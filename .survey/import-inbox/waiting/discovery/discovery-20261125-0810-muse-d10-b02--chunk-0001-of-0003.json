@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d10-b02::chunk-0001-of-0003",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.22509",
+      "identity_tokens": [
+        "arXiv:2604.22509"
+      ],
+      "title": "LaissezCloud: Continuous Resource Renegotiation for the Public Cloud",
+      "reason": "本論文『LaissezCloud: Continuous Resource Renegotiation for the Public Cloud』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2604.22509",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06665",
+      "identity_tokens": [
+        "arXiv:2605.06665"
+      ],
+      "title": "UniPool: Learning Expert-to-Layer Ownership from Brief Global Access",
+      "reason": "本論文『UniPool: Learning Expert-to-Layer Ownership from Brief Global Access』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.06665",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12207",
+      "identity_tokens": [
+        "arXiv:2605.12207"
+      ],
+      "title": "Not How Many, But Which: Parameter Placement in Low-Rank Adaptation",
+      "reason": "本論文『Not How Many, But Which: Parameter Placement in Low-Rank Adaptation』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.12207",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.18918",
+      "identity_tokens": [
+        "arXiv:2605.18918"
+      ],
+      "title": "ESLD (External Surrogate Latent Defense): A Latent-Space Architecture for Faster, Stronger Prompt-Injection Defense",
+      "reason": "本論文『ESLD (External Surrogate Latent Defense): A Latent-Space Architecture for Faster, Stronger Prompt-Injection Defense』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.18918",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22866",
+      "identity_tokens": [
+        "arXiv:2605.22866"
+      ],
+      "title": "Multi-Resolution Attribution from Adaptive Routing State",
+      "reason": "本論文『Multi-Resolution Attribution from Adaptive Routing State』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2605.22866",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16620",
+      "identity_tokens": [
+        "arXiv:2606.16620"
+      ],
+      "title": "Entropy-Gated Latent Recursion",
+      "reason": "Entropy-Gated Latent Recursionは推論時スケーリングにおいて、高不確実性トークンでのみ凍結モデルの上位デコーダ層を再帰適用する学習不要の推論手法であり、推論時計算の新たな軸を提示する直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2606.16620",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31201",
+      "identity_tokens": [
+        "arXiv:2606.31201"
+      ],
+      "title": "ExPLoRe: Expert Patch-Level Loss Routing for Multi-Objective Masked Image Modeling",
+      "reason": "本論文『ExPLoRe: Expert Patch-Level Loss Routing for Multi-Objective Masked Image Modeling』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2606.31201",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04934",
+      "identity_tokens": [
+        "arXiv:2607.04934"
+      ],
+      "title": "Lightweight ML-Based Automatic Sleep Staging Framework with Constrained CNN and Mamba for Small-Sample EEG Datasets",
+      "reason": "本論文『Lightweight ML-Based Automatic Sleep Staging Framework with Constrained CNN and Mamba for Small-Sample EEG Datasets』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2607.04934",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.14661",
+      "identity_tokens": [
+        "arXiv:2607.14661"
+      ],
+      "title": "SmartRAG: Native Graph-Based RAG for Mobile Device",
+      "reason": "本論文『SmartRAG: Native Graph-Based RAG for Mobile Device』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2607.14661",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25180",
+      "identity_tokens": [
+        "arXiv:2607.25180"
+      ],
+      "title": "Bekko Embedding: Parameter-Efficient Multilingual Retrieval with Ultra-Compact Encoders",
+      "reason": "本論文『Bekko Embedding: Parameter-Efficient Multilingual Retrieval with Ultra-Compact Encoders』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2607.25180",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05521",
+      "identity_tokens": [
+        "arXiv:2608.05521"
+      ],
+      "title": "Reasoning from Traces: Divergence-Guided Agentic Repair of WebAssembly Discrepancies",
+      "reason": "本論文『Reasoning from Traces: Divergence-Guided Agentic Repair of WebAssembly Discrepancies』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2608.05521",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.09888",
+      "identity_tokens": [
+        "arXiv:2608.09888"
+      ],
+      "title": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
+      "reason": "本論文『BDH-CQ: In-Context Learning with Recurrent Latent Reasoning』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2608.09888",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.01345",
+      "identity_tokens": [
+        "arXiv:2609.01345"
+      ],
+      "title": "Cheap Verifiers, Large Blind Spots: Measuring the Reliability Cost of Cost-Saving Cascades",
+      "reason": "本論文『Cheap Verifiers, Large Blind Spots: Measuring the Reliability Cost of Cost-Saving Cascades』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2609.01345",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16008",
+      "identity_tokens": [
+        "arXiv:2609.16008"
+      ],
+      "title": "Co-Skill: A Collaborative Communication Framework for Skill Evolution",
+      "reason": "本論文『Co-Skill: A Collaborative Communication Framework for Skill Evolution』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2609.16008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.17250",
+      "identity_tokens": [
+        "arXiv:2508.17250"
+      ],
+      "title": "Routing Distilled Knowledge via Mixture of LoRA Experts for Large Language Model based Bundle Generation",
+      "reason": "本論文『Routing Distilled Knowledge via Mixture of LoRA Experts for Large Language Model based Bundle Generation』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2508.17250",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.04336",
+      "identity_tokens": [
+        "arXiv:2501.04336"
+      ],
+      "title": "Building a Mind Palace: Structuring Environment-Grounded Semantic Graphs for Effective Long Video Analysis with LLMs",
+      "reason": "本論文『Building a Mind Palace: Structuring Environment-Grounded Semantic Graphs for Effective Long Video Analysis with LLMs』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2501.04336",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3725411",
+      "identity_tokens": [
+        "DOI:10.1145/3725411"
+      ],
+      "title": "Logical and Physical Optimizations for SQL Query Execution over Large Language Models",
+      "reason": "本論文『Logical and Physical Optimizations for SQL Query Execution over Large Language Models』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://doi.org/10.1145/3725411",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.17358",
+      "identity_tokens": [
+        "arXiv:2405.17358"
+      ],
+      "title": "Rethinking Transformers in Solving POMDPs",
+      "reason": "本論文『Rethinking Transformers in Solving POMDPs』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2405.17358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.08479",
+      "identity_tokens": [
+        "arXiv:2403.08479"
+      ],
+      "title": "MD-Dose: A diffusion model based on the Mamba for radiation dose prediction",
+      "reason": "本論文『MD-Dose: A diffusion model based on the Mamba for radiation dose prediction』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2403.08479",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12464",
+      "identity_tokens": [
+        "arXiv:2502.12464"
+      ],
+      "title": "SafeRoute: Adaptive Model Selection for Efficient and Accurate Safety Guardrails in Large Language Models",
+      "reason": "本論文『SafeRoute: Adaptive Model Selection for Efficient and Accurate Safety Guardrails in Large Language Models』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2502.12464",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d10-b02",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

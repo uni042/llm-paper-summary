@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d12-b01::chunk-0002-of-0003",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.16105",
+      "identity_tokens": [
+        "arXiv:2405.16105"
+      ],
+      "title": "MambaLLIE: Implicit Retinex-Aware Low Light Enhancement with Global-then-Local State Space",
+      "reason": "Retinex理論と状態空間モデルを組み合わせた低照度画像強調MambaLLIEは画像復元の応用研究であり、LLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2405.16105",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.03380",
+      "identity_tokens": [
+        "arXiv:2504.03380"
+      ],
+      "title": "Online Difficulty Filtering for Reasoning Oriented Reinforcement Learning",
+      "reason": "検証可能報酬による強化学習で難易度フィルタリングの理論と効果を示す研究であり、対象は推論モデルの学習効率であって推論時の処理ではない。",
+      "source_url": "https://arxiv.org/abs/2504.03380",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16173",
+      "identity_tokens": [
+        "arXiv:2602.16173"
+      ],
+      "title": "Learning Personalized Agents from Human Feedback",
+      "reason": "対話中の明示的フィードバックから個人の嗜好へ継続適応するPAHFはエージェントのパーソナライゼーション手法であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2602.16173",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.17100",
+      "identity_tokens": [
+        "arXiv:2306.17100"
+      ],
+      "title": "RL4CO: An Extensive Reinforcement Learning for Combinatorial Optimization Benchmark",
+      "reason": "組合せ最適化向け深層強化学習の統合ベンチマークRL4COの提案であり、LLM推論とは対象分野が異なる評価基盤の研究である。",
+      "source_url": "https://arxiv.org/abs/2306.17100",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00994",
+      "identity_tokens": [
+        "arXiv:2602.00994"
+      ],
+      "title": "Reasoning and Tool-use Compete in Agentic RL:From Quantifying Interference to Disentangled Tuning",
+      "reason": "エージェント強化学習における推論能力とツール使用の干渉を定量化し分離チューニングする研究であり、対象は学習時の能力干渉であって推論実行ではない。",
+      "source_url": "https://arxiv.org/abs/2602.00994",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.17837",
+      "identity_tokens": [
+        "arXiv:2603.17837"
+      ],
+      "title": "The Silent Thought: Modeling Internal Cognition in Full-Duplex Spoken Dialogue Models via Latent Reasoning",
+      "reason": "全二重音声対話で聞き取りと並行して潜在推論を行うFLAIRは、推論時計算の配置という点で関連するが、主眼は対話応答の質であり推論効率の機構や定量評価は薄い。",
+      "source_url": "https://arxiv.org/abs/2603.17837",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17100",
+      "identity_tokens": [
+        "arXiv:2602.17100"
+      ],
+      "title": "AgentConductor: Topology Evolution for Multi-Agent Competition-Level Code Generation",
+      "reason": "競プロ水準のコード生成に向けマルチエージェントの通信トポロジを進化させるAgentConductorは、エージェント協調の能力改善が目的で推論システムの話ではない。",
+      "source_url": "https://arxiv.org/abs/2602.17100",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22158",
+      "identity_tokens": [
+        "arXiv:2605.22158"
+      ],
+      "title": "ST-SimDiff: Balancing Spatiotemporal Similarity and Difference for Efficient Video Understanding with MLLMs",
+      "reason": "長尺動画で視覚トークンの冗長性を時空間類似性で削減しつつ差分で重要事象を残すST-SimDiffは、MLLMの動画処理における視覚トークン数と計算量を直接削減する推論効率化手法である。",
+      "source_url": "https://arxiv.org/abs/2605.22158",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26355",
+      "identity_tokens": [
+        "arXiv:2608.26355"
+      ],
+      "title": "Finding the Right Evidence: Factor-Guided Coarse-to-Fine Reasoning for Long Videos",
+      "reason": "長尺動画QAで識別的な証拠フレームを段階的に取得するPACEは文脈量の削減にもつながるが、主眼は回答精度のための証拠選択であり推論コスト削減の機構としては間接的である。",
+      "source_url": "https://arxiv.org/abs/2608.26355",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.17981",
+      "identity_tokens": [
+        "arXiv:2608.17981"
+      ],
+      "title": "Recirculation",
+      "reason": "prefill相で再循環させることで生成時の追加レイテンシほぼなしに困惑度と精度を上げる推論時アーキテクチャ拡張。推論時の計算構造が対象だが、目的は効率ではなく生成品質の向上である。",
+      "source_url": "https://arxiv.org/abs/2608.17981",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03584",
+      "identity_tokens": [
+        "arXiv:2602.03584"
+      ],
+      "title": "V0: A Generalist Value Model for Any Policy at State Zero",
+      "reason": "GRPO等で必要となる価値モデルを状態ゼロ専用に一般化するV0は方策勾配学習のベースライン推定の研究であり、LLMの推論デプロイとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2602.03584",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00595",
+      "identity_tokens": [
+        "arXiv:2603.00595"
+      ],
+      "title": "UNICBench: UNIfied Counting Benchmark for MLLM",
+      "reason": "画像・文書・音声にわたるMLLMの計数能力を測るUNICBenchは評価ベンチマークのみの提案であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2603.00595",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.19926",
+      "identity_tokens": [
+        "arXiv:2606.19926"
+      ],
+      "title": "MemGUI-Agent: An End-to-End Long-Horizon Mobile GUI Agent with Proactive Context Management",
+      "reason": "モバイルGUIエージェントで文脈管理自体を行動として扱うConActによりプロンプト肥大を抑えるMemGUI-Agent。文脈量の制御は推論コストと関連するが、主眼は長期タスクの成功率である。",
+      "source_url": "https://arxiv.org/abs/2606.19926",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04898",
+      "identity_tokens": [
+        "arXiv:2604.04898"
+      ],
+      "title": "QED-Nano: Teaching a Tiny Model to Prove Hard Theorems",
+      "reason": "4Bの小型モデルをオリンピック級定理証明へ学習させるQED-Nanoは学習パイプラインと能力の研究であり、小型化も推論システムの機構ではなく学習成果である。",
+      "source_url": "https://arxiv.org/abs/2604.04898",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25611",
+      "identity_tokens": [
+        "arXiv:2609.25611"
+      ],
+      "title": "Qwen3.8-Omni: Towards Native Omni-Modal Agents",
+      "reason": "ネイティブなマルチモーダル共同学習によるQwen3.8-Omni-Flashのモデル報告であり、MoE構造を継承するものの推論・サービングへの新規な技術的貢献は要旨に示されていない。",
+      "source_url": "https://arxiv.org/abs/2609.25611",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.21795",
+      "identity_tokens": [
+        "arXiv:2601.21795"
+      ],
+      "title": "Effective LoRA Adapter Routing using Task Representations",
+      "reason": "公開LoRAアダプタプールに対しタスク表現で適切なアダプタを選択・合成するLORAUTERは、複数アダプタを抱えるLLMの推論時ルーティング機構であり、マルチLoRAサービングに直接関わる。",
+      "source_url": "https://arxiv.org/abs/2601.21795",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07064",
+      "identity_tokens": [
+        "arXiv:2602.07064"
+      ],
+      "title": "OmniFysics: Towards Physical Intelligence Evolution via Omni-Modal Signal Processing and Network Optimization",
+      "reason": "画像・音声・動画・テキストを統合し物理知識を注入するOmniFysicsは物理理解能力のためのモデルとデータエンジンの研究であり、推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2602.07064",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06447",
+      "identity_tokens": [
+        "arXiv:2606.06447"
+      ],
+      "title": "Latent Reasoning with Normalizing Flows",
+      "reason": "正規化フローで連続潜在空間に中間計算を行う潜在推論は、トークン列でのCoT生成を置き換える推論時計算の形として関連するが、効率の定量評価より推論表現の質が主眼である。",
+      "source_url": "https://arxiv.org/abs/2606.06447",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.01512",
+      "identity_tokens": [
+        "arXiv:2512.01512"
+      ],
+      "title": "MCAT: Scaling Many-to-Many Speech-to-Text Translation With MLLMs to 70 Languages",
+      "reason": "MLLMによる多言語音声翻訳MCATは長音声での推論速度低下を課題に加速枠組みを含むが、対象は翻訳タスクの性能とカバレッジであり推論機構の汎用的な貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2512.01512",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22446",
+      "identity_tokens": [
+        "arXiv:2601.22446"
+      ],
+      "title": "Anytime Safe PAC Efficient Reasoning",
+      "reason": "易しいクエリを非思考モデルへ振り分ける選択的思考を、部分フィードバック下でも安全に運用するB-PAC推論は、大規模推論モデルの推論コストとレイテンシを抑える推論時ルーティング手法である。",
+      "source_url": "https://arxiv.org/abs/2601.22446",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d12-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

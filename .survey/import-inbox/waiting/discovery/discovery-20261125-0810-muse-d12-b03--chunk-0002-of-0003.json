@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d12-b03::chunk-0002-of-0003",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.00421",
+      "identity_tokens": [
+        "arXiv:2508.00421"
+      ],
+      "title": "UIS-Mamba: Exploring Mamba for Underwater Instance Segmentation via Dynamic Tree Scan and Hidden State Weaken",
+      "reason": "動的ツリースキャン等で水中インスタンスセグメンテーションを行うUIS-Mambaは海洋画像解析の応用であり、LLM推論とは分野が異なる。",
+      "source_url": "https://arxiv.org/abs/2508.00421",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3664647.3680926",
+      "identity_tokens": [
+        "DOI:10.1145/3664647.3680926"
+      ],
+      "title": "SelM: Selective Mechanism based Audio-Visual Segmentation",
+      "reason": "選択機構で音声・視覚セグメンテーションを行うSelMはマルチモーダル知覚の応用研究であり、LLM推論システムとは無関係である。",
+      "source_url": "https://doi.org/10.1145/3664647.3680926",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.08947",
+      "identity_tokens": [
+        "arXiv:2412.08947"
+      ],
+      "title": "Selective Visual Prompting in Vision Mamba",
+      "reason": "視覚プロンプトでVision Mambaを下流タスクへ適応させる研究は視覚モデルの効率的微調整の話であり、LLM推論の対象ではない。",
+      "source_url": "https://arxiv.org/abs/2412.08947",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.01892",
+      "identity_tokens": [
+        "arXiv:2310.01892"
+      ],
+      "title": "FiGURe: Simple and Efficient Unsupervised Node Representations with Filter Augmentations",
+      "reason": "フィルタ拡張による教師なしノード表現学習FiGUReはグラフ表現学習の研究であり、LLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2310.01892",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.08234",
+      "identity_tokens": [
+        "arXiv:2506.08234"
+      ],
+      "title": "Compound AI Systems Optimization: A Survey of Methods, Challenges, and Future Directions",
+      "reason": "複合AIシステム全体の最適化手法を概観するサーベイは、複数LLMを含むワークフローの最適化として関連するが、推論システムの具体的な機構を新たに提案するものではない。",
+      "source_url": "https://arxiv.org/abs/2506.08234",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.424",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.424"
+      ],
+      "title": "InteractSpeech: A Speech Dialogue Interaction Corpus for Spoken Dialogue Model",
+      "reason": "音声対話モデルの学習・評価用に150時間の対話コーパスを提供するInteractSpeechはデータセットの提案であり、推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.424",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.10374",
+      "identity_tokens": [
+        "arXiv:2407.10374"
+      ],
+      "title": "An Empirical Study of Mamba-based Pedestrian Attribute Recognition",
+      "reason": "歩行者属性認識へのMamba適用を実証的に調べる研究は視覚認識の応用評価であり、LLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2407.10374",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.19496",
+      "identity_tokens": [
+        "arXiv:2510.19496"
+      ],
+      "title": "CARES: Context-Aware Resolution Selector for VLMs",
+      "reason": "視覚トークンが全体の97〜99%を占めるVLMで、画像とクエリから必要解像度を予測するCARESは、低解像度で足りる入力の計算とレイテンシを直接削減する推論前処理機構である。",
+      "source_url": "https://arxiv.org/abs/2510.19496",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.263",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.263"
+      ],
+      "title": "L-CiteEval: A Suite for Evaluating Fidelity of Long-context Models",
+      "reason": "長文脈モデルの忠実性を評価するL-CiteEvalは評価スイートの提案であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-long.263",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.01440",
+      "identity_tokens": [
+        "arXiv:2410.01440"
+      ],
+      "title": "Closed-Loop Long-Horizon Robotic Planning via Equilibrium Sequence Modeling",
+      "reason": "平衡状態へ反復精緻化する系列モデリングでロボットの長期計画を行う研究はロボット計画の能力研究であり、LLM推論の機構ではない。",
+      "source_url": "https://arxiv.org/abs/2410.01440",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TWC.2025.3617502",
+      "identity_tokens": [
+        "DOI:10.1109/TWC.2025.3617502"
+      ],
+      "title": "ChannelMamba: A Mamba-Driven Selective State-Space Model for Channel Prediction of High-Mobility MIMO in 6G IoT",
+      "reason": "6Gの高速移動MIMOチャネル予測に選択的SSMを使うChannelMambaは無線通信のチャネル推定への応用であり、LLM推論とは分野が異なる。",
+      "source_url": "https://doi.org/10.1109/TWC.2025.3617502",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2408.11451",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2408.11451"
+      ],
+      "title": "Bidirectional Gated Mamba for Sequential Recommendation",
+      "reason": "双方向ゲート付きMambaによる逐次推薦はレコメンデーションへのSSM応用であり、リアルタイム性の主張も推薦モデル内部のものでLLM推論とは無関係である。",
+      "source_url": "https://doi.org/10.48550/arXiv.2408.11451",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.19110",
+      "identity_tokens": [
+        "arXiv:2410.19110"
+      ],
+      "title": "Bio2Token: All-atom tokenization of any biomolecular structure with Mamba",
+      "reason": "全原子トークン化とMambaで生体分子構造を表現するBio2Tokenは創薬・分子設計向けの表現学習であり、LLM推論とは分野が異なる。",
+      "source_url": "https://arxiv.org/abs/2410.19110",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.05065",
+      "identity_tokens": [
+        "arXiv:2506.05065"
+      ],
+      "title": "UnHiPPO: Uncertainty-aware Initialization for State Space Models",
+      "reason": "測定ノイズを前提にHiPPO初期化を拡張するUnHiPPOは状態空間モデルの基礎理論であり、LLMを含む系列モデルの土台とはなるが推論システムへの直接の適用はない。",
+      "source_url": "https://arxiv.org/abs/2506.05065",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13245",
+      "identity_tokens": [
+        "arXiv:2510.13245"
+      ],
+      "title": "CymbaDiff: Structured Spatial Diffusion for Sketch-based 3D Semantic Urban Scene Generation",
+      "reason": "スケッチから3D都市シーンを生成するCymbaDiffとそのベンチマークは都市生成の応用であり、LLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2510.13245",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TGRS.2025.3624051",
+      "identity_tokens": [
+        "DOI:10.1109/TGRS.2025.3624051"
+      ],
+      "title": "STDMamba: Spatiotemporal Decomposition Mamba for Long-Term Fine-Grained SST Prediction",
+      "reason": "時空間分解Mambaによる長期海面水温予測STDMambaは海洋・気候予測へのSSM応用であり、LLM推論とは分野が異なる。",
+      "source_url": "https://doi.org/10.1109/TGRS.2025.3624051",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.00887",
+      "identity_tokens": [
+        "arXiv:2310.00887"
+      ],
+      "title": "GRID: A Platform for General Robot Intelligence Development",
+      "reason": "汎用ロボット知能開発プラットフォームGRIDはロボット学習基盤の提案であり、LLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2310.00887",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04082",
+      "identity_tokens": [
+        "arXiv:2407.04082"
+      ],
+      "title": "DASS: Distilled Audio State Space Models are Stronger and More Duration-Scalable Learners",
+      "reason": "蒸留した音声状態空間モデルで音声タグ付けを行うDASSは音響モデリングの応用であり、SSMの効率も音声タスク内部の話でLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2407.04082",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.22663",
+      "identity_tokens": [
+        "arXiv:2503.22663"
+      ],
+      "title": "NetSSM: Multi-Flow and State-Aware Network Trace Generation using State-Space Models",
+      "reason": "状態空間モデルでネットワークトレースを合成生成するNetSSMはネットワーク計測データ生成の研究であり、LLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2503.22663",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.01088",
+      "identity_tokens": [
+        "arXiv:2509.01088"
+      ],
+      "title": "Privacy-Preserving Reasoning with Knowledge-Distilled Parametric Retrieval Augmented Generation",
+      "reason": "文書をLoRAパラメータ化するParametric RAGでプライバシと推論レイテンシの問題に取り組む研究は、RAGの推論時構成として関連するが、主眼はプライバシ保護であり効率機構は従属的である。",
+      "source_url": "https://arxiv.org/abs/2509.01088",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d12-b03",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

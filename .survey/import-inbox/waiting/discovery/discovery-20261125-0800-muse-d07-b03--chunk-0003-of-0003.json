@@ -1,0 +1,175 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d07-b03::chunk-0003-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.18369",
+      "identity_tokens": [
+        "arXiv:2407.18369"
+      ],
+      "title": "AI Safety in Generative AI Large Language Models: A Survey",
+      "reason": "生成AI・LLMの安全性リスクと対策を概観するサーベイであり、推論システムとは無関係のため対象外。",
+      "source_url": "https://arxiv.org/abs/2407.18369",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.03193",
+      "identity_tokens": [
+        "arXiv:2504.03193"
+      ],
+      "title": "Mamba as a Bridge: Where Vision Foundation Models Meet Vision Language Models for Domain-Generalized Semantic Segmentation",
+      "reason": "視覚基盤モデルと視覚言語モデルをMambaで融合するドメイン汎化セマンティックセグメンテーションの手法であり、画像タスク専用でLLM推論とは無関係のため対象外。",
+      "source_url": "https://arxiv.org/abs/2504.03193",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13922",
+      "identity_tokens": [
+        "arXiv:2502.13922"
+      ],
+      "title": "LongPO: Long Context Self-Evolution of Large Language Models through Short-to-Long Preference Optimization",
+      "reason": "短文脈から長文脈への自己生成選好データで長文脈アライメントを行う訓練手法であり、推論システムではなく訓練の研究のため対象外。",
+      "source_url": "https://arxiv.org/abs/2502.13922",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04368",
+      "identity_tokens": [
+        "arXiv:2410.04368"
+      ],
+      "title": "Algorithmic Capabilities of Random Transformers",
+      "reason": "ランダム初期化Transformerが埋め込み層のみの最適化で獲得できるアルゴリズム能力を調べた基礎研究であり、推論システムとは無関係のため対象外。",
+      "source_url": "https://arxiv.org/abs/2410.04368",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.09660",
+      "identity_tokens": [
+        "arXiv:2509.09660"
+      ],
+      "title": "Steering MoE LLMs via Expert (De)Activation",
+      "reason": "MoE型LLMで振る舞いに関連するエキスパートを推論時に活性化・不活性化して安全性等を制御する枠組みで、推論時のエキスパート制御として関連するが目的は効率化ではなく振る舞い制御のため境界。",
+      "source_url": "https://arxiv.org/abs/2509.09660",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.15871",
+      "identity_tokens": [
+        "arXiv:2503.15871"
+      ],
+      "title": "MASH-VLM: Mitigating Action-Scene Hallucination in Video-LLMs through Disentangled Spatial-Temporal Representations",
+      "reason": "動画LLMの動作・場面幻覚を空間時間表現の分離で緩和するアーキテクチャ改良であり、幻覚対策が主題で推論システムではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2503.15871",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.06560",
+      "identity_tokens": [
+        "arXiv:2504.06560"
+      ],
+      "title": "NeedleInATable: Exploring Long-Context Capability of Large Language Models towards Long-Structured Tables",
+      "reason": "長大な構造化表に対するLLMのセル単位知覚を測るベンチマークの提案であり、モデル評価の研究で推論システムとは無関係のため対象外。",
+      "source_url": "https://arxiv.org/abs/2504.06560",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.17642",
+      "identity_tokens": [
+        "arXiv:2406.17642"
+      ],
+      "title": "Banishing LLM Hallucinations Requires Rethinking Generalization",
+      "reason": "混合メモリエキスパートで事実を記憶させ幻覚を除去するモデルLamini-1等の検討であり、幻覚の一般化理論が主題で推論システムではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2406.17642",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.00603",
+      "identity_tokens": [
+        "arXiv:2501.00603"
+      ],
+      "title": "DiC: Rethinking Conv3x3 Designs in Diffusion Models",
+      "reason": "3x3畳み込みのみで構成する高速な拡散モデルのアーキテクチャ研究であり、画像生成が対象でLLM推論とは無関係のため対象外。",
+      "source_url": "https://arxiv.org/abs/2501.00603",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26362",
+      "identity_tokens": [
+        "arXiv:2605.26362"
+      ],
+      "title": "Why LLMs Hallucinate on Structured Knowledge: A Mechanistic Analysis of Reasoning over Linearized Representations",
+      "reason": "構造化知識に対するLLMの幻覚を注意とFFNの内部動態から分析した機構的研究であり、推論システムの提案ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2605.26362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d07-b03",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

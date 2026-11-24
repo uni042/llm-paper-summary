@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d12-b01::chunk-0001-of-0003",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32373",
+      "identity_tokens": [
+        "arXiv:2610.32373"
+      ],
+      "title": "Past as State, Present as Attention: Persistent-State Blockwise Flow Matching for Long-Horizon Co-Speech Motion Generation",
+      "reason": "共著ジェスチャ生成の長期一貫性が対象で、過去動作を状態として圧縮するflow matchingはモーション生成モデルの工夫であり、LLM推論システムへの技術的貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.32373",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.02480",
+      "identity_tokens": [
+        "arXiv:2611.02480"
+      ],
+      "title": "Chain on Demand: Deferred Evidence Organization for Long-Term Conversational Memory",
+      "reason": "会話履歴をターンレベルのまま保持し、クエリ時に証拠チェーンを再構成する長期会話メモリ手法。エージェントの文脈管理とは関連するが、推論時の計算・メモリ効率への定量的な貢献は要旨からは薄い。",
+      "source_url": "https://arxiv.org/abs/2611.02480",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.14009",
+      "identity_tokens": [
+        "arXiv:2611.14009"
+      ],
+      "title": "Coding Agent Memory Post-Training II: Unlocking the Memory Potential of Pre-trained File Operations for Long-Horizon Tasks via On-Policy Distillation",
+      "reason": "ファイル操作を記憶媒体とするコーディングエージェントの記憶制御をon-policy蒸留で後学習する研究。文脈溢れへの対処とは関係するが、主眼は学習手法であり推論システム機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2611.14009",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.05560",
+      "identity_tokens": [
+        "arXiv:2511.05560"
+      ],
+      "title": "Sample-Efficient Language Modeling with Linear Attention and Lightweight Enhancements",
+      "reason": "BabyLM制約下で線形時間のmLSTMトークンミキサ等を用いるサンプル効率的言語モデリング。線形アテンション自体は推論効率と関連するが、評価軸は学習のサンプル効率であり推論時の利得は示されていない。",
+      "source_url": "https://arxiv.org/abs/2511.05560",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/CVPR52734.2025.00886",
+      "identity_tokens": [
+        "DOI:10.1109/CVPR52734.2025.00886"
+      ],
+      "title": "ICP: Immediate Compensation Pruning for Mid-to-high Sparsity",
+      "reason": "7B級の言語・視覚モデルを対象に、中〜高スパース率でも再学習コストを抑える即時補償プルーニングICPを提案する。単一コンシューマGPUでの推論を前提としたモデル圧縮であり、推論向けスパース化への直接の貢献が確認できる。",
+      "source_url": "https://doi.org/10.1109/CVPR52734.2025.00886",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.14960",
+      "identity_tokens": [
+        "arXiv:2408.14960"
+      ],
+      "title": "Multilingual Arbitrage: Optimizing Data Pools to Accelerate Multilingual Progress",
+      "reason": "複数モデルの言語別性能差を利用して合成データプールを最適化する多言語学習データの研究であり、対象は学習データ生成であって推論・サービングの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2408.14960",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.20461",
+      "identity_tokens": [
+        "arXiv:2504.20461"
+      ],
+      "title": "Efficient Graph-Based Approximate Nearest Neighbor Search Achieving: Low Latency Without Throughput Loss",
+      "reason": "グラフ型近似最近傍探索でfork-join並列の非効率を改め低レイテンシとスループット維持を狙う探索システム。ベクトル検索基盤としては関連するが、LLM推論そのものへの適用・評価は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2504.20461",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2205.15171",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2205.15171"
+      ],
+      "title": "Parameter Efficient Diff Pruning for Bias Mitigation",
+      "reason": "スパースなdebiasingサブネットワークで大規模言語モデルの社会的バイアスをモジュール式に緩和する研究であり、プルーニングの目的は公平性であって推論効率化ではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2205.15171",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.15694",
+      "identity_tokens": [
+        "arXiv:2511.15694"
+      ],
+      "title": "The Impact of Quantization on Large Reasoning Model Reinforcement Learning",
+      "reason": "大規模推論モデルの強化学習に対する事後量子化と量子化対応RLの性能差を系統的に測る分析。量子化が主題だが、対象は推論デプロイではなくRL学習過程への影響である。",
+      "source_url": "https://arxiv.org/abs/2511.15694",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TC.2025.3588317",
+      "identity_tokens": [
+        "DOI:10.1109/TC.2025.3588317"
+      ],
+      "title": "GATe: Efficient Graph Attention Network Acceleration With Near-Memory Processing",
+      "reason": "グラフ注意ネットワークの集約と注意演算をニアメモリ処理で加速するGATeはGNN専用アクセラレータであり、LLM推論の対象範囲とは異なるモデル族のハードウェアである。",
+      "source_url": "https://doi.org/10.1109/TC.2025.3588317",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:0d8ac956bdea92958278300b66c3b787a4d57052",
+      "identity_tokens": [
+        "SemanticScholar:0d8ac956bdea92958278300b66c3b787a4d57052"
+      ],
+      "title": "Network Requirements for Distributed Machine Learning Training in the Cloud",
+      "reason": "タイトルがクラウドにおける分散機械学習の学習用ネットワーク要件そのものを明示しており、推論・サービングへの言及はタイトルに一切ない学習基盤の主題である。",
+      "source_url": "https://www.semanticscholar.org/paper/0d8ac956bdea92958278300b66c3b787a4d57052",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.01119",
+      "identity_tokens": [
+        "arXiv:2506.01119"
+      ],
+      "title": "MOOSE: Pay Attention to Temporal Dynamics for Video Understanding via Optical Flows",
+      "reason": "光学フローと空間埋め込みを統合する動画エンコーダMOOSEは原子動作や医療映像等の動画理解タスク向けであり、LLM推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2506.01119",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/LSP.2025.3580496",
+      "identity_tokens": [
+        "DOI:10.1109/LSP.2025.3580496"
+      ],
+      "title": "Efficient Detection of QIM-Based VoIP Steganography Using Adjacent Frame Integration and Multi-Codeword Priority Attention",
+      "reason": "QIM方式VoIPステゴグラフィの検出を隣接フレーム統合と注意で軽量化するセキュリティ応用であり、注意機構の利用は検出モデル内部に限られLLM推論とは無関係である。",
+      "source_url": "https://doi.org/10.1109/LSP.2025.3580496",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2402.13497",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2402.13497"
+      ],
+      "title": "Push Quantization-Aware Training Toward Full Precision Performances via Consistency Regularization",
+      "reason": "量子化対応学習の汎化を一貫性正則化で高めるQAT手法。量子化モデルの推論利用が最終目的ではあるが、対象・評価は視覚系QATの学習性能でありLLM推論への適用は示されていない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2402.13497",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.25745",
+      "identity_tokens": [
+        "arXiv:2510.25745"
+      ],
+      "title": "Efficient Vocal Source Separation Through Windowed Sink Attention",
+      "reason": "Mel-Band-Roformerの全時間自己注意を窓付きシンク注意へ置換するボーカル音源分離の効率化であり、対象は音響信号処理モデルであってLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2510.25745",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.00328",
+      "identity_tokens": [
+        "arXiv:2410.00328"
+      ],
+      "title": "Tuning Fast Memory Size based on Modeling of Page Migration for Tiered Memory",
+      "reason": "階層メモリでページマイグレーションのモデルに基づき高速メモリ容量を決めるTuna。一般的な階層メモリ運用の話であり、LLM推論のオフロードへの適用や評価は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2410.00328",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.06197",
+      "identity_tokens": [
+        "arXiv:2401.06197"
+      ],
+      "title": "Efficient Deformable ConvNets: Rethinking Dynamic and Sparse Operator for Vision Applications",
+      "reason": "変形可能畳み込み演算子DCNv4のメモリアクセス最適化と高速化は視覚アプリケーション向け演算子の改良であり、LLM推論の演算・カーネルとは対象が異なる。",
+      "source_url": "https://arxiv.org/abs/2401.06197",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.17102",
+      "identity_tokens": [
+        "arXiv:2512.17102"
+      ],
+      "title": "Reinforcement Learning for Self-Improving Agent with Skill Library",
+      "reason": "スキルライブラリを持つLLMエージェントの自己改善を強化学習で促す研究であり、対象はエージェントの能力学習であって推論システムの効率・実行機構ではない。",
+      "source_url": "https://arxiv.org/abs/2512.17102",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08794",
+      "identity_tokens": [
+        "arXiv:2602.08794"
+      ],
+      "title": "MOVA: Towards Scalable and Synchronized Video-Audio Generation",
+      "reason": "動画と音声を同時生成するオープンソース生成モデルMOVAの報告であり、主眼は生成品質とアーキテクチャ・学習であり推論サービングの機構は扱われていない。",
+      "source_url": "https://arxiv.org/abs/2602.08794",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01770",
+      "identity_tokens": [
+        "arXiv:2606.01770"
+      ],
+      "title": "Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task Streams",
+      "reason": "プロンプトやスキル等を進化させるauto-harnessでエージェントの自己改善を持続させる枠組みであり、対象はタスク成績の改善であってLLM推論の実行効率ではない。",
+      "source_url": "https://arxiv.org/abs/2606.01770",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d12-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

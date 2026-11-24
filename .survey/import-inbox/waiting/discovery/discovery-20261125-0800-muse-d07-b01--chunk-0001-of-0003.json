@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d07-b01::chunk-0001-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.08812",
+      "identity_tokens": [
+        "arXiv:2412.08812"
+      ],
+      "title": "Test-Time Alignment via Hypothesis Reweighting",
+      "reason": "報酬モデルの複数ヘッドをユーザの少量の選好ラベルで再重み付けするテスト時パーソナライゼーション手法であり、推論基盤やサービング最適化ではなくアライメント手法のため対象外。",
+      "source_url": "https://arxiv.org/abs/2412.08812",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CCDC69976.2026.11560481",
+      "identity_tokens": [
+        "DOI:10.1109/CCDC69976.2026.11560481"
+      ],
+      "title": "A Lightweight Multi-Scale Hierarchical Network for Multi-Modal Trajectory Prediction in Autonomous Driving",
+      "reason": "タイトルが自動運転における軌道予測という異分野応用を明示しており、LLM推論システムの範囲外のためタイトルスクリーンで対象外。",
+      "source_url": "https://doi.org/10.1109/CCDC69976.2026.11560481",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/brainsci16030267",
+      "identity_tokens": [
+        "DOI:10.3390/brainsci16030267"
+      ],
+      "title": "STHMA: Decoupling Spatio-Temporal Dynamics in EEG via Hybrid State Space Modeling",
+      "reason": "タイトルがEEG信号のモデリングという脳科学応用を明示しており、LLM推論システムの範囲外のためタイトルスクリーンで対象外。",
+      "source_url": "https://doi.org/10.3390/brainsci16030267",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.18533",
+      "identity_tokens": [
+        "arXiv:2410.18533"
+      ],
+      "title": "LOGO - Long cOntext aliGnment via efficient preference Optimization",
+      "reason": "長文脈モデルの生成能力を高めるための参照フリー選好最適化による訓練戦略であり、推論システムやデコーディング最適化の提案ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2410.18533",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06087",
+      "identity_tokens": [
+        "arXiv:2601.06087"
+      ],
+      "title": "The AI Roles Continuum: Blurring the Boundary Between Research and Engineering",
+      "reason": "AIラボの職種・採用基準を定性的に分析した組織論の論文であり、推論システムやモデル実行技術とは無関係のため対象外。",
+      "source_url": "https://arxiv.org/abs/2601.06087",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07935",
+      "identity_tokens": [
+        "arXiv:2604.07935"
+      ],
+      "title": "The Hyperscale Lottery: How State-Space Models Have Sacrificed Edge Efficiency",
+      "reason": "Mamba-3がエッジ推論で28〜48%のレイテンシ増を招くことを実測した分析論文で、エッジ推論効率への示唆はあるが具体的な推論システムや最適化手法の提案ではないため境界。",
+      "source_url": "https://arxiv.org/abs/2604.07935",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16351",
+      "identity_tokens": [
+        "arXiv:2605.16351"
+      ],
+      "title": "PALM: Physically-Anchored Latent-timescale Mamba for Stable Representations under Distribution Shift",
+      "reason": "fMRIや気象予測など科学基盤モデルの表現学習における分布シフト対策であり、LLM推論システムとは無関係のドメイン手法のため対象外。",
+      "source_url": "https://arxiv.org/abs/2605.16351",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.00601",
+      "identity_tokens": [
+        "arXiv:2606.00601"
+      ],
+      "title": "ScanWeaver: Compiler-Driven Parallelization of Affine Recurrences via Associative Scan Lowering",
+      "reason": "Mamba型選択的スキャン等の再帰計算をMLIRでGPUへ下げるコンパイラ基盤で推論カーネルに近いが、対象は汎用のaffine再帰でありLLM推論としての評価が限定的なため境界。",
+      "source_url": "https://arxiv.org/abs/2606.00601",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06987",
+      "identity_tokens": [
+        "arXiv:2607.06987"
+      ],
+      "title": "UP: Unbounded Positive Asymmetric Optimization for Breaking the Exploration-Stability Dilemma",
+      "reason": "重要度サンプリングのクリッピングを再設計した強化学習の訓練目的関数の提案であり、推論時の計算やサービングとは無関係のため対象外。",
+      "source_url": "https://arxiv.org/abs/2607.06987",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35333",
+      "identity_tokens": [
+        "arXiv:2609.35333"
+      ],
+      "title": "Scalable In-Context Reinforcement Learning with Recurrent Algorithm Distillation",
+      "reason": "文脈内強化学習のための履歴圧縮アーキテクチャの提案であり、LLM推論基盤の最適化ではなくエージェント学習手法のため対象外。",
+      "source_url": "https://arxiv.org/abs/2609.35333",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.11458",
+      "identity_tokens": [
+        "arXiv:2610.11458"
+      ],
+      "title": "Generative Adversarial Loops",
+      "reason": "KV圧縮や疎注意などの推論アルゴリズムを自動探索する敵対的ループの枠組みで、推論最適化への応用例はあるが成果物は自動研究フレームワーク自体であり推論システムではないため境界。",
+      "source_url": "https://arxiv.org/abs/2610.11458",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.19709",
+      "identity_tokens": [
+        "arXiv:2610.19709"
+      ],
+      "title": "Beyond State Capacity: Why Retrieval Breaks in Mamba",
+      "reason": "Mambaの文脈内検索失敗の原因をゲート機構の観点から分析したモデル能力の研究であり、推論システムや高速化手法の提案ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2610.19709",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MIC.2025.3575493",
+      "identity_tokens": [
+        "DOI:10.1109/MIC.2025.3575493"
+      ],
+      "title": "Smaller, Smarter, Closer: The Edge of Collaborative Generative Artificial Intelligence",
+      "reason": "エッジとクラウドの協調推論を論じる展望記事であり、推論配置の論点は扱うが具体的なシステムや実測評価のない論説のため境界。",
+      "source_url": "https://doi.org/10.1109/MIC.2025.3575493",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.18828",
+      "identity_tokens": [
+        "arXiv:2409.18828"
+      ],
+      "title": "MECG-E: Mamba-based ECG Enhancer for Baseline Wander Removal",
+      "reason": "Mambaを用いた心電図のベースラインワンダ除去という医療信号処理タスク専用モデルであり、LLM推論とは無関係のため対象外。",
+      "source_url": "https://arxiv.org/abs/2409.18828",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.02099",
+      "identity_tokens": [
+        "arXiv:2212.02099"
+      ],
+      "title": "LMEC: Learnable Multiplicative Absolute Position Embedding Based Conformer for Speech Recognition",
+      "reason": "音声認識用Conformerの位置埋め込みと線形注意の改良であり、推論速度の言及は副次的でASRモデルアーキテクチャの研究のため対象外。",
+      "source_url": "https://arxiv.org/abs/2212.02099",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.05342",
+      "identity_tokens": [
+        "arXiv:2504.05342"
+      ],
+      "title": "MASS: MoErging through Adaptive Subspace Selection",
+      "reason": "複数ファインチューン済みモデルのマージと推論時ルータによる部分空間選択を提案するが、評価対象はCLIP画像分類でありLLM推論への適用が示されていないため境界。",
+      "source_url": "https://arxiv.org/abs/2504.05342",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3746027.3754597",
+      "identity_tokens": [
+        "DOI:10.1145/3746027.3754597"
+      ],
+      "title": "Parameter-Efficient Variational AutoEncoder for Multimodal Multi-Interest Recommendation",
+      "reason": "タイトルが多興味推薦システムという推薦応用を明示しており、LLM推論システムの範囲外のためタイトルスクリーンで対象外。",
+      "source_url": "https://doi.org/10.1145/3746027.3754597",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:37dc44f661b4d80459e7e3f0a3daf5a67736c1b2",
+      "identity_tokens": [
+        "SemanticScholar:37dc44f661b4d80459e7e3f0a3daf5a67736c1b2"
+      ],
+      "title": "Don’t Read Too Much Into It: Adaptive Computation for Open-Domain Question Answering",
+      "reason": "オープンドメイン質問応答のリーダに適応計算と早期終了を適用する手法であり、推論時計算の制御として関連するがタスク固有のモデル改良のため境界。",
+      "source_url": "https://www.semanticscholar.org/paper/37dc44f661b4d80459e7e3f0a3daf5a67736c1b2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.16112",
+      "identity_tokens": [
+        "arXiv:2506.16112"
+      ],
+      "title": "AutoV: Loss-Oriented Ranking for Visual Prompt Retrieval in LVLMs",
+      "reason": "大規模視覚言語モデル向けの視覚プロンプトを損失ベースで検索する手法であり、プロンプト工学の研究で推論基盤の最適化ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2506.16112",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.15976",
+      "identity_tokens": [
+        "arXiv:2506.15976"
+      ],
+      "title": "LBMamba: Locally Bi-directional Mamba",
+      "reason": "画像認識向けに局所双方向スキャンを導入したビジョンMambaバックボーンのアーキテクチャ提案であり、LLM推論とは無関係のため対象外。",
+      "source_url": "https://arxiv.org/abs/2506.15976",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d07-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

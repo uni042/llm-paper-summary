@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d10-b02::chunk-0002-of-0003",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18658",
+      "identity_tokens": [
+        "arXiv:2505.18658"
+      ],
+      "title": "Robustness in Large Language Models: A Survey of Mitigation Strategies and Evaluation Metrics",
+      "reason": "本論文『Robustness in Large Language Models: A Survey of Mitigation Strategies and Evaluation Metrics』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2505.18658",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.12621",
+      "identity_tokens": [
+        "arXiv:2312.12621"
+      ],
+      "title": "Blox: A Modular Toolkit for Deep Learning Schedulers",
+      "reason": "本論文『Blox: A Modular Toolkit for Deep Learning Schedulers』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2312.12621",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.05026",
+      "identity_tokens": [
+        "arXiv:2408.05026"
+      ],
+      "title": "Retrieval-augmented code completion for local projects using large language models",
+      "reason": "本論文『Retrieval-augmented code completion for local projects using large language models』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2408.05026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.588",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.588"
+      ],
+      "title": "All That Glitters is Not Gold: Improving Robust Retrieval-Augmented Language Models with Fact-Centric Preference Alignment",
+      "reason": "本論文『All That Glitters is Not Gold: Improving Robust Retrieval-Augmented Language Models with Fact-Centric Preference Alignment』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.588",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.12423",
+      "identity_tokens": [
+        "arXiv:2505.12423"
+      ],
+      "title": "PSC: Extending Context Window of Large Language Models via Phase Shift Calibration",
+      "reason": "PSCはRoPEの周波数を較正する小モジュールでLLMの文脈窓を拡張する手法であり、長文脈推論における位置符号化の効率的な拡張として推論システムへ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2505.12423",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.semeval-1.411",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.semeval-1.411"
+      ],
+      "title": "ShefFriday at SemEval-2026 Task 9: LLM-Based Annotation Methods for Detecting Multilingual, Multicultural and Multievent Online Polarisation",
+      "reason": "本論文『ShefFriday at SemEval-2026 Task 9: LLM-Based Annotation Methods for Detecting Multilingual, Multicultural and Multievent Online Polarisation』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://doi.org/10.18653/v1/2026.semeval-1.411",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1198",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-main.1198"
+      ],
+      "title": "SLlama: Parameter-Efficient Language Model Architecture for Enhanced Linguistic Competence Under Strict Data Constraints",
+      "reason": "本論文『SLlama: Parameter-Efficient Language Model Architecture for Enhanced Linguistic Competence Under Strict Data Constraints』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.1198",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2609.39989",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2609.39989"
+      ],
+      "title": "What Can Component-Replacement Evidence Establish? A Critical Scoping Review of Local Decisions in LLM Agents",
+      "reason": "本論文『What Can Component-Replacement Evidence Establish? A Critical Scoping Review of Local Decisions in LLM Agents』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2609.39989",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16155",
+      "identity_tokens": [
+        "arXiv:2603.16155"
+      ],
+      "title": "Dialect-Agnostic SQL Parsing via LLM-Based Segmentation",
+      "reason": "本論文『Dialect-Agnostic SQL Parsing via LLM-Based Segmentation』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2603.16155",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11163",
+      "identity_tokens": [
+        "arXiv:2605.11163"
+      ],
+      "title": "Benchmarking LLM-Based Static Analysis for Secure Smart Contract Development: Reliability, Limitations, and Potential Hybrid Solutions",
+      "reason": "本論文『Benchmarking LLM-Based Static Analysis for Secure Smart Contract Development: Reliability, Limitations, and Potential Hybrid Solutions』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2605.11163",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09600",
+      "identity_tokens": [
+        "arXiv:2607.09600"
+      ],
+      "title": "Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation",
+      "reason": "本論文『Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2607.09600",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.25045",
+      "identity_tokens": [
+        "arXiv:2610.25045"
+      ],
+      "title": "SteadyThought: Mitigating LLM Under-Thinking via Thought-Level Preference Optimization",
+      "reason": "本論文『SteadyThought: Mitigating LLM Under-Thinking via Thought-Level Preference Optimization』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2610.25045",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.05383",
+      "identity_tokens": [
+        "arXiv:2407.05383"
+      ],
+      "title": "Learning motion blur robust vision transformers for real-time UAV tracking",
+      "reason": "本論文『Learning motion blur robust vision transformers for real-time UAV tracking』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2407.05383",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s44385-025-00022-0",
+      "identity_tokens": [
+        "DOI:10.1038/s44385-025-00022-0"
+      ],
+      "title": "PodGPT: an audio-augmented large language model for research and education",
+      "reason": "本論文『PodGPT: an audio-augmented large language model for research and education』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://doi.org/10.1038/s44385-025-00022-0",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3765750",
+      "identity_tokens": [
+        "DOI:10.1145/3765750"
+      ],
+      "title": "Metareasoning for Edge-Cloud Collaborative LLM Planning for Efficient Autonomous Navigation",
+      "reason": "本論文『Metareasoning for Edge-Cloud Collaborative LLM Planning for Efficient Autonomous Navigation』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://doi.org/10.1145/3765750",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.16394",
+      "identity_tokens": [
+        "arXiv:2504.16394"
+      ],
+      "title": "ConTextual: Improving Clinical Text Summarization in LLMs with Context-preserving Token Filtering and Knowledge Graphs",
+      "reason": "本論文『ConTextual: Improving Clinical Text Summarization in LLMs with Context-preserving Token Filtering and Knowledge Graphs』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2504.16394",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.10059",
+      "identity_tokens": [
+        "arXiv:2508.10059"
+      ],
+      "title": "CodeGrad: Integrating Multi-Step Verification with Gradient-Based LLM Refinement",
+      "reason": "本論文『CodeGrad: Integrating Multi-Step Verification with Gradient-Based LLM Refinement』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2508.10059",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.25472",
+      "identity_tokens": [
+        "arXiv:2510.25472"
+      ],
+      "title": "NetEcho: From Real-World Streaming Side-Channels to Full LLM Conversation Recovery",
+      "reason": "本論文『NetEcho: From Real-World Streaming Side-Channels to Full LLM Conversation Recovery』は要旨上、推論効率・モデル実行・メモリ等の関連要素を含むが、主目的は応用・学習・評価寄りであり、LLM推論システムへの直接貢献の具体性が弱いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2510.25472",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.16611",
+      "identity_tokens": [
+        "arXiv:2406.16611"
+      ],
+      "title": "Evaluation of Language Models in the Medical Context Under Resource-Constrained Settings",
+      "reason": "本論文『Evaluation of Language Models in the Medical Context Under Resource-Constrained Settings』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2406.16611",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.11610",
+      "identity_tokens": [
+        "arXiv:2505.11610"
+      ],
+      "title": "Foundation Models for AI-Enabled Biological Design",
+      "reason": "本論文『Foundation Models for AI-Enabled Biological Design』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2505.11610",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d10-b02",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

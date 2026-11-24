@@ -1,0 +1,117 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d09-b04::chunk-0003-of-0003",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 6,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29310",
+      "identity_tokens": [
+        "arXiv:2608.29310"
+      ],
+      "title": "Super Library Agent: Joint Generation and Maintenance of Multiple Applications Beyond the Single Codebase",
+      "reason": "Super Library Agentは複数アプリの生成保守で共有ライブラリを抽出・移行するコーディングエージェントの研究であり、推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2608.29310",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 430
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.17660",
+      "identity_tokens": [
+        "arXiv:2305.17660"
+      ],
+      "title": "Plug-and-Play Document Modules for Pre-trained Models",
+      "reason": "PlugDは文書を一度だけ符号化して差し込みモジュールとして再利用し計算コストを69%削減するが、対象は事前学習モデルの文書NLPタスクでありLLM推論サービングの機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2305.17660",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 431
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.20252",
+      "identity_tokens": [
+        "arXiv:2410.20252"
+      ],
+      "title": "Adaptive Video Understanding Agent: Enhancing efficiency with dynamic frame sampling and feedback-driven reasoning",
+      "reason": "適応的フレームサンプリングとフィードバック推論で長編映像理解の効率を上げるエージェント手法であり、映像処理量削減に関わるが映像理解応用であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2410.20252",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 432
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05259",
+      "identity_tokens": [
+        "arXiv:2506.05259"
+      ],
+      "title": "Learning long range dependencies through time reversal symmetry breaking",
+      "reason": "RHELはハミルトン系の物理軌跡の有限差分で勾配を計算する学習アルゴリズムであり、学習側の研究であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2506.05259",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 433
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14672",
+      "identity_tokens": [
+        "arXiv:2510.14672"
+      ],
+      "title": "VTimeCoT: Thinking by Drawing for Video Temporal Grounding and Reasoning",
+      "reason": "VTimeCoTはプログレスバーの視覚ツールで映像時間グラウンディングを行う訓練不要枠組みであり、映像理解応用であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2510.14672",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 434
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2508.05287",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2508.05287"
+      ],
+      "title": "FlowState: Sampling Rate Invariant Time Series Forecasting",
+      "reason": "FlowStateはサンプリングレート不変な時系列基盤モデルのアーキテクチャであり、予測応用であってLLM推論システムではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2508.05287",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 435
+    }
+  ],
+  "parent_run_key": "muse-20261125-d09-b04",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 46
+}

@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d11-b03::chunk-0002-of-0003",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.12437",
+      "identity_tokens": [
+        "arXiv:2609.12437"
+      ],
+      "title": "Beyond the Query: Do Retrieval Signals Improve Adaptive Multimodal RAG Routing?",
+      "reason": "適応型マルチモーダルRAGのルーティングに検索信号が効くかを統制実験で検証する研究で、ルーティングという推論運用との関連はあるが新規機構ではなく評価が主体である。",
+      "source_url": "https://arxiv.org/abs/2609.12437",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.17248",
+      "identity_tokens": [
+        "arXiv:2609.17248"
+      ],
+      "title": "Video-HolmesV2: Can MLLMs Reason with Spatio-Temporal Audio-Visual Evidence in Long Videos?",
+      "reason": "Video-HolmesV2は長尺動画に対するMLLMの音視覚推論能力を問うベンチマーク的評価であり、能力評価のみである。",
+      "source_url": "https://arxiv.org/abs/2609.17248",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28379",
+      "identity_tokens": [
+        "arXiv:2606.28379"
+      ],
+      "title": "LEDGER: Scaling Agentic Document Editing with Dependency-aware Graph Retrieval",
+      "reason": "LEDGERは依存グラフ検索でエージェントによる長文文書編集のコンテキスト工学を拡張するが、主目的は文書編集エージェントの応用であり推論基盤への貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2606.28379",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3768987",
+      "identity_tokens": [
+        "DOI:10.1145/3768987"
+      ],
+      "title": "End-to-End Coordination of RAN and Edge Server for Latency-Critical Inference Serving over Cellular Networks",
+      "reason": "セルラーネットワーク越しの遅延制約付き推論サービングのために無線アクセス網とエッジサーバをエンドツーエンドで協調させる研究であり、推論サービングの遅延保証への直接貢献が具体的である。",
+      "source_url": "https://doi.org/10.1145/3768987",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 56
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.02909",
+      "identity_tokens": [
+        "arXiv:2401.02909"
+      ],
+      "title": "Introducing Bode: A Fine-Tuned Large Language Model for Portuguese Prompt-Based Task",
+      "reason": "Bodeはポルトガル語プロンプト課題向けに微調整した大規模言語モデルの紹介であり、低資源言語モデルの構築が主題である。",
+      "source_url": "https://arxiv.org/abs/2401.02909",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 238
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.13785",
+      "identity_tokens": [
+        "arXiv:2509.13785"
+      ],
+      "title": "Summary on The Multilingual Conversational Speech Language Model Challenge: Datasets, Tasks, Baselines, and Methods",
+      "reason": "多言語会話音声言語モデルチャレンジの課題・データ・手法の総括であり、音声言語モデルのコンペティション報告である。",
+      "source_url": "https://arxiv.org/abs/2509.13785",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 240
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.01426",
+      "identity_tokens": [
+        "arXiv:2501.01426"
+      ],
+      "title": "Unifying Specialized Visual Encoders for Video Language Models",
+      "reason": "MERVは動画言語モデル向けに複数の視覚エンコーダ表現を統合する手法であり、動画理解モデルの能力向上が主題である。",
+      "source_url": "https://arxiv.org/abs/2501.01426",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 241
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.26388",
+      "identity_tokens": [
+        "arXiv:2509.26388"
+      ],
+      "title": "Game-Time: Evaluating Temporal Dynamics in Spoken Language Models",
+      "reason": "Game-Timeは会話音声言語モデルの時間的ダイナミクスを評価するベンチマークであり、能力評価のみである。",
+      "source_url": "https://arxiv.org/abs/2509.26388",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 242
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.20436",
+      "identity_tokens": [
+        "arXiv:2503.20436"
+      ],
+      "title": "Siformer: Feature-isolated Transformer for Efficient Skeleton-based Sign Language Recognition",
+      "reason": "Siformerは骨格ベース手話認識のためのTransformerであり、手話映像の認識応用である。",
+      "source_url": "https://arxiv.org/abs/2503.20436",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 243
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.439",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.naacl-long.439"
+      ],
+      "title": "LongLeader: A Comprehensive Leaderboard for Large Language Models in Long-context Scenarios",
+      "reason": "LongLeaderは長文脈シナリオにおけるLLMの包括的リーダーボードであり、能力評価のみでシステム貢献はない。",
+      "source_url": "https://doi.org/10.18653/v1/2025.naacl-long.439",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 244
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.03042",
+      "identity_tokens": [
+        "arXiv:2411.03042"
+      ],
+      "title": "Predictor-Corrector Enhanced Transformers with Exponential Moving Average Coefficient Learning",
+      "reason": "予測子修正子法とEMA係数学習でTransformerを拡張する研究であり、モデル学習ダイナミクスのアーキテクチャ改良が主題である。",
+      "source_url": "https://arxiv.org/abs/2411.03042",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 245
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.18808",
+      "identity_tokens": [
+        "arXiv:2509.18808"
+      ],
+      "title": "SR-Eval: Evaluating LLMs on Code Generation under Stepwise Requirement Refinement",
+      "reason": "SR-Evalは段階的要件洗練下でのコード生成を評価するベンチマークであり、能力評価のみである。",
+      "source_url": "https://arxiv.org/abs/2509.18808",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 246
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.02362",
+      "identity_tokens": [
+        "arXiv:2402.02362"
+      ],
+      "title": "Unification of symmetries inside neural networks: transformer, feedforward and neural ODE",
+      "reason": "ニューラルネット内の対称性をゲージ対称性で統一する理論研究であり、推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2402.02362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 247
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23838",
+      "identity_tokens": [
+        "arXiv:2505.23838"
+      ],
+      "title": "Exploring the Landscape of Text-to-SQL with Large Language Models: Progresses, Challenges and Opportunities",
+      "reason": "Text-to-SQLの進展と課題を整理するサーベイであり、データベース質問応答技術の総説であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2505.23838",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 248
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.18671",
+      "identity_tokens": [
+        "arXiv:2506.18671"
+      ],
+      "title": "TCDiff++: An End-to-end Trajectory-Controllable Diffusion Model for Harmonious Music-Driven Group Choreography",
+      "reason": "TCDiff++は音楽駆動の集団振付生成のための軌跡制御拡散モデルであり、ダンス生成応用である。",
+      "source_url": "https://arxiv.org/abs/2506.18671",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 249
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.691",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.691"
+      ],
+      "title": "How to Improve LLMs' Performance on Specific Languages: A Perspective on LLM-Derived Language Similarity",
+      "reason": "LLM由来の言語類似度に基づき特定言語の性能を改善する方策の研究であり、言語性能の分析であって推論システムではない。",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.691",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 250
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.25826",
+      "identity_tokens": [
+        "arXiv:2509.25826"
+      ],
+      "title": "Kairos: Toward Adaptive and Parameter-Efficient Time Series Foundation Models",
+      "reason": "Kairosは時系列基盤モデルの適応的・パラメータ効率的な設計であり、時系列予測応用向けモデルの研究である。",
+      "source_url": "https://arxiv.org/abs/2509.25826",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 251
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.27254",
+      "identity_tokens": [
+        "arXiv:2603.27254"
+      ],
+      "title": "Amalgam: Hybrid LLM-PGM Synthesis Algorithm for Accuracy and Realism",
+      "reason": "AmalgamはLLMと確率グラフィカルモデルを組み合わせる合成データ生成アルゴリズムであり、データ生成応用である。",
+      "source_url": "https://arxiv.org/abs/2603.27254",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 252
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.02248",
+      "identity_tokens": [
+        "arXiv:2606.02248"
+      ],
+      "title": "Geometric Latent Reasoning Induces Shorter Generations in LLMs",
+      "reason": "幾何学的潜在推論によりLLMの生成を短くする研究は生成コストとの関連が直接あるが、主体は潜在推論の学習定式化であり推論システムとしての機構・評価は要旨で薄い。",
+      "source_url": "https://arxiv.org/abs/2606.02248",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 253
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07354",
+      "identity_tokens": [
+        "arXiv:2610.07354"
+      ],
+      "title": "Evaluating Escalation Signals for LLM Routing: Targets, Controls, and Five Ways to Fool Yourself",
+      "reason": "小モデルから大モデルへのエスカレーション信号として意味エントロピーを検証する研究はLLMルーティングに直結するが、新規ルータではなく信号の評価研究である。",
+      "source_url": "https://arxiv.org/abs/2610.07354",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 254
+    }
+  ],
+  "parent_run_key": "muse-20261125-d11-b03",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

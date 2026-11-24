@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d09-b04::chunk-0002-of-0003",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03830",
+      "identity_tokens": [
+        "arXiv:2404.03830"
+      ],
+      "title": "BiSHop: Bi-Directional Cellular Learning for Tabular Data with Generalized Sparse Modern Hopfield Model",
+      "reason": "BiSHopは疎な現代ホップフィールド層による表形式データ学習フレームワークであり、表データ応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2404.03830",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.07225",
+      "identity_tokens": [
+        "arXiv:2104.07225"
+      ],
+      "title": "Text Guide: Improving the Quality of Long Text Classification by a Text Selection Method Based on Feature Importance",
+      "reason": "Text Guideは特徴量重要度に基づくテキスト選択で長文分類の品質を上げる手法であり、分類応用であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2104.07225",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 411
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3596237",
+      "identity_tokens": [
+        "DOI:10.1145/3596237"
+      ],
+      "title": "Hierarchical Wi-Fi Trajectory Embedding for Indoor User Mobility Pattern Analysis",
+      "reason": "タイトル自体が屋内Wi-Fi軌跡埋め込みによる移動パターン分析という位置情報応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1145/3596237",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 412
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3563766.3564115",
+      "identity_tokens": [
+        "DOI:10.1145/3563766.3564115"
+      ],
+      "title": "Congestion control in machine learning clusters",
+      "reason": "機械学習訓練クラスタで公平な輻輳制御が必ずしも望ましくないことを示し不公平な制御等を提案する研究であり、学習基盤のネットワーク論であって推論システムではない。",
+      "source_url": "https://doi.org/10.1145/3563766.3564115",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 413
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.00272",
+      "identity_tokens": [
+        "arXiv:2404.00272"
+      ],
+      "title": "HSIMamba: Hyperpsectral Imaging Efficient Feature Learning with Bidirectional State Space for Classification",
+      "reason": "タイトル自体がハイパースペクトル画像分類というリモートセンシング応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2404.00272",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 414
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.15881",
+      "identity_tokens": [
+        "arXiv:2405.15881"
+      ],
+      "title": "Scaling Diffusion Mamba with Bidirectional SSMs for Efficient Image and Video Generation",
+      "reason": "DiMは双方向SSMで自己注意を置き換え線形複雑度と高速な推論を実現する拡散アーキテクチャだが、対象は画像・映像生成でありLLM推論システムではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2405.15881",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 415
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.19040",
+      "identity_tokens": [
+        "arXiv:2507.19040"
+      ],
+      "title": "FD-Bench: A Full-Duplex Benchmarking Pipeline Designed for Full Duplex Spoken Dialogue Systems",
+      "reason": "FD-Benchは全二重音声対話システムの割込み対応等を測るベンチマーク基盤であり、能力評価であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2507.19040",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 416
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.03686",
+      "identity_tokens": [
+        "arXiv:2406.03686"
+      ],
+      "title": "BindGPT: A Scalable Framework for 3D Molecular Design via Language Modeling and Reinforcement Learning",
+      "reason": "タイトル自体が言語モデリングと強化学習による3D分子設計という創薬応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2406.03686",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 417
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02684",
+      "identity_tokens": [
+        "arXiv:2409.02684"
+      ],
+      "title": "Neural timescales from a computational perspective",
+      "reason": "神経時間スケールの定義・測定・機構を計算論の観点で総説した神経科学のレビューであり、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2409.02684",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 418
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.20881",
+      "identity_tokens": [
+        "arXiv:2405.20881"
+      ],
+      "title": "S4Fusion: Saliency-Aware Selective State Space Model for Infrared and Visible Image Fusion",
+      "reason": "タイトル自体が赤外・可視画像融合という画像融合応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2405.20881",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 419
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CVPR52734.2025.00609",
+      "identity_tokens": [
+        "DOI:10.1109/CVPR52734.2025.00609"
+      ],
+      "title": "Exploring Historical Information for RGBE Visual Tracking with Mamba",
+      "reason": "タイトル自体がRGBE視覚追跡という映像追跡応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1109/CVPR52734.2025.00609",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 420
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/BIBM62325.2024.10822754",
+      "identity_tokens": [
+        "DOI:10.1109/BIBM62325.2024.10822754"
+      ],
+      "title": "ECGMamba: Towards ECG Classification with State Space Models",
+      "reason": "タイトル自体が状態空間モデルによるECG分類という医療信号応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1109/BIBM62325.2024.10822754",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 421
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.06553",
+      "identity_tokens": [
+        "arXiv:2501.06553"
+      ],
+      "title": "VASparse: Towards Efficient Visual Hallucination Mitigation via Visual-Aware Token Sparsification",
+      "reason": "VASparseは視覚認識トークンの疎化をデコード時に行い視覚幻覚を抑える差し込み型デコード手法であり、トークン削減に触れるが主目的は幻覚緩和であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2501.06553",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 422
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.09012",
+      "identity_tokens": [
+        "arXiv:2510.09012"
+      ],
+      "title": "Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy",
+      "reason": "エントロピー誘導の温度制御と投機的デコードの受容規則で自己回帰画像生成を高速化する研究であり、デコード高速化の機構はあるが対象は画像生成であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2510.09012",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 423
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2401.08867",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2401.08867"
+      ],
+      "title": "MambaTab: A Simple Yet Effective Approach for Handling Tabular Data",
+      "reason": "MambaTabは表形式データ向けのSSMモデルであり、表データ応用であってLLM推論システムではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2401.08867",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 424
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.02117",
+      "identity_tokens": [
+        "arXiv:2410.02117"
+      ],
+      "title": "Searching for Efficient Linear Layers over a Continuous Space of Structured Matrices",
+      "reason": "構造化行列の連続空間で効率的な線形層を探索し計算最適スケーリングを分析する研究であり、推論計算の削減に通じるが学習時のスケーリング則が中心であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2410.02117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 425
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.09463",
+      "identity_tokens": [
+        "arXiv:2011.09463"
+      ],
+      "title": "EasyTransfer: A Simple and Scalable Deep Transfer Learning Platform for NLP Applications",
+      "reason": "EasyTransferは分散訓練・推論エンジンを持つ転移学習プラットフォームの紹介であり、NLP応用開発基盤であって推論システムの新規機構ではない。",
+      "source_url": "https://arxiv.org/abs/2011.09463",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 426
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.06316",
+      "identity_tokens": [
+        "arXiv:2303.06316"
+      ],
+      "title": "One Neuron Saved is One Neuron Earned: On Parametric Efficiency of Quadratic Networks",
+      "reason": "二次ニューロン網のパラメータ効率を理論と実証で示した研究であり、アーキテクチャの表現力分析であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2303.06316",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 427
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.09627",
+      "identity_tokens": [
+        "arXiv:2409.09627"
+      ],
+      "title": "Spatial-Temporal Mamba Network for EEG-based Motor Imagery Classification",
+      "reason": "タイトル自体がEEGベース運動イメージ分類という脳波応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2409.09627",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 428
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.07654",
+      "identity_tokens": [
+        "arXiv:2504.07654"
+      ],
+      "title": "ms-Mamba: Multi-scale Mamba for Time-Series Forecasting",
+      "reason": "ms-Mambaは複数時間スケールのMambaブロックによる時系列予測モデルであり、予測応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2504.07654",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 429
+    }
+  ],
+  "parent_run_key": "muse-20261125-d09-b04",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 46
+}

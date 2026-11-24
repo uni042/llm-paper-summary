@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d09-b01::chunk-0001-of-0003",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MDM71479.2026.00015",
+      "identity_tokens": [
+        "DOI:10.1109/MDM71479.2026.00015"
+      ],
+      "title": "Indexing and Search Algorithms for Large Language Models on the Edge",
+      "reason": "LLM-MSはP2Pエッジネットワーク上でLLMの発見・選択とトークン予算付き複数モデル推論を行う分散アーキテクチャだが、主眼はモデル検索と選択であり推論実行系の最適化は限定的なため境界とする。",
+      "source_url": "https://doi.org/10.1109/MDM71479.2026.00015",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:0b3897e6a3a9739596c981fc49f93ac2e1b4adc5",
+      "identity_tokens": [
+        "SemanticScholar:0b3897e6a3a9739596c981fc49f93ac2e1b4adc5"
+      ],
+      "title": "X -Stream: Exploring MLLMs as Multiplexers for Multi-Stream Understanding",
+      "reason": "X-Streamは複数映像ストリームをまたぐオンライン理解を測るMLLM向けベンチマークであり、推論システムへの技術的貢献はない。",
+      "source_url": "https://www.semanticscholar.org/paper/0b3897e6a3a9739596c981fc49f93ac2e1b4adc5",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 92
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3672608.3707747",
+      "identity_tokens": [
+        "DOI:10.1145/3672608.3707747"
+      ],
+      "title": "Mixture of Modular Experts: Distilling Knowledge from a Multilingual Teacher into Specialized Modular Language Models",
+      "reason": "多言語教師からの知識蒸留とモジュール型MoEで小型で効率的な多言語モデルを作る研究であり、モデル圧縮の側面はあるが学習手法が中心で推論機構の提案ではないため境界とする。",
+      "source_url": "https://doi.org/10.1145/3672608.3707747",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 114
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.18786",
+      "identity_tokens": [
+        "arXiv:2409.18786"
+      ],
+      "title": "A Survey on the Honesty of Large Language Models",
+      "reason": "LLMの誠実性に関する定義・評価・改善策を整理したサーベイであり、推論システムの効率化への貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2409.18786",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 239
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/nargab/lqad021",
+      "identity_tokens": [
+        "DOI:10.1093/nargab/lqad021"
+      ],
+      "title": "TIS Transformer: remapping the human proteome using deep learning",
+      "reason": "タイトル自体がヒトプロテオームの再マッピングという生物学応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1093/nargab/lqad021",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 240
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03055",
+      "identity_tokens": [
+        "arXiv:2410.03055"
+      ],
+      "title": "Permissive Information-Flow Analysis for Large Language Models",
+      "reason": "LLMクエリに対する情報フロー（テイント）ラベルの伝播方式を提案するセキュリティ分析であり、推論効率や実行系への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2410.03055",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 241
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10996",
+      "identity_tokens": [
+        "arXiv:2502.10996"
+      ],
+      "title": "RAS: Retrieval-And-Structuring for Knowledge-Intensive LLM Generation",
+      "reason": "RASは検索結果を質問固有の知識グラフへ構造化してRAG生成の推論精度を上げる枠組みであり、推論システムの計算・メモリ効率への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2502.10996",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 242
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.13940",
+      "identity_tokens": [
+        "arXiv:2408.13940"
+      ],
+      "title": "Derailer-Rerailer: Adaptive Verification for Efficient and Reliable Language Model Reasoning",
+      "reason": "Derailer-Rerailerは推論の安定性を軽量に評価し必要な場合だけ検証を追加することで複数回推論のコストを抑える枠組みだが、プロンプト水準の制御であり実行系機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2408.13940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 243
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.15801",
+      "identity_tokens": [
+        "arXiv:2505.15801"
+      ],
+      "title": "VerifyBench: Benchmarking Reference-based Reward Systems for Large Language Models",
+      "reason": "VerifyBenchは参照ベース報酬システムを評価するベンチマークであり、強化学習の検証器評価が目的で推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2505.15801",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 244
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TNANO.2025.3531721",
+      "identity_tokens": [
+        "DOI:10.1109/TNANO.2025.3531721"
+      ],
+      "title": "On the Dependability of Bidirectional Encoder Representations from Transformers (BERT) to Soft Errors",
+      "reason": "異なる浮動小数点形式で実装したBERTへのソフトエラー注入による依存性分析であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://doi.org/10.1109/TNANO.2025.3531721",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 245
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-0460",
+      "identity_tokens": [
+        "DOI:10.52202/085713-0460"
+      ],
+      "title": "CIDD: Collaborative Intelligence for Structure-Based Drug Design Empowered by LLMs",
+      "reason": "タイトル自体がLLMを活用した構造ベース創薬設計という医薬応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.52202/085713-0460",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 246
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.568",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.emnlp-main.568"
+      ],
+      "title": "On the In-context Generation of Language Models",
+      "reason": "言語モデルのin-context生成能力の起源と影響要因を潜在変数モデルと合成データ実験で分析した研究であり、推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.568",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 247
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.18583",
+      "identity_tokens": [
+        "arXiv:2409.18583"
+      ],
+      "title": "Hit the Sweet Spot! Span-Level Ensemble for Large Language Models",
+      "reason": "SweetSpanは複数LLMが共有プレフィックスからスパン単位で候補を生成し相互評価で統合するデコード時アンサンブルだが、主目的は生成品質であり計算効率の改善ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2409.18583",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 248
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11227-025-07798-3",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-025-07798-3"
+      ],
+      "title": "Efficient configuration of heterogeneous resources and task scheduling strategies in deep learning auto-tuning systems",
+      "reason": "Ray Tuneを拡張した異種分散環境でのハイパーパラメータ探索・学習基盤の資源配分とチェックポイント最適化であり、学習側の基盤であって推論システムではない。",
+      "source_url": "https://doi.org/10.1007/s11227-025-07798-3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 249
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ASRU65441.2025.11434680",
+      "identity_tokens": [
+        "DOI:10.1109/ASRU65441.2025.11434680"
+      ],
+      "title": "Joint ASR and Speech Attribute Prediction for Conversational Dysarthric Speech Analysis with Multimodal Language Models",
+      "reason": "タイトル自体が会話型構音障害音声の分析という医療・音声応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1109/ASRU65441.2025.11434680",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 250
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2512.07404",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2512.07404"
+      ],
+      "title": "Do LLMs Trust the Code They Write?",
+      "reason": "LLM内部のコード正しさ表現を隠れ状態の対比で抽出する解釈可能性研究であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2512.07404",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 251
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.05807",
+      "identity_tokens": [
+        "arXiv:2601.05807"
+      ],
+      "title": "Fusion Matters: Length-Aware Analysis of Positional-Encoding Fusion in Transformers",
+      "reason": "位置エンコーディングとトークン埋め込みの融合方式をテキスト分類で比較した実証研究であり、推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2601.05807",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 252
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13206",
+      "identity_tokens": [
+        "arXiv:2604.13206"
+      ],
+      "title": "Numerical Instability and Chaos: Quantifying the Unpredictability of Large Language Models",
+      "reason": "浮動小数点丸め誤差がTransformer層を伝播してカオス的に増幅する現象の分析であり、推論機構の提案ではなく信頼性の解析にとどまる。",
+      "source_url": "https://arxiv.org/abs/2604.13206",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 253
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.04378",
+      "identity_tokens": [
+        "arXiv:2606.04378"
+      ],
+      "title": "DLLG: Dynamic Logit-Level Gating of LLM Experts",
+      "reason": "DLLGは複数専門LLMのロジットをトークン単位で学習済みゲートにより融合する推論時アンサンブルだが、主目的は推論品質の向上であり効率化機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2606.04378",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 254
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.23141",
+      "identity_tokens": [
+        "arXiv:2610.23141"
+      ],
+      "title": "LexPilot: Benchmarking the Proactive Interaction Ability of Legal LLMs with Laypeople in Chinese Civil Case Consultation",
+      "reason": "タイトル自体が中国の民事相談における法律LLMの対話能力ベンチマークという法律応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2610.23141",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 255
+    }
+  ],
+  "parent_run_key": "muse-20261125-d09-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

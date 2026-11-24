@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d12-b02::chunk-0002-of-0003",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14200",
+      "identity_tokens": [
+        "arXiv:2602.14200"
+      ],
+      "title": "TS-Haystack: A Multi-Task Retrieval Benchmark for Long-Context Time-Series Reasoning",
+      "reason": "時系列言語モデルの長文脈検索能力を測るTS-Haystackはベンチマークの提案であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2602.14200",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01820",
+      "identity_tokens": [
+        "arXiv:2603.01820"
+      ],
+      "title": "How do standard time series forecasting benchmarks translate to finance? A broad study of risk adjusted performance",
+      "reason": "標準的な時系列予測ベンチマークが金融のリスク調整後成績へどう移るかを検証する研究であり、対象は資産予測の評価であってLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2603.01820",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24295",
+      "identity_tokens": [
+        "arXiv:2603.24295"
+      ],
+      "title": "RS-SSM: Refining Forgotten Specifics in State Space Model for Video Semantic Segmentation",
+      "reason": "状態空間圧縮で失われる詳細を補うRS-SSMは動画意味セグメンテーション向けの視覚モデルであり、LLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2603.24295",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06622",
+      "identity_tokens": [
+        "arXiv:2604.06622"
+      ],
+      "title": "Balancing Efficiency and Restoration: Lightweight Mamba-Based Model for CT Metal Artifact Reduction",
+      "reason": "CT金属アーチファクト除去のための軽量MambaモデルMARMambaは医用画像復元の応用であり、LLM推論システムとは分野が異なる。",
+      "source_url": "https://arxiv.org/abs/2604.06622",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.04217",
+      "identity_tokens": [
+        "arXiv:2605.04217"
+      ],
+      "title": "Jordan-RoPE: Non-Semisimple Relative Positional Encoding via Complex Jordan Blocks",
+      "reason": "RoPEやALiBiを一般化しジョルダンブロックで相対位置符号化を構成するJordan-RoPEは注意機構の基礎理論であり、推論効率への直接の機構や評価は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2605.04217",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23027",
+      "identity_tokens": [
+        "arXiv:2605.23027"
+      ],
+      "title": "PIMbot: A Self-Adaptive Attack Framework for Adversarial Manipulation of Multi-Robot Reinforcement Learning",
+      "reason": "複数ロボットの強化学習における協調を敵対的に操作する攻撃枠組みPIMbotはマルチロボットRLの研究であり、LLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2605.23027",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31096",
+      "identity_tokens": [
+        "arXiv:2605.31096"
+      ],
+      "title": "iVGR: Internalizing Visually Grounded Reasoning for MLLMs with Reinforcement Learning",
+      "reason": "視覚的根拠づけCoTを強化学習で内面化するiVGRはMLLMの推論品質を扱うが、対象は学習による推論様式の獲得であり推論システムの効率機構ではない。",
+      "source_url": "https://arxiv.org/abs/2605.31096",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13894",
+      "identity_tokens": [
+        "arXiv:2606.13894"
+      ],
+      "title": "Gefen: Optimized Stochastic Optimizer",
+      "reason": "AdamWのモーメント状態を共有・量子化して学習メモリを最大8倍削減するGefenは学習用オプティマイザの研究であり、推論への適用は示されていない学習単独の効率化である。",
+      "source_url": "https://arxiv.org/abs/2606.13894",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31830",
+      "identity_tokens": [
+        "arXiv:2606.31830"
+      ],
+      "title": "PriorEye: Geospatial Visual Priors for End-to-End Autonomous Driving",
+      "reason": "街路レベルの視覚事前情報を記憶拡張で使う自動運転PriorEyeは運転知覚の能力研究であり、LLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2606.31830",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15257",
+      "identity_tokens": [
+        "arXiv:2607.15257"
+      ],
+      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+      "reason": "オープン領域の情報探索エージェント協調を頑健化するSearchOS-V1はエージェントの作業過程の改善が主眼であり、推論実行の効率機構ではない。",
+      "source_url": "https://arxiv.org/abs/2607.15257",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06171",
+      "identity_tokens": [
+        "arXiv:2608.06171"
+      ],
+      "title": "Routing Is Least Learnable Where It Is Most Valuable: Bounds on Representation Routing for Web Agents",
+      "reason": "ウェブエージェントの観測モード選択の学習可能性をベンチマークで測る分析研究であり、推論システムへの技術的提案は含まれない。",
+      "source_url": "https://arxiv.org/abs/2608.06171",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.05274",
+      "identity_tokens": [
+        "arXiv:2609.05274"
+      ],
+      "title": "How to Speculate about Uncertainty in Agentic Coding? A Draft-Model Gate Method",
+      "reason": "投機的デコードのドラフトモデルを逆用し、エージェント出力トークンから失敗予測信号を得るSpeculative Uncertainty。ドラフトモデルの推論時利用ではあるが、目的は高速化ではなくエージェントの信頼性判定である。",
+      "source_url": "https://arxiv.org/abs/2609.05274",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29217",
+      "identity_tokens": [
+        "arXiv:2609.29217"
+      ],
+      "title": "AdaptDuplex: From Static to Adaptive Full-Duplex Spoken Dialogue",
+      "reason": "全二重音声対話でサブ秒レイテンシの下で適応的な動作点を持つAdaptDuplexは、対話モデルのレイテンシ設計として関連するが、主眼は対話の自然さであり汎用推論機構ではない。",
+      "source_url": "https://arxiv.org/abs/2609.29217",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.11156",
+      "identity_tokens": [
+        "arXiv:2610.11156"
+      ],
+      "title": "MiDashengLM-Spatial: Unifying General Audio Understanding and Spatial Awareness",
+      "reason": "モノラル音声理解と空間音響の認識を統合するMiDashengLM-Spatialは音声言語モデルの能力研究であり、推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.11156",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.30949",
+      "identity_tokens": [
+        "arXiv:2610.30949"
+      ],
+      "title": "IQuest-Q1: Advancing Foundation Capabilities for Agentic CLI Systems",
+      "reason": "320B総パラメータのMoEエージェント基盤モデルIQuest-Q1の学習報告であり、事前学習と中間学習の安定化が主眼で推論・サービングの新規機構は示されていない。",
+      "source_url": "https://arxiv.org/abs/2610.30949",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18795",
+      "identity_tokens": [
+        "arXiv:2403.18795"
+      ],
+      "title": "Gamba: Marry Gaussian Splatting with Mamba for single view 3D reconstruction",
+      "reason": "ガウススプラッティングとMambaを組み合わせ単一画像から3D再構成を高速に行うGambaは3D生成の応用であり、LLM推論とは対象が異なる。",
+      "source_url": "https://arxiv.org/abs/2403.18795",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.14717",
+      "identity_tokens": [
+        "arXiv:2408.14717"
+      ],
+      "title": "Text2SQL is Not Enough: Unifying AI and Databases with TAG",
+      "reason": "自然言語質問に対し言語モデルとデータベースの計算を統合するTAGは、LMを用いるデータシステムの実行パラダイムとして関連するが、推論効率ではなく質問応答の実行方式が主題である。",
+      "source_url": "https://arxiv.org/abs/2408.14717",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bib/bbae163",
+      "identity_tokens": [
+        "DOI:10.1093/bib/bbae163"
+      ],
+      "title": "Self-supervised learning on millions of primary RNA sequences from 72 vertebrates improves sequence-based RNA splicing prediction",
+      "reason": "72種の脊椎動物RNA配列で事前学習したSpliceBERTによるスプライシング予測はゲノム配列解析の応用であり、LLM推論システムとは分野が異なる。",
+      "source_url": "https://doi.org/10.1093/bib/bbae163",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23189",
+      "identity_tokens": [
+        "arXiv:2505.23189"
+      ],
+      "title": "TrackVLA: Embodied Visual Tracking in the Wild",
+      "reason": "一人称視覚で対象を追跡するTrackVLAは身体性AIの視覚追跡モデルの研究であり、VLAの能力が主眼で推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2505.23189",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02705",
+      "identity_tokens": [
+        "arXiv:2410.02705"
+      ],
+      "title": "ControlAR: Controllable Image Generation with Autoregressive Models",
+      "reason": "制御画像をトークン化して自己回帰画像生成へ組み込むControlARは画像生成の制御手法であり、LLM推論の効率・実行とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2410.02705",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d12-b02",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}
