@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-15T23:14:50.905770+00:00",
+  "generated_at": "2026-11-24T04:10:35.666207+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 2,
+  "count": 3,
   "worker_counts": {
     "scheduled-chat-00": 1,
-    "scheduled-chat-30": 0,
+    "scheduled-chat-30": 1,
     "scheduled-chat-45": 1
   },
   "entries": [
@@ -41,7 +41,7 @@
       "file_bytes": 12320,
       "source_sha256": "c4d7519b45848910e7c1c69c3dac0604d9c30c450ba11c0094c466b539808ea6",
       "source_git_blob_sha": "6bcb21df0caebb67354b5df7b6b8eca98441f202",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.941933,
@@ -50,6 +50,26 @@
         "method_chars": 1101,
         "evaluation_chars": 762,
         "limitation_chars": 472
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2601.20168-efficient-token-pruning-for-llada-v.md",
+      "canonical_id": "arXiv:2601.20168",
+      "title": "Efficient Token Pruning for LLaDA-V",
+      "file_bytes": 15869,
+      "source_sha256": "0ac2166274f5cca10a37428dabaf249e5c4007a333be9cca212dee81e636cba8",
+      "source_git_blob_sha": "5944b1ba0ae9c9754fcd94e42f38d71dc5c5710f",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.998358,
+      "quality_metrics": {
+        "body_chars": 3735,
+        "method_chars": 1168,
+        "evaluation_chars": 834,
+        "limitation_chars": 212
       },
       "mechanical_failures": [],
       "warnings": []
