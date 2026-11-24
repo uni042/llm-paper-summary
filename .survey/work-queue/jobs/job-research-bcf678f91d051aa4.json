@@ -35,10 +35,15 @@
   "selection_reason": "マルチノードLLM配置でNVLink単独利用が帯域上限となる問題に対し、PCIeとRDMA NICを含む異種リンクを集約する集合通信フレームワークFlexLinkを提案し、適応的負荷分散でAllReduceやAllGatherの帯域を最大27％高めるNCCL互換の通信高速化である。",
   "semantic_scholar_id": "d1d24efa437c1d5684af5bf1ccd34c0277d97246",
   "source_url": "https://arxiv.org/abs/2510.15882",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlexLink: Boosting your NVLink Bandwidth by 27% without accuracy concern",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-24T04:07:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2510.15882-flexlink-boosting-your-nvlink-bandwidth-by-27-without-accuracy-concern.md",
+  "represented_canonical_id": "arXiv:2510.15882",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

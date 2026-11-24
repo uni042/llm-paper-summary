@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（636本）
+## 自動生成の論文一覧（638本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2052,6 +2052,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   デコード専用GPUの遊休SMへPEFT微調整を同居させ、KVキャッシュの空き領域の貸し出しと遅延予測に基づくSM配分で、推論QoSを守りつつ微調整スループットを平均46.2パーセント高めるサービング方式。
 
+- **2025-11 · [FastForward Pruning: Efficient LLM Pruning via Single-Step Reinforcement Learning](2025-2511.18977-fastforward-pruning-efficient-llm-pruning-via-single-step-reinforcement-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層別疎性の配分探索を、予算充足を決定的マッピングへ分離した単一ステップ強化学習と進行カリキュラムで高速化し、リッジ回帰較正と組み合わせる構造化枝刈りフレームワーク。
+
 - **2025-11 · [DyOrc: Efficient Serving of Dynamic Machine Learning Workflows](2025-05067fc6be56-dyorc-efficient-serving-of-dynamic-machine-learning-workflows.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   条件分岐で呼ぶ部品が変わる動的ワークフローを、部品ごとの独立サービス化とリクエストをまたぐバッチ処理、マルコフ予測による投機的スケジューリングと先行ロード、同一デバイス内のゼロコピー受け渡しで高速化し、実測で平均遅延を最大198%改善したサービングシステム。
@@ -2075,6 +2079,10 @@
 - **2025-10 · [Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing](2025-2510.16040-kelle-co-design-kv-caching-and-edram-for-efficient-llm-serving-in-edge-c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Kelleは、端末上で大規模言語モデル（LLM）を推論する際、鍵・値の中間表現（KVキャッシュ）を面積効率の高い組込みDRAM（eDRAM）へ置き、記憶内容の削除・再計算・リフレッシュ頻度・演算順序まで一体で最適化する方式である。原著の合成・モデル評価では、元のSRAM構成に対し平均3.94倍の遅延改善と4.46倍のエネルギー効率改善を報告する。
+
+- **2025-10 · [Improving LLM Reasoning via Dependency-Aware Query Decomposition and Logic-Parallel Content Expansion](2025-2510.24390-improving-llm-reasoning-via-dependency-aware-query-decomposition-and-log.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  回答を要点と依存グラフへ分解して独立な要点を並行展開し、複数質問間では計算集約的な要点生成とメモリ集約的な展開を重ねるパイプラインで、推論の速度と品質を両立させる枠組み。
 
 - **2025-10 · [From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs](2025-2510.05632-systematic-study-multicore-npu-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2207,7 +2215,7 @@
   仮想 トークン Counter（VTC）は、要求数ではなくクライアントごとに実際に処理した入力・出力トークンをサービス量として数え、累積サービス量が少ないクライアントから新しい要求を実行バッチへ入れる。空きGPUを意図的に遊ばせず、公平性と高い利用率を両立することを狙う。
 
 - **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：97  
+  実装：✓ ・ リポジトリ内被引用：98  
   根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
 - **2024-05 · [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)**  

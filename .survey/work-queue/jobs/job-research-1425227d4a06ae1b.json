@@ -35,10 +35,15 @@
   "selection_reason": "vLLM上に構築したOpt4GPTQが、共有メモリバッファリング・ベクトル化メモリロード・インラインアセンブリの3最適化で異種アクセラレータ上の4ビットGPTQ量子化LLM推論を最大84.42%高速化しており、量子化推論への直接貢献が確認できる。",
   "semantic_scholar_id": "89a7cc5290697da4cbf9ed8c65a142cdc9b743bd",
   "source_url": "https://arxiv.org/abs/2511.19438",
-  "status": "ready",
+  "status": "superseded",
   "title": "Opt4GPTQ: Co-Optimizing Memory and Computation for 4-bit GPTQ Quantized LLM Inference on Heterogeneous Platforms",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-24T04:07:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2511.19438-opt4gptq-co-optimizing-memory-and-computation-for-4-bit-gptq-quantized-l.md",
+  "represented_canonical_id": "arXiv:2511.19438",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

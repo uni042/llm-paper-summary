@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（233本）
+## 自動生成の論文一覧（234本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -755,6 +755,10 @@
 - **2025-10 · [Sparse Query Attention (SQA): A Computationally Efficient Attention Mechanism with Query Heads Reduction](2025-2510.01817-sparse-query-attention-sqa-a-computationally-efficient-attention-mechani.md)**  
   実装：[✓](https://github.com/RxAI-dev/rxnn-Attention) ・ リポジトリ内被引用：0  
   キー・バリューではなくクエリヘッドを減らすことで注意スコア計算の演算量そのものをHq/H倍へ削り、計算律速な学習・長文処理で最大約3.4倍の高速化を示した注意アーキテクチャ。
+
+- **2025-10 · [RECON: Reasoning with Condensation for Efficient Retrieval-Augmented Generation](2025-2510.10448-recon-reasoning-with-condensation-for-efficient-retrieval-augmented-gene.md)**  
+  実装：[✓](https://github.com/allfornancy/RECON) ・ リポジトリ内被引用：0  
+  RL型RAGの推論ループ内に、関連性事前学習と多観点蒸留で訓練した専用要約器を挟み、文脈長を35%・推論時間を30.9%削減しながらQA精度も上げた文脈圧縮の枠組み。
 
 - **2025-10 · [RCPU: Rotation-Constrained Error Compensation for Structured Pruning of a Large Language Model](2025-2510.07782-rcpu-rotation-constrained-error-compensation-for-structured-pruning-of-a.md)**  
   実装：[✓](https://github.com/harutaro/rcpu) ・ リポジトリ内被引用：0  

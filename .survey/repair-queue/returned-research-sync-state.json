@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "f69515733e4286f5e7bf1da67443dc881cfd861e",
+  "base_commit": "4bdb5e1565782231c4d21c8246005795d3245c6e",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -422,11 +422,13 @@
     "2025-2510.08999-sqs-bayesian-dnn-compression-through-sparse-quantized-sub-distributions.json",
     "2025-2510.09017-value-state-gated-attention-for-mitigating-extreme-token-phenomena-in-transformers.json",
     "2025-2510.09932-automatically-generating-ml-compiler-backends-from-tensor-accelerator-isa-descriptions.json",
+    "2025-2510.10448-recon-reasoning-with-condensation-for-efficient-retrieval-augmented-generation.json",
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
     "2025-2510.13860-shishulm-achieving-optimal-and-efficient-parameterization-with-low-attention-transformer-models.json",
     "2025-2510.14444-a-free-lunch-in-llm-compression-revisiting-retraining-after-pruning.json",
     "2025-2510.14853-rewiring-experts-on-the-fly-continuous-rerouting-for-better-online-adaptation-of-moe-models.json",
     "2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-monolithic-forwarding.json",
+    "2025-2510.15882-flexlink-boosting-your-nvlink-bandwidth-by-27-without-accuracy-concern.json",
     "2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.json",
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
     "2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-point-exponent-remapping-and-parameter-sharing.json",
@@ -435,6 +437,7 @@
     "2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.json",
     "2025-2510.22101-scaling-up-efficient-small-language-models-serving-and-deployment-for-semantic-job-search.json",
     "2025-2510.23652-the-structural-scalpel-automated-contiguous-layer-pruning-for-large-language-models.json",
+    "2025-2510.24390-improving-llm-reasoning-via-dependency-aware-query-decomposition-and-logic-parallel-content-expansion.json",
     "2025-2510.25977-neuronmlp-efficient-llm-inference-via-singular-value-decomposition-compression-and-tiling-on-aws-trainium.json",
     "2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-language-models.json",
     "2025-2511.00315-language-modeling-with-factorization-memory.json",
@@ -451,6 +454,8 @@
     "2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-on-model-as-a-service-platforms.json",
     "2025-2511.12500-iris-first-class-multi-gpu-programming-experience-in-triton.json",
     "2025-2511.18692-vlm-in-a-flash-io-efficient-sparsification-of-vision-language-model-via-neuron-chunking.json",
+    "2025-2511.18977-fastforward-pruning-efficient-llm-pruning-via-single-step-reinforcement-learning.json",
+    "2025-2511.19438-opt4gptq-co-optimizing-memory-and-computation-for-4-bit-gptq-quantized-llm-inference-on-heterogeneous-platforms.json",
     "2025-2511.19518-towards-efficient-vlms-information-theoretic-driven-compression-via-adaptive-structural-pruning.json",
     "2025-2511.19822-mosaic-pruning-a-hierarchical-framework-for-generalizable-pruning-of-mixture-of-experts-models.json",
     "2025-2511.21910-platinum-path-adaptable-lut-based-accelerator-tailored-for-low-bit-weight-matrix-multiplication.json",
@@ -52909,6 +52914,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2510.10448": {
+      "order": [
+        "2026-11-24T03:58:42+00:00",
+        "2025-2510.10448-recon-reasoning-with-condensation-for-efficient-retrieval-augmented-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.15882": {
+      "order": [
+        "2026-11-24T04:00:19+00:00",
+        "2025-2510.15882-flexlink-boosting-your-nvlink-bandwidth-by-27-without-accuracy-concern.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.24390": {
+      "order": [
+        "2026-11-24T04:01:54+00:00",
+        "2025-2510.24390-improving-llm-reasoning-via-dependency-aware-query-decomposition-and-logic-parallel-content-expansion.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2511.18977": {
+      "order": [
+        "2026-11-24T04:03:29+00:00",
+        "2025-2511.18977-fastforward-pruning-efficient-llm-pruning-via-single-step-reinforcement-learning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2511.19438": {
+      "order": [
+        "2026-11-24T04:05:05+00:00",
+        "2025-2511.19438-opt4gptq-co-optimizing-memory-and-computation-for-4-bit-gptq-quantized-llm-inference-on-heterogeneous-platforms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67090,6 +67140,21 @@
     "arxiv:2510.09017": [
       "papers/inference/99-other-inference-systems/2025-2510.09017-value-state-gated-attention-for-mitigating-extreme-token-phenomena-in-tr.md",
       "papers/inference/99-other-inference-systems/2025-2510.09017-value-state-gated-attention-for-mitigating-extreme-token-phenomena-in-tr.md"
+    ],
+    "arxiv:2510.10448": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2510.10448-recon-reasoning-with-condensation-for-efficient-retrieval-augmented-gene.md"
+    ],
+    "arxiv:2510.15882": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2510.15882-flexlink-boosting-your-nvlink-bandwidth-by-27-without-accuracy-concern.md"
+    ],
+    "arxiv:2510.24390": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.24390-improving-llm-reasoning-via-dependency-aware-query-decomposition-and-log.md"
+    ],
+    "arxiv:2511.18977": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.18977-fastforward-pruning-efficient-llm-pruning-via-single-step-reinforcement-.md"
+    ],
+    "arxiv:2511.19438": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2511.19438-opt4gptq-co-optimizing-memory-and-computation-for-4-bit-gptq-quantized-l.md"
     ]
   }
 }
