@@ -1,0 +1,861 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d09-b03",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 50,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JIOT.2025.3635092",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2025.3635092"
+      ],
+      "title": "End-to-End Autonomous Driving: From Classic Paradigm to Large Model Empowerment—A Comprehensive Survey",
+      "reason": "タイトル自体が自動運転の包括的サーベイという運転応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1109/JIOT.2025.3635092",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 340
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.20090",
+      "identity_tokens": [
+        "arXiv:2604.20090"
+      ],
+      "title": "Less Languages, Less Tokens: An Efficient Unified Logic Cross-lingual Chain-of-Thought Reasoning Framework",
+      "reason": "UL-XCoTは言語選択とデコード中の低品質推論パス枝刈りで多言語CoTのトークンと遅延を削減する推論時枠組みだが、対象は多言語推論のサンプリング制御であり実行系機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2604.20090",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 341
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22944",
+      "identity_tokens": [
+        "arXiv:2512.22944"
+      ],
+      "title": "Multiple Token Divergence: Measuring and Steering In-Context Computation Density",
+      "reason": "MTDは複数予測ヘッド間の発散で文脈内計算量を測り、Divergence Steeringで生成の計算的性質を制御するデコード手法だが、効率化ではなく計算特性の測定と制御が主眼であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2512.22944",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 342
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16381",
+      "identity_tokens": [
+        "arXiv:2605.16381"
+      ],
+      "title": "StreamPro: From Reactive Perception to Proactive Decision-Making in Streaming Video",
+      "reason": "StreamProはストリーミング映像の能動的応答をSFTとGRPOで訓練する枠組みであり、学習手法が中心で推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2605.16381",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 343
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08936",
+      "identity_tokens": [
+        "arXiv:2609.08936"
+      ],
+      "title": "AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing",
+      "reason": "AuKは音声生成・編集の基盤モデルのデータ構築と訓練を報告する技術報告であり、音声応用であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2609.08936",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 344
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12665",
+      "identity_tokens": [
+        "arXiv:2604.12665"
+      ],
+      "title": "Hypergraph-State Collaborative Reasoning for Multi-Object Tracking",
+      "reason": "タイトル自体が複数物体追跡という映像解析応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2604.12665",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 345
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.05923",
+      "identity_tokens": [
+        "arXiv:2603.05923"
+      ],
+      "title": "Learning Next Action Predictors from Human-Computer Interaction",
+      "reason": "人間のコンピュータ操作履歴から次行動を予測するユーザーモデリングのデータとモデルであり、応用研究であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2603.05923",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 346
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09969",
+      "identity_tokens": [
+        "arXiv:2605.09969"
+      ],
+      "title": "The Truth Lies Somewhere in the Middle (of the Generated Tokens)",
+      "reason": "生成トークンの隠れ状態の平均プーリングが意味表現として優れることを示した表現解析であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2605.09969",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 347
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.06467",
+      "identity_tokens": [
+        "arXiv:2403.06467"
+      ],
+      "title": "Point Mamba: A Novel Point Cloud Backbone Based on State Space Model with Octree-Based Ordering Strategy",
+      "reason": "Point Mambaは八分木順序付けによる点群処理用SSMバックボーンであり、3D視覚応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2403.06467",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 348
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22323",
+      "identity_tokens": [
+        "arXiv:2601.22323"
+      ],
+      "title": "Models Under SCOPE: Scalable and Controllable Routing via Pre-hoc Reasoning",
+      "reason": "SCOPEはモデルのコストと性能を推論に基づいて予測し、クエリごとに適切なモデルへ振り分けるルーティング枠組みであり、精度を保ちながら推論コストを削減するサービング機構である。",
+      "source_url": "https://arxiv.org/abs/2601.22323",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 349
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10698",
+      "identity_tokens": [
+        "arXiv:2602.10698"
+      ],
+      "title": "AugVLA-3D: Depth-Driven Feature Augmentation for Vision-Language-Action Models",
+      "reason": "AugVLA-3Dは深度推定の3D特徴をVLAモデルへ融合するロボット制御の枠組みであり、操作タスク応用であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2602.10698",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 350
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.07895",
+      "identity_tokens": [
+        "arXiv:2606.07895"
+      ],
+      "title": "TBD-VLA: Temporal Block Diffusion Vision Language Action Model",
+      "reason": "TBD-VLAは行動系列を時間ブロック化しブロック内拡散で並列デコードすることでVLAの推論遅延を下げるが、対象はロボット行動トークンの生成でありLLM推論の一般機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2606.07895",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 351
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.09354",
+      "identity_tokens": [
+        "arXiv:2512.09354"
+      ],
+      "title": "Video-QTR: Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding",
+      "reason": "Video-QTRはクエリ駆動で知覚資源を配分し長編映像の視覚トークンとメモリ消費を減らす軽量枠組みだが、映像理解のパイプライン設計であり汎用推論機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2512.09354",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 352
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.13602",
+      "identity_tokens": [
+        "arXiv:2602.13602"
+      ],
+      "title": "Towards Sparse Video Understanding and Reasoning",
+      "reason": "ReViSeは情報量の高いフレームだけを選び要約を状態として早期停止する映像QAエージェントで計算量を減らすが、映像応用の処理戦略であり推論実行系の機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2602.13602",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 353
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.01002",
+      "identity_tokens": [
+        "arXiv:2604.01002"
+      ],
+      "title": "Query-Conditioned Evidential Keyframe Sampling for MLLM-Based Long-Form Video Understanding",
+      "reason": "クエリ条件付きの証拠スコアで長編映像からキーフレームを選ぶサンプリング手法であり、MLLMの文脈・計算コスト削減に関わるが映像前処理の学習手法であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2604.01002",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 354
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09568",
+      "identity_tokens": [
+        "arXiv:2604.09568"
+      ],
+      "title": "EvoDesign: Agentic Editable Diagram Creation via Design Expertise Evolution",
+      "reason": "EvoDesignは編集可能な図表作成を行うエージェント枠組みであり、デザイン生成応用であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2604.09568",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 355
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.24203",
+      "identity_tokens": [
+        "arXiv:2604.24203"
+      ],
+      "title": "Agentic Witnessing: Pragmatic and Scalable TEE-Enabled Privacy-Preserving Auditing",
+      "reason": "Agentic WitnessingはTEE内のLLM監査者へ二値質問を行うプライバシー保護監査枠組みであり、検証の応用であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2604.24203",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 356
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20745",
+      "identity_tokens": [
+        "arXiv:2605.20745"
+      ],
+      "title": "The Hidden Signal of Verifier Strictness: Controlling and Improving Step-Wise Verification via Selective Latent Steering",
+      "reason": "VerifySteerは検証器の厳格さを隠れ状態ステアリングで制御する手法であり、検証品質の制御であって推論効率の機構ではない。",
+      "source_url": "https://arxiv.org/abs/2605.20745",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 357
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30318",
+      "identity_tokens": [
+        "arXiv:2606.30318"
+      ],
+      "title": "Chronos: A Physics-Informed Full-History Framework for Non-Markovian Long-Horizon Manipulation",
+      "reason": "Chronosは非マルコフな長期間操作のために観測履歴を潜在状態とするロボット方策であり、操作応用であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2606.30318",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 358
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3779212.3790247",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790247"
+      ],
+      "title": "Wave: Leveraging Architecture Observation for Privacy-Preserving Model Oversight",
+      "reason": "Waveはマイクロアーキテクチャ観測で実行中モデルのアーキテクチャを推定しモデル提供者を監視するプライバシー保護型オーバーサイト手法であり、セキュリティ応用であって推論システムの効率化ではない。",
+      "source_url": "https://doi.org/10.1145/3779212.3790247",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 359
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.11426",
+      "identity_tokens": [
+        "arXiv:2512.11426"
+      ],
+      "title": "AgentBalance: Backbone-then-Topology Design for Cost-Effective Multi-Agent Systems under Budget Constraints",
+      "reason": "AgentBalanceはトークンコストと遅延の予算制約下でマルチエージェントのバックボーンと通信トポロジーを設計する枠組みであり、推論コスト最適化に触れるが対象はエージェント構成設計であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2512.11426",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 360
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10656",
+      "identity_tokens": [
+        "arXiv:2602.10656"
+      ],
+      "title": "AudioRAG: A Challenging Benchmark for Audio Reasoning and Information Retrieval",
+      "reason": "AudioRAGは音声推論と情報検索を組み合わせて評価するベンチマークであり、能力評価であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2602.10656",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 361
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.10069",
+      "identity_tokens": [
+        "arXiv:2603.10069"
+      ],
+      "title": "Improving Search Agent with One Line of Code",
+      "reason": "SAPOは検索エージェントのGRPO学習における重要度サンプリングドリフトを抑える学習安定化手法であり、学習側の研究であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2603.10069",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 362
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28522",
+      "identity_tokens": [
+        "arXiv:2603.28522"
+      ],
+      "title": "RAD-LAD: Rule and Language Grounded Autonomous Driving in Real-Time",
+      "reason": "RAD-LADはリアルタイム自動運転の言語-行動プランナと規則ベースプランナの併用であり、運転応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2603.28522",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 363
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.02944",
+      "identity_tokens": [
+        "arXiv:2605.02944"
+      ],
+      "title": "Exploring Pass-Rate Reward in Reinforcement Learning for Code Generation",
+      "reason": "コード生成RLにおける合格率報酬の効果を検証した実証研究であり、学習報酬の分析であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2605.02944",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 364
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.07447",
+      "identity_tokens": [
+        "arXiv:2610.07447"
+      ],
+      "title": "Fork-and-Flush: Escaping Idea Basins in Autoresearch Agents",
+      "reason": "Fork-and-Flushは自動研究エージェントの軌跡を分岐させ文脈をリセットして探索停滞を逃れる介入であり、エージェント運用の工夫であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2610.07447",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 365
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSVT.2026.3665200",
+      "identity_tokens": [
+        "DOI:10.1109/TCSVT.2026.3665200"
+      ],
+      "title": "FPZNet: Fuzzy Perception Zero-Shot Learning for Infrared and Visible Image Fusion",
+      "reason": "タイトル自体が赤外・可視画像融合のゼロショット学習という画像融合応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1109/TCSVT.2026.3665200",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 366
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.10548",
+      "identity_tokens": [
+        "arXiv:2512.10548"
+      ],
+      "title": "Blink: Dynamic Visual Token Resolution for Enhanced Multimodal Understanding",
+      "reason": "Blinkは層ごとの顕著性に応じて視覚トークンの解像度と計算配分を単一フォワードパス内で動的に変えるMLLM手法だが、主目的は知覚精度であり効率化は副次的であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2512.10548",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 367
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.19248",
+      "identity_tokens": [
+        "arXiv:2603.19248"
+      ],
+      "title": "DuCCAE: A Hybrid Engine for Immersive Conversation via Collaboration, Augmentation, and Evolution",
+      "reason": "DuCCAEはリアルタイム応答生成と非同期エージェント実行を分離して共有状態で同期する商用対話エンジンであり、サービング構成に触れるが対象は没入型会話製品の運用であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2603.19248",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 368
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03307",
+      "identity_tokens": [
+        "arXiv:2604.03307"
+      ],
+      "title": "V-Reflection: Transforming MLLMs from Passive Observers to Active Interrogators",
+      "reason": "V-Reflectionは推論中に視覚特徴を能動的に問い直すMLLMの知覚枠組みと蒸留訓練であり、知覚精度の研究であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2604.03307",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 369
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12358",
+      "identity_tokens": [
+        "arXiv:2605.12358"
+      ],
+      "title": "From Message-Passing to Linearized Graph Sequence Models",
+      "reason": "メッセージパッシングを線形化グラフ系列モデルとして再定式化するグラフ学習の理論・実証研究であり、LLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2605.12358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 370
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.16874",
+      "identity_tokens": [
+        "arXiv:2605.16874"
+      ],
+      "title": "Reasoning Can Be Restored by Correcting a Few Decision Tokens",
+      "reason": "ベースモデルと推論モデルの不一致が少数の決定トークンに集中することを示し、その補正で推論能力回復を狙う分析だが、推論システムの機構というより生成分布の解析と介入であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.16874",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 371
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25701",
+      "identity_tokens": [
+        "arXiv:2605.25701"
+      ],
+      "title": "Neural Router: Semantic Content Matching for Agentic AI",
+      "reason": "Neural RouterはLLMを意味マッチングに使うpub/subブローカで、圧縮によりLLM呼び出し削減の交差点を分析するが、対象はエージェント間通信基盤であり推論サービングではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.25701",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 372
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.14732",
+      "identity_tokens": [
+        "arXiv:2606.14732"
+      ],
+      "title": "Steady-Forcing: Balancing Spatial Persistence and Motion Continuity in Long-Horizon Nature Video Diffusion",
+      "reason": "Steady-Forcingは視覚アンカーと運動メモリ、キャッシュ浄化で長時間映像拡散の安定性を保つ枠組みであり、生成モデルの記憶機構に触れるが対象は映像生成であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2606.14732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 373
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19592",
+      "identity_tokens": [
+        "arXiv:2607.19592"
+      ],
+      "title": "Knowledge-Centric Self-Improvement",
+      "reason": "知識中心の自己改善はエージェントではなく共有知識ベースを改善対象とするパラダイムの事例研究であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2607.19592",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 374
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14015",
+      "identity_tokens": [
+        "arXiv:2608.14015"
+      ],
+      "title": "MedClaw: Heuristic Agent Harness for Long-Horizon Surgical Video Reasoning",
+      "reason": "タイトル自体が外科手術映像推論のエージェントという医療応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2608.14015",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 375
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.09832",
+      "identity_tokens": [
+        "arXiv:2610.09832"
+      ],
+      "title": "SkillForge: Co-Evolving Skills and Agents via Dynamic Skill Lifecycles",
+      "reason": "SkillForgeはスキルライブラリと方策を強化学習で共進化させるエージェント学習手法であり、学習側の研究であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2610.09832",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 376
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/2632-2153/ae64a9",
+      "identity_tokens": [
+        "DOI:10.1088/2632-2153/ae64a9"
+      ],
+      "title": "BOA constrictor: a Mamba-based lossless compressor for scientific data",
+      "reason": "BOA constrictorはMamba型モデルによる高エネルギー物理データ向け可逆圧縮器であり、科学データ圧縮の応用であってLLM推論システムではない。",
+      "source_url": "https://doi.org/10.1088/2632-2153/ae64a9",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 377
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/WACV61042.2026.00688",
+      "identity_tokens": [
+        "DOI:10.1109/WACV61042.2026.00688"
+      ],
+      "title": "D2Mamba: Dual Domain Guided Informed Search in State Space Model for Underwater Image Enhancement",
+      "reason": "タイトル自体が水中画像強調という画像処理応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1109/WACV61042.2026.00688",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 378
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s12859-026-06516-x",
+      "identity_tokens": [
+        "DOI:10.1186/s12859-026-06516-x"
+      ],
+      "title": "UniPTMs: a unified multi-type PTM site prediction model via master–slave architecture-based multi-stage fusion strategy and hierarchical contrastive loss",
+      "reason": "タイトル自体がタンパク質翻訳後修飾部位の予測という生物学応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1186/s12859-026-06516-x",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 379
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/automation6040086",
+      "identity_tokens": [
+        "DOI:10.3390/automation6040086"
+      ],
+      "title": "HDR-IRSTD: Detection-Driven HDR Infrared Image Enhancement and Small Target Detection Based on HDR Infrared Image Enhancement",
+      "reason": "タイトル自体が赤外小目標検出という画像検出応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.3390/automation6040086",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 380
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26072064",
+      "identity_tokens": [
+        "DOI:10.3390/s26072064"
+      ],
+      "title": "FirePM-YOLO: Position-Enhanced Mamba for YOLO-Based Fire Rescue Object Detection from UAV Perspectives",
+      "reason": "タイトル自体がUAVからの消防救助物体検出という防災応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.3390/s26072064",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 381
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18094",
+      "identity_tokens": [
+        "arXiv:2601.18094"
+      ],
+      "title": "OneVoice: One Model, Triple Scenarios-Towards Unified Zero-shot Voice Conversion",
+      "reason": "OneVoiceはMoEと拡散を組み合わせた統合ゼロショット音声変換モデルであり、音声応用であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2601.18094",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 382
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01404",
+      "identity_tokens": [
+        "arXiv:2602.01404"
+      ],
+      "title": "BOA Constrictor: Squeezing Performance out of GPUs in the Cloud via Budget-Optimal Allocation",
+      "reason": "BOA ConstrictorはクラウドGPUの予算最適な割り当てを訓練ジョブのストリームに対して行う方策の研究であり、学習基盤の資源配分であって推論サービングではない。",
+      "source_url": "https://arxiv.org/abs/2602.01404",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 383
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19000",
+      "identity_tokens": [
+        "arXiv:2602.19000"
+      ],
+      "title": "MagicAgent: Towards Generalized Agent Planning",
+      "reason": "MagicAgentは汎用エージェント計画のための基盤モデル群と合成データ・多タスク訓練の研究であり、モデル学習が中心で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2602.19000",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 384
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14739",
+      "identity_tokens": [
+        "arXiv:2603.14739"
+      ],
+      "title": "TrajMamba: An Ego-Motion-Guided Mamba Model for Pedestrian Trajectory Prediction from an Egocentric Perspective",
+      "reason": "タイトル自体が一人称視点の歩行者軌跡予測という交通応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2603.14739",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 385
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.29165",
+      "identity_tokens": [
+        "arXiv:2603.29165"
+      ],
+      "title": "LatentPilot: Scene-Aware Vision-and-Language Navigation by Dreaming Ahead with Latent Visual Reasoning",
+      "reason": "LatentPilotは将来観測を訓練時に使う視覚言語ナビゲーションの学習パラダイムであり、ロボット応用であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2603.29165",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 386
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.23734",
+      "identity_tokens": [
+        "arXiv:2604.23734"
+      ],
+      "title": "Prism-Reranker: Beyond Relevance Scoring - Jointly Producing Contributions and Evidence for Agentic Retrieval",
+      "reason": "Prism-Rerankerは関連度に加えて貢献文と証拠節を出力し下流LLMの文脈トークン浪費を減らす再ランキングモデルだが、対象は検索パイプラインのモデルであり推論実行系ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2604.23734",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 387
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11840",
+      "identity_tokens": [
+        "arXiv:2605.11840"
+      ],
+      "title": "Selection, Not Fusion: Radar-Modulated State Space Models for Radar-Camera Depth Estimation",
+      "reason": "レーダ変調選択スキャンによるレーダ-カメラ深度推定手法であり、自動運転知覚の応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2605.11840",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 388
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26035",
+      "identity_tokens": [
+        "arXiv:2605.26035"
+      ],
+      "title": "Length Generalization with Log-Depth Recurrent Units",
+      "reason": "Log-Depth Recurrent Unitによる長さ汎化のアーキテクチャ研究であり、正規言語タスクでの評価が中心でLLM推論システムへの適用はない。",
+      "source_url": "https://arxiv.org/abs/2605.26035",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 389
+    }
+  ]
+}

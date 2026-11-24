@@ -1,0 +1,793 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d09-b04",
+  "reference_main_sha": "69a2bec9",
+  "record_count": 46,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01801",
+      "identity_tokens": [
+        "arXiv:2606.01801"
+      ],
+      "title": "MetaForge: A Self-Evolving Multimodal Agent that Retrieves, Adapts, and Forges Tools On Demand",
+      "reason": "MetaForgeはツールの要否判断・検索・合成を行う自己進化型マルチモーダルエージェント枠組みであり、エージェント設計であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2606.01801",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 390
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24479",
+      "identity_tokens": [
+        "arXiv:2606.24479"
+      ],
+      "title": "MambaRaw: Selective State Space Modeling for Efficient 4K Raw Image Reconstruction",
+      "reason": "MambaRawは4K RAW画像再構成にSSMを用いる画像復元手法であり、画像処理応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2606.24479",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 391
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02479",
+      "identity_tokens": [
+        "arXiv:2607.02479"
+      ],
+      "title": "EAGLE-360: Embodied Active Global-to-Local Exploration in 360°",
+      "reason": "EAGLE-360は360度環境での対象局所化を行う具身探索枠組みであり、視覚応用であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2607.02479",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 392
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20833",
+      "identity_tokens": [
+        "arXiv:2607.20833"
+      ],
+      "title": "REFACT: Adaptive Fact Restatement for Compact and Faithful Chain-of-Thought Reasoning",
+      "reason": "REFACTは事実再述による引用付き推論を教師軌跡と最適化で学習させる枠組みであり、根拠付けの学習手法であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2607.20833",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 393
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06930",
+      "identity_tokens": [
+        "arXiv:2608.06930"
+      ],
+      "title": "AVCap: Reinforcing Audio-Video Joint Caption with Detail-Aware Reward",
+      "reason": "AVCapは音声映像同時キャプションのデータセットと詳細配慮型GRPO学習であり、キャプション応用であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2608.06930",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 394
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19991",
+      "identity_tokens": [
+        "arXiv:2609.19991"
+      ],
+      "title": "AVTrace: Diagnosing Audio-Visual Temporal Reasoning in Omni Models",
+      "reason": "AVTraceはオムニモデルの音声映像時間推論を診断する評価スイートであり、能力評価であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2609.19991",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 395
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33698",
+      "identity_tokens": [
+        "arXiv:2609.33698"
+      ],
+      "title": "One Latent, Many Tokens: Jointly Learning Compressed Embeddings for Efficient Language Diffusion",
+      "reason": "JPEG-DLMは圧縮器・フロー生成・デコーダを共同学習し、圧縮埋め込み上で言語拡散生成を行うことで最近の拡散・フローモデル中最高のスループットを達成する効率的生成機構である。",
+      "source_url": "https://arxiv.org/abs/2609.33698",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 396
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.14625",
+      "identity_tokens": [
+        "arXiv:2610.14625"
+      ],
+      "title": "From Existing Methods to New Research Ideas: Two Perspectives on Recursive Self-Improvement",
+      "reason": "再帰的自己改善の方法論を分類と深層学習との対応から論じた展望論文であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2610.14625",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 397
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.12846",
+      "identity_tokens": [
+        "arXiv:2406.12846"
+      ],
+      "title": "DrVideo: Document Retrieval Based Long Video Understanding",
+      "reason": "DrVideoは長編映像を文書化して検索とエージェント反復で理解するシステムであり、映像処理量の削減に関わるが映像理解のパイプライン応用であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2406.12846",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 398
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.03031",
+      "identity_tokens": [
+        "arXiv:2403.03031"
+      ],
+      "title": "Learning to Use Tools via Cooperative and Interactive Agents",
+      "reason": "ConAgentsはツール選択・実行・較正を専門エージェントで分担するツール学習枠組みであり、エージェント設計であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2403.03031",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 399
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13508",
+      "identity_tokens": [
+        "arXiv:2502.13508"
+      ],
+      "title": "VLAS: Vision-Language-Action Model With Speech Instructions For Customized Robot Manipulation",
+      "reason": "VLASは音声指示を直接理解するロボット操作用VLAモデルであり、操作応用であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2502.13508",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 400
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.03344",
+      "identity_tokens": [
+        "arXiv:2406.03344"
+      ],
+      "title": "Audio Mamba: Bidirectional State Space Model for Audio Representation Learning",
+      "reason": "Audio Mambaは音声分類向けの自己注意なしSSMモデルであり、音響応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2406.03344",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 401
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.19584",
+      "identity_tokens": [
+        "arXiv:2407.19584"
+      ],
+      "title": "SaulLM-54B & SaulLM-141B: Scaling Up Domain Adaptation for the Legal Domain",
+      "reason": "SaulLMは法律ドメイン適応の大規模継続事前学習モデルであり、ドメイン特化の学習が主題で推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2407.19584",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 402
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-024-50469-9",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-024-50469-9"
+      ],
+      "title": "Chemical language modeling with structured state space sequence models",
+      "reason": "タイトル自体が構造化状態空間モデルによる化学言語モデリングという化学応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1038/s41467-024-50469-9",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 403
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.02959",
+      "identity_tokens": [
+        "arXiv:2411.02959"
+      ],
+      "title": "HtmlRAG: HTML is Better Than Plain Text for Modeling Retrieved Knowledge in RAG Systems",
+      "reason": "HtmlRAGは検索知識の形式としてプレーンテキストではなくHTMLを使うRAG手法であり、知識表現の改善が目的で推論効率の機構ではない。",
+      "source_url": "https://arxiv.org/abs/2411.02959",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 404
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICCV51070.2023.00949",
+      "identity_tokens": [
+        "DOI:10.1109/ICCV51070.2023.00949"
+      ],
+      "title": "MiniROAD: Minimal RNN Framework for Online Action Detection",
+      "reason": "MiniROADは学習時と推論時の不一致を損失重みで補正するオンライン行動検出用の最小RNNフレームワークであり、映像行動検出応用であってLLM推論システムではない。",
+      "source_url": "https://doi.org/10.1109/ICCV51070.2023.00949",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 405
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.08784",
+      "identity_tokens": [
+        "arXiv:2308.08784"
+      ],
+      "title": "CodeCoT: Tackling Code Syntax Errors in CoT Reasoning for Code Generation",
+      "reason": "CodeCoTは自己検査付きChain-of-Thoughtでコードの構文エラーを減らす生成手法であり、コード生成の品質手法であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2308.08784",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 406
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.05579",
+      "identity_tokens": [
+        "arXiv:2504.05579"
+      ],
+      "title": "Tapnext: Tracking Any Point (Tap) as Next Token Prediction",
+      "reason": "TAPNextは点追跡を次トークン予測として定式化する映像追跡モデルであり、コンピュータビジョン応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2504.05579",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 407
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.15844",
+      "identity_tokens": [
+        "arXiv:2211.15844"
+      ],
+      "title": "How Important Are Good Method Names in Neural Code Generation? A Model Robustness Perspective",
+      "reason": "メソッド名に対するコード生成モデルの頑健性を攻撃・防御で研究したものであり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2211.15844",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 408
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.05522",
+      "identity_tokens": [
+        "arXiv:2404.05522"
+      ],
+      "title": "3DMambaIPF: A State Space Model for Iterative Point Cloud Filtering via Differentiable Rendering",
+      "reason": "タイトル自体が点群フィルタリングという3D処理応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2404.05522",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 409
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03830",
+      "identity_tokens": [
+        "arXiv:2404.03830"
+      ],
+      "title": "BiSHop: Bi-Directional Cellular Learning for Tabular Data with Generalized Sparse Modern Hopfield Model",
+      "reason": "BiSHopは疎な現代ホップフィールド層による表形式データ学習フレームワークであり、表データ応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2404.03830",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.07225",
+      "identity_tokens": [
+        "arXiv:2104.07225"
+      ],
+      "title": "Text Guide: Improving the Quality of Long Text Classification by a Text Selection Method Based on Feature Importance",
+      "reason": "Text Guideは特徴量重要度に基づくテキスト選択で長文分類の品質を上げる手法であり、分類応用であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2104.07225",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 411
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3596237",
+      "identity_tokens": [
+        "DOI:10.1145/3596237"
+      ],
+      "title": "Hierarchical Wi-Fi Trajectory Embedding for Indoor User Mobility Pattern Analysis",
+      "reason": "タイトル自体が屋内Wi-Fi軌跡埋め込みによる移動パターン分析という位置情報応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1145/3596237",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 412
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3563766.3564115",
+      "identity_tokens": [
+        "DOI:10.1145/3563766.3564115"
+      ],
+      "title": "Congestion control in machine learning clusters",
+      "reason": "機械学習訓練クラスタで公平な輻輳制御が必ずしも望ましくないことを示し不公平な制御等を提案する研究であり、学習基盤のネットワーク論であって推論システムではない。",
+      "source_url": "https://doi.org/10.1145/3563766.3564115",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 413
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.00272",
+      "identity_tokens": [
+        "arXiv:2404.00272"
+      ],
+      "title": "HSIMamba: Hyperpsectral Imaging Efficient Feature Learning with Bidirectional State Space for Classification",
+      "reason": "タイトル自体がハイパースペクトル画像分類というリモートセンシング応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2404.00272",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 414
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.15881",
+      "identity_tokens": [
+        "arXiv:2405.15881"
+      ],
+      "title": "Scaling Diffusion Mamba with Bidirectional SSMs for Efficient Image and Video Generation",
+      "reason": "DiMは双方向SSMで自己注意を置き換え線形複雑度と高速な推論を実現する拡散アーキテクチャだが、対象は画像・映像生成でありLLM推論システムではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2405.15881",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 415
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.19040",
+      "identity_tokens": [
+        "arXiv:2507.19040"
+      ],
+      "title": "FD-Bench: A Full-Duplex Benchmarking Pipeline Designed for Full Duplex Spoken Dialogue Systems",
+      "reason": "FD-Benchは全二重音声対話システムの割込み対応等を測るベンチマーク基盤であり、能力評価であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2507.19040",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 416
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.03686",
+      "identity_tokens": [
+        "arXiv:2406.03686"
+      ],
+      "title": "BindGPT: A Scalable Framework for 3D Molecular Design via Language Modeling and Reinforcement Learning",
+      "reason": "タイトル自体が言語モデリングと強化学習による3D分子設計という創薬応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2406.03686",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 417
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02684",
+      "identity_tokens": [
+        "arXiv:2409.02684"
+      ],
+      "title": "Neural timescales from a computational perspective",
+      "reason": "神経時間スケールの定義・測定・機構を計算論の観点で総説した神経科学のレビューであり、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2409.02684",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 418
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.20881",
+      "identity_tokens": [
+        "arXiv:2405.20881"
+      ],
+      "title": "S4Fusion: Saliency-Aware Selective State Space Model for Infrared and Visible Image Fusion",
+      "reason": "タイトル自体が赤外・可視画像融合という画像融合応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2405.20881",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 419
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CVPR52734.2025.00609",
+      "identity_tokens": [
+        "DOI:10.1109/CVPR52734.2025.00609"
+      ],
+      "title": "Exploring Historical Information for RGBE Visual Tracking with Mamba",
+      "reason": "タイトル自体がRGBE視覚追跡という映像追跡応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1109/CVPR52734.2025.00609",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 420
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/BIBM62325.2024.10822754",
+      "identity_tokens": [
+        "DOI:10.1109/BIBM62325.2024.10822754"
+      ],
+      "title": "ECGMamba: Towards ECG Classification with State Space Models",
+      "reason": "タイトル自体が状態空間モデルによるECG分類という医療信号応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1109/BIBM62325.2024.10822754",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 421
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.06553",
+      "identity_tokens": [
+        "arXiv:2501.06553"
+      ],
+      "title": "VASparse: Towards Efficient Visual Hallucination Mitigation via Visual-Aware Token Sparsification",
+      "reason": "VASparseは視覚認識トークンの疎化をデコード時に行い視覚幻覚を抑える差し込み型デコード手法であり、トークン削減に触れるが主目的は幻覚緩和であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2501.06553",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 422
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.09012",
+      "identity_tokens": [
+        "arXiv:2510.09012"
+      ],
+      "title": "Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy",
+      "reason": "エントロピー誘導の温度制御と投機的デコードの受容規則で自己回帰画像生成を高速化する研究であり、デコード高速化の機構はあるが対象は画像生成であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2510.09012",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 423
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2401.08867",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2401.08867"
+      ],
+      "title": "MambaTab: A Simple Yet Effective Approach for Handling Tabular Data",
+      "reason": "MambaTabは表形式データ向けのSSMモデルであり、表データ応用であってLLM推論システムではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2401.08867",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 424
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.02117",
+      "identity_tokens": [
+        "arXiv:2410.02117"
+      ],
+      "title": "Searching for Efficient Linear Layers over a Continuous Space of Structured Matrices",
+      "reason": "構造化行列の連続空間で効率的な線形層を探索し計算最適スケーリングを分析する研究であり、推論計算の削減に通じるが学習時のスケーリング則が中心であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2410.02117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 425
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.09463",
+      "identity_tokens": [
+        "arXiv:2011.09463"
+      ],
+      "title": "EasyTransfer: A Simple and Scalable Deep Transfer Learning Platform for NLP Applications",
+      "reason": "EasyTransferは分散訓練・推論エンジンを持つ転移学習プラットフォームの紹介であり、NLP応用開発基盤であって推論システムの新規機構ではない。",
+      "source_url": "https://arxiv.org/abs/2011.09463",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 426
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.06316",
+      "identity_tokens": [
+        "arXiv:2303.06316"
+      ],
+      "title": "One Neuron Saved is One Neuron Earned: On Parametric Efficiency of Quadratic Networks",
+      "reason": "二次ニューロン網のパラメータ効率を理論と実証で示した研究であり、アーキテクチャの表現力分析であって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2303.06316",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 427
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.09627",
+      "identity_tokens": [
+        "arXiv:2409.09627"
+      ],
+      "title": "Spatial-Temporal Mamba Network for EEG-based Motor Imagery Classification",
+      "reason": "タイトル自体がEEGベース運動イメージ分類という脳波応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2409.09627",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 428
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.07654",
+      "identity_tokens": [
+        "arXiv:2504.07654"
+      ],
+      "title": "ms-Mamba: Multi-scale Mamba for Time-Series Forecasting",
+      "reason": "ms-Mambaは複数時間スケールのMambaブロックによる時系列予測モデルであり、予測応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2504.07654",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 429
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29310",
+      "identity_tokens": [
+        "arXiv:2608.29310"
+      ],
+      "title": "Super Library Agent: Joint Generation and Maintenance of Multiple Applications Beyond the Single Codebase",
+      "reason": "Super Library Agentは複数アプリの生成保守で共有ライブラリを抽出・移行するコーディングエージェントの研究であり、推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2608.29310",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 430
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.17660",
+      "identity_tokens": [
+        "arXiv:2305.17660"
+      ],
+      "title": "Plug-and-Play Document Modules for Pre-trained Models",
+      "reason": "PlugDは文書を一度だけ符号化して差し込みモジュールとして再利用し計算コストを69%削減するが、対象は事前学習モデルの文書NLPタスクでありLLM推論サービングの機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2305.17660",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 431
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.20252",
+      "identity_tokens": [
+        "arXiv:2410.20252"
+      ],
+      "title": "Adaptive Video Understanding Agent: Enhancing efficiency with dynamic frame sampling and feedback-driven reasoning",
+      "reason": "適応的フレームサンプリングとフィードバック推論で長編映像理解の効率を上げるエージェント手法であり、映像処理量削減に関わるが映像理解応用であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2410.20252",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 432
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05259",
+      "identity_tokens": [
+        "arXiv:2506.05259"
+      ],
+      "title": "Learning long range dependencies through time reversal symmetry breaking",
+      "reason": "RHELはハミルトン系の物理軌跡の有限差分で勾配を計算する学習アルゴリズムであり、学習側の研究であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2506.05259",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 433
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14672",
+      "identity_tokens": [
+        "arXiv:2510.14672"
+      ],
+      "title": "VTimeCoT: Thinking by Drawing for Video Temporal Grounding and Reasoning",
+      "reason": "VTimeCoTはプログレスバーの視覚ツールで映像時間グラウンディングを行う訓練不要枠組みであり、映像理解応用であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2510.14672",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 434
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2508.05287",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2508.05287"
+      ],
+      "title": "FlowState: Sampling Rate Invariant Time Series Forecasting",
+      "reason": "FlowStateはサンプリングレート不変な時系列基盤モデルのアーキテクチャであり、予測応用であってLLM推論システムではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2508.05287",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:10:00+09:00",
+      "last_checked_at": "2026-11-25T08:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 435
+    }
+  ]
+}
