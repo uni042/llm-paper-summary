@@ -1,0 +1,526 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-656264322e6285e3-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-656264322e62",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isca66397.2026.00167",
+    "DOI:10.1145/3713082.3730381",
+    "DOI:10.18653/v1/2026.findings-acl.590",
+    "arXiv:2510.02838",
+    "arXiv:2607.09889"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "86585d9df84fbc2c2658db79d4a445531da475ef",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T10:55:59.882119+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00167",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3713082.3730381",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-acl.590",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.02838",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.09889",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Power Sloshing in Compound Servers for Large-Scale AI Inference Workloads",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00167",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI workloads are rapidly emerging as an important component of datacenter operations, with inference services in particular consuming an ever-increasing share of computational cycles. To keep pace with the growing demand for AI-driven applications, datacenters have begun deploying advanced compound servers that tightly integrate accelerators such as GPUs with traditional CPUs. While these platforms enable high performance, they also drive up the power requirements of datacenters, creating new challenges for scaling the infrastructure. To address these challenges, we conduct a comprehensive characterization of power usage patterns in datacenters hosting AI services. We find that power consumption fluctuates widely across time, models, services, and server components. These observations reveal the inefficiency of applying fixed, uniform power limits across servers, which can result in either under-provisioning and degraded performance, or overprovisioning and wasted planned power. Motivated by these insights, we investigate dynamic power control to optimize both power consumption and performance. Through experiments on production workloads, we demonstrate that controlled power sloshing can deliver benefits, yielding up to 30% power savings. We further develop a scalable, automated algorithm for server-level power management, which could be deployed in datacenters and reduce power by up to 11% without degrading the quality of service. Finally, based on our production experience, we offer practical guidelines for hardware and software co-design in next-generation AI platforms.",
+      "identifiers": [
+        "SemanticScholar:f8d93ca9406f0e192a779e41603eca8ce48d6fab"
+      ],
+      "semantic_scholar_id": "f8d93ca9406f0e192a779e41603eca8ce48d6fab",
+      "doi": "10.1109/ISCA66397.2026.00167",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00167",
+      "authors": [
+        "Albert Cho",
+        "Jovan Stojkovic",
+        "Leonardo Piga",
+        "Abhishek Dhanotia",
+        "Sultan Mahmud Sajal",
+        "Ge-Fei Zuo",
+        "Krishna T. Malladi",
+        "Devon Akers",
+        "Kalyan Subramanian",
+        "S. Kanaujia",
+        "Alexandros Daglis"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "Remembering Distinct Items, Not Tokens: A Learnable Dirichlet-Process Cache Between State-Space Models and Attention",
+      "source_url": "https://arxiv.org/abs/2607.09889",
+      "year": 2026,
+      "published": "2026-07-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fixed-state sequence models compress an unbounded past into a bounded state, which caps their associative recall at roughly the state dimension; attention escapes the cap by keeping a key-value entry for every token, at quadratic compute and a cache that grows with the sequence. We study the middle ground: a sparse cache that allocates a slot only when an input is novel, so its size tracks the number of distinct items rather than the number of tokens. The allocation rule is the DP-means clustering rule, the small-variance limit of a Dirichlet-process mixture, used not as latent-variable inference but as the key-value memory operator for a deep recurrent backbone. We develop it in two forms, a static cache with a fixed concentration and a surprise-adaptive variant whose concentration follows the recent novelty rate. On a controlled associative-recall benchmark with redundancy we show that the cache matches full-attention recall while storing only the distinct items, that it dominates a fixed-budget eviction cache on the recall-versus-size frontier, and that on a state-space backbone it answers both a recall query and a long-range aggregate at the lowest memory of any model tested. The allocation is learnable end to end: a two-parameter novelty-threshold gate trained on the task loss alone recovers the rule exactly, whereas an over-parameterized gate fails, so the operative ingredient is the inductive bias rather than capacity. The evidence is a family of controlled mechanism studies at modest scale, with the distinct-items property confirmed on four real streams (recommendation, systems logs, clinical events, and insurance claims); a real-backbone, real-corpus language validation is pursued in a companion study.",
+      "identifiers": [
+        "SemanticScholar:a54f3e2b79610a1049a7a30dc9751fedc7ced62a"
+      ],
+      "semantic_scholar_id": "a54f3e2b79610a1049a7a30dc9751fedc7ced62a",
+      "canonical_id": "arXiv:2607.09889",
+      "arxiv_id": "2607.09889",
+      "doi": "10.48550/arXiv.2607.09889",
+      "authors": [
+        "Siddharth Pal",
+        "Viktoria Rojkova"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 137,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Concept rather than Document: Context Compression via AMR-based Conceptual Entropy",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.590",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:eb92383d9aadae157e5991e318d9ffb3f354bb5f"
+      ],
+      "semantic_scholar_id": "eb92383d9aadae157e5991e318d9ffb3f354bb5f",
+      "doi": "10.18653/v1/2026.findings-acl.590",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.590",
+      "authors": [
+        "Kai-Ze Shi",
+        "Xueyao Sun",
+        "Xiao-Hui Tao",
+        "Lin Li",
+        "Qi-Ka Lin",
+        "Guan-Dong Xu"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "TridentServe: A Stage-level Serving System for Diffusion Pipelines",
+      "source_url": "https://arxiv.org/abs/2510.02838",
+      "year": 2025,
+      "published": "2025-10-03",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion pipelines, renowned for their powerful visual generation capabilities, have seen widespread adoption in generative vision tasks (e.g., text-to-image/video). These pipelines typically follow an encode--diffuse--decode three-stage architecture. Current serving systems deploy diffusion pipelines within a static, manual, and pipeline-level paradigm, allocating the same resources to every request and stage. However, through an in-depth analysis, we find that such a paradigm is inefficient due to the discrepancy in resource needs across the three stages of each request, as well as across different requests. Following the analysis, we propose the dynamic stage-level serving paradigm and develop TridentServe, a brand new diffusion serving system. TridentServe automatically, dynamically derives the placement plan (i.e., how each stage resides) for pipeline deployment and the dispatch plan (i.e., how the requests are routed) for request processing, co-optimizing the resource allocation for both model and requests. Extensive experiments show that TridentServe consistently improves SLO attainment and reduces average/P95 latencies by up to 2.5x and 3.6x/4.1x over existing works across a variety of workloads.",
+      "identifiers": [
+        "SemanticScholar:3d7bc703ec0621fe606f228ec3a59423639a3bf9"
+      ],
+      "semantic_scholar_id": "3d7bc703ec0621fe606f228ec3a59423639a3bf9",
+      "canonical_id": "arXiv:2510.02838",
+      "arxiv_id": "2510.02838",
+      "doi": "10.48550/arXiv.2510.02838",
+      "authors": [
+        "Yi-Fei Xia",
+        "Fang-Cheng Fu",
+        "H. Yuan",
+        "Hanke Zhang",
+        "Xupeng Miao",
+        "Yi-Jun Liu",
+        "Su-Han Ling",
+        "Jie Jiang",
+        "Bin Cui"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 417,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Storage Class Memory is Dead, All Hail Managed-Retention Memory: Rethinking Memory for the AI Era",
+      "source_url": "https://doi.org/10.1145/3713082.3730381",
+      "year": 2025,
+      "published": "2025-05-14",
+      "venue": "USENIX Workshop on Hot Topics in Operating Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI clusters today are one of the major uses of High Bandwidth Memory (HBM). However, HBM is suboptimal for AI workloads for several reasons. Analysis shows HBM is overprovisioned on write performance, but underprovisioned on density and read bandwidth, and also has significant energy per bit overheads. It is also expensive, with lower yield than DRAM due to manufacturing complexity. We propose a new memory class: Managed-Retention Memory (MRM), which is more optimized to store key data structures for AI inference workloads. We believe that MRM may finally provide a path to viability for technologies that were originally proposed to support Storage Class Memory (SCM). These technologies traditionally offered long-term persistence (10+ years) but provided poor IO performance and/or endurance. MRM makes different trade-offs, and by understanding the workload IO patterns, MRM foregoes long-term data retention and write performance for better potential performance on the metrics important for these workloads.",
+      "identifiers": [
+        "SemanticScholar:c05e3c50abc552de8debc5dcaae39853d0581209"
+      ],
+      "semantic_scholar_id": "c05e3c50abc552de8debc5dcaae39853d0581209",
+      "doi": "10.1145/3713082.3730381",
+      "canonical_id": "DOI:10.1145/3713082.3730381",
+      "authors": [
+        "Sergey Legtchenko",
+        "Ioan A. Stefanovici",
+        "Richard Black",
+        "A. Rowstron",
+        "Jun-Yi Liu",
+        "Paolo Costa",
+        "B. Canakci",
+        "D. Narayanan",
+        "Xingbo Wu"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 559,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00167",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00167",
+        "id:SemanticScholar:f8d93ca9406f0e192a779e41603eca8ce48d6fab",
+        "title:power sloshing in compound servers for largescale ai inference workloads",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00167"
+      ],
+      "record": {
+        "title": "Power Sloshing in Compound Servers for Large-Scale AI Inference Workloads",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00167",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AI workloads are rapidly emerging as an important component of datacenter operations, with inference services in particular consuming an ever-increasing share of computational cycles. To keep pace with the growing demand for AI-driven applications, datacenters have begun deploying advanced compound servers that tightly integrate accelerators such as GPUs with traditional CPUs. While these platforms enable high performance, they also drive up the power requirements of datacenters, creating new challenges for scaling the infrastructure. To address these challenges, we conduct a comprehensive characterization of power usage patterns in datacenters hosting AI services. We find that power consumption fluctuates widely across time, models, services, and server components. These observations reveal the inefficiency of applying fixed, uniform power limits across servers, which can result in either under-provisioning and degraded performance, or overprovisioning and wasted planned power. Motivated by these insights, we investigate dynamic power control to optimize both power consumption and performance. Through experiments on production workloads, we demonstrate that controlled power sloshing can deliver benefits, yielding up to 30% power savings. We further develop a scalable, automated algorithm for server-level power management, which could be deployed in datacenters and reduce power by up to 11% without degrading the quality of service. Finally, based on our production experience, we offer practical guidelines for hardware and software co-design in next-generation AI platforms.",
+        "identifiers": [
+          "SemanticScholar:f8d93ca9406f0e192a779e41603eca8ce48d6fab"
+        ],
+        "semantic_scholar_id": "f8d93ca9406f0e192a779e41603eca8ce48d6fab",
+        "doi": "10.1109/ISCA66397.2026.00167",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00167",
+        "authors": [
+          "Albert Cho",
+          "Jovan Stojkovic",
+          "Leonardo Piga",
+          "Abhishek Dhanotia",
+          "Sultan Mahmud Sajal",
+          "Ge-Fei Zuo",
+          "Krishna T. Malladi",
+          "Devon Akers",
+          "Kalyan Subramanian",
+          "S. Kanaujia",
+          "Alexandros Daglis"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 176,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.09889",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.09889",
+        "id:SemanticScholar:a54f3e2b79610a1049a7a30dc9751fedc7ced62a",
+        "id:arXiv:2607.09889",
+        "title:remembering distinct items not tokens a learnable dirichletprocess cache between statespace models and attention",
+        "url:https://arxiv.org/abs/2607.09889"
+      ],
+      "record": {
+        "title": "Remembering Distinct Items, Not Tokens: A Learnable Dirichlet-Process Cache Between State-Space Models and Attention",
+        "source_url": "https://arxiv.org/abs/2607.09889",
+        "year": 2026,
+        "published": "2026-07-10",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Fixed-state sequence models compress an unbounded past into a bounded state, which caps their associative recall at roughly the state dimension; attention escapes the cap by keeping a key-value entry for every token, at quadratic compute and a cache that grows with the sequence. We study the middle ground: a sparse cache that allocates a slot only when an input is novel, so its size tracks the number of distinct items rather than the number of tokens. The allocation rule is the DP-means clustering rule, the small-variance limit of a Dirichlet-process mixture, used not as latent-variable inference but as the key-value memory operator for a deep recurrent backbone. We develop it in two forms, a static cache with a fixed concentration and a surprise-adaptive variant whose concentration follows the recent novelty rate. On a controlled associative-recall benchmark with redundancy we show that the cache matches full-attention recall while storing only the distinct items, that it dominates a fixed-budget eviction cache on the recall-versus-size frontier, and that on a state-space backbone it answers both a recall query and a long-range aggregate at the lowest memory of any model tested. The allocation is learnable end to end: a two-parameter novelty-threshold gate trained on the task loss alone recovers the rule exactly, whereas an over-parameterized gate fails, so the operative ingredient is the inductive bias rather than capacity. The evidence is a family of controlled mechanism studies at modest scale, with the distinct-items property confirmed on four real streams (recommendation, systems logs, clinical events, and insurance claims); a real-backbone, real-corpus language validation is pursued in a companion study.",
+        "identifiers": [
+          "SemanticScholar:a54f3e2b79610a1049a7a30dc9751fedc7ced62a"
+        ],
+        "semantic_scholar_id": "a54f3e2b79610a1049a7a30dc9751fedc7ced62a",
+        "canonical_id": "arXiv:2607.09889",
+        "arxiv_id": "2607.09889",
+        "doi": "10.48550/arXiv.2607.09889",
+        "authors": [
+          "Siddharth Pal",
+          "Viktoria Rojkova"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 137,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-acl.590",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.590",
+        "id:SemanticScholar:eb92383d9aadae157e5991e318d9ffb3f354bb5f",
+        "title:concept rather than document context compression via amrbased conceptual entropy",
+        "url:https://doi.org/10.18653/v1/2026.findings-acl.590"
+      ],
+      "record": {
+        "title": "Concept rather than Document: Context Compression via AMR-based Conceptual Entropy",
+        "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.590",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:eb92383d9aadae157e5991e318d9ffb3f354bb5f"
+        ],
+        "semantic_scholar_id": "eb92383d9aadae157e5991e318d9ffb3f354bb5f",
+        "doi": "10.18653/v1/2026.findings-acl.590",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.590",
+        "authors": [
+          "Kai-Ze Shi",
+          "Xueyao Sun",
+          "Xiao-Hui Tao",
+          "Lin Li",
+          "Qi-Ka Lin",
+          "Guan-Dong Xu"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 146,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.02838",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.02838",
+        "id:SemanticScholar:3d7bc703ec0621fe606f228ec3a59423639a3bf9",
+        "id:arXiv:2510.02838",
+        "title:tridentserve a stagelevel serving system for diffusion pipelines",
+        "url:https://arxiv.org/abs/2510.02838"
+      ],
+      "record": {
+        "title": "TridentServe: A Stage-level Serving System for Diffusion Pipelines",
+        "source_url": "https://arxiv.org/abs/2510.02838",
+        "year": 2025,
+        "published": "2025-10-03",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion pipelines, renowned for their powerful visual generation capabilities, have seen widespread adoption in generative vision tasks (e.g., text-to-image/video). These pipelines typically follow an encode--diffuse--decode three-stage architecture. Current serving systems deploy diffusion pipelines within a static, manual, and pipeline-level paradigm, allocating the same resources to every request and stage. However, through an in-depth analysis, we find that such a paradigm is inefficient due to the discrepancy in resource needs across the three stages of each request, as well as across different requests. Following the analysis, we propose the dynamic stage-level serving paradigm and develop TridentServe, a brand new diffusion serving system. TridentServe automatically, dynamically derives the placement plan (i.e., how each stage resides) for pipeline deployment and the dispatch plan (i.e., how the requests are routed) for request processing, co-optimizing the resource allocation for both model and requests. Extensive experiments show that TridentServe consistently improves SLO attainment and reduces average/P95 latencies by up to 2.5x and 3.6x/4.1x over existing works across a variety of workloads.",
+        "identifiers": [
+          "SemanticScholar:3d7bc703ec0621fe606f228ec3a59423639a3bf9"
+        ],
+        "semantic_scholar_id": "3d7bc703ec0621fe606f228ec3a59423639a3bf9",
+        "canonical_id": "arXiv:2510.02838",
+        "arxiv_id": "2510.02838",
+        "doi": "10.48550/arXiv.2510.02838",
+        "authors": [
+          "Yi-Fei Xia",
+          "Fang-Cheng Fu",
+          "H. Yuan",
+          "Hanke Zhang",
+          "Xupeng Miao",
+          "Yi-Jun Liu",
+          "Su-Han Ling",
+          "Jie Jiang",
+          "Bin Cui"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 417,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3713082.3730381",
+      "identity_tokens": [
+        "id:DOI:10.1145/3713082.3730381",
+        "id:SemanticScholar:c05e3c50abc552de8debc5dcaae39853d0581209",
+        "title:storage class memory is dead all hail managedretention memory rethinking memory for the ai era",
+        "url:https://doi.org/10.1145/3713082.3730381"
+      ],
+      "record": {
+        "title": "Storage Class Memory is Dead, All Hail Managed-Retention Memory: Rethinking Memory for the AI Era",
+        "source_url": "https://doi.org/10.1145/3713082.3730381",
+        "year": 2025,
+        "published": "2025-05-14",
+        "venue": "USENIX Workshop on Hot Topics in Operating Systems",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AI clusters today are one of the major uses of High Bandwidth Memory (HBM). However, HBM is suboptimal for AI workloads for several reasons. Analysis shows HBM is overprovisioned on write performance, but underprovisioned on density and read bandwidth, and also has significant energy per bit overheads. It is also expensive, with lower yield than DRAM due to manufacturing complexity. We propose a new memory class: Managed-Retention Memory (MRM), which is more optimized to store key data structures for AI inference workloads. We believe that MRM may finally provide a path to viability for technologies that were originally proposed to support Storage Class Memory (SCM). These technologies traditionally offered long-term persistence (10+ years) but provided poor IO performance and/or endurance. MRM makes different trade-offs, and by understanding the workload IO patterns, MRM foregoes long-term data retention and write performance for better potential performance on the metrics important for these workloads.",
+        "identifiers": [
+          "SemanticScholar:c05e3c50abc552de8debc5dcaae39853d0581209"
+        ],
+        "semantic_scholar_id": "c05e3c50abc552de8debc5dcaae39853d0581209",
+        "doi": "10.1145/3713082.3730381",
+        "canonical_id": "DOI:10.1145/3713082.3730381",
+        "authors": [
+          "Sergey Legtchenko",
+          "Ioan A. Stefanovici",
+          "Richard Black",
+          "A. Rowstron",
+          "Jun-Yi Liu",
+          "Paolo Costa",
+          "B. Canakci",
+          "D. Narayanan",
+          "Xingbo Wu"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 559,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:43498b988de7922f35e953aee4e76a830cba617d6b1dd3dc688614ed787df8ab",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

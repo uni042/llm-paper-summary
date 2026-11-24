@@ -1,0 +1,151 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2ee8ae411a88e962-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2ee8ae411a88",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2603.26556"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "86585d9df84fbc2c2658db79d4a445531da475ef",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T10:55:59.881479+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2603.26556",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "When Perplexity Lies: Generation-Focused Distillation of Hybrid Sequence Models",
+      "source_url": "https://arxiv.org/abs/2603.26556",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Converting a pretrained Transformer into a more efficient hybrid model through distillation offers a promising approach to reducing inference costs. However, achieving high-quality generation in distilled models requires careful joint design of both the student architecture and the distillation process. Many prior distillation works evaluate downstream multiple-choice benchmarks by ranking candidate answers with log-likelihood rather than requiring autoregressive generation, which can obscure important differences in model quality. For example, on overlapping benchmarks, we show that a 7B distilled model that nearly matches its teacher to within 0.2 pp under log-likelihood scoring falls behind by 20.8 pp when it must generate answers autoregressively. We investigate this phenomenon with GenDistill, a multi-stage pipeline we designed for distilling a pretrained Transformer into an efficient Hybrid Kimi Delta Attention (Hybrid-KDA) student. Using it as a controlled testbed on Qwen3-0.6B, we systematically ablate six design axes (training objective, loss masking, training duration, dataset selection, parameter freezing, and architecture choice) and evaluate every choice under both log-likelihood and generation-based protocols. We find that log-likelihood-based evaluation consistently underestimates the gap between teacher and student, and can in some cases reverse the ranking of design choices, so conclusions drawn from perplexity-only evaluation may be misleading. Among the factors we study, dataset selection, completion-only masking, and freezing attention layers during post-training have the largest impact on generation quality. Our best distillation recipe, using a Hybrid-KDA model as the student, retains 86-90% of teacher accuracy on knowledge benchmarks while reducing KV cache memory by up to 75% and improving time-to-first-token by 2-4x at 128K-token contexts.",
+      "identifiers": [
+        "SemanticScholar:115f9c4704a86af296ebcb6224843e312f1c98e0"
+      ],
+      "semantic_scholar_id": "115f9c4704a86af296ebcb6224843e312f1c98e0",
+      "canonical_id": "arXiv:2603.26556",
+      "arxiv_id": "2603.26556",
+      "doi": "10.48550/arXiv.2603.26556",
+      "authors": [
+        "Juan Gabriel Kostelec",
+        "Xiang Wang",
+        "Axel Laborieux",
+        "Christos Sourmpis",
+        "Qing Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 242,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.26556",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.26556",
+        "id:SemanticScholar:115f9c4704a86af296ebcb6224843e312f1c98e0",
+        "id:arXiv:2603.26556",
+        "title:when perplexity lies generationfocused distillation of hybrid sequence models",
+        "url:https://arxiv.org/abs/2603.26556"
+      ],
+      "record": {
+        "title": "When Perplexity Lies: Generation-Focused Distillation of Hybrid Sequence Models",
+        "source_url": "https://arxiv.org/abs/2603.26556",
+        "year": 2026,
+        "published": "2026-03-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Converting a pretrained Transformer into a more efficient hybrid model through distillation offers a promising approach to reducing inference costs. However, achieving high-quality generation in distilled models requires careful joint design of both the student architecture and the distillation process. Many prior distillation works evaluate downstream multiple-choice benchmarks by ranking candidate answers with log-likelihood rather than requiring autoregressive generation, which can obscure important differences in model quality. For example, on overlapping benchmarks, we show that a 7B distilled model that nearly matches its teacher to within 0.2 pp under log-likelihood scoring falls behind by 20.8 pp when it must generate answers autoregressively. We investigate this phenomenon with GenDistill, a multi-stage pipeline we designed for distilling a pretrained Transformer into an efficient Hybrid Kimi Delta Attention (Hybrid-KDA) student. Using it as a controlled testbed on Qwen3-0.6B, we systematically ablate six design axes (training objective, loss masking, training duration, dataset selection, parameter freezing, and architecture choice) and evaluate every choice under both log-likelihood and generation-based protocols. We find that log-likelihood-based evaluation consistently underestimates the gap between teacher and student, and can in some cases reverse the ranking of design choices, so conclusions drawn from perplexity-only evaluation may be misleading. Among the factors we study, dataset selection, completion-only masking, and freezing attention layers during post-training have the largest impact on generation quality. Our best distillation recipe, using a Hybrid-KDA model as the student, retains 86-90% of teacher accuracy on knowledge benchmarks while reducing KV cache memory by up to 75% and improving time-to-first-token by 2-4x at 128K-token contexts.",
+        "identifiers": [
+          "SemanticScholar:115f9c4704a86af296ebcb6224843e312f1c98e0"
+        ],
+        "semantic_scholar_id": "115f9c4704a86af296ebcb6224843e312f1c98e0",
+        "canonical_id": "arXiv:2603.26556",
+        "arxiv_id": "2603.26556",
+        "doi": "10.48550/arXiv.2603.26556",
+        "authors": [
+          "Juan Gabriel Kostelec",
+          "Xiang Wang",
+          "Axel Laborieux",
+          "Christos Sourmpis",
+          "Qing Guo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 242,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d36d3e59226d69dffa52c74adb7a002a4aa5d372525b8b9a1fa36999e3b3db62",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

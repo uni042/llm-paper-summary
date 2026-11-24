@@ -1,0 +1,246 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0576fc799dcdfb6d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0576fc799dcd",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.02020",
+    "arXiv:2610.13778"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "86585d9df84fbc2c2658db79d4a445531da475ef",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T10:55:59.723678+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.02020",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.13778",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ReplaySSM: Cache SSM Inputs, Not State",
+      "source_url": "https://arxiv.org/abs/2610.13778",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State-space models (SSMs) maintain a fixed-size recurrent state, but reading and writing it at every decoding step can bottleneck hybrid models. This eager state management causes large state I/O with low arithmetic intensity, leaves speculative decoding no cheap rollback, and feeds state quantization error into subsequent recurrent updates. We introduce ReplaySSM, which unrolls the recurrence to represent the state as a checkpoint and a buffer of recent SSM inputs. This separates output computation from checkpoint updates. By updating the checkpoint periodically, ReplaySSM avoids state writes on most steps and roughly halves the dominant state memory traffic. Keeping recent inputs also makes speculative rollback a buffer-pointer operation and enables output-only verification without materializing intermediate states. The same separation allows a low-precision checkpoint to serve output computation on most steps while a higher-precision checkpoint serves recurrent updates, so rounding error in the low-precision copy never enters later updates. We implement ReplaySSM in vLLM for Mamba-2 and Gated DeltaNet. At serving batch size 256, it accelerates standard decoding by $1.20$--$1.47\\times$ over a tuned vLLM baseline across four hybrid models, and delivers about $1.8\\times$ the throughput of vLLM's speculative decoding on the two 120B-class models. Separate state precisions also reduce output KL divergence and downstream accuracy losses compared with a shared low-precision checkpoint.",
+      "identifiers": [
+        "SemanticScholar:debb43c16e4ea7dcb09cd5e8006dc49657f220d0"
+      ],
+      "semantic_scholar_id": "debb43c16e4ea7dcb09cd5e8006dc49657f220d0",
+      "canonical_id": "arXiv:2610.13778",
+      "arxiv_id": "2610.13778",
+      "authors": [
+        "Ze-Wei Liou",
+        "H. Nover",
+        "Amey Naik",
+        "Andrii Skliar",
+        "Igor Shovkun",
+        "Ido Shahaf",
+        "Tri Dao"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Unveiling the Entropy Dynamics of Chain-of-Thought Reasoning",
+      "source_url": "https://arxiv.org/abs/2606.02020",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper investigates the entropy dynamics of Chain-of-Thought (CoT) and uncovers a consistent two-phase structure: an Uncertainty Region of exploration transitioning sharply to a Confidence Region of convergence. We demonstrate that the Confidence Region possesses two critical properties: 1) High Reliability -- answers in the confidence region become highly accurate and stable, and 2) High Redundancy -- models generate unnecessary tokens long after reaching the correct answer. These properties unlock more efficient and reliable inference strategies: 1) Early Exit leverages reliability and redundancy to terminate computation safely when returns diminish, and 2)Test-Time Scaling uses the Confidence Region signal to prioritize converged trajectories. To operationalize these insights, we formulate Confidence Region detection as a sequential change-point detection problem, being the first to apply classical change-point methods to monitor CoT reasoning. Using the Cumulative Sum (CUSUM) algorithm, a statistically optimal change-point detector, we develop a training-free framework for real-time inference control. Experiments show our approach establishes a superior Pareto-frontier for early exit. CUSUM achieves 63.06% accuracy with 11.1% token reduction, outperforming DEER and Dynasor by 3.28% and 4.36% in accuracy respectively. For test-time scaling, CUSUM-weighted voting consistently outperforms self-consistency.",
+      "identifiers": [
+        "SemanticScholar:379c0b6966148b4aa7cae08804d0fc0f81cfc8d0"
+      ],
+      "semantic_scholar_id": "379c0b6966148b4aa7cae08804d0fc0f81cfc8d0",
+      "canonical_id": "arXiv:2606.02020",
+      "arxiv_id": "2606.02020",
+      "doi": "10.48550/arXiv.2606.02020",
+      "authors": [
+        "Ting Xu",
+        "Xu He",
+        "Yu-Pu Lu",
+        "Jian-Kai Sun",
+        "Dong Li",
+        "Wai Lam",
+        "Jian-Ye Hao"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.13778",
+      "identity_tokens": [
+        "id:SemanticScholar:debb43c16e4ea7dcb09cd5e8006dc49657f220d0",
+        "id:arXiv:2610.13778",
+        "title:replayssm cache ssm inputs not state",
+        "url:https://arxiv.org/abs/2610.13778"
+      ],
+      "record": {
+        "title": "ReplaySSM: Cache SSM Inputs, Not State",
+        "source_url": "https://arxiv.org/abs/2610.13778",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State-space models (SSMs) maintain a fixed-size recurrent state, but reading and writing it at every decoding step can bottleneck hybrid models. This eager state management causes large state I/O with low arithmetic intensity, leaves speculative decoding no cheap rollback, and feeds state quantization error into subsequent recurrent updates. We introduce ReplaySSM, which unrolls the recurrence to represent the state as a checkpoint and a buffer of recent SSM inputs. This separates output computation from checkpoint updates. By updating the checkpoint periodically, ReplaySSM avoids state writes on most steps and roughly halves the dominant state memory traffic. Keeping recent inputs also makes speculative rollback a buffer-pointer operation and enables output-only verification without materializing intermediate states. The same separation allows a low-precision checkpoint to serve output computation on most steps while a higher-precision checkpoint serves recurrent updates, so rounding error in the low-precision copy never enters later updates. We implement ReplaySSM in vLLM for Mamba-2 and Gated DeltaNet. At serving batch size 256, it accelerates standard decoding by $1.20$--$1.47\\times$ over a tuned vLLM baseline across four hybrid models, and delivers about $1.8\\times$ the throughput of vLLM's speculative decoding on the two 120B-class models. Separate state precisions also reduce output KL divergence and downstream accuracy losses compared with a shared low-precision checkpoint.",
+        "identifiers": [
+          "SemanticScholar:debb43c16e4ea7dcb09cd5e8006dc49657f220d0"
+        ],
+        "semantic_scholar_id": "debb43c16e4ea7dcb09cd5e8006dc49657f220d0",
+        "canonical_id": "arXiv:2610.13778",
+        "arxiv_id": "2610.13778",
+        "authors": [
+          "Ze-Wei Liou",
+          "H. Nover",
+          "Amey Naik",
+          "Andrii Skliar",
+          "Igor Shovkun",
+          "Ido Shahaf",
+          "Tri Dao"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.02020",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.02020",
+        "id:SemanticScholar:379c0b6966148b4aa7cae08804d0fc0f81cfc8d0",
+        "id:arXiv:2606.02020",
+        "title:unveiling the entropy dynamics of chainofthought reasoning",
+        "url:https://arxiv.org/abs/2606.02020"
+      ],
+      "record": {
+        "title": "Unveiling the Entropy Dynamics of Chain-of-Thought Reasoning",
+        "source_url": "https://arxiv.org/abs/2606.02020",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper investigates the entropy dynamics of Chain-of-Thought (CoT) and uncovers a consistent two-phase structure: an Uncertainty Region of exploration transitioning sharply to a Confidence Region of convergence. We demonstrate that the Confidence Region possesses two critical properties: 1) High Reliability -- answers in the confidence region become highly accurate and stable, and 2) High Redundancy -- models generate unnecessary tokens long after reaching the correct answer. These properties unlock more efficient and reliable inference strategies: 1) Early Exit leverages reliability and redundancy to terminate computation safely when returns diminish, and 2)Test-Time Scaling uses the Confidence Region signal to prioritize converged trajectories. To operationalize these insights, we formulate Confidence Region detection as a sequential change-point detection problem, being the first to apply classical change-point methods to monitor CoT reasoning. Using the Cumulative Sum (CUSUM) algorithm, a statistically optimal change-point detector, we develop a training-free framework for real-time inference control. Experiments show our approach establishes a superior Pareto-frontier for early exit. CUSUM achieves 63.06% accuracy with 11.1% token reduction, outperforming DEER and Dynasor by 3.28% and 4.36% in accuracy respectively. For test-time scaling, CUSUM-weighted voting consistently outperforms self-consistency.",
+        "identifiers": [
+          "SemanticScholar:379c0b6966148b4aa7cae08804d0fc0f81cfc8d0"
+        ],
+        "semantic_scholar_id": "379c0b6966148b4aa7cae08804d0fc0f81cfc8d0",
+        "canonical_id": "arXiv:2606.02020",
+        "arxiv_id": "2606.02020",
+        "doi": "10.48550/arXiv.2606.02020",
+        "authors": [
+          "Ting Xu",
+          "Xu He",
+          "Yu-Pu Lu",
+          "Jian-Kai Sun",
+          "Dong Li",
+          "Wai Lam",
+          "Jian-Ye Hao"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 176,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:615ca0a1158f77b14b97b356ee6e85d7262b9197a0b92804b6f6cefbea9e5c4d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

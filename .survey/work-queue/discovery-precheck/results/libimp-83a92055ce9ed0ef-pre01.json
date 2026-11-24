@@ -1,0 +1,690 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-83a92055ce9ed0ef-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-83a92055ce9e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isca66397.2026.00106",
+    "arXiv:2604.08565",
+    "arXiv:2605.04069",
+    "arXiv:2606.02332",
+    "arXiv:2609.03905",
+    "arXiv:2610.16244",
+    "arXiv:2611.00444"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "86585d9df84fbc2c2658db79d4a445531da475ef",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T10:55:59.899973+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00106",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.08565",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.04069",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.02332",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.03905",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.16244",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.00444",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AQuant: Repurposing CODEC for VLM Acceleration via Adaptive Quantization",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00106",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have reached the forefront of accuracy in various vision understanding tasks. Despite their remarkable success, the computing costs of VLMs scale significantly with the high image resolutions or the increasing number of video frames that need to be processed, posing substantial challenges for deployment to real-time applications. Although specialized quantization accelerators have been developed, they may not be the optimal solutions due to their neglect of the inherent data similarity within VLMs. Additionally, the use of floating-point units for floating-point to integer conversion introduces non-negligible hardware overhead. This paper introduces Adaptive Quantization (AQuant), an algorithm-hardware co-design framework that repurposes the CODEC to accelerate VLM inference in an end-to-end and unified manner. AQuant leverages the inherent similarities in visual tokens, exploiting them for differential value (delta) generation, which is well-suited for dynamic quantization due to its narrower distribution. To eliminate the expensive floating-point similarity detection, AQuant integrates an exponent-based similarity detection operation. On the hardware side, we enhance the video CODEC's capabilities to efficiently implement exponentsimilarity detection and adaptive quantization. The framework also incorporates a Neural Processing Unit (NPU) with mixedprecision support, which collaborates closely with the CODEC to translate algorithmic savings into real speedup. Experimental results show that AQuant achieves speedups of $4.5 \\times 2.8 \\times$, and $6.9 \\times$ over state-of-the-art accelerators, such as LLM.265, CMC, and Xavier AGX GPU, with negligible accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:edbaf3f0b4460d353104321bfd74986b05c03cef"
+      ],
+      "semantic_scholar_id": "edbaf3f0b4460d353104321bfd74986b05c03cef",
+      "doi": "10.1109/ISCA66397.2026.00106",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00106",
+      "authors": [
+        "Zhuo-Ran Song",
+        "Chun-Yu Qi",
+        "Jian Weng",
+        "Xiao-Yao Liang",
+        "Hai-Bing Guan"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "Dynamic sparsity in tree-structured feed-forward layers at scale",
+      "source_url": "https://arxiv.org/abs/2604.08565",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "At typical context lengths, the feed-forward MLP block accounts for a large share of a transformer's compute budget, motivating sparse alternatives to dense MLP blocks. We study sparse, tree-structured feed-forward layers as drop-in replacements for MLP blocks in deep transformer architectures, enabling conditional computation via hard hierarchical routing without a separate router network. We demonstrate for the first time that this form of tree-structured conditional sparsity can be applied for autoregressive language modeling and downstream question answering, including zero- and few-shot settings, and its scalability beyond 1B parameters. Despite activating fewer than 5% of the feed-forward block's units per token, our models match dense baselines under controlled training and fine-tuning protocols. We further analyze training dynamics and identify an emergent auto-pruning effect: the interaction of hard routing with asymmetric nonlinearities progressively deactivates unused paths, yielding partial conversion of dynamic routing into static structural sparsity. We show that simple architectural choices can modulate this behavior and recover balanced trees without auxiliary losses. Overall, our work demonstrates that tree-structured feed-forward layers provide a scalable and controllable mechanism for sparsifying large transformer models.",
+      "identifiers": [
+        "SemanticScholar:476d6684c69d6a0bd5e38a80671c9149e4756253"
+      ],
+      "semantic_scholar_id": "476d6684c69d6a0bd5e38a80671c9149e4756253",
+      "canonical_id": "arXiv:2604.08565",
+      "arxiv_id": "2604.08565",
+      "doi": "10.48550/arXiv.2604.08565",
+      "authors": [
+        "Reza Sedghi",
+        "Robin Schiewer",
+        "Anand Subramoney",
+        "D. Kappel"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 251,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LAWS: Learning from Actual Workloads Symbolically - A Self-Certifying Parametrized Cache Architecture for Neural Inference, Robotics, and Edge Deployment",
+      "source_url": "https://arxiv.org/abs/2605.04069",
+      "year": 2026,
+      "published": "2026-04-12",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce LAWS (Learning from Actual Workloads Symbolically), a self-certifying inference caching architecture that builds a growing library of certified expert functions from deployment observations. Each expert covers a region of input space defined by a node in the Probabilistic Language Trie (PLT) of the base model and carries a formal error bound holding uniformly over all inputs. The central result is a self-certification theorem: for any input x, the LAWS approximation error is bounded by epsilon_fit + 2*Lambda(W)*C_E, where Lambda(W) is the model Lipschitz constant, C_E is the maximum embedding diameter, and epsilon_fit is the expert training error -- all checkable at deployment time without ground truth. We prove that LAWS generalizes both Mixture-of-Experts and KV prefix caching as special cases and is strictly more expressive than any fixed-K MoE or finite cache. Further results include a monotone hit rate theorem (any-match routing ensures coverage only increases), an expert library growth rate of O(2^H log N) where H is workload entropy, a fleet learning convergence theorem with Omega(K) speedup for K-unit fleets, and an over-the-air update bandwidth bound. We conjecture that LAWS is acquisition-optimal among stationary online caching algorithms and that the effective Lipschitz constant on the training distribution grows polynomially rather than exponentially in depth. Applications are developed for LLM inference, robotic control, and multi-agent edge deployment.",
+      "identifiers": [
+        "SemanticScholar:8b175af7e53ad6836c6b20fc5d4e45f21cd3d914"
+      ],
+      "semantic_scholar_id": "8b175af7e53ad6836c6b20fc5d4e45f21cd3d914",
+      "canonical_id": "arXiv:2605.04069",
+      "arxiv_id": "2605.04069",
+      "doi": "10.48550/arXiv.2605.04069",
+      "authors": [
+        "Gregory Magarshak"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 226,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Forget Attention: Importance-Aware Attention Is All You Need",
+      "source_url": "https://arxiv.org/abs/2606.02332",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention retrieves content precisely, but its scores depend only on query--key products, leaving order and recency to positional encodings. Conversely, state-space models (SSMs) such as Mamba-3 track order and recency through input-dependent state transitions that decay and rotate, yet compressing context into a fixed-size state hampers precise retrieval. Hybrids like Samba and Hymba exploit this complementarity only across layers or heads, so SSM transitions never shape attention scores directly. The closest prior work, the Forgetting Transformer (FoX), adds an input-dependent forget gate to the scores but reweights attention by recency alone. We propose SSM-Informed Softmax Attention (SISA), which builds Mamba-3-style state transitions, rotation included, directly into the scores alongside FoX's gate. Each logit receives the weight such an SSM would give that token pair: a decayed match between rotated SSM projections. This rotation already encodes relative position, so SISA drops RoPE; restoring it raises loss. SISA outperforms parameter-matched Transformer and FoX in language modeling and length extrapolation. Among the attention models we compare, hybrids included, only SISA benefits from context beyond the training window. Building SSM transitions into the scores yields stronger attention, and our kernels make it faster and leaner than baselines on their official or standard kernels.",
+      "identifiers": [
+        "SemanticScholar:43654c81253451604464e15509c94700f3266931"
+      ],
+      "semantic_scholar_id": "43654c81253451604464e15509c94700f3266931",
+      "canonical_id": "arXiv:2606.02332",
+      "arxiv_id": "2606.02332",
+      "doi": "10.48550/arXiv.2606.02332",
+      "authors": [
+        "Suhyeong Shin",
+        "Yeongwook Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Every Kernel Is a Join: Automatic Multi-GPU Parallelism for AI Computations in Einsummable",
+      "source_url": "https://arxiv.org/abs/2609.03905",
+      "year": 2026,
+      "published": "2026-09-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Distributing an AI computation across the GPUs of a multi-GPU server is one of the central problems in systems-for-AI. We present Einsummable, a prototype system that accepts a PyTorch-like description of an AI computation and automatically distributes it across a multi-GPU server, with no device assignments, sharding annotations, or communication operations written by the programmer. Einsummable models every operation as a relational join followed by an aggregation over tensor relations, in which the tuples contain sub-tensors. Each operation exposes its possible decompositions through what we call\"join-agg specs\". An optimizer then selects decompositions across the whole computation to minimize a communication-cost proxy. Because it searches decompositions rather than a menu of named strategies, Einsummable discovers plans that mesh-based auto-parallelizers cannot. Each decomposed operation is implemented by synthesizing an exchange program, which is a topology-aware generalization of Volcano's exchange operator. Einsummable invokes no canned collectives: all communication and aggregation is special-purpose, derived at compile time. Despite being fully automatic, Einsummable can outperform custom-designed implementations. For example, on LLaMA transformer blocks on an eight-GPU A100 server, Einsummable achieves a geometric-mean runtime of 8.97 ms, versus 13.80 ms for hand-tuned PyTorch and 15.90 ms for vLLM.",
+      "identifiers": [
+        "SemanticScholar:ed77a109ac7eadfd5ad35935e74fe047bd9ad985"
+      ],
+      "semantic_scholar_id": "ed77a109ac7eadfd5ad35935e74fe047bd9ad985",
+      "canonical_id": "arXiv:2609.03905",
+      "arxiv_id": "2609.03905",
+      "doi": "10.48550/arXiv.2609.03905",
+      "authors": [
+        "Zhi-Min Ding",
+        "Chen-Kuan Liao",
+        "Chima Adiole",
+        "Brianna Barrow",
+        "Fang-Zhou Du",
+        "Yu-Shun Hsiao",
+        "Ge Huang",
+        "Yi-Cheng Jin",
+        "Ismail Syed",
+        "C. Jermaine"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 82,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HeteroVDiff: Pipelining Video Diffusion across Mobile NPU and GPU with Shared Weights",
+      "source_url": "https://arxiv.org/abs/2610.16244",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video generation is moving from the cloud to phones for privacy and offline use, and applications often ask for several clips at a time, so on-device video generation is a throughput problem before it is a latency problem. Contemporary mobile SoCs carry both a GPU and a neural processing unit (NPU) on shared DRAM, yet existing on-device video diffusion systems run the denoiser on one engine while the other sits idle or only decodes the finished latent afterwards. Heterogeneous designs built for mobile LLMs do not carry over: they synchronise the two engines at every operator and partition weight tensors between them instead of sharing one stored copy. We first measure the platform limits that decide what can run on this class of SoC: how large one buffer may be, whether both runtimes can map the same buffer, and how much activation memory the NPU toolchain lets one graph hold. Guided by these measurements, we store the base weights once in INT8 in the layout the NPU reads natively; the GPU consumes the same bytes directly as integer dot-product operands, so neither runtime rearranges weights on load. We then flatten the denoising trajectory into its full sequence of block executions and cut it once at a block boundary, so the GPU runs the prefix and the NPU the suffix. The cut is placed from measured rather than modelled rates, including the decoder that only the NPU can run, and taken while both engines run together because each engine's speed changes when the other is active. We present HeteroVDiff, which serves a multi-expert video diffusion model across the NPU and GPU with 48% less weight memory than giving each engine its own copy. Generating videos back to back on a Galaxy S25 with decoding inside the pipeline, HeteroVDiff sustains 1.35x the stream throughput of NPU-only execution, and on VBench-2.0 it matches FP32 in the total score over all 18 dimensions.",
+      "identifiers": [
+        "SemanticScholar:414a77edb61dd7b4dcb19d9c58f273fb5a598913"
+      ],
+      "semantic_scholar_id": "414a77edb61dd7b4dcb19d9c58f273fb5a598913",
+      "canonical_id": "arXiv:2610.16244",
+      "arxiv_id": "2610.16244",
+      "authors": [
+        "Zhe-Yu Shen",
+        "Zi-Yao Wang",
+        "Ye-Xiao He",
+        "Guoheng Sun",
+        "Yu-Ning Zhang",
+        "Yi-Ting Wang",
+        "Wang-Hao Ye",
+        "Ang Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CLiS: Plug-and-Play Attention Acceleration for Video Diffusion on TPUs via Certified Stabilization",
+      "source_url": "https://arxiv.org/abs/2611.00444",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High-resolution video diffusion relies on attention over long token sequences, making attention efficiency critical to generation latency. Our analysis identifies repeated maximum reductions and accumulator rescaling in online softmax as a bottleneck in long-context TPU attention. We propose CLiS (Certified Loop-invariant Stabilization), a training-free, plug-and-play optimization for video diffusion inference. CLiS fixes per-row stabilizers before the KV loop and certifies numerical safety per head, falling back to online softmax when certification fails. It integrates into existing fused-attention kernels without changing model weights or architecture. On Wan 2.2 and LTX-2 across TPU v6e and TPU7x, CLiS reduces diffusion transformer (DiT) step latency by up to 19.6% relative to tuned online softmax without measurable quality loss. Controlled TPU adaptations of prior GPU stabilization methods show performance or numerical-safety limitations. Preliminary causal LLM experiments also show up to 13.5% higher training throughput in continued pretraining and 7.7% in supervised fine-tuning.",
+      "identifiers": [
+        "SemanticScholar:176414d2d07c24d3a0828c5caedee4de50a539a6"
+      ],
+      "semantic_scholar_id": "176414d2d07c24d3a0828c5caedee4de50a539a6",
+      "canonical_id": "arXiv:2611.00444",
+      "arxiv_id": "2611.00444",
+      "authors": [
+        "Elisa Tsai",
+        "Shao-Yu Huang",
+        "Daniel Mandragona",
+        "Wei-Yu Lin",
+        "Wen-Xin Dong",
+        "Jevin Jiang",
+        "Chandra Devarakonda",
+        "Mehdy Bohlool",
+        "Yi-Xin Shi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00106",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00106",
+        "id:SemanticScholar:edbaf3f0b4460d353104321bfd74986b05c03cef",
+        "title:aquant repurposing codec for vlm acceleration via adaptive quantization",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00106"
+      ],
+      "record": {
+        "title": "AQuant: Repurposing CODEC for VLM Acceleration via Adaptive Quantization",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00106",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have reached the forefront of accuracy in various vision understanding tasks. Despite their remarkable success, the computing costs of VLMs scale significantly with the high image resolutions or the increasing number of video frames that need to be processed, posing substantial challenges for deployment to real-time applications. Although specialized quantization accelerators have been developed, they may not be the optimal solutions due to their neglect of the inherent data similarity within VLMs. Additionally, the use of floating-point units for floating-point to integer conversion introduces non-negligible hardware overhead. This paper introduces Adaptive Quantization (AQuant), an algorithm-hardware co-design framework that repurposes the CODEC to accelerate VLM inference in an end-to-end and unified manner. AQuant leverages the inherent similarities in visual tokens, exploiting them for differential value (delta) generation, which is well-suited for dynamic quantization due to its narrower distribution. To eliminate the expensive floating-point similarity detection, AQuant integrates an exponent-based similarity detection operation. On the hardware side, we enhance the video CODEC's capabilities to efficiently implement exponentsimilarity detection and adaptive quantization. The framework also incorporates a Neural Processing Unit (NPU) with mixedprecision support, which collaborates closely with the CODEC to translate algorithmic savings into real speedup. Experimental results show that AQuant achieves speedups of $4.5 \\times 2.8 \\times$, and $6.9 \\times$ over state-of-the-art accelerators, such as LLM.265, CMC, and Xavier AGX GPU, with negligible accuracy loss.",
+        "identifiers": [
+          "SemanticScholar:edbaf3f0b4460d353104321bfd74986b05c03cef"
+        ],
+        "semantic_scholar_id": "edbaf3f0b4460d353104321bfd74986b05c03cef",
+        "doi": "10.1109/ISCA66397.2026.00106",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00106",
+        "authors": [
+          "Zhuo-Ran Song",
+          "Chun-Yu Qi",
+          "Jian Weng",
+          "Xiao-Yao Liang",
+          "Hai-Bing Guan"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 176,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.08565",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.08565",
+        "id:SemanticScholar:476d6684c69d6a0bd5e38a80671c9149e4756253",
+        "id:arXiv:2604.08565",
+        "title:dynamic sparsity in treestructured feedforward layers at scale",
+        "url:https://arxiv.org/abs/2604.08565"
+      ],
+      "record": {
+        "title": "Dynamic sparsity in tree-structured feed-forward layers at scale",
+        "source_url": "https://arxiv.org/abs/2604.08565",
+        "year": 2026,
+        "published": "2026-03-18",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "At typical context lengths, the feed-forward MLP block accounts for a large share of a transformer's compute budget, motivating sparse alternatives to dense MLP blocks. We study sparse, tree-structured feed-forward layers as drop-in replacements for MLP blocks in deep transformer architectures, enabling conditional computation via hard hierarchical routing without a separate router network. We demonstrate for the first time that this form of tree-structured conditional sparsity can be applied for autoregressive language modeling and downstream question answering, including zero- and few-shot settings, and its scalability beyond 1B parameters. Despite activating fewer than 5% of the feed-forward block's units per token, our models match dense baselines under controlled training and fine-tuning protocols. We further analyze training dynamics and identify an emergent auto-pruning effect: the interaction of hard routing with asymmetric nonlinearities progressively deactivates unused paths, yielding partial conversion of dynamic routing into static structural sparsity. We show that simple architectural choices can modulate this behavior and recover balanced trees without auxiliary losses. Overall, our work demonstrates that tree-structured feed-forward layers provide a scalable and controllable mechanism for sparsifying large transformer models.",
+        "identifiers": [
+          "SemanticScholar:476d6684c69d6a0bd5e38a80671c9149e4756253"
+        ],
+        "semantic_scholar_id": "476d6684c69d6a0bd5e38a80671c9149e4756253",
+        "canonical_id": "arXiv:2604.08565",
+        "arxiv_id": "2604.08565",
+        "doi": "10.48550/arXiv.2604.08565",
+        "authors": [
+          "Reza Sedghi",
+          "Robin Schiewer",
+          "Anand Subramoney",
+          "D. Kappel"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 251,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.04069",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.04069",
+        "id:SemanticScholar:8b175af7e53ad6836c6b20fc5d4e45f21cd3d914",
+        "id:arXiv:2605.04069",
+        "title:laws learning from actual workloads symbolically a selfcertifying parametrized cache architecture for neural inference robotics and edge deployment",
+        "url:https://arxiv.org/abs/2605.04069"
+      ],
+      "record": {
+        "title": "LAWS: Learning from Actual Workloads Symbolically - A Self-Certifying Parametrized Cache Architecture for Neural Inference, Robotics, and Edge Deployment",
+        "source_url": "https://arxiv.org/abs/2605.04069",
+        "year": 2026,
+        "published": "2026-04-12",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce LAWS (Learning from Actual Workloads Symbolically), a self-certifying inference caching architecture that builds a growing library of certified expert functions from deployment observations. Each expert covers a region of input space defined by a node in the Probabilistic Language Trie (PLT) of the base model and carries a formal error bound holding uniformly over all inputs. The central result is a self-certification theorem: for any input x, the LAWS approximation error is bounded by epsilon_fit + 2*Lambda(W)*C_E, where Lambda(W) is the model Lipschitz constant, C_E is the maximum embedding diameter, and epsilon_fit is the expert training error -- all checkable at deployment time without ground truth. We prove that LAWS generalizes both Mixture-of-Experts and KV prefix caching as special cases and is strictly more expressive than any fixed-K MoE or finite cache. Further results include a monotone hit rate theorem (any-match routing ensures coverage only increases), an expert library growth rate of O(2^H log N) where H is workload entropy, a fleet learning convergence theorem with Omega(K) speedup for K-unit fleets, and an over-the-air update bandwidth bound. We conjecture that LAWS is acquisition-optimal among stationary online caching algorithms and that the effective Lipschitz constant on the training distribution grows polynomially rather than exponentially in depth. Applications are developed for LLM inference, robotic control, and multi-agent edge deployment.",
+        "identifiers": [
+          "SemanticScholar:8b175af7e53ad6836c6b20fc5d4e45f21cd3d914"
+        ],
+        "semantic_scholar_id": "8b175af7e53ad6836c6b20fc5d4e45f21cd3d914",
+        "canonical_id": "arXiv:2605.04069",
+        "arxiv_id": "2605.04069",
+        "doi": "10.48550/arXiv.2605.04069",
+        "authors": [
+          "Gregory Magarshak"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 226,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.02332",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.02332",
+        "id:SemanticScholar:43654c81253451604464e15509c94700f3266931",
+        "id:arXiv:2606.02332",
+        "title:forget attention importanceaware attention is all you need",
+        "url:https://arxiv.org/abs/2606.02332"
+      ],
+      "record": {
+        "title": "Forget Attention: Importance-Aware Attention Is All You Need",
+        "source_url": "https://arxiv.org/abs/2606.02332",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention retrieves content precisely, but its scores depend only on query--key products, leaving order and recency to positional encodings. Conversely, state-space models (SSMs) such as Mamba-3 track order and recency through input-dependent state transitions that decay and rotate, yet compressing context into a fixed-size state hampers precise retrieval. Hybrids like Samba and Hymba exploit this complementarity only across layers or heads, so SSM transitions never shape attention scores directly. The closest prior work, the Forgetting Transformer (FoX), adds an input-dependent forget gate to the scores but reweights attention by recency alone. We propose SSM-Informed Softmax Attention (SISA), which builds Mamba-3-style state transitions, rotation included, directly into the scores alongside FoX's gate. Each logit receives the weight such an SSM would give that token pair: a decayed match between rotated SSM projections. This rotation already encodes relative position, so SISA drops RoPE; restoring it raises loss. SISA outperforms parameter-matched Transformer and FoX in language modeling and length extrapolation. Among the attention models we compare, hybrids included, only SISA benefits from context beyond the training window. Building SSM transitions into the scores yields stronger attention, and our kernels make it faster and leaner than baselines on their official or standard kernels.",
+        "identifiers": [
+          "SemanticScholar:43654c81253451604464e15509c94700f3266931"
+        ],
+        "semantic_scholar_id": "43654c81253451604464e15509c94700f3266931",
+        "canonical_id": "arXiv:2606.02332",
+        "arxiv_id": "2606.02332",
+        "doi": "10.48550/arXiv.2606.02332",
+        "authors": [
+          "Suhyeong Shin",
+          "Yeongwook Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 176,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.03905",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.03905",
+        "id:SemanticScholar:ed77a109ac7eadfd5ad35935e74fe047bd9ad985",
+        "id:arXiv:2609.03905",
+        "title:every kernel is a join automatic multigpu parallelism for ai computations in einsummable",
+        "url:https://arxiv.org/abs/2609.03905"
+      ],
+      "record": {
+        "title": "Every Kernel Is a Join: Automatic Multi-GPU Parallelism for AI Computations in Einsummable",
+        "source_url": "https://arxiv.org/abs/2609.03905",
+        "year": 2026,
+        "published": "2026-09-03",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Distributing an AI computation across the GPUs of a multi-GPU server is one of the central problems in systems-for-AI. We present Einsummable, a prototype system that accepts a PyTorch-like description of an AI computation and automatically distributes it across a multi-GPU server, with no device assignments, sharding annotations, or communication operations written by the programmer. Einsummable models every operation as a relational join followed by an aggregation over tensor relations, in which the tuples contain sub-tensors. Each operation exposes its possible decompositions through what we call\"join-agg specs\". An optimizer then selects decompositions across the whole computation to minimize a communication-cost proxy. Because it searches decompositions rather than a menu of named strategies, Einsummable discovers plans that mesh-based auto-parallelizers cannot. Each decomposed operation is implemented by synthesizing an exchange program, which is a topology-aware generalization of Volcano's exchange operator. Einsummable invokes no canned collectives: all communication and aggregation is special-purpose, derived at compile time. Despite being fully automatic, Einsummable can outperform custom-designed implementations. For example, on LLaMA transformer blocks on an eight-GPU A100 server, Einsummable achieves a geometric-mean runtime of 8.97 ms, versus 13.80 ms for hand-tuned PyTorch and 15.90 ms for vLLM.",
+        "identifiers": [
+          "SemanticScholar:ed77a109ac7eadfd5ad35935e74fe047bd9ad985"
+        ],
+        "semantic_scholar_id": "ed77a109ac7eadfd5ad35935e74fe047bd9ad985",
+        "canonical_id": "arXiv:2609.03905",
+        "arxiv_id": "2609.03905",
+        "doi": "10.48550/arXiv.2609.03905",
+        "authors": [
+          "Zhi-Min Ding",
+          "Chen-Kuan Liao",
+          "Chima Adiole",
+          "Brianna Barrow",
+          "Fang-Zhou Du",
+          "Yu-Shun Hsiao",
+          "Ge Huang",
+          "Yi-Cheng Jin",
+          "Ismail Syed",
+          "C. Jermaine"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 82,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.16244",
+      "identity_tokens": [
+        "id:SemanticScholar:414a77edb61dd7b4dcb19d9c58f273fb5a598913",
+        "id:arXiv:2610.16244",
+        "title:heterovdiff pipelining video diffusion across mobile npu and gpu with shared weights",
+        "url:https://arxiv.org/abs/2610.16244"
+      ],
+      "record": {
+        "title": "HeteroVDiff: Pipelining Video Diffusion across Mobile NPU and GPU with Shared Weights",
+        "source_url": "https://arxiv.org/abs/2610.16244",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video generation is moving from the cloud to phones for privacy and offline use, and applications often ask for several clips at a time, so on-device video generation is a throughput problem before it is a latency problem. Contemporary mobile SoCs carry both a GPU and a neural processing unit (NPU) on shared DRAM, yet existing on-device video diffusion systems run the denoiser on one engine while the other sits idle or only decodes the finished latent afterwards. Heterogeneous designs built for mobile LLMs do not carry over: they synchronise the two engines at every operator and partition weight tensors between them instead of sharing one stored copy. We first measure the platform limits that decide what can run on this class of SoC: how large one buffer may be, whether both runtimes can map the same buffer, and how much activation memory the NPU toolchain lets one graph hold. Guided by these measurements, we store the base weights once in INT8 in the layout the NPU reads natively; the GPU consumes the same bytes directly as integer dot-product operands, so neither runtime rearranges weights on load. We then flatten the denoising trajectory into its full sequence of block executions and cut it once at a block boundary, so the GPU runs the prefix and the NPU the suffix. The cut is placed from measured rather than modelled rates, including the decoder that only the NPU can run, and taken while both engines run together because each engine's speed changes when the other is active. We present HeteroVDiff, which serves a multi-expert video diffusion model across the NPU and GPU with 48% less weight memory than giving each engine its own copy. Generating videos back to back on a Galaxy S25 with decoding inside the pipeline, HeteroVDiff sustains 1.35x the stream throughput of NPU-only execution, and on VBench-2.0 it matches FP32 in the total score over all 18 dimensions.",
+        "identifiers": [
+          "SemanticScholar:414a77edb61dd7b4dcb19d9c58f273fb5a598913"
+        ],
+        "semantic_scholar_id": "414a77edb61dd7b4dcb19d9c58f273fb5a598913",
+        "canonical_id": "arXiv:2610.16244",
+        "arxiv_id": "2610.16244",
+        "authors": [
+          "Zhe-Yu Shen",
+          "Zi-Yao Wang",
+          "Ye-Xiao He",
+          "Guoheng Sun",
+          "Yu-Ning Zhang",
+          "Yi-Ting Wang",
+          "Wang-Hao Ye",
+          "Ang Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 43,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.00444",
+      "identity_tokens": [
+        "id:SemanticScholar:176414d2d07c24d3a0828c5caedee4de50a539a6",
+        "id:arXiv:2611.00444",
+        "title:clis plugandplay attention acceleration for video diffusion on tpus via certified stabilization",
+        "url:https://arxiv.org/abs/2611.00444"
+      ],
+      "record": {
+        "title": "CLiS: Plug-and-Play Attention Acceleration for Video Diffusion on TPUs via Certified Stabilization",
+        "source_url": "https://arxiv.org/abs/2611.00444",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "High-resolution video diffusion relies on attention over long token sequences, making attention efficiency critical to generation latency. Our analysis identifies repeated maximum reductions and accumulator rescaling in online softmax as a bottleneck in long-context TPU attention. We propose CLiS (Certified Loop-invariant Stabilization), a training-free, plug-and-play optimization for video diffusion inference. CLiS fixes per-row stabilizers before the KV loop and certifies numerical safety per head, falling back to online softmax when certification fails. It integrates into existing fused-attention kernels without changing model weights or architecture. On Wan 2.2 and LTX-2 across TPU v6e and TPU7x, CLiS reduces diffusion transformer (DiT) step latency by up to 19.6% relative to tuned online softmax without measurable quality loss. Controlled TPU adaptations of prior GPU stabilization methods show performance or numerical-safety limitations. Preliminary causal LLM experiments also show up to 13.5% higher training throughput in continued pretraining and 7.7% in supervised fine-tuning.",
+        "identifiers": [
+          "SemanticScholar:176414d2d07c24d3a0828c5caedee4de50a539a6"
+        ],
+        "semantic_scholar_id": "176414d2d07c24d3a0828c5caedee4de50a539a6",
+        "canonical_id": "arXiv:2611.00444",
+        "arxiv_id": "2611.00444",
+        "authors": [
+          "Elisa Tsai",
+          "Shao-Yu Huang",
+          "Daniel Mandragona",
+          "Wei-Yu Lin",
+          "Wen-Xin Dong",
+          "Jevin Jiang",
+          "Chandra Devarakonda",
+          "Mehdy Bohlool",
+          "Yi-Xin Shi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 25,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:070168da04a7f58c4c86471e1cbcb72b944d572dfc030bd62d8434ec811ed99c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
