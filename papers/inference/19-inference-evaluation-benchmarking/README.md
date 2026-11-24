@@ -164,6 +164,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   AOT（local-global Anchor Optimal Transport）は、動画対応の大規模言語モデル（Video LLM）の入力に含まれる視覚トークンを、追加学習なしで削減する方式である。LLaVA-OneVision-7Bの無圧縮平均58.4に対し、視覚トークン10%保持のAOTは平均57.0で、元性能の97.6%を維持した。
 
+- **2026-03 · [Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing](2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  視覚トランスフォーマーの手前で再構成可能な最小の複数尺度パッチを自己回帰的に選ぶ軽量な注視モジュールにより、視覚トークンを最大100分の1へ減らし、長尺・4K動画への拡張と精度向上を両立する。
+
 - **2025-12 · [Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models](2025-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficie.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   決まった層で視覚トークンを一様に間引く詰め込み口を作り、注意の働きで情報を残るトークンへ移す自己圧縮を学習させる方式で、LLaVA-1.5-7Bの計算量を53.7%、キー値キャッシュを56.7%減らしながら性能の98.2%を保持した。
@@ -694,10 +698,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   FP4の感度を射影の種類とブロックの深さで切り分けた診断研究で、MLPの上向き・下向き射影が全規模・両形式で最も敏感であり、感度は最終ブロックだけに集中しないことを示した。
 
-- **2026-03 · [Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing](2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  視覚トランスフォーマーの手前で再構成可能な最小の複数尺度パッチを自己回帰的に選ぶ軽量な注視モジュールにより、視覚トークンを最大100分の1へ減らし、長尺・4K動画への拡張と精度向上を両立する。
-
 - **2026-03 · [AE-LLM: Adaptive Efficiency Optimization for Large Language Models](2026-2603.20492-ae-llm-adaptive-efficiency-optimization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   効率化手法の組合せを多目的最適化として自動探索する枠組み。代理モデルの予測と進化探索で、精度・遅延・メモリ・エネルギーのバランスが取れた構成を配備条件ごとに見つける。
@@ -821,7 +821,7 @@
   「温度0の貪欲復号なら同じモデルは同じ答えを返す」という前提が、GPU数・GPU種類・バッチサイズによる浮動小数点演算順序の変化だけでも崩れることを系統的に示し、重みの保存精度と計算精度を分離するLayerCastで再現性を改善する研究。
 
 - **2025-10 · [Growing a Twig to Accelerate Large Vision-Language Models](2025-2503.14075-growing-a-twig-to-accelerate-large-vision-language-models.md)**  
-  実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：15  
   初期の視覚トークン枝刈り方式は、入力処理（プリフィル）の計算量を減らす一方、初期層の注意得点が質問内容を十分反映しないため、削除してはいけない視覚トークンを捨てやすい。ICCV 2025論文の主結果では、LLaVA-1.5-7Bの平均視覚トークンを576から64へ減らした設定（88.9%削減）で、6課題の平均相対性能96.0%を維持した。
 
 - **2025-07 · [Collaborative Inference and Learning between Edge SLMs and Cloud LLMs: A Survey of Algorithms, Execution, and Open Challenges](2025-2507.16731-collaborative-inference-and-learning-between-edge-slms-and-cloud-llms-a-.md)**  

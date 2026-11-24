@@ -248,6 +248,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   通常の推論評価では精度、応答遅延、トークン毎秒、GPU利用率、モデル浮動小数点演算利用率（モデル FLOPs Utilization、MFU）を測る。KVキャッシュ圧縮、量子化、疎注意、ルーティング、バッチ化、スケジューリングなどは、トークン当たりの計算量と消費エネルギーを減らすことで、この上限を引き上げる介入として位置づけられる。
 
+- **2026-05 · [Cascade Token Selection for Transformer Attention Acceleration](2026-2605.03110-cascade-token-selection-for-transformer-attention-acceleration.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  前層の代表トークン集合を継承し相互グラムで検証と微修正だけを行うことで、注意圧縮の選択費用を二乗量から系列長×代表数へ下げ、グラム演算を22〜63パーセント削減するカスケード選択方式。
+
 - **2026-05 · [BFLA: Block-Filtered Long-Context Attention Mechanism](2026-2605.12193-bfla-block-filtered-long-context-attention-mechanism.md)**  
   実装：[✓](https://github.com/Alicewithrabbit/BFLA) ・ リポジトリ内被引用：1  
   学習なしの決定的ブロック索引、クエリタイルでの選択共有、長さ適応の保持予算を組み合わせた疎プリフィルで、密な比較対象に対して最初のトークンまでの時間を最大約4倍、要求全体を最大3.72倍速くし、長文脈の品質は同等以上を保った。
@@ -589,10 +593,6 @@
 - **2026-05 · [CompactAttention: Accelerating Chunked Prefill with Block-Union KV Selection](2026-2605.16839-compactattention-accelerating-chunked-prefill-with-block-union-kv-select.md)**  
   実装：[✓](https://github.com/jiwonsong-dev/CompactAttention) ・ リポジトリ内被引用：0  
   CompactAttentionは、長文脈の大規模言語モデル（LLM）の分割入力処理（chunked プリフィル）を高速化するため、疎注意（sparse 注意機構）の「どのKVブロックを選ぶか」と「選んだKVをどのカーネルで計算するか」を切り離す方式である。
-
-- **2026-05 · [Cascade Token Selection for Transformer Attention Acceleration](2026-2605.03110-cascade-token-selection-for-transformer-attention-acceleration.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  前層の代表トークン集合を継承し相互グラムで検証と微修正だけを行うことで、注意圧縮の選択費用を二乗量から系列長×代表数へ下げ、グラム演算を22〜63パーセント削減するカスケード選択方式。
 
 - **2026-05 · [AdapShot: Adaptive Many-Shot In-Context Learning with Semantic-Aware KV Cache Reuse](2026-2605.03644-adapshot-adaptive-many-shot-in-context-learning-with-semantic-aware-kv-c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
