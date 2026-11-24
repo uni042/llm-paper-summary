@@ -35,10 +35,15 @@
   "selection_reason": "エッジ上のVLAモデルが自己回帰デコードのメモリ律速で3〜5Hzに留まる問題へ、DecodeとPrefillを跨リクエストでパイプライン化するスケジューラと統合KVリングバッファで対処するActionFlowであり、エッジ推論高速化への直接貢献が明確。",
   "semantic_scholar_id": "a63326e80618990593fc10b94239e6ff677dd449",
   "source_url": "https://arxiv.org/abs/2512.20276",
-  "status": "ready",
+  "status": "superseded",
   "title": "ActionFlow: A Pipelined Action Acceleration for Vision Language Models on Edge",
   "type": "research",
   "venue": "Design Automation Conference",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-24T00:50:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on.md",
+  "represented_canonical_id": "arXiv:2512.20276",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（112本）
+## 自動生成の論文一覧（113本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -285,6 +285,10 @@
 - **2025-12 · [Input-Adaptive Visual Preprocessing for Efficient Fast Vision-Language Model Inference](2025-2512.20839-input-adaptive-visual-preprocessing-for-efficient-fast-vision-language-m.md)**  
   実装：[✓](https://github.com/kmdavidds/mlfastlm) ・ リポジトリ内被引用：0  
   画像の複雑さに応じて解像度と切り抜きを変える前処理をFastVLMの前に置き、モデル無変更で視覚トークンを55パーセント超、画像あたり推論時間を50パーセント超減らす軽量な効率化。
+
+- **2025-12 · [ActionFlow: A Pipelined Action Acceleration for Vision Language Models on Edge](2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  連続制御の現在フレームのプリフィルと過去フレームのデコードを1バッチへ詰めるリクエスト間パイプライン化で、再学習なしにエッジ上の視覚言語行動モデルを2.55倍高速化する推論基盤。
 
 ### 2年前（2024-12〜2025-11）
 

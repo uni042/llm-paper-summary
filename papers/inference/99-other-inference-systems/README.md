@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1414本）
+## 自動生成の論文一覧（1416本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3330,6 +3330,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   深い注意層が自らの更新を消すという抑制仮説に基づき、クエリとキー重みの結合の強さだけで注意層を順位付けて外す、データ不要で1秒未満に終わる深さ方向の枝刈り。
 
+- **2025-12 · [Compass: Co-Exploration of Mapping and Hardware for Heterogeneous Multi-Chiplet Accelerators Targeting LLM Inference Service Workloads](2025-2512.06093-compass-co-exploration-of-mapping-and-hardware-for-heterogeneous-multi-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  混在するリクエスト種類と可変系列長の提供ワークロードを、マイクロバッチと層の二次元グラフ符号化で表し、系列長分布に合わせて遺伝的探索でチップレット配置を最適化することで、エネルギー遅延積を先行探索手法から平均約63パーセント削減するマッピング探索フレームワーク。
+
 - **2025-12 · [Can LLMs Predict Their Own Failures? Self-Awareness via Internal Circuits](2025-2512.20578-can-llms-predict-their-own-failures-self-awareness-via-internal-circuits.md)**  
   実装：[✓](https://github.com/Amirhosein-gh98/Gnosis) ・ リポジトリ内被引用：0  
   回答文中の自己申告の確信度も、誤った回答に対して高い確信を示す問題がある。提案方式は、生成モデル本体の重みを変更せず、生成中に現れる隠れ状態（Hidden States）と注意重み（注意機構 Maps）の時系列的な特徴を抽出する。これは判定器の時間比較であり、回答を生成する言語モデル全体が37倍または99倍速くなるという意味ではない。
@@ -4719,7 +4723,7 @@
   RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
 
 - **2023-12 · [Zoology: Measuring and Improving Recall in Efficient Language Models](2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：43  
+  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：44  
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
@@ -5190,6 +5194,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   微調整データなしで、層ごとの量子化感度をロジットの距離で測ってパレートフロンティアで層を選び、事前学習コーパスで較正することで、言語トランスフォーマーの95%以上を8ビット整数化しても正解率の低下を0.02%以内に抑える学習後量子化の研究。
 
+- **2024-05 · [Language-Specific Pruning for Efficient Reduction of Large Language Models](2024-f34641a221bb-language-specific-pruning-for-efficient-reduction-of-large-language-mode.md)**  
+  実装：[✓](https://github.com/mshamrai/language-specific-pruning) ・ リポジトリ内被引用：0  
+  枝刈りの較正データの言語がウクライナ語評価のパープレキシティを大きく左右することを、SparseGPTとWandaの比較で示し、英語較正では2:4スパース化が崩壊する一方、ウクライナ語較正なら50パーセント削減とメモリ約41パーセント減を両立できることを示した研究。
+
 - **2024-05 · [Efficient Distributed LLM Inference with Dynamic Partitioning](2024-2326b3d5db35-efficient-distributed-llm-inference-with-dynamic-partitioning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   テンソル並列の全分割戦略を記号探索してパレート最適な3方式を残し、入力長とGPU特性の閾値で実行時に切り替える動的分割で、L4上のLlama 2で初回トークンまでの時間を最大40パーセント、遅延を最大18パーセント削減する修士論文。
@@ -5257,7 +5265,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：359  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：360  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -5552,13 +5560,13 @@
   実装：[✓](https://github.com/mlpen/Nystromformer) ・ リポジトリ内被引用：50  
   標準的な自己注意（self-注意機構）は、系列長nのすべてのトークン対の類似度を計算するため、n×nの注意行列を作る。系列が2倍になると注意行列の要素数は4倍となり、長い文書を扱うTransformerでは計算量とメモリ容量が問題になる。
 
+- **2020-12 · [Fast Transformers with Clustered Attention](2020-2007.04825-fast-transformers-with-clustered-attention.md)**  
+  実装：[✓](https://github.com/idiap/fast-transformers) ・ リポジトリ内被引用：23  
+  本論文は、自己注意（self-注意機構）の各クエリがすべてのキーを参照するため、系列長Nに対して注意行列がN×Nになり、計算量と中間メモリが二乗で増える問題を扱う。NeurIPS 2020の正式版では、GTX 1080 Ti 11GB上の音声認識2データセットと、学習済みRoBERTaのGLUE・SQuADへの適用を評価した。
+
 - **2021-10 · [8-bit Optimizers via Block-wise Quantization](2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md)**  
   実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：22  
   Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
-
-- **2020-12 · [Fast Transformers with Clustered Attention](2020-2007.04825-fast-transformers-with-clustered-attention.md)**  
-  実装：[✓](https://github.com/idiap/fast-transformers) ・ リポジトリ内被引用：22  
-  本論文は、自己注意（self-注意機構）の各クエリがすべてのキーを参照するため、系列長Nに対して注意行列がN×Nになり、計算量と中間メモリが二乗で増える問題を扱う。NeurIPS 2020の正式版では、GTX 1080 Ti 11GB上の音声認識2データセットと、学習済みRoBERTaのGLUE・SQuADへの適用を評価した。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  
   実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：17  
@@ -5625,7 +5633,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：378  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：379  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（221本）
+## 自動生成の論文一覧（223本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -606,6 +606,14 @@
   実装：✓ ・ リポジトリ内被引用：0  
   反省トークンの地点で探査文字列への続きのエントロピーを測り、確信が十分なら思考を打ち切って応答段階へ移す学習不要の適応的打ち切りで、小規模な推論モデルのトークンを最大約40%削りながら精度をほぼ保つ方式。
 
+- **2025-12 · [Understanding and Harnessing Sparsity in Unified Multimodal Models](2025-2512.02351-understanding-and-harnessing-sparsity-in-unified-multimodal-models.md)**  
+  実装：[✓](https://github.com/Shwai-He/SparseUnifiedModel) ・ リポジトリ内被引用：0  
+  統合マルチモーダルモデルの部品ごとの圧縮耐性を学習なし枝刈りで測り分け、弱い生成部品はニューロンをエキスパートへ分けて半分だけ活性化するMoE適応で、BAGELのGenEvalを無圧縮以上へ回復させる分析と適応法。
+
+- **2025-12 · [Sliced ReLU attention: Quasi-linear contextual expressivity via sorting](2025-2512.11411-sliced-relu-attention-quasi-linear-contextual-expressivity-via-sorting.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  クエリとキーの差の一次元射影へReLUを適用し、ソートと累積和で注意をO(n log n)で厳密計算する注意機構で、普遍近似の理論保証を保ちながらLRA平均正解率をソフトマックスの59.8パーセントから62.9パーセントへ上げる。
+
 - **2025-12 · [HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices](2025-2512.14052-hypervl-an-efficient-and-dynamic-multimodal-large-language-model-for-edg.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚解像度圧縮器で入力ごとに縮小率を予測して視覚トークンを減らし、二重整合学習で大小二つの視覚エンコーダを一つの言語モデルへそろえて切替可能にした、端末向けマルチモーダルモデル。
@@ -901,6 +909,6 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
-  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：131  
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：132  
   自己注意（self-注意機構）は系列長Lに対して二次の注意行列を作るため、1万〜数万ステップの系列では計算・メモリ負荷が大きくなる。論文はLong Range Arena（LRA）の全課題で当時の最良水準を更新し、長さ16,384のPath-Xで88%正解率を達成した。
 <!-- survey:auto:end -->

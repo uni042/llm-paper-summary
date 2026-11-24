@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "7ee2af4af20eb74ffa028e0c6355342b5665846a",
+  "base_commit": "e7d43ac670844e7686a31d3615542e8c22926fc8",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -221,6 +221,7 @@
     "2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cross-domain-properties-of-quantization.json",
     "2024-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inference.json",
     "2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-system.json",
+    "2024-f34641a221bb-language-specific-pruning-for-efficient-reduction-of-large-language-models.json",
     "2024-kivi-asymmetric-2bit-kv-cache-quantization.json",
     "2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.json",
     "2025-1efbe4ec3d0b-empiric-exploring-missing-pieces-in-kv-cache-compression-for-reducing-computation-storage-and-latency-in-long-context-ll.json",
@@ -389,8 +390,10 @@
     "2025-2511.22176-focused-chain-of-thought-efficient-llm-reasoning-via-structured-input-information.json",
     "2025-2511.22599-discedge-distributed-context-management-for-large-language-models-at-the-edge.json",
     "2025-2512.00335-efficient-kernel-mapping-and-comprehensive-system-evaluation-of-llm-acceleration-on-a-cgla.json",
+    "2025-2512.02351-understanding-and-harnessing-sparsity-in-unified-multimodal-models.json",
     "2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and-gauge-fixing.json",
     "2025-2512.05597-fast-scenescript-fast-and-accurate-language-based-3d-scene-understanding-via-multi-token-prediction.json",
+    "2025-2512.06093-compass-co-exploration-of-mapping-and-hardware-for-heterogeneous-multi-chiplet-accelerators-targeting-llm-inference-serv.json",
     "2025-2512.06457-bitstopper-an-efficient-transformer-attention-accelerator-via-stage-fusion-and-early-termination.json",
     "2025-2512.06727-kv-car-kv-cache-compression-using-autoencoders-and-kv-reuse-in-large-language-models.json",
     "2025-2512.06869-role-aware-heuristic-episodic-attention-for-conversational-llms.json",
@@ -400,6 +403,7 @@
     "2025-2512.09927-token-expand-merge-training-free-token-compression-for-vision-language-action-models.json",
     "2025-2512.10922-sparseswaps-tractable-llm-pruning-mask-refinement-at-scale.json",
     "2025-2512.11221-adaptive-soft-rolling-kv-freeze-with-entropy-guided-recovery-sublinear-memory-growth-for-efficient-llm-inference.json",
+    "2025-2512.11411-sliced-relu-attention-quasi-linear-contextual-expressivity-via-sorting.json",
     "2025-2512.11534-hfs-holistic-query-aware-frame-selection-for-efficient-video-understanding.json",
     "2025-2512.12560-streamingassistant-efficient-visual-token-pruning-for-accelerating-online-video-understanding.json",
     "2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via-shared-projection-and-block-skipping.json",
@@ -409,6 +413,7 @@
     "2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large-language-models.json",
     "2025-2512.20184-reaching-agreement-among-reasoning-llm-agents.json",
     "2025-2512.20198-designing-spatial-architectures-for-sparse-attention-star-accelerator-via-cross-stage-tiling.json",
+    "2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on-edge.json",
     "2025-2512.20636-data-free-pruning-of-self-attention-layers-in-llms.json",
     "2025-2512.20839-input-adaptive-visual-preprocessing-for-efficient-fast-vision-language-model-inference.json",
     "2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-resource-constrained-gpus.json",
@@ -52029,6 +52034,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.63317/55g6qr4jy7ip": {
+      "order": [
+        "2026-11-24T00:45:42+00:00",
+        "2024-f34641a221bb-language-specific-pruning-for-efficient-reduction-of-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.02351": {
+      "order": [
+        "2026-11-24T00:46:37+00:00",
+        "2025-2512.02351-understanding-and-harnessing-sparsity-in-unified-multimodal-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.06093": {
+      "order": [
+        "2026-11-24T00:47:31+00:00",
+        "2025-2512.06093-compass-co-exploration-of-mapping-and-hardware-for-heterogeneous-multi-chiplet-accelerators-targeting-llm-inference-serv.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.11411": {
+      "order": [
+        "2026-11-24T00:48:25+00:00",
+        "2025-2512.11411-sliced-relu-attention-quasi-linear-contextual-expressivity-via-sorting.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.20276": {
+      "order": [
+        "2026-11-24T00:49:19+00:00",
+        "2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on-edge.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -65862,6 +65912,21 @@
     "doi:10.1145/3673038.3673124": [
       "papers/inference/15-inference-simulation-emulation/2024-0f63b674eee9-arlo-serving-transformer-based-language-models-with-dynamic-input-length.md",
       "papers/inference/15-inference-simulation-emulation/2024-0f63b674eee9-arlo-serving-transformer-based-language-models-with-dynamic-input-length.md"
+    ],
+    "doi:10.63317/55g6qr4jy7ip": [
+      "papers/inference/99-other-inference-systems/2024-f34641a221bb-language-specific-pruning-for-efficient-reduction-of-large-language-mode.md"
+    ],
+    "arxiv:2512.02351": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2512.02351-understanding-and-harnessing-sparsity-in-unified-multimodal-models.md"
+    ],
+    "arxiv:2512.06093": [
+      "papers/inference/99-other-inference-systems/2025-2512.06093-compass-co-exploration-of-mapping-and-hardware-for-heterogeneous-multi-c.md"
+    ],
+    "arxiv:2512.11411": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2512.11411-sliced-relu-attention-quasi-linear-contextual-expressivity-via-sorting.md"
+    ],
+    "arxiv:2512.20276": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on.md"
     ]
   }
 }
