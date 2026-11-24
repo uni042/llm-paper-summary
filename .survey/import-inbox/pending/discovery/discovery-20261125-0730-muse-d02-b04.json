@@ -1,0 +1,572 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d02-b04",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 33,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.01117",
+      "identity_tokens": [
+        "arXiv:2609.01117"
+      ],
+      "title": "Latent Recurrent Thoughts: Recurrent Refinement of Proposed Latents for Reasoning with Frozen LLMs",
+      "reason": "凍結LLMの潜在空間で推論を反復精緻化するLatent Recurrent Thoughtsは推論時計算の使い方に触れるが、対象は推論能力の改善である。",
+      "source_url": "https://arxiv.org/abs/2609.01117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 366
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.08636",
+      "identity_tokens": [
+        "arXiv:2508.08636"
+      ],
+      "title": "InternBootcamp: Boosting LLM Reasoning with Verifiable Task Scaling",
+      "reason": "InternBootcampは検証可能タスクのスケーリングでLLM推論能力を強化学習する枠組みであり、学習基盤の研究である。",
+      "source_url": "https://arxiv.org/abs/2508.08636",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 367
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.11737",
+      "identity_tokens": [
+        "arXiv:2507.11737"
+      ],
+      "title": "Auto-Formulating Dynamic Programming Problems with Large Language Models",
+      "reason": "動的計画法問題の定式化をLLMで自動化する研究であり、オペレーションズリサーチへの応用が主題である。",
+      "source_url": "https://arxiv.org/abs/2507.11737",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 368
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2212.10197",
+      "identity_tokens": [
+        "arXiv:2212.10197"
+      ],
+      "title": "EIT: Enhanced Interactive Transformer",
+      "reason": "EITの拡張多頭自己注意は多視点学習の原理に基づく注意機構の改良だが、表現力の改善が主題で推論効率の検証は要旨に乏しい。",
+      "source_url": "https://arxiv.org/abs/2212.10197",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 369
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.18811",
+      "identity_tokens": [
+        "arXiv:2412.18811"
+      ],
+      "title": "DCIS: Efficient Length Extrapolation of LLMs via Divide-and-Conquer Scaling Factor Search",
+      "reason": "DCISはRoPEスケーリング因子探索でLLMの文脈長外挿の微調整コストを下げる枠組みであり、対象は適応学習側で推論機構ではない。",
+      "source_url": "https://arxiv.org/abs/2412.18811",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 370
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.18028",
+      "identity_tokens": [
+        "arXiv:2402.18028"
+      ],
+      "title": "OpenMEDLab: An Open-source Platform for Multi-modality Foundation Models in Medicine",
+      "reason": "タイトル自体が医療向けマルチモーダル基盤モデルのプラットフォームという医療応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2402.18028",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 371
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.07616",
+      "identity_tokens": [
+        "arXiv:2502.07616"
+      ],
+      "title": "Tractable Transformers for Flexible Conditional Generation",
+      "reason": "扱いやすいTransformerによる柔軟な条件付き生成は非自己回帰生成の原理研究であり、生成効率は背景にあるが推論システム機構の提案は限定的である。",
+      "source_url": "https://arxiv.org/abs/2502.07616",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 372
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.11588",
+      "identity_tokens": [
+        "arXiv:2510.11588"
+      ],
+      "title": "Analyzing and Internalizing Complex Policy Documents for LLM Agents",
+      "reason": "エージェントのポリシー文書をモデル事前知識へ内在化する手法はプロンプト処理の計算 overhead 削減に触れるが、主眼は業務規則の内在化である。",
+      "source_url": "https://arxiv.org/abs/2510.11588",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 373
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18846",
+      "identity_tokens": [
+        "arXiv:2505.18846"
+      ],
+      "title": "LLM-Driven APT Detection for 6G Wireless Networks: A Systematic Review and Taxonomy",
+      "reason": "タイトル自体が6G無線ネットワークにおけるLLM駆動APT検出というセキュリティ応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2505.18846",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 374
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562440",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS66217.2026.11562440"
+      ],
+      "title": "A 198.7 μJ/token Block Diffusion LLM Processor with Mask Token Similarity-Based Activation Reuse",
+      "reason": "マスクトークン類似度に基づく活性化再利用を持つブロック拡散LLMプロセッサは、エネルギー効率とトークン生成遅延を狙うLLM推論ハードウェアである。",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562440",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 376
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.14087",
+      "identity_tokens": [
+        "arXiv:2508.14087"
+      ],
+      "title": "FM4NPP: A Scaling Foundation Model for Nuclear and Particle Physics",
+      "reason": "タイトル自体が原子核・素粒子物理学向け基盤モデルという物理学応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2508.14087",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 378
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08893",
+      "identity_tokens": [
+        "arXiv:2601.08893"
+      ],
+      "title": "Spectral Generative Flow Models: A Physics-Inspired Replacement for Vectorized Large Language Models",
+      "reason": "スペクトル生成フローモデルは物理学に着想を得た生成アーキテクチャの置換提案であり、能力の枠組みが主題で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2601.08893",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 379
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21293",
+      "identity_tokens": [
+        "arXiv:2601.21293"
+      ],
+      "title": "Reliability-Calibrated Edge-IoT Early Fault Warning for Rotating Machinery with a Physics-Guided Tiny-Mamba Transformer",
+      "reason": "タイトル自体が回転機械の早期故障警告という産業設備応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2601.21293",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 380
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.26769",
+      "identity_tokens": [
+        "arXiv:2603.26769"
+      ],
+      "title": "Edge Reliability Gap in Vision-Language Models: Quantifying Failure Modes of Compressed VLMs Under Visual Corruption",
+      "reason": "圧縮VLMの視覚破損下での失敗様式を定量化する研究であり、エッジ展開の評価に留まり推論機構の提案はない。",
+      "source_url": "https://arxiv.org/abs/2603.26769",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 381
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18066",
+      "identity_tokens": [
+        "arXiv:2605.18066"
+      ],
+      "title": "TIDAL: Recovering Temporal Phase for Cloud Block Storage Placement from LLM-Derived Semantics",
+      "reason": "TIDALはLLM由来の意味情報を用いるクラウドブロックストレージ配置であり、対象はストレージシステムでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2605.18066",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 382
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15765",
+      "identity_tokens": [
+        "arXiv:2606.15765"
+      ],
+      "title": "Learning to Orchestrate Vision Foundation Models for Multi-Task Dense Prediction",
+      "reason": "視覚基盤モデル群を多タスク稠密予測へ編成する学習研究であり、視覚タスクの表現合成が主題である。",
+      "source_url": "https://arxiv.org/abs/2606.15765",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 383
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.16305",
+      "identity_tokens": [
+        "arXiv:2607.16305"
+      ],
+      "title": "LookME: Lookup-Based Multimodal Embeddings for Layer Injection in Vision-Language Models",
+      "reason": "LookMEはVLMの層注入向けルックアップ型埋め込みでMoE展開時のメモリと遅延に触れるが、主眼は埋め込み表現の設計である。",
+      "source_url": "https://arxiv.org/abs/2607.16305",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 384
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00296",
+      "identity_tokens": [
+        "arXiv:2610.00296"
+      ],
+      "title": "Certainty Is Not Just Correctness: Rethinking Token-Level Certainty in LLM Reasoning",
+      "reason": "トークンレベル確実性と正しさの関係を統制実験で再検討する研究であり、対象は推論・学習の代理指標の妥当性である。",
+      "source_url": "https://arxiv.org/abs/2610.00296",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 385
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05458",
+      "identity_tokens": [
+        "arXiv:2610.05458"
+      ],
+      "title": "Measuring and Reducing Cross-Vendor Mismatch in Language Models",
+      "reason": "GPUベンダ間で同一言語モデルのロジットが食い違う現象の計測と緩和であり、推論実行の再現性に触れるが効率化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2610.05458",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 386
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.31566",
+      "identity_tokens": [
+        "arXiv:2610.31566"
+      ],
+      "title": "CellTrack-Bench: Microscopic Cell Tracking Benchmark for Vision-Language Models",
+      "reason": "タイトル自体が顕微鏡細胞追跡ベンチマークという生物学応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2610.31566",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 387
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.02208",
+      "identity_tokens": [
+        "arXiv:2204.02208"
+      ],
+      "title": "Abstractive summarization of hospitalisation histories with transformer networks",
+      "reason": "タイトル自体が入院歴の要約という医療文書応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2204.02208",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 388
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.11027",
+      "identity_tokens": [
+        "arXiv:2306.11027"
+      ],
+      "title": "JiuZhang 2.0: A Unified Chinese Pre-trained Language Model for Multi-task Mathematical Problem Solving",
+      "reason": "JiuZhang 2.0は数学問題解決向けの中国語事前学習モデルであり、応用タスクの能力が主題で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2306.11027",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 389
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CISP-BMEI56279.2022.9980289",
+      "identity_tokens": [
+        "DOI:10.1109/CISP-BMEI56279.2022.9980289"
+      ],
+      "title": "Transformer-based severity detection of Parkinson's symptoms from gait",
+      "reason": "タイトル自体が歩行からのパーキンソン症状重症度検出という医療応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1109/CISP-BMEI56279.2022.9980289",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 390
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.20868",
+      "identity_tokens": [
+        "arXiv:2509.20868"
+      ],
+      "title": "StyleBench: Evaluating thinking styles in Large Language Models",
+      "reason": "StyleBenchは推論スタイルの効率と頑健性を評価するベンチマーク研究であり、評価のみで推論機構の提案はない。",
+      "source_url": "https://arxiv.org/abs/2509.20868",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 391
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.01042",
+      "identity_tokens": [
+        "arXiv:2506.01042"
+      ],
+      "title": "Probing Neural Topology of Large Language Models",
+      "reason": "グラフプロービングでLLMニューロンの機能的結合を調べる解釈研究であり、推論システムへの適用は示されない。",
+      "source_url": "https://arxiv.org/abs/2506.01042",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 392
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.18571",
+      "identity_tokens": [
+        "arXiv:2511.18571"
+      ],
+      "title": "SAMBA: Toward an EEG Foundation Model via Differential Mamba and Coordinate-Driven Spatial Embedding",
+      "reason": "タイトル自体がEEG基盤モデルという脳波信号応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2511.18571",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 393
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.16302",
+      "identity_tokens": [
+        "arXiv:2409.16302"
+      ],
+      "title": "How Redundant Is the Transformer Stack in Speech Representation Models?",
+      "reason": "音声表現モデルのTransformer層冗長性を分析し剪定可能性を示す研究だが、対象は音声モデルでありLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2409.16302",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 394
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.21131",
+      "identity_tokens": [
+        "arXiv:2510.21131"
+      ],
+      "title": "Large Language Models Meet Text-Attributed Graphs: A Survey of Integration Frameworks and Applications",
+      "reason": "LLMとテキスト属性グラフの統合枠組みと応用を整理したサーベイであり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2510.21131",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 395
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2508.10409",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2508.10409"
+      ],
+      "title": "AnalogSeeker: An Open-source Foundation Language Model for Analog Circuit Design",
+      "reason": "タイトル自体がアナログ回路設計向け基盤言語モデルという電子設計応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.48550/arXiv.2508.10409",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 396
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.09637",
+      "identity_tokens": [
+        "arXiv:2410.09637"
+      ],
+      "title": "ReLU's Revival: On the Entropic Overload in Normalization-Free Large Language Models",
+      "reason": "正規化なしLLMにおけるReLU系活性化関数の検討はプライベート推論等の動機を含むが、アーキテクチャの学習・解釈可能性が主題である。",
+      "source_url": "https://arxiv.org/abs/2410.09637",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 397
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.12645",
+      "identity_tokens": [
+        "arXiv:2509.12645"
+      ],
+      "title": "Large Language Models Imitate Logical Reasoning, but at what Cost?",
+      "reason": " frontier LLMの論理推論能力を18か月追跡した縦断評価であり、能力評価のみで推論システムの機構はない。",
+      "source_url": "https://arxiv.org/abs/2509.12645",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 398
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3719027.3765223",
+      "identity_tokens": [
+        "DOI:10.1145/3719027.3765223"
+      ],
+      "title": "PreferCare: Preference Dataset Copyright Protection in LLM Alignment by Watermark Injection and Verification",
+      "reason": "選好データセットの著作権保護のための透かし注入・検証であり、対象はアライメント用データの保護で推論とは無関係である。",
+      "source_url": "https://doi.org/10.1145/3719027.3765223",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 399
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.12339",
+      "identity_tokens": [
+        "arXiv:2504.12339"
+      ],
+      "title": "GOAT-TTS: Expressive and Realistic Speech Generation via A Dual-Branch LLM",
+      "reason": "GOAT-TTSは二分岐LLMによる表現豊かな音声生成モデルであり、音声合成の品質が主題で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2504.12339",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 400
+    }
+  ]
+}
