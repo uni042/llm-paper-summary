@@ -1,0 +1,586 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3bcf67f95ee6943c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3bcf67f95ee6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/978-3-031-72643-9_13",
+    "DOI:10.1016/j.softx.2026.102537",
+    "DOI:10.1109/icarai70085.2026.11635457",
+    "arXiv:2412.12951",
+    "arXiv:2506.13514",
+    "arXiv:2609.00442"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1342cefb58e709c81fe8eb0de95a0c7864826e5e",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T04:30:33.733136+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/978-3-031-72643-9_13",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1016/j.softx.2026.102537",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icarai70085.2026.11635457",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.12951",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.13514",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.00442",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DiLLeMa: An extensible and scalable framework for distributed large language models (LLMs) inference on multi-GPU clusters",
+      "source_url": "https://doi.org/10.1016/j.softx.2026.102537",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "SoftwareX",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:fb85fd9c0f2eaf4c6879cf879b0c0ae08be79610"
+      ],
+      "semantic_scholar_id": "fb85fd9c0f2eaf4c6879cf879b0c0ae08be79610",
+      "doi": "10.1016/j.softx.2026.102537",
+      "canonical_id": "DOI:10.1016/j.softx.2026.102537",
+      "authors": [
+        "Robby Ulung Pambudi",
+        "A. Shiddiqi",
+        "R. Ijtihadie",
+        "Muhammad Nabil Akhtar Raya Amoriza",
+        "Hardy Tee",
+        "Fadhl Akmal Madany",
+        "R. J. Akbar",
+        "D. A. Navastara"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 296,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DRLM: Deep Reinforcement Learning-Based LLM Query Orchestration in Edge Environments",
+      "source_url": "https://arxiv.org/abs/2609.00442",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) services increasingly process heterogeneous queries with diverse latency, accuracy, and resource requirements. While edge deployment reduces response time, the heterogeneity of devices and the diversity of model families, parameter scales, and quantization levels make efficient LLM query orchestration challenging. This paper introduces DRLM, a Deep Reinforcement Learning-based LLM query orchestration framework in edge environments. DRLM integrates two lightweight predictors: (i) a class-conditioned quality estimator that maps queries to semantic categories and infers model performance, and (ii) a feature-driven latency predictor that estimates inference time across model-device configurations. These predictions, combined with system state, feed a factorized Proximal Policy Optimization (PPO) agent that performs state-aware orchestration decisions. To enable data-driven orchestration, we construct a large-scale benchmarking dataset with 223 835 measurements spanning 1258 queries, 6 query classes, 8 model families (32 deployed instances), 5 quantization levels, and heterogeneous edge devices. Evaluation on a 64-node edge cluster and comparison with three baselines and two state-of-the-art methods show that DRLM reduces inference latency by up to 51% and queuing delay by up to 67 %, while incurring at most 8% accuracy loss. It improves latency under increasing workloads up to 61.4%, demonstrating robust and stable orchestration.",
+      "identifiers": [
+        "SemanticScholar:7508c29b35bf617f55b021e419f3cefaa65bc2f0"
+      ],
+      "semantic_scholar_id": "7508c29b35bf617f55b021e419f3cefaa65bc2f0",
+      "canonical_id": "arXiv:2609.00442",
+      "arxiv_id": "2609.00442",
+      "doi": "10.48550/arXiv.2609.00442",
+      "authors": [
+        "Reza Farahani",
+        "Zoha Azimi Ourimi",
+        "Mario Colosi",
+        "Lauri Lovén",
+        "C. Timmerer",
+        "S. Dustdar"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "IVTP: Instruction-Guided Visual Token Pruning for Large Vision-Language Models",
+      "source_url": "https://doi.org/10.1007/978-3-031-72643-9_13",
+      "year": 2024,
+      "published": null,
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 55,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:810a5fecf7f57a711ef55c038b3f9d495b72ad25"
+      ],
+      "semantic_scholar_id": "810a5fecf7f57a711ef55c038b3f9d495b72ad25",
+      "doi": "10.1007/978-3-031-72643-9_13",
+      "canonical_id": "DOI:10.1007/978-3-031-72643-9_13",
+      "authors": [
+        "Kai Huang",
+        "Hao Zou",
+        "Ye Xi",
+        "Bo-Chen Wang",
+        "Zhen Xie",
+        "Liang Yu"
+      ],
+      "priority": 55,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 55,
+        "citation_count": 55,
+        "total": 55,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 876,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cost-Aware LLM Invocation Strategies in Large-Scale Enterprise Systems",
+      "source_url": "https://doi.org/10.1109/ICARAI70085.2026.11635457",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "2026 International Conference Automatics, Robotics and Artificial Intelligence (ICARAI)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are becoming central to production pipelines at companies of all sizes. At scale, however, a tradeoff emerges: more capable models complete individual tasks more successfully, but charge per-token rates linearly proportional to that capacity. Billions of tokens are served daily at production companies, making this tradeoff one of cost versus quality. Companies that serve millions of requests per day cannot afford cost overruns or spikes in latency. Routing all traffic through a single large model is costly because many requests are simple. In practice, companies use heuristic approaches or manual rulesets that do not transfer well between workflows. In this paper, we address this challenge by presenting CALLS (Cost-Aware LLM Load-balancing Strategy), a strategy for selecting one of a fleet of model tiers for each query based on its estimated complexity. CALLS offers: (i) a lightweight complexity classifier that uses features capturing the syntax and semantics of the input query, (ii) a simple yet expressive three-tier routing policy based on a formalization of the cost-utility tradeoff, and (iii) an online feedback loop that calibrates the complexity thresholds used in the classifier based on observed response quality. We evaluate CALLS on four classes of enterprise tasks: retrieval-augmented generation (RAG), code assistance, long-document summarization, and question answering, and demonstrate that it decreases inference cost on a corpus of 48k production queries by 61.4% while losing only 3.2% of its quality relative to serving all traffic through a large model. Compared with state-of-the-art adaptive nearest cohort techniques, CALLS yields an additional 14.7% improvement with negligible quality loss.",
+      "identifiers": [
+        "SemanticScholar:4d2aa26956c087eba2eccd2b03489cb49068e3a6"
+      ],
+      "semantic_scholar_id": "4d2aa26956c087eba2eccd2b03489cb49068e3a6",
+      "doi": "10.1109/ICARAI70085.2026.11635457",
+      "canonical_id": "DOI:10.1109/ICARAI70085.2026.11635457",
+      "authors": [
+        "Sai Chaitanya Kumar Paidi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FineGates: LLMs Finetuning with Compression using Stochastic Gates",
+      "source_url": "https://arxiv.org/abs/2412.12951",
+      "year": 2024,
+      "published": "2024-12-17",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs), with billions of parameters, present significant challenges for full finetuning due to the high computational demands, memory requirements, and impracticality of many real-world applications. When faced with limited computational resources or small datasets, updating all model parameters can often result in overfitting. To address this, lightweight finetuning techniques have been proposed, like learning low-rank adapter layers. These methods aim to train only a few additional parameters combined with the base model, which remains frozen, reducing resource usage and mitigating overfitting risks. In this work, we propose an adaptor model based on stochastic gates that simultaneously sparsify the frozen base model with task-specific adaptation. Our method comes with a small number of trainable parameters and allows us to speed up the base model inference with competitive accuracy. We evaluate it in additional variants by equipping it with additional low-rank parameters and comparing it to several recent baselines. Our results show that the proposed method improves the finetuned model accuracy comparatively to the several baselines and allows the removal of up to 20-40\\% without significant accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:e65d8a8c6f8cbe50624559d74f0ce5153e6bc56b"
+      ],
+      "semantic_scholar_id": "e65d8a8c6f8cbe50624559d74f0ce5153e6bc56b",
+      "canonical_id": "arXiv:2412.12951",
+      "arxiv_id": "2412.12951",
+      "doi": "10.48550/arXiv.2412.12951",
+      "authors": [
+        "Jonathan Svirsky",
+        "Yehonathan Refael",
+        "Ofir Lindenbaum"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 707,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TensorSLM: Energy-efficient Embedding Compression of Sub-billion Parameter Language Models on Low-end Devices",
+      "source_url": "https://arxiv.org/abs/2506.13514",
+      "year": 2025,
+      "published": "2025-06-16",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small Language Models (SLMs, or on-device LMs) have significantly fewer parameters than Large Language Models (LLMs). They are typically deployed on low-end devices, like mobile phones and single-board computers. Unlike LLMs, which rely on increasing model size for better generalisation, SLMs designed for edge applications are expected to have adaptivity to the deployment environments and energy efficiency given the device battery life constraints, which are not addressed in datacenter-deployed LLMs. This paper addresses these two requirements by proposing a training-free token embedding compression approach using Tensor-Train Decomposition (TTD). Each pre-trained token embedding vector is converted into a lower-dimensional Matrix Product State (MPS). We comprehensively evaluate the extracted low-rank structures across compression ratio, language task performance, latency, and energy consumption on a typical low-end device, i.e. Raspberry Pi. Taking the sub-billion parameter versions of GPT-2/Cerebres-GPT and OPT models as examples, our approach achieves a comparable language task performance to the original model with around $2.0\\times$ embedding layer compression, while the energy consumption of a single query drops by half.",
+      "identifiers": [
+        "SemanticScholar:45a7571182c1c829ea4db61d1c76aef4f28a299e"
+      ],
+      "semantic_scholar_id": "45a7571182c1c829ea4db61d1c76aef4f28a299e",
+      "canonical_id": "arXiv:2506.13514",
+      "arxiv_id": "2506.13514",
+      "doi": "10.48550/arXiv.2506.13514",
+      "authors": [
+        "Mingxue Xu",
+        "Yao Xu",
+        "D. Mandic"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 526,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.softx.2026.102537",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.softx.2026.102537",
+        "id:SemanticScholar:fb85fd9c0f2eaf4c6879cf879b0c0ae08be79610",
+        "title:dillema an extensible and scalable framework for distributed large language models llms inference on multigpu clusters",
+        "url:https://doi.org/10.1016/j.softx.2026.102537"
+      ],
+      "record": {
+        "title": "DiLLeMa: An extensible and scalable framework for distributed large language models (LLMs) inference on multi-GPU clusters",
+        "source_url": "https://doi.org/10.1016/j.softx.2026.102537",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "SoftwareX",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:fb85fd9c0f2eaf4c6879cf879b0c0ae08be79610"
+        ],
+        "semantic_scholar_id": "fb85fd9c0f2eaf4c6879cf879b0c0ae08be79610",
+        "doi": "10.1016/j.softx.2026.102537",
+        "canonical_id": "DOI:10.1016/j.softx.2026.102537",
+        "authors": [
+          "Robby Ulung Pambudi",
+          "A. Shiddiqi",
+          "R. Ijtihadie",
+          "Muhammad Nabil Akhtar Raya Amoriza",
+          "Hardy Tee",
+          "Fadhl Akmal Madany",
+          "R. J. Akbar",
+          "D. A. Navastara"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 296,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.00442",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.00442",
+        "id:SemanticScholar:7508c29b35bf617f55b021e419f3cefaa65bc2f0",
+        "id:arXiv:2609.00442",
+        "title:drlm deep reinforcement learningbased llm query orchestration in edge environments",
+        "url:https://arxiv.org/abs/2609.00442"
+      ],
+      "record": {
+        "title": "DRLM: Deep Reinforcement Learning-Based LLM Query Orchestration in Edge Environments",
+        "source_url": "https://arxiv.org/abs/2609.00442",
+        "year": 2026,
+        "published": "2026-08-31",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) services increasingly process heterogeneous queries with diverse latency, accuracy, and resource requirements. While edge deployment reduces response time, the heterogeneity of devices and the diversity of model families, parameter scales, and quantization levels make efficient LLM query orchestration challenging. This paper introduces DRLM, a Deep Reinforcement Learning-based LLM query orchestration framework in edge environments. DRLM integrates two lightweight predictors: (i) a class-conditioned quality estimator that maps queries to semantic categories and infers model performance, and (ii) a feature-driven latency predictor that estimates inference time across model-device configurations. These predictions, combined with system state, feed a factorized Proximal Policy Optimization (PPO) agent that performs state-aware orchestration decisions. To enable data-driven orchestration, we construct a large-scale benchmarking dataset with 223 835 measurements spanning 1258 queries, 6 query classes, 8 model families (32 deployed instances), 5 quantization levels, and heterogeneous edge devices. Evaluation on a 64-node edge cluster and comparison with three baselines and two state-of-the-art methods show that DRLM reduces inference latency by up to 51% and queuing delay by up to 67 %, while incurring at most 8% accuracy loss. It improves latency under increasing workloads up to 61.4%, demonstrating robust and stable orchestration.",
+        "identifiers": [
+          "SemanticScholar:7508c29b35bf617f55b021e419f3cefaa65bc2f0"
+        ],
+        "semantic_scholar_id": "7508c29b35bf617f55b021e419f3cefaa65bc2f0",
+        "canonical_id": "arXiv:2609.00442",
+        "arxiv_id": "2609.00442",
+        "doi": "10.48550/arXiv.2609.00442",
+        "authors": [
+          "Reza Farahani",
+          "Zoha Azimi Ourimi",
+          "Mario Colosi",
+          "Lauri Lovén",
+          "C. Timmerer",
+          "S. Dustdar"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/978-3-031-72643-9_13",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-031-72643-9_13",
+        "id:SemanticScholar:810a5fecf7f57a711ef55c038b3f9d495b72ad25",
+        "title:ivtp instructionguided visual token pruning for large visionlanguage models",
+        "url:https://doi.org/10.1007/978-3-031-72643-9_13"
+      ],
+      "record": {
+        "title": "IVTP: Instruction-Guided Visual Token Pruning for Large Vision-Language Models",
+        "source_url": "https://doi.org/10.1007/978-3-031-72643-9_13",
+        "year": 2024,
+        "published": null,
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 55,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:810a5fecf7f57a711ef55c038b3f9d495b72ad25"
+        ],
+        "semantic_scholar_id": "810a5fecf7f57a711ef55c038b3f9d495b72ad25",
+        "doi": "10.1007/978-3-031-72643-9_13",
+        "canonical_id": "DOI:10.1007/978-3-031-72643-9_13",
+        "authors": [
+          "Kai Huang",
+          "Hao Zou",
+          "Ye Xi",
+          "Bo-Chen Wang",
+          "Zhen Xie",
+          "Liang Yu"
+        ],
+        "priority": 55,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 55,
+          "citation_count": 55,
+          "total": 55,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 876,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icarai70085.2026.11635457",
+      "identity_tokens": [
+        "id:DOI:10.1109/icarai70085.2026.11635457",
+        "id:SemanticScholar:4d2aa26956c087eba2eccd2b03489cb49068e3a6",
+        "title:costaware llm invocation strategies in largescale enterprise systems",
+        "url:https://doi.org/10.1109/ICARAI70085.2026.11635457"
+      ],
+      "record": {
+        "title": "Cost-Aware LLM Invocation Strategies in Large-Scale Enterprise Systems",
+        "source_url": "https://doi.org/10.1109/ICARAI70085.2026.11635457",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "2026 International Conference Automatics, Robotics and Artificial Intelligence (ICARAI)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are becoming central to production pipelines at companies of all sizes. At scale, however, a tradeoff emerges: more capable models complete individual tasks more successfully, but charge per-token rates linearly proportional to that capacity. Billions of tokens are served daily at production companies, making this tradeoff one of cost versus quality. Companies that serve millions of requests per day cannot afford cost overruns or spikes in latency. Routing all traffic through a single large model is costly because many requests are simple. In practice, companies use heuristic approaches or manual rulesets that do not transfer well between workflows. In this paper, we address this challenge by presenting CALLS (Cost-Aware LLM Load-balancing Strategy), a strategy for selecting one of a fleet of model tiers for each query based on its estimated complexity. CALLS offers: (i) a lightweight complexity classifier that uses features capturing the syntax and semantics of the input query, (ii) a simple yet expressive three-tier routing policy based on a formalization of the cost-utility tradeoff, and (iii) an online feedback loop that calibrates the complexity thresholds used in the classifier based on observed response quality. We evaluate CALLS on four classes of enterprise tasks: retrieval-augmented generation (RAG), code assistance, long-document summarization, and question answering, and demonstrate that it decreases inference cost on a corpus of 48k production queries by 61.4% while losing only 3.2% of its quality relative to serving all traffic through a large model. Compared with state-of-the-art adaptive nearest cohort techniques, CALLS yields an additional 14.7% improvement with negligible quality loss.",
+        "identifiers": [
+          "SemanticScholar:4d2aa26956c087eba2eccd2b03489cb49068e3a6"
+        ],
+        "semantic_scholar_id": "4d2aa26956c087eba2eccd2b03489cb49068e3a6",
+        "doi": "10.1109/ICARAI70085.2026.11635457",
+        "canonical_id": "DOI:10.1109/ICARAI70085.2026.11635457",
+        "authors": [
+          "Sai Chaitanya Kumar Paidi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 176,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.12951",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.12951",
+        "id:SemanticScholar:e65d8a8c6f8cbe50624559d74f0ce5153e6bc56b",
+        "id:arXiv:2412.12951",
+        "title:finegates llms finetuning with compression using stochastic gates",
+        "url:https://arxiv.org/abs/2412.12951"
+      ],
+      "record": {
+        "title": "FineGates: LLMs Finetuning with Compression using Stochastic Gates",
+        "source_url": "https://arxiv.org/abs/2412.12951",
+        "year": 2024,
+        "published": "2024-12-17",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs), with billions of parameters, present significant challenges for full finetuning due to the high computational demands, memory requirements, and impracticality of many real-world applications. When faced with limited computational resources or small datasets, updating all model parameters can often result in overfitting. To address this, lightweight finetuning techniques have been proposed, like learning low-rank adapter layers. These methods aim to train only a few additional parameters combined with the base model, which remains frozen, reducing resource usage and mitigating overfitting risks. In this work, we propose an adaptor model based on stochastic gates that simultaneously sparsify the frozen base model with task-specific adaptation. Our method comes with a small number of trainable parameters and allows us to speed up the base model inference with competitive accuracy. We evaluate it in additional variants by equipping it with additional low-rank parameters and comparing it to several recent baselines. Our results show that the proposed method improves the finetuned model accuracy comparatively to the several baselines and allows the removal of up to 20-40\\% without significant accuracy loss.",
+        "identifiers": [
+          "SemanticScholar:e65d8a8c6f8cbe50624559d74f0ce5153e6bc56b"
+        ],
+        "semantic_scholar_id": "e65d8a8c6f8cbe50624559d74f0ce5153e6bc56b",
+        "canonical_id": "arXiv:2412.12951",
+        "arxiv_id": "2412.12951",
+        "doi": "10.48550/arXiv.2412.12951",
+        "authors": [
+          "Jonathan Svirsky",
+          "Yehonathan Refael",
+          "Ofir Lindenbaum"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 707,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.13514",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.13514",
+        "id:SemanticScholar:45a7571182c1c829ea4db61d1c76aef4f28a299e",
+        "id:arXiv:2506.13514",
+        "title:tensorslm energyefficient embedding compression of subbillion parameter language models on lowend devices",
+        "url:https://arxiv.org/abs/2506.13514"
+      ],
+      "record": {
+        "title": "TensorSLM: Energy-efficient Embedding Compression of Sub-billion Parameter Language Models on Low-end Devices",
+        "source_url": "https://arxiv.org/abs/2506.13514",
+        "year": 2025,
+        "published": "2025-06-16",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Small Language Models (SLMs, or on-device LMs) have significantly fewer parameters than Large Language Models (LLMs). They are typically deployed on low-end devices, like mobile phones and single-board computers. Unlike LLMs, which rely on increasing model size for better generalisation, SLMs designed for edge applications are expected to have adaptivity to the deployment environments and energy efficiency given the device battery life constraints, which are not addressed in datacenter-deployed LLMs. This paper addresses these two requirements by proposing a training-free token embedding compression approach using Tensor-Train Decomposition (TTD). Each pre-trained token embedding vector is converted into a lower-dimensional Matrix Product State (MPS). We comprehensively evaluate the extracted low-rank structures across compression ratio, language task performance, latency, and energy consumption on a typical low-end device, i.e. Raspberry Pi. Taking the sub-billion parameter versions of GPT-2/Cerebres-GPT and OPT models as examples, our approach achieves a comparable language task performance to the original model with around $2.0\\times$ embedding layer compression, while the energy consumption of a single query drops by half.",
+        "identifiers": [
+          "SemanticScholar:45a7571182c1c829ea4db61d1c76aef4f28a299e"
+        ],
+        "semantic_scholar_id": "45a7571182c1c829ea4db61d1c76aef4f28a299e",
+        "canonical_id": "arXiv:2506.13514",
+        "arxiv_id": "2506.13514",
+        "doi": "10.48550/arXiv.2506.13514",
+        "authors": [
+          "Mingxue Xu",
+          "Yao Xu",
+          "D. Mandic"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 526,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0b00d197f21e7d5bbd7e301a7717c46771753ffd536df61a56711d14af9f888a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

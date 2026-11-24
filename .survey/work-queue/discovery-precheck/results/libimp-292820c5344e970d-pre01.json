@@ -1,0 +1,237 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-292820c5344e970d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-292820c5344e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2512.20687",
+    "arXiv:2607.04244"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1342cefb58e709c81fe8eb0de95a0c7864826e5e",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T04:30:31.682985+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2512.20687",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.04244",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PHOTON: Hierarchical Autoregressive Modeling for Lightspeed and Memory-Efficient Language Generation",
+      "source_url": "https://arxiv.org/abs/2512.20687",
+      "year": 2025,
+      "published": "2025-12-22",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers operate as horizontal token-by-token scanners; at each generation step, attending to an ever-growing sequence of token-level states. This access pattern increases prefill latency and makes long-context decoding more memory-bound, as KV-cache reads and writes dominate inference time over arithmetic operations. We propose Parallel Hierarchical Operation for TOp-down Networks (PHOTON), a hierarchical autoregressive model that replaces horizontal scanning with vertical, multi-resolution context scanning. PHOTON maintains a hierarchy of latent streams: a bottom-up encoder compresses tokens into low-rate contextual states, while lightweight top-down decoders reconstruct fine-grained token representations in parallel. We further introduce recursive generation that updates only the coarsest latent stream and eliminates bottom-up re-encoding. Experimental results show that PHOTON is superior to competitive Transformer-based language models regarding the throughput-quality trade-off, providing advantages in long-context and multi-query tasks. In particular, this reduces decode-time KV-cache traffic, yielding up to $10^{3}\\times$ higher throughput per unit memory.",
+      "identifiers": [
+        "SemanticScholar:1dd4811876169d0fd88e87c277794cbe45b9ab35"
+      ],
+      "semantic_scholar_id": "1dd4811876169d0fd88e87c277794cbe45b9ab35",
+      "canonical_id": "arXiv:2512.20687",
+      "arxiv_id": "2512.20687",
+      "doi": "10.48550/arXiv.2512.20687",
+      "authors": [
+        "Yuma Ichikawa",
+        "Naoya Takagi",
+        "Takumi Nakagawa",
+        "Yuzi Kanazawa",
+        "Akira Sakai"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 337,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Quantize the Target, Quantize the Drafter: Efficient Inference with Qwen3.5-4B",
+      "source_url": "https://arxiv.org/abs/2607.04244",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This report describes our approach to the Efficient Qwen Competition, where the goal is to enable low-latency serving of Qwen3.5-4B on a resource-constrained NVIDIA A10G GPU. Our system combines a quantized target model with speculative decoding. To recover accuracy, we apply quantization-aware distillation to the target model while retaining the original quantization grid. To speed up decoding, a block-diffusion drafter specialized for the quantized target model is trained using a two-stage procedure: first learning from the high-precision target and then adapting to the low-precision target. Because the drafter is invoked at every speculative decoding step, we further reduce its overhead with quantization and sliding-window attention, preserving draft-token acceptance while improving long-context decoding latency. As a result, our submission achieves a 6.978$\\times$ average speedup over the baseline while satisfying the required quality thresholds, ranking 3rd overall. We hope these results provide useful insights for practical LLM inference. The code and resources are available at https://github.com/nota-github/adaptfm-quant-dflash",
+      "identifiers": [
+        "SemanticScholar:fa89d084dc323ff8018655289aca81b4b7d00a26"
+      ],
+      "semantic_scholar_id": "fa89d084dc323ff8018655289aca81b4b7d00a26",
+      "canonical_id": "arXiv:2607.04244",
+      "arxiv_id": "2607.04244",
+      "doi": "10.48550/arXiv.2607.04244",
+      "authors": [
+        "Jaeyeon Kim",
+        "Jewon Lee",
+        "Bo-Kyeong Kim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.20687",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.20687",
+        "id:SemanticScholar:1dd4811876169d0fd88e87c277794cbe45b9ab35",
+        "id:arXiv:2512.20687",
+        "title:photon hierarchical autoregressive modeling for lightspeed and memoryefficient language generation",
+        "url:https://arxiv.org/abs/2512.20687"
+      ],
+      "record": {
+        "title": "PHOTON: Hierarchical Autoregressive Modeling for Lightspeed and Memory-Efficient Language Generation",
+        "source_url": "https://arxiv.org/abs/2512.20687",
+        "year": 2025,
+        "published": "2025-12-22",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers operate as horizontal token-by-token scanners; at each generation step, attending to an ever-growing sequence of token-level states. This access pattern increases prefill latency and makes long-context decoding more memory-bound, as KV-cache reads and writes dominate inference time over arithmetic operations. We propose Parallel Hierarchical Operation for TOp-down Networks (PHOTON), a hierarchical autoregressive model that replaces horizontal scanning with vertical, multi-resolution context scanning. PHOTON maintains a hierarchy of latent streams: a bottom-up encoder compresses tokens into low-rate contextual states, while lightweight top-down decoders reconstruct fine-grained token representations in parallel. We further introduce recursive generation that updates only the coarsest latent stream and eliminates bottom-up re-encoding. Experimental results show that PHOTON is superior to competitive Transformer-based language models regarding the throughput-quality trade-off, providing advantages in long-context and multi-query tasks. In particular, this reduces decode-time KV-cache traffic, yielding up to $10^{3}\\times$ higher throughput per unit memory.",
+        "identifiers": [
+          "SemanticScholar:1dd4811876169d0fd88e87c277794cbe45b9ab35"
+        ],
+        "semantic_scholar_id": "1dd4811876169d0fd88e87c277794cbe45b9ab35",
+        "canonical_id": "arXiv:2512.20687",
+        "arxiv_id": "2512.20687",
+        "doi": "10.48550/arXiv.2512.20687",
+        "authors": [
+          "Yuma Ichikawa",
+          "Naoya Takagi",
+          "Takumi Nakagawa",
+          "Yuzi Kanazawa",
+          "Akira Sakai"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 337,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.04244",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.04244",
+        "id:SemanticScholar:fa89d084dc323ff8018655289aca81b4b7d00a26",
+        "id:arXiv:2607.04244",
+        "title:quantize the target quantize the drafter efficient inference with qwen354b",
+        "url:https://arxiv.org/abs/2607.04244"
+      ],
+      "record": {
+        "title": "Quantize the Target, Quantize the Drafter: Efficient Inference with Qwen3.5-4B",
+        "source_url": "https://arxiv.org/abs/2607.04244",
+        "year": 2026,
+        "published": "2026-07-05",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This report describes our approach to the Efficient Qwen Competition, where the goal is to enable low-latency serving of Qwen3.5-4B on a resource-constrained NVIDIA A10G GPU. Our system combines a quantized target model with speculative decoding. To recover accuracy, we apply quantization-aware distillation to the target model while retaining the original quantization grid. To speed up decoding, a block-diffusion drafter specialized for the quantized target model is trained using a two-stage procedure: first learning from the high-precision target and then adapting to the low-precision target. Because the drafter is invoked at every speculative decoding step, we further reduce its overhead with quantization and sliding-window attention, preserving draft-token acceptance while improving long-context decoding latency. As a result, our submission achieves a 6.978$\\times$ average speedup over the baseline while satisfying the required quality thresholds, ranking 3rd overall. We hope these results provide useful insights for practical LLM inference. The code and resources are available at https://github.com/nota-github/adaptfm-quant-dflash",
+        "identifiers": [
+          "SemanticScholar:fa89d084dc323ff8018655289aca81b4b7d00a26"
+        ],
+        "semantic_scholar_id": "fa89d084dc323ff8018655289aca81b4b7d00a26",
+        "canonical_id": "arXiv:2607.04244",
+        "arxiv_id": "2607.04244",
+        "doi": "10.48550/arXiv.2607.04244",
+        "authors": [
+          "Jaeyeon Kim",
+          "Jewon Lee",
+          "Bo-Kyeong Kim"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:274e14a1426afb1437b28d4446afe9b00cd1b10df6f72a925e4e1f9136a0ee43",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
