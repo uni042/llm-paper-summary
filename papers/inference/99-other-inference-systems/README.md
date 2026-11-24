@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1501本）
+## 自動生成の論文一覧（1502本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1769,6 +1769,10 @@
 - **2026-08 · [COEC: Calibrated Orthogonal-Equivalence Compensation for Structured Pruning of Large Language Models](2026-2608.21142-coec-calibrated-orthogonal-equivalence-compensation-for-structured-pruni.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   列を落とした保持重みへ左右両側の直交回転と特異値ごとの再調整で学習不要の補償を行うCOECを提案し、疎性30パーセントで全モデルの困惑度を既存補償より改善し、利得が疎さとともに大きくなることを示した。
+
+- **2026-08 · [CForce: Boosting Parallel Decoding for dLLMs via Consistency Forcing](2026-2608.13925-cforce-boosting-parallel-decoding-for-dllms-via-consistency-forcing.md)**  
+  実装：[✓](https://github.com/inclusionAI/dFactory) ・ リポジトリ内被引用：0  
+  拡散言語モデルの自己軌跡上で初期段階の予測を後期段階へ信頼度適応型KLで合わせる自己蒸留により、編集可能なモデルでは並列度と精度を同時に上げ、並列復号の速度と品質の前線を押し広げる。
 
 - **2026-08 · [Budget-Aware LLM Quantization and Low-Rank Correction via Information-Guided Subspace Matrices](2026-b373673622df-budget-aware-llm-quantization-and-low-rank-correction-via-information-gu.md)**  
   実装：[✓](https://github.com/sinuofan/IJCAI2026-BALANCER) ・ リポジトリ内被引用：0  
@@ -5581,7 +5585,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：366  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：367  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -5973,7 +5977,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：390  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：391  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

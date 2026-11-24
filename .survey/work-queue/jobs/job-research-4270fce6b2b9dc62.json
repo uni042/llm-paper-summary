@@ -35,10 +35,15 @@
   "selection_reason": "Reduced Matrix Multiplicationは重みを変更せず入力適応的にTransformer行列積の縮約次元を選ぶ学習不要なLLM推論手法で、カスタムカーネルによる実時間短縮まで示しており推論計算削減への直接貢献がある。",
   "semantic_scholar_id": "d1f2c43ef7f4a061fa850bc140db23563ff6005d",
   "source_url": "https://arxiv.org/abs/2608.13426",
-  "status": "ready",
+  "status": "superseded",
   "title": "Reduced Matrix Multiplication: Input-Adaptive Matrix-Product Reduction for LLM Inference",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T07:39:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2608.13426-reduced-matrix-multiplication-input-adaptive-matrix-product-reduction-fo.md",
+  "represented_canonical_id": "arXiv:2608.13426",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "自動運転VLA向けにバックボーンをブロック層単位で分割し視覚エンコーダとLLMプレフィックスをGPU、LLMサフィックスをCPUへオフロードする跨フレーム非同期パイプラインで、GPUメモリ制約下の並列推論を実現する",
   "semantic_scholar_id": "d30fc4fa59cf0fd35be20004135529ecc4f60ca2",
   "source_url": "https://arxiv.org/abs/2608.14586",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient Block-Layer Parallel Inference for Vision-Language-Action on Hybrid Architectures",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T07:39:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.14586-efficient-block-layer-parallel-inference-for-vision-language-action-on-h.md",
+  "represented_canonical_id": "arXiv:2608.14586",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

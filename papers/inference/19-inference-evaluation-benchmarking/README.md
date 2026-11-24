@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（243本）
+## 自動生成の論文一覧（244本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -365,6 +365,10 @@
 - **2026-08 · [Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces](2026-2608.00423-bottleneck-preserving-witnessing.md)**  
   実装：[✓](https://github.com/llmllmllm/BPW) ・ リポジトリ内被引用：0  
   スケジューリング・入力処理・生成・KVキャッシュの各ボトルネックを実機測定で独立確認し、四要素すべてに複数の証拠を残す小さなLLMサービング再生用トレースを選ぶ。
+
+- **2026-08 · [DeaMoE: Efficient MoE Structure for Fast Small-Batch Decoding](2026-2608.14385-deamoe-efficient-moe-structure-for-fast-small-batch-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エキスパートを部門へまとめ大きな射影を共有させ、私有の小さな変換だけで分化させるMoE構造と部門先行の2段ルーティングで、小バッチデコードのエキスパート重み読み込みを最大約半分にし、品質を保ったままTPOTを最大1.33倍高速化した。
 
 - **2026-08 · [Beyond Tokens: A Survey on Decoding Methods for Large Language and Vision-Language Models](2026-2608.14797-beyond-tokens-a-survey-on-decoding-methods-for-large-language-and-vision.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

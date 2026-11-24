@@ -35,10 +35,15 @@
   "selection_reason": "CForceは拡散LLMの早期denoising段階のマスク予測を後期段階に整合させる蒸留で、mask-to-tokenとedit-capableの並列デコードの速度・品質トレードオフを改善する。",
   "semantic_scholar_id": "d9b0f66b8e7aca365e45320f9007e829be2fb171",
   "source_url": "https://arxiv.org/abs/2608.13925",
-  "status": "ready",
+  "status": "superseded",
   "title": "CForce: Boosting Parallel Decoding for dLLMs via Consistency Forcing",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T07:39:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.13925-cforce-boosting-parallel-decoding-for-dllms-via-consistency-forcing.md",
+  "represented_canonical_id": "arXiv:2608.13925",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

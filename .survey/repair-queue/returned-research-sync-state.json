@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "9820c9b3202e70ece3983789f6897c39b26ed2fa",
+  "base_commit": "34162d5aa000407b81ae45dd9ca911604edd7017",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1031,6 +1031,7 @@
     "2026-2608.08630-vlzip-unified-visual-and-textual-compression-for-interleaved-long-context-modeling.json",
     "2026-2608.08652-legolm-structured-weight-sharing-for-large-language-models.json",
     "2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-single-stream-webgpu-llm-inference.json",
+    "2026-2608.09252-fsgen-agile-fused-and-sparse-accelerator-generator-with-accurate-power-model-for-llm-applications.json",
     "2026-2608.10137-the-parser-already-knows-lightweight-bias-correction-in-constrained-decoding.json",
     "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json",
     "2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-language-models.json",
@@ -1039,8 +1040,12 @@
     "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json",
     "2026-2608.13226-coverprune-coverage-driven-token-pruning-for-3d-vlms-via-optimal-transport.json",
     "2026-2608.13416-streamttt-reconciling-real-time-perception-and-long-term-memory-in-streaming-vlms.json",
+    "2026-2608.13426-reduced-matrix-multiplication-input-adaptive-matrix-product-reduction-for-llm-inference.json",
+    "2026-2608.13925-cforce-boosting-parallel-decoding-for-dllms-via-consistency-forcing.json",
     "2026-2608.14003-batch-wise-adaptive-pruning-periodic-neuron-activation-aware-weight-pruning-for-language-reasoning-model.json",
+    "2026-2608.14385-deamoe-efficient-moe-structure-for-fast-small-batch-decoding.json",
     "2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-without-hand-written-cuda.json",
+    "2026-2608.14586-efficient-block-layer-parallel-inference-for-vision-language-action-on-hybrid-architectures.json",
     "2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.json",
     "2026-2608.15592-when-entropy-is-not-enough-reclaiming-lost-semantics-in-llm-output-length-prediction.json",
     "2026-2608.15817-rlcascaderouter-quality-estimator-free-cascade-routing-via-reinforcement-learning.json",
@@ -53791,6 +53796,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.09252": {
+      "order": [
+        "2026-11-24T07:32:50+00:00",
+        "2026-2608.09252-fsgen-agile-fused-and-sparse-accelerator-generator-with-accurate-power-model-for-llm-applications.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.13426": {
+      "order": [
+        "2026-11-24T07:33:57+00:00",
+        "2026-2608.13426-reduced-matrix-multiplication-input-adaptive-matrix-product-reduction-for-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.13925": {
+      "order": [
+        "2026-11-24T07:35:04+00:00",
+        "2026-2608.13925-cforce-boosting-parallel-decoding-for-dllms-via-consistency-forcing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.14385": {
+      "order": [
+        "2026-11-24T07:36:11+00:00",
+        "2026-2608.14385-deamoe-efficient-moe-structure-for-fast-small-batch-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.14586": {
+      "order": [
+        "2026-11-24T07:37:18+00:00",
+        "2026-2608.14586-efficient-block-layer-parallel-inference-for-vision-language-action-on-hybrid-architectures.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68324,6 +68374,21 @@
     "arxiv:2608.06867": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2608.06867-llmrouter-unified-infrastructure-for-developing-evaluating-and-deploying.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2608.06867-llmrouter-unified-infrastructure-for-developing-evaluating-and-deploying.md"
+    ],
+    "arxiv:2608.09252": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2608.09252-fsgen-agile-fused-and-sparse-accelerator-generator-with-accurate-power-m.md"
+    ],
+    "arxiv:2608.13426": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2608.13426-reduced-matrix-multiplication-input-adaptive-matrix-product-reduction-fo.md"
+    ],
+    "arxiv:2608.13925": [
+      "papers/inference/99-other-inference-systems/2026-2608.13925-cforce-boosting-parallel-decoding-for-dllms-via-consistency-forcing.md"
+    ],
+    "arxiv:2608.14385": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.14385-deamoe-efficient-moe-structure-for-fast-small-batch-decoding.md"
+    ],
+    "arxiv:2608.14586": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.14586-efficient-block-layer-parallel-inference-for-vision-language-action-on-h.md"
     ]
   }
 }

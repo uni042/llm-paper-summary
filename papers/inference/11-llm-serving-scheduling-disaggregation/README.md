@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（644本）
+## 自動生成の論文一覧（645本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1229,6 +1229,10 @@
 - **2026-06 · [Energy-Efficient Multimodal Inference Serving with Tri-serve](2026-2606.29629-energy-efficient-multimodal-inference-serving-with-tri-serve.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Qwen2.5-Omni-7Bを代表例として、Thinker（理解・推論）、Talker（音声生成の中間表現）、Vocoder/Code2Wav（波形生成）をvLLM-Omniの別プロセス・別GPUへ割り当てると、後段は前段の出力待ちで停止する。
+
+- **2026-06 · [Efficient Block-Layer Parallel Inference for Vision-Language-Action on Hybrid Architectures](2026-2608.14586-efficient-block-layer-parallel-inference-for-vision-language-action-on-h.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  VLAモデルをTransformerブロック単位でGPU前半とCPU後半に分割し、フレーム間非同期パイプラインと境界適応スケジューリングで遊休CPUを活用することで、遅延を最大30.9パーセント削減しGPUメモリ不足で動かないモデルを実車で動作可能にする異種混在推論。
 
 - **2026-06 · [DriftSched: Adaptive QoS-Aware Scheduling under Runtime Token Drift for Multi-Tenant GPU Inference](2026-2606.02982-driftsched-adaptive-qos-aware-scheduling-under-runtime-token-drift-for-m.md)**  
   実装：[✓](https://github.com/kpalania1/driftsched) ・ リポジトリ内被引用：0  

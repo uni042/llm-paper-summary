@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（337本）
+## 自動生成の論文一覧（339本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -510,6 +510,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、マスク拡散言語モデル（masked diffusion language モデル、以下dLLM）を多数の利用者へ提供するとき、どの処理が遅延を生み、要求ごとの計算量がどのように変動し、バッチ処理で何を共有すべきかを実機で調べた特性分析である。新しい復号アルゴリズムや完成した推論サーバーの提案ではない。
 
+- **2026-08 · [Reduced Matrix Multiplication: Input-Adaptive Matrix-Product Reduction for LLM Inference](2026-2608.13426-reduced-matrix-multiplication-input-adaptive-matrix-product-reduction-fo.md)**  
+  実装：[✓](https://github.com/Zesearch/rmm-llm) ・ リポジトリ内被引用：0  
+  行列積の乗算軸を入力の活性値で決定的に間引く学習不要の削減法で、保持率一つで費用と品質を調整し、注意側が全結合側より削減しやすい非対称性を示しつつ、長系列で実測1.40倍の高速化を得る研究。
+
 - **2026-08 · [Opt.Gear Technical Report](2026-2608.01034-opt-gear-technical-report.md)**  
   実装：[✓](https://huggingface.co/OptGear) ・ リポジトリ内被引用：0  
   局所層のKVキャッシュを固定長の畳み込み状態へ置き換えるConvKV-Gated Mixerと、ヘッシアン初期化つき量子化対応学習で、端末NPUでの高速推論とマイコン上での生成までを狙うオンデバイス基盤モデルOpt.Gearの技術報告。
@@ -529,6 +533,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-08 · [Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning](2026-2608.14290-intern-s2-mobius-foundation-model-with-decoupled-knowledge-and-reasoning.md)**  
   実装：[✓](https://github.com/InternLM/Intern-S2-Mobius) ・ リポジトリ内被引用：0  
   通常のTransformerは各層でSelf-注意機構とFFNが対になり、前の層の隠れ状態を次の層へ送る。スクラッチ学習では7B-A1BのMobiusがTransformerと同程度のMMLUを達成するのに0.626倍の訓練トークンしか必要としない。
+
+- **2026-08 · [FSGen: Agile Fused and Sparse Accelerator Generator with Accurate Power Model for LLM Applications](2026-2608.09252-fsgen-agile-fused-and-sparse-accelerator-generator-with-accurate-power-m.md)**  
+  実装：[✓](https://github.com/hkust-zhiyao/FSGen) ・ リポジトリ内被引用：0  
+  融合演算データフローと多層の疎性を統一表現で扱い、ChiselによるRTL生成とプリミティブ単位の機械学習電力モデルで広い設計空間を高速に探索するLLMアクセラレータ生成器FSGenを提案し、先行生成器比で最大58倍の性能指標を達成した。
 
 - **2026-08 · [Determinism-Preserving GPU Spatial Sharing with Vitamin-E](2026-2603.15042-determinism-preserving-gpu-spatial-sharing-with-vitamin-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1163,7 +1171,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：226  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：227  
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
@@ -1191,7 +1199,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   テンソル並列では、行列の列や行をGPUごとに分割して計算する。各GPUが自分の部分を処理しても、次の行列積が必要とする入力を集める全収集（AllGather）、あるいは計算結果を加算して分散する縮約散布（ReduceScatter）が必要になる。通信の完了を待ってから次の行列積を始めると、GPUが計算できない待機時間が生じる。
 
 - **2024-04 · [CATS: Contextually-Aware Thresholding for Sparsity in Large Language Models](2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md)**  
-  実装：[✓](https://github.com/ScalingIntelligence/CATS) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/ScalingIntelligence/CATS) ・ リポジトリ内被引用：30  
   大規模言語モデルの多層パーセプトロン（MLP）では、活性値の小さい中間ニューロンも密行列積の対象となる。特にバッチが小さい自己回帰復号では、重みをGPUメモリから読む帯域が処理時間を制限しやすい。混合専門家（MoE）モデルは一部の専門家だけを選ぶが、通常のLlama2やMistralの密なGated-MLPにはそのような明示的な専門家選択器がない。
 
 - **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
