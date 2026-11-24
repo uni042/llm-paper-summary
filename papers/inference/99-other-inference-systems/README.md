@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1494本）
+## 自動生成の論文一覧（1496本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1814,6 +1814,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   基盤を凍結して状態更新だけを比べ、ソフトマックスの一次近似が示すキー依存のランク1射影を備えるデルタ型が最も注意を近似できること、窓とシンクと短い畳み込みの処方で先行線形化のMMLUを上回ることを示した。
 
+- **2026-07 · [SWE-Pruner Pro: The Coder LLM Already Knows What to Prune](2026-2607.18213-swe-pruner-pro-the-coder-llm-already-knows-what-to-prune.md)**  
+  実装：[✓](https://github.com/Ayanami1314/swe-pruner-pro) ・ リポジトリ内被引用：0  
+  エージェント自身の隠れ状態から行単位の枝刈り信号を読み出す小さなヘッドで、別モデルなしにツール出力を削り、SWE-QA-Proでトークン39.4パーセント減と品質維持を両立する。
+
 - **2026-07 · [Structured Redundancy Modeling for Efficient Visual Token Pruning in High-Resolution MLLMs](2026-2607.23046-structured-redundancy-modeling-for-efficient-visual-token-pruning-in-hig.md)**  
   実装：[✓](https://github.com/cvsp-lab/SFPruner) ・ リポジトリ内被引用：0  
   後段の言語モデルがそれらすべてを処理すると、注意演算とKVキャッシュの負担が増えるため、重要な視覚トークンだけを残す枝刈りが有効である。Qwen2.5-VL-7Bで平均512トークンを残す条件では、CDPrunerの選択時間112.4msに対し2.5msで、約110msを選択段階から削減する。
@@ -1861,6 +1865,10 @@
 - **2026-07 · [Resting Neurons, Active Insights: Robustifying Activation Sparsity in LLMs via Spontaneity](2025-2512.12744-resting-neurons-active-insights-improving-input-sparsification-for-large.md)**  
   実装：[✓](https://github.com/hxu105/SPON) ・ リポジトリ内被引用：0  
   TEALなどの活性疎化方式は、小さい入力活性を閾値処理で零にして重み転送と積和を省く。実際にNVIDIA A6000でバッチ1の生成速度を測定し、50%疎化したLlama3-8Bは64.13 トークン/s、Mistral-7Bは71.84 トークン/sであり、TEALの64.28、71.25 トークン/sとほぼ同じだった。
+
+- **2026-07 · [Reflex: Real-Time VLA Control through Streaming Inference](2026-2607.14695-reflex-real-time-vla-control-through-streaming-inference.md)**  
+  実装：[✓](https://github.com/9yc/Reflex) ・ リポジトリ内被引用：0  
+  フローマッチング型行動モデルの文脈を3領域へ分ける分割注意で正しいキャッシュ再利用を可能にし、非同期実行と組み合わせて推論2.58倍高速化と反応遅延の最大54パーセント削減を達成する。
 
 - **2026-07 · [RDQ: Residual Distribution Quantization for Large Language Models](2026-2607.10137-rdq-residual-distribution-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5565,7 +5573,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：123  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：124  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  

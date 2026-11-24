@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（122本）
+## 自動生成の論文一覧（123本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -229,6 +229,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-07 · [ELiTeFormer: An Efficient Transformer for FPGAs](2026-2607.03652-eliteformer-an-efficient-transformer-for-fpgas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ELiTeFormerは、言語モデルの注意機構と全結合層を個別に高速化するだけでは、再構成可能な論理回路（Field-Programmable Gate Array; FPGA）の特性を十分に利用できないという問題に取り組む。
+
+- **2026-07 · [EdgeCoInfer: Hierarchical Collaborative Inference for On-Device Multimodal Large Models](2026-2607.17143-edgecoinfer-hierarchical-collaborative-inference-for-on-device-multimoda.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  マルチモーダルモデルの機能モジュール共有と層分割を同時に最適化し、遺伝的アルゴリズムと強化学習の階層型解法で端末群へ配置することで、メモリを71.88パーセント削減しつつタスク完了率100パーセントを保つエッジ協調推論。
 
 - **2026-07 · [Characterizing LLM Kernel Access and Memory Interaction in Multi-Partition NUMA GPUs](2026-2607.28824-characterizing-llm-kernel-access-and-memory-interaction-in-multi-partiti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

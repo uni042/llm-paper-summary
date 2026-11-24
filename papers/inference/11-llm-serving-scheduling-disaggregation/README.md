@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（642本）
+## 自動生成の論文一覧（643本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1358,6 +1358,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   埋め込み型のモデル選択を秘密分散のマルチパーティ計算で実行し、エンコーダの非線形演算の置き換え、多段階蒸留、定数ラウンドのトップk探索で、平文と同等のルーティング品質と素朴な暗号実装の約20倍の高速化を両立する枠組み。
 
+- **2026-04 · [FineServe: A Fine-Grained Dataset and Characterization of Global LLM Serving Workloads](2026-2607.19349-fineserve-a-fine-grained-dataset-and-characterization-of-global-llm-serv.md)**  
+  実装：[✓](https://github.com/hihiztc1/FineServe) ・ リポジトリ内被引用：0  
+  世界規模の商用プラットフォームから4か月・14.8億リクエストを収集し、アーキテクチャ・規模・タスク意図の軸で到着とトークン挙動の異質性を明らかにした実ワークロードデータセットと、その知見を再現する混成ワークロード生成器。
+
 - **2026-04 · [Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference](2026-2604.07472-fast-heterogeneous-serving-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   異種GPU・モデル・TP/PP・ルーティングを制約認識型貪欲法で共同配置し、Azure トレース較正の大規模問題で1秒未満・厳密ソルバー比260倍超高速に実行可能解を得る。
@@ -2211,7 +2215,7 @@
   事前充填を固定長チャンク化して復号インスタンスから分離し、生成長予測付き二段階配置で混合LLM要求の干渉を抑える配信システム。
 
 - **2024-08 · [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](2024-2408.00741-dynamollm.md)**  
-  実装：✓ ・ リポジトリ内被引用：126  
+  実装：✓ ・ リポジトリ内被引用：127  
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
@@ -2306,13 +2310,13 @@
   実装：✓ ・ リポジトリ内被引用：36  
   P/D-Serveは、事前充填と復号を別インスタンス群へ分け、シナリオごとにP/D比を調整し、混雑ノードを待たず要求を再送し、KV転送をまとめることで数万NPUクラスタの待ち行列と通信固定費を減らす商用基盤。
 
+- **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
+  実装：[✓](https://github.com/microsoft/MixLLM/tree/batchllm_vllm_064) ・ リポジトリ内被引用：35  
+  BatchLLMは、検索結果の説明文生成、広告文書の変換、推薦候補の採点など、数千件以上のプロンプトをまとめて処理する大規模言語モデル（LLM）の一括推論を対象とするシステムである。原著のMLSys 2026産業部門版は、NVIDIA A100とAMD MI200上で、vLLMやSGLangに対して1.3～10.8倍の端点処理率改善を報告する。
+
 - **2024-10 · [Don't Stop Me Now: Embedding Based Scheduling for LLMs](2024-2410.01035-embedding-based-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：35  
   TRAILはLLM内部層埋め込みで残り出力長を逐次予測し、KVキャッシュ増加前だけプリエンプトする制限付きSPRPTでvLLMの待ち時間を削減する。
-
-- **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
-  実装：[✓](https://github.com/microsoft/MixLLM/tree/batchllm_vllm_064) ・ リポジトリ内被引用：34  
-  BatchLLMは、検索結果の説明文生成、広告文書の変換、推薦候補の採点など、数千件以上のプロンプトをまとめて処理する大規模言語モデル（LLM）の一括推論を対象とするシステムである。原著のMLSys 2026産業部門版は、NVIDIA A100とAMD MI200上で、vLLMやSGLangに対して1.3～10.8倍の端点処理率改善を報告する。
 
 - **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
   実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：30  
@@ -2513,7 +2517,7 @@
   複数モデルへ届くリクエスト数が時間ごとに偏る環境で、モデルを複数GPUへ分割して置き、空いているGPUをモデル間で共有しやすくすることで、特定モデルだけ待ち行列が伸びるのを抑えるサービング配置手法。
 
 - **2023-05 · [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)**  
-  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：163  
+  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：164  
   出力トークンを1つ生成する区切りで要求（リクエスト）を一時停止・再開できるようにし、短い要求を優先しながらKVキャッシュ（KV キャッシュ）をCPUへ退避・先読みして待ち時間を減らすLLMサービングスケジューラ（serving スケジューラ）。
 
 - **2023-11 · [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)**  

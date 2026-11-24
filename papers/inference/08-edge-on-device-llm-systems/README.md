@@ -68,6 +68,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   モバイルLLMのコールドスタートで浪費されるフラッシュ帯域を、重要度別の可変精度量子化・SIMD向け重み格納・CPU/NPU協調実行で削減し、同等精度条件の初回応答を最大4.07倍高速化する。
 
+- **2025-12 · [ActionFlow: A Pipelined Action Acceleration for Vision Language Models on Edge](2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  連続制御の現在フレームのプリフィルと過去フレームのデコードを1バッチへ詰めるリクエスト間パイプライン化で、再学習なしにエッジ上の視覚言語行動モデルを2.55倍高速化する推論基盤。
+
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-10 · [TileWeave: Heterogeneous Tiling for Sparse Prefill on Mobile SoCs](2026-2611.00408-tileweave-heterogeneous-tiling-for-sparse-prefill-on-mobile-socs.md)**  
@@ -297,10 +301,6 @@
 - **2025-12 · [Atom: Efficient On-Device Video-Language Pipelines Through Modular Reuse](2025-2512.17108-atom-efficient-on-device-video-language-pipelines-through-modular-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   動画言語パイプラインをエンコーダと共有言語デコーダのモジュールへ分解し、常駐再利用とクリップ並列で再読込と直列実行を消すことで、スマートフォン上のエンドツーエンド遅延を27〜33%削減しつつピークメモリ増を約40MBに抑えるオンデバイス実行システム。
-
-- **2025-12 · [ActionFlow: A Pipelined Action Acceleration for Vision Language Models on Edge](2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  連続制御の現在フレームのプリフィルと過去フレームのデコードを1バッチへ詰めるリクエスト間パイプライン化で、再学習なしにエッジ上の視覚言語行動モデルを2.55倍高速化する推論基盤。
 
 ### 2年前（2024-12〜2025-11）
 

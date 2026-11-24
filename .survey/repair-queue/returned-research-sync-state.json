@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "da2d4ec018f2305b355475d063b338a2a70ea465",
+  "base_commit": "2b9338028607d01302fbc8077ec2682f93ab4a78",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -960,10 +960,15 @@
     "2026-2607.14557-seeing-the-end-at-step-zero-accelerating-diffusion-mllms-via-mlp-sparsity-aware-truncation.json",
     "2026-2607.14618-polyq-codesigning-end-to-end-quantization-framework-for-scalable-edge-cpu-llm-inference.json",
     "2026-2607.14630-cross-layer-error-compensation-and-finite-sample-feature-statistics-matching-for-extreme-low-bit-quantization-of-large-l.json",
+    "2026-2607.14695-reflex-real-time-vla-control-through-streaming-inference.json",
+    "2026-2607.17143-edgecoinfer-hierarchical-collaborative-inference-for-on-device-multimodal-large-models.json",
     "2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.json",
     "2026-2607.17486-salt-salience-aware-lexical-trie-for-long-context-compression.json",
+    "2026-2607.18213-swe-pruner-pro-the-coder-llm-already-knows-what-to-prune.json",
     "2026-2607.18839-hpd-parsing-hierarchical-parallel-document-parsing.json",
+    "2026-2607.19214-keeping-the-cache-warm-pays-keepalive-economics-for-agentic-workloads.json",
     "2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.json",
+    "2026-2607.19349-fineserve-a-fine-grained-dataset-and-characterization-of-global-llm-serving-workloads.json",
     "2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-context-reasoning.json",
     "2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-locality-sensitive-hashing.json",
     "2026-2607.19686-multi-mask-diffusion-language-models-for-few-step-generation.json",
@@ -53641,6 +53646,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.14695": {
+      "order": [
+        "2026-11-24T06:50:13+00:00",
+        "2026-2607.14695-reflex-real-time-vla-control-through-streaming-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.17143": {
+      "order": [
+        "2026-11-24T06:51:48+00:00",
+        "2026-2607.17143-edgecoinfer-hierarchical-collaborative-inference-for-on-device-multimodal-large-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.18213": {
+      "order": [
+        "2026-11-24T06:53:23+00:00",
+        "2026-2607.18213-swe-pruner-pro-the-coder-llm-already-knows-what-to-prune.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.19214": {
+      "order": [
+        "2026-11-24T06:54:58+00:00",
+        "2026-2607.19214-keeping-the-cache-warm-pays-keepalive-economics-for-agentic-workloads.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.19349": {
+      "order": [
+        "2026-11-24T06:56:33+00:00",
+        "2026-2607.19349-fineserve-a-fine-grained-dataset-and-characterization-of-global-llm-serving-workloads.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68114,6 +68164,21 @@
     "arxiv:2607.12161": [
       "papers/inference/99-other-inference-systems/2026-2607.12161-token-reduction-is-not-cost-reduction.md",
       "papers/inference/99-other-inference-systems/2026-2607.12161-token-reduction-is-not-cost-reduction.md"
+    ],
+    "arxiv:2607.14695": [
+      "papers/inference/99-other-inference-systems/2026-2607.14695-reflex-real-time-vla-control-through-streaming-inference.md"
+    ],
+    "arxiv:2607.17143": [
+      "papers/inference/15-inference-simulation-emulation/2026-2607.17143-edgecoinfer-hierarchical-collaborative-inference-for-on-device-multimoda.md"
+    ],
+    "arxiv:2607.18213": [
+      "papers/inference/99-other-inference-systems/2026-2607.18213-swe-pruner-pro-the-coder-llm-already-knows-what-to-prune.md"
+    ],
+    "arxiv:2607.19214": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2607.19214-keeping-the-cache-warm-pays-keepalive-economics-for-agentic-workloads.md"
+    ],
+    "arxiv:2607.19349": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.19349-fineserve-a-fine-grained-dataset-and-characterization-of-global-llm-serv.md"
     ]
   }
 }

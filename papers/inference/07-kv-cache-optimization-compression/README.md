@@ -1949,6 +1949,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：22  
   QuantSpecは、長い文脈を持つ大規模言語モデルの復号で、鍵値キャッシュ（KVキャッシュ）の読出しがGPU帯域と容量を圧迫する問題を、階層量子化キャッシュを共有する自己投機的復号によって改善する。
 
+- **2025-10 · [Acon: Optimizing Context Compression for Long-horizon LLM Agents](2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md)**  
+  実装：✓ ・ リポジトリ内被引用：21  
+  Acon（Agent Context Optimization）は、過去の行動・観測をまとめた履歴と、新たに届いた長いツール観測の両方をLLMで圧縮する。圧縮の指針を人手で固定せず、同じ課題で非圧縮なら成功したのに圧縮後は失敗した実行軌跡を比較し、失われた重要情報を分析して自然言語の圧縮指示を改善する。
+
 - **2025-05 · [PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs](2025-2505.18610-pm-kvq-progressive-mixed-precision-kv-cache-quantization-for-long-cot-llms.md)**  
   実装：[✓](https://github.com/thu-nics/PM-KVQ) ・ リポジトリ内被引用：21  
   KVを16→8→4→2bitと必要時だけ段階圧縮し、層感度とRoPE位置補間校正で長CoTの累積量子化誤差を抑えるPM-KVQ。
@@ -1960,10 +1964,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-02 · [TransMLA: Migrating GQA Models to MLA with Full DeepSeek Compatibility and Speedup](2025-2502.07864-transmla-migrating-gqa-models-to-mla-with-full-deepseek-compatibility-an.md)**  
   実装：✓ ・ リポジトリ内被引用：21  
   TransMLAは、すでに学習済みのグループ化問い合わせ注意（Grouped Query 注意機構、GQA）モデルを、DeepSeek系の多頭潜在注意（Multi-head Latent 注意機構、MLA）へ変換するための手法である。
-
-- **2025-10 · [Acon: Optimizing Context Compression for Long-horizon LLM Agents](2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
-  Acon（Agent Context Optimization）は、過去の行動・観測をまとめた履歴と、新たに届いた長いツール観測の両方をLLMで圧縮する。圧縮の指針を人手で固定せず、同じ課題で非圧縮なら成功したのに圧縮後は失敗した実行軌跡を比較し、失われた重要情報を分析して自然言語の圧縮指示を改善する。
 
 - **2025-06 · [InfiniPot-V: Memory-Constrained KV Cache Compression for Streaming Video Understanding](2025-2506.15745-infinipot-v-memory-constrained-kv-cache-compression-for-streaming-video-.md)**  
   実装：[✓](https://github.com/aiha-lab/InfiniPot-V) ・ リポジトリ内被引用：20  
