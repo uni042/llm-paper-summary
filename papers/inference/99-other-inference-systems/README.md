@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1517本）
+## 自動生成の論文一覧（1519本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -40,6 +40,10 @@
   実装：✓ ・ リポジトリ内被引用：9  
   HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。
 
+- **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
+  実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：9  
+  コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
+
 - **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   モデル固有のKVキャッシュを、共有潜在空間への入出力変換器を介して交換する。単に同じ数値へ復元するのではなく、受信側が後続トークンを正しく予測できる状態を学ぶことで、異なる言語モデル間の内部状態共有を可能にする。
@@ -51,10 +55,6 @@
 - **2026-02 · [RelayCaching：協調LLMの生成KVキャッシュ再利用](2026-2603.13289-relaycaching-accelerating-llm-collaboration-via-decoding-kv-cache-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   前段エージェントのデコードKVを後段プリフィルへ渡し、位置補正と中間層・重要トークンだけの疎な再計算で80%以上を再利用し、TTFTを最大4.7倍短縮する。
-
-- **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
-  実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：8  
-  コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
 
 - **2026-07 · [Read As Human: Compressing Context via Parallelizable Close Reading and Skimming](2026-2602.01840-read-as-human-compressing-context-via-parallelizable-close-reading-and-s.md)**  
   実装：[✓](https://github.com/Twilightaaa/RAM) ・ リポジトリ内被引用：7  
@@ -584,6 +584,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   量子化の情報保持をSQNRで、速度利得をルーフライン型の解析予測で測り、重み付きで統合する層重要度指標を提案し、再実行なしの速度予測が平均誤差約3.4パーセントで実測と合うことを示した。
 
+- **2026-07 · [The Key to Going Linear: Analysis-Driven Transformer Linearization](2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  基盤を凍結して状態更新だけを比べ、ソフトマックスの一次近似が示すキー依存のランク1射影を備えるデルタ型が最も注意を近似できること、窓とシンクと短い畳み込みの処方で先行線形化のMMLUを上回ることを示した。
+
 - **2026-07 · [Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models](2026-2607.10640-spectral-heat-flow-for-conservative-token-condensation-in-vision-languag.md)**  
   実装：[✓](https://github.com/Lzy-dot/SpecFlow) ・ リポジトリ内被引用：1  
   特徴類似グラフ上の熱拡散で重要度を領域単位に平滑化し、四分木の領域配分と捨てる側のシンク凝縮で被覆と統計を守る学習不要の視覚トークン圧縮で、約9割削減でも性能の約96パーセントを保った。
@@ -607,6 +611,10 @@
 - **2026-07 · [Back from the Future: Key-Value Cache Management by Counter-Causal Surprise](2026-2607.27600-back-from-the-future-key-value-cache-management-by-counter-causal-surpri.md)**  
   実装：[✓](https://github.com/metacognitionai/counter_causal) ・ リポジトリ内被引用：1  
   従来のスライディングウィンドウは古いトークンを機械的に捨て、H2Oなどのheavy-hitter方式は過去に多く注意されたトークンを残す。Qwen2.5-7B、RTX4090のキャッシュ更新1回では、KV長512で54msから7.9ms、4096で496msから52.6msとなり、更新処理単体で7～9倍速くなる。
+
+- **2026-07 · [A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets](2026-2607.02303-a-hippocampus-for-linear-attention-an-exact-memory-for-what-the-recurren.md)**  
+  実装：[✓](https://github.com/scale-lab-ai/HOLA) ・ リポジトリ内被引用：1  
+  線形注意（Linear 注意機構）や状態空間モデル（State Space モデル; SSM）は、入力履歴を固定長の再帰状態へ要約するため、過去の全トークンに対応する鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）を保存する全注意と比べて、長文脈の記憶容量を一定に保ちやすい。
 
 - **2026-06 · [STaR-Quant: State-Time Consistent Post-Training Quantization for Diffusion Large Language Models](2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusio.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1106,6 +1114,10 @@
   実装：[✓](https://github.com/alexz949/BasisKV) ・ リポジトリ内被引用：0  
   バリューの低ランク潜在表現を一つ作り、KVキャッシュ幅、テンソル並列の通信、キーのページ選択の三つに共有することで、8GPUテンソル並列で最大1.42倍の高速化を得る低ランク圧縮法。
 
+- **2026-10 · [YANchor-4B: Effective Long-Horizon Reasoning in O(N) Time with O(1) Memory](2026-2610.10118-yanchor-4b-effective-long-horizon-reasoning-in-o-n-time-with-o-1-memory.md)**  
+  実装：[✓](https://github.com/RocoreMatrix/YANchor) ・ リポジトリ内被引用：0  
+  回帰圧縮と局所注意に、重要度で残す検索可能な記憶アンカーを加え、生成時間は長さに比例しメモリは一定のまま、AIME平均82.93パーセントの長距離推論を実現する4B級モデル。
+
 - **2026-10 · [Whose Turn Is It? Context-Guided Model Routing for Stateful Agents](2026-2610.19292-whose-turn-is-it-context-guided-model-routing-for-stateful-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   状態を持つエージェントのターン単位ルーティングを比較し、履歴を見ることが同じ振り分け率で成功率を3.3ポイント上げることと、切替の費用が方向で非対称であり下方の切替だけが短期間で元を取ることを示した分析研究。
@@ -1153,6 +1165,10 @@
 - **2026-10 · [The Cost of Context: Profiling the Energy Footprint of Input Tokens in Large Language Models](2026-2610.19819-the-cost-of-context-profiling-the-energy-footprint-of-input-tokens-in-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィルだけを1ミリ秒刻みの電力計測で切り分け、入力トークンのエネルギー原単位が文脈長とエンジン最適化でどう変わるかをA100実機で示した計測研究。
+
+- **2026-10 · [TAP: Efficient Long-Horizon Agent Pruning via Trajectory-Anchored Recovery](2026-2610.09074-tap-efficient-long-horizon-agent-pruning-via-trajectory-anchored-recover.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  教師軌跡へ文脈を固定したオンポリシー蒸留と、その回復目的によるチャネル再評価を交互に回す反復プルーニングで、RL訓練エージェントのFFNを60〜80パーセント削ってもタスク成功率を大きく保ち、成功あたり費用を下げる枠組み。
 
 - **2026-10 · [Static Bootstrap Placement for Encrypted Language Model Decoding](2026-2610.04912-static-bootstrap-placement-for-encrypted-language-model-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1890,10 +1906,6 @@
   実装：[✓](https://github.com/PointFiveLabs/ai-efficiency-benchmark) ・ リポジトリ内被引用：0  
   コーディングエージェントの文脈削減を2908回の課金実行で対照測定し、費用の大半がプロンプトキャッシュであり、ツール出力を38パーセント削っても費用が6.8パーセント増えるなど、トークン削減と費用削減が切り離されることを示した実証研究。
 
-- **2026-07 · [The Key to Going Linear: Analysis-Driven Transformer Linearization](2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  基盤を凍結して状態更新だけを比べ、ソフトマックスの一次近似が示すキー依存のランク1射影を備えるデルタ型が最も注意を近似できること、窓とシンクと短い畳み込みの処方で先行線形化のMMLUを上回ることを示した。
-
 - **2026-07 · [SWE-Pruner Pro: The Coder LLM Already Knows What to Prune](2026-2607.18213-swe-pruner-pro-the-coder-llm-already-knows-what-to-prune.md)**  
   実装：[✓](https://github.com/Ayanami1314/swe-pruner-pro) ・ リポジトリ内被引用：0  
   エージェント自身の隠れ状態から行単位の枝刈り信号を読み出す小さなヘッドで、別モデルなしにツール出力を削り、SWE-QA-Proでトークン39.4パーセント減と品質維持を両立する。
@@ -2101,10 +2113,6 @@
 - **2026-07 · [ACBQ: Adaptive Cross-Block Quantization of Large Language Models](2026-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   自己注意と全結合ネットワークを別単位で最適化し、エントロピーで測った依存の強いブロックをグループ化して一緒に量子化することで誤差の蓄積を抑え、重み2ビットや重み・活性値4ビットでも精度を保つ学習後量子化ACBQ。
-
-- **2026-07 · [A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets](2026-2607.02303-a-hippocampus-for-linear-attention-an-exact-memory-for-what-the-recurren.md)**  
-  実装：[✓](https://github.com/scale-lab-ai/HOLA) ・ リポジトリ内被引用：0  
-  線形注意（Linear 注意機構）や状態空間モデル（State Space モデル; SSM）は、入力履歴を固定長の再帰状態へ要約するため、過去の全トークンに対応する鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）を保存する全注意と比べて、長文脈の記憶容量を一定に保ちやすい。
 
 - **2026-07 · [3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving](2026-2607.01617-3dls-disaggregated-serving-interconnect.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4132,6 +4140,10 @@
   実装：[✓](https://github.com/CSU-ModelCompression/BAQ) ・ リポジトリ内被引用：1  
   BAQ（Bit Allocation Quantization）は、大規模言語モデルの事後量子化で各列に同じビット数を割り当てることの非効率を、逆ヘッセ行列に基づく感度係数から計算した列別ビット幅で改善する手法である。
 
+- **2025-05 · [Scaling Reasoning without Attention](2025-2505.22425-scaling-reasoning-without-attention.md)**  
+  実装：[✓](https://github.com/inclusionAI/PromptCoT) ・ リポジトリ内被引用：1  
+  KVキャッシュを持たないMamba-2の状態空間双対層だけで推論モデルを構成し、PromptCoTの合成データによる2段階カリキュラムで鍛えた研究。7Bで27B級の推論性能と、メモリ制限下で最大3.66倍のスループットを示した。
+
 - **2025-05 · [DINGO: Constrained Inference for Diffusion LLMs](2025-2505.23061-dingo-constrained-inference-for-diffusion-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   正規表現のオートマトン上で動的計画法を回し、ブロック並列予測でも分布を歪めずに確率最大の制約適合出力を厳密に求める、拡散言語モデル向けの制約付きデコード。
@@ -4739,10 +4751,6 @@
 - **2025-05 · [Semantic Retention and Extreme Compression in LLMs: Can We Have Both?](2025-2505.07289-semantic-retention-and-extreme-compression-in-llms-can-we-have-both.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、学習済み大規模言語モデル（LLM）に対する重み剪定と量子化の組合せを、同じ理論圧縮率で比較した研究である。主な結果は、25%剪定と4ビット量子化の組合せが、理論圧縮率TCr=81.25%の条件で、3ビット量子化のみより平均約20%高い意味保持率を示すというものだ。
-
-- **2025-05 · [Scaling Reasoning without Attention](2025-2505.22425-scaling-reasoning-without-attention.md)**  
-  実装：[✓](https://github.com/inclusionAI/PromptCoT) ・ リポジトリ内被引用：0  
-  KVキャッシュを持たないMamba-2の状態空間双対層だけで推論モデルを構成し、PromptCoTの合成データによる2段階カリキュラムで鍛えた研究。7Bで27B級の推論性能と、メモリ制限下で最大3.66倍のスループットを示した。
 
 - **2025-05 · [QwenLong-CPRS: Towards ∞-LLMs with Dynamic Context Optimization](2025-2505.18092-qwenlong-cprs-towards-llms-with-dynamic-context-optimization.md)**  
   実装：[✓](https://github.com/Tongyi-Zhiwen/QwenLong-CPRS) ・ リポジトリ内被引用：0  
@@ -5649,7 +5657,7 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：142  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：143  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  

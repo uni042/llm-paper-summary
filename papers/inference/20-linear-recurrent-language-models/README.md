@@ -49,6 +49,10 @@
   実装：[✓](https://github.com/open-lm-engine/lm-engine) ・ リポジトリ内被引用：1  
   線形注意やMamba-2、Gated DeltaNetなどの再帰型方式は固定サイズの状態へ過去を畳み込み、生成時のメモリを一定に保ちやすい。
 
+- **2026-02 · [Online Vector Quantized Attention](2026-2602.03922-online-vector-quantized-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  オンラインベクトル量子化注意（Online Vector Quantized 注意機構、OVQ-注意機構）は、長い系列の情報を比較的大きな固定上限の記憶状態へ圧縮しながら、自己注意（self-注意機構）の長距離検索能力に近づける系列混合層である。
+
 - **2026-01 · [MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head](2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md)**  
   実装：[✓](https://github.com/DAGroup-PKU/MHLA) ・ リポジトリ内被引用：1  
   MHLA（Multi-Head Linear 注意機構）は、系列長に対して計算量が線形に増える注意機構を維持しながら、従来の線形注意（linear 注意機構）で失われるトークン間の選択性を回復する構造である。DeiT-TのImageNet-1K正答率は通常の線形注意69.8%からMHLA75.8%へ、通常のソフトマックス注意72.2%も上回った。
@@ -87,10 +91,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルを長文脈で使う場合、通常の全注意機構は過去のキーと値をトークン数に応じて保存し続けるため、GPUメモリが推論可能な文脈長を制約する。実行基盤側も改修し、8基のAMD MI300Xを使って最大約200万トークンの推論を実行した。
 
-- **2026-02 · [Online Vector Quantized Attention](2026-2602.03922-online-vector-quantized-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  オンラインベクトル量子化注意（Online Vector Quantized 注意機構、OVQ-注意機構）は、長い系列の情報を比較的大きな固定上限の記憶状態へ圧縮しながら、自己注意（self-注意機構）の長距離検索能力に近づける系列混合層である。
-
 - **2026-01 · [Gecko: An Efficient Neural Architecture Inherently Processing Sequences with Arbitrary Lengths](2026-2601.06463-gecko-an-efficient-neural-architecture-inherently-processing-sequences-w.md)**  
   実装：[✓](https://github.com/XuezheMax/gecko-llm) ・ リポジトリ内被引用：0  
   Geckoは、従来のTransformerで長い系列を扱う際の二乗注意計算と、固定窓に分割する方式で過去の情報が失われる問題を、モデル構造そのものから扱う研究である。
@@ -98,7 +98,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2024-12 · [Gated Delta Networks: Improving Mamba2 with Delta Rule](2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md)**  
-  実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：171  
+  実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：172  
   本論文は、長文脈を固定容量の状態へ圧縮する線形再帰言語モデルが、記憶の保持と更新を両立しにくい問題を扱う。
 
 - **2025-02 · [PICASO: Permutation-Invariant Context Composition with State Space Models](2025-2502.17605-picaso-permutation-invariant-context-composition-with-state-space-models.md)**  
@@ -124,7 +124,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2023-2312.00752-mamba-selective-state-space-linear-time-inference.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：347  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：348  
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
 
 - **2023-12 · [Gated Linear Attention Transformers with Hardware-Efficient Training](2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md)**  
@@ -144,7 +144,7 @@
   Infini-注意機構は、入力文脈が数十万から100万トークンに達しても、過去の全トークンに対応する鍵・値（KV）を保存し続けずに情報を参照するための注意機構である。
 
 - **2024-06 · [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md)**  
-  実装：[✓](https://github.com/microsoft/Samba) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/microsoft/Samba) ・ リポジトリ内被引用：48  
   Sambaは、選択的状態空間モデル（Selective State Space モデル; SSM）で遠い過去を固定サイズ状態へ畳み込み、スライディング窓注意（Sliding Window 注意機構; SWA）で直近トークンを正確に参照する。
 
 - **2024-04 · [Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence](2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md)**  

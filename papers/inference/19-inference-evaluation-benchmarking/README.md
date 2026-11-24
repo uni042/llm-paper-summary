@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（249本）
+## 自動生成の論文一覧（250本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -92,6 +92,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   消費者向けNvidia GPUとApple Siliconを70B級モデルとNVFP4まで含めて実測比較した分析。Nvidiaは収まる範囲で計算密度が最高だがVRAMの壁とバックエンド摩擦があり、Appleは統合メモリで大規模モデルを実用精度のまま載せ効率でも勝るという二分構造を示した。
 
+- **2026-05 · [PARCEL: Pool-Anchored Resampling with Conditioned Elastic Queries for Efficient Vision-Language Understanding](2026-2605.30126-parcel-pool-anchored-resampling-with-conditioned-elastic-queries-for-eff.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  PARCELは、視覚トークンの数を16、64、256など異なる予算へ縮めても、空間的な位置関係と画像の細部を両立して保つための、可変予算の視覚表現設計である。27種類の評価課題を横断した全体平均の性能保持率は、視覚トークン256個で95.6%、64個で95.3%、16個で88.3%と報告された。
+
 - **2026-05 · [Agentic Kernel Optimization: Generating State-of-the-Art GPU Kernels Without Hand-Written CUDA](2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-with.md)**  
   実装：[✓](https://github.com/CodeGandee/flashinfer-bench-starter-kit/tree/main/solution/cuda) ・ リポジトリ内被引用：1  
   正しさを門番とする評価とハッキング禁止の下で複数コードエージェントが計画・実装・プロファイル・統合を分担し、人手のCUDAなしでMoEと疎注意のカーネルを参照実装比最大1101倍まで高速化した事例研究。
@@ -157,6 +161,10 @@
 - **2026-10 · [VLA-HWBench: Where the Time Goes When VLA Models Run on Edge Hardware](2026-2610.34717-vla-hwbench-where-the-time-goes-when-vla-models-run-on-edge-hardware.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   開放モデル18種を2種の縁端計算機で7段階に分解して測り、遅延はモデル規模ではなく行動生成の反復回数で決まること、融合と4ビット化が最大の利得だが適用範囲が狭いこと、最適化後はソフトウェア律速が残ることを明らかにした。
+
+- **2026-10 · [VisionWeave: Weaving Elastic Visual Representations as a Native Capability of MLLMs](2026-2610.07987-visionweave-weaving-elastic-visual-representations-as-a-native-capabilit.md)**  
+  実装：[✓](https://github.com/FFY0/VisionWeave) ・ リポジトリ内被引用：0  
+  視覚ブロックごとに細粒度4トークンと粗粒度1トークンを学習済みルーターで織り替える弾性表現を自己蒸留で基盤モデルに植え付け、Qwen3.8-27Bで平均43.0パーセントのトークン削減と本来性能の98.9パーセント維持、SGLangで2.30倍のスループットを両立する。
 
 - **2026-10 · [Towards Green AI: Evaluating Energy Efficiency for Quantized LLM Inference](2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inferenc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -497,10 +505,6 @@
 - **2026-05 · [Switchcraft: AI Model Router for Agentic Tool Calling](2026-2605.07112-switchcraft-ai-model-router-for-agentic-tool-calling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   道具呼出しごとの厳密な正しさを予測する較正済みDistilBERT分類器で、予算内で最も安い正解見込みモデルを選び不可能な要求は棄却することで、単一最良モデルより59パーセント安く高い正解率を出すエージェント向けモデルルーター。
-
-- **2026-05 · [PARCEL: Pool-Anchored Resampling with Conditioned Elastic Queries for Efficient Vision-Language Understanding](2026-2605.30126-parcel-pool-anchored-resampling-with-conditioned-elastic-queries-for-eff.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  PARCELは、視覚トークンの数を16、64、256など異なる予算へ縮めても、空間的な位置関係と画像の細部を両立して保つための、可変予算の視覚表現設計である。27種類の評価課題を横断した全体平均の性能保持率は、視覚トークン256個で95.6%、64個で95.3%、16個で88.3%と報告された。
 
 - **2026-05 · [Measuring Maximum Activations in Open Large Language Models](2026-2605.15572-measuring-maximum-activations-in-open-large-language-models.md)**  
   実装：[✓](https://github.com/clx1415926/Max_act_llm) ・ リポジトリ内被引用：0  

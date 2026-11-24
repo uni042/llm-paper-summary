@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0c6e974e2e4925379be927af83934ab053c2ec91",
+  "base_commit": "9b3f54f86756a2d24f8e04d07db775e8d4473a9c",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1264,6 +1264,7 @@
     "2026-2610.07863-refold-training-free-reversible-inter-turn-context-folding-for-long-horizon-agents.json",
     "2026-2610.07904-apexquant-data-free-elastic-quantization-by-residual-re-isotropization.json",
     "2026-2610.07940-hybrid-latent-attention-for-looped-language-models.json",
+    "2026-2610.07987-visionweave-weaving-elastic-visual-representations-as-a-native-capability-of-mllms.json",
     "2026-2610.08231-osfp4-joint-optimization-of-diagonal-smoothing-and-block-scales-for-nvfp4-quantization.json",
     "2026-2610.08268-dysco-dynamic-sharding-for-collaborative-edge-cloud-llm-inference-with-depth-synchronized-batching.json",
     "2026-2610.08341-diprune-task-aware-token-pruning-with-dual-importance-for-efficient-multimodal-language-models.json",
@@ -1273,19 +1274,23 @@
     "2026-2610.08811-kvfetch-temporal-prefetching-for-the-missing-half-of-kv-cache-compression.json",
     "2026-2610.08858-lrcc-generalizing-low-rank-compression-with-conditional-computation.json",
     "2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.json",
+    "2026-2610.09074-tap-efficient-long-horizon-agent-pruning-via-trajectory-anchored-recovery.json",
     "2026-2610.09139-breaking-the-space-barrier-and-its-application-to-language-model-inference.json",
     "2026-2610.09202-few-bits-one-law-toward-w2a4kv2.json",
     "2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-compression.json",
     "2026-2610.09424-democratizing-moe-inference-on-commodity-gpus-with-comoe.json",
     "2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-for-regression-testing.json",
     "2026-2610.10058-cache-the-encoder-within-compact-reusable-memory-across-llm-queries.json",
+    "2026-2610.10118-edgerock-strong-reasoning-at-constant-memory.json",
     "2026-2610.10135-attention-via-black-box-vector-search.json",
     "2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-residuals.json",
     "2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expected-decoding-rounds.json",
     "2026-2610.10552-freeze-the-decoder-heal-the-encoder-parameter-efficient-adaptation-for-svd-based-kv-cache-compression.json",
     "2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-and-cheaper-than-recompute.json",
     "2026-2610.11134-quilt-rethinking-sparse-attention-prefill-through-shared-query-execution.json",
+    "2026-2610.11158-zepp-accelerating-distributed-moe-serving-under-relaxed-balance-constraints.json",
     "2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.json",
+    "2026-2610.11214-bridging-kv-cache-quantization-and-linear-attention-from-theory-to-pretrained-weight-migration.json",
     "2026-2610.11245-read-what-matters-query-adaptive-quantization-for-kv-caches.json",
     "2026-2610.11284-dynate-accelerating-diffusion-llms-via-dynamic-token-execution.json",
     "2026-2610.11358-rarecache-bridging-the-gap-in-cross-model-kv-cache-reuse.json",
@@ -54091,6 +54096,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.07987": {
+      "order": [
+        "2026-11-24T08:45:09+00:00",
+        "2026-2610.07987-visionweave-weaving-elastic-visual-representations-as-a-native-capability-of-mllms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.09074": {
+      "order": [
+        "2026-11-24T08:46:15+00:00",
+        "2026-2610.09074-tap-efficient-long-horizon-agent-pruning-via-trajectory-anchored-recovery.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.10118": {
+      "order": [
+        "2026-11-24T08:47:22+00:00",
+        "2026-2610.10118-edgerock-strong-reasoning-at-constant-memory.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.11158": {
+      "order": [
+        "2026-11-24T08:48:29+00:00",
+        "2026-2610.11158-zepp-accelerating-distributed-moe-serving-under-relaxed-balance-constraints.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.11214": {
+      "order": [
+        "2026-11-24T08:49:35+00:00",
+        "2026-2610.11214-bridging-kv-cache-quantization-and-linear-attention-from-theory-to-pretrained-weight-migration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68744,6 +68794,21 @@
     "arxiv:2610.07904": [
       "papers/inference/99-other-inference-systems/2026-2610.07904-apexquant-data-free-elastic-quantization-by-residual-re-isotropization.md",
       "papers/inference/99-other-inference-systems/2026-2610.07904-apexquant-data-free-elastic-quantization-by-residual-re-isotropization.md"
+    ],
+    "arxiv:2610.07987": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.07987-visionweave-weaving-elastic-visual-representations-as-a-native-capabilit.md"
+    ],
+    "arxiv:2610.09074": [
+      "papers/inference/99-other-inference-systems/2026-2610.09074-tap-efficient-long-horizon-agent-pruning-via-trajectory-anchored-recover.md"
+    ],
+    "arxiv:2610.10118": [
+      "papers/inference/99-other-inference-systems/2026-2610.10118-yanchor-4b-effective-long-horizon-reasoning-in-o-n-time-with-o-1-memory.md"
+    ],
+    "arxiv:2610.11158": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.11158-zepp-accelerating-distributed-moe-serving-under-relaxed-balance-constrai.md"
+    ],
+    "arxiv:2610.11214": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.11214-bridging-kv-cache-quantization-and-linear-attention-from-theory-to-pretr.md"
     ]
   }
 }

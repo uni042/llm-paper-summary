@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（646本）
+## 自動生成の論文一覧（647本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -676,6 +676,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   TIDE（Temporal Incremental 下書き Engine、時間的増分草稿エンジン）は、投機的復号（投機的復号）を「静的な草稿モデルを使う復号手法」から「実際の入力分布に合わせて草稿モデルを更新し、必要な場合だけ投機するサービングシステム」へ拡張する研究である。
 
+- **2026-02 · [RAM-Net: Linear-Time Sequence Modeling with Sparsely Addressable State](2026-2602.11958-ram-net-linear-time-sequence-modeling-with-sparsely-addressable-state.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  全注意型Transformerは、過去トークンを独立したkey/valueとして保存し、現在のqueryに適合する位置へ集中してアクセスできる。一方でKVキャッシュは系列長に比例して増え、長文推論のメモリ容量と帯域を圧迫する。アドレスが重ならないトークン同士は同じ状態を汚さない。1.3Bでも実文書検索の全注意との差は残る。< の表1～3を参照した。
+
 - **2026-02 · [Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models](2026-2604.02340-not-all-denoising-steps-are-equal-model-scheduling-for-faster-masked-dif.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   マスク拡散の除去段階は中間が最も容量に敏感で両端は置き換えに強いことを全探索と分布距離で示し、段階の25%を軽い4層モデルへ置く挟み込み型配置で計算量を16.7%減らし、生成困惑度の悪化を42.85から44.31（3.41%）に抑えた。
@@ -725,6 +729,10 @@
 - **2026-11 · [Apto: Self-Adaptive CPU-GPU Hybrid MoE Inference on Shared PCs](2026-2611.01859-apto-self-adaptive-cpu-gpu-hybrid-moe-inference-on-shared-pcs.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分担を事前に決めず、両端キューからCPUとGPUが完了順にエキスパートを取り合う自己適応スケジューリングで、共有PCのCPU競合に分担自体を追随させるMoEハイブリッド推論方式。
+
+- **2026-10 · [Zepp: Accelerating Distributed MoE Serving under Relaxed Balance Constraints](2026-2610.11158-zepp-accelerating-distributed-moe-serving-under-relaxed-balance-constrai.md)**  
+  実装：[✓](https://github.com/andronius-yang/zepp) ・ リポジトリ内被引用：0  
+  負荷均衡を目的から制約へ格下げし、複製配置・通信の分割とマージ・3ストリームの重ね合わせでノード間通信そのものを最小化する分散MoEサービング基盤。
 
 - **2026-10 · [Unlocking Structured Pruning for Reasoning Language Models via Attention-Preserving MLP Trimming](2026-2610.19121-unlocking-structured-pruning-for-reasoning-language-models-via-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1441,10 +1449,6 @@
 - **2026-03 · [CALVO: Improve Serving Efficiency for LLM Inferences with Intense Network Demands](2026-2603.21257-calvo-network-aware-kv-loading-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   遠隔KV読み込みを独立した非同期段階へ分離し、通信時間と計算時間を合わせた要求費用で順序付けすることで、長文脈の高キャッシュ再利用環境で平均最初のトークン時間を81.3%以上短縮し、期限達成率を最大61.67%改善する。
-
-- **2026-02 · [RAM-Net: Linear-Time Sequence Modeling with Sparsely Addressable State](2026-2602.11958-ram-net-linear-time-sequence-modeling-with-sparsely-addressable-state.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  全注意型Transformerは、過去トークンを独立したkey/valueとして保存し、現在のqueryに適合する位置へ集中してアクセスできる。一方でKVキャッシュは系列長に比例して増え、長文推論のメモリ容量と帯域を圧迫する。アドレスが重ならないトークン同士は同じ状態を汚さない。1.3Bでも実文書検索の全注意との差は残る。< の表1～3を参照した。
 
 - **2026-02 · [QuRL: Efficient Reinforcement Learning with Quantized Rollout](2026-2602.13953-qurl-efficient-reinforcement-learning-with-quantized-rollout.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
