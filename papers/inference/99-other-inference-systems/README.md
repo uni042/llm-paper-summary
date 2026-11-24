@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1535本）
+## 自動生成の論文一覧（1538本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -519,6 +519,10 @@
 - **2026-10 · [ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories](2026-2610.38255-parattt-parallelizing-test-time-training-layers-with-deep-memories.md)**  
   実装：[✓](https://github.com/ntumm120/paraTTT) ・ リポジトリ内被引用：1  
   深い非線形メモリの勾配軌跡を3つのチャンク並列パスで反復精緻化し、テスト時学習層を誤差を揃えて32倍速く評価できるようにした並列化アルゴリズム。
+
+- **2026-10 · [Multi-Token Prediction Done Right](2026-2610.38331-multi-token-prediction-done-right.md)**  
+  実装：[✓](https://github.com/JaydenTeoh/Soft-MTP) ・ リポジトリ内被引用：1  
+  複数トークン予測の交差エントロピー勾配を自己蒸留成分と低品質な残差へ厳密に分解し、勾配回収の工夫で残差だけを消す一行変更のSoft-MTPにより、全規模でパープレキシティ、投機的デコーディング、ゼロショット精度を無料で改善する学習法。
 
 - **2026-10 · [Measuring the Energy Cost of Completing Tasks with Quantized Language-Model Agents](2026-2610.32417-measuring-the-energy-cost-of-completing-tasks-with-quantized-language-mo.md)**  
   実装：[✓](https://github.com/stephen122204/mantra-energy/tree/paper-1) ・ リポジトリ内被引用：1  
@@ -1154,9 +1158,21 @@
   実装：[✓](https://github.com/camail-official/LoReS) ・ リポジトリ内被引用：0  
   リカレント言語モデルの量子化を状態外と状態内へ分け、減衰型リカレンスは外れ値が弱く量子化しやすいことと、バリュー軸グルーピング・減衰ベース混合精度・確率的丸めからなるLoReSで状態を8ビット化しても大規模ハイブリッドの精度がほぼ保たれることを示す研究。
 
+- **2026-11 · [One Schedule Does Not Fit All: Adaptive Inference Schedules for Diffusion Language Models](2026-2611.25895-one-schedule-does-not-fit-all-adaptive-inference-schedules-for-diffusion.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  固定のノイズ除去スケジュールが最適でないことを示し、ペア校正と同時ブートストラップ限界で効用と退化ガードレールを一緒に認証して最安の候補だけを配備し、駄目なら完全スケジュールへ戻る配備ルールで、デノイザ評価回数をタスクにより1.33倍から8.0倍まで減らすことを認証した研究。
+
 - **2026-11 · [Keep the Reasoning, Read the Image: On-Demand Visual KV for Multi-Turn Reasoning VLMs](2026-2611.23769-keep-the-reasoning-read-the-image-on-demand-visual-kv-for-multi-turn-rea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い推論が画像のKVエントリを押し出す問題に対し、全視覚エントリをCPUメモリに退避して削除を防ぎ、各ステップで現在のクエリが必要とする分だけをテキストの低評価スロットと交換して読む、既存の保持方針へ被せる学習不要のオンデマンド読み出し方式。
+
+- **2026-11 · [FrontierReplay: Split-Free Exact Prefix Caching for Hybrid Language Models](2026-2611.26020-frontierreplay-split-free-exact-prefix-caching-for-hybrid-language-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ハイブリッドモデルでプリフィックス再利用が終わる位置はターンの境界など予測可能だと実測し、プリフィルを切断せず回帰層の入力ログから状態だけを再計算して正確なチェックポイントを作ることで、有効スループットを最大4.26倍にし初回トークン時間を最大89パーセント減らしたキャッシュ方式。
+
+- **2026-11 · [Efficient and Robust Drafting with Multi-Token Prediction](2026-2611.25813-efficient-and-robust-drafting-with-multi-token-prediction.md)**  
+  実装：[✓](https://github.com/google-research/gemma4-mtp-drafter-domain-adaptation) ・ リポジトリ内被引用：0  
+  対象モデルの活性値とKVキャッシュを共有する単一の4層ドラフトヘッドで複数トークンを自己回帰的に予測し、プリフィルと全語彙射影の費用を削ることで、Gemma 4の31BでH100上3.14倍、スマートフォンのGPU上でE4Bが2.18倍の追加学習なし高速化を実測した複数トークン予測法。
 
 - **2026-11 · [Direct GPU Energy Measurements of Batch-Level Sharing in Mixture-of-Experts and Recurrent Models](2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-expe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1337,10 +1353,6 @@
 - **2026-10 · [MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration](2026-2610.26083-mx-like-tensor-core-for-llm-inference-with-npu-integration-via-hardware-.md)**  
   実装：[✓](https://github.com/KULeuven-MICAS/MX-Like-for-LLM-Inference) ・ リポジトリ内被引用：0  
   ブロック量子化のスケール形式と重み活性値の非対称精度からなる設計空間を、形式特化のデータパスとエヌピー統合で精度とシリコン両面から探索し、エフピー4域ではユーイー5エム3スケールが劣化を25.3パーセント減らしほぼ無償で得られること、高精度域ではスケールは無関係なことを示した研究。
-
-- **2026-10 · [Multi-Token Prediction Done Right](2026-2610.38331-multi-token-prediction-done-right.md)**  
-  実装：[✓](https://github.com/JaydenTeoh/Soft-MTP) ・ リポジトリ内被引用：0  
-  複数トークン予測の交差エントロピー勾配を自己蒸留成分と低品質な残差へ厳密に分解し、勾配回収の工夫で残差だけを消す一行変更のSoft-MTPにより、全規模でパープレキシティ、投機的デコーディング、ゼロショット精度を無料で改善する学習法。
 
 - **2026-10 · [Multi-State Linear Attention with Generalized Second-Order Routing](2026-2610.37645-multi-state-linear-attention-with-generalized-second-order-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3896,6 +3908,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   RadioはLLM重みの事後量子化を、平均ビット数の制約下で元モデルとの出力歪みを最小化するレート・歪み最適化として定式化する。
 
+- **2025-05 · [Cross-Attention Speculative Decoding](2025-2505.24544-cross-attention-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  Beagle（Budget EAGLE）は、投機的復号の小型下書きモデルに単層のcross-注意機構 Transformerを採用し、EAGLE-v2のようなself-注意機構型下書きに近い速度を、単純な構造と少ないメモリで得る方式である。
+
 - **2025-05 · [$\mu$-MoE: Test-Time Pruning as Micro-Grained Mixture-of-Experts](2025-2505.18451-mu-moe-test-time-pruning-as-micro-grained-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   μ-MoEは、モデルをあらかじめ一度だけ枝刈りするのではなく、実際に与えられたプロンプトをその場の校正データとして使い、線形層の重みのうち重要なものだけを有効化する方式である。
@@ -3999,10 +4015,6 @@
 - **2025-05 · [NeUQI: Near-Optimal Uniform Quantization Parameter Initialization for Low-Bit LLMs](2025-2505.17595-neuqi-near-optimal-uniform-quantization-parameter-initialization-for-low.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   低ビットの言語モデルを作る際、重みを整数格子へ写す一様量子化は既存GPUの整数演算・メモリ削減と相性がよい。
-
-- **2025-05 · [Cross-Attention Speculative Decoding](2025-2505.24544-cross-attention-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  Beagle（Budget EAGLE）は、投機的復号の小型下書きモデルに単層のcross-注意機構 Transformerを採用し、EAGLE-v2のようなself-注意機構型下書きに近い速度を、単純な構造と少ないメモリで得る方式である。
 
 - **2025-04 · [Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression](2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md)**  
   実装：[✓](https://github.com/The-Inscrutable-X/TACQ) ・ リポジトリ内被引用：2  
@@ -5725,7 +5737,7 @@
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
-  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：129  
+  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：130  
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
@@ -6113,7 +6125,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：304  
+  実装：✓ ・ リポジトリ内被引用：305  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "26762b58d48d5b31494d2e8bda4639509b244485",
+  "base_commit": "c118e4316a5a632e8cc8d3aefd7a164d3c80085e",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1670,6 +1670,11 @@
     "2026-2611.25112-triplekv-predict-prefetch-protect-kv-cache-management-for-ai-agents.json",
     "2026-2611.25433-rocokv-accelerating-llm-inference-serving-through-uncertainty-and-redundancy-aware-kv-cache-compression.json",
     "2026-2611.25436-raptor-rejection-aware-adaptive-tree-based-on-speculative-decoding.json",
+    "2026-2611.25813-efficient-and-robust-drafting-with-multi-token-prediction.json",
+    "2026-2611.25895-one-schedule-does-not-fit-all-adaptive-inference-schedules-for-diffusion-language-models.json",
+    "2026-2611.25938-dts-delta-based-tile-scoring-for-efficient-long-context-sparse-attention.json",
+    "2026-2611.26020-frontierreplay-split-free-exact-prefix-caching-for-hybrid-language-models.json",
+    "2026-2611.26106-ascmla-unlocking-fp4-efficiency-for-long-context-mla-decoding-through-asymmetric-scaling.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -54735,6 +54740,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.25813": {
+      "order": [
+        "2026-11-24T11:13:47+00:00",
+        "2026-2611.25813-efficient-and-robust-drafting-with-multi-token-prediction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.25895": {
+      "order": [
+        "2026-11-24T11:14:42+00:00",
+        "2026-2611.25895-one-schedule-does-not-fit-all-adaptive-inference-schedules-for-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.25938": {
+      "order": [
+        "2026-11-24T11:15:38+00:00",
+        "2026-2611.25938-dts-delta-based-tile-scoring-for-efficient-long-context-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.26020": {
+      "order": [
+        "2026-11-24T11:16:33+00:00",
+        "2026-2611.26020-frontierreplay-split-free-exact-prefix-caching-for-hybrid-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.26106": {
+      "order": [
+        "2026-11-24T11:17:28+00:00",
+        "2026-2611.26106-ascmla-unlocking-fp4-efficiency-for-long-context-mla-decoding-through-asymmetric-scaling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69616,6 +69666,21 @@
     "arxiv:2611.25436": [
       "papers/inference/05-speculative-decoding-moe/2026-2611.25436-raptor-rejection-aware-adaptive-tree-based-on-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2026-2611.25436-raptor-rejection-aware-adaptive-tree-based-on-speculative-decoding.md"
+    ],
+    "arxiv:2611.25813": [
+      "papers/inference/99-other-inference-systems/2026-2611.25813-efficient-and-robust-drafting-with-multi-token-prediction.md"
+    ],
+    "arxiv:2611.25895": [
+      "papers/inference/99-other-inference-systems/2026-2611.25895-one-schedule-does-not-fit-all-adaptive-inference-schedules-for-diffusion.md"
+    ],
+    "arxiv:2611.25938": [
+      "papers/inference/13-sparse-attention/2026-2611.25938-dts-delta-based-tile-scoring-for-efficient-long-context-sparse-attention.md"
+    ],
+    "arxiv:2611.26020": [
+      "papers/inference/99-other-inference-systems/2026-2611.26020-frontierreplay-split-free-exact-prefix-caching-for-hybrid-language-model.md"
+    ],
+    "arxiv:2611.26106": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.26106-ascmla-unlocking-fp4-efficiency-for-long-context-mla-decoding-through-as.md"
     ]
   }
 }

@@ -121,6 +121,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   短い流入急増が接頭辞キャッシュの溢れとセッション滞留のフィードバックで持続障害になる準安定障害を実機で示し、流体モデルで脆弱条件を導いた上で、固定優先度・予測ピークによる受付制限・デコードメモリ貸し出しで防ぐ方式を提案した。
 
+- **2026-10 · [HiState: Hierarchical Prefix Cache Management for Hybrid LLM Serving in Agentic Workloads](2026-2610.41508-histate-hierarchical-prefix-cache-management-for-hybrid-llm-serving-in-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  混成模型の接頭辞再利用で、鍵と値は全て要るが再帰の保存点は一つで足りる非対称性を使い、保存点を SSD に置く階層化と間隔の適応と統一した追い出しで、実在の代理人軌跡の第九十九百分位の最初のトークンまでの時間を最大で五・七三倍速くしたと報告した。
+
 - **2026-09 · [Speculative Macro Commit for Faster Tool-Using Agents](2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ドラフトモデルが隔離環境でツール操作列を先行実行し、権威モデルが先頭操作を確認したマクロだけ後続操作と観測をまとめて確定して、大型モデル呼出しとツール待ちを減らす。
@@ -194,10 +198,6 @@
 - **2026-10 · [In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents](2026-2610.41291-in-model-context-compression-with-agentic-soft-tokens-for-long-horizon-l.md)**  
   実装：[✓](https://github.com/RISE-X-Lab/Agentic-Soft-Token) ・ リポジトリ内被引用：0  
   実行中モデルの再帰状態で吸収済みと判定した観測を連続値の柔らかいトークンへ畳み正確な値は通常トークンで保護する学習不要の圧縮で、長期課題の精度を未圧縮同等以上に保ち注意の組を最大で五十九点八四パーセント減らしたと報告した。
-
-- **2026-10 · [HiState: Hierarchical Prefix Cache Management for Hybrid LLM Serving in Agentic Workloads](2026-2610.41508-histate-hierarchical-prefix-cache-management-for-hybrid-llm-serving-in-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  混成模型の接頭辞再利用で、鍵と値は全て要るが再帰の保存点は一つで足りる非対称性を使い、保存点を SSD に置く階層化と間隔の適応と統一した追い出しで、実在の代理人軌跡の第九十九百分位の最初のトークンまでの時間を最大で五・七三倍速くしたと報告した。
 
 - **2026-10 · [Context as Infrastructure: Knowledge Compilation for Retrieval in Agentic Systems with Harnesses](2026-2610.41172-context-as-infrastructure-knowledge-compilation-for-retrieval-in-agentic.md)**  
   実装：[✓](https://github.com/infiniflow/ragflow) ・ リポジトリ内被引用：0  

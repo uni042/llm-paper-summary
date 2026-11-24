@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（224本）
+## 自動生成の論文一覧（225本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -293,6 +293,10 @@
 - **2026-11 · [Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention](2026-2610.42147-latent-sparse-attention-towards-subquadratic-ultra-long-context-attentio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   キーを学習した潜在空間で意味的に集めてクエリが代表だけを採点する疎な注意で、千万トークンで一層の入力処理を元の疎な注意より二十二・七倍・全注意より七十二・四倍速くし精度を数点以内に保ち、原生型でも全注意と同等の精度と一・六倍の学習高速化を示した。
+
+- **2026-11 · [DTS: Delta-Based Tile Scoring for Efficient Long-Context Sparse Attention](2026-2611.25938-dts-delta-based-tile-scoring-for-efficient-long-context-sparse-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ブロック疎注意のタイルスコア付け自体が高い問題に対し、局所的なベクトル変化でクエリとキーのアンカーを選ぶ学習不要のDTSを提案し、LLaMA-3.1-8B-Instructで全注意との平均差0.10ポイント以内を保ちながら、128Kでスコア付け遅延をXAttention比38パーセント減らし、512Kでプリフィルを3.3倍速くした研究。
 
 - **2026-11 · [Coarse Semantic Blocks for Efficient Training-Free Sparse Attention](2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.md)**  
   実装：[✓](https://github.com/pfnet-research/semantic-block-sparse-attention/) ・ リポジトリ内被引用：0  
