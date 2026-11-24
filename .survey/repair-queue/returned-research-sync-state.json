@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2c41aaa62dfc99abdc9d9a7686e1d614e86d272a",
+  "base_commit": "831ba57c3f7de0d30408ab2f79dfa734635fb38a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1680,6 +1680,11 @@
     "2026-2611.26619-tidecache-efficient-hybrid-llm-serving-with-transparent-cache-management-and-layer-wise-streaming.json",
     "2026-2611.26657-bitprefill-w1-58a4-tensor-core-acceleration-for-compute-bound-llm-prefill.json",
     "2026-2611.26857-carrierkv-an-edge-llm-accelerator-with-positional-carrier-decomposition-for-low-bit-kv-cache.json",
+    "2026-2611.26902-perceive-once-escalate-on-demand-handing-off-visual-kv-memory-from-small-to-large-vlms.json",
+    "2026-2611.26976-mixfold-sub-4-bit-mixed-precision-llm-inference-via-output-channel-grouping-on-mobile-npus.json",
+    "2026-2611.26980-contexture-runtime-context-eviction-for-high-throughput-agent-serving.json",
+    "2026-2611.27217-copyro-feeding-copy-proposals-to-parallel-drafters.json",
+    "2026-2611.27323-cruella-a-unified-microscaling-and-floating-point-dot-product-unit-for-llm-inference-on-fpgas.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -54835,6 +54840,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.26902": {
+      "order": [
+        "2026-11-24T11:32:19+00:00",
+        "2026-2611.26902-perceive-once-escalate-on-demand-handing-off-visual-kv-memory-from-small-to-large-vlms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.26976": {
+      "order": [
+        "2026-11-24T11:33:56+00:00",
+        "2026-2611.26976-mixfold-sub-4-bit-mixed-precision-llm-inference-via-output-channel-grouping-on-mobile-npus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.26980": {
+      "order": [
+        "2026-11-24T11:35:33+00:00",
+        "2026-2611.26980-contexture-runtime-context-eviction-for-high-throughput-agent-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.27217": {
+      "order": [
+        "2026-11-24T11:37:10+00:00",
+        "2026-2611.27217-copyro-feeding-copy-proposals-to-parallel-drafters.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.27323": {
+      "order": [
+        "2026-11-24T11:38:46+00:00",
+        "2026-2611.27323-cruella-a-unified-microscaling-and-floating-point-dot-product-unit-for-llm-inference-on-fpgas.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69756,6 +69806,21 @@
     "arxiv:2611.26857": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2611.26857-carrierkv-an-edge-llm-accelerator-with-positional-carrier-decomposition-.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2611.26857-carrierkv-an-edge-llm-accelerator-with-positional-carrier-decomposition-.md"
+    ],
+    "arxiv:2611.26902": [
+      "papers/inference/99-other-inference-systems/2026-2611.26902-perceive-once-escalate-on-demand-handing-off-visual-kv-memory-from-small.md"
+    ],
+    "arxiv:2611.26976": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2611.26976-mixfold-sub-4-bit-mixed-precision-llm-inference-via-output-channel-group.md"
+    ],
+    "arxiv:2611.26980": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2611.26980-contexture-runtime-context-eviction-for-high-throughput-agent-serving.md"
+    ],
+    "arxiv:2611.27217": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2611.27217-copyro-feeding-copy-proposals-to-parallel-drafters.md"
+    ],
+    "arxiv:2611.27323": [
+      "papers/inference/99-other-inference-systems/2026-2611.27323-cruella-a-unified-microscaling-and-floating-point-dot-product-unit-for-l.md"
     ]
   }
 }

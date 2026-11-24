@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（121本）
+## 自動生成の論文一覧（122本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -56,6 +56,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   近年の端末向けシステムオンチップ（SoC）には、CPU、内蔵画像処理装置（integrated GPU、iGPU）、神経処理装置（NPU）が同居し、同じ主記憶を共有するものがある。原著はAMD Ryzen AIの3機種を用いて、事前充填（プリフィル）で内蔵GPU単独比の平均速度向上率をそれぞれ約2.30倍、1.50倍、1.17倍と報告する。
 
+- **2026-05 · [Quant.npu: Enabling Efficient Mobile NPU Inference for on-device LLMs via Fully Static Quantization](2026-2605.20295-quant-npu-enabling-efficient-mobile-npu-inference-for-on-device-llms-via.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  QualcommのHexagon系NPUは、整数行列積の高速化と規則的な量子化に適した専用回路を持つ。SM8650実機ではW4A8構成がExecuTorchのW4A16構成より最大15.1%低遅延となり、Llama-3.2-3B-InstructのW4A8では従来の回転方式より精度が大きく改善した。
+
 - **2026-05 · [Lever：スマートフォン向けフラッシュ常駐LLMの投機的推論](2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   OnePlus 12上の測定では、フラッシュ常駐標的モデルの検証時間のうち約78〜93%を入出力が占める条件があり、演算高速化だけではこの待ち時間を解消できない。Leverは投機的復号（投機的復号）を「サーバGPUで標的モデルの計算回数を減らす方式」ではなく、「フラッシュ常駐モデルの呼出し回数を複数トークンへ償却する方式」として再設計する。
@@ -77,6 +81,10 @@
   連続制御の現在フレームのプリフィルと過去フレームのデコードを1バッチへ詰めるリクエスト間パイプライン化で、再学習なしにエッジ上の視覚言語行動モデルを2.55倍高速化する推論基盤。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [MixFold: Sub-4-Bit Mixed-Precision LLM Inference via Output-Channel Grouping on Mobile NPUs](2026-2611.26976-mixfold-sub-4-bit-mixed-precision-llm-inference-via-output-channel-group.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モバイルNPUで3ビットと完全対称2ビットの重みを展開せずネイティブ整数演算で実行する折り畳みと、タイル整合な出力チャネルグループ単位の混合精度を組み合わせ、llama.cpp比でデコード最大1.41倍とエネルギー効率最大4.3倍を実現するモバイル推論手法。
 
 - **2026-11 · [HyCoInfer: Cloud-Edge Collaborative Inference for Large Language Models on Heterogeneous GPU-FPGA Architectures](2026-2611.22086-hycoinfer-cloud-edge-collaborative-inference-for-large-language-models-o.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -221,10 +229,6 @@
 - **2026-06 · [E2LLM: Towards Efficient LLM Serving in Heterogeneous Edge/Fog Environments](2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   E2LLMは異種端末を入力処理用・生成用の複製群に分け、各群の連続層を端末へ再配置し、層・帯域・負荷の最遅段を抑える分散サービング方式。
-
-- **2026-05 · [Quant.npu: Enabling Efficient Mobile NPU Inference for on-device LLMs via Fully Static Quantization](2026-2605.20295-quant-npu-enabling-efficient-mobile-npu-inference-for-on-device-llms-via.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  QualcommのHexagon系NPUは、整数行列積の高速化と規則的な量子化に適した専用回路を持つ。SM8650実機ではW4A8構成がExecuTorchのW4A16構成より最大15.1%低遅延となり、Llama-3.2-3B-InstructのW4A8では従来の回転方式より精度が大きく改善した。
 
 - **2026-05 · [Keyword Matters: Unveiling the Energy Sensitivity of On-Device LLM Prompting](2026-2607.22568-keyword-matters-unveiling-the-energy-sensitivity-of-on-device-llm-prompt.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -443,7 +447,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)**  
-  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：81  
+  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：82  
   PowerInfer-2は、利用頻度を測った重みだけをスマホの高速メモリへ置き、残りをUFSから読みつつCPU・NPU計算と重ねて、容量不足と読出し待ちを減らす方式。
 
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  

@@ -19,15 +19,15 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   対象 隠れ featuresで条件付けしたblock-diffusion drafterが候補列を1回で並列生成し、投機ドラフト自身の逐次待ちを除くDFlash。
 
 - **2026-07 · [DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation](2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md)**  
-  実装：[✓](https://github.com/deepseek-ai/DeepSpec) ・ リポジトリ内被引用：68  
+  実装：[✓](https://github.com/deepseek-ai/DeepSpec) ・ リポジトリ内被引用：69  
   並列ドラフトの後半受理率低下を軽量な逐次ヘッドで抑え、較正した接頭辞生存確率と実機処理能力から検証長を負荷適応で配分し、実トラフィックで同等処理能力時のユーザー当たり生成速度を57〜85%改善する。
 
 - **2026-05 · [Domino: Decoupling Causal Modeling from Autoregressive Drafting in Speculative Decoding](2026-2605.29707-domino-speculative-decoding.md)**  
-  実装：[✓](https://github.com/jianuo-huang/Domino) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/jianuo-huang/Domino) ・ リポジトリ内被引用：41  
   並列ドラフトが弱めるトークン間の依存を、軽量GRUと低ランク補正で戻す投機的デコード方式。Qwen3評価では受理長と生成速度を改善したが、要旨の最大5.8倍は本文表の条件と対応づけられない。
 
 - **2026-04 · [Accelerating Speculative Decoding with Block Diffusion Draft Trees](2026-2604.12989-accelerating-speculative-decoding-with-block-diffusion-draft-trees.md)**  
-  実装：[✓](https://github.com/liranringel/ddtree) ・ リポジトリ内被引用：36  
+  実装：[✓](https://github.com/liranringel/ddtree) ・ リポジトリ内被引用：37  
   DFlashが1回で得た位置別確率分布から高確率な複数接頭辞をDDTreeとして組み、1回の対象モデル検証で複数経路を試して単一路径投機より受理長と速度を高める。
 
 - **2026-01 · [DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference](2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md)**  
@@ -62,13 +62,13 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/hao-ai-lab/JetSpec) ・ リポジトリ内被引用：13  
   自己回帰型言語モデルは次トークンを逐次生成するため、出力長が伸びるほど復号遅延が蓄積する。投機的復号は小さなドラフト器が複数トークンを提案し、対象モデルがまとめて検証することで対象モデルの逐次順伝播回数を減らす。木予算256、貪欲復号設定のMATH-500では自己回帰復号比9.64倍、平均受理長10.76を報告する。
 
+- **2026-02 · [P-EAGLE: Parallel-Drafting EAGLE with Scalable Training](2026-2602.01469-p-eagle-parallel-drafting-eagle-with-scalable-training.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  投機的復号は軽いドラフトモデルが先に複数トークンを提案し、大きな対象モデルがまとめて検証することで、対象モデルの重みを読む回数を減らす。vLLMでの実測では、GPT-OSS 20B、120B、Qwen3-Coder 30Bに対し、自己回帰EAGLE-3比で代表的に1.10〜1.36倍の生成処理量改善を報告する。
+
 - **2026-02 · [MoE-Spec: Expert Budgeting for Efficient Speculative Decoding](2026-2602.16052-moe-spec-expert-budgeting-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   MoE-Specは、候補木全体のルータ確率を層ごとに合算して専門家を予算B個へ絞り、各枝をその集合内で再選択して、木の拡大による検証重み読出しを抑える。
-
-- **2026-02 · [P-EAGLE: Parallel-Drafting EAGLE with Scalable Training](2026-2602.01469-p-eagle-parallel-drafting-eagle-with-scalable-training.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
-  投機的復号は軽いドラフトモデルが先に複数トークンを提案し、大きな対象モデルがまとめて検証することで、対象モデルの重みを読む回数を減らす。vLLMでの実測では、GPT-OSS 20B、120B、Qwen3-Coder 30Bに対し、自己回帰EAGLE-3比で代表的に1.10〜1.36倍の生成処理量改善を報告する。
 
 - **2026-06 · [DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding](2026-2606.02091-dflare.md)**  
   実装：[✓](https://github.com/Tencent/AngelSlim) ・ リポジトリ内被引用：10  
@@ -78,17 +78,21 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/haodilei/Draft-OPD) ・ リポジトリ内被引用：10  
   投機的復号の検証で露出したドラフト誤り位置から提案を再生し、教師分布でオンポリシー蒸留することで受理長と無損失推論速度を高める。
 
+- **2026-05 · [Draft Less, Retrieve More: Hybrid Tree Construction for Speculative Decoding](2026-2605.20104-draft-less-retrieve-more-hybrid-tree-construction-for-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  動的剪定は投機木を速くするが、剪定した枝の中に本来受理できる候補があれば平均受理長が落ちる。Graftは剪定で空いた候補枠を捨てず、対象モデルの過去検証から得た安価な検索候補で「接ぎ木」する。対象モデルが一度に検証するノード総数は増やさず、ドラフト計算だけを安い検索へ置換する。
+
 - **2026-01 · [Double: Breaking the Acceleration Limit via Double Retrieval Speculative Parallelism](2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md)**  
   実装：[✓](https://github.com/Sylvan820/Double1) ・ リポジトリ内被引用：9  
   Doubleは、並列投機的復号（Parallel 投機的復号; PSD）における二つの性能制約を同時に解く。この方式は、ドラフト用の追加学習を必要としない。原著の8基のNVIDIA A100 80GBによる実験では、LLaMA3.3-70BのHumanEvalで通常のターゲット推論に対して5.33倍、Qwen3-32Bでは2.84倍の実時間高速化を示す。
 
+- **2026-07 · [DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting](2026-2607.07409-dels-spec-decoupled-long-short-contexts-for-parallel-speculative-draftin.md)**  
+  実装：[✓](https://github.com/dt-3t/DeLS-Spec) ・ リポジトリ内被引用：8  
+  投機的復号（投機的復号）は、軽量なドラフトモデルで複数の候補トークンを先に生成し、目標モデルの一度の前向き計算で並列検証することで自己回帰生成の逐次呼出しを減らす。Qwen3-4Bの温度0、8ベンチマーク平均では、DFlashの自己回帰比復号高速化4.63倍・平均受理長6.04から、DeLS-Specは4.82倍・6.35へ改善した。
+
 - **2026-07 · [D-cut: Adaptive Verification Depth Pruning for Batched Speculative Decoding](2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   投機的復号は小さなドラフト器が複数トークンを先に提案し、大きな対象モデルがまとめて検証することで逐次実行回数を減らす。高並行条件では長ドラフト基準の自己回帰復号比平均高速化率1.26倍を1.65倍へ引き上げ、30個のモデル・課題組合せ中29個で改善した。
-
-- **2026-05 · [Draft Less, Retrieve More: Hybrid Tree Construction for Speculative Decoding](2026-2605.20104-draft-less-retrieve-more-hybrid-tree-construction-for-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  動的剪定は投機木を速くするが、剪定した枝の中に本来受理できる候補があれば平均受理長が落ちる。Graftは剪定で空いた候補枠を捨てず、対象モデルの過去検証から得た安価な検索候補で「接ぎ木」する。対象モデルが一度に検証するノード総数は増やさず、ドラフト計算だけを安い検索へ置換する。
 
 - **2026-09 · [LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers](2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md)**  
   実装：[✓](https://github.com/kaist-flexml-lab/loopspec) ・ リポジトリ内被引用：7  
@@ -97,10 +101,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-08 · [Verification-Aware Training for Speculative Decoding](2026-2608.30135-verification-aware-training-for-speculative-decoding.md)**  
   実装：[✓](https://github.com/naver-ai/VAT) ・ リポジトリ内被引用：7  
   投機的復号（投機的復号）は、軽量な草案モデルが先の複数トークンを提案し、大きな目標モデルが一度の前向き計算でそれらを検証することで自己回帰生成の遅延を減らす。NVIDIA A100 80GB上で、EAGLE-3と拡散型のDFlash、目標モデルQwen3-4B、Qwen3-8B、Llama-3.1-8Bを組み合わせ、数学・コード・会話の八課題で評価した。
-
-- **2026-07 · [DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting](2026-2607.07409-dels-spec-decoupled-long-short-contexts-for-parallel-speculative-draftin.md)**  
-  実装：[✓](https://github.com/dt-3t/DeLS-Spec) ・ リポジトリ内被引用：7  
-  投機的復号（投機的復号）は、軽量なドラフトモデルで複数の候補トークンを先に生成し、目標モデルの一度の前向き計算で並列検証することで自己回帰生成の逐次呼出しを減らす。Qwen3-4Bの温度0、8ベンチマーク平均では、DFlashの自己回帰比復号高速化4.63倍・平均受理長6.04から、DeLS-Specは4.82倍・6.35へ改善した。
 
 - **2026-06 · [TreeFlash: Parallel AR-Approximation for Faster Speculative Decoding](2026-2606.03819-treeflash-parallel-ar-approximation-for-faster-speculative-decoding.md)**  
   実装：[✓](https://github.com/ETH-DISCO/TreeFlash) ・ リポジトリ内被引用：7  
@@ -298,9 +298,17 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：2  
   浅いループの状態で複数トークン先まで下書きし、中間ループの食い違い検出で見込みのない分岐の計算を止める無損失な投機的復号で、自己回帰比最大7.82倍を実測した。
 
+- **2026-10 · [Contextual Correction of Parallel Drafts for Speculative Decoding](2026-2610.12570-contextual-correction-of-parallel-drafts-for-speculative-decoding.md)**  
+  実装：[✓](https://github.com/two-delta/DCOCO/) ・ リポジトリ内被引用：2  
+  並列下書きの各位置に上位候補を残し、隣接候補間の相性を並列採点して接頭辞優先に選び直す補正器で、ブロック内依存を回復し、投機的復号のスループットを全構成で最良にした。
+
 - **2026-09 · [UBTree: Parallel Tree Drafting via Unigram and Bigram Models for Speculative Decoding](2026-2609.39972-ubtree-parallel-tree-drafting-via-unigram-and-bigram-models-for-speculat.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   投機的復号（投機的復号）は軽いドラフトモデルが将来の候補トークンを提案し、大きなターゲットモデルが一度に検証することで自己回帰生成を高速化する。
+
+- **2026-09 · [Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding](2026-2609.36173-draft-in-parallel-condition-through-depth-adjacent-causal-injection-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  投機的復号（投機的復号）は、軽量な下書き器が候補トークン列を提案し、対象LLMが一括検証する。Qwen3-8Bの7課題、温度0での平均受理長は、DFlashの3.77トークン/回からDSpineの4.82トークン/回へ増加し、相対改善率は27.8%となる。
 
 - **2026-09 · [Carryover Drafting: Recycling Rejected States for Speculative Decoding](2026-2609.14717-carryover-drafting-recycling-rejected-states.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -374,6 +382,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/furiosa-ai/TABED) ・ リポジトリ内被引用：2  
   TABED（Test-Time 適応的 Ensemble Drafting）は、画像と文章を処理する大規模視覚言語モデル（LVLM）の出力生成を速くするための、実行時適応型の投機的復号方式である。
 
+- **2026-11 · [Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter](2026-2611.05611-hybrid-spark-adaptive-speculative-decoding-that-lets-the-content-choose-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  モデル型と複写型の下書きを毎段両方走らせ、複写型へ校正済みの受理推定を持たせ、検証枠の価格で両者を同じ物差しで比べて要求ごとに選ぶことで、編集ではモデル型のみより最大一点六二倍速く、対話では互角を保ったと報告した。
+
 - **2026-10 · [SharpDraft: Accelerating Long-Context Speculative Decoding with Cardinality-Aware Query Scaling](2026-2610.05106-sharpdraft-accelerating-long-context-speculative-decoding-with-cardinali.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   見えるキーの個数に応じて下書きのクエリを拡大し、注意の希釈を抑えて長い生成でも受理を保つ、学習不要の投機的復号の補正で、逐次生成比最大3.19倍の高速化を得た。
@@ -410,10 +422,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/SJTU-DAI-Sys/DLite) ・ リポジトリ内被引用：1  
   下書き側の履歴KVを廃し、対象モデルの隠れ状態と局所予測だけで投機する履歴なしの下書き方式で、エージェント課題の受理長を既存最良比で最大70パーセント改善した。
 
-- **2026-10 · [Contextual Correction of Parallel Drafts for Speculative Decoding](2026-2610.12570-contextual-correction-of-parallel-drafts-for-speculative-decoding.md)**  
-  実装：[✓](https://github.com/two-delta/DCOCO/) ・ リポジトリ内被引用：1  
-  並列下書きの各位置に上位候補を残し、隣接候補間の相性を並列採点して接頭辞優先に選び直す補正器で、ブロック内依存を回復し、投機的復号のスループットを全構成で最良にした。
-
 - **2026-10 · [Beyond the Point Mass: Acceptance-Derived Weights and Distributional Losses for Speculative Decoding](2026-2610.28355-beyond-the-point-mass-acceptance-derived-weights-and-distributional-loss.md)**  
   実装：[✓](https://github.com/Lucas-TY/D-PAL-SpecForge) ・ リポジトリ内被引用：1  
   受理確率を記録トークンへの信頼度ではなく対象分布との重なりで測り直し、期待受理長から導いた位置重みと分布全体を合わせる損失で下書きモデルを学習することで、投機的復号の受理長とスループットを先行法より伸ばした。
@@ -442,9 +450,9 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：1  
   DScaleは、ブロック拡散型の草案器が並列生成したトークン候補を、教師モデルが検証する際の実行効率を改善するサービング方式である。
 
-- **2026-09 · [Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding](2026-2609.36173-draft-in-parallel-condition-through-depth-adjacent-causal-injection-for-.md)**  
+- **2026-09 · [DEdit: Iterative Draft Editing for Speculative Decoding](2026-2609.38510-dedit-iterative-draft-editing-for-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  投機的復号（投機的復号）は、軽量な下書き器が候補トークン列を提案し、対象LLMが一括検証する。Qwen3-8Bの7課題、温度0での平均受理長は、DFlashの3.77トークン/回からDSpineの4.82トークン/回へ増加し、相対改善率は27.8%となる。
+  後ろの位置の予測を前の位置の修正に利用できる点が、因果方向の補正方式と異なる。著者の7課題マクロ平均では、Qwen3-4BとQwen3-8Bを対象とするgreedy復号で、自己回帰生成に対するエンドツーエンド速度倍率がそれぞれ5.72倍と5.97倍、1検証ラウンド当たりの平均前進トークン数が7.58と7.75であった。
 
 - **2026-09 · [BV Loss: Block Verification-Aware Loss for Block Diffusion Speculative Decoding](2026-2609.34832-bv-loss-block-verification-aware-loss-for-block-diffusion-speculative-de.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -513,6 +521,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-05 · [SlimSpec: Low-Rank Draft LM-Head for Accelerated Speculative Decoding](2026-2605.10453-slimspec-low-rank-draft-lm-head-for-accelerated-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   投機的復号（投機的復号）は、小さなドラフトモデルが先に複数トークンを提案し、大きな対象モデルが一括して検証することで生成を高速化する。
+
+- **2026-05 · [Hybrid Verified Decoding: Learning to Allocate Verification in Speculative Decoding](2026-2606.01019-hybrid-verified-decoding-learning-to-allocate-verification-in-speculativ.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  投機的復号（投機的復号）は、軽量な草稿器が複数の候補トークンを提案し、最終的な対象LLMが一括検証して受理できる接頭部分を確定する。平均高速化はそれぞれ2.97倍、2.64倍。
 
 - **2026-05 · [Fast Byte Latent Transformer](2026-2605.08044-fast-byte-latent-transformer.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -639,10 +651,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-11 · [HybridSpec: Throughput-Aware Speculative Decoding for Hybrid GDN–MoE Models](2026-2611.04055-hybridspec-throughput-aware-speculative-decoding-for-hybrid-gdn-moe-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混合型の対象で検証長が費用を急増させる問題に対し、受理の見込みと実測遅延から検証長を GPU 上で選び、振り分け境界での補正と並列な状態再構築を組み合わせる方式で、自己回帰より一・七五倍から一・八八倍、素の並列起草より一・三〇倍から一・三三倍速くなったと報告した。
-
-- **2026-11 · [Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter](2026-2611.05611-hybrid-spark-adaptive-speculative-decoding-that-lets-the-content-choose-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  モデル型と複写型の下書きを毎段両方走らせ、複写型へ校正済みの受理推定を持たせ、検証枠の価格で両者を同じ物差しで比べて要求ごとに選ぶことで、編集ではモデル型のみより最大一点六二倍速く、対話では互角を保ったと報告した。
 
 - **2026-11 · [ForeSpark: Joint Draft and Verification Budget Scheduling for Parallel Speculative Decoding](2026-2611.13442-forespark-joint-draft-and-verification-budget-scheduling-for-parallel-sp.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -888,10 +896,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   しかし同じステップで予測した位置は互いの確定値を見ていないため、各トークンが局所的にもっともらしくても、読み順が飛ぶ、語が重複する、表タグが閉じないなどの誤りが生じる。領域crop単位・SGLangのデコード-onlyでは777から3,057 トークン/s（3.94倍）である。
 
-- **2026-09 · [DEdit: Iterative Draft Editing for Speculative Decoding](2026-2609.38510-dedit-iterative-draft-editing-for-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  後ろの位置の予測を前の位置の修正に利用できる点が、因果方向の補正方式と異なる。著者の7課題マクロ平均では、Qwen3-4BとQwen3-8Bを対象とするgreedy復号で、自己回帰生成に対するエンドツーエンド速度倍率がそれぞれ5.72倍と5.97倍、1検証ラウンド当たりの平均前進トークン数が7.58と7.75であった。
-
 - **2026-09 · [Beneath the Tokens: A Performance Engineering Study of Multi-Token Prediction in GPU-Accelerated LLM Inference](2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-predic.md)**  
   実装：[✓](https://github.com/suwesh/performance-engineering-series/tree/main/speculative-decoding-gpu-profiling) ・ リポジトリ内被引用：0  
   2トークンMTPの高速化を、受理長・CUDAグラフ実行回数・ランタイム階層の3層で実測し、支配的カーネルは速くなっておらず、繰り返し実行の回数削減による償却が利得の正体であることを示した性能分析。
@@ -1020,10 +1024,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   PPOW（Performance-Driven Policy Optimization with 適応的 Windowing）は、投機的復号（投機的復号）で用いる軽量な草稿モデル（下書きモデル、drafter）を、推論時の受理効率に合わせて追加学習する方式である。
 
-- **2026-05 · [Hybrid Verified Decoding: Learning to Allocate Verification in Speculative Decoding](2026-2606.01019-hybrid-verified-decoding-learning-to-allocate-verification-in-speculativ.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  投機的復号（投機的復号）は、軽量な草稿器が複数の候補トークンを提案し、最終的な対象LLMが一括検証して受理できる接頭部分を確定する。平均高速化はそれぞれ2.97倍、2.64倍。
-
 - **2026-05 · [Factorization-Error-Free Discrete Diffusion Language Model via Speculative Decoding](2026-2605.14305-factorization-error-free-discrete-diffusion-language-model-via-speculati.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   離散拡散言語モデルの因数分解誤差を接頭辞条件付きの厳密分解で消し、ノイズ除去内部の投機的復号で逐次化の費用を取り戻して、4課題平均で正解率5.04ポイント増と3.86倍の高速化を両立する方式。
@@ -1123,7 +1123,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test](2025-2503.01840-eagle-3.md)**  
-  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：278  
+  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：279  
   特徴回帰制約を外して直接トークン予測し、訓練時に自己生成入力を再投入することでドラフト学習のデータ規模拡大を有効化したEAGLE系投機的復号。
 
 - **2025-09 · [DiffuSpec: Unlocking Diffusion Language Models for Speculative Decoding](2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md)**  
@@ -1139,7 +1139,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   Llama-3.1-8Bをドラフト、Llama-3.1-405Bを目標にした実験では、平均受理長が標準方式の6.3から19.7トークンへ伸び、最適化されたgpt-fast上で129.3トークン/秒に達した。
 
 - **2025-04 · [PARD: Accelerating LLM Inference with Low-Cost PARallel Draft Model Adaptation](2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md)**  
-  実装：[✓](https://github.com/AMD-AIG-AIMA/PARD) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/AMD-AIG-AIMA/PARD) ・ リポジトリ内被引用：33  
   PARDは、高精度な小型自己回帰モデルを、1回の順伝播で複数の候補トークンを出す並列下書きモデルへ低コストで適応し、同一モデル系列の複数の対象モデルへ再利用できるようにする投機的復号（投機的復号）方式である。
 
 - **2025-07 · [Your LLM Knows the Future: Uncovering Its Multi-Token Prediction Potential](2025-2507.11851-your-llm-knows-the-future-uncovering-its-multi-token-prediction-potentia.md)**  
@@ -1334,6 +1334,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：3  
   これは単一リクエストの生成方法の最適化だが、複数リクエストが同じGPUを共有するときには別の問題が残る。従来のスケジューラは、プロンプトから予測した出力長を仕事量の代理変数として使うことが多い。公式会議録は、NVIDIA L20 48GBで3種類のワークロードを用いた評価において、平均推論遅延を既存手法より約39%削減したと報告する。
 
+- **2025-11 · [Speculative Streaming: Efficient and Scalable Speculative Decoding with Multi-Stream Attention](2025-ecec79b7ef4d-speculative-streaming-efficient-and-scalable-speculative-decoding-with-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  Medusaのように対象モデルへ複数予測ヘッドを付ける方式は別モデルを不要にするが、ヘッド間のトークン依存を表現しにくい。
+
 - **2025-11 · [Global Resolution: Optimal Multi-Draft Speculative Sampling via Convex Minimization](2025-2511.15898-global-resolution-optimal-multi-draft-speculative-sampling-via-convex-mi.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Global Resolutionは、複数の草案トークンを同じ次トークン位置に提示する投機的サンプリングに対し、目標モデルの出力分布からの逸脱を制御しながら、草案のいずれかを受理できる確率を最大化する検証規則を計算する研究である。語彙数をVとすると候補n組の数はVのn乗であり、n=2でも通常の大語彙では汎用ソルバーで解けない。
@@ -1385,10 +1389,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-11 · [TapOut: A Bandit-Based Approach to Dynamic Speculative Decoding](2025-2511.02017-tapout-a-bandit-based-approach-to-dynamic-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   TapOutは、確率分布に基づく五つの停止規則を候補とし、多腕バンディット（multi-armed bandit）が検証結果からその時点で有利な規則を選ぶ方式である。
-
-- **2025-11 · [Speculative Streaming: Efficient and Scalable Speculative Decoding with Multi-Stream Attention](2025-ecec79b7ef4d-speculative-streaming-efficient-and-scalable-speculative-decoding-with-m.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  Medusaのように対象モデルへ複数予測ヘッドを付ける方式は別モデルを不要にするが、ヘッド間のトークン依存を表現しにくい。
 
 - **2025-11 · [Speculative Decoding in Decentralized LLM Inference: Turning Communication Latency into Computation Throughput](2025-2511.11733-speculative-decoding-in-decentralized-llm-inference-turning-communicatio.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1597,7 +1597,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   したがって本研究は「精度を下げて速くする層削減」ではなく、「一時的な近似ドラフトで正確な検証を少ない回数にする」方式である。LLaMA-2-13Bでは通常自己回帰の20.10トークン/秒に対して28.26トークン/秒、全体1.41倍、LLaMA-2-70Bでは4.32に対して6.41トークン/秒、1.48倍を報告する。
 
 - **2024-03 · [Recurrent Drafter for Fast Speculative Decoding in Large Language Models](2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md)**  
-  実装：[✓](https://github.com/apple/ml-recurrent-drafter) ・ リポジトリ内被引用：43  
+  実装：[✓](https://github.com/apple/ml-recurrent-drafter) ・ リポジトリ内被引用：44  
   軽量再帰型の下書きモデル、ビーム探索、動的な共有接頭辞除去、対象モデルからの知識蒸留を組み合わせる。受理トークン数が多くても処理率が上がるとは限らないことを、実測の正負両結果から検証する。
 
 - **2024-05 · [Dynamic Speculation Lookahead Accelerates Speculative Decoding of Large Language Models](2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md)**  
@@ -1653,7 +1653,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   投機的復号は、小型のドラフトモデルが先に数トークンを生成し、大型の対象モデルがまとめて検証することで、対象モデルの逐次実行回数を減らす方式である。著者らはQwen2.5を用いたMT-Benchの最大8K文脈で、固定長より最大17%の高速化を報告する。
 
 - **2024-10 · [ParallelSpec: Parallel Drafter for Efficient Speculative Decoding](2024-2410.05589-parallelspec-parallel-drafter-for-efficient-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   投機的復号（投機的復号）は、小さな下書きモデルが複数トークンの候補を作り、大きな対象モデルがまとめて検証することで、大きなモデルを毎トークン実行する費用を減らす。
 
 - **2024-02 · [Generation Meets Verification: Accelerating Large Language Model Inference with Smart Parallel Auto-Correct Decoding](2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md)**  
@@ -1755,7 +1755,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：575  
+  実装：✓ ・ リポジトリ内被引用：576  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

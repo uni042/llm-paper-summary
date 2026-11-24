@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1539本）
+## 自動生成の論文一覧（1541本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -408,6 +408,10 @@
   実装：[✓](https://github.com/multimodal-art-projection/TACO) ・ リポジトリ内被引用：2  
   TACO（Terminal Agent Compression）は、コマンド出力をエージェントの履歴へ入れる直前に圧縮する追加層である。MiniMax-M2.5によるTerminalBench 1.0では成功率42.30%→45.25%、総トークン29.74→23.43百万（21.2%減）である。
 
+- **2026-03 · [The Missing Memory Hierarchy: Demand Paging for LLM Context Windows](2026-2603.09023-pichay-demand-paging-context-windows.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  エージェント文脈を仮想メモリとしてページングし、古いツール結果を追い出して再参照時に復元する透明プロキシ。139万追い出しで0.0254%フォルト率を報告。
+
 - **2026-03 · [Prune-then-Quantize or Quantize-then-Prune? Understanding the Impact of Compression Order in Joint Model Compression](2026-2603.18426-prune-then-quantize-or-quantize-then-prune-understanding-the-impact-of-c.md)**  
   実装：[✓](https://github.com/snudatalab/PQQP) ・ リポジトリ内被引用：2  
   本論文は、大規模言語モデル（LLM）を枝刈り（枝刈り）と量子化（量子化）の両方で圧縮する場合、どちらを先に適用すべきかを、圧縮率とモデル品質の関係から分析した研究である。枝刈り率5～30%、量子化4～8ビットを含む条件で、単独適用時の圧縮強度の差が大きいほど順序による品質差が大きくなる傾向を確認した。
@@ -615,6 +619,10 @@
 - **2026-07 · [The Key to Going Linear: Analysis-Driven Transformer Linearization](2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   基盤を凍結して状態更新だけを比べ、ソフトマックスの一次近似が示すキー依存のランク1射影を備えるデルタ型が最も注意を近似できること、窓とシンクと短い畳み込みの処方で先行線形化のMMLUを上回ることを示した。
+
+- **2026-07 · [SWE-Pruner Pro: The Coder LLM Already Knows What to Prune](2026-2607.18213-swe-pruner-pro-the-coder-llm-already-knows-what-to-prune.md)**  
+  実装：[✓](https://github.com/Ayanami1314/swe-pruner-pro) ・ リポジトリ内被引用：1  
+  エージェント自身の隠れ状態から行単位の枝刈り信号を読み出す小さなヘッドで、別モデルなしにツール出力を削り、SWE-QA-Proでトークン39.4パーセント減と品質維持を両立する。
 
 - **2026-07 · [Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models](2026-2607.10640-spectral-heat-flow-for-conservative-token-condensation-in-vision-languag.md)**  
   実装：[✓](https://github.com/Lzy-dot/SpecFlow) ・ リポジトリ内被引用：1  
@@ -863,10 +871,6 @@
 - **2026-03 · [TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference](2026-2603.21365-tide-token-informed-depth-execution-for-per-token-early-exit-in-llm-infe.md)**  
   実装：[✓](https://github.com/RightNow-AI/TIDE) ・ リポジトリ内被引用：1  
   TIDE（Token-Informed Depth Execution）は、学習済み大規模言語モデル（LLM）の中間層における隠れ状態が最終層の表現へ近づいたかを、後付けの小規模な二値分類器で判定する方式である。元の言語モデルの重みを変更せず、約2,000件のWikiText-103文による較正をA100上で約170秒で実行できる点が実装上の特徴である。
-
-- **2026-03 · [The Missing Memory Hierarchy: Demand Paging for LLM Context Windows](2026-2603.09023-pichay-demand-paging-context-windows.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  エージェント文脈を仮想メモリとしてページングし、古いツール結果を追い出して再参照時に復元する透明プロキシ。139万追い出しで0.0254%フォルト率を報告。
 
 - **2026-03 · [Task-aware Block Pruning with Output Distribution Signals for Large Language Models](2026-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-lang.md)**  
   実装：[✓](https://github.com/Song-haJo/TaBP) ・ リポジトリ内被引用：1  
@@ -1158,6 +1162,10 @@
   実装：[✓](https://github.com/camail-official/LoReS) ・ リポジトリ内被引用：0  
   リカレント言語モデルの量子化を状態外と状態内へ分け、減衰型リカレンスは外れ値が弱く量子化しやすいことと、バリュー軸グルーピング・減衰ベース混合精度・確率的丸めからなるLoReSで状態を8ビット化しても大規模ハイブリッドの精度がほぼ保たれることを示す研究。
 
+- **2026-11 · [Perceive Once, Escalate on Demand: Handing Off Visual KV Memory from Small to Large VLMs](2026-2611.26902-perceive-once-escalate-on-demand-handing-off-visual-kv-memory-from-small.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  小さい視覚言語モデルのKVキャッシュを大きいモデルへ渡すとき、相手のキャッシュへの忠実な回帰ではなく相手自身の回答から写像を蒸留することで、履歴の再エンコードなしに大きいモデルの判断を引き出せることを示した、カスケードの受け渡し経路の研究。
+
 - **2026-11 · [One Schedule Does Not Fit All: Adaptive Inference Schedules for Diffusion Language Models](2026-2611.25895-one-schedule-does-not-fit-all-adaptive-inference-schedules-for-diffusion.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   固定のノイズ除去スケジュールが最適でないことを示し、ペア校正と同時ブートストラップ限界で効用と退化ガードレールを一緒に認証して最安の候補だけを配備し、駄目なら完全スケジュールへ戻る配備ルールで、デノイザ評価回数をタスクにより1.33倍から8.0倍まで減らすことを認証した研究。
@@ -1181,6 +1189,10 @@
 - **2026-11 · [Direct GPU Energy Measurements of Batch-Level Sharing in Mixture-of-Experts and Recurrent Models](2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-expe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   演算回数ではなくGPUエネルギーを直接測り、再帰方策ではバッチ共有が成立しないこと、専門家モデルではバッチ配慮型ルーティングが重み読みを25から31パーセント減らしトークンあたりエネルギーを12から18パーセント減らすことを示す実測研究。
+
+- **2026-11 · [Cruella: A Unified Microscaling and Floating-Point Dot-Product Unit for LLM Inference on FPGAs](2026-2611.27323-cruella-a-unified-microscaling-and-floating-point-dot-product-unit-for-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MXFP4とBF16の両方の積を1つのDSP配列で実行する統一ドット積ユニットをFPGAへ実装し、別置き構成よりDSP23パーセントとLUT36パーセントを削減しながら、MXFP4重みによるデコード1.15から1.87倍を実機で示すハードウェア研究。
 
 - **2026-11 · [Concise-9B: Removing the Slack from a Reasoning Model's Thinking](2026-2611.02278-concise-9b-removing-the-slack-from-a-reasoning-model-s-thinking.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2001,10 +2013,6 @@
 - **2026-07 · [Token Reduction Is Not Cost Reduction](2026-2607.12161-token-reduction-is-not-cost-reduction.md)**  
   実装：[✓](https://github.com/PointFiveLabs/ai-efficiency-benchmark) ・ リポジトリ内被引用：0  
   コーディングエージェントの文脈削減を2908回の課金実行で対照測定し、費用の大半がプロンプトキャッシュであり、ツール出力を38パーセント削っても費用が6.8パーセント増えるなど、トークン削減と費用削減が切り離されることを示した実証研究。
-
-- **2026-07 · [SWE-Pruner Pro: The Coder LLM Already Knows What to Prune](2026-2607.18213-swe-pruner-pro-the-coder-llm-already-knows-what-to-prune.md)**  
-  実装：[✓](https://github.com/Ayanami1314/swe-pruner-pro) ・ リポジトリ内被引用：0  
-  エージェント自身の隠れ状態から行単位の枝刈り信号を読み出す小さなヘッドで、別モデルなしにツール出力を削り、SWE-QA-Proでトークン39.4パーセント減と品質維持を両立する。
 
 - **2026-07 · [Structured Redundancy Modeling for Efficient Visual Token Pruning in High-Resolution MLLMs](2026-2607.23046-structured-redundancy-modeling-for-efficient-visual-token-pruning-in-hig.md)**  
   実装：[✓](https://github.com/cvsp-lab/SFPruner) ・ リポジトリ内被引用：0  

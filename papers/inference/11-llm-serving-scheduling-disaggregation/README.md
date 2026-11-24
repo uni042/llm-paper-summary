@@ -112,6 +112,10 @@
   実装：[✓](https://github.com/baihuajun24/spork) ・ リポジトリ内被引用：6  
   主LLM自身をprobeとして分岐し、思考生成中に将来のツール呼出しを先行実行することで外部ツール待ちを隠す。GAIAのQwen3-32BでP95遅延を18%削減し、誤予測時は一致した呼出し接頭辞を再利用する。
 
+- **2026-06 · [SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering](2026-2607.00151-smoothagent-lookahead-context-engineering.md)**  
+  実装：[✓](https://github.com/PanZaifeng/SmoothAgent) ・ リポジトリ内被引用：6  
+  文脈要約・オフロード・分離を前倒し実行し変換後KVを先に作るlookahead ランタイム。SGLangのSLO-aware スケジューラと組み合わせ、長時間agentの変換点TTFTを最大11.9倍改善。
+
 - **2026-03 · [Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving](2026-2603.13358-ppd-disaggregation-multiturn-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   複数ターン会話の2ターン目以降について、既存鍵値キャッシュを持つデコードGPUで追加プリフィルするか従来どおりプリフィルGPUへ送るかを遅延目標ごとに動的選択し、後続ターンの初トークン待ち時間と鍵値転送量を大幅に削減する。
@@ -123,10 +127,6 @@
 - **2026-01 · [A Universal Load Balancing Principle and Its Application to Large Language Model Serving](2026-2601.17855-universal-load-balancing-principle-llm-serving.md)**  
   実装：[✓](https://github.com/Echoscd/Load-Balancing-Release) ・ リポジトリ内被引用：6  
   同期障壁で最遅GPUに全体が律速されるデータ並列デコードを、短期先読み付き整数最適化BF-IOで割り当て直し、256基A100相当のシミュレーションでFCFS比スループット約92%向上・エネルギー約29%削減を示す。
-
-- **2026-06 · [SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering](2026-2607.00151-smoothagent-lookahead-context-engineering.md)**  
-  実装：[✓](https://github.com/PanZaifeng/SmoothAgent) ・ リポジトリ内被引用：5  
-  文脈要約・オフロード・分離を前倒し実行し変換後KVを先に作るlookahead ランタイム。SGLangのSLO-aware スケジューラと組み合わせ、長時間agentの変換点TTFTを最大11.9倍改善。
 
 - **2026-06 · [QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving](2026-2606.05875-qcfuse-query-aware-cache-fusion-via-compressed-view-for-efficient-rag-se.md)**  
   実装：[✓](https://github.com/uYanJX/QCFuse) ・ リポジトリ内被引用：5  
@@ -268,6 +268,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   両者を別々のGPU群へ固定分離すると、入力長と出力長の比率が変化したとき、一方が過負荷でも他方のGPUが遊んでしまう。実機評価では、A100で固定同居方式より最大1.91倍、固定分離方式より最大1.61倍の有効処理量（有効スループット）を達成した。
 
+- **2026-05 · [HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling](2026-2605.16637-hexagent-workflow-heterogeneity-aware-scheduling.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  HexAGenTは逐次公開されるエージェントワークフローの完了危険度を追跡し、異種GPU上のプリフィル・デコード配置とキュー優先度を共同決定して、ワークフロー全体のSLO達成を改善する。
+
 - **2026-05 · [DeltaBox: Scaling Stateful AI Agents with Millisecond-Level Sandbox Checkpoint/Rollback](2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   ファイルとプロセスの連続状態差分だけを保存し、動的overlay層切替と凍結テンプレートforkを組み合わせて、状態を持つAIエージェントのチェックポイント・ロールバックをミリ秒級にする。
@@ -371,10 +375,6 @@
 - **2026-05 · [PRISM: Fast Online LLM Serving via Scheduling-Memory Co-design](2026-2605.08581-prism-fast-online-llm-serving-via-scheduling-memory-co-design.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   共通のシステム指示、同じ検索文書、ツール定義などの区間が何度も現れ、末尾だけが要求ごとに変わる。著者らは単一NVIDIA A800 80GB上のSGLangで実装し、Qwen3-4B-Instruct-2507およびLlama2-13Bを評価した。
-
-- **2026-05 · [HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling](2026-2605.16637-hexagent-workflow-heterogeneity-aware-scheduling.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  HexAGenTは逐次公開されるエージェントワークフローの完了危険度を追跡し、異種GPU上のプリフィル・デコード配置とキュー優先度を共同決定して、ワークフロー全体のSLO達成を改善する。
 
 - **2026-03 · [SLO-Aware Compute Resource Allocation for Prefill-Decode Disaggregated LLM Inference](2026-2603.04716-slo-aware-compute-resource-allocation-for-prefill-decode-disaggregated-l.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1541,7 +1541,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-11 · [Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)**  
-  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：309  
+  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：310  
   Mooncakeは、大規模言語モデル（Large Language モデル、LLM）の推論サービスで、GPUの計算能力とメモリを同時に効率よく使うための分散サービング基盤である。中心にあるのは、KVの所在と移動費用を知る全体スケジューラ（Global Scheduler）であるConductorである。
 
 - **2025-02 · [Autellix: An Efficient Serving Engine for LLM Agents as General Programs](2025-2502.13965-autellix-agent-program-serving.md)**  
@@ -1549,7 +1549,7 @@
   エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
-  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：62  
+  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：63  
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
@@ -2299,7 +2299,7 @@
   RAGCacheは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ知識文書が何度も検索されることに着目し、その文書を言語モデルが処理したときの鍵・値キャッシュ（KVキャッシュ）を複数要求で再利用する推論提供システムである。
 
 - **2023-12 · [Stateful Large Language Model Serving with Pensieve](2023-2312.05516-pensieve-stateful-large-language-model-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：73  
+  実装：✓ ・ リポジトリ内被引用：74  
   Pensieveは、会話型の大規模言語モデルを複数往復にわたって提供するとき、前回までの履歴を毎回最初から入力処理する重複計算を減らす状態保持型の推論提供システムである。
 
 - **2024-04 · [Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction](2024-2404.08509-ssjf.md)**  
@@ -2541,11 +2541,11 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1985  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1986  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
-  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：611  
+  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：612  
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  

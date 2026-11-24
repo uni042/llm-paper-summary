@@ -35,7 +35,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   プリフィル側だけに集中していたKVキャッシュのストレージ読出しをデコード側NICにも分散し、RDMA転送と負荷認識スケジューリングでエージェント型LLM推論のストレージ帯域ボトルネックを緩和する。
 
 - **2026-08 · [Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse](2026-2608.03893-cross-model-kv-cache-transfer.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：17  
   大小モデル間でKVを内容空間のヘッド単位線形写像へ変換し、受信モデルの長文再プリフィルを省く方式。対応層を選びRoPEを付け直して形状差による誤差を抑える。
 
 - **2026-05 · [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md)**  
@@ -43,7 +43,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   長い入力文脈や過去の会話を再利用する大規模言語モデル（LLM）の配信では、過去の入力を処理した際の鍵・値キャッシュ（KVキャッシュ）を保存しておけば、同じ接頭辞を再計算せずに済む。提案するのは、KVブロックに対応するGPU向けオブジェクト、GPUから非同期で要求を発行・完了確認する待ち行列、推論カーネルの実行余裕に応じて読み書きを配置する制御の三つである。
 
 - **2025-12 · [EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving](2025-2512.14946-evicpress-joint-compression-eviction.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   コンテキスト別の圧縮感度とアクセス頻度を用い、KV圧縮方式・圧縮率・CPU/SSD等への退避を統一効用で共同最適化し、同等品質でTTFTを大幅短縮する階層KV管理方式。
 
 - **2026-08 · [HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management](2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md)**  
@@ -94,6 +94,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：6  
   BF16の指数が少数値へ集中する性質を使い、頻出指数を4ビット化し例外だけ位置付きで別保存することで、KVキャッシュを無損失かつGPU上で高速圧縮し、分離LLM配信の転送待ちを削減する方式。
 
+- **2026-05 · [Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches](2026-2605.18825-saecache-semantic-aware-prefix-eviction.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  接頭辞ブロックを再利用様式とトークン種別で複数キューへ分け、追い出し後の再参照を使って優先度をオンライン学習し、異質な会話負荷でKV再利用率を高める。
+
 - **2026-03 · [InfoFlow KV: Information-Flow-Aware KV Recomputation for Long Context](2026-2603.05353-infoflow-kv-information-flow-aware-kv-recomputation-for-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   InfoFlow KVは、文書単位で事前計算したキー・バリュー（Key-Value; KV）キャッシュを再利用する長文脈の検索拡張生成（Retrieval-Augmented Generation; RAG）で、問い合わせから文脈への注意質量を使って再計算すべきトークンを選ぶ。
@@ -109,10 +113,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-05 · [VeriCache: Turning Lossy KV Cache into Lossless LLM Inference](2026-2605.17613-vericache-lossless-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   VeriCacheは圧縮KVで候補を生成し、完全KVをCPU／共有ストアから読み込んで最初の不一致を検証・訂正し、品質を保ったまま復元帯域とGPU計算を要求間で重ねる方式。
-
-- **2026-05 · [Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches](2026-2605.18825-saecache-semantic-aware-prefix-eviction.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  接頭辞ブロックを再利用様式とトークン種別で複数キューへ分け、追い出し後の再参照を使って優先度をオンライン学習し、異質な会話負荷でKV再利用率を高める。
 
 - **2026-04 · [HybridGen: Efficient LLM Generative Inference via CPU-GPU Hybrid Computing](2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -359,7 +359,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：178  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：179  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
@@ -477,7 +477,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：219  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：220  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  

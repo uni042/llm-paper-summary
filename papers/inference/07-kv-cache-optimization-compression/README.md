@@ -69,6 +69,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/FutureMLS-Lab/OSCAR) ・ リポジトリ内被引用：13  
   しかし2ビットには4段階の値しかなく、KV活性値の少数の大きな外れ値が量子化範囲を支配すると、通常値の区別が失われ、注意分布が崩れる。システム評価はNVIDIA H100上の著者実装であり、12GB級の民生GPUや標準配布版llama.cppで同じ結果が出ると示したものではない。
 
+- **2026-05 · [Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management](2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：11  
+  PBKVは、複数の言語モデルエージェントが同じ処理を分担する動的ワークフローで、次に使われる可能性が高いキー・値キャッシュ（KVキャッシュ）をGPUに残し、必要に応じてホストメモリから先読みする仕組みである。
+
 - **2026-05 · [LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents](2026-2602.01053-lragent-multilora-agent-kv-sharing.md)**  
   実装：[✓](https://github.com/jeonhye/lragent) ・ リポジトリ内被引用：10  
   multi-LoRAエージェントのKVを共有基盤成分と低ランク役割成分へ分解し、後者を全次元化せず注意計算することで、長い共有履歴のKVメモリと再プリフィルを削減する。
@@ -77,17 +81,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/hpdps-group/KVServe) ・ リポジトリ内被引用：10  
   KVServeは、実効帯域・負荷・品質制約からKV圧縮プロファイルか無圧縮を選び、分離型LLMの通信待ちと圧縮処理費を同時に抑える。
 
-- **2026-05 · [Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management](2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md)**  
+- **2026-02 · [SideQuest: Model-Driven KV Cache Management for Long-Horizon Agentic Reasoning](2026-2602.22603-sidequest-model-driven-kv-cache-management-for-long-horizon-agentic-reas.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
-  PBKVは、複数の言語モデルエージェントが同じ処理を分担する動的ワークフローで、次に使われる可能性が高いキー・値キャッシュ（KVキャッシュ）をGPUに残し、必要に応じてホストメモリから先読みする仕組みである。
+  調査エージェントが過去に開いた文書のうち不要になったものを、別の補助推論が意味的に判定し、主推論を止めずにKVキャッシュから削除する。
 
 - **2026-05 · [RateQuant: Optimal Mixed-Precision KV Cache Quantization via Rate-Distortion Theory](2026-2605.06675-ratequant-optimal-mixed-precision-kv-cache-quantization-via-rate-distort.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   各ヘッドの損失勾配に基づく重要度と、量子化器固有の指数型ビット数・歪み関係を校正し、逆水充填法と整数ビットの限界利得選択で配分を決める。Qwen3/Llama3の5モデルと3種類の量子化器で評価し、平均4ビット時のTurboQuantにおける量子化劣化回復率は5モデル平均75.7%。
-
-- **2026-02 · [SideQuest: Model-Driven KV Cache Management for Long-Horizon Agentic Reasoning](2026-2602.22603-sidequest-model-driven-kv-cache-management-for-long-horizon-agentic-reas.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  調査エージェントが過去に開いた文書のうち不要になったものを、別の補助推論が意味的に判定し、主推論を止めずにKVキャッシュから削除する。
 
 - **2026-02 · [Learning to Evict from Key-Value Cache](2026-2602.10238-learning-to-evict-from-key-value-cache.md)**  
   実装：[✓](https://github.com/apple/ml-learning-to-evict) ・ リポジトリ内被引用：9  
@@ -140,6 +140,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [SemPIC: Learning Semantic Position-Independent KV Caches](2026-2607.28069-sempic-learning-semantic-position-independent-kv-caches.md)**  
   実装：[✓](https://github.com/jn12-29/SemPIC) ・ リポジトリ内被引用：5  
   SemPICは、検索拡張生成（Retrieval-Augmented Generation、RAG）やエージェントの長い文書文脈を、問い合わせや文書順序が変わっても再利用するための位置非依存キャッシュ（Position-Independent Caching、PIC）方式である。
+
+- **2026-06 · [Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving](2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  AsymCacheは、非連続KV区間を一つの注意カーネルで統合し、再利用確率と再計算遅延で追い出し、負荷適応チャンク化で長文サービングのGPU計算と管理費を減らす。
 
 - **2026-06 · [Kamera: Unified Position-Invariant Multimodal KV Cache for Training-Free Reuse](2026-2606.23581-kamera-unified-position-invariant-multimodal-kv-cache-for-training-free-.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -197,6 +201,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/Amir-zsh/nova-kv) ・ リポジトリ内被引用：4  
   文脈長と同時実行数に比例してキャッシュが増えるため、読み出し帯域が復号速度と同時収容数の制約になる。NOVA-KVは、このキャッシュを単に数値として再現するのではなく、照会と鍵の内積、および注意重みと値の積を保つことを量子化の目的に置く。
 
+- **2026-08 · [Practical Online KV Cache Compaction for LLM Agents: An Empirical Study](2026-2608.00902-practical-online-kv-cache-compaction-for-llm-agents-an-empirical-study.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  静的な長文質問では、最終質問を見た後で不要トークンを選別できるが、エージェントがまだ次に何を調べるか分からない時点で圧縮すると、後で必要になる検索結果を失い得る。大規模モデルQwen3.5-27BのBrowseComp-Plusでは、無圧縮の正答率52.50%に対し、1ターン遅延のTEが52.00%、AMが51.00%だった。
+
 - **2026-08 · [KV Cache Compression Through the Lens of Transform Coding](2026-2608.14191-kv-cache-compression-through-the-lens-of-transform-coding.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   保存精度を下げれば容量を削減できるが、鍵と値の数値的な再構成誤差が小さいことと、注意機構の出力が変化しないことは同義ではない。約5.82倍の鍵値キャッシュ圧縮時に、原著の標準誤差による判定では、両モデルの主要18評価セルすべてで非圧縮基準との統計的な区別がつかないと報告する。
@@ -212,10 +220,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [KV Cache Translation across Heterogeneous Large Language Models](2026-2607.28979-kv-cache-translation-across-heterogeneous-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   従来の単一射影や共有潜在空間を介す方式と異なり、MoTは複数の変換器を用意し、トークンごとに適切な変換器を上位K個選択して出力を混合する。Llama-3.2 3B、Gemma-3 4B、Qwen-3 4B間の異種変換を評価し、閉集合質問応答の平均正解率57.6%、抽出型質問応答の平均F1 0.42を報告する。
-
-- **2026-06 · [Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving](2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  AsymCacheは、非連続KV区間を一つの注意カーネルで統合し、再利用確率と再計算遅延で追い出し、負荷適応チャンク化で長文サービングのGPU計算と管理費を減らす。
 
 - **2026-06 · [MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference](2026-2606.01563-momentkv-closing-the-directional-gap-in-kv-cache-eviction-for-long-conte.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -268,10 +272,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents](2608.19662.md)**  
   実装：[✓](https://github.com/EIT-NLP/ReCache) ・ リポジトリ内被引用：3  
   ツール／スキル定義を組合せ非依存のKVブロックとして再利用し、重要な層・KVヘッド群と呼出し必須フィールドだけを残して、エージェント推論のプリフィルとKVメモリを削減する。
-
-- **2026-08 · [Practical Online KV Cache Compaction for LLM Agents: An Empirical Study](2026-2608.00902-practical-online-kv-cache-compaction-for-llm-agents-an-empirical-study.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  静的な長文質問では、最終質問を見た後で不要トークンを選別できるが、エージェントがまだ次に何を調べるか分からない時点で圧縮すると、後で必要になる検索結果を失い得る。大規模モデルQwen3.5-27BのBrowseComp-Plusでは、無圧縮の正答率52.50%に対し、1ターン遅延のTEが52.00%、AMが51.00%だった。
 
 - **2026-07 · [Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding](2026-2607.01775-set-diffusion-interpolating-token-orderings-between-autoregression-and-d.md)**  
   実装：[✓](https://github.com/kuleshov-group/setdlms) ・ リポジトリ内被引用：3  
@@ -340,6 +340,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Understanding KV Residency in Production-Scale Agentic LLM Workloads](2026-2610.22863-understanding-kv-residency-in-production-scale-agentic-llm-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   1億2100万回超の本番呼出しを分析し、エージェントのKV保持がセッション規模と配置の両面で律速すること、休止上限と低精度複製の保持が再計算を大きく減らすことを示した。
+
+- **2026-10 · [Cache Engineering for Agents](2026-2610.28577-cache-engineering-for-agents.md)**  
+  実装：[✓](https://github.com/thu-nics/AKV) ・ リポジトリ内被引用：2  
+  履歴テキストを書き換えずにKVキャッシュ自体を削除・再配置して有効文脈を制御する方式と、その履歴依存性に対応する提供基盤で、要約方式より成績を上げながら費用を27.7パーセント削減した。
 
 - **2026-10 · [Behavior-Preserving KV Cache Compression](2026-2610.06479-behavior-preserving-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -548,10 +552,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Coda: Exploiting Admission Flexibility for Coding-Agent Serving](2026-2610.03088-coda-exploiting-admission-flexibility-for-coding-agent-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   コーディングエージェント向けサービングで、KV状態の準備費用と待ち時間による受付順の並べ替え、文脈長の近い集団への注意分割、多ワーカーでの文脈適合ルーティングを組み合わせ、進行を保ちながらスループットを上げる方式。
-
-- **2026-10 · [Cache Engineering for Agents](2026-2610.28577-cache-engineering-for-agents.md)**  
-  実装：[✓](https://github.com/thu-nics/AKV) ・ リポジトリ内被引用：1  
-  履歴テキストを書き換えずにKVキャッシュ自体を削除・再配置して有効文脈を制御する方式と、その履歴依存性に対応する提供基盤で、要約方式より成績を上げながら費用を27.7パーセント削減した。
 
 - **2026-10 · [AlignPred: Error-Controlled KV Cache Compression via Alignment and Predictive Coding](2026-2610.17970-alignpred-error-controlled-kv-cache-compression-via-alignment-and-predic.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

@@ -112,6 +112,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：1  
   TOMは、三値重み（ternary 重み）を持つ大規模言語モデル（LLM）をエッジ端末で低遅延・低消費電力に動かすための、読出し専用メモリ（ROM）と静的ランダムアクセスメモリ（SRAM）の混合専用回路である。重みを毎トークン外部メモリから転送する方式と異なり、固定ベースモデルの重みをROMとしてオンチップへ焼き込み、各演算器の近くに分散配置する。
 
+- **2026-02 · [Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference](2026-2602.04595-harmonia-algorithm-hardware-co-design-for-memory-and-compute-efficient-b.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLMの推論ではモデル重みだけでなく、各層で生じる活性化と、長い入力履歴を保持する鍵・値キャッシュ（KVキャッシュ）がメモリ容量・帯域・演算器の面積を消費する。重みだけを4ビット整数へ量子化しても、活性化がFP16のままでは浮動小数点と整数の混合積和演算を処理する回路が必要になる。
+
 - **2026-01 · [SynPerf: A Hybrid Analytical-ML Framework for GPU Performance Prediction](2026-2601.14910-synperf-a-hybrid-analytical-ml-framework-for-gpu-performance-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   カーネルをタスクへ分解し命令パイプラインごとの需要を解析してから学習モデルで実行時間を予測するGPU性能モデルで、11種のGPUでカーネル誤差6.1パーセントまで下げ、性能上限の診断で融合MoEを最大1.7倍速くした。
@@ -333,10 +337,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-02 · [TriGen: NPU Architecture for End-to-End Acceleration of Large Language Models based on SW-HW Co-Design](2026-2602.12962-trigen-npu-architecture-for-end-to-end-acceleration-of-large-language-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TriGenは、モバイルや組込み機器のようにSRAM容量とDRAM帯域が厳しく制限される環境で、Transformer型LLMの線形演算だけでなくRMSNorm、softmax、SiLUなどの非線形演算を含むモデル全体を一つのNPU設計で実行する研究である。
-
-- **2026-02 · [Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference](2026-2602.04595-harmonia-algorithm-hardware-co-design-for-memory-and-compute-efficient-b.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  LLMの推論ではモデル重みだけでなく、各層で生じる活性化と、長い入力履歴を保持する鍵・値キャッシュ（KVキャッシュ）がメモリ容量・帯域・演算器の面積を消費する。重みだけを4ビット整数へ量子化しても、活性化がFP16のままでは浮動小数点と整数の混合積和演算を処理する回路が必要になる。
 
 - **2026-02 · [From Buffers to Registers: Unlocking Fine-Grained FlashAttention with Hybrid-Bonded 3D NPU Co-Design](2026-2602.11016-from-buffers-to-registers-unlocking-fine-grained-flashattention-with-hyb.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

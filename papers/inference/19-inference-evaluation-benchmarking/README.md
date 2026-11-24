@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（255本）
+## 自動生成の論文一覧（256本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -173,6 +173,10 @@
 - **2026-11 · [Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads](2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b2.md)**  
   実装：[✓](https://github.com/MohsenZand/GPUBenchmarking) ・ リポジトリ内被引用：0  
   新旧のデータセンター向け図形処理装置を二つの独立クラスタで横断測定し、新装置が畳み込みで最大五・六倍、七百億の言語モデル推論で二十四から二十七パーセント遅い一方で大きな行列積の負荷では速いこと、遅さは基板電力の低さからカーネルごとの費用に帰着すること、同一半導体でも提供基盤の版で最初のトークンまでの時間が二・一倍変わることを示した。
+
+- **2026-11 · [CoPyro: Feeding Copy Proposals to Parallel Drafters](2026-2611.27217-copyro-feeding-copy-proposals-to-parallel-drafters.md)**  
+  実装：[✓](https://github.com/dt-3t/CoPyro) ・ リポジトリ内被引用：0  
+  文脈中の過去の出現からコピーした続きをマスクの代わりに並列ドラフターへ入力し、信頼性特徴とともに残す部分と直す部分を学ばせることで、受理長を最大5.08パーセント伸ばす投機的デコードの改良。
 
 - **2026-11 · [AutoEMatic: Runtime-Adaptive Mixed-Precision LLM Inference via Automatic Exponent-Mantissa Refinement](2026-2611.10165-autoematic-runtime-adaptive-mixed-precision-llm-inference-via-automatic-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

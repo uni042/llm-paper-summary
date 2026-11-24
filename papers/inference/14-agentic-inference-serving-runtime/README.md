@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（102本）
+## 自動生成の論文一覧（103本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -62,7 +62,7 @@
   ツール呼出しを「LLMが確定してから実行する」直列経路から外し、小型モデルが次の呼出しを先読みして外部処理を本体生成と重ねる。クライアント側だけでも6〜21%の時間短縮を報告し、ツールが短い条件では推論エンジン統合がさらに2〜3%を削る。
 
 - **2026-05 · [Leyline: KV Cache Directives for Agentic Inference](2026-2606.01065-leyline-kv-cache-directives-for-agentic-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   従来のKVキャッシュ管理は、プロンプト到着後は末尾へトークンが追加され続けるチャット型負荷を暗黙に前提とする。そのため完全一致する接頭辞を再利用する接頭辞キャッシュや、古いKVを前から追い出す方式が成立する。
 
 - **2026-04 · [KAIROS: Stateful, Context-Aware Power-Efficient Agentic Inference Serving](2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md)**  
@@ -81,13 +81,13 @@
   実装：✓ ・ リポジトリ内被引用：4  
   通常の最近最少使用方式（Least Recently Used、LRU）では、同じエージェントのキャッシュ木に属するノードの最近使用時刻がほぼ同時に更新され、削除対象が特定のエージェントに偏る。
 
+- **2026-07 · [Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework](2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md)**  
+  実装：[✓](https://github.com/hyscale-lab/aries) ・ リポジトリ内被引用：4  
+  AriesはLLM推論、ハーネス、状態付きツールを一つのエージェント軌跡として計測し、ツール待ち、長期文脈、サンドボックスの瞬間的な資源需要を同じタスク進捗へ結び付ける実験基盤である。
+
 - **2026-05 · [Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving](2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   Irminsulは、複数ターンのエージェント型LLMサービングで、トークン内容は同じなのにプロンプト内の位置が変わるためKVキャッシュを再利用できない問題を扱う。システム変数、検索文書、ツール出力、会話の圧縮結果が途中に挿入されると、残りの大部分が以前と同じ内容でも、最初の不一致以降は再計算になる。
-
-- **2026-07 · [Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework](2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md)**  
-  実装：[✓](https://github.com/hyscale-lab/aries) ・ リポジトリ内被引用：3  
-  AriesはLLM推論、ハーネス、状態付きツールを一つのエージェント軌跡として計測し、ツール待ち、長期文脈、サンドボックスの瞬間的な資源需要を同じタスク進捗へ結び付ける実験基盤である。
 
 - **2026-04 · [MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems](2026-2604.26963-mars-efficient-adaptive-co-scheduling-for-heterogeneous-agentic-systems.md)**  
   実装：[✓](https://github.com/Afterglow231/MARS_preview) ・ リポジトリ内被引用：3  
@@ -186,6 +186,10 @@
 - **2026-11 · [Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning](2026-2611.06956-octopus-one-brain-many-branches-for-latent-kv-multi-agent-reinforcement-.md)**  
   実装：[✓](https://github.com/shatianming5/octopus) ・ リポジトリ内被引用：0  
   エピソードを不変カーソル上の分岐DAGとしてGPU上で実行し、枝ごとの文脈分離、全注意層だけへの兄弟KVマウント、接頭辞重複排除付きのDAG-GRPO学習を組み合わせて、4Bモデルで深い検索の正解率を26.0パーセントから49.6パーセントへ上げる統合基盤。
+
+- **2026-11 · [Contexture: Runtime Context Eviction for High-Throughput Agent Serving](2026-2611.26980-contexture-runtime-context-eviction-for-high-throughput-agent-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェント履歴のトークンをツール操作の置き換え関係でたどって削除候補を特定し、共有KVキャッシュの圧力と残留を見て確定する実行時エビクションで、サービス品質目標下のスループットを最良比較対象比20から73パーセント高めるエージェント提供手法。
 
 - **2026-11 · [Bursts That Outlast Themselves: Persistent Degradation in Prefix-Cached Agent Serving](2026-2611.13412-bursts-that-outlast-themselves-persistent-degradation-in-prefix-cached-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
