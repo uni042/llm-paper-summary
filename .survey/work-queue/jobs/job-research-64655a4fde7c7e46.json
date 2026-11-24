@@ -35,10 +35,15 @@
   "selection_reason": "長いシステムプロンプトを共有するバッチリクエストで、システムプロンプト分のKVをDRAMからSRAMへリクエストごとに繰り返し読む冗長性を、RelayAttentionの因果注意の再定式化でバッチ当たり1回に削減し、vLLM統合でスループットとレイテンシを改善するLLMサービング向け注意アルゴリズムである。",
   "semantic_scholar_id": "de9b37396a6fafc7b11223ef6682e9f13b2edaf1",
   "source_url": "https://arxiv.org/abs/2402.14808",
-  "status": "ready",
+  "status": "superseded",
   "title": "RelayAttention for Efficient Large Language Model Serving with Long System Prompts",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-24T01:02:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.14808-relayattention-for-efficient-large-language-model-serving-with-long-syst.md",
+  "represented_canonical_id": "arXiv:2402.14808",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

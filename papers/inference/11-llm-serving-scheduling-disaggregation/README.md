@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（628本）
+## 自動生成の論文一覧（630本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2390,6 +2390,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   提案方式は、層ごとの端末推論時間、端末からサーバーへの上り転送時間、サーバーから端末への下り転送時間、サーバー資源消費量を測定し、モデルの順方向の依存関係を守りながら配置する。
 
+- **2024-02 · [RelayAttention for Efficient Large Language Model Serving with Long System Prompts](2024-2402.14808-relayattention-for-efficient-large-language-model-serving-with-long-syst.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  共有システムプロンプトのKVをバッチで一度だけ読むよう因果注意を厳密に再定式化し、vLLMでリクエスト率を最大約2.2倍へ上げるRelayAttentionを提案する。
+
 - **2023-12 · [Unicron: Economizing Self-Healing LLM Training at Scale](2023-2401.00134-unicron-economizing-self-healing-llm-training-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   しかし、通常時の学習速度を犠牲にする方式や、障害を受けた一つのジョブだけを回復させる方式では、複数ジョブが共存するクラスタの長期的な総計算量が最適になるとは限らない。論文が示す最大1.9倍という値は、128枚のA800 GPUを用いた高頻度障害シナリオでの累積重み付き有効演算量のMegatron比である。
@@ -2417,6 +2421,10 @@
 - **2024-10 · [MESS+: Energy-Optimal Inferencing in Language Model Zoos with Service Level Guarantees](2024-2411.00889-mess-energy-optimal-inferencing-in-language-model-zoos-with-service-leve.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデルズーからのリクエスト単位のモデル選択を、平均精度のSLAを制約とするオンライン制御問題として定式化し、仮想キューと精度予測器でエネルギー消費を最大モデル固定比で最大4.6倍分削減した研究。
+
+- **2024-07 · [ScaleLLM: A Resource-Frugal LLM Serving Framework by Optimizing End-to-End Efficiency](2024-2408.00008-scalellm-a-resource-frugal-llm-serving-framework-by-optimizing-end-to-en.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論エンジンだけでなくゲートウェイまで含めてエンドツーエンドで最適化するサービング基盤で、エンジン側の並列化と量子化と連続バッチング、ゲートウェイ側のRust化とgRPC化を組み合わせ、同時64リクエストでvLLM比4.3倍を出す方式。
 
 - **2024-06 · [Fast Graph Vector Search via Hardware Acceleration and Delayed-Synchronization Traversal](2024-2406.12385-fast-graph-vector-search-via-hardware-acceleration-and-delayed-synchroni.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "bc9fe1d0de9a6e5c28936c93057e32c9e21eef66",
+  "base_commit": "01f6a8734f149625983aa1128961d4caa811a06a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -105,6 +105,7 @@
     "2020-7a4de3412575-optimizing-transformers-with-approximate-computing-for-faster-smaller-and-more-accurate-nlp-models.json",
     "2021-2108.02347-fmmformer-efficient-and-flexible-transformer-via-decomposed-near-field-and-far-field-attention.json",
     "2021-2108.09193-smart-bird-learnable-sparse-attention-for-efficient-and-effective-transformer.json",
+    "2021-2111.09714-you-only-sample-almost-once-linear-cost-self-attention-via-bernoulli-sampling.json",
     "2021-2112.08560-block-skim-efficient-question-answering-for-transformer.json",
     "2021-a15e1294d14f-tprune.json",
     "2022-04cb6c841249-pame-precision-aware-multi-exit-dnn-serving-for-reducing-latencies-of-batched-inferences.json",
@@ -112,10 +113,12 @@
     "2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.json",
     "2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.json",
     "2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.json",
+    "2023-2301.10448-pre-computed-memory-or-on-the-fly-encoding-a-hybrid-approach-to-retrieval-augmentation-makes-the-most-of-your-compute.json",
     "2023-2302.06117-the-framework-tax-disparities-between-inference-efficiency-in-research-and-deployment.json",
     "2023-2302.11180-disco-distributed-inference-with-sparse-communications.json",
     "2023-2302.14705-acceltran-a-sparsity-aware-accelerator-for-dynamic-inference-with-transformers.json",
     "2023-2304.11520-processing-natural-language-on-embedded-devices-how-well-do-transformer-models-perform.json",
+    "2023-2305.14380-finding-the-pillars-of-strength-for-multi-head-attention.json",
     "2023-2305.14405-neuralmatrix-compute-the-entire-neural-networks-with-linear-matrix-operations-for-efficient-inference.json",
     "2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-photonic-transformer-accelerator.json",
     "2023-2306.01841-binary-and-ternary-natural-language-generation.json",
@@ -142,6 +145,7 @@
     "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
     "2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformers.json",
     "2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large-language-models.json",
+    "2024-2402.14808-relayattention-for-efficient-large-language-model-serving-with-long-system-prompts.json",
     "2024-2402.17652-compass-a-decentralized-scheduler-for-latency-sensitive-ml-workflows.json",
     "2024-2403.02920-taylorshift-shifting-the-complexity-of-self-attention-from-squared-to-linear-and-back.json",
     "2024-2403.07339-im-unpack-training-and-inference-with-arbitrarily-low-precision-integers.json",
@@ -175,6 +179,7 @@
     "2024-2407.12070-co-designing-binarized-transformer-and-hardware-accelerator-for-efficient-end-to-end-edge-deployment.json",
     "2024-2407.19775-model-agnostic-hybrid-sharding-for-heterogeneous-distributed-inference.json",
     "2024-2407.20228-flexattention-for-efficient-high-resolution-vision-language-models.json",
+    "2024-2408.00008-scalellm-a-resource-frugal-llm-serving-framework-by-optimizing-end-to-end-efficiency.json",
     "2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-inference.json",
     "2024-2408.10631-llm-barber-block-aware-rebuilder-for-sparsity-mask-in-one-shot-for-large-language-models.json",
     "2024-2408.14906-writing-in-the-margins-better-inference-pattern-for-long-context-retrieval.json",
@@ -52079,6 +52084,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2111.09714": {
+      "order": [
+        "2026-11-24T00:53:41+00:00",
+        "2021-2111.09714-you-only-sample-almost-once-linear-cost-self-attention-via-bernoulli-sampling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2301.10448": {
+      "order": [
+        "2026-11-24T00:55:16+00:00",
+        "2023-2301.10448-pre-computed-memory-or-on-the-fly-encoding-a-hybrid-approach-to-retrieval-augmentation-makes-the-most-of-your-compute.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2305.14380": {
+      "order": [
+        "2026-11-24T00:56:51+00:00",
+        "2023-2305.14380-finding-the-pillars-of-strength-for-multi-head-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2402.14808": {
+      "order": [
+        "2026-11-24T00:58:26+00:00",
+        "2024-2402.14808-relayattention-for-efficient-large-language-model-serving-with-long-system-prompts.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2408.00008": {
+      "order": [
+        "2026-11-24T01:00:00+00:00",
+        "2024-2408.00008-scalellm-a-resource-frugal-llm-serving-framework-by-optimizing-end-to-end-efficiency.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -65932,6 +65982,21 @@
     "arxiv:2512.20276": [
       "papers/inference/08-edge-on-device-llm-systems/2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on.md",
       "papers/inference/08-edge-on-device-llm-systems/2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on.md"
+    ],
+    "arxiv:2111.09714": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.09714-you-only-sample-almost-once-linear-cost-self-attention-via-bernoulli-sam.md"
+    ],
+    "arxiv:2301.10448": [
+      "papers/inference/99-other-inference-systems/2023-2301.10448-pre-computed-memory-or-on-the-fly-encoding-a-hybrid-approach-to-retrieva.md"
+    ],
+    "arxiv:2305.14380": [
+      "papers/inference/99-other-inference-systems/2023-2305.14380-finding-the-pillars-of-strength-for-multi-head-attention.md"
+    ],
+    "arxiv:2402.14808": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.14808-relayattention-for-efficient-large-language-model-serving-with-long-syst.md"
+    ],
+    "arxiv:2408.00008": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00008-scalellm-a-resource-frugal-llm-serving-framework-by-optimizing-end-to-en.md"
     ]
   }
 }

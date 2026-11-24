@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1416本）
+## 自動生成の論文一覧（1418本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -5452,6 +5452,10 @@
   実装：[✓](https://github.com/twwwwx/Infor-Coef) ・ リポジトリ内被引用：0  
   Infor-Coefが扱うのは、BERTのモデル重みを固定比率で減らすだけでは、簡単な入力と難しい入力に同じ計算を割り当てるという問題である。BERT-base比で16.2倍という原著の代表値は、バッチ内最大長へpaddingしたときの推定FLOPs比である。
 
+- **2023-05 · [Finding the Pillars of Strength for Multi-Head Attention](2023-2305.14380-finding-the-pillars-of-strength-for-multi-head-attention.md)**  
+  実装：[✓](https://github.com/SenticNet/GHA) ・ リポジトリ内被引用：0  
+  多頭注意のヘッドをグループ内同質化とグループ間多様化の自己教師あり制約で分け、各グループの代表ヘッドだけを投票で残すことで、パラメータを32.1パーセント削りながら翻訳と要約で通常のTransformerを上回る注意機構の冗長性削減。
+
 - **2023-02 · [DISCO: Distributed Inference with Sparse Communications](2023-2302.11180-disco-distributed-inference-with-sparse-communications.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   層内並列の分散推論で送る特徴の選択を重みの重要度による疎化へ変換して学習し、ResNet-50の2ノード推論で通信量を5分の1にしながら4.7倍の高速化と同等精度を両立する枠組み。
@@ -5459,6 +5463,10 @@
 - **2023-02 · [Auto-Parallelizing Large Models with Rhino: A Systematic Approach on Production AI Platform](2023-2302.08141-auto-parallelizing-large-models-with-rhino-a-systematic-approach-on-prod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Rhinoは、単一デバイス向けに記述されたテンソル計算を、複数GPUへ自動分散する学習システムである。評価では、V100 32GBと100Gb RoCEのクラスタでGPTとGShard MoEを最大16GPUまで実行し、Alpa、Megatron/DeepSpeedと比較した。
+
+- **2023-01 · [Pre-computed memory or on-the-fly encoding? A hybrid approach to retrieval augmentation makes the most of your compute](2023-2301.10448-pre-computed-memory-or-on-the-fly-encoding-a-hybrid-approach-to-retrieva.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  検索パッセージの符号化の大半を事前計算メモリへ寄せ、残りの層だけ質問条件付きでその場で仕上げるLUMENにより、FiD並みの質問応答品質をずっと少ない演算で得る。
 
 - **2023-01 · [AttMemo: Accelerating Self-Attention with Memoization on Big Memory Systems](2023-2301.09262-attmemo-accelerating-self-attention-with-memoization-on-big-memory-syste.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5607,7 +5615,7 @@
   Lite Transformerは、短い文章を処理する翻訳・要約・言語モデルを、限られた計算予算の端末で実行するためのモデル構造を提案したICLR 2020論文である。
 
 - **2020-06 · [Multi-Head Attention: Collaborate Instead of Concatenate](2020-2006.16362-multi-head-attention-collaborate-instead-of-concatenate.md)**  
-  実装：[✓](https://github.com/epfml/collaborative-attention) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/epfml/collaborative-attention) ・ リポジトリ内被引用：9  
   標準的な多頭注意（Multi-Head 注意機構、MHA）は、複数の注意ヘッドに独立したクエリ射影とキー射影を与え、それぞれが計算した値を連結して出力する。単層のV100測定では設定次第で推論時間が2.28ミリ秒から1.75ミリ秒へ短縮した。
 
 - **2020-05 · [IntelliCode Compose: Code Generation using Transformer](2020-2005.08025-intellicode-compose-code-generation-using-transformer.md)**  
@@ -5637,7 +5645,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：296  
+  実装：✓ ・ リポジトリ内被引用：297  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  
