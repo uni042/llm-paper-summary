@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "be70c155e7f7f0f66ff65352c6ea657f44d5329e",
+  "base_commit": "4e3af4752535ad0b7f3aeb2601bb20d8a04d70da",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -34,6 +34,7 @@
     "0000-09fca0c0140b-speed-without-sacrifice-fine-tuning-language-models-with-medusa-and-knowledge-distillation-in-travel-applications.json",
     "0000-0f876c37e0b4-accelerating-inference-for-pretrained-language-models-by-unified-multi-perspective-early-exiting.json",
     "0000-1015f01478e5-langcompress-language-aware-compression-of-large-language-models.json",
+    "0000-12d4703b0ce4-tailoring-llm-weight-compression-for-pim-architectures.json",
     "0000-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.json",
     "0000-14ad8695291c-an-optimized-dataflow-for-mitigating-attention-performance-bottlenecks.json",
     "0000-19bdead741ff-variable-layerwise-quantization-a-simple-and-effective-approach-to-quantize-llms.json",
@@ -46,13 +47,16 @@
     "0000-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm-decoding-with-sparse-attention.json",
     "0000-2af879bf02e3-clusterattn-kv-cache-compression-under-intrinsic-attention-clustering.json",
     "0000-3399d40c799e-mlwq-efficient-small-language-model-deployment-via-multi-level-weight-quantization.json",
+    "0000-3b396464dc29-k-un-s-erve-parameter-centric-memory-management-for-efficient-memory-throttling-handling-in-llm-serving.json",
     "0000-47d0d3b8c049-scvq-sparse-compensated-vector-quantization-for-large-language-models.json",
+    "0000-4d1a83de7ba2-moe-infinity-offloading-efficient-moe-model-serving.json",
     "0000-514f83264c8b-edinburgh-research-explorer-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.json",
     "0000-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-transformers-in-production.json",
     "0000-572d81dfcf74-beyond-fixed-length-calibration-for-post-training-compression-of-llms.json",
     "0000-5e4ab017b5df-distribution-aware-low-bitwidth-quantization-for-large-language-models.json",
     "0000-65a0133f5916-position-adaptive-temporal-sparsity-for-kv-caches-in-long-context-llms.json",
     "0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.json",
+    "0000-67a90d0976d5-a-multi-engine-dataflow-for-moe-decoding-on-scratchpad-based-tensor-accelerators.json",
     "0000-682e6def443e-claro-controlled-attribute-driven-reasoning-optimization-for-efficient-chain-of-thought.json",
     "0000-685f90406825-l-earning-w-hat-m-atters-s-upervising-s-parse-a-ttention-r-outing-with-c-ausal-e-vidence-s-ets.json",
     "0000-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computation-and-communication.json",
@@ -60,6 +64,7 @@
     "0000-8203b84bd016-adaptive-layer-sparsity-for-large-language-models-via-activation-correlation-assessment.json",
     "0000-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.json",
     "0000-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compression.json",
+    "0000-8ac901573970-d-fss-a-tten-d-ynamic-f-ine-grained-s-tructured-s-parse-a-ttention-m-echanism.json",
     "0000-9723e70ce878-flowhn-adaptive-token-routing-for-efficient-parallel-hybrid-networks.json",
     "0000-a46d04ddafae-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-through-optimal-balance-in-adaptation.json",
     "0000-a4fadb2637c2-hisvd-principled-low-rank-approximation-of-llms-via-hierarchical-modeling-of-information-capacity-and-spectral-structure.json",
@@ -51847,6 +51852,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "SemanticScholar:a2702be5faa1771302288bfb61f0e9b7b1698c4b": {
+      "order": [
+        "2026-11-24T00:13:46+00:00",
+        "0000-12d4703b0ce4-tailoring-llm-weight-compression-for-pim-architectures.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07": {
+      "order": [
+        "2026-11-24T00:14:33+00:00",
+        "0000-3b396464dc29-k-un-s-erve-parameter-centric-memory-management-for-efficient-memory-throttling-handling-in-llm-serving.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71": {
+      "order": [
+        "2026-11-24T00:15:20+00:00",
+        "0000-4d1a83de7ba2-moe-infinity-offloading-efficient-moe-model-serving.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a": {
+      "order": [
+        "2026-11-24T00:16:08+00:00",
+        "0000-67a90d0976d5-a-multi-engine-dataflow-for-moe-decoding-on-scratchpad-based-tensor-accelerators.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:3525ea7693b1c2b1983a80ef979b72050153570b": {
+      "order": [
+        "2026-11-24T00:17:39+00:00",
+        "0000-8ac901573970-d-fss-a-tten-d-ynamic-f-ine-grained-s-tructured-s-parse-a-ttention-m-echanism.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -65632,6 +65682,12 @@
     "doi:10.54097/wy0g8m89": [
       "papers/inference/99-other-inference-systems/2024-b333410eff96-dynamic-layer-skipping-for-large-language-models-on-natural-language-und.md",
       "papers/inference/99-other-inference-systems/2024-b333410eff96-dynamic-layer-skipping-for-large-language-models-on-natural-language-und.md"
+    ],
+    "semanticscholar:a2702be5faa1771302288bfb61f0e9b7b1698c4b": [
+      "papers/inference/16-weight-quantization-compression/2026-12d4703b0ce4-tailoring-llm-weight-compression-for-pim-architectures.md"
+    ],
+    "semanticscholar:3525ea7693b1c2b1983a80ef979b72050153570b": [
+      "papers/inference/13-sparse-attention/2022-2203.00091-dynamic-n-m-fine-grained-structured-sparse-attention-mechanism.md"
     ]
   }
 }

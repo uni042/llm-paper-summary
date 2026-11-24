@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（219本）
+## 自動生成の論文一覧（220本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -865,6 +865,10 @@
 - **2021-12 · [LongT5: Efficient Text-To-Text Transformer for Long Sequences](2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md)**  
   実装：[✓](https://github.com/google-research/longt5) ・ リポジトリ内被引用：13  
   T5のエンコーダを長文向けに置き換え、各層でブロック集約した大域トークンを一時的に作る注意機構を提案する。重要文生成による事前学習と組み合わせ、要約・質問応答で長い入力の情報を利用する。論文の主な評価はモデル品質と学習時の計算費用であり、デコード専用の推論サービング実験とは区別する。
+
+- **2022-02 · [Dynamic N:M Fine-grained Structured Sparse Attention Mechanism](2022-2203.00091-dynamic-n-m-fine-grained-structured-sparse-attention-mechanism.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  注意スコアを実行時にN:M構造化スパースへ動的に間引き、間引き処理を行列積のレジスタ上の後処理へ融合して追加費用を消すことで、A100で全注意比1.27から1.89倍の高速化を精度損失なしに得る注意機構。
 
 ### 6年前（2020-12〜2021-11）
 

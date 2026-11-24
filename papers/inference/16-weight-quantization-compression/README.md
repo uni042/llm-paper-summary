@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（201本）
+## 自動生成の論文一覧（202本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -276,6 +276,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   BiSCo-LLMは、大規模言語モデル（LLM）の重みを2ビット級へ圧縮する際、単純なスカラー量子化では表現力が不足し、ベクトル量子化では明示的なコードブックの記憶容量と検索費用が増える問題に対処する研究である。BiSCo-LLMは較正データと元の重みから重要チャネルを選び、約1%を8ビットで保護する。
 
+- **2026-06 · [Tailoring LLM Weight Compression For PIM Architectures](2026-12d4703b0ce4-tailoring-llm-weight-compression-for-pim-architectures.md)**  
+  実装：[✓](https://github.com/Tajdari-S/PIM-LLM-Compression) ・ リポジトリ内被引用：0  
+  BF16の指数部の冗長性を使い、固定長でバンク内復号できる辞書方式と差分方式の二つの重み圧縮をPIM向けに設計し、容量を約24から25パーセント減らして復号回路の面積増を1割前後に抑える研究。
+
 - **2026-06 · [SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving](2026-2606.11244-spear-error-adaptive-low-bit-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   トークン適応型量子化誤差補償とカーネル・通信・SLOスケジューリングを共同設計し、W4–FP16のperplexity差を56–75%回復。
@@ -423,7 +427,7 @@
   DLP（動的 Layerwise 枝刈り、動的層別刈り込み）は、重みのどれを削るかだけでなく、各層に何割の重みを残すかを決めるためのモデル圧縮方式である。ただし同じ70%の疎化率でも、重要な層を一律に70%削ると、あまり重要でない層を多く削る場合より予測品質が大きく損なわれる。
 
 - **2025-02 · [Huff-LLM: End-to-End Lossless Compression for Efficient LLM Inference](2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   Huff-LLMは、言語モデルの重みを数値を一切変えずに圧縮し、保存先から推論演算器の直前まで圧縮状態を維持する方式である。Llama、Qwen、OPT、Vicunaの重みで容量削減を測定し、専用推論回路のモデル化で最大約32%の重み容量削減、最大約31%の推論遅延短縮、最大約26%のエネルギー削減を報告する。
 
 - **2025-09 · [PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models](2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md)**  
@@ -823,7 +827,7 @@
   Transformerの重みと行列積を8ビット整数へ量子化しても、推論全体が整数だけで実行できるとは限らない。Tesla T4上の予備的な整数カーネル実装では、FP32比で2.4～4.0倍の推論高速化を報告する。
 
 - **2021-09 · [Block Pruning For Faster Transformers](2021-2109.04838-block-pruning-for-faster-transformers.md)**  
-  実装：[✓](https://github.com/huggingface/nn_pruning) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/huggingface/nn_pruning) ・ リポジトリ内被引用：41  
   Block Pruningは移動量に基づく枝刈り（movement 枝刈り）を重みブロック単位へ拡張し、フィードフォワード層の次元や注意ヘッドを構造的に除去できる形へ誘導する。
 
 - **2021-02 · [Accelerated Sparse Neural Training: A Provable and Efficient Method to Find N:M Transposable Masks](2021-2102.08124-accelerated-sparse-neural-training-a-provable-and-efficient-method-to-fi.md)**  

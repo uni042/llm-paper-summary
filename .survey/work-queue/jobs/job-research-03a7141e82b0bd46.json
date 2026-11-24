@@ -35,10 +35,15 @@
   "selection_reason": "PIMアーキテクチャ向けにBF16重みの指数部に着目した辞書型・デルタ型の軽量圧縮を設計し、重み容量を約24〜25％削減しつつDRAMバンク内データパスへの展開回路のゲート増までRTLで評価しており、メモリ律速なLLM推論向け重み圧縮の直接的貢献が要旨で確認できる。",
   "semantic_scholar_id": "a2702be5faa1771302288bfb61f0e9b7b1698c4b",
   "source_url": "https://www.semanticscholar.org/paper/a2702be5faa1771302288bfb61f0e9b7b1698c4b",
-  "status": "ready",
+  "status": "superseded",
   "title": "Tailoring LLM Weight Compression For PIM Architectures",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": null
+  "year": null,
+  "superseded_at": "2026-11-24T00:20:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-12d4703b0ce4-tailoring-llm-weight-compression-for-pim-architectures.md",
+  "represented_canonical_id": "SemanticScholar:a2702be5faa1771302288bfb61f0e9b7b1698c4b",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
