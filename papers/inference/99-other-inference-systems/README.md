@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1507本）
+## 自動生成の論文一覧（1509本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -172,6 +172,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   Swordsmanは、拡散言語モデル（Diffusion Language モデル、DLM）の生成速度と品質を改善するため、出力列を固定長で区切るブロック復号を、モデルの予測エントロピーに応じて動的に区切る方式へ変更する。
 
+- **2026-02 · [EntropyPrune: Matrix Entropy Guided Visual Token Pruning for Multimodal Large Language Models](2026-2602.17196-entropyprune-matrix-entropy-guided-visual-token-pruning-for-multimodal-l.md)**  
+  実装：[✓](https://github.com/YahongWang1/EntropyPrune) ・ リポジトリ内被引用：4  
+  既存の視覚トークン枝刈り（visual トークン 枝刈り）は重要そうなトークンを残すが、どの層で削除するかを経験的に固定するものが多く、異なるモデル・画像で最適な位置が変わる理由を説明しにくい。
+
 - **2026-01 · [Native LLM and MLLM Inference at Scale on Apple Silicon](2026-2601.19139-native-llm-and-mllm-inference-at-scale-on-apple-silicon.md)**  
   実装：[✓](https://github.com/waybarrios/vllm-mlx) ・ リポジトリ内被引用：4  
   Apple SiliconはCPUとGPUが同じ物理メモリを利用する統合メモリ構成を持つため、一般的な独立GPU環境とはモデル重みや中間状態の管理条件が異なる。
@@ -240,9 +244,9 @@
   実装：✓ ・ リポジトリ内被引用：3  
   大規模言語モデル（LLM）の重みを4ビット未満に量子化すると、同じ平均ビット数でも、どの重みを低精度にするかによって予測品質が大きく変わる。第三に、行列積のタイルと整合する64×128重みブロックへ整数ビット幅を割り当て、勾配に基づく一括更新と受理判定で全モデルの平均容量予算へ近づける。
 
-- **2026-02 · [EntropyPrune: Matrix Entropy Guided Visual Token Pruning for Multimodal Large Language Models](2026-2602.17196-entropyprune-matrix-entropy-guided-visual-token-pruning-for-multimodal-l.md)**  
-  実装：[✓](https://github.com/YahongWang1/EntropyPrune) ・ リポジトリ内被引用：3  
-  既存の視覚トークン枝刈り（visual トークン 枝刈り）は重要そうなトークンを残すが、どの層で削除するかを経験的に固定するものが多く、異なるモデル・画像で最適な位置が変わる理由を説明しにくい。
+- **2026-02 · [OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport](2026-2602.20205-otprune-distribution-aligned-visual-token-pruning-via-optimal-transport.md)**  
+  実装：[✓](https://github.com/xiwenc1/OTPrune) ・ リポジトリ内被引用：3  
+  OTPruneは、画像と言語を組み合わせて推論する多モーダル大規模言語モデルにおいて、画像から得られる多数の視覚トークンを追加学習なしで削減する手法である。原著が証明する約63%の最悪時近似保証は代理目的の最大化に対するものであり、元のワッサースタイン距離や言語モデルの回答品質が63%保証されるという意味ではない。
 
 - **2026-01 · [Residual Context Diffusion Language Models](2026-2601.22954-residual-context-diffusion-language-models.md)**  
   実装：[✓](https://github.com/yuezhouhu/residual-context-diffusion) ・ リポジトリ内被引用：3  
@@ -427,10 +431,6 @@
 - **2026-02 · [Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts](2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md)**  
   実装：[✓](https://github.com/wenhaoli-xmu/OOMB) ・ リポジトリ内被引用：2  
   チャンク再計算・ページ化KV/勾配・非同期CPUオフロード・疎注意を統合し、Qwen2.5-7Bの4M文脈学習を単一H200で実現する。
-
-- **2026-02 · [OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport](2026-2602.20205-otprune-distribution-aligned-visual-token-pruning-via-optimal-transport.md)**  
-  実装：[✓](https://github.com/xiwenc1/OTPrune) ・ リポジトリ内被引用：2  
-  OTPruneは、画像と言語を組み合わせて推論する多モーダル大規模言語モデルにおいて、画像から得られる多数の視覚トークンを追加学習なしで削減する手法である。原著が証明する約63%の最悪時近似保証は代理目的の最大化に対するものであり、元のワッサースタイン距離や言語モデルの回答品質が63%保証されるという意味ではない。
 
 - **2026-02 · [FlexRank: Nested Low-Rank Knowledge Decomposition for Adaptive Model Deployment](2026-2602.02680-flexrank-nested-low-rank-knowledge-decomposition-for-adaptive-model-depl.md)**  
   実装：[✓](https://github.com/RickZack/FlexRank) ・ リポジトリ内被引用：2  
@@ -803,6 +803,10 @@
 - **2026-03 · [The Missing Memory Hierarchy: Demand Paging for LLM Context Windows](2026-2603.09023-pichay-demand-paging-context-windows.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   エージェント文脈を仮想メモリとしてページングし、古いツール結果を追い出して再参照時に復元する透明プロキシ。139万追い出しで0.0254%フォルト率を報告。
+
+- **2026-03 · [Task-aware Block Pruning with Output Distribution Signals for Large Language Models](2026-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-lang.md)**  
+  実装：[✓](https://github.com/Song-haJo/TaBP) ・ リポジトリ内被引用：1  
+  各ブロック前後の出力分布の統計的変化を複数選択式質問応答の較正データで集約して重要度を測るブロック枝刈りTaBPを提案し、LLaMA-3-8Bで25%のブロックを削除しても平均正解率60.93%を保ち、感度分析型の比較対象56.6%前後を上回った。
 
 - **2026-03 · [TAPS: Task Aware Proposal Distributions for Speculative Sampling](2026-2603.27027-taps-task-aware-proposal-distributions-for-speculative-sampling.md)**  
   実装：[✓](https://github.com/Moe-Zbeeb/TAPS) ・ リポジトリ内被引用：1  
@@ -1458,6 +1462,10 @@
   実装：[✓](https://github.com/DPVault/SpliTEE) ・ リポジトリ内被引用：0  
   TEE内のLLM線形演算を差分プライバシーで保護してGPUへ委譲し、プロンプト漏洩を抑えつつCPU-only TDX推論を約2倍高速化する。
 
+- **2026-09 · [Speech Block Influence: Component-Specific Layer Scoring for Pruning Speech LLMs](2026-2609.29343-speech-block-influence-component-specific-layer-scoring-for-pruning-spee.md)**  
+  実装：[✓](https://github.com/CU-0/sbi-speechllm-pruning) ・ リポジトリ内被引用：0  
+  音声LLMの層枝刈りに向け、エンコーダはアダプタ出力への影響で、デコーダはテキストトークンだけの入出力類似度で採点する部品別スコアSBIを提案し、従来のブロック影響度より高い枝刈り率まで性能を保てることと、テキストのみ較正で代替できることを示した。
+
 - **2026-09 · [SinkPruner: Sink-Free Visual Token Pruning for Multimodal Large Language Models](2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-.md)**  
   実装：[✓](https://github.com/LaVi-Lab/SinkPruner) ・ リポジトリ内被引用：0  
   注意を欺く高ノルム外れ値を先に取り除いて1個へ集約し、その後にテキスト誘導で絞る学習不要の視覚トークン枝刈りで、約9割削減でもLLaVA-1.5の性能の96.5パーセントを保った。
@@ -1545,6 +1553,10 @@
 - **2026-09 · [LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference](2026-2609.03079-leanstream-speculate-refine-on-device.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LeanStreamは、層内の部分残差から次層の重み優先度を更新し、重み読出し・GPU計算・キャッシュを非同期に重ねて、端末LLMのSSD待ちと予測ミスを減らす。
+
+- **2026-09 · [Layer-Aware Position Embeddings for Visual Token Pruning in Multimodal Large Language Models](2026-2609.23715-layer-aware-position-embeddings-for-visual-token-pruning-in-multimodal-l.md)**  
+  実装：[✓](https://github.com/YahongWang1/LayerPos) ・ リポジトリ内被引用：0  
+  枝刈り後の位置番号を全層一律にせず、中間のグラウンディング敏感層だけ元の番号を保ち他は詰め直すことで、CDPrunerで77.8パーセント削減しても元の性能の98.2パーセントを保持する。
 
 - **2026-09 · [LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation](2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-count.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2862,10 +2874,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文脈窓が2倍になるとワットあたりトークンが半分になる1/W則を解析的に導き、文脈長ルーティングがGPU世代交代より大きな省エネ手段であり、両者の利得が乗算で重なることを示す分析研究。
 
-- **2026-03 · [Task-aware Block Pruning with Output Distribution Signals for Large Language Models](2026-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-lang.md)**  
-  実装：[✓](https://github.com/Song-haJo/TaBP) ・ リポジトリ内被引用：0  
-  各ブロック前後の出力分布の統計的変化を複数選択式質問応答の較正データで集約して重要度を測るブロック枝刈りTaBPを提案し、LLaMA-3-8Bで25%のブロックを削除しても平均正解率60.93%を保ち、感度分析型の比較対象56.6%前後を上回った。
-
 - **2026-03 · [SecDTD: Dynamic Token Drop for Secure Transformers Inference](2026-2603.13670-secdtd-dynamic-token-drop-for-secure-transformers-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   安全なTransformer推論向けに、ソフトマックス前スコア付けMCNと秘匿中央値選択OMSelでトークンドロップを前倒しし、暗号文で最も高いソフトマックスまで削って最大4.47倍の高速化を精度維持で示す。
@@ -3557,7 +3565,7 @@
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
-  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：61  
+  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：62  
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
@@ -3581,7 +3589,7 @@
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
-  実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：42  
   長い思考過程を生成する推論モデルは、難しい問題で高い正答率を得られる一方、簡単な問題でも冗長な検討を続けることがある。本論文は、正答を優先したまま正解応答の長さに罰則を与えるオンライン強化学習を提案する。7Bの5タスク平均では、長さ罰則 $\alpha=0.2$ の場合、基準モデルに対して生成トークン数が51.58%、正答率が95.94%となった。
 
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  

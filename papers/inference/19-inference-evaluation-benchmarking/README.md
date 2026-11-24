@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（246本）
+## 自動生成の論文一覧（249本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -234,6 +234,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文書知識の置き場として文脈、KV表現、パラメータを保存量を揃えて統制比較し、KV型のCartridgesが単一文書と複数文書の両方で最も正確だが忘却も伴うこと、Compactionとパラメータ型は複数文書の合成で崩れることを明らかにした比較研究。
 
+- **2026-09 · [Visual Jev: Accurate and Efficient Decisions from Shared Visual Context](2026-2609.25845-visual-jev-accurate-and-efficient-decisions-from-shared-visual-context.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  同じ画像への複数の選択式質問で、視覚プリフィックスを一度だけ計算して共有し質問接尾辞を隔離バッチ実行することで、再計算を消して8.9倍の処理効率を得る視覚判断システム。
+
 - **2026-09 · [The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?](2026-2609.17863-inference-engineering-pareto-atlas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   54実測点と校正シミュレータで推論最適化の組合せを品質・遅延・費用の同一Pareto面へ置き、制約別の支配構成を示す。
@@ -322,6 +326,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）を低ビット量子化して端末へ載せるとき、一般的には困惑度（perplexity）や選択式問題の正答率がどれだけ落ちるかを確認する。例えばLLaMA-3.1-8BのMMLUでは、Q4KとQ40の正答率はそれぞれ32.2%と32.1%でほぼ等しいのに、BF16に対するTVDは0.055と0.221で約4倍異なる。
 
+- **2026-08 · [To Think or Not to Think: Allocating Reasoning Where It Helps](2026-2609.29664-to-think-or-not-to-think-allocating-reasoning-where-it-helps.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論長の効果が部分的に解ける問題へ集中することを示し、サンプリングした応答群の短半分と長半分の正解率比較から長さ調整の方向だけを推定してGRPOの報酬へ入れるCAREにより、精度を上げながら推論トークンを最大で約37パーセント減らした学習手法の研究。
+
 - **2026-08 · [Thinking Hard, Not Smart: Reasoning Models Fail to Ration Test-Time Compute Across Questions](2026-2608.07968-thinking-hard-not-smart-reasoning-models-fail-to-ration-test-time-comput.md)**  
   実装：[✓](https://github.com/Fcr09/thinking-hard-not-smart) ・ リポジトリ内被引用：0  
   長い思考を許す推論言語モデルは、一問ごとの数学・コード問題で精度を高められる。しかし現実の計算資源は有限であり、複数の依頼を同時に処理する場合には「どの問題へ何トークン使うか」「いつ諦めて別の問題へ進むか」という別の判断が必要になる。この論文は新しい高速化カーネルや推論サービング基盤を提案するものではない。
@@ -329,6 +337,10 @@
 - **2026-08 · [The Halt Vector: Internalizing a Causal Steering Intervention for Efficient Reasoning](2026-2608.28859-the-halt-vector-internalizing-a-causal-steering-intervention-for-efficie.md)**  
   実装：[✓](https://github.com/dylanjayabahu/halt-vector) ・ リポジトリ内被引用：0  
   答え確定前後の活性差から作った停止ベクトルへのステアリングを、軸外次元を固定した全ベクトル再構成で重みへ内在化し、24問の適合だけで未見ベンチマークの思考を約24パーセント、問題適応的に削減した研究。
+
+- **2026-08 · [Task-Aware Spectral Pruning: A Mixture-of-Masks Framework for Efficient LLM Inference](2026-2609.29499-task-aware-spectral-pruning-a-mixture-of-masks-framework-for-efficient-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  スペクトル記述子が課題別除去損害を予測できるかを事前に判定し、通過時だけ課題族ごとの依存閉鎖マスクを構築してターン単位で振り分ける枝刈りで、70Bの計算量43パーセント削減時に保持率97.7パーセントとデコード1.44倍を両立する。
 
 - **2026-08 · [SABER: Stability-Aware Early Exit for LLM Reasoning via Adversarial Branch Probing](2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branc.md)**  
   実装：[✓](https://github.com/Bl1nding/SABER) ・ リポジトリ内被引用：0  
@@ -681,7 +693,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
-  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：52  
+  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：53  
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  

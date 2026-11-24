@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a9b436f6d2739226a173193ffd4344e05342168f",
+  "base_commit": "1e075a1132f3a7c7af52411797a282bf7b56a23a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1124,11 +1124,16 @@
     "2026-2609.23058-lazyagent-demand-driven-materialization-and-physical-optimization-of-agentic-programs.json",
     "2026-2609.23085-measured-joules-learned-routes-learning-to-route-for-energy-efficient-llm-serving.json",
     "2026-2609.23314-valuediff-value-geometric-kv-cache-eviction-for-sink-suppressed-llms.json",
+    "2026-2609.23715-layer-aware-position-embeddings-for-visual-token-pruning-in-multimodal-large-language-models.json",
     "2026-2609.24270-dissecting-how-die-scaling-breaks-gpu-fine-grained-scheduling.json",
     "2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfigurable-tiled-architecture.json",
     "2026-2609.24875-sphquant-efficient-extreme-low-bit-weight-quantization-for-vision-language-models.json",
     "2026-2609.25053-latentport-beyond-kv-cache-cross-model-transfer-of-recurrent-memory-in-hybrid-language-models-a-4b-to-9b-hybrid-state-ha.json",
+    "2026-2609.25845-visual-jev-accurate-and-efficient-decisions-from-shared-visual-context.json",
     "2026-2609.26177-magnitude-profile-pruning-calibration-free-structured-attention-head-removal-for-transformer-compression.json",
+    "2026-2609.29343-speech-block-influence-component-specific-layer-scoring-for-pruning-speech-llms.json",
+    "2026-2609.29499-task-aware-spectral-pruning-a-mixture-of-masks-framework-for-efficient-llm-inference.json",
+    "2026-2609.29664-to-think-or-not-to-think-allocating-reasoning-where-it-helps.json",
     "2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.json",
     "2026-2609.29875-when-can-agents-forget-their-reasoning-iclr-for-long-horizon-agent-context-compression.json",
     "2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindness.json",
@@ -53941,6 +53946,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.23715": {
+      "order": [
+        "2026-11-24T08:05:07+00:00",
+        "2026-2609.23715-layer-aware-position-embeddings-for-visual-token-pruning-in-multimodal-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.25845": {
+      "order": [
+        "2026-11-24T08:06:21+00:00",
+        "2026-2609.25845-visual-jev-accurate-and-efficient-decisions-from-shared-visual-context.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.29343": {
+      "order": [
+        "2026-11-24T08:07:34+00:00",
+        "2026-2609.29343-speech-block-influence-component-specific-layer-scoring-for-pruning-speech-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.29499": {
+      "order": [
+        "2026-11-24T08:08:48+00:00",
+        "2026-2609.29499-task-aware-spectral-pruning-a-mixture-of-masks-framework-for-efficient-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.29664": {
+      "order": [
+        "2026-11-24T08:10:01+00:00",
+        "2026-2609.29664-to-think-or-not-to-think-allocating-reasoning-where-it-helps.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68534,6 +68584,21 @@
     "arxiv:2609.18131": [
       "papers/inference/06-moe-quantization-compression/2026-2609.18131-colla-q-toward-collaborative-experts-in-moe-quantization-via-minimax-pre.md",
       "papers/inference/06-moe-quantization-compression/2026-2609.18131-colla-q-toward-collaborative-experts-in-moe-quantization-via-minimax-pre.md"
+    ],
+    "arxiv:2609.23715": [
+      "papers/inference/99-other-inference-systems/2026-2609.23715-layer-aware-position-embeddings-for-visual-token-pruning-in-multimodal-l.md"
+    ],
+    "arxiv:2609.25845": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.25845-visual-jev-accurate-and-efficient-decisions-from-shared-visual-context.md"
+    ],
+    "arxiv:2609.29343": [
+      "papers/inference/99-other-inference-systems/2026-2609.29343-speech-block-influence-component-specific-layer-scoring-for-pruning-spee.md"
+    ],
+    "arxiv:2609.29499": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.29499-task-aware-spectral-pruning-a-mixture-of-masks-framework-for-efficient-l.md"
+    ],
+    "arxiv:2609.29664": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.29664-to-think-or-not-to-think-allocating-reasoning-where-it-helps.md"
     ]
   }
 }
