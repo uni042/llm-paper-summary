@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d08-b02::chunk-0002-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11229025",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11229025"
+      ],
+      "title": "DA-Mamba: A Dual-domain Attention Mamba-based Image Deraining Network",
+      "reason": "DA-Mambaは周波数領域と勾配特徴を注意で融合する画像デレーニング（雨除去）ネットワークであり、対象は画像復元の品質であってLLM推論システムとは無関係である。",
+      "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11229025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 471
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/info13060290",
+      "identity_tokens": [
+        "DOI:10.3390/info13060290"
+      ],
+      "title": "Contextualizer: Connecting the Dots of Context with Second-Order Attention",
+      "reason": "Contextualizerは二次注意で文表現を線形時間に構成する軽量アルゴリズムだが、対象はテキスト分類のための文表現学習であり、LLM推論システムの機構への貢献は確認できない。",
+      "source_url": "https://doi.org/10.3390/info13060290",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.08768",
+      "identity_tokens": [
+        "arXiv:2505.08768"
+      ],
+      "title": "SPAT: Sensitivity-based Multihead-attention Pruning on Time Series Forecasting Models",
+      "reason": "SPATは感度指標SENDで冗長な注意モジュール全体を剪定し多変量時系列予測モデルのFLOPsを35.274%削減する構造化剪定だが、対象は時系列予測モデルでありLLM推論への適用は示されていないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2505.08768",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.20891",
+      "identity_tokens": [
+        "arXiv:2509.20891"
+      ],
+      "title": "AIBA: Attention-based Instrument Band Alignment for Text-to-Audio Diffusion",
+      "reason": "AIBAはテキスト・音声拡散モデルの交差注意を推論時にフックして楽器帯域との整合を定量化する学習不要の分析パイプラインであり、対象は音声生成モデルの解釈分析であってLLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2509.20891",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01581",
+      "identity_tokens": [
+        "arXiv:2511.01581"
+      ],
+      "title": "ExplicitLM: Decoupling Knowledge from Parameters via Explicit Memory Banks",
+      "reason": "ExplicitLMは人間可読な知識を百万規模の外部メモリバンクへ分離する新しい言語モデルアーキテクチャであり、主題は知識の解釈可能性と更新容易性であって、推論時の効率化を目的とする機構ではない。",
+      "source_url": "https://arxiv.org/abs/2511.01581",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3738900",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3738900"
+      ],
+      "title": "MBA: Efficient Hardware Accelerator for MXFP4 Quantization via Learnable Block-Wise Affine Transformation",
+      "reason": "MBAはMXFP4量子化向けにブロック対角なアフィン変換を学習し、BF16とMXFP4の両モードを持つ専用アクセラレータと協調設計する手法で、LLaMA3-8Bでの精度と2.66倍のTOPS/Wを示しており、推論量子化とそのハードウェア実行への直接貢献が確認できる。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3738900",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IECON58223.2025.11221528",
+      "identity_tokens": [
+        "DOI:10.1109/IECON58223.2025.11221528"
+      ],
+      "title": "Residual Aggregation and Multi-Head Attention Reweighting for Autoformer in Industrial Time Series Forecasting",
+      "reason": "RAMARは残差集約と注意ヘッド再重み付けでAutoformerを工業時系列予測向けに改良するモデルであり、対象は予測保守等の産業予測タスクの精度であってLLM推論システムとは無関係である。",
+      "source_url": "https://doi.org/10.1109/IECON58223.2025.11221528",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/NaNA66698.2025.00037",
+      "identity_tokens": [
+        "DOI:10.1109/NaNA66698.2025.00037"
+      ],
+      "title": "PrivSeek: Lightweight and Private Inference for Distilled DeepSeek-Qwen via Secret Sharing",
+      "reason": "PrivSeekは秘密分散に基づき因果自己注意マスクとSiLUの安全な計算プロトコルを構築し、蒸留DeepSeek-Qwenのプライベート推論を平文比1.2%の精度偏差で実現する軽量な秘匿推論手法であり、LLM推論の実行方式への直接貢献が確認できる。",
+      "source_url": "https://doi.org/10.1109/NaNA66698.2025.00037",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.32604/cmc.2025.072735",
+      "identity_tokens": [
+        "DOI:10.32604/cmc.2025.072735"
+      ],
+      "title": "Modeling Pruning as a Phase Transition: A Thermodynamic Analysis of Neural Activations",
+      "reason": "本論文は活性化の自由エネルギーから剪定の臨界閾値を予測する熱力学的な分析枠組みで、前方計算の繰り返しを省き閾値探索を高速化するが、対象は視覚・テキストモデル全般の剪定分析でありLLM推論システムへの具体的な適用ではないため境界とする。",
+      "source_url": "https://doi.org/10.32604/cmc.2025.072735",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.03474",
+      "identity_tokens": [
+        "arXiv:2107.03474"
+      ],
+      "title": "Differentiable Random Access Memory using Lattices",
+      "reason": "本論文は格子上の最近傍でO(1)アクセスできる微分可能なランダムアクセスメモリを提案し言語モデリングの容量を増やすアーキテクチャ研究であり、対象はモデルの記憶容量と精度であって推論システムの効率化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2107.03474",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 480
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05033",
+      "identity_tokens": [
+        "arXiv:2402.05033"
+      ],
+      "title": "Majority Kernels: An Approach to Leverage Big Model Dynamics for Efficient Small Model Training",
+      "reason": "Majority Kernelsは単一の学習過程で大規模モデルと展開用小規模モデルを同時に得る学習ダイナミクスの改変であり、主題は学習側の手法であって推論時の機構への貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2402.05033",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 481
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.12513",
+      "identity_tokens": [
+        "arXiv:2504.12513"
+      ],
+      "title": "AdaVid: Adaptive Video-Language Pretraining",
+      "reason": "AdaVidは推論時に隠れ次元を調整できる適応的Transformerブロックで動画エンコーダの計算量を動的に変える枠組みであり、推論時適応計算の機構はあるが対象はエッジデバイス上の動画理解エンコーダでLLM推論ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2504.12513",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 482
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.04117",
+      "identity_tokens": [
+        "arXiv:2507.04117"
+      ],
+      "title": "Relational inductive biases on attention mechanisms",
+      "reason": "本論文は注意機構の関係的帰納バイアスを置換群に対する同変性の観点から分類する幾何的深層学習の理論分析であり、推論システムの効率化への技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2507.04117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 483
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.27516",
+      "identity_tokens": [
+        "arXiv:2510.27516"
+      ],
+      "title": "BiSparse-AAS: Bilinear Sparse Attention and Adaptive Spans Framework for Scalable and Efficient Text Summarization",
+      "reason": "BiSparse-AASは疎注意・適応スパン・双線形注意を組み合わせて長文要約の二次複雑度を緩和する枠組みであり、注意の効率化機構はあるが評価は要約タスクのROUGEが中心で推論システムとしての測定は示されていないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2510.27516",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 484
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.17591",
+      "identity_tokens": [
+        "arXiv:2404.17591"
+      ],
+      "title": "Large Language Models for Next Point-of-Interest Recommendation",
+      "reason": "本論文は事前学習済みLLMで位置情報推薦（次のPOI予測）の文脈情報を扱う枠組みであり、対象は位置ベースソーシャルネットワークの推薦応用であってLLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2404.17591",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 485
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1039/d5dd00275c",
+      "identity_tokens": [
+        "DOI:10.1039/d5dd00275c"
+      ],
+      "title": "Scientific knowledge graph and ontology generation using open large language models",
+      "reason": "本論文はオープンなLLMで科学文献から知識グラフとオントロジーをゼロショット生成する手法を化学元素や単原子触媒の分野で評価する研究であり、対象は科学知識管理の応用であってLLM推論システムとは無関係である。",
+      "source_url": "https://doi.org/10.1039/d5dd00275c",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 486
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.05903",
+      "identity_tokens": [
+        "arXiv:2601.05903"
+      ],
+      "title": "HAPS: Hierarchical LLM Routing with Joint Architecture and Parameter Search",
+      "reason": "HAPSは上位ルータでモデルアーキテクチャを選び下位ルータで入力条件付きLoRAパラメータを生成する階層型LLMルーティングであり、推論時のモデル選択に関わるが目的は課題性能の向上で、サービングのコストやレイテンシを扱う機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2601.05903",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 487
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-026-70070-6",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-026-70070-6"
+      ],
+      "title": "An end-to-end generalizable deep learning framework to comprehensively analyze transcriptional regulation",
+      "reason": "タイトル自体が転写制御を包括的に解析するエンドツーエンドの深層学習フレームワーク（ゲノム注釈への応用）を明示しており、生物学・ゲノム科学の応用研究であってLLM推論システムとは無関係である。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://doi.org/10.1038/s41467-026-70070-6",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 488
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04602",
+      "identity_tokens": [
+        "arXiv:2602.04602"
+      ],
+      "title": "Automated Extraction of Multicomponent Alloy Data Using Large Language Models for Sustainable Design",
+      "reason": "タイトル自体が持続可能な設計のための多成分合金データのLLMによる自動抽出を明示しており、材料科学文献からのデータ抽出という応用が主題であってLLM推論システムの技術ではない。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2602.04602",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.12487",
+      "identity_tokens": [
+        "arXiv:2512.12487"
+      ],
+      "title": "More Than the Final Answer: Improving Visual Extraction and Logical Consistency in Vision-Language Models",
+      "reason": "PeRL-VLは検証可能報酬による強化学習に知覚の記述報酬と推論の教師あり学習を分離して組み合わせる視覚言語モデルの学習手法であり、主題はマルチモーダル推論能力の学習であって推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2512.12487",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 490
+    }
+  ],
+  "parent_run_key": "muse-20261125-d08-b02",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

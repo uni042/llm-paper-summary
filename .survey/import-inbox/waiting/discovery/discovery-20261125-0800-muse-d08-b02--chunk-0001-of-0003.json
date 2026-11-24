@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d08-b02::chunk-0001-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28642",
+      "identity_tokens": [
+        "arXiv:2605.28642"
+      ],
+      "title": "Parameter- and Bandwidth-Efficient Edge--cloud Many-to-Many Speech-to-Text Translation",
+      "reason": "ESRTは軽量な音声エンコーダを端末に残し圧縮したテンソルだけをクラウドへ送るエッジ・クラウド協調の音声テキスト翻訳フレームワークで、分割推論の帯域削減は具体的だが、対象が音声翻訳専用モデルの学習と展開に限られるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.28642",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.11951",
+      "identity_tokens": [
+        "arXiv:2607.11951"
+      ],
+      "title": "GRID: Grammar-Railed Decoding for Enterprise SQL Generation",
+      "reason": "GRIDはLALR(1)パーサ設定をキーとする正確な次トークンマスクで文法制約デコードを実装し、トークンあたり中央値3.6〜6.7µsのマスク生成と健全性・完全性等の保証、監査証跡まで備えるデコードエンジンであり、制約付きデコードへの直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2607.11951",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.12574",
+      "identity_tokens": [
+        "arXiv:2608.12574"
+      ],
+      "title": "Trie Automata for Constrained Decoding over Large Finite Sets",
+      "reason": "本論文は有限集合からの選択制約に対しトライ木オートマトンでノードごとのトークンマスクを事前計算し、XGrammar比でステップあたり7倍、vLLMのバッチサービングで29倍のスループットを示す制約付きデコード機構であり、サービングへの直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2608.12574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34227",
+      "identity_tokens": [
+        "arXiv:2609.34227"
+      ],
+      "title": "When Does Selection Replace Extraction? A Pre-Registered Test of Agent Memory with a Typed Decision Model",
+      "reason": "本論文は会話メモリにおいてLLM抽出事実と生ターンの選択のどちらが有効かを事前登録研究で比較したエージェント記憶の実証研究であり、書き込みコストの差は報告されるが推論システムの機構への貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2609.34227",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02819",
+      "identity_tokens": [
+        "arXiv:2610.02819"
+      ],
+      "title": "Text-Centric Post-Training for Omni-Modal Reasoning",
+      "reason": "本論文はテキストのみの推論学習と少量の音響視覚RLを組み合わせるオムニモーダルモデルの事後学習パラダイムであり、主題はマルチモーダル推論能力の学習効率であって推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2610.02819",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.16289",
+      "identity_tokens": [
+        "arXiv:2610.16289"
+      ],
+      "title": "Fast Quantized Johnson$-$Lindenstrauss Transforms",
+      "reason": "本論文はKVキャッシュ圧縮に使われる量子化Johnson-Lindenstrauss変換（QJL）についてランダム化Hadamard変換の合成による高速な構成と埋め込み次元・実行時間の保証を与える理論研究であり、対象は推論機構に直結するが実装や推論ワークロードでの評価がないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2610.16289",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.28819",
+      "identity_tokens": [
+        "arXiv:2610.28819"
+      ],
+      "title": "LIFT: Scoped Constraints for Evaluating and Training Instruction Following",
+      "reason": "LIFTは文書作成タスクに範囲付き制約を設けた指示追従ベンチマークとその学習用データの提示であり、対象は言語モデルの能力評価と学習であってLLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2610.28819",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.04327",
+      "identity_tokens": [
+        "arXiv:2611.04327"
+      ],
+      "title": "Anchor: Augmented Cross-Layer Recurrent State for Long-Context Retrieval in Test-Time Training",
+      "reason": "Anchorはスライディングウィンドウ注意とテスト時学習を混成した線形化Transformerについて、再帰状態をアンカー層だけに配置し層間で共有することで状態を10分の1にし、softmax注意比でエンドツーエンドレイテンシを最大4.3倍削減する長文脈推論の効率化手法であり、注意機構と実行時メモリへの直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2611.04327",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.00057",
+      "identity_tokens": [
+        "arXiv:2406.00057"
+      ],
+      "title": "Toward Conversational Agents with Context and Time Sensitive Long-term Memory",
+      "reason": "本論文は長期会話からの時間・出来事ベース検索のためのデータセットと、表検索とベクトル検索を組み合わせた検索拡張生成モデルを提示する会話エージェント研究であり、対象は会話検索の精度であって推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2406.00057",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2107.08687",
+      "identity_tokens": [
+        "arXiv:2107.08687"
+      ],
+      "title": "Long-term series forecasting with Query Selector - efficient model of sparse attention",
+      "reason": "Query Selectorは時系列予測向けに決定論的な疎注意行列を構成する効率的アルゴリズムだが、評価対象はETT等の予測データセットのモデルであり、LLM推論への適用や推論システムとしての測定は示されていないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2107.08687",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2008.01547",
+      "identity_tokens": [
+        "arXiv:2008.01547"
+      ],
+      "title": "TensorCoder: Dimension-Wise Attention via Tensor Representation for Natural Language Modeling",
+      "reason": "TensorCoderは次元方向の注意で注意計算の複雑度をO(N^2 d)からO(N d^2)へ下げる言語モデリング手法だが、対象はBERT時代のマスク言語モデリングと機械翻訳の小型モデルであり、現在のLLM推論での評価はないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2008.01547",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s13636-023-00293-8",
+      "identity_tokens": [
+        "DOI:10.1186/s13636-023-00293-8"
+      ],
+      "title": "Multi-task deep cross-attention networks for far-field speaker verification and keyword spotting",
+      "reason": "MTCANetは遠距離音声でのキーワードスポッティングと話者照合を深い交差注意で同時に行う音声アシスタント向けモデルであり、対象は音声トリガーの認識精度であってLLM推論システムとは無関係である。",
+      "source_url": "https://doi.org/10.1186/s13636-023-00293-8",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3609510.3609815",
+      "identity_tokens": [
+        "DOI:10.1145/3609510.3609815"
+      ],
+      "title": "Improving Throughput-oriented Generative Inference with CPUs",
+      "reason": "本論文はGPU・DRAM・NVMeを使うスループット指向のLLM生成推論について、重み転送が律速であることを分析しCPUを計算デバイスとして重み転送と計算を重ねることでスループットと総レイテンシを約40%改善する手法であり、オフロード型推論への直接貢献が確認できる。",
+      "source_url": "https://doi.org/10.1145/3609510.3609815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.04234",
+      "identity_tokens": [
+        "arXiv:2511.04234"
+      ],
+      "title": "Reusing Pre-Training Data at Test Time is a Compute Multiplier",
+      "reason": "本論文は事前学習データへの検索拡張をテスト時に用いることで事前学習のデータ効率を定量化する研究であり、MMLU等の精度向上を示す能力・データ分析であって推論システムの効率化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2511.04234",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.07585",
+      "identity_tokens": [
+        "arXiv:2303.07585"
+      ],
+      "title": "Input-length-shortening and text generation via attention values",
+      "reason": "本論文はBERTの第1層の注意和でトークンを選別し入力長を約6%まで短縮して分類精度を保つ手法を示すが、対象はBERTによるテキスト分類というエンコーダ時代の入力削減であり、LLMのプロンプト圧縮や推論システムとしての評価にはつながっていないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2303.07585",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 465
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.10078",
+      "identity_tokens": [
+        "arXiv:2507.10078"
+      ],
+      "title": "Compression Method for Deep Diagonal State Space Model Based on H2 Optimal Reduction",
+      "reason": "本論文は制御理論のH2最適モデル低次元化を深層の対角状態空間モデルへ適用しパラメータを32分の1へ圧縮する手法だが、評価はLRAベンチマークの系列モデルでありLLM推論への適用は示されていないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2507.10078",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 466
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11228409",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11228409"
+      ],
+      "title": "RL-Pruner: Retraining-Free Global Exploration Pruning Method Based on Reinforcement Learning",
+      "reason": "RL-Prunerは強化学習でマスク配置を全域探索する再学習不要の構造化剪定をBERTとDistilBERTへ適用する手法であり、剪定による推論効率化の機構はあるが対象が小型エンコーダモデルのGLUE・SQuAD評価に限られるため境界とする。",
+      "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11228409",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 467
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2212.07771",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2212.07771"
+      ],
+      "title": "Put Attention to Temporal Saliency Patterns of Multi-Horizon Time Series",
+      "reason": "TSDは注意機構で時間的顕著性パターンを符号化する多期間時系列予測アーキテクチャであり、対象は時系列予測の精度と説明可能性であってLLM推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2212.07771",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 468
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.00340",
+      "identity_tokens": [
+        "arXiv:2302.00340"
+      ],
+      "title": "Attention Link: An Efficient Attention-Based Low Resource Machine Translation Architecture",
+      "reason": "Attention Linkは低資源のニューラル機械翻訳でTransformerの性能を上げるアーキテクチャ改変であり、評価は翻訳タスクのBLEUが中心で、推論効率の機構やLLM推論への適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2302.00340",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.03718",
+      "identity_tokens": [
+        "arXiv:2504.03718"
+      ],
+      "title": "Task-Aware Parameter-Efficient Fine-Tuning of Large Pre-Trained Models at the Edge",
+      "reason": "TaskEdgeは重みと活性化からパラメータ重要度を測り課題固有パラメータだけを更新するエッジ向けパラメータ効率微調整の枠組みであり、主題は微調整の計算・メモリ削減であって推論の高速化はスパース化統合による付随効果に留まる。",
+      "source_url": "https://arxiv.org/abs/2504.03718",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 470
+    }
+  ],
+  "parent_run_key": "muse-20261125-d08-b02",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

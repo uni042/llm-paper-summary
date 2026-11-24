@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d08-b01::chunk-0001-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.11308",
+      "identity_tokens": [
+        "arXiv:2408.11308"
+      ],
+      "title": "Defending Against Jailbreak Through Early Exit Generation of Large Language Models",
+      "reason": "EEG-Defenderは初期層の埋め込みで悪性入力を検出し生成を早期終了させるジェイルブレイク防御であり、early exitは推論効率化ではなく攻撃成功率の低減を目的に使われており、LLM推論システムへの技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2408.11308",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 401
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.18130",
+      "identity_tokens": [
+        "arXiv:2508.18130"
+      ],
+      "title": "Frozen in Time: Parameter-Efficient Time Series Transformers via Reservoir-Induced Feature Expansion and Fixed Random Dynamics",
+      "reason": "タイトル自体が凍結したランダム特徴（リザバー）ブロックを挟む時系列予測Transformer（FreezeTST）による長期予測を明示しており、時系列予測タスクの応用研究であってLLM推論システムとは無関係である。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2508.18130",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 402
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CASES60062.2024.00008",
+      "identity_tokens": [
+        "DOI:10.1109/CASES60062.2024.00008"
+      ],
+      "title": "What do Transformers have to learn from Biological Spiking Neural Networks?",
+      "reason": "本論文はスパイキングニューラルネットワークと線形再帰・状態空間モデルの類似からエネルギー効率の高い言語モデルへの道筋を探る教育セッションの拡張要旨であり、推論のエネルギー効率という方向性には関わるが具体的な推論機構や評価を提示していないため境界とする。",
+      "source_url": "https://doi.org/10.1109/CASES60062.2024.00008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 403
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/SLT54892.2023.10023097",
+      "identity_tokens": [
+        "DOI:10.1109/SLT54892.2023.10023097"
+      ],
+      "title": "Untied Positional Encodings for Efficient Transformer-Based Speech Recognition",
+      "reason": "Scaled Untied RPEはConformer系音声認識の自己注意における位置相関と特徴相関を分離しレイテンシを最大50.9%削減する位置符号化であるが、対象はLLMではなく音声認識エンコーダの推論であり、推論システムへの貢献は間接的なため境界とする。",
+      "source_url": "https://doi.org/10.1109/SLT54892.2023.10023097",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 404
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.13407",
+      "identity_tokens": [
+        "arXiv:2405.13407"
+      ],
+      "title": "Dynamic Context Adaptation and Information Flow Control in Transformers: Introducing the Evaluator Adjuster Unit and Gated Residual Connections",
+      "reason": "Evaluator Adjuster UnitとGated Residual Connectionsは文脈適応と情報フロー制御のためのTransformerアーキテクチャ改変であり、評価はNLPベンチマークの適応性が中心で、推論時の計算・メモリ効率への具体的な機構や測定は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2405.13407",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 405
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.07422",
+      "identity_tokens": [
+        "arXiv:2502.07422"
+      ],
+      "title": "MoENAS: Mixture-of-Expert based Neural Architecture Search for jointly Accurate, Fair, and Robust Edge Deep Neural Networks",
+      "reason": "MoENASは混合エキスパートを探索空間とするニューラルアーキテクチャ探索で、画像分類用エッジDNNの精度・公平性・頑健性を改善する設計手法であり、MoE推論の実行時機構やLLM推論システムへの貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2502.07422",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 406
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.12315",
+      "identity_tokens": [
+        "arXiv:2504.12315"
+      ],
+      "title": "Capybara-OMNI: An Efficient Paradigm for Building Omni-Modal Language Models",
+      "reason": "Capybara-OMNIはテキスト・画像・動画・音声を理解するオムニモーダル言語モデルを軽量に学習するためのデータ構築と学習レシピの提示であり、マルチモーダルモデルの学習・能力構築が主題で推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2504.12315",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 407
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.00141",
+      "identity_tokens": [
+        "arXiv:2509.00141"
+      ],
+      "title": "Scaling Legal AI: Benchmarking Mamba and Transformers for Statutory Classification and Case Law Retrieval",
+      "reason": "タイトル自体が法令分類と判例検索という法律AI応用におけるMambaとTransformerのベンチマークを明示しており、法律文書タスクの能力比較が主題であってLLM推論システムの技術ではない。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2509.00141",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 408
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IITCEE64140.2025.10915299",
+      "identity_tokens": [
+        "DOI:10.1109/IITCEE64140.2025.10915299"
+      ],
+      "title": "Analysis of optimization Techniques for Dynamic Neural Networks",
+      "reason": "本論文はDistilBERTやViT等の動的ニューラルネットワークに対する最適化技法を実証分析しスループット29%改善やGPU使用量61%削減を報告するが、対象は小型エンコーダ・視覚モデルで新規機構の提案ではなく、LLM推論への適用は示されていないため境界とする。",
+      "source_url": "https://doi.org/10.1109/IITCEE64140.2025.10915299",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 409
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/KSE68178.2025.11309551",
+      "identity_tokens": [
+        "DOI:10.1109/KSE68178.2025.11309551"
+      ],
+      "title": "Optimizing LLM with FP8",
+      "reason": "本論文はFP8の層別特化（MLPへE4M3、注意のクエリ・キーパスへE5M2）を提案しLlama系モデルでメモリ削減を狙う量子化研究であり推論量子化に関連するが、確認できた要旨範囲では評価の中心が学習実行でありサービングでの推論利得は直接示されていないため境界とする。",
+      "source_url": "https://doi.org/10.1109/KSE68178.2025.11309551",
+      "body_check": "abstract_screen_only (partial, via secondary listing; Crossref/OpenAlex/publisher abstract unavailable); body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3797161.3797162",
+      "identity_tokens": [
+        "DOI:10.1145/3797161.3797162"
+      ],
+      "title": "Emotional Semantic Generation: Enhancing Long-Range Emotional Coherence in LLMs",
+      "reason": "Emotional Semantic Generationは感情ブロックと意味ブロックでTransformerに長距離の感情的一貫性と文学的表現を持たせる生成枠組みであり、対象はテキスト生成の表現品質であって推論時の計算・メモリ効率への貢献は確認できない。",
+      "source_url": "https://doi.org/10.1145/3797161.3797162",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 411
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2410.14485",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2410.14485"
+      ],
+      "title": "CaTs and DAGs: Integrating Directed Acyclic Graphs with Transformers and Fully-Connected Neural Networks for Causally Constrained Predictions",
+      "reason": "Causal Transformersは有向非循環グラフで指定された因果制約を満たすようTransformerと全結合ネットを設計するモデルクラスであり、主題は因果構造への頑健性と解釈可能性であって推論システムの効率化機構ではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2410.14485",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 412
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.08711",
+      "identity_tokens": [
+        "arXiv:2410.08711"
+      ],
+      "title": "On-Chip Learning via Transformer In-Context Learning",
+      "reason": "本論文は自己注意を局所シナプス可塑性とみなしLoihi 2ニューロモルフィックチップ上でTransformerの文脈内学習を実演するもので、オンチップ実行というオンデバイス推論との接点はあるが、貢献の中心は少数ショット分類でのオンチップ学習の実証であり推論効率の機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2410.08711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 413
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.21723",
+      "identity_tokens": [
+        "arXiv:2507.21723"
+      ],
+      "title": "Detection Transformers Under the Knife: A Neuroscience-Inspired Approach to Ablations",
+      "reason": "本論文はDETR系の検出Transformerのクエリ埋め込みや注意層を神経科学式にアブレーションしてCOCOでの役割を分析する解釈可能性研究であり、物体検出モデルの分析であってLLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2507.21723",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 414
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.05943",
+      "identity_tokens": [
+        "arXiv:2510.05943"
+      ],
+      "title": "EARL: Efficient Agentic Reinforcement Learning Systems for Large Language Models",
+      "reason": "EARLはエージェント強化学習の学習段階に応じて並列化を切り替え中間データの配置を最適化する学習システムであり、スループット改善の対象はLLMの事後学習パイプラインであって、推論サービングへの具体的な適用は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2510.05943",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 415
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00724",
+      "identity_tokens": [
+        "arXiv:2512.00724"
+      ],
+      "title": "UMM-RM: An Upcycle-and-Merge MoE Reward Model for Mitigating Reward Hacking",
+      "reason": "UMM-RMはSFTチェックポイントのFFNを共有・ルーティングエキスパートへアップサイクルし単一の稠密報酬モデルへ統合する報酬ハッキング対策であり、主題はRLHFの報酬モデリングの頑健性であって推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2512.00724",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 416
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04726",
+      "identity_tokens": [
+        "arXiv:2601.04726"
+      ],
+      "title": "Memory Matters More: Event-Centric Memory as a Logic Map for Agent Searching and Reasoning",
+      "reason": "CompassMemはエージェントの経験をイベントグラフとして組織化し論理関係に基づく検索で長期推論を支援するメモリ枠組みであり、対象はエージェントの記憶・検索品質であってLLM推論の実行時メモリやサービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2601.04726",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 417
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.04853",
+      "identity_tokens": [
+        "arXiv:2604.04853"
+      ],
+      "title": "MemMachine: A Ground-Truth-Preserving Memory System for Personalized AI Agents",
+      "reason": "MemMachineは会話エピソードを原形のまま保持する個人化エージェント向けメモリシステムで、Mem0比で入力トークンを約80%削減する効率面の測定もあるが、貢献の中心は記憶の保持・検索精度であり推論ランタイムの機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2604.04853",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 418
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20064",
+      "identity_tokens": [
+        "arXiv:2607.20064"
+      ],
+      "title": "PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning",
+      "reason": "PRO-LONGは対話履歴の完全な構造化ログをプログラム的に検索するエージェント向け文脈管理で、ベースライン比4.2〜5.8倍少ないトークン使用を報告するが、対象はエージェントハーネスの文脈管理でありサービングやデコードの機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2607.20064",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 419
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22721",
+      "identity_tokens": [
+        "arXiv:2605.22721"
+      ],
+      "title": "Self-Evolving Multi-Agent Systems via Decentralized Memory",
+      "reason": "DecentMemは各エージェントが活用・探索の二つのメモリプールを持つ分散型メモリ枠組みで自己進化型マルチエージェントの精度改善が主題であり、トークン削減は副次的結果でLLM推論システムの機構への貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2605.22721",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 420
+    }
+  ],
+  "parent_run_key": "muse-20261125-d08-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

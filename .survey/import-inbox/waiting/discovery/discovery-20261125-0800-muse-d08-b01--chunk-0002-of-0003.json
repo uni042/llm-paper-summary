@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d08-b01::chunk-0002-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.21567",
+      "identity_tokens": [
+        "arXiv:2512.21567"
+      ],
+      "title": "Beyond Heuristics: A Decision-Theoretic Framework for Agent Memory Management",
+      "reason": "DAMはエージェントのメモリ管理を不確実性下の逐次意思決定として再定式化する決定理論的枠組みであり、著者らも新規アルゴリズムではないと明示する概念整理であって、推論システムへの技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2512.21567",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 421
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00503",
+      "identity_tokens": [
+        "arXiv:2603.00503"
+      ],
+      "title": "M2: Dual-Memory Augmentation for Long-Horizon Web Agents via Trajectory Summarization and Insight Retrieval",
+      "reason": "M2は軌跡要約による内部メモリと洞察検索による外部メモリでWebエージェントの文脈を圧縮し、トークンを58.7%削減しつつ成功率を上げる枠組みだが、対象はエージェントの文脈効率であり推論サービングの機構そのものではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2603.00503",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 422
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22767",
+      "identity_tokens": [
+        "arXiv:2608.22767"
+      ],
+      "title": "The Retriever Should Remember: Experience-Amortized Reranking for Long-Term Agent Memory",
+      "reason": "EARMは過去のLLMリランカの関連性スコアを行列補完で再利用し、候補の17.5%への直接スコアリングでリランキングの推論オーバーヘッドを下げる枠組みであり、推論コスト削減の機構は具体的だが対象がエージェント記憶の検索リランキングに限られるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2608.22767",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 423
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00861",
+      "identity_tokens": [
+        "arXiv:2602.00861"
+      ],
+      "title": "Multi-Head Attention Is a Multi-Player Game",
+      "reason": "本論文は複数ヘッド注意をポテンシャルゲームとして定式化しPrice of Anarchyで幻覚とヘッド冗長性を結びつける理論研究とGAME-LoRAによる幻覚低減であり、対象は学習と出力品質の理論であって推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2602.00861",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 424
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.04929",
+      "identity_tokens": [
+        "arXiv:2604.04929"
+      ],
+      "title": "Rethinking Model Efficiency: Multi-Agent Inference with Large Models",
+      "reason": "本論文は出力トークン数がVLMのエンドツーエンドレイテンシのボトルネックであることを分析し、小規模モデルの推論トークンを再利用するマルチエージェント推論枠組みを提案するが、仕組みはモデル間の応答再利用という推論時編成に留まりランタイム機構の提案ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2604.04929",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 425
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15657",
+      "identity_tokens": [
+        "arXiv:2607.15657"
+      ],
+      "title": "Do Agents Dream of False Memories? Black-box Visual Attacks on Long-term Memory in Multimodal AI Agents",
+      "reason": "Lucidはマルチモーダルエージェントの長期記憶に対するブラックボックス視覚攻撃で、記憶ポイズニングと記憶注入の攻撃成功率を示すセキュリティ研究であり、推論システムの効率化への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2607.15657",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 426
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2607.04676",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2607.04676"
+      ],
+      "title": "Adaptive Space-efficient Collectives for Dynamic and Unstructured Sparsity on GPU Platforms",
+      "reason": "本論文はビットベクタ形式Piciによる疎なペイロードの圧縮・展開をGPU上で行い、疎性に応じて表現を切り替えるall-gather／reduce-scatter／all-reduce集合通信を実装し、99%疎性でNCCL比最大5.25倍の高速化と深層学習アプリの26%高速化を示しており、分散推論を含むGPU通信への直接貢献が確認できる。",
+      "source_url": "https://doi.org/10.48550/arXiv.2607.04676",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 427
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06787",
+      "identity_tokens": [
+        "arXiv:2606.06787"
+      ],
+      "title": "AdMem: Advanced Memory for Task-solving Agents",
+      "reason": "AdMemは意味・手続き・エピソード記憶を二層構造で統合し報酬に基づく統合・剪定を行うタスク解決エージェント向けメモリ枠組みであり、主題はエージェントの長期タスク成功率であってLLM推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2606.06787",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 428
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14086",
+      "identity_tokens": [
+        "arXiv:2607.14086"
+      ],
+      "title": "Leveraging unlabelled data for generalizable neural population decoding",
+      "reason": "タイトル自体がラベルなしデータを用いる汎化可能な神経集団デコーディング（脳信号からの読み出し）を明示しており、ブレイン・コンピュータ・インターフェース向けの神経科学応用であってLLM推論システムとは無関係である。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2607.14086",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 429
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.22276",
+      "identity_tokens": [
+        "arXiv:2610.22276"
+      ],
+      "title": "MJev-Spatial: System One Spatial Intelligence via Native Attention Matching",
+      "reason": "MJev-Spatialは空間理解タスクを候補スコアリングによる分類として単一フォワードパスで解き自己回帰デコードを回避して2.5〜5.6倍高速化するVLMの推論方式だが、対象が空間知能タスク専用の意思決定モデルであり汎用のLLMデコード機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2610.22276",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 430
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.04259",
+      "identity_tokens": [
+        "arXiv:2210.04259"
+      ],
+      "title": "Linear attention coupled Fourier neural operator for simulation of three-dimensional turbulence",
+      "reason": "LAFNOは線形注意とフーリエニューラルオペレータを組み合わせて三次元乱流シミュレーションの誤差を削減する科学計算モデルであり、線形注意は流体シミュレーションの道具として使われておりLLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2210.04259",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 431
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.18512",
+      "identity_tokens": [
+        "arXiv:2501.18512"
+      ],
+      "title": "Streaming DiLoCo with overlapping communication: Towards a Distributed Free Lunch",
+      "reason": "Streaming DiLoCoはパラメータ部分集合の逐次同期、同期と学習の重なり、交換データの量子化で分散学習の必要帯域を2桁削減する学習アルゴリズムであり、対象はLLMの分散学習であって推論への具体的適用は確認できない。",
+      "source_url": "https://arxiv.org/abs/2501.18512",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 432
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.03792",
+      "identity_tokens": [
+        "arXiv:2406.03792"
+      ],
+      "title": "Light-PEFT: Lightening Parameter-Efficient Fine-Tuning via Early Pruning",
+      "reason": "Light-PEFTは基盤モデルとPEFTモジュールの冗長パラメータを学習初期に剪定して微調整の効率を上げる枠組みであり、主題はファインチューニングの学習効率で、推論高速化は剪定の副次的効果に留まる。",
+      "source_url": "https://arxiv.org/abs/2406.03792",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 433
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.24940",
+      "identity_tokens": [
+        "arXiv:2510.24940"
+      ],
+      "title": "SemCoT: Accelerating Chain-of-Thought Reasoning through Semantically-Aligned Implicit Tokens",
+      "reason": "SemCoTは推論ステップを意味的に整合した暗黙トークンへ蒸留し、軽量な生成器で暗黙推論トークン自体の生成コストも下げることでChain-of-Thoughtの生成トークン数と生成時間を直接削減する手法であり、デコード効率化への直接貢献が要旨で確認できる。",
+      "source_url": "https://arxiv.org/abs/2510.24940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 434
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23866",
+      "identity_tokens": [
+        "arXiv:2509.23866"
+      ],
+      "title": "Efficient Multi-turn RL for GUI Agents via Decoupled Training and Adaptive Data Curation",
+      "reason": "DARTはGUIエージェントの強化学習を環境クラスタ・ロールアウト・データ管理・学習の非同期モジュールへ分離する学習フレームワークであり、効率化の対象はエージェントRLの学習パイプラインであって推論サービングではない。",
+      "source_url": "https://arxiv.org/abs/2509.23866",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 435
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.09115",
+      "identity_tokens": [
+        "arXiv:2101.09115"
+      ],
+      "title": "The heads hypothesis: A unifying statistical approach towards understanding multi-headed attention in BERT",
+      "reason": "本論文はBERTの注意ヘッドの機能的役割を仮説検定付きスコアで統計的に分析する解釈研究であり、対象はエンコーダモデルの理解であってLLM推論システムの効率化機構への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2101.09115",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 436
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02472",
+      "identity_tokens": [
+        "arXiv:2610.02472"
+      ],
+      "title": "APDMem: Agent-Controlled Progressive Disclosure for Query-Adaptive Long-Term Memory",
+      "reason": "APDMemは会話履歴を要約から生メッセージまでの4層で保持し、推論時に必要に応じて深掘りする段階的開示型の検索で全体の8%の参照に留める長期記憶アーキテクチャだが、対象は個人化アシスタントの記憶検索であり推論ランタイムの機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2610.02472",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 437
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.00466",
+      "identity_tokens": [
+        "arXiv:2502.00466"
+      ],
+      "title": "EDELINE: Enhancing Memory in Diffusion-based World Models via Linear-Time Sequence Modeling",
+      "reason": "EDELINEは状態空間モデルと拡散モデルを統合した世界モデルでAtariやCrafter等の強化学習環境の予測性能を競う研究であり、対象はRLエージェントの環境モデリングであってLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2502.00466",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 438
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3685800.3685832",
+      "identity_tokens": [
+        "DOI:10.14778/3685800.3685832"
+      ],
+      "title": "DLRover-RM: Resource Optimization for Deep Recommendation Models Training in the cloud",
+      "reason": "DLRover-RMは推薦モデルの学習ジョブについて資源・性能モデルと3段階ヒューリスティクスでクラウド資源配分を自動調整する弾性学習フレームワークであり、対象はDLRMの学習基盤であって推論サービングではない。",
+      "source_url": "https://doi.org/10.14778/3685800.3685832",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 439
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.19301",
+      "identity_tokens": [
+        "arXiv:2406.19301"
+      ],
+      "title": "MCNC: Manifold-Constrained Reparameterization for Neural Compression",
+      "reason": "MCNCはパラメータ空間を低次元の凍結した非線形多様体へ拘束するモデル圧縮法で高い圧縮率を示すが、評価は画像・言語タスク全般の圧縮と再構成時間であり、推論時のメモリ・レイテンシへの適用を具体的に示していないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2406.19301",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 440
+    }
+  ],
+  "parent_run_key": "muse-20261125-d08-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}
