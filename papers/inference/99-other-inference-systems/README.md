@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1468本）
+## 自動生成の論文一覧（1472本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3030,6 +3030,10 @@
   実装：[✓](https://github.com/ShengxuanQiu/HyPER) ・ リポジトリ内被引用：0  
   経路プールの信頼度と多様さを64トークンごとに観測して分岐・短区間拡張・1トークン精錬を使い分ける学習なしの制御と、長さと信頼度による最終投票で、Qwen3-NextのAIME24正解率を自己整合の90.7%から97.3%へ上げ、トークン費用を正規化値0.61まで下げた。
 
+- **2026-02 · [Greedy-Gnorm: A Gradient Matrix Norm-Based Alternative to Attention Entropy for Head Pruning](2026-2602.04491-greedy-gnorm-a-gradient-matrix-norm-based-alternative-to-attention-entro.md)**  
+  実装：[✓](https://github.com/dionysus23334/Greedy-Gnorm) ・ リポジトリ内被引用：0  
+  ヘッドを1つ削るたびにクエリ・キー・バリュー勾配行列のノルムの積で重要度を計算し直す貪欲なヘッド枝刈りで、静的な注意エントロピーより滑らかな精度低下を実現し、BERTの容量を22.52パーセント削減する。
+
 - **2026-02 · [Greedy Multi-Path Block Verification for Faster Decoding in Speculative Sampling](2026-2602.16961-greedy-multi-path-block-verification-for-faster-decoding-in-speculative-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常の方式は、草稿の先頭付近に受理されにくいトークンがあると、その後の候補が正しくても利用できない。A100 80GB上のOPT-6.7B/350MおよびOPT-6.7B/125Mでは、草稿長L=8、経路数K=3により、K=1のBVに対してトークン当たり実時間を6条件平均13.34%削減した。
@@ -3130,6 +3134,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   専門家の重みを暗号化された選択で1つだけ取り出してから計算することで、選択結果をサーバへ漏らさずに疎性を保ち、秘密保持推論の通信を最大約29.8倍減らした安全な専門家混合推論の研究。
 
+- **2026-01 · [Scalable Generative Game Engine: Breaking the Resolution Wall via Hardware-Algorithm Co-Design](2026-2602.00608-scalable-generative-game-engine-breaking-the-resolution-wall-via-hardwar.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  世界モデルとデコーダの律速の違いに合わせてアクセラレータ配分・演算子融合・潜在外挿を設計し、生成ゲームの解像度を720かける480へ引き上げて毎秒26.4フレームを達成する協調設計。
+
 - **2026-01 · [S3-Attention:Attention-Aligned Endogenous Retrieval for Memory-Bounded Long-Context Inference](2026-2601.17702-s3-attention-attention-aligned-endogenous-retrieval-for-memory-bounded-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   キーとクエリの射影を疎な自動符号化器で離散特徴へ変えて中央処理装置上に転置索引を作りキャッシュを捨てることで画像処理装置のメモリを一定に保ち、統一評価で八十億級モデルの平均得点二四・八七、全文脈二五・〇一に対する保持率九九・四パーセントを語彙照合との融合で達成した。
@@ -3190,6 +3198,10 @@
   実装：[✓](https://github.com/deeplearning-wisc/ModeX) ・ リポジトリ内被引用：0  
   しかし従来は、正解と照合できる数学問題なら多数決が使える一方、自由記述の要約やプログラムでは文字列の一致が品質を表さない。別の大規模言語モデルを採点器として呼ぶ方式は、その採点器の推論費用と誤判定を持ち込む。
 
+- **2026-01 · [Mixture-of-Models: Unifying Heterogeneous Agents via N-Way Self-Evaluating Deliberation](2026-2601.16863-mixture-of-models-unifying-heterogeneous-agents-via-n-way-self-evaluatin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  異種LLMの編成を合意状態が回帰する意味的回帰ネットワークとして実行する審議プロトコルNSEDを提案し、ブローカーによる制約付きチーム編成、自己投票を禁じる二次投票、疲労モデルによる最適停止を備え、小型モデルの編成でAIME 2025の84.0パーセントを示す。
+
 - **2026-01 · [MI-PRUN: Optimize Large Language Model Pruning via Mutual Information](2026-2601.07212-mi-prun-optimize-large-language-model-pruning-via-mutual-information.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ブロック前後の隠れ状態の相互情報量で冗長な層を見分け、連続ブロック単位の反復入れ替えで削除組合せを大域的に磨く枝刈り方式で、従来法より小さい品質低下で層を削減した。
@@ -3249,6 +3261,10 @@
 - **2026-01 · [Context Tokens are Anchors: Understanding the Repetition Curse in dMLLMs from an Information Flow Perspective](2026-2601.20520-context-tokens-are-anchors-understanding-the-repetition-curse-in-dmllms-.md)**  
   実装：[✓](https://github.com/ErikZ719/CoTA) ・ リポジトリ内被引用：0  
   拡散型マルチモーダルモデルでキャッシュが引き起こす反復現象を、文脈トークンがアンカーであるという情報フロー分析で説明し、注意強化とエントロピー誘導投票のCoTAで隣接反復率を大幅に減らした研究。
+
+- **2026-01 · [Conditional Performance Guarantee for Large Reasoning Models](2026-2601.22790-conditional-performance-guarantee-for-large-reasoning-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論モデルと非思考モデルの振り分け保証を全体平均から集団単位へ細かくし、集団ごとに閾値を較正するG-PACと不確かさのクラスタリングで集団を学ぶC-PACで、集団ごとの性能損失を許容範囲に収めながら思考トークンを節約する統計的枠組み。
 
 - **2026-01 · [CAPA: Contribution-Aware Pruning and FFN Approximation for Efficient Large Vision-Language Models](2026-2602.00247-capa-contribution-aware-pruning-and-ffn-approximation-for-efficient-larg.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

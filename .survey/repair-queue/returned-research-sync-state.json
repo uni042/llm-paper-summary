@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c59af338f8f56adba2eaa606a19e14677e0647a4",
+  "base_commit": "2588bb898a93177d16fbab0082dc2e3a6eb65566",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -557,6 +557,7 @@
     "2026-2601.14910-synperf-a-hybrid-analytical-ml-framework-for-gpu-performance-prediction.json",
     "2026-2601.15296-entropy-tree-tree-based-decoding-with-entropy-guided-exploration.json",
     "2026-2601.15380-you-need-better-attention-priors.json",
+    "2026-2601.16863-mixture-of-models-distributed-inference-over-heterogeneous-llms-as-model-level-mixture-of-experts.json",
     "2026-2601.17702-s3-attention-attention-aligned-endogenous-retrieval-for-memory-bounded-long-context-inference.json",
     "2026-2601.17902-dllm-asr-a-faster-diffusion-llm-based-framework-for-speech-recognition.json",
     "2026-2601.19001-frost-filtering-reasoning-outliers-with-attention-for-efficient-reasoning.json",
@@ -574,16 +575,19 @@
     "2026-2601.22563-eugens-efficient-unified-and-general-dense-layers.json",
     "2026-2601.22617-entrocut-entropy-guided-adaptive-truncation-for-efficient-chain-of-thought-reasoning-in-small-scale-large-reasoning-models.json",
     "2026-2601.22787-float8-2bits-entropy-coding-enables-data-free-model-compression.json",
+    "2026-2601.22790-conditional-performance-guarantee-for-large-reasoning-models.json",
     "2026-2601.22959-triage-hierarchical-visual-budgeting-for-efficient-video-reasoning-in-vision-language-models.json",
     "2026-2601.23182-fouriersampler-unlocking-non-autoregressive-potential-in-diffusion-language-models.json",
     "2026-2602.00165-benfords-law-as-a-distributional-prior-for-post-training-quantization.json",
     "2026-2602.00247-capa-contribution-aware-pruning-and-ffn-approximation-for-efficient-large-vision-language-models.json",
+    "2026-2602.00608-scalable-generative-game-engine-breaking-the-resolution-wall-via-hardware-algorithm-co-design.json",
     "2026-2602.01744-softmax-linear-attention-reclaiming-global-competition.json",
     "2026-2602.01901-q-cache-visual-attention-is-valuable-in-less-than-half-of-decode-layers-for-multimodal.json",
     "2026-2602.02071-baps-a-fine-grained-low-precision-scheme-for-softmax-in-attention-via-block-aware-precision-rescaling.json",
     "2026-2602.02126-two-stage-grid-optimization-for-group-wise-quantization-of-llms.json",
     "2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-quantization.json",
     "2026-2602.02159-focus-dllm-accelerating-long-context-diffusion-llm-inference-via-confidence-guided-context-focusing.json",
+    "2026-2602.02199-more-than-a-quick-glance-overcoming-the-greedy-bias-in-kv-cache-compression.json",
     "2026-2602.02538-enhancing-post-training-quantization-via-future-activation-awareness.json",
     "2026-2602.02711-dynamic-mixed-precision-routing-for-efficient-multi-step-llm-interaction.json",
     "2026-2602.02988-nli-non-uniform-linear-interpolation-approximation-of-nonlinear-operators.json",
@@ -591,6 +595,7 @@
     "2026-2602.03134-swiftvlm-efficient-vision-language-model-inference-via-cross-layer-token-bypass.json",
     "2026-2602.03295-pop-prefill-only-pruning-for-efficient-large-model-inference.json",
     "2026-2602.03359-meki-memory-based-expert-knowledge-injection-for-efficient-llm-scaling.json",
+    "2026-2602.04491-greedy-gnorm-a-gradient-matrix-norm-based-alternative-to-attention-entropy-for-head-pruning.json",
     "2026-2602.06127-compressing-llms-with-mop-mixture-of-pruners.json",
     "2026-2602.06412-stopping-computation-for-converged-tokens-in-masked-diffusion-lm-decoding.json",
     "2026-2602.06454-relaygen-intra-generation-model-switching-for-efficient-reasoning.json",
@@ -53041,6 +53046,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2601.16863": {
+      "order": [
+        "2026-11-24T04:37:17+00:00",
+        "2026-2601.16863-mixture-of-models-distributed-inference-over-heterogeneous-llms-as-model-level-mixture-of-experts.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.22790": {
+      "order": [
+        "2026-11-24T04:38:49+00:00",
+        "2026-2601.22790-conditional-performance-guarantee-for-large-reasoning-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.00608": {
+      "order": [
+        "2026-11-24T04:40:22+00:00",
+        "2026-2602.00608-scalable-generative-game-engine-breaking-the-resolution-wall-via-hardware-algorithm-co-design.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.02199": {
+      "order": [
+        "2026-11-24T04:41:55+00:00",
+        "2026-2602.02199-more-than-a-quick-glance-overcoming-the-greedy-bias-in-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.04491": {
+      "order": [
+        "2026-11-24T04:43:28+00:00",
+        "2026-2602.04491-greedy-gnorm-a-gradient-matrix-norm-based-alternative-to-attention-entropy-for-head-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67274,6 +67324,21 @@
     "arxiv:2601.07839": [
       "papers/inference/99-other-inference-systems/2025-2601.07839-hierarchical-sparse-plus-low-rank-compression-of-llm.md",
       "papers/inference/99-other-inference-systems/2025-2601.07839-hierarchical-sparse-plus-low-rank-compression-of-llm.md"
+    ],
+    "arxiv:2601.16863": [
+      "papers/inference/99-other-inference-systems/2026-2601.16863-mixture-of-models-unifying-heterogeneous-agents-via-n-way-self-evaluatin.md"
+    ],
+    "arxiv:2601.22790": [
+      "papers/inference/99-other-inference-systems/2026-2601.22790-conditional-performance-guarantee-for-large-reasoning-models.md"
+    ],
+    "arxiv:2602.00608": [
+      "papers/inference/99-other-inference-systems/2026-2602.00608-scalable-generative-game-engine-breaking-the-resolution-wall-via-hardwar.md"
+    ],
+    "arxiv:2602.02199": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2602.02199-more-than-a-quick-glance-overcoming-the-greedy-bias-in-kv-cache-compress.md"
+    ],
+    "arxiv:2602.04491": [
+      "papers/inference/99-other-inference-systems/2026-2602.04491-greedy-gnorm-a-gradient-matrix-norm-based-alternative-to-attention-entro.md"
     ]
   }
 }
