@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-11-24T01:20:04+00:00",
+  "checked_at": "2026-11-24T01:25:43+00:00",
   "summary": {
-    "total": 5216,
-    "complete": 5213,
-    "incomplete": 3
+    "total": 5221,
+    "complete": 5221,
+    "incomplete": 0
   },
   "families": {
     "inference": {
-      "total": 5177,
-      "complete": 5174
+      "total": 5182,
+      "complete": 5182
     },
     "training": {
       "total": 25,
@@ -21,21 +21,5 @@
       "complete": 14
     }
   },
-  "incomplete": [
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2506.12353-efficient-reasoning-through-suppression-of-self-affirmation-reflections-.md",
-      "canonical_id": "arXiv:2506.12353",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-d58c83365862-amdahl-s-law-for-llms-a-throughput-centric-analysis-of-extreme-llm-quant.md",
-      "canonical_id": "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-1e016ba4edaa-hybridserve-stall-free-distributed-disaggregated-llm-inference-with-hybr.md",
-      "canonical_id": "DOI:10.5220/0014919900004039",
-      "reason": "missing structured reference audit metadata"
-    }
-  ]
+  "incomplete": []
 }

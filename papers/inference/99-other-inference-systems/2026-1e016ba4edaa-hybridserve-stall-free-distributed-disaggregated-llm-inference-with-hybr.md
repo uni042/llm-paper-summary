@@ -1,34 +1,57 @@
 ---
-canonical_id: 'DOI:10.5220/0014919900004039'
+canonical_id: DOI:10.5220/0014919900004039
 title: 'HybridServe: Stall-Free Distributed Disaggregated LLM Inference with Hybrid KVCache Buffering'
-summary: 'HybridServeは、事前入力処理と復号処理を別ノードに分離するLLM推論で、復号側GPUメモリがKVキャッシュで満杯になって前段の計算が停止する問題を、復号ノードのCPU固定メモリを二次バッファにすることで緩和する。前段から復号側へ早期にキャッシュを送る方式を保ちつつ、復号側でGPU／CPUの階層から必要なブロックを取得する。V100を2台使う実機評価では、従来のPush/Pull分離方式比でTTFT最大1.76倍、処理量最大1.57倍を報告する。'
-list_summary: '分離型LLM推論で復号側VRAMとCPU固定メモリをKVキャッシュの二層バッファにし、前段停止とノード間再取得を減らす。'
+summary: HybridServeは、事前入力処理と復号処理を別ノードに分離するLLM推論で、復号側GPUメモリがKVキャッシュで満杯になって前段の計算が停止する問題を、復号ノードのCPU固定メモリを二次バッファにすることで緩和する。前段から復号側へ早期にキャッシュを送る方式を保ちつつ、復号側でGPU／CPUの階層から必要なブロックを取得する。V100を2台使う実機評価では、従来のPush/Pull分離方式比でTTFT最大1.76倍、処理量最大1.57倍を報告する。
+list_summary: 分離型LLM推論で復号側VRAMとCPU固定メモリをKVキャッシュの二層バッファにし、前段停止とノード間再取得を減らす。
 authors:
-  - Yi-Syuan Ke
-  - Zhan-Wei Wu
-  - Chih-Tai Tsai
-  - Sao-Hsuan Lin
-  - Jerry Chou
-published: '2026-05'
-publication: 'Proceedings of the 16th International Conference on Cloud Computing and Services Science (CLOSER 2026), pp. 285-292'
-publication_type: '査読付き国際会議論文'
-publication_status: 'Published'
-doi: '10.5220/0014919900004039'
-source: 'https://www.scitepress.org/PublishedPapers/2026/149199/'
+- Yi-Syuan Ke
+- Zhan-Wei Wu
+- Chih-Tai Tsai
+- Sao-Hsuan Lin
+- Jerry Chou
+published: 2026-05
+publication: Proceedings of the 16th International Conference on Cloud Computing and Services Science (CLOSER 2026), pp. 285-292
+publication_type: 査読付き国際会議論文
+publication_status: Published
+doi: 10.5220/0014919900004039
+source: https://www.scitepress.org/PublishedPapers/2026/149199/
 sources:
-  - 'https://www.scitepress.org/PublishedPapers/2026/149199/'
-  - 'https://www.scitepress.org/publishedPapers/2026/149199/pdf/index.html'
-implementation: 'vLLM 0.8.3の分離推論を基に実装。事前入力側Sender、復号側Receiver、NCCLを用いたGPU RDMA転送、復号側の固定CPUメモリと非同期コピーを利用。公開公式コードURLは一次資料から確認できない。'
+- https://www.scitepress.org/PublishedPapers/2026/149199/
+- https://www.scitepress.org/publishedPapers/2026/149199/pdf/index.html
+implementation: vLLM 0.8.3の分離推論を基に実装。事前入力側Sender、復号側Receiver、NCCLを用いたGPU RDMA転送、復号側の固定CPUメモリと非同期コピーを利用。公開公式コードURLは一次資料から確認できない。
 code: null
-worker_id: 'scheduled-chat-30'
-worker_run_key: '20261028-0230-scheduled-chat-30/r01'
+worker_id: scheduled-chat-30
+worker_run_key: 20261028-0230-scheduled-chat-30/r01
 worker_completed_at: '2026-10-28T02:37:00+09:00'
 last_checked: '2026-10-28'
-reference_main_sha: 'ae765f79b8c091ddf2127e2849418aaa83793d1f'
+reference_main_sha: ae765f79b8c091ddf2127e2849418aaa83793d1f
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.5220/0014919900004039
+- canonical_id: arXiv:2310.06825
+  arxiv_id: '2310.06825'
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2207.00032
+- canonical_id: arXiv:2203.16487
+- canonical_id: arXiv:2401.11181
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2505.11916
+- canonical_id: arXiv:2306.14048
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2502.07903
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2404.02015
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2407.00079
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2408.08147
+- canonical_id: arXiv:2501.14743
+references_checked_at: '2026-11-24'
+references_source: primary-pdf-reference-section
+references_total: 2
 ---
 
 ## 書誌・位置づけ

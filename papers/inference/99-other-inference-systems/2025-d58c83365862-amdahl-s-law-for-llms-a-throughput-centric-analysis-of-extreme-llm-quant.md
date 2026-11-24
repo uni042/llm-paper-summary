@@ -1,30 +1,48 @@
 ---
-canonical_id: "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0"
-title: "Amdahl's Law for LLMs: A Throughput-Centric Analysis of Extreme LLM Quantization"
+canonical_id: SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0
+title: 'Amdahl''s Law for LLMs: A Throughput-Centric Analysis of Extreme LLM Quantization'
 authors:
-  - Jinendra Malekar
-  - Ramtin Zand
-published: "2025-09"
-publication: "Transactions on Machine Learning Research (TMLR), 2025"
-publication_type: "査読付き論文"
-publication_status: "published"
-source: "https://openreview.net/pdf/1d0cc2b5346e96acffddae42868912c1c32d3959.pdf"
+- Jinendra Malekar
+- Ramtin Zand
+published: 2025-09
+publication: Transactions on Machine Learning Research (TMLR), 2025
+publication_type: 査読付き論文
+publication_status: published
+source: https://openreview.net/pdf/1d0cc2b5346e96acffddae42868912c1c32d3959.pdf
 sources:
-  - "https://openreview.net/pdf/1d0cc2b5346e96acffddae42868912c1c32d3959.pdf"
-  - "https://openreview.net/forum?id=JtrQJJQYpP"
-summary: "1〜2ビット重みの極端な量子化が線形射影を高速化しても、注意ヘッドに残る高精度の行列演算が全体性能を制限する。著者はLLM向けAmdahl則とサイクル精度のアクセラレータモデルで、モデル規模・文脈長・ヘッド数・演算器構成によるボトルネック移動を分析した。"
-list_summary: "1〜2ビットLLMの射影層と高精度注意ヘッドの計算比率をモデル規模・文脈長・ハードウェア別に測定し、部分高速化の限界をAmdahl則で定量化する。"
-implementation: "13種類のGPT・OPT・LLaMA構成を対象に、SCALE-Simのサイクル精度シミュレーションで256×256/32×32のシストリック配列を評価し、付録でTesla V100 GPUの演算時間も分析。提案の1ビット専用推論エンジンを実機実装・計測した研究ではない。"
+- https://openreview.net/pdf/1d0cc2b5346e96acffddae42868912c1c32d3959.pdf
+- https://openreview.net/forum?id=JtrQJJQYpP
+summary: 1〜2ビット重みの極端な量子化が線形射影を高速化しても、注意ヘッドに残る高精度の行列演算が全体性能を制限する。著者はLLM向けAmdahl則とサイクル精度のアクセラレータモデルで、モデル規模・文脈長・ヘッド数・演算器構成によるボトルネック移動を分析した。
+list_summary: 1〜2ビットLLMの射影層と高精度注意ヘッドの計算比率をモデル規模・文脈長・ハードウェア別に測定し、部分高速化の限界をAmdahl則で定量化する。
+implementation: 13種類のGPT・OPT・LLaMA構成を対象に、SCALE-Simのサイクル精度シミュレーションで256×256/32×32のシストリック配列を評価し、付録でTesla V100 GPUの演算時間も分析。提案の1ビット専用推論エンジンを実機実装・計測した研究ではない。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-30"
-worker_run_key: "20261030-0358-scheduled-chat-30/r01"
-worker_completed_at: "2026-10-30T04:02:00+09:00"
-reference_main_sha: "21e288cf423b8916b5ceb4ef47fb74500323dbc1"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-30
+worker_run_key: 20261030-0358-scheduled-chat-30/r01
+worker_completed_at: '2026-10-30T04:02:00+09:00'
+reference_main_sha: 21e288cf423b8916b5ceb4ef47fb74500323dbc1
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2302.14017
+  arxiv_id: '2302.14017'
+  openreview_id: tcbBPnfwxS.
+- canonical_id: arXiv:2406.05981
+- canonical_id: arXiv:2211.10438
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2402.04396
+- canonical_id: arXiv:2403.20306
+- canonical_id: arXiv:2308.13137
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2305.11627
+- canonical_id: arXiv:2402.17764
+- canonical_id: arXiv:2504.02118
+- canonical_id: arXiv:2402.11295
+references_checked_at: '2026-11-24'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # 極端なLLM量子化の効果はどこで頭打ちになるか：演算割合とAmdahl則による分析
