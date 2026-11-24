@@ -65,6 +65,9 @@ PRIMARY_PDF_OVERRIDES = {
     "AAAI:39816": "https://ojs.aaai.org/index.php/AAAI/article/download/39816/43777",
     "AAAI:39454": "https://ojs.aaai.org/index.php/AAAI/article/download/39454/43415",
     "AAAI:39106": "https://ojs.aaai.org/index.php/AAAI/article/download/39106/43068",
+    # SCITEPRESS links this direct PDF from the official landing page; the
+    # only URL recorded in the paper metadata is the HTML viewer page.
+    "DOI:10.5220/0014919900004039": "https://www.scitepress.org/publishedPapers/2026/149199/149199.pdf",
 }
 
 # Author-hosted copies are used only after the official publisher PDF fails.
@@ -94,6 +97,13 @@ PRIMARY_PDF_FALLBACKS = {
     ],
     "DOI:10.1145/3579371.3589038": [
         "https://arxiv.org/pdf/2304.07493",
+    ],
+    # OpenReview serves this TMLR paper's official PDF only behind a bot
+    # challenge that datacenter/CI clients cannot pass. The fallback is the
+    # Internet Archive snapshot of that same official PDF (verified: TMLR
+    # 09/2025, Malekar & Zand, OpenReview forum JtrQJJQYpP).
+    "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0": [
+        "https://web.archive.org/web/20251104094932id_/https://openreview.net/pdf?id=JtrQJJQYpP",
     ],
     "DOI:10.1145/3620665.3640422": [
         "https://scale.snu.ac.kr/papers/2024-04-Conference-ASPLOS-AttAcc.pdf",
