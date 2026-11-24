@@ -184,6 +184,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   MELINOEは、混合専門家モデル（MoE）の専門家重みをCPUへ退避する推論環境で、モデル自身の専門家選択を少数の再利用しやすい専門家へ寄せる手法である。著者らはOLMoE、Phi-3.5-MoE、Mixtral-8x7Bを対象に、H100、A100、RTX 4090のメモリ制限環境で評価した。
 
+- **2025-12 · [Trellis: Learning to Compress Key-Value Memory in Attention Models](2025-2512.23852-trellis-learning-to-compress-key-value-memory-in-attention-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  通常の自己注意では、生成済みの全トークンに対する鍵ベクトルと値ベクトルを保持し、次のトークンでそれらを参照する。提案は、鍵を圧縮して中間表現を得る第1段と、値を圧縮して出力を得る第2段からなる。
+
 - **2025-12 · [SWAA: Sliding Window Attention Adaptation for Efficient Long-Context LLMs Without Pretraining](2025-2512.10411-swaa-sliding-window-attention-adaptation-for-efficient-long-context-llms.md)**  
   実装：[✓](https://github.com/yuyijiong/sliding-window-attention-adaptation) ・ リポジトリ内被引用：4  
   全注意で学習されたモデルへ滑走窓注意を事前学習なしで適応させる五つの方法の組合せを系統的に検証し、単独では崩壊する長文脈性能が、方法の相乗効果と軽量な微調整で全注意近くまで回復することを示すレシピ集の研究。
@@ -263,10 +267,6 @@
 - **2026-01 · [GlimpRouter: Efficient Collaborative Inference by Glimpsing One Token of Thoughts](2026-2601.05110-glimprouter-efficient-collaborative-inference-by-glimpsing-one-token-of-.md)**  
   実装：[✓](https://github.com/Zengwh02/GlimpRouter) ・ リポジトリ内被引用：3  
   大規模推論モデルは長い思考過程を生成するため、回答までの待ち時間と計算費用が大きい。トークン単位で常時切り替えると、判定とモデル切替が頻繁になりやすい。
-
-- **2025-12 · [Trellis: Learning to Compress Key-Value Memory in Attention Models](2025-2512.23852-trellis-learning-to-compress-key-value-memory-in-attention-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  通常の自己注意では、生成済みの全トークンに対する鍵ベクトルと値ベクトルを保持し、次のトークンでそれらを参照する。提案は、鍵を圧縮して中間表現を得る第1段と、値を圧縮して出力を得る第2段からなる。
 
 - **2025-12 · [MatKV: Trading Compute for Flash Storage in LLM Inference](2025-2512.22195-matkv-trading-compute-for-flash-storage-in-llm-inference.md)**  
   実装：[✓](https://github.com/kunwooshin/MatKV) ・ リポジトリ内被引用：3  
@@ -3704,6 +3704,10 @@
   実装：[✓](https://github.com/ZJU-REAL/Self-Braking-Tuning) ・ リポジトリ内被引用：9  
   従来の出力トークン予算や推論時の外部停止判定では、問題の難しさと必要な推論深度を一律に扱ったり、追加の判定機構が必要になったりする。
 
+- **2025-10 · [StreamingTOM: Streaming Token Compression for Efficient Video Understanding](2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understandi.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  未来フレームを使わず、隣接フレームとの変化と顕著さでフレームごとに五十トークンだけを言語モデルへ通し、残りを四ビットで蓄積して質問時に必要な分だけ復元することで、鍵値キャッシュを一五・七倍に圧縮しながら無学習方式で最良の精度を示した。
+
 - **2025-04 · [PLD+: Accelerating LLM Inference by Leveraging Language Model Artifacts](2025-1e04c2f7fc65-pld-accelerating-llm-inference-by-leveraging-language-model-artifacts.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   PLD+（プロンプト Lookup Decoding+）は、入力文脈の一部がそのまま出力にも現れる場合に、過去の入力トークン列を将来の出力候補として再利用する投機的復号法である。例えばコード編集で改行やインデント、識別子が何度も現れると、従来のPLDが最長の局所的な文字列一致だけで候補を選ぶと、同じ記号が出る別の場所を誤選択し、検証に失敗する。
@@ -3711,10 +3715,6 @@
 - **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
-
-- **2025-10 · [StreamingTOM: Streaming Token Compression for Efficient Video Understanding](2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understandi.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  未来フレームを使わず、隣接フレームとの変化と顕著さでフレームごとに五十トークンだけを言語モデルへ通し、残りを四ビットで蓄積して質問時に必要な分だけ復元することで、鍵値キャッシュを一五・七倍に圧縮しながら無学習方式で最良の精度を示した。
 
 - **2025-01 · [Rope to Nope and Back Again: A New Hybrid Attention Strategy](2025-2501.18795-rope-to-nope-and-back-again-a-new-hybrid-attention-strategy.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -3732,6 +3732,10 @@
   実装：[✓](https://github.com/jd-opensource/xllm) ・ リポジトリ内被引用：6  
   原著のDeepSeek-R1、プリフィル/デコード分離、入力2048／出力2048トークン、TPOT上限100msの表3では、MindIEが8476.44 トークン/s、xLLMが11351.58 トークン/sとなり、同じ制約下で約33.9%の改善を示した。
 
+- **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
+  実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：6  
+  通常の4ビットあるいは3ビット重み量子化では、同じ量子化群に非常に大きな重みが混ざると、その外れ値に合わせて量子化刻みを広げる必要がある。これを「モデル全体が3.5倍高速になった」と解釈してはいけない。
+
 - **2025-05 · [GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment](2025-2505.12215-gmsa-enhancing-context-compression-via-group-merging-and-layer-semantic-.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   GMSAは、原文を文字列として間引くのではなく、少数の連続表現トークン（soft トークン）へ変換する文脈圧縮方式である。NaturalQuestionsの4倍圧縮では完全一致（Exact Match、EM）が58.12%で、元文脈をそのまま与える条件の15.07%を上回った。
@@ -3743,10 +3747,6 @@
 - **2025-04 · [Activated LoRA: Fine-tuned LLMs for Intrinsics](2025-2504.12397-activated-lora-fine-tuned-llms-for-intrinsics.md)**  
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：6  
   しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
-
-- **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
-  実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：5  
-  通常の4ビットあるいは3ビット重み量子化では、同じ量子化群に非常に大きな重みが混ざると、その外れ値に合わせて量子化刻みを広げる必要がある。これを「モデル全体が3.5倍高速になった」と解釈してはいけない。
 
 - **2025-08 · [Towards Efficient and Practical GPU Multitasking in the Era of LLM](2025-2508.08448-towards-efficient-and-practical-gpu-multitasking-in-the-era-of-llm.md)**  
   実装：[✓](https://github.com/ovg-project) ・ リポジトリ内被引用：5  
@@ -5027,16 +5027,16 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：124  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：126  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
+
+- **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
+  実装：✓ ・ リポジトリ内被引用：109  
+  本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
   実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：108  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
-
-- **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：108  
-  本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
   実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：98  
@@ -5158,6 +5158,10 @@
   実装：[✓](https://github.com/alinlab/HOMER) ・ リポジトリ内被引用：7  
   HOMER（Hierarchical cOntext MERging）は、入力を小区間に分けて初期層を処理し、中間層へ進むにつれて隣接区間を統合する。ICLR 2024の原著では、Llama-2-13B-chatの32Kトークンにおけるパスキー検索正答率が80.4%、位置尺度変更方式との併用で86.0%だった。
 
+- **2024-10 · [Quamba: A Post-Training Quantization Recipe for Selective State Space Models](2024-2410.13229-quamba-a-post-training-quantization-recipe-for-selective-state-space-mod.md)**  
+  実装：[✓](https://github.com/enyac-group/Quamba) ・ リポジトリ内被引用：6  
+  Mambaのような選択的状態空間モデル（SSM）は、注意機構のKVキャッシュを保持せず、固定サイズの再帰状態で長い系列を処理できる。2.8BのMambaではOrin Nano 8GBで生成1トークン当たりの遅延が103.56msから60.17msに減り、6種zero-shot平均精度は63.1%から62.2%へ低下した。
+
 - **2024-06 · [DeciMamba: Exploring the Length Extrapolation Potential of Mamba](2024-2406.14528-decimamba-exploring-the-length-extrapolation-potential-of-mamba.md)**  
   実装：[✓](https://github.com/assafbk/DeciMamba) ・ リポジトリ内被引用：6  
   Mambaは選択的状態空間モデル（Selective State Space モデル; SSM）の一種で、注意機構のように系列長の二乗へ比例する全組合せを直接計算せず、再帰的な隠れ状態へ過去の情報を集約する。
@@ -5181,10 +5185,6 @@
 - **2024-10 · [TesseraQ: Ultra Low-Bit LLM Post-Training Quantization with Block Reconstruction](2024-2410.19103-tesseraq-ultra-low-bit-llm-post-training-quantization-with-block-reconst.md)**  
   実装：[✓](https://github.com/Intelligent-Computing-Lab-Yale/TesseraQ) ・ リポジトリ内被引用：5  
   大規模言語モデルを2〜4bitに事後量子化すると、重みの容量を大幅に減らせるが、2bit付近では量子化誤差が大きくなり、困惑度や下流タスク精度が崩れやすい。Table 2では5つの常識推論タスクの平均正答率が50.52%から59.27%へ上がる。
-
-- **2024-10 · [Quamba: A Post-Training Quantization Recipe for Selective State Space Models](2024-2410.13229-quamba-a-post-training-quantization-recipe-for-selective-state-space-mod.md)**  
-  実装：[✓](https://github.com/enyac-group/Quamba) ・ リポジトリ内被引用：5  
-  Mambaのような選択的状態空間モデル（SSM）は、注意機構のKVキャッシュを保持せず、固定サイズの再帰状態で長い系列を処理できる。2.8BのMambaではOrin Nano 8GBで生成1トークン当たりの遅延が103.56msから60.17msに減り、6種zero-shot平均精度は63.1%から62.2%へ低下した。
 
 - **2024-10 · [BitStack: Any-Size Compression of Large Language Models in Variable Memory Environments](2024-2410.23918-bitstack-any-size-compression-of-large-language-models-in-variable-memor.md)**  
   実装：[✓](https://github.com/xinghaow99/BitStack) ・ リポジトリ内被引用：5  
@@ -5649,7 +5649,7 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：141  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：142  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  

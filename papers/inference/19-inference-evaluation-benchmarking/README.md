@@ -697,7 +697,7 @@
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-02 · [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md)**  
-  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：38  
+  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：39  
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
@@ -919,7 +919,7 @@
   Azure OpenAI GPTサービスの1031万件・213日分の実トレースと再生基盤BurstGPT-Perfを公開し、平均RPSだけを揃えた合成負荷では見えないバースト、会話間隔、応答長、失敗がサービング評価の結論を変えることを示す。
 
 - **2024-03 · [The Unreasonable Ineffectiveness of the Deeper Layers](2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md)**  
-  実装：✓ ・ リポジトリ内被引用：64  
+  実装：✓ ・ リポジトリ内被引用：65  
   削除したい層数を決め、入力・出力間の角距離が最小の連続ブロックを選択し、実際に層を除去する。Llama-2系列の5-shot MMLUでは削除率45〜55%付近で急落するが、Qwen系列では約20%付近で急落する。
 
 - **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
@@ -1009,7 +1009,7 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
-  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：137  
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：138  
   自己注意（self-注意機構）は系列長Lに対して二次の注意行列を作るため、1万〜数万ステップの系列では計算・メモリ負荷が大きくなる。論文はLong Range Arena（LRA）の全課題で当時の最良水準を更新し、長さ16,384のPath-Xで88%正解率を達成した。
 
 - **2021-11 · [You Only Sample (Almost) Once: Linear Cost Self-Attention Via Bernoulli Sampling](2021-2111.09714-you-only-sample-almost-once-linear-cost-self-attention-via-bernoulli-sam.md)**  
