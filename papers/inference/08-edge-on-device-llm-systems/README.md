@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（113本）
+## 自動生成の論文一覧（115本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -387,6 +387,14 @@
 - **2025-08 · [Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative](2025-2508.07329-efficient-edge-llms-deployment-via-hessianaware-quantization-and-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、GPUメモリが限られた端末でMixture-of-Experts（MoE）モデルを実行する際の二つの問題を同時に扱う。第一に、重みだけでなく活性値も整数8ビットへ量子化すると、少数の極端な活性値が量子化範囲を支配し、精度が悪化し得る。
+
+- **2025-08 · [Camel: Energy-Aware LLM Inference on Resource-Constrained Devices](2025-2508.09173-camel-energy-aware-llm-inference-on-resource-constrained-devices.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エッジ推論のGPU周波数とバッチサイズの組み合わせを多腕バンディットとして探索し、事後分布の更新で最適構成を素早く見つけることで、Jetson AGX Orin上でエネルギー遅延積を既定構成比12.4から29.9パーセント下げるエネルギー管理の枠組み。
+
+- **2025-06 · [HAPE: Hardware-Aware LLM Pruning For Efficient On-Device Inference Optimization](2025-3b8e234e37c9-hape-hardware-aware-llm-pruning-for-efficient-on-device-inference-optimi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  疎率ではなく実機の遅延感度で重要度を決め、ブロック内の動的疎率と枝刈り中の疎コンパイルを組み合わせ、学習なしで端末向けにLLMを枝刈りするハードウェア考慮型の枠組み。
 
 - **2025-05 · [Scaling On-Device GPU Inference for Large Generative Models](2025-2505.00232-scaling-on-device-gpu-inference-for-large-generative-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

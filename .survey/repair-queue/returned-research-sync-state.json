@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ed9c6817a0ddd8631622268c569b43c44beda020",
+  "base_commit": "76f7ccd9c832e9fd83e794b304c1fa80c5f2ad71",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -318,6 +318,7 @@
     "2025-2506.11120-sdmprune-self-distillation-mlp-pruning-for-efficient-large-language-models.json",
     "2025-2506.17254-near-optimal-online-deployment-and-routing-for-streaming-llms.json",
     "2025-2506.17255-ultrasketchllm-sub-1-bit-llm-compression-via-sketch-and-hardware-friendly-operators.json",
+    "2025-2506.18582-parallel-continuous-chain-of-thought-with-jacobi-iteration.json",
     "2025-2506.20480-gptailor-large-language-model-pruning-through-layer-cutting-and-stitching.json",
     "2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intensive-operators.json",
     "2025-2506.23025-spectra-1-1-scaling-laws-and-efficient-inference-for-ternary-language-models.json",
@@ -336,6 +337,7 @@
     "2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-communication.json",
     "2025-2508.05282-not-all-errors-are-created-equal-ascot-addresses-late-stage-fragility-in-efficient-llm-reasoning.json",
     "2025-2508.08289-attention-as-conditioning-what-classical-learning-theory-predicts-about-linear-transformers.json",
+    "2025-2508.09173-camel-energy-aware-llm-inference-on-resource-constrained-devices.json",
     "2025-2508.09471-eggs-ptp-an-expander-graph-guided-structured-post-training-pruning-method-for-large-language-models.json",
     "2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-strong-aligner.json",
     "2025-2508.15828-z-pruner-post-training-pruning-of-large-language-models-for-efficiency-without-retraining.json",
@@ -431,10 +433,13 @@
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
     "2025-2601.14260-end-to-end-transformer-acceleration-through-processing-in-memory-architectures.json",
     "2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision-proxy-rounding-and-pre-searching.json",
+    "2025-3b8e234e37c9-hape-hardware-aware-llm-pruning-for-efficient-on-device-inference-optimization.json",
     "2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.json",
+    "2025-61ee18f9ab39-accelerating-1-bit-llms-via-in-memory-computing-architectures.json",
     "2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.json",
     "2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-language-models.json",
     "2025-9cce4f3ac879-faster-speculative-decoding-via-effective-draft-decoder-with-pruned-candidate-tree.json",
+    "2025-9d0005ab2d5d-minimizing-transformer-inference-overhead-using-controlling-element-on-shenwei-ai-accelerator.json",
     "2025-addressing-activation-outliers-in-llms-ptq-survey.json",
     "2025-af96f29ab97d-towards-ml-system-extensibility.json",
     "2025-bb64608d032b-paco-predictive-auto-configuration-for-slo-constrained-large-language-model-inference-serving.json",
@@ -52179,6 +52184,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2506.18582": {
+      "order": [
+        "2026-11-24T01:13:27+00:00",
+        "2025-2506.18582-parallel-continuous-chain-of-thought-with-jacobi-iteration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2508.09173": {
+      "order": [
+        "2026-11-24T01:14:20+00:00",
+        "2025-2508.09173-camel-energy-aware-llm-inference-on-resource-constrained-devices.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3744244": {
+      "order": [
+        "2026-11-24T01:15:14+00:00",
+        "2025-3b8e234e37c9-hape-hardware-aware-llm-pruning-for-efficient-on-device-inference-optimization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/MWSCAS53549.2025.11244527": {
+      "order": [
+        "2026-11-24T01:16:07+00:00",
+        "2025-61ee18f9ab39-accelerating-1-bit-llms-via-in-memory-computing-architectures.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1631/FITEE.2400453": {
+      "order": [
+        "2026-11-24T01:17:01+00:00",
+        "2025-9d0005ab2d5d-minimizing-transformer-inference-overhead-using-controlling-element-on-shenwei-ai-accelerator.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66072,6 +66122,21 @@
     "arxiv:2506.07639": [
       "papers/inference/99-other-inference-systems/2025-2506.07639-fast-ecot-efficient-embodied-chain-of-thought-via-thoughts-reuse.md",
       "papers/inference/99-other-inference-systems/2025-2506.07639-fast-ecot-efficient-embodied-chain-of-thought-via-thoughts-reuse.md"
+    ],
+    "arxiv:2506.18582": [
+      "papers/inference/99-other-inference-systems/2025-2506.18582-parallel-continuous-chain-of-thought-with-jacobi-iteration.md"
+    ],
+    "arxiv:2508.09173": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2508.09173-camel-energy-aware-llm-inference-on-resource-constrained-devices.md"
+    ],
+    "doi:10.1145/3744244": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-3b8e234e37c9-hape-hardware-aware-llm-pruning-for-efficient-on-device-inference-optimi.md"
+    ],
+    "doi:10.1109/mwscas53549.2025.11244527": [
+      "papers/inference/17-pim-near-data-acceleration/2025-2504.01994-accelerating-1-bit-llms-via-in-memory-computing-architectures.md"
+    ],
+    "doi:10.1631/fitee.2400453": [
+      "papers/inference/09-kernel-runtime-compilation/2025-9d0005ab2d5d-minimizing-transformer-inference-overhead-using-controlling-element-on-s.md"
     ]
   }
 }

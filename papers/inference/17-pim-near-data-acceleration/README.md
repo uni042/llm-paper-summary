@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（39本）
+## 自動生成の論文一覧（40本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -160,6 +160,10 @@
 - **2025-09 · [HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference](2025-2509.12993-hpim-heterogeneous-processing-in-memory-based-accelerator-for-large-lang.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   HPIMは、単一リクエスト・単一バッチのLLMデコードにおいて、重みを毎トークン読み込むGEMVの帯域制約と、KVキャッシュを使う注意演算の低遅延・複雑な演算制約を、異なるPIM（Processing-In-メモリ）メモリ階層で処理するハードウェア・ソフトウェア協調設計である。
+
+- **2025-08 · [Accelerating 1-Bit LLMs Via in-Memory Computing Architectures](2025-2504.01994-accelerating-1-bit-llms-via-in-memory-computing-architectures.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  1ビット言語モデルの射影層をアナログインメモリ計算へ、注意ヘッドをデジタルシストリックアレイへ割り当てる混成加速器で、文脈長128のOPT 6.7Bで毎秒トークン79.2倍を記録する一方、エネルギー効率は長文脈と大規模モデルでのみ逆転することを示す研究。
 
 - **2025-03 · [MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration](2025-2503.23817-mvdram-enabling-gemv-execution-in-unmodified-dram-for-low-bit-llm-accele.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
