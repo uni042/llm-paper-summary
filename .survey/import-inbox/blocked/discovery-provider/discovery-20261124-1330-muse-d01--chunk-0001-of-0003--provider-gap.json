@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "muse",
-  "run_key": "muse-final-20261124-d01::chunk-0001-of-0003",
+  "run_key": "muse-final-20261124-d01::provider-gap",
   "reference_main_sha": "06fa235e4b200b1ea3146c018a35f3f8c827101a",
-  "record_count": 20,
+  "record_count": 12,
   "origin": "discovery_worklist",
   "records": [
     {
@@ -110,23 +110,6 @@
       "worklist_rank": 6
     },
     {
-      "classification": "borderline",
-      "canonical_id": "SemanticScholar:8fbcaea3abcea368d93658b90372125f76021a81",
-      "identity_tokens": [
-        "SemanticScholar:8fbcaea3abcea368d93658b90372125f76021a81"
-      ],
-      "title": "This paper",
-      "reason": "タイトルが『This paper』とだけ記録されたプレースホルダで、Semantic Scholarページへアクセスできず、arXiv・Crossrefでも同一性を特定できなかったため、論文固有の対象・機構を一次要旨で確認できていない。",
-      "source_url": "https://www.semanticscholar.org/paper/8fbcaea3abcea368d93658b90372125f76021a81",
-      "body_check": "abstract_not_obtained; body_not_read",
-      "first_checked_at": "2026-11-24T13:30:00+09:00",
-      "last_checked_at": "2026-11-24T13:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 8
-    },
-    {
       "classification": "accept",
       "canonical_id": "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
       "identity_tokens": [
@@ -178,23 +161,6 @@
       "worklist_rank": 11
     },
     {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/ACP66871.2025.11350985",
-      "identity_tokens": [
-        "DOI:10.1109/ACP66871.2025.11350985"
-      ],
-      "title": "Carbon-Aware LLM Inference Instance Deployment and Workload Assignment Across Geo-distributed Data Centers",
-      "reason": "地理分散データセンター間で、炭素強度・レイテンシ要件・地域需要の異質性を踏まえ、推論インスタンス配置とリクエストフロー割当てをMILPで共同最適化する研究だが、対象は配置・運用最適化であり推論エンジン自体の機構ではないため、サービング基盤への貢献は間接的である。",
-      "source_url": "https://doi.org/10.1109/ACP66871.2025.11350985",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-24T13:30:00+09:00",
-      "last_checked_at": "2026-11-24T13:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 12
-    },
-    {
       "classification": "accept",
       "canonical_id": "DOI:10.48550/arXiv.2409.19134",
       "identity_tokens": [
@@ -210,23 +176,6 @@
         "worker-worklist discovery_review"
       ],
       "worklist_rank": 13
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/3704413.3764419",
-      "identity_tokens": [
-        "DOI:10.1145/3704413.3764419"
-      ],
-      "title": "DRAGON: Enhancing On-Device Model Performance with Distributed Retrieval-Augmented Generation",
-      "reason": "クラウドと端末に分散した文書に対するRAGを、両側で独立にトークン生成し投機的に集約するSpeculative Aggregationと集約側スケジューリングで分散実行する枠組みだが、主目的はオンデバイスSLMの回答性能の向上であり、推論効率化はその手段にとどまる。",
-      "source_url": "https://doi.org/10.1145/3704413.3764419",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-24T13:30:00+09:00",
-      "last_checked_at": "2026-11-24T13:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 14
     },
     {
       "classification": "accept",
@@ -246,74 +195,6 @@
       "worklist_rank": 15
     },
     {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2510.19183",
-      "identity_tokens": [
-        "arXiv:2510.19183"
-      ],
-      "title": "PruneHal: Reducing Hallucinations in Multi-modal Large Language Models through Adaptive KV Cache Pruning",
-      "reason": "冗長な視覚トークンが注意を分散させ幻覚を招くという観察に基づき、適応的KVキャッシュ剪定で重要視覚情報へ注意を集中させる手法だが、目的はMLLMの幻覚低減という品質改善であり、KVキャッシュ剪定はその手段として使われている。",
-      "source_url": "https://arxiv.org/abs/2510.19183",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-24T13:30:00+09:00",
-      "last_checked_at": "2026-11-24T13:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 16
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/3845814.3850071",
-      "identity_tokens": [
-        "DOI:10.1145/3845814.3850071"
-      ],
-      "title": "Breaking the Tradeoff: Elastic and Isolated GPU Sharing with GVM",
-      "reason": "GPU共有における隔離と弾力性のトレードオフに対し、GPUコンテナ抽象、ページテーブルによる細粒度メモリ会計と先行スワップ、ハードウェアレベルのスケジューリング・プリエンプションを備えたOSレベルGPU仮想化層GVMを提案するが、対象はLLMに限らない汎用AIワークロードであり、LLMサービング固有の機構ではない。",
-      "source_url": "https://doi.org/10.1145/3845814.3850071",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-24T13:30:00+09:00",
-      "last_checked_at": "2026-11-24T13:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 17
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "SemanticScholar:b28e8a65316e52aec7e4116c6ad799819a27e9a2",
-      "identity_tokens": [
-        "SemanticScholar:b28e8a65316e52aec7e4116c6ad799819a27e9a2"
-      ],
-      "title": "PISA: Piecewise Sparse Attention Is Wiser for Efficient Diffusion Transformers",
-      "reason": "拡散Transformer（画像生成）向けに、非重要ブロックの注意スコアの分布安定性を利用してスキップしたブロックをTaylor展開で近似補償する区分的疎注意PISAを提案するもので、対象は視覚生成モデルでありLLM推論への適用は示されていない。",
-      "source_url": "https://www.semanticscholar.org/paper/b28e8a65316e52aec7e4116c6ad799819a27e9a2",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-24T13:30:00+09:00",
-      "last_checked_at": "2026-11-24T13:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 18
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2609.37976",
-      "identity_tokens": [
-        "arXiv:2609.37976"
-      ],
-      "title": "S3: Spectral Null-Space Swap Makes Reasoning Models Efficient",
-      "reason": "思考モデルの推論能力が非思考モデルの主特異方向の零空間成分に宿ることを示し、両チェックポイントをスペクトル的に合成して思考トークン量を減らす学習不要なS3を提案するが、機構はモデル合成というモデル側の操作であり、推論システム上でのレイテンシ等の実測は要旨では確認できない。",
-      "source_url": "https://arxiv.org/abs/2609.37976",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-24T13:30:00+09:00",
-      "last_checked_at": "2026-11-24T13:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 19
-    },
-    {
       "classification": "accept",
       "canonical_id": "SemanticScholar:ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
       "identity_tokens": [
@@ -329,27 +210,25 @@
         "worker-worklist discovery_review"
       ],
       "worklist_rank": 20
-    },
-    {
-      "classification": "accept",
-      "canonical_id": "DOI:10.18653/v1/2024.acl-long.270",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2024.acl-long.270"
-      ],
-      "title": "RelayAttention for Efficient Large Language Model Serving with Long System Prompts",
-      "reason": "長いシステムプロンプトを共有するバッチ推論で、リクエストごとにDRAMから繰り返し読まれるシステムプロンプトのKVをバッチ内で一度だけ読むよう因果注意の計算を組み替えたRelayAttentionを提案し、再学習なしでLLMサービングのスループット・レイテンシを改善する。",
-      "source_url": "https://doi.org/10.18653/v1/2024.acl-long.270",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-24T13:30:00+09:00",
-      "last_checked_at": "2026-11-24T13:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 21
     }
   ],
   "parent_run_key": "muse-final-20261124-d01",
   "chunk_index": 1,
   "chunk_count": 3,
-  "source_record_count": 50
+  "source_record_count": 50,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261124-1330-muse-d01--chunk-0001-of-0003.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/icassp55912.2026.11463419",
+    "DOI:10.1145/3801489.3806878",
+    "DOI:10.1145/3820171.3806875",
+    "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+    "SemanticScholar:89654f548e541a8ef233be6585316ce6cc201535",
+    "SemanticScholar:bb0c8059c2e4312820ad152f5e212b9326694c29",
+    "SemanticScholar:c4a54a26100d339d10c59db6b8cc56ac481534c8",
+    "SemanticScholar:c5fffaf2a39b3c94891bf640999654409f162882",
+    "SemanticScholar:ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
+    "arXiv:2409.19134",
+    "arXiv:2505.20776",
+    "arXiv:2611.02966"
+  ]
 }
