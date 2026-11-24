@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "RISC-V ISA Extensions for Vectorized Unstructured Sparse SpMM in LLM Inference",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539157",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Unstructured sparsity has emerged as a key enabler for pruning large language models (LLMs) while preserving accuracy. However, its highly irregular pattern makes it notoriously difficult to accelerate, creating severe bottlenecks in vectorization and memory access that prevent efficient deployment on edge hardware with tight power and area constraints. We present SCG, a vectorizable sparse matrix format designed to unlock high-performance unstructured sparse matrix–matrix multiplication (SpMM), the dominant kernel in LLM feed-forward networks and Q/K/V/O projections. To exploit SCG, we introduce custom RISC-V instructions and extend the BOOM processor with two lightweight pipelines for efficient parallel execution. This format–instruction–hardware co-design directly addresses the long-standing challenge of unstructured sparse acceleration in general-purpose processors. On real LLM workloads, our design achieves 11.9×, 12.7×, and 13.4× average speedups over baseline BOOM on LLaMA2-7B, OPT-1.3B, and TinyLLaMA-1.1B, respectively, with negligible hardware overhead. Compared to state-of-the-art sparse accelerators, it delivers up to 1.72× higher area efficiency.",
+      "identifiers": [
+        "SemanticScholar:843ce542353a947b16e9843babb98f7a64275a80"
+      ],
+      "semantic_scholar_id": "843ce542353a947b16e9843babb98f7a64275a80",
+      "doi": "10.23919/DATE69613.2026.11539157",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539157",
+      "authors": [
+        "Tengfei Xia",
+        "Zhi-Hua Fan",
+        "Jing Xue",
+        "Shantian Qin",
+        "Xiao-Chun Ye",
+        "Wen-Ming Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ベクトル化可能なスパース形式SCGとRISC-V ISA拡張でLLM推論の非構造スパースSpMMをエッジハードウェア上で高速化する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Continual Transformers: Redundancy-Free Attention for Online Inference",
+      "source_url": "https://arxiv.org/abs/2201.06268",
+      "year": 2022,
+      "published": "2022-01-17",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers in their common form are inherently limited to operate on whole token sequences rather than on one token at a time. Consequently, their use during online inference on time-series data entails considerable redundancy due to the overlap in successive token sequences. In this work, we propose novel formulations of the Scaled Dot-Product Attention, which enable Transformers to perform efficient online token-by-token inference on a continual input stream. Importantly, our modifications are purely to the order of computations, while the outputs and learned weights are identical to those of the original Transformer Encoder. We validate our Continual Transformer Encoder with experiments on the THUMOS14, TVSeries and GTZAN datasets with remarkable results: Our Continual one- and two-block architectures reduce the floating point operations per prediction by up to 63x and 2.6x, respectively, while retaining predictive performance.",
+      "identifiers": [
+        "SemanticScholar:d10864946d1733444f0472acf1294f15b350e65e"
+      ],
+      "semantic_scholar_id": "d10864946d1733444f0472acf1294f15b350e65e",
+      "canonical_id": "arXiv:2201.06268",
+      "arxiv_id": "2201.06268",
+      "doi": "10.48550/arXiv.2201.06268",
+      "authors": [
+        "Lukas Hedegaard",
+        "Arian Bakhtiarnia",
+        "Alexandros Iosifidis"
+      ],
+      "priority": 29,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 29,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1772,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "Continual Transformersはトークン単位のオンライン推論で重複計算を排除する注意の再定式化を行い、ストリーミング推論の効率へ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Compressed-Sensing-Guided, Inference-Aware Structured Reduction for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.14156",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models deliver strong generative performance but at the cost of massive parameter counts, memory use, and decoding latency. Prior work has shown that pruning and structured sparsity can preserve accuracy under substantial compression, while prompt-compression methods reduce latency by removing redundant input tokens. However, these two directions remain largely separate. Most model-compression methods are static and optimized offline, and they do not exploit the fact that different prompts and decoding steps activate different latent computational pathways. Prompt-compression methods reduce sequence length, but they do not adapt the executed model subnetwork. We propose a unified compressed-sensing-guided framework for dynamic LLM execution. Random measurement operators probe latent model usage, sparse recovery estimates task-conditioned and token-adaptive support sets, and the recovered supports are compiled into hardware-efficient sparse execution paths over blocks, attention heads, channels, and feed-forward substructures. The framework introduces five key contributions: task-conditioned measurements, so different prompts induce different sparse supports; token-adaptive recovery, so active substructures are re-estimated during decoding; formal sample-complexity bounds under restricted isometry or mutual incoherence assumptions; compile-to-hardware constraints that restrict recovery to GPU-efficient structures; and a joint objective that unifies prompt compression with model reduction. Together, these components recast LLM inference as a measurement-and-recovery problem with explicit approximation guarantees and deployment-oriented speedup constraints.",
+      "identifiers": [
+        "SemanticScholar:184ed87efbeb74fcd76bdc7e7029603072d63f1b"
+      ],
+      "semantic_scholar_id": "184ed87efbeb74fcd76bdc7e7029603072d63f1b",
+      "canonical_id": "arXiv:2604.14156",
+      "arxiv_id": "2604.14156",
+      "doi": "10.48550/arXiv.2604.14156",
+      "authors": [
+        "Andrew Kiruluta"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      },
+      "reason": "圧縮センシング誘導の推論時適応型構造化削減は剪定とプロンプト圧縮を統合し、LLMのパラメータ・メモリ・デコード遅延を削減する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5b1094913153",
+    "round": "libimp-5b10949131536af5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5b10949131536af5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5b10949131536af5-pre01.json",
+    "receipt": "sha256:f381bc423136d276d1e8dad8c0f1e8996596a5caac5a406487eded80467508c9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5b1094913153",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

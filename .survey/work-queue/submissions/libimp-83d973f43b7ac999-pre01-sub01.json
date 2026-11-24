@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Shallow to Deep: Aligning Token Pruning with Stage-wise Roles in LVLMs",
+      "source_url": "https://arxiv.org/abs/2609.25635",
+      "year": 2026,
+      "published": "2026-09-22",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) incur high computational costs from redundant visual tokens. Although training-free attention-based multi-layer pruning in the vision encoder stage has been explored as an effective strategy, we find that pruning in shallow layers consistently degrades performance. In this paper, we aim to understand this problem and seek a solution. By analyzing attention patterns across network depth, we find that shallow layers primarily function as edge detectors with chaotic attention maps, while deeper layers transition through local subject recognition and unstable semantic aggregation. To address the misalignment between pruning strategies and network stages, we propose STD, a hierarchical token pruning framework that adapts token selection mechanisms to the functional role of each network stage. STD employs High-Frequency Spectral Analysis in shallow layers to deterministically preserve structural edges, uses Gaussian-Smoothed Attention in intermediate layers to maintain spatial coherence, and introduces a Stability-Adaptive Trigger in deep layers to execute pruning only during semantically stable phases. Extensive experiments show that STD outperforms state-of-the-art pruning methods by 1.1% on LLaVA-1.5-7B with 88.9% token reduction, while also being plug-and-play and highly effective when combined with other methods, and by 2.1% on LLaVA-NeXT-7B with 94.4% reduction, delivering a 3.9x speed-up in the prefilling stage. Our code will be released at https://github.com/Twilight03/STD.",
+      "identifiers": [
+        "SemanticScholar:e5f2106e7a1a113e987f78ab9aa4f26b0dc7f502"
+      ],
+      "semantic_scholar_id": "e5f2106e7a1a113e987f78ab9aa4f26b0dc7f502",
+      "canonical_id": "arXiv:2609.25635",
+      "arxiv_id": "2609.25635",
+      "doi": "10.18653/2026.emnlp-main.1226",
+      "authors": [
+        "Shuo Zhang",
+        "Jin-Tao Tong",
+        "Yi-Xiong Zou",
+        "Yu-Hua Li",
+        "Rui-Xuan Li"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "STDは大規模視覚言語モデルの層ごとの役割（浅層のエッジ検出等）に合わせ階層的に視覚トークンを剪定する枠組みであり、LVLM推論の計算コスト削減へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-83d973f43b7a",
+    "round": "libimp-83d973f43b7ac999-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-83d973f43b7ac999-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-83d973f43b7ac999-pre01.json",
+    "receipt": "sha256:bc536ce67da558b7cb520127e24b77b177ac16f3b7b2e4a022c66d0dcbde2fb0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-83d973f43b7a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

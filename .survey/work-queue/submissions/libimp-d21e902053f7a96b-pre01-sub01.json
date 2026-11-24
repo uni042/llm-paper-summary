@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "EarlySelectKV: Anticipatory KV Selection via Cross-Layer Query Proxies",
+      "source_url": "https://arxiv.org/abs/2611.01715",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Query-conditioned sparse KV selection reduces long-context inference cost by attending to a subset of historical KV entries at each decoding step. Existing selectors must wait for the target-layer query before scoring candidates and generating indices, placing routing on the immediate pre-attention path. We introduce EarlySelectKV, a training-free transformation that uses proxy queries from earlier hidden states to precompute selected KV indices while retaining the real target-layer query for final attention. Tests with RocketKV, Quest, and Loki show no consistent pattern of quality degradation across the evaluated settings. In the primary RocketKV evaluation, ES-RocketKV differs by +0.018 points on LongBench, approximately -0.01 points on RULER, and +0.25 percentage points on representative NIAH/Passkey settings. In a TensorRT-LLM deployment with CPU-offloaded routing, ES-RocketKV improves end-to-end output throughput by up to 12.4% and reduces GPU-resident memory by 11.1% of the combined KV/K-summary pool. This makes routing timing an explicit optimization target alongside KV subset selection in sparse long-context decoding. Code is available at https://github.com/sea-with-sakura/EarlySelectKV.",
+      "identifiers": [
+        "SemanticScholar:ffaca7d0d183a59e4ecd0b3e872ba5979a46bf13"
+      ],
+      "semantic_scholar_id": "ffaca7d0d183a59e4ecd0b3e872ba5979a46bf13",
+      "canonical_id": "arXiv:2611.01715",
+      "arxiv_id": "2611.01715",
+      "doi": "10.18653/2026.emnlp-main.229",
+      "authors": [
+        "Yu-Hao Liu",
+        "Yue-Hao Li",
+        "Ling-He Zhang",
+        "Gao Huang",
+        "Jun-Ran Li",
+        "Hong-Chang Wang",
+        "Hai-Fang Jian"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "EarlySelectKVは前層の隠れ状態から作るプロキシクエリでKV選択インデックスを事前計算し、対象層クエリを最終注意に使う学習不要の疎KV選択であり、長文脈推論コスト削減へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FastMamba: A High-Speed and Efficient Mamba Accelerator on FPGA with Accurate Quantization",
+      "source_url": "https://arxiv.org/abs/2505.18975",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "IEEE Computer Society Annual Symposium on VLSI",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State Space Models (SSMs), like recent Mamba2, have achieved remarkable performance and received extensive attention. However, deploying Mamba2 on resource-constrained edge devices encounters many problems: severe outliers within the linear layer challenging the quantization, diverse and irregular element-wise tensor operations, and hardware-unfriendly nonlinear functions in the SSM block. To address these issues, this paper presents FastMamba, a dedicated accelerator on FPGA with hardware-algorithm co-design to promote the deployment efficiency of Mamba2. Specifically, we successfully achieve 8-bit quantization for linear layers through Hadamard transformation to eliminate outliers. Moreover, a hardware-friendly and finegrained power-of-two quantization framework is presented for the SSM block and convolution layer, and a first-order linear approximation is developed to optimize the nonlinear functions. Based on the accurate algorithm quantization, we propose an accelerator that integrates parallel vector processing units, pipelined execution dataflow, and an efficient SSM Nonlinear Approximation Unit, which enhances computational efficiency and reduces hardware complexity. Finally, we evaluate FastMamba on Xilinx VC709 FPGA. For the input prefill task on Mamba2130 M, FastMamba achieves $68.80 \\times$ and $8.90 \\times$ speedup over Intel Xeon 4210R CPU and NVIDIA RTX 3090 GPU, respectively. In the output decode experiment with Mamba2-2.7B, FastMamba attains $1.65 \\times$ higher energy efficiency than RTX 3090 GPU.",
+      "identifiers": [
+        "SemanticScholar:21e72ebb0b870462fd442a2557b7056200bc79ac"
+      ],
+      "semantic_scholar_id": "21e72ebb0b870462fd442a2557b7056200bc79ac",
+      "canonical_id": "arXiv:2505.18975",
+      "arxiv_id": "2505.18975",
+      "doi": "10.1109/ISVLSI65124.2025.11130250",
+      "authors": [
+        "Aotao Wang",
+        "Haikuo Shao",
+        "Shao-Bo Ma",
+        "Zhong-Feng Wang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 548,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FastMambaはMamba2の線形層をHadamard変換で8ビット量子化し、SSMブロック向け2の冪量子化と線形近似でFPGAアクセラレータを構成する、エッジ配備向け推論高速化の研究である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d21e902053f7",
+    "round": "libimp-d21e902053f7a96b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d21e902053f7a96b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d21e902053f7a96b-pre01.json",
+    "receipt": "sha256:bc53e5f5faf7d4e39890bb1653241333edfe8f6751f0a1bb06faf33f094579e4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d21e902053f7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
