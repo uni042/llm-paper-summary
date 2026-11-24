@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1488本）
+## 自動生成の論文一覧（1492本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -24,13 +24,13 @@
   実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：12  
   LLaVA型の画像言語モデルは、画像符号化器が出力した多数の視覚特徴を言語モデルの入力列へ結合する。この前提では、視覚情報の統合が実際に行われる層と計算資源を費やす層が一致しない。
 
+- **2025-12 · [Recursive Language Models](2025-2512.24601-recursive-language-models.md)**  
+  実装：[✓](https://github.com/alexzhang13/rlm) ・ リポジトリ内被引用：12  
+  再帰型言語モデル（Recursive Language モデル; RLM）は、長い入力を大規模言語モデルの注意窓へ丸ごと入れる代わりに、持続的なプログラム実行環境の変数として保存し、モデル自身がコードを生成して入力の必要箇所を調査・分割・変換する推論方式である。
+
 - **2026-02 · [FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging](2026-2602.08024-flashvid-efficient-video-large-language-models-via-training-free-tree-ba.md)**  
   実装：[✓](https://github.com/Fanziyang-v/FlashVID) ・ リポジトリ内被引用：11  
   入力フレームが増えるとトークン列が長くなり、注意機構だけでなく全結合層の計算、鍵値キャッシュ、初回応答までの時間が増える。LLaVA-OneVisionでは、視覚トークンを10%まで減らしても四つの主要評価群の平均点58.4から57.9へと小幅な低下にとどまり、元精度の99.1%を維持した。
-
-- **2025-12 · [Recursive Language Models](2025-2512.24601-recursive-language-models.md)**  
-  実装：[✓](https://github.com/alexzhang13/rlm) ・ リポジトリ内被引用：11  
-  再帰型言語モデル（Recursive Language モデル; RLM）は、長い入力を大規模言語モデルの注意窓へ丸ごと入れる代わりに、持続的なプログラム実行環境の変数として保存し、モデル自身がコードを生成して入力の必要箇所を調査・分割・変換する推論方式である。
 
 - **2026-02 · [OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models](2026-2602.04804-omnisift-modality-asymmetric-token-compression-for-efficient-omni-modal-.md)**  
   実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：10  
@@ -1998,9 +1998,17 @@
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィル→デコードのKV転送とデコード側テンソル並列AllReduceを同じ横方向リンクで競合させず、KVだけを3D縦リンクへ物理分離するチップレット構成。等帯域条件でも最大1.49倍のスループットと60.2%の遅延削減を示す。
 
+- **2026-06 · [When Attention Collapses: Stage-Aware Visual Token Pruning from Structure to Semantics](2026-2606.03569-when-attention-collapses-stage-aware-visual-token-pruning-from-structure.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意スコア頼みの視覚トークン枝刈りが高スコア領域へ崩壊する問題を定量化し、投入前の反発型サンプリングで多様性を確保してから中間層で指示関連性により絞る二段階の学習不要な枝刈りで、トークンを約9割減らしても性能をほぼ保つ。
+
 - **2026-06 · [Walk fast but be careful: Understanding Parallel Sampling in Masked Diffusion](2026-2606.22976-walk-fast-but-be-careful-understanding-parallel-sampling-in-masked-diffu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   グラフ上のランダムウォークで並列開示の誤差を条件付き依存として分離測定し、エントロピー基準が構造依存で一様に最適でないことを示した上で、分離子を開示する二分サンプラーで対数ステップの厳密な並列生成を実現するマスク拡散の研究。
+
+- **2026-06 · [Video-Rate Streaming Stylization on a Vision-Aware MLLM-Conditioned Edit Diffusion: Asymmetric Batched Inference on a Distilled UNet + MLLM Text Encoder](2026-2606.05981-video-rate-streaming-stylization-on-a-vision-aware-mllm-conditioned-edit.md)**  
+  実装：[✓](https://github.com/otanl/dreamlite-stream) ・ リポジトリ内被引用：0  
+  蒸留で軽くなった拡散デノイザではなく重いMLLMテキストエンコーダが律速になる反転したボトルネックに対し、CUDAストリーム分離とバッチ非対称性、コンパイル可能な時間アダプタ再定式化、条件の周期再利用で消費者GPU上に動画レートのストリーミング様式化を実現する推論システムの研究。
 
 - **2026-06 · [UniRank: Unified Rank Allocation for Low-Rank LLM Compression](2026-2606.21847-unirank-unified-rank-allocation-for-low-rank-llm-compression.md)**  
   実装：[✓](https://github.com/EIT-NLP/LLM-Pruning) ・ リポジトリ内被引用：0  
@@ -2093,6 +2101,10 @@
 - **2026-06 · [OffQ: Taming Structured Outliers in LLM Quantization by Offsetting](2026-2606.07116-offq-taming-structured-outliers-in-llm-quantization-by-offsetting.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低ビット量子化は、大規模言語モデル（LLM）の重み転送量と行列積の費用を削減する。一次論文の表1では、Llama 3-8BのWikiText困惑度が16ビットの6.1、比較方式ResQの7.1に対してOffQは6.98、8課題平均ゼロショット正解率はResQの63.91%に対して65.49%だった。
+
+- **2026-06 · [Not All Errors Are Equal: Consequence-Aware Reasoning Compute Allocation](2026-2606.04402-not-all-errors-are-equal-consequence-aware-reasoning-compute-allocation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  失敗の損害の大きさを課題文から予測して計算量を配る結果重大さ基準の配分で、難易度基準より費用重み付き損失を最大30.7パーセント減らし、難易度基準が無作為より悪い理由まで示す配分研究。
 
 - **2026-06 · [MS-Resampler: Multi-Scope Visual Resampling for Efficient Multimodal LLMs](2026-2606.31383-ms-resampler-multi-scope-visual-resampling-for-efficient-multimodal-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2329,6 +2341,10 @@
 - **2026-05 · [Parallel Prefix Verification for Speculative Generation](2026-2605.04263-parallel-prefix-verification-for-speculative-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   しかし従来の意味的投機方式では、節ごとに正誤を順番に判定するため、検証回数が新たな直列処理の負担となる。対象モデル単独に対する生成処理量はGPQAで1.25倍、GSM8Kで4.29倍となり、EAGLE-3併用では最大4.46倍を示した。
+
+- **2026-05 · [OmniMem: Perturbation-aware Memory Compression for Streaming Audio-Visual LLMs](2026-2606.07577-omnimem-perturbation-aware-memory-compression-for-streaming-audio-visual.md)**  
+  実装：[✓](https://github.com/bytedance/SALMONN/tree/omni_mem) ・ リポジトリ内被引用：0  
+  映像と音声のKVキャッシュを分けて層別・モダリティ別に予算を配り、注意重要度と冗長性を掛けたスコアで残すペアを選ぶことで、同一8K予算で長尺動画理解の正解率を比較対象より2から4ポイント高める圧縮方式。
 
 - **2026-05 · [OccamToken: Efficient VLM Inference with Training-Free and Budget-Adaptive Token Pruning](2026-2605.29657-occamtoken-efficient-vlm-inference-with-training-free-and-budget-adaptiv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3508,13 +3524,13 @@
   実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：41  
   長い思考過程を生成する推論モデルは、難しい問題で高い正答率を得られる一方、簡単な問題でも冗長な検討を続けることがある。本論文は、正答を優先したまま正解応答の長さに罰則を与えるオンライン強化学習を提案する。7Bの5タスク平均では、長さ罰則 $\alpha=0.2$ の場合、基準モデルに対して生成トークン数が51.58%、正答率が95.94%となった。
 
+- **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
+  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：39  
+  従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
+
 - **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  
   実装：[✓](https://github.com/zhijie-group/Discrete-Diffusion-Forcing) ・ リポジトリ内被引用：38  
   離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
-
-- **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
-  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：38  
-  従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
 
 - **2025-02 · [CoT-Valve: Length-Compressible Chain-of-Thought Tuning](2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：36  
@@ -4919,7 +4935,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：105  
+  実装：✓ ・ リポジトリ内被引用：106  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
@@ -5006,6 +5022,10 @@
   実装：✓ ・ リポジトリ内被引用：12  
   本研究は、端末側で短い草稿を作り、クラウド側で草稿中のトークンをまとめて検証することで、品質と計算費用の間の連続的な選択肢を作る。GSM8KではLlama-2-7B単独の正答率21.68%、70B単独53.07%に対し、対数閾値−0.5の協調方式は52.24%を達成した。
 
+- **2024-01 · [APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding](2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：12  
+  各トークンの生成にはモデル重みの読み込みと注意計算が必要で、単一要求ではGPUの演算器が十分使われない一方、多数要求では注意計算とKVキャッシュ容量が制約になる。重要なのは独立した段落を別々の生成系列として同時に進めることであり、単に次の複数トークンを予測して検証する投機的復号（投機的復号）とは異なる。
+
 - **2024-03 · [Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2024-8166d1af62df-exploring-post-training-quantization-in-llms-from-comprehensive-study-to.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   この論文は、大規模言語モデル（Large Language モデル; LLM）の学習後量子化（Post-学習 量子化; PTQ）について、「何ビットにするか」だけでなく、重みと活性化のどちらを量子化するか、どの範囲で尺度を共有するか、誤差をどの方法で補正するか、モデル系列と規模によって結果がどう変わるかを分離して調べる。
@@ -5013,10 +5033,6 @@
 - **2024-02 · [A Survey on Transformer Compression](2024-2402.05964-a-survey-on-transformer-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   論文はTransformer圧縮を、構造を保つ圧縮（量子化・知識蒸留）と、構造を変える圧縮（枝刈り・効率的なモデル構造）という二つの上位観点で整理する。
-
-- **2024-01 · [APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding](2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
-  各トークンの生成にはモデル重みの読み込みと注意計算が必要で、単一要求ではGPUの演算器が十分使われない一方、多数要求では注意計算とKVキャッシュ容量が制約になる。重要なのは独立した段落を別々の生成系列として同時に進めることであり、単に次の複数トークンを予測して検証する投機的復号（投機的復号）とは異なる。
 
 - **2024-10 · [SIGMA: Secure GPT Inference with Function Secret Sharing](2024-c544a15b6867-sigma-secure-gpt-inference-with-function-secret-sharing.md)**  
   実装：[✓](https://github.com/mpc-msri/EzPC/tree/master/GPU-MPC/experiments/sigma) ・ リポジトリ内被引用：10  

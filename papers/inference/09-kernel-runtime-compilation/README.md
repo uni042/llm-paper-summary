@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（334本）
+## 自動生成の論文一覧（335本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -645,6 +645,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [SonicSampler: Unified Tile-Aware Kernels for LLM Sampling and Speculative Verification](2026-2607.20475-sonicsampler-unified-tile-aware-kernels-for-llm-sampling-and-speculative.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SonicSamplerは語彙を固定長タイルへ分割し、第1段階で要求別のロジット変換とタイル内top-k抽出を融合し、第2段階でタイル候補を統合して確率切り詰め・乱数抽出・投機的検証を行う。
+
+- **2026-05 · [PopPy: Opportunistically Exploiting Parallelism in Python Compound AI Applications](2026-2605.18697-poppy-opportunistically-exploiting-parallelism-in-python-compound-ai-app.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  逐次Pythonで書かれた複合AIアプリケーションを機会的実行の核計算へコンパイルし、独立なモデル呼び出しを自動で並行化して逐次意味論を保ったまま最大6.4倍高速化するコンパイラと実行系。
 
 - **2026-05 · [Parallax: Parameterized Local Linear Attention for Language Modeling](2026-2605.29157-parallax-parameterized-local-linear-attention-for-language-modeling.md)**  
   実装：[✓](https://github.com/Yifei-Zuo/Parallax) ・ リポジトリ内被引用：0  
@@ -1293,7 +1297,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：138  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：139  
   密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  

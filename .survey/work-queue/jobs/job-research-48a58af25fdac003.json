@@ -35,10 +35,15 @@
   "selection_reason": "長尺動画の音声・映像LLM推論で線形に増えるビデオトークンとKVキャッシュに対し、モダリティ別メモリ配分と摂動を意識したKV選択で圧縮するOmniMemを提案し、同一メモリ予算で学習不要圧縮ベースラインを2〜4ポイント上回るストリーミング推論向けメモリ圧縮である。",
   "semantic_scholar_id": "c46fea7bd768aa71cbcc8c75a3c18f7aed8ebf6a",
   "source_url": "https://arxiv.org/abs/2606.07577",
-  "status": "ready",
+  "status": "superseded",
   "title": "OmniMem: Perturbation-aware Memory Compression for Streaming Audio-Visual LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T06:15:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.07577-omnimem-perturbation-aware-memory-compression-for-streaming-audio-visual.md",
+  "represented_canonical_id": "arXiv:2606.07577",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

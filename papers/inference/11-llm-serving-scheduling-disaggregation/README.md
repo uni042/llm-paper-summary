@@ -2398,13 +2398,13 @@
   実装：✓ ・ リポジトリ内被引用：8  
   初回トークンまでの時間（time to first トークン; TTFT）や連続するトークン間隔（time between トークン; TBT）について利用者ごとのサービス水準目標（service-level objective; SLO）を満たすには、実行中の要求の優先度を調整し、低優先度の要求を一時停止して高優先度の要求へGPUメモリを譲る必要がある。
 
+- **2024-04 · [ALTO: An Efficient Network Orchestrator for Compound AI Systems](2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  ALTO（Automatic Language Token Orchestrator）は、言語モデルの生成結果を複数の検索・再順位付け・追加生成段へ渡す複合AIシステムの実行基盤である。論文の実機評価では、応答遅延4秒を目標とする条件で、非逐次転送の比較方式より最大3倍の要求到着負荷を処理し、低負荷での99パーセンタイル遅延を1.8分の1にした。
+
 - **2024-08 · [SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving](2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md)**  
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：7  
   推論中に変動するバッチサイズとKVキャッシュ量から次の必要性能を予測し、サービス品質目標（service-level objective, SLO）を破らない範囲までGPU周波数を下げる。さらに負荷に合わせてテンソル並列度の異なるエンジンを切り替え、LLM配信の「使っていない性能余裕」をエネルギー削減へ変える。
-
-- **2024-04 · [ALTO: An Efficient Network Orchestrator for Compound AI Systems](2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  ALTO（Automatic Language Token Orchestrator）は、言語モデルの生成結果を複数の検索・再順位付け・追加生成段へ渡す複合AIシステムの実行基盤である。論文の実機評価では、応答遅延4秒を目標とする条件で、非逐次転送の比較方式より最大3倍の要求到着負荷を処理し、低負荷での99パーセンタイル遅延を1.8分の1にした。
 
 - **2024-04 · [Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models](2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md)**  
   実装：[✓](https://github.com/siyan-zhao/prepacking) ・ リポジトリ内被引用：6  
@@ -2493,7 +2493,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1939  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1940  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "64f1ce250d77487f5664778c9b887f7a36f43840",
+  "base_commit": "a7785807d8d0ecb08ed09bd9f263a0fecc5727a9",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -829,6 +829,7 @@
     "2026-2605.17842-snlp-layer-parallel-inference-via-structured-newton-corrections.json",
     "2026-2605.18331-prune-update-and-trim-robust-structured-pruning-for-large-language-models.json",
     "2026-2605.18597-latent-action-reparameterization-for-efficient-agent-inference.json",
+    "2026-2605.18697-poppy-opportunistically-exploiting-parallelism-in-python-agentic-workflows.json",
     "2026-2605.19260-aquaui-visual-token-reduction-for-gui-agents-with-adaptive-quadtrees.json",
     "2026-2605.19322-dynatok-temporally-adaptive-and-positional-bias-aware-token-compression-for-video-llms.json",
     "2026-2605.19506-eventprune-cascaded-event-assisted-token-pruning-for-efficient-first-person-dynamic-spatial-reasoning.json",
@@ -862,14 +863,18 @@
     "2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted-recovery.json",
     "2026-2606.02559-from-layers-to-submodules-rethinking-granularity-in-replacement-based-llm-compression.json",
     "2026-2606.03014-mosaic-efficient-mixture-of-agent-scheduling-via-adaptive-aggregation-and-inference-concurrency.json",
+    "2026-2606.03569-when-attention-collapses-stage-aware-visual-token-pruning-from-structure-to-semantics.json",
     "2026-2606.03965-agentic-chain-of-thought-steering-for-efficient-and-controllable-llm-reasoning.json",
+    "2026-2606.04402-not-all-errors-are-equal-consequence-aware-reasoning-compute-allocation.json",
     "2026-2606.04594-ekka-automated-diagnosis-of-silent-errors-in-llm-inference.json",
     "2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusion-large-language-models.json",
     "2026-2606.05232-differentiable-efficient-operator-search.json",
+    "2026-2606.05981-inverting-the-streaming-diffusion-bottleneck-video-rate-mllm-conditioned-edit-diffusion-on-a-consumer-gpu.json",
     "2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approximation-for-quantized-gated-deltanet.json",
     "2026-2606.06521-p-cast-precision-in-fp8-attention-sink-induced-collapse-and-the-optimality-of-s-2-8.json",
     "2026-2606.07248-clairvoyant-predictive-shortest-job-first-admission-for-serial-llm-inference.json",
     "2026-2606.07362-breaking-the-ice-analyzing-cold-start-latency-in-vllm.json",
+    "2026-2606.07577-omnimem-perturbation-aware-memory-compression-for-streaming-audio-visual-llms.json",
     "2026-2606.07581-behavioral-consistency-in-machine-learning.json",
     "2026-2606.07819-joint-structural-pruning-and-mixed-precision-quantization-for-llm-compression.json",
     "2026-2606.08511-look-less-reason-more-block-wise-attention-skipping-for-efficient-multimodal-llms.json",
@@ -53491,6 +53496,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2605.18697": {
+      "order": [
+        "2026-11-24T06:11:34+00:00",
+        "2026-2605.18697-poppy-opportunistically-exploiting-parallelism-in-python-agentic-workflows.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.03569": {
+      "order": [
+        "2026-11-24T06:12:19+00:00",
+        "2026-2606.03569-when-attention-collapses-stage-aware-visual-token-pruning-from-structure-to-semantics.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.04402": {
+      "order": [
+        "2026-11-24T06:13:04+00:00",
+        "2026-2606.04402-not-all-errors-are-equal-consequence-aware-reasoning-compute-allocation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.05981": {
+      "order": [
+        "2026-11-24T06:13:49+00:00",
+        "2026-2606.05981-inverting-the-streaming-diffusion-bottleneck-video-rate-mllm-conditioned-edit-diffusion-on-a-consumer-gpu.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.07577": {
+      "order": [
+        "2026-11-24T06:14:34+00:00",
+        "2026-2606.07577-omnimem-perturbation-aware-memory-compression-for-streaming-audio-visual-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67904,6 +67954,21 @@
     "arxiv:2605.17164": [
       "papers/inference/15-inference-simulation-emulation/2026-2605.17164-charon-a-unified-and-fine-grained-simulator-for-large-scale-llm-training.md",
       "papers/inference/15-inference-simulation-emulation/2026-2605.17164-charon-a-unified-and-fine-grained-simulator-for-large-scale-llm-training.md"
+    ],
+    "arxiv:2605.18697": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2605.18697-poppy-opportunistically-exploiting-parallelism-in-python-compound-ai-app.md"
+    ],
+    "arxiv:2606.03569": [
+      "papers/inference/99-other-inference-systems/2026-2606.03569-when-attention-collapses-stage-aware-visual-token-pruning-from-structure.md"
+    ],
+    "arxiv:2606.04402": [
+      "papers/inference/99-other-inference-systems/2026-2606.04402-not-all-errors-are-equal-consequence-aware-reasoning-compute-allocation.md"
+    ],
+    "arxiv:2606.05981": [
+      "papers/inference/99-other-inference-systems/2026-2606.05981-video-rate-streaming-stylization-on-a-vision-aware-mllm-conditioned-edit.md"
+    ],
+    "arxiv:2606.07577": [
+      "papers/inference/99-other-inference-systems/2026-2606.07577-omnimem-perturbation-aware-memory-compression-for-streaming-audio-visual.md"
     ]
   }
 }
