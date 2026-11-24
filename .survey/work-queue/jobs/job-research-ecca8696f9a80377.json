@@ -35,10 +35,15 @@
   "selection_reason": "VLMバックボーンの出力変化量を予測するLatent Bridgeで高コストなVLM呼び出しを周期実行に減らし、VLAモデル推論で呼び出しを50〜75%削減し1.65〜1.73倍の高速化を実測しているため。",
   "semantic_scholar_id": "8e52002772ed95087bdd4cf7a89dbe3630dfe015",
   "source_url": "https://arxiv.org/abs/2605.02739",
-  "status": "ready",
+  "status": "superseded",
   "title": "Latent Bridge: Feature Delta Prediction for Efficient Dual-System Vision-Language-Action Model Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T05:57:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.02739-latent-bridge-feature-delta-prediction-for-efficient-dual-system-vision-.md",
+  "represented_canonical_id": "arXiv:2605.02739",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

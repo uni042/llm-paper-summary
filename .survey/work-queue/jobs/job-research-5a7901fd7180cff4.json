@@ -35,10 +35,15 @@
   "selection_reason": "Apple MPSバックエンドでの自己回帰デコードに非単調なレイテンシ急増が生じる現象をGPT-2・BLOOM・OPTで計測し、KVキャッシュとの強い相互作用やデコード段階起源であることを切り分けた研究で、KVキャッシュとデコード実行レジームの計測に直接貢献する。",
   "semantic_scholar_id": "6688a5dc5193a42b8aa2e4d8fe4bcf8c26338b39",
   "source_url": "https://arxiv.org/abs/2605.08913",
-  "status": "ready",
+  "status": "superseded",
   "title": "Non-Monotonic Latency in Apple MPS Decoding: KV Cache Interactions and Execution Regimes",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T05:57:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.08913-non-monotonic-latency-in-apple-mps-decoding-kv-cache-interactions-and-ex.md",
+  "represented_canonical_id": "arXiv:2605.08913",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

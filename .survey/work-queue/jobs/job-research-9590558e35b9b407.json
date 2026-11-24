@@ -35,10 +35,15 @@
   "selection_reason": "Ascend上のMoE推論で、pooled HBMと対称メモリを使いディスパッチ／コンバインをリレーバッファなしで宛先エキスパートウィンドウへ直接配置し、prefillとdecode両相の通信・並べ替えオーバーヘッドを削る直接的なMoE推論高速化である。",
   "semantic_scholar_id": "d4346061214295ee998de1a10b950d4a338e3f11",
   "source_url": "https://arxiv.org/abs/2605.06055",
-  "status": "ready",
+  "status": "superseded",
   "title": "Relay Buffer Independent Communication over Pooled HBM for Efficient MoE Inference on Ascend",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T05:57:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06055-relay-buffer-independent-communication-over-pooled-hbm-for-efficient-moe.md",
+  "represented_canonical_id": "arXiv:2605.06055",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（120本）
+## 自動生成の論文一覧（121本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -52,13 +52,13 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：5  
   ScaleSimは、多数の大規模言語モデル利用エージェントを同時に動かすシミュレーションにおいて、GPUメモリ上のエージェント固有状態を、次にどのエージェントが言語モデルを呼び出すかというアプリケーション側の予測に基づいて管理する配信システムである。
 
+- **2026-03 · [DyQ-VLA: Dynamic Quantization and Compensation for VLA models with Runtime Error Awareness](2026-2603.07904-dyq-vla-temporal-dynamic-aware-quantization-for-embodied-vision-language.md)**  
+  実装：[✓](https://anonymous.4open.science/r/DyQ-VLA-7F51/) ・ リポジトリ内被引用：4  
+  DyQ-VLAの2026年10月4日公開の第3版は、量子化によって変わる実行時の行動と誤差の相関を明示的に測り、並進と回転で異なる制御を行う。LIBEROおよびRoboTwin 2.0の評価では、BF16に対する推論単位の速度改善が1.74〜1.81倍、成功した実行全体にわたるモデル推論時間の改善が1.88〜1.93倍となった。
+
 - **2026-06 · [KernelSight-LM: A Kernel-Level LLM Inference Simulator](2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   GPUカーネル予測と実運用サービングの離散事象モデルを統合し、未計測GPUでもカーネル誤差12.1%、対象計測ありで3.8%を達成。
-
-- **2026-03 · [DyQ-VLA: Dynamic Quantization and Compensation for VLA models with Runtime Error Awareness](2026-2603.07904-dyq-vla-temporal-dynamic-aware-quantization-for-embodied-vision-language.md)**  
-  実装：[✓](https://anonymous.4open.science/r/DyQ-VLA-7F51/) ・ リポジトリ内被引用：3  
-  DyQ-VLAの2026年10月4日公開の第3版は、量子化によって変わる実行時の行動と誤差の相関を明示的に測り、並進と回転で異なる制御を行う。LIBEROおよびRoboTwin 2.0の評価では、BF16に対する推論単位の速度改善が1.74〜1.81倍、成功した実行全体にわたるモデル推論時間の改善が1.88〜1.93倍となった。
 
 - **2026-06 · [Characterizing How Complex Agentic AI Systems Handle General Tasks: A Trace-Based Simulation Study](2026-2606.01725-characterizing-how-complex-agentic-ai-systems-handle-general-tasks-a-tra.md)**  
   実装：[✓](https://doi.org/10.5281/zenodo.22133686) ・ リポジトリ内被引用：2  
@@ -249,6 +249,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-06 · [LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge](2026-2606.31580-laser-load-aware-serving-with-early-exit-for-reasoning-llms-at-the-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論モデルの早期終了を固定しきい値から負荷連動へ変え、難易度と負荷で推論予算の上限も割り当てることで、平均遅延を17から38パーセント減らし期限内完了率を3から6ポイント上げた（正解率は平均約1ポイント低下）。
+
+- **2026-05 · [Sim-FA: A GPGPU Simulator Framework for Fine-Grained Asynchronous Pipeline Analysis](2026-2605.00555-sim-fa-a-gpgpu-simulator-framework-for-fine-grained-asynchronous-pipelin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HopperのTMAとWGMMAとワープ特殊化をワープグループ単位でモデル化するサイクル精度シミュレータと、波単位の再取得を入れた解析モデルで、FlashAttention-3の遅延を実機誤差平均5.7パーセントで再現し、既存解析モデルの長系列での過小評価の原因を示す研究。
 
 - **2026-05 · [Multi-Scale Dequant: Eliminating Dequantization Bottleneck via Activation Decomposition for Efficient LLM Inference](2026-2605.13915-multi-scale-dequant-eliminating-dequantization-bottleneck-via-activation.md)**  
   実装：[✓](https://gitcode.com/cann/ops-transformer) ・ リポジトリ内被引用：0  

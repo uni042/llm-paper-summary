@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1484本）
+## 自動生成の論文一覧（1486本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -771,6 +771,10 @@
 - **2026-04 · [Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment](2026-2604.24447-characterizing-vision-language-action-models-across-xpus-constraints-and.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本論文は、視覚・言語・行動モデル（Vision-Language-Action、VLA）をロボットに搭載するときの「制御周期内に推論を終えられるか」「何ワット時・いくらで実行できるか」という推論システムの問題を扱う。
+
+- **2026-04 · [Breaking Block Boundaries: Anchor-based History-stable Decoding for Diffusion Large Language Models](2026-2604.08964-breaking-block-boundaries-anchor-based-history-stable-decoding-for-diffu.md)**  
+  実装：[✓](https://github.com/zs1314/AHD) ・ リポジトリ内被引用：1  
+  履歴バッファと動的アンカーでトークンの安定化の軌跡を捉え、安定したトークンをブロック境界を越えて早期確定することで、拡散言語モデルのデコードステップ削減と性能向上を両立する学習不要の方式。
 
 - **2026-04 · [ART: Attention Run-time Termination for Efficient Large Language Model Decoding](2026-2606.00024-art-attention-run-time-termination-for-efficient-large-language-model-de.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -2386,6 +2390,10 @@
   実装：[✓](https://github.com/Conzel/super-outlier-dlm) ・ リポジトリ内被引用：0  
   本論文は、離散拡散型言語モデル（Diffusion Language モデル、DLM）と自己回帰型言語モデル（Autoregressive Language モデル、ARモデル）で、隠れ状態の層間類似性と圧縮耐性がどのように異なるかを調べた実証研究である。
 
+- **2026-05 · [Latent Bridge: Feature Delta Prediction for Efficient Dual-System Vision-Language-Action Model Inference](2026-2605.02739-latent-bridge-feature-delta-prediction-for-efficient-dual-system-vision-.md)**  
+  実装：[✓](https://github.com/1999Lyd/Latent-Bridge) ・ リポジトリ内被引用：0  
+  視覚言語バックボーンの出力の変化量を小さな橋で予測して呼び出しを50から75パーセント省き、二系統型の行動モデルで成功率をほぼ保ったまま1.65から1.73倍へ高速化する。
+
 - **2026-05 · [Latent Action Reparameterization for Efficient Agent Inference](2026-2605.18597-latent-action-reparameterization-for-efficient-agent-inference.md)**  
   実装：[✓](https://github.com/EZ-hwh/LAR) ・ リポジトリ内被引用：0  
   エージェントの軌跡から遷移等価な複数ステップ行動を潜在行動として学習し語彙化することで、行動トークンを最大で約27パーセント減らしながらタスク性能を維持または改善する、行動表現そのものの再設計。
@@ -2429,6 +2437,10 @@
 - **2026-05 · [Focus-then-Context: Subject-Centric Progressive Visual Token Reduction for Vision-Language Models](2026-2605.20950-focus-then-context-subject-centric-progressive-visual-token-reduction-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SPprunerは視覚言語モデルの推論時に、質問と一致する画像領域だけでなく目立つ被写体とその周囲の構造情報を残す二段階の視覚トークン間引き方式である。
+
+- **2026-05 · [Focus on the Core: Empowering Diffusion Large Language Models by Self-Contrast](2026-2605.01373-focus-on-the-core-empowering-diffusion-large-language-models-by-self-con.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散言語モデルのデコードを核トークンへ集中させる学習不要の手法。分布のステップ間変動から高情報密度トークンを自動検出し、再マスクした負例との自己コントラストで品質を上げ、収束検知による並列デコードでステップ数と遅延も削減する。
 
 - **2026-05 · [Fixed-Point Masked Generative Modeling](2026-2605.31215-fixed-point-masked-generative-modeling.md)**  
   実装：[✓](https://github.com/andreamiele/fp-mgm/) ・ リポジトリ内被引用：0  
@@ -2721,10 +2733,6 @@
 - **2026-04 · [CLASP: Class-Adaptive Layer Fusion and Dual-Stage Pruning for Multimodal Large Language Models](2026-2604.12767-clasp-class-adaptive-layer-fusion-and-dual-stage-pruning-for-multimodal-.md)**  
   実装：[✓](https://github.com/Yunkaidang/CLASP) ・ リポジトリ内被引用：0  
   CLASP（Class-適応的 層 融合 and Dual-Stage Pruning）は、画像・動画を入力するマルチモーダルLLM（MLLM）の視覚トークンを、ユーザーの質問の種類に応じて削減する方式である。
-
-- **2026-04 · [Breaking Block Boundaries: Anchor-based History-stable Decoding for Diffusion Large Language Models](2026-2604.08964-breaking-block-boundaries-anchor-based-history-stable-decoding-for-diffu.md)**  
-  実装：[✓](https://github.com/zs1314/AHD) ・ リポジトリ内被引用：0  
-  履歴バッファと動的アンカーでトークンの安定化の軌跡を捉え、安定したトークンをブロック境界を越えて早期確定することで、拡散言語モデルのデコードステップ削減と性能向上を両立する学習不要の方式。
 
 - **2026-04 · [BOSCH: Black-Box Binary Optimization for Short-Context Attention-Head Selection in LLMs](2026-2604.05942-bosch-black-box-binary-optimization-for-short-context-attention-head-sel.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3457,7 +3465,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：152  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：153  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
