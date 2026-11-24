@@ -104,6 +104,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   注意の行列積を4ビット化する際に、較正固定の等価な拡大・縮小でキーの外れ値をクエリ側へ移し、正規化子を実際に使う量子化済み重みから求めることで、判断のずれを大幅に減らした学習不要の方式である。
 
+- **2026-06 · [Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models](2026-2606.24165-spectral-evolution-guided-token-pruning-in-multimodal-large-language-mod.md)**  
+  実装：[✓](https://github.com/zjubinchen/CLSE) ・ リポジトリ内被引用：1  
+  層をまたぐ周波数成分の変化量を重要度にして視覚トークンを第2層の前に落とす学習不要の枝刈りで、88.9パーセント削減でも全トークン性能の94.8パーセントを保持した。
+
 - **2026-06 · [NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation](2026-2606.27791-nll-guided-full-attention-layer-selection-for-training-free-sliding-wind.md)**  
   実装：[✓](https://gitlab.com/fars-a/nll-guided-swaa-layer-selection) ・ リポジトリ内被引用：1  
   長文脈LLMの事前充填（プリフィル）では、通常の全注意（full 注意機構; FA）の計算量が入力長に対して二乗で増える。36層のQwen3-4B-Thinking-2507とLongMemEval24kの評価では、9層（1/4）を全注意としたNLL-guidedが64.6%の正解率を得た。
@@ -526,10 +530,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   一二二言語で推論エネルギーを実機計測し、トークン当たりで最大八・三倍、応答当たり総量で英語比一七九倍の言語間格差があること、その主因が低資源言語でのトークン単価上昇と出力トークン数膨張の掛け算であり、格差がモデル・ハードウェア・課題を変えても残ることを明らかにした。
 
-- **2026-06 · [Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models](2026-2606.24165-spectral-evolution-guided-token-pruning-in-multimodal-large-language-mod.md)**  
-  実装：[✓](https://github.com/zjubinchen/CLSE) ・ リポジトリ内被引用：0  
-  層をまたぐ周波数成分の変化量を重要度にして視覚トークンを第2層の前に落とす学習不要の枝刈りで、88.9パーセント削減でも全トークン性能の94.8パーセントを保持した。
-
 - **2026-06 · [MARS: Margin-Adversarial Risk-controlled Stopping for Parallel LLM Test-time Scaling](2026-2606.12935-mars-margin-adversarial-risk-controlled-stopping-for-parallel-llm-test-t.md)**  
   実装：[✓](https://github.com/Wenbo11/MARS) ・ リポジトリ内被引用：0  
   途中回答の投票の票差が、将来の変更による敵対的な損害を上回ることを証明してから並列生成を止める停止規則で、精度を保ったまま自己整合性のトークンを25から47パーセント削減する。
@@ -816,13 +816,13 @@
   実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：17  
   著者らはキャッシュ拡張生成（Cache-Augmented Generation、CAG）を提案する。Llama 3.1 8BをV100×8で評価した結果、SQuADとHotPotQAの多くの知識集合でCAGの回答品質は疎検索・密検索を用いるRAGと同等以上である。
 
+- **2025-10 · [Growing a Twig to Accelerate Large Vision-Language Models](2025-2503.14075-growing-a-twig-to-accelerate-large-vision-language-models.md)**  
+  実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：16  
+  初期の視覚トークン枝刈り方式は、入力処理（プリフィル）の計算量を減らす一方、初期層の注意得点が質問内容を十分反映しないため、削除してはいけない視覚トークンを捨てやすい。ICCV 2025論文の主結果では、LLaVA-1.5-7Bの平均視覚トークンを576から64へ減らした設定（88.9%削減）で、6課題の平均相対性能96.0%を維持した。
+
 - **2025-06 · [Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference](2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md)**  
   実装：[✓](https://github.com/nanomaoli/llm_reproducibility) ・ リポジトリ内被引用：16  
   「温度0の貪欲復号なら同じモデルは同じ答えを返す」という前提が、GPU数・GPU種類・バッチサイズによる浮動小数点演算順序の変化だけでも崩れることを系統的に示し、重みの保存精度と計算精度を分離するLayerCastで再現性を改善する研究。
-
-- **2025-10 · [Growing a Twig to Accelerate Large Vision-Language Models](2025-2503.14075-growing-a-twig-to-accelerate-large-vision-language-models.md)**  
-  実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：15  
-  初期の視覚トークン枝刈り方式は、入力処理（プリフィル）の計算量を減らす一方、初期層の注意得点が質問内容を十分反映しないため、削除してはいけない視覚トークンを捨てやすい。ICCV 2025論文の主結果では、LLaVA-1.5-7Bの平均視覚トークンを576から64へ減らした設定（88.9%削減）で、6課題の平均相対性能96.0%を維持した。
 
 - **2025-07 · [Collaborative Inference and Learning between Edge SLMs and Cloud LLMs: A Survey of Algorithms, Execution, and Open Challenges](2025-2507.16731-collaborative-inference-and-learning-between-edge-slms-and-cloud-llms-a-.md)**  
   実装：✓ ・ リポジトリ内被引用：7  

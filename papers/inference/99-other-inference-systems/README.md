@@ -2132,6 +2132,10 @@
   実装：[✓](https://github.com/YujiaoYang-work/UoE) ・ リポジトリ内被引用：1  
   本論文は、Mixture-of-Experts（MoE）の疎活性化をMLPブロックだけに限定せず、注意ブロックとMLPブロックをともに、機能的に等価な部分計算から構成される専門家集合へ分解するUnion-of-Experts（UoE）を提案する。
 
+- **2025-03 · [StreamMind: Unlocking Full Frame Rate Streaming Video Dialogue through Event-Gated Cognition](2025-2503.06220-streammind-unlocking-full-frame-rate-streaming-video-dialogue-through-ev.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  状態空間モデルによる定数費用の知覚と、言語モデルの浅い層を転用した認知ゲートで、毎秒100フレームのストリーミング動画へ能動的に応答する枠組み。
+
 - **2025-03 · [STADE: Standard Deviation as a Pruning Metric](2025-2503.22451-stade-standard-deviation-as-a-pruning-metric.md)**  
   実装：[✓](https://github.com/Coello-dev/STADE) ・ リポジトリ内被引用：1  
   枝刈り問題の理論解析から、入力が中心化されていない層ではWandaではなく活性の標準偏差を使う指標が最適になることを導いた研究。層ごとに指標を切り替えるSTADE-Wまで含め、理論の予測どおりに優劣が入れ替わることを実測で確認した。
@@ -2520,10 +2524,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文を一つの埋め込みへ圧縮し、完了した文の埋め込みをキャッシュして生成する階層型モデルで、小規模領域で計算量最大約10倍と速度最大3倍の効率を得る一方、品質の代償も測る研究。
 
-- **2025-03 · [StreamMind: Unlocking Full Frame Rate Streaming Video Dialogue through Event-Gated Cognition](2025-2503.06220-streammind-unlocking-full-frame-rate-streaming-video-dialogue-through-ev.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  状態空間モデルによる定数費用の知覚と、言語モデルの浅い層を転用した認知ゲートで、毎秒100フレームのストリーミング動画へ能動的に応答する枠組み。
-
 - **2025-03 · [Efficient self-attention with smart pruning for sustainable large language models](2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-langua.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   埋め込みと全結合層の重みを凍結とゼロ化で削り、自己注意のクエリとキーを行の同一化で、バリューを対角化で圧縮する枝刈り手法。GPT-2で全体約70%圧縮しながら分類精度の低下を約2.5ポイントに抑え、推論を2.5倍に高速化したと報告する。
@@ -2670,13 +2670,13 @@
   実装：[✓](https://github.com/mpc-msri/EzPC/tree/master/GPU-MPC/experiments/sigma) ・ リポジトリ内被引用：10  
   SIGMAは関数秘密分散（Function Secret Sharing; FSS）によって複雑な非線形演算を二者間で実現し、事前に作った暗号鍵を使ってオンライン時の通信を抑える。代表結果は、系列長128の二者間オンライン推論において、既存のGPU秘匿計算系CrypTenより12.2～19倍短い実行時間である。
 
+- **2024-10 · [Fast Best-of-N Decoding via Speculative Rejection](2024-2410.20290-fast-best-of-n-decoding-via-speculative-rejection.md)**  
+  実装：[✓](https://github.com/Zanette-Labs/SpeculativeRejection) ・ リポジトリ内被引用：10  
+  部分応答の報酬が最終報酬と相関することを使い、生成途中で見込みの薄い応答を繰り返し打ち切ることで、Best-of-Nを単一GPUで16倍から32倍効率化する推論時アラインメント。
+
 - **2024-03 · [AI and Memory Wall](2024-2403.14123-ai-and-memory-wall.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   AI向け計算器の演算性能が急速に増える一方、DRAMやデバイス間通信の帯域は同じ速度で増えない。低バッチの自己回帰生成では重みの再読出しが支配的になり、FLOPsだけで推論性能を評価すると誤る。
-
-- **2024-10 · [Fast Best-of-N Decoding via Speculative Rejection](2024-2410.20290-fast-best-of-n-decoding-via-speculative-rejection.md)**  
-  実装：[✓](https://github.com/Zanette-Labs/SpeculativeRejection) ・ リポジトリ内被引用：9  
-  部分応答の報酬が最終報酬と相関することを使い、生成途中で見込みの薄い応答を繰り返し打ち切ることで、Best-of-Nを単一GPUで16倍から32倍効率化する推論時アラインメント。
 
 - **2024-04 · [MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts](2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md)**  
   実装：[✓](https://github.com/TUDB-Labs/MixLoRA) ・ リポジトリ内被引用：9  
@@ -3087,7 +3087,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：208  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：209  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
