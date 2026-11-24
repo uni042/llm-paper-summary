@@ -1,0 +1,653 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-87f8d717f0809a10-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-87f8d717f080",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/ipdpsw63119.2024.00016",
+    "DOI:10.1109/tcsii.2025.3596228",
+    "DOI:10.1145/3746467.3801501",
+    "DOI:10.23919/date69613.2026.11539097",
+    "arXiv:2510.18030",
+    "arXiv:2510.26697"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5e22a9eb1ed83a10943760b25e814a0ba609e032",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T04:47:39.418133+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/ipdpsw63119.2024.00016",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tcsii.2025.3596228",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3746467.3801501",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11539097",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.18030",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.26697",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "From Local to Global: Revisiting Structured Pruning Paradigms for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.18030",
+      "year": 2025,
+      "published": "2025-10-20",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning is a practical approach to deploying large language models (LLMs) efficiently, as it yields compact, hardware-friendly architectures. However, the dominant local paradigm is task-agnostic: by optimizing layer-wise reconstruction rather than task objectives, it tends to preserve perplexity or generic zero-shot behavior but fails to capitalize on modest task-specific calibration signals, often yielding limited downstream gains. We revisit global structured pruning and present GISP, Global Iterative Structured Pruning, a post-training method that removes attention heads and MLP channels using first-order, loss-based important scores aggregated at the structure level with block-wise normalization. Built on this global importance metric, GISP adopts an iterative schedule, rather than one-shot pruning, stabilizes accuracy at higher sparsity, and mitigates perplexity collapse without requiring intermediate fine-tuning. Importantly, the iterative pruning forms nested subnetworks that support a''prune-once, deploy-many''workflow. Furthermore, GISP defines structural importance directly with respect to a target loss, making it easy to adapt pruning to task-specific objectives. In this work, we use perplexity for language modeling and a margin-based objective for decision-style tasks. Extensive experiments show that across Llama2-7B/13B, Llama3-8B, and Mistral-0.3-7B, GISP consistently lowers WikiText-2 perplexity and improves on downstream accuracy, with especially strong gains at 40-50% sparsity; on DeepSeek-R1-Distill-Llama-3-8B and Qwen3-8B with GSM8K, task-aligned calibration substantially boosts exact-match accuracy. The implementation is available at https://github.com/uncc-efficient-ai/GISP.",
+      "identifiers": [
+        "SemanticScholar:9767e72d7a59a0d845be701b330d56baaff45246"
+      ],
+      "semantic_scholar_id": "9767e72d7a59a0d845be701b330d56baaff45246",
+      "canonical_id": "arXiv:2510.18030",
+      "arxiv_id": "2510.18030",
+      "doi": "10.48550/arXiv.2510.18030",
+      "authors": [
+        "Zi-Yan Wang",
+        "Enmao Diao",
+        "Qi Le",
+        "Pu Wang",
+        "Minwoo Lee",
+        "Shu-Ping Yeh",
+        "Evgeny Stupachenko",
+        "Hao Feng",
+        "Li Yang"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 400,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "The End of Manual Decoding: Towards Truly End-to-End Language Models",
+      "source_url": "https://arxiv.org/abs/2510.26697",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The\"end-to-end\"label for LLMs is a misnomer. In practice, they depend on a non-differentiable decoding process that requires laborious, hand-tuning of hyperparameters like temperature and top-p. This paper introduces AutoDeco, a novel architecture that enables truly\"end-to-end\"generation by learning to control its own decoding strategy. We augment the standard transformer with lightweight heads that, at each step, dynamically predict context-specific temperature and top-p values alongside the next-token logits. This approach transforms decoding into a parametric, token-level process, allowing the model to self-regulate its sampling strategy within a single forward pass. Through extensive experiments on eight benchmarks, we demonstrate that AutoDeco not only significantly outperforms default decoding strategies but also achieves performance comparable to an oracle-tuned baseline derived from\"hacking the test set\"-a practical upper bound for any static method. Crucially, we uncover an emergent capability for instruction-based decoding control: the model learns to interpret natural language commands (e.g.,\"generate with low randomness\") and adjusts its predicted temperature and top-p on a token-by-token basis, opening a new paradigm for steerable and interactive LLM decoding.",
+      "identifiers": [
+        "SemanticScholar:a67f6696ebf1aa1f9bed5166e71e0fa9e4e10e21"
+      ],
+      "semantic_scholar_id": "a67f6696ebf1aa1f9bed5166e71e0fa9e4e10e21",
+      "canonical_id": "arXiv:2510.26697",
+      "arxiv_id": "2510.26697",
+      "doi": "10.48550/arXiv.2510.26697",
+      "authors": [
+        "Zhi-Chao Wang",
+        "Dongyang Ma",
+        "Xin-Ting Huang",
+        "Deng Cai",
+        "Tian Lan",
+        "Jia-Hao Xu",
+        "Hai-Tao Mi",
+        "Xiao-Ying Tang",
+        "Yan Wang"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 390,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "BETA: A Bit-Grained Transformer Attention Accelerator With Efficient Early Termination",
+      "source_url": "https://doi.org/10.1109/TCSII.2025.3596228",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "IEEE Transactions on Circuits and Systems - II - Express Briefs",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention-based large language models (LLMs) have revolutionized the natural language processing (NLP). Despite their impressive effectiveness, the quadratic complexity of self-attention incurs heavy computational and memory burdens. Dynamic sparse attention techniques emerge as a solution, however, the introduced extra prediction stage, coupled with costly data memory access, diminishes their hardware efficiency. To address these limitations, this brief proposes BETA, a fine-grained algorithm-architecture co-design tailored for sparse attention. First, a bit-grained multi-round filter (BMF) prediction is proposed to unveil and eliminate redundant memory access hidden in the sparsity prediction stage. Second, an adaptive and lightweight max-based threshold selection (MTS) strategy is developed to work in concert with the bit-wise prediction process. Third, a bit-wise out-of-order execution (BOOE) scheme is employed to enhance hardware utilization during bit-wise prediction. Finally, an elaborate architecture is designed to translate the theoretical complexity reduction into practical performance improvement. Implementation results demonstrate that BETA achieves <inline-formula> <tex-math notation=\"LaTeX\">$5.4\\times $ </tex-math></inline-formula>, <inline-formula> <tex-math notation=\"LaTeX\">$6.5\\times $ </tex-math></inline-formula>, <inline-formula> <tex-math notation=\"LaTeX\">$1.8\\times $ </tex-math></inline-formula> improvements in energy efficiency than the state-of-the-art Transformer accelerators Sanger, Spatten and SOFA, respectively, while maintaining comparable inference accuracy.",
+      "identifiers": [
+        "SemanticScholar:a7a71daece55f88209e792218fabf3fd75412461"
+      ],
+      "semantic_scholar_id": "a7a71daece55f88209e792218fabf3fd75412461",
+      "doi": "10.1109/TCSII.2025.3596228",
+      "canonical_id": "DOI:10.1109/TCSII.2025.3596228",
+      "authors": [
+        "Hui-Zheng Wang",
+        "Hong-Bin Wang",
+        "Zhi-Heng Yue",
+        "Jing-Yao Liu",
+        "Tai-Quan Wei",
+        "Shao-Jun Wei",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 419,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Toward a Holistic Performance Evaluation of Large Language Models Across Diverse AI Accelerators",
+      "source_url": "https://doi.org/10.1109/IPDPSW63119.2024.00016",
+      "year": 2024,
+      "published": "2024-05-27",
+      "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Artificial intelligence (AI) methods have become critical in scientific applications to help accelerate scientific discovery. Large language models (LLMs) are being considered a promising approach to address some challenging problems because of their superior generalization capabilities across domains. The effectiveness of the models and the accuracy of the applications are contingent upon their efficient execution on the underlying hardware infrastructure. Specialized AI accelerator hardware systems have recently become available for accelerating AI applications. However, the comparative performance of these AI accelerators on large language models has not been previously studied. In this paper, we systematically study LLMs on multiple AI accelerators and GPU s and evaluate their performance characteristics for these models. We evaluate these systems with (i) a micro-benchmark using a core transformer block, (ii) a GPT-2 model, and (iii) an LLM-driven science use case, GenSLM. We present our findings and analyses of the models' performance to better understand the intrinsic capabilities of AI accelerators. Furthermore, our analysis takes into account key factors such as sequence lengths, scaling behavior, and sensitivity to gradient accumulation steps.",
+      "identifiers": [
+        "SemanticScholar:c698bc364e8c7ac6422923d84c87ad88d78d4c5c"
+      ],
+      "semantic_scholar_id": "c698bc364e8c7ac6422923d84c87ad88d78d4c5c",
+      "doi": "10.1109/IPDPSW63119.2024.00016",
+      "canonical_id": "DOI:10.1109/IPDPSW63119.2024.00016",
+      "authors": [
+        "M. Emani",
+        "Sam Foreman",
+        "V. Sastry",
+        "Zhen Xie",
+        "Siddhisanket Raskar",
+        "William Arnold",
+        "R. Thakur",
+        "V. Vishwanath",
+        "M. Papka",
+        "Sanjif Shanmugavelu",
+        "Darshan Gandhi",
+        "Heng-Yu Zhao",
+        "Dun Ma",
+        "Kiran Ranganath",
+        "Rickey C. Weisner",
+        "Jiunn-Yeu Chen",
+        "Yuting Yang",
+        "N. Vassilieva",
+        "B. Zhang",
+        "Sylvia Howland",
+        "Alexander Tsyplikhin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 911,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DyGen: A Constant-Time Kernel Generator for Dynamic-Shape Neural Networks",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539097",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In recent years, dynamic-shape neural networks have been widely adopted in intelligent applications, such as Mixture-of-Experts based large language models and computer vision tasks. However, in dynamic scenarios, operator shapes are determined at runtime. This leads to prohibitively expensive compilation times for existing static compilers, as they must search across a vast optimization space to identify the best configuration. To address the need for efficient optimization of dynamic-shape neural networks, we present DyGen (Dynamic-shape Kernel Generator)—a lightweight, two-stage compiler plug-in on GPU platforms. In the offline stage, DyGen employs deliberately crafted pruning rules to construct a compact candidate configuration set for the target hardware, then select the configuration of the high-performance kernel to train a configuration generation model. During the online stage, dynamic operator information is directly fed into the generator, which can quickly produce efficient kernel configurations without the need for costly search. Compared to state-of-the-art tensor compilers, DyGen improves inference performance by an average of 36%, while significantly reducing generation overhead from 9 seconds to 0.3 seconds.",
+      "identifiers": [
+        "SemanticScholar:23707648b375379930e6cd2e83adff71a45fdd83"
+      ],
+      "semantic_scholar_id": "23707648b375379930e6cd2e83adff71a45fdd83",
+      "doi": "10.23919/DATE69613.2026.11539097",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539097",
+      "authors": [
+        "Yuhan Kang",
+        "Wen-Rui Zhang",
+        "Dong Chen",
+        "Yang Shi",
+        "Jian-Chao Yang",
+        "Zeyu Xue",
+        "Jing Feng",
+        "Mei Wen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "iGenOrch: Intelligent Orchestration Framework for Multi-Model LLM Inference on Edge Platforms",
+      "source_url": "https://doi.org/10.1145/3746467.3801501",
+      "year": 2026,
+      "published": "2026-04-23",
+      "venue": "ACM Southeast Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing demand for on-device Large Language Model (LLM) inference has accelerated the deployment of AI capabilities onto constrained edge platforms. However, effective resource management remains a critical challenge, especially with multiple LLM processes run concurrently with a diverse set of requirements such as latency, memory footprints, and workload patterns. Traditional Linux kernel schedulers are designed for general-purpose workloads and fail to account for the bursty, compute- and memory-sensitive LLMs, resulting in unstable latency and inefficient CPU-memory utilization on edge devices. To address these limitations, we propose iGenOrch, a kernel-integrated orchestration framework that enables intelligent scheduling for multi-LLM workloads on constrained devices. The iGenOrch incorporates a monitoring module that captures runtime metrics, such as per-request latency, queue size, token throughput, CPU, and memory usage. This is fed directly into a modified device kernel scheduler. The iGenOrch dynamically adapts CPU affinity, process priority, concurrency levels, and batch size to approximate a multi-objective optimization problem and achieves lower latency and workload distribution across concurrent LLM instances. Experimental results demonstrate that iGenOrch significantly improves latency stability, reduces memory overhead, and improves stability under concurrent multi-LLM execution.",
+      "identifiers": [
+        "SemanticScholar:11f70f86c6666f57cdb4d19d5f6c20d7283e182f"
+      ],
+      "semantic_scholar_id": "11f70f86c6666f57cdb4d19d5f6c20d7283e182f",
+      "doi": "10.1145/3746467.3801501",
+      "canonical_id": "DOI:10.1145/3746467.3801501",
+      "authors": [
+        "Faiza Akram",
+        "M. Chowdhury",
+        "Gabriella Dunne",
+        "K. Williams",
+        "Kaleb Love",
+        "A. Malik",
+        "S. Khan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.18030",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.18030",
+        "id:SemanticScholar:9767e72d7a59a0d845be701b330d56baaff45246",
+        "id:arXiv:2510.18030",
+        "title:from local to global revisiting structured pruning paradigms for large language models",
+        "url:https://arxiv.org/abs/2510.18030"
+      ],
+      "record": {
+        "title": "From Local to Global: Revisiting Structured Pruning Paradigms for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2510.18030",
+        "year": 2025,
+        "published": "2025-10-20",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured pruning is a practical approach to deploying large language models (LLMs) efficiently, as it yields compact, hardware-friendly architectures. However, the dominant local paradigm is task-agnostic: by optimizing layer-wise reconstruction rather than task objectives, it tends to preserve perplexity or generic zero-shot behavior but fails to capitalize on modest task-specific calibration signals, often yielding limited downstream gains. We revisit global structured pruning and present GISP, Global Iterative Structured Pruning, a post-training method that removes attention heads and MLP channels using first-order, loss-based important scores aggregated at the structure level with block-wise normalization. Built on this global importance metric, GISP adopts an iterative schedule, rather than one-shot pruning, stabilizes accuracy at higher sparsity, and mitigates perplexity collapse without requiring intermediate fine-tuning. Importantly, the iterative pruning forms nested subnetworks that support a''prune-once, deploy-many''workflow. Furthermore, GISP defines structural importance directly with respect to a target loss, making it easy to adapt pruning to task-specific objectives. In this work, we use perplexity for language modeling and a margin-based objective for decision-style tasks. Extensive experiments show that across Llama2-7B/13B, Llama3-8B, and Mistral-0.3-7B, GISP consistently lowers WikiText-2 perplexity and improves on downstream accuracy, with especially strong gains at 40-50% sparsity; on DeepSeek-R1-Distill-Llama-3-8B and Qwen3-8B with GSM8K, task-aligned calibration substantially boosts exact-match accuracy. The implementation is available at https://github.com/uncc-efficient-ai/GISP.",
+        "identifiers": [
+          "SemanticScholar:9767e72d7a59a0d845be701b330d56baaff45246"
+        ],
+        "semantic_scholar_id": "9767e72d7a59a0d845be701b330d56baaff45246",
+        "canonical_id": "arXiv:2510.18030",
+        "arxiv_id": "2510.18030",
+        "doi": "10.48550/arXiv.2510.18030",
+        "authors": [
+          "Zi-Yan Wang",
+          "Enmao Diao",
+          "Qi Le",
+          "Pu Wang",
+          "Minwoo Lee",
+          "Shu-Ping Yeh",
+          "Evgeny Stupachenko",
+          "Hao Feng",
+          "Li Yang"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 400,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.26697",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.26697",
+        "id:SemanticScholar:a67f6696ebf1aa1f9bed5166e71e0fa9e4e10e21",
+        "id:arXiv:2510.26697",
+        "title:the end of manual decoding towards truly endtoend language models",
+        "url:https://arxiv.org/abs/2510.26697"
+      ],
+      "record": {
+        "title": "The End of Manual Decoding: Towards Truly End-to-End Language Models",
+        "source_url": "https://arxiv.org/abs/2510.26697",
+        "year": 2025,
+        "published": "2025-10-30",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The\"end-to-end\"label for LLMs is a misnomer. In practice, they depend on a non-differentiable decoding process that requires laborious, hand-tuning of hyperparameters like temperature and top-p. This paper introduces AutoDeco, a novel architecture that enables truly\"end-to-end\"generation by learning to control its own decoding strategy. We augment the standard transformer with lightweight heads that, at each step, dynamically predict context-specific temperature and top-p values alongside the next-token logits. This approach transforms decoding into a parametric, token-level process, allowing the model to self-regulate its sampling strategy within a single forward pass. Through extensive experiments on eight benchmarks, we demonstrate that AutoDeco not only significantly outperforms default decoding strategies but also achieves performance comparable to an oracle-tuned baseline derived from\"hacking the test set\"-a practical upper bound for any static method. Crucially, we uncover an emergent capability for instruction-based decoding control: the model learns to interpret natural language commands (e.g.,\"generate with low randomness\") and adjusts its predicted temperature and top-p on a token-by-token basis, opening a new paradigm for steerable and interactive LLM decoding.",
+        "identifiers": [
+          "SemanticScholar:a67f6696ebf1aa1f9bed5166e71e0fa9e4e10e21"
+        ],
+        "semantic_scholar_id": "a67f6696ebf1aa1f9bed5166e71e0fa9e4e10e21",
+        "canonical_id": "arXiv:2510.26697",
+        "arxiv_id": "2510.26697",
+        "doi": "10.48550/arXiv.2510.26697",
+        "authors": [
+          "Zhi-Chao Wang",
+          "Dongyang Ma",
+          "Xin-Ting Huang",
+          "Deng Cai",
+          "Tian Lan",
+          "Jia-Hao Xu",
+          "Hai-Tao Mi",
+          "Xiao-Ying Tang",
+          "Yan Wang"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 390,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcsii.2025.3596228",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcsii.2025.3596228",
+        "id:SemanticScholar:a7a71daece55f88209e792218fabf3fd75412461",
+        "title:beta a bitgrained transformer attention accelerator with efficient early termination",
+        "url:https://doi.org/10.1109/TCSII.2025.3596228"
+      ],
+      "record": {
+        "title": "BETA: A Bit-Grained Transformer Attention Accelerator With Efficient Early Termination",
+        "source_url": "https://doi.org/10.1109/TCSII.2025.3596228",
+        "year": 2025,
+        "published": "2025-10-01",
+        "venue": "IEEE Transactions on Circuits and Systems - II - Express Briefs",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention-based large language models (LLMs) have revolutionized the natural language processing (NLP). Despite their impressive effectiveness, the quadratic complexity of self-attention incurs heavy computational and memory burdens. Dynamic sparse attention techniques emerge as a solution, however, the introduced extra prediction stage, coupled with costly data memory access, diminishes their hardware efficiency. To address these limitations, this brief proposes BETA, a fine-grained algorithm-architecture co-design tailored for sparse attention. First, a bit-grained multi-round filter (BMF) prediction is proposed to unveil and eliminate redundant memory access hidden in the sparsity prediction stage. Second, an adaptive and lightweight max-based threshold selection (MTS) strategy is developed to work in concert with the bit-wise prediction process. Third, a bit-wise out-of-order execution (BOOE) scheme is employed to enhance hardware utilization during bit-wise prediction. Finally, an elaborate architecture is designed to translate the theoretical complexity reduction into practical performance improvement. Implementation results demonstrate that BETA achieves <inline-formula> <tex-math notation=\"LaTeX\">$5.4\\times $ </tex-math></inline-formula>, <inline-formula> <tex-math notation=\"LaTeX\">$6.5\\times $ </tex-math></inline-formula>, <inline-formula> <tex-math notation=\"LaTeX\">$1.8\\times $ </tex-math></inline-formula> improvements in energy efficiency than the state-of-the-art Transformer accelerators Sanger, Spatten and SOFA, respectively, while maintaining comparable inference accuracy.",
+        "identifiers": [
+          "SemanticScholar:a7a71daece55f88209e792218fabf3fd75412461"
+        ],
+        "semantic_scholar_id": "a7a71daece55f88209e792218fabf3fd75412461",
+        "doi": "10.1109/TCSII.2025.3596228",
+        "canonical_id": "DOI:10.1109/TCSII.2025.3596228",
+        "authors": [
+          "Hui-Zheng Wang",
+          "Hong-Bin Wang",
+          "Zhi-Heng Yue",
+          "Jing-Yao Liu",
+          "Tai-Quan Wei",
+          "Shao-Jun Wei",
+          "Yang Hu",
+          "Shou-Yi Yin"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 419,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ipdpsw63119.2024.00016",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdpsw63119.2024.00016",
+        "id:SemanticScholar:c698bc364e8c7ac6422923d84c87ad88d78d4c5c",
+        "title:toward a holistic performance evaluation of large language models across diverse ai accelerators",
+        "url:https://doi.org/10.1109/IPDPSW63119.2024.00016"
+      ],
+      "record": {
+        "title": "Toward a Holistic Performance Evaluation of Large Language Models Across Diverse AI Accelerators",
+        "source_url": "https://doi.org/10.1109/IPDPSW63119.2024.00016",
+        "year": 2024,
+        "published": "2024-05-27",
+        "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Artificial intelligence (AI) methods have become critical in scientific applications to help accelerate scientific discovery. Large language models (LLMs) are being considered a promising approach to address some challenging problems because of their superior generalization capabilities across domains. The effectiveness of the models and the accuracy of the applications are contingent upon their efficient execution on the underlying hardware infrastructure. Specialized AI accelerator hardware systems have recently become available for accelerating AI applications. However, the comparative performance of these AI accelerators on large language models has not been previously studied. In this paper, we systematically study LLMs on multiple AI accelerators and GPU s and evaluate their performance characteristics for these models. We evaluate these systems with (i) a micro-benchmark using a core transformer block, (ii) a GPT-2 model, and (iii) an LLM-driven science use case, GenSLM. We present our findings and analyses of the models' performance to better understand the intrinsic capabilities of AI accelerators. Furthermore, our analysis takes into account key factors such as sequence lengths, scaling behavior, and sensitivity to gradient accumulation steps.",
+        "identifiers": [
+          "SemanticScholar:c698bc364e8c7ac6422923d84c87ad88d78d4c5c"
+        ],
+        "semantic_scholar_id": "c698bc364e8c7ac6422923d84c87ad88d78d4c5c",
+        "doi": "10.1109/IPDPSW63119.2024.00016",
+        "canonical_id": "DOI:10.1109/IPDPSW63119.2024.00016",
+        "authors": [
+          "M. Emani",
+          "Sam Foreman",
+          "V. Sastry",
+          "Zhen Xie",
+          "Siddhisanket Raskar",
+          "William Arnold",
+          "R. Thakur",
+          "V. Vishwanath",
+          "M. Papka",
+          "Sanjif Shanmugavelu",
+          "Darshan Gandhi",
+          "Heng-Yu Zhao",
+          "Dun Ma",
+          "Kiran Ranganath",
+          "Rickey C. Weisner",
+          "Jiunn-Yeu Chen",
+          "Yuting Yang",
+          "N. Vassilieva",
+          "B. Zhang",
+          "Sylvia Howland",
+          "Alexander Tsyplikhin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 911,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11539097",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539097",
+        "id:SemanticScholar:23707648b375379930e6cd2e83adff71a45fdd83",
+        "title:dygen a constanttime kernel generator for dynamicshape neural networks",
+        "url:https://doi.org/10.23919/DATE69613.2026.11539097"
+      ],
+      "record": {
+        "title": "DyGen: A Constant-Time Kernel Generator for Dynamic-Shape Neural Networks",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11539097",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In recent years, dynamic-shape neural networks have been widely adopted in intelligent applications, such as Mixture-of-Experts based large language models and computer vision tasks. However, in dynamic scenarios, operator shapes are determined at runtime. This leads to prohibitively expensive compilation times for existing static compilers, as they must search across a vast optimization space to identify the best configuration. To address the need for efficient optimization of dynamic-shape neural networks, we present DyGen (Dynamic-shape Kernel Generator)—a lightweight, two-stage compiler plug-in on GPU platforms. In the offline stage, DyGen employs deliberately crafted pruning rules to construct a compact candidate configuration set for the target hardware, then select the configuration of the high-performance kernel to train a configuration generation model. During the online stage, dynamic operator information is directly fed into the generator, which can quickly produce efficient kernel configurations without the need for costly search. Compared to state-of-the-art tensor compilers, DyGen improves inference performance by an average of 36%, while significantly reducing generation overhead from 9 seconds to 0.3 seconds.",
+        "identifiers": [
+          "SemanticScholar:23707648b375379930e6cd2e83adff71a45fdd83"
+        ],
+        "semantic_scholar_id": "23707648b375379930e6cd2e83adff71a45fdd83",
+        "doi": "10.23919/DATE69613.2026.11539097",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539097",
+        "authors": [
+          "Yuhan Kang",
+          "Wen-Rui Zhang",
+          "Dong Chen",
+          "Yang Shi",
+          "Jian-Chao Yang",
+          "Zeyu Xue",
+          "Jing Feng",
+          "Mei Wen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 218,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3746467.3801501",
+      "identity_tokens": [
+        "id:DOI:10.1145/3746467.3801501",
+        "id:SemanticScholar:11f70f86c6666f57cdb4d19d5f6c20d7283e182f",
+        "title:igenorch intelligent orchestration framework for multimodel llm inference on edge platforms",
+        "url:https://doi.org/10.1145/3746467.3801501"
+      ],
+      "record": {
+        "title": "iGenOrch: Intelligent Orchestration Framework for Multi-Model LLM Inference on Edge Platforms",
+        "source_url": "https://doi.org/10.1145/3746467.3801501",
+        "year": 2026,
+        "published": "2026-04-23",
+        "venue": "ACM Southeast Conference",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The growing demand for on-device Large Language Model (LLM) inference has accelerated the deployment of AI capabilities onto constrained edge platforms. However, effective resource management remains a critical challenge, especially with multiple LLM processes run concurrently with a diverse set of requirements such as latency, memory footprints, and workload patterns. Traditional Linux kernel schedulers are designed for general-purpose workloads and fail to account for the bursty, compute- and memory-sensitive LLMs, resulting in unstable latency and inefficient CPU-memory utilization on edge devices. To address these limitations, we propose iGenOrch, a kernel-integrated orchestration framework that enables intelligent scheduling for multi-LLM workloads on constrained devices. The iGenOrch incorporates a monitoring module that captures runtime metrics, such as per-request latency, queue size, token throughput, CPU, and memory usage. This is fed directly into a modified device kernel scheduler. The iGenOrch dynamically adapts CPU affinity, process priority, concurrency levels, and batch size to approximate a multi-objective optimization problem and achieves lower latency and workload distribution across concurrent LLM instances. Experimental results demonstrate that iGenOrch significantly improves latency stability, reduces memory overhead, and improves stability under concurrent multi-LLM execution.",
+        "identifiers": [
+          "SemanticScholar:11f70f86c6666f57cdb4d19d5f6c20d7283e182f"
+        ],
+        "semantic_scholar_id": "11f70f86c6666f57cdb4d19d5f6c20d7283e182f",
+        "doi": "10.1145/3746467.3801501",
+        "canonical_id": "DOI:10.1145/3746467.3801501",
+        "authors": [
+          "Faiza Akram",
+          "M. Chowdhury",
+          "Gabriella Dunne",
+          "K. Williams",
+          "Kaleb Love",
+          "A. Malik",
+          "S. Khan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 215,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:751eeafba5c92d26acd895be8888290710958d78f0366c2da1e19926a3de46fd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
