@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AdaFuse: Accelerating Dynamic Adapter Inference via Token-Level Pre-Gating and Fused Kernel Optimization",
+      "source_url": "https://arxiv.org/abs/2603.11873",
+      "year": 2026,
+      "published": "2026-03-12",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of dynamic, sparse structures like Mixture-of-Experts (MoE) with parameter-efficient adapters (e.g., LoRA) is a powerful technique for enhancing Large Language Models (LLMs). However, this architectural enhancement comes at a steep cost: despite minimal increases in computational load, the inference latency often skyrockets, leading to decoding speeds slowing by over 2.5 times. Through a fine-grained performance analysis, we pinpoint the primary bottleneck not in the computation itself, but in the severe overhead from fragmented, sequential CUDA kernel launches required for conventional dynamic routing.\n\nTo address this challenge, we introduce AdaFuse, a framework built on a tight co-design between the algorithm and the underlying hardware system to enable efficient dynamic adapter execution. Departing from conventional layer-wise or block-wise routing, AdaFuse employs a token-level pre-gating strategy, which makes a single, global routing decision for all adapter layers before a token is processed. This ``decide-once, apply-everywhere'' approach effectively staticizes the execution path for each token, creating an opportunity for holistic optimization. We capitalize on this by developing a custom CUDA kernel that performs a fused switching operation, merging the parameters of all selected LoRA adapters into the backbone model in a single, efficient pass. Experimental results on popular open-source LLMs show that AdaFuse achieves accuracy on par with state-of-the-art dynamic adapters while drastically cutting decoding latency by a factor of over 2.4x, thereby bridging the gap between model capability and inference efficiency.",
+      "identifiers": [
+        "SemanticScholar:3e5e70b28b6aa866a3cd9c0651e157a99965edfe"
+      ],
+      "semantic_scholar_id": "3e5e70b28b6aa866a3cd9c0651e157a99965edfe",
+      "canonical_id": "arXiv:2603.11873",
+      "arxiv_id": "2603.11873",
+      "doi": "10.1609/aaai.v40i37.40435",
+      "authors": [
+        "Qiyang Li",
+        "Rui Kong",
+        "Yu-Chen Li",
+        "Heng-Yi Cai",
+        "Shuai-Qiang Wang",
+        "Ling-He Kong",
+        "Gui-Hai Chen",
+        "Da-Wei Yin"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoEとLoRA等の動的アダプタを併用したLLM推論で、断片化した逐次CUDAカーネル起動のオーバーヘッドによりデコードが2.5倍以上遅くなる問題に対し、トークンレベルの事前ゲーティングと融合カーネル最適化でアダプタ推論を高速化するAdaFuseを提案する。推論カーネル／実行時への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dora: QoE-Aware Hybrid Parallelism for Distributed Edge AI",
+      "source_url": "https://arxiv.org/abs/2512.10990",
+      "year": 2025,
+      "published": "2025-12-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the proliferation of edge AI applications, satisfying user quality of experience (QoE) requirements, such as model inference latency, has become a first class objective, as these models operate in resource constrained settings and directly interact with users. Yet, modern AI models routinely exceed the resource capacity of individual devices, necessitating distributed execution across heterogeneous devices over variable and contention prone networks. Existing planners for hybrid (e.g., data and pipeline) parallelism largely optimize for throughput or device utilization, overlooking QoE, leading to severe resource inefficiency (e.g., unnecessary energy drain) or QoE violations under runtime dynamics. We present Dora, a framework for QoE aware hybrid parallelism in distributed edge AI training and inference. Dora jointly optimizes heterogeneous computation, contention prone networks, and multi dimensional QoE objectives via three key mechanisms: (i) a heterogeneity aware model partitioner that determines and assigns model partitions across devices, forming a compact set of QoE compliant plans; (ii) a contention aware network scheduler that further refines these candidate plans by maximizing compute communication overlap; and (iii) a runtime adapter that adaptively composes multiple plans to maximize global efficiency while respecting overall QoEs. Across representative edge deployments, including smart homes, traffic analytics, and small edge clusters, Dora achieves 1.1--6.3 times faster execution and, alternatively, reduces energy consumption by 21--82 percent, all while maintaining QoE under runtime dynamics.",
+      "identifiers": [
+        "SemanticScholar:30c2c141557e7f15d326e6ef579399e1a4b74f3a"
+      ],
+      "semantic_scholar_id": "30c2c141557e7f15d326e6ef579399e1a4b74f3a",
+      "canonical_id": "arXiv:2512.10990",
+      "arxiv_id": "2512.10990",
+      "doi": "10.48550/arXiv.2512.10990",
+      "authors": [
+        "Jian-Li Jin",
+        "Zi-Yang Lin",
+        "Qianli Dong",
+        "Yi Chen",
+        "Jayanth Srinivasa",
+        "Myungjin Lee",
+        "Zhao-Wei Tan",
+        "Fan Lai"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 350,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異種エッジデバイス群にモデルを分散実行する際、スループットでなく推論遅延等のQoEを目的関数に据えたデータ／パイプライン混合並列の配置計画Doraを提案する。分散エッジ推論の並列化・スケジューリングに直接関わる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PrunePath: Towards Highly Structured Sparse Language Models",
+      "source_url": "https://arxiv.org/abs/2605.28283",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Feed-forward networks (FFNs) dominate the parameter count and computation of modern language models, yet existing pruning methods often struggle to convert sparsity into hardware-friendly inference efficiency gains. We introduce \\textbf{PrunePath}, a budget-adaptive structured sparsification framework for FFN layers. Built on MoEfication, PrunePath replaces independent expert-wise thresholding with a softmax-normalized routing distribution and activates important experts under a cumulative-mass threshold. This formulation imposes a token-level probability budget, enabling adaptive expert counts and a direct inference-time sparsity knob from a single checkpoint. Across NLU, NLG, and instruction-tuning evaluations, PrunePath achieves a favorable sparsity--performance trade-off compared with existing static pruning and MoEfication-based methods. We further implement Triton kernels for KV-cache decoding to translate the resulting structured sparsity into practical memory savings and measurable decoding-speed improvements. These results demonstrate the superior performance of PrunePath for building highly sparse, deployment-friendly large language models.",
+      "identifiers": [
+        "SemanticScholar:72332d121cfdf5ed0eed81ece6385bf906ef58fa"
+      ],
+      "semantic_scholar_id": "72332d121cfdf5ed0eed81ece6385bf906ef58fa",
+      "canonical_id": "arXiv:2605.28283",
+      "arxiv_id": "2605.28283",
+      "doi": "10.48550/arXiv.2605.28283",
+      "authors": [
+        "Zhe-Xuan Gu",
+        "Zi-Xun Fu",
+        "Yan-Cheng Yuan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 181,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FFN層のプルーニングをMoEficationベースの予算適応型構造化スパース化PrunePathとし、softmax正規化ルーティングと累積質量しきい値でトークンごとの専門家数を適応させ、スパース性をハードウェアに優しい推論効率へ変換する。構造化プルーニングによる推論高速化への直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Adaptive Scheduling of Multimodal Large Language Model in Intelligent Edge Computing",
+      "source_url": "https://doi.org/10.1145/3774908",
+      "year": 2025,
+      "published": "2025-11-11",
+      "venue": "ACM Transactions on Autonomous and Adaptive Systems",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) integrate multimodal encoders with Large Language Models (LLMs) to overcome the limitations of text-only models. Traditional LLMs are deployed on high-performance cloud servers, but MLLMs, which process multimodal data, face high transmission latency and privacy risks when tasks are offloaded to the cloud. Intelligent edge computing is a promising solution for supporting such latency-sensitive and privacy-sensitive tasks. However, the heterogeneity of edge environments makes efficient MLLM inference challenging. In this work, we enhance MLLM inference efficiency in heterogeneous edge environments by decoupling MLLM into LLM and multimodal encoders, deploying the LLM on high-performance devices and the multimodal encoders on lower-capability devices. Additionally, we observe that processing MLLM tasks in edge environments involves numerous configuration parameters that impact inference speed and energy consumption in an unknown and possibly time-varying fashion. To address this challenge, we present an adaptive scheduling algorithm that assigns parameters to tasks or minimizing energy consumption while meeting maximum latency constraints. The results of extensive experimental trials demonstrate that the proposed approach consistently outperforms existing state-of-the-art methods, achieving significant improvements in both latency reduction and energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:248932ed6e21613362b44b3c3cfc627eecb8ec80"
+      ],
+      "semantic_scholar_id": "248932ed6e21613362b44b3c3cfc627eecb8ec80",
+      "doi": "10.1145/3774908",
+      "canonical_id": "DOI:10.1145/3774908",
+      "authors": [
+        "Xingyu Yuan",
+        "He Li",
+        "Mian-Xiong Dong",
+        "K. Ota"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 378,
+        "matched_prestigious_venue": null
+      },
+      "reason": "インテリジェントエッジコンピューティング環境でマルチモーダルLLMの推論を適応的にスケジューリングし、不均一なエッジ資源下での伝送遅延と推論効率を改善する研究であり、エッジでのMLLM推論スケジューリングという推論システム技術に直接関わる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sequence Accumulation and Beyond: Infinite Context Length on Single GPU and Large Clusters",
+      "source_url": "https://doi.org/10.1609/aaai.v39i19.34284",
+      "year": 2025,
+      "published": "2025-04-11",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear sequence modeling methods, such as linear attention, state space modeling, and linear RNNs, have recently been recognized as potential alternatives to softmax attention thanks to their linear complexity and competitive performance. However, although their linear-memory advantage during training enables dealing with long sequences, it is still hard to handle extremely long sequences with very limited computational resources. In this paper, we propose Sequence Accumulation (SA) which leverages the common recurrence feature of linear sequence modeling methods to manage infinite context length even on a single GPU. Specifically, SA divides long input sequences into fixed-length sub-sequences and accumulates intermediate states sequentially, which reaches only constant-memory consumption. Additionally, we further propose Sequence Accumulation with Pipeline Parallelism (SAPP), to train large models with infinite context length, without incurring any additional synchronization costs in the sequence dimension. Extensive experiments with a wide range of context lengths are conducted to validate the effectiveness of SA and SAPP on both single and multiple GPUs. Results show that SA and SAPP enable the training of infinite context length on even very limited resources, and are well compatible with the out-of-the-box distributed training techniques.",
+      "identifiers": [
+        "SemanticScholar:7f1f691299aed58228b050f999c078fe9361fba2"
+      ],
+      "semantic_scholar_id": "7f1f691299aed58228b050f999c078fe9361fba2",
+      "doi": "10.1609/aaai.v39i19.34284",
+      "canonical_id": "DOI:10.1609/aaai.v39i19.34284",
+      "authors": [
+        "Wei-Gao Sun",
+        "Yongtuo Liu",
+        "Xia-Qiang Tang",
+        "Xiao-Yu Mo"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 592,
+        "matched_prestigious_venue": null
+      },
+      "reason": "線形注意・状態空間モデル等の線形系列モデルの再帰性を利用するSequence Accumulationにより、単一GPUや大規模クラスタで無限長の文脈を扱えるようにする。長文脈処理のメモリ効率化は推論時の文脈処理にも直接関わる機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c93b6d50ff2c",
+    "round": "libimp-c93b6d50ff2cdb83-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c93b6d50ff2cdb83-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c93b6d50ff2cdb83-pre01.json",
+    "receipt": "sha256:3453cab7fc5e8c89bdca0b8db5b886b799526a02bd517fa2fc4fd8fd57e08b1c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c93b6d50ff2c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

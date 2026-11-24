@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Shorthand for Thought: Compressing LLM Reasoning via Entropy-Guided Supertokens",
+      "source_url": "https://arxiv.org/abs/2604.26355",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning in Large Language Models incurs significant inference-time compute, yet the token-level information structure of reasoning traces remains underexplored. We observe that reasoning tokens split into two functional types: low-entropy structural tokens (recurring phrases that scaffold the reasoning process) and higher-entropy organic tokens (problem-specific content that drives toward a solution). This asymmetry motivates a simple, model-agnostic compression pipeline: apply cross-word BPE merges on a model's own reasoning traces to derive \\textit{supertokens} that capture frequent structural patterns, then teach the model to adopt them via supervised fine-tuning. Across three model families and five mathematical reasoning benchmarks, our approach shortens reasoning traces by 8.1% on average; under a TOST equivalence analysis at a +/- 2pp margin, accuracy is equivalent or inconclusive on 13/15 model -- benchmark cells (2 pass equivalence, 11 inconclusive, predominantly AIME at N=30, with non-equivalent degradation on 2/15 cells (DeepSeek-R1-Distill-Llama-70B on MATH-500 and OlympiadBench). Beyond compression, learned supertokens often align with interpretable reasoning moves such as backtracking, verification, and strategy shifts. This enables a compact structural analysis of reasoning traces: correct traces show more recovery and verification patterns, while incorrect traces show more repeated hedging and unresolved counterarguments. We release the full pipeline as open-source code.",
+      "identifiers": [
+        "SemanticScholar:97e6b6be773d3a6e8cf244caf899bef84ed1a521"
+      ],
+      "semantic_scholar_id": "97e6b6be773d3a6e8cf244caf899bef84ed1a521",
+      "canonical_id": "arXiv:2604.26355",
+      "arxiv_id": "2604.26355",
+      "doi": "10.48550/arXiv.2604.26355",
+      "authors": [
+        "Zhenyu Zhao",
+        "Sander Land",
+        "D. Bikel",
+        "Waseem AlShikh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論トレース中の低エントロピー構造トークンを跨語BPEマージでスーパートークン化しSFTで採用させることで推論トレースを平均8.1%短縮し推論時計算を削減する具体手法であり、CoT圧縮による推論効率化として直接の貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Late-Layer Fusion is Enough: Dual-Path Vision Token Routing for Multimodal Large Language Models under Visual Saturation",
+      "source_url": "https://arxiv.org/abs/2606.09131",
+      "year": 2026,
+      "published": "2026-06-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) commonly inherit the deep, symmetric Transformer backbone designed for unimodal text modeling, and apply the same computation uniformly to image and language tokens. This design overlooks a key modality asymmetry: image and text tokens differ substantially in information density, redundancy, and required reasoning depth. Through a layer-wise analysis of LLaVA-1.5, we observe that vision tokens tend to saturate in the middle layers. Specifically, text-to-image attention decreases from 0.68 at layer 0 to 0.07 by layer 4, and stabilizes near 0.04 after layer 18, whereas text tokens continue to benefit from deep semantic processing. These findings suggest a mismatch between architectural symmetry and depth-asynchronous modality evolution, resulting in redundant visual computation and possible drift in perceptual representations during deep task-specific adaptation. Motivated by this, we propose Dual-Path Vision Token Routing (DPVR), a modality-asymmetric routing framework for efficient MLLMs. Its core instantiation, DPVR-LF (Late-Layer Fusion), routes vision tokens at the saturation point into a one-layer trainable side branch, runs a thirteen-layer text-only forward that skips image positions in the deep stack, and re-fuses the visual and textual streams only at the final layer. With approximately 3% trainable parameters, DPVR-LF preserves competitive multimodal performance on standard benchmarks while reducing visual computation in the deep Transformer stack. The results challenge the conventional assumption that vision tokens must traverse all deep language-model layers, and indicate that a single late fusion layer can be sufficient for maintaining strong perceptual competence in LLaVA-style MLLMs.",
+      "identifiers": [
+        "SemanticScholar:1139f65f66a7704c86743f9c66f9ac9359d5e79a"
+      ],
+      "semantic_scholar_id": "1139f65f66a7704c86743f9c66f9ac9359d5e79a",
+      "canonical_id": "arXiv:2606.09131",
+      "arxiv_id": "2606.09131",
+      "doi": "10.48550/arXiv.2606.09131",
+      "authors": [
+        "Si-Yuan Liu",
+        "Jin-Yang Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MLLMで視覚トークンが中間層で飽和する観測に基づき、飽和点で視覚トークンを1層のサイドブランチへ回すDual-Path Vision Token Routing（Late-Layer Fusion）を提案して冗長な視覚計算を削減しており、マルチモーダルLLM推論の効率化機構として直接の貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Joint Partitioning and Placement of Foundation Models for Real-Time Edge AI",
+      "source_url": "https://arxiv.org/abs/2512.01039",
+      "year": 2025,
+      "published": "2025-11-30",
+      "venue": "International Conference on Computing, Networking and Communications",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference over large-scale foundation models within heterogeneous edge environments necessitates a fundamentally reconfigurable orchestration substrate. Static partitioning of model layers presumes temporal stability across compute and network resources, which is misaligned with the volatility of realworld deployments. We introduce a framework in which both the spatial placement and internal segmentation of foundation models are elevated to runtime-resolved constructs. The orchestration problem is formalized as a constrained optimization over layerwise assignments, subject to evolving latency, utilization, and privacy gradients. The framework implements reactive inference composition responsive to infrastructural fluctuations by integrating model-aware capacity profiling with dynamic graph re-partitioning and reallocation. We introduce architectural and algorithmic components, along with a representative use case in 6G multi-access edge computing.",
+      "identifiers": [
+        "SemanticScholar:466a32a03c490d03f5cee407bc6f9889011a96f3"
+      ],
+      "semantic_scholar_id": "466a32a03c490d03f5cee407bc6f9889011a96f3",
+      "canonical_id": "arXiv:2512.01039",
+      "arxiv_id": "2512.01039",
+      "doi": "10.1109/ICNC68183.2026.11416947",
+      "authors": [
+        "Aladin Djuhera",
+        "F. Koch",
+        "A. Binotto"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 359,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異種エッジ環境での基盤モデル推論について、層ごとの分割と配置をレイテンシ・利用率・プライバシ制約の下で実行時に解く再構成可能なオーケストレーション枠組みを提案しており、分散・エッジ推論の配置最適化として直接の貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Can Confidence Estimates Decide When Chain-of-Thought Is Necessary for LLMs?",
+      "source_url": "https://arxiv.org/abs/2510.21007",
+      "year": 2025,
+      "published": "2025-10-23",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-thought (CoT) prompting is a common technique for improving the reasoning abilities of large language models (LLMs). However, extended reasoning is often unnecessary and substantially increases token usage. As such, a key question becomes how to optimally allocate compute to when reasoning is actually needed. We study this through confidence-gated CoT, where a model produces a direct answer and a confidence estimate to decide whether to invoke CoT. We present an evaluation framework together with the first systematic study of confidence signals for this decision. We evaluate four representative confidence measures and compare them with random gating and an oracle upper bound. Experiments across two model families and diverse reasoning tasks show that existing training-free confidence measures can reduce redundant reasoning. However, we also find that the utility of individual confidence measures is inconsistent across settings. Through our evaluation framework and analysis, our study provides practical guidance toward developing and evaluating models that selectively use CoT.",
+      "identifiers": [
+        "SemanticScholar:540cfb6d8d084255edacd3d1eeba82ac9e68a1c1"
+      ],
+      "semantic_scholar_id": "540cfb6d8d084255edacd3d1eeba82ac9e68a1c1",
+      "canonical_id": "arXiv:2510.21007",
+      "arxiv_id": "2510.21007",
+      "doi": "10.48550/arXiv.2510.21007",
+      "authors": [
+        "Samuel Lewis-Lim",
+        "Xing-Wei Tan",
+        "Zhi-Xue Zhao",
+        "Nikolaos Aletras"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 397,
+        "matched_prestigious_venue": null
+      },
+      "reason": "直接回答への信頼度推定でCoTを起動するか判定するconfidence-gated CoTを体系的に評価し、既存の学習不要な信頼度指標で冗長な推論とトークン使用を削減できることを示しており、推論時計算の適応的配分として直接の貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Extended Mind Transformers",
+      "source_url": "https://arxiv.org/abs/2406.02332",
+      "year": 2024,
+      "published": "2024-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained language models demonstrate general intelligence and common sense, but long inputs quickly become a bottleneck for memorizing information at inference time. We resurface a simple method, Memorizing Transformers (Wu et al., 2022), that gives the model access to a bank of pre-computed memories. We show that it is possible to fix many of the shortcomings of the original method, such as the need for fine-tuning, by critically assessing how positional encodings should be updated for the keys and values retrieved. This intuitive method uses the model's own key/query system to select and attend to the most relevant memories at each generation step, rather than using external embeddings. We demonstrate the importance of external information being retrieved in a majority of decoder layers, contrary to previous work. We open source a new counterfactual long-range retrieval benchmark, and show that Extended Mind Transformers outperform today's state of the art by 6% on average.",
+      "identifiers": [
+        "SemanticScholar:ecdc3b00321dc6dea7ba9c15797dd5fed6280a43"
+      ],
+      "semantic_scholar_id": "ecdc3b00321dc6dea7ba9c15797dd5fed6280a43",
+      "canonical_id": "arXiv:2406.02332",
+      "arxiv_id": "2406.02332",
+      "doi": "10.48550/arXiv.2406.02332",
+      "authors": [
+        "Phoebe Klett",
+        "T. Ahle"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 903,
+        "matched_prestigious_venue": null
+      },
+      "reason": "事前計算したメモリバンクをモデル自身のキー・クエリ機構で検索して推論時に参照するExtended Mind Transformersを改良し、位置符号化の更新方法の修正でファインチューニングなしに長距離検索性能を改善しており、推論時外部メモリ機構として直接の貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4ee07c70882d",
+    "round": "libimp-4ee07c70882d31dd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4ee07c70882d31dd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4ee07c70882d31dd-pre01.json",
+    "receipt": "sha256:131c03275c69c8fe11c5350551737cca096e37c26204fb3c8f1191e3167b8cb9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4ee07c70882d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+      "source_url": "https://arxiv.org/abs/2611.06500",
+      "year": 2026,
+      "published": "2026-11-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) agents typically append raw tool outputs to their context. Over multi-step interactions, long and noisy observations incur substantial context overhead and dilute the agent's attention to task-relevant information. Existing token pruning and summarization methods remain constrained by discrete text representations, limiting the achievable compression ratios. In this work, we challenge the prevailing assumption that agents must consume tool observations as explicit text tokens. To this end, we propose Coca-Cola, a continuous latent context compression model for LLM agents. Coca-Cola compresses tool observations into latent tokens and embeds them into the input embedding space of the agent. We further introduce Action-Preserving Training, which aligns the agent's next-action distributions under full and compressed observations. This trains the compression model to learn action-sufficient latent tokens that retain decision-critical information. Experiments with web-search agents on four QA benchmarks and two model families show that Coca-Cola reduces the agent's token consumption by 70.01%-89.24% and end-to-end runtime by 24.45%-55.97%, while consistently improving task performance. These results suggest that Coca-Cola offers a promising approach for context compression in agents. Our code is available at https://github.com/THU-Agent/Coca-cola.",
+      "identifiers": [
+        "SemanticScholar:8ad30080bc5995afb119b2919d1a92bab00d6540"
+      ],
+      "semantic_scholar_id": "8ad30080bc5995afb119b2919d1a92bab00d6540",
+      "canonical_id": "arXiv:2611.06500",
+      "arxiv_id": "2611.06500",
+      "authors": [
+        "Yue-Tong Liu",
+        "Zhe-Hao Zhou",
+        "Yi-Tong Zhang",
+        "Hao-Ru Chen",
+        "Jia Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ツール出力を潜在トークンへ圧縮してエージェントの文脈へ埋め込むCoca-Colaにより、推論時の文脈オーバーヘッドを削減する潜在文脈圧縮機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Enhancing Learned Knowledge in LoRA Adapters Through Efficient Contrastive Decoding on Ascend NPUs",
+      "source_url": "https://arxiv.org/abs/2505.14620",
+      "year": 2025,
+      "published": "2025-05-20",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Huawei Cloud users leverage LoRA (Low-Rank Adaptation) as an efficient and scalable method to fine-tune and customize large language models (LLMs) for application-specific needs. However, tasks that require complex reasoning or deep contextual understanding are often hindered by biases or interference from the base model when using typical decoding methods like greedy or beam search. These biases can lead to generic or task-agnostic responses from the base model instead of leveraging the LoRA-specific adaptations. In this paper, we introduce Contrastive LoRA Decoding (CoLD), a novel decoding framework designed to maximize the use of task-specific knowledge in LoRA-adapted models, resulting in better downstream performance. CoLD utilizes contrastive decoding by scoring candidate tokens based on the divergence between the probability distributions of a LoRA-adapted expert model and the corresponding base model. This approach prioritizes tokens that better align with the LoRA's learned representations, enhancing performance for specialized tasks. Despite its effectiveness, a naive implementation of CoLD can be computationally expensive. Each decoding step requires evaluating multiple token candidates across both the base and expert models, creating significant inefficiencies. To address this challenge, we developed an optimized kernel for Huawei's Ascend NPU. CoLD demonstrates consistent performance improvements, achieving up to a 5.54% increase in task accuracy while reducing end-to-end latency by 28% compared to greedy decoding. This work offers valuable insights into practical and efficient decoding strategies for fine-tuned LLMs, particularly in resource-constrained environments, and has broad implications for applied data science in both cloud and on-premises settings.",
+      "identifiers": [
+        "SemanticScholar:779d6d31e59122d17a241c54f90cad37ca9cf645"
+      ],
+      "semantic_scholar_id": "779d6d31e59122d17a241c54f90cad37ca9cf645",
+      "canonical_id": "arXiv:2505.14620",
+      "arxiv_id": "2505.14620",
+      "doi": "10.1145/3711896.3737215",
+      "authors": [
+        "M. Heisler",
+        "Linzi Xing",
+        "Ge Shi",
+        "Hanieh Sadri",
+        "Gursimran Singh",
+        "Weiwei Zhang",
+        "Tao Ye",
+        "Ying Xiong",
+        "Yong Zhang",
+        "Zhenan Fan"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 553,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LoRA適応モデルと基礎モデルの分布乖離で候補トークンを採点する対照デコードCoLDであり、推論時のデコード機構へ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ff7a56296bde",
+    "round": "libimp-ff7a56296bdedd71-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ff7a56296bdedd71-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ff7a56296bdedd71-pre01.json",
+    "receipt": "sha256:b042f504a5c1fa1c7c32e64ec426898102da214326b0a96bb88058c5887746e9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ff7a56296bde",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

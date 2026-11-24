@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Multilingual Iterative Model Pruning: What Matters?",
+      "source_url": "https://doi.org/10.18653/v1/2025.ijcnlp-long.32",
+      "year": 2025,
+      "published": null,
+      "venue": "IJCNLP-AACL",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning techniques have been studied to construct small models for efficiency, yet the effect of cross-lingual, which shows language performance transferability, is understudied in this field. In this work, we investigate cross-lingual effects in multilingual large language model compression using iterative pruning and recovery. We employ structured layer pruning with LoRA-based recovery and knowledge distillation, testing whether calibration languages different from target evaluation languages can preserve multilingual performance. Experiments on Qwen2.5-7B and Llama3.1-8B demonstrate that any recovery language consistently outperforms no-recovery baselines, with even low-resource languages like Swahili providing 5% improvements. In contrast to expectations, dominant pretraining languages do not always yield the best results, where In-donesian achieves the highest performance in Llama3.1-8B, while Japanese performs the best in Qwen2.5-7B. Our findings reveal that cross-lingual calibration effectively maintains multi-lingual capabilities in the iterative pruning.",
+      "identifiers": [
+        "SemanticScholar:f4d765ec54b8356d10d951f3f0e7bacc3ee74fa2"
+      ],
+      "semantic_scholar_id": "f4d765ec54b8356d10d951f3f0e7bacc3ee74fa2",
+      "doi": "10.18653/v1/2025.ijcnlp-long.32",
+      "canonical_id": "DOI:10.18653/v1/2025.ijcnlp-long.32",
+      "authors": [
+        "H. Wibowo",
+        "Hai-Yue Song",
+        "Hideki Tanaka",
+        "M. Utiyama",
+        "Alham Fikri Aji",
+        "Raj Dabre"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 511,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Qwen2.5-7BやLlama3.1-8Bを対象に構造化層プルーニングとLoRA回復を反復する多言語LLM圧縮を検証しており、LLMのモデル圧縮による推論効率化へ直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Multilayer Dataflow: Orchestrate Butterfly Sparsity to Accelerate Attention Computation",
+      "source_url": "https://arxiv.org/abs/2411.00734",
+      "year": 2024,
+      "published": "2024-11-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent neural networks (NNs) with self-attention exhibit competitiveness across different AI domains, but the essential attention mechanism brings massive computation and memory demands. To this end, various sparsity patterns are introduced to reduce the quadratic computation complexity, among which the structured butterfly sparsity has been proven efficient in computation reduction while maintaining model accuracy. However, its complicated data accessing pattern brings utilization degradation and makes parallelism hard to exploit in general block-oriented architecture like GPU. Since the reconfigurable dataflow architecture is known to have better data reusability and architectural flexibility in general NN-based acceleration, we want to apply it to the butterfly sparsity for acquiring better computational efficiency for attention workloads. We first propose a hybrid butterfly-sparsity network to obtain better trade-offs between attention accuracy and performance. Next, we propose a scalable multilayer dataflow method supported by coarse-grained streaming parallelism designs, to orchestrate the butterfly sparsity computation on the dataflow array. The experiments show that compared with Jetson Xavier NX, our design has a speedup of up to $14.34\\times$ ($9.29\\times$ on average) as well as $11.14\\times$ energy efficiency advancement in attention workloads. In comparison with SOTA attention accelerators of the same peak performance, our dataflow architecture acquires $2.38\\times$-$4.7\\times$ efficiency improvement as well as $6.60\\times$-$15.37\\times$ energy reduction with butterfly sparsity optimization.",
+      "identifiers": [
+        "SemanticScholar:5bc190dfe4f737a5d6dfdddc21cfca6b463aef6e"
+      ],
+      "semantic_scholar_id": "5bc190dfe4f737a5d6dfdddc21cfca6b463aef6e",
+      "canonical_id": "arXiv:2411.00734",
+      "arxiv_id": "2411.00734",
+      "doi": "10.48550/arXiv.2411.00734",
+      "authors": [
+        "Hai-Bin Wu",
+        "Wen-Ming Li",
+        "Kaizhuo Yan",
+        "Zhi-Hua Fan",
+        "Peiyang Wu",
+        "Yu-Qun Liu",
+        "Yan-Huan Liu",
+        "Ziqing Qiang",
+        "Meng Wu",
+        "Kunming Liu",
+        "Xiao-Chun Ye",
+        "Dong-Rui Fan"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 753,
+        "matched_prestigious_venue": null
+      },
+      "reason": "バタフライ疎性を持つ注意計算を多層データフローアーキテクチャで高速化する提案であり、注意計算のハードウェア高速化へ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f03bf59a2e9b",
+    "round": "libimp-f03bf59a2e9b33d1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f03bf59a2e9b33d1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f03bf59a2e9b33d1-pre01.json",
+    "receipt": "sha256:995d14cb8f716cfbbc4d5c044b143b22da8520f620d9c755109d2b553e16c93d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f03bf59a2e9b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

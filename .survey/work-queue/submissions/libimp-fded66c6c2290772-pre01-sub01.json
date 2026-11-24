@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "EllieSQL: Cost-Efficient Text-to-SQL with Complexity-Aware Routing",
+      "source_url": "https://arxiv.org/abs/2503.22402",
+      "year": 2025,
+      "published": "2025-03-28",
+      "venue": "arXiv.org",
+      "citation_count": 24,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Text-to-SQL automatically translates natural language queries to SQL, allowing non-technical users to retrieve data from databases without specialized SQL knowledge. Despite the success of advanced LLM-based Text-to-SQL approaches on leaderboards, their unsustainable computational costs--often overlooked--stand as the\"elephant in the room\"in current leaderboard-driven research, limiting their economic practicability for real-world deployment and widespread adoption. To tackle this, we exploratively propose EllieSQL, a complexity-aware routing framework that assigns queries to suitable SQL generation pipelines based on estimated complexity. We investigate multiple routers to direct simple queries to efficient approaches while reserving computationally intensive methods for complex cases. Drawing from economics, we introduce the Token Elasticity of Performance (TEP) metric, capturing cost-efficiency by quantifying the responsiveness of performance gains relative to token investment in SQL generation. Experiments show that compared to always using the most advanced methods in our study, EllieSQL with the Qwen2.5-0.5B-DPO router reduces token use by over 40% without compromising performance on Bird development set, achieving more than a 2x boost in TEP over non-routing approaches. This not only advances the pursuit of cost-efficient Text-to-SQL but also invites the community to weigh resource efficiency alongside performance, contributing to progress in sustainable Text-to-SQL. Our source code and model are available at https://elliesql.github.io/.",
+      "identifiers": [
+        "SemanticScholar:a59a52507efd73a11502f0c0243cdc10f54383b2"
+      ],
+      "semantic_scholar_id": "a59a52507efd73a11502f0c0243cdc10f54383b2",
+      "canonical_id": "arXiv:2503.22402",
+      "arxiv_id": "2503.22402",
+      "doi": "10.48550/arXiv.2503.22402",
+      "authors": [
+        "Yizhang Zhu",
+        "Runzhi Jiang",
+        "Bo-Yan Li",
+        "Nan Tang",
+        "Yu-Yu Luo"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 24,
+        "citation_count": 24,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 606,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Text-to-SQLで常に最先端パイプラインを使う計算コストに対し、クエリの複雑度を推定して単純なクエリを軽量な生成経路へ振り分ける複雑度認識ルーティングであり、性能を落とさずトークン使用量を40%以上削減する推論コスト支配型の振り分けフレームワークである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fded66c6c229",
+    "round": "libimp-fded66c6c2290772-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fded66c6c2290772-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fded66c6c2290772-pre01.json",
+    "receipt": "sha256:f573ba286b1647e1dfc91a7947b3a2e22b20c1d3a9eaf5520d301334166fcb45"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fded66c6c229",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

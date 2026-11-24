@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AttBind: Memory-Efficient Acceleration for Long-Range Attention Using Vector-Derived Symbolic Binding",
+      "source_url": "https://doi.org/10.23919/DATE58400.2024.10546602",
+      "year": 2024,
+      "published": "2024-03-25",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models have achieved a number of breakthrough results in a variety of complex tasks. Transformer's promising performance originates from multi-head attention (MHA), which can model long-range sequence data dependency. Better performance has been demonstrated to be obtained by increasing the sequence length $N$. However, scaling up the sequence length is extremely challenging for memory-constrained hardware because the naive Transformer requires quadratic $O(N^{2})$ complexity. In this work, we address this challenge by leveraging the binding operation in vector symbolic architecture (VSA). We propose the memory-efficient MHA algorithm to simplify the MHA computation at the cost of linear complexity. Then, we present the ASIC hardware architecture with optimized timing and dataflow to accelerate the proposed algorithm. We extensively evaluate our design across various long-range attention tasks. Our experiments show that the accuracy is competitive to state-of-the-art MHA optimization approaches with lower memory consumption and inference latency. The proposed algorithm achieves 7.8× speedup and 4.5× reduction in data movement over the naive Transformer on ASIC. Meanwhile, our design supports 8 to 16 × sequence lengths compared to existing hardware accelerators.",
+      "identifiers": [
+        "SemanticScholar:b26878ec158f22a2b05404daefd900fb51615152"
+      ],
+      "semantic_scholar_id": "b26878ec158f22a2b05404daefd900fb51615152",
+      "doi": "10.23919/DATE58400.2024.10546602",
+      "canonical_id": "DOI:10.23919/DATE58400.2024.10546602",
+      "authors": [
+        "Weihong Xu",
+        "Jaeyoung Kang",
+        "T. Rosing"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 974,
+        "matched_prestigious_venue": null
+      },
+      "reason": "メモリ制約のあるハードウェアで長距離注意を加速するため、ベクトル由来の記号バインディングを用いて注意のメモリ効率を高めるAttBindをDATEで提案する。長距離注意のハードウェア加速という推論機構への直接貢献が要旨で確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Cicada: A Pipeline-Efficient Approach to Serverless Inference with Decoupled Management",
+      "source_url": "https://arxiv.org/abs/2502.20959",
+      "year": 2025,
+      "published": "2025-02-28",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serverless computing has emerged as a pivotal paradigm for deploying Deep Learning (DL) models, offering automatic scaling and cost efficiency. However, the inherent cold start problem in serverless ML inference systems, particularly the time-consuming model loading process, remains a significant bottleneck. Utilizing pipelined model loading improves efficiency but still suffer from pipeline stalls due to sequential layer construction and monolithic weight loading. In this paper, we propose \\textit{Cicada}, a novel pipeline optimization framework that coordinates computational, storage, and scheduling resources through three key mechanisms: (1) \\textit{MiniLoader}: which reduces layer construction overhead by opportunistically optimizing parameter initialization; (2) \\textit{WeightDecoupler}: decoupling weight file processing from layer construction, enabling asynchronous weight retrieval and out-of-order weight application; (3) \\textit{Priority-Aware Scheduler}: dynamically allocating resources to ensure high-priority inference tasks are executed promptly. Our experimental results demonstrate that Cicada achieves significant performance improvements over the state-of-the-art PISeL framework. Specifically, Cicada reduces end-to-end inference latency by an average of 61.59\\%, with the MiniLoader component contributing the majority of this optimization (53.41\\%), and the WeightDecoupler achieves up to 26.17\\% improvement. Additionally, Cicada achieves up to 2.52x speedup in the inference pipeline utlization compared to PISeL.",
+      "identifiers": [
+        "SemanticScholar:f177eaa7bf5370828a6982372e42c692823cc24e"
+      ],
+      "semantic_scholar_id": "f177eaa7bf5370828a6982372e42c692823cc24e",
+      "canonical_id": "arXiv:2502.20959",
+      "arxiv_id": "2502.20959",
+      "authors": [
+        "Z. Wu",
+        "Y. Deng",
+        "J. Hu",
+        "L. Cui",
+        "Z. Zhang",
+        "L. Zeng",
+        "G. Min"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 634,
+        "matched_prestigious_venue": null
+      },
+      "reason": "サーバレス推論のコールドスタート、特にモデル読み込みのボトルネックに対し、計算・ストレージ・スケジューリングを協調させたパイプライン最適化Cicadaで層構築と重み読み込みの停滞を解消する。推論サービング基盤への直接の技術的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c93b6d50ff2c",
+    "round": "libimp-c93b6d50ff2cdb83-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c93b6d50ff2cdb83-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c93b6d50ff2cdb83-pre01.json",
+    "receipt": "sha256:3453cab7fc5e8c89bdca0b8db5b886b799526a02bd517fa2fc4fd8fd57e08b1c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c93b6d50ff2c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
