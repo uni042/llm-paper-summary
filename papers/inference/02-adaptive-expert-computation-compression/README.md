@@ -390,10 +390,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/inclusionAI/GroveMoE) ・ リポジトリ内被引用：4  
   専門家群ごとに小型の随伴専門家を共有して通常の上位k個ルーティングのまま計算量を動的化し、33B総パラメータ・3.14〜3.28B活性のGroveMoEを構築する。
 
-- **2025-03 · [SEAP: Sparse Expert Activation Pruning Unlocks the Brainpower of Large Language Models](2025-2503.07605-seap-sparse-expert-activation-pruning-unlocks-the-brainpower-of-large-la.md)**  
-  実装：[✓](https://github.com/IAAR-Shanghai/SEAP) ・ リポジトリ内被引用：4  
-  SEAPは、密な大規模言語モデルの内部でタスクごとに異なるニューロン群が強く活性化することを利用し、タスクに必要な経路を残しながら不要なニューロンを構造単位で削る圧縮手法である。
-
 - **2025-11 · [Route Experts by Sequence, not by Token](2025-2511.06494-seqtopk-route-by-sequence.md)**  
   実装：[✓](https://github.com/Y-Research-SBU/SeqTopK) ・ リポジトリ内被引用：3  
   系列全体で同じ総エキスパート予算を保ちながら、容易なトークンから難しいトークンへ計算を再配分し、高スパースMoEの品質を改善するSeqTopKを提案。
@@ -401,6 +397,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-05 · [Mixture of Lookup Experts](2025-2503.15798-mixture-of-lookup-experts.md)**  
   実装：[✓](https://github.com/JieShibo/MoLE) ・ リポジトリ内被引用：3  
   学習時エキスパート入力を語彙埋め込みへ固定して推論前にFFN出力を検索表化し、巨大エキスパート重みではなく小さな出力ベクトルだけをストレージから読むことでMoEのVRAMと転送遅延を削減する。
+
+- **2025-03 · [SEAP: Sparse Expert Activation Pruning Unlocks the Brainpower of Large Language Models](2025-2503.07605-seap-sparse-expert-activation-pruning-unlocks-the-brainpower-of-large-la.md)**  
+  実装：[✓](https://github.com/IAAR-Shanghai/SEAP) ・ リポジトリ内被引用：3  
+  SEAPは、密な大規模言語モデルの内部でタスクごとに異なるニューロン群が強く活性化することを利用し、タスクに必要な経路を残しながら不要なニューロンを構造単位で削る圧縮手法である。
 
 - **2025-10 · [Expert Merging in Sparse Mixture of Experts with Nash Bargaining](2025-2510.16138-namex-nash-expert-merging.md)**  
   実装：[✓](https://github.com/anh147/NAMEx) ・ リポジトリ内被引用：2  

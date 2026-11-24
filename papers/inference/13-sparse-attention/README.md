@@ -938,13 +938,13 @@
   実装：[✓](https://github.com/WHUIR/ADORE) ・ リポジトリ内被引用：1  
   KVキャッシュから寄与の低いトークンを予測して解放し、後で必要になる解放済みトークンのKV状態を再構築して戻すことで、Llama-2 7Bの長生成でフル注意比221.8パーセントのスループット改善と品質維持を両立する。
 
+- **2024-06 · [Low-Rank Approximation for Sparse Attention in Multi-Modal LLMs](2024-8be7c3fc01e1-low-rank-approximation-for-sparse-attention-in-multi-modal-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  クエリとキーを低ランク空間へ射影した近似注意マップの順序で重要なペアだけを選び、自己注意の計算を半分以下にしながら精度をむしろ改善するスパース注意の学習法。
+
 - **2024-10 · [Correlation-Aware Select and Merge Attention for Efficient Fine-Tuning and Context Length Extension](2024-2410.04211-correlation-aware-select-and-merge-attention-for-efficient-fine-tuning-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案する MS 注意機構（Merge-Selection 注意機構） は、すべてのトークン対の注意を計算せず、質問側と参照側のトークンを領域へ分割し、領域代表の関連度から重要なKV領域を選ぶ。
-
-- **2024-06 · [Low-Rank Approximation for Sparse Attention in Multi-Modal LLMs](2024-8be7c3fc01e1-low-rank-approximation-for-sparse-attention-in-multi-modal-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  クエリとキーを低ランク空間へ射影した近似注意マップの順序で重要なペアだけを選び、自己注意の計算を半分以下にしながら精度をむしろ改善するスパース注意の学習法。
 
 - **2023-12 · [Investigating the Effects of Sparse Attention on Cross-Encoders](2023-2312.17649-investigating-the-effects-of-sparse-attention-on-cross-encoders.md)**  
   実装：[✓](https://github.com/webis-de/ECIR-24) ・ リポジトリ内被引用：0  

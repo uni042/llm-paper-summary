@@ -714,6 +714,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：✓ ・ リポジトリ内被引用：1  
   提案する適応的局所認識トークン剪定は、画像を複数の意味的にまとまった領域へ分け、領域ごとに保持するトークンを確保する。OMG-LLaVAでも同程度の削減条件で、検証集合のAPが24.1から26.2、領域の重なり率が58.0から61.0へ改善した。
 
+- **2025-03 · [Lifting the Veil on Visual Information Flow in MLLMs: Unlocking Pathways to Faster Inference](2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-.md)**  
+  実装：[✓](https://github.com/ustc-hyin/HiMAP) ・ リポジトリ内被引用：1  
+  画像トークンの視覚情報フローが浅い層では指示トークンへの注入、深い層では画像トークン同士の集約へ転換することを突き止め、層ごとに違う重要度基準で二段階に画像トークンを落とすHiMAPで計算量を約65%以上減らすマルチモーダル推論の高速化。
+
 - **2025-10 · [LiteStage: Latency-aware Layer Skipping for Multi-stage Reasoning](2025-2510.14211-litestage-latency-aware-layer-skipping-for-multi-stage-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LiteStageは、複雑な質問を短い複数段階に分けて解く小型言語モデルについて、各段階に同じ数の層スキップを適用するのではなく、段階ごとの正答率と実際の推論遅延を測定してスキップ予算を配分する手法である。
@@ -762,10 +766,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：[✓](https://github.com/Xigm/DYNAMAX) ・ リポジトリ内被引用：0  
   デコーダのみTransformerとMambaの後半層に早期終了分類器を付け、状態を持てるMambaブロック型分類器と上位候補を許す蒸留学習で、層の枝刈りより精度を保ちながらトークンごとの計算を動的に打ち切る枠組み。
 
-- **2025-03 · [Lifting the Veil on Visual Information Flow in MLLMs: Unlocking Pathways to Faster Inference](2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-.md)**  
-  実装：[✓](https://github.com/ustc-hyin/HiMAP) ・ リポジトリ内被引用：0  
-  画像トークンの視覚情報フローが浅い層では指示トークンへの注入、深い層では画像トークン同士の集約へ転換することを突き止め、層ごとに違う重要度基準で二段階に画像トークンを落とすHiMAPで計算量を約65%以上減らすマルチモーダル推論の高速化。
-
 - **2024-12 · [COSEE: Consistency-Oriented Signal-Based Early Exiting via Calibrated Sample Weighting Mechanism](2024-2412.13236-cosee-consistency-oriented-signal-based-early-exiting-via-calibrated-sam.md)**  
   実装：[✓](https://github.com/He-Jianing/COSEE) ・ リポジトリ内被引用：0  
   学習時に複数の閾値で終了過程を模擬し、サンプルが終了しやすい層の近くの分類器へ損失の重みを寄せることで、高速化率を推論時に変えられるまま学習と推論の一致を取る早期終了の学習枠組み。
@@ -809,7 +809,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   LongVUは、長時間動画を多模態大規模言語モデルへ入力するとき、視覚トークン数が文脈長を超える問題に対して、時間方向の冗長なフレーム削除、質問に応じた空間解像度の配分、フレーム間で重複する空間トークンの削除を段階的に組み合わせる方式である。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  
-  実装：[✓](https://aka.ms/LLMLingua-2) ・ リポジトリ内被引用：50  
+  実装：[✓](https://aka.ms/LLMLingua-2) ・ リポジトリ内被引用：51  
   本手法は圧縮を単語の保持/削除の二値分類として定式化し、双方向encoderのXLM-RoBERTa-largeやmBERTに圧縮の目的を直接学習させる。V100-32GB上のMeetingBank遅延測定では、非圧縮エンドツーエンド14.9秒に対し、5倍圧縮時5.2秒（2.9倍高速）と報告する。
 
 - **2024-06 · [D2O: Dynamic Discriminative Operations for Efficient Long-Context Inference of Large Language Models](2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md)**  
