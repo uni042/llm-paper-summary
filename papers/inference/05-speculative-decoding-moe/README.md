@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（438本）
+## 自動生成の論文一覧（439本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1032,6 +1032,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/networkslab/HPD) ・ リポジトリ内被引用：0  
   属性値が文書条件付きで独立であることを使い、位置番号に間隔を空けて複数値を同時デコードし、文書重ね合わせで最大96トークン並列化して抽出費用を最大13.8倍下げる方式。
 
+- **2026-04 · [A-IO: Adaptive Inference Orchestration for Memory-Bound NPUs](2026-2604.09752-a-io-adaptive-inference-orchestration-for-memory-bound-npus.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  メモリ律速なNPU向けに、1Bモデルを意図センシングのプローブとして使うリクエスト単位の適応ルーティング。種別・不確実性・文脈長で実行モデルとPLDの有効化を切り替え、重み読み出しを分離して静的配置の精度と速度の前線を破る。
+
 - **2026-04 · [A survey on edge multimodal large models: compression, inference acceleration, and applications](2026-14ed0b92764b-a-survey-on-edge-multimodal-large-models-compression-inference-accelerat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エッジ向けマルチモーダル大規模モデルを、モダリティ別・本体別のモデル圧縮と、KVキャッシュや協調実行を含むシステム推論加速の二軸で整理し、応用とエッジネイティブ設計などの今後の方向を示すサーベイ。
@@ -1727,7 +1731,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：566  
+  実装：✓ ・ リポジトリ内被引用：567  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  
@@ -1769,7 +1773,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：795  
+  実装：✓ ・ リポジトリ内被引用：796  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  

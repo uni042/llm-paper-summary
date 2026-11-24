@@ -35,10 +35,15 @@
   "selection_reason": "メモリ律速なNPU（Ascend 910B）上でのLLM自己回帰デコードを対象に、投機的デコードのカーネル同期オーバーヘッド等の問題を踏まえた適応的推論オーケストレーションA-IOを提案しており、推論実行基盤への直接貢献が確認できる。",
   "semantic_scholar_id": "473ddc779228a4891d852ecdd3d30c4fc61b89eb",
   "source_url": "https://arxiv.org/abs/2604.09752",
-  "status": "ready",
+  "status": "superseded",
   "title": "A-IO: Adaptive Inference Orchestration for Memory-Bound NPUs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T05:37:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2604.09752-a-io-adaptive-inference-orchestration-for-memory-bound-npus.md",
+  "represented_canonical_id": "arXiv:2604.09752",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

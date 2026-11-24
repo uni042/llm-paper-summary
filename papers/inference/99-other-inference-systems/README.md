@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1479本）
+## 自動生成の論文一覧（1481本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2618,6 +2618,10 @@
   実装：[✓](https://github.com/imagination-research/NI-Sampling) ・ リポジトリ内被引用：0  
   そのため従来の全段階方式は一回のモデル実行で一位置だけを確定し、長さ512の出力では原則512回の推論が必要となる。ICLR 2026の論文に記載された単一GPU評価では、LLaDA-8B-InstructのMBPP、生成長512で全段階方式19.1トークン/秒に対し273.8トークン/秒（14.3倍）を報告する。
 
+- **2026-04 · [MIPT-SSM: Scaling Language Models with O(1) Inference Cache via Phase Transitions](2026-2604.07716-mipt-ssm-scaling-language-models-with-o-1-inference-cache-via-phase-tran.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  学習される測定率で波の相と粒子の相を切り替える状態空間モデルにより、系列長8192でTransformerの34,651MBに対し810MBのメモリで済み、AG Newsの精度は0.905でTransformerの0.736を上回った。
+
 - **2026-04 · [MCAP: Deployment-Time Layer Profiling for Memory-Constrained LLM Inference](2026-2604.21026-mcap-deployment-time-layer-profiling-for-memory-constrained-llm-inferenc.md)**  
   実装：[✓](https://github.com/genovationtech/nve) ・ リポジトリ内被引用：0  
   MCAP（Monte Carlo Activation Profiling）は、モデルを読み込む段階で少数の入力を使って層ごとの重要度を計測し、推論時の演算精度と重みの常駐先を同時に決める方式である。論文の代表例ではプロファイルは338バイトのJSONであり、初回計測は約60秒、同一アーキテクチャの再利用時は追加計測を省ける。
@@ -2625,6 +2629,10 @@
 - **2026-04 · [MARS: Enabling Autoregressive Models Multi-Token Generation](2026-2604.07023-mars-enabling-autoregressive-models-multi-token-generation.md)**  
   実装：[✓](https://github.com/Xalp/MARS) ・ リポジトリ内被引用：0  
   MARS（Mask AutoRegreSsion）は、通常は1回の前向き計算で1トークンを生成する自己回帰（autoregressive; AR）言語モデルに、必要なときだけ複数トークンをまとめて出力する能力を追加する方式である。
+
+- **2026-04 · [Local-Splitter: A Measurement Study of Seven Tactics for Reducing Cloud LLM Token Usage on Coding-Agent Workloads](2026-2604.12301-local-splitter-a-measurement-study-of-seven-tactics-for-reducing-cloud-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  小型ローカルモデルを前段に置く7戦術を同一条件で測り、ローカル振り分けとプロンプト圧縮の組が編集・説明中心の作業でクラウドトークンを45から79パーセント減らす一方、最適な組は作業種別で変わることを示した測定研究。
 
 - **2026-04 · [LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model](2026-2604.20796-llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffu.md)**  
   実装：[✓](https://github.com/inclusionAI/LLaDA2.0-Uni) ・ リポジトリ内被引用：0  
@@ -5505,7 +5513,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：116  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：117  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  

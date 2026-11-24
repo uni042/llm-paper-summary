@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（236本）
+## 自動生成の論文一覧（237本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -549,6 +549,10 @@
 - **2026-04 · [Beyond Accuracy: Unveiling Inefficiency Patterns in Tool-Integrated Reasoning](2026-2604.05404-beyond-accuracy-unveiling-inefficiency-patterns-in-tool-integrated-reaso.md)**  
   実装：[✓](https://github.com/sqs-ustc/tool-reasoning-framework-PTE) ・ リポジトリ内被引用：0  
   本論文は、推論と外部ツール利用を交互に行うツール統合推論（tool-integrated reasoning; TIR）の計算費用の測り方を提案する。
+
+- **2026-04 · [Awakening Dormant Experts: Counterfactual Routing to Mitigate MoE Hallucinations](2026-2604.14246-awakening-dormant-experts-counterfactual-routing-to-mitigate-moe-halluci.md)**  
+  実装：[✓](https://github.com/ZhaiYanbo/CoR) ・ リポジトリ内被引用：0  
+  眠った専門エキスパートを反事実影響で起こし、総活性数を変えずに層間予算を知識層へ移すことで、事実性平均を約2ポイント上げ静的増量を上回る学習なしのルーティング是正。
 
 - **2026-03 · [Towards Efficient Large Vision-Language Models: A Comprehensive Survey on Inference Strategies](2026-2603.27960-towards-efficient-large-vision-language-models-a-comprehensive-survey-on.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

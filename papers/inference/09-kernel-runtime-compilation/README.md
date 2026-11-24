@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（333本）
+## 自動生成の論文一覧（334本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -717,6 +717,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [LP-GEMM: Integrating Layout Propagation into GEMM Operations](2026-2604.04599-lp-gemm-integrating-layout-propagation-into-gemm-operations.md)**  
   実装：[✓](https://github.com/czariv/simple_attention) ・ リポジトリ内被引用：0  
   連続する行列積が毎回入出力を詰め替える無駄を除くため、GEMMを初期・中間・終端の3種類に分割し、内部の詰め込み配置を次の行列積へ伝播するLP-GEMMを提案。
+
+- **2026-04 · [Layer-wise MoE Routing Locality under Shared-Prefix Code Generation: Token-Identity Decomposition and Compile-Equivalent Fork Redundancy](2026-2604.17182-layer-wise-moe-routing-locality-under-shared-prefix-code-generation-toke.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  共有プリフィックスから分岐した851本のコード生成でMoEルーティングの重なりを層とトークン同一性に分解して測り、中間層で文脈依存が盛り上がる交差と、コンパイル等価な冗長候補が生成の大半を占めることを示す分析研究。
 
 - **2026-04 · [Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference](2026-2604.23467-hybrid-jit-cuda-graph-low-latency-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

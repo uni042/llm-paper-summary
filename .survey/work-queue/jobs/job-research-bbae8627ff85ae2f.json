@@ -35,10 +35,15 @@
   "selection_reason": "Local-Splitterはローカル小型モデルをトリアージ層とする7戦術（ローカルルーティング、プロンプト圧縮、意味キャッシュ、ローカル起草＋クラウドレビュー、ベンダープロンプトキャッシュ等）をコーディングエージェント負荷で計測し、クラウドLLMトークン使用量45〜79%削減を示した推論基盤の計測研究である。",
   "semantic_scholar_id": "1d66d6cef118d1a956d594843e10966e328efb41",
   "source_url": "https://arxiv.org/abs/2604.12301",
-  "status": "ready",
+  "status": "superseded",
   "title": "Local-Splitter: A Measurement Study of Seven Tactics for Reducing Cloud LLM Token Usage on Coding-Agent Workloads",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T05:37:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.12301-local-splitter-a-measurement-study-of-seven-tactics-for-reducing-cloud-l.md",
+  "represented_canonical_id": "arXiv:2604.12301",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
