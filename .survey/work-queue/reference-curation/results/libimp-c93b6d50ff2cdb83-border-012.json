@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c93b6d50ff2cdb83-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.03066",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.03066",
+    "identity_tokens": [
+      "arXiv:2601.03066"
+    ],
+    "reason": "LLMが推論トークンの機能的重要度を内部に符号化しているかを診断し、尤度を保ちながら不要トークンを貪欲に除くプルーニングで推論チェーンを短縮する。推論コスト削減につながる要素はあるが中心は診断的分析であり、推論システムとしての機構は限定的である。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Do LLMs Encode Functional Importance of Reasoning Tokens?"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c93b6d50ff2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a815ed1e2e3690cd-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2604.17886",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2604.17886",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.17886",
+      "arXiv:2604.17886"
+    ],
+    "reason": "複数セッションにまたがる潜在選好をテキスト仮説として保持し生成・検証・洗練のループで更新するテスト時メモリ手法は、エージェントの文脈・記憶管理と接点を持つが、主目的はパーソナライズされたツール呼び出しの精度向上であり、推論システムとしての貢献は間接的である。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Latent Preference Modeling for Cross-Session Personalized Tool Calling"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a815ed1e2e36",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

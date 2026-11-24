@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dff1e681649a669b-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2603.16148",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2603.16148",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.16148",
+      "arXiv:2603.16148"
+    ],
+    "reason": "選択的状態空間ダイナミクスを持つスパイキング言語モデルNeuronSparkを大規模事前学習する代替アーキテクチャの研究であり、線形注意に通じる連想メモリ等を含むが、主眼は学習と神経ダイナミクスで推論効率の実測や機構の具体性は要旨では薄い。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "NeuronSpark: A Spiking Neural Network Language Model with Selective State Space Dynamics"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dff1e681649a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

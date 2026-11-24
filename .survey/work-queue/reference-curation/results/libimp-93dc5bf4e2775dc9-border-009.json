@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-93dc5bf4e2775dc9-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.10959",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.10959",
+    "identity_tokens": [
+      "arXiv:2503.10959"
+    ],
+    "reason": "視覚Mambaモデル向け初のデータフリー学習後量子化として、潜在状態空間の近傍相互作用で合成データを生成し、時間ステップごとに更新される動的外れ値検出による混合精度量子化を行う枠組みだが、対象が視覚Mambaに限定されLLM推論への適用は示されていない。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Ouromamba: a Data-Free Quantization Framework for Vision Mamba"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93dc5bf4e277",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

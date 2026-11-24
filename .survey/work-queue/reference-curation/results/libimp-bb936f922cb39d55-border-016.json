@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb936f922cb39d55-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.23898",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.23898",
+    "identity_tokens": [
+      "arXiv:2509.23898"
+    ],
+    "reason": "微分可能な構造化スパース化D-Gatingはモデル圧縮へつながるが、主眼は学習時の正則化の理論的等価性であり、推論時の圧縮・高速化の実証は限定的。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Differentiable Sparsity via D-Gating: Simple and Versatile Structured Penalization"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb936f922cb3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

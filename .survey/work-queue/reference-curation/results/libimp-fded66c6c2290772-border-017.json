@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fded66c6c2290772-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.08390",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.08390",
+    "identity_tokens": [
+      "arXiv:2506.08390"
+    ],
+    "reason": "大規模推論モデルが生成前に推論強度を活性化の方向ベクトルの大きさとして事前計画していることを示し、過剰思考の検出や単純な問題での効率的推論への応用を示唆する機構解析であり、推論長制御と接点はあるが主眼は解釈可能性の分析である。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On Reasoning Strength Planning in Large Reasoning Models"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fded66c6c229",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

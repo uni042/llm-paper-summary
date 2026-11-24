@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fd5bc48a087f0d4e-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.20745",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.20745",
+    "identity_tokens": [
+      "arXiv:2512.20745"
+    ],
+    "reason": "ツール拡張エージェントによる数学的推論能力の強化が主題であり、タイトル自体が推論能力（reasoning）の応用研究を明示している。推論システムへの技術的貢献は示されていない。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "AgentMath: Empowering Mathematical Reasoning for Large Language Models via Tool-Augmented Agent"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fd5bc48a087f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

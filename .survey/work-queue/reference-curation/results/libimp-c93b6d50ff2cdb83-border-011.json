@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c93b6d50ff2cdb83-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2010.12821",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2010.12821",
+    "identity_tokens": [
+      "arXiv:2010.12821"
+    ],
+    "reason": "事前学習言語モデルの入出力埋め込み共有（タイング）を見直し、埋め込みパラメータの配分効率を上げる研究である。モデルサイズ配分の話ではあるが、主眼は微調整時の言語理解性能であり推論時のメモリ・運用への効果は要旨で示されていない。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking embedding coupling in pre-trained language models"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c93b6d50ff2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

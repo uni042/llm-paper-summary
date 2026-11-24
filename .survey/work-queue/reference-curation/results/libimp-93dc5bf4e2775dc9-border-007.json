@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-93dc5bf4e2775dc9-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.09916",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.09916",
+    "identity_tokens": [
+      "arXiv:2610.09916"
+    ],
+    "reason": "モデル重みの可逆圧縮について、指数分布の似たチャンク間でHuffman符号を共有し再利用可能なセットアップを事前計算することで圧縮を高速化するNeuralZipだが、対象はチェックポイントの保管・転送であり推論実行時の圧縮機構ではない。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "NeuralZip: Reusable Setup for Fast Lossless Compression"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93dc5bf4e277",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

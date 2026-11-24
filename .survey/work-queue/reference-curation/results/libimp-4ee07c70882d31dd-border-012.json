@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ee07c70882d31dd-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.00273",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.00273",
+    "identity_tokens": [
+      "arXiv:2410.00273"
+    ],
+    "reason": "大規模Transformerの性能モデルを構築し並列化戦略やHPCシステム特性への感度を分析するが、分析の中心は事前学習を含む学習レジームとHPC設計であり、推論サービングへの直接の適用は限定的である。",
+    "first_checked_at": "2026-11-24T21:39:09+00:00",
+    "last_checked_at": "2026-11-24T21:39:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Comprehensive Performance Modeling and System Design Insights for Foundation Models"
+  },
+  "processed_at": "2026-11-24T21:39:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ee07c70882d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

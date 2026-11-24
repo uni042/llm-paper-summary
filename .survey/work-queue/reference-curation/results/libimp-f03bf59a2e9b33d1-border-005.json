@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f03bf59a2e9b33d1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.24358",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.24358",
+    "identity_tokens": [
+      "arXiv:2608.24358"
+    ],
+    "reason": "コーディングエージェントのモデル切替（ハンドオフ）に伴う品質・コストの実証研究で、モデルルーティングに隣接するがサービング機構そのものの提案ではない。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Handoff Tax: Continuing Non-Native Trajectories in LLM Agents"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f03bf59a2e9b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

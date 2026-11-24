@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-93dc5bf4e2775dc9-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.16647",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.16647",
+    "identity_tokens": [
+      "arXiv:2605.16647"
+    ],
+    "reason": "完全準同型暗号下の系列推論に向け、暗号文同士の乗算を局所書き込み経路に限定し公開減衰で状態更新する準同型状態空間モデルを設計しているが、評価はfastText特徴による感情分類であり、LLM推論への適用は示されていない秘匿推論の特殊領域である。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Public-Decay Homomorphic State Space Models for Private Sequence Inference"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93dc5bf4e277",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

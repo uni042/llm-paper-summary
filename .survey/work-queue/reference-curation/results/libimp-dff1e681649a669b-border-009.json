@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dff1e681649a669b-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.05152",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.05152",
+    "identity_tokens": [
+      "arXiv:2409.05152"
+    ],
+    "reason": "検索トークンを自己回帰生成に組み込み生成と検索を単一フォワードパスで統合するOneGenを提案し推論効率も評価しているが、主貢献はRAGやエンティティリンキング等の複合タスクの能力統合であり推論基盤の機構ではない。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OneGen: Efficient One-Pass Unified Generation and Retrieval for LLMs"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dff1e681649a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

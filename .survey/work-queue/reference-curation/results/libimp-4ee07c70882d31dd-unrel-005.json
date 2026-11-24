@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ee07c70882d31dd-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.23629",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.23629",
+    "identity_tokens": [
+      "arXiv:2509.23629"
+    ],
+    "reason": "検証可能報酬による強化学習で緩徐な推論が創発する過程を統計物理の概念ネットワークとして解析しSFT介入タイミングの学習手法を提案する学習ダイナミクスの研究であり、推論システムの機構は扱っていない。",
+    "first_checked_at": "2026-11-24T21:39:09+00:00",
+    "last_checked_at": "2026-11-24T21:39:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Emergent Slow Thinking in LLMs as Inverse Tree Freezing"
+  },
+  "processed_at": "2026-11-24T21:39:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ee07c70882d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

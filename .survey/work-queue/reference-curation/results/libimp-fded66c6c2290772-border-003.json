@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fded66c6c2290772-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.03439",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.03439",
+    "identity_tokens": [
+      "arXiv:2410.03439"
+    ],
+    "reason": "各ツールを固有トークンとしてLLMのパラメータへ埋め込み、外部検索を介さず生成過程でツール呼び出しを行うToolGenは推論時のツール取得経路を変えるが、4万7千ツール規模の学習を前提とするエージェント能力手法であり、サービング機構としての貢献は限定的である。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ToolGen: Unified Tool Retrieval and Calling via Generation"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fded66c6c229",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

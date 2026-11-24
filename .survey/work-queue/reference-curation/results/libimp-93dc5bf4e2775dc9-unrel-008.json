@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-93dc5bf4e2775dc9-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.22179",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.22179",
+    "identity_tokens": [
+      "arXiv:2610.22179"
+    ],
+    "reason": "学習時の重み・活性化・オプティマイザ状態を対象に、事前計算済み符号表のHuffman符号化GPUカーネルで可逆圧縮テンソルを実現するLCTであり、実証も学習・ファインチューニング時のメモリ削減で、学習単独の文脈である。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "LCT: Losslessly Compressed Tensors with GPU friendly execution for Training"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93dc5bf4e277",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

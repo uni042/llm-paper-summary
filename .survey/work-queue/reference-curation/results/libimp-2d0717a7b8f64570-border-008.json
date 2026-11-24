@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d0717a7b8f64570-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:320d87fa661661bcc9082aeca7f82566971f5e12",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:320d87fa661661bcc9082aeca7f82566971f5e12",
+    "identity_tokens": [
+      "SemanticScholar:320d87fa661661bcc9082aeca7f82566971f5e12"
+    ],
+    "reason": "Hessianベースの構造化プルーニング基準とレイテンシ認識正則化でDeiTを全層横断に剪定し、パラメータ再配分したNViTによりFLOPs 2.6倍削減・実行時1.9倍高速化を示す。プルーニング手法自体は汎用だが対象は画像ViTであり、LLM推論への適用は確認できない。",
+    "first_checked_at": "2026-11-24T21:39:09+00:00",
+    "last_checked_at": "2026-11-24T21:39:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "NViT: Vision Transformer Compression and Parameter Redistribution"
+  },
+  "processed_at": "2026-11-24T21:39:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d0717a7b8f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

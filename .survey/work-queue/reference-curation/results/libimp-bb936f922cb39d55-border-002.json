@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb936f922cb39d55-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.01762",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.01762",
+    "identity_tokens": [
+      "arXiv:2610.01762"
+    ],
+    "reason": "ストリーミング動画LLM向けに階層キャプション記憶（PHCM）を推論時に併用するが、主目的は動画理解の応答能力であり、推論システムとしてのメモリ圧縮効果の定量化は限定的。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb936f922cb3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

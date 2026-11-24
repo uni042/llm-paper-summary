@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fded66c6c2290772-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.10471",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.10471",
+    "identity_tokens": [
+      "arXiv:2412.10471"
+    ],
+    "reason": "好奇心駆動の木探索で動画区間を自律的に探索し内発的報酬でフレームを集める長動画理解エージェントは、多数フレームのサンプリングに比べ計算コストを抑える狙いを持つが、主眼は動画理解の精度向上であり、推論コスト削減の機構的な新規性は要旨からは限定的である。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VCA: Video Curious Agent for Long Video Understanding"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fded66c6c229",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fded66c6c2290772-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.01698",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.01698",
+    "identity_tokens": [
+      "arXiv:2310.01698"
+    ],
+    "reason": "HiPPO行列の近似対角化を摂動理論で安定化し、状態空間モデルの初期化の頑健性を高める理論・学習面の研究であり、長系列ベンチマークの精度改善が目的で推論システムではない。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Robustifying State-space Models for Long Sequences via Approximate Diagonalization"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fded66c6c229",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f64a3db600a9add9-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/access.2025.3589514",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/access.2025.3589514",
+    "identity_tokens": [
+      "DOI:10.1109/access.2025.3589514"
+    ],
+    "reason": "深層学習の生体模倣的起源とスケーリング偏重の限界を論じ、Liquid Neural Networksや予測符号化等の神経科学由来の方向性を展望するレビューであり、推論システムへの技術的貢献はない。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Scale Is Not All You Need: Revisiting the Biomimetic Roots of Deep Learning to Overcome Fundamental Limitations"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f64a3db600a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

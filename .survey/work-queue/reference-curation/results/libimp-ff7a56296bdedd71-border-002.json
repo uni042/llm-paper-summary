@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff7a56296bdedd71-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3786659",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3786659",
+    "identity_tokens": [
+      "DOI:10.1145/3786659"
+    ],
+    "reason": "テンソルフロー発散に基づくフィルタ・層の段階的プルーニングで汎用NN圧縮を狙うが、対象は一般のニューラルネットでありLLM推論への直接適用は要旨から確認できない。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "IDAP++: Advancing Divergence-Aware Pruning with Joint Filter and Layer Optimization"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff7a56296bde",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d0717a7b8f64570-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2312.10702",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2312.10702",
+    "identity_tokens": [
+      "arXiv:2312.10702"
+    ],
+    "reason": "位相的データ解析（persistent homology）でBERTの各ニューロンの重要度を測り、圧縮と説明可能性を両立させるOBCEを提案する。要旨上は圧縮の指針提示が中心で、量子化・プルーニングとしての推論高速化の実測や実行系への落とし込みが弱く、即Researchの根拠は薄い。",
+    "first_checked_at": "2026-11-24T21:39:08+00:00",
+    "last_checked_at": "2026-11-24T21:39:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Can persistent homology whiten Transformer-based black-box models? A case study on BERT compression"
+  },
+  "processed_at": "2026-11-24T21:39:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d0717a7b8f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

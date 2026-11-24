@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c93b6d50ff2cdb83-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icima68728.2026.11564766",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icima68728.2026.11564766",
+    "identity_tokens": [
+      "DOI:10.1109/icima68728.2026.11564766"
+    ],
+    "reason": "3B未満の小規模モデルをエッジで実時間実行する際の遅延と精度を比較分析する研究と題し主題はエッジ推論の計測に近いが、Crossref・出版社経由で要旨を取得できず、比較条件や対象機種を一次要旨で検証できなかった。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-24T21:39:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Enabling Real-Time AI at the Edge: A Comparative Analysis of Latency and Accuracy in Sub-3B Parameter Models"
+  },
+  "processed_at": "2026-11-24T21:39:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c93b6d50ff2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

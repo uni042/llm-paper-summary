@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f64a3db600a9add9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.21277",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.21277",
+    "identity_tokens": [
+      "arXiv:2504.21277"
+    ],
+    "reason": "マルチモーダルLLMの推論能力を強化学習で高める手法群（報酬設計、価値モデル有無の paradigm、評価ベンチマーク）を総説するサーベイであり、対象は学習・推論能力の向上であって推論システムではない。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Reinforced MLLM: A Survey on RL-Based Reasoning in Multimodal Large Language Models"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f64a3db600a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

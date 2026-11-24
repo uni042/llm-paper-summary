@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ee07c70882d31dd-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.06823",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.06823",
+    "identity_tokens": [
+      "arXiv:2504.06823"
+    ],
+    "reason": "LLMの知識パラダイムに関する未解決問題（知識更新・反転の呪い・内部知識の競合）と仮説的展望を論じるブログ記事であり、推論システムの技術的貢献は確認できない。",
+    "first_checked_at": "2026-11-24T21:39:09+00:00",
+    "last_checked_at": "2026-11-24T21:39:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Open Problems and a Hypothetical Path Forward in LLM Knowledge Paradigms"
+  },
+  "processed_at": "2026-11-24T21:39:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ee07c70882d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

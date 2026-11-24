@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f64a3db600a9add9-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:ee26bb846f04240fe6e82170a4b15f3b8bd3a09e",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:ee26bb846f04240fe6e82170a4b15f3b8bd3a09e",
+    "identity_tokens": [
+      "SemanticScholar:ee26bb846f04240fe6e82170a4b15f3b8bd3a09e"
+    ],
+    "reason": "基盤モデルの設計に持続可能性とプログラマビリティの原則を取り入れることを論じる人間中心設計のポジションペーパーであり、推論システムの機構への貢献は含まれない。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Designing Human-Centric Foundation Models"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f64a3db600a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fd5bc48a087f0d4e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.02053",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.02053",
+    "identity_tokens": [
+      "arXiv:2503.02053"
+    ],
+    "reason": "バイオメディシン向け基盤モデルの効率化を掲げる論文であり、タイトル自体が生物医学応用を明示している。LLM推論基盤そのものへの貢献はタイトル上確認できない。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T21:39:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "EPEE: towards efficient and effective foundation models in biomedicine"
+  },
+  "processed_at": "2026-11-24T21:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fd5bc48a087f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
