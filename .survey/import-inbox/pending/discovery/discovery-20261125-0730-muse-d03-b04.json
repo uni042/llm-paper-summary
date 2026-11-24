@@ -1,0 +1,708 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261125-d03-b04",
+ "reference_main_sha": "7ee9f908",
+ "record_count": 41,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:e6b87ce03c7291ba4df7ce942626502607d0d743",
+   "identity_tokens": [
+    "SemanticScholar:e6b87ce03c7291ba4df7ce942626502607d0d743"
+   ],
+   "title": "ERNIE-DOC: The Retrospective Long-Document Modeling Transformer",
+   "reason": "ERNIE-DOC is a document-level language pretraining model using retrospective feed and enhanced recurrence mechanisms to model complete long documents; a pretraining model for document tasks, not an inference system.",
+   "source_url": "https://www.semanticscholar.org/paper/e6b87ce03c7291ba4df7ce942626502607d0d743",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 58
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2605.21426",
+   "identity_tokens": [
+    "arXiv:2605.21426"
+   ],
+   "title": "Adaptive Signal Resuscitation: Channel-wise Post-Pruning Repair for Sparse Vision Networks",
+   "reason": "Adaptive Signal Resuscitation is a training-free channel-wise variance-matching repair applied after one-shot magnitude pruning of sparse vision networks; a vision-model compression repair, not LLM inference.",
+   "source_url": "https://arxiv.org/abs/2605.21426",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 59
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2307.07421",
+   "identity_tokens": [
+    "arXiv:2307.07421"
+   ],
+   "title": "SummaryMixing: A Linear-Complexity Alternative to Self-Attention for Speech Recognition and Understanding",
+   "reason": "SummaryMixing replaces self-attention with a single utterance summary plus time-specific information in ASR models, making speech recognition inference up to 28% faster; a speech-recognition application architecture.",
+   "source_url": "https://arxiv.org/abs/2307.07421",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 60
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:64b0d0b8492a883a35f4edf3f54410fc7d7f497d",
+   "identity_tokens": [
+    "SemanticScholar:64b0d0b8492a883a35f4edf3f54410fc7d7f497d"
+   ],
+   "title": "Q-ASR: Integer-only Zero-shot Quantization for Efficient Speech Recognition",
+   "reason": "Q-ASR is an integer-only zero-shot quantization scheme using synthetic calibration data, applied to QuartzNet/Jasper/Conformer for edge speech recognition; inference quantization bound to ASR models.",
+   "source_url": "https://www.semanticscholar.org/paper/64b0d0b8492a883a35f4edf3f54410fc7d7f497d",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 61
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2008.09093",
+   "identity_tokens": [
+    "arXiv:2008.09093"
+   ],
+   "title": "PARADE: Passage Representation Aggregation forDocument Reranking",
+   "reason": "Compares passage representation aggregation strategies (PARADE) for BERT/T5 document reranking on Robust04/GOV2; an information-retrieval task study.",
+   "source_url": "https://arxiv.org/abs/2008.09093",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 62
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/JIOT.2026.3661927",
+   "identity_tokens": [
+    "DOI:10.1109/JIOT.2026.3661927"
+   ],
+   "title": "MMSegRWKV: Enhancing Multimodal MRI Segmentation for Internet-of-Medical-Things-Enabled Healthcare With RWKV-Inspired Architectures",
+   "reason": "Title explicitly presents multimodal MRI segmentation for Internet-of-Medical-Things healthcare, a medical imaging application.",
+   "source_url": "https://doi.org/10.1109/JIOT.2026.3661927",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 63
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2111.08536",
+   "identity_tokens": [
+    "arXiv:2111.08536"
+   ],
+   "title": "HiRID-ICU-Benchmark - A Comprehensive Machine Learning Benchmark on High-resolution ICU Data",
+   "reason": "Title explicitly presents a machine learning benchmark on high-resolution ICU data, a clinical/healthcare benchmark application.",
+   "source_url": "https://arxiv.org/abs/2111.08536",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 64
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1016/j.ipm.2022.103247",
+   "identity_tokens": [
+    "DOI:10.1016/j.ipm.2022.103247"
+   ],
+   "title": "Online portfolio management via deep reinforcement learning with high-frequency data",
+   "reason": "Title explicitly concerns online portfolio management via deep reinforcement learning with high-frequency data, a financial application.",
+   "source_url": "https://doi.org/10.1016/j.ipm.2022.103247",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 65
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2205.13299",
+   "identity_tokens": [
+    "arXiv:2205.13299"
+   ],
+   "title": "Federated Split BERT for Heterogeneous Text Classification",
+   "reason": "FedSplitBERT splits BERT encoder layers between clients and a server for federated text classification under non-IID data, using quantization to cut communication; federated training, not inference.",
+   "source_url": "https://arxiv.org/abs/2205.13299",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 66
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2410.02930",
+   "identity_tokens": [
+    "arXiv:2410.02930"
+   ],
+   "title": "Graph-tree Fusion Model with Bidirectional Information Propagation for Long Document Classification",
+   "reason": "Fuses syntax-tree sentence encodings with document graph attention for long document classification without token limits; a document-classification task model.",
+   "source_url": "https://arxiv.org/abs/2410.02930",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 67
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:850e7a5d017c65e3caa3798f3c16583369ea8798",
+   "identity_tokens": [
+    "SemanticScholar:850e7a5d017c65e3caa3798f3c16583369ea8798"
+   ],
+   "title": "Graph Masked Autoencoder",
+   "reason": "Graph Masked Autoencoders learn graph representations by reconstructing masked node features with an asymmetric transformer encoder-decoder; self-supervised graph learning, not inference systems.",
+   "source_url": "https://www.semanticscholar.org/paper/850e7a5d017c65e3caa3798f3c16583369ea8798",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 68
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.3390/batteries12080308",
+   "identity_tokens": [
+    "DOI:10.3390/batteries12080308"
+   ],
+   "title": "DMS-SVDD: Dynamic Multiscale State-Space Support Vector Data Description for Lithium-Ion Battery Fault Detection from Electric Vehicle Charging Segments",
+   "reason": "Title explicitly presents a state-space data-description method for lithium-ion battery fault detection from EV charging segments, a battery/EV application.",
+   "source_url": "https://doi.org/10.3390/batteries12080308",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 69
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2607.28571",
+   "identity_tokens": [
+    "arXiv:2607.28571"
+   ],
+   "title": "Finding Change in Satellite Archives from Text: How to Combine Before-and-After Images Efficiently",
+   "reason": "Title explicitly concerns finding change in satellite archives from text, a remote-sensing/satellite application.",
+   "source_url": "https://arxiv.org/abs/2607.28571",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 70
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2509.24988",
+   "identity_tokens": [
+    "arXiv:2509.24988"
+   ],
+   "title": "Generalized Correctness Models: Learning Calibrated and Model-Agnostic Correctness Predictors from Historical Patterns",
+   "reason": "Generalized Correctness Models learn calibrated predictors of LLM answer correctness from many models historical outputs; a confidence-estimation study, not an inference-system contribution.",
+   "source_url": "https://arxiv.org/abs/2509.24988",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 71
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2208.08253",
+   "identity_tokens": [
+    "arXiv:2208.08253"
+   ],
+   "title": "An Efficient Coarse-to-Fine Facet-Aware Unsupervised Summarization Framework Based on Semantic Blocks",
+   "reason": "C2F-FAR is a coarse-to-fine facet-aware ranking framework for unsupervised long-document summarization over semantic blocks; a summarization task framework.",
+   "source_url": "https://arxiv.org/abs/2208.08253",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 72
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2402.19170",
+   "identity_tokens": [
+    "arXiv:2402.19170"
+   ],
+   "title": "Improving Legal Judgement Prediction in Romanian with Long Text Encoders",
+   "reason": "Title explicitly concerns improving legal judgement prediction in Romanian with long text encoders, a legal application.",
+   "source_url": "https://arxiv.org/abs/2402.19170",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 73
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2406.19983",
+   "identity_tokens": [
+    "arXiv:2406.19983"
+   ],
+   "title": "Machine Learning Predictors for Min-Entropy Estimation",
+   "reason": "Shows machine learning predictors (CNN-LSTM, GPT-2) estimate average min-entropy of random number generators, outperforming NIST SP 800-90B predictors in some settings; a cryptographic entropy-estimation study.",
+   "source_url": "https://arxiv.org/abs/2406.19983",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 74
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/IJCNN60899.2024.10651438",
+   "identity_tokens": [
+    "DOI:10.1109/IJCNN60899.2024.10651438"
+   ],
+   "title": "Halveformer: A Novel Architecture Combined with Linear Models for Long Sequences Time Series Forecasting",
+   "reason": "Halveformer combines linear models with a transformer encoder for long-sequence time series forecasting on seven benchmarks; a forecasting architecture.",
+   "source_url": "https://doi.org/10.1109/IJCNN60899.2024.10651438",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 75
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/WACV61041.2025.00781",
+   "identity_tokens": [
+    "DOI:10.1109/WACV61041.2025.00781"
+   ],
+   "title": "Local Masked Reconstruction for Efficient Self-Supervised Learning on High-Resolution Images",
+   "reason": "Local masked reconstruction makes generative self-supervised vision pretraining 2.5x faster than MAE on high-resolution ImageNet; a vision pretraining method (same LoMaR line as the related pretraining paper).",
+   "source_url": "https://doi.org/10.1109/WACV61041.2025.00781",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 76
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.48550/arXiv.2506.02916",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2506.02916"
+   ],
+   "title": "Transferable Sequential Recommendation with Vanilla Cross-Entropy Loss",
+   "reason": "MMM4Rec is a multimodal Mamba framework with algebraic constraints for transferable sequential recommendation; a recommender-systems application.",
+   "source_url": "https://doi.org/10.48550/arXiv.2506.02916",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 78
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "SemanticScholar:ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
+   "identity_tokens": [
+    "SemanticScholar:ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6"
+   ],
+   "title": "MoEfication: Conditional Computation of Transformer Models for Efficient Inference",
+   "reason": "MoEfication splits pretrained transformer FFN parameters into functional expert partitions with learned routers, conditionally using only 10-30% of FFN parameters while keeping over 95% of original performance, directly enabling efficient inference.",
+   "source_url": "https://www.semanticscholar.org/paper/ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 80
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2504.11729",
+   "identity_tokens": [
+    "arXiv:2504.11729"
+   ],
+   "title": "EdgePrompt: A Distributed Key-Value Inference Framework for LLMs in 6G Networks",
+   "reason": "EdgePrompt is a cloud-edge collaborative framework using hierarchical attention splicing and distributed key-value pair optimization to raise LLM inference throughput and cut latency in 6G network deployments.",
+   "source_url": "https://arxiv.org/abs/2504.11729",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 81
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2604.12376",
+   "identity_tokens": [
+    "arXiv:2604.12376"
+   ],
+   "title": "Cooperative Memory Paging with Keyword Bookmarks for Long-Horizon LLM Conversations",
+   "reason": "Cooperative memory paging replaces evicted conversation segments with 8-24 token keyword bookmarks and gives the model a recall tool, beating full context on LoCoMo across four models; a KV/context memory management scheme for long-horizon LLM conversations.",
+   "source_url": "https://arxiv.org/abs/2604.12376",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 82
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323149",
+   "identity_tokens": [
+    "DOI:10.1109/ICPADS67057.2025.11323149"
+   ],
+   "title": "AUE: A Normalized Energy Efficiency Metric for AI Servers Under LLM Workloads",
+   "reason": "Proposes AUE, a normalized energy-efficiency metric (energy per thousand tokens per billion activated parameters) measured on Ascend NPU servers under dense and MoE LLM workloads; inference-infrastructure measurement, not a serving mechanism.",
+   "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323149",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 83
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.02159",
+   "identity_tokens": [
+    "arXiv:2505.02159"
+   ],
+   "title": "Small Clips, Big Gains: Learning Long-Range Refocused Temporal Information for Video Super-Resolution",
+   "reason": "LRTI-VSR is a training framework that teaches recurrent video super-resolution models to exploit long-range refocused temporal information from short training clips; a video restoration task method.",
+   "source_url": "https://arxiv.org/abs/2505.02159",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 84
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2611.13378",
+   "identity_tokens": [
+    "arXiv:2611.13378"
+   ],
+   "title": "Looping Deeper Without Growing the KV Cache: Recurrent Depth for Causal Encoder-Decoders",
+   "reason": "Designs a looped causal encoder-decoder whose encoder recurrence shares the last round KV cache losslessly, achieving zero round-wise KV growth and 1/6 of a looped transformer global KV, validated by looping the 552B DeepSeek-V4.1-Flash for serving.",
+   "source_url": "https://arxiv.org/abs/2611.13378",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 85
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2512.02924",
+   "identity_tokens": [
+    "arXiv:2512.02924"
+   ],
+   "title": "AutoNeural: Co-Designing Vision-Language Models for NPU Inference",
+   "reason": "AutoNeural co-designs an NPU-native VLM: a MobileNetV5-style encoder with bounded activations for stable INT4/8/16 integer-only inference and an SSM-hybrid language backbone that removes KV-cache memory I/O during generation.",
+   "source_url": "https://arxiv.org/abs/2512.02924",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 86
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2611.03173",
+   "identity_tokens": [
+    "arXiv:2611.03173"
+   ],
+   "title": "PagedMoE: Cross-Precision Expert Caching for Token-Level Dynamic Precision in SSD-Resident MoE Inference",
+   "reason": "PagedMoE stores each SSD-resident MoE expert once in a prefix-compatible tree codebook and bitplane layout so lower-precision prefixes are reused or extended by fetching only missing bitplanes, cutting SSD I/O in token-level dynamic-precision expert caching.",
+   "source_url": "https://arxiv.org/abs/2611.03173",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 87
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2408.11656",
+   "identity_tokens": [
+    "arXiv:2408.11656"
+   ],
+   "title": "Macformer: Transformer with Random Maclaurin Feature Attention",
+   "reason": "Macformer approximates dot-product kernels with random Maclaurin features for linear-time attention, validated mainly on the Long Range Arena benchmark; a generic efficient-attention architecture without an LLM serving evaluation.",
+   "source_url": "https://arxiv.org/abs/2408.11656",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 88
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2601.08963",
+   "identity_tokens": [
+    "arXiv:2601.08963"
+   ],
+   "title": "Breaking the Bottlenecks: Scalable Diffusion Models for 3D Molecular Generation",
+   "reason": "Reinterprets directly denoising diffusion models through a reverse transition kernel formalism for 3D molecular generation; a molecular-generation theory/application paper.",
+   "source_url": "https://arxiv.org/abs/2601.08963",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 89
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.03563",
+   "identity_tokens": [
+    "arXiv:2512.03563"
+   ],
+   "title": "State Space Models for Bioacoustics: A comparative Evaluation with Transformers",
+   "reason": "Title explicitly evaluates state space models for bioacoustics against transformers, an animal-sound/biological audio application domain.",
+   "source_url": "https://arxiv.org/abs/2512.03563",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 90
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2609.18935",
+   "identity_tokens": [
+    "arXiv:2609.18935"
+   ],
+   "title": "Long-Lived Characters, Local Inference: Incremental Memory Maintenance for Game NPCs",
+   "reason": "Studies incremental memory maintenance for long-lived game NPCs on a local quantized hybrid recurrent-attention model, removing superseded attention KV entries and recomputing replacements at the sequence tail; the KV-cache maintenance mechanism is application-bound and evaluated only in local experiments.",
+   "source_url": "https://arxiv.org/abs/2609.18935",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 91
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.23043",
+   "identity_tokens": [
+    "arXiv:2510.23043"
+   ],
+   "title": "HieraMamba: Video Temporal Grounding via Hierarchical Anchor-Mamba Pooling",
+   "reason": "HieraMamba uses hierarchical anchor-Mamba pooling with contrastive objectives for video temporal grounding on Ego4D-NLQ/MAD/TACoS; a video localization task architecture.",
+   "source_url": "https://arxiv.org/abs/2510.23043",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 92
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2512.11851",
+   "identity_tokens": [
+    "arXiv:2512.11851"
+   ],
+   "title": "KV Cache Recycling to Expand Usable Context Capacity in Low Parameter LLMs",
+   "reason": "KV cache recycling serializes past key-value activations to CPU and reuses them when a cached prompt is an exact prefix of a new input, giving consistent latency speedups with no material output degradation in DialoGPT-medium tests.",
+   "source_url": "https://arxiv.org/abs/2512.11851",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 93
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/MASS66014.2025.00085",
+   "identity_tokens": [
+    "DOI:10.1109/MASS66014.2025.00085"
+   ],
+   "title": "Task Offloading for Collaborative Inference of LLM Agents at the Network Edge",
+   "reason": "Proposes a two-stage optimization of task offloading decisions and compute resource allocation for collaborative inference of LLM agents at the network edge, reducing total task completion latency by 49.6% versus random, greedy and genetic baselines.",
+   "source_url": "https://doi.org/10.1109/MASS66014.2025.00085",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 94
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2605.08314",
+   "identity_tokens": [
+    "arXiv:2605.08314"
+   ],
+   "title": "FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast",
+   "reason": "FlashSVD v1.5 is a unified inference runtime for SVD-compressed transformers combining phase-specific kernels, dense-KV decode, packed MLP execution and per-layer CUDA-graph replay, achieving up to 2.55x decode and 2.39x end-to-end speedup.",
+   "source_url": "https://arxiv.org/abs/2605.08314",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 95
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2309.07988",
+   "identity_tokens": [
+    "arXiv:2309.07988"
+   ],
+   "title": "Folding Attention: Memory and Power Optimization for On-Device Transformer-Based Streaming Speech Recognition",
+   "reason": "Folding attention shrinks the linear projection layers dominating on-device streaming speech recognition transformers, cutting model size 24% and power 23%; a general compression trick evaluated only on a speech application.",
+   "source_url": "https://arxiv.org/abs/2309.07988",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 96
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2609.34045",
+   "identity_tokens": [
+    "arXiv:2609.34045"
+   ],
+   "title": "Kafila: Serving Large Language Models on a Trusted Set of Heterogeneous Commodity Machines",
+   "reason": "Kafila serves LLMs across a trusted ring of heterogeneous commodity machines, with a planner that measures each device memory bandwidth and capacity and divides the model exactly for the fixed ring order before serving begins.",
+   "source_url": "https://arxiv.org/abs/2609.34045",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 97
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2512.19011",
+   "identity_tokens": [
+    "arXiv:2512.19011"
+   ],
+   "title": "Do You Really Need a GPU to Guard Your LLM? CPU-Class Classifiers and Multi-Stage Pipelines for Safety Enforcement at Scale",
+   "reason": "Evaluates CPU-class TF-IDF classifiers against GPU transformer pipelines for jailbreak safety screening of LLM traffic at deployment scale and cost; guardrail infrastructure evaluation adjacent to, but not part of, core LLM inference.",
+   "source_url": "https://arxiv.org/abs/2512.19011",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 98
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2405.16148",
+   "identity_tokens": [
+    "arXiv:2405.16148"
+   ],
+   "title": "Accelerating Transformers with Spectrum-Preserving Token Merging",
+   "reason": "PiToMe merges tokens using an energy score that preserves informative low-energy tokens, reducing transformer computational and memory requirements while maintaining accuracy across vision and language models including GPT and LLaVA.",
+   "source_url": "https://arxiv.org/abs/2405.16148",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 99
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/CVPRF71909.2026.00285",
+   "identity_tokens": [
+    "DOI:10.1109/CVPRF71909.2026.00285"
+   ],
+   "title": "MipKV: A Sparsify-Then-Recover Paradigm for Accelerating Large Vision-Language Model Pre-Filling",
+   "reason": "MipKV downsamples visual tokens into offset thumbnails, prunes cross-thumbnail attention and selectively recomputes high-deviation tokens, accelerating LVLM pre-filling to 16.25% of self-attention FLOPs with 7.45x faster attention on Qwen2-VL.",
+   "source_url": "https://doi.org/10.1109/CVPRF71909.2026.00285",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T07:30:00+09:00",
+   "last_checked_at": "2026-11-25T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 100
+  }
+ ]
+}
