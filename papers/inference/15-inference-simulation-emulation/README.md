@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（127本）
+## 自動生成の論文一覧（128本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -71,6 +71,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-02 · [Asynchronous Verified Semantic Caching for Tiered LLM Architectures](2026-2602.13165-asynchronous-verified-semantic-caching-for-tiered-llm-architectures.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   著者は、事前に人手や大規模モデルで検証した回答を持つ静的キャッシュと、通常の要求を処理しながら生成回答を保存する動的キャッシュを分離する構成を前提とする。原著のトレース駆動シミュレーションでは、会話要求における静的由来回答の割合が8.2%から19.4%、検索要求では2.2%から8.6%へ増えた。
+
+- **2026-10 · [ePACT: Energy-Performance-Aware Commitment Tracking for LLM Serving](2026-2610.01784-epact-energy-performance-aware-commitment-tracking-for-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLMサービングの電力を単純に減らすのではなく、事前に契約した時間単位の電力量へ実消費を近づける。要求ごとのサービス期限を予測し、レプリカ数とGPUクロックをオンラインで調整する。
 
 - **2026-09 · [Characterizing High Bandwidth Flash for LLM Serving](2026-2609.39131-characterizing-high-bandwidth-flash-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -130,6 +134,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   カーネル集合ごとに一回だけの短い実測を基準にし、固定費を保つ移転則と離散事象の模擬で他配置の性能を予測する枠組みで、十一の基準実測から百七十二構成のトークン当たり時間を中央値誤差八・一パーセントで予測し、探索を実機試行から予測上の探索へ変えたと報告した。
 
+- **2026-11 · [LEDGE: An Efficient Simulator for Distributed LLM Serving on Heterogeneous Edge Devices](2026-2611.24085-ledge-an-efficient-simulator-for-distributed-llm-serving-on-heterogeneou.md)**  
+  実装：[✓](https://github.com/gdfwj/LEDGE) ・ リポジトリ内被引用：0  
+  テンソル演算を実行せず、イベントグラフと較正済み性能モデルと共有リンク競合の再現で、異種エッジデバイス上の分散LLM提供の遅延を数パーセントの誤差で予測し、実機の135倍の速さで配置探索を可能にするシミュレータ。
+
 - **2026-11 · [LaFlash: Capacity-Driven Acceleration for Coding Agent Workflows via QLC-HBF](2026-2611.22746-laflash-capacity-driven-acceleration-for-coding-agent-workflows-via-qlc-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   コーディングエージェントの休止状態を追い出さず保持する方が再計算より速いことに着目し、大容量のQLC高帯域フラッシュへ状態を置くLaFlashで、SLC方式とバッチ拡大の組み合わせに対し平均7.04倍のスループットと10.96倍のエネルギー効率を得る容量駆動の加速アーキテクチャ。
@@ -149,10 +157,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-10 · [Exploiting the Flexibility of LLM Inference for Frequency Regulation Service](2026-2610.23532-exploiting-the-flexibility-of-llm-inference-for-frequency-regulation-ser.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論の遅延余裕を使ってクラスタの消費電力を電力網の周波数調整信号へ追随させるため、リクエスト割り当てとトークン配分の階層スケジューリングに、遅れた報酬の再配分と平均場近似による大規模協調を組み合わせた手法。
-
-- **2026-10 · [ePACT: Energy-Performance-Aware Commitment Tracking for LLM Serving](2026-2610.01784-epact-energy-performance-aware-commitment-tracking-for-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  LLMサービングの電力を単純に減らすのではなく、事前に契約した時間単位の電力量へ実消費を近づける。要求ごとのサービス期限を予測し、レプリカ数とGPUクロックをオンラインで調整する。
 
 - **2026-10 · [DynaTE: Accelerating Diffusion LLMs via Dynamic Token Execution](2026-2610.11284-dynate-accelerating-diffusion-llms-via-dynamic-token-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

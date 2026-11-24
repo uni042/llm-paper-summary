@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1534本）
+## 自動生成の論文一覧（1535本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1145,6 +1145,10 @@
 - **2026-11 · [Concise-9B: Removing the Slack from a Reasoning Model's Thinking](2026-2611.02278-concise-9b-removing-the-slack-from-a-reasoning-model-s-thinking.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   答えが固まった後の思考であるスラックを強制読み出しで測り、最短の正解サンプルで自己学習して除去する研究。未見8983問でトークンを0.66倍にし、正解率は同等範囲を維持する。
+
+- **2026-11 · [CanopyKV: Remember beyond the Crop for Fast Active Visual Reasoning](2026-2611.24373-canopykv-remember-beyond-the-crop-for-fast-active-visual-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  能動的な視覚推論で、切り出しの親子関係から新しい視野で置き換わらない補完証拠を残し、履歴を固定して継続状態を守ることで、全量保持の約4分の1のKVキャッシュで正解率と課題完了速度をともに改善した学習不要のKV圧縮方式。
 
 - **2026-11 · [Calibration of Large Model Quantization based on HiFloat4 Format](2026-2610.41112-calibration-of-large-model-quantization-based-on-hifloat4-format.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5151,7 +5155,7 @@
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
-  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：25  
   Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
 
 - **2024-04 · [LongVLM: Efficient Long Video Understanding via Large Language Models](2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md)**  
@@ -5717,7 +5721,7 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：144  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：145  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  

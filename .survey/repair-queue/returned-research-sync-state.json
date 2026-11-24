@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a1f68e93cc5dde6d32fae86dc563f6ff2e99f6a9",
+  "base_commit": "e61f8773546e340cad93ff478c8ce91d73aa1e85",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1660,6 +1660,11 @@
     "2026-2611.23035-storing-the-gemma-4-k-v-cache-once-exact-global-kv-memory-savings-in-a-paged-serving-engine-with-unchanged-attention-ker.json",
     "2026-2611.23558-towards-fair-resource-sharing-in-agentic-llm-serving.json",
     "2026-2611.23769-keep-the-reasoning-read-the-image-on-demand-visual-kv-for-multi-turn-reasoning-vlms.json",
+    "2026-2611.23835-narrowspec-draft-hidden-width-need-not-match-the-target-in-speculative-decoding.json",
+    "2026-2611.24085-ledge-an-efficient-simulator-for-distributed-llm-serving-on-heterogeneous-edge-devices.json",
+    "2026-2611.24119-efair-fair-llm-serving-under-hourly-electricity-commitments.json",
+    "2026-2611.24301-loopcache-accelerating-long-context-self-speculative-decoding-for-looped-transformers.json",
+    "2026-2611.24373-canopykv-remember-beyond-the-crop-for-fast-active-visual-reasoning.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -54608,6 +54613,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.23835": {
+      "order": [
+        "2026-11-24T10:45:40+00:00",
+        "2026-2611.23835-narrowspec-draft-hidden-width-need-not-match-the-target-in-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.24085": {
+      "order": [
+        "2026-11-24T10:47:15+00:00",
+        "2026-2611.24085-ledge-an-efficient-simulator-for-distributed-llm-serving-on-heterogeneous-edge-devices.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.24119": {
+      "order": [
+        "2026-11-24T10:48:50+00:00",
+        "2026-2611.24119-efair-fair-llm-serving-under-hourly-electricity-commitments.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.24301": {
+      "order": [
+        "2026-11-24T10:50:24+00:00",
+        "2026-2611.24301-loopcache-accelerating-long-context-self-speculative-decoding-for-looped-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.24373": {
+      "order": [
+        "2026-11-24T10:51:59+00:00",
+        "2026-2611.24373-canopykv-remember-beyond-the-crop-for-fast-active-visual-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69453,6 +69503,21 @@
     "arxiv:2611.23769": [
       "papers/inference/99-other-inference-systems/2026-2611.23769-keep-the-reasoning-read-the-image-on-demand-visual-kv-for-multi-turn-rea.md",
       "papers/inference/99-other-inference-systems/2026-2611.23769-keep-the-reasoning-read-the-image-on-demand-visual-kv-for-multi-turn-rea.md"
+    ],
+    "arxiv:2611.23835": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.23835-narrowspec-draft-hidden-width-need-not-match-the-target-in-speculative-d.md"
+    ],
+    "arxiv:2611.24085": [
+      "papers/inference/15-inference-simulation-emulation/2026-2611.24085-ledge-an-efficient-simulator-for-distributed-llm-serving-on-heterogeneou.md"
+    ],
+    "arxiv:2611.24119": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.24119-efair-fair-llm-serving-under-hourly-electricity-commitments.md"
+    ],
+    "arxiv:2611.24301": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.24301-loopcache-accelerating-long-context-self-speculative-decoding-for-looped.md"
+    ],
+    "arxiv:2611.24373": [
+      "papers/inference/99-other-inference-systems/2026-2611.24373-canopykv-remember-beyond-the-crop-for-fast-active-visual-reasoning.md"
     ]
   }
 }
