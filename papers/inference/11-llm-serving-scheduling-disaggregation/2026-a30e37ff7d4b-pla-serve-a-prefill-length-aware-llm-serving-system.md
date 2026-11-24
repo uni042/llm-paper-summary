@@ -51,6 +51,7 @@ references:
   arxiv_id: '2406.16858'
 - canonical_id: arXiv:2503.01840
   arxiv_id: '2503.01840'
+- canonical_id: arXiv:2008.12260
 - canonical_id: arXiv:2412.15115
   arxiv_id: '2412.15115'
 - canonical_id: arXiv:2504.07878
@@ -74,7 +75,7 @@ references:
   arxiv_id: '2507.17120'
 - canonical_id: arXiv:2401.09670
   arxiv_id: '2401.09670'
-references_checked_at: '2026-09-19'
+references_checked_at: '2026-11-24'
 references_source: arxiv-html-reference-section
 references_total: 40
 source: https://proceedings.mlsys.org/paper_files/paper/2026/file/bbb7506579431a85861a05fff048d3e1-Paper-Conference.pdf
