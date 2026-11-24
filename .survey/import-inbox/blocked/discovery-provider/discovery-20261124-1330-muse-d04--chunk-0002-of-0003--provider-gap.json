@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-d04::provider-gap",
+  "reference_main_sha": "06fa235e4b200b1ea3146c018a35f3f8c827101a",
+  "record_count": 1,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.04701",
+      "identity_tokens": [
+        "arXiv:2604.04701"
+      ],
+      "title": "MUXQ: Mixed-to-Uniform Precision MatriX Quantization via Low-Rank Outlier Decomposition",
+      "reason": "NPUオンデバイスLLM推論向けのINT量子化MUXQは、入力活性化の外れ値チャネルを検出し小さな補助行列で大きさをチャネル間に再配分することで、外れ値も低精度INTのままハードウェア効率の良い均一計算に載せる推論量子化そのものである。",
+      "source_url": "https://arxiv.org/abs/2604.04701",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 189
+    }
+  ],
+  "parent_run_key": "muse-final-20261124-d04",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 44,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261124-1330-muse-d04--chunk-0002-of-0003.json",
+  "provider_gap_ids": [
+    "arXiv:2604.04701"
+  ]
+}

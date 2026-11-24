@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-d05::provider-gap",
+  "reference_main_sha": "06fa235e4b200b1ea3146c018a35f3f8c827101a",
+  "record_count": 4,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.06828",
+      "identity_tokens": [
+        "arXiv:2611.06828"
+      ],
+      "title": "Systolic Linear Attention: Co-Designing Tile-Grouped Gated Delta Attention for TPUs",
+      "reason": "TPUの256×256シストリック行列ユニットに合わせ、キー幅の拡張・値ヘッド間でのキーと書込ゲートの共有・減衰ゲートのタイル化・FP32ブロック倍加による厳密チャンク反転のカーネル内融合でGated Delta Attentionを再設計し、MaxText KDA比2.1〜2.6倍の高速化と一時HBM使用量49〜61%削減を実測した、線形注意カーネルのハードウェア協調設計であり推論カーネルそのものが主題。",
+      "source_url": "https://arxiv.org/abs/2611.06828",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 208
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.10623",
+      "identity_tokens": [
+        "arXiv:2510.10623"
+      ],
+      "title": "ADiP: Adaptive Precision Systolic Array for Matrix Multiplication Acceleration",
+      "reason": "Transformerの行列積を対象に、精度を動的に切り替えられる再構成可能PEと共有シフタ／アキュムレータを持つ適応精度シストリックアレイADiPを提案し、GPT-2・BERT・BitNet等のワークロードで最大4倍のスループットとメモリ効率を示した推論計算ハードウェアの設計であり、行列積アクセラレーションが主題。",
+      "source_url": "https://arxiv.org/abs/2510.10623",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 216
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.07523",
+      "identity_tokens": [
+        "arXiv:2501.07523"
+      ],
+      "title": "Parallel Key-Value Cache Fusion for Position Invariant RAG",
+      "reason": "RAGで検索文書の配置順により出力が変わる問題に対し、文書ごとのKVキャッシュを並列に生成して融合することでデコーダオンリーLLMの出力を位置不変にする推論時フレームワークであり、KVキャッシュの並列生成・融合という推論機構そのものが主題。",
+      "source_url": "https://arxiv.org/abs/2501.07523",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 224
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36653",
+      "identity_tokens": [
+        "arXiv:2609.36653"
+      ],
+      "title": "Scheduling Recursive Reasoning in Looped Transformers",
+      "reason": "ループ型Transformerの反復推論において、各更新の持続的進展と変動のバランスをオンラインで追跡してステップサイズを適応させるスケジューラTAPSを提案し、再学習なしで反復回数を削減し一致精度での壁時計時間最大1.56倍高速化を示した、テスト時計算の推論時スケジューリングが主題。",
+      "source_url": "https://arxiv.org/abs/2609.36653",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 228
+    }
+  ],
+  "parent_run_key": "muse-final-20261124-d05",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 47,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261124-1330-muse-d05--chunk-0001-of-0003.json",
+  "provider_gap_ids": [
+    "arXiv:2501.07523",
+    "arXiv:2510.10623",
+    "arXiv:2609.36653",
+    "arXiv:2611.06828"
+  ]
+}

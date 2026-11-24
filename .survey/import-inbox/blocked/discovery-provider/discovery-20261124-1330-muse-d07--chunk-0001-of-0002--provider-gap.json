@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-d07::provider-gap",
+  "reference_main_sha": "06fa235e4b200b1ea3146c018a35f3f8c827101a",
+  "record_count": 2,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.23582",
+      "identity_tokens": [
+        "arXiv:2609.23582"
+      ],
+      "title": "ARID: A Deployable Edge AI System for Structured Information Extraction from Industrial Maintenance Work Orders",
+      "reason": "Jetson Orin NX（8GB）上の常駐サービングとして、4ビット推論・文法制約デコード・作業票単位のルーティングを組み合わせ、P50/P99遅延（5,310/5,656ms）と消費電力12.5Wを実測したエッジ推論システムであり、オンデバイス推論への直接貢献が要旨で確認できる。",
+      "source_url": "https://arxiv.org/abs/2609.23582",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 308
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.01715",
+      "identity_tokens": [
+        "arXiv:2611.01715"
+      ],
+      "title": "EarlySelectKV: Anticipatory KV Selection via Cross-Layer Query Proxies",
+      "reason": "初期層の隠れ状態から作るプロキシクエリでKV選択インデックスを事前計算し、ルーティングを注意のクリティカルパスから外すEarlySelectKVを提案する。TensorRT-LLM＋CPUオフロード配置で出力スループット最大12.4%向上とGPU常駐メモリ11.1%削減を実測しており、KVキャッシュ推論への直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2611.01715",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 329
+    }
+  ],
+  "parent_run_key": "muse-final-20261124-d07",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 34,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261124-1330-muse-d07--chunk-0001-of-0002.json",
+  "provider_gap_ids": [
+    "arXiv:2609.23582",
+    "arXiv:2611.01715"
+  ]
+}
