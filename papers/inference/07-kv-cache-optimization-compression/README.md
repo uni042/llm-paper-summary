@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（657本）
+## 自動生成の論文一覧（658本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1599,6 +1599,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、GPUを計算能力の大きさで増設する従来のLLMデータセンター設計が、長文脈・長い推論出力・複数エージェント間の接頭辞共有という負荷に必ずしも合致しないと論じる。
 
+- **2026-06 · [Plug-and-Play KV Cache Reuse for Low-Latency Retrieval-Augmented Generation](2026-61064d66f56b-plug-and-play-kv-cache-reuse-for-low-latency-retrieval-augmented-generat.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モデルもプロンプトも変えない条件で、システム指示をアンカーとして文書ブロックを事前計算し、位置埋め込みを直して連結することでKVキャッシュを再利用し、最初のトークンまでの時間を約5.9倍短くする代わりに正解率の一部を失う交換関係を実測した研究。
+
 - **2026-06 · [Myopia Rectification: KV Cache Pruning for MLLMs via Dynamic Attention Subsidy and Token Reclamation](2026-1b586a81703a-myopia-rectification-kv-cache-pruning-for-mllms-via-dynamic-attention-su.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数画像MLLMで後ろの画像が注意されにくい「注意機構 Myopia」を発見し、画像単位の動的注意補助（DAS）と捨てトークンの回収箱（Recycling Bin）で、KVキャッシュ20%でも精度を保つ学習不要のプルーニング手法を提案した論文。
@@ -1934,7 +1938,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   KVを一律の長さで削る方式は簡単だが、要約、文書質問応答、コード補完などでは、重要な情報が残る層とトークン位置が異なる。
 
 - **2025-02 · [Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation](2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md)**  
-  実装：✓ ・ リポジトリ内被引用：27  
+  実装：✓ ・ リポジトリ内被引用：28  
   文書自体が同じなのに、GPUはその文書の鍵・値（KV）を再計算することになる。Cache-Craftは再利用するかどうかの判定と、どれだけ再計算して修復するかの決定を分離する。実際のRAGワークロードでは、接頭辞キャッシュ比で冗長計算を51%減らし、連続バッチ下で処理率を1.6倍、エンドツーエンド応答遅延を約半分にしたと報告する。
 
 - **2024-12 · [DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction](2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md)**  
@@ -2634,7 +2638,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：879  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：880  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  

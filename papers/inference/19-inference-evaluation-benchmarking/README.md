@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（253本）
+## 自動生成の論文一覧（255本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -518,6 +518,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   道具呼出しごとの厳密な正しさを予測する較正済みDistilBERT分類器で、予算内で最も安い正解見込みモデルを選び不可能な要求は棄却することで、単一最良モデルより59パーセント安く高い正解率を出すエージェント向けモデルルーター。
 
+- **2026-05 · [MindFusion: Communication-Efficient Mobile-Cloud Orchestration for MLLMs](2026-43a5561dce36-mindfusion-communication-efficient-mobile-cloud-orchestration-for-mllms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  生データを端末に残すモバイルとクラウドの分割実行で、デコードをクラウド内に閉じさせる近道と画像特徴だけの8分の1圧縮により、最初のトークンまでの遅延を87パーセント減らしデコードを最大25倍速くしながら転送量を70パーセント以上削る方式。
+
 - **2026-05 · [Measuring Maximum Activations in Open Large Language Models](2026-2605.15572-measuring-maximum-activations-in-open-large-language-models.md)**  
   実装：[✓](https://github.com/clx1415926/Max_act_llm) ・ リポジトリ内被引用：0  
   低ビット推論では、活性値を少数の離散水準へ写すときに、値の最大絶対値が量子化尺度の決定を左右する。近い規模のMoEモデルは密モデルより14.0〜23.4倍低い極大値を示す。
@@ -665,6 +669,10 @@
 - **2026-01 · [Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct](2026-2601.14277-which-quantization-should-i-use-a-unified-evaluation-of-llama-cpp-quanti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   同じ80億パラメータモデルを半精度から13形式へ変換し、五つの下流課題と困惑度と速度を統一条件で比べ、5ビットと調整のよい4ビットが容量を約3分の2減らしても品質をほぼ保ち、最も強い3ビットだけが推論課題で大きく崩れることを示した実務指針。
+
+- **2026-01 · [Tensor Program Superoptimization through Cost-Guided Symbolic Program Synthesis](2026-5223769ccd56-tensor-program-superoptimization-through-cost-guided-symbolic-program-sy.md)**  
+  実装：[✓](https://doi.org/10.5281/zenodo.17638076) ・ リポジトリ内被引用：0  
+  テンソルプログラムを記号実行で数式化し、スケッチ合成と実測コストモデルの分枝限定法で等価な高速プログラムを自動発見する超最適化器STENSO。NumPyで幾何平均3.8倍、JAXとPyTorchで1.6倍の高速化を報告する。
 
 - **2026-01 · [Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference](2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

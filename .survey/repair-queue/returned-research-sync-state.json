@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "59c94847209ffbf642d018248143e82b537a5201",
+  "base_commit": "854cb309bfab0d948efd9df53c7bc621ccd947b2",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1652,8 +1652,13 @@
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
+    "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
     "2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-privacy-preserving-transformer-inference.json",
+    "2026-43a5561dce36-mindfusion-communication-efficient-mobile-cloud-orchestration-for-mllms.json",
     "2026-4fa7ab93c4a9-simserving-native-execution-simulation-for-evolution-resilient-llm-serving-configuration-tuning.json",
+    "2026-5223769ccd56-tensor-program-superoptimization-through-cost-guided-symbolic-program-synthesis.json",
+    "2026-53bf172d8ba2-orion-a-collaborative-edge-inference-framework-for-large-language-models-processing-multi-sensor-data-in-uav-swarms.json",
+    "2026-61064d66f56b-plug-and-play-kv-cache-reuse-for-low-latency-retrieval-augmented-generation.json",
     "2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-guarantees-via-response-time-theory.json",
     "2026-6e8bb6985b9f-sprint-scalable-secure-differentially-private-inference-for-transformers.json",
     "2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregated-llm-serving.json",
@@ -54341,6 +54346,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.findings-acl.798": {
+      "order": [
+        "2026-11-24T09:47:46+00:00",
+        "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/FMSys72110.2026.00012": {
+      "order": [
+        "2026-11-24T09:48:32+00:00",
+        "2026-43a5561dce36-mindfusion-communication-efficient-mobile-cloud-orchestration-for-mllms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/CGO68049.2026.11395198": {
+      "order": [
+        "2026-11-24T09:49:19+00:00",
+        "2026-5223769ccd56-tensor-program-superoptimization-through-cost-guided-symbolic-program-synthesis.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.3390/drones10060410": {
+      "order": [
+        "2026-11-24T09:50:07+00:00",
+        "2026-53bf172d8ba2-orion-a-collaborative-edge-inference-framework-for-large-language-models-processing-multi-sensor-data-in-uav-swarms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/IJCNN69854.2026.11728998": {
+      "order": [
+        "2026-11-24T09:50:55+00:00",
+        "2026-61064d66f56b-plug-and-play-kv-cache-reuse-for-low-latency-retrieval-augmented-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69094,6 +69144,21 @@
     "doi:10.1109/pesgm58988.2026.11693290": [
       "papers/inference/15-inference-simulation-emulation/2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adapt.md",
       "papers/inference/15-inference-simulation-emulation/2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adapt.md"
+    ],
+    "doi:10.18653/v1/2026.findings-acl.798": [
+      "papers/inference/99-other-inference-systems/2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.md"
+    ],
+    "doi:10.1109/fmsys72110.2026.00012": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-43a5561dce36-mindfusion-communication-efficient-mobile-cloud-orchestration-for-mllms.md"
+    ],
+    "doi:10.1109/cgo68049.2026.11395198": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-5223769ccd56-tensor-program-superoptimization-through-cost-guided-symbolic-program-sy.md"
+    ],
+    "doi:10.3390/drones10060410": [
+      "papers/inference/15-inference-simulation-emulation/2026-53bf172d8ba2-orion-a-collaborative-edge-inference-framework-for-large-language-models.md"
+    ],
+    "doi:10.1109/ijcnn69854.2026.11728998": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-61064d66f56b-plug-and-play-kv-cache-reuse-for-low-latency-retrieval-augmented-generat.md"
     ]
   }
 }

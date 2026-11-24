@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1530本）
+## 自動生成の論文一覧（1531本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2061,6 +2061,10 @@
 - **2026-07 · [LogbQuant: Quantizing Language Models in Logarithmic Space](2026-2607.01127-logbquant-quantizing-language-models-in-logarithmic-space.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重み行列ごとに対数コードブックを作りエネルギー基準の枝刈りで範囲を絞る重み量子化で、4ビットで崩壊する線形量子化に対し正解率とパープレキシティを大きく保ちメモリを最大65パーセント減らす方式。
+
+- **2026-07 · [Lightweight Haar Wavelet Subband Pruning for LLMs](2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.md)**  
+  実装：[✓](https://github.com/dellixx/HWSP) ・ リポジトリ内被引用：0  
+  重みをハール変換して四つの周波数帯域へ分け、各帯域を同じ割合で切る較正不要の枝刈りで、低周波への偏りを防ぎ、70Bモデルでも単一GPUで3分の枝刈りと強い方式に拮抗する品質を両立する。
 
 - **2026-07 · [LaCo: Layer-wise Compensation for Pruned Large Language Models](2026-00140e8efcf4-laco-layer-wise-compensation-for-pruned-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

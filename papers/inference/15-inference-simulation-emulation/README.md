@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（124本）
+## 自動生成の論文一覧（125本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -261,6 +261,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-05 · [Sim-FA: A GPGPU Simulator Framework for Fine-Grained Asynchronous Pipeline Analysis](2026-2605.00555-sim-fa-a-gpgpu-simulator-framework-for-fine-grained-asynchronous-pipelin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HopperのTMAとWGMMAとワープ特殊化をワープグループ単位でモデル化するサイクル精度シミュレータと、波単位の再取得を入れた解析モデルで、FlashAttention-3の遅延を実機誤差平均5.7パーセントで再現し、既存解析モデルの長系列での過小評価の原因を示す研究。
+
+- **2026-05 · [Orion: A Collaborative Edge Inference Framework for Large Language Models Processing Multi-Sensor Data in UAV Swarms](2026-53bf172d8ba2-orion-a-collaborative-edge-inference-framework-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ドローン群の機上デバイスだけへLLMを協調配置する推論框架。動的計画法による層分割、因果的注意の負荷増に合わせた適応的な系列分割、第1トークンの予測デコードの3点でプリフィル遅延を削り、70Bモデルをメモリ制約のある機上ノード群だけで動かす。
 
 - **2026-05 · [Multi-Scale Dequant: Eliminating Dequantization Bottleneck via Activation Decomposition for Efficient LLM Inference](2026-2605.13915-multi-scale-dequant-eliminating-dequantization-bottleneck-via-activation.md)**  
   実装：[✓](https://gitcode.com/cann/ops-transformer) ・ リポジトリ内被引用：0  
