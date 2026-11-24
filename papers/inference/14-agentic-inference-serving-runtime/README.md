@@ -41,13 +41,13 @@
   実装：✓ ・ リポジトリ内被引用：16  
   1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
 
+- **2026-05 · [Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI](2026-2606.00866-mori.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  MORIはエージェントの直近の推論・ツール待機時間から相対アイドル度を求め、KVキャッシュをGPUとCPU DRAMへ容量適応的に配置して、高負荷時のスループットと応答性を改善する。
+
 - **2026-06 · [CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents](2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md)**  
   実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：15  
   実コーディングエージェントの接頭辞局所性とツール待ち時間を利用し、接頭辞優先スケジューリングと予測型KV追い出しでセッション完了を最大3.5倍改善。
-
-- **2026-05 · [Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI](2026-2606.00866-mori.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
-  MORIはエージェントの直近の推論・ツール待機時間から相対アイドル度を求め、KVキャッシュをGPUとCPU DRAMへ容量適応的に配置して、高負荷時のスループットと応答性を改善する。
 
 - **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
   実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：14  
@@ -144,6 +144,10 @@
 - **2026-06 · [Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows](2026-2606.14672-towards-direct-latent-space-synthesis-for-parallel-branches-in-llm-agent-workflows.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   並列エージェントの生成済みKVを位置再符号化・キャッシュ写像・合成器LoRAで直接統合し、再プリフィルを省いて9課題中7課題で品質を維持・改善しつつ最初のトークンまでを2.5〜11倍高速化する。
+
+- **2026-06 · [Ling and Ring 2.6 Technical Report: Efficient and Instant Agentic Intelligence at Trillion-Parameter Scale](2026-2606.15079-ling-and-ring-2-6-technical-report-efficient-and-instant-agentic-intelli.md)**  
+  実装：[✓](https://github.com/inclusionAI/Ling-V2.5) ・ リポジトリ内被引用：1  
+  学習済み1兆モデルを線形注意とMLAの7対1ハイブリッドへ移植し、トークン効率の事後学習とKPopによるエージェント強化学習で、長文脈の推論効率と実務エージェント能力を同時に高めた技術報告。
 
 - **2026-05 · [Stateful Inference for Low-Latency Multi-Agent Tool Calling](2026-2605.26289-stateful-inference-for-low-latency-multi-agent-tool-calling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -302,10 +306,6 @@
 - **2026-06 · [Streaming Communication in Multi-Agent Reasoning](2026-2606.05158-streaming-communication-in-multi-agent-reasoning.md)**  
   実装：[✓](https://github.com/EnVision-Research/StreamMA) ・ リポジトリ内被引用：0  
   従来の逐次転送（Serial）は、各エージェントが全推論段階を終えた後に回答全文を渡すため、処理経路が深くなるほど待ち時間が積み上がる。全文を受け取る方式では後期の誤りまで強く条件付けられるが、段階別転送では下流が信頼できる初期部分から独自の推論を始められる。
-
-- **2026-06 · [Ling and Ring 2.6 Technical Report: Efficient and Instant Agentic Intelligence at Trillion-Parameter Scale](2026-2606.15079-ling-and-ring-2-6-technical-report-efficient-and-instant-agentic-intelli.md)**  
-  実装：[✓](https://github.com/inclusionAI/Ling-V2.5) ・ リポジトリ内被引用：0  
-  学習済み1兆モデルを線形注意とMLAの7対1ハイブリッドへ移植し、トークン効率の事後学習とKPopによるエージェント強化学習で、長文脈の推論効率と実務エージェント能力を同時に高めた技術報告。
 
 - **2026-06 · [Libra: Efficient Resource Management for Agentic RL Post-Training](2026-2606.03077-libra-efficient-resource-management-for-agentic-rl-post-training.md)**  
   実装：[✓](https://github.com/NetX-lab/Libra) ・ リポジトリ内被引用：0  

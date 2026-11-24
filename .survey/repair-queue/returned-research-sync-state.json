@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "9647e1763f5b4e74a40497531be69c386c3cab01",
+  "base_commit": "331e9acc38d9e0883bd10edd47eb999c777a0212",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1675,6 +1675,11 @@
     "2026-2611.25938-dts-delta-based-tile-scoring-for-efficient-long-context-sparse-attention.json",
     "2026-2611.26020-frontierreplay-split-free-exact-prefix-caching-for-hybrid-language-models.json",
     "2026-2611.26106-ascmla-unlocking-fp4-efficiency-for-long-context-mla-decoding-through-asymmetric-scaling.json",
+    "2026-2611.26363-hisa-sparsifying-the-hidden-dimension-of-rope-attention-in-llms.json",
+    "2026-2611.26435-aggron-aggressive-compression-of-agentic-kv-caches-during-head-of-line-stalls-in-the-request-queue.json",
+    "2026-2611.26619-tidecache-efficient-hybrid-llm-serving-with-transparent-cache-management-and-layer-wise-streaming.json",
+    "2026-2611.26657-bitprefill-w1-58a4-tensor-core-acceleration-for-compute-bound-llm-prefill.json",
+    "2026-2611.26857-carrierkv-an-edge-llm-accelerator-with-positional-carrier-decomposition-for-low-bit-kv-cache.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -54785,6 +54790,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.26363": {
+      "order": [
+        "2026-11-24T11:21:34+00:00",
+        "2026-2611.26363-hisa-sparsifying-the-hidden-dimension-of-rope-attention-in-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.26435": {
+      "order": [
+        "2026-11-24T11:22:59+00:00",
+        "2026-2611.26435-aggron-aggressive-compression-of-agentic-kv-caches-during-head-of-line-stalls-in-the-request-queue.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.26619": {
+      "order": [
+        "2026-11-24T11:24:24+00:00",
+        "2026-2611.26619-tidecache-efficient-hybrid-llm-serving-with-transparent-cache-management-and-layer-wise-streaming.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.26657": {
+      "order": [
+        "2026-11-24T11:25:49+00:00",
+        "2026-2611.26657-bitprefill-w1-58a4-tensor-core-acceleration-for-compute-bound-llm-prefill.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.26857": {
+      "order": [
+        "2026-11-24T11:27:15+00:00",
+        "2026-2611.26857-carrierkv-an-edge-llm-accelerator-with-positional-carrier-decomposition-for-low-bit-kv-cache.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69686,6 +69736,21 @@
     "arxiv:2611.26106": [
       "papers/inference/09-kernel-runtime-compilation/2026-2611.26106-ascmla-unlocking-fp4-efficiency-for-long-context-mla-decoding-through-as.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2611.26106-ascmla-unlocking-fp4-efficiency-for-long-context-mla-decoding-through-as.md"
+    ],
+    "arxiv:2611.26363": [
+      "papers/inference/99-other-inference-systems/2026-2611.26363-hisa-sparsifying-the-hidden-dimension-of-rope-attention-in-llms.md"
+    ],
+    "arxiv:2611.26435": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.26435-aggron-aggressive-compression-of-agentic-kv-caches-during-head-of-line-s.md"
+    ],
+    "arxiv:2611.26619": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.26619-tidecache-efficient-hybrid-llm-serving-with-transparent-cache-management.md"
+    ],
+    "arxiv:2611.26657": [
+      "papers/inference/16-weight-quantization-compression/2026-2611.26657-bitprefill-w1-58a4-tensor-core-acceleration-for-compute-bound-llm-prefil.md"
+    ],
+    "arxiv:2611.26857": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.26857-carrierkv-an-edge-llm-accelerator-with-positional-carrier-decomposition-.md"
     ]
   }
 }

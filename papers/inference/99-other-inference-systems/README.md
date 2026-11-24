@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1538本）
+## 自動生成の論文一覧（1539本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1165,6 +1165,10 @@
 - **2026-11 · [Keep the Reasoning, Read the Image: On-Demand Visual KV for Multi-Turn Reasoning VLMs](2026-2611.23769-keep-the-reasoning-read-the-image-on-demand-visual-kv-for-multi-turn-rea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い推論が画像のKVエントリを押し出す問題に対し、全視覚エントリをCPUメモリに退避して削除を防ぎ、各ステップで現在のクエリが必要とする分だけをテキストの低評価スロットと交換して読む、既存の保持方針へ被せる学習不要のオンデマンド読み出し方式。
+
+- **2026-11 · [HiSA: Sparsifying the Hidden Dimension of RoPE Attention in LLMs](2026-2611.26363-hisa-sparsifying-the-hidden-dimension-of-rope-attention-in-llms.md)**  
+  実装：[✓](https://github.com/ambroise-b/hisa) ・ リポジトリ内被引用：0  
+  回転位置埋め込みの速い周波数ペアは遠距離で不要だという仮説から、角度予算を超えたペアのスコア部分だけを位置だけで静的に落とす隠れ次元疎化を提案し、内積の約3割の計算で検証損失を密な注意より下げ、KVキャッシュ削減とデコード高速化まで示した研究。
 
 - **2026-11 · [FrontierReplay: Split-Free Exact Prefix Caching for Hybrid Language Models](2026-2611.26020-frontierreplay-split-free-exact-prefix-caching-for-hybrid-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5733,7 +5737,7 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：145  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：146  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
@@ -6125,7 +6129,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：305  
+  実装：✓ ・ リポジトリ内被引用：306  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  

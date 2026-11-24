@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（203本）
+## 自動生成の論文一覧（204本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -167,6 +167,10 @@
 - **2026-11 · [Computed Permutation Trellis Coding: Near-Optimal Quantization from Two Multiplications and a 64-Byte Table](2026-2611.22019-computed-permutation-trellis-coding-near-optimal-quantization-from-two-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   状態への2回の乗算と64バイトのテーブル参照だけでトレリス符号の置換を計算し、4ビットで理想まで0.07ビットに迫る実効ビット数3.93を達成する低ビット量子化形式。1つのデコーダが1から6ビットと標準スカラー形式を兼ね、Llama 3.1の重み量子化でQTIPより最大27%低いKLを示し、Trainium 4ではネイティブ形式と同等の速度で復号できる。
+
+- **2026-11 · [BitPrefill: W1.58A4 Tensor-Core Acceleration for Compute-Bound LLM Prefill](2026-2611.26657-bitprefill-w1-58a4-tensor-core-acceleration-for-compute-bound-llm-prefil.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  三値重みと4ビット活性値をネイティブINT4テンソルコア行列積へ載せ、形状適応型のカーネル選択と融合した逆量子化で計算律速のプリフィルを速くする演算子で、BitNet-b1.58 3BのプリフィルをBF16比1.42倍にしエネルギーも42パーセント減らす。
 
 - **2026-10 · [SAGE: Pushing 2-Bit Vector-Quantized LLMs toward Real-World Usability](2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.md)**  
   実装：[✓](https://github.com/Zincwolf/sage) ・ リポジトリ内被引用：0  
@@ -589,7 +593,7 @@
   巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
 
 - **2024-02 · [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md)**  
-  実装：✓ ・ リポジトリ内被引用：92  
+  実装：✓ ・ リポジトリ内被引用：93  
   狙いは、学習済みFP16/BF16モデルを後から近似する事後学習量子化ではなく、モデル自体を極低bit表現へ適応させ、品質を維持したまま重み転送・行列積・メモリ容量の支配項を小さくすることにある。
 
 - **2024-10 · [FlatQuant: Flatness Matters for LLM Quantization](2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md)**  
@@ -597,7 +601,7 @@
   層ごとの学習可能アフィン変換を小さなクロネッカー積へ分解し量子化と融合して、LLaMA-3-70BのW4A4で精度低下1%未満とプリフィル最大2.3倍高速化を両立する。
 
 - **2024-02 · [BiLLM: Pushing the Limit of Post-Training Quantization for LLMs](2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md)**  
-  実装：[✓](https://github.com/Aaronhuang-778/BiLLM) ・ リポジトリ内被引用：77  
+  実装：[✓](https://github.com/Aaronhuang-778/BiLLM) ・ リポジトリ内被引用：78  
   ヘッセ感度で重要列を選び二値残差近似し、残りのベル形重み分布を最適分割して別々に二値化することで、再学習なしにLLM重みを約1.1ビットまで圧縮する。
 
 - **2024-06 · [QTIP: Quantization with Trellises and Incoherence Processing](2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md)**  
