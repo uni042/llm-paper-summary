@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "62ef6812fb57e12eaa89b7da6c8a3e592703d79c",
+  "base_commit": "2908234922883316aba9afe28258fed51cb6e7b4",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -971,9 +971,12 @@
     "2026-2607.19349-fineserve-a-fine-grained-dataset-and-characterization-of-global-llm-serving-workloads.json",
     "2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-context-reasoning.json",
     "2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-locality-sensitive-hashing.json",
+    "2026-2607.19456-moa-structured-decode-attention-dnf-derivation-kv-cache-accumulation-gqa-mqa-and-openacc-kernel.json",
     "2026-2607.19686-multi-mask-diffusion-language-models-for-few-step-generation.json",
+    "2026-2607.20467-dc-leap-training-free-acceleration-of-dllms-via-draft-guided-contiguous-leaping-decoding.json",
     "2026-2607.20507-cachespec-finding-the-sweet-spot-for-small-models-in-large-language-models.json",
     "2026-2607.21076-c-ptq-fisher-weighted-channel-wise-sensitivity-for-post-training-quantization-of-mllms.json",
+    "2026-2607.21291-adaptive-depth-sparse-framework-similarity-driven-resource-allocation-for-pre-trained-llms.json",
     "2026-2607.21985-unified-static-dynamic-pruning-for-efficient-llm-inference.json",
     "2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-model.json",
     "2026-2607.22465-oracle-agentic-ai-orchestrator-routing-via-adaptive-verifier-calibration-feedback.json",
@@ -983,8 +986,10 @@
     "2026-2607.22602-deeplook-uncertainty-guided-branching-with-lookahead-confidence.json",
     "2026-2607.22720-causalgate-causal-importance-distillation-for-transformer-module-pruning.json",
     "2026-2607.22726-pca-persistence-aware-compression-and-aggregation-for-fast-video-large-language-models.json",
+    "2026-2607.23115-gleam-adaptive-network-efficient-cuda-api-remoting-for-cross-device-gpu-sharing-over-lans.json",
     "2026-2607.23264-x-stage-modeling-post-issue-backpressure-in-gpu-communication-computation-fusion.json",
     "2026-2607.23265-wavezip-wavelet-driven-space-time-decoupling-for-video-token-condensation.json",
+    "2026-2607.23445-omni-prune-query-aware-unified-token-pruning-for-efficient-omnimodal-large-language-models.json",
     "2026-2607.24148-a-motion-aware-vector-quantization-framework-with-centroid-reuse-for-efficient-vla-inference.json",
     "2026-2607.25335-every-time-i-hire-a-linguist-inference-costs-go-down-on-linguistic-rules-as-effective.json",
     "2026-2607.25669-omnidelta-skill-driven-budget-allocation-for-token-compression-in-omni-llms.json",
@@ -53691,6 +53696,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.19456": {
+      "order": [
+        "2026-11-24T07:01:30+00:00",
+        "2026-2607.19456-moa-structured-decode-attention-dnf-derivation-kv-cache-accumulation-gqa-mqa-and-openacc-kernel.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.20467": {
+      "order": [
+        "2026-11-24T07:02:43+00:00",
+        "2026-2607.20467-dc-leap-training-free-acceleration-of-dllms-via-draft-guided-contiguous-leaping-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.21291": {
+      "order": [
+        "2026-11-24T07:03:56+00:00",
+        "2026-2607.21291-adaptive-depth-sparse-framework-similarity-driven-resource-allocation-for-pre-trained-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.23115": {
+      "order": [
+        "2026-11-24T07:05:10+00:00",
+        "2026-2607.23115-gleam-adaptive-network-efficient-cuda-api-remoting-for-cross-device-gpu-sharing-over-lans.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.23445": {
+      "order": [
+        "2026-11-24T07:06:23+00:00",
+        "2026-2607.23445-omni-prune-query-aware-unified-token-pruning-for-efficient-omnimodal-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68184,6 +68234,21 @@
     "arxiv:2607.19349": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.19349-fineserve-a-fine-grained-dataset-and-characterization-of-global-llm-serv.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.19349-fineserve-a-fine-grained-dataset-and-characterization-of-global-llm-serv.md"
+    ],
+    "arxiv:2607.19456": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.19456-moa-structured-decode-attention-dnf-derivation-kv-cache-accumulation-gqa.md"
+    ],
+    "arxiv:2607.20467": [
+      "papers/inference/99-other-inference-systems/2026-2607.20467-dc-leap-training-free-acceleration-of-dllms-via-draft-guided-contiguous-.md"
+    ],
+    "arxiv:2607.21291": [
+      "papers/inference/99-other-inference-systems/2026-2607.21291-adaptive-depth-sparse-framework-similarity-driven-resource-allocation-fo.md"
+    ],
+    "arxiv:2607.23115": [
+      "papers/inference/99-other-inference-systems/2026-2607.23115-gleam-adaptive-network-efficient-cuda-api-remoting-for-cross-device-gpu-.md"
+    ],
+    "arxiv:2607.23445": [
+      "papers/inference/99-other-inference-systems/2026-2607.23445-omni-prune-query-aware-unified-token-pruning-for-efficient-omnimodal-lar.md"
     ]
   }
 }

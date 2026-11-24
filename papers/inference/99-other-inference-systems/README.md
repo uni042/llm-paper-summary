@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1496本）
+## 自動生成の論文一覧（1500本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -24,6 +24,10 @@
   実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：12  
   LLaVA型の画像言語モデルは、画像符号化器が出力した多数の視覚特徴を言語モデルの入力列へ結合する。この前提では、視覚情報の統合が実際に行われる層と計算資源を費やす層が一致しない。
 
+- **2026-02 · [OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models](2026-2602.04804-omnisift-modality-asymmetric-token-compression-for-efficient-omni-modal-.md)**  
+  実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：11  
+  動画と音声を同時に受け取る統合マルチモーダル大規模言語モデルでは、視覚エンコーダと音声エンコーダが生成したトークンを時間順に並べ、言語モデルへ渡す。著者らは20秒のクリップでも2万を超える入力トークンが生じ得ることを問題設定に挙げる。
+
 - **2026-02 · [FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging](2026-2602.08024-flashvid-efficient-video-large-language-models-via-training-free-tree-ba.md)**  
   実装：[✓](https://github.com/Fanziyang-v/FlashVID) ・ リポジトリ内被引用：11  
   入力フレームが増えるとトークン列が長くなり、注意機構だけでなく全結合層の計算、鍵値キャッシュ、初回応答までの時間が増える。LLaVA-OneVisionでは、視覚トークンを10%まで減らしても四つの主要評価群の平均点58.4から57.9へと小幅な低下にとどまり、元精度の99.1%を維持した。
@@ -31,10 +35,6 @@
 - **2025-12 · [Recursive Language Models](2025-2512.24601-recursive-language-models.md)**  
   実装：[✓](https://github.com/alexzhang13/rlm) ・ リポジトリ内被引用：11  
   再帰型言語モデル（Recursive Language モデル; RLM）は、長い入力を大規模言語モデルの注意窓へ丸ごと入れる代わりに、持続的なプログラム実行環境の変数として保存し、モデル自身がコードを生成して入力の必要箇所を調査・分割・変換する推論方式である。
-
-- **2026-02 · [OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models](2026-2602.04804-omnisift-modality-asymmetric-token-compression-for-efficient-omni-modal-.md)**  
-  実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：10  
-  動画と音声を同時に受け取る統合マルチモーダル大規模言語モデルでは、視覚エンコーダと音声エンコーダが生成したトークンを時間順に並べ、言語モデルへ渡す。著者らは20秒のクリップでも2万を超える入力トークンが生じ得ることを問題設定に挙げる。
 
 - **2026-07 · [FlashAccel: Leveraging High-Bandwidth Flash (HBF) for High-Throughput LLM Inference](2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -1902,6 +1902,10 @@
   実装：[✓](https://github.com/icip-cas/OmniFocus) ・ リポジトリ内被引用：0  
   質問との類似度を映像と音声で独立に測って区間予算を配り、連関と顕著性の二重得点でトークンを選ぶ学習不要の圧縮で、保持率25パーセントでも正解率を保ちプリフィルを1.38倍にした。
 
+- **2026-07 · [Omni-Prune: Query-Aware Unified Token Pruning for Efficient Omnimodal Large Language Models](2026-2607.23445-omni-prune-query-aware-unified-token-pruning-for-efficient-omnimodal-lar.md)**  
+  実装：[✓](https://github.com/kimberlyii/Omni-Prune) ・ リポジトリ内被引用：0  
+  音声の顕著さで時間窓を切り、エンコーダ注意と質問への関連度で音声と映像を統一採点し、対応ペアを一緒に残して代表トークンで補う学習不要の枝刈りで、全トークン性能の99パーセント台を保ちながらプリフィルを最大3.25倍速くする。
+
 - **2026-07 · [Octopus: Gated Selective Attention for Memory-Bounded Long-Context Inference in Large Language Models](2026-28d0e3a1162b-octopus-gated-selective-attention-for-memory-bounded-long-context-infere.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   事前学習済みモデルの各層へ学習可能なゲートを付け、トークンごとの効用をKVヘッド単位で予測して高効用のKV状態だけを固定予算へ残すことで、履歴を一つの状態へ圧縮せずにメモリ有界な長文脈推論を実現する方式。
@@ -1949,6 +1953,10 @@
 - **2026-07 · [GyRot: Leveraging Hidden Synergy between Rotation and Fine-grained Group Quantization for Low-bit LLM Inference](2026-2607.27694-gyrot-leveraging-hidden-synergy-between-rotation-and-fine-grained-group-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GyRotは、重み・活性化を4ビットに圧縮したLLMを精度よく、しかも整数演算中心の専用回路で実行するためのアルゴリズムとハードウェアの共同設計である。回路性能は28nm・1GHz条件の合成・推定に基づき、Tender比の幾何平均で速度3.40倍、エネルギー効率3.64倍と報告する。
+
+- **2026-07 · [Gleam: Adaptive Network-Efficient CUDA API Remoting for Cross-Device GPU Sharing over LANs](2026-2607.23115-gleam-adaptive-network-efficient-cuda-api-remoting-for-cross-device-gpu-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  構内ネットワーク越しのCUDAリモーティングで、重みのハッシュキャッシュ、呼出しの非同期化、競合を予測する割当て、文脈保護を組み合わせ、リモーティング効率1.4から24.2倍とスループット最大1.79倍を達成する。
 
 - **2026-07 · [FlowHN: Adaptive Token Routing for Efficient Parallel Hybrid Networks](2026-9723e70ce878-flowhn-adaptive-token-routing-for-efficient-parallel-hybrid-networks.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2005,6 +2013,10 @@
 - **2026-07 · [An Efficient vLLM-Based Inference Pipeline for Unified Audio Understanding and Generation](2026-2607.02119-an-efficient-vllm-based-inference-pipeline-for-unified-audio-understandi.md)**  
   実装：[✓](https://github.com/whr-a/vllm/tree/opuslm) ・ リポジトリ内被引用：0  
   複数コードブックの音声トークン生成を主従分解でvLLMの単一ストリーム経路へ載せ、CFGの条件・無条件リクエストを対で同時スケジュールして、音声理解と生成を統合した高スループット推論パイプラインを実現する研究。
+
+- **2026-07 · [Adaptive Depth Sparse Framework: Similarity-Driven Resource Allocation for Pre-Trained LLMs](2026-2607.21291-adaptive-depth-sparse-framework-similarity-driven-resource-allocation-fo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層の入出力の類似度から「表現をよく変える層ほど多くのトークンを残す」層別保持率を決め、軽量ルーターと密モデルへのアライメント学習で、学習済みLLMを再学習なしに深さ疎化するAdaDSFの提案。
 
 - **2026-07 · [ACBQ: Adaptive Cross-Block Quantization of Large Language Models](2026-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2521,6 +2533,10 @@
 - **2026-05 · [DeferMem: Query-Time Evidence Distillation via Reinforcement Learning for Long-Term Agent Memory](2026-2605.22411-defermem-query-time-evidence-distillation-via-reinforcement-learning-for.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来の記憶システムは、将来の質問が分からない時点で対話を要約・圧縮し、検索しやすい記憶単位を作る。原著v2の評価ではLongMemEval-Sの正答率が70.00%、LoCoMoで学習に使った唯一の会話conv-26を除いた正答率が89.93%だった。
+
+- **2026-05 · [DC-Leap: Training-Free Acceleration of dLLMs via Draft-Guided Contiguous Leaping Decoding](2026-2607.20467-dc-leap-training-free-acceleration-of-dllms-via-draft-guided-contiguous-.md)**  
+  実装：[✓](https://github.com/ffh-wyls/DC-Leap) ・ リポジトリ内被引用：0  
+  拡散言語モデルの並列確定を左から連続した範囲だけに制限して依存誤差を抑え、窓外の高信頼予測を下書きとして右側文脈に使うことで、確定閾値を下げて長系列MBPPで53.19倍まで高速化する学習不要のデコード法。
 
 - **2026-05 · [Concurrency without Model Changes: Future-based Asynchronous Function Calling for LLMs](2026-2605.15077-concurrency-without-model-changes-future-based-asynchronous-function-cal.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3505,7 +3521,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：153  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：154  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -3541,7 +3557,7 @@
   長い思考過程を生成する推論モデルは、難しい問題で高い正答率を得られる一方、簡単な問題でも冗長な検討を続けることがある。本論文は、正答を優先したまま正解応答の長さに罰則を与えるオンライン強化学習を提案する。7Bの5タスク平均では、長さ罰則 $\alpha=0.2$ の場合、基準モデルに対して生成トークン数が51.58%、正答率が95.94%となった。
 
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
-  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：39  
+  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：40  
   従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
 
 - **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "LAN内の異種個人デバイス間でCUDA APIリモーティングによりGPUを共有し、AI推論の分散オフロードを可能にする。モデル重みの自動キャッシュで帯域を削減し、非同期実行とネットワーク・GPU競合を考慮するランタイムスケジューラでリモーティング先を決める推論基盤である。",
   "semantic_scholar_id": "8a26e94f95e8921f1fc6f2177e201e0b95f8ff26",
   "source_url": "https://arxiv.org/abs/2607.23115",
-  "status": "ready",
+  "status": "superseded",
   "title": "Gleam: Adaptive Network-Efficient CUDA API Remoting for Cross-Device GPU Sharing over LANs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T07:08:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.23115-gleam-adaptive-network-efficient-cuda-api-remoting-for-cross-device-gpu-.md",
+  "represented_canonical_id": "arXiv:2607.23115",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
