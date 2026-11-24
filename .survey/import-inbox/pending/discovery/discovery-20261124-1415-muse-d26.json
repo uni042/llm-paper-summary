@@ -1,0 +1,725 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-final-20261124-d26",
+ "reference_main_sha": "34ad531931ec344a1b032890129ef15d3b213439",
+ "record_count": 42,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:d87ceea3f5d0582997840a107f2bd6c5a1aadbde",
+   "identity_tokens": [
+    "SemanticScholar:d87ceea3f5d0582997840a107f2bd6c5a1aadbde"
+   ],
+   "title": "In-network Aggregation for Shared Machine Learning Clusters",
+   "reason": "PANAMAは共有MLクラスタ上のデータ並列学習を対象に、勾配集約をスイッチ内ハードウェアアクセラレータでラインレート実行し学習時間を短縮するインネットワーク集約基盤であり、対象は学習時通信の高速化のみで推論への適用は示されていない。",
+   "source_url": "https://www.semanticscholar.org/paper/d87ceea3f5d0582997840a107f2bd6c5a1aadbde",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 277
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2609.20804",
+   "identity_tokens": [
+    "arXiv:2609.20804"
+   ],
+   "title": "An Empirical Study of Harness Design for Coding Agents",
+   "reason": "コーディングエージェントのハーネス構成要素（計画・行動空間・文脈管理）を固定した実行ループ上で比較した実証研究で、文脈管理戦略と文脈窓予算が効率へ与える影響はエージェント実行時の設計知見として関連するが、推論システム自体の提案ではなく能力とコストの評価研究にとどまる。",
+   "source_url": "https://arxiv.org/abs/2609.20804",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 279
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2606.04560",
+   "identity_tokens": [
+    "arXiv:2606.04560"
+   ],
+   "title": "Rollout-Level Advantage-Prioritized Experience Replay for GRPO",
+   "reason": "GRPOの経験再生をロールアウト単位の優先度付きバッファと鮮度制限で効率化する強化学習の学習アルゴリズムであり、推論高速化ではなく推論モデルの事後学習におけるサンプル効率の改善が目的である。",
+   "source_url": "https://arxiv.org/abs/2606.04560",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 280
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.13013",
+   "identity_tokens": [
+    "arXiv:2602.13013"
+   ],
+   "title": "Towards Universal Video MLLMs with Attribute-Structured and Quality-Verified Instructions",
+   "reason": "動画MLLM向けに属性構造化した100万件の視聴覚指示データと自動検証パイプラインを構築し、SFTでキャプションモデルを学習するデータ・能力研究であり、推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2602.13013",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 281
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2609.23886",
+   "identity_tokens": [
+    "arXiv:2609.23886"
+   ],
+   "title": "this-that-model-1.0: A typed decision model that decides in 30 ms, for a millionth of a cent",
+   "reason": "2Bの型付き決定モデルが隠れ状態から選択肢を直接読み出し、生成トークンゼロで30ミリ秒級の判定を1回のフォワードパスで返す設計はLLM呼び出しを置き換える推論コスト削減の方向と一致するが、特定の意思決定タスク専用に学習されたモデル自体の提案であり、汎用の推論システム技術としての切り出しは弱い。",
+   "source_url": "https://arxiv.org/abs/2609.23886",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 282
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2608.17393",
+   "identity_tokens": [
+    "arXiv:2608.17393"
+   ],
+   "title": "LEGO-RL: Harness-Native Reinforcement Learning for Coding Agents",
+   "reason": "コーディングエージェントのネイティブハーネスをそのまま政策勾配学習へ接続するRL学習フレームワークであり、サンドボックス編成や学習・推論間乖離の是正も学習パイプライン側の課題解決であって、推論サービングへの貢献ではない。",
+   "source_url": "https://arxiv.org/abs/2608.17393",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 283
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2601.14945",
+   "identity_tokens": [
+    "arXiv:2601.14945"
+   ],
+   "title": "TIDAL: Temporally Interleaved Diffusion and Action Loop for High-Frequency VLA Control",
+   "reason": "拡散型VLAの低頻度な一括実行が招く推論遅延に対し、低頻度の意味推論ループが意味埋め込みをキャッシュし、高頻度の制御ループが単一ステップのフロー積分と実行を交互に行う二重周波数スケジューラで計算予算を再配分し、フィードバック周波数を4倍化する推論時フレームワークである。",
+   "source_url": "https://arxiv.org/abs/2601.14945",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 284
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2605.29438",
+   "identity_tokens": [
+    "arXiv:2605.29438"
+   ],
+   "title": "ElegantVLA: Learning When to Think for Efficient Vision-Language-Action Models",
+   "reason": "VLAの制御ステップごとに、軽量スケジューラが視覚エンコーダ・LLM・行動ヘッドへ5段階の再計算／再利用モードと3段階のデノイジングモードを割り当てるプラグイン型の推論時動的計算スケジューリングであり、ベースモデルの再学習なしに最大3.77倍の高速化と制御周波数の向上を実現している。",
+   "source_url": "https://arxiv.org/abs/2605.29438",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 285
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2410.15091",
+   "identity_tokens": [
+    "arXiv:2410.15091"
+   ],
+   "title": "Spatial-Mamba: Effective Visual State Space Models via Structure-Aware State Fusion",
+   "reason": "画像分類・検出・セグメンテーション向けに構造認識型の状態融合で2次元視覚状態空間モデルを設計する視覚モデルアーキテクチャの研究であり、LLM推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2410.15091",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 286
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2602.08948",
+   "identity_tokens": [
+    "arXiv:2602.08948"
+   ],
+   "title": "CoRefine: Confidence-Guided Self-Refinement for Adaptive Test-Time Compute",
+   "reason": "512サンプルの並列デコードに頼るテスト時スケーリングに対し、凍結したLLM上の軽量Conv1Dコントローラが信頼度軌跡を見て停止・再検討・方針転換を判断する信頼度誘導型の自己洗練機構であり、約190分の1のトークン量で同等の精度を狙う適応的テスト時計算の制御手法である。",
+   "source_url": "https://arxiv.org/abs/2602.08948",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 287
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.02178",
+   "identity_tokens": [
+    "arXiv:2605.02178"
+   ],
+   "title": "T2PO: Uncertainty-Guided Exploration Control for Stable Multi-Turn Agentic Reinforcement Learning",
+   "reason": "多ターンエージェントRLの不安定さをトークン・ターン単位の不確実性監視と再サンプリングで抑える学習アルゴリズムであり、推論ではなく強化学習の学習効率と安定性の改善が目的である。",
+   "source_url": "https://arxiv.org/abs/2605.02178",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 288
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2607.01083",
+   "identity_tokens": [
+    "arXiv:2607.01083"
+   ],
+   "title": "Scaling Laws for Collapse in Asynchronous GRPO",
+   "reason": "非同期GRPOにおける同期間隔と学習率の積が安定境界を決めるという学習崩壊のスケーリング則を実証・理論化した研究であり、事後学習の学習ダイナミクスの解析であって推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2607.01083",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 289
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2610.16491",
+   "identity_tokens": [
+    "arXiv:2610.16491"
+   ],
+   "title": "Drafting Agents, Not Just Tokens: Speculative Recursive Self-Improvement for Agentic Systems",
+   "reason": "投機的デコードのdraft-verifyの考え方を比喩として借りたエージェント自己改善の探索フレームワークであり、対象はエージェントの版改訂探索と改善器の学習であって、トークンのデコードや推論実行の機構ではない。",
+   "source_url": "https://arxiv.org/abs/2610.16491",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 290
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.48550/arXiv.2609.23136",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2609.23136"
+   ],
+   "title": "Fast Intent-Driven Service Orchestration with Jev for 6G Edge Networks",
+   "reason": "Open RANのインテント解釈を近リアルタイム制御ループへ組み込む6Gエッジネットワーク応用の評価研究であり、対象領域は無線アクセス網の制御であってLLM推論システムの提案ではない。",
+   "source_url": "https://doi.org/10.48550/arXiv.2609.23136",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 291
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2603.04349",
+   "identity_tokens": [
+    "arXiv:2603.04349"
+   ],
+   "title": "FocusGraph: Graph-Structured Frame Selection for Embodied Long Video Question Answering",
+   "reason": "長時間動画QAで全フレーム処理が推論時間を膨らませる問題に対し、シーングラフ要約から質問関連クリップを軽量セレクタで選び、パッチ単位の疎フロー保持でキーフレームを抽出してからMLLMへ渡すことで、質問時の推論コストを削減しつつ精度を保つフレーム選択機構である。",
+   "source_url": "https://arxiv.org/abs/2603.04349",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 292
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.13511",
+   "identity_tokens": [
+    "arXiv:2605.13511"
+   ],
+   "title": "Many-Shot CoT-ICL: Making In-Context Learning Truly Learn",
+   "reason": "多ショットCoT文脈内学習の性質を分析しデモンストレーションの順序付け手法を提案するプロンプティング・能力研究であり、推論システムへの技術的貢献はない。",
+   "source_url": "https://arxiv.org/abs/2605.13511",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 293
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1007/s11263-026-02824-0",
+   "identity_tokens": [
+    "DOI:10.1007/s11263-026-02824-0"
+   ],
+   "title": "Distillation-free Scaling of Large State-Space Models for Images and Videos",
+   "reason": "画像分類と行動認識向けにMambaと注意を交互配置して大規模状態空間モデルのパラメータ拡張性を改善する視覚アーキテクチャの研究であり、LLM推論システムとは無関係である。",
+   "source_url": "https://doi.org/10.1007/s11263-026-02824-0",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 294
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.48550/arXiv.2604.17886",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2604.17886"
+   ],
+   "title": "Latent Preference Modeling for Cross-Session Personalized Tool Calling",
+   "reason": "複数セッションにまたがる潜在選好をテキスト仮説として保持し生成・検証・洗練のループで更新するテスト時メモリ手法は、エージェントの文脈・記憶管理と接点を持つが、主目的はパーソナライズされたツール呼び出しの精度向上であり、推論システムとしての貢献は間接的である。",
+   "source_url": "https://doi.org/10.48550/arXiv.2604.17886",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 295
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.11456",
+   "identity_tokens": [
+    "arXiv:2602.11456"
+   ],
+   "title": "AuroraRL: Fast, Fault-Tolerant, and Cost-Efficient Reinforcement Learning over Decentralized Network",
+   "reason": "分散RL学習で疎なパラメータ差分だけをチェックポイント化して汎用ネットワーク越しに同期する学習システムであり、高スループット化の対象は学習時の重み同期であって推論ではない。",
+   "source_url": "https://arxiv.org/abs/2602.11456",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 297
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2603.22120",
+   "identity_tokens": [
+    "arXiv:2603.22120"
+   ],
+   "title": "StreamingClaw Technical Report",
+   "reason": "ストリーミング動画理解エージェントの統合フレームワークで、リアルタイム推論や階層型長期記憶、知覚・意思決定・行動の閉ループを備えるが、技術報告としての能力枠組みの提示が中心であり、推論システムの機構的な新規貢献は要旨からは薄い。",
+   "source_url": "https://arxiv.org/abs/2603.22120",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 298
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.16079",
+   "identity_tokens": [
+    "arXiv:2605.16079"
+   ],
+   "title": "VideoSeeker: Incentivizing Instance-level Video Understanding via Native Agentic Tool Invocation",
+   "reason": "視覚プロンプトによるインスタンスレベルの動画理解モデルを、データ合成パイプラインとSFT・RLで構築する能力研究であり、推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2605.16079",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 299
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2610.28402",
+   "identity_tokens": [
+    "arXiv:2610.28402"
+   ],
+   "title": "StreamEval: Evaluating Interactive Streaming Video Generation Models",
+   "reason": "対話型ストリーミング動画生成モデルを評価するベンチマークの提案であり、生成モデルの能力評価のみで推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2610.28402",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 300
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2410.03439",
+   "identity_tokens": [
+    "arXiv:2410.03439"
+   ],
+   "title": "ToolGen: Unified Tool Retrieval and Calling via Generation",
+   "reason": "各ツールを固有トークンとしてLLMのパラメータへ埋め込み、外部検索を介さず生成過程でツール呼び出しを行うToolGenは推論時のツール取得経路を変えるが、4万7千ツール規模の学習を前提とするエージェント能力手法であり、サービング機構としての貢献は限定的である。",
+   "source_url": "https://arxiv.org/abs/2410.03439",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 301
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2601.22141",
+   "identity_tokens": [
+    "arXiv:2601.22141"
+   ],
+   "title": "Routing the Lottery: Adaptive Subnetworks for Heterogeneous Data",
+   "reason": "データの異質性に合わせて複数の部分ネットワークへ振り分ける適応的プルーニングはモデル圧縮の一形態だが、対象は汎用の深層学習モデルの分類精度とモジュール化であり、LLM推論への適用や推論時の動的実行は確認できない。",
+   "source_url": "https://arxiv.org/abs/2601.22141",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 302
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2603.06619",
+   "identity_tokens": [
+    "arXiv:2603.06619"
+   ],
+   "title": "Not all tokens are needed(NAT): token efficient reinforcement learning",
+   "reason": "選択したトークンの部分集合だけで政策勾配を推定しRL学習の計算とメモリを削減する学習手法であり、高速化の対象は強化学習の学習過程であって推論ではない。",
+   "source_url": "https://arxiv.org/abs/2603.06619",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 303
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2607.23942",
+   "identity_tokens": [
+    "arXiv:2607.23942"
+   ],
+   "title": "From Cognitive Architectures to Language Agents: A Mechanism-Level Review of Lineage, Convergence, and Migration Gaps",
+   "reason": "認知アーキテクチャから言語エージェントのランタイム族までを、状態・制御・永続化・資源ガバナンスといった機構単位で整理したレビューであり、エージェント実行基盤の設計空間とは接点を持つが、推論システムの技術提案ではなく系譜整理が主眼である。",
+   "source_url": "https://arxiv.org/abs/2607.23942",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 305
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2609.03153",
+   "identity_tokens": [
+    "arXiv:2609.03153"
+   ],
+   "title": "VeriPhy: Agentic Physical Reasoning for World Model Evaluation and Refinement",
+   "reason": "生成動画の物理的妥当性を型付き義務と証拠記録で監査する世界モデルの評価システムであり、対象は動画生成モデルの能力検証であってLLM推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2609.03153",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 306
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2609.19596",
+   "identity_tokens": [
+    "arXiv:2609.19596"
+   ],
+   "title": "Full-Duplex Speech Models Take the Floor When Asked, Not When Needed",
+   "reason": "全二重音声モデルが発話開始をどう判断するかを条件操作で調べた能力評価研究であり、推論システムへの技術的貢献はない。",
+   "source_url": "https://arxiv.org/abs/2609.19596",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 307
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2610.14852",
+   "identity_tokens": [
+    "arXiv:2610.14852"
+   ],
+   "title": "Getting Space Right: Agentic Rewards for Image Generation",
+   "reason": "空間的なテキスト画像生成のRL向けに道具使用型の報酬モデルとカリキュラム学習を提案する学習手法であり、対象は画像生成モデルの学習であって推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2610.14852",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 308
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2412.10471",
+   "identity_tokens": [
+    "arXiv:2412.10471"
+   ],
+   "title": "VCA: Video Curious Agent for Long Video Understanding",
+   "reason": "好奇心駆動の木探索で動画区間を自律的に探索し内発的報酬でフレームを集める長動画理解エージェントは、多数フレームのサンプリングに比べ計算コストを抑える狙いを持つが、主眼は動画理解の精度向上であり、推論コスト削減の機構的な新規性は要旨からは限定的である。",
+   "source_url": "https://arxiv.org/abs/2412.10471",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 309
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2110.08743",
+   "identity_tokens": [
+    "arXiv:2110.08743"
+   ],
+   "title": "GNN-LM: Language Modeling based on Global Contexts via GNN",
+   "reason": "訓練コーパス全体から類似文脈をGNNで参照して言語モデリングの汎化を高めるモデルアーキテクチャの研究であり、推論システムではなく言語モデルの能力改善が目的である。",
+   "source_url": "https://arxiv.org/abs/2110.08743",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 310
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2305.15947",
+   "identity_tokens": [
+    "arXiv:2305.15947"
+   ],
+   "title": "Online learning of long-range dependencies",
+   "reason": "独立再帰モジュールを用い、推論1パス分の約2倍のコストで長距離依存をオンライン学習するRNN学習アルゴリズムの研究であり、推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2305.15947",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 311
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2502.13962",
+   "identity_tokens": [
+    "arXiv:2502.13962"
+   ],
+   "title": "Is That Your Final Answer? Test-Time Scaling Improves Selective Question Answering",
+   "reason": "テスト時計算を増やすと選択的質問応答の信頼度も上がることを示し、リスク水準別の評価報告法を提案する評価研究であり、能力評価の枠組みが主眼で推論システムの提案はない。",
+   "source_url": "https://arxiv.org/abs/2502.13962",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 314
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2310.01698",
+   "identity_tokens": [
+    "arXiv:2310.01698"
+   ],
+   "title": "Robustifying State-space Models for Long Sequences via Approximate Diagonalization",
+   "reason": "HiPPO行列の近似対角化を摂動理論で安定化し、状態空間モデルの初期化の頑健性を高める理論・学習面の研究であり、長系列ベンチマークの精度改善が目的で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2310.01698",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 315
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:7e087f842281182474ed96712febca0828469c1c",
+   "identity_tokens": [
+    "SemanticScholar:7e087f842281182474ed96712febca0828469c1c"
+   ],
+   "title": "A 2-Dimensional State Space Layer for Spatial Inductive Bias",
+   "reason": "ViTやConvNeXtへ組み込む2次元状態空間層で視覚タスクの空間帰納バイアスを強める視覚アーキテクチャの研究であり、LLM推論システムへの貢献はない。",
+   "source_url": "https://www.semanticscholar.org/paper/7e087f842281182474ed96712febca0828469c1c",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 316
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2006.10213",
+   "identity_tokens": [
+    "arXiv:2006.10213"
+   ],
+   "title": "SEAL: Segment-wise Extractive-Abstractive Long-form Text Summarization",
+   "reason": "入力スニペットを疎に選択して注意するエンコーダ・デコーダで長文要約を行う系列変換モデルの研究であり、対象は要約タスクのモデル能力であって推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2006.10213",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 318
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2506.08390",
+   "identity_tokens": [
+    "arXiv:2506.08390"
+   ],
+   "title": "On Reasoning Strength Planning in Large Reasoning Models",
+   "reason": "大規模推論モデルが生成前に推論強度を活性化の方向ベクトルの大きさとして事前計画していることを示し、過剰思考の検出や単純な問題での効率的推論への応用を示唆する機構解析であり、推論長制御と接点はあるが主眼は解釈可能性の分析である。",
+   "source_url": "https://arxiv.org/abs/2506.08390",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 319
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2401.17919",
+   "identity_tokens": [
+    "arXiv:2401.17919"
+   ],
+   "title": "LOCOST: State-Space Models for Long Document Abstractive Summarization",
+   "reason": "長文要約向けに状態空間モデルベースのエンコーダ・デコーダを採用し、推論時のメモリを最大87%削減して60万トークン超の入力を処理するが、主目的は要約タスクのモデル提供であり、推論機構としての新規性は低複雑度アーキテクチャの採用にとどまる。",
+   "source_url": "https://arxiv.org/abs/2401.17919",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 320
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2210.03923",
+   "identity_tokens": [
+    "arXiv:2210.03923"
+   ],
+   "title": "Sparse Teachers Can Be Dense with Knowledge",
+   "reason": "教師パラメータの知識量スコアで学生に不親切なパラメータを除いた疎な教師を作る知識蒸留の学習手法であり、推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2210.03923",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 321
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2503.22402",
+   "identity_tokens": [
+    "arXiv:2503.22402"
+   ],
+   "title": "EllieSQL: Cost-Efficient Text-to-SQL with Complexity-Aware Routing",
+   "reason": "Text-to-SQLで常に最先端パイプラインを使う計算コストに対し、クエリの複雑度を推定して単純なクエリを軽量な生成経路へ振り分ける複雑度認識ルーティングであり、性能を落とさずトークン使用量を40%以上削減する推論コスト支配型の振り分けフレームワークである。",
+   "source_url": "https://arxiv.org/abs/2503.22402",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 324
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1145/3696348.3696856",
+   "identity_tokens": [
+    "DOI:10.1145/3696348.3696856"
+   ],
+   "title": "A case for server-scale photonic connectivity",
+   "reason": "サーバ内の複数アクセラレータ間を光接続し帯域を動的に割り当てる提案は、分散推論を含むML基盤の相互接続として関連するが、学習と推論を分けずハードウェアの方向性を論じる提言型の論文であり、推論システムの具体的な機構提案ではない。",
+   "source_url": "https://doi.org/10.1145/3696348.3696856",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 325
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1145/3805621.3807653",
+   "identity_tokens": [
+    "DOI:10.1145/3805621.3807653"
+   ],
+   "title": "With a Hop, Skip, and a Prefill: How Benchmark Volatility Distorts the Accuracy of Long-Context Benchmarks and How To Combat It",
+   "reason": "長文脈推論ベンチマーク16件のプロンプト長のばらつきが精度測定を歪めることを示し、トークン量制御版のタスクやナップサック型の文書選択で安定化を図る分析は、長文脈推論の計測手法として関連するが、対象は能力ベンチマークの測定妥当性であり推論性能の計測ではない。",
+   "source_url": "https://doi.org/10.1145/3805621.3807653",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T14:15:00+09:00",
+   "last_checked_at": "2026-11-24T14:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 326
+  }
+ ]
+}
