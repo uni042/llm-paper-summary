@@ -604,6 +604,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル・デコード分離で、各要求のTTFT/TPOT目標までの余裕を測り、余裕のない要求を先にプリフィルし、余裕内だけ短いデコード要求を選んで長い要求の先頭待ちと同期遅延を減らすSLOスケジューラ。
 
+- **2026-05 · [SOMA: Efficient Multi-turn LLM Serving via Small Language Model](2026-2605.11317-soma-efficient-multi-turn-llm-serving-via-small-language-model.md)**  
+  実装：[✓](https://github.com/LabRAI/SOMA) ・ リポジトリ内被引用：1  
+  会話の序盤を大規模モデルで処理して局所的な応答の振る舞いを掘り出し、小規模な代替モデルへLoRAで移してから切り替えることで、応答類似度を平均93.1まで保ちながら長い会話ほど提供費用を下げる多ターン提供の枠組み。
+
 - **2026-05 · [Optimus: Elastic Decoding for Efficient Diffusion LLM Serving](2026-2605.24832-optimus-elastic-decoding-diffusion-llm-serving.md)**  
   実装：[✓](https://github.com/dubcyfor3/Optimus) ・ リポジトリ内被引用：1  
   拡散LLMのブロックを再学習なしでチャンク化し、GPU飽和と有効トークン率を見ながら復号粒度を動的変更して負荷変動へ追従する。
@@ -1349,10 +1353,6 @@
 - **2026-05 · [SwiftSNNI: Optimized Scheduling for Secure Neural Network Inference (SNNI) on Multi-Core Systems](2026-7558c762ca4b-swiftsnni-optimized-scheduling-for-secure-neural-network-inference-snni-.md)**  
   実装：[✓](https://github.com/KanwalBat00l/SwiftSNNI) ・ リポジトリ内被引用：0  
   セキュア推論の前処理とオンライン推論を別ジョブとして重ねて実行する資源配慮型スケジューラで、逐次実行の比較対象に対し平均入力遅延を最大97パーセント削減しスループットを最大5.6倍にする。
-
-- **2026-05 · [SOMA: Efficient Multi-turn LLM Serving via Small Language Model](2026-2605.11317-soma-efficient-multi-turn-llm-serving-via-small-language-model.md)**  
-  実装：[✓](https://github.com/LabRAI/SOMA) ・ リポジトリ内被引用：0  
-  会話の序盤を大規模モデルで処理して局所的な応答の振る舞いを掘り出し、小規模な代替モデルへLoRAで移してから切り替えることで、応答類似度を平均93.1まで保ちながら長い会話ほど提供費用を下げる多ターン提供の枠組み。
 
 - **2026-05 · [RW-TTT: Batched Serving for Request-Owned Test-Time Training State](2026-2605.28053-rw-ttt-batched-serving-for-request-owned-test-time-training-state.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
