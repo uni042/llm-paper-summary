@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9eb81f4fb57ca88e-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.22804",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.22804",
+    "identity_tokens": [
+      "arXiv:2606.22804"
+    ],
+    "reason": "エッジで映像を特徴とキャプションへ蒸留して送信し、クラウドの重い推論モデルをクエリ時のみ起動するエッジ-クラウド協調フレームワーク（CoVStream）で、帯域87.6%削減を実測するが、対象は長動画理解という応用であり、LLM推論基盤としての汎用機構ではない。",
+    "first_checked_at": "2026-11-24T04:45:40+00:00",
+    "last_checked_at": "2026-11-24T04:45:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CoVStream: Edge-Cloud Collaboration for Understanding of Long Video Streams"
+  },
+  "processed_at": "2026-11-24T04:45:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9eb81f4fb57c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

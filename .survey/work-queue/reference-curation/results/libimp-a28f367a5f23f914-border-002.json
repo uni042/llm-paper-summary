@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a28f367a5f23f914-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:8a93bba2111814672849fa48eed21d613ab1a3fa",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:8a93bba2111814672849fa48eed21d613ab1a3fa",
+    "identity_tokens": [
+      "SemanticScholar:8a93bba2111814672849fa48eed21d613ab1a3fa"
+    ],
+    "reason": "arXiv版（2201.03327）で確認したところ、推論レイテンシの目標に応じてTransformerエンコーダ各層の寄与の小さい隠れ要素を除去し計算量を適応調整する機構は推論効率化そのものだが、対象はBERT系エンコーダによる言語理解であり、生成LLMの推論システムへの直接貢献は限定的である。",
+    "first_checked_at": "2026-11-24T04:45:40+00:00",
+    "last_checked_at": "2026-11-24T04:45:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TiltedBERT: Resource Adjustable Version of BERT"
+  },
+  "processed_at": "2026-11-24T04:45:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a28f367a5f23",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

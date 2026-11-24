@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a28f367a5f23f914-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:377b882ad91855f3eef67ddfa6296c4125e12510",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:377b882ad91855f3eef67ddfa6296c4125e12510",
+    "identity_tokens": [
+      "SemanticScholar:377b882ad91855f3eef67ddfa6296c4125e12510"
+    ],
+    "reason": "簡略化したMambaが連想想起課題を解く際の学習済み重みと隠れ状態の変化を分析した機構的解釈可能性の研究であり、モデル能力の分析が目的で推論システムへの技術的貢献はない。",
+    "first_checked_at": "2026-11-24T04:45:40+00:00",
+    "last_checked_at": "2026-11-24T04:45:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "How does Mamba Perform Associative Recall? A Mechanistic Study"
+  },
+  "processed_at": "2026-11-24T04:45:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a28f367a5f23",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

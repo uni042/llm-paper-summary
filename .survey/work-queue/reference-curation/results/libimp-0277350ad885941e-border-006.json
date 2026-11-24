@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0277350ad885941e-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:60a6600258b48c07d60dce4e630dfa9f3cf3b3f7",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:60a6600258b48c07d60dce4e630dfa9f3cf3b3f7",
+    "identity_tokens": [
+      "SemanticScholar:60a6600258b48c07d60dce4e630dfa9f3cf3b3f7"
+    ],
+    "reason": "LLMデプロイメント向け混合精度量子化と題し重み量子化系譜から提示されたが、一次要旨を取得できなかったため、量子化方式と推論カーネルへの貢献を確認できていない。",
+    "first_checked_at": "2026-11-24T04:45:39+00:00",
+    "last_checked_at": "2026-11-24T04:45:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LLM-MQ: Mixed-precision Quantization for Efﬁcient LLM Deployment"
+  },
+  "processed_at": "2026-11-24T04:45:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0277350ad885",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

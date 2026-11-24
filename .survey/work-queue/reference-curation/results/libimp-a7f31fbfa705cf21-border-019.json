@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a7f31fbfa705cf21-border-019",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.19120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.19120",
+    "identity_tokens": [
+      "arXiv:2409.19120"
+    ],
+    "reason": "生成AIの入力とモデルを第三者に露出させないセキュアな実行方法論を提示する研究で、推論時のデータ秘匿には関わるが、一次要旨の範囲では具体的な推論システム機構や効率の評価が示されていない。",
+    "first_checked_at": "2026-11-24T04:45:40+00:00",
+    "last_checked_at": "2026-11-24T04:45:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Secure Multiparty Generative AI"
+  },
+  "processed_at": "2026-11-24T04:45:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a7f31fbfa705",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a7f31fbfa705cf21-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:be94b7ac7d34076e033f0de48e29ef8ec0138ebf",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:be94b7ac7d34076e033f0de48e29ef8ec0138ebf",
+    "identity_tokens": [
+      "SemanticScholar:be94b7ac7d34076e033f0de48e29ef8ec0138ebf"
+    ],
+    "reason": "GShard MoEモデルの学習時における通信オーバーヘッドのスループットへの影響をTPU上で計測した技術レポートであり、対象は学習であり推論への具体的適用はない。",
+    "first_checked_at": "2026-11-24T04:45:40+00:00",
+    "last_checked_at": "2026-11-24T04:45:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Overhead-communication Exploration in Large-Scale Machine Learning Frameworks"
+  },
+  "processed_at": "2026-11-24T04:45:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a7f31fbfa705",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

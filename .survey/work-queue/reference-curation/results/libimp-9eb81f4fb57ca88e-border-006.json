@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9eb81f4fb57ca88e-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.07861",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.07861",
+    "identity_tokens": [
+      "arXiv:2601.07861"
+    ],
+    "reason": "RWKVの再利用可能な状態を埋め込みモデルとリランカーで共有し、リランキング時の推論コストを文書長から切り離して5.4〜44.8倍の高速化をうたうが、対象はRAGの検索段階であり、LLM生成推論システムへの貢献は間接的である。",
+    "first_checked_at": "2026-11-24T04:45:40+00:00",
+    "last_checked_at": "2026-11-24T04:45:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EmbeddingRWKV: State-Centric Retrieval with Reusable States"
+  },
+  "processed_at": "2026-11-24T04:45:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9eb81f4fb57c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

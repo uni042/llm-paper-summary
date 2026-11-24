@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0277350ad885941e-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:db107d11eaea05b826c298aed5e60ec2723f867d",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:db107d11eaea05b826c298aed5e60ec2723f867d",
+    "identity_tokens": [
+      "SemanticScholar:db107d11eaea05b826c298aed5e60ec2723f867d"
+    ],
+    "reason": "層ごとの線形注意への変換と選択的蒸留によるTransformer推論最適化と題するが、一次要旨を取得できなかったため、変換手法の推論効率への効果を確認できていない。",
+    "first_checked_at": "2026-11-24T04:45:39+00:00",
+    "last_checked_at": "2026-11-24T04:45:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Optimizing Transformer Inference with Selective Distillation: Layerwise Conversion to Linear Attention"
+  },
+  "processed_at": "2026-11-24T04:45:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0277350ad885",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
