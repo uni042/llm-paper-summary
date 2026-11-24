@@ -51,7 +51,7 @@ references:
   arxiv_id: '1805.02867'
 - canonical_id: arXiv:2308.02885
   arxiv_id: '2308.02885'
-references_checked_at: '2026-11-18'
+references_checked_at: '2026-11-24'
 references_source: arxiv-html-reference-section
 references_total: 65
 title: 'Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling'
