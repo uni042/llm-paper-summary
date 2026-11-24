@@ -546,6 +546,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/MAdrid1011/AHASD) ・ リポジトリ内被引用：1  
   投機的復号（投機的復号）は、小さな草稿モデル（下書き language モデル, DLM）が複数の候補トークンを生成し、大きな目標モデル（target language モデル, TLM）がまとめて検証することで、高価な目標モデルの逐次実行回数を減らす。
 
+- **2026-03 · [SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation](2026-2603.16219-specsteer-synergizing-local-context-and-global-reasoning-for-efficient-p.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  端末の小モデルが私的文脈で下書きし、クラウドの大モデルが私的文脈を見ずに確率比で検証し、棄却時だけ意図の差分を注入して直す協調推論で、個人化品質と2.36倍の高速化を両立した。
+
 - **2026-02 · [Privacy-Aware Split Inference with Speculative Decoding for Large Language Models over Wide-Area Networks](2026-2602.16760-privacy-aware-split-inference-with-speculative-decoding-for-large-langua.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   問題は、生成の各トークンでローカル→クラウド→ローカルの往復通信が必要になることだ。著者はヤコビ反復（Jacobi Iteration）から得たn-gram候補を使う先読み復号（Lookahead Decoding）を組み込み、1回の往復で複数トークンを確定させることで遅延を償却する。
@@ -1044,10 +1048,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   エッジ向けマルチモーダル大規模モデルを、モダリティ別・本体別のモデル圧縮と、KVキャッシュや協調実行を含むシステム推論加速の二軸で整理し、応用とエッジネイティブ設計などの今後の方向を示すサーベイ。
 
-- **2026-03 · [SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation](2026-2603.16219-specsteer-synergizing-local-context-and-global-reasoning-for-efficient-p.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  端末の小モデルが私的文脈で下書きし、クラウドの大モデルが私的文脈を見ずに確率比で検証し、棄却時だけ意図の差分を注入して直す協調推論で、個人化品質と2.36倍の高速化を両立した。
-
 - **2026-03 · [EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs](2026-2603.08088-eagle-pangu-accelerator-safe-tree-speculative-decoding-on-ascend-npus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は小さな草稿モデルで複数候補を先に生成し、教師モデルがまとめて検証することで教師モデルの呼び出し回数を減らす。240ターンの単一要求評価で、教師単独の平均17.65トークン/秒から22.42トークン/秒へ改善し、平均速度比1.27倍を報告する（原著表1）。
@@ -1139,7 +1139,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   複雑な数学問題に大規模言語モデルを使うと、最終回答に至るまで何十もの途中式や判断を順番に生成する。高性能な大型モデルだけに全段階を担当させると、簡単な計算の確認にも高価なモデルの演算を費やす。一方、小型モデルだけでは途中の誤りが連鎖して最終回答を損なう。報酬が閾値以上なら草稿を採用し、低ければ草稿を棄却して目標モデルに同じ文脈から次段階を生成させる。
 
 - **2025-10 · [Self Speculative Decoding for Diffusion Large Language Models](2025-2510.04147-self-speculative-decoding-for-diffusion-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：17  
   別のモデル重みを載せず、複数位置の候補を一度に予測し、その候補を階層的な検証木としてまとめて実行する。原著はLLaDA系列3モデル、Dream系列2モデルを単一NVIDIA A100 80GBで評価した。
 
 - **2025-05 · [SpecBranch: Speculative Decoding via Hybrid Drafting and Rollback-Aware Branch Parallelism](2025-2506.01979-specbranch-speculative-decoding-via-hybrid-drafting-and-rollback-aware-branching.md)**  
