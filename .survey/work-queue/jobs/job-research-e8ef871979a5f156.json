@@ -35,10 +35,15 @@
   "selection_reason": "本番LLM向けに注意機構とSSMの並列ハイブリッドで決定論的な条件付き計算を行うFlowHNは、FLOP認識型トークン循環でワークロードを均衡化し同期ストールを減らして最大4倍のスループットとMFU向上を示しており、推論アーキテクチャとスケジューリングへの直接貢献が要旨で確認できる。",
   "semantic_scholar_id": "bbfdcaa9ef02e74cd0a5925f085f7b5a02738c9b",
   "source_url": "https://doi.org/10.18653/v1/2026.acl-industry.83",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlowHN: Adaptive Token Routing for Efficient Parallel Hybrid Networks",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T00:02:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-9723e70ce878-flowhn-adaptive-token-routing-for-efficient-parallel-hybrid-networks.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.acl-industry.83",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

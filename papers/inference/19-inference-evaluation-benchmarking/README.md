@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（220本）
+## 自動生成の論文一覧（221本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -401,6 +401,10 @@
 - **2026-07 · [CORVUS: Context Optimization and Reduction Via Underlying Synchronization for LLM Coding Agents](2026-2607.22711-corvus-context-optimization-and-reduction-via-underlying-synchronization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   コード編集を行う大規模言語モデル（LLM）エージェントは、ファイル読込み、編集、試験、再読込みを何度も繰り返す。従来の追記専用履歴では、読込み時のファイル本文が道具の観測結果として永久に残り、後で同じファイルが変更されても古い本文は削除されない。エージェントがその古い記述を使って修正すると、適用位置の不一致や失敗が起こり、さらに再読込みと再試行を繰り返す。
+
+- **2026-07 · [ConvX: A Lightweight Converter to Bridge Indexed Dense Representations and Large Language Models for Retrieval-Augmented Generation](2026-2812aba9b42f-convx-a-lightweight-converter-to-bridge-indexed-dense-representations-an.md)**  
+  実装：[✓](https://github.com/NLPlab-skku/ConvX) ・ リポジトリ内被引用：0  
+  検索器が索引時に作った密ベクトルを、語彙復元で学習した軽量コンバータで固定個数のメモリスロットへ展開して生成モデルへ渡し、文書本文の再入力なしに16倍から128倍の圧縮率で検索付き生成を行う方式。
 
 - **2026-07 · [C-PTQ: Fisher-weighted Channel-wise Sensitivity for Post-training Quantization of MLLMs](2026-2607.21076-c-ptq-fisher-weighted-channel-wise-sensitivity-for-post-training-quantiz.md)**  
   実装：[✓](https://github.com/renaissanceee/cptq) ・ リポジトリ内被引用：0  

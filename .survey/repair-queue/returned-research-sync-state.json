@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "bdef5f64d0fa0f4657afb4ba512dad1481dbb061",
+  "base_commit": "681a362f8271499f7f906a25c385ef7789a01b28",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -32,12 +32,15 @@
     "0000-0427ffa977bc-smart-routing-cost-effective-multi-llm-serving-in-aios.json",
     "0000-07a1c74f044c-anchoring-the-cache-mitigating-contextual-hallucination-in-kv-compressed-long-context-summarization.json",
     "0000-09fca0c0140b-speed-without-sacrifice-fine-tuning-language-models-with-medusa-and-knowledge-distillation-in-travel-applications.json",
+    "0000-0f876c37e0b4-accelerating-inference-for-pretrained-language-models-by-unified-multi-perspective-early-exiting.json",
     "0000-1015f01478e5-langcompress-language-aware-compression-of-large-language-models.json",
     "0000-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.json",
+    "0000-14ad8695291c-an-optimized-dataflow-for-mitigating-attention-performance-bottlenecks.json",
     "0000-19bdead741ff-variable-layerwise-quantization-a-simple-and-effective-approach-to-quantize-llms.json",
     "0000-1cd332146598-rsce-training-free-residual-stream-encoding-for-persistent-context-amortization.json",
     "0000-2326b3d5db35-efficient-distributed-llm-inference-with-dynamic-partitioning.json",
     "0000-2650e5d02f29-collaborative-lossless-llm-inference-serving-with-offloading-based-pipeline-parallelism-on-edge-devices.json",
+    "0000-2812aba9b42f-convx-a-lightweight-converter-to-bridge-indexed-dense-representations-and-large-language-models-for-retrieval-augmented.json",
     "0000-28d0e3a1162b-octopus-gated-selective-attention-for-memory-bounded-long-context-inference-in-large-language-models.json",
     "0000-28f8da2934ce-rqt-hierarchical-residual-quantization-for-multi-model-compression.json",
     "0000-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm-decoding-with-sparse-attention.json",
@@ -54,8 +57,10 @@
     "0000-685f90406825-l-earning-w-hat-m-atters-s-upervising-s-parse-a-ttention-r-outing-with-c-ausal-e-vidence-s-ets.json",
     "0000-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computation-and-communication.json",
     "0000-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-language-models.json",
+    "0000-8203b84bd016-adaptive-layer-sparsity-for-large-language-models-via-activation-correlation-assessment.json",
     "0000-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.json",
     "0000-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compression.json",
+    "0000-9723e70ce878-flowhn-adaptive-token-routing-for-efficient-parallel-hybrid-networks.json",
     "0000-a46d04ddafae-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-through-optimal-balance-in-adaptation.json",
     "0000-a4fadb2637c2-hisvd-principled-low-rank-approximation-of-llms-via-hierarchical-modeling-of-information-capacity-and-spectral-structure.json",
     "0000-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-carlo-tree-search-with-dynamic-kv-retrieval.json",
@@ -51756,6 +51761,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "SemanticScholar:4a984ec8286b19bb0c033e6e4df198a0421b0c17": {
+      "order": [
+        "2026-11-23T23:58:08+00:00",
+        "0000-0f876c37e0b4-accelerating-inference-for-pretrained-language-models-by-unified-multi-perspective-early-exiting.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2107.06419": {
+      "order": [
+        "2026-11-23T23:58:53+00:00",
+        "0000-14ad8695291c-an-optimized-dataflow-for-mitigating-attention-performance-bottlenecks.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.findings-acl.1823": {
+      "order": [
+        "2026-11-23T23:59:39+00:00",
+        "0000-2812aba9b42f-convx-a-lightweight-converter-to-bridge-indexed-dense-representations-and-large-language-models-for-retrieval-augmented.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.52202/079017-3471": {
+      "order": [
+        "2026-11-24T00:00:27+00:00",
+        "0000-8203b84bd016-adaptive-layer-sparsity-for-large-language-models-via-activation-correlation-assessment.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-industry.83": {
+      "order": [
+        "2026-11-24T00:01:16+00:00",
+        "0000-9723e70ce878-flowhn-adaptive-token-routing-for-efficient-parallel-hybrid-networks.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -65513,6 +65563,21 @@
     "doi:10.18653/v1/2024.findings-emnlp.358": [
       "papers/inference/99-other-inference-systems/2024-b9a679571edc-sca-selective-compression-attention-for-efficiently-extending-the-contex.md",
       "papers/inference/99-other-inference-systems/2024-b9a679571edc-sca-selective-compression-attention-for-efficiently-extending-the-contex.md"
+    ],
+    "semanticscholar:4a984ec8286b19bb0c033e6e4df198a0421b0c17": [
+      "papers/inference/99-other-inference-systems/2022-0f876c37e0b4-accelerating-inference-for-pretrained-language-models-by-unified-multi-p.md"
+    ],
+    "arxiv:2107.06419": [
+      "papers/inference/08-edge-on-device-llm-systems/2021-2107.06419-flat-an-optimized-dataflow-for-mitigating-attention-performance-bottlene.md"
+    ],
+    "doi:10.18653/v1/2026.findings-acl.1823": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2812aba9b42f-convx-a-lightweight-converter-to-bridge-indexed-dense-representations-an.md"
+    ],
+    "doi:10.52202/079017-3471": [
+      "papers/inference/09-kernel-runtime-compilation/2024-8203b84bd016-adaptive-layer-sparsity-for-large-language-models-via-activation-correla.md"
+    ],
+    "doi:10.18653/v1/2026.acl-industry.83": [
+      "papers/inference/99-other-inference-systems/2026-9723e70ce878-flowhn-adaptive-token-routing-for-efficient-parallel-hybrid-networks.md"
     ]
   }
 }

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（325本）
+## 自動生成の論文一覧（326本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -1111,6 +1111,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-01 · [Longer Attention Span: Increasing Transformer Context Length with Sparse Graph Processing Techniques](2025-2502.01659-longer-attention-span-increasing-transformer-context-length-with-sparse-.md)**  
   実装：[✓](https://github.com/KLab-AI3/Graph-Processing-Attention-IPDPS-2025) ・ リポジトリ内被引用：0  
   本論文の主張は、疎な注意機構 maskを使うだけではGPUの計算は必ずしも疎にならない、という実装上の問題を解決することである。
+
+- **2024-12 · [Adaptive Layer Sparsity for Large Language Models via Activation Correlation Assessment](2024-8203b84bd016-adaptive-layer-sparsity-for-large-language-models-via-activation-correla.md)**  
+  実装：[✓](https://github.com/lliai/ALS) ・ リポジトリ内被引用：0  
+  層間活性値の相互情報量から作る冗長性指標を目的関数にした線形計画で層別スパース率を大域的に配分し、一様配分の枝刈りよりパープレキシティとゼロショット精度の劣化を抑える配分方式。
 
 ### 3年前（2023-12〜2024-11）
 

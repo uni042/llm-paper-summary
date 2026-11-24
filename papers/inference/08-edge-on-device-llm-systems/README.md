@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（111本）
+## 自動生成の論文一覧（112本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -457,6 +457,12 @@
 - **2022-03 · [Overcoming Oscillations in Quantization-Aware Training](2022-2203.11086-overcoming-oscillations-in-quantization-aware-training.md)**  
   実装：[✓](https://github.com/qualcomm-ai-research/oscillations-qat) ・ リポジトリ内被引用：9  
   量子化対応学習（Quantization-Aware 学習; QAT）は、訓練中に低ビットの重みと活性を模擬し、推論時に使う整数化済みネットワークの精度を回復する手法である。ImageNetのMobileNetV3-Smallでは重み・活性3/3ビットのLSQ基準52.0%に対し、減衰59.0%、凍結58.9%を報告する。
+
+### 6年前（2020-12〜2021-11）
+
+- **2021-07 · [FLAT: An Optimized Dataflow for Mitigating Attention Performance Bottlenecks](2021-2107.06419-flat-an-optimized-dataflow-for-mitigating-attention-performance-bottlene.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  注意の中間テンソルをオフチップへ書き戻さず、ロジットから適用までを行単位に融合とタイル化で処理し、メモリフットプリントを二乗から線形へ落として長系列でもアクセラレータを動かすデータフロー最適化。
 
 ### 7年前（2019-12〜2020-11）
 
