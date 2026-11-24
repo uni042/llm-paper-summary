@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ccd9cd1fbef37f24abe427cbb9f80611c0773841",
+  "base_commit": "75a9dfcdf69e985f1de162af1f90476b791bda1d",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -641,6 +641,9 @@
     "2026-2603.00188-st-lite-training-free-kv-cache-compression-with-spatio-trajectory-guidance-for-long-horizon-gui-agents.json",
     "2026-2603.00356-token-management-in-multi-tenant-ai-inference-platforms.json",
     "2026-2603.01376-3basil-an-algorithmic-framework-for-sparse-plus-low-rank-compression-of-llms.json",
+    "2026-2603.01661-hero-adaptive-orchestration-of-retrieval-augmented-generation-on-heterogeneous-mobile-soc.json",
+    "2026-2603.02228-neural-paging-learning-context-management-policies-for-turing-complete-agents.json",
+    "2026-2603.02633-robust-heterogeneous-analog-digital-computing-for-mixture-of-experts-models-with-theoretical-generalization-guarantees.json",
     "2026-2603.02737-ouroboros-wafer-scale-sram-cim-with-token-grained-pipelining-for-llm-inference.json",
     "2026-2603.02872-think-as-you-see-streaming-chain-of-thought-reasoning-for-large-vision-language-models.json",
     "2026-2603.04162-bielik-q2-sharp-a-comparative-study-of-extreme-2-bit-quantization-methods-for-a-polish-11b-language-model.json",
@@ -648,6 +651,7 @@
     "2026-2603.04514-progressive-refinement-regulation-for-accelerating-diffusion-language-model-decoding.json",
     "2026-2603.05454-beyond-scattered-acceptance-fast-and-coherent-inference-for-dlms-via-longest-stable-prefixes.json",
     "2026-2603.05663-keeping-the-evidence-chain-semantic-evidence-allocation-for-training-free-token-pruning-in-video-temporal-grounding.json",
+    "2026-2603.05974-balancing-latency-and-accuracy-of-code-completion-via-local-cloud-model-cascading.json",
     "2026-2603.08065-deterministic-differentiable-structured-pruning-for-large-language-models.json",
     "2026-2603.08741-the-aetherfloat-family-block-scale-free-quad-radix-floating-point-architectures-for-ai-accelerators.json",
     "2026-2603.08747-diagnosing-fp4-inference-a-layer-wise-and-block-wise-sensitivity-analysis-of-nvfp4-and-mxfp4.json",
@@ -658,6 +662,7 @@
     "2026-2603.11340-slo-tuner-black-box-online-tuning-llm-performance.json",
     "2026-2603.11603-autoscout-structured-optimization-for-automating-ml-system-configuration.json",
     "2026-2603.12208-forensiczip-more-tokens-are-better-but-not-necessary-in-forensic-vision-language-models.json",
+    "2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-autoregressive-gazing.json",
     "2026-2603.13364-finermoe-dimension-expansion-for-finer-grained-expert-with-its-upcycling-approach.json",
     "2026-2603.13670-secdtd-dynamic-token-drop-for-secure-transformers-inference.json",
     "2026-2603.14892-balancing-saliency-and-coverage-semantic-prominence-aware-budgeting-for-visual-token-compression-in-vlms.json",
@@ -53141,6 +53146,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2603.01661": {
+      "order": [
+        "2026-11-24T05:00:15+00:00",
+        "2026-2603.01661-hero-adaptive-orchestration-of-retrieval-augmented-generation-on-heterogeneous-mobile-soc.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.02228": {
+      "order": [
+        "2026-11-24T05:01:49+00:00",
+        "2026-2603.02228-neural-paging-learning-context-management-policies-for-turing-complete-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.02633": {
+      "order": [
+        "2026-11-24T05:03:22+00:00",
+        "2026-2603.02633-robust-heterogeneous-analog-digital-computing-for-mixture-of-experts-models-with-theoretical-generalization-guarantees.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.05974": {
+      "order": [
+        "2026-11-24T05:04:56+00:00",
+        "2026-2603.05974-balancing-latency-and-accuracy-of-code-completion-via-local-cloud-model-cascading.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.12254": {
+      "order": [
+        "2026-11-24T05:06:30+00:00",
+        "2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-autoregressive-gazing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67414,6 +67464,21 @@
     "arxiv:2602.22556": [
       "papers/inference/99-other-inference-systems/2026-2602.22556-stable-adaptive-thinking-via-advantage-shaping-and-length-aware-gradient.md",
       "papers/inference/99-other-inference-systems/2026-2602.22556-stable-adaptive-thinking-via-advantage-shaping-and-length-aware-gradient.md"
+    ],
+    "arxiv:2603.01661": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2603.01661-hero-adaptive-orchestration-of-agentic-rag-on-heterogeneous-mobile-soc.md"
+    ],
+    "arxiv:2603.02228": [
+      "papers/inference/99-other-inference-systems/2026-2603.02228-neural-paging-learning-context-management-policies-for-turing-complete-a.md"
+    ],
+    "arxiv:2603.02633": [
+      "papers/inference/15-inference-simulation-emulation/2026-2603.02633-robust-heterogeneous-analog-digital-computing-for-mixture-of-experts-mod.md"
+    ],
+    "arxiv:2603.05974": [
+      "papers/inference/05-speculative-decoding-moe/2026-2603.05974-balancing-latency-and-accuracy-of-code-completion-via-local-cloud-model-.md"
+    ],
+    "arxiv:2603.12254": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-a.md"
     ]
   }
 }

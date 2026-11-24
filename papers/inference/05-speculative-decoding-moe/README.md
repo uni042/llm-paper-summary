@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（436本）
+## 自動生成の論文一覧（437本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1044,6 +1044,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/krzysiekfonal/mlx-lm/tree/feature/slem-with-context-aware) ・ リポジトリ内被引用：0  
   投機的復号は、小さな草稿モデルが複数の候補トークンを先行生成し、大きなターゲットモデルがまとめて検証することで生成速度を上げる。一般的な速度モデルでは、ターゲットがk個の候補をまとめて検証する費用は1トークンの自己回帰生成に近く、草稿が十分に安くて受理率が高ければ高速化できる。
 
+- **2026-03 · [Balancing Latency and Accuracy of Code Completion via Local-Cloud Model Cascading](2026-2603.05974-balancing-latency-and-accuracy-of-code-completion-via-local-cloud-model-.md)**  
+  実装：[✓](https://github.com/ZJU-CTAG/MCCom) ・ リポジトリ内被引用：0  
+  端末の小規模モデルを既定とし、信頼度と利用者の拒否行動で大規模モデルへ切り替えるカスケード補完で、遅延を最大47.9パーセント減らしながら完全一致率を平均8.9パーセント上げる。
+
 - **2026-03 · [Accelerating PayPal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models](2026-2604.19767-accelerating-paypal-s-commerce-agent-with-speculative-decoding-an-empiri.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、新しい投機的復号アルゴリズムそのものの提案ではなく、商取引向けに微調整された8B級言語モデルの構造化出力に、既存のEAGLE3を導入したときの運用上の利益と限界を測定する実証論文である。草稿長3の構成では、要求処理量は基準の1.22〜1.49倍、平均要求遅延は18〜33%短縮された。
@@ -1370,6 +1374,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://anonymous.4open.science/r/owl-BFB8) ・ リポジトリ内被引用：1  
   OWLは、投機的復号（投機的復号）において、入力文脈がドラフトモデルの学習時の長さを超えると候補トークンの受理数が急減する問題を扱う。投機的復号は、小型のドラフトモデルが将来の複数トークンを予測し、大型の対象モデルがそれらをまとめて検証することで、対象モデルの逐次実行回数を減らす。
 
+- **2025-10 · [On-device Semantic Selection Made Low Latency and Memory Efficient with Monolithic Forwarding](2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  全候補を1つのバッチで進め、中間層で順位が安定した候補を落とし、重みを流し読みする、学習不要のオンデバイス再ランク付け推論システム。遅延とピークメモリを同時に大きく減らす。
+
 - **2025-10 · [FastVLM: Self-Speculative Decoding for Fast Vision-Language Model Inference](2025-2510.22641-fastvlm-self-speculative-decoding-for-fast-vision-language-model-inferen.md)**  
   実装：[✓](https://anonymous.4open.science/r/SSD-575E/README.md) ・ リポジトリ内被引用：1  
   自己回帰デコードでは1トークンごとに大きなデコーダを呼び出す。投機的復号では小さい候補生成器が数トークンを先に作り、大きい本体が一度に検証して、受理した連続トークンを確定する。しかし視覚言語タスクでは、デコーダの浅い層だけを通った特徴から正しいキャプションや回答を予測するのが難しい。
@@ -1425,10 +1433,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-10 · [TokenTiming: A Dynamic Alignment Method for Universal Speculative Decoding Model Pairs](2025-2510.15545-tokentiming-a-dynamic-alignment-method-for-universal-speculative-decodin.md)**  
   実装：[✓](https://github.com/SeabirdShore/TokenTiming) ・ リポジトリ内被引用：0  
   投機的復号は小型ドラフトモデルが複数の次トークンを提案し、大型ターゲットモデルがまとめて検証することで自己回帰生成の逐次計算を減らす。
-
-- **2025-10 · [On-device Semantic Selection Made Low Latency and Memory Efficient with Monolithic Forwarding](2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  全候補を1つのバッチで進め、中間層で順位が安定した候補を落とし、重みを流し読みする、学習不要のオンデバイス再ランク付け推論システム。遅延とピークメモリを同時に大きく減らす。
 
 - **2025-10 · [3-Model Speculative Decoding](2025-2510.12966-3-model-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1596,6 +1600,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：26  
   一覧用要約：DySpecは下書きモデルの確率分布から候補の受理見込みを近似し、受理後の子候補と拒否後の兄弟候補を優先度付きキューで動的に展開する。閾値付き層単位生成で下書き呼出しを抑え、Llama2-70BのCPUオフロード条件では対象モデル呼出し回数の削減により大きな速度改善を得る。
 
+- **2024-02 · [Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding](2024-2402.13720-ouroboros-generating-longer-drafts-phrase-by-phrase-for-faster-speculati.md)**  
+  実装：[✓](https://github.com/thunlp/Ouroboros) ・ リポジトリ内被引用：26  
+  通常の投機的復号（投機的復号）では、対象となる大規模言語モデル（対象モデル）より小さい下書きモデル（下書きモデル）が数トークンを先読み生成し、対象モデルがそれらを一度に検証する。
+
 - **2024-04 · [On Speculative Decoding for Multimodal Large Language Models](2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：25  
   この部分は小バッチ時にメモリ帯域が律速になりやすく、画像理解モデルであっても文章LLMと同じ問題を抱える。従来の投機的復号では、小型モデルが数トークンを予測し、大型モデルがその候補を一括検証する。論文の最大2.37倍は、メモリ律速を仮定して計算した高速化指標（MBSU）であり、実際に計測したトークン率の倍率と混同してはならない。
@@ -1603,10 +1611,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-02 · [Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement](2024-2402.14160-recursive-speculative-decoding-accelerating-llm-inference-via-sampling-w.md)**  
   実装：✓ ・ リポジトリ内被引用：25  
   投機的復号は小さいドラフトモデルで先のトークンを予測し、大きい対象モデルにまとめて検証させることで、対象モデルの逐次実行回数を減らす。Llama 2-7Bと115Mドラフトを使ったXSumの評価では、通常の逐次復号37.269トークン/秒に対し、RSD-Cの2-2分岐は56.609トークン/秒を報告する。
-
-- **2024-02 · [Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding](2024-2402.13720-ouroboros-generating-longer-drafts-phrase-by-phrase-for-faster-speculati.md)**  
-  実装：[✓](https://github.com/thunlp/Ouroboros) ・ リポジトリ内被引用：25  
-  通常の投機的復号（投機的復号）では、対象となる大規模言語モデル（対象モデル）より小さい下書きモデル（下書きモデル）が数トークンを先読み生成し、対象モデルがそれらを一度に検証する。
 
 - **2023-12 · [Lookahead: An Inference Acceleration Framework for Large Language Model with Lossless Generation Accuracy](2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md)**  
   実装：[✓](https://github.com/alipay/PainlessInferenceAcceleration) ・ リポジトリ内被引用：24  

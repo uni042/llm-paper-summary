@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（97本）
+## 自動生成の論文一覧（98本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -322,6 +322,10 @@
 - **2026-04 · [CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades](2026-2604.12262-cascadedebate-multi-agent-deliberation-for-cost-aware-llm-cascades.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、問い合わせを小型LLMから大型LLMへ段階的に委譲するカスケード（cascade）に、必要なときだけ複数エージェントの討論（multi-agent deliberation）を挿入するCascadeDebateを提案する。Llama-3.2のMedQAでは標準カスケード68.20%に対し提案法86.44%を報告する。
+
+- **2026-03 · [HeRo: Adaptive Orchestration of Agentic RAG on Heterogeneous Mobile SoC](2026-2603.01661-hero-adaptive-orchestration-of-agentic-rag-on-heterogeneous-mobile-soc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  携帯SoC上のエージェント型検索拡張生成を、段階ごとの処理装置適性と共有帯域の混雑をモデル化して動的に割り振るHeRoで、市販端末のエンドツーエンド遅延を最大10.94倍削減するシステム。
 
 - **2026-02 · [Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization](2026-2602.22675-search-more-think-less-rethinking-long-horizon-agentic-search-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

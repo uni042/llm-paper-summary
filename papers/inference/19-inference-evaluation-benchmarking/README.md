@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（234本）
+## 自動生成の論文一覧（235本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -562,6 +562,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   実サービスではツール呼び出し回数、生成トークン数、API料金に上限があるため、単に推論を長くする方式は適さない。原著はgpt-oss-20bとQwen3-30B-A3B-Instruct-2507を用い、HotpotQA、2WikiMultihopQA、MuSiQue、Bamboogleで評価した。
 
+- **2026-03 · [Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing](2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚トランスフォーマーの手前で再構成可能な最小の複数尺度パッチを自己回帰的に選ぶ軽量な注視モジュールにより、視覚トークンを最大100分の1へ減らし、長尺・4K動画への拡張と精度向上を両立する。
+
 - **2026-03 · [AE-LLM: Adaptive Efficiency Optimization for Large Language Models](2026-2603.20492-ae-llm-adaptive-efficiency-optimization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   効率化手法の組合せを多目的最適化として自動探索する枠組み。代理モデルの予測と進化探索で、精度・遅延・メモリ・エネルギーのバランスが取れた構成を配備条件ごとに見つける。
@@ -929,7 +933,7 @@
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  
-  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：19  
   しかし実際のサービスでは、数学問題、法務文書、要約、常識質問など、タスクごとに得意なモデルが異なる。常に最も大きいモデルを呼ぶ方式は品質を得やすい反面、必要以上の推論計算を消費する。これらは品質と必要なモデル呼出し回数の評価であり、実際のGPU実行時間・請求金額の削減倍率を測定したものではない（原著§5、表1・2）。
 
 - **2023-05 · [A Quantitative Review on Language Model Efficiency Research](2023-2306.01768-a-quantitative-review-on-language-model-efficiency-research.md)**  

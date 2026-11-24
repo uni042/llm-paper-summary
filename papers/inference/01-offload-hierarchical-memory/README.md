@@ -460,6 +460,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：2  
   ローカルLLMの実行環境を選ぶ際、モデルが何GBに収まるか、何bitで量子化できるか、GPUの理論FLOPSがいくつかという指標だけでは実際の生成速度を予測できない。DeepSeek 236BのM2 Ultra上ではIQ2Mが57.33ms/トークンで最も遅く、サイズが約1.73倍のIQ4NLは1.21倍速い。
 
+- **2025-04 · [RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU](2025-2504.15302-ragdoll-efficient-offloading-based-online-rag-system-on-a-single-gpu.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  RAGDollは、検索拡張生成（retrieval-augmented generation; RAG）を単一GPUと限られたメモリで運用するとき、検索側とLLM生成側を個別に最適化するだけでは全体の待ち時間が短くならない問題を扱う。さらに、先読み転送を計算と重ね、事前の性能測定と実行時の待ち行列長からバッチサイズを切り替える。
+
 - **2025-08 · [FlexLink: Boosting your NVLink Bandwidth by 27% without accuracy concern](2025-2510.15882-flexlink-boosting-your-nvlink-bandwidth-by-27-without-accuracy-concern.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   NVLink・PCIe・RDMA NICを束ねてノード内集合通信の帯域を上げるFlexLinkを提案し、2段の適応型負荷分散でH800実機のAllGather帯域をNCCL比最大27%改善した研究。
@@ -467,10 +471,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-08 · [Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories](2025-2508.08457-packing-prefetch-onchip-memory-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル計算中の余剰HBM帯域で次層KVを先読みし、512MB〜1GB級M3Dオンチップメモリへ保持して、長文デコードのKV転送待ちを隠すハードウェア・スケジューラ協調方式。
-
-- **2025-04 · [RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU](2025-2504.15302-ragdoll-efficient-offloading-based-online-rag-system-on-a-single-gpu.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  RAGDollは、検索拡張生成（retrieval-augmented generation; RAG）を単一GPUと限られたメモリで運用するとき、検索側とLLM生成側を個別に最適化するだけでは全体の待ち時間が短くならない問題を扱う。さらに、先読み転送を計算と重ね、事前の性能測定と実行時の待ち行列長からバッチサイズを切り替える。
 
 - **2025-04 · [MOM: Memory-Efficient Offloaded Mini-Sequence Inference for Long Context Language Models](2025-2504.12526-mom-memory-efficient-offloaded-mini-sequence-inference-for-long-context-.md)**  
   実装：[✓](https://github.com/TianyiZhu877/MOM) ・ リポジトリ内被引用：1  
