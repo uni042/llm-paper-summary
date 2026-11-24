@@ -1,0 +1,589 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-final-20261124-d07",
+ "reference_main_sha": "06fa235e4b200b1ea3146c018a35f3f8c827101a",
+ "record_count": 34,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2609.23582",
+   "identity_tokens": [
+    "arXiv:2609.23582"
+   ],
+   "title": "ARID: A Deployable Edge AI System for Structured Information Extraction from Industrial Maintenance Work Orders",
+   "reason": "Jetson Orin NX（8GB）上の常駐サービングとして、4ビット推論・文法制約デコード・作業票単位のルーティングを組み合わせ、P50/P99遅延（5,310/5,656ms）と消費電力12.5Wを実測したエッジ推論システムであり、オンデバイス推論への直接貢献が要旨で確認できる。",
+   "source_url": "https://arxiv.org/abs/2609.23582",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 308
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1145/3503221.3508417",
+   "identity_tokens": [
+    "DOI:10.1145/3503221.3508417"
+   ],
+   "title": "BaGuaLu: targeting brain scale pretrained models with over 37 million cores",
+   "reason": "新世代Sunwayスーパーコンピュータ全体で14.5兆パラメータ級モデルの学習を可能にする学習システム（BaGuaLu）であり、大規模学習の並列化が主題で、推論への具体的適用は示されていない。",
+   "source_url": "https://doi.org/10.1145/3503221.3508417",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 310
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2410.03943",
+   "identity_tokens": [
+    "arXiv:2410.03943"
+   ],
+   "title": "Oscillatory State-Space Models",
+   "reason": "強制調和振動子に基づく線形振動状態空間モデル（LinOSS）を提案し、並列スキャンによる効率的な長系列処理と安定性・普遍性の理論を示すが、LLM推論システムとしての評価やサービングへの適用は要旨に示されておらず、アーキテクチャ提案の段階にとどまる。",
+   "source_url": "https://arxiv.org/abs/2410.03943",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 311
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2506.05904",
+   "identity_tokens": [
+    "arXiv:2506.05904"
+   ],
+   "title": "Proactive Assistant Dialogue Generation from Streaming Egocentric Videos",
+   "reason": "一人称動画ストリームから能動的アシスタント対話を生成するためのデータ生成パイプライン・評価指標・モデルの提案であり、応用と能力の研究であって推論システムへの技術的貢献は要旨に確認できない。",
+   "source_url": "https://arxiv.org/abs/2506.05904",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 313
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2205.01549",
+   "identity_tokens": [
+    "arXiv:2205.01549"
+   ],
+   "title": "Adaptable Adapters",
+   "reason": "事前学習モデルへのアダプタ挿入をデータ量に応じて学習可能にする適応的アダプタの提案であり、対象はパラメータ効率のよい微調整（学習）であって、推論効率化への具体的適用は示されていない。",
+   "source_url": "https://arxiv.org/abs/2205.01549",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 316
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2402.00854",
+   "identity_tokens": [
+    "arXiv:2402.00854"
+   ],
+   "title": "SymbolicAI: A framework for logic-based approaches combining generative models and solvers",
+   "reason": "LLMを意味パーサとしてソルバと連携させるニューロシンボリックなプログラミング／ワークフロー枠組みであり、推論の実行効率・サービング・メモリ等に関するシステム的貢献は要旨にない。",
+   "source_url": "https://arxiv.org/abs/2402.00854",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 317
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2405.03939",
+   "identity_tokens": [
+    "arXiv:2405.03939"
+   ],
+   "title": "Long Context Alignment with Short Instructions and Synthesized Positions",
+   "reason": "位置インデックスのスキップにより短い指示データから長文脈依存を合成するアライメント手法（SkipAlign）であり、長文脈能力を高める学習手法であって推論システムへの直接貢献はない。",
+   "source_url": "https://arxiv.org/abs/2405.03939",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 318
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/TASLP.2021.3076863",
+   "identity_tokens": [
+    "DOI:10.1109/TASLP.2021.3076863"
+   ],
+   "title": "Adaptive Adapters: An Efficient Way to Incorporate BERT Into Neural Machine Translation",
+   "reason": "BERTをニューラル機械翻訳へ軽量アダプタで組み込む際の層ごとの使用可否を潜在変数で学習する手法であり、微調整の効率化（学習）が主題で、推論システムへの適用は示されていない。",
+   "source_url": "https://doi.org/10.1109/TASLP.2021.3076863",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 320
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1145/3696410.3714663",
+   "identity_tokens": [
+    "DOI:10.1145/3696410.3714663"
+   ],
+   "title": "Frequency-Augmented Mixture-of-Heterogeneous-Experts Framework for Sequential Recommendation",
+   "reason": "周波数領域の偏りを補う異種エキスパート混合による逐次推薦フレームワーク（FamouSRec）であり、推薦システムの精度向上が目的で、LLM推論におけるMoE実行とは無関係である。",
+   "source_url": "https://doi.org/10.1145/3696410.3714663",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 321
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2506.07016",
+   "identity_tokens": [
+    "arXiv:2506.07016"
+   ],
+   "title": "MAGNET: A Multi-agent Framework for Finding Audio-Visual Needles by Reasoning over Multi-Video Haystacks",
+   "reason": "複数動画から音声・視覚の手がかりを探すAV-HaystacksQAという課題・ベンチマークとマルチエージェント枠組みの提案であり、マルチモーダル理解の能力評価が中心で推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2506.07016",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 324
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2311.09606",
+   "identity_tokens": [
+    "arXiv:2311.09606"
+   ],
+   "title": "GistScore: Learning Better Representations for In-Context Example Selection with Gist Bottlenecks",
+   "reason": "注意ボトルネックで学習した要約（gist）表現により文脈内学習の例選択をスコアリングする手法であり、例選択の精度向上が主題で、推論システムの機構に関する貢献は要旨に確認できない。",
+   "source_url": "https://arxiv.org/abs/2311.09606",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 326
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.72",
+   "identity_tokens": [
+    "DOI:10.18653/v1/2025.findings-naacl.72"
+   ],
+   "title": "CORAL: Benchmarking Multi-turn Conversational Retrieval-Augmented Generation",
+   "reason": "複数ターン対話型RAGを評価するための大規模ベンチマーク（CORAL）と評価枠組みの提案であり、能力評価のみを扱い推論システムへの技術的貢献はない。",
+   "source_url": "https://doi.org/10.18653/v1/2025.findings-naacl.72",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 327
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2411.13262",
+   "identity_tokens": [
+    "arXiv:2411.13262"
+   ],
+   "title": "FASTNav: Fine-Tuned Adaptive Small-Language- Models Trained for Multi-Point Robot Navigation",
+   "reason": "エッジ配置を目的に、微調整と教師-生徒反復で小型言語モデルをロボットナビゲーション向けに強化し低応答時間をうたうが、主貢献は応用向けの学習レシピであり、推論機構そのものの提案や推論システムとしての評価は薄い。",
+   "source_url": "https://arxiv.org/abs/2411.13262",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 328
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2611.01715",
+   "identity_tokens": [
+    "arXiv:2611.01715"
+   ],
+   "title": "EarlySelectKV: Anticipatory KV Selection via Cross-Layer Query Proxies",
+   "reason": "初期層の隠れ状態から作るプロキシクエリでKV選択インデックスを事前計算し、ルーティングを注意のクリティカルパスから外すEarlySelectKVを提案する。TensorRT-LLM＋CPUオフロード配置で出力スループット最大12.4%向上とGPU常駐メモリ11.1%削減を実測しており、KVキャッシュ推論への直接貢献が確認できる。",
+   "source_url": "https://arxiv.org/abs/2611.01715",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 329
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2507.05238",
+   "identity_tokens": [
+    "arXiv:2507.05238"
+   ],
+   "title": "Bridging Expressivity and Scalability with Adaptive Unitary SSMs",
+   "reason": "歪対称で入力依存の回帰によりユニタリ発展を実現する適応的ユニタリSSM（AUSSM）を提案し、形式言語の表現力と並列学習のためのCUDA実装を示すが、推論時の利点は線形回帰構造から示唆されるにとどまり、LLM推論システムとしての評価はない。",
+   "source_url": "https://arxiv.org/abs/2507.05238",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 330
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2502.10447",
+   "identity_tokens": [
+    "arXiv:2502.10447"
+   ],
+   "title": "MoHAVE: Mixture of Hierarchical Audio-Visual Experts for Robust Speech Recognition",
+   "reason": "階層ゲーティングでモダリティ別エキスパート群を活性化する音声認識（AVSR）向けMoEフレームワークであり、音声認識の精度・頑健性が目的の応用研究で、LLM推論システムとは対象が異なる。",
+   "source_url": "https://arxiv.org/abs/2502.10447",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 332
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2409.12139",
+   "identity_tokens": [
+    "arXiv:2409.12139"
+   ],
+   "title": "Takin: A Cohort of Superior Quality Zero-shot Speech Generation Models",
+   "reason": "ニューラルコーデック言語モデルによるゼロショット音声合成・声変換モデル群（Takin）の技術報告であり、音声生成の能力が主題で推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2409.12139",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 333
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.18653/v1/2026.acl-long.1321",
+   "identity_tokens": [
+    "DOI:10.18653/v1/2026.acl-long.1321"
+   ],
+   "title": "CURE: Critique-Driven Unified Reinforcement Learning for Test-Time Self-Improvement",
+   "reason": "単一ポリシーが解法・批評・再探索を担うよう統合する強化学習フレームワーク（CURE）であり、テスト時自己改善の能力を高める学習手法であって、推論システムの機構に関する提案ではない。",
+   "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1321",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 335
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2507.01327",
+   "identity_tokens": [
+    "arXiv:2507.01327"
+   ],
+   "title": "Reasoner for Real-World Event Detection: Scaling Reinforcement Learning via Adaptive Perplexity-Aware Sampling Strategy",
+   "reason": "顧客対応対話の異常イベント検出に、難易度適応型の強化学習（APARL）を適用する研究であり、業務応用と学習手法が主題で推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2507.01327",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 336
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2210.03731",
+   "identity_tokens": [
+    "arXiv:2210.03731"
+   ],
+   "title": "Demystifying Map Space Exploration for NPUs",
+   "reason": "NPU等のアクセラレータへのDNNマッピング探索手法を体系的に比較し探索技法を提案する研究で、推論実行の最適化に触れるものの、対象は汎用DNNのマッピングでありLLM推論への直接の適用や評価は示されていない。",
+   "source_url": "https://arxiv.org/abs/2210.03731",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 338
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2410.08003",
+   "identity_tokens": [
+    "arXiv:2410.08003"
+   ],
+   "title": "More Experts Than Galaxies: Conditionally-overlapping Experts With Biologically-Inspired Fixed Routing",
+   "reason": "学習可能なゲーティングを固定ランダム射影に置き換え、重なり合う多数のエキスパートを持つ疎なMoEアーキテクチャ（COMET）を提案するが、狙いは学習時の干渉低減とモジュール性であり、推論効率に関する評価は要旨にない。",
+   "source_url": "https://arxiv.org/abs/2410.08003",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 339
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2508.01546",
+   "identity_tokens": [
+    "arXiv:2508.01546"
+   ],
+   "title": "E-VRAG: Enhancing Long Video Understanding with Resource-Efficient Retrieval Augmented Generation",
+   "reason": "階層的クエリ分解によるフレーム事前フィルタと軽量VLMによるスコアリングで、長動画RAGの計算コスト削減を狙う枠組み（E-VRAG）であり、推論コスト低減の工夫はあるが主眼は動画理解の検索精度と効率の両立で、推論システム機構の新規性は限定的である。",
+   "source_url": "https://arxiv.org/abs/2508.01546",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 340
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2510.27017",
+   "identity_tokens": [
+    "arXiv:2510.27017"
+   ],
+   "title": "Kad: A Framework for Proxy-based Test-time Alignment with Knapsack Approximation Deferral",
+   "reason": "小型のアライン済みモデルをプロキシとし、トークン単位の委譲判断をナップサック問題として近似するテスト時アライメント枠組み（Kad）で、投機的デコード速度への言及もあるが、主目的はアライメント品質であり推論システムへの貢献は副次的である。",
+   "source_url": "https://arxiv.org/abs/2510.27017",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 341
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/IOLTS69666.2026.11633785",
+   "identity_tokens": [
+    "DOI:10.1109/IOLTS69666.2026.11633785"
+   ],
+   "title": "Error-Resilient State-Space Networks Using Low-Precision Recovery Models",
+   "reason": "量子化・枝刈りした冗長なバックアップ予測ネットワークでSSMの隠れ状態のソフトエラーを実行時に検出・訂正する機構を提案するが、対象は状態空間モデル一般の耐故障性であり、LLM推論システムとしての評価は限られる。",
+   "source_url": "https://doi.org/10.1109/IOLTS69666.2026.11633785",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 344
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2504.11781",
+   "identity_tokens": [
+    "arXiv:2504.11781"
+   ],
+   "title": "ACMamba: Fast Unsupervised Anomaly Detection via An Asymmetrical Consensus State Space Model",
+   "reason": "ハイパースペクトル画像の教師なし異常検出に非対称コンセンサスSSM（ACMamba）を適用する研究であり、リモートセンシング応用が主題で、コスト削減も学習時のサンプリングに関するもので推論システムとは無関係である。",
+   "source_url": "https://arxiv.org/abs/2504.11781",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 346
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2512.19720",
+   "identity_tokens": [
+    "arXiv:2512.19720"
+   ],
+   "title": "Per-Axis Weight Deltas for Frequent Model Updates",
+   "reason": "多数の微調整済みLLM変種をサービングする際の課題に対し、重み差分を1ビット符号と行・列ごとのFP16スケールで表す圧縮デルタと、モジュール単位で一括転送するローダを提案し、コールドスタート遅延とストレージ削減をシステム観点で示しており、モデルサービングへの直接貢献が確認できる。",
+   "source_url": "https://arxiv.org/abs/2512.19720",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 347
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2601.07861",
+   "identity_tokens": [
+    "arXiv:2601.07861"
+   ],
+   "title": "EmbeddingRWKV: State-Centric Retrieval with Reusable States",
+   "reason": "RWKVの再利用可能な状態を埋め込みモデルとリランカーで共有し、リランキング時の推論コストを文書長から切り離して5.4〜44.8倍の高速化をうたうが、対象はRAGの検索段階であり、LLM生成推論システムへの貢献は間接的である。",
+   "source_url": "https://arxiv.org/abs/2601.07861",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 348
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.05026",
+   "identity_tokens": [
+    "arXiv:2602.05026"
+   ],
+   "title": "Laws of Learning Dynamics and the Core of Learners",
+   "reason": "学習ダイナミクスの保存則や予測エントロピーに関する理論と、CIFAR-10でのアンサンブルルーティング実験を扱う学習理論の研究であり、LLM推論システムとは無関係である。",
+   "source_url": "https://arxiv.org/abs/2602.05026",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 349
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2603.18788",
+   "identity_tokens": [
+    "arXiv:2603.18788"
+   ],
+   "title": "Mi:dm K 2.5 Pro",
+   "reason": "32Bパラメータの企業向けLLM（Mi:dm K 2.5 Pro）のデータ構築・事前学習・後学習パイプラインを報告するモデル開発の技術報告であり、推論システムに関する技術的貢献は要旨に示されていない。",
+   "source_url": "https://arxiv.org/abs/2603.18788",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 350
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2605.08696",
+   "identity_tokens": [
+    "arXiv:2605.08696"
+   ],
+   "title": "Structured Recurrent Mixers for Massively Parallelized Sequence Generation",
+   "reason": "学習時は系列並列表現、推論時は回帰表現へ代数的に変換できる構造化回帰ミキサを提案し、線形複雑度モデルより大きな推論スループットと並行度を実験でうたうが、実サービング環境での評価ではなくアーキテクチャ提案の段階である。",
+   "source_url": "https://arxiv.org/abs/2605.08696",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 352
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.15012",
+   "identity_tokens": [
+    "arXiv:2605.15012"
+   ],
+   "title": "Boosting Reinforcement Learning with Verifiable Rewards via Randomly Selected Few-Shot Guidance",
+   "reason": "検証可能報酬による強化学習（RLVR）のサンプル効率を、少量のデモンストレーション併用で改善する学習アルゴリズム（FEST）であり、学習単独の効率化であって推論への具体的適用は確認できない。",
+   "source_url": "https://arxiv.org/abs/2605.15012",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 353
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2605.24569",
+   "identity_tokens": [
+    "arXiv:2605.24569"
+   ],
+   "title": "Energy-Aware Computing in the Year 2026",
+   "reason": "HPCからクラウド・エッジまでを対象とするエネルギー効率計算の包括的な概説・分類論文であり、生成AIのエネルギー問題にも触れるが、LLM推論システムに特化した技術的貢献を持つものではない。",
+   "source_url": "https://arxiv.org/abs/2605.24569",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 354
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2606.04661",
+   "identity_tokens": [
+    "arXiv:2606.04661"
+   ],
+   "title": "CRAFT: Cost-aware Refinement And Front-aware Tuning of Prompts",
+   "reason": "プロンプト長に伴う推論コストと精度のParetoフロントを探索するプロンプト最適化手法（CRAFT）であり、推論コストを目的関数に含む点は関連するが、対象はプロンプト探索であって推論システムの機構そのものではない。",
+   "source_url": "https://arxiv.org/abs/2606.04661",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 355
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2606.22804",
+   "identity_tokens": [
+    "arXiv:2606.22804"
+   ],
+   "title": "CoVStream: Edge-Cloud Collaboration for Understanding of Long Video Streams",
+   "reason": "エッジで映像を特徴とキャプションへ蒸留して送信し、クラウドの重い推論モデルをクエリ時のみ起動するエッジ-クラウド協調フレームワーク（CoVStream）で、帯域87.6%削減を実測するが、対象は長動画理解という応用であり、LLM推論基盤としての汎用機構ではない。",
+   "source_url": "https://arxiv.org/abs/2606.22804",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-24T13:30:00+09:00",
+   "last_checked_at": "2026-11-24T13:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 356
+  }
+ ]
+}
