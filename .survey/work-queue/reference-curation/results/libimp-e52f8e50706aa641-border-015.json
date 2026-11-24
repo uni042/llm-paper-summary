@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52f8e50706aa641-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.10616",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.10616",
+    "identity_tokens": [
+      "arXiv:2606.10616"
+    ],
+    "reason": "長期エージェントのメモリ保持を、予算制約と部分観測可能性の下での制約付き確率最適化として定式化し学習型保持方策OSL-MRを提案するもので、メモリ資源配分というシステム的側面はあるが、対象はエージェントの経験保持であり、LLM推論のメモリ／KVキャッシュ機構とは層が異なる。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning What to Remember: Observability-Safe Memory Retention via Constrained Optimization for Long-Horizon Language Agents"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52f8e50706a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

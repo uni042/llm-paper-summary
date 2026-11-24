@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f8419cd42d7d4ce-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2302.00003",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2302.00003",
+    "identity_tokens": [
+      "arXiv:2302.00003"
+    ],
+    "reason": "外部パラメータ表への疎な参照によって推論時間を増やさずモデル容量を増やすアーキテクチャを論じ、参照関数と表の消費方法を比較する。推論時間を増やさない性質は関わるが、主題はモデル容量と予測性能の拡大であり、推論システムの機構の提案ではない。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Power of External Memory in Increasing Predictive Model Capacity"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f8419cd42d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

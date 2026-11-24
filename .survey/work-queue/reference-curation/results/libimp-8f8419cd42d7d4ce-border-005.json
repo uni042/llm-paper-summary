@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f8419cd42d7d4ce-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.11743",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.11743",
+    "identity_tokens": [
+      "arXiv:2610.11743"
+    ],
+    "reason": "遅延配信される低次元トレース上の注意整合型再帰アーキテクチャを提案し、並列プリフィルや有界バッファによる継続といった推論時の性質も備えるが、評価は小規模モデルの合成タスクに限られ、推論システムとしての実装・効率評価はない。機構の新規性はあるが、サーベイ対象への直接貢献は弱い。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TraceRelay: Attention-Aligned Recurrence over Rolling Traces"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f8419cd42d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-635c3a885f17db8d-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.06446",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.06446",
+    "identity_tokens": [
+      "arXiv:2506.06446"
+    ],
+    "reason": "同一文字列が複数トークナイズで生成され課金価格がばらつく問題に対し、正準トークナイズのみを許す制約付き生成とその効率的サンプリングを提案するが、主眼は課金の公平性であり推論効率の改善ではない。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Tokenization Multiplicity Leads to Arbitrary Price Variation in LLM-as-a-service"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-635c3a885f17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52f8e50706aa641-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.05661",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.05661",
+    "identity_tokens": [
+      "arXiv:2501.05661"
+    ],
+    "reason": "電子カルテの表現学習を対象に、患者サブグループ向けエキスパート特化MoEとテスト時適応を組み合わせて死亡・再入院リスク予測を改善するTAMERであり、医療ドメインの予測応用でLLM推論システムの技術ではない。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "TAMER: A Test-Time Adaptive MoE-Driven Framework for EHR Representation Learning"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52f8e50706a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

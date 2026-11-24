@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f8419cd42d7d4ce-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:54b347af6c2cf2760ebf53ac3231b4e468cf0832",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:54b347af6c2cf2760ebf53ac3231b4e468cf0832",
+    "identity_tokens": [
+      "SemanticScholar:54b347af6c2cf2760ebf53ac3231b4e468cf0832"
+    ],
+    "reason": "自己注意を並列状態推定器として捉えるRobust Filter Attentionの別版レコードで、注意の再定式化と長文脈外挿の安定性が主題。言語モデリング評価が中心で、推論カーネルやサービング機構への具体的な貢献は確認できない。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Robust Filter Attention: Self-Attention as a Parallel State Estimator"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f8419cd42d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

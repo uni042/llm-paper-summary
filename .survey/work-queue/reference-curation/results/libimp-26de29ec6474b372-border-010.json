@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-26de29ec6474b372-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.17869",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.17869",
+    "identity_tokens": [
+      "arXiv:2602.17869"
+    ],
+    "reason": "長尺映像理解のため、情報密度に基づく適応的フレームサンプラと自己符号化器型の時空間映像圧縮器をマルチモーダルLLMと統合し、メモリ制約の下で多数のフレームを扱う。入力側の圧縮はマルチモーダル推論のメモリ効率に関わるが、主目的は映像理解の精度であり、推論システムとしての評価は限定的である。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning Compact Video Representations for Efficient Long-form Video Understanding in Large Multimodal Models"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26de29ec6474",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

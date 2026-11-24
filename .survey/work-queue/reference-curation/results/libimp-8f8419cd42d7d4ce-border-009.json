@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f8419cd42d7d4ce-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.04154",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.04154",
+    "identity_tokens": [
+      "arXiv:2509.04154"
+    ],
+    "reason": "自己注意を線形確率微分方程式に基づくロバスト状態推定として再定式化し、標準注意と同等の計算量で長文脈外挿の安定性を示す。注意機構の理論的再定式化であり、言語モデリングのperplexity評価が中心で、推論カーネルやサービングへの実装貢献はない。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Robust Filter Attention: Self-Attention as Precision-Weighted State Estimation"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f8419cd42d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

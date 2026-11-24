@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1fb7f2c1b62eb845-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2026.acl-long.1321",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2026.acl-long.1321",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.acl-long.1321"
+    ],
+    "reason": "単一ポリシーが解法・批評・再探索を担うよう統合する強化学習フレームワーク（CURE）であり、テスト時自己改善の能力を高める学習手法であって、推論システムの機構に関する提案ではない。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "CURE: Critique-Driven Unified Reinforcement Learning for Test-Time Self-Improvement"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1fb7f2c1b62e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

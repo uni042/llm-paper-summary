@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4b3b53539e9ba8a8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.18462",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.18462",
+    "identity_tokens": [
+      "arXiv:2603.18462"
+    ],
+    "reason": "マルチモーダル感情分析のためのMambaベース融合アーキテクチャで、対象は感情分析という応用タスクの精度であり、推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "AlignMamba-2: Enhancing multimodal fusion and sentiment analysis with modality-aware Mamba"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4b3b53539e9b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

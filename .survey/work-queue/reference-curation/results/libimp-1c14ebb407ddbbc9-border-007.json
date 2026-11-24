@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c14ebb407ddbbc9-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.10844",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.10844",
+    "identity_tokens": [
+      "arXiv:2509.10844"
+    ],
+    "reason": "LLMベースの埋め込みモデルを対象に、Fisher情報と汎用ドメイン勾配との整合度を組み合わせたDAIスコアでワンショット枝刈りするGAPruneで、圧縮による配備容易化は推論圧縮と関連するが、対象は生成LLMではなく検索用埋め込みモデルであり、サービング観点の評価は要旨にない。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "GAPrune: Gradient-Alignment Pruning for Domain-Aware Embeddings"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c14ebb407dd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5527cb950eceaea-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.13109",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.13109",
+    "identity_tokens": [
+      "arXiv:2512.13109"
+    ],
+    "reason": "U字型注意バイアスの要因として初期顕著性を同定し初期トークンへの注意重み調整で長文脈処理を改善する能力・機構分析であり、推論効率への貢献はない。",
+    "first_checked_at": "2026-11-24T04:36:19+00:00",
+    "last_checked_at": "2026-11-24T04:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Uncovering the Role of Initial Saliency in U-Shaped Attention Bias: Scaling Initial Token Weight for Enhanced Long-Text Processing"
+  },
+  "processed_at": "2026-11-24T04:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5527cb950ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

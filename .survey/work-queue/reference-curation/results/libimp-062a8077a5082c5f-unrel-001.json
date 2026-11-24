@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-062a8077a5082c5f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:28682682ce59cf90de9da7d62d1c17513fdac09a",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:28682682ce59cf90de9da7d62d1c17513fdac09a",
+    "identity_tokens": [
+      "SemanticScholar:28682682ce59cf90de9da7d62d1c17513fdac09a"
+    ],
+    "reason": "入力系列を複数GPUへ分割しRing Self-Attentionで注意を計算する系列並列は、長系列の学習を可能にするための学習時メモリ効率化であり、要旨全体が学習のバッチサイズ・系列長拡大の話で、推論への具体的適用は示されていない。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Sequence Parallelism: Making 4D Parallelism Possible"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-062a8077a508",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

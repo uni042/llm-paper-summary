@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-238036c01c42f9ff-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.39924",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.39924",
+    "identity_tokens": [
+      "arXiv:2609.39924"
+    ],
+    "reason": "コーデックネイティブ入力と抽象トークンで視覚トークンをネイティブに圧縮し下流MLLMの視覚文脈とprefill負担を減らすCoViscoは推論効率に資するが、成果物は大規模事前学習された視覚エンコーダというモデル自体であり推論時の機構ではない。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CoVisco: Codec-Native Vision Encoder with Native Token Compression for Unified Image-Video Understanding"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-238036c01c42",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

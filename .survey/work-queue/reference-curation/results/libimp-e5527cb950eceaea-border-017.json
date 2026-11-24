@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5527cb950eceaea-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.01120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.01120",
+    "identity_tokens": [
+      "arXiv:2602.01120"
+    ],
+    "reason": "逐次スケーリングを二状態マルコフ過程としてモデル化し最適性条件から精度-効率バランスを取るMarkovScaleは推論時計算配分の枠組みだが、サービングシステムというより生成戦略の最適化理論とその適用が中心である。",
+    "first_checked_at": "2026-11-24T04:36:19+00:00",
+    "last_checked_at": "2026-11-24T04:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MarkovScale: Towards Optimal Sequential Scaling at Inference Time"
+  },
+  "processed_at": "2026-11-24T04:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5527cb950ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

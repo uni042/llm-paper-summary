@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c14ebb407ddbbc9-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3676536.3676770",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3676536.3676770",
+    "identity_tokens": [
+      "DOI:10.1145/3676536.3676770"
+    ],
+    "reason": "エッジデバイス上のオンデバイス学習を対象に、前方伝播で後方伝播の不要な出力勾配を予測して勾配計算とメモリアクセスを省く予測器と、その専用アクセラレータOFTの提案であり、扱うのは注意機構の学習高速化で推論ではない。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "OFT: An Accelerator with Eager Gradient Prediction for Attention Training"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c14ebb407dd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52f8e50706aa641-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:f86fed0f9b716d58d5b6876987390d03850e758f",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:f86fed0f9b716d58d5b6876987390d03850e758f",
+    "identity_tokens": [
+      "SemanticScholar:f86fed0f9b716d58d5b6876987390d03850e758f"
+    ],
+    "reason": "層のループ（パラメータ共有）とMoEを組み合わせたモデルが、知識グラフをO(T)パラメータで記憶し多ホップ質問に推論時回答できることを理論と合成実験で示す研究で、小型化という推論関連の動機はあるものの、証拠は合成知識グラフ上の空間計算量分析であり実LLMの推論評価はない。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards smaller language models via layer looping"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52f8e50706a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

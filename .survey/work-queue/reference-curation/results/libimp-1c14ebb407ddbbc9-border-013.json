@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c14ebb407ddbbc9-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2509.26207",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2509.26207",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2509.26207",
+      "arXiv:2509.26207"
+    ],
+    "reason": "注意ブロック内のQ/K/V/出力射影とヘッドを分離し二階指標でチャネル枝刈りする構造化プルーニングを提案し、ASTとWhisperで注意ブロックのパラメータ50%削減後も性能維持を示すが、評価対象は音響信号アーキテクチャであり、LLM推論への適用は要旨に示されていない。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The silence of the weights: an investigation of structural pruning strategies for attention-based audio signal architectures"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c14ebb407dd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

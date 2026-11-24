@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5527cb950eceaea-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.04765",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.04765",
+    "identity_tokens": [
+      "arXiv:2501.04765"
+    ],
+    "reason": "初期層から深層へトークンを輸送する経路で拡散モデルの学習効率と生成性能を同時に高める手法であり、学習専用かつ拡散モデル対象でLLM推論とは無関係である。",
+    "first_checked_at": "2026-11-24T04:36:19+00:00",
+    "last_checked_at": "2026-11-24T04:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Tread: Token Routing for Efficient Architecture-Agnostic Diffusion Training"
+  },
+  "processed_at": "2026-11-24T04:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5527cb950ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-062a8077a5082c5f-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.13183",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.13183",
+    "identity_tokens": [
+      "arXiv:2310.13183"
+    ],
+    "reason": "大規模疎モデルを得るため枝刈りマスクをランダム生成して候補から選択するプルーニング手法だが、評価はGLUEの8データセット（BERT級エンコーダの分類）であり、生成LLMの推論圧縮への適用や推論時効果の検証は要旨に示されていない。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Breaking through Deterministic Barriers: Randomized Pruning Mask Generation and Selection"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-062a8077a508",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

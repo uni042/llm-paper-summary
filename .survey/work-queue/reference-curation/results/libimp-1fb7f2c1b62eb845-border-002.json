@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1fb7f2c1b62eb845-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.03943",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.03943",
+    "identity_tokens": [
+      "arXiv:2410.03943"
+    ],
+    "reason": "強制調和振動子に基づく線形振動状態空間モデル（LinOSS）を提案し、並列スキャンによる効率的な長系列処理と安定性・普遍性の理論を示すが、LLM推論システムとしての評価やサービングへの適用は要旨に示されておらず、アーキテクチャ提案の段階にとどまる。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Oscillatory State-Space Models"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1fb7f2c1b62e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

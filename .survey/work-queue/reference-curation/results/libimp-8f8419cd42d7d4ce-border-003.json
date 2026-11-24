@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f8419cd42d7d4ce-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.11051",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.11051",
+    "identity_tokens": [
+      "arXiv:2605.11051"
+    ],
+    "reason": "ソフトウェア工学エージェント向けに、文脈を連続埋め込みへ圧縮するIn-Context Autoencoderを多段階コーディングタスクで評価し、単発タスクでは有効でもエージェント的タスクでは失敗することを示す分析論文。文脈圧縮は推論効率と関わるが、貢献は圧縮手法の能力面の失敗分析であり、推論システムへの技術的寄与は間接的である。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On Problems of Implicit Context Compression for Software Engineering Agents"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f8419cd42d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

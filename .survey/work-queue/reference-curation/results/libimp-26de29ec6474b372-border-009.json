@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-26de29ec6474b372-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.06520",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.06520",
+    "identity_tokens": [
+      "arXiv:2601.06520"
+    ],
+    "reason": "訓練・推論パイプライン等のAIバッチジョブを対象に、複数リージョンのスポットインスタンスの可用性・価格の時空間的な不均一性を利用して、締切制約の下でコストを最小化する調達・配置手法。クラウド資源スケジューリングとして関連するが、対象はバッチジョブ一般で、推論は対象ワークロードの一つに過ぎない。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SkyNomad: On Using Multi-Region Spot Instances to Minimize AI Batch Job Cost"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26de29ec6474",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

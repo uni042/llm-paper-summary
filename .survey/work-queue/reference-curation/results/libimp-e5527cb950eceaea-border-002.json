@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5527cb950eceaea-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.02192",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.02192",
+    "identity_tokens": [
+      "arXiv:2602.02192"
+    ],
+    "reason": "遠隔推論ワーカーへのロールアウト分散と方策配布遅延下での学習重ね合わせを行うECHO-2は推論資源を活用するが、目的はRLポストトレーニングのスループットであり推論サービング自体への貢献は間接的である。",
+    "first_checked_at": "2026-11-24T04:36:19+00:00",
+    "last_checked_at": "2026-11-24T04:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ECHO-2: A Large-Scale Distributed Rollout Framework for Cost-Efficient Reinforcement Learning"
+  },
+  "processed_at": "2026-11-24T04:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5527cb950ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

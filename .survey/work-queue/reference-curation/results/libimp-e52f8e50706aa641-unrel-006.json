@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52f8e50706aa641-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:23aad969e67ba084f5fc9fe30e5e631e4c79127f",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:23aad969e67ba084f5fc9fe30e5e631e4c79127f",
+    "identity_tokens": [
+      "SemanticScholar:23aad969e67ba084f5fc9fe30e5e631e4c79127f"
+    ],
+    "reason": "AIOpsの障害根本原因分析を対象に、vLLMで提供したLLMへゼロショット／少数ショット／RAGを適用してログ異常検出を評価するTriCalRAGベンチマークであり、スループット等の付随計測はあるものの主題は運用ログ分析という領域応用で、推論システムの技術ではない。",
+    "first_checked_at": "2026-11-24T04:36:18+00:00",
+    "last_checked_at": "2026-11-24T04:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "TriCalRAG: A Three-Strategy, Retrieval-Augmented Benchmark for On-Premise LLM-Based Root Cause Analysis in AIOps"
+  },
+  "processed_at": "2026-11-24T04:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52f8e50706a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c14ebb407ddbbc9-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/apccas67402.2025.11378307",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/apccas67402.2025.11378307",
+    "identity_tokens": [
+      "DOI:10.1109/apccas67402.2025.11378307"
+    ],
+    "reason": "音声Transformer向けに、TOP-P垂直注意の低コスト同定・対角注意・選択的垂直注意からなる音響配慮型注意と混合精度PEを持つASRアクセラレータECHOで、注意計算を最大83.3%削減する推論ハードウェアだが、対象モデルはwav2vec 2.0等の音声モデルに限定され、LLM推論への適用は要旨に示されていない。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ECHO: An Efficient Co-Designed ASR Accelerator with Hardware-Friendly and Audio-Aware Attention"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c14ebb407dd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

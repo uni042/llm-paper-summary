@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-26de29ec6474b372-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.11399",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.11399",
+    "identity_tokens": [
+      "arXiv:2607.11399"
+    ],
+    "reason": "エージェント実行ハーネスの状態（観測・中間失敗・フィードバック）に基づき、ステップ単位で単一モデルの選択や複数モデルのアンサンブルを選ぶルーティングの枠組みを提案する。モデルルーティングはサービングと接点があるが、主眼はエージェント実行の能力・コスト配分であり、推論基盤の機構ではない。",
+    "first_checked_at": "2026-11-24T04:36:17+00:00",
+    "last_checked_at": "2026-11-24T04:36:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Agentic Routing: The Harness-Native Data Flywheel"
+  },
+  "processed_at": "2026-11-24T04:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26de29ec6474",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

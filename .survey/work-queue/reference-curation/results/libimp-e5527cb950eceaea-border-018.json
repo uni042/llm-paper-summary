@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5527cb950eceaea-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.24809",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.24809",
+    "identity_tokens": [
+      "arXiv:2604.24809"
+    ],
+    "reason": "線形時間のスペクトル系列演算子SeqCond AttentionとTransformer層を交互配置した371M小型モデルNautile-370Mは推論予算を意識した設計だが、成果物はモデル自体の学習・RL段階の報告であり推論システムの技術ではない。",
+    "first_checked_at": "2026-11-24T04:36:19+00:00",
+    "last_checked_at": "2026-11-24T04:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Nautile-370M: Spectral Memory Meets Attention in a Small Reasoning Model"
+  },
+  "processed_at": "2026-11-24T04:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5527cb950ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
