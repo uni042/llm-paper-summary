@@ -1,0 +1,811 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d05-b02",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 50,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.15071",
+      "identity_tokens": [
+        "arXiv:2405.15071"
+      ],
+      "title": "Grokked Transformers are Implicit Reasoners: A Mechanistic Journey to the Edge of Generalization",
+      "reason": "This mechanistic study shows transformers learn implicit composition and comparison reasoning only after grokking-length training; a capability/interpretability finding with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2405.15071",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.00783",
+      "identity_tokens": [
+        "arXiv:2407.00783"
+      ],
+      "title": "Diffusion Models and Representation Learning: A Survey",
+      "reason": "This survey reviews diffusion models through the lens of representation learning, covering denoising architectures and guidance; a vision generative-modeling survey unrelated to LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2407.00783",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/079017-3017",
+      "identity_tokens": [
+        "DOI:10.52202/079017-3017"
+      ],
+      "title": "Grokking of Implicit Reasoning in Transformers: A Mechanistic Journey to the Edge of Generalization",
+      "reason": "The proceedings version of the grokking study on implicit reasoning in transformers, analyzing composition and comparison generalization after extended training; a capability study with no inference contribution.",
+      "source_url": "https://doi.org/10.52202/079017-3017",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.19813",
+      "identity_tokens": [
+        "arXiv:2407.19813"
+      ],
+      "title": "Improving Retrieval Augmented Language Model with Self-Reasoning",
+      "reason": "Self-reasoning retrieval-augmented language models generate their own relevance and traceability judgments during inference to filter irrelevant documents; inference-time RAG behavior, but aimed at answer reliability rather than inference efficiency or serving, so borderline.",
+      "source_url": "https://arxiv.org/abs/2407.19813",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TNNLS.2024.3377194",
+      "identity_tokens": [
+        "DOI:10.1109/TNNLS.2024.3377194"
+      ],
+      "title": "Dynamic Neural Network Structure: A Review for its Theories and Applications",
+      "reason": "This TNNLS review systematizes dynamic neural network structures that adapt architecture or parameters per input, including efficiency motivations; a broad review across domains without a specific LLM inference mechanism, hence borderline.",
+      "source_url": "https://doi.org/10.1109/TNNLS.2024.3377194",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.10262",
+      "identity_tokens": [
+        "arXiv:2511.10262"
+      ],
+      "title": "MTR-DuplexBench: Towards a Comprehensive Evaluation of Multi-Round Conversations for Full-Duplex Speech Language Models",
+      "reason": "MTR-DuplexBench evaluates multi-round conversation handling in full-duplex speech language models, including context consistency during inference; a benchmark contribution, not an inference system.",
+      "source_url": "https://arxiv.org/abs/2511.10262",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.16533",
+      "identity_tokens": [
+        "arXiv:2502.16533"
+      ],
+      "title": "A Survey of Graph Transformers: Architectures, Theories and Applications",
+      "reason": "This survey organizes graph transformer architectures, theory and applications for graph-structured data; a GNN-domain survey with no LLM inference-system relevance.",
+      "source_url": "https://arxiv.org/abs/2502.16533",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.11134",
+      "identity_tokens": [
+        "arXiv:2212.11134"
+      ],
+      "title": "Generating music with sentiment using Transformer-GANs",
+      "reason": "Transformer-GANs generate sentiment-conditioned music with long-term coherence; a music generation application with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2212.11134",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.14712",
+      "identity_tokens": [
+        "arXiv:2404.14712"
+      ],
+      "title": "ORBIT: Oak Ridge Base Foundation Model for Earth System Predictability",
+      "reason": "Title explicitly presents a foundation model for Earth system predictability, a geoscience forecasting application, with no LLM inference subject stated in the title.",
+      "source_url": "https://arxiv.org/abs/2404.14712",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.16980",
+      "identity_tokens": [
+        "arXiv:2503.16980"
+      ],
+      "title": "VQToken: Neural Discrete Token Representation Learning for Extreme Token Reduction in Video Large Language Models",
+      "reason": "VQToken learns discrete token representations enabling extreme visual token reduction for video LLMs, directly cutting the sequence length and compute that dominate video-LLM inference; a concrete token-compression contribution to inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2503.16980",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2209.09545",
+      "identity_tokens": [
+        "arXiv:2209.09545"
+      ],
+      "title": "Graph Reasoning Transformer for Image Parsing",
+      "reason": "GReaT uses graph reasoning over image patches for image parsing, restructuring patch interactions in a vision transformer; a computer-vision architecture with no LLM inference relevance.",
+      "source_url": "https://arxiv.org/abs/2209.09545",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3675164",
+      "identity_tokens": [
+        "DOI:10.1145/3675164"
+      ],
+      "title": "Automated Disentangled Sequential Recommendation with Large Language Models",
+      "reason": "This ACM paper applies LLMs to disentangled sequential recommendation, predicting next items from user behavior sequences; a recommender-system application, not an inference-system contribution.",
+      "source_url": "https://doi.org/10.1145/3675164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24193",
+      "identity_tokens": [
+        "arXiv:2509.24193"
+      ],
+      "title": "AceSearcher: Bootstrapping Reasoning and Search for LLMs via Reinforced Self-Play",
+      "reason": "AceSearcher trains one LLM via supervised and reinforcement fine-tuning to alternate between query decomposition and answer solving roles; a training framework for search capability, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2509.24193",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.13131",
+      "identity_tokens": [
+        "arXiv:2406.13131"
+      ],
+      "title": "When Parts Are Greater Than Sums: Individual LLM Components Can Outperform Full Models",
+      "reason": "Decomposing LLM outputs into attention-head and MLP contributions shows individual components can beat the full model on classification; an in-context-learning analysis with no inference-system mechanism.",
+      "source_url": "https://arxiv.org/abs/2406.13131",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.19072",
+      "identity_tokens": [
+        "arXiv:2506.19072"
+      ],
+      "title": "HAWAII: Hierarchical Visual Knowledge Transfer for Efficient Vision-Language Models",
+      "reason": "HAWAII distills multiple pretrained visual experts into a single vision encoder so VLMs gain expert strengths with minimal inference overhead; efficiency is a distillation side benefit for a vision capability goal, so borderline.",
+      "source_url": "https://arxiv.org/abs/2506.19072",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.07100",
+      "identity_tokens": [
+        "arXiv:2205.07100"
+      ],
+      "title": "Multiformer: A Head-Configurable Transformer-Based Model for Direct Speech Translation",
+      "reason": "Multiformer configures attention heads for direct speech translation to handle long redundant speech sequences with efficient attention variants; an application-specific speech architecture with an efficiency flavor, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2205.07100",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.00856",
+      "identity_tokens": [
+        "arXiv:2302.00856"
+      ],
+      "title": "idT5: Indonesian Version of Multilingual T5 Transformer",
+      "reason": "idT5 fine-tunes multilingual T5 for Indonesian language coverage; a language-resource adaptation with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2302.00856",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.06436",
+      "identity_tokens": [
+        "arXiv:2509.06436"
+      ],
+      "title": "Tree of Agents: Improving Long-Context Capabilities of Large Language Models through Multi-Perspective Reasoning",
+      "reason": "Tree of Agents segments long inputs across chunk-processing agents to mitigate lost-in-the-middle in long-context LLM use; an inference-time reasoning framework, but its contribution is reasoning quality over chunks rather than serving or decoding efficiency, so borderline.",
+      "source_url": "https://arxiv.org/abs/2509.06436",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.02600",
+      "identity_tokens": [
+        "arXiv:2408.02600"
+      ],
+      "title": "BioMamba: Domain-Adaptive Biomedical Language Models",
+      "reason": "BioMamba continues pretraining Mamba2 checkpoints on PubMed-heavy mixtures for biomedical text; a domain-adapted language model with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2408.02600",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.01328",
+      "identity_tokens": [
+        "arXiv:2504.01328"
+      ],
+      "title": "Slow-Fast Architecture for Video Multi-Modal Large Language Models",
+      "reason": "A slow-fast architecture allocates temporal resolution and spatial detail under a compute budget for video MLLMs; compute-aware model architecture for a video application rather than an inference system mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2504.01328",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.16367",
+      "identity_tokens": [
+        "arXiv:2401.16367"
+      ],
+      "title": "TQCompressor: Improving Tensor Decomposition Methods in Neural Networks Via Permutations",
+      "reason": "TQCompressor improves Kronecker tensor decomposition via permutations to compress GPT-2 with less expressivity loss; a generic model-compression study on a small legacy model, with limited evidence as an LLM inference contribution, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2401.16367",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.00396",
+      "identity_tokens": [
+        "arXiv:2506.00396"
+      ],
+      "title": "Speculative Reward Model Boosts Decision Making Ability of LLMs Cost-Effectively",
+      "reason": "A speculative reward model accelerates LLM decision-making search by cheaply estimating rewards before full evaluation; speculation is applied to reward estimation for agent decisions, not token decoding, so the inference-system link is indirect and borderline.",
+      "source_url": "https://arxiv.org/abs/2506.00396",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CISAT71030.2026.11682188",
+      "identity_tokens": [
+        "DOI:10.1109/CISAT71030.2026.11682188"
+      ],
+      "title": "Frequency-Informed Positional Encoding: An Enhanced Transformer for Vessel Trajectory Prediction",
+      "reason": "Frequency-informed positional encoding improves transformer generalization for vessel trajectory prediction on AIS maritime data; a shipping-traffic application with no LLM inference relevance.",
+      "source_url": "https://doi.org/10.1109/CISAT71030.2026.11682188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ITIS59651.2023.10420049",
+      "identity_tokens": [
+        "DOI:10.1109/ITIS59651.2023.10420049"
+      ],
+      "title": "Adaptation of Multilingual T5 Transformer for Indonesian Language",
+      "reason": "This ITIS paper adapts multilingual T5 to Indonesian, duplicating the idT5 language-adaptation line of work; no inference-system content.",
+      "source_url": "https://doi.org/10.1109/ITIS59651.2023.10420049",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3802095",
+      "identity_tokens": [
+        "DOI:10.1145/3802095"
+      ],
+      "title": "OctoSelector: Efficient and Effective Batch-Aware Model Selection for Large Language Models",
+      "reason": "OctoSelector clusters queries by difficulty-aware representations and selects LLMs per batch under accuracy, latency and cost constraints; batch-aware model selection is serving-adjacent routing, but framed as a selection framework rather than a serving system, so borderline.",
+      "source_url": "https://doi.org/10.1145/3802095",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.19871",
+      "identity_tokens": [
+        "arXiv:2510.19871"
+      ],
+      "title": "From Denoising to Refining: A Corrective Framework for Vision-Language Diffusion Model",
+      "reason": "A corrective framework reframes vision-language diffusion generation from denoising to refining to stop error cascades in parallel decoding; decoding behavior of multimodal diffusion models, adjacent to but outside LLM inference systems, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2510.19871",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10926",
+      "identity_tokens": [
+        "arXiv:2601.10926"
+      ],
+      "title": "Selecting Language Models for Social Science: Start Small, Start Open, and Validate",
+      "reason": "This paper advises social scientists to start small and open when selecting among thousands of LLMs and to validate measures ex-post; usage guidance for a research community, not an inference contribution.",
+      "source_url": "https://arxiv.org/abs/2601.10926",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08398",
+      "identity_tokens": [
+        "arXiv:2603.08398"
+      ],
+      "title": "Revealing Behavioral Plasticity in Large Language Models: A Token-Conditional Perspective",
+      "reason": "Token-conditional generation exposes behavioral plasticity, switching LLMs between reasoning and direct answering at inference time, stabilized by RL; the phenomenon is behavioral control, not an inference-system efficiency or serving mechanism.",
+      "source_url": "https://arxiv.org/abs/2603.08398",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06070",
+      "identity_tokens": [
+        "arXiv:2604.06070"
+      ],
+      "title": "Short Data, Long Context: Distilling Positional Knowledge in Transformers",
+      "reason": "Long-context retrieval ability is distilled into students using only packed short-context samples via logit distillation and RoPE analysis; a training-side distillation recipe, with no inference-time mechanism, so unrelated under the training-only rule.",
+      "source_url": "https://arxiv.org/abs/2604.06070",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02947",
+      "identity_tokens": [
+        "arXiv:2606.02947"
+      ],
+      "title": "BYORn: Bootstrap Your Own Responses to Defend Large Vision-Language Models Against Backdoor Attacks",
+      "reason": "BYORn detects semantically implausible poisoned responses to make supervised fine-tuning robust to backdoor attacks in vision-language models; a training-security defense with no inference contribution.",
+      "source_url": "https://arxiv.org/abs/2606.02947",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22473",
+      "identity_tokens": [
+        "arXiv:2606.22473"
+      ],
+      "title": "Interleaved Speech Language Models Latently Work In Text",
+      "reason": "Probing shows interleaved speech-text language models pass through a latent transcription phase in intermediate layers; an interpretability analysis of speech LMs with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2606.22473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07631",
+      "identity_tokens": [
+        "arXiv:2608.07631"
+      ],
+      "title": "PACE: A Playback-Aligned Context Engine for LLM-Based Full-Duplex Voice Dialogue",
+      "reason": "PACE is provider-independent middleware that anchors the model-facing context of full-duplex voice services to the client playback boundary; a serving-layer context management idea for voice dialogue, but narrow and unvalidated as a general inference system, so borderline.",
+      "source_url": "https://arxiv.org/abs/2608.07631",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01192",
+      "identity_tokens": [
+        "arXiv:2610.01192"
+      ],
+      "title": "FlashBack: Knowing When to Remember in Streaming Vision-Language Models",
+      "reason": "FlashBack decides when streaming vision-language models should retrieve historical memory under a bounded compute budget; memory-access gating for streaming VLM perception is inference-adjacent, but tied to a video application, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2610.01192",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.21214",
+      "identity_tokens": [
+        "arXiv:2610.21214"
+      ],
+      "title": "Rubric Judgments Lack Uncertainty: Conformal Weighting for LLM Evaluation",
+      "reason": "Conformal weighting adds uncertainty estimates to rubric-based LLM-as-judge evaluation scores; an evaluation methodology paper with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2610.21214",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.32389",
+      "identity_tokens": [
+        "arXiv:2610.32389"
+      ],
+      "title": "KnitTrans: Coordinated Trajectory Transfer for Effective and Efficient LLM Reinforcement Learning",
+      "reason": "KnitTrans coordinates trajectory transfer from rollout to training in LLM RL, reducing staleness from disaggregated pipelining and redundant data movement; RL training-system efficiency where generation is a component, but the target is training throughput, so borderline.",
+      "source_url": "https://arxiv.org/abs/2610.32389",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.05587",
+      "identity_tokens": [
+        "arXiv:2409.05587"
+      ],
+      "title": "DSDFormer: An Innovative Transformer-Mamba Framework for Robust High-Precision Driver Distraction Identification",
+      "reason": "DSDFormer fuses transformer and Mamba features for driver distraction identification from vehicle imagery; an automotive safety application with no LLM inference relevance.",
+      "source_url": "https://arxiv.org/abs/2409.05587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.08112",
+      "identity_tokens": [
+        "arXiv:2504.08112"
+      ],
+      "title": "Scaling Laws of Graph Neural Networks for Atomistic Materials Modeling*",
+      "reason": "Title explicitly limits the work to scaling laws of graph neural networks for atomistic materials modeling, a materials-science application, with no inference-system subject in the title.",
+      "source_url": "https://arxiv.org/abs/2504.08112",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3747291",
+      "identity_tokens": [
+        "DOI:10.1145/3747291"
+      ],
+      "title": "High-level Synthesis Directives Design Optimization via Large Language Model",
+      "reason": "LLMs are used to optimize high-level synthesis directives for circuit design; an EDA application of LLMs as optimizers, with no inference-system contribution.",
+      "source_url": "https://doi.org/10.1145/3747291",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.04114",
+      "identity_tokens": [
+        "arXiv:2212.04114"
+      ],
+      "title": "Group Generalized Mean Pooling for Vision Transformer",
+      "reason": "Group generalized mean pooling replaces class-token aggregation in vision transformers for image classification; a vision architecture detail with no LLM inference relevance.",
+      "source_url": "https://arxiv.org/abs/2212.04114",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.14646",
+      "identity_tokens": [
+        "arXiv:2506.14646"
+      ],
+      "title": "GuiLoMo: Allocating Expert Number and Rank for LoRA-MoE via Bilevel Optimization with GuidedSelection Vectors",
+      "reason": "GuiLoMo allocates expert counts and LoRA ranks in LoRA-MoE fine-tuning via bilevel optimization; a parameter-efficient training method whose gains are in adaptation capacity, not inference execution.",
+      "source_url": "https://arxiv.org/abs/2506.14646",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.04124",
+      "identity_tokens": [
+        "arXiv:2405.04124"
+      ],
+      "title": "Comparative study of state-based neural networks for virtual analog audio effects modeling",
+      "reason": "Title explicitly limits the work to neural networks for virtual analog audio effects modeling, an audio-effects application, with no language-model inference subject in the title.",
+      "source_url": "https://arxiv.org/abs/2405.04124",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.15685",
+      "identity_tokens": [
+        "arXiv:2411.15685"
+      ],
+      "title": "State-Space Large Audio Language Models",
+      "reason": "State-space large audio language models replace quadratic transformer attention with SSMs to ease memory and time constraints in audio reasoning deployment; an alternative-architecture proposal for an audio application, with efficiency motivation but no LLM serving mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2411.15685",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05578",
+      "identity_tokens": [
+        "arXiv:2511.05578"
+      ],
+      "title": "UTF-8 Plumbing: Byte-level Tokenizers Unavoidably Enable LLMs to Generate Ill-formed UTF-8",
+      "reason": "Byte-level tokenizers are shown to unavoidably let LLMs emit ill-formed UTF-8; a tokenization correctness analysis with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2511.05578",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.05503",
+      "identity_tokens": [
+        "arXiv:2309.05503"
+      ],
+      "title": "Long-Range Transformer Architectures for Document Understanding",
+      "reason": "Long-range transformer variants using local, hierarchical and recurrent attention are explored for multi-page document understanding; efficient-attention architectures demonstrated on a document application rather than LLM serving, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2309.05503",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.02209",
+      "identity_tokens": [
+        "arXiv:2508.02209"
+      ],
+      "title": "Balancing Information Accuracy and Response Timeliness in Networked LLMs",
+      "reason": "A networked system aggregates outputs of smaller specialized language models, trading information accuracy against response timeliness; a deployment-level composition study without a concrete serving or decoding mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2508.02209",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01463",
+      "identity_tokens": [
+        "arXiv:2511.01463"
+      ],
+      "title": "HMVLM: Human Motion-Vision-Lanuage Model via MoE LoRA",
+      "reason": "HMVLM integrates 3D human motion into language models via MoE LoRA instruction tuning; a multimodal capability model for motion understanding with no inference contribution.",
+      "source_url": "https://arxiv.org/abs/2511.01463",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.14680",
+      "identity_tokens": [
+        "arXiv:2404.14680"
+      ],
+      "title": "Automated Multi-Language to English Machine Translation Using Generative Pre-Trained Transformers",
+      "reason": "Sixteen open GPT models are benchmarked zero-shot for multilingual-to-English translation; an application benchmark study with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2404.14680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18575",
+      "identity_tokens": [
+        "arXiv:2507.18575"
+      ],
+      "title": "Hybrid Transformer-Mamba Model for 3D Semantic Segmentation",
+      "reason": "HybridTM combines transformer global attention with Mamba linear processing for 3D semantic segmentation of point clouds; a 3D vision architecture with no LLM inference relevance.",
+      "source_url": "https://arxiv.org/abs/2507.18575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.03613",
+      "identity_tokens": [
+        "arXiv:2106.03613"
+      ],
+      "title": "RoSearch: Search for Robust Student Architectures When Distilling Pre-trained Language Models",
+      "reason": "RoSearch searches distilled student architectures that resist adversarial attacks when compressing pretrained language models; compression is via distillation architecture search with a robustness objective and training-time cost, so the inference contribution is indirect and borderline.",
+      "source_url": "https://arxiv.org/abs/2106.03613",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.07965",
+      "identity_tokens": [
+        "arXiv:2504.07965"
+      ],
+      "title": "Cat, Rat, Meow: On the Alignment of Language Model and Human Term-Similarity Judgments",
+      "reason": "Thirty-two language models are compared with human term-similarity judgments at behavioral and representational levels; a cognitive alignment evaluation with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2504.07965",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,747 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d05-b04",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 46,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.21940",
+      "identity_tokens": [
+        "arXiv:2609.21940"
+      ],
+      "title": "AutoViewMem: Self-Configuring Orthogonal Views for Conversational Long-Term Memory",
+      "reason": "AutoViewMem self-configures orthogonal memory views to reduce semantic interference in top-K retrieval for conversational long-term memory; an agent memory representation method, adjacent to inference-time retrieval but not a serving contribution, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2609.21940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36976",
+      "identity_tokens": [
+        "arXiv:2609.36976"
+      ],
+      "title": "AMU:Admission and Memory Update for Personalized Conversations - Structured Memory with SLM Guided Control",
+      "reason": "AMU controls memory admission and updates for personalized conversations using structured memory with a small-model guided controller; a memory write-path governance method for assistants, not an inference system mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2609.36976",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.14244",
+      "identity_tokens": [
+        "arXiv:2610.14244"
+      ],
+      "title": "Understanding the Power Consumption of Modern High Bandwidth Memory: Experimental Analysis and Modeling Using Real HBM2 DRAM Chips",
+      "reason": "Real HBM2 chips are experimentally characterized to build accurate power models and expose data-pattern-dependent consumption; memory-hardware measurement relevant to inference infrastructure, but a characterization study without an inference mechanism, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2610.14244",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.25211",
+      "identity_tokens": [
+        "arXiv:2610.25211"
+      ],
+      "title": "NeuroAct: Advancing EEG Analysis and Decoding via Dual-Loop Autonomous Research",
+      "reason": "Title explicitly limits the work to EEG analysis and decoding via an autonomous research framework, a brain-signal application, with no LLM inference subject stated in the title.",
+      "source_url": "https://arxiv.org/abs/2610.25211",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.03743",
+      "identity_tokens": [
+        "arXiv:2611.03743"
+      ],
+      "title": "EvoMemState: Evolving Memory State for Personal Agents",
+      "reason": "EvoMemState maintains evolving memory state for personal LLM agents so new facts update and constrain earlier ones instead of sitting as independent facts; an agent memory consistency method without serving or decoding content, so borderline.",
+      "source_url": "https://arxiv.org/abs/2611.03743",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.07661",
+      "identity_tokens": [
+        "arXiv:2308.07661"
+      ],
+      "title": "Attention Is Not All You Need Anymore",
+      "reason": "A family of drop-in self-attention replacements aims to preserve transformer performance while changing the attention computation; an architecture proposal whose abstract centers on performance retention rather than demonstrated LLM inference gains, so borderline.",
+      "source_url": "https://arxiv.org/abs/2308.07661",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2102.07680",
+      "identity_tokens": [
+        "arXiv:2102.07680"
+      ],
+      "title": "Translational Equivariance in Kernelizable Attention",
+      "reason": "Kernelizable attention is given translational equivariance so relative-position inductive biases survive without materializing the full attention matrix; efficient-attention theory with an inference-relevant motivation but no LLM inference evaluation, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2102.07680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICDCS60910.2024.00015",
+      "identity_tokens": [
+        "DOI:10.1109/ICDCS60910.2024.00015"
+      ],
+      "title": "Portus: Efficient DNN Checkpointing to Persistent Memory with Zero-Copy",
+      "reason": "Portus checkpoints DNN models from GPUs to persistent memory over RDMA with a zero-copy three-level index; training checkpoint infrastructure, not inference serving or execution.",
+      "source_url": "https://doi.org/10.1109/ICDCS60910.2024.00015",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13697",
+      "identity_tokens": [
+        "arXiv:2510.13697"
+      ],
+      "title": "On Pretraining for Project-Level Code Completion",
+      "reason": "Repository-level pretraining strategies and a 16K context extension are studied for project-level code completion with OpenCoder; a pretraining study for a coding capability, not inference.",
+      "source_url": "https://arxiv.org/abs/2510.13697",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.01912",
+      "identity_tokens": [
+        "arXiv:2511.01912"
+      ],
+      "title": "EvoMem: Improving Multi-Agent Planning with Dual-Evolving Memory",
+      "reason": "EvoMem gives LLM multi-agent planning frameworks dual-evolving memory inspired by working memory; an agent planning memory method whose contribution is coordination quality, not inference systems, so borderline.",
+      "source_url": "https://arxiv.org/abs/2511.01912",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20932",
+      "identity_tokens": [
+        "arXiv:2505.20932"
+      ],
+      "title": "QwT-v2: Practical, Effective and Efficient Post-Training Quantization",
+      "reason": "QwT-v2 improves post-training quantization with lightweight compensating structures while removing the extra latency and incompatibility of the original QwT; a practical quantization contribution directly reducing model inference resource use, hence accept.",
+      "source_url": "https://arxiv.org/abs/2505.20932",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2023.3340854",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2023.3340854"
+      ],
+      "title": "LongT5-Mulla: LongT5 With Multi-Level Local Attention for a Longer Sequence",
+      "reason": "LongT5-Mulla adds multi-level local attention so LongT5 handles longer sequences than full quadratic attention allows; an efficient-attention architecture variant for long-text tasks, but an older model-line study without LLM serving evidence, so borderline.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2023.3340854",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.08371",
+      "identity_tokens": [
+        "arXiv:2507.08371"
+      ],
+      "title": "The Curious Case of Factuality Finetuning: Models' Internal Beliefs Can Improve Factuality",
+      "reason": "Factuality finetuning is studied through models' internal beliefs to reduce hallucination with the right training data; a training-data study for output factuality with no inference contribution.",
+      "source_url": "https://arxiv.org/abs/2507.08371",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.15248",
+      "identity_tokens": [
+        "arXiv:2509.15248"
+      ],
+      "title": "Synthetic bootstrapped pretraining",
+      "reason": "Synthetic bootstrapped pretraining learns inter-document relations to synthesize a new corpus for joint LM pretraining; a pretraining data method with no inference mechanism.",
+      "source_url": "https://arxiv.org/abs/2509.15248",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3450439.3451856",
+      "identity_tokens": [
+        "DOI:10.1145/3450439.3451856"
+      ],
+      "title": "Affinitention nets: kernel perspective on attention architectures for set classification with applications to medical text and images",
+      "reason": "Affinitention nets give a kernel view of attention for set classification, applied to pathology slides and medical text; a medical/vision set-classification method with no LLM inference relevance.",
+      "source_url": "https://doi.org/10.1145/3450439.3451856",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.03251",
+      "identity_tokens": [
+        "arXiv:2210.03251"
+      ],
+      "title": "Small Character Models Match Large Word Models for Autocomplete Under Memory Constraints",
+      "reason": "Small character-level models match large word models for open-domain autocomplete under explicit memory constraints; model sizing under memory limits is inference-adjacent, but the study is a task comparison rather than an inference mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2210.03251",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.09166",
+      "identity_tokens": [
+        "arXiv:2501.09166"
+      ],
+      "title": "Attention is All You Need Until You Need Retention",
+      "reason": "A retention layer gives transformers persistent memory read by attention and written during use, reframed as social learning over other agents' behavior; a speculative architecture/memory proposal without an inference-system evaluation, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2501.09166",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10888801",
+      "identity_tokens": [
+        "DOI:10.1109/ICASSP49660.2025.10888801"
+      ],
+      "title": "GPT-C: Generative PrompT Compression",
+      "reason": "GPT-C generatively compresses long prompts to accelerate LLM inference and relieve context-window limits while preserving task performance; a direct prompt-compression contribution to inference cost, hence accept.",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10888801",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3744906",
+      "identity_tokens": [
+        "DOI:10.1145/3744906"
+      ],
+      "title": "Accelerating Parallel Structures in DNNs via Parallel Fusion and Operator Co-Optimization",
+      "reason": "Magneto is an ML compiler that broadens parallel fusion scope and co-optimizes operators to accelerate DNN inference; compiler-level inference optimization, but demonstrated for generic DNN structures rather than LLM serving, so borderline.",
+      "source_url": "https://doi.org/10.1145/3744906",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.03774",
+      "identity_tokens": [
+        "arXiv:2007.03774"
+      ],
+      "title": "The curious case of developmental BERTology: On sparsity, transfer learning, generalization and the brain",
+      "reason": "This essay connects developmental neuroscience with sparsity, transfer learning and generalization in BERT-era models; a perspective piece with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2007.03774",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.14802",
+      "identity_tokens": [
+        "arXiv:2507.14802"
+      ],
+      "title": "ACME: Adaptive Customization of Large Models via Distributed Systems",
+      "reason": "ACME adaptively customizes large transformer models for deployment closer to users under privacy, latency and energy constraints in distributed systems; deployment customization framework adjacent to serving, but centered on automated model design rather than inference execution, so borderline.",
+      "source_url": "https://arxiv.org/abs/2507.14802",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.16209",
+      "identity_tokens": [
+        "arXiv:2510.16209"
+      ],
+      "title": "StretchySnake: Flexible SSM Training Unlocks Action Recognition Across Spatio-Temporal Scales",
+      "reason": "StretchySnake adapts SSM training to multiple spatio-temporal resolutions for video action recognition; a training method for a video application with no LLM inference relevance.",
+      "source_url": "https://arxiv.org/abs/2510.16209",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3735066",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3735066"
+      ],
+      "title": "Compute-Adaptive Risk Control: A Finite-Sample Calibration Layer for Early-Exit and Cascade Inference",
+      "reason": "Compute-adaptive risk control calibrates policy selection among early-exit and cascade inference policies with finite-sample guarantees; it governs adaptive inference policies, but the contribution is a statistical calibration layer rather than an inference mechanism, so borderline.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3735066",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICDCS63083.2025.00111",
+      "identity_tokens": [
+        "DOI:10.1109/ICDCS63083.2025.00111"
+      ],
+      "title": "Wainscot: Tailoring Model Parallelism to Fit Device Memory Limits",
+      "reason": "Wainscot rebalances model-parallel allocations so training a large DNN fits device memory limits without idle devices; a training memory/parallelism method, not inference.",
+      "source_url": "https://doi.org/10.1109/ICDCS63083.2025.00111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JSTARS.2026.3700391",
+      "identity_tokens": [
+        "DOI:10.1109/JSTARS.2026.3700391"
+      ],
+      "title": "Localized Spatial-State Enhanced Decoder for Infrared Small Target Detection",
+      "reason": "Title explicitly limits the work to a decoder for infrared small target detection, a remote-sensing detection application, with no language-model inference subject in the title.",
+      "source_url": "https://doi.org/10.1109/JSTARS.2026.3700391",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE64628.2025.10992963",
+      "identity_tokens": [
+        "DOI:10.23919/DATE64628.2025.10992963"
+      ],
+      "title": "AttentionLib: A Scalable Optimization Framework for Automated Attention Acceleration on FPGA",
+      "reason": "AttentionLib automatically optimizes and accelerates self-attention on FPGAs, explicitly targeting the memory-intensive decode phase of long-sequence LLM inference; a direct attention-acceleration contribution for LLM inference, hence accept.",
+      "source_url": "https://doi.org/10.23919/DATE64628.2025.10992963",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.11685",
+      "identity_tokens": [
+        "arXiv:2101.11685"
+      ],
+      "title": "CNN with large memory layers",
+      "reason": "Product-key memory layers give CNNs sparse access to very large memory with square-root scaling, demonstrated on computer vision; a vision memory architecture with no LLM inference relevance.",
+      "source_url": "https://arxiv.org/abs/2101.11685",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.08153",
+      "identity_tokens": [
+        "arXiv:2308.08153"
+      ],
+      "title": "Fast Training of NMT Model with Data Sorting",
+      "reason": "Sorting translation sentences by length removes empty-token computation when training transformer NMT models; a training efficiency trick for one application, not inference.",
+      "source_url": "https://arxiv.org/abs/2308.08153",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.03375",
+      "identity_tokens": [
+        "arXiv:2411.03375"
+      ],
+      "title": "Kernel Approximation using Analog In-Memory Computing",
+      "reason": "Analog in-memory computing approximates kernel functions for classical ML algorithms directly in memory arrays; hardware for kernel methods outside transformer/LLM inference, with only generic proximity to inference acceleration, so borderline.",
+      "source_url": "https://arxiv.org/abs/2411.03375",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13455",
+      "identity_tokens": [
+        "arXiv:2506.13455"
+      ],
+      "title": "Stereo sound event localization and detection based on PSELDnet pretraining and BiMamba sequence modeling",
+      "reason": "Title explicitly limits the work to stereo sound event localization and detection, an audio-scene application, with no language-model inference subject stated in the title.",
+      "source_url": "https://arxiv.org/abs/2506.13455",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.10290",
+      "identity_tokens": [
+        "arXiv:2510.10290"
+      ],
+      "title": "Grounded AI for Code Review: Resource-Efficient Large-Model Serving in Enterprise Pipelines",
+      "reason": "A production code-review system serves a quantized open-weight model on a single GPU with multi-tier caching inside enterprise pipelines; a real serving deployment, but the contribution is an application pipeline rather than a reusable inference mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2510.10290",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.15627",
+      "identity_tokens": [
+        "arXiv:2406.15627"
+      ],
+      "title": "Benchmarking Uncertainty Quantification Methods for Large Language Models with LM-Polygraph",
+      "reason": "LM-Polygraph benchmarks uncertainty quantification methods for detecting LLM hallucinations; an evaluation framework for output reliability with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2406.15627",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19326",
+      "identity_tokens": [
+        "arXiv:2607.19326"
+      ],
+      "title": "Selective State-Space Adaptation and Retrieval for Language Model Reasoning",
+      "reason": "MaLoRA makes LoRA adapter scaling input-dependent through selective state-space control for language model reasoning; an adapter architecture for capability, trained per task, with no inference efficiency or serving contribution.",
+      "source_url": "https://arxiv.org/abs/2607.19326",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.09892",
+      "identity_tokens": [
+        "arXiv:2512.09892"
+      ],
+      "title": "Provably Learning from Modern Language Models via Low Logit Rank",
+      "reason": "Modern language models are argued to be learnable because their conditional log-probability matrices have approximately low logit rank; a learning-theory result with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2512.09892",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133192",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133192"
+      ],
+      "title": "Adaptive agentic meta-controller (AAMC): A deep reinforcement learning framework for intelligent SLM/LLM orchestration",
+      "reason": "AAMC is a deep RL meta-controller orchestrating small and large language models in agentic systems to cut cost and latency; orchestration policy for agent workloads is serving-adjacent, but presented as an RL controller study rather than a serving system, so borderline.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.133192",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02550",
+      "identity_tokens": [
+        "arXiv:2602.02550"
+      ],
+      "title": "HyPAC: Cost-Efficient LLMs-Human Hybrid Annotation with PAC Error Guarantees",
+      "reason": "HyPAC adaptively routes annotation inputs among LLMs, reasoning models and human experts with PAC error guarantees at lowest cost; cost-aware routing for an annotation application, adjacent to inference routing but not an LLM serving mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2602.02550",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.26865",
+      "identity_tokens": [
+        "arXiv:2607.26865"
+      ],
+      "title": "Think Short, Defer Smart, Act, and Repeat: Calibrated Reasoning and Uncertainty-Aware Deferral for Edge LLM Agents",
+      "reason": "Think Short, Defer Smart manages reasoning budgets for edge LLM agents and defers to a cloud model under calibrated uncertainty; edge-cloud deferral is inference-relevant, but the contribution is an agent reliability framework rather than a serving mechanism, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2607.26865",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07192",
+      "identity_tokens": [
+        "arXiv:2604.07192"
+      ],
+      "title": "Compact Constraint Encoding for LLM Code Generation: An Empirical Study of Token Economics and Constraint Compliance",
+      "reason": "Compact structured constraint headers are empirically shown to reduce prompt token consumption for LLM code generation across 11 models; token-economics measurement for one application, with no reusable compression mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2604.07192",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03852",
+      "identity_tokens": [
+        "arXiv:2606.03852"
+      ],
+      "title": "FLARE: Fine-Grained Diagnostic Feedback for LLM Code Refinement",
+      "reason": "FLARE uses a lightweight diagnostic model to give line-level bug localization feedback for iterative LLM code refinement; a code-generation application framework with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2606.03852",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.13534",
+      "identity_tokens": [
+        "arXiv:2011.13534"
+      ],
+      "title": "A Survey of Deep Learning Approaches for OCR and Document Understanding",
+      "reason": "This survey reviews deep learning for OCR and document understanding across invoices, contracts and resumes; a document-processing survey unrelated to LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2011.13534",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s13321-024-00808-1",
+      "identity_tokens": [
+        "DOI:10.1186/s13321-024-00808-1"
+      ],
+      "title": "DLM-DTI: a dual language model for the prediction of drug-target interaction with hint-based learning",
+      "reason": "Title explicitly limits the work to prediction of drug-target interaction with a dual language model, a pharmaceutical application, with no inference-system subject in the title.",
+      "source_url": "https://doi.org/10.1186/s13321-024-00808-1",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.08975",
+      "identity_tokens": [
+        "arXiv:2110.08975"
+      ],
+      "title": "Deep Transfer Learning & Beyond: Transformer Language Models in Information Systems Research",
+      "reason": "This information-systems review discusses transformer language models' implications for business and society research; a management-discipline perspective with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2110.08975",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.07517",
+      "identity_tokens": [
+        "arXiv:2408.07517"
+      ],
+      "title": "Advancing spatio-temporal processing through adaptation in spiking neural networks",
+      "reason": "Adaptation-augmented spiking neurons improve spatio-temporal processing on neuromorphic hardware at low power; neuromorphic computing research outside LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2408.07517",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04471",
+      "identity_tokens": [
+        "arXiv:2504.04471"
+      ],
+      "title": "VideoAgent2: Enhancing the LLM-Based Agent System for Long-Form Video Understanding by Uncertainty-Aware CoT",
+      "reason": "VideoAgent2 enhances an LLM agent system for long-form video understanding with uncertainty-aware chain of thought; a video-understanding application framework with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2504.04471",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.03287",
+      "identity_tokens": [
+        "arXiv:2411.03287"
+      ],
+      "title": "The Future of Intelligent Healthcare: A Systematic Analysis and Discussion on the Integration and Impact of Robots Using Large Language Models for Healthcare",
+      "reason": "Title explicitly presents a systematic discussion of robots using LLMs for healthcare, a medical-robotics application topic, with no inference-system subject stated in the title.",
+      "source_url": "https://arxiv.org/abs/2411.03287",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.00029",
+      "identity_tokens": [
+        "arXiv:2306.00029"
+      ],
+      "title": "CodeTF: One-stop Transformer Library for State-of-the-art Code LLM",
+      "reason": "CodeTF is an open-source library unifying data, model and training/inference pipelines for code LLMs; developer tooling for code intelligence rather than an inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2306.00029",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ]
+}
