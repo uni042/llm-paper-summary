@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-d12::provider-gap",
+  "reference_main_sha": "20cbdaeca4786bf4a65092bbab9c6629b5887c79",
+  "record_count": 7,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.10764",
+      "identity_tokens": [
+        "arXiv:2408.10764"
+      ],
+      "title": "Predicting Rewards Alongside Tokens: Non-disruptive Parameter Insertion for Efficient Inference Intervention in Large Language Model",
+      "reason": "Otterは報酬などの校正信号を別モデルでなくTransformer内部へ非破壊的にパラメータ挿入してトークンと同時予測し、推論介入の追加時間・空間を最大98.5％／86.5％削減して既存推論エンジンへ統合できるため、推論介入の高速化に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2408.10764",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 68
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.07098",
+      "identity_tokens": [
+        "arXiv:2606.07098"
+      ],
+      "title": "SigmaScale: LLM Compression with SVD-based Low-Rank Decomposition and Learned Scaling Matrices",
+      "reason": "SigmaScaleは学習可能な行列スケーリングを特異値分解による低ランク圧縮へ組み込み、実効ランクを下げてLlama 3.1 8B・Qwen3-8Bの圧縮後性能を保ち、LLM推論計算コスト削減を目的とする重み圧縮手法である。",
+      "source_url": "https://arxiv.org/abs/2606.07098",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.14426",
+      "identity_tokens": [
+        "arXiv:2412.14426"
+      ],
+      "title": "All-in-One Tuning and Structural Pruning for Domain-Specific LLMs",
+      "reason": "ATPは学習可能なプルーニング決定生成器でファインチューニングと構造化プルーニングを一段階で同時に行い、LoRA配慮の前方計算と疎性正則化で決定した部分構造をそのまま除去できるため、領域特化LLMの推論向けモデル圧縮に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2412.14426",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 76
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.07425",
+      "identity_tokens": [
+        "arXiv:2511.07425"
+      ],
+      "title": "An Evaluation of LLMs Inference on Popular Single-board Computers",
+      "reason": "Raspberry Pi等のシングルボードコンピュータ3機種上で量子化済みLLM 25本をOllamaとLlamafileで実測し、生成スループット・メモリ・消費電力を比較した初の広範な評価で、オンデバイスLLM推論の計測に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2511.07425",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.02877",
+      "identity_tokens": [
+        "arXiv:2504.02877"
+      ],
+      "title": "Revisiting Funnel Transformers for Modern LLM Architectures with Comprehensive Ablations in Training and Inference Configurations",
+      "reason": "Funnel Transformerの系列圧縮をGemma2へ適用し、学習・ファインチューニング・復元方式の組合せを系統的に消融して最大44％のレイテンシ削減を確認しており、現代的LLMアーキテクチャの推論高速化に具体的な指針を与える。",
+      "source_url": "https://arxiv.org/abs/2504.02877",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 80
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.15926",
+      "identity_tokens": [
+        "arXiv:2510.15926"
+      ],
+      "title": "TeLLMe v2: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs",
+      "reason": "TeLLMe v2はテーブルルックアップ行列積エンジンとURAM重みバッファ管理、ストリーミングデータフローにより1.58ビット三値LLMのプリフィルとデコード双方をエッジFPGAで実行する加速器で、低ビットLLM推論ハードウェアに直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2510.15926",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2306.13835",
+      "identity_tokens": [
+        "arXiv:2306.13835"
+      ],
+      "title": "Computron: Serving Distributed Deep Learning Models with Model Parallel Swapping",
+      "reason": "Computronはモデル並列スワッピングにより複数GPUへ分散した大規模モデルを共有クラスタで入れ替えながら提供し、CPU-GPUリンク総帯域でパラメータ転送を高速化するサービングシステムで、分散推論の資源利用効率に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2306.13835",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 83
+    }
+  ],
+  "parent_run_key": "muse-final-20261124-d12",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 40,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261124-1345-muse-d12--chunk-0001-of-0002.json",
+  "provider_gap_ids": [
+    "arXiv:2306.13835",
+    "arXiv:2408.10764",
+    "arXiv:2412.14426",
+    "arXiv:2504.02877",
+    "arXiv:2510.15926",
+    "arXiv:2511.07425",
+    "arXiv:2606.07098"
+  ]
+}
