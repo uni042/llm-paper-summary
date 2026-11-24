@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "46ccc6a8c8c2cbe41137b4166efc96ef82f3e418",
+  "base_commit": "690d869a99eed447b3e9ef7d3aee6bf24acb8e12",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -307,9 +307,11 @@
     "2025-2504.05352-achieving-binary-weight-and-activation-for-llms-using-post-training-quantization.json",
     "2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-pruning-for-efficient-long-context-llm-inference.json",
     "2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.json",
+    "2025-2504.10854-lvlm-csp-accelerating-large-vision-language-models-via-clustering-scattering-and-pruning-for-reasoning-segmentation.json",
     "2025-2504.12984-tilus-a-tile-level-gpgpu-programming-language-for-low-precision-computation.json",
     "2025-2504.14941-windve-collaborative-cpu-npu-vector-embedding.json",
     "2025-2504.15475-speculative-sampling-via-exponential-races.json",
+    "2025-2504.19391-bi-directional-model-cascading-with-proxy-confidence.json",
     "2025-2504.20922-dynamax-dynamic-computing-for-transformers-and-mamba-based-architectures.json",
     "2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.json",
     "2025-2505.00232-scaling-on-device-gpu-inference-for-large-generative-models.json",
@@ -324,6 +326,7 @@
     "2025-2505.10118-why-1-1-1-in-visual-token-pruning-beyond-naive-integration-via-multi-objective-balanced-covering.json",
     "2025-2505.10413-hierarchical-document-refinement-for-long-context-retrieval-augmented-generation.json",
     "2025-2505.10951-subgcache-accelerating-graph-based-rag-with-subgraph-level-kv-cache.json",
+    "2025-2505.11040-efficient-attention-via-pre-scoring-prioritizing-informative-keys-in-transformers.json",
     "2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.json",
     "2025-2505.15154-prolonged-reasoning-is-not-all-you-need-certainty-based-adaptive-routing-for-efficient-llm-mllm-reasoning.json",
     "2025-2505.16221-lightrouter-towards-efficient-llm-collaboration-with-minimal-overhead.json",
@@ -355,9 +358,11 @@
     "2025-2506.17254-near-optimal-online-deployment-and-routing-for-streaming-llms.json",
     "2025-2506.17255-ultrasketchllm-sub-1-bit-llm-compression-via-sketch-and-hardware-friendly-operators.json",
     "2025-2506.18582-parallel-continuous-chain-of-thought-with-jacobi-iteration.json",
+    "2025-2506.18796-context-aware-codellm-eviction-for-ai-assisted-coding.json",
     "2025-2506.20480-gptailor-large-language-model-pruning-through-layer-cutting-and-stitching.json",
     "2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intensive-operators.json",
     "2025-2506.23025-spectra-1-1-scaling-laws-and-efficient-inference-for-ternary-language-models.json",
+    "2025-2506.23635-towards-building-private-llms-exploring-multi-node-expert-parallelism-on-apple-silicon-for-mixture-of-experts-large-lang.json",
     "2025-2507.00715-earn-efficient-inference-acceleration-for-llm-based-generative-recommendation-by-register-tokens.json",
     "2025-2507.00797-veda-efficient-llm-generation-through-voting-based-kv-cache-eviction-and-dataflow-flexible-accelerator.json",
     "2025-2507.03340-degrees-of-freedom-for-linear-attention-distilling-softmax-attention-with-optimal-feature-efficiency.json",
@@ -52759,6 +52764,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2504.10854": {
+      "order": [
+        "2026-11-24T03:28:05+00:00",
+        "2025-2504.10854-lvlm-csp-accelerating-large-vision-language-models-via-clustering-scattering-and-pruning-for-reasoning-segmentation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2504.19391": {
+      "order": [
+        "2026-11-24T03:29:38+00:00",
+        "2025-2504.19391-bi-directional-model-cascading-with-proxy-confidence.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.11040": {
+      "order": [
+        "2026-11-24T03:31:12+00:00",
+        "2025-2505.11040-efficient-attention-via-pre-scoring-prioritizing-informative-keys-in-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2506.18796": {
+      "order": [
+        "2026-11-24T03:32:46+00:00",
+        "2025-2506.18796-context-aware-codellm-eviction-for-ai-assisted-coding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2506.23635": {
+      "order": [
+        "2026-11-24T03:34:19+00:00",
+        "2025-2506.23635-towards-building-private-llms-exploring-multi-node-expert-parallelism-on-apple-silicon-for-mixture-of-experts-large-lang.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66880,6 +66930,21 @@
     "arxiv:2504.00434": [
       "papers/inference/99-other-inference-systems/2025-2504.00434-hera-hybrid-edge-cloud-resource-allocation-for-cost-efficient-ai-agents.md",
       "papers/inference/99-other-inference-systems/2025-2504.00434-hera-hybrid-edge-cloud-resource-allocation-for-cost-efficient-ai-agents.md"
+    ],
+    "arxiv:2504.10854": [
+      "papers/inference/99-other-inference-systems/2025-2504.10854-lvlm-csp-accelerating-large-vision-language-models-via-clustering-scatte.md"
+    ],
+    "arxiv:2504.19391": [
+      "papers/inference/99-other-inference-systems/2025-2504.19391-bi-directional-model-cascading-with-proxy-confidence.md"
+    ],
+    "arxiv:2505.11040": [
+      "papers/inference/99-other-inference-systems/2025-2505.11040-efficient-attention-via-pre-scoring-prioritizing-informative-keys-in-tra.md"
+    ],
+    "arxiv:2506.18796": [
+      "papers/inference/99-other-inference-systems/2025-2506.18796-context-aware-codellm-eviction-for-ai-assisted-coding.md"
+    ],
+    "arxiv:2506.23635": [
+      "papers/inference/12-moe-parallelism-communication/2025-2506.23635-towards-building-private-llms-exploring-multi-node-expert-parallelism-on.md"
     ]
   }
 }

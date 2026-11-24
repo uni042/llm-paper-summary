@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1456本）
+## 自動生成の論文一覧（1460本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4460,6 +4460,10 @@
   実装：[✓](https://github.com/rimads/avey-dpa) ・ リポジトリ内被引用：0  
   本論文は、Transformerの自己注意とRNN系の再帰状態の双方を用いず、長い系列から関連部分だけを選択してトークン間の相互作用を計算する言語モデルAveyを提案する。一方、一般NLPのゼロショット平均精度は1.52BではTransformer++の52.54%に対してAveyは51.53%で、全面的な品質優位ではない。
 
+- **2025-06 · [Context-Aware CodeLLM Eviction for AI-assisted Coding](2025-2506.18796-context-aware-codellm-eviction-for-ai-assisted-coding.md)**  
+  実装：[✓](https://figshare.com/s/1a30559050bc43d5fefd) ・ リポジトリ内被引用：0  
+  自前ホストのCodeLLMサービングで、最終利用時刻・再読み込み時間・将来需要・タスク重要度の4要素からエビクションスコアを計算して追い出し先を決めるCACEを提案し、LRU比でTTFT最大70%減・読み込みオーバーヘッド最大31%減を実機で示した研究。
+
 - **2025-06 · [Attention2D: Communication Efficient Distributed Self-Attention Mechanism](2025-2503.15758-attention2d-communication-efficient-distributed-self-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の自己注意をGPU間で分割する際、Ring 注意機構などの従来の一次元コンテキスト並列では、各GPUが自分のクエリ部分を担当しても、全てのキー・バリュー（KV）を順に受け取る必要がある。A100を16枚または64枚使用したGPT-3型モデルの学習では、Ring 注意機構に対してNOがそれぞれ2.4倍以上・4倍以上の学習性能を示す。
@@ -4556,6 +4560,10 @@
   実装：[✓](https://github.com/LIONS-EPFL/NBL) ・ リポジトリ内被引用：0  
   Neural Block Linearization（NBL）は、特定の注意層について「その入力から出力を線形写像でどの程度予測できるか」を測り、予測しやすい層だけを統計的に推定した線形層で代替する。
 
+- **2025-05 · [Efficient Attention via Pre-Scoring: Prioritizing Informative Keys in Transformers](2025-2505.11040-efficient-attention-via-pre-scoring-prioritizing-informative-keys-in-tra.md)**  
+  実装：[✓](https://github.com/Bruce-JiYuefeng/prescored-transformer) ・ リポジトリ内被引用：0  
+  k平均・kメディアンのクラスタリングやレバレッジスコアで重要なキーを事前に選び、その部分集合だけへハイパーアテンションを適用することで、長文脈の困惑度を12から8.3へ改善する事前スコア付け機構。
+
 - **2025-05 · [EdgeMM: Multi-Core CPU with Heterogeneous AI-Extension and Activation-aware Weight Pruning for Multimodal LLMs at Edge](2025-2505.10782-edgemm-multi-core-cpu-with-heterogeneous-ai-extension-and-activation-awa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エッジでマルチモーダルLLM（MLLM）を実行する際、画像などをトークンに変換するエンコーダ、入力トークンをまとめて処理するLLM プリフィル、出力トークンを逐次生成するデコードでは、計算とメモリの比率が大きく異なる。ただし、これらは実チップを製造して測定した数字ではなく、シミュレーション・実装設計評価に基づく比較である。
@@ -4576,6 +4584,10 @@
   実装：[✓](https://github.com/ZipECHO/Self-Draft) ・ リポジトリ内被引用：0  
   重みをメモリから読み出す費用が大きい状況では、1回の順伝播で得られるトークン数を増やすことが有効である。コーパスから固定的なn-gram候補を検索する方式も、実際の対話・コード生成との分布ずれに弱い。
 
+- **2025-04 · [LVLM_CSP: Accelerating Large Vision Language Models via Clustering, Scattering, and Pruning for Reasoning Segmentation](2025-2504.10854-lvlm-csp-accelerating-large-vision-language-models-via-clustering-scatte.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論セグメンテーション向けに、代表トークンでの粗推論→全トークンの再投入→[SEG]注意での大胆な枝刈りという学習不要の3段階で画像トークンを間引き、計算量65パーセント削減と精度実質維持を両立した手法。
+
 - **2025-04 · [HERA: Hybrid Edge-cloud Resource Allocation for Cost-Efficient AI Agents](2025-2504.00434-hera-hybrid-edge-cloud-resource-allocation-for-cost-efficient-ai-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェントのサブタスク連鎖では振り分けが後続へ波及することに着目し、類似度予測・S-L距離・収束検出・サブタスク分解を階層化した振り分けで、サブタスクの約46パーセントをローカル小モデルへ逃がしてクラウド費用を19〜30パーセント削減する。
@@ -4591,6 +4603,10 @@
 - **2025-04 · [DenseSSM: State Space Models with Dense Hidden Connection for Efficient Large Language Models](2025-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SSMで浅い層の隠れ状態が深い層へ届く前に減衰する問題に対し、複数層の隠れ状態を選択的に射影・ゲートして現在の隠れ状態へ融合する密な層間接続DenseSSMを提案し、RetNetとMambaの精度を上げる。
+
+- **2025-04 · [Bi-directional Model Cascading with Proxy Confidence](2025-2504.19391-bi-directional-model-cascading-with-proxy-confidence.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モデルカスケードの回送判断を、小モデルの中間層由来の自信と、大モデルを呼ばずに自信を予測する補助モデルの双方向で決める方式を提案し、LLaMA-2 13B→70Bで同等精度の回送率を最大42.5%削減した研究。
 
 - **2025-04 · [Achieving Binary Weight and Activation for LLMs Using Post-Training Quantization](2025-2504.05352-achieving-binary-weight-and-activation-for-llms-using-post-training-quan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4894,6 +4910,10 @@
   実装：✓ ・ リポジトリ内被引用：10  
   AI向け計算器の演算性能が急速に増える一方、DRAMやデバイス間通信の帯域は同じ速度で増えない。低バッチの自己回帰生成では重みの再読出しが支配的になり、FLOPsだけで推論性能を評価すると誤る。
 
+- **2024-02 · [A Survey on Transformer Compression](2024-2402.05964-a-survey-on-transformer-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  論文はTransformer圧縮を、構造を保つ圧縮（量子化・知識蒸留）と、構造を変える圧縮（枝刈り・効率的なモデル構造）という二つの上位観点で整理する。
+
 - **2024-10 · [Fast Best-of-N Decoding via Speculative Rejection](2024-2410.20290-fast-best-of-n-decoding-via-speculative-rejection.md)**  
   実装：[✓](https://github.com/Zanette-Labs/SpeculativeRejection) ・ リポジトリ内被引用：9  
   部分応答の報酬が最終報酬と相関することを使い、生成途中で見込みの薄い応答を繰り返し打ち切ることで、Best-of-Nを単一GPUで16倍から32倍効率化する推論時アラインメント。
@@ -4901,10 +4921,6 @@
 - **2024-04 · [MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts](2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md)**  
   実装：[✓](https://github.com/TUDB-Labs/MixLoRA) ・ リポジトリ内被引用：9  
   大規模言語モデルを多くの下流タスクへ適応させるとき、全パラメータを更新する方式は学習用メモリと計算時間が大きい。著者の概要にある「約30%のトークン計算遅延削減」は、元のMixLoRA実装に対する最適化効果を指す総括値であり、通常LoRAより30%速いという意味ではない。
-
-- **2024-02 · [A Survey on Transformer Compression](2024-2402.05964-a-survey-on-transformer-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  論文はTransformer圧縮を、構造を保つ圧縮（量子化・知識蒸留）と、構造を変える圧縮（枝刈り・効率的なモデル構造）という二つの上位観点で整理する。
 
 - **2024-01 · [A Comprehensive Survey of Compression Algorithms for Language Models](2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -5006,6 +5022,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   Taipanはこの弱点を、すべてのトークンへ全面的な注意を適用するのではなく、軽量な二値ゲートで選別したトークンの表現だけを補強することで緩和する。学習時には選択率が目標値15%へ近づく損失を加え、選別の離散性をStraight-Through Gumbel-Softmaxで扱う。
 
+- **2024-10 · [LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions](2024-2410.05462-levattention-time-space-and-streaming-efficient-algorithm-for-heavy-atte.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  実験は画像分類用の視覚Transformer（ViT）であり、LLMのKVキャッシュ圧縮やGPU推論時間の改善を直接実証したものではない。
+
 - **2024-08 · [Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations](2024-2408.03130-inference-optimizations-for-large-language-models-effects-challenges-and.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Donisch、Schacht、Lanquillonの論文は、LLMの推論資源を削減する研究を、量子化、剪定、知識蒸留、アーキテクチャ最適化という四群に分けた文献レビューである。§III-Dで紹介する投機的復号の2〜3倍の遅延改善は参照論文に帰属する値であり、このレビューの独立した再現結果ではない。
@@ -5065,10 +5085,6 @@
 - **2024-10 · [Optimized Spatial Architecture Mapping Flow for Transformer Accelerators](2024-2410.07407-optimized-spatial-architecture-mapping-flow-for-transformer-accelerators.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   SAMT（Spatial 構成 Mapping for Transformers）は、Transformer推論の行列演算をTPU型・NVDLA型などの空間アクセラレータへ割り当てる際に、演算子融合の選択とPE（processing element）上のデータフローを同時に最適化する探索フローである。
-
-- **2024-10 · [LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions](2024-2410.05462-levattention-time-space-and-streaming-efficient-algorithm-for-heavy-atte.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  実験は画像分類用の視覚Transformer（ViT）であり、LLMのKVキャッシュ圧縮やGPU推論時間の改善を直接実証したものではない。
 
 - **2024-10 · [FastAttention: Extend FlashAttention2 to NPUs and Low-resource GPUs](2024-2410.16663-fastattention-extend-flashattention2-to-npus-and-low-resource-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -5413,7 +5429,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：111  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：112  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
@@ -5793,7 +5809,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：382  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：383  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（79本）
+## 自動生成の論文一覧（80本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -312,6 +312,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2025-07 · [Photonic Fabric Platform for AI Accelerators](2025-2507.14000-photonic-fabric-platform-for-ai-accelerators.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案のPhotonic Fabric Appliance（PFA）は、HBM3EとDDR5を含むメモリモジュールを光スイッチで接続し、16モジュール構成で最大32TBの共有メモリと115Tbpsの全対全デジタル交換を想定する。
+
+- **2025-06 · [Towards Building Private LLMs: Exploring Multi-Node Expert Parallelism on Apple Silicon for Mixture-of-Experts Large Language Models](2025-2506.23635-towards-building-private-llms-exploring-multi-node-expert-parallelism-on.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Mac Studioクラスタに132BのMoEモデルDBRXを専門家並列で載せ、ドライバの重み固定処理・負荷分散・通信回数を最適化して生成6.1トークン/秒とH100構成比1.15倍のコスト効率を実測した私設LLM基盤の研究。
 
 ### 3年前（2023-12〜2024-11）
 
