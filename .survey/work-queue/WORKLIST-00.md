@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-24T03:59:56+00:00`
+Generated: `2026-11-24T04:12:50+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-11-24T03:59:56+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **200** / 未claim総数: **200** / このworker向け: **67**
+ready総数: **195** / 未claim総数: **195** / このworker向け: **65**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -73,22 +73,20 @@ ready総数: **200** / 未claim総数: **200** / このworker向け: **67**
 | 54 | 10 | research | DOI:10.36227/techrxiv.177205041.14536362/v1 | Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores | [primary](https://doi.org/10.36227/techrxiv.177205041.14536362/v1) | `papers/inference/99-other-inference-systems/2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-tensor-cores.md` |
 | 55 | 10 | research | DOI:10.18653/v1/2026.findings-acl.367 | EOP-LLM: Energy Oriented Pruning for Large Language Models | [primary](https://doi.org/10.18653/v1/2026.findings-acl.367) | `papers/inference/99-other-inference-systems/0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.md` |
 | 56 | 10 | research | arXiv:2512.22925 | Argus: Token Aware Distributed LLM Inference Optimization | [primary](https://arxiv.org/abs/2512.22925) | `papers/inference/99-other-inference-systems/2025-2512.22925-argus-token-aware-distributed-llm-inference-optimization.md` |
-| 57 | 8 | research | arXiv:2510.09017 | Value-State Gated Attention for Mitigating Extreme-Token Phenomena in Transformers | [primary](https://arxiv.org/abs/2510.09017) | `papers/inference/99-other-inference-systems/2025-2510.09017-value-state-gated-attention-for-mitigating-extreme-token-phenomena-in-transformers.md` |
-| 58 | 6 | research | arXiv:2509.24257 | VeriLLM: A Lightweight Framework for Publicly Verifiable Decentralized Inference | [primary](https://arxiv.org/abs/2509.24257) | `papers/inference/99-other-inference-systems/2025-2509.24257-verillm-a-lightweight-framework-for-publicly-verifiable-decentralized-inference.md` |
-| 59 | 3 | research | arXiv:2510.10448 | RECON: Reasoning with Condensation for Efficient Retrieval-Augmented Generation | [primary](https://arxiv.org/abs/2510.10448) | `papers/inference/99-other-inference-systems/2025-2510.10448-recon-reasoning-with-condensation-for-efficient-retrieval-augmented-generation.md` |
-| 60 | 3 | research | DOI:10.1109/ICDEW67478.2025.00020 | LLM-MS: A Multi-Model LLM Search Engine | [primary](https://doi.org/10.1109/ICDEW67478.2025.00020) | `papers/inference/99-other-inference-systems/2025-fa0fa1f7bd52-llm-ms-a-multi-model-llm-search-engine.md` |
-| 61 | 1 | research | arXiv:2510.24390 | Improving LLM Reasoning via Dependency-Aware Query Decomposition and Logic-Parallel Content Expansion | [primary](https://arxiv.org/abs/2510.24390) | `papers/inference/99-other-inference-systems/2025-2510.24390-improving-llm-reasoning-via-dependency-aware-query-decomposition-and-logic-parallel-content-expansion.md` |
-| 62 | 0 | research | DOI:10.1016/j.compeleceng.2026.111505 | Component-aware self-speculative decoding for hybrid language models: An architectural viability study | [primary](https://doi.org/10.1016/j.compeleceng.2026.111505) | `papers/inference/99-other-inference-systems/2026-component-aware-self-speculative-decoding-hybrid-language-models.md` |
-| 63 | 0 | research | arXiv:2509.22512 | AxLLM: accelerator architecture for large language models with computation reuse capability | [primary](https://arxiv.org/abs/2509.22512) | `papers/inference/99-other-inference-systems/2025-2509.22512-axllm-accelerator-architecture-for-large-language-models-with-computation-reuse-capability.md` |
-| 64 | 0 | research | SemanticScholar:0c3001da91dd77f7b906026bd6f5c4b44a1ec575 | Edinburgh Research Explorer Dynamic memory compression Retrofitting LLMs for accelerated inference | [primary](https://www.semanticscholar.org/paper/0c3001da91dd77f7b906026bd6f5c4b44a1ec575) | `papers/inference/99-other-inference-systems/0000-514f83264c8b-edinburgh-research-explorer-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md` |
-| 65 | 0 | research | SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07 | K UN S ERVE : Parameter-centric Memory Management for Efficient Memory Throttling Handling in LLM Serving | [primary](https://www.semanticscholar.org/paper/435390ada7cb1b2e890b34dc036764d5098dee07) | `papers/inference/99-other-inference-systems/0000-3b396464dc29-k-un-s-erve-parameter-centric-memory-management-for-efficient-memory-throttling-handling-in-llm-serving.md` |
-| 66 | 0 | research | SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6 | UvA-DARE (Digital Academic Repository) Reward-Guided Speculative Decoding for Efficient LLM Reasoning | [primary](https://www.semanticscholar.org/paper/acaaa08dba4a23b0b68a2c455ded10f7146674b6) | `papers/inference/99-other-inference-systems/0000-a7044071c51b-uva-dare-digital-academic-repository-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md` |
-| 67 | 0 | research | SemanticScholar:f6b06fd0d5934422f800efe3677bcb209bec91ee | T OWARDS P RIVACY -P RESERVING LLM I NFERENCE VIA C OLLABORATIVE O BFUSCATION (T ECHNICAL R EPORT ) | [primary](https://www.semanticscholar.org/paper/f6b06fd0d5934422f800efe3677bcb209bec91ee) | `papers/inference/99-other-inference-systems/0000-d2ff8abe23fb-t-owards-p-rivacy-p-reserving-llm-i-nference-via-c-ollaborative-o-bfuscation-t-echnical-r-eport.md` |
+| 57 | 8 | research | SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f | : Conditional Computation of Transformer Models for Efﬁcient Inference | [primary](https://www.semanticscholar.org/paper/8c4e2a1c421d91a75961e1a91a378cbaf4289b0f) | `papers/inference/99-other-inference-systems/0000-f1582c313b41-conditional-computation-of-transformer-models-for-efficient-inference.md` |
+| 58 | 4 | research | SemanticScholar:2cc4c4451cd258c6b621ec97870b93887941e8ad | CacheGen: Fast Context Loading for Language Model Applications via KV Cache Streaming | [primary](https://www.semanticscholar.org/paper/2cc4c4451cd258c6b621ec97870b93887941e8ad) | `papers/inference/99-other-inference-systems/0000-bc0dfc0b468d-cachegen-fast-context-loading-for-language-model-applications-via-kv-cache-streaming.md` |
+| 59 | 3 | research | DOI:10.1109/ICDEW67478.2025.00020 | LLM-MS: A Multi-Model LLM Search Engine | [primary](https://doi.org/10.1109/ICDEW67478.2025.00020) | `papers/inference/99-other-inference-systems/2025-fa0fa1f7bd52-llm-ms-a-multi-model-llm-search-engine.md` |
+| 60 | 1 | research | arXiv:2510.24390 | Improving LLM Reasoning via Dependency-Aware Query Decomposition and Logic-Parallel Content Expansion | [primary](https://arxiv.org/abs/2510.24390) | `papers/inference/99-other-inference-systems/2025-2510.24390-improving-llm-reasoning-via-dependency-aware-query-decomposition-and-logic-parallel-content-expansion.md` |
+| 61 | 0 | research | arXiv:2511.18977 | FastForward Pruning: Efficient LLM Pruning via Single-Step Reinforcement Learning | [primary](https://arxiv.org/abs/2511.18977) | `papers/inference/99-other-inference-systems/2025-2511.18977-fastforward-pruning-efficient-llm-pruning-via-single-step-reinforcement-learning.md` |
+| 62 | 0 | research | arXiv:2406.18173 | UIO-LLMs: Unbiased Incremental Optimization for Long-Context LLMs | [primary](https://arxiv.org/abs/2406.18173) | `papers/inference/99-other-inference-systems/2024-2406.18173-uio-llms-unbiased-incremental-optimization-for-long-context-llms.md` |
+| 63 | 0 | research | SemanticScholar:3ce4934467503e25801e8bc7ab94425fb2d65380 | Smart Routing: Cost-Effective Multi-LLM Serving in AIOS | [primary](https://www.semanticscholar.org/paper/3ce4934467503e25801e8bc7ab94425fb2d65380) | `papers/inference/99-other-inference-systems/0000-0427ffa977bc-smart-routing-cost-effective-multi-llm-serving-in-aios.md` |
+| 64 | 0 | research | SemanticScholar:8d0525ec83fad54f638ac86ba0d428ae6226d8ad | C HUNK LLM: A L IGHTWEIGHT P LUGGABLE F RAME - WORK FOR A CCELERATING LLM S I NFERENCE | [primary](https://www.semanticscholar.org/paper/8d0525ec83fad54f638ac86ba0d428ae6226d8ad) | `papers/inference/99-other-inference-systems/0000-a1f72e13ea4b-c-hunk-llm-a-l-ightweight-p-luggable-f-rame-work-for-a-ccelerating-llm-s-i-nference.md` |
+| 65 | 0 | research | SemanticScholar:dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a | A Multi-Engine Dataflow for MoE Decoding on Scratchpad-Based Tensor Accelerators | [primary](https://www.semanticscholar.org/paper/dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a) | `papers/inference/99-other-inference-systems/0000-67a90d0976d5-a-multi-engine-dataflow-for-moe-decoding-on-scratchpad-based-tensor-accelerators.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127113** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **65373** / 監査再投入 **0** / 機械規則適用後 **123480** / 選抜率 **50.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127126** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **65379** / 監査再投入 **0** / 機械規則適用後 **123493** / 選抜率 **50.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
