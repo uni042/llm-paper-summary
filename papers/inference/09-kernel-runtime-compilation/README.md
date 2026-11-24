@@ -1104,6 +1104,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   MBOK（Multiple Boolean Kernels）の基本表現は、通常の実数重み行列を複数の符号行列とチャネル別スケールの和で近似するものである。各カーネルの重みは1-bitで、入力側・出力側の実数スケールを別途持つ。元のFP重みから順に近似成分を抽出し、残差へ同じ分解を繰り返すため、単一の符号行列より表現力が高い。
 
+- **2025-05 · [COUNTDOWN: Contextually Sparse Activation Filtering Out Unnecessary Weights in Down Projection](2025-2505.17701-countdown-contextually-sparse-activation-filtering-out-unnecessary-weigh.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  下方射影の重み付き和という見方から、直接係数と間接係数で残す中間次元を選ぶ二つの疎な活性化を導き、理想条件で90パーセントの計算省略と最良5.5パーセントの低下、予測器なし方式ではCATS比で最大29.4パーセント良い性能保持を示す。
+
 - **2025-04 · [Tilus: A Tile-Level GPGPU Programming Language for Low-Precision Computation](2025-2504.12984-tilus-a-tile-level-gpgpu-programming-language-for-low-precision-computat.md)**  
   実装：[✓](https://github.com/NVIDIA/tilus) ・ リポジトリ内被引用：1  
   一から八ビットの任意幅の低精度型を原生的に扱い、配置の代数と再解釈で配置変換を消しパイプライン化を保つタイル単位の言語で、低精度カーネルが既存コンパイラより一・七五倍と二・六一倍、手書きカーネルより一・二九倍と一・〇三倍速くなった。
@@ -1211,10 +1215,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-05 · [FireQ: Fast INT4-FP8 Kernel and RoPE-aware Quantization for LLM Inference Acceleration](2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みINT4・活性FP8の混合精度カーネルとRoPE配慮の外れ値平滑化、3段パイプラインの注意カーネルを共同設計した量子化推論手法。FFNでQServe比1.68倍、プリフィルで1.26倍を精度を保って達成。
-
-- **2025-05 · [COUNTDOWN: Contextually Sparse Activation Filtering Out Unnecessary Weights in Down Projection](2025-2505.17701-countdown-contextually-sparse-activation-filtering-out-unnecessary-weigh.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  下方射影の重み付き和という見方から、直接係数と間接係数で残す中間次元を選ぶ二つの疎な活性化を導き、理想条件で90パーセントの計算省略と最良5.5パーセントの低下、予測器なし方式ではCATS比で最大29.4パーセント良い性能保持を示す。
 
 - **2025-04 · [Pruning Laws for Large Language Models](2025-2504.04342-pruning-laws-for-large-language-models.md)**  
   実装：[✓](https://github.com/parmanu-lcs2/pruning_laws) ・ リポジトリ内被引用：0  

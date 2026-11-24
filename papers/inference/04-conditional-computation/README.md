@@ -146,6 +146,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：✓ ・ リポジトリ内被引用：1  
   視覚言語モデル（Vision-Language モデル; VLM）では、画像エンコーダが数百〜数千の視覚トークンを生成する。言語モデルへ渡す視覚トークンを減らせば事前処理（プリフィル）の計算量と遅延を削減できるが、「どのトークンを残すか」を学習する段階で問題が生じる。この演算子不一致が重要度学習を不安定にする。
 
+- **2026-08 · [Batch-wise Adaptive Pruning: Periodic Neuron Activation-Aware Weight Pruning for Language Reasoning Model](2026-2608.14003-batch-wise-adaptive-pruning-periodic-neuron-activation-aware-weight-prun.md)**  
+  実装：[✓](https://github.com/matsuolab/batch-wise-prune) ・ リポジトリ内被引用：1  
+  バッチ共有マスクで崩れる閾値型の適応枝刈りを、周期的なtop-k選択と重要度を蓄積する活性化メモリで置き換え、バッチ4・スパース率50パーセントでTEALを39.7ポイント上回り1.40倍の高速化を得る学習不要の枝刈り。
+
 - **2026-07 · [Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models](2026-2607.10640-spectral-heat-flow-for-conservative-token-condensation-in-vision-languag.md)**  
   実装：[✓](https://github.com/Lzy-dot/SpecFlow) ・ リポジトリ内被引用：1  
   特徴類似グラフ上の熱拡散で重要度を領域単位に平滑化し、四分木の領域配分と捨てる側のシンク凝縮で被覆と統計を守る学習不要の視覚トークン圧縮で、約9割削減でも性能の約96パーセントを保った。
@@ -359,10 +363,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2026-08 · [CoverPrune: Coverage-Driven Token Pruning for 3D VLMs via Optimal Transport](2026-2608.13226-coverprune-coverage-driven-token-pruning-for-3d-vlms-via-optimal-transpo.md)**  
   実装：[✓](https://github.com/Brucess/CoverPrune) ・ リポジトリ内被引用：0  
   3次元視覚言語モデルの視覚トークン枝刈りを多様性最大化から視覚的証拠の被覆保存へ転換し、特徴・空間・時間のコストと情報量容量を持つ最適輸送と貪欲近似で、保持率5%でも崩れにくい学習不要の枝刈りを実現する研究。
-
-- **2026-08 · [Batch-wise Adaptive Pruning: Periodic Neuron Activation-Aware Weight Pruning for Language Reasoning Model](2026-2608.14003-batch-wise-adaptive-pruning-periodic-neuron-activation-aware-weight-prun.md)**  
-  実装：[✓](https://github.com/matsuolab/batch-wise-prune) ・ リポジトリ内被引用：0  
-  バッチ共有マスクで崩れる閾値型の適応枝刈りを、周期的なtop-k選択と重要度を蓄積する活性化メモリで置き換え、バッチ4・スパース率50パーセントでTEALを39.7ポイント上回り1.40倍の高速化を得る学習不要の枝刈り。
 
 - **2026-08 · [Allocation Before Ranking: Decoupled Token Compression for OmniLLMs](2026-2608.01665-allocation-before-ranking-decoupled-token-compression-for-omnillms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -638,6 +638,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：[✓](https://github.com/alibaba/EfficientAI) ・ リポジトリ内被引用：4  
   重みの量子化や枝刈りとは別に、入力活性の多くをゼロにできれば、ゼロに対応する重み列を読み込まずに済む。論文の代表例では、LLaMA2-7Bのモデル全体の活性疎性40%で困惑度の悪化が5.47から5.64への0.17にとどまり、7種のゼロ例示タスクの平均得点は66.69から66.15への0.54ポイント低下である。
 
+- **2025-03 · [Lifting the Veil on Visual Information Flow in MLLMs: Unlocking Pathways to Faster Inference](2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-.md)**  
+  実装：[✓](https://github.com/ustc-hyin/HiMAP) ・ リポジトリ内被引用：4  
+  画像トークンの視覚情報フローが浅い層では指示トークンへの注入、深い層では画像トークン同士の集約へ転換することを突き止め、層ごとに違う重要度基準で二段階に画像トークンを落とすHiMAPで計算量を約65%以上減らすマルチモーダル推論の高速化。
+
 - **2025-08 · [AdaptInfer: Adaptive Token Pruning for Vision-Language Model Inference via Dynamical Text Guidance](2025-2508.06084-adaptinfer-adaptive-token-pruning-for-vision-language-model-inference-vi.md)**  
   実装：[✓](https://github.com/weiczh02/AdaptInfer-base) ・ リポジトリ内被引用：3  
   AdaptInferは、質問文のうち画像のどの部分を見るべきかを決める文章トークンが、Transformerの深さに応じて変わることを利用し、各枝刈り層で文章の重要度を再計算して画像トークンを選ぶ方式である。
@@ -649,10 +653,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2025-05 · [ToDRE: Effective Visual Token Pruning via Token Diversity and Task Relevance](2025-2505.18757-todre-effective-visual-token-pruning-via-token-diversity-and-task-releva.md)**  
   実装：[✓](https://github.com/Yrdal3910/ToDRE) ・ リポジトリ内被引用：3  
   既存の削減方式は、視覚トークン同士の類似度か、テキストと視覚の注意スコアのどちらか一方を重複の指標として使うことが多い。
-
-- **2025-03 · [Lifting the Veil on Visual Information Flow in MLLMs: Unlocking Pathways to Faster Inference](2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-.md)**  
-  実装：[✓](https://github.com/ustc-hyin/HiMAP) ・ リポジトリ内被引用：3  
-  画像トークンの視覚情報フローが浅い層では指示トークンへの注入、深い層では画像トークン同士の集約へ転換することを突き止め、層ごとに違う重要度基準で二段階に画像トークンを落とすHiMAPで計算量を約65%以上減らすマルチモーダル推論の高速化。
 
 - **2025-09 · [HERO: Rethinking Visual Token Early Dropping in High-Resolution Large Vision-Language Models](2025-2509.13067-hero-rethinking-visual-token-early-dropping-in-high-resolution-large-vis.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
