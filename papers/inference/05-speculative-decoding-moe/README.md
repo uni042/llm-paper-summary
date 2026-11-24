@@ -1318,6 +1318,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：2  
   候補長（Speculation Length, SL）を大きくすると受理が続く局面ではtarget呼出しを節約できるが、棄却が多い局面では不要な下書き計算と検証負荷が増える。特にコード生成・対話・要約など異種要求を同じバッチに入れると、全要求に同じSLを固定する方式は一部の要求にとって不利になる。
 
+- **2025-06 · [PredGen: Accelerated Inference of Large Language Models through Input-Time Speculation for Real-Time Speech Interaction](2025-2506.15556-predgen-accelerated-inference-of-large-language-models-through-input-tim.md)**  
+  実装：[✓](https://github.com/jacklishufan/PredGen) ・ リポジトリ内被引用：2  
+  テキストをトークン単位で逐次出力できても、自然なイントネーションを持つ音声を文単位で合成するなら、第一文が完成するまでの時間（time to first sentence; TTFS）が遅延の主要部分になる。LiとGroverのPredGenは、利用者がまだ発話している時間を、LLM応答の先行計算へ転用することでこの待ち時間を削る。
+
 - **2025-06 · [POSS: Position Specialist Generates Better Draft for Speculative Decoding](2025-2506.03566-poss-position-specialist-generates-better-draft-for-speculative-decoding.md)**  
   実装：[✓](https://github.com/shrango/PosS) ・ リポジトリ内被引用：2  
   PosS（Position Specialists）は、投機的デコードのドラフトモデルが後半の投機位置ほど予測に失敗しやすい問題を、位置別に学習した複数のドラフト層で改善する研究である。最初の位置では対象LLMの正確な隠れ状態を利用できるが、後半の位置では前のドラフトが予測した不完全な特徴を入力にするため、誤差が累積する。
@@ -1381,10 +1385,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-07 · [SpecASR: Accelerating LLM-based Automatic Speech Recognition via Speculative Decoding](2025-2507.18181-specasr-accelerating-llm-based-automatic-speech-recognition-via-speculat.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   SpecASRは、大規模言語モデルを復号器に用いる自動音声認識（ASR）の逐次生成を短縮する投機的復号方式である。
-
-- **2025-06 · [PredGen: Accelerated Inference of Large Language Models through Input-Time Speculation for Real-Time Speech Interaction](2025-2506.15556-predgen-accelerated-inference-of-large-language-models-through-input-tim.md)**  
-  実装：[✓](https://github.com/jacklishufan/PredGen) ・ リポジトリ内被引用：1  
-  テキストをトークン単位で逐次出力できても、自然なイントネーションを持つ音声を文単位で合成するなら、第一文が完成するまでの時間（time to first sentence; TTFS）が遅延の主要部分になる。LiとGroverのPredGenは、利用者がまだ発話している時間を、LLM応答の先行計算へ転用することでこの待ち時間を削る。
 
 - **2025-06 · [Guided Speculative Inference for Efficient Test-Time Alignment of LLMs](2025-2506.04118-guided-speculative-inference-for-efficient-test-time-alignment-of-llms.md)**  
   実装：[✓](https://github.com/j-geuter/GSI) ・ リポジトリ内被引用：1  
@@ -1501,7 +1501,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   先読みデコードは、対象LLMを未来位置へ並列反復して途中の正しい短いトークン列を蓄積し、現在接頭辞に合う候補を一括検証して、追加モデルなしに逐次ステップとメモリ帯域待ちを減らす。
 
 - **2024-07 · [Online Speculative Decoding](2023-2310.07177-online-speculative-decoding.md)**  
-  実装：[✓](https://github.com/LiuXiaoxuanPKU/OSD) ・ リポジトリ内被引用：119  
+  実装：[✓](https://github.com/LiuXiaoxuanPKU/OSD) ・ リポジトリ内被引用：120  
   投機的復号で得られる目標モデルの確率分布を教師信号として下書きモデルをオンライン更新し、問い合わせ分布の変化に追従して受理率と推論速度を高める方式。
 
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
@@ -1757,7 +1757,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：791  
+  実装：✓ ・ リポジトリ内被引用：792  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  
