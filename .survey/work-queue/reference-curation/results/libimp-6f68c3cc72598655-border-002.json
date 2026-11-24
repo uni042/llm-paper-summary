@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6f68c3cc72598655-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.16114",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.16114",
+    "identity_tokens": [
+      "arXiv:2608.16114"
+    ],
+    "reason": "HyperSkillはエージェントの経験メモリをハイパーグラフ構造で保持し、スキルの合成関係を使った検索と自己進化を行うメモリ枠組みだが、対象はエージェントの手続き知識の再利用であり、推論実行系やサービングへの機構的貢献はない。",
+    "first_checked_at": "2026-11-24T21:12:36+00:00",
+    "last_checked_at": "2026-11-24T21:12:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill Memory"
+  },
+  "processed_at": "2026-11-24T21:12:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6f68c3cc7259",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-24T21:09:09+00:00",
-  "record_count": 14854,
+  "updated_at": "2026-11-24T21:12:37+00:00",
+  "record_count": 14868,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -213095,6 +213095,202 @@
         "worker-worklist discovery_review"
       ],
       "title": "Efficient Long-context Language Model Training by Core Attention Disaggregation"
+    },
+    "arXiv:2510.18533": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.18533",
+      "identity_tokens": [
+        "arXiv:2510.18533"
+      ],
+      "reason": "タイトルが話者照合（音声バイオメトリクス応用）を明示しており、MoEはその話者照合モデルの内部構成要素にすぎず、LLM推論システムの主題ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Noise-Conditioned Mixture-of-Experts Framework for Robust Speaker Verification"
+    },
+    "arXiv:2401.17868": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.17868",
+      "identity_tokens": [
+        "arXiv:2401.17868"
+      ],
+      "reason": "タイトルがSegment Anything Modelのパラメータ効率ファインチューニングを明示しており、対象は画像セグメンテーション用ビジョンモデルの微調整であってLLM推論システムの主題ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Convolution Meets LoRA: Parameter Efficient Finetuning for Segment Anything Model"
+    },
+    "arXiv:2410.02749": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02749",
+      "identity_tokens": [
+        "arXiv:2410.02749"
+      ],
+      "reason": "タイトルが合成編集系列による言語モデルの学習でコード合成能力を改善する学習手法を明示しており、推論・デコード機構の主題ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Training Language Models on Synthetic Edit Sequences Improves Code Synthesis"
+    },
+    "arXiv:2501.15087": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.15087",
+      "identity_tokens": [
+        "arXiv:2501.15087"
+      ],
+      "reason": "タイトルがLLMベース推薦のためのパッチ学習を明示しており、対象は推薦システムという応用領域の学習手法であってLLM推論システムの主題ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Multi-Grained Patch Training for Efficient LLM-based Recommendation"
+    },
+    "arXiv:2610.21893": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.21893",
+      "identity_tokens": [
+        "arXiv:2610.21893"
+      ],
+      "reason": "GACC-Benchは高レベル目標に応じて情報を保持する目標適応型文脈圧縮の能力をLLM横断で測るベンチマークであり、対象はモデル能力の評価であって文脈圧縮を実行する推論システム機構の提案ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "GACC-Bench: Benchmarking Goal-Adaptive Context Compression Ability across Large Language Models"
+    },
+    "arXiv:2505.22922": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22922",
+      "identity_tokens": [
+        "arXiv:2505.22922"
+      ],
+      "reason": "LoRA等のパラメータ・メモリ効率手法を事前学習へ適用する際のアルゴリズム的進展とベンチマークを扱う研究であり、対象はLLM事前学習の効率化であって推論への具体的適用は示されていない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Scalable Parameter and Memory Efficient Pretraining for LLM: Recent Algorithmic Advances and Benchmarking"
+    },
+    "arXiv:2605.04418": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.04418",
+      "identity_tokens": [
+        "arXiv:2605.04418"
+      ],
+      "reason": "多様体制約付き学習の動力学を活性化の観点から解析しMuon等の行列最適化器や重み正規化との相互作用を論じる事前学習の研究であり、対象は学習の安定化と加速であって推論への適用はない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Demystifying Manifold Constraints in LLM Pre-training"
+    },
+    "arXiv:2512.03644": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03644",
+      "identity_tokens": [
+        "arXiv:2512.03644"
+      ],
+      "reason": "FFTrainerは余剰ネットワーク容量を使って学習状態を高速に保存・復旧し、ノード障害時のロールバックを防ぐLLM学習の耐障害システムであり、対象は学習チェックポイント管理であって推論への貢献はない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "FFTrainer: Fast Failover in Large-Language Model Training with Almost-Free State Management"
+    },
+    "arXiv:2603.19987": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19987",
+      "identity_tokens": [
+        "arXiv:2603.19987"
+      ],
+      "reason": "LLMの事後学習RLが潜在パターンの洗練にとどまる能力上限を、コンパクトなMarkov状態の再導入で破ろうとするRL定式化の研究であり、対象は事後学習の能力向上であって推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-24T21:12:37+00:00",
+      "last_checked_at": "2026-11-24T21:12:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Breaking the Capability Ceiling of LLM Post-Training by Reintroducing Markov States"
+    },
+    "arXiv:2011.14243": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.14243",
+      "identity_tokens": [
+        "arXiv:2011.14243"
+      ],
+      "reason": "SRIFTYはクラウド上の分散ニューラルネットワーク学習について、共有インスタンスの性能ばらつきを特性評価しコストとスループットの観点から最適なVM構成を選ぶ研究であり、対象は学習のクラウド資源選択である。",
+      "first_checked_at": "2026-11-24T21:12:37+00:00",
+      "last_checked_at": "2026-11-24T21:12:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "SRIFTY: Swift and Thrifty Distributed Neural Network Training on the Cloud"
+    },
+    "arXiv:2507.09205": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.09205",
+      "identity_tokens": [
+        "arXiv:2507.09205"
+      ],
+      "reason": "チベット語の大規模コーパス構築とQwen2.5-7Bへの継続事前学習による低リソース言語適応の研究であり、対象は言語モデルの事前学習と言語カバレッジであって推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-24T21:12:37+00:00",
+      "last_checked_at": "2026-11-24T21:12:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "From Curated Data to Scalable Models: Continual Pre-training of Dense and MoE Large Language Models for Tibetan"
+    },
+    "arXiv:2508.16676": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.16676",
+      "identity_tokens": [
+        "arXiv:2508.16676"
+      ],
+      "reason": "WISCAはネットワーク構造を変えず重みパターンを再スケーリングしてLLM学習の効率と品質を上げるモデル遷移手法であり、対象は学習過程の最適化であって推論への適用は示されていない。",
+      "first_checked_at": "2026-11-24T21:12:37+00:00",
+      "last_checked_at": "2026-11-24T21:12:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "WISCA: A Lightweight Model Transition Method to Improve LLM Training via Weight Scaling"
+    },
+    "DOI:10.1109/icoecit68303.2026.11497966": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icoecit68303.2026.11497966",
+      "identity_tokens": [
+        "DOI:10.1109/icoecit68303.2026.11497966"
+      ],
+      "reason": "LLM学習プロトコル内のメモリ断片化やボトルネックに対し、強化学習でメモリ需要を予測するニューラルネットワーク支援の動的メモリ割り当てを提案するが、対象は学習時のメモリ管理であって推論時のメモリ階層への適用はない。",
+      "first_checked_at": "2026-11-24T21:12:37+00:00",
+      "last_checked_at": "2026-11-24T21:12:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Neural Network Assisted Dynamic Memory Allocation in Large Language Model Training Protocols"
+    },
+    "arXiv:2204.02922": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.02922",
+      "identity_tokens": [
+        "arXiv:2204.02922"
+      ],
+      "reason": "事前学習言語モデルの固定化した注意パターンを注意ガイディングで是正し情報検索・NLPタスクの性能を上げる手法であり、対象はPLMの精度改善であって推論高速化やサービングへの貢献はない。",
+      "first_checked_at": "2026-11-24T21:12:37+00:00",
+      "last_checked_at": "2026-11-24T21:12:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Paying More Attention to Self-attention: Improving Pre-trained Language Models via Attention Guiding"
     }
   }
 }

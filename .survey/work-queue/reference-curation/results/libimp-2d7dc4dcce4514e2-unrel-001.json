@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d7dc4dcce4514e2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.18533",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.18533",
+    "identity_tokens": [
+      "arXiv:2510.18533"
+    ],
+    "reason": "タイトルが話者照合（音声バイオメトリクス応用）を明示しており、MoEはその話者照合モデルの内部構成要素にすぎず、LLM推論システムの主題ではない。",
+    "first_checked_at": "2026-11-24T21:12:36+00:00",
+    "last_checked_at": "2026-11-24T21:12:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Noise-Conditioned Mixture-of-Experts Framework for Robust Speaker Verification"
+  },
+  "processed_at": "2026-11-24T21:12:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d7dc4dcce45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

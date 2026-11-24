@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6e7dc2387aac33d0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.13149",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.13149",
+    "identity_tokens": [
+      "arXiv:2609.13149"
+    ],
+    "reason": "BudgetBenchはローカルLLMエージェントのメモリ戦略を、呼び出し当たり入力トークン予算を独立変数として品質・レイテンシ・予算違反率で比較する測定プロトコルとハーネスだが、対象はエージェントメモリ戦略の評価であり推論基盤そのものの計測ではない。",
+    "first_checked_at": "2026-11-24T21:12:36+00:00",
+    "last_checked_at": "2026-11-24T21:12:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BudgetBench: A Budget-Tiered Protocol and Pilot Harness for Memory Strategy Evaluation in Local Large Language Model Agents"
+  },
+  "processed_at": "2026-11-24T21:12:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6e7dc2387aac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

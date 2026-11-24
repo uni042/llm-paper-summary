@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-24T21:09:09+00:00",
-  "record_count": 8677,
+  "updated_at": "2026-11-24T21:12:37+00:00",
+  "record_count": 8688,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -133054,6 +133054,171 @@
       ],
       "borderline_recheck_count": 0,
       "title": "TransInferSim: Toward Fast and Accurate Evaluation of Embedded Hardware Accelerators for Transformer Networks"
+    },
+    "arXiv:2607.18280": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.18280",
+      "identity_tokens": [
+        "arXiv:2607.18280"
+      ],
+      "reason": "低ランク近似とチャネルプルーニングによる静的圧縮にトークン単位の動的レイヤースキップ用ルータを重ねる複合疎化の限界を調べる研究で、推論圧縮には関わるが主眼は単一次元圧縮との劣化境界の分析であり、実行系での効率実測に基づく提案ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Single-Dimensional Compression: The Compound Sparsity Frontier of Large Language Models"
+    },
+    "arXiv:2609.13149": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.13149",
+      "identity_tokens": [
+        "arXiv:2609.13149"
+      ],
+      "reason": "BudgetBenchはローカルLLMエージェントのメモリ戦略を、呼び出し当たり入力トークン予算を独立変数として品質・レイテンシ・予算違反率で比較する測定プロトコルとハーネスだが、対象はエージェントメモリ戦略の評価であり推論基盤そのものの計測ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BudgetBench: A Budget-Tiered Protocol and Pilot Harness for Memory Strategy Evaluation in Local Large Language Model Agents"
+    },
+    "arXiv:2609.36830": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36830",
+      "identity_tokens": [
+        "arXiv:2609.36830"
+      ],
+      "reason": "完全非同期RLのLLM事後学習で、軌跡の陳腐化を生成段階とプール待機段階に分解しプール認識型に制御する研究で、ロールアウト生成と学習の重なりという実行系の側面はあるが、目的は事後学習のスループット維持であり推論サービングへの貢献ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Where Does Staleness Accumulate? Pool Aware Effective Staleness Control for Asynchronous RL in LLM Post-Training"
+    },
+    "DOI:10.1016/j.neucom.2026.133312": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133312",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133312"
+      ],
+      "reason": "分岐パイプライン並列によるDNN学習高速化と題するが、Crossref・OpenAlexのいずれでも一次要旨を取得できなかったため、推論システムへの具体的な関連を検証できていない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BPP: Branch pipeline parallelism strategy for accelerating DNN training"
+    },
+    "arXiv:2608.16114": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16114",
+      "identity_tokens": [
+        "arXiv:2608.16114"
+      ],
+      "reason": "HyperSkillはエージェントの経験メモリをハイパーグラフ構造で保持し、スキルの合成関係を使った検索と自己進化を行うメモリ枠組みだが、対象はエージェントの手続き知識の再利用であり、推論実行系やサービングへの機構的貢献はない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill Memory"
+    },
+    "arXiv:2607.13591": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.13591",
+      "identity_tokens": [
+        "arXiv:2607.13591"
+      ],
+      "reason": "メモリの読み書きを固定ヒューリスティクスでなく文脈依存に学習する適応的メモリ管理をLLMエージェント向けに提案するが、対象はエージェントの学習・検索政策であり、推論システムのメモリ階層やKVキャッシュ管理とは異なる層の話である。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memory as a Controlled Process: Learned Adaptive Memory Management for LLM Agents"
+    },
+    "arXiv:2601.00821": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.00821",
+      "identity_tokens": [
+        "arXiv:2601.00821"
+      ],
+      "reason": "対話メモリの保存表現としてLLM抽出の構造化アーティファクトと逐語チャンクを固定パイプラインで比較し逐語側がLoCoMo等で優れることを示した実証研究で、文脈保持の知見はあるが推論システム機構の提案ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fidelity Before Structure: Verbatim Chunks Beat Lossy Artifact Extraction in Long-Conversation LLM Memory"
+    },
+    "arXiv:2608.26580": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26580",
+      "identity_tokens": [
+        "arXiv:2608.26580"
+      ],
+      "reason": "拡散型マルチモーダルLLMの並列デコードで、視覚情報に基づきマスク解除するトークンの順序を決める生成順序戦略だが、狙いはマルチモーダル生成の品質向上であり、デコードのレイテンシやサービング効率への機構的貢献は主目的ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Visual Information-Guided Parallel Decoding for Diffusion Multimodal Large Language Models"
+    },
+    "arXiv:2508.18387": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.18387",
+      "identity_tokens": [
+        "arXiv:2508.18387"
+      ],
+      "reason": "Integral Transformerは注意ロジット分布からのサンプリング信号を積分して注意ノイズを除去する自己注意機構の改変だが、目的は意味的に無情報なトークンへの過剰な注意の緩和による品質改善であり、推論効率の機構的貢献は示されていない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Integral Transformer: Denoising Attention, Not Too Much Not Too Little"
+    },
+    "arXiv:2311.00684": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.00684",
+      "identity_tokens": [
+        "arXiv:2311.00684"
+      ],
+      "reason": "T5系の位置埋め込みの柔軟性に着目し、注意アライメント戦略と柔軟な位置埋め込みで学習長を超える長さ外挿を改善する研究で、長文脈処理には関わるが主眼はモデルの長さ一般化能力であり推論システム機構ではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Attention Alignment and Flexible Positional Embeddings Improve Transformer Length Extrapolation"
+    },
+    "DOI:10.1109/ccgrid68966.2026.00044": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ccgrid68966.2026.00044",
+      "identity_tokens": [
+        "DOI:10.1109/ccgrid68966.2026.00044"
+      ],
+      "reason": "AdaSchedはMLaaS共有GPUクラスタで、イテレーション数でなく最終モデル性能を完了条件とする多段階の性能駆動型深層学習ワークロードスケジューラだが、対象は学習ジョブのクラスタスケジューリングであり推論サービングのスケジューリングではない。",
+      "first_checked_at": "2026-11-24T21:12:36+00:00",
+      "last_checked_at": "2026-11-24T21:12:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AdaSched: A Performance-Driven Cluster Scheduler for Deep Learning Workloads using Deep Reinforcement Learning"
     }
   }
 }

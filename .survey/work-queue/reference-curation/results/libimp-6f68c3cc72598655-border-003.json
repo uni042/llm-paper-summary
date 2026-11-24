@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6f68c3cc72598655-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.13591",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.13591",
+    "identity_tokens": [
+      "arXiv:2607.13591"
+    ],
+    "reason": "メモリの読み書きを固定ヒューリスティクスでなく文脈依存に学習する適応的メモリ管理をLLMエージェント向けに提案するが、対象はエージェントの学習・検索政策であり、推論システムのメモリ階層やKVキャッシュ管理とは異なる層の話である。",
+    "first_checked_at": "2026-11-24T21:12:36+00:00",
+    "last_checked_at": "2026-11-24T21:12:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Memory as a Controlled Process: Learned Adaptive Memory Management for LLM Agents"
+  },
+  "processed_at": "2026-11-24T21:12:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6f68c3cc7259",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
