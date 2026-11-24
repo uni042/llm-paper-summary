@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（144本）
+## 自動生成の論文一覧（145本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -475,6 +475,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-04 · [Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading](2025-2504.11816-infersave-vm-selection-kv-offloading.md)**  
   実装：[✓](https://github.com/lass-lab/InferSave) ・ リポジトリ内被引用：1  
   SLO・モデル/入出力長・GPU価格/VRAM/帯域からKVオフロード率と実効TPSを予測し、AWS上で最も安価に要件を満たすVMを自動選択する。
+
+- **2025-09 · [Tiny but Mighty: A Software-Hardware Co-Design Approach for Efficient Multimodal Inference on Battery-Powered Small Devices](2025-2510.05109-tiny-but-mighty-a-software-hardware-co-design-approach-for-efficient-mul.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  マルチモーダルモデルをモジュールへ分けNPUとGPUへ動的に割り振るNanomindを専用ハードウェアとゼロコピー受け渡しと混合量子化で実装し、エネルギー42.3パーセント削減と電池で最大20.8時間の動作を得る協調設計。
 
 - **2025-07 · [SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding](2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

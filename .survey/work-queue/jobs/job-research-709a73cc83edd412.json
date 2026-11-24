@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論時に下投影行列の不要な重みを文脈的スパース活性化で除去するCOUNTDOWNを提案し、計算量最大90%削減と専用カーネルによる実加速を示しており、推論高速化への直接貢献が確認できる。",
   "semantic_scholar_id": "9f25f9086299fbde6c729c3ff42d27cfaa711d0b",
   "source_url": "https://arxiv.org/abs/2505.17701",
-  "status": "ready",
+  "status": "superseded",
   "title": "COUNTDOWN: Contextually Sparse Activation Filtering Out Unnecessary Weights in Down Projection",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-24T02:09:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2505.17701-countdown-contextually-sparse-activation-filtering-out-unnecessary-weigh.md",
+  "represented_canonical_id": "arXiv:2505.17701",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

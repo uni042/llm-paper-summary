@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1433本）
+## 自動生成の論文一覧（1436本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4172,6 +4172,10 @@
   実装：[✓](https://github.com/qingjiesjtu/CapBound) ・ リポジトリ内被引用：0  
   解けない問題への長く非生産的な推論を減らすため、推論中の表現の軌跡と入力直後の隠れ状態という2つの早期信号を発見し、推論を打ち切って簡潔な方針だけを提示させるテスト時監視を提案した研究。
 
+- **2025-09 · [Semantic Agreement Enables Efficient Open-Ended LLM Cascades](2025-2509.21837-semantic-agreement-enables-efficient-open-ended-llm-cascades.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数の小さいモデルの出力同士の意味的な一致を振り分け信号にし、学習なし・ブラックボックス対応のまま、大きいモデルの計算量の40パーセントで同等以上の品質と最大61パーセントの遅延削減を達成する自由生成向けカスケード。
+
 - **2025-09 · [Self-Aligned Reward: Towards Effective and Efficient Reasoners](2025-2509.05489-self-aligned-reward-towards-effective-and-efficient-reasoners.md)**  
   実装：[✓](https://github.com/amazon-science/Self-Aligned-Reward-Towards_Effective_and_Efficient_Reasoners) ・ リポジトリ内被引用：0  
   提案する自己整合報酬（Self-Aligned Reward; SAR）は、同じ回答 $a$ の困惑度を、質問 $q$ を与えた場合と与えない場合で計算する。例えばQwen3-1.7Bでは、GRPOの平均正答率53.37%、回答長762.8トークンに対して、SAR付きGRPOは54.13%、602.0トークンだった。
@@ -4396,6 +4400,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Hopscotchは、Transformerの注意ブロックを丸ごと除去しながら、残る層の出力を少数のスカラーで再調整する構造圧縮法である。Llama-3.1-8B-InstructとQwen2.5-7B-Instructで検証し、Llamaでは四つの注意ブロックを削除しても平均性能保持率98.65%、七つ削除した場合も97.08%と報告する。
 
+- **2025-06 · [Graph-KV: Breaking Sequence via Injecting Structural Biases into Large Language Models](2025-2506.07334-graph-kv-breaking-sequence-via-injecting-structural-biases-into-large-la.md)**  
+  実装：[✓](https://github.com/Graph-COM/GraphKV) ・ リポジトリ内被引用：0  
+  テキスト片のKVをグラフの辺に沿ってだけ結び位置符号も出典と対象で分けて共有することで、平坦化の位置バイアスと二次計算を避け多段推論で逐次符号化を上回る。
+
 - **2025-06 · [GPTailor: Large Language Model Pruning Through Layer Cutting and Stitching](2025-2506.20480-gptailor-large-language-model-pruning-through-layer-cutting-and-stitchin.md)**  
   実装：[✓](https://github.com/Guinan-Su/auto-merge-llm) ・ リポジトリ内被引用：0  
   単一モデルではなく同族の微調整モデルの層を除去・選択・統合する切り貼りを零次最適化で探索する枝刈りで、一百三十億級モデルの約二十五パーセント除去時に能力の九十七・三パーセント、七十億級で九十二・二パーセントを後訓練なしで保った。
@@ -4607,6 +4615,10 @@
 - **2025-02 · [Round Attention: A Novel Round-Level Attention Mechanism to Accelerate LLM Inference](2025-2502.15294-round-attention-a-novel-round-level-attention-mechanism-to-accelerate-ll.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   対話型LLMを長期間利用すると、過去の質問・回答を含むKVキャッシュが増え、GPUメモリ容量とCPUからの転送帯域が推論の制約になる。通常のトークン単位KV圧縮や選択は、注意スコアを層ごとに評価したり、小さなKV片を何度も転送したりする費用を生む。
+
+- **2025-02 · [Prompt-based Depth Pruning of Large Language Models](2025-2502.04348-prompt-based-depth-pruning-of-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ブロックの重要度が課題で違うことに着目し、候補の省略集合を課題尤度で作りプロンプトごとに軽量ルーターが選ぶ動的深さ枝刈りPuDDingで、約22パーセント削減でも静的枝刈りより正解率を上げつつ1.2倍台の生成高速化を得る。
 
 - **2025-02 · [Online Pseudo-average Shifting Attention (PASA) for Robust Low-precision LLM Inference: Algorithms and Numerical Analysis](2025-2503.01873-online-pseudo-average-shifting-attention-pasa-for-robust-low-precision-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（328本）
+## 自動生成の論文一覧（329本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -1099,6 +1099,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-05 · [FireQ: Fast INT4-FP8 Kernel and RoPE-aware Quantization for LLM Inference Acceleration](2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みINT4・活性FP8の混合精度カーネルとRoPE配慮の外れ値平滑化、3段パイプラインの注意カーネルを共同設計した量子化推論手法。FFNでQServe比1.68倍、プリフィルで1.26倍を精度を保って達成。
+
+- **2025-05 · [COUNTDOWN: Contextually Sparse Activation Filtering Out Unnecessary Weights in Down Projection](2025-2505.17701-countdown-contextually-sparse-activation-filtering-out-unnecessary-weigh.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  下方射影の重み付き和という見方から、直接係数と間接係数で残す中間次元を選ぶ二つの疎な活性化を導き、理想条件で90パーセントの計算省略と最良5.5パーセントの低下、予測器なし方式ではCATS比で最大29.4パーセント良い性能保持を示す。
 
 - **2025-04 · [Pruning Laws for Large Language Models](2025-2504.04342-pruning-laws-for-large-language-models.md)**  
   実装：[✓](https://github.com/parmanu-lcs2/pruning_laws) ・ リポジトリ内被引用：0  

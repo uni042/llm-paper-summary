@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "15dcd62869ec4c0357401e441fe04f4fe346576c",
+  "base_commit": "97af2189bc9a8f68a7761de899150650ce494f05",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -246,6 +246,7 @@
     "2025-2502.00899-hassle-free-a-unified-framework-for-sparse-plus-low-rank-matrix-decomposition.json",
     "2025-2502.02790-leveraging-the-true-depth-of-llms.json",
     "2025-2502.02818-transql-serving-large-language-models-with-sql-on-low-resource-hardware.json",
+    "2025-2502.04348-prompt-based-depth-pruning-of-large-language-models.json",
     "2025-2502.05947-acceleration-multiple-heads-decoding-for-llm-via-dynamic-tree-attention.json",
     "2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.json",
     "2025-2502.11832-haan-a-holistic-approach-for-accelerating-normalization-operations-in-large-language-models.json",
@@ -299,6 +300,7 @@
     "2025-2505.15154-prolonged-reasoning-is-not-all-you-need-certainty-based-adaptive-routing-for-efficient-llm-mllm-reasoning.json",
     "2025-2505.16221-lightrouter-towards-efficient-llm-collaboration-with-minimal-overhead.json",
     "2025-2505.16743-trim-achieving-extreme-sparsity-with-targeted-row-wise-iterative-metric-driven-pruning.json",
+    "2025-2505.17701-countdown-contextually-sparse-activation-filtering-out-unnecessary-weights-in-down-projection.json",
     "2025-2505.18092-qwenlong-cprs-towards-llms-with-dynamic-context-optimization.json",
     "2025-2505.18232-two-stage-regularization-based-structured-pruning-for-llms.json",
     "2025-2505.18824-flatattention-dataflow-and-fabric-collectives-co-optimization-for-efficient-attention.json",
@@ -315,6 +317,7 @@
     "2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.json",
     "2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.json",
     "2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.json",
+    "2025-2506.07334-graph-kv-breaking-sequence-via-injecting-structural-biases-into-large-language-models.json",
     "2025-2506.07639-fast-ecot-efficient-embodied-chain-of-thought-via-thoughts-reuse.json",
     "2025-2506.08436-olica-efficient-structured-pruning-of-large-language-models-without-retraining.json",
     "2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-gradient-descent.json",
@@ -361,6 +364,7 @@
     "2025-2509.17486-attncomp-attention-guided-adaptive-context-compression-for-retrieval-augmented-generation.json",
     "2025-2509.20624-fs-dfm-fast-and-accurate-long-text-generation-with-few-step-diffusion-language-models.json",
     "2025-2509.20979-toward-robust-and-efficient-ml-based-gpu-caching-for-modern-inference.json",
+    "2025-2509.21837-semantic-agreement-enables-efficient-open-ended-llm-cascades.json",
     "2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.json",
     "2025-2509.23663-hivtp-a-training-free-method-to-improve-vlms-efficiency-via-hierarchical-visual-token-pruning.json",
     "2025-2509.24711-stop-before-you-fail-operational-capability-boundaries-for-mitigating-unproductive.json",
@@ -371,6 +375,7 @@
     "2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-low-batch-llm-inference.json",
     "2025-2510.03291-unipruning-unifying-local-metric-and-global-feedback-for-scalable-sparse-llm-inference.json",
     "2025-2510.05090-finish-first-perfect-later-test-time-token-level-cross-validation-for-diffusion.json",
+    "2025-2510.05109-tiny-but-mighty-a-software-hardware-co-design-approach-for-efficient-multimodal-inference-on-battery-powered-small-devic.json",
     "2025-2510.07782-rcpu-rotation-constrained-error-compensation-for-structured-pruning-of-a-large-language-model.json",
     "2025-2510.08999-sqs-bayesian-dnn-compression-through-sparse-quantized-sub-distributions.json",
     "2025-2510.09932-automatically-generating-ml-compiler-backends-from-tensor-accelerator-isa-descriptions.json",
@@ -52379,6 +52384,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2502.04348": {
+      "order": [
+        "2026-11-24T02:00:47+00:00",
+        "2025-2502.04348-prompt-based-depth-pruning-of-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.17701": {
+      "order": [
+        "2026-11-24T02:02:19+00:00",
+        "2025-2505.17701-countdown-contextually-sparse-activation-filtering-out-unnecessary-weights-in-down-projection.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2506.07334": {
+      "order": [
+        "2026-11-24T02:03:50+00:00",
+        "2025-2506.07334-graph-kv-breaking-sequence-via-injecting-structural-biases-into-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2509.21837": {
+      "order": [
+        "2026-11-24T02:05:22+00:00",
+        "2025-2509.21837-semantic-agreement-enables-efficient-open-ended-llm-cascades.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.05109": {
+      "order": [
+        "2026-11-24T02:06:54+00:00",
+        "2025-2510.05109-tiny-but-mighty-a-software-hardware-co-design-approach-for-efficient-multimodal-inference-on-battery-powered-small-devic.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66352,6 +66402,21 @@
     "arxiv:2411.12992": [
       "papers/inference/99-other-inference-systems/2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connecte.md",
       "papers/inference/99-other-inference-systems/2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connecte.md"
+    ],
+    "arxiv:2502.04348": [
+      "papers/inference/99-other-inference-systems/2025-2502.04348-prompt-based-depth-pruning-of-large-language-models.md"
+    ],
+    "arxiv:2505.17701": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2505.17701-countdown-contextually-sparse-activation-filtering-out-unnecessary-weigh.md"
+    ],
+    "arxiv:2506.07334": [
+      "papers/inference/99-other-inference-systems/2025-2506.07334-graph-kv-breaking-sequence-via-injecting-structural-biases-into-large-la.md"
+    ],
+    "arxiv:2509.21837": [
+      "papers/inference/99-other-inference-systems/2025-2509.21837-semantic-agreement-enables-efficient-open-ended-llm-cascades.md"
+    ],
+    "arxiv:2510.05109": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2510.05109-tiny-but-mighty-a-software-hardware-co-design-approach-for-efficient-mul.md"
     ]
   }
 }
