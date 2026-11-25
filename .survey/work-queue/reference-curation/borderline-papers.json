@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T22:32:41+00:00",
-  "record_count": 9391,
+  "updated_at": "2026-11-25T22:34:18+00:00",
+  "record_count": 9401,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -143779,6 +143779,156 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Co-Fabric: Breaking Host-Domain Boundaries for Unified xPU Interconnection"
+    },
+    "DOI:10.1007/978-981-95-2725-0_16": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/978-981-95-2725-0_16",
+      "identity_tokens": [
+        "DOI:10.1007/978-981-95-2725-0_16"
+      ],
+      "reason": "LLM推論効率をコードライブラリ横断で粗粒度・細粒度に分析する評価研究であり、推論性能の計測として関連するが、新しい推論機構やシステム最適化の提案は含まれないため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Coarse-to-Fine Evaluation of Inference Efficiency for Large Language Models"
+    },
+    "arXiv:2509.14899": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.14899",
+      "identity_tokens": [
+        "arXiv:2509.14899"
+      ],
+      "reason": "プロンプトを適切なLLMへ振り分けるCARGOは埋め込み回帰器による性能予測と不確実時の二段分類でコスト配慮のモデル選択を行うが、サービング内部の実行機構ではなくルーティング精度の評価が中心であるため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cargo: a Framework for Confidence-Aware Routing of Large Language Models"
+    },
+    "arXiv:2509.11520": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.11520",
+      "identity_tokens": [
+        "arXiv:2509.11520"
+      ],
+      "reason": "早期終了DNNへ選択的予測SPEEDを組み合わせ、困難なサンプルを安易に途中終了させないことで推論遅延と信頼性を両立させる手法だが、対象は汎用DNN分類でありLLM推論への具体的適用は示されていないため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Know What You Don't Know: Selective Prediction for Early Exit DNNs"
+    },
+    "arXiv:2410.20926": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.20926",
+      "identity_tokens": [
+        "arXiv:2410.20926"
+      ],
+      "reason": "長系列をテンソル化して各次元へ注意を適用するTensorized Attentionは長距離依存と計算効率を狙う注意機構だが、評価は系列モデリング一般でありLLM推論時の実測や適用は不明瞭であるため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Long Sequence Modeling with Attention Tensorization: From Sequence to Tensor Learning"
+    },
+    "arXiv:2605.12879": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12879",
+      "identity_tokens": [
+        "arXiv:2605.12879"
+      ],
+      "reason": "二重確率注意の推論時反復をスライス双対射影で償却するASAPは注意機構の改変だが、主眼は学習効率と表現特性の改善にあり、LLM推論システムでの効率実証は確認できないため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ASAP: Amortized Doubly-Stochastic Attention via Sliced Dual Projection"
+    },
+    "arXiv:2408.10764": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.10764",
+      "identity_tokens": [
+        "arXiv:2408.10764"
+      ],
+      "reason": "報酬予測用の追加パラメータをTransformer内部へ挿入し別モデルなしでデコード介入信号を得るOtterは推論時介入のオーバーヘッド削減を狙うが、主目的は生成の安全性・品質の校正であり推論効率化への貢献は副次的であるため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Predicting Rewards Alongside Tokens: Non-disruptive Parameter Insertion for Efficient Inference Intervention in Large Language Model"
+    },
+    "arXiv:2601.08160": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08160",
+      "identity_tokens": [
+        "arXiv:2601.08160"
+      ],
+      "reason": "エージェント長期記憶を時間・意味の索引でクエリ関連部分集合へ絞り検索遅延を下げるSwiftMemは、LLM推論そのものではなくエージェント記憶基盤の高速化であるため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SwiftMem: Fast Agentic Memory via Query-aware Indexing"
+    },
+    "SemanticScholar:4d8a4509753cc91832f80ec35795064e79630ef3": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:4d8a4509753cc91832f80ec35795064e79630ef3",
+      "identity_tokens": [
+        "SemanticScholar:4d8a4509753cc91832f80ec35795064e79630ef3"
+      ],
+      "reason": "BERT・RoBERTaベース質問応答モデルの構造化プルーニングによる産業向け圧縮であり推論向け圧縮に関連するが、対象は小規模なタスク特化モデルでLLM推論システムへの直接性は薄いため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Structured Pruning of a BERT-based Question Answering Model"
+    },
+    "arXiv:2609.39563": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39563",
+      "identity_tokens": [
+        "arXiv:2609.39563"
+      ],
+      "reason": "コーデックの動きベクトルと残差信号から再帰的に状態を更新しフレームの再トークン化を避けるRESUMEは動画言語モデルのトークン効率化を狙うが、推論システムとしての機構や実測は要旨からは不明瞭であるため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RESUME: Recurrent State Updates from Motion and Residual Signals for Efficient Video Language Modeling"
+    },
+    "arXiv:2610.04864": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.04864",
+      "identity_tokens": [
+        "arXiv:2610.04864"
+      ],
+      "reason": "クリップ単位のストリーミング処理と永続thinkトークンで長動画VLM埋め込みの視覚トークン予算を抑えるQASLRは効率化機構を含むが、主目的は動画埋め込みの精度であり推論システムへの貢献は間接的であるため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing Long-Video VLM Embeddings with Query-Aware Streaming Latent Reasoning"
     }
   }
 }

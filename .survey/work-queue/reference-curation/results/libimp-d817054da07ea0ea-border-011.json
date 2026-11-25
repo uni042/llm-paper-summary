@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d817054da07ea0ea-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:4d8a4509753cc91832f80ec35795064e79630ef3",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:4d8a4509753cc91832f80ec35795064e79630ef3",
+    "identity_tokens": [
+      "SemanticScholar:4d8a4509753cc91832f80ec35795064e79630ef3"
+    ],
+    "reason": "BERT・RoBERTaベース質問応答モデルの構造化プルーニングによる産業向け圧縮であり推論向け圧縮に関連するが、対象は小規模なタスク特化モデルでLLM推論システムへの直接性は薄いため",
+    "first_checked_at": "2026-11-25T22:34:18+00:00",
+    "last_checked_at": "2026-11-25T22:34:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Structured Pruning of a BERT-based Question Answering Model"
+  },
+  "processed_at": "2026-11-25T22:34:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d817054da07e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

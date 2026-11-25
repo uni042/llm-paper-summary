@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d817054da07ea0ea-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.39563",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.39563",
+    "identity_tokens": [
+      "arXiv:2609.39563"
+    ],
+    "reason": "コーデックの動きベクトルと残差信号から再帰的に状態を更新しフレームの再トークン化を避けるRESUMEは動画言語モデルのトークン効率化を狙うが、推論システムとしての機構や実測は要旨からは不明瞭であるため",
+    "first_checked_at": "2026-11-25T22:34:18+00:00",
+    "last_checked_at": "2026-11-25T22:34:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RESUME: Recurrent State Updates from Motion and Residual Signals for Efficient Video Language Modeling"
+  },
+  "processed_at": "2026-11-25T22:34:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d817054da07e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

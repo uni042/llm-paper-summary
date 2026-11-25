@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-25T22:32:41+00:00",
-  "record_count": 16116,
+  "updated_at": "2026-11-25T22:34:18+00:00",
+  "record_count": 16123,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -230796,6 +230796,104 @@
         "worker-worklist discovery_review"
       ],
       "title": "TestHallVQA: Exploring LVLMs' Document-Level Reasoning under Redundant Contexts from Scientific Exams"
+    },
+    "arXiv:2501.02040": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.02040",
+      "identity_tokens": [
+        "arXiv:2501.02040"
+      ],
+      "reason": "SSMに着想を得た分離型自己注意を画像分類・物体検出向けのVision Mamba系アーキテクチャへ適用するコンピュータビジョン論文であり、LLM推論への適用は確認できないため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Separable Self-attention Inspired by the State Space Model for Computer Vision"
+    },
+    "SemanticScholar:86ff6b8c3e3033f7e49b4592a46127b5d81aa097": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:86ff6b8c3e3033f7e49b4592a46127b5d81aa097",
+      "identity_tokens": [
+        "SemanticScholar:86ff6b8c3e3033f7e49b4592a46127b5d81aa097"
+      ],
+      "reason": "事前学習済みDiffusion Transformerを線形注意化して画像生成を効率化する設計指針の研究であり、対象は画像生成モデルの変換であってLLM推論システムではないため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Delving into a Simple Linear Diffusion Transformer for Image Generation"
+    },
+    "arXiv:2510.02850": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.02850",
+      "identity_tokens": [
+        "arXiv:2510.02850"
+      ],
+      "reason": "報酬モデルプールから動的にRMを選ぶBayesianRouterはRLHF/RLAIFのアライメント学習パイプライン内のルーティングであり、推論時の処理への技術的貢献は確認できないため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Reward Model Routing in Alignment"
+    },
+    "SemanticScholar:b8ca07fc7e7e70b6fd0f0b3b4921e4dabe11cd23": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:b8ca07fc7e7e70b6fd0f0b3b4921e4dabe11cd23",
+      "identity_tokens": [
+        "SemanticScholar:b8ca07fc7e7e70b6fd0f0b3b4921e4dabe11cd23"
+      ],
+      "reason": "生物学的配列の特徴集約のための学習可能な最適輸送埋め込みであり、注意との関係は理論的言及にとどまり、応用先は配列データの集合学習であってLLM推論ではないため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Trainable Optimal Transport Embedding for Feature Aggregation and its Relationship to Attention"
+    },
+    "arXiv:2609.27514": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27514",
+      "identity_tokens": [
+        "arXiv:2609.27514"
+      ],
+      "reason": "多言語会話音声のダイアライゼーション・認識・理解を競うMLC-SLMチャレンジの概要報告であり、音声言語モデルの能力評価が主題で推論システムへの貢献はないため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "The Second MLC-SLM Challenge: Multilingual Conversational Speech Diarization, Recognition, and Understanding"
+    },
+    "arXiv:2609.33411": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33411",
+      "identity_tokens": [
+        "arXiv:2609.33411"
+      ],
+      "reason": "ベンチマーク生成ワークフロー自体を二重ループ探索で最適化するMetaBench-Harnessは評価ハーネスの自動改善であり、LLMの能力評価側の研究で推論実行への貢献はないため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MetaBench-Harness: Unlocking End-to-End Optimization of Benchmark Harnesses"
+    },
+    "arXiv:2610.08125": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.08125",
+      "identity_tokens": [
+        "arXiv:2610.08125"
+      ],
+      "reason": "全二重音声対話モデルを二者対話設定で評価するDyaFDBはターン取りや割り込みを含む対話能力の評価フレームワークであり、推論システムへの技術的貢献はないため",
+      "first_checked_at": "2026-11-25T22:34:18+00:00",
+      "last_checked_at": "2026-11-25T22:34:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Conversation Is a Two-Body Problem: Dyadic Evaluation of Full-Duplex Dialogue Models"
     }
   }
 }

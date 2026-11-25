@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d817054da07ea0ea-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.14899",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.14899",
+    "identity_tokens": [
+      "arXiv:2509.14899"
+    ],
+    "reason": "プロンプトを適切なLLMへ振り分けるCARGOは埋め込み回帰器による性能予測と不確実時の二段分類でコスト配慮のモデル選択を行うが、サービング内部の実行機構ではなくルーティング精度の評価が中心であるため",
+    "first_checked_at": "2026-11-25T22:34:18+00:00",
+    "last_checked_at": "2026-11-25T22:34:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cargo: a Framework for Confidence-Aware Routing of Large Language Models"
+  },
+  "processed_at": "2026-11-25T22:34:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d817054da07e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
