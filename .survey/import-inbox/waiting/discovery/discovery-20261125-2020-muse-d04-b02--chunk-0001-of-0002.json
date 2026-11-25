@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d04-b02::chunk-0001-of-0002",
+  "reference_main_sha": "d642a1edf2da21b75a1764d6b6eec704e92b8e0b",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.07150",
+      "identity_tokens": [
+        "arXiv:2404.07150"
+      ],
+      "title": "Adaptive behavior with stable synapses",
+      "reason": "安定シナプス下での適応行動とTransformerのin-context learningを結ぶ神経科学・理論的考察であり、推論システムの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2404.07150",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 467
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.06802",
+      "identity_tokens": [
+        "arXiv:2501.06802"
+      ],
+      "title": "Unifying Two Types of Scaling Laws from the Perspective of Conditional Kolmogorov Complexity",
+      "reason": "条件付きKolmogorov複雑性の観点から学習と推論の2種のスケーリング則を統一する理論分析であり、推論システムの具体的な機構提案はない。",
+      "source_url": "https://arxiv.org/abs/2501.06802",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 468
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.23121",
+      "identity_tokens": [
+        "arXiv:2503.23121"
+      ],
+      "title": "Efficient Explicit Joint-level Interaction Modeling with Mamba for Text-guided HOI Generation",
+      "reason": "テキスト誘導の人間・物体相互作用（HOI）生成をMambaで効率的に行う生成タスク応用であり、効率化は当該生成モデルの内部設計にとどまる。",
+      "source_url": "https://arxiv.org/abs/2503.23121",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16083",
+      "identity_tokens": [
+        "arXiv:2505.16083"
+      ],
+      "title": "FR-Mamba: Time-Series Physical Field Reconstruction Based on State Space Model",
+      "reason": "状態空間モデルによる時系列物理場再構成（FR-Mamba）という科学計算応用であり、推論システムとの関連はタイトルから確認できない。",
+      "source_url": "https://arxiv.org/abs/2505.16083",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 470
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.10419",
+      "identity_tokens": [
+        "arXiv:2507.10419"
+      ],
+      "title": "Multiple Choice Learning of Low Rank Adapters for Language Modeling",
+      "reason": "LoRA-MCLは多様な文継続をデコードできるよう複数選択学習で言語モデルを訓練する学習方式であり、推論システムではなく学習単独の改良である。",
+      "source_url": "https://arxiv.org/abs/2507.10419",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 471
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.17651",
+      "identity_tokens": [
+        "arXiv:2509.17651"
+      ],
+      "title": "SISMA: Semantic Face Image Synthesis with Mamba",
+      "reason": "Mambaによる意味的顔画像合成（SISMA）という画像生成応用であり、推論システムへの貢献はタイトルから確認できない。",
+      "source_url": "https://arxiv.org/abs/2509.17651",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.09474",
+      "identity_tokens": [
+        "arXiv:2510.09474"
+      ],
+      "title": "Multimodal Policy Internalization for Conversational Agents",
+      "reason": "Multimodal Policy Internalizationは長大なポリシープロンプトをパラメータへ内在化し推論時の固定計算コストを避ける狙いだが、本質はポリシー追従の学習タスクでありサービング機構の検証はない。",
+      "source_url": "https://arxiv.org/abs/2510.09474",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00450",
+      "identity_tokens": [
+        "arXiv:2512.00450"
+      ],
+      "title": "RecruitView: A Multimodal Dataset for Predicting Personality and Interview Performance for Human Resources Applications",
+      "reason": "人事応用向けに性格と面接パフォーマンスを予測するマルチモーダルデータセットの研究であり、推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2512.00450",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.procs.2026.06.485",
+      "identity_tokens": [
+        "DOI:10.1016/j.procs.2026.06.485"
+      ],
+      "title": "Abstractive Text Summarization of NPTEL Lectures for Microlearning using Fine-Tuned T5 and Beam Search",
+      "reason": "NPTEL講義のマイクロラーニング用要約にfine-tuned T5とビームサーチを使う教育応用であり、推論システムへの直接貢献はない。",
+      "source_url": "https://doi.org/10.1016/j.procs.2026.06.485",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/nargab/lqaf124",
+      "identity_tokens": [
+        "DOI:10.1093/nargab/lqaf124"
+      ],
+      "title": "araCNA: somatic copy number profiling using long-range sequence models",
+      "reason": "長距離系列モデルによる体細胞コピー数プロファイリング（araCNA）というゲノム解析応用であり、推論システムとの関連はタイトルから確認できない。",
+      "source_url": "https://doi.org/10.1093/nargab/lqaf124",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CLUSTERWorkshops61563.2024.00028",
+      "identity_tokens": [
+        "DOI:10.1109/CLUSTERWorkshops61563.2024.00028"
+      ],
+      "title": "Automatic Parallelization with CodeT5+: A Model for Generating OpenMP Directives",
+      "reason": "CodeT5+でOpenMPディレクティブを生成する自動並列化はコード生成タスクであり、対象プログラムの並列化支援であってLLM推論システムの機構ではない。",
+      "source_url": "https://doi.org/10.1109/CLUSTERWorkshops61563.2024.00028",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICCBDAI66607.2025.11389035",
+      "identity_tokens": [
+        "DOI:10.1109/ICCBDAI66607.2025.11389035"
+      ],
+      "title": "A Synergistic and Efficient Framework for Real-Time Action Recognition with MLLM and Lightweight Models",
+      "reason": "SARFはMLLMの低速経路と軽量モデルの高速経路を動的ゲーティングで振り分け遅延を7倍以上削減するが、対象は人間行動認識タスクに特化しており汎用サービングへの展開は不明瞭である。",
+      "source_url": "https://doi.org/10.1109/ICCBDAI66607.2025.11389035",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/WACV61041.2025.00905",
+      "identity_tokens": [
+        "DOI:10.1109/WACV61041.2025.00905"
+      ],
+      "title": "Spk2ImgMamba: Spiking Camera Image Reconstruction with Multi-Scale State Space Models",
+      "reason": "スパイキングカメラ画像再構成のためのマルチスケールSSMという画像復元応用であり、推論システムへの貢献はタイトルから確認できない。",
+      "source_url": "https://doi.org/10.1109/WACV61041.2025.00905",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3711903",
+      "identity_tokens": [
+        "DOI:10.1145/3711903"
+      ],
+      "title": "Obfuscated Clone Search in JavaScript based on Reinforcement Subsequence Learning",
+      "reason": "難読化されたJavaScriptクローン検索に強化学習による部分列学習を用いるソフトウェア工学応用であり、LLM推論システムとは無関係である。",
+      "source_url": "https://doi.org/10.1145/3711903",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 480
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3233/FAIA251308",
+      "identity_tokens": [
+        "DOI:10.3233/FAIA251308"
+      ],
+      "title": "Selecting the Right Experts: Generalizing Information Extraction for Unseen Scenarios via Task-Aware Expert Weighting",
+      "reason": "未見シナリオの情報抽出汎化のためにタスク認識型の専門家重み付け（LoRA専門家選択）を行うが、目的は抽出精度の汎化であり推論効率・サービングへの貢献はない。",
+      "source_url": "https://doi.org/10.3233/FAIA251308",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 481
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2409.16953",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2409.16953"
+      ],
+      "title": "Path-adaptive Spatio-Temporal State Space Model for Event-based Recognition with Arbitrary Duration",
+      "reason": "イベントカメラによる物体・行動認識のための時空間SSM（PASS）はセンサ認識応用であり、推論頻度汎化も当該認識タスク内の話にとどまる。",
+      "source_url": "https://doi.org/10.48550/arXiv.2409.16953",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 482
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03174",
+      "identity_tokens": [
+        "arXiv:2410.03174"
+      ],
+      "title": "HRVMamba: Efficient High-Resolution Visual Representation Learning With State Space Model for Human Pose Estimation",
+      "reason": "人姿勢推定のための高解像度視覚表現学習SSM（HRVMamba）という視覚応用であり、推論システムへの貢献はタイトルから確認できない。",
+      "source_url": "https://arxiv.org/abs/2410.03174",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 484
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.20258",
+      "identity_tokens": [
+        "arXiv:2503.20258"
+      ],
+      "title": "E-ViM3: Mamba-3D as Masked Autoencoders for Accurate and Data-Efficient Analysis of Medical Ultrasound Videos",
+      "reason": "医用超音波動画解析のためのMamba-3Dマスクドオートエンコーダという医療応用であり、推論システムとの関連はタイトルから確認できない。",
+      "source_url": "https://arxiv.org/abs/2503.20258",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 485
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16911",
+      "identity_tokens": [
+        "arXiv:2505.16911"
+      ],
+      "title": "Active Speech Enhancement: Active Speech Denoising Decliping and Deveraberation",
+      "reason": "能動的音声強調（ノイズ除去・クリッピング除去・残響除去）のためのTransformer-Mambaアーキテクチャという音声処理応用であり、推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2505.16911",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 486
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.07395",
+      "identity_tokens": [
+        "arXiv:2508.07395"
+      ],
+      "title": "Parity Requires Unified Input Dependence and Negative Eigenvalues in SSMs",
+      "reason": "SSMがパリティ課題を解くために入力依存性と負の固有値が必要という状態追跡能力の理論研究であり、推論システムへの直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2508.07395",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 487
+    }
+  ],
+  "parent_run_key": "muse-20261125-d04-b02",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 28
+}

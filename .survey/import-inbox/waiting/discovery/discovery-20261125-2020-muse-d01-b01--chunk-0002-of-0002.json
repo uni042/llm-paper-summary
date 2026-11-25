@@ -1,0 +1,338 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d01-b01::chunk-0002-of-0002",
+  "reference_main_sha": "d642a1edf2da21b75a1764d6b6eec704e92b8e0b",
+  "record_count": 19,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.06762",
+      "identity_tokens": [
+        "arXiv:2401.06762"
+      ],
+      "title": "Seeing the roads through the trees: A benchmark for modeling spatial dependencies with aerial imagery",
+      "reason": "航空画像の道路セグメンテーション用ベンチマークと長距離文脈理解の失敗分析であり、評価データセットの提供のみで推論システムの手法はない。",
+      "source_url": "https://arxiv.org/abs/2401.06762",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02751",
+      "identity_tokens": [
+        "arXiv:2410.02751"
+      ],
+      "title": "ReLIC: A Recipe for 64k Steps of In-Context Reinforcement Learning for Embodied AI",
+      "reason": "64kステップ文脈内RLのための部分更新とSink-KVを提案するが、対象は身体性エージェントの適応学習でありLLMサービングのKVキャッシュ管理とは文脈が異なる。",
+      "source_url": "https://arxiv.org/abs/2410.02751",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.11717",
+      "identity_tokens": [
+        "arXiv:2411.11717"
+      ],
+      "title": "RAWMamba: Unified sRGB-to-RAW De-rendering With State Space Model",
+      "reason": "sRGBからRAWへの逆レンダリングをMambaで統一する画像処理手法であり、写真現像応用でLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2411.11717",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.23818",
+      "identity_tokens": [
+        "arXiv:2503.23818"
+      ],
+      "title": "L2RU: a Structured State Space Model with prescribed L2-bound",
+      "reason": "L2ゲイン制約付き構造化SSMのパラメトライズと安定性理論であり、システム同定・制御向けの基礎理論でLLM推論実行への直接適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2503.23818",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.23595",
+      "identity_tokens": [
+        "arXiv:2507.23595"
+      ],
+      "title": "MamV2XCalib: V2X-based Target-Less Infrastructure Camera Calibration with State Space Model",
+      "reason": "V2X車両LiDARを用いる路側カメラの無ターゲット校正手法であり、交通インフラ計測応用でLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2507.23595",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08513",
+      "identity_tokens": [
+        "arXiv:2510.08513"
+      ],
+      "title": "SliceFine: The Universal Winning-Slice Hypothesis for Pretrained Networks",
+      "reason": "事前学習済みネットワークのランダムな部分ネットワーク微調整が十分であることを示す理論研究であり、対象は適応学習の理論で推論高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2510.08513",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.18312",
+      "identity_tokens": [
+        "arXiv:2511.18312"
+      ],
+      "title": "DiM-TS: Bridge the Gap between Selective State Space Models and Time Series for Generative Modeling",
+      "reason": "時系列データの拡散生成にMambaを適用する生成モデリング手法であり、プライバシー向け合成データ生成が目的でLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2511.18312",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JIOT.2024.3510395",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2024.3510395"
+      ],
+      "title": "A Wrist-Rolling Motion Recognition Method for Mobile Phone Unlocking",
+      "reason": "手首回転動作による携帯電話ロック解除の生体認証手法であり、モバイル認証応用でLLM推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.1109/JIOT.2024.3510395",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TIM.2026.3659681",
+      "identity_tokens": [
+        "DOI:10.1109/TIM.2026.3659681"
+      ],
+      "title": "Event Camera Monocular Depth Estimation: An Event-Tailored State-Space Model-Based Approach",
+      "reason": "イベントカメラ単眼深度推定専用のSSMアーキテクチャESDepthであり、深度計測応用でLLM推論基盤とは無関係である。",
+      "source_url": "https://doi.org/10.1109/TIM.2026.3659681",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3746027.3755521",
+      "identity_tokens": [
+        "DOI:10.1145/3746027.3755521"
+      ],
+      "title": "Freq-RWKV: Granularity-Aware Spatial-Frequency Synergy via Dual-Domain Recurrent Scanning for Pan-sharpening",
+      "reason": "パンシャープニングのための空間・周波数二重ドメインRWKVであり、衛星画像融合応用に限られLLM推論への貢献はない。",
+      "source_url": "https://doi.org/10.1145/3746027.3755521",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21437/interspeech.2023-1168",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2023-1168"
+      ],
+      "title": "Information Magnitude Based Dynamic Sub-sampling for Speech-to-text",
+      "reason": "音声翻訳・ASRで冗長フレームを間引く情報量ベース動的サブサンプリングであり、音声モデル内部の計算削減に留まりLLM推論システムの機構ではない。",
+      "source_url": "https://doi.org/10.21437/interspeech.2023-1168",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 465
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.69987/jacs.2024.40810",
+      "identity_tokens": [
+        "DOI:10.69987/jacs.2024.40810"
+      ],
+      "title": "Long-Document RAG for Contractual and Insurance Clause Analysis in Receivables RWA Structures",
+      "reason": "売掛債権RWAの契約・保険条項分析に特化した長文書RAGの評価パイプラインであり、金融RegTech応用が主目的で汎用推論基盤の貢献はない。",
+      "source_url": "https://doi.org/10.69987/jacs.2024.40810",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 466
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.10263",
+      "identity_tokens": [
+        "arXiv:2406.10263"
+      ],
+      "title": "A Lightweight Framework for Adaptive Retrieval In Code Completion With Critique Model",
+      "reason": "RAGコード補完で検索要否をcritiqueモデルで判定し検索回数と遅延を削減するが、対象はコード補完応用に組み込む軽量判定器であり汎用サービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2406.10263",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 468
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.19429",
+      "identity_tokens": [
+        "arXiv:2502.19429"
+      ],
+      "title": "scMamba: A Pre-Trained Model for Single-Nucleus RNA Sequencing Analysis in Neurodegenerative Disorders",
+      "reason": "神経変性疾患の単核RNAシーケンシング解析用事前学習モデルであり、バイオメディカル応用でLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2502.19429",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.03442",
+      "identity_tokens": [
+        "arXiv:2504.03442"
+      ],
+      "title": "Pyramid-based Mamba Multi-class Unsupervised Anomaly Detection",
+      "reason": "工業製品の多クラス異常検出・局在化のためのピラミッド走査SSMであり、MVTec向け外観検査応用でLLM推論への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2504.03442",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 470
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23615",
+      "identity_tokens": [
+        "arXiv:2505.23615"
+      ],
+      "title": "Learning Interpretable Differentiable Logic Networks for Tabular Regression",
+      "reason": "表形式回帰向けの微分可能論理ネットワークで解釈性と低推論コストを狙うが、対象は表データ回帰モデル自体でありLLM推論基盤ではない。",
+      "source_url": "https://arxiv.org/abs/2505.23615",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 471
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.21567",
+      "identity_tokens": [
+        "arXiv:2507.21567"
+      ],
+      "title": "RelMap: Enhancing Online Map Construction with Class-Aware Spatial Relation and Semantic Priors",
+      "reason": "自動運転のオンラインHDマップ構築にMoE意味事前分布を組み込む知覚フレームワークであり、運転支援応用でLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2507.21567",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.21865",
+      "identity_tokens": [
+        "arXiv:2509.21865"
+      ],
+      "title": "Beyond RAG vs. Long-Context: Learning Distraction-Aware Retrieval for Efficient Knowledge Grounding",
+      "reason": "長文脈投入より学習型検索でトークン量とdistractionを減らすRAG検索器LDARであり、推論コストに間接的に効くが中核は検索学習でサービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2509.21865",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.06441",
+      "identity_tokens": [
+        "arXiv:2511.06441"
+      ],
+      "title": "Towards Resource-Efficient Multimodal Intelligence: Learned Routing among Specialized Expert Models",
+      "reason": "学習型ルーティングネットワークがクエリごとに専門モデルへ振り分け、品質を保ちながら高コストモデルへの依存を67%以上削減するマルチモデル推論基盤の枠組みを実証している。",
+      "source_url": "https://arxiv.org/abs/2511.06441",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 474
+    }
+  ],
+  "parent_run_key": "muse-20261125-d01-b01",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 39
+}

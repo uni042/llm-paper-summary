@@ -1,0 +1,151 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d04-b01::chunk-0002-of-0002",
+  "reference_main_sha": "d642a1edf2da21b75a1764d6b6eec704e92b8e0b",
+  "record_count": 8,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14147",
+      "identity_tokens": [
+        "arXiv:2505.14147"
+      ],
+      "title": "SHARP: Synthesizing High-quality Aligned Reasoning Problems for Large Reasoning Models Reinforcement Learning",
+      "reason": "大規模推論モデルのRLVR学習用に検証可能な推論問題を合成するSHARPは学習データ生成の手法であり、推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2505.14147",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.05584",
+      "identity_tokens": [
+        "arXiv:2509.05584"
+      ],
+      "title": "ProfilingAgent: Profiling-Guided Agentic Reasoning for Adaptive Model Optimization",
+      "reason": "ProfilingAgentは層ごとの遅延・メモリのプロファイルに基づき構造化プルーニングと学習後動的量子化を自動設計するが、評価対象はImageNet等の視覚分類モデルでありLLM推論への適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2509.05584",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.20455",
+      "identity_tokens": [
+        "arXiv:2510.20455"
+      ],
+      "title": "Rotate Both Ways: Time-and-Order RoPE for Generative Recommendation",
+      "reason": "生成推薦モデルのために時刻と順序を組み込むRoPE拡張TO-RoPEを提案する推薦システムの表現学習研究であり、LLM推論システムへの直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2510.20455",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ITC-CSCC62988.2024.10628393",
+      "identity_tokens": [
+        "DOI:10.1109/ITC-CSCC62988.2024.10628393"
+      ],
+      "title": "Patch Regularization in Visual State Space Model",
+      "reason": "視覚状態空間モデルのCross-Scanにおけるパッチ正則化（ランダムマスク）は視覚表現学習の訓練手法であり、推論システムの機構ではない。",
+      "source_url": "https://doi.org/10.1109/ITC-CSCC62988.2024.10628393",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JSEN.2025.3609806",
+      "identity_tokens": [
+        "DOI:10.1109/JSEN.2025.3609806"
+      ],
+      "title": "CM2-Net: A Hybrid CNN–Mamba2 Net for 3-D Electromagnetic Tomography Image Reconstruction",
+      "reason": "3次元電磁トモグラフィ画像再構成のためのCNN-Mamba2ハイブリッドネットという計測画像応用であり、推論システムとの関連はタイトルから確認できない。",
+      "source_url": "https://doi.org/10.1109/JSEN.2025.3609806",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3594536.3595142",
+      "identity_tokens": [
+        "DOI:10.1145/3594536.3595142"
+      ],
+      "title": "Don't Use a Cannon to Kill a Fly: An Efficient Cascading Pipeline for Long Documents",
+      "reason": "軽量なロジスティック回帰で前段フィルタリングする3段カスケードは長文分類の計算コスト削減に関わるが、対象は法務文書分類タスクであり汎用推論基盤としての機構は限定的である。",
+      "source_url": "https://doi.org/10.1145/3594536.3595142",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3770641",
+      "identity_tokens": [
+        "DOI:10.1145/3770641"
+      ],
+      "title": "ActiveEye: Enabling Continuous and Responsive Video Understanding for Smart Eyewear Systems",
+      "reason": "ActiveEyeはウェアラブル・モバイル・クラウド構成でVLMの時空間サンプリングと送信を適応制御し、リソース制約下で連続映像理解のエネルギー効率と応答性を両立する推論システムである。",
+      "source_url": "https://doi.org/10.1145/3770641",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2305.19141",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2305.19141"
+      ],
+      "title": "Taylorformer: Probabilistic Predictions for Time Series and other Processes",
+      "reason": "Taylorformerは時系列等の確率過程予測のためのNeural Process系アーキテクチャであり、LLM推論システムへの直接貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2305.19141",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T20:20:00+09:00",
+      "last_checked_at": "2026-11-25T20:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 465
+    }
+  ],
+  "parent_run_key": "muse-20261125-d04-b01",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 28
+}
