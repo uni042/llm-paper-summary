@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d01-b03::chunk-0003-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31432",
+      "identity_tokens": [
+        "arXiv:2606.31432"
+      ],
+      "title": "Clinically Structured Rank-Gated LoRA for Cross-Benchmark Medical Question Answering",
+      "reason": "医療多肢選択質問応答に向けて、単一アダプタのランクをゲート制御するBiRG-LoRAの提案であり、対象は医療QAへのパラメータ効率適応という学習手法と応用の組合せであって、推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2606.31432",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 163
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20228",
+      "identity_tokens": [
+        "arXiv:2607.20228"
+      ],
+      "title": "User-Centric Modeling of Transactional Sequences with Explainable State Space Models",
+      "reason": "取引イベント系列のユーザーモデリングに、対照表現学習と状態空間モデルを組み合わせる研究であり、対象は金融取引データの表現学習という応用であって、LLM推論システムへの直接の技術的貢献は要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2607.20228",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 164
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.28642",
+      "identity_tokens": [
+        "arXiv:2607.28642"
+      ],
+      "title": "ThinkReset: Learnable Intermediate Interface Construction for Bounded-Context Long-Horizon Reasoning",
+      "reason": "文脈窓が制限される下での長大な思考連鎖で、破棄した履歴を置き換える再利用可能な中間インターフェースを学習するThinkResetの提案であり、文脈管理という推論時の主題には関わるが対象は推論過程の表現設計であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2607.28642",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 165
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14073",
+      "identity_tokens": [
+        "arXiv:2608.14073"
+      ],
+      "title": "Experimental Study on System-Level Performance Impact of Read Disturbance in Modern SSDs",
+      "reason": "現代SSDの読み出し擾乱がシステムレベルの性能へ与える影響を実験的に調査する研究であり、対象はストレージの信頼性というハードウェア課題であって、LLM推論システムの実行機構への直接の技術的貢献は要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2608.14073",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 166
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13158",
+      "identity_tokens": [
+        "arXiv:2609.13158"
+      ],
+      "title": "TestHallVQA: Exploring LVLMs' Document-Level Reasoning under Redundant Contexts from Scientific Exams",
+      "reason": "科学試験の冗長な文脈の下で大規模視覚言語モデルの文書レベル推論を測るベンチマークTestHallVQAの研究であり、対象は視覚質問応答の能力評価であって、LLM推論システムへの直接の技術的貢献は確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2609.13158",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 167
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27372",
+      "identity_tokens": [
+        "arXiv:2609.27372"
+      ],
+      "title": "Neither Silence nor Overlap Is Failure: Intent-Conditioned Evaluation of Turn-Taking in Full-Duplex Spoken Dialogue Models",
+      "reason": "全二重音声対話モデルの発話交替を、話者の意図で条件付けして評価するベンチマークTACTの提案であり、対象は対話モデルの能力評価の方法論であって、推論システムの実行機構への直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2609.27372",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 168
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32630",
+      "identity_tokens": [
+        "arXiv:2609.32630"
+      ],
+      "title": "ExpVoyager: Direct Experience Navigation for Dynamic Agent Skill Synthesis",
+      "reason": "LLMエージェントが蓄積した経験を再利用可能な手続き的スキルへ変換する動的スキル合成ExpVoyagerの研究であり、対象はエージェントの学習・自己進化の仕組みであって、推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2609.32630",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 169
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35791",
+      "identity_tokens": [
+        "arXiv:2609.35791"
+      ],
+      "title": "FD-VAD: Semantic Endpoint Detection for Streaming Full-Duplex Speech",
+      "reason": "全二重音声対話のエンドポイント検出を、ASRを介さないストリーミング型の音響言語推論として定式化するFD-VADの研究であり、対象は音声対話の要素モデルであって、LLM推論システムの実行機構への貢献ではないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2609.35791",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 170
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02353",
+      "identity_tokens": [
+        "arXiv:2610.02353"
+      ],
+      "title": "Does Every User Need a Private LoRA? Decoupling Personalization from Per-User Adaptation",
+      "reason": "個人化LLMでユーザーごとの適応状態を持つ設計が人口規模で膨らむ問題に対し、適応容量の共有可能性を実証的に分析する研究であり、マルチLoRAサービングの容量配分に関わる知見ではあるが実行機構の提案ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2610.02353",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 171
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.07556",
+      "identity_tokens": [
+        "arXiv:2610.07556"
+      ],
+      "title": "Decoupled Multi-Agent Orchestration",
+      "reason": "言語モデルのマルチエージェントシステムで、計画を固定ワーカー群から切り離して二段階で構成するDeOrchの提案であり、対象はエージェント編成の学習手法であって、推論システムの実行機構への直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.07556",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 172
+    }
+  ],
+  "parent_run_key": "muse-20261126-d01-b03",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

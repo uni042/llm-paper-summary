@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d01-b02::chunk-0002-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.02654",
+      "identity_tokens": [
+        "arXiv:2604.02654"
+      ],
+      "title": "Drift-Resilient Temporal Priors for Visual Tracking",
+      "reason": "複数フレームの視覚追跡で過去予測の蓄積によるモデルドリフトを抑えるため、フレームごとの信頼度を校正するDTPTrackの研究であり、対象は視覚追跡という応用分野であって、LLM推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2604.02654",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 91
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.04217",
+      "identity_tokens": [
+        "arXiv:2605.04217"
+      ],
+      "title": "Jordan-RoPE: Non-Semisimple Relative Positional Encoding via Complex Jordan Blocks",
+      "reason": "回転位置符号化RoPEとALiBiを統一的に捉え、複素ジョルダンブロックによる非半単純な相対位置符号化Jordan-RoPEを理論的に検討する研究であり、注意の位置符号化には関わるが理論検討が中心で推論システムへの直接の貢献は薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.04217",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 92
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26949",
+      "identity_tokens": [
+        "arXiv:2605.26949"
+      ],
+      "title": "DinoComplete: 3D Shape Completion with Distilled Semantic Priors and State Space Models",
+      "reason": "部分スキャンからの3次元形状補完に、DINO特徴から蒸留した意味的 prior を組み合わせるDinoCompleteの研究であり、対象は3次元再構成という応用分野であって、LLM推論システムへの直接の技術的貢献は要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2605.26949",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 93
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13894",
+      "identity_tokens": [
+        "arXiv:2606.13894"
+      ],
+      "title": "Gefen: Optimized Stochastic Optimizer",
+      "reason": "AdamWのモーメント状態が学習メモリを圧迫する問題に対し、二次モーメントの共有と一次モーメントの量子化でオプティマイザメモリを削減するGefenの提案であり、対象は学習時のメモリであって推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2606.13894",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 94
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.11106",
+      "identity_tokens": [
+        "arXiv:2607.11106"
+      ],
+      "title": "Beyond the Eye: Efficient Multimodal Reasoning via Self-Regulated Implicit Visual Tools",
+      "reason": "マルチモーダルLLMの画像思考パラダイムが外部ツール呼び出しと画像再符号化で推論遅延を増やす問題に対し、暗黙的視覚ツールで自己調整するBEEの提案であり、推論遅延の削減に関わるが主眼はマルチモーダル推論の方式であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2607.11106",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 95
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06171",
+      "identity_tokens": [
+        "arXiv:2608.06171"
+      ],
+      "title": "Routing Is Least Learnable Where It Is Most Valuable: Bounds on Representation Routing for Web Agents",
+      "reason": "ウェブエージェントの観測モード（テキスト・ピクセル等）を課題ごとに選ぶ利得と学習可能性をWebArena等で測定する研究であり、対象はエージェントの観測設計の評価であって、LLM推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2608.06171",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 96
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.26086",
+      "identity_tokens": [
+        "arXiv:2609.26086"
+      ],
+      "title": "CoVeR: Coverage-Based Routing of Verifier Calls in Agentic Retrieval",
+      "reason": "エージェント型検索で証拠の十分性をLLM検証器に毎回判定させるコストに対し、埋め込みのカバレッジマージンで検証呼び出しの大半をスキップするCoVeRの提案であり、推論呼び出し回数の削減に関わるが対象は検索パイプラインの制御であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2609.26086",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 97
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.11156",
+      "identity_tokens": [
+        "arXiv:2610.11156"
+      ],
+      "title": "MiDashengLM-Spatial: Unifying General Audio Understanding and Spatial Awareness",
+      "reason": "モノラル音声理解と空間音声理解を統一する音声言語モデルMiDashengLM-Spatialの研究であり、対象は音声理解の能力拡張であって、LLM推論システムの実行効率や機構への直接の技術的貢献は要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.11156",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 98
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.08406",
+      "identity_tokens": [
+        "arXiv:2404.08406"
+      ],
+      "title": "MambaDFuse: A Mamba-based Dual-phase Model for Multi-modality Image Fusion",
+      "reason": "複数モダリティ画像融合のためにMambaベースの二相モデルMambaDFuseを提案する研究であり、対象は画像融合という応用分野の精度であって、LLM推論システムへの直接の技術的貢献は要旨から確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2404.08406",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 99
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.14717",
+      "identity_tokens": [
+        "arXiv:2408.14717"
+      ],
+      "title": "Text2SQL is Not Enough: Unifying AI and Databases with TAG",
+      "reason": "自然言語質問をデータベース上で処理するために言語モデルとデータ管理システムを統合するTAGの枠組みと評価を提示する研究であり、対象はAIとデータベースの統合方式であって、推論システムの実行機構への貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2408.14717",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 100
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10818",
+      "identity_tokens": [
+        "arXiv:2502.10818"
+      ],
+      "title": "On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging Recurrent and Graph Learning",
+      "reason": "グラフニューラルネットワークの勾配消失・過平滑化・過圧縮を、再帰学習とグラフ学習を橋渡しする統一的観点から理論的に論じる研究であり、対象はGNNの学習理論であってLLM推論システムへの直接の貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2502.10818",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 101
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02705",
+      "identity_tokens": [
+        "arXiv:2410.02705"
+      ],
+      "title": "ControlAR: Controllable Image Generation with Autoregressive Models",
+      "reason": "自己回帰モデルによる制御可能な画像生成ControlARの研究であり、制御画像をトークン化してプリフィルする方式を含むが対象は画像生成の制御性という応用であって、LLM推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2410.02705",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 102
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.03900",
+      "identity_tokens": [
+        "arXiv:2403.03900"
+      ],
+      "title": "Mamba4Rec: Towards Efficient Sequential Recommendation with Selective State Space Models",
+      "reason": "逐次推薦でTransformerの二次計算量が推論非効率を招く問題に対し、選択的状態空間モデルを用いるMamba4Recを提案する研究であり、推論効率を動機とするが対象は推薦システムという応用分野であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2403.03900",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 103
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3552326.3587436",
+      "identity_tokens": [
+        "DOI:10.1145/3552326.3587436"
+      ],
+      "title": "A2TP: Aggregator-aware In-network Aggregation for Multi-tenant Learning",
+      "reason": "分散機械学習の学習イテレーションにおける勾配集約の通信ボトルネックを、スイッチ内集約で緩和するA2TPの提案であり、対象は学習時の通信であって、推論システムへの直接の技術的貢献は要旨から確認できない。",
+      "source_url": "https://doi.org/10.1145/3552326.3587436",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 104
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.07440",
+      "identity_tokens": [
+        "arXiv:2402.07440"
+      ],
+      "title": "Benchmarking and Building Long-Context Retrieval Models with LoCo and M2-BERT",
+      "reason": "長文文書を対象とする検索エンコーダの評価と事前学習を行うLoCoベンチマークとM2-BERTの研究であり、長文脈処理には関わるが対象は検索モデルの構築と評価であって、LLM推論システムの実行機構への貢献は薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2402.07440",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 105
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.15766",
+      "identity_tokens": [
+        "arXiv:2110.15766"
+      ],
+      "title": "NxMTransformer: Semi-Structured Sparsification for Natural Language Understanding via ADMM",
+      "reason": "オンライン展開時の遅延制約を踏まえ、専用ハードウェアのNxMスパース性に適合するようADMMでTransformerを半構造的に疎化するNxMTransformerの研究であり、推論向け圧縮には関わるが対象はNLUエンコーダで手法は学習過程であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2110.15766",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 106
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.05500",
+      "identity_tokens": [
+        "arXiv:2503.05500"
+      ],
+      "title": "EuroBERT: Scaling Multilingual Encoders for European Languages",
+      "reason": "欧州言語向けの多言語エンコーダ系列EuroBERTを、デコーダ側の進歩を取り入れて構築する研究であり、対象は埋め込みモデルの学習と能力であって、LLM推論システムの実行機構への直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2503.05500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 107
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.12731",
+      "identity_tokens": [
+        "arXiv:2405.12731"
+      ],
+      "title": "From Today’s Code to Tomorrow’s Symphony: The AI Transformation of Developer’s Routine by 2030",
+      "reason": "GitHub CopilotやChatGPTによるAI支援プログラミングの現状と2030年に向けた開発者業務の変容を比較分析する展望論文であり、具体的な推論機構の提案はなく、LLM推論システムへの直接の技術的貢献は要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2405.12731",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 108
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.10548",
+      "identity_tokens": [
+        "arXiv:2212.10548"
+      ],
+      "title": "T-Projection: High Quality Annotation Projection for Sequence Labeling Tasks",
+      "reason": "系列ラベリング課題と言語向けに、並行コーパス上でアノテーションを射影するT-Projectionの提案であり、対象は教師データ生成というNLPの課題であって、LLM推論システムへの直接の技術的貢献は確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2212.10548",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 109
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.03085",
+      "identity_tokens": [
+        "arXiv:2405.03085"
+      ],
+      "title": "Compressing Long Context for Enhancing RAG with AMR-based Concept Distillation",
+      "reason": "RAGで検索された長文文書のノイズが回答を薄める問題に対し、AMRベースの概念蒸留で長文脈を圧縮してから入力する手法であり、LLMへ渡す文脈量の削減は推論コストに関わるが主眼は検索拡張生成の品質改善であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2405.03085",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 110
+    }
+  ],
+  "parent_run_key": "muse-20261126-d01-b02",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

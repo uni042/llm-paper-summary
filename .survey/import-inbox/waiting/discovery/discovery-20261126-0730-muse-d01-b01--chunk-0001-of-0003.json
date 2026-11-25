@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d01-b01::chunk-0001-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3820171.3806875",
+      "identity_tokens": [
+        "DOI:10.1145/3820171.3806875"
+      ],
+      "title": "SageServe: Optimizing LLM Serving on Cloud Data Centers with Forecast Aware Auto-Scaling",
+      "reason": "Microsoftの大規模LLM推論ワークロードを実測し、需要予測に基づくオートスケーリングで遅延感受性の異なる混合リクエストを共有GPUプールへ振り分けるサービング基盤であり、LLMサービングへの直接のシステム貢献が要旨で具体的に確認できる。",
+      "source_url": "https://doi.org/10.1145/3820171.3806875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3801489.3806878",
+      "identity_tokens": [
+        "DOI:10.1145/3801489.3806878"
+      ],
+      "title": "Optimal Scheduling Algorithms for LLM Inference: Theory and Practice",
+      "reason": "プリフィルとデコードの二相構造を持つLLM推論について、リクエストのルーティングとスケジューリングを理論枠組みとして定式化し最適スケジューリングアルゴリズムを提示する研究で、推論スケジューリングへの直接の技術的貢献が確認できる。",
+      "source_url": "https://doi.org/10.1145/3801489.3806878",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/978-981-95-2725-0_16",
+      "identity_tokens": [
+        "DOI:10.1007/978-981-95-2725-0_16"
+      ],
+      "title": "Towards Coarse-to-Fine Evaluation of Inference Efficiency for Large Language Models",
+      "reason": "LLMの推論効率を粗い粒度から細かい粒度へ段階的に評価し、既存の最適化コードライブラリ間の性能差とその要因を分析する評価研究であり、推論効率の計測には関わるが推論システム自体への新たな機構の提案ではないため境界とする。",
+      "source_url": "https://doi.org/10.1007/978-981-95-2725-0_16",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d",
+      "identity_tokens": [
+        "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d"
+      ],
+      "title": "AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving",
+      "reason": "モデル並列を統計的多重化へ転用し、バースト的な複数モデルのサービングで遅延を削減するAlpaServeを提案する研究であり、モデル並列のオーバーヘッドと多重化利得のトレードオフを具体化した、サービングへの直接の貢献が確認できる。",
+      "source_url": "https://www.semanticscholar.org/paper/f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28379",
+      "identity_tokens": [
+        "arXiv:2606.28379"
+      ],
+      "title": "LEDGER: Scaling Agentic Document Editing with Dependency-aware Graph Retrieval",
+      "reason": "長大な構造化文書へのエージェント編集において依存グラフに基づく検索で必要コンテキストだけを選択するLEDGERの提案であり、コンテキスト工学の応用手法であってLLM推論システムの実行機構への貢献は間接的であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2606.28379",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10101",
+      "identity_tokens": [
+        "arXiv:2410.10101"
+      ],
+      "title": "Learning Linear Attention in Polynomial Time",
+      "reason": "線形アテンションを持つ単層TransformerのPAC学習可能性をRKHSの観点から証明する学習理論の研究であり、推論時の計算効率やサービング機構とは無関係で、LLM推論システムへの直接の技術的貢献は要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2410.10101",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05842",
+      "identity_tokens": [
+        "arXiv:2610.05842"
+      ],
+      "title": "HLA: Expressive Hybrid Linear Attention via Chunk-Wise Dynamic Mixing",
+      "reason": "履歴を再帰状態へ圧縮する線形アテンションにクエリ依存のチャンク単位混合を加え、長文脈の自己回帰デコードで遠方の疎な情報へ選択的にアクセスできるようにする機構であり、デコード効率化を狙う注意機構への直接の貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2610.05842",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.15380",
+      "identity_tokens": [
+        "arXiv:2411.15380"
+      ],
+      "title": "Nd-BiMamba2: A Unified Bidirectional Architecture for Multi-Dimensional Data Processing",
+      "reason": "Mamba2を基に1次元時系列から3次元ボリュームデータまでを扱う双方向アーキテクチャNd-BiMamba2の提案であり、効率的な系列処理とは関わるものの対象は多次元データ処理全般で、LLM推論への具体的適用が示されないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2411.15380",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:8f75ea35c30c188795ffc64afefbc4bf5c531fa4",
+      "identity_tokens": [
+        "SemanticScholar:8f75ea35c30c188795ffc64afefbc4bf5c531fa4"
+      ],
+      "title": "Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference",
+      "reason": "単一GPUのHBM制約下でMoE推論を行うため、エキスパート量子化を動的に調整してオフロード転送がクリティカルパス化する事態を避けるDynamic Expert Quantizationの提案であり、MoE推論への直接の技術的貢献が確認できる。",
+      "source_url": "https://www.semanticscholar.org/paper/8f75ea35c30c188795ffc64afefbc4bf5c531fa4",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2409.19134",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2409.19134"
+      ],
+      "title": "Confidential Prompting: Protecting User Prompts from Cloud LLM Providers",
+      "reason": "信頼できないクラウド事業者からユーザープロンプトを守るため、機密VM内でLLMサービスを実行しSecure Partitioned Decodingで分割するPetridishの提案であり、主目的は機密性の確保で推論効率への貢献は副次的であるため境界とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2409.19134",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.30270",
+      "identity_tokens": [
+        "arXiv:2609.30270"
+      ],
+      "title": "HybridInfer: Thermal-Aware Reinforcement-Learning Tier Routing for On-Device, Edge, and Cloud LLM Inference",
+      "reason": "端末・エッジ・クラウドの三層へLLM推論を振り分けるにあたり、端末の熱制約で推論ランタイムが不安定化する実測知見を踏まえ、熱を意識した強化学習ベースの層ルーティングを行うHybridInferであり、推論配置への直接の貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2609.30270",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.17052",
+      "identity_tokens": [
+        "arXiv:2607.17052"
+      ],
+      "title": "Searching for Task-Specific Vision Paths: Evolutionary Block Pruning Across Vision-Language Models",
+      "reason": "視覚言語モデルが全質問に同じ視覚エンコーダを実行する無駄に対し、固定予算でスキップする視覚ブロックの組合せを進化的に探索する研究であり、VLM推論の計算削減には関わるが対象は視覚側の枝刈りで能力評価が中心であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2607.17052",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.15926",
+      "identity_tokens": [
+        "arXiv:2510.15926"
+      ],
+      "title": "TeLLMe v2: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs",
+      "reason": "三値量子化されたLLMのプリフィルとデコードの両方を対象に、テーブル参照型行列積を用いるエッジFPGA向けアクセラレータTeLLMe v2の提案であり、低ビット量子化モデルの推論ハードウェアへの直接の技術的貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2510.15926",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.28157",
+      "identity_tokens": [
+        "arXiv:2604.28157"
+      ],
+      "title": "FlashRT: Towards Computationally and Memory Efficient Red-Teaming for Prompt Injection and Knowledge Corruption",
+      "reason": "プロンプトインジェクションと知識汚染に対するレッドチーミング手法を計算・メモリ効率よく実行するFlashRTの研究であり、効率化の対象は攻撃生成の評価プロセスそのもので、LLM推論システムの実行効率への貢献ではないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2604.28157",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.04701",
+      "identity_tokens": [
+        "arXiv:2604.04701"
+      ],
+      "title": "MUXQ: Mixed-to-Uniform Precision MatriX Quantization via Low-Rank Outlier Decomposition",
+      "reason": "NPUベースのオンデバイス環境向けに、入力活性化の外れ値を低ランク成分へ分解して混合精度の行列量子化を均一精度へ変換するMUXQの提案であり、オンデバイスLLM推論の量子化への直接の技術的貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2604.04701",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.08620",
+      "identity_tokens": [
+        "arXiv:2306.08620"
+      ],
+      "title": "Anticipatory Music Transformer",
+      "reason": "記号音楽生成の制御タスクに向け、イベント過程と制御過程をインターリーブして先行的に生成するAnticipatory Music Transformerの研究であり、音楽生成という応用分野の手法でLLM推論システムへの直接の貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2306.08620",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.35985",
+      "identity_tokens": [
+        "arXiv:2610.35985"
+      ],
+      "title": "Let the Gate Decide: Per-Lookup Precision for Quantized Conditional Memory in LLMs",
+      "reason": "DeepSeekのEngramのような条件付きメモリ層の巨大なn-gramテーブルに対し、検索行の量子化誤差がゲート値で重み付けされる点に着目し、ルックアップ単位の精度配分を決める手法であり、LLM推論時のメモリ圧縮への直接の貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2610.35985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1117/12.3114673",
+      "identity_tokens": [
+        "DOI:10.1117/12.3114673"
+      ],
+      "title": "A LUT-based sparse transformer accelerator with structured sparsity for efficient inference",
+      "reason": "構造化スパース性を備えたTransformerをエッジデバイスで効率よく推論するため、ルックアップテーブル方式のスパースアクセラレータを設計する研究であり、Transformer推論ハードウェアへの直接の技術的貢献が要旨で確認できる。",
+      "source_url": "https://doi.org/10.1117/12.3114673",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.04708",
+      "identity_tokens": [
+        "arXiv:2404.04708"
+      ],
+      "title": "Efficient Sparse Processing-in-Memory Architecture (ESPIM) for Machine Learning Inference",
+      "reason": "推論時のピン帯域律速な行列ベクトル演算を対象に、非構造スパース推論の不規則性と負荷不均衡に対処するプロセッシングインメモリ・アーキテクチャESPIMの提案であり、ML推論ハードウェアへの直接の技術的貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2404.04708",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.13785",
+      "identity_tokens": [
+        "arXiv:2509.13785"
+      ],
+      "title": "Summary on The Multilingual Conversational Speech Language Model Challenge: Datasets, Tasks, Baselines, and Methods",
+      "reason": "多言語会話音声言語モデルのコンペティションMLC-SLMについて、データセット・タスク設定・ベースラインを総括するチャレンジ報告であり、推論システムの機構に関する提案はなくLLM推論システムへの直接の貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2509.13785",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 30
+    }
+  ],
+  "parent_run_key": "muse-20261126-d01-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

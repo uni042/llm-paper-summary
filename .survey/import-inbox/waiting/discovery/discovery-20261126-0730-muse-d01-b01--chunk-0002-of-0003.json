@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d01-b01::chunk-0002-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.20436",
+      "identity_tokens": [
+        "arXiv:2503.20436"
+      ],
+      "title": "Siformer: Feature-isolated Transformer for Efficient Skeleton-based Sign Language Recognition",
+      "reason": "骨格データに基づく手話認識のために特徴分離型のTransformerであるSiformerを提案するコンピュータビジョン応用の研究であり、対象は手話の認識精度であって、LLM推論システムへの直接の技術的貢献は要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2503.20436",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.18808",
+      "identity_tokens": [
+        "arXiv:2509.18808"
+      ],
+      "title": "SR-Eval: Evaluating LLMs on Code Generation under Stepwise Requirement Refinement",
+      "reason": "要求が段階的に具体化される条件下でのコード生成能力を測るベンチマークSR-Evalの提案であり、LLMの能力評価のみを扱う研究であるため、推論システムへの直接の技術的貢献はなく対象外とする。",
+      "source_url": "https://arxiv.org/abs/2509.18808",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.18671",
+      "identity_tokens": [
+        "arXiv:2506.18671"
+      ],
+      "title": "TCDiff++: An End-to-end Trajectory-Controllable Diffusion Model for Harmonious Music-Driven Group Choreography",
+      "reason": "タイトル自体が、音楽に合わせた集団の振り付け生成のための軌道制御可能な拡散モデルであることを明示しており、音楽・ダンス生成という異分野応用が明白であるため、要旨を確認せずタイトル段階で対象外と判断した。",
+      "source_url": "https://arxiv.org/abs/2506.18671",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.27254",
+      "identity_tokens": [
+        "arXiv:2603.27254"
+      ],
+      "title": "Amalgam: Hybrid LLM-PGM Synthesis Algorithm for Accuracy and Realism",
+      "reason": "合成データセット生成のために確率的グラフィカルモデルとLLMを組み合わせるAmalgamの提案であり、対象は医療等のドメイン向けデータ生成の精度と現実感であって、LLM推論システムの実行機構への貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2603.27254",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.33178",
+      "identity_tokens": [
+        "arXiv:2610.33178"
+      ],
+      "title": "AOS-Bench: Can LLM Agents Manage Dynamic Workloads?",
+      "reason": "永続的アシスタントとして複数の作業を抱えるコーディングエージェントのワークロード管理能力を測るAOS-Benchの提案であり、エージェントの能力評価ベンチマークであって推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.33178",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 35
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.07087",
+      "identity_tokens": [
+        "arXiv:2504.07087"
+      ],
+      "title": "KG-LLM-Bench: A Scalable Benchmark for Evaluating LLM Reasoning on Textualized Knowledge Graphs",
+      "reason": "知識グラフをテキスト化してLLMへ入力する方式の違いが推論性能へ与える影響を測るKG-LLM-Benchの提案であり、LLMの推論能力の評価ベンチマークであって、推論システムの実行機構への貢献ではないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2504.07087",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 36
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11851",
+      "identity_tokens": [
+        "arXiv:2406.11851"
+      ],
+      "title": "GUARD-D-LLM: An LLM-Based Risk Assessment Engine for the Downstream uses of LLMs",
+      "reason": "EUのAI法等を背景に、LLMの下流利用から生じるリスクを分類しLLM自体でリスク評価を行うGUARD-D-LLMの研究であり、リスク管理の枠組みであってLLM推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2406.11851",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 37
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3663141",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3663141"
+      ],
+      "title": "Route Optimization Reimagined: Multi-Modal Large Language Models for Next-Generation Vehicle Routing",
+      "reason": "タイトル自体が、次世代の車両ルーティングにマルチモーダル大規模言語モデルを用いる経路最適化の研究であることを明示しており、物流の経路計画という異分野応用が明白であるためタイトル段階で対象外と判断した。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3663141",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 39
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mc.2025.3546045",
+      "identity_tokens": [
+        "DOI:10.1109/mc.2025.3546045"
+      ],
+      "title": "Evolving AI: What Lies Beyond Today's Language Models",
+      "reason": "今日の言語モデルの先にあるAIの進化像を論じる展望的な短文であり、具体的な機構や評価を伴う技術提案は含まれておらず、LLM推論システムへの直接の技術的貢献は要旨から確認できないため対象外とする。",
+      "source_url": "https://doi.org/10.1109/mc.2025.3546045",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:0f0156fba32ad42d59e1cc8ab16ec3c1f5bf2e80",
+      "identity_tokens": [
+        "SemanticScholar:0f0156fba32ad42d59e1cc8ab16ec3c1f5bf2e80"
+      ],
+      "title": "Less is More: Improving LLM Reasoning with Minimal Test-Time Intervention",
+      "reason": "テスト時計算の増大による推論精度向上に対し、高エントロピーの少数トークンだけへ介入するMinimal Test-Time Interventionで推論を安定化させる枠組みであり、対象は推論時の振る舞いの制御で、推論システムの実行効率機構ではないため境界とする。",
+      "source_url": "https://www.semanticscholar.org/paper/0f0156fba32ad42d59e1cc8ab16ec3c1f5bf2e80",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 43
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18933",
+      "identity_tokens": [
+        "arXiv:2604.18933"
+      ],
+      "title": "Gated Memory Policy",
+      "reason": "ロボット操作タスクにおける観測履歴の記憶要件の違いに対応するため、ゲート付きメモリを持つ方策Gated Memory Policyを提案するロボティクス研究であり、LLM推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2604.18933",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01897",
+      "identity_tokens": [
+        "arXiv:2604.01897"
+      ],
+      "title": "FastTurn: Unifying Acoustic and Streaming Semantic Cues for Low-Latency and Robust Turn Detection",
+      "reason": "全二重音声対話で発話交替を検出するため、音響情報とストリーミング意味情報を統合するFastTurnの提案であり、対象はターン検出モデルの精度と頑健性であって、LLM推論システムの実行機構への貢献ではないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2604.01897",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 47
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.caeai.2026.100558",
+      "identity_tokens": [
+        "DOI:10.1016/j.caeai.2026.100558"
+      ],
+      "title": "Optimizing automated scoring in ILSAs with prompt compression",
+      "reason": "国際的な読解評価の自動採点において、長い読解文と採点ガイドを含むプロンプトの計算コストをプロンプト圧縮で下げる検討であり、プロンプト圧縮自体は推論コスト削減に関わるが主目的は教育測定への応用であるため境界とする。",
+      "source_url": "https://doi.org/10.1016/j.caeai.2026.100558",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29528",
+      "identity_tokens": [
+        "arXiv:2608.29528"
+      ],
+      "title": "MedCache: Efficient and Temporally Valid Memory for Longitudinal Clinical Agents",
+      "reason": "縦断的な臨床エージェントが複数受診にまたがる患者状態を保持するためのメモリ設計を、ベンチマーク上でキュレーション・組織化・検索の観点から検討するMedCacheの研究であり、エージェントメモリの設計知見ではあるが臨床応用が主目的のため境界とする。",
+      "source_url": "https://arxiv.org/abs/2608.29528",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.15595",
+      "identity_tokens": [
+        "arXiv:2211.15595"
+      ],
+      "title": "FsaNet: Frequency Self-Attention for Semantic Segmentation",
+      "reason": "画像のスペクトル特性を利用して計算量を線形まで抑えた周波数自己注意をセマンティックセグメンテーションへ適用するFsaNetの研究であり、対象は画像分割の精度であってLLM推論システムへの直接の貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2211.15595",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00187",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00187"
+      ],
+      "title": "HiT: A Unified Sparsity-Adaptive Architecture for High-Throughput Matrix Multiplication",
+      "reason": "疎性の度合いが多様な行列同士の乗算を高スループットで処理する統一アーキテクチャHiTの提案であり、行列演算の加速は推論基盤と関わるものの対象はAI・科学計算全般の汎用行列乗算で、LLM推論に特化した機構ではないため境界とする。",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00187",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 51
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-eacl.189",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-eacl.189"
+      ],
+      "title": "Tailoring Memory Granularity for Multi-Hop Reasoning over Long Contexts",
+      "reason": "長文脈での多段推論に向け、RAGの文脈メモリを単一表現でなく粒度を調整して保持するTAGの枠組みであり、検索拡張生成のメモリ表現に関する提案であって、LLM推論システムの実行機構への直接の貢献は薄いため境界とする。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-eacl.189",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460793",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11460793"
+      ],
+      "title": "Keeping Models Listening: Segment- and time-aware attention rescaling at decoding time",
+      "reason": "音声大規模言語モデルでデコードが進むにつれ音声根拠への注意が減衰する現象を分析し、デコード時に注意ロジットを再スケーリングするAttnAdapterを提案する研究であり、対象はデコード時の品質維持で効率化機構ではないため境界とする。",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11460793",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 53
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.15131",
+      "identity_tokens": [
+        "arXiv:2407.15131"
+      ],
+      "title": "Token-Picker: Accelerating Attention in Text Generation with Minimized Memory Transfer via Probability Estimation",
+      "reason": "テキスト生成時の注意がメモリ転送律速である点に対し、ソフトマックス前の確率推定で低確率トークンを除去してオフチップメモリアクセスを最小化するToken-Pickerの提案であり、注意計算の推論高速化への直接の貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2407.15131",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 54
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.05154",
+      "identity_tokens": [
+        "arXiv:2608.05154"
+      ],
+      "title": "RIG-RoPE: Relation-Stratified Multimodal Attention with Instance-Local Rotary Geometry and Representation-Aware Traversal Coordinates",
+      "reason": "マルチモーダル回転位置符号化におけるインスタンス間の空間変位の曖昧さを解くため、関係で層化した注意と表現認識型の走査座標を導入するRIG-RoPEの提案であり、位置符号化の設計論であって推論システムへの直接の貢献は薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2608.05154",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 55
+    }
+  ],
+  "parent_run_key": "muse-20261126-d01-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}
