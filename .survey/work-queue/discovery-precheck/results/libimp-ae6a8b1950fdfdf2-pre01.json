@@ -1,0 +1,209 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ae6a8b1950fdfdf2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ae6a8b1950fd",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/access.2026.3692964",
+    "DOI:10.1109/iscas56072.2025.11043162",
+    "arXiv:2501.05248",
+    "arXiv:2506.01084",
+    "arXiv:2506.19651",
+    "arXiv:2507.12145",
+    "arXiv:2512.16855",
+    "arXiv:2607.20129"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e2df0677a37beade650b8142f650b9f1dab4379f",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 7,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T04:57:15.738443+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/access.2026.3692964",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/access.2026.3692964"
+    },
+    {
+      "requested_id": "DOI:10.1109/iscas56072.2025.11043162",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/iscas56072.2025.11043162"
+    },
+    {
+      "requested_id": "arXiv:2501.05248",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.01084",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.52202/085713-5077"
+    },
+    {
+      "requested_id": "arXiv:2506.19651",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2506.19651"
+    },
+    {
+      "requested_id": "arXiv:2507.12145",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3842721.3850118"
+    },
+    {
+      "requested_id": "arXiv:2512.16855",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/iccad66269.2025.11240962"
+    },
+    {
+      "requested_id": "arXiv:2607.20129",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.20129"
+    }
+  ],
+  "results": [
+    {
+      "title": "Deriving Coding-Specific Sub-Models from LLMs using Resource-Efficient Pruning",
+      "source_url": "https://arxiv.org/abs/2501.05248",
+      "year": 2025,
+      "published": "2025-01-09",
+      "venue": "2025 IEEE/ACM International Workshop on Large Language Models for Code (LLM4Code)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated their exceptional performance in various complex code generation tasks. However, their broader adoption is limited by significant computational demands and high resource requirements, particularly memory and processing power. To mitigate such requirements, model pruning techniques are used to create more compact models with significantly fewer parameters. However, current approaches do not focus on the efficient extraction of programming-language-specific sub-models. In this work, we explore the idea of efficiently deriving coding-specific sub-models through unstructured pruning (i.e., Wanda). We investigate the impact of different domain-specific calibration datasets on pruning outcomes across three distinct domains and extend our analysis to extracting four language-specific sub-models: Python, Java, C++, and JavaScript. We demonstrate that it is possible to efficiently extract programming-language-specific sub-models using appropriate calibration datasets while maintaining acceptable accuracy w.r.t. full models. We are also the first to provide analytical evidence that domain-specific tasks activate distinct regions within LLMs, supporting the creation of specialized sub-models through unstructured pruning. We believe that this work has significant potential to enhance LLM accessibility for coding by reducing computational requirements to enable local execution on consumer-grade hardware, and supporting faster inference times critical for real-time development feedback.",
+      "identifiers": [
+        "SemanticScholar:b09336b4c5779fada9862b40f121baef2a29f18f"
+      ],
+      "semantic_scholar_id": "b09336b4c5779fada9862b40f121baef2a29f18f",
+      "canonical_id": "arXiv:2501.05248",
+      "arxiv_id": "2501.05248",
+      "doi": "10.1109/LLM4Code66737.2025.00028",
+      "authors": [
+        "Laura Puccioni",
+        "Alireza Farshin",
+        "Mariano Scazzariello",
+        "Chang-Jie Wang",
+        "Marco Chiesa",
+        "Dejan Kostić"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 685,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2501.05248",
+      "identity_tokens": [
+        "id:DOI:10.1109/llm4code66737.2025.00028",
+        "id:SemanticScholar:b09336b4c5779fada9862b40f121baef2a29f18f",
+        "id:arXiv:2501.05248",
+        "title:deriving codingspecific submodels from llms using resourceefficient pruning",
+        "url:https://arxiv.org/abs/2501.05248"
+      ],
+      "record": {
+        "title": "Deriving Coding-Specific Sub-Models from LLMs using Resource-Efficient Pruning",
+        "source_url": "https://arxiv.org/abs/2501.05248",
+        "year": 2025,
+        "published": "2025-01-09",
+        "venue": "2025 IEEE/ACM International Workshop on Large Language Models for Code (LLM4Code)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated their exceptional performance in various complex code generation tasks. However, their broader adoption is limited by significant computational demands and high resource requirements, particularly memory and processing power. To mitigate such requirements, model pruning techniques are used to create more compact models with significantly fewer parameters. However, current approaches do not focus on the efficient extraction of programming-language-specific sub-models. In this work, we explore the idea of efficiently deriving coding-specific sub-models through unstructured pruning (i.e., Wanda). We investigate the impact of different domain-specific calibration datasets on pruning outcomes across three distinct domains and extend our analysis to extracting four language-specific sub-models: Python, Java, C++, and JavaScript. We demonstrate that it is possible to efficiently extract programming-language-specific sub-models using appropriate calibration datasets while maintaining acceptable accuracy w.r.t. full models. We are also the first to provide analytical evidence that domain-specific tasks activate distinct regions within LLMs, supporting the creation of specialized sub-models through unstructured pruning. We believe that this work has significant potential to enhance LLM accessibility for coding by reducing computational requirements to enable local execution on consumer-grade hardware, and supporting faster inference times critical for real-time development feedback.",
+        "identifiers": [
+          "SemanticScholar:b09336b4c5779fada9862b40f121baef2a29f18f"
+        ],
+        "semantic_scholar_id": "b09336b4c5779fada9862b40f121baef2a29f18f",
+        "canonical_id": "arXiv:2501.05248",
+        "arxiv_id": "2501.05248",
+        "doi": "10.1109/LLM4Code66737.2025.00028",
+        "authors": [
+          "Laura Puccioni",
+          "Alireza Farshin",
+          "Mariano Scazzariello",
+          "Chang-Jie Wang",
+          "Marco Chiesa",
+          "Dejan Kostić"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 685,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7dcf882a6a2c6e333b65b95bf39c8be9cf83ff21c307c747d27ab1a3781d7727",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
