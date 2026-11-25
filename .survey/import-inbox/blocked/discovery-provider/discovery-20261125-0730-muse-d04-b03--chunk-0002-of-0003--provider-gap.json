@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d04-b03::provider-gap",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 7,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/LCA.2026.3689575",
+      "identity_tokens": [
+        "DOI:10.1109/LCA.2026.3689575"
+      ],
+      "title": "KiF: Accelerating Low-Batch LLM Inference Using In-Flash KV Cache",
+      "reason": "KiF manages the KV cache inside flash chips with pseudo-SLC write management and an in-flash GEMV accelerator, delivering up to 4.1x throughput over SSD KV offloading for low-batch edge LLM inference; direct KV-cache system.",
+      "source_url": "https://doi.org/10.1109/LCA.2026.3689575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 230
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.18482",
+      "identity_tokens": [
+        "arXiv:2611.18482"
+      ],
+      "title": "MMFlash: Faster Speculative Decoding for Vision-Language Models",
+      "reason": "MMFlash adapts diffusion-drafter speculative decoding to vision-language models using a token-level visual-dependence metric to raise acceptance; direct speculative decoding for multimodal inference.",
+      "source_url": "https://arxiv.org/abs/2611.18482",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 231
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/MM.2026.3669502",
+      "identity_tokens": [
+        "DOI:10.1109/MM.2026.3669502"
+      ],
+      "title": "Architecting Long-Context Large Language Model Acceleration With Packing–Prefetch Scheduler and Ultralarge Capacity On-Chip Memories",
+      "reason": "Proposes a packing-prefetch scheduler with ultra-large on-chip M3D memories that hides KV-cache transfer overhead in long-context LLM inference, reporting 8.06x decode speedup; direct inference architecture.",
+      "source_url": "https://doi.org/10.1109/MM.2026.3669502",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 233
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1609/aaai.v40i31.39789",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v40i31.39789"
+      ],
+      "title": "DIAA: A Decoding-Efficient Inference Acceleration Approach for On-Device Large Language Models",
+      "reason": "DIAA accelerates on-device LLM speculative decoding without a separate draft model's memory burden and with adaptive token trees; direct decoding acceleration for edge inference.",
+      "source_url": "https://doi.org/10.1609/aaai.v40i31.39789",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 234
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2311.04951",
+      "identity_tokens": [
+        "arXiv:2311.04951"
+      ],
+      "title": "Leveraging Speculative Sampling and KV-Cache Optimizations Together for Generative AI using OpenVINO",
+      "reason": "Demonstrates combining speculative sampling with KV-cache optimizations in OpenVINO to reduce text-generation latency; a direct, if tutorial-style, inference optimization contribution.",
+      "source_url": "https://arxiv.org/abs/2311.04951",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 235
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IWQoS65803.2025.11143464",
+      "identity_tokens": [
+        "DOI:10.1109/IWQoS65803.2025.11143464"
+      ],
+      "title": "Birds in Cages: Edge Inference Allocation for Distributed LLM Deployment",
+      "reason": "Formulates allocation of distributed LLM inference tasks across heterogeneous edge servers under differing latency requirements and generative resource uncertainty; direct edge inference scheduling.",
+      "source_url": "https://doi.org/10.1109/IWQoS65803.2025.11143464",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 236
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.22867",
+      "identity_tokens": [
+        "arXiv:2603.22867"
+      ],
+      "title": "TRINE: A Token-Aware, Runtime-Adaptive FPGA Inference Engine for Multimodal AI",
+      "reason": "TRINE is a single-bitstream FPGA inference engine and compiler unifying ViT/CNN/GNN/Transformer layers with in-stream token pruning and dependency-aware kernel offloading; inference accelerator hardware including Transformer workloads.",
+      "source_url": "https://arxiv.org/abs/2603.22867",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 240
+    }
+  ],
+  "parent_run_key": "muse-20261125-d04-b03",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261125-0730-muse-d04-b03--chunk-0002-of-0003.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/iwqos65803.2025.11143464",
+    "DOI:10.1109/lca.2026.3689575",
+    "DOI:10.1109/mm.2026.3669502",
+    "DOI:10.1609/aaai.v40i31.39789",
+    "arXiv:2311.04951",
+    "arXiv:2603.22867",
+    "arXiv:2611.18482"
+  ]
+}

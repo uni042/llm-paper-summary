@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "muse",
-  "run_key": "muse-20261125-d04-b03::chunk-0003-of-0003",
+  "run_key": "muse-20261125-d04-b03::provider-gap",
   "reference_main_sha": "7ee9f908",
-  "record_count": 10,
+  "record_count": 5,
   "origin": "discovery_worklist",
   "records": [
     {
@@ -23,40 +23,6 @@
         "worker-worklist discovery_review"
       ],
       "worklist_rank": 241
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2512.20120",
-      "identity_tokens": [
-        "arXiv:2512.20120"
-      ],
-      "title": "HEART-VIT: Hessian-Guided Efficient Dynamic Attention and Token Pruning in Vision Transformer",
-      "reason": "HEART-ViT prunes tokens and attention heads in Vision Transformers using Hessian-guided sensitivity; efficient ViT inference, but a vision-only model with no LLM serving connection.",
-      "source_url": "https://arxiv.org/abs/2512.20120",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-25T07:30:00+09:00",
-      "last_checked_at": "2026-11-25T07:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 242
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2507.04290",
-      "identity_tokens": [
-        "arXiv:2507.04290"
-      ],
-      "title": "MPQ-DMv2: Flexible Residual Mixed Precision Quantization for Low-Bit Diffusion Models With Temporal Distillation",
-      "reason": "MPQ-DMv2 is a mixed-precision quantization framework for extremely low-bit diffusion models with temporal distillation; quantization for inference, but targeting image diffusion models, not LLMs.",
-      "source_url": "https://arxiv.org/abs/2507.04290",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-25T07:30:00+09:00",
-      "last_checked_at": "2026-11-25T07:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 243
     },
     {
       "classification": "accept",
@@ -93,40 +59,6 @@
       "worklist_rank": 245
     },
     {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2605.03667",
-      "identity_tokens": [
-        "arXiv:2605.03667"
-      ],
-      "title": "ELAS: Efficient Pre-Training of Low-Rank Large Language Models via 2:4 Activation Sparsity",
-      "reason": "ELAS pre-trains low-rank LLMs with 2:4 activation sparsity to cut training memory and raise throughput; pre-training efficiency only, no inference application.",
-      "source_url": "https://arxiv.org/abs/2605.03667",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-25T07:30:00+09:00",
-      "last_checked_at": "2026-11-25T07:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 246
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2610.06260",
-      "identity_tokens": [
-        "arXiv:2610.06260"
-      ],
-      "title": "CentriQ: Calibration-Free Quantization of Diffusion Transformers via Exact Mean Centering",
-      "reason": "CentriQ quantizes diffusion Transformers to 4 bits calibration-free via exact mean centering; an inference quantization method, but for image-generation DiTs rather than LLM inference.",
-      "source_url": "https://arxiv.org/abs/2610.06260",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-25T07:30:00+09:00",
-      "last_checked_at": "2026-11-25T07:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 247
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2610.35985",
       "identity_tokens": [
@@ -159,27 +91,18 @@
         "worker-worklist discovery_review"
       ],
       "worklist_rank": 249
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2511.01462",
-      "identity_tokens": [
-        "arXiv:2511.01462"
-      ],
-      "title": "Efficiently Training A Flat Neural Network Before It has been Quantizated",
-      "reason": "Trains flat full-precision networks so later post-training quantization of ViTs loses less accuracy; a training-side preconditioning method for quantization, evaluated on vision Transformers.",
-      "source_url": "https://arxiv.org/abs/2511.01462",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-25T07:30:00+09:00",
-      "last_checked_at": "2026-11-25T07:30:00+09:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "worklist_rank": 250
     }
   ],
   "parent_run_key": "muse-20261125-d04-b03",
   "chunk_index": 3,
   "chunk_count": 3,
-  "source_record_count": 50
+  "source_record_count": 50,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261125-0730-muse-d04-b03--chunk-0003-of-0003.json",
+  "provider_gap_ids": [
+    "DOI:10.1007/s11633-026-1653-x",
+    "DOI:10.1109/icc52391.2025.11161094",
+    "DOI:10.1109/lca.2026.3691007",
+    "DOI:10.3390/computers15010039",
+    "arXiv:2610.35985"
+  ]
 }

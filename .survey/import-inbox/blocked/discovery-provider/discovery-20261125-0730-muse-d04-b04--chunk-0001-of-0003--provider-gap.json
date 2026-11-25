@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d04-b04::provider-gap",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 4,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.03142",
+      "identity_tokens": [
+        "arXiv:2402.03142"
+      ],
+      "title": "Less is KEN: a Universal and Simple Non-Parametric Pruning Algorithm for Large Language Models",
+      "reason": "KEN is a non-parametric unstructured pruning algorithm for LLMs based on kernel density estimation that preserves significant parameters and stores only the optimized subnetwork; direct LLM pruning for deployment.",
+      "source_url": "https://arxiv.org/abs/2402.03142",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 262
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.23373",
+      "identity_tokens": [
+        "arXiv:2607.23373"
+      ],
+      "title": "UltraViT: Latency-Optimized On-device Vision Encoder for Large Vision-Language Models",
+      "reason": "UltraViT designs a pyramidal vision encoder explicitly optimized against measured on-device latencies for large vision-language models; direct inference-latency optimization of an LVLM component.",
+      "source_url": "https://arxiv.org/abs/2607.23373",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 268
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.13667",
+      "identity_tokens": [
+        "arXiv:2608.13667"
+      ],
+      "title": "Second Thought: Reasoning in Parallel as LLM Agents Act and Observe",
+      "reason": "Second Thought forks auxiliary reasoning branches that decode concurrently during ReAct action/observation idle windows and merges them back, relocating reasoning into otherwise wasted inference time; a direct inference-time execution framework.",
+      "source_url": "https://arxiv.org/abs/2608.13667",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 269
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.12959",
+      "identity_tokens": [
+        "arXiv:2610.12959"
+      ],
+      "title": "Video Codec-Guided Training-Free Token Compression for Video Large Language Models",
+      "reason": "Uses video codec motion vectors, residuals and reference dependencies as a cheap prior for training-free visual token compression in video LLMs; direct inference token compression for VLLMs.",
+      "source_url": "https://arxiv.org/abs/2610.12959",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 270
+    }
+  ],
+  "parent_run_key": "muse-20261125-d04-b04",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261125-0730-muse-d04-b04--chunk-0001-of-0003.json",
+  "provider_gap_ids": [
+    "arXiv:2402.03142",
+    "arXiv:2607.23373",
+    "arXiv:2608.13667",
+    "arXiv:2610.12959"
+  ]
+}

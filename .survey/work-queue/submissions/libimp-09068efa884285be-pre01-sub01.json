@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Per-Axis Weight Deltas for Frequent Model Updates",
+      "source_url": "https://arxiv.org/abs/2512.19720",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving many task-specialized LLM variants is often limited by the large size of fine-tuned checkpoints and the resulting cold-start latency. Since fine-tuned weights differ from their base model by relatively small structured residuals, a natural approach is to represent them as compressed deltas. We propose a simple 1-bit delta scheme that stores only the sign of the weight difference together with lightweight per-axis (row/column) FP16 scaling factors, learned from a small calibration set. This design preserves the compactness of 1-bit deltas while more accurately capturing variation across weight dimensions, leading to improved reconstruction quality over scalar alternatives. From a systems perspective, a streamlined loader that transfers packed deltas in a single operation per module reduces cold-start latency and storage overhead, with artifacts several times smaller than a full FP16 checkpoint. The method is drop-in, requires minimal calibration data, and maintains inference efficiency by avoiding dense reconstruction. Our experimental setup and source code are available at https://github.com/kuiumdjiev/Per-Axis-Weight-Deltas-for-Frequent-Model-Updates.",
+      "identifiers": [
+        "SemanticScholar:e26d32821855bab2a4b99a8bc7feaf838b16063b"
+      ],
+      "semantic_scholar_id": "e26d32821855bab2a4b99a8bc7feaf838b16063b",
+      "canonical_id": "arXiv:2512.19720",
+      "arxiv_id": "2512.19720",
+      "doi": "10.48550/arXiv.2512.19720",
+      "authors": [
+        "Stefan Kuyumdzhiev",
+        "Radostin Cholakov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 344,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Stores fine-tuned model variants as 1-bit per-axis-scaled weight deltas with a streamlined loader, attacking checkpoint size and cold-start latency when serving many task-specialized LLMs; direct serving-system contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Task-Oriented Key-Layer KV Communication for Efficient Latent Multi-Agent Collaboration",
+      "source_url": "https://arxiv.org/abs/2610.08820",
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model-based multi-agent systems improve complex problem solving through collaboration, while latent communication directly transmits model internal states to avoid the high inference costs of natural language. However, existing KV-based latent communication methods prioritize sender-side state fidelity, leading to substantial communication and computation overhead and potentially introducing redundant information. To address these limitations, we revisit latent communication from a task-oriented perspective, shifting its objective from sender-side state fidelity to receiver-side task sufficiency. Under this formulation, we propose KITE, a training-free framework for task-oriented key-layer KV communication. KITE identifies a task-effective key layer using a receiver trajectory distortion criterion, transmits only the latent working memory associated with the key layer, and further uses the same layer as the entry point for autoregressive latent reasoning. Experiments on seven benchmarks across two model families and three model scales show that, compared with full-layer KV communication, KITE reduces communication volume by 28-36$\\times$, achieves up to 3$\\times$ end-to-end inference speedup, and improves accuracy by up to 23.3 percentage points.",
+      "identifiers": [
+        "SemanticScholar:9317567d279b6d761b04101e43f8416b9526f8e7"
+      ],
+      "semantic_scholar_id": "9317567d279b6d761b04101e43f8416b9526f8e7",
+      "canonical_id": "arXiv:2610.08820",
+      "arxiv_id": "2610.08820",
+      "authors": [
+        "Dong-Sen Zhang",
+        "Pei-Pei Li",
+        "Ze-Kun Li",
+        "Wen-Jun Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 62,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KITE selects task-oriented key layers whose KV states are transmitted for latent multi-agent collaboration, cutting the communication and computation overhead of KV-based latent communication; direct KV-cache communication optimization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-09068efa8842",
+    "round": "libimp-09068efa884285be-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-09068efa884285be-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-09068efa884285be-pre01.json",
+    "receipt": "sha256:ed1555a85faa02998f0315e7113f076502487e5a4c318699e46ab2515b9d2bb0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-09068efa8842",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

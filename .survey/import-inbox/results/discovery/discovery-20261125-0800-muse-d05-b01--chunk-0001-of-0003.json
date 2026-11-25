@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "discovery",
+  "status": "imported_with_provider_gaps",
+  "source_sha256": "d880c27b66ed631a587ce862318d723e62c1f3d0bec509a3bca5f0adcfe8fd84",
+  "retained_payload": null,
+  "processed_at": "2026-11-25T04:59:33+00:00",
+  "record_count": 20,
+  "run_key": "muse-20261125-d05-b01::chunk-0001-of-0003",
+  "parent_run_key": "muse-20261125-d05-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "worker_id": "muse",
+  "accept_count": 5,
+  "relevance_count": 15,
+  "provider_gap_count": 5,
+  "provider_gap_ids": [
+    "DOI:10.1109/iscas56072.2025.11043703",
+    "DOI:10.23919/date69613.2026.11539717",
+    "arXiv:2507.22931",
+    "arXiv:2604.09150",
+    "arXiv:2605.28115"
+  ],
+  "provider_gap_payload": ".survey/import-inbox/blocked/discovery-provider/discovery-20261125-0800-muse-d05-b01--chunk-0001-of-0003--provider-gap.json",
+  "counts": {
+    "allowed": 0,
+    "filtered": 0,
+    "submitted": 0
+  }
+}
