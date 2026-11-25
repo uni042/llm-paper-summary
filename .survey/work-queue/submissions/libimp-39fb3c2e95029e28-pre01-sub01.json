@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OS-Pruner: Pruning Chains-of-Thought of Reasoning Models via Optimal Stopping",
+      "source_url": "https://arxiv.org/abs/2607.11089",
+      "year": 2026,
+      "published": "2026-07-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable success in complex reasoning tasks through Chain-of-Thought (CoT) prompting. However, these models often exhibit\"computational overthinking,\"generating redundant reasoning steps that increase latency and cost without improving accuracy. Recent studies suggest that CoT trajectories can be significantly pruned, yet existing methods often rely on forcing a static thinking budget, heuristic filtering, sub-optimal early exit via classification, or expensive re-training. In this paper, we introduce OS-Pruner, a lightweight plug-in framework that formulates chain-of-thought pruning as an optimal stopping problem. Given a reasoning prefix, OS-Pruner learns whether further reasoning is worth its token cost by optimizing an explicit utility that trades off final-answer accuracy against generated length. Our novel formulation enables the model to dynamically assess the sufficient point of termination for a reasoning chain. OS-Pruner is designed to be lightweight during both training and inference, and to provide users with fine-grained control over the reasoning-effort vs. accuracy trade-off. On diverse reasoning benchmarks and base models, OS-Pruner achieves 20-60\\% reduction in generation length with minimal accuracy sacrifice.",
+      "identifiers": [
+        "SemanticScholar:dbfa51b5159a1a7735c7a3bcfe0c1fd65c19a42f"
+      ],
+      "semantic_scholar_id": "dbfa51b5159a1a7735c7a3bcfe0c1fd65c19a42f",
+      "canonical_id": "arXiv:2607.11089",
+      "arxiv_id": "2607.11089",
+      "doi": "10.48550/arXiv.2607.11089",
+      "authors": [
+        "Mohamed Ehab",
+        "Aymane El Gadarri",
+        "V. Farias",
+        "A. Jozefiak",
+        "C. Moallemi"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OS-Pruner prunes chains of thought in reasoning models via optimal stopping, avoiding static budgets and retraining while cutting latency and cost of redundant reasoning steps; a concrete inference-time reasoning-length optimization, hence accept.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-39fb3c2e9502",
+    "round": "libimp-39fb3c2e95029e28-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-39fb3c2e95029e28-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-39fb3c2e95029e28-pre01.json",
+    "receipt": "sha256:8ff5f317a395cf98e646f4d3839f40ea604c9c1457169d8a995038d701966141"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-39fb3c2e9502",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

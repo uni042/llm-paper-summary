@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SISA: A Scale-In Systolic Array for GEMM Acceleration",
+      "source_url": "https://arxiv.org/abs/2603.29913",
+      "year": 2026,
+      "published": "2026-03-31",
+      "venue": "European Conference on Parallel Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The currently dominant AI/ML workloads, such as Large Language Models (LLMs), rely on the efficient execution of General Matrix-Matrix Multiplication (GEMM) operations. Thus, most systems are equipped with dedicated matrix hardware accelerators based on square Systolic Arrays (SAs) of Processing Elements (PEs). While this organization was effective for traditional Deep Neural Networks (DNNs), LLMs introduce input-dependent and highly skewed matrices, leading to underutilized SA resources. To address this challenge, we propose SISA (Scale-In Systolic Array), a novel SA architecture that partitions the traditional square array into horizontal rectangular slabs. With minimal overhead, SISA exposes parallelism through independently scheduled slabs for efficient execution of small or skewed matrix shapes, while retaining full-array operation for large GEMMs. SISA achieves up to 8.52x speedup and 93% energy-delay-product (EDP) reduction for representative LLMs compared to a state-of-the-art monolithic SA with the same number of PEs.",
+      "identifiers": [
+        "SemanticScholar:3c31a3e2bec29c4accced6f3523163038b63505f"
+      ],
+      "semantic_scholar_id": "3c31a3e2bec29c4accced6f3523163038b63505f",
+      "canonical_id": "arXiv:2603.29913",
+      "arxiv_id": "2603.29913",
+      "doi": "10.1007/978-3-032-35248-4_25",
+      "authors": [
+        "Luigi Altamura",
+        "Alessio Cicero",
+        "Mateo Vázquez Maceiras",
+        "M. Maleki",
+        "P. Trancoso"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SISA is a scale-in systolic array redesign that handles the skewed, input-dependent GEMM shapes produced by LLM workloads, raising processing-element utilization over square arrays; a direct accelerator contribution for LLM execution, hence accept.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2fd07b4c4bde",
+    "round": "libimp-2fd07b4c4bde8d82-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2fd07b4c4bde8d82-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2fd07b4c4bde8d82-pre01.json",
+    "receipt": "sha256:c73a3fbe3622b7268962f9fc29d107407325e92e5cf4e8b2e4545401e6b84f4b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2fd07b4c4bde",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

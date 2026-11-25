@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Parallel Key-Value Cache Fusion for Position Invariant RAG",
+      "source_url": "https://arxiv.org/abs/2501.07523",
+      "year": 2025,
+      "published": "2025-01-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in Large Language Models (LLMs) underscore the necessity of Retrieval Augmented Generation (RAG) to leverage external information. However, LLMs are sensitive to the position of relevant information within contexts and tend to generate incorrect responses when such information is placed in the middle, known as `Lost in the Middle' phenomenon. In this paper, we introduce a framework that generates consistent outputs for decoder-only models, irrespective of the input context order. Experimental results for three open domain question answering tasks demonstrate position invariance, where the model is not sensitive to input context order, and superior robustness to irrelevent passages compared to prevailing approaches for RAG pipelines.",
+      "identifiers": [
+        "SemanticScholar:3ecfab592fa0280d18707485d94114db9b7185c6"
+      ],
+      "semantic_scholar_id": "3ecfab592fa0280d18707485d94114db9b7185c6",
+      "canonical_id": "arXiv:2501.07523",
+      "arxiv_id": "2501.07523",
+      "doi": "10.48550/arXiv.2501.07523",
+      "authors": [
+        "Philhoon Oh",
+        "Jin-Woo Shin",
+        "James Thorne"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 681,
+        "matched_prestigious_venue": null
+      },
+      "reason": "本論文は位置不変RAGのために並列KVキャッシュ融合を行う枠組みであり、取得文脈の位置感度をKVキャッシュ側の処理で解くKVキャッシュ機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-de72387154ed",
+    "round": "libimp-de72387154edd3b2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-de72387154edd3b2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-de72387154edd3b2-pre01.json",
+    "receipt": "sha256:fa0dabebcde477fa81c739bd83e558def868a3bbf289d2401409686396d93893"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-de72387154ed",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

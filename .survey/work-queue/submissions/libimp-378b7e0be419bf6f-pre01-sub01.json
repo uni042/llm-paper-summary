@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "QwT-v2: Practical, Effective and Efficient Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2505.20932",
+      "year": 2025,
+      "published": "2025-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Network quantization is arguably one of the most practical network compression approaches for reducing the enormous resource consumption of modern deep neural networks. They usually require diverse and subtle design choices for specific architecture and tasks. Instead, the QwT method is a simple and general approach which introduces lightweight additional structures to improve quantization. But QwT incurs extra parameters and latency. More importantly, QwT is not compatible with many hardware platforms. In this paper, we propose QwT-v2, which not only enjoys all advantages of but also resolves major defects of QwT. By adopting a very lightweight channel-wise affine compensation (CWAC) module, QwT-v2 introduces significantly less extra parameters and computations compared to QwT, and at the same time matches or even outperforms QwT in accuracy. The compensation module of QwT-v2 can be integrated into quantization inference engines with little effort, which not only effectively removes the extra costs but also makes it compatible with most existing hardware platforms.",
+      "identifiers": [
+        "SemanticScholar:691cfd647f085fc3b584dafe01675f9c49c5c108"
+      ],
+      "semantic_scholar_id": "691cfd647f085fc3b584dafe01675f9c49c5c108",
+      "canonical_id": "arXiv:2505.20932",
+      "arxiv_id": "2505.20932",
+      "doi": "10.48550/arXiv.2505.20932",
+      "authors": [
+        "Ning-Yuan Tang",
+        "Minghao Fu",
+        "Hao Yu",
+        "Jian-Xin Wu"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 547,
+        "matched_prestigious_venue": null
+      },
+      "reason": "QwT-v2 improves post-training quantization with lightweight compensating structures while removing the extra latency and incompatibility of the original QwT; a practical quantization contribution directly reducing model inference resource use, hence accept.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GPT-C: Generative PrompT Compression",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10888801",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) increasingly rely on lengthy prompts to achieve complex tasks. However, longer prompts not only increase inference costs but pose significant challenges for limited context windows of LLMs. Prompt compression aims to accelerate inference in long-text scenarios while preserving performance in various tasks. Conventional extractive compression methods often lead to semantic incoherence and loss of primitive key information. To this end, we propose a Generative PrompT Compression (GPT-C) paradigm. In the absence of appropriate datasets, we design a Collaborative Ordered Agent (Co-Agent) framework to distill high-quality datasets. We then develop a task-agnostic, length-adaptive reinforcement learning strategy that controls compression length and enhances the generalization across diverse tasks. Extensive experiments demonstrate that GPT-C achieves performance comparable to the original prompts while utilizing only 20% of the tokens.",
+      "identifiers": [
+        "SemanticScholar:1dc1c6728346ae71ebda8adc617709fabc4ab637"
+      ],
+      "semantic_scholar_id": "1dc1c6728346ae71ebda8adc617709fabc4ab637",
+      "doi": "10.1109/ICASSP49660.2025.10888801",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10888801",
+      "authors": [
+        "Li-Jun Liu",
+        "Rui Wang",
+        "Li-Hua Jing",
+        "Feixiao Lv",
+        "Zixuan Zhu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 598,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GPT-C generatively compresses long prompts to accelerate LLM inference and relieve context-window limits while preserving task performance; a direct prompt-compression contribution to inference cost, hence accept.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-378b7e0be419",
+    "round": "libimp-378b7e0be419bf6f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-378b7e0be419bf6f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-378b7e0be419bf6f-pre01.json",
+    "receipt": "sha256:43cc0ac9d96a92523eeef3b58fc8340ab2a5c05e5bfaf11e7758fcd2201fdbc1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-378b7e0be419",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

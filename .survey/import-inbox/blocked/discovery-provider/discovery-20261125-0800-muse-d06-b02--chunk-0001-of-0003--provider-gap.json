@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d06-b02::provider-gap",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 2,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05842",
+      "identity_tokens": [
+        "arXiv:2610.05842"
+      ],
+      "title": "HLA: Expressive Hybrid Linear Attention via Chunk-Wise Dynamic Mixing",
+      "reason": "HLAはチャンク単位の動的混合で線形注意の履歴圧縮と遠方情報への選択的アクセスを両立させ、長文脈の自己回帰デコードを効率化する注意機構であり、デコード高速化へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2610.05842",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 60
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3651558",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3651558"
+      ],
+      "title": "Enabling Software-Defined Tiered LLM Inference Continuum on Passive Optical Network",
+      "reason": "本論文はパッシブ光ネットワーク上でソフトウェア定義の階層型LLM推論コンティニュアムを可能にする基盤を論じ、フォグ・エッジへ分散するLLM推論の配置・調整へ直接関わる。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3651558",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 81
+    }
+  ],
+  "parent_run_key": "muse-20261125-d06-b02",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261125-0800-muse-d06-b02--chunk-0001-of-0003.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/access.2026.3651558",
+    "arXiv:2610.05842"
+  ]
+}
