@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（680本）
+## 自動生成の論文一覧（681本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2268,6 +2268,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   実時間モデルと生成AIを同時実行するRTGenワークロードをAMD Ryzen AI実機で全バックエンド測定し、最適実行先がモデルと生成段階で逆転すること、EDFはLLMを飢餓させFCFSは期限違反57.6%に達すること、初回トークン優先のFTFがTTFTを保ちつつ違反率を約半減させることを示したスケジューリング空間の特性評価。
 
+- **2025-07 · [Enabling Efficient GPU Communication over Multiple NICs with FuseLink](2025-72feac01c8db-enabling-efficient-gpu-communication-over-multiple-nics-with-fuselink.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GPUとネットワークカードの静的な結び付けによる帯域の無駄を解くため、サーバ内のGPU間接続を使って空いているカードへトラフィックを中継する通信方式。バッファの再マッピングで中継し、実行中のタスクを妨げないよう優先度付きで制御する。サーバ間帯域は最大212GB/s、LLMサービングの初回トークン遅延は最大2.73倍短縮した。
+
 - **2025-06 · [Optimizing MoE Routers: Design, Implementation, and Evaluation in Transformer Models](2025-2506.16419-optimizing-moe-routers-design-implementation-and-evaluation-in-transform.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本稿は新しい分散MoEサービング基盤を提案するのではなく、ルーティングの設計選択がパラメータ数、トークン処理遅延、選択分布の集中度、既存モデルへの組込み難度にどう効くかを実装比較する研究である。
@@ -2427,7 +2431,7 @@
   LLM人気度を考慮した配置と事前充填・復号の動的共配置、共有KVキャッシュ管理を組み合わせ、複数LLM配信のGPU計算・メモリ利用率を同時に高める。
 
 - **2024-06 · [Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs](2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md)**  
-  実装：[✓](https://github.com/Thesys-lab/Helix-ASPLOS25) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/Thesys-lab/Helix-ASPLOS25) ・ リポジトリ内被引用：42  
   異種GPUとネットワークを容量付き有向グラフへ写像し、最大流を目的に層配置をMILPで決め、最大流比率に沿って要求ごとの経路を選ぶことで、固定パイプラインの遊休GPUと通信混雑を減らすLLMサービング方式。
 
 - **2024-04 · [Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services](2024-2404.16283-andes-qoe-text-streaming-serving.md)**  
@@ -2645,11 +2649,11 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1994  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1995  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
-  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：616  
+  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：617  
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  

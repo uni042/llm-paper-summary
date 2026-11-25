@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "438865c12b3f5c047a2b52e1837b7ee848e2698c",
+  "base_commit": "5cd8b053a5e43165d8c526e0428616e23b506bad",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -506,6 +506,7 @@
     "2025-5504da64243a-ubiquitous-memory-augmentation-via-mobile-multimodal-embedding-system.json",
     "2025-61ee18f9ab39-accelerating-1-bit-llms-via-in-memory-computing-architectures.json",
     "2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.json",
+    "2025-72feac01c8db-enabling-efficient-gpu-communication-over-multiple-nics-with-fuselink.json",
     "2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-language-models.json",
     "2025-9cce4f3ac879-faster-speculative-decoding-via-effective-draft-decoder-with-pruned-candidate-tree.json",
     "2025-9d0005ab2d5d-minimizing-transformer-inference-overhead-using-controlling-element-on-shenwei-ai-accelerator.json",
@@ -55019,6 +55020,15 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "USENIX:OSDI25:ren": {
+      "order": [
+        "2026-11-25T11:36:07+00:00",
+        "2025-72feac01c8db-enabling-efficient-gpu-communication-over-multiple-nics-with-fuselink.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70008,6 +70018,9 @@
     "arxiv:2502.04563": [
       "papers/inference/09-kernel-runtime-compilation/2025-2502.04563-waferllm-large-language-model-inference-at-wafer-scale.md",
       "papers/inference/09-kernel-runtime-compilation/2025-2502.04563-waferllm-large-language-model-inference-at-wafer-scale.md"
+    ],
+    "usenix:osdi25:ren": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-72feac01c8db-enabling-efficient-gpu-communication-over-multiple-nics-with-fuselink.md"
     ]
   }
 }
