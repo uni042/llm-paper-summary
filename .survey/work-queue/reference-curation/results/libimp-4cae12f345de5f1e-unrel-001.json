@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4cae12f345de5f1e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.01980",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.01980",
+    "identity_tokens": [
+      "arXiv:2303.01980"
+    ],
+    "reason": "本論文は深層学習ライフサイクル全体のエネルギー効率手法を概説するサーベイであり、学習を含む総説でLLM推論システムへの具体的な技術貢献は確認できない。",
+    "first_checked_at": "2026-11-25T11:23:17+00:00",
+    "last_checked_at": "2026-11-25T11:23:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Towards energy-efficient Deep Learning: An overview of energy-efficient approaches along the Deep Learning Lifecycle"
+  },
+  "processed_at": "2026-11-25T11:23:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4cae12f345de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

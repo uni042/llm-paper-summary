@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15683e42951addbc-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/gaiis69281.2026.11519177",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/gaiis69281.2026.11519177",
+    "identity_tokens": [
+      "DOI:10.1109/gaiis69281.2026.11519177"
+    ],
+    "reason": "MonoRouterは単調性を課した項目反応理論でLLMルーティングを行う研究であり、コスト配分に関わるが中核はモデル選択ポリシーでサービング機構の貢献は薄い。",
+    "first_checked_at": "2026-11-25T11:23:16+00:00",
+    "last_checked_at": "2026-11-25T11:23:16+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MonoRouter: Enforcing Monotonicity in Item Response Theory for LLM Routing"
+  },
+  "processed_at": "2026-11-25T11:23:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15683e42951a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

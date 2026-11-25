@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e55a800732e47c5f-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.19644",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.19644",
+    "identity_tokens": [
+      "arXiv:2610.19644"
+    ],
+    "reason": "Selective Reasoningは凍結したLLM上で型付き意思決定に追加推論をオンデマンドで挟む読解器の研究であり、推論時計算の制御に関わるが主対象は意思決定タスクの精度である。",
+    "first_checked_at": "2026-11-25T11:23:18+00:00",
+    "last_checked_at": "2026-11-25T11:23:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Selective Reasoning for Typed Decision Models: When to Start, Read, and Stop"
+  },
+  "processed_at": "2026-11-25T11:23:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e55a800732e4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

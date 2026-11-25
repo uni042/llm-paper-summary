@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15683e42951addbc-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.37017",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.37017",
+    "identity_tokens": [
+      "arXiv:2609.37017"
+    ],
+    "reason": "LatComはマルチエージェント協調で潜在表現を圧縮し受信側文脈の増大を抑える手法であり、推論コスト削減に関わるが主対象はエージェント間通信の情報圧縮である。",
+    "first_checked_at": "2026-11-25T11:23:16+00:00",
+    "last_checked_at": "2026-11-25T11:23:16+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LatCom: Cross-Agent Latent Compression for Efficient Multi-Agent Collaboration"
+  },
+  "processed_at": "2026-11-25T11:23:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15683e42951a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

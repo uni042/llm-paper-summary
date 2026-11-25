@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b55997994f4fff80-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2210.11870",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2210.11870",
+    "identity_tokens": [
+      "arXiv:2210.11870"
+    ],
+    "reason": "LittleBirdはBigBird系の改良でBERT型QAモデルの速度とメモリを改善する効率的Transformerだが、対象はエンコーダ型QAであり現在のLLM推論基盤への直接性は薄い。",
+    "first_checked_at": "2026-11-25T11:23:17+00:00",
+    "last_checked_at": "2026-11-25T11:23:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LittleBird: Efficient Faster & Longer Transformer for Question Answering"
+  },
+  "processed_at": "2026-11-25T11:23:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b55997994f4f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

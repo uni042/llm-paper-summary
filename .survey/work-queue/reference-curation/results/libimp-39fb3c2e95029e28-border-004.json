@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39fb3c2e95029e28-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.01590",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.01590",
+    "identity_tokens": [
+      "arXiv:2607.01590"
+    ],
+    "reason": "Hawk retrieves hardware-aware knowledge so LLMs can generate high-performance NPU kernels without violating memory hierarchies; the LLM is a code-generation tool and the product is kernel-development automation, adjacent to inference kernels but not an inference system, so borderline.",
+    "first_checked_at": "2026-11-25T11:23:16+00:00",
+    "last_checked_at": "2026-11-25T11:23:16+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hawk: Harnessing Hardware-Aware Knowledge for High-Performance NPU Kernel Generation"
+  },
+  "processed_at": "2026-11-25T11:23:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39fb3c2e9502",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

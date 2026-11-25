@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39fb3c2e95029e28-border-019",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.12960",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.12960",
+    "identity_tokens": [
+      "arXiv:2511.12960"
+    ],
+    "reason": "ENGRAM is a deliberately lightweight memory orchestration system giving conversational agents long-horizon consistency without knowledge-graph pipelines; agent memory infrastructure that shapes inference-time context, but focused on memory simplicity rather than serving efficiency, so borderline.",
+    "first_checked_at": "2026-11-25T11:23:17+00:00",
+    "last_checked_at": "2026-11-25T11:23:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ENGRAM: Effective, Lightweight Memory Orchestration for Conversational Agents"
+  },
+  "processed_at": "2026-11-25T11:23:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39fb3c2e9502",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

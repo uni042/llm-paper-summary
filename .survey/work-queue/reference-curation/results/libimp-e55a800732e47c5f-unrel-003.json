@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e55a800732e47c5f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/cgo68049.2026.11395228",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/cgo68049.2026.11395228",
+    "identity_tokens": [
+      "DOI:10.1109/cgo68049.2026.11395228"
+    ],
+    "reason": "本論文はコンパイラ拡張で浮動小数点数値コードを書き換える研究であり、対象は数値計算コード一般の性能と精度であってLLM推論システムではない。",
+    "first_checked_at": "2026-11-25T11:23:18+00:00",
+    "last_checked_at": "2026-11-25T11:23:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Thinking Fast and Correct: Automated Rewriting of Numerical Code through Compiler Augmentation"
+  },
+  "processed_at": "2026-11-25T11:23:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e55a800732e4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
