@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T03:12:40+00:00",
-  "record_count": 9025,
+  "updated_at": "2026-11-25T03:18:12+00:00",
+  "record_count": 9029,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -133376,9 +133376,9 @@
       "identity_tokens": [
         "arXiv:2610.05125"
       ],
-      "reason": "マスク拡散言語モデルの復号において、事後サンプル平均の予測エントロピーでトークン確定順序を決めるベイズ的デコーディングBayesERを提案するが、主目的はキャリブレーション誤差の低減であり推論効率への貢献は副次的である。",
+      "reason": "BayesER is a post-hoc Bayesian decoding framework that orders token commitment in masked diffusion language models by predictive entropy; decoding-time, but aimed at calibration of generation rather than inference efficiency or serving.",
       "first_checked_at": "2026-11-24T21:39:09+00:00",
-      "last_checked_at": "2026-11-24T21:39:09+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -133436,9 +133436,9 @@
       "identity_tokens": [
         "arXiv:2511.08135"
       ],
-      "reason": "GPU等の汎用計算とFPGA/ASIC等のカスタム計算の双方で高並列化と計算・記憶融合により効率とレイテンシを両立させる統合TransformerアーキテクチャUniFormerを提案するが、対象は汎用TransformerでありLLM推論への特化は確認できない。",
+      "reason": "UniFormer designs a unified efficient Transformer deployable across general and custom (FPGA/ASIC) computing; hardware-deployment oriented architecture work, but generic across models rather than an LLM inference system.",
       "first_checked_at": "2026-11-24T21:39:09+00:00",
-      "last_checked_at": "2026-11-24T21:39:09+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -133692,9 +133692,9 @@
       "identity_tokens": [
         "arXiv:2605.25535"
       ],
-      "reason": "個人化メモリのベンチマークPerMemBenchとセッション単位の保存ゲーティングを提案するが、中心は評価基盤であり、推論時メモリ管理機構としての貢献はゲーティングの実証に留まる。",
+      "reason": "PerMemBench benchmarks personalized long-term memory for LLM agents and studies session-level storage policies; relevant to agent memory cost, but the contribution is a benchmark and policy study, not an inference system.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -133723,9 +133723,9 @@
       "identity_tokens": [
         "arXiv:2603.15167"
       ],
-      "reason": "質問誘導型の視覚圧縮と記憶フィードバックで長尺動画の視覚トークンを絞るが、主目的は動画理解精度であり、マルチモーダル推論の圧縮機構としては応用寄りの位置づけ。",
+      "reason": "QViC-MF compresses long-video frames with question guidance and memory feedback for video understanding; visual compression serves a perception task and its inference-system contribution is indirect.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -133783,9 +133783,9 @@
       "identity_tokens": [
         "arXiv:2509.23898"
       ],
-      "reason": "微分可能な構造化スパース化D-Gatingはモデル圧縮へつながるが、主眼は学習時の正則化の理論的等価性であり、推論時の圧縮・高速化の実証は限定的。",
+      "reason": "D-Gating makes structured sparsity differentiable so compact networks can be trained with SGD; a training-side sparsity regularizer whose inference benefit is only via the resulting smaller model.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -133873,9 +133873,9 @@
       "identity_tokens": [
         "arXiv:2606.15991"
       ],
-      "reason": "Rustの所有権規律をタイル型GPUカーネル記述へ拡張し、安全にカスタムGPUカーネルを書けるcuTile Rustを提案する。カーネル開発基盤ではあるが汎用のGPUプログラミング言語研究であり、LLM推論カーネルへの具体的適用は要旨で確認できない。",
+      "reason": "cuTile Rust extends Rust ownership to tile-based GPU kernel authoring with data-race freedom guarantees; a general GPU programming system, not an LLM inference kernel or serving contribution.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -133978,9 +133978,9 @@
       "identity_tokens": [
         "arXiv:2410.03752"
       ],
-      "reason": "音声認識向けに限定的注意窓とチャンク処理で線形スケーリングするストリーミングSpeechLLM-XLを提案し長尺発話でも劣化しないことを示すが、主目的は音声認識応用でありLLM推論基盤への一般化は限定的である。",
+      "reason": "SpeechLLM-XL uses chunked limited-window attention for linear-scaling streaming speech recognition; the efficiency technique is real but the target is a speech-recognition application model, not LLM serving.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134001,21 +134001,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Efficient Diffusion Models: A Comprehensive Survey From Principles to Practices"
-    },
-    "DOI:10.52202/085713-3624": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.52202/085713-3624",
-      "identity_tokens": [
-        "DOI:10.52202/085713-3624"
-      ],
-      "reason": "LLMを批評者として用いる効率的なコード生成と題するが、Crossref・OpenAlexのいずれからも要旨を取得できず、効率化の機構と対象を一次要旨で検証できていない。",
-      "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "More Than Just Functional: LLM-as-a-Critique for Efficient Code Generation"
     },
     "arXiv:2111.11992": {
       "classification": "borderline",
@@ -138282,6 +138267,81 @@
       ],
       "borderline_recheck_count": 0,
       "title": "When Is 0.1% Enough? Analyzing the Combined Effects of Dimensionality Reduction and Quantization on Text Embedding Compression"
+    },
+    "arXiv:2604.03809": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.03809",
+      "identity_tokens": [
+        "arXiv:2604.03809"
+      ],
+      "reason": "Measures representational collapse in multi-agent LLM committees and adds a diversity-weighted consensus protocol with lower token cost; primarily a capability/measurement study of agent voting, not an inference system.",
+      "first_checked_at": "2026-11-25T03:18:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Representational Collapse in Multi-Agent LLM Committees: Measurement and Diversity-Aware Consensus"
+    },
+    "arXiv:2605.00180": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.00180",
+      "identity_tokens": [
+        "arXiv:2605.00180"
+      ],
+      "reason": "RouteProfile builds graph-based profiles of newly released LLMs from public signals so routers can cold-start model selection; it supports LLM routing but contributes profiling, not a serving or cost-optimization mechanism.",
+      "first_checked_at": "2026-11-25T03:18:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RouteProfile: Graph-Based Profiling for Cold-Start LLM Routing"
+    },
+    "arXiv:2306.06635": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.06635",
+      "identity_tokens": [
+        "arXiv:2306.06635"
+      ],
+      "reason": "Proposes a 2-D state-space layer with efficient parameterization and accelerated computation inserted into Vision Transformers; an efficient vision architecture component, not an LLM inference system contribution.",
+      "first_checked_at": "2026-11-25T03:18:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "2-D SSM: A General Spatial Layer for Visual Transformers"
+    },
+    "arXiv:2605.15315": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15315",
+      "identity_tokens": [
+        "arXiv:2605.15315"
+      ],
+      "reason": "LaMR prunes repository context for coding agents using latent multi-rubric relevance, reducing agent token budgets; context management for an agent application rather than an inference serving or decoding technique.",
+      "first_checked_at": "2026-11-25T03:18:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Context Pruning for Coding Agents via Multi-Rubric Latent Reasoning"
+    },
+    "arXiv:2407.04616": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.04616",
+      "identity_tokens": [
+        "arXiv:2407.04616"
+      ],
+      "reason": "Isomorphic Pruning removes heterogeneous substructures (attention heads, convolutions, residuals) in vision models; a structured pruning method, but demonstrated on vision models rather than LLM inference.",
+      "first_checked_at": "2026-11-25T03:18:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Isomorphic Pruning for Vision Models"
     }
   }
 }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-25T03:12:40+00:00",
+  "updated_at": "2026-11-25T03:18:12+00:00",
   "record_count": 15403,
   "records": {
     "arXiv:2303.08774": {
@@ -213397,9 +213397,9 @@
       "identity_tokens": [
         "arXiv:2607.10848"
       ],
-      "reason": "LLMの強化学習における信頼領域マスクについて、次ステップで乖離が増減するかを閉形式で予測するマスクを提案する学習安定化の研究であり、推論への具体的適用は確認できない。",
+      "reason": "Predictive Divergence Masks change token masking criteria in PPO-style reinforcement learning for LLMs; a training-algorithm contribution with no inference application.",
       "first_checked_at": "2026-11-24T21:39:09+00:00",
-      "last_checked_at": "2026-11-24T21:39:09+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -213453,9 +213453,9 @@
       "identity_tokens": [
         "arXiv:2410.05224"
       ],
-      "reason": "プログラム的に生成したテンプレートデータでLLMをファインチューニングして生成能力を高めるCookbookの提案であり、学習データ構築の研究であって推論システムの機構は扱っていない。",
+      "reason": "Cookbook programmatically generates synthetic instruction data to fine-tune LLM generative abilities; a training-data construction framework with no inference-system content.",
       "first_checked_at": "2026-11-24T21:39:09+00:00",
-      "last_checked_at": "2026-11-24T21:39:09+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -213566,9 +213566,9 @@
       "identity_tokens": [
         "arXiv:2402.06512"
       ],
-      "reason": "タイトル自体が臨床試験アウトカム予測という医療応用を明示しており、LLM推論システムの対象外である。",
+      "reason": "Title itself states the work predicts multimodal clinical trial outcomes with LLMs, a medical outcome-prediction application; no inference-system technique is indicated in the title.",
       "first_checked_at": "2026-11-24T21:39:09+00:00",
-      "last_checked_at": "2026-11-24T21:39:09+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -213594,9 +213594,9 @@
       "identity_tokens": [
         "DOI:10.1145/3677052.3698691"
       ],
-      "reason": "タイトル自体が注文執行（株式取引の最適執行）へのMoE適用を明示しており、金融応用であってLLM推論システムの対象外である。",
+      "reason": "Applies mixture-of-experts RL agents with spectral-clustering specialization to optimal order execution on NASDAQ Amazon stock data; a financial trading application, confirmed by the abstract.",
       "first_checked_at": "2026-11-24T21:39:09+00:00",
-      "last_checked_at": "2026-11-24T21:39:09+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -213608,9 +213608,9 @@
       "identity_tokens": [
         "arXiv:2508.04749"
       ],
-      "reason": "タイトル自体が脳とモデルの橋渡しによる失語症のシミュレーション・リハビリという神経科学・臨床応用を明示しており、LLM推論システムの対象外である。",
+      "reason": "Lesions components of an MoE language model to simulate aphasia subtypes and validates outputs against patient speech; a neuroscience/cognitive-modeling study, not an inference contribution.",
       "first_checked_at": "2026-11-24T21:39:09+00:00",
-      "last_checked_at": "2026-11-24T21:39:09+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -213622,9 +213622,9 @@
       "identity_tokens": [
         "arXiv:2505.02655"
       ],
-      "reason": "タイトル自体が多変量時系列予測という予測応用を明示しており、LLM推論システムの対象外である。",
+      "reason": "SCFormer adds temporal constraints and HiPPO historical state to a channel-wise Transformer for multivariate time-series forecasting; a forecasting architecture for a non-LLM application.",
       "first_checked_at": "2026-11-24T21:39:09+00:00",
-      "last_checked_at": "2026-11-24T21:39:09+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -213945,9 +213945,9 @@
       "identity_tokens": [
         "arXiv:2610.07792"
       ],
-      "reason": "サービング経験からエージェントが自己改善できるかを測るベンチマークServeLearnBenchの提案であり、能力評価のみで推論システムへの技術的貢献はない。",
+      "reason": "ServeLearnBench is a benchmark for how well LLM agents self-improve from serving experience in evolving environments; capability evaluation with no inference-system contribution.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -213959,27 +213959,13 @@
       "identity_tokens": [
         "arXiv:2605.07959"
       ],
-      "reason": "注意層とLoRAの確率的最適化による学習可能性をポアンカレ不等式で証明する学習理論であり、推論効率化への具体的適用はない。",
+      "reason": "Proves convergence/trainability of stochastic training for multi-head attention and LoRA via Poincare inequalities; optimization theory for training, with no inference application.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
       "title": "Convergent Stochastic Training of Multi-Headed Attention and Understanding LoRA"
-    },
-    "arXiv:2407.04616": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2407.04616",
-      "identity_tokens": [
-        "arXiv:2407.04616"
-      ],
-      "reason": "Vision TransformerやCNNなど視覚モデル専用の同型構造プルーニングであり、LLM推論システムへの適用は対象外。",
-      "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "title": "Isomorphic Pruning for Vision Models"
     },
     "arXiv:2412.11965": {
       "classification": "unrelated",
@@ -214001,9 +213987,9 @@
       "identity_tokens": [
         "arXiv:2406.13762"
       ],
-      "reason": "自己注意の内部構造をカーネル主成分分析で可視化する分析研究であり、推論システムへの技術的貢献は確認できない。",
+      "reason": "Derives self-attention from kernel PCA and analyzes the value matrix theoretically; an interpretability/theory account of attention with no system or efficiency contribution.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -214078,20 +214064,6 @@
         "worker-worklist discovery_review"
       ],
       "title": "Efficient Reasoning Training Does Not Always Harm CoT Faithfulness and Monitorability"
-    },
-    "arXiv:2604.03809": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2604.03809",
-      "identity_tokens": [
-        "arXiv:2604.03809"
-      ],
-      "reason": "同一モデルの役割プロンプト違いからなるマルチエージェント委員会で推論根拠の表現が崩壊する現象を測定し、多様性重み付き合意DALCを提案する研究であり、対象は合意形成の能力・振る舞い分析であって推論システムではない。",
-      "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "title": "Representational Collapse in Multi-Agent LLM Committees: Measurement and Diversity-Aware Consensus"
     },
     "DOI:10.1109/tifs.2025.3602233": {
       "classification": "unrelated",
@@ -214240,9 +214212,9 @@
       "identity_tokens": [
         "arXiv:2410.14273"
       ],
-      "reason": "オープンソースLLMの知的財産保護のため、表現間のCKA類似度で派生モデルを同定する学習不要のフィンガープリント手法であり、推論効率やサービングに関する貢献はない。",
+      "reason": "REEF fingerprints whether a suspect LLM derives from a victim model using representation similarity for IP protection; model-provenance detection with no inference efficiency or systems content.",
       "first_checked_at": "2026-11-24T21:39:11+00:00",
-      "last_checked_at": "2026-11-24T21:39:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -214262,29 +214234,15 @@
       ],
       "title": "ProConSuL: Project Context for Code Summarization with LLMs"
     },
-    "arXiv:2306.06635": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2306.06635",
-      "identity_tokens": [
-        "arXiv:2306.06635"
-      ],
-      "reason": "多次元状態空間モデルによる2次元帰納バイアス層をVision Transformerへ組み込む視覚アーキテクチャの研究であり、LLM推論とは無関係である。",
-      "first_checked_at": "2026-11-24T21:39:11+00:00",
-      "last_checked_at": "2026-11-24T21:39:11+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "title": "2-D SSM: A General Spatial Layer for Visual Transformers"
-    },
     "arXiv:2602.00520": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2602.00520",
       "identity_tokens": [
         "arXiv:2602.00520"
       ],
-      "reason": "電子カルテ等のイベントストリーム（マルチセット列）向け基盤モデルとして階層を保つNested Event Stream TransformerとMasked Set Modelingを提案する異分野データ向けアーキテクチャであり、LLM推論システムの対象外である。",
+      "reason": "NEST is a nested event-stream Transformer architecture for sequences of multisets such as EHR encounters; a domain sequence-modeling architecture with no inference-system contribution.",
       "first_checked_at": "2026-11-24T21:39:11+00:00",
-      "last_checked_at": "2026-11-24T21:39:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -214590,9 +214548,9 @@
       "identity_tokens": [
         "arXiv:2512.20745"
       ],
-      "reason": "ツール拡張エージェントによる数学的推論能力の強化が主題であり、タイトル自体が推論能力（reasoning）の応用研究を明示している。推論システムへの技術的貢献は示されていない。",
+      "reason": "AgentMath builds tool-augmented SFT data and agentic RL so LLMs solve complex mathematics with code interpreters; a reasoning-capability framework with no inference-system contribution.",
       "first_checked_at": "2026-11-24T21:39:11+00:00",
-      "last_checked_at": "2026-11-24T21:39:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -220797,6 +220755,48 @@
         "worker-worklist discovery_review"
       ],
       "title": "Transferable Sequential Recommendation with Vanilla Cross-Entropy Loss"
+    },
+    "arXiv:2602.01167": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01167",
+      "identity_tokens": [
+        "arXiv:2602.01167"
+      ],
+      "reason": "Empirical study of task-interfering layers in vision-language models via per-layer interventions; an analysis of model behavior with no compression, serving, or inference-efficiency method proposed.",
+      "first_checked_at": "2026-11-25T03:18:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Do All Individual Layers Help? an Empirical Study of Task-Interfering Layers in Vision-Language Models"
+    },
+    "DOI:10.52202/085713-3624": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-3624",
+      "identity_tokens": [
+        "DOI:10.52202/085713-3624"
+      ],
+      "reason": "Uses a prompted LLM as an efficiency critique over the AST of generated code so code LLMs emit faster-running programs; the efficiency concerned is the generated code's runtime, not the LLM's inference system.",
+      "first_checked_at": "2026-11-25T03:18:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "More Than Just Functional: LLM-as-a-Critique for Efficient Code Generation"
+    },
+    "arXiv:2601.02972": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02972",
+      "identity_tokens": [
+        "arXiv:2601.02972"
+      ],
+      "reason": "Multi-stage SFT plus RL with an adaptive length penalty teaches adaptive reasoning and reduces overthinking; a training recipe for reasoning quality, not an inference-system mechanism.",
+      "first_checked_at": "2026-11-25T03:18:11+00:00",
+      "last_checked_at": "2026-11-25T03:18:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Correct, Concise and Complete: Multi-stage Training For Adaptive Reasoning"
     }
   }
 }

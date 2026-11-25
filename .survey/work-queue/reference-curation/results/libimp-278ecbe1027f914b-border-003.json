@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-278ecbe1027f914b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.03809",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.03809",
+    "identity_tokens": [
+      "arXiv:2604.03809"
+    ],
+    "reason": "Measures representational collapse in multi-agent LLM committees and adds a diversity-weighted consensus protocol with lower token cost; primarily a capability/measurement study of agent voting, not an inference system.",
+    "first_checked_at": "2026-11-25T03:18:11+00:00",
+    "last_checked_at": "2026-11-25T03:18:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Representational Collapse in Multi-Agent LLM Committees: Measurement and Diversity-Aware Consensus"
+  },
+  "processed_at": "2026-11-25T03:18:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-278ecbe1027f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
