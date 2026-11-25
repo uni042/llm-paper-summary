@@ -2722,6 +2722,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   低bitのLLM推論では、すべての重みや活性を同じ低精度へ変換するより、精度低下に敏感な部分を高精度で残す混合量子化が有効になる場合がある。
 
+- **2024-10 · [Rethinking Token Reduction for State Space Models](2024-2410.14725-rethinking-token-reduction-for-state-space-models.md)**  
+  実装：[✓](https://github.com/wuyushuwys/ToR_SSM) ・ リポジトリ内被引用：3  
+  Mamba向けに、隠れ状態由来の重要度でトークンを分類し枝刈りとマージを使い分ける学習後トークン削減を作り、演算2割減でも既存削減法より平均正解率を約9ポイント高く保つ。
+
 - **2024-02 · [Plato: Plan to Efficiently Decode for Large Language Model Inference](2024-2402.12280-plato-plan-to-efficiently-decode-for-large-language-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   Platoは、長い回答を1トークンずつ逐次生成する代わりに、質問を意味的な小課題（node）へ分割し、その間の依存関係を有向非巡回グラフ（DAG）として表現することで、依存しない部分を並列生成するLLM推論システムである。
@@ -2729,10 +2733,6 @@
 - **2023-12 · [The Cost of Compression: Investigating the Impact of Compression on Parametric Knowledge in Language Models](2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-param.md)**  
   実装：[✓](https://github.com/NamburiSrinath/LLMCompression) ・ リポジトリ内被引用：3  
   枝刈りと量子化が重みに蓄えた事実知識へ与える影響を三系統のモデルで系統測定し、全体の同時枝刈りが最も有害で五割超の枝刈りで知識が急落すること、注意の量子化は比較的安全で最終層の構造的枝刈りが特に危険であることを示した。
-
-- **2024-10 · [Rethinking Token Reduction for State Space Models](2024-2410.14725-rethinking-token-reduction-for-state-space-models.md)**  
-  実装：[✓](https://github.com/wuyushuwys/ToR_SSM) ・ リポジトリ内被引用：2  
-  Mamba向けに、隠れ状態由来の重要度でトークンを分類し枝刈りとマージを使い分ける学習後トークン削減を作り、演算2割減でも既存削減法より平均正解率を約9ポイント高く保つ。
 
 - **2024-10 · [LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions](2024-2410.05462-levattention-time-space-and-streaming-efficient-algorithm-for-heavy-atte.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

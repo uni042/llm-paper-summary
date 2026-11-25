@@ -1282,13 +1282,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：28  
   Mirageは「既知のアルゴリズムに対して良いGPUスケジュールを探す」だけでも、「数式を書き換えて既存カーネルを組み合わせる」だけでもない。テンソル計算をGPUのカーネル・スレッドブロック・スレッド階層をまたぐμGraphで表し、数式の形、融合境界、並列化方法を同じ探索の中で変えることで、人手では実装量が大きい複合最適化を自動発見する。
 
+- **2024-05 · [Large Language Model Pruning](2024-2406.00030-large-language-model-pruning.md)**  
+  実装：✓ ・ リポジトリ内被引用：23  
+  ニューロン同士の相互情報量で冗長性を測り、カーネル幅の新しい推定で精度を高めた、教師なし・再学習不要の全結合層の構造的枝刈り手法。
+
 - **2024-10 · [ThunderKittens: Simple, Fast, and Adorable AI Kernels](2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md)**  
   実装：[✓](https://github.com/HazyResearch/ThunderKittens) ・ リポジトリ内被引用：22  
   各演算ごとに大量のCUDA制御コードを書く代わりに、タイル演算と「ロード・計算・保存・終了」の4段階を指定し、共有メモリの配置や同期の多くを共通部品に任せる。さらに、行列積の段数を1から4へ増やすと260→760 TFLOPS、L2再利用を意識したブロック順序では805対392 TFLOPSという差があり、性能改善の機構を個別に検証している。
-
-- **2024-05 · [Large Language Model Pruning](2024-2406.00030-large-language-model-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
-  ニューロン同士の相互情報量で冗長性を測り、カーネル幅の新しい推定で精度を高めた、教師なし・再学習不要の全結合層の構造的枝刈り手法。
 
 - **2023-12 · [An LLM Compiler for Parallel Function Calling](2023-2312.04511-an-llm-compiler-for-parallel-function-calling.md)**  
   実装：[✓](https://github.com/SqueezeAILab/LLMCompiler) ・ リポジトリ内被引用：21  

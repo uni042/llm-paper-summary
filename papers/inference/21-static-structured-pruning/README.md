@@ -272,7 +272,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-03 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
-  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：122  
+  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：121  
   本論文は、大規模言語モデルの全ての変換層が同程度に必要とは限らないという観察から、計算の一部を省略する二種類の方式を提案する。ACL 2025掲載版の代表例では、Llama2-13Bの40層から10層を対象とする条件で、多肢選択指標の平均値は58.49から53.57となり、元の約91.59%を維持した。
 
 - **2023-12 · [Fluctuation-based Adaptive Structured Pruning for Large Language Models](2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md)**  
@@ -299,6 +299,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   大規模言語モデル（LLM）は多数のTransformer層を積み重ねることで表現能力を獲得する。重要な限定条件は、すべて分類タスク向けに再微調整した後の結果である。
 
+- **2024-02 · [NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models](2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large.md)**  
+  実装：[✓](https://github.com/Lucius-lsr/NutePrune) ・ リポジトリ内被引用：2  
+  無傷のモデル1個にマスクとLoRAを取り替えて多数の教師を演じさせることで、メモリ追加なしに漸進的蒸留を構造化プルーニングへ適用したNutePruneの研究。教師と生徒のスパース率の差を一定に保ち、能力差による蒸留の難化を抑える。
+
 - **2023-12 · [Mini-GPTs: Efficient Large Language Models through Contextual Pruning](2023-2312.12682-mini-gpts-efficient-large-language-models-through-contextual-pruning.md)**  
   実装：[✓](https://github.com/tval2/contextual-pruning) ・ リポジトリ内被引用：2  
   Mini-GPTsは、汎用言語モデルが保持する知識や計算経路の全てを個別業務で必要とするわけではないという仮説から、用途に応じて不要なニューロンを取り除く研究である。削除後には分野別データで微調整し、困惑度の回復を試みる。
@@ -306,10 +310,6 @@
 - **2024-11 · [AmoebaLLM: Constructing Any-Shape Large Language Models for Efficient and Instant Deployment](2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and.md)**  
   実装：[✓](https://github.com/GATECH-EIC/AmoebaLLM) ・ リポジトリ内被引用：1  
   動的計画法の層選択と形状連動のLoRA混合で、一回の微調整から深さと幅の任意形状のモデルを即時抽出できるようにし、個別圧縮より高い精度を出した枠組み。
-
-- **2024-02 · [NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models](2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large.md)**  
-  実装：[✓](https://github.com/Lucius-lsr/NutePrune) ・ リポジトリ内被引用：1  
-  無傷のモデル1個にマスクとLoRAを取り替えて多数の教師を演じさせることで、メモリ追加なしに漸進的蒸留を構造化プルーニングへ適用したNutePruneの研究。教師と生徒のスパース率の差を一定に保ち、能力差による蒸留の難化を抑える。
 
 - **2024-09 · [PASS: Pruning Attention Heads with Almost-sure Sparsity Targets](2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.md)**  
   実装：[✓](https://github.com/DujianDing/PASS) ・ リポジトリ内被引用：0  
