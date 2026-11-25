@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d04-b01::chunk-0002-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08893",
+      "identity_tokens": [
+        "arXiv:2410.08893"
+      ],
+      "title": "Drama: Mamba-Enabled Model-Based Reinforcement Learning Is Sample and Parameter Efficient",
+      "reason": "Mambaを世界モデルに使うモデルベース強化学習Dramaの研究であり、サンプル効率とパラメータ効率は学習側の話でLLM推論システムへの貢献は確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2410.08893",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 121
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.11752",
+      "identity_tokens": [
+        "arXiv:2506.11752"
+      ],
+      "title": "DART: Distilling Autoregressive Reasoning to Silent Thought",
+      "reason": "自己回帰CoTを非自己回帰のサイレント思考へ蒸留し遅延敏感用途の計算量を減らすDARTは、デコード方式の変更として関連するが学習ベースのモデル変換であり実行系の機構ではないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2506.11752",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 122
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3664647.3680926",
+      "identity_tokens": [
+        "DOI:10.1145/3664647.3680926"
+      ],
+      "title": "SelM: Selective Mechanism based Audio-Visual Segmentation",
+      "reason": "音声に同期する物体を映像から切り出す音響視覚セグメンテーションSelMの研究であり、視覚タスクへの選択機構の適用でLLM推論システムとの関係はないため対象外とした。",
+      "source_url": "https://doi.org/10.1145/3664647.3680926",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 123
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.11595",
+      "identity_tokens": [
+        "arXiv:2505.11595"
+      ],
+      "title": "Stepwise Guided Policy Optimization: Coloring Your Incorrect Reasoning in GRPO",
+      "reason": "GRPOで誤答ステップを色付けして方策を誘導する学習手法の提案であり、推論モデルの訓練改善が主題で推論システムの実行技術ではないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2505.11595",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 124
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.08234",
+      "identity_tokens": [
+        "arXiv:2506.08234"
+      ],
+      "title": "Compound AI Systems Optimization: A Survey of Methods, Challenges, and Future Directions",
+      "reason": "複合AIシステム全体の最適化手法を整理するサーベイであり、推論を含むシステム最適化の観点は関連するが、具体的な推論実行機構の提案ではなく概観にとどまるため境界とした。",
+      "source_url": "https://arxiv.org/abs/2506.08234",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 125
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.03235",
+      "identity_tokens": [
+        "arXiv:2306.03235"
+      ],
+      "title": "Information Flow Control in Machine Learning through Modular Model Architecture",
+      "reason": "訓練データから出力への情報フローをモジュール構造で制御する機械学習のセキュリティ研究であり、アクセス制御が主題でLLM推論システムへの貢献はないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2306.03235",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 126
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.19496",
+      "identity_tokens": [
+        "arXiv:2510.19496"
+      ],
+      "title": "CARES: Context-Aware Resolution Selector for VLMs",
+      "reason": "VLMで視覚トークンが計算と遅延の大半を占める問題に対し、画像と質問から最小十分な入力解像度を予測する軽量セレクタCARESで計算を最大80%削減しており、VLM推論の前処理として直接の効率化貢献が確認できるため採用とした。",
+      "source_url": "https://arxiv.org/abs/2510.19496",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 127
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.10667",
+      "identity_tokens": [
+        "arXiv:2406.10667"
+      ],
+      "title": "UniZero: Generalized and Efficient Planning with Scalable Latent World Models",
+      "reason": "潜在世界モデルとモンテカルロ木探索による汎用計画法UniZeroの強化学習研究であり、計画探索の効率が主題でLLM推論システムへの貢献は確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2406.10667",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 128
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TWC.2025.3617502",
+      "identity_tokens": [
+        "DOI:10.1109/TWC.2025.3617502"
+      ],
+      "title": "ChannelMamba: A Mamba-Driven Selective State-Space Model for Channel Prediction of High-Mobility MIMO in 6G IoT",
+      "reason": "6Gの高速移動MIMO向けチャネル予測にMambaを用いるChannelMambaの通信応用であり、無線チャネル推定が目的でLLM推論システムとは無関係のため対象外とした。",
+      "source_url": "https://doi.org/10.1109/TWC.2025.3617502",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 129
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04439",
+      "identity_tokens": [
+        "arXiv:2407.04439"
+      ],
+      "title": "XLSR-Transducer: Streaming ASR for Self-Supervised Pretrained Models",
+      "reason": "自己教師あり事前学習モデルをストリーミング音声認識へ使うXLSR-Transducerの研究であり、ASRの精度改善が対象でLLM推論システムへの貢献はないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2407.04439",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 130
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05065",
+      "identity_tokens": [
+        "arXiv:2506.05065"
+      ],
+      "title": "UnHiPPO: Uncertainty-aware Initialization for State Space Models",
+      "reason": "測定ノイズを考慮して状態空間モデルのHiPPO初期化を拡張するUnHiPPOの理論研究であり、初期化理論が主題で推論実行の効率化機構ではないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2506.05065",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 131
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TGRS.2025.3616967",
+      "identity_tokens": [
+        "DOI:10.1109/TGRS.2025.3616967"
+      ],
+      "title": "CWIMamba: Cross-Scale Windowed Integration State Space Model for Hyperspectral Anomaly Detection",
+      "reason": "ハイパースペクトル画像の異常検出に跨スケール窓統合の状態空間モデルを用いるCWIMambaのリモートセンシング応用であり、LLM推論との関係はないため対象外とした。",
+      "source_url": "https://doi.org/10.1109/TGRS.2025.3616967",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 132
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.00887",
+      "identity_tokens": [
+        "arXiv:2310.00887"
+      ],
+      "title": "GRID: A Platform for General Robot Intelligence Development",
+      "reason": "汎用ロボット知能の開発プラットフォームGRIDの提案であり、ロボットの技能学習基盤が主題でLLM推論システムへの技術的貢献は確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2310.00887",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 133
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.01728",
+      "identity_tokens": [
+        "arXiv:2409.01728"
+      ],
+      "title": "Shuffle Mamba: State Space Models With Random Shuffle for Multi-Modal Image Fusion",
+      "reason": "多モーダル画像融合にランダムシャッフル走査のMambaを用いるShuffle Mambaの研究であり、画像融合タスクが対象でLLM推論システムの技術ではないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2409.01728",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 134
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.01088",
+      "identity_tokens": [
+        "arXiv:2509.01088"
+      ],
+      "title": "Privacy-Preserving Reasoning with Knowledge-Distilled Parametric Retrieval Augmented Generation",
+      "reason": "文書をLoRAパラメータ化するパラメトリックRAGの推論遅延と合成データ依存を知識蒸留で緩和する提案であり、RAGの推論形態には関わるが主眼はプライバシー保護と精度のため境界とした。",
+      "source_url": "https://arxiv.org/abs/2509.01088",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 135
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.08451",
+      "identity_tokens": [
+        "arXiv:2503.08451"
+      ],
+      "title": "MinGRU-Based Encoder for Turbo Autoencoder Frameworks",
+      "reason": "ターボ符号の自動符号器にMinGRU符号器を組み込む通信符号化の研究であり、チャネル符号化が対象でLLM推論システムへの貢献は確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2503.08451",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 137
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/imo2.45",
+      "identity_tokens": [
+        "DOI:10.1002/imo2.45"
+      ],
+      "title": "Hyena architecture enables fast and efficient protein language modeling",
+      "reason": "タンパク質言語モデリングにHyenaアーキテクチャを用いて高速化する生命科学応用であり、タンパク質配列解析が目的でLLM推論システムの技術ではないため対象外とした。",
+      "source_url": "https://doi.org/10.1002/imo2.45",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 138
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.16032",
+      "identity_tokens": [
+        "arXiv:2503.16032"
+      ],
+      "title": "Agentic Keyframe Search for Video Question Answering",
+      "reason": "動画質問応答で必要なキーフレームをエージェント的に探索し計算コストを抑えるAKeySは、マルチモーダル推論の入力削減として関連するが、対象はVideoQAの前段探索であり中核の推論機構ではないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2503.16032",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 139
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.00499",
+      "identity_tokens": [
+        "arXiv:2510.00499"
+      ],
+      "title": "MOSS-Speech: Towards True Speech-to-Speech Models Without Text Guidance",
+      "reason": "テキストを介さず音声から音声を直接生成するMOSS-Speechのモデル研究であり、音声対話モデルの能力が主題で推論システムの実行技術への貢献は確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2510.00499",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 140
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-00683-w",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-00683-w"
+      ],
+      "title": "Dual-order evolution and adaptive geometric alignment via state spaces duality for few-shot action recognition",
+      "reason": "状態空間双対性を使った少数ショット動作認識の幾何整合フレームワークであり、映像認識タスクへの応用でLLM推論システムとの関係はないため対象外とした。",
+      "source_url": "https://doi.org/10.1007/s44443-026-00683-w",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 141
+    }
+  ],
+  "parent_run_key": "muse-20261126-d04-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}
