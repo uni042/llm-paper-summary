@@ -1,0 +1,504 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261126-d04-b04",
+ "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+ "record_count": 29,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.06532",
+   "identity_tokens": [
+    "arXiv:2510.06532"
+   ],
+   "title": "CLAQS: Compact Learnable All-Quantum Token Mixer with Shared-ansatz for Text Classification",
+   "reason": "テキスト分類向けの全量子トークンミキサCLAQSの量子NLP研究であり、量子回路による分類器が対象で古典的なLLM推論システムへの貢献は確認できないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2510.06532",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 262
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2511.12671",
+   "identity_tokens": [
+    "arXiv:2511.12671"
+   ],
+   "title": "DensePercept-NCSSD: Vision Mamba towards Real-time Dense Visual Perception with Non-Causal State Space Duality",
+   "reason": "光学フローと視差推定を非因果状態空間双対性で実時間化するVision Mambaの研究であり、密な視覚知覚タスクが対象でLLM推論システムの技術ではないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2511.12671",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 263
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/CLUSTER59342.2025.11186495",
+   "identity_tokens": [
+    "DOI:10.1109/CLUSTER59342.2025.11186495"
+   ],
+   "title": "FIFO-MEP: An Efficient Multi-Eviction-Point FIFO Cache with Stable Demotion for Burst-Oriented Access Mitigation",
+   "reason": "バースト的アクセスに強い多段退避点FIFOキャッシュFIFO-MEPの提案であり、分散計算のキャッシュ退避という一般機構としては関連するが、LLMのKVキャッシュではなく汎用キャッシュの研究のため境界とした。",
+   "source_url": "https://doi.org/10.1109/CLUSTER59342.2025.11186495",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 264
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/ICMCCE63640.2024.11163448",
+   "identity_tokens": [
+    "DOI:10.1109/ICMCCE63640.2024.11163448"
+   ],
+   "title": "Voice Performance Analysis Based on CNN-Mamba",
+   "reason": "CNNとMambaを組み合わせて音声パフォーマンスを分析する研究であり、音声タスクへのモデル適用が対象でLLM推論システムへの貢献はないため対象外とした。",
+   "source_url": "https://doi.org/10.1109/ICMCCE63640.2024.11163448",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 265
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/JSEN.2025.3620206",
+   "identity_tokens": [
+    "DOI:10.1109/JSEN.2025.3620206"
+   ],
+   "title": "Efficient Ocular Artifacts Removal From EEG Recordings Using State-Space Model",
+   "reason": "EEG記録から眼球アーティファクトを状態空間モデルで除去する研究であり、脳波信号処理の応用が対象でLLM推論システムとは無関係のため対象外とした。",
+   "source_url": "https://doi.org/10.1109/JSEN.2025.3620206",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 266
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1145/3729292",
+   "identity_tokens": [
+    "DOI:10.1145/3729292"
+   ],
+   "title": "Lightweight and Locality-Aware Composition of Black-Box Subroutines",
+   "reason": "ブラックボックスなサブルーチン合成の局所性を高める軽量な合成手法の研究であり、対象は一般のソフトウェア合成と演算子融合でLLM推論システムへの直接の貢献は確認できないため対象外とした。",
+   "source_url": "https://doi.org/10.1145/3729292",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 267
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.23919/DATE64628.2025.10992973",
+   "identity_tokens": [
+    "DOI:10.23919/DATE64628.2025.10992973"
+   ],
+   "title": "OLORAS: Online LOng Range Action Segmentation for Edge Devices",
+   "reason": "エッジデバイス向けのオンライン長範囲行動分節モデルOLORASの研究であり、行動分節タスクのエッジ実装が対象でLLM推論システムの技術ではないため対象外とした。",
+   "source_url": "https://doi.org/10.23919/DATE64628.2025.10992973",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 268
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.48550/arXiv.2509.08150",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2509.08150"
+   ],
+   "title": "Verbalized Algorithms",
+   "reason": "LLMの自由形式推論に保証付きアルゴリズムを言語化して組み合わせる範式の提案であり、推論の方法論が主題で推論システムの実行効率への貢献は確認できないため対象外とした。",
+   "source_url": "https://doi.org/10.48550/arXiv.2509.08150",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 269
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2501.18113",
+   "identity_tokens": [
+    "arXiv:2501.18113"
+   ],
+   "title": "Adding MFMA Support to gem5",
+   "reason": "gem5のGPUモデルへ行列コアのMFMA命令サポートを追加しMLワークロードのシミュレーションを可能にする研究であり、推論ハードウェアの計測基盤としては関連するが、対象はシミュレータ拡張であり実行機構そのものではないため境界とした。",
+   "source_url": "https://arxiv.org/abs/2501.18113",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 278
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.01224",
+   "identity_tokens": [
+    "arXiv:2505.01224"
+   ],
+   "title": "VRS-UIE: Value-Driven Reordering Scanning for Underwater Image Enhancement",
+   "reason": "水中画像強調に価値駆動の再順序走査を用いるVRS-UIEの研究であり、画像強調タスクが対象でLLM推論システムへの貢献はないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2505.01224",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 279
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2506.12810",
+   "identity_tokens": [
+    "arXiv:2506.12810"
+   ],
+   "title": "Lyapunov Learning at the Onset of Chaos",
+   "reason": "カオスの onset におけるLyapunov学習で非定常時系列へ適応する研究であり、オンライン学習の理論・手法が主題でLLM推論システムの技術ではないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2506.12810",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 280
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2507.10302",
+   "identity_tokens": [
+    "arXiv:2507.10302"
+   ],
+   "title": "DisCo: Towards Distinct and Coherent Visual Encapsulation in Video MLLMs",
+   "reason": "動画MLLMで視覚内容をトークンへ封入する方式の明瞭さと時間一貫性を論じるDisCoの研究であり、視覚トークン化は推論入力の形成に関わるが、主眼は表現の質であり効率機構は示されていないため境界とした。",
+   "source_url": "https://arxiv.org/abs/2507.10302",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 281
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2508.09153",
+   "identity_tokens": [
+    "arXiv:2508.09153"
+   ],
+   "title": "JustDense: Just Using Dense Instead of Sequence Mixer for Time Series Analysis",
+   "reason": "時系列解析で系列ミキサを密な処理に置き換えるJustDenseの研究であり、時系列モデルの構造論が対象でLLM推論システムへの貢献はないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2508.09153",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 282
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2509.20789",
+   "identity_tokens": [
+    "arXiv:2509.20789"
+   ],
+   "title": "Aligning Inductive Bias for Data-Efficient Generalization in State Space Models",
+   "reason": "状態空間モデルの帰納バイアスをデータ効率のよい汎化へ整合させる研究であり、学習のデータ効率が主題で推論実行の効率化機構ではないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2509.20789",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 283
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.13163",
+   "identity_tokens": [
+    "arXiv:2510.13163"
+   ],
+   "title": "A Matter of Representation: Towards Graph-Based Abstract Code Generation",
+   "reason": "グラフ構造の抽象コード生成をLLMで扱う表現の問題を論じる研究であり、コード生成の表現形式が対象で推論システムの実行技術への貢献はないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2510.13163",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 284
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2511.15077",
+   "identity_tokens": [
+    "arXiv:2511.15077"
+   ],
+   "title": "MambaTrack3D: A State Space Model Framework for LiDAR-Based Object Tracking under High Temporal Variation",
+   "reason": "LiDAR点群の3D物体追跡に状態空間モデルを用いるMambaTrack3Dの研究であり、自動運転向け追跡タスクが対象でLLM推論システムの技術ではないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2511.15077",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 285
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.00647",
+   "identity_tokens": [
+    "arXiv:2512.00647"
+   ],
+   "title": "MambaScope: Coarse-to-Fine Scoping for Efficient Vision Mamba",
+   "reason": "Vision Mambaのトークンを粗密に絞って効率化するMambaScopeの研究であり、視覚モデルの入力削減が対象でLLM推論システムへの直接の貢献は確認できないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2512.00647",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 286
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.23919/DATE64628.2025.10992781",
+   "identity_tokens": [
+    "DOI:10.23919/DATE64628.2025.10992781"
+   ],
+   "title": "EVASION: Efficient KV CAche CompreSsion vIa PrOduct QuaNtization",
+   "reason": "長文脈LLM推論で線形に増えるKVキャッシュを積量子化で低ビット化し、疎計算と非同期量子化を備えたGPU推論フレームワークまで実装するEVASIONは、KVキャッシュ圧縮という推論メモリ機構への直接貢献が確認できるため採用とした。",
+   "source_url": "https://doi.org/10.23919/DATE64628.2025.10992781",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 288
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2611.01704",
+   "identity_tokens": [
+    "arXiv:2611.01704"
+   ],
+   "title": "MatMoE: Matryoshka Mixture-of-Experts with Dynamic Mixed-Precision Quantization for Efficient Inference",
+   "reason": "MoE推論で専門家の重要度と遅延制約に応じてビット幅をデコード中に動的割当てするMatMoEをllama.cpp上に実装し高速化を示しており、MoEの混合精度量子化による推論効率化への直接貢献が確認できるため採用とした。",
+   "source_url": "https://arxiv.org/abs/2611.01704",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 289
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2607.20481",
+   "identity_tokens": [
+    "arXiv:2607.20481"
+   ],
+   "title": "Routing Without Training: Controllable-Ratio LLM Offloading via Reliability Gating",
+   "reason": "ローカルLLMのサンプル間一致度を信頼度信号としてクラウドへオフロードするか判定する学習不要ルーティングCARGOにより、任意の協調比率でローカル・クラウド協調推論を制御できる直接の推論配置貢献が確認できるため採用とした。",
+   "source_url": "https://arxiv.org/abs/2607.20481",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 291
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2510.09647",
+   "identity_tokens": [
+    "arXiv:2510.09647"
+   ],
+   "title": "Rounding-Guided Backdoor Injection in Deep Learning Model Quantization",
+   "reason": "モデル量子化の丸めを悪用してバックドアを埋め込む攻撃QuRAの研究であり、量子化という推論配備技術の安全性には関わるが、効率化の機構ではなく攻撃手法のため境界とした。",
+   "source_url": "https://arxiv.org/abs/2510.09647",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 292
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.18535/ijsrm/v13i11.ec03",
+   "identity_tokens": [
+    "DOI:10.18535/ijsrm/v13i11.ec03"
+   ],
+   "title": "Multi-Objective Reinforcement Learning for Resource-Optimal LLM Serving in SaaS Clouds",
+   "reason": "SaaSクラウドでのLLMサービングに実行中精度を適応させるAdaptive Precision Scalingの アーキテクチャと分類を述べる論文であり、サービング最適化の方向性は示すが具体的な機構や評価の裏付けが薄いため境界とした。",
+   "source_url": "https://doi.org/10.18535/ijsrm/v13i11.ec03",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 293
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2611.07496",
+   "identity_tokens": [
+    "arXiv:2611.07496"
+   ],
+   "title": "ZYFA: Speed and Accuracy of FP8 FlashAttention on AMD CDNA4",
+   "reason": "AMD MI355X上でFP8 FlashAttentionのプリフィルカーネルを、確率計算の近似とsoftmaxと行列積の ping-pong スケジューリングで高速化するZYFAは、注意カーネルという推論の中核演算への直接貢献が確認できるため採用とした。",
+   "source_url": "https://arxiv.org/abs/2611.07496",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 294
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2601.08089",
+   "identity_tokens": [
+    "arXiv:2601.08089"
+   ],
+   "title": "Q-realign: Piggybacking Realignment on Quantization for Safe and Efficient LLM Deployment",
+   "reason": "微調整で損なわれた安全性を事後量子化へ相乗りさせて回復するQ-realignは、量子化を配備工程に組み込む発想として関連するが、主目的は安全性の回復であり推論効率の機構ではないため境界とした。",
+   "source_url": "https://arxiv.org/abs/2601.08089",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 295
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2012.01839",
+   "identity_tokens": [
+    "arXiv:2012.01839"
+   ],
+   "title": "Distributed Training and Optimization Of Neural Networks",
+   "reason": "ニューラルネットの分散学習とハイパーパラメータ最適化を論じる研究であり、学習側の計算資源の話でLLM推論システムへの貢献は確認できないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2012.01839",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 296
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/JIOT.2021.3131407",
+   "identity_tokens": [
+    "DOI:10.1109/JIOT.2021.3131407"
+   ],
+   "title": "EdgePipe: Tailoring Pipeline Parallelism With Deep Neural Networks for Volatile Wireless Edge Devices",
+   "reason": "不安定な無線エッジでDNNのパイプライン並列を調整するEdgePipeは、エッジ推論の並列実行システムとして関連するが、対象は一般DNNでありLLM推論への適用は示されていないため境界とした。",
+   "source_url": "https://doi.org/10.1109/JIOT.2021.3131407",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 297
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/ISCAS56072.2025.11044273",
+   "identity_tokens": [
+    "DOI:10.1109/ISCAS56072.2025.11044273"
+   ],
+   "title": "A 17.1 TOPS/W FP-INT Transformer Inference Accelerator with Sparsity Boosting and Output Importance-Aware Processing",
+   "reason": "疎性を高める加算木と出力重要度に応じた浮動小数点蓄積の削減で17.1 TOPS/Wを達成するFP-INT Transformer推論アクセラレータであり、Transformer推論専用ハードウェアへの直接の効率貢献が確認できるため採用とした。",
+   "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11044273",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 298
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2610.06677",
+   "identity_tokens": [
+    "arXiv:2610.06677"
+   ],
+   "title": "How Sparse Probability Maps Shape Mixture-of-Experts Routing",
+   "reason": "MoEルータの確率写像を疎なものへ変えた際の専門家割当ての変化を分析する研究であり、MoE推論のルーティング理解には関わるが、新しい推論機構の提案ではなく分析にとどまるため境界とした。",
+   "source_url": "https://arxiv.org/abs/2610.06677",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 299
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.48550/arXiv.2405.18884",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2405.18884"
+   ],
+   "title": "Learning Mixture-of-Experts for General-Purpose Black-Box Discrete Optimization",
+   "reason": "ブラックボックス離散最適化のための汎用ニューラル最適化器MEGOの研究であり、ここでの専門家混合は最適化器の構造であってLLM推論システムへの貢献はないため対象外とした。",
+   "source_url": "https://doi.org/10.48550/arXiv.2405.18884",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T07:30:00+09:00",
+   "last_checked_at": "2026-11-26T07:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 300
+  }
+ ]
+}
