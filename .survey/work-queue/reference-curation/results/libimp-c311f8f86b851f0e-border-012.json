@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c311f8f86b851f0e-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.10078",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.10078",
+    "identity_tokens": [
+      "arXiv:2507.10078"
+    ],
+    "reason": "本論文は制御理論のH2最適モデル低次元化を深層の対角状態空間モデルへ適用しパラメータを32分の1へ圧縮する手法だが、評価はLRAベンチマークの系列モデルでありLLM推論への適用は示されていないため境界とする。",
+    "first_checked_at": "2026-11-25T11:42:50+00:00",
+    "last_checked_at": "2026-11-25T11:42:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compression Method for Deep Diagonal State Space Model Based on H2 Optimal Reduction"
+  },
+  "processed_at": "2026-11-25T11:42:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c311f8f86b85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d2e4a5c702bba13b-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.10996",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.10996",
+    "identity_tokens": [
+      "arXiv:2502.10996"
+    ],
+    "reason": "RASは検索結果を質問固有の知識グラフへ構造化してRAG生成の推論精度を上げる枠組みであり、推論システムの計算・メモリ効率への貢献はない。",
+    "first_checked_at": "2026-11-25T11:42:50+00:00",
+    "last_checked_at": "2026-11-25T11:42:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "RAS: Retrieval-And-Structuring for Knowledge-Intensive LLM Generation"
+  },
+  "processed_at": "2026-11-25T11:42:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d2e4a5c702bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

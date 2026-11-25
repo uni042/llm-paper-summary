@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-769177b1927a058c-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.05033",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.05033",
+    "identity_tokens": [
+      "arXiv:2402.05033"
+    ],
+    "reason": "Majority Kernelsは単一の学習過程で大規模モデルと展開用小規模モデルを同時に得る学習ダイナミクスの改変であり、主題は学習側の手法であって推論時の機構への貢献は確認できない。",
+    "first_checked_at": "2026-11-25T11:42:49+00:00",
+    "last_checked_at": "2026-11-25T11:42:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Majority Kernels: An Approach to Leverage Big Model Dynamics for Efficient Small Model Training"
+  },
+  "processed_at": "2026-11-25T11:42:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-769177b1927a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

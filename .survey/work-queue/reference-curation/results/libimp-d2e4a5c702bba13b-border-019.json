@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d2e4a5c702bba13b-border-019",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.04378",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.04378",
+    "identity_tokens": [
+      "arXiv:2606.04378"
+    ],
+    "reason": "DLLGは複数専門LLMのロジットをトークン単位で学習済みゲートにより融合する推論時アンサンブルだが、主目的は推論品質の向上であり効率化機構ではないため境界とする。",
+    "first_checked_at": "2026-11-25T11:42:50+00:00",
+    "last_checked_at": "2026-11-25T11:42:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DLLG: Dynamic Logit-Level Gating of LLM Experts"
+  },
+  "processed_at": "2026-11-25T11:42:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d2e4a5c702bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

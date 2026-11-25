@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-769177b1927a058c-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.12487",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.12487",
+    "identity_tokens": [
+      "arXiv:2512.12487"
+    ],
+    "reason": "PeRL-VLは検証可能報酬による強化学習に知覚の記述報酬と推論の教師あり学習を分離して組み合わせる視覚言語モデルの学習手法であり、主題はマルチモーダル推論能力の学習であって推論システムの効率化ではない。",
+    "first_checked_at": "2026-11-25T11:42:49+00:00",
+    "last_checked_at": "2026-11-25T11:42:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "More Than the Final Answer: Improving Visual Extraction and Logical Consistency in Vision-Language Models"
+  },
+  "processed_at": "2026-11-25T11:42:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-769177b1927a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

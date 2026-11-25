@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30ef8211e3fa7f43-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.22223",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.22223",
+    "identity_tokens": [
+      "arXiv:2605.22223"
+    ],
+    "reason": "本論文はTransformerが生成できる異なる出力列の数をプロンプト長から理論的に上界評価する表現力の理論研究であり、対象はモデルの能力の理論的性質であって推論システムの効率化への貢献はない。",
+    "first_checked_at": "2026-11-25T11:42:49+00:00",
+    "last_checked_at": "2026-11-25T11:42:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "How Many Different Outputs Can a Transformer Generate?"
+  },
+  "processed_at": "2026-11-25T11:42:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30ef8211e3fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

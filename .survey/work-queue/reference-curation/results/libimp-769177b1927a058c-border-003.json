@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-769177b1927a058c-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.08768",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.08768",
+    "identity_tokens": [
+      "arXiv:2505.08768"
+    ],
+    "reason": "SPATは感度指標SENDで冗長な注意モジュール全体を剪定し多変量時系列予測モデルのFLOPsを35.274%削減する構造化剪定だが、対象は時系列予測モデルでありLLM推論への適用は示されていないため境界とする。",
+    "first_checked_at": "2026-11-25T11:42:49+00:00",
+    "last_checked_at": "2026-11-25T11:42:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SPAT: Sensitivity-based Multihead-attention Pruning on Time Series Forecasting Models"
+  },
+  "processed_at": "2026-11-25T11:42:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-769177b1927a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

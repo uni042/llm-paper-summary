@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30ef8211e3fa7f43-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.09622",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.09622",
+    "identity_tokens": [
+      "arXiv:2502.09622"
+    ],
+    "reason": "本論文はマスク拡散言語モデルについて、パープレキシティでは系列長に依らず少ないサンプリングステップで済む一方、系列誤り率ではステップ数が系列長に比例して自己回帰の効率優位が消えることを示す理論分析であり、生成方式の推論効率に関わるがシステム実装や実測ではないため境界とする。",
+    "first_checked_at": "2026-11-25T11:42:48+00:00",
+    "last_checked_at": "2026-11-25T11:42:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Theoretical Benefit and Limitation of Diffusion Language Model"
+  },
+  "processed_at": "2026-11-25T11:42:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30ef8211e3fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
