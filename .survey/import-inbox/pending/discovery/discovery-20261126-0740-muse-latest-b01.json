@@ -1,0 +1,379 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-latest-b01",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 23,
+  "origin": "discovery_latest_search",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.33111",
+      "identity_tokens": [
+        "arXiv:2611.33111"
+      ],
+      "title": "Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions",
+      "reason": "ドラフトモデルがターゲット分布に対して過小自信である点に着目し、温度スケーリング等の事後キャリブレーションで分布ギャップを縮めて受理長を最大約10％改善し、追加コストほぼなしでサービングのスループット向上を一次要旨で示す投機的デコードへの直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.33111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.33004",
+      "identity_tokens": [
+        "arXiv:2611.33004"
+      ],
+      "title": "LEGOSpec: A Composable and Efficient Framework for Speculative Draft Design and Training",
+      "reason": "ドラフトモデルをContext・Backbone・Proposal・Objectiveへ分解する構成可能フレームワークと、受理長を最大13.7％（長文脈で34.7％）改善するDFluxドラフトを提示し、メタデータ対応スケジューリングで学習スループットも上げる、投機的デコードの設計・学習基盤への直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.33004",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32989",
+      "identity_tokens": [
+        "arXiv:2611.32989"
+      ],
+      "title": "AVQ-Attention-2: Adaptive Vector-Quantized Attention with Exact Local Blocks and Linear-Cost Training",
+      "reason": "キー群をクラスタ化してコードワードではなくクラスタ平均へ注意する適応ベクトル量子化注意に厳密な局所ブロックを組み合わせ、FlashAttentionより高速で品質低下がほぼない近似注意を一次要旨で示しており、長文脈推論の注意計算コスト削減への直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32989",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32954",
+      "identity_tokens": [
+        "arXiv:2611.32954"
+      ],
+      "title": "LoomKV: Lossless KV Cache Compression from GPU Memory to SSD for LLM Serving",
+      "reason": "BF16の上位バイトに対する較正済み3ビット符号でKVキャッシュを無損失に0.71倍へ圧縮し、LMCacheとvLLM上で外部階層モードとGPUプールモードの両方でgoodputを最大3.6倍化するなど、LLMサービングのKV階層メモリへの直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32954",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32881",
+      "identity_tokens": [
+        "arXiv:2611.32881"
+      ],
+      "title": "Scalable Placement for Disaggregated LLM Serving on Heterogeneous Edge Fleets",
+      "reason": "異種エッジデバイス群での分離型LLMサービングについて、レプリカ構成・prefill/decode割当・層分割を支配関係プルーニングとwater-fillingで共同最適化し、30台構成で441msに最適配置を求めるSpadeを提示する、配置計画への直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32881",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32873",
+      "identity_tokens": [
+        "arXiv:2611.32873"
+      ],
+      "title": "MXFP4 for LLM Inference: Complementary Post-Training Quantization Techniques and Their Interactions",
+      "reason": "MXFP6・MXFP4・NVFP4のマイクロスケーリング形式とHadamard回転・PTQ手法・スケール選択の相互作用を6モデルで系統的に検証し、校正不要のスケール選択Midmaxを提案して4ビット推論の精度指針を一次要旨で具体的に示す、推論向け量子化への直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32873",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.32855",
+      "identity_tokens": [
+        "arXiv:2611.32855"
+      ],
+      "title": "Speculative Decoding for Semantic-ID-Based Generative Recommendations",
+      "reason": "Semantic ID生成推薦のtop-K検索をツリー注意で一括採点し厳密性を証明付きで保証するSIDECARは投機的実行の機構を使うが、対象は推薦システムの検索精度と呼び出し回数であり、LLM推論システム自体への貢献は間接的で応用が主目的であるため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.32855",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.32736",
+      "identity_tokens": [
+        "arXiv:2611.32736"
+      ],
+      "title": "Qwen-Image-HD: Autoregressive Diffusion for High Definition Image Generation",
+      "reason": "タイル単位の自己回帰生成と対角方向へ並列化するWavefront-AutoRegressive推論スケジュールで単一画像レイテンシ削減をうたうが、論文の主目的は4K画像生成の品質改善であり、推論システムへの貢献は生成モデル本体に従属する補助的なものにとどまるため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.32736",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32634",
+      "identity_tokens": [
+        "arXiv:2611.32634"
+      ],
+      "title": "ModelLess: A Serverless System for Multi-Tier LLM Inference on Shared GPUs",
+      "reason": "オンライン・バッチ等の階層ごとにプリエンプション時の喪失範囲を定義し、スリープ／ウェイクでアイドルGPUを下位階層へ貸し出すサーバーレスLLM推論基盤ModelLessをSGLangプラグイン等で実装し、実トレース再生で貸出可能GPU時間を示す直接のシステム貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32634",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32624",
+      "identity_tokens": [
+        "arXiv:2611.32624"
+      ],
+      "title": "HiCal: Offline Calibration for Hierarchical Scale Encoding in Accurate HiF4 Quantization",
+      "reason": "HiFloat4の階層スケール符号化について、Level-1の丸めバイアスとLevel-2/3の拡張閾値を実分布でオフライン較正するHiCalにより量子化MSEを最大23.5％削減し、推論時のブロックごと探索なしで精度を上げる、低ビットLLM推論向け量子化への直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32624",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32572",
+      "identity_tokens": [
+        "arXiv:2611.32572"
+      ],
+      "title": "Breaking Routing And Inter-device Dependencies in Mixture-of-Experts",
+      "reason": "laddered residualとearly routingでMoEのdispatch/combineの逐次依存を緩め、通信を専用ストリームで注意計算と重ねるBRAID-MoEにより、変換したQwen3-30B-A3Bでprefill最大1.29倍・decode最大1.37倍の推論高速化を一次要旨で示す、MoE推論の通信・計算重なりへの直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32572",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32423",
+      "identity_tokens": [
+        "arXiv:2611.32423"
+      ],
+      "title": "Factorized Context Attention: From Emulated to Native Grid Probing",
+      "reason": "プロンプト経由で再現されていたgrid probingを、入力を一度だけKVキャッシュへ符号化しマスク付きバッチforwardで実行する学習不要のブロック疎注意FCAとしてモデル内部へ実装し、長文脈推論で精度と到達範囲を保ちながらコストを大幅に下げる注意機構への直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32423",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32295",
+      "identity_tokens": [
+        "arXiv:2611.32295"
+      ],
+      "title": "Norn: Context-Length-Aware Optimization of Weight and KV Cache Placement for Offloaded LLM Inference",
+      "reason": "文脈長に応じて重みとKVキャッシュの配置と計算割当をサブレイヤ単位で切り替える実行計画を事前計算し、単一GPUのオフロード推論でPipelined Sharding比最大16.8倍のレイテンシ改善を一次要旨で示す、階層メモリ配置最適化への直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32295",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32269",
+      "identity_tokens": [
+        "arXiv:2611.32269"
+      ],
+      "title": "Pando: Noise-Coupled Parallel Draft Trees for Efficient Edge Speculative Decoding",
+      "reason": "並列ドラフタ上にターゲットのサンプリングノイズと結合した枝刈りで動的ドラフトツリーを構築し、ブロック長の上限を超えて受理長を最大8.4％伸ばし、エッジデバイスでAR比5.3倍の高速化と4.2倍のエネルギー削減を示す投機的デコードへの直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32264",
+      "identity_tokens": [
+        "arXiv:2611.32264"
+      ],
+      "title": "Mayfly: Lifecycle-Aware High-Bandwidth Flash for Recursive Self-Improvement",
+      "reason": "再帰的自己改善のセッション群で生じるKVキャッシュのバーストと減衰に合わせ、High-Bandwidth Flash上のKVをその場読みとHBM復帰の間でライフサイクル管理するMayflyにより完了時間を最大34％短縮する、LLM推論のKV階層メモリ管理への直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32264",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32083",
+      "identity_tokens": [
+        "arXiv:2611.32083"
+      ],
+      "title": "Inference-Aware Congestion Control for Distributed MoE Inference",
+      "reason": "分散MoE推論でボトルネックとなるコンシューマが計算と通信の重なりで変化する点に着目し、ACK/INTフィードバックと集団通信の進捗を併用してQPレートを配分するIACCによりHPCC比でTTFTとTPOTを改善する、分散推論の通信制御への直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.32083",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.32073",
+      "identity_tokens": [
+        "arXiv:2611.32073"
+      ],
+      "title": "Efficient Semantic ORDER BY via Transitivity-Aware LLM Batch Sorting",
+      "reason": "LLM比較の結果を推移性グラフへ記録して不要な再問い合わせを避ける意味的ORDER BY演算子TBSは、LLM呼び出し回数とコストの削減を示すが、対象はデータベースのクエリ処理でありLLM推論システム自体の機構ではなく、LLM利用側の応用最適化が主目的であるため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.32073",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.31944",
+      "identity_tokens": [
+        "arXiv:2611.31944"
+      ],
+      "title": "DraftKV: Protecting Persistent Worlds through Hierarchical Streaming Retrieval",
+      "reason": "対話型ビデオワールドモデルで履歴KVキャッシュを幾何的根拠と関連度で検索し、CPUオフロードとタイル単位ストリーミング注意でレイテンシとGPUメモリを削減するが、対象はビデオ生成モデルの一貫性維持であり、LLM推論システムへの適用は一次要旨では示されていないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.31944",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.31937",
+      "identity_tokens": [
+        "arXiv:2611.31937"
+      ],
+      "title": "Native Block-Quantized Matrix Multiplication and Explicit K/V Residency with Dual-View Access for LLM Inference on RISC-V Vector Processors",
+      "reason": "RISC-Vベクトルプロセッサ上でブロック量子化行列積をネイティブ実行するQBSと、K/Vを局所保持してデコード注意を高速化するAKVを定義し、RTL評価で投影計算最大51.34倍・注意1.45倍の高速化を示す、LLM推論向けハードウェア実行方式への直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.31937",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.31892",
+      "identity_tokens": [
+        "arXiv:2611.31892"
+      ],
+      "title": "Cheap Memory Costs Future Compute: Co-Designing Persistent KV and GPU Execution for Efficient Streaming Video Diffusion",
+      "reason": "ブロック因果ビデオ拡散で永続KVキャッシュの更新コストを、陳腐化したKVの再構成と部分リフレッシュで下げるSAMRはKV管理の機構を含むが、対象はビデオDiTの生成推論であり、LLM推論システムへの直接の適用や転用可能性は一次要旨からは確認できないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.31892",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.31744",
+      "identity_tokens": [
+        "arXiv:2611.31744"
+      ],
+      "title": "Mixed-Initiative Mining of Root-Cause Analyses into Audit Priors for C/C++ Vulnerability Hunting",
+      "reason": "根本原因分析レポートから脆弱性監査の優先順位付け用プライアを抽出する研究であり、LLMは監査エージェントの利用側として登場するだけで、推論・サービング・KVキャッシュ等の推論システム機構への技術的貢献は一次要旨に一切示されていないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2611.31744",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.31737",
+      "identity_tokens": [
+        "arXiv:2611.31737"
+      ],
+      "title": "GreenDynaMix: Thermal-Aware Dynamic Mixed-Precision MoE LLM Inference Systems",
+      "reason": "DVFSによる熱管理とMoEルータの重要度に基づく動的混合精度割当を統合した実行時システムGreenDynaMixにより、GPUの温度起因エージング率を25〜33％下げつつスループットを回復する、LLM推論の実行時システムへの直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.31737",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.31638",
+      "identity_tokens": [
+        "arXiv:2611.31638"
+      ],
+      "title": "Wavefront: Low-Rank Drafting with Parallel Causal Refinement for Speculative Decoding",
+      "reason": "並列ブロックドラフタのlm_head読み出しを低ランク基底へ置換し補正ヘッドを強化してJacobi反復で並列精緻化するWavefrontをvLLM上のCUDAグラフとして実装し、Qwen3系で既存投機的デコード比最大23.6％のスループット改善を示す直接貢献であるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.31638",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:40:00+09:00",
+      "last_checked_at": "2026-11-26T07:40:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    }
+  ]
+}
