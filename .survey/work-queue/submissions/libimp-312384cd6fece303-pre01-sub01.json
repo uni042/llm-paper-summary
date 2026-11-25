@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AdaptServe: Auto-Scalable DL Serving with Dynamic Model Parallelism",
+      "source_url": "https://doi.org/10.1109/HPSC66065.2025.00025",
+      "year": 2025,
+      "published": "2025-05-09",
+      "venue": "International Conference on High Performance Scientific Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the widespread adoption of large-scale deep learning models in cloud computing environments, model serving systems are facing increasingly higher demands in terms of throughput and latency for online inference. Existing model serving systems often face trade-offs between resource utilization and scalability. Offline placement systems struggle to adapt to real-time workload fluctuations, while online systems suffer from limited granularity in scheduling decisions. These limitations can lead to low resource utilization and high request latency. To address these challenges, we propose AdaptServe, a scalable and dynamic deep learning (DL) model serving system that combines parallel placement strategy with real-time model replicas management to optimize system throughput, scalability, and reliability. During the model initialization phase, AdaptServe employs Integer Linear Programming (ILP) to efficiently allocate resources and place parallelized replicas. In runtime replica management, AdaptServe leverages deep reinforcement learning (DRL) to adaptively manage model replicas in response to fluctuating workloads, achieving real-time auto-scaling model inference services. Experiments show that AdaptServe can cope with different cluster sizes, workload pressures and latency constraints, delivering superior performance compared to state-of-the-art systems while utilizing less than 80% of computational resources.",
+      "identifiers": [
+        "SemanticScholar:20740369f8ec5ec27ff73037247ce37f3ccf7f27"
+      ],
+      "semantic_scholar_id": "20740369f8ec5ec27ff73037247ce37f3ccf7f27",
+      "doi": "10.1109/HPSC66065.2025.00025",
+      "canonical_id": "DOI:10.1109/HPSC66065.2025.00025",
+      "authors": [
+        "Yue Zhang",
+        "Xuan Mo",
+        "Wei-Gang Wu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 565,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AdaptServe is a DL serving system combining ILP-based parallel replica placement with deep-RL runtime replica management under dynamic model parallelism, targeting throughput, scalability and latency for online inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RepoFusion-in-Decoder: Efficient Cross-File Code Completion via Lightweight Encoder Fusion",
+      "source_url": "https://doi.org/10.1109/AANN66429.2025.11257694",
+      "year": 2025,
+      "published": "2025-08-15",
+      "venue": "2025 5th International Conference on Advanced Algorithms and Neural Networks (AANN)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) based code completion tools have greatly enhanced software development productivity by providing repository-aware suggestions. However, existing state-of-the-art decoder-only LLMs, such as Qwen2.5-Coder-3B, suffer from high latency, particularly due to expensive prefill computations when leveraging long, repository-scale contexts. This latency limits their practical deployment in highly interactive programming environments. In this work, we propose an efficient Fusion-in-Decoder (FiD) architecture that extends a pre-trained, high-quality decoder-only code LM with a lightweight encoder and trainable cross-attention layers, while keeping the decoder frozen. Our approach enables independent encoding and caching of cross-file code chunks, substantially reducing prefill time. We design a two-stage data preparation pipeline leveraging repository-level chunking and BM25-based retrieval to supply realistic multi-file context. Experiments on the Long Code Arena and RepoEval-Updated benchmarks demonstrate that our model achieves significant reductions in end-to-end latency, particularly with long prompts, while sustaining strong code completion performance. Our results highlight the promise of FiD-augmented decoder-only models for low-latency cross-file code completion at scale.",
+      "identifiers": [
+        "SemanticScholar:d60babfaded3ee8da430f637cf739cee41dfbfcd"
+      ],
+      "semantic_scholar_id": "d60babfaded3ee8da430f637cf739cee41dfbfcd",
+      "doi": "10.1109/AANN66429.2025.11257694",
+      "canonical_id": "DOI:10.1109/AANN66429.2025.11257694",
+      "authors": [
+        "Zhuo-Qing Zhong",
+        "Wei Liu",
+        "Chang-Ye Yang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 467,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RepoFusion-in-Decoder extends a frozen decoder-only code LM with a lightweight encoder and cross-attention so cross-file code chunks are encoded and cached independently, substantially reducing prefill time for repository-level code completion.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CIMple: Standard-cell SRAM-based CIM with LUT-based split softmax for attention acceleration",
+      "source_url": "https://arxiv.org/abs/2604.15944",
+      "year": 2025,
+      "published": "2025-10-08",
+      "venue": "2025 Cross-Disciplinary Conference on Memory-Centric Computing (CCMCC)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) such as LLaMA and DeepSeek, are built on transformer architectures, which have become a standard model for achieving state-of-the-art performance in natural language processing tasks. Recently, there has been growing interest in deploying LLMs on edge devices. Although smaller LLM models are being proposed, they often still contain billions of parameters. Since edge devices are limited in their resources this poses a significant challenge for edge deployment. Compute-in-memory (CIM) is a promising architecture that addresses this by reducing data movement through the integration of computational logic directly into memory. However, existing CIM architectures support only static Multiply-Accumulate (MAC) operations which limit their configurability in supporting nonlinear operations and various types of transformer models. This paper presents a fully digital standard-cell SRAM-based CIM architecture accelerator for self-attention, called CIMple, designed to overcome these limitations, inside transformer models. The key contributions of CIMple are: 1) A novel dual-banked CIM-based fully digital self-attention accelerator using 8-bit parallel weight feeding. 2) A look-up-table (LUT) based fixed-point implementation reducing latency with minimal accuracy degradation. 3) A performance evaluation of a 32kb CIM-based self-attention accelerator implemented in 28nm, which achieves 26.1 TOPS/W at 0.85V and 2.31 TOPS/mm2 at 1.2V, both with INT8 precision.",
+      "identifiers": [
+        "SemanticScholar:0ad679459636b033f9413f6fc0649c1334cff700"
+      ],
+      "semantic_scholar_id": "0ad679459636b033f9413f6fc0649c1334cff700",
+      "canonical_id": "arXiv:2604.15944",
+      "arxiv_id": "2604.15944",
+      "doi": "10.1109/CCMCC67628.2025.11380467",
+      "authors": [
+        "Bas Ahn",
+        "Xingjian Tao",
+        "M. Gomony",
+        "M. Geilen",
+        "H. Corporaal"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 413,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CIMple is a fully digital standard-cell SRAM compute-in-memory accelerator with LUT-based split softmax designed to accelerate self-attention for LLM deployment on resource-constrained edge devices.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-312384cd6fec",
+    "round": "libimp-312384cd6fece303-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-312384cd6fece303-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-312384cd6fece303-pre01.json",
+    "receipt": "sha256:6d4dcc888822bc75739711cd4bf78b237c3519a0aa86cf4c50592fca7607205c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-312384cd6fec",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

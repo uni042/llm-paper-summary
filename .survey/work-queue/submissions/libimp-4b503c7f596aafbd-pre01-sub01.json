@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing",
+      "source_url": "https://arxiv.org/abs/2605.18796",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM cascades and model routing promise lower inference cost by sending easy queries to a small model and escalating hard ones to a large model, but most deployed routers use uncalibrated confidence scores and require per-workload threshold tuning. We present UCCI, a calibration-first router that maps token-level margin uncertainty to a per-query error probability via isotonic regression and selects the escalation threshold by constrained cost minimization. Under three explicit assumptions, threshold policies on the calibrated score are cost-optimal, and isotonic calibration achieves O(n^{-1/3}) sample complexity for expected calibration error (ECE). On a production named entity recognition workload of 75,000 queries served by 4B and 12B instruction-tuned LLMs on H100 GPUs, UCCI cuts inference cost by 31% (95% CI: [27%, 35%]) at micro-F1 = 0.91 while reducing ECE from 0.12 to 0.03. At the same operating point, UCCI beats entropy thresholding, split-conformal routing, and a FrugalGPT-style learned threshold. All cascade results use end-to-end routing on actual model outputs and measured H100 latency, not simulated routing from global accuracies or nominal API prices.",
+      "identifiers": [
+        "SemanticScholar:a3657bd41677842ed5c48562895822f1afdd0089"
+      ],
+      "semantic_scholar_id": "a3657bd41677842ed5c48562895822f1afdd0089",
+      "canonical_id": "arXiv:2605.18796",
+      "arxiv_id": "2605.18796",
+      "doi": "10.48550/arXiv.2605.18796",
+      "authors": [
+        "Varun Kotte"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 198,
+        "matched_prestigious_venue": null
+      },
+      "reason": "UCCI is a calibration-first LLM cascade router that maps token-level margin uncertainty to per-query error probability and picks escalation thresholds by constrained inference-cost minimization on a production workload; direct inference cost optimization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Cortex: Achieving Low-Latency, Cost-Efficient Remote Data Access For LLM via Semantic-Aware Knowledge Caching",
+      "source_url": "https://arxiv.org/abs/2509.17360",
+      "year": 2025,
+      "published": "2025-09-22",
+      "venue": "Symposium on Networked Systems Design and Implementation",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) agents tackle data-intensive tasks such as deep research and code generation. However, their effectiveness depends on frequent interactions with knowledge sources across remote clouds or regions. Such interactions can create non-trivial latency and cost bottlenecks. Existing caching solutions focus on exact-match queries, limiting their effectiveness for semantic knowledge reuse. To address this challenge, we introduce Cortex, a novel cross-region knowledge caching architecture for LLM agents. At its core are two abstractions: Semantic Element (SE) and Semantic Retrieval Index (Seri). A semantic element captures the semantic embedding representation of an LLM query together with performance-aware metadata such as latency, cost, and staticity. Seri then provides two-stage retrieval: a vector similar index with semantic embedding for fast candidate selection and a lightweight LLM-powered semantic judger for precise validation. Atop these primitives, Cortex builds a new cache interface that includes a new semantic-aware cache hit definition, a cost-efficient eviction policy, and proactive prefetching. To reduce overhead, Cortex co-locates the small LLM judger with the main LLM using adaptive scheduling and resource sharing. Our evaluation demonstrates that Cortex delivers substantial performance improvements without compromising correctness. On representative search workloads, Cortex achieves up to a 3.6x increase in throughput by maintaining cache hit rates of over 85%, while preserving accuracy virtually identical to non-cached baselines. Cortex also improves throughput for coding tasks by 20%, showcasing its versatility across diverse agentic workloads.",
+      "identifiers": [
+        "SemanticScholar:641a8b01dc986ede5d894765b24c5fed6ad15462"
+      ],
+      "semantic_scholar_id": "641a8b01dc986ede5d894765b24c5fed6ad15462",
+      "canonical_id": "arXiv:2509.17360",
+      "arxiv_id": "2509.17360",
+      "authors": [
+        "Chao-Yi Ruan",
+        "Chao Bi",
+        "Kai-Wen Zheng",
+        "Zi-Ji Shi",
+        "Xin-Yi Wan",
+        "Jia-Lin Li"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 429,
+        "matched_prestigious_venue": "Networked Systems Design and Implementation"
+      },
+      "reason": "Asteria/Cortex is a cross-region semantic caching architecture for LLM agent tool access, with semantic elements and a retrieval index carrying latency and cost metadata; a caching system reducing LLM workflow latency and cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Conformal LLM Routing with Distribution-Free Safety Guarantees",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-srw.70",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM routing directs queries to a cheaper model when it suffices and to an expensive model otherwise, reducing inference cost. Existing input-based routers optimize cost-performance trade-offs but provide no formal bound on how often the cheaper model fails among routed queries. We adapt a proactive conformal gate framework to LLM routing. A logistic regression gate trained on text embed-dings predicts per-query safety, and Clopper-Pearson conformal calibration selects a routing threshold that guarantees the violation rate among routed queries stays below α (the violation tolerance) with probability at least 1 − δ (the confidence level). On two benchmarks covering math reasoning (GSM8K) and multi-domain knowledge (MMLU), routing between Mixtral-8x7B and GPT-4 (a 24.5 × cost difference), our method maintains the target α within the δ tolerance across a sweep from 0.05 to 0.50, while a validation-tuned baseline crosses the violation boundary on GSM8K. A feasibility analysis across all 10 Router-Bench models reveals that routability is jointly model-and task-dependent. To our knowledge, this is the first input-based LLM router with distribution-free safety guarantees.",
+      "identifiers": [
+        "SemanticScholar:78aa879d375de0fddae1f6bc9646251a36537ecb"
+      ],
+      "semantic_scholar_id": "78aa879d375de0fddae1f6bc9646251a36537ecb",
+      "doi": "10.18653/v1/2026.acl-srw.70",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-srw.70",
+      "authors": [
+        "I. Uddin",
+        "André Bauer"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 147,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Adapts conformal gating to LLM routing between Mixtral-8x7B and GPT-4 with a guaranteed violation rate among queries sent to the cheaper model; a routing method whose explicit objective is reducing inference cost safely.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Learning-Based Collaborative MEC for LLM Inference with Soft-Deadline Awareness via Transformer-Enhanced PPO",
+      "source_url": "https://arxiv.org/abs/2608.02031",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper investigates collaborative mobile edge computing (MEC) servers for large language model (LLM) inference under soft deadline constraints. In this system, to improve the quality of service, computations are expected to be completed within their deadlines. However, due to dependencies among tasks or subtasks, any missed deadline can lead to catastrophic consequences for the entire request. In this context, this work proposes an extended deadline mechanism with constrained flexibility. The main challenges lie in handling large-scale computations under strict latency constraints while limiting the number of allowable deadline extensions, especially in the presence of task dependencies within each request. To tackle these challenges, we develop a transformer-enhanced proximal policy optimization (PPO) framework that enables efficient collaboration among MEC servers. The proposed approach aims to maximize the number of tasks completed within their deadlines while minimizing the use of deadline extensions. By capturing temporal dependencies and cross-server interactions, the transformer improves decision-making for task migration. Simulation results demonstrate that the proposed method significantly outperforms conventional PPO and heuristic-based approaches in terms of task completion rate and overall system efficiency.",
+      "identifiers": [
+        "SemanticScholar:c403779f99234245e736f464eac8dea49274187e"
+      ],
+      "semantic_scholar_id": "c403779f99234245e736f464eac8dea49274187e",
+      "canonical_id": "arXiv:2608.02031",
+      "arxiv_id": "2608.02031",
+      "doi": "10.48550/arXiv.2608.02031",
+      "authors": [
+        "Ngoc Hung Nguyen",
+        "Björn Landfeldt"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 114,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Proposes Transformer-enhanced PPO collaboration among MEC servers that schedules LLM inference tasks under soft deadlines with limited deadline extensions; the contribution targets LLM inference scheduling and QoS at the edge.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Distributed Inference of Large Language Models on Edge Devices",
+      "source_url": "https://doi.org/10.1145/3731806.3731859",
+      "year": 2025,
+      "published": "2025-02-20",
+      "venue": "International Conference on Software and Computer Applications",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We aim to propose a novel architecture to improve the performance of Large Language Models (LLMs) during inference on edge devices, particularly focused on mobile phones through a distributed computing environment. By utilizing the resources available across the local network, our architecture optimizes inference while maintaining the quality of generated text. Our study compares the number of nodes across the network while inferring an LLM and highlights the performance optimization in the average inference time per token with a greater number of nodes. We saw an improvement of up to 74% when the distributed system was scaled to four nodes. Our study advances the democratization of local LLMs and paves the way for research and applications that follow it.",
+      "identifiers": [
+        "SemanticScholar:54c2e6be1b72b4c35df1813925412c817976582a"
+      ],
+      "semantic_scholar_id": "54c2e6be1b72b4c35df1813925412c817976582a",
+      "doi": "10.1145/3731806.3731859",
+      "canonical_id": "DOI:10.1145/3731806.3731859",
+      "authors": [
+        "Karthik Namboori",
+        "Rohit P. Suresh",
+        "Sathwik Hj",
+        "Shriansh Mohanty",
+        "Jayashree Rangareddy"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 643,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Presents a distributed architecture that runs LLM inference across local-network edge devices (mobile phones) and reports up to 74% lower per-token inference time at four nodes; direct distributed edge inference contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4b503c7f596a",
+    "round": "libimp-4b503c7f596aafbd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4b503c7f596aafbd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4b503c7f596aafbd-pre01.json",
+    "receipt": "sha256:be52b9d4bc0a8e6f3334dff13e353275a04f88e01654c2c6000fb00ff1218965"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4b503c7f596a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

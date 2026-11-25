@@ -2,7 +2,7 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "muse",
-  "run_key": "muse-20261125-d03-b04::chunk-0003-of-0003",
+  "run_key": "muse-20261125-d03-b04::provider-gap",
   "reference_main_sha": "7ee9f908",
   "record_count": 1,
   "origin": "discovery_worklist",
@@ -28,5 +28,9 @@
   "parent_run_key": "muse-20261125-d03-b04",
   "chunk_index": 3,
   "chunk_count": 3,
-  "source_record_count": 41
+  "source_record_count": 41,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261125-0730-muse-d03-b04--chunk-0003-of-0003.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/cvprf71909.2026.00285"
+  ]
 }
