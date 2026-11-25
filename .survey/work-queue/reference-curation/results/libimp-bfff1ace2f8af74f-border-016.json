@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bfff1ace2f8af74f-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.26728",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.26728",
+    "identity_tokens": [
+      "arXiv:2603.26728"
+    ],
+    "reason": "SEAR defines a schema for evaluating production LLM responses and routing requests across multi-provider gateways using latency, cost and throughput signals; gateway routing infrastructure, but centered on evaluation data modeling rather than a serving mechanism, so borderline.",
+    "first_checked_at": "2026-11-25T04:54:30+00:00",
+    "last_checked_at": "2026-11-25T04:54:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SEAR: Schema-Based Evaluation and Routing for LLM Gateways"
+  },
+  "processed_at": "2026-11-25T04:54:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfff1ace2f8a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

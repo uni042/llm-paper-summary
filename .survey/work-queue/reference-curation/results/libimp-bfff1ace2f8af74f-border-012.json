@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bfff1ace2f8af74f-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.14528",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.14528",
+    "identity_tokens": [
+      "arXiv:2606.14528"
+    ],
+    "reason": "BayLing-Duplex builds a native full-duplex speech dialogue model on a single autoregressive LLM without external VAD; real-time interaction architecture for speech, adjacent to inference but primarily a speech-model capability contribution, so borderline.",
+    "first_checked_at": "2026-11-25T04:54:30+00:00",
+    "last_checked_at": "2026-11-25T04:54:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BayLing-Duplex: Native Full-Duplex Speech Dialogue with a Single Autoregressive LLM"
+  },
+  "processed_at": "2026-11-25T04:54:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfff1ace2f8a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

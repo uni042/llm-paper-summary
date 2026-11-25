@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-430cdabbeda5ee14-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:fe8dfadb8653815abb80206c50f247717357d320",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:fe8dfadb8653815abb80206c50f247717357d320",
+    "identity_tokens": [
+      "SemanticScholar:fe8dfadb8653815abb80206c50f247717357d320"
+    ],
+    "reason": "Behemoth pairs a training accelerator with a NAND-flash memory system to train extreme-scale DNNs, reporting training throughput and cost versus TPU v3; training-only hardware with no inference application.",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-25T04:54:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Behemoth: A Flash-centric Training Accelerator for Extreme-scale DNNs"
+  },
+  "processed_at": "2026-11-25T04:54:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-430cdabbeda5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

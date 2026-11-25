@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98fbd561c89e75ff-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2007.04069",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2007.04069",
+    "identity_tokens": [
+      "arXiv:2007.04069"
+    ],
+    "reason": "Auto-MAP uses a DQN to search distributed execution plans that parallelize DNN training workloads across devices; it addresses training parallelization, not inference serving or decoding efficiency.",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-25T04:54:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Auto-MAP: A DQN Framework for Exploring Distributed Execution Plans for DNN Workloads"
+  },
+  "processed_at": "2026-11-25T04:54:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98fbd561c89e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

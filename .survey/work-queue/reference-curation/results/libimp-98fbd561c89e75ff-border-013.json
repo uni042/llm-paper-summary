@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98fbd561c89e75ff-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.12102",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.12102",
+    "identity_tokens": [
+      "arXiv:2412.12102"
+    ],
+    "reason": "This paper proposes a distributed collaborative inference system for generative AI over next-generation 6G networks, but at a conceptual network-architecture level without a concrete LLM serving mechanism or measured inference pipeline, so borderline.",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-25T04:54:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Distributed Collaborative Inference System in Next-Generation Networks and Communication"
+  },
+  "processed_at": "2026-11-25T04:54:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98fbd561c89e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

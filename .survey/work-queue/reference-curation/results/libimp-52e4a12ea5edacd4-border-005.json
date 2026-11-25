@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52e4a12ea5edacd4-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2401.17919",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2401.17919",
+    "identity_tokens": [
+      "arXiv:2401.17919"
+    ],
+    "reason": "LOCOST is an SSM encoder-decoder for long-document summarization reporting large inference memory savings over sparse Transformers; efficiency is real, but the contribution is a task-specific summarization architecture.",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-25T04:54:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LOCOST: State-Space Models for Long Document Abstractive Summarization"
+  },
+  "processed_at": "2026-11-25T04:54:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52e4a12ea5ed",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

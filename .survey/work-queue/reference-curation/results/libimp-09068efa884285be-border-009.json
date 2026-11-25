@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09068efa884285be-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.02890",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.02890",
+    "identity_tokens": [
+      "arXiv:2609.02890"
+    ],
+    "reason": "PersonaLink distills user history into a bounded persona compared against retrieval at inference time for a frozen agent, explicitly trading per-query context cost against accuracy; inference-adjacent, but a personalization method, not a serving technique.",
+    "first_checked_at": "2026-11-24T21:43:55+00:00",
+    "last_checked_at": "2026-11-25T04:54:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Bounded Personas Match Retrieval on Classification but Not Regression for a Frozen Agent"
+  },
+  "processed_at": "2026-11-25T04:54:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09068efa8842",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

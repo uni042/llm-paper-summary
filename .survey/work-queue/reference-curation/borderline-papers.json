@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T03:18:12+00:00",
-  "record_count": 9029,
+  "updated_at": "2026-11-25T04:54:30+00:00",
+  "record_count": 9066,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -133496,9 +133496,9 @@
       "identity_tokens": [
         "arXiv:2510.10397"
       ],
-      "reason": "対話発話を自動抽出の手がかりへ結ぶ連想記憶グラフと、関連度・重要度・時間整合の多信号を適応的に融合する検索で大規模記憶QAの想起精度を高める枠組みであり、エージェント記憶に関連するが主眼は想起精度で効率への貢献は不明瞭である。",
+      "reason": "AssoMem builds an associative memory graph with multi-signal retrieval for large-scale memory question answering; a memory-retrieval framework for assistants, not an inference execution or serving technique.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -133556,9 +133556,9 @@
       "identity_tokens": [
         "SemanticScholar:a79227418db753b0b50d1df0790571966136d29b"
       ],
-      "reason": "自己教師ありモデルの構造化プルーニングによる話者ダイアライゼーション効率化と題するが、当該identityの一次要旨を取得できず、推論システムへの貢献範囲を検証できていない。",
+      "reason": "Structured pruning guided by distillation compresses WavLM-based speaker diarization models (80% smaller, 4x faster inference); the compression method is sound but the application is a speech diarization model, not LLM inference.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -133595,21 +133595,6 @@
       "borderline_recheck_count": 0,
       "title": "Robust Question Answering: A study on Self-Attention Mechanism and Data Augmentation"
     },
-    "arXiv:2609.20804": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2609.20804",
-      "identity_tokens": [
-        "arXiv:2609.20804"
-      ],
-      "reason": "コーディングエージェントのハーネス構成要素（計画・行動空間・文脈管理）を固定した実行ループ上で比較した実証研究で、文脈管理戦略と文脈窓予算が効率へ与える影響はエージェント実行時の設計知見として関連するが、推論システム自体の提案ではなく能力とコストの評価研究にとどまる。",
-      "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "An Empirical Study of Harness Design for Coding Agents"
-    },
     "arXiv:2609.23886": {
       "classification": "borderline",
       "canonical_id": "arXiv:2609.23886",
@@ -133632,9 +133617,9 @@
         "DOI:10.48550/arxiv.2604.17886",
         "arXiv:2604.17886"
       ],
-      "reason": "複数セッションにまたがる潜在選好をテキスト仮説として保持し生成・検証・洗練のループで更新するテスト時メモリ手法は、エージェントの文脈・記憶管理と接点を持つが、主目的はパーソナライズされたツール呼び出しの精度向上であり、推論システムとしての貢献は間接的である。",
+      "reason": "MPT benchmarks cross-session personalized tool calling and PRefine maintains latent user preferences as test-time memory; agent memory/personalization work, not an inference system technique.",
       "first_checked_at": "2026-11-24T21:39:10+00:00",
-      "last_checked_at": "2026-11-24T21:39:10+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134144,9 +134129,9 @@
       "identity_tokens": [
         "arXiv:2410.03439"
       ],
-      "reason": "各ツールを固有トークンとしてLLMのパラメータへ埋め込み、外部検索を介さず生成過程でツール呼び出しを行うToolGenは推論時のツール取得経路を変えるが、4万7千ツール規模の学習を前提とするエージェント能力手法であり、サービング機構としての貢献は限定的である。",
+      "reason": "ToolGen represents each tool as a unique token so LLMs generate retrieval and calls within next-token prediction, avoiding separate retrieval; it changes the tool-use interface, with inference-system impact only indirect.",
       "first_checked_at": "2026-11-24T21:39:11+00:00",
-      "last_checked_at": "2026-11-24T21:39:11+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134174,9 +134159,9 @@
       "identity_tokens": [
         "arXiv:2401.17919"
       ],
-      "reason": "長文要約向けに状態空間モデルベースのエンコーダ・デコーダを採用し、推論時のメモリを最大87%削減して60万トークン超の入力を処理するが、主目的は要約タスクのモデル提供であり、推論機構としての新規性は低複雑度アーキテクチャの採用にとどまる。",
+      "reason": "LOCOST is an SSM encoder-decoder for long-document summarization reporting large inference memory savings over sparse Transformers; efficiency is real, but the contribution is a task-specific summarization architecture.",
       "first_checked_at": "2026-11-24T21:39:11+00:00",
-      "last_checked_at": "2026-11-24T21:39:11+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134219,9 +134204,9 @@
       "identity_tokens": [
         "arXiv:2512.15600"
       ],
-      "reason": "高次相互作用へ拡張したN-simplicial注意と平滑化の理論解析が中心で、単体選択による計算負荷の配分はあるが推論効率の実証は限定的。",
+      "reason": "Introduces N-simplicial attention with cost-effective simplex selection and analyzes its smoothing via Lipschitz bounds; an attention-variant architecture/theory study without an inference-system evaluation.",
       "first_checked_at": "2026-11-24T21:39:11+00:00",
-      "last_checked_at": "2026-11-24T21:39:11+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134429,9 +134414,9 @@
       "identity_tokens": [
         "arXiv:2609.02890"
       ],
-      "reason": "利用履歴を有界なペルソナへ蒸留して検索のクエリ毎コストを回避するパーソナライズ手法で、文脈コストの観点は推論に触れるが、主貢献は分類・回帰タスクでのパーソナライズ精度の比較であり推論システムへの寄与は薄い。",
+      "reason": "PersonaLink distills user history into a bounded persona compared against retrieval at inference time for a frozen agent, explicitly trading per-query context cost against accuracy; inference-adjacent, but a personalization method, not a serving technique.",
       "first_checked_at": "2026-11-24T21:43:55+00:00",
-      "last_checked_at": "2026-11-24T21:43:55+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134467,21 +134452,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Generative Adversarial Loops"
-    },
-    "SemanticScholar:16da48fc1a2cd5ffbe3d95500eff4186fa102ac2": {
-      "classification": "borderline",
-      "canonical_id": "SemanticScholar:16da48fc1a2cd5ffbe3d95500eff4186fa102ac2",
-      "identity_tokens": [
-        "SemanticScholar:16da48fc1a2cd5ffbe3d95500eff4186fa102ac2"
-      ],
-      "reason": "Sink-KV機構により64kステップ分の文脈内経験をフル注意で利用する身体性エージェント向け文脈内強化学習で、KV保持の工夫は含むが主目的は身体性AIの適応能力であり、LLM推論システムへの貢献は限定的である。",
-      "first_checked_at": "2026-11-24T21:43:55+00:00",
-      "last_checked_at": "2026-11-24T21:43:55+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "ReLIC: A recipe for 64k steps In-Context Reinforcement Learning for Embodied AI"
     },
     "DOI:10.1109/mic.2025.3575493": {
       "classification": "borderline",
@@ -134604,21 +134574,6 @@
       "borderline_recheck_count": 0,
       "title": "DARTS: Distribution-Aware Active Rollout Trajectory Shaping for Accelerating LLM Reinforcement Learning"
     },
-    "SemanticScholar:8109ee2d4e112b2fa7192a51dfb6c084c28e5bfb": {
-      "classification": "borderline",
-      "canonical_id": "SemanticScholar:8109ee2d4e112b2fa7192a51dfb6c084c28e5bfb",
-      "identity_tokens": [
-        "SemanticScholar:8109ee2d4e112b2fa7192a51dfb6c084c28e5bfb"
-      ],
-      "reason": "複数実験の並列シミュレーションでLLM学習システムの設計空間探索を加速すると題するが、一次要旨を取得できなかったため、シミュレーション機構と推論システム計測への具体的な寄与を検証できていない。",
-      "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation"
-    },
     "arXiv:2404.15198": {
       "classification": "borderline",
       "canonical_id": "arXiv:2404.15198",
@@ -134641,9 +134596,9 @@
         "DOI:10.48550/arxiv.2409.15520",
         "arXiv:2409.15520"
       ],
-      "reason": "推論エンジンだけを使ってリソース制約のあるエッジデバイス上でLLMをファインチューニングし個人化を可能にする研究で、推論エンジンの流用という接点はあるが最終目的はオンデバイス学習であり、推論効率化そのものではない。",
+      "reason": "Repurposes on-device inference engines (ExecuTorch) with zeroth-order optimization to fine-tune LLMs on edge devices; it exploits inference infrastructure, but the purpose is training/personalization, not inference efficiency.",
       "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134656,9 +134611,9 @@
       "identity_tokens": [
         "DOI:10.1109/iccv51701.2025.00221"
       ],
-      "reason": "AVAMはマルチ画像質問応答向けに適応的視覚アンカリングで視覚トークンを圧縮し協調デコードで精度を上げる枠組みで、視覚冗長削減はあるが主目的はMVQAの精度改善であり、推論システム機構としての貢献は副次的である。",
+      "reason": "Adaptive Visual Anchoring compresses visual tokens for multi-image VQA in MLLMs with flexible token counts; token reduction serves a QA application and is framed as an accuracy-efficiency plug-in, not a serving system.",
       "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134671,9 +134626,9 @@
       "identity_tokens": [
         "DOI:10.1016/j.neucom.2025.129897"
       ],
-      "reason": "疎なLLM向けの依存関係を意識した継続学習ファインチューニングと題するが、一次要旨を取得できなかったため、継続学習手法としての内容と推論システムへの具体的な寄与を検証できていない。",
+      "reason": "DCFT fine-tunes post-training-pruned sparse LLMs continually while preserving sparsity, treating interacting matrices jointly; it maintains an inference-relevant sparse model, but the contribution is a continual fine-tuning method.",
       "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134716,9 +134671,9 @@
       "identity_tokens": [
         "arXiv:2507.08064"
       ],
-      "reason": "PUMAは浅い層のみを残す層剪定自己蒸留とモダリティ適応対照損失で統合マルチモーダル検索用MLLMを軽量化し推論効率にも触れるが、主目的は検索タスクのモデル学習であり、推論システム機構への貢献は副次的である。",
+      "reason": "PUMA prunes MLLM layers with self-distillation to cut inference cost, but the target task is unified multimodal retrieval and the pruning is tied to retrieval quality rather than a general LLM serving or decoding mechanism, so the inference-system contribution is indirect.",
       "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134836,9 +134791,9 @@
       "identity_tokens": [
         "SemanticScholar:4b26311cfc5e289f417568decbedcd975f0f52bf"
       ],
-      "reason": "AI4Science向けのエージェント分析エンジンと題するが、要旨を取得できず、推論システムとの関係を一次要旨で検証できなかった。",
+      "reason": "Lumilake is an agentic analytics engine whose LLM-aware query optimization consolidates shared prefixes to maximize KV-cache reuse across workflow calls; it contains a real KV-reuse optimization, but the system target is analytics workflow execution, not LLM serving itself.",
       "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134874,21 +134829,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Loyola eCommons Loyola eCommons"
-    },
-    "SemanticScholar:7ff9dd28fe3a88ea8cc3066f98a8a3e259296427": {
-      "classification": "borderline",
-      "canonical_id": "SemanticScholar:7ff9dd28fe3a88ea8cc3066f98a8a3e259296427",
-      "identity_tokens": [
-        "SemanticScholar:7ff9dd28fe3a88ea8cc3066f98a8a3e259296427"
-      ],
-      "reason": "自己進化するコーディングエージェントと題するが、要旨を取得できず、推論システムへの機構的貢献を一次要旨で検証できなかった。",
-      "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Self-Evolving Coding Agents"
     },
     "SemanticScholar:b639124771f9c62cd656a24e8e685a456918e0ff": {
       "classification": "borderline",
@@ -134941,9 +134881,9 @@
       "identity_tokens": [
         "arXiv:2601.03417"
       ],
-      "reason": "潜在空間にグラフ構造メモリを保持し、固定予算で部分グラフを取り出すLatentGraphMemは、LLMの長期文脈メモリの安定性と検索効率を狙うが、貢献の中心はQA向けメモリ表現と検索のモデリングであり、サービングやランタイム基盤としてのシステム機構は薄い。",
+      "reason": "LatentGraphMem stores graph-structured memory in latent space with explicit subgraph retrieval for long-horizon LLM QA; a memory-system design for context handling, adjacent to but not an inference execution technique.",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135016,9 +134956,9 @@
       "identity_tokens": [
         "arXiv:2507.04290"
       ],
-      "reason": "拡散モデルの2〜4ビット推論に向けた残差型混合精度量子化と時間蒸留の枠組みであり、推論圧縮の機構自体は備える。ただし対象は画像生成の拡散モデルで、LLM推論への直接適用は要旨で確認できない。",
+      "reason": "MPQ-DMv2 is a mixed-precision quantization framework for extremely low-bit diffusion models with temporal distillation; quantization for inference, but targeting image diffusion models, not LLMs.",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135061,29 +135001,14 @@
       "identity_tokens": [
         "arXiv:2511.01462"
       ],
-      "reason": "量子化しやすい平坦な全精度ネットワークを学習段階で事前に整えることで視覚Transformerの学習後量子化誤差を抑える枠組みであり、低ビット推論への布石ではある。ただし対象はViTで機構の中心は学習側の事前調整にあり、LLM推論への適用は確認できない。",
+      "reason": "Trains flat full-precision networks so later post-training quantization of ViTs loses less accuracy; a training-side preconditioning method for quantization, evaluated on vision Transformers.",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
       "borderline_recheck_count": 0,
       "title": "Efficiently Training A Flat Neural Network Before It has been Quantizated"
-    },
-    "SemanticScholar:976d3da7b9cb198d8b054fab699c408fbbf54ea1": {
-      "classification": "borderline",
-      "canonical_id": "SemanticScholar:976d3da7b9cb198d8b054fab699c408fbbf54ea1",
-      "identity_tokens": [
-        "SemanticScholar:976d3da7b9cb198d8b054fab699c408fbbf54ea1"
-      ],
-      "reason": "分散学習の通信特性の理解を主題とする論文と題されるが、Semantic Scholar APIを使用できない条件下で出版社ページ・Crossref・OpenAlexのいずれからも一次要旨を取得できず、推論システムへの貢献範囲を検証できなかった。",
-      "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "MIT Open Access Articles Understanding Communication Characteristics of Distributed Training"
     },
     "arXiv:2607.08010": {
       "classification": "borderline",
@@ -135106,9 +135031,9 @@
       "identity_tokens": [
         "arXiv:2601.21714"
       ],
-      "reason": "複数アシスタントエージェントが非圧縮の階層的エピソード記憶を保持し文脈を再構成するLLMエージェント記憶フレームワークであり、推論時の文脈保持には関わる。しかし主眼はエージェントの推論精度と論理整合性であり、サービングや実行時メモリ機構への直接貢献は薄い。",
+      "reason": "E-mem reconstructs episodic context with multiple assistant agents instead of compressing memory for long-horizon LLM agents; agent memory architecture adjacent to inference context handling, but no serving/decoding technique.",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135136,9 +135061,9 @@
       "identity_tokens": [
         "DOI:10.1145/3650212.3680371"
       ],
-      "reason": "対象コードLLMの内部へアクセスせず、教師付きの協調デコードにより生成時に脆弱なコードを抑えるデコード時介入の手法であり、生成過程への機構的介入はある。ただし目的はセキュリティ強化であり、推論効率やサービングへの貢献は要旨に示されていない。",
+      "reason": "CoSec hardens code LLMs at decoding time with a supervised co-decoding partner that steers away from vulnerable code; an inference-time decoding intervention, but for security rather than inference efficiency or serving.",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135166,9 +135091,9 @@
       "identity_tokens": [
         "DOI:10.3390/electronics14132718"
       ],
-      "reason": "CNNとLLMについてバッチサイズごとに重みメモリエネルギーと計算エネルギーの支配関係がどう変わるかを比較分析した研究であり、推論時のエネルギー特性の計測・分析には関わる。ただし具体的な推論システム技術や最適化機構の提案はなく、分析にとどまる。",
+      "reason": "Compares how weight-memory versus compute energy scales for CNNs and LLM Transformers across batch sizes on edge intelligence; an energy measurement study relevant to inference deployment, but no new technique.",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135189,21 +135114,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Visual Memory Attacks Can Persist Through The KV Cache"
-    },
-    "DOI:10.1109/tpami.2026.3651754": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/tpami.2026.3651754",
-      "identity_tokens": [
-        "DOI:10.1109/tpami.2026.3651754"
-      ],
-      "reason": "大規模MoEモデルの密度考慮多段階学習による最適化高速化と題するが、出版社・Crossrefで要旨を取得できず、学習最適化の範囲か推論への適用か一次要旨で検証できなかった。",
-      "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Accelerated Optimization of Large Mixture-of-Experts Models by Density-Aware Multi-Stage Learning"
     },
     "DOI:10.1016/j.eswa.2025.130109": {
       "classification": "borderline",
@@ -135361,9 +135271,9 @@
       "identity_tokens": [
         "DOI:10.1109/icde65448.2025.00175"
       ],
-      "reason": "CAMはGPU主導・CPU管理のSSD管理でOSカーネル経由のボトルネックを避けストレージアクセスをバッチ化するが、対象は汎用アクセラレータシステムのストレージ層であり、LLM推論のオフロードへの具体的適用は要旨からは限定的である。",
+      "reason": "CAM lets GPUs initiate and manage NVMe SSD accesses asynchronously with CPU-managed batching to remove kernel overhead in accelerator-centric systems; generic GPU storage infrastructure that could serve inference data paths but is not inference-specific, hence borderline.",
       "first_checked_at": "2026-11-24T22:11:31+00:00",
-      "last_checked_at": "2026-11-24T22:11:31+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135429,21 +135339,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "From AR to Diffusion: Efficiently Adapting Large Language Models with Strictly Causal and Elastic Horizons"
-    },
-    "arXiv:2609.15309": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2609.15309",
-      "identity_tokens": [
-        "arXiv:2609.15309"
-      ],
-      "reason": "Elo-per-token分析はトークン予算ごとに最良解を追跡しエージェントのテスト時戦略を測る枠組みで、テスト時計算の計測には関係するが、対象は汎用エージェントの課題性能のスケーリングであり推論システム機構への貢献は間接的である。",
-      "first_checked_at": "2026-11-24T22:11:31+00:00",
-      "last_checked_at": "2026-11-24T22:11:31+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "When Agents Slow Down: Understanding LLM Agents'Test-Time Strategies via Elo-per-token Analysis"
     },
     "arXiv:2410.09637": {
       "classification": "borderline",
@@ -135526,9 +135421,9 @@
       "identity_tokens": [
         "arXiv:2407.12075"
       ],
-      "reason": "学習可能な二値ベクトルのタイルを層ごとに再利用して二値重みネットをサブビット圧縮するTiled Bit Networksは推論時の保存・計算削減を狙うが、対象はCNN・MLPを含む汎用ニューラルネットでありLLM推論への適用検証はない。",
+      "reason": "Tiled Bit Networks tile layers with learned binary vectors for sub-bit compression of binary networks; a general neural compression scheme, not evaluated as an LLM inference technique.",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135580,21 +135475,6 @@
       "borderline_recheck_count": 0,
       "title": "The Energy Footprint of LLM-Based Environmental Analysis: LLMs and Domain Products"
     },
-    "arXiv:2602.06470": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2602.06470",
-      "identity_tokens": [
-        "arXiv:2602.06470"
-      ],
-      "reason": "ユーザー対話ログから継続学習してLLMシステムを改善する枠組みと題するが、要旨の中心はノイズの多い実運用ログからのフィードバック信号抽出とモデル最適化（学習）であり、推論・サービング機構への直接貢献は不明瞭である。",
-      "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Improve Large Language Model Systems with User Logs"
-    },
     "arXiv:2402.00841": {
       "classification": "borderline",
       "canonical_id": "arXiv:2402.00841",
@@ -135616,9 +135496,9 @@
       "identity_tokens": [
         "arXiv:2504.01328"
       ],
-      "reason": "動画MLLM向けに圧縮した高速トークンで概要を掴み未圧縮の低速トークンをテキストからクロス注意で参照する二重トークン構成で、限られた計算予算下で入力フレーム数を増やす設計だが、主目的は動画理解の品質と効率の両立であり汎用LLMサービング機構ではない。",
+      "reason": "A slow-fast architecture allocates temporal resolution and spatial detail under a compute budget for video MLLMs; compute-aware model architecture for a video application rather than an inference system mechanism, so borderline.",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135796,9 +135676,9 @@
       "identity_tokens": [
         "DOI:10.1109/iccca66364.2025.11325717"
       ],
-      "reason": "実運用でのLLMスケーリングにおけるコスト効率枠組みを、モデル圧縮・ハードウェア配慮型配置・資源配分の観点で比較検討する概説的な研究で、具体的な推論システム機構の提案や実測に基づく新規貢献は薄い。",
+      "reason": "This paper surveys and compares cost-efficiency frameworks for scaling LLMs across optimization, hardware-aware deployment and resource allocation, but proposes no concrete inference mechanism or measured serving system, so it remains a borderline overview.",
       "first_checked_at": "2026-11-24T22:36:47+00:00",
-      "last_checked_at": "2026-11-24T22:36:47+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135916,9 +135796,9 @@
       "identity_tokens": [
         "arXiv:2506.19072"
       ],
-      "reason": "HAWAIIは複数の視覚専門家の知識を単一の視覚エンコーダへ階層的に蒸留し、学習・推論の計算コストを抑えつつ視覚言語モデルの視覚理解を高める枠組みだが、主眼はマルチモーダル理解能力の移転であり、LLM推論システムの機構としての寄与は副次的である。",
+      "reason": "HAWAII distills multiple pretrained visual experts into a single vision encoder so VLMs gain expert strengths with minimal inference overhead; efficiency is a distillation side benefit for a vision capability goal, so borderline.",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135991,9 +135871,9 @@
       "identity_tokens": [
         "arXiv:2605.12456"
       ],
-      "reason": "TextSealはGumbel-maxサンプリングを基礎に二重鍵生成とエントロピー重み付きスコアで局所検出を可能にするLLM透かしで、投機的デコードやマルチトークン予測といったサービング最適化と両立し推論オーバーヘッドを加えないと示すが、主貢献は来歴・蒸留保護のための透かし機構であり推論システム自体の高速化ではない。",
+      "reason": "TextSeal is a decoding-time watermark using dual-key Gumbel-max sampling and entropy-weighted localized detection; it claims zero inference overhead and compatibility with speculative decoding, but the contribution is provenance protection rather than an inference-system improvement, so it stays borderline.",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136021,9 +135901,9 @@
       "identity_tokens": [
         "DOI:10.1109/imc-ssgp67001.2025.11473981"
       ],
-      "reason": "4LMはRaspberry Pi等のエッジデバイスへ軽量LLMを配置し量子化でメモリと計算量を削って画像キャプションを行う枠組みで、モデルサイズとキャプション品質のトレードオフを検証するが、主眼はエッジ上の画像キャプションという応用配置であり新しい推論機構の提示は限定的である。",
+      "reason": "4LM deploys quantized lightweight LLMs for image captioning on Raspberry-Pi-class embedded hardware; quantization is used as an off-the-shelf deployment step for a captioning application rather than a new inference technique, hence borderline.",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136036,9 +135916,9 @@
       "identity_tokens": [
         "arXiv:2412.12102"
       ],
-      "reason": "次世代ネットワーク向けの分散協調推論システムは、ネットワーク階層ごとに異なるサイズのモデルを配置しタスク・オフロードで効率とレイテンシを最適化する生成AI向け設計だが、主眼は6G等の通信ネットワーク応用における配置戦略であり、LLMサービング一般の機構としての検証は薄い。",
+      "reason": "This paper proposes a distributed collaborative inference system for generative AI over next-generation 6G networks, but at a conceptual network-architecture level without a concrete LLM serving mechanism or measured inference pipeline, so borderline.",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136066,9 +135946,9 @@
       "identity_tokens": [
         "arXiv:2610.26262"
       ],
-      "reason": "Dynamics-Aware Sparse Attentionは自己回帰ビデオ拡散Transformer向けに動的・静的領域を分離し、履歴KVキャッシュを動的フレーム中心に圧縮してビデオ生成の計算とメモリを削減する手法で、疎注意とKV圧縮の技術は推論効率化だが対象はLLMではなくビデオ生成モデルである。",
+      "reason": "Dynamics-aware sparse attention allocates computation to moving regions in autoregressive video diffusion transformers to cut their heavy compute and memory; an efficient-attention method, but for video generation rather than LLM inference, so borderline.",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136426,9 +136306,9 @@
       "identity_tokens": [
         "DOI:10.18653/v1/2025.findings-acl.447"
       ],
-      "reason": "ALWは層間確率分布の対比で浅層ノイズを分離する適応的層別対比デコードで推論効率を保ちながら推論タスク精度を上げる手法だが、目的はデコード時の推論能力向上であり、速度・メモリ等のシステム効率の改善は主眼ではない。",
+      "reason": "ALW contrasts layer-wise probability distributions during decoding to reduce noise accumulation and improve reasoning; a decoding method, but aimed at answer quality rather than inference efficiency or serving.",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136471,9 +136351,9 @@
       "identity_tokens": [
         "arXiv:2205.07100"
       ],
-      "reason": "Multiformerはヘッドごとに異なる注意機構を使い分けるヘッド構成可能Transformerで、長い音声系列での情報損失を抑える設計だが、対象は直接音声翻訳という特定タスクのモデルであり、推論高速化や汎用サービングへの評価は示されていない。",
+      "reason": "Multiformer configures attention heads for direct speech translation to handle long redundant speech sequences with efficient attention variants; an application-specific speech architecture with an efficiency flavor, hence borderline.",
       "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136486,9 +136366,9 @@
       "identity_tokens": [
         "arXiv:2509.06436"
       ],
-      "reason": "Tree of Agentsは長文脈入力をチャンク分割して複数エージェントが木構造で協調推論する枠組みで、prefix-hashキャッシングと適応的剪定でAPIオーバーヘッドを抑える工夫はあるが、主目的はlost-in-the-middle緩和による長文脈推論能力の改善であり、推論システム機構の提案ではない。",
+      "reason": "Tree of Agents segments long inputs across chunk-processing agents to mitigate lost-in-the-middle in long-context LLM use; an inference-time reasoning framework, but its contribution is reasoning quality over chunks rather than serving or decoding efficiency, so borderline.",
       "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136591,9 +136471,9 @@
       "identity_tokens": [
         "arXiv:2601.19657"
       ],
-      "reason": "拡散言語モデルの移動シンク現象を解析し、自身にのみ注意する追加シンク・トークンを注意マスクで導入して推論の頑健性を上げる提案で、生成品質・安定性の改善が中心であり、並列デコードの計算量やメモリ削減といった推論システム面の効果は示されていない。",
+      "reason": "A fixed sink token is proposed to stabilize the moving-sink phenomenon in diffusion language models during parallel generation; it concerns generation stability of an alternative LM paradigm rather than serving or decoding efficiency, hence borderline.",
       "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136646,21 +136526,6 @@
       "borderline_recheck_count": 0,
       "title": "Looped State-Space Language Models with Adaptive Exit-State Selection"
     },
-    "arXiv:2608.08744": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2608.08744",
-      "identity_tokens": [
-        "arXiv:2608.08744"
-      ],
-      "reason": "較正済みの微分可能なエネルギー代理モデルをファインチューニング目的へ組み込み、推論時の精度とCO2排出のブレークイーブンを狙う共同損失の提案で、推論時の炭素削減を目的には含むが手段はファインチューニングであり、推論実行やサービングの機構ではない。",
-      "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Can We Optimize the Performance-Carbon Emission Break-Even Point?: The Quest for Greener LLMs"
-    },
     "arXiv:2604.05400": {
       "classification": "borderline",
       "canonical_id": "arXiv:2604.05400",
@@ -136682,9 +136547,9 @@
       "identity_tokens": [
         "arXiv:2407.19813"
       ],
-      "reason": "自己推論を備えた検索拡張言語モデルにより、無関係な検索文書による劣化の緩和と引用のトレーサビリティ向上を図る研究で、推論時に検索を使う枠組みではあるが主目的は知識集約タスクの信頼性・精度改善であり、推論システムの効率機構ではない。",
+      "reason": "Self-reasoning retrieval-augmented language models generate their own relevance and traceability judgments during inference to filter irrelevant documents; inference-time RAG behavior, but aimed at answer reliability rather than inference efficiency or serving, so borderline.",
       "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136697,9 +136562,9 @@
       "identity_tokens": [
         "DOI:10.1109/tnnls.2024.3377194"
       ],
-      "reason": "動的ニューラルネットワーク構造のレビューで、動的構築と動的推論の技法を深層学習と広域学習の両面から整理するが、対象はLLMに限らず多様なドメインの応用を含む総説であり、LLM推論システムへの具体的な技術貢献を一次要旨から特定できない。",
+      "reason": "This TNNLS review systematizes dynamic neural network structures that adapt architecture or parameters per input, including efficiency motivations; a broad review across domains without a specific LLM inference mechanism, hence borderline.",
       "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -138342,6 +138207,696 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Isomorphic Pruning for Vision Models"
+    },
+    "arXiv:2410.07490": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.07490",
+      "identity_tokens": [
+        "arXiv:2410.07490"
+      ],
+      "reason": "MoDEM routes prompts with a BERT router to domain-specialized expert LLMs and reports a better performance-to-cost ratio; a model-zoo deployment pattern, but the contribution is domain specialization rather than serving mechanics.",
+      "first_checked_at": "2026-11-25T04:54:28+00:00",
+      "last_checked_at": "2026-11-25T04:54:28+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MoDEM: Mixture of Domain Expert Models"
+    },
+    "arXiv:2605.24584": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.24584",
+      "identity_tokens": [
+        "arXiv:2605.24584"
+      ],
+      "reason": "LAPLEX defines trainable Laplace-kernel operators with FFT-like scaling for matrix-vector multiplication up to 1e9 dimensions; a general operator primitive that could serve inference, but no inference-system evaluation is given.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LAPLEX: The FFT of Learnable Laplace Kernels"
+    },
+    "arXiv:2610.19386": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.19386",
+      "identity_tokens": [
+        "arXiv:2610.19386"
+      ],
+      "reason": "STRATA organizes agent experience into a self-maintaining three-layer graph for test-time self-evolution; agent memory architecture adjacent to inference cost, but no serving or decoding mechanism.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "STRATA: Self-Maintaining Structured Experience Graphs for Self-Evolving Language Agents"
+    },
+    "arXiv:2506.18472": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.18472",
+      "identity_tokens": [
+        "arXiv:2506.18472"
+      ],
+      "reason": "AViLA frames query-evidence asynchrony for streaming vision-language agents and grounds responses in past and future streams; a streaming agent framework whose efficiency aspect is secondary to the interaction problem.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AViLA: Asynchronous Vision-Language Agent for Streaming Multimodal Data Interaction"
+    },
+    "arXiv:2412.16146": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.16146",
+      "identity_tokens": [
+        "arXiv:2412.16146"
+      ],
+      "reason": "Mamba2D re-derives selective SSMs with a native 2D scan for vision tasks and reports parameter-efficient ImageNet results; an efficient vision architecture, not an LLM inference system.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mamba2D: A Natively Multi-Dimensional State-Space Model for Vision Tasks"
+    },
+    "DOI:10.1007/s13042-025-02563-7": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s13042-025-02563-7",
+      "identity_tokens": [
+        "DOI:10.1007/s13042-025-02563-7"
+      ],
+      "reason": "MS-NET-v2 constructs modular expert subsets with selective inference execution for DNNs, improving adaptive-inference efficiency; generic modular inference, not LLM-specific serving.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MS-NET-v2: modular selective network optimized by systematic generation of expert modules"
+    },
+    "arXiv:2605.02152": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.02152",
+      "identity_tokens": [
+        "arXiv:2605.02152"
+      ],
+      "reason": "SpecEdit accelerates diffusion-based image editing with training-free semantic-locked dynamic resolution; an inference acceleration method, but for image diffusion models rather than LLM inference.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SpecEdit: Training-Free Acceleration for Diffusion based Image Editing via Semantic Locking"
+    },
+    "DOI:10.1109/jstsp.2024.3433616": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jstsp.2024.3433616",
+      "identity_tokens": [
+        "DOI:10.1109/jstsp.2024.3433616"
+      ],
+      "reason": "Applies unstructured pruning plus low-rank factorization (via truncated SVD) to self-supervised speech models to cut memory and compute; compression is generic, but the target is speech-task models, not LLM inference.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unstructured Pruning and Low Rank Factorisation of Self-Supervised Pre-Trained Speech Models"
+    },
+    "arXiv:2604.17221": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.17221",
+      "identity_tokens": [
+        "arXiv:2604.17221"
+      ],
+      "reason": "Bilinear Input Modulation augments Mamba SSMs with a state-input product (Koopman form) with parallel-scan-compatible variants; an architecture improvement for sequence modeling, not an inference system contribution.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bilinear Input Modulation for Mamba: Koopman Bilinear Forms for Memory Retention and Multiplicative Computation"
+    },
+    "DOI:10.1063/5.0291688": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1063/5.0291688",
+      "identity_tokens": [
+        "DOI:10.1063/5.0291688"
+      ],
+      "reason": "Introduces an attention-head-importance pruning strategy for BERT aimed at edge deployment, but the work is framed and evaluated as depression detection on social media; application-led with a compression component.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing depression detection in social media through BERT model pruning"
+    },
+    "arXiv:2601.14945": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.14945",
+      "identity_tokens": [
+        "arXiv:2601.14945"
+      ],
+      "reason": "TIDAL is a dual-frequency scheduler that caches semantic embeddings and interleaves diffusion planning with high-frequency VLA actuation to cut control latency; inference scheduling, but for a robotics control application.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TIDAL: Temporally Interleaved Diffusion and Action Loop for High-Frequency VLA Control"
+    },
+    "arXiv:2603.04349": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.04349",
+      "identity_tokens": [
+        "arXiv:2603.04349"
+      ],
+      "reason": "FocusGraph selects informative keyframes via scene-graph captions to make embodied long-video QA faster and lighter; frame selection reduces MLLM input cost, but the work targets a QA application.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FocusGraph: Graph-Structured Frame Selection for Embodied Long Video Question Answering"
+    },
+    "arXiv:2412.00359": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.00359",
+      "identity_tokens": [
+        "arXiv:2412.00359"
+      ],
+      "reason": "A shared-weight self-attention BERT learns one QKV matrix, halving parameters and cutting training time; parameter sharing is compression-adjacent, but the work is an architecture/training study, not an inference technique.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Does Self-Attention Need Separate Weights in Transformers?"
+    },
+    "DOI:10.1109/icit64854.2026.11491057": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icit64854.2026.11491057",
+      "identity_tokens": [
+        "DOI:10.1109/icit64854.2026.11491057"
+      ],
+      "reason": "Fine-tunes a compact LLaMA for diabetic-retinopathy reports and QA and evaluates its Q4 GGUF quantization on CPU; an application deployment study of a clinical model, not a general inference technique.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantized LLMs for Clinical Report and Question Answering in Retinal Disease Assessment"
+    },
+    "arXiv:2509.26200": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.26200",
+      "identity_tokens": [
+        "arXiv:2509.26200"
+      ],
+      "reason": "Studies retrieval bias in a shared collective memory for LLM agents doing 6G RAN-edge orchestration and defines a Retrieval Bias Index; agent memory analysis for a network-management application, not an inference system.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Toward an Unbiased Collective Memory for Efficient LLM-Based Agentic 6G Cross-Domain Management"
+    },
+    "arXiv:2609.23582": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.23582",
+      "identity_tokens": [
+        "arXiv:2609.23582"
+      ],
+      "reason": "ARID is a deployable Jetson system extracting structured fields from maintenance work orders using 4-bit inference and grammar-constrained decoding; an application system whose inference engineering is use-case specific.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ARID: A Deployable Edge AI System for Structured Information Extraction from Industrial Maintenance Work Orders"
+    },
+    "arXiv:2211.09119": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2211.09119",
+      "identity_tokens": [
+        "arXiv:2211.09119"
+      ],
+      "reason": "Token Turing Machines keep a bounded token memory read/written by a Transformer controller for long visual sequences at bounded per-step cost; an efficient architecture, but a general sequence model rather than an LLM inference system.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Token Turing Machines"
+    },
+    "SemanticScholar:7e087f842281182474ed96712febca0828469c1c": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:7e087f842281182474ed96712febca0828469c1c",
+      "identity_tokens": [
+        "SemanticScholar:7e087f842281182474ed96712febca0828469c1c"
+      ],
+      "reason": "Presents a 2-dimensional state space layer giving visual Transformers spatial inductive bias with efficient parameterization (same work family as the 2-D SSM layer judged from its arXiv abstract); a vision architecture component, not LLM inference.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A 2-Dimensional State Space Layer for Spatial Inductive Bias"
+    },
+    "arXiv:2512.20120": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.20120",
+      "identity_tokens": [
+        "arXiv:2512.20120"
+      ],
+      "reason": "HEART-ViT prunes tokens and attention heads in Vision Transformers using Hessian-guided sensitivity; efficient ViT inference, but a vision-only model with no LLM serving connection.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HEART-VIT: Hessian-Guided Efficient Dynamic Attention and Token Pruning in Vision Transformer"
+    },
+    "arXiv:2610.06260": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.06260",
+      "identity_tokens": [
+        "arXiv:2610.06260"
+      ],
+      "reason": "CentriQ quantizes diffusion Transformers to 4 bits calibration-free via exact mean centering; an inference quantization method, but for image-generation DiTs rather than LLM inference.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CentriQ: Calibration-Free Quantization of Diffusion Transformers via Exact Mean Centering"
+    },
+    "arXiv:2609.32852": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32852",
+      "identity_tokens": [
+        "arXiv:2609.32852"
+      ],
+      "reason": "ARSM compresses agentic reasoning context in-situ with an auto-regressive state machine to relieve agent memory bottlenecks; context compression for agents, adjacent to but not an LLM serving/decoding system.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ARSM: Auto-Regressive State Machine for Agentic Reasoning Compression"
+    },
+    "arXiv:2611.06500": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.06500",
+      "identity_tokens": [
+        "arXiv:2611.06500"
+      ],
+      "reason": "Coca-Cola compresses tool observations into continuous latent tokens for LLM agents instead of raw text context; reduces agent context overhead, but is an agent-representation method rather than an inference system technique.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tools Need Not Speak in Text: Latent Context Compression for Agents"
+    },
+    "arXiv:2506.04513": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.04513",
+      "identity_tokens": [
+        "arXiv:2506.04513"
+      ],
+      "reason": "Prunes neurons and layers simultaneously across generic deep networks; a general structured-pruning method not specialized to or evaluated as an LLM inference technique.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pruning Everything, Everywhere, All at Once"
+    },
+    "arXiv:2609.36653": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36653",
+      "identity_tokens": [
+        "arXiv:2609.36653"
+      ],
+      "reason": "TAPS schedules update scales along recurrent reasoning trajectories in looped Transformers at test time; it modulates test-time computation, but the contribution is a reasoning-dynamics method rather than a serving system.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scheduling Recursive Reasoning in Looped Transformers"
+    },
+    "arXiv:2609.34736": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.34736",
+      "identity_tokens": [
+        "arXiv:2609.34736"
+      ],
+      "reason": "SeLMRoute extracts candidate-independent semantic evidence from queries to learn LLM routing decisions under deployment objectives; routing research, but the abstract centers on evidence representation rather than serving-cost mechanics.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SeLMRoute: Probabilistic Semantic Evidence for Large Language Model Routing"
+    },
+    "SemanticScholar:5d4a2a1ec0c26ea1f4ff13fb73f7d3415268bc14": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:5d4a2a1ec0c26ea1f4ff13fb73f7d3415268bc14",
+      "identity_tokens": [
+        "SemanticScholar:5d4a2a1ec0c26ea1f4ff13fb73f7d3415268bc14"
+      ],
+      "reason": "Division-of-Thoughts decomposes tasks between on-device SLMs and cloud LLMs with a scheduler and adapter, cutting reasoning time and API cost; hybrid routing for agents, with inference savings secondary to the agent framework.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Division-of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device LLM Agents"
+    },
+    "arXiv:2603.12255": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.12255",
+      "identity_tokens": [
+        "arXiv:2603.12255"
+      ],
+      "reason": "Spatial-TTT maintains spatial evidence over unbounded video streams with test-time training and sliding-window attention; an efficient streaming architecture for a spatial-intelligence application, not LLM inference.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training"
+    },
+    "arXiv:2604.01670": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.01670",
+      "identity_tokens": [
+        "arXiv:2604.01670"
+      ],
+      "reason": "Hierarchical Memory Orchestration tiers interaction history with a compact primary cache for personalized agents on constrained devices; agent memory management adjacent to inference cost, but no serving/decoding mechanism.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hierarchical Memory Orchestration for Personalized Persistent Agents"
+    },
+    "DOI:10.1109/jssc.2025.3603187": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jssc.2025.3603187",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2025.3603187"
+      ],
+      "reason": "T-REX is a hardware-software Transformer accelerator minimizing external memory access with compression and dynamic batching, but it also introduces a factorizing training method and targets training as well as inference; mixed scope, not clearly an inference-system contribution.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "T-REX: Hardware–Software Co-Optimized Transformer Accelerator With Reduced External Memory Access and Enhanced Hardware Utilization"
+    },
+    "arXiv:2608.00017": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.00017",
+      "identity_tokens": [
+        "arXiv:2608.00017"
+      ],
+      "reason": "Shows stored self-assessment rewards inflate for incorrect episodes in memory-based self-improving LLM agents (the Echo Gap); an analysis of agent memory systems, not an inference technique.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memory Reward Inflation in Self-Improving LLM Agents"
+    },
+    "arXiv:2603.27666": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.27666",
+      "identity_tokens": [
+        "arXiv:2603.27666"
+      ],
+      "reason": "Builds controllable diffusion generation on linear-attention Transformers for secure on-device generation with gated condition injection; efficient architecture, but the target is image generation, not LLM inference.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Gated Condition Injection without Multimodal Attention: Towards Controllable Linear-Attention Transformers"
+    },
+    "DOI:10.1109/ccgridw69005.2026.00038": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ccgridw69005.2026.00038",
+      "identity_tokens": [
+        "DOI:10.1109/ccgridw69005.2026.00038"
+      ],
+      "reason": "Compares WANDA, RIA and a hybrid pruning method on small language models for healthcare deployment; a comparative pruning study in an application sector, with no new serving system.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Comparative Analysis of Model Pruning Approaches for Optimizing Small Language Models"
+    },
+    "arXiv:2605.14913": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14913",
+      "identity_tokens": [
+        "arXiv:2605.14913"
+      ],
+      "reason": "Representative Attention compresses spatial tokens into representation-space proxies for linear global attention in Vision Transformers; an efficient attention variant for vision models, not LLM inference.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Representative Attention For Vision Transformers"
+    },
+    "arXiv:2609.19104": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19104",
+      "identity_tokens": [
+        "arXiv:2609.19104"
+      ],
+      "reason": "rMuscle exploits repetitive embodied workloads to accelerate vision-language-action model inference for factory robots; the framework targets VLA policy latency in a robotics setting, adjacent to but not an LLM inference system contribution, so borderline.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "rMuscle: Robotic Muscle Memory for Efficient Vision-Language-Action Model Inference"
+    },
+    "DOI:10.1109/eccst68196.2025.11441098": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/eccst68196.2025.11441098",
+      "identity_tokens": [
+        "DOI:10.1109/eccst68196.2025.11441098"
+      ],
+      "reason": "An OmniQuant-inspired post-training quantization is applied to the LatentSync lip-synchronization diffusion model for real-time deployment; quantization of a non-LLM application model, with the inference contribution tied to that application, hence borderline.",
+      "first_checked_at": "2026-11-25T04:54:29+00:00",
+      "last_checked_at": "2026-11-25T04:54:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accelerating LatentSync Lip-Synchronization via OmniQuant-Inspired Post-Training Quantization"
+    },
+    "arXiv:2610.34673": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.34673",
+      "identity_tokens": [
+        "arXiv:2610.34673"
+      ],
+      "reason": "Formalizes long-term agent memory selection as budgeted slate recommendation under per-request cost budgets; a memory-retrieval design framing for LLM agents, not a serving or decoding system.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agent Memory as Recommendation: Recommender-System Design for Long-Term Memory of LLM Agents"
+    },
+    "arXiv:2502.00744": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.00744",
+      "identity_tokens": [
+        "arXiv:2502.00744"
+      ],
+      "reason": "CoNNect is a differentiable connectivity-preserving regularizer for structural pruning of general neural networks; a pruning-training method whose inference benefit is generic and not LLM-specific.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoNNect: Connectivity-Based Regularization for Structural Pruning of Neural Networks"
+    },
+    "arXiv:2605.11196": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11196",
+      "identity_tokens": [
+        "arXiv:2605.11196"
+      ],
+      "reason": "Variational Linear Attention reframes linear-attention memory updates as regularized least squares with a self-limiting state norm for long contexts; an attention mechanism study with stability theory, not a serving system.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Variational Linear Attention: Stable Associative Memory for Long-Context Transformers"
+    },
+    "DOI:10.1145/3788853.3803078": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3788853.3803078",
+      "identity_tokens": [
+        "DOI:10.1145/3788853.3803078"
+      ],
+      "reason": "TokaDB is a storage engine for the training-serving data lifecycle of large recommendation models, handling behavior-sequence access and KV-cache-like data at exabyte scale; serving-adjacent data management for recommender models rather than LLM inference, so borderline.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TokaDB: A Unified Storage Engine for Training-Serving Data Management in Large Recommendation Models"
+    },
+    "arXiv:2606.13708": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.13708",
+      "identity_tokens": [
+        "arXiv:2606.13708"
+      ],
+      "reason": "Tiara defines a programmable line-rate ISA for remote memory access that resolves data-dependent indirection in one round trip, citing disaggregated LLM inference KV-cache resolution among several patterns; promising memory infrastructure but not LLM-inference-specific, so borderline.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access"
+    },
+    "arXiv:2501.13958": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.13958",
+      "identity_tokens": [
+        "arXiv:2501.13958"
+      ],
+      "reason": "This survey covers graph retrieval-augmented generation for customizing LLMs, organizing retrieval structures used at inference time, but it is a survey of a RAG application area without a new serving or decoding mechanism, so borderline.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey of Graph Retrieval-Augmented Generation for Customized Large Language Models"
+    },
+    "arXiv:2606.14528": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.14528",
+      "identity_tokens": [
+        "arXiv:2606.14528"
+      ],
+      "reason": "BayLing-Duplex builds a native full-duplex speech dialogue model on a single autoregressive LLM without external VAD; real-time interaction architecture for speech, adjacent to inference but primarily a speech-model capability contribution, so borderline.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BayLing-Duplex: Native Full-Duplex Speech Dialogue with a Single Autoregressive LLM"
+    },
+    "arXiv:2603.26728": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.26728",
+      "identity_tokens": [
+        "arXiv:2603.26728"
+      ],
+      "reason": "SEAR defines a schema for evaluating production LLM responses and routing requests across multi-provider gateways using latency, cost and throughput signals; gateway routing infrastructure, but centered on evaluation data modeling rather than a serving mechanism, so borderline.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SEAR: Schema-Based Evaluation and Routing for LLM Gateways"
+    },
+    "arXiv:2602.01935": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.01935",
+      "identity_tokens": [
+        "arXiv:2602.01935"
+      ],
+      "reason": "MOSAIC coordinates multiple LLMs collaboratively to cut the query cost of LLM-guided compiler optimization; multi-model cost routing demonstrated on a compiler application rather than a general inference system, hence borderline.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MOSAIC: More LLMs, Less Cost through Collaborative Reasoning for Compiler Optimizations"
+    },
+    "arXiv:2605.25424": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25424",
+      "identity_tokens": [
+        "arXiv:2605.25424"
+      ],
+      "reason": "SeqRoute formulates multi-turn LLM routing under a global budget as an MDP solved by offline RL, preventing early budget exhaustion across a session; a routing policy contribution adjacent to serving economics, but no serving-system mechanism, so borderline.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SeqRoute: Global Budget-Aware Sequential LLM Routing via Offline Reinforcement Learning"
+    },
+    "arXiv:2610.33360": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.33360",
+      "identity_tokens": [
+        "arXiv:2610.33360"
+      ],
+      "reason": "An LSTM-style looped transformer shares one KV cache across its recurrent core, cutting persistent cache sets from fifteen to four at matched FLOPs; cache sharing is inference-relevant, but the paper is an architecture study trained and evaluated as a model design, so borderline.",
+      "first_checked_at": "2026-11-25T04:54:30+00:00",
+      "last_checked_at": "2026-11-25T04:54:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LSTM-Style Looped Transformers with Shared KV Caches"
     }
   }
 }
