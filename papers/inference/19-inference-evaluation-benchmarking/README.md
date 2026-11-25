@@ -172,6 +172,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   AOT（local-global Anchor Optimal Transport）は、動画対応の大規模言語モデル（Video LLM）の入力に含まれる視覚トークンを、追加学習なしで削減する方式である。LLaVA-OneVision-7Bの無圧縮平均58.4に対し、視覚トークン10%保持のAOTは平均57.0で、元性能の97.6%を維持した。
 
+- **2026-03 · [Diagnosing FP4 Inference: A Layer-Wise and Block-Wise Sensitivity Analysis of NVFP4 and MXFP4](2026-2603.08747-diagnosing-fp4-inference-a-layer-wise-and-block-wise-sensitivity-analysi.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  FP4の感度を射影の種類とブロックの深さで切り分けた診断研究で、MLPの上向き・下向き射影が全規模・両形式で最も敏感であり、感度は最終ブロックだけに集中しないことを示した。
+
 - **2025-12 · [Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models](2025-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficie.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   決まった層で視覚トークンを一様に間引く詰め込み口を作り、注意の働きで情報を残るトークンへ移す自己圧縮を学習させる方式で、LLaVA-1.5-7Bの計算量を53.7%、キー値キャッシュを56.7%減らしながら性能の98.2%を保持した。
@@ -694,10 +698,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   実サービスではツール呼び出し回数、生成トークン数、API料金に上限があるため、単に推論を長くする方式は適さない。原著はgpt-oss-20bとQwen3-30B-A3B-Instruct-2507を用い、HotpotQA、2WikiMultihopQA、MuSiQue、Bamboogleで評価した。
 
-- **2026-03 · [Diagnosing FP4 Inference: A Layer-Wise and Block-Wise Sensitivity Analysis of NVFP4 and MXFP4](2026-2603.08747-diagnosing-fp4-inference-a-layer-wise-and-block-wise-sensitivity-analysi.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  FP4の感度を射影の種類とブロックの深さで切り分けた診断研究で、MLPの上向き・下向き射影が全規模・両形式で最も敏感であり、感度は最終ブロックだけに集中しないことを示した。
-
 - **2026-03 · [AE-LLM: Adaptive Efficiency Optimization for Large Language Models](2026-2603.20492-ae-llm-adaptive-efficiency-optimization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   効率化手法の組合せを多目的最適化として自動探索する枠組み。代理モデルの予測と進化探索で、精度・遅延・メモリ・エネルギーのバランスが取れた構成を配備条件ごとに見つける。
@@ -829,7 +829,7 @@
   端末で簡単な要求を処理し、必要な時だけクラウドを呼ぶ方式は自然だが、呼出し回数が増えれば往復遅延が支配的になる。
 
 - **2025-07 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2025-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
-  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：6  
   層の入出力の類似度から重要度を測る指標BIで冗長な層を見つけ、層を丸ごと削除するShortGPTと、生成トークンだけ全層を通すShortGPT-genで、約25%の層を削っても多肢選択で約9割、生成で97%の性能を保つ枝刈り手法。
 
 - **2025-11 · [From Prompts to Power: Measuring the Energy Footprint of LLM Inference](2025-2511.05597-from-prompts-to-power-measuring-the-energy-footprint-of-llm-inference.md)**  

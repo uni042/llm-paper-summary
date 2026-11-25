@@ -3008,6 +3008,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   重みを4ビット整数へ量子化すれば、各重みが取れる値は16種類に限られる。約2.5倍という代表値を、現在のGPUにおける推論遅延やトークン生成速度の改善と解釈してはならない。
 
+- **2023-09 · [Softmax Bias Correction for Quantized Generative Models](2023-2309.01729-softmax-bias-correction-for-quantized-generative-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ソフトマックスを8ビット量子化すると小さな確率がゼロへ丸められて確率の合計が崩れることを突き止め、そのずれを校正データで測って量子化のオフセットへ吸収することで、追加計算なしに量子化ソフトマックスの精度を回復する方式。
+
 - **2023-07 · [Beyond Classical Attention: Quantum Attention for Scalable Computation](2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本論文は、長い入力系列に対する自己注意で全ての問い合わせと鍵の内積を計算する代わりに、閾値を超える少数の大きな内積だけを量子探索で発見する理論的な方法を提案する。
@@ -3027,10 +3031,6 @@
 - **2023-09 · [Understanding the Impact of Post-Training Quantization on Large Language Models](2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   量子化方式ごとに温度・生成長・topkへの生成品質の感度を6,300生成で実測した分析。4ビット量子化は温度に敏感で、方式の優劣はモデル系列で逆転する。
-
-- **2023-09 · [Softmax Bias Correction for Quantized Generative Models](2023-2309.01729-softmax-bias-correction-for-quantized-generative-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ソフトマックスを8ビット量子化すると小さな確率がゼロへ丸められて確率の合計が崩れることを突き止め、そのずれを校正データで測って量子化のオフセットへ吸収することで、追加計算なしに量子化ソフトマックスの精度を回復する方式。
 
 - **2023-09 · [Poster: PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing](2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequ.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
