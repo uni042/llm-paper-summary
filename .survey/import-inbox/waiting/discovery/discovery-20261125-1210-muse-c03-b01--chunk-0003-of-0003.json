@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-c03-b01::chunk-0003-of-0003",
+  "reference_main_sha": "79e9fcbe",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.09701",
+      "identity_tokens": [
+        "arXiv:2307.09701"
+      ],
+      "title": "Efficiency Pentathlon: A Standardized Arena for Efficiency Evaluation",
+      "reason": "要旨では推論を中心にモデル効率を総合的・現実的に測る標準化評価アリーナEfficiency Pentathlonを提案し推論効率の計測基盤には関わるが、提示されるのは評価手法であり推論を高速化する機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2307.09701",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 481
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.11464",
+      "identity_tokens": [
+        "arXiv:2408.11464"
+      ],
+      "title": "MambaOcc: Visual State Space Model for BEV-based Occupancy Prediction with Local Adaptive Reordering",
+      "reason": "タイトルが示す対象はBEVベース占有予測という自動運転向け視覚認識であり、LLM推論システムへの接続がタイトル上ない。",
+      "source_url": "https://arxiv.org/abs/2408.11464",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 482
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.13524",
+      "identity_tokens": [
+        "arXiv:2505.13524"
+      ],
+      "title": "Quantum-Enhanced Channel Mixing in RWKV Models for Time Series Forecasting",
+      "reason": "要旨の対象はRWKVのチャネル混合へ変分量子回路を導入した時系列予測モデルであり、時系列予測という応用と量子拡張が主眼でLLM推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2505.13524",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 483
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13261",
+      "identity_tokens": [
+        "arXiv:2511.13261"
+      ],
+      "title": "Building Egocentric Procedural AI Assistant: Methods, Benchmarks, and Challenges",
+      "reason": "要旨の対象は一人称視点の手順支援AIアシスタントのタスク定義・ベンチマーク・課題整理であり、応用タスクの評価枠組みであって推論システム技術ではない。",
+      "source_url": "https://arxiv.org/abs/2511.13261",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 484
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2025.10.14.682378",
+      "identity_tokens": [
+        "DOI:10.1101/2025.10.14.682378"
+      ],
+      "title": "GeneJepa: A Predictive World Model of the Transcriptome",
+      "reason": "タイトルが示す対象はトランスクリプトームの予測ワールドモデルGeneJepaであり、生物学・遺伝子発現の応用であってLLM推論とは無関係である。",
+      "source_url": "https://doi.org/10.1101/2025.10.14.682378",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 485
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2403.09040",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2403.09040"
+      ],
+      "title": "RAGGED: Towards Informed Design of Retrieval Augmented Generation Systems",
+      "reason": "要旨では検索拡張生成システムの構成要素を体系的に評価するRAGGEDを提案しRAGの推論時構成への設計示唆はあるが、内容は評価フレームワークであり推論を高速化・効率化する機構の提案ではないため境界とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2403.09040",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 486
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.06245",
+      "identity_tokens": [
+        "arXiv:2409.06245"
+      ],
+      "title": "A Two-Stage Band-Split Mamba-2 Network For Music Separation",
+      "reason": "タイトルが示す対象はバンド分割Mamba-2による音楽分離であり、音源分離の信号処理応用であってLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2409.06245",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 487
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.12423",
+      "identity_tokens": [
+        "arXiv:2412.12423"
+      ],
+      "title": "GG-SSMs: Graph-Generating State Space Models",
+      "reason": "要旨の対象は特徴関係からグラフを動的生成する状態空間モデルGG-SSMsという汎用系列モデル構造であり、視覚・時系列向けの構造提案であってLLM推論システムへの適用は確認できない。",
+      "source_url": "https://arxiv.org/abs/2412.12423",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 488
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.04632",
+      "identity_tokens": [
+        "arXiv:2508.04632"
+      ],
+      "title": "IFDECORATOR: Wrapping Instruction Following Reinforcement Learning with Verifiable Rewards",
+      "reason": "要旨の対象は検証可能報酬による強化学習RLVRの効率と過最適化を改善する学習枠組みIFDecoratorであり、LLMの学習手法であって推論高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2508.04632",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.03142",
+      "identity_tokens": [
+        "arXiv:2510.03142"
+      ],
+      "title": "MM-Nav: Multi-View VLA Model for Robust Visual Navigation via Multi-Expert Learning",
+      "reason": "要旨の対象は多視点VLAモデルによる視覚ナビゲーションポリシーMM-Navであり、ロボットナビゲーション応用であってLLM推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2510.03142",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 490
+    }
+  ],
+  "parent_run_key": "muse-20261125-c03-b01",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

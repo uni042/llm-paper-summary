@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-c02-b01::chunk-0001-of-0003",
+  "reference_main_sha": "79e9fcbe",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.04585",
+      "identity_tokens": [
+        "arXiv:2508.04585"
+      ],
+      "title": "UniTalker: Conversational Speech-Visual Synthesis",
+      "reason": "対話文脈から表情豊かな音声と視覚応答を生成する会話音声・視覚合成タスクの提案であり、LLM推論の実行効率やサービング機構への技術的貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2508.04585",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21070",
+      "identity_tokens": [
+        "arXiv:2509.21070"
+      ],
+      "title": "ScaleDiff: Scaling Difficult Problems for Advanced Mathematical Reasoning",
+      "reason": "難易度の高い数学問題を自動合成して推論モデルの学習データを拡充するパイプラインであり、対象は学習データ生成であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2509.21070",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10994-025-06807-z",
+      "identity_tokens": [
+        "DOI:10.1007/s10994-025-06807-z"
+      ],
+      "title": "Efficient and interpretable raw audio classification with diagonal state space models",
+      "reason": "対角状態空間モデルと層別ダウンサンプリングで生音声分類を効率化する応用研究であり、対象は音声分類モデルであってLLM推論基盤ではない。",
+      "source_url": "https://doi.org/10.1007/s10994-025-06807-z",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICCV51701.2025.02111",
+      "identity_tokens": [
+        "DOI:10.1109/ICCV51701.2025.02111"
+      ],
+      "title": "Bridging Local Inductive Bias and Long-Range Dependencies With Pixel-Mamba for End-To-End Whole Slide Image Analysis",
+      "reason": "Pixel-Mambaでギガピクセルの病理ホールスライド画像を解析する医用画像アーキテクチャであり、LLM推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.1109/ICCV51701.2025.02111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/SP61157.2025.00052",
+      "identity_tokens": [
+        "DOI:10.1109/SP61157.2025.00052"
+      ],
+      "title": "PyLingual: Toward Perfect Decompilation of Evolving High-Level Languages",
+      "reason": "NLPとプログラム言語理論を組み合わせたPython逆コンパイラの研究であり、言語処理技術の応用先はコード解析であってLLM推論の高速化ではない。",
+      "source_url": "https://doi.org/10.1109/SP61157.2025.00052",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:bb0c8059c2e4312820ad152f5e212b9326694c29",
+      "identity_tokens": [
+        "SemanticScholar:bb0c8059c2e4312820ad152f5e212b9326694c29"
+      ],
+      "title": "xDeepServe: Model-as-a-Service on Huawei CloudMatrix384 xDeepServe Team @ Huawei",
+      "reason": "CloudMatrix384スーパーポッド上で分離型アーキテクチャと低遅延通信を用いるHuawei Cloudの本番Model-as-a-ServiceサービングシステムxDeepServeの報告であり、大規模MoE LLMサービングへの直接のシステム貢献が確認できる。",
+      "source_url": "https://www.semanticscholar.org/paper/bb0c8059c2e4312820ad152f5e212b9326694c29",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:dbc88fc157d871d7dde56b3a2cefb34dfc785e7a",
+      "identity_tokens": [
+        "SemanticScholar:dbc88fc157d871d7dde56b3a2cefb34dfc785e7a"
+      ],
+      "title": "Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models",
+      "reason": "次世代LLMの分散推論をSLO制約下で効率的に実行するためのハードウェアプラットフォーム設計要件を、計算・メモリ・ネットワーク資源の観点から分析した研究であり、分散推論基盤設計への直接の貢献がある。",
+      "source_url": "https://www.semanticscholar.org/paper/dbc88fc157d871d7dde56b3a2cefb34dfc785e7a",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:89654f548e541a8ef233be6585316ce6cc201535",
+      "identity_tokens": [
+        "SemanticScholar:89654f548e541a8ef233be6585316ce6cc201535"
+      ],
+      "title": "Structured Pruning Learns Compact and Accurate Models",
+      "reason": "事前学習済み言語モデルへの構造化プルーニングでコンパクトなタスクモデルを得る圧縮手法だが、要旨では蒸留ほどの推論速度向上は得にくいとされ、LLMサービングへの具体的効果が薄い。",
+      "source_url": "https://www.semanticscholar.org/paper/89654f548e541a8ef233be6585316ce6cc201535",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10101",
+      "identity_tokens": [
+        "arXiv:2410.10101"
+      ],
+      "title": "Learning Linear Attention in Polynomial Time",
+      "reason": "線形注意を持つ単層TransformerのPAC学習可能性を多項式時間で示す学習理論の研究であり、推論実行の効率化機構は扱っていない。",
+      "source_url": "https://arxiv.org/abs/2410.10101",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.09385",
+      "identity_tokens": [
+        "arXiv:2410.09385"
+      ],
+      "title": "Mamba4Cast: Efficient Zero-Shot Time Series Forecasting with State Space Models",
+      "reason": "Mambaベースのゼロショット時系列予測基盤モデルMamba4Castの提案であり、対象は時系列予測タスクであってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2410.09385",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.5555/3709347.3743976",
+      "identity_tokens": [
+        "DOI:10.5555/3709347.3743976"
+      ],
+      "title": "Context Adaptive Memory-Efficient LLM Inference for Edge Multi-Agent Systems",
+      "reason": "エッジマルチエージェント環境向けに、文脈適応型スパースKVキャッシュCASKで長文脈LLM推論のKVキャッシュメモリと注意処理の負担を削減する手法であり、メモリ効率的なエッジLLM推論への直接の貢献が確認できる。",
+      "source_url": "https://doi.org/10.5555/3709347.3743976",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 39
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.05917",
+      "identity_tokens": [
+        "arXiv:2611.05917"
+      ],
+      "title": "DecoupAttn: Decoupled Sparse Attention for Training-Free Acceleration of Video Diffusion",
+      "reason": "ビデオ拡散Transformerの疎注意を分離して学習なしで高速化するDecoupAttnであり、注意計算削減の機構は推論高速化技術だが、対象はLLMではなくビデオ拡散モデルの推論である。",
+      "source_url": "https://arxiv.org/abs/2611.05917",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.30270",
+      "identity_tokens": [
+        "arXiv:2609.30270"
+      ],
+      "title": "HybridInfer: Thermal-Aware Reinforcement-Learning Tier Routing for On-Device, Edge, and Cloud LLM Inference",
+      "reason": "熱制約で不安定化するオンデバイス生成を避けるため、強化学習でオンデバイス・エッジ・クラウドの階層へLLM推論をルーティングするHybridInferであり、推論配置とスケジューリングへの直接の貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2609.30270",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.14426",
+      "identity_tokens": [
+        "arXiv:2412.14426"
+      ],
+      "title": "All-in-One Tuning and Structural Pruning for Domain-Specific LLMs",
+      "reason": "ドメイン特化LLM向けにチューニングと構造化プルーニングを一体化する手法だが、主眼はドメイン適応の精度維持であり、推論時のメモリや速度への効果は要旨で具体化されていない。",
+      "source_url": "https://arxiv.org/abs/2412.14426",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 51
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2306.13835",
+      "identity_tokens": [
+        "arXiv:2306.13835"
+      ],
+      "title": "Computron: Serving Distributed Deep Learning Models with Model Parallel Swapping",
+      "reason": "モデル並列スワッピングで共有GPUクラスタ上に多数の大規模モデルを載せ替えて提供するサービングシステムComputronであり、分散モデルサービングへの直接のシステム貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2306.13835",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 53
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20806",
+      "identity_tokens": [
+        "arXiv:2607.20806"
+      ],
+      "title": "Profiling Lightweight Large Language Models",
+      "reason": "軽量LLMをローカル・エッジ環境でエネルギー・実行時間・メモリの観点から実測するプロファイリング枠組みであり、推論計測には関連するがシステム最適化機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2607.20806",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 54
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:9db228fde8d0bbddef4c6c915ec8fbbfc108da74",
+      "identity_tokens": [
+        "SemanticScholar:9db228fde8d0bbddef4c6c915ec8fbbfc108da74"
+      ],
+      "title": "Spatio-Temporal Gated Transformers for Efﬁcient Video Processing",
+      "reason": "テキストクエリに対応する時空間チューブを動画から定位するTubeDETRの提案であり、対象は動画グラウンディングタスクであって推論システムではない。",
+      "source_url": "https://www.semanticscholar.org/paper/9db228fde8d0bbddef4c6c915ec8fbbfc108da74",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 220
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731",
+      "identity_tokens": [
+        "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731"
+      ],
+      "title": "EFloat: Entropy-coded Floating Point Format for Deep Learning",
+      "reason": "浮動小数点指数の偏りを利用するエントロピー符号化数値形式EFloatで埋め込み等のデータを圧縮する手法であり、推論メモリ削減と関連はあるがLLM推論への適用や効果は要旨で示されていない。",
+      "source_url": "https://www.semanticscholar.org/paper/f5f58f9886f27ddd97b503d63ac42051b1d00731",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 223
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:0f0156fba32ad42d59e1cc8ab16ec3c1f5bf2e80",
+      "identity_tokens": [
+        "SemanticScholar:0f0156fba32ad42d59e1cc8ab16ec3c1f5bf2e80"
+      ],
+      "title": "Less is More: Improving LLM Reasoning with Minimal Test-Time Intervention",
+      "reason": "高エントロピートークンへの最小限のテスト時介入でLLM推論の正確さを上げるMTIであり、推論時計算には関係するが、主目的は推論能力の改善でシステム効率への貢献は副次的である。",
+      "source_url": "https://www.semanticscholar.org/paper/0f0156fba32ad42d59e1cc8ab16ec3c1f5bf2e80",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 234
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:56f32a568a3be4122c3399d79803c4976246d45b",
+      "identity_tokens": [
+        "SemanticScholar:56f32a568a3be4122c3399d79803c4976246d45b"
+      ],
+      "title": "Principled Approaches Applications Interpretability Robustness Efficiency Deep Learning Systems Natural Language Processing Computer Vision Mathematical Modeling",
+      "reason": "NLPにおける深層学習の解釈可能性・頑健性・効率を概観する総説的章であり、特定のLLM推論システム技術の提案ではない。",
+      "source_url": "https://www.semanticscholar.org/paper/56f32a568a3be4122c3399d79803c4976246d45b",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 235
+    }
+  ],
+  "parent_run_key": "muse-20261125-c02-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

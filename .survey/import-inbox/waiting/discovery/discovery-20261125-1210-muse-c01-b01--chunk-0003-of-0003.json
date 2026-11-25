@@ -1,0 +1,134 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-c01-b01::chunk-0003-of-0003",
+  "reference_main_sha": "79e9fcbe",
+  "record_count": 7,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.03173",
+      "identity_tokens": [
+        "arXiv:2505.03173"
+      ],
+      "title": "RAVU: Retrieval Augmented Video Understanding with Compositional Reasoning over Graph",
+      "reason": "時空間グラフ上の検索と合成的推論で長動画理解を行うRAVUはマルチモーダルモデルの理解能力の拡張であり、推論効率化の機構は主題ではないため",
+      "source_url": "https://arxiv.org/abs/2505.03173",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.05970",
+      "identity_tokens": [
+        "arXiv:2508.05970"
+      ],
+      "title": "Impact-driven Context Filtering For Cross-file Code Completion",
+      "reason": "リポジトリレベルコード補完で検索した他ファイルコンテキストの影響度を尤度指標で測り有害なチャンクを除く Impact-driven Context Filtering は推論時コンテキストの選別に関わるが、主目的は補完精度の改善であるため",
+      "source_url": "https://arxiv.org/abs/2508.05970",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 490
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.csite.2025.106500",
+      "identity_tokens": [
+        "DOI:10.1016/j.csite.2025.106500"
+      ],
+      "title": "Research on an Hourly Heat Load Forecasting Model for District Heating Systems Based on Heterogeneous Model Fusion",
+      "reason": "地域暖房システムの時間別熱負荷をTCN・BiMamba2・KANの融合で予測するエネルギー需要予測の応用研究であり、LLM推論とは無関係であるため",
+      "source_url": "https://doi.org/10.1016/j.csite.2025.106500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3539618.3591922",
+      "identity_tokens": [
+        "DOI:10.1145/3539618.3591922"
+      ],
+      "title": "ReNeuIR at SIGIR 2023: The Second Workshop on Reaching Efficiency in Neural Information Retrieval",
+      "reason": "ニューラル情報検索の効率を扱うSIGIRワークショップReNeuIRの開催報告であり、個別の技術提案ではなく、対象も情報検索であってLLM推論システムではないため",
+      "source_url": "https://doi.org/10.1145/3539618.3591922",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/systems13110991",
+      "identity_tokens": [
+        "DOI:10.3390/systems13110991"
+      ],
+      "title": "State-Space and Multi-Scale Convolutional Generative Adversarial Network for Traffic Flow Forecasting",
+      "reason": "交通流予測へ状態空間モデル生成器と多スケール畳み込み識別器のGANを適用するSSGANであり、交通需要予測の応用研究でLLM推論とは無関係であるため",
+      "source_url": "https://doi.org/10.3390/systems13110991",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.19544",
+      "identity_tokens": [
+        "arXiv:2411.19544"
+      ],
+      "title": "SkelMamba: A State Space Model for Efficient Skeleton Action Recognition of Neurological Disorders",
+      "reason": "神経疾患の診断を含む骨格動作認識へ解剖学誘導型SSMを適用するSkelMambaであり、医療・行動認識応用が主題でLLM推論への貢献はないため",
+      "source_url": "https://arxiv.org/abs/2411.19544",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.23049",
+      "identity_tokens": [
+        "arXiv:2506.23049"
+      ],
+      "title": "AURA: Agent for Understanding, Reasoning, and Automated Tool Use in Voice-Driven Tasks",
+      "reason": "ASR・TTS・LLMをカスケード接続しツール利用を可能にした音声ネイティブ助手AURAの応用システム構築であり、推論システムの効率化機構は含まれないため",
+      "source_url": "https://arxiv.org/abs/2506.23049",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T12:10:00+09:00",
+      "last_checked_at": "2026-11-25T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 495
+    }
+  ],
+  "parent_run_key": "muse-20261125-c01-b01",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 47
+}
