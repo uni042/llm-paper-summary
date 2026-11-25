@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（684本）
+## 自動生成の論文一覧（685本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2100,6 +2100,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   流入するモデル群から同時稼働数の上限内で段階ごとに配備集合を楽観的に選び、段階内では予算と処理上限を満たす線形計画で問合せを振り分ける二層の方式で、後悔が問合せ数の三分の二乗の水準という理論の下限と一致する近最適性を示した。
 
+- **2025-05 · [SOLA: Optimizing SLO Attainment for Large Language Model Serving with State-Aware Scheduling](2025-f8e12a3f2fb1-sola-optimizing-slo-attainment-for-large-language-model-serving-with-sta.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  固定したスケジューリング原則がSLO達成率を下げる問題に対し、リクエスト単体の状態とシステム全体の状態を見て、初回トークン遅延とトークン間遅延の配分とリクエスト間の配分を細かく制御するスケジューリング方式。達成率は45.5%から99.4%へ上がり、捌けるリクエスト数も増えた。
+
 - **2025-04 · [NoWag: A Unified Framework for Shape Preserving Compression of Large Language Models](2025-2504.14569-nowag-a-unified-framework-for-shape-preserving-compression-of-large-lang.md)**  
   実装：[✓](https://github.com/LawrenceRLiu/NoWag) ・ リポジトリ内被引用：2  
   NoWag（Normalized 重み and 活性値 Guided Compression）は、学習済みLLMの重み行列を入出力形状を保ったまま低ビット量子化または疎化するための共通枠組みである。NoWag-Pも50%非構造剪定ではWandaより低いperplexityを示す。
@@ -2335,7 +2339,7 @@
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：582  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：583  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -2661,7 +2665,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1999  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2000  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
