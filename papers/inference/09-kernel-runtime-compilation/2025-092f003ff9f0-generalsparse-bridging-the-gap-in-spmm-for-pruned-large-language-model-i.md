@@ -1,5 +1,5 @@
 ---
-canonical_id: "USENIX:ATC25:wang-yaoyu"
+canonical_id: USENIX:ATC25:wang-yaoyu
 arxiv_id: null
 doi: null
 openreview_id: null
@@ -9,43 +9,62 @@ arxiv_categories:
 last_audited: null
 audit_version: 0
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-v1"
+quality_self_review_version: 2026-10-07-v1
 quality_body_chars: 4393
 quality_method_chars: 1232
 quality_evaluation_chars: 1197
 quality_limitation_chars: 292
-storage_targets: ["プルーニングされた重みを疎行列として保持し、推論時は疎行列・行列積として計算する"]
-bottlenecks: ["疎行列・行列積（SpMM）のGPU性能が、プルーニング方式ごとの疎パターンと疎密度に強く依存すること", "層ごとに異なる疎密度への適応"]
-hardware_details: "NVIDIA Tesla A100（Ampereアーキテクチャ、CUDA 12.1）で評価。モデルレベルの評価では2台のA100でテンソル並列を実行"
-quality_effect: "本方式は計算の実行方法を最適化するものであり、精度はプルーニング自体で決まる。プルーニング済みOPT-30Bの精度低下（69.69%から67.20%）はプルーニングに起因する"
-evidence_locations: ["要旨", "第3節 設計（メモリアクセス空間と削減空間、コストモデル、コード生成）", "第4節 評価（表4・表5）"]
+storage_targets:
+- プルーニングされた重みを疎行列として保持し、推論時は疎行列・行列積として計算する
+bottlenecks:
+- 疎行列・行列積（SpMM）のGPU性能が、プルーニング方式ごとの疎パターンと疎密度に強く依存すること
+- 層ごとに異なる疎密度への適応
+hardware_details: NVIDIA Tesla A100（Ampereアーキテクチャ、CUDA 12.1）で評価。モデルレベルの評価では2台のA100でテンソル並列を実行
+quality_effect: 本方式は計算の実行方法を最適化するものであり、精度はプルーニング自体で決まる。プルーニング済みOPT-30Bの精度低下（69.69%から67.20%）はプルーニングに起因する
+evidence_locations:
+- 要旨
+- 第3節 設計（メモリアクセス空間と削減空間、コストモデル、コード生成）
+- 第4節 評価（表4・表5）
 references:
-  - canonical_id: "arXiv:2205.01068"
+- canonical_id: arXiv:2205.01068
 references_checked_at: 2025-11-25
 references_source: primary-reference-section
 references_total: 53
-title: "GeneralSparse: Bridging the Gap in SpMM for Pruned Large Language Model Inference on GPUs"
-summary: "重みのプルーニングはLLMのメモリと計算を減らすが、プルーニング方式ごとに疎パターンが異なり、層ごとに疎密度も変わるため、疎行列・行列積（SpMM）の高速化手法はどれも一部のパターンでしか速くない。本論文のGeneralSparseは、メモリアクセスを「ボックス分割」の戦略として抽象化し、GPUの階層に沿った多段の削減と組み合わせ、コストモデルに基づく自動カーネル生成で、行列ごとに適したSpMMカーネルを作る。プルーニング済みLLMの重みでcuSPARSE比最大20.82倍、エンドツーエンドの推論で最大2.33倍の高速化を達成した。"
-list_summary: "プルーニング済みLLMの疎行列計算を、パターンごとに最適化するのではなく、メモリアクセスと削減の抽象化から自動生成で適応させるSpMM方式。疎パターンと疎密度の違いに一貫して対応し、cuSPARSE比で最大20.82倍、推論全体で最大2.33倍速くなった。"
-authors: ["Yaoyu Wang", "Xiao Guo", "Junmin Xiao", "De Chen", "Guangming Tan"]
-authors_affiliations: "中国科学院計算技術研究所（SKLP）および中国科学院大学（全員）"
+title: 'GeneralSparse: Bridging the Gap in SpMM for Pruned Large Language Model Inference on GPUs'
+summary: 重みのプルーニングはLLMのメモリと計算を減らすが、プルーニング方式ごとに疎パターンが異なり、層ごとに疎密度も変わるため、疎行列・行列積（SpMM）の高速化手法はどれも一部のパターンでしか速くない。本論文のGeneralSparseは、メモリアクセスを「ボックス分割」の戦略として抽象化し、GPUの階層に沿った多段の削減と組み合わせ、コストモデルに基づく自動カーネル生成で、行列ごとに適したSpMMカーネルを作る。プルーニング済みLLMの重みでcuSPARSE比最大20.82倍、エンドツーエンドの推論で最大2.33倍の高速化を達成した。
+list_summary: プルーニング済みLLMの疎行列計算を、パターンごとに最適化するのではなく、メモリアクセスと削減の抽象化から自動生成で適応させるSpMM方式。疎パターンと疎密度の違いに一貫して対応し、cuSPARSE比で最大20.82倍、推論全体で最大2.33倍速くなった。
+authors:
+- Yaoyu Wang
+- Xiao Guo
+- Junmin Xiao
+- De Chen
+- Guangming Tan
+authors_affiliations: 中国科学院計算技術研究所（SKLP）および中国科学院大学（全員）
 published: 2025-07-07
-publication: "USENIX ATC '25（2025 USENIX Annual Technical Conference）"
-publication_type: "conference"
+publication: USENIX ATC '25（2025 USENIX Annual Technical Conference）
+publication_type: conference
 publication_status: Published
-lineage: "GPU向け疎行列演算の系統。人手設計、従来型オートチューナ、コンパイラ技術のいずれでも不足していた適応性・柔軟性・自動生成を、抽象化と知的な自動調整でまとめて満たす位置づけである。"
-topics: ["疎行列演算", "プルーニング", "GPUカーネル", "自動チューニング", "LLM推論"]
-importance: "プルーニング済みモデルの推論を実用的にするための、汎用的なSpMM基盤の提案"
-hardware_evaluation: "NVIDIA Tesla A100で評価し、カーネル単体とモデル全体の両面で既存手法と比較した。"
-source: "https://www.usenix.org/conference/atc25/presentation/wang-yaoyu"
-sources: ["https://www.usenix.org/conference/atc25/presentation/wang-yaoyu", "https://www.usenix.org/system/files/atc25-wang-yaoyu.pdf"]
-code: ""
-implementation: "コストモデルとコード生成器を備えた自動カーネル生成の仕組みとして実装される。論文中に公開コードの案内はない。"
+lineage: GPU向け疎行列演算の系統。人手設計、従来型オートチューナ、コンパイラ技術のいずれでも不足していた適応性・柔軟性・自動生成を、抽象化と知的な自動調整でまとめて満たす位置づけである。
+topics:
+- 疎行列演算
+- プルーニング
+- GPUカーネル
+- 自動チューニング
+- LLM推論
+importance: プルーニング済みモデルの推論を実用的にするための、汎用的なSpMM基盤の提案
+hardware_evaluation: NVIDIA Tesla A100で評価し、カーネル単体とモデル全体の両面で既存手法と比較した。
+source: https://www.usenix.org/conference/atc25/presentation/wang-yaoyu
+sources:
+- https://www.usenix.org/conference/atc25/presentation/wang-yaoyu
+- https://www.usenix.org/system/files/atc25-wang-yaoyu.pdf
+code: null
+implementation: コストモデルとコード生成器を備えた自動カーネル生成の仕組みとして実装される。論文中に公開コードの案内はない。
 last_checked: 2025-11-25
-worker_id: "muse-venue"
-worker_run_key: "venue-20261125-b01"
-worker_completed_at: "2026-11-25T20:32:19+09:00"
-reference_main_sha: "caf5851c42f69eb3003c93854fb7b76efa127394"
+worker_id: muse-venue
+worker_run_key: venue-20261125-b01
+worker_completed_at: '2026-11-25T20:32:19+09:00'
+reference_main_sha: caf5851c42f69eb3003c93854fb7b76efa127394
+implementation_status: official-code-not-confirmed
 ---
 
 # GeneralSparse: Bridging the Gap in SpMM for Pruned Large Language Model Inference on GPUs

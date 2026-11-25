@@ -1,5 +1,5 @@
 ---
-canonical_id: "USENIX:OSDI25:ren"
+canonical_id: USENIX:OSDI25:ren
 arxiv_id: null
 doi: null
 openreview_id: null
@@ -9,45 +9,77 @@ arxiv_categories:
 last_audited: null
 audit_version: 0
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-v1"
+quality_self_review_version: 2026-10-07-v1
 quality_body_chars: 5549
 quality_method_chars: 1796
 quality_evaluation_chars: 1085
 quality_limitation_chars: 527
-storage_targets: ["ネットワークバッファを統一仮想メモリの再マッピングで中継用GPU上に置き、RDMAの送信元メモリとして使う"]
-bottlenecks: ["サーバ間GPU通信の帯域（単一のネットワークカードへの静的な結び付け）", "PCIe経路の非一様性による帯域低下", "混雑したネットワークカードへのトラフィック集中"]
-hardware_details: "インテル8480C CPU、Hopper世代GPU 8台、ConnectX-7 400Gbpsのネットワークカード8枚、8レーンNVLinkとNVSwitch（サーバ内帯域200GB/s）"
-quality_effect: "通信経路の変更のみであり、計算結果や生成品質への影響はない"
-evidence_locations: ["要旨", "第4節 設計（中継方式の比較）", "第6節 評価（表3・表4）", "第7節 議論と限界"]
+storage_targets:
+- ネットワークバッファを統一仮想メモリの再マッピングで中継用GPU上に置き、RDMAの送信元メモリとして使う
+bottlenecks:
+- サーバ間GPU通信の帯域（単一のネットワークカードへの静的な結び付け）
+- PCIe経路の非一様性による帯域低下
+- 混雑したネットワークカードへのトラフィック集中
+hardware_details: インテル8480C CPU、Hopper世代GPU 8台、ConnectX-7 400Gbpsのネットワークカード8枚、8レーンNVLinkとNVSwitch（サーバ内帯域200GB/s）
+quality_effect: 通信経路の変更のみであり、計算結果や生成品質への影響はない
+evidence_locations:
+- 要旨
+- 第4節 設計（中継方式の比較）
+- 第6節 評価（表3・表4）
+- 第7節 議論と限界
 references:
-  - canonical_id: "arXiv:2311.18677"
-  - canonical_id: "arXiv:2309.06180"
-  - canonical_id: "arXiv:2406.01566"
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2309.06180
+- canonical_id: arXiv:2406.01566
 references_checked_at: 2025-11-25
 references_source: primary-reference-section
 references_total: 69
-title: "Enabling Efficient GPU Communication over Multiple NICs with FuseLink"
-summary: "機械学習クラスタではサーバ間通信の帯域を稼ぐために1台のサーバへ複数のネットワークカードを積むが、GPUとカードの結び付けが静的であるため、通信量に偏りのあるタスクでは一部のカードが混雑し、残りが遊ぶ。本論文のFuseLinkは、サーバ内の高速なGPU間接続をサーバ間ネットワークへ組み込み、混雑していないカードへGPUを経由してトラフィックを中継する仕組みである。ネットワークバッファの再マッピングによる中継、空きカードの検出と優先度付きスケジューリングを備え、NCCLへプラグインとして統合される。サーバ間帯域は最大212GB/sに達し、LLMサービングの初回トークン遅延を1.04〜2.73倍短縮した。"
-list_summary: "GPUとネットワークカードの静的な結び付けによる帯域の無駄を解くため、サーバ内のGPU間接続を使って空いているカードへトラフィックを中継する通信方式。バッファの再マッピングで中継し、実行中のタスクを妨げないよう優先度付きで制御する。サーバ間帯域は最大212GB/s、LLMサービングの初回トークン遅延は最大2.73倍短縮した。"
-authors: ["Zhenghang Ren", "Yuxuan Li", "Zilong Wang", "Xinyang Huang", "Wenxue Li", "Kaiqiang Xu", "Xudong Liao", "Yijun Sun", "Bowen Liu", "Han Tian", "Junxue Zhang", "Mingfei Wang", "Zhizhen Zhong", "Guyue Liu", "Ying Zhang", "Kai Chen"]
-authors_affiliations: "香港科技大学（iSINGLab、Renほか多数）、中国科学技術大学（Tian）、MetaX（Wang）、MIT（Zhong）、北京大学（Liu）、Meta（Zhang）"
+title: Enabling Efficient GPU Communication over Multiple NICs with FuseLink
+summary: 機械学習クラスタではサーバ間通信の帯域を稼ぐために1台のサーバへ複数のネットワークカードを積むが、GPUとカードの結び付けが静的であるため、通信量に偏りのあるタスクでは一部のカードが混雑し、残りが遊ぶ。本論文のFuseLinkは、サーバ内の高速なGPU間接続をサーバ間ネットワークへ組み込み、混雑していないカードへGPUを経由してトラフィックを中継する仕組みである。ネットワークバッファの再マッピングによる中継、空きカードの検出と優先度付きスケジューリングを備え、NCCLへプラグインとして統合される。サーバ間帯域は最大212GB/sに達し、LLMサービングの初回トークン遅延を1.04〜2.73倍短縮した。
+list_summary: GPUとネットワークカードの静的な結び付けによる帯域の無駄を解くため、サーバ内のGPU間接続を使って空いているカードへトラフィックを中継する通信方式。バッファの再マッピングで中継し、実行中のタスクを妨げないよう優先度付きで制御する。サーバ間帯域は最大212GB/s、LLMサービングの初回トークン遅延は最大2.73倍短縮した。
+authors:
+- Zhenghang Ren
+- Yuxuan Li
+- Zilong Wang
+- Xinyang Huang
+- Wenxue Li
+- Kaiqiang Xu
+- Xudong Liao
+- Yijun Sun
+- Bowen Liu
+- Han Tian
+- Junxue Zhang
+- Mingfei Wang
+- Zhizhen Zhong
+- Guyue Liu
+- Ying Zhang
+- Kai Chen
+authors_affiliations: 香港科技大学（iSINGLab、Renほか多数）、中国科学技術大学（Tian）、MetaX（Wang）、MIT（Zhong）、北京大学（Liu）、Meta（Zhang）
 published: 2025-07-07
-publication: "OSDI '25（19th USENIX Symposium on Operating Systems Design and Implementation、プロシーディングス91〜108ページ）"
-publication_type: "conference"
+publication: OSDI '25（19th USENIX Symposium on Operating Systems Design and Implementation、プロシーディングス91〜108ページ）
+publication_type: conference
 publication_status: Published
-lineage: "GPU間通信とネットワーク多重化の系統。NCCLのPXNが静的に中継GPUを結び付けるのに対し、本方式は空きカードを実行時に検出して動的に使う点で分かれる。"
-topics: ["GPU間通信", "ネットワークカードの多重利用", "NCCL", "分散推論の通信", "RDMA"]
-importance: "サーバ間帯域が分散推論と学習の共通のボトルネックになる中で、既存ハードウェアの遊休資源を使う現実的な解を示した"
-hardware_evaluation: "Hopper世代GPU 8台と400Gbpsのネットワークカード8枚を備えたサーバで評価し、PXNを有効にしたNCCLと比較した。"
-source: "https://www.usenix.org/conference/osdi25/presentation/ren"
-sources: ["https://www.usenix.org/conference/osdi25/presentation/ren", "https://www.usenix.org/system/files/osdi25-ren.pdf"]
-code: ""
-implementation: "NCCLのネットワークプラグインとして実装され、スケジューラはデーモンプロセスとして動く。アプリケーション側のコード変更は不要で、デフォルトのIBネットワークを置き換える形で導入される。"
+lineage: GPU間通信とネットワーク多重化の系統。NCCLのPXNが静的に中継GPUを結び付けるのに対し、本方式は空きカードを実行時に検出して動的に使う点で分かれる。
+topics:
+- GPU間通信
+- ネットワークカードの多重利用
+- NCCL
+- 分散推論の通信
+- RDMA
+importance: サーバ間帯域が分散推論と学習の共通のボトルネックになる中で、既存ハードウェアの遊休資源を使う現実的な解を示した
+hardware_evaluation: Hopper世代GPU 8台と400Gbpsのネットワークカード8枚を備えたサーバで評価し、PXNを有効にしたNCCLと比較した。
+source: https://www.usenix.org/conference/osdi25/presentation/ren
+sources:
+- https://www.usenix.org/conference/osdi25/presentation/ren
+- https://www.usenix.org/system/files/osdi25-ren.pdf
+code: null
+implementation: NCCLのネットワークプラグインとして実装され、スケジューラはデーモンプロセスとして動く。アプリケーション側のコード変更は不要で、デフォルトのIBネットワークを置き換える形で導入される。
 last_checked: 2025-11-25
-worker_id: "muse-venue"
-worker_run_key: "venue-20261125-b01"
-worker_completed_at: "2026-11-25T20:32:19+09:00"
-reference_main_sha: "caf5851c42f69eb3003c93854fb7b76efa127394"
+worker_id: muse-venue
+worker_run_key: venue-20261125-b01
+worker_completed_at: '2026-11-25T20:32:19+09:00'
+reference_main_sha: caf5851c42f69eb3003c93854fb7b76efa127394
+implementation_status: official-code-not-confirmed
 ---
 
 # Enabling Efficient GPU Communication over Multiple NICs with FuseLink

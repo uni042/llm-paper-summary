@@ -1,52 +1,75 @@
 ---
-canonical_id: "OpenReview:ubIvpetAd6"
+canonical_id: OpenReview:ubIvpetAd6
 arxiv_id: null
 doi: null
-openreview_id: "ubIvpetAd6"
+openreview_id: ubIvpetAd6
 arxiv_categories:
   primary: null
   cross_list: []
 last_audited: null
 audit_version: 0
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-v1"
+quality_self_review_version: 2026-10-07-v1
 quality_body_chars: 4121
 quality_method_chars: 1016
 quality_evaluation_chars: 892
 quality_limitation_chars: 229
-storage_targets: ["実行中リクエストのKVキャッシュと、リクエストごとの進行状態（待ち時間、生成済みトークン数など）をスケジューラが保持する"]
-bottlenecks: ["固定したスケジューリング原則による、初回トークン遅延とトークン間遅延の間の偏り", "リクエスト間の遅延のばらつきによるSLO達成率の低下"]
-hardware_details: "NVIDIA A100 80GB（SXM4）を8台備えたサーバで評価。vLLM（v0.4.2）へ統合して実装した"
-quality_effect: "スケジューリングの変更であり、生成品質への影響はない"
-evidence_locations: ["要旨", "図1（vLLMとの達成率の対比）", "第6節 評価（グッドプットの比較）"]
+storage_targets:
+- 実行中リクエストのKVキャッシュと、リクエストごとの進行状態（待ち時間、生成済みトークン数など）をスケジューラが保持する
+bottlenecks:
+- 固定したスケジューリング原則による、初回トークン遅延とトークン間遅延の間の偏り
+- リクエスト間の遅延のばらつきによるSLO達成率の低下
+hardware_details: NVIDIA A100 80GB（SXM4）を8台備えたサーバで評価。vLLM（v0.4.2）へ統合して実装した
+quality_effect: スケジューリングの変更であり、生成品質への影響はない
+evidence_locations:
+- 要旨
+- 図1（vLLMとの達成率の対比）
+- 第6節 評価（グッドプットの比較）
 references:
-  - canonical_id: "arXiv:2309.06180"
-  - canonical_id: "arXiv:2403.02310"
+- canonical_id: arXiv:2309.06180
+- canonical_id: arXiv:2403.02310
 references_checked_at: 2025-11-25
 references_source: primary-reference-section
 references_total: 40
-title: "SOLA: Optimizing SLO Attainment for Large Language Model Serving with State-Aware Scheduling"
-summary: "LLMサービングのSLO達成率が低い主因は、イテレーションごとに固定した原則でスケジューリングすることにある。プリフィル優先はトークン間遅延を犠牲にし、リクエスト間の遅延のばらつきも大きい。本論文のSOLAは、スケジューリングの設計空間（実行順序と各イテレーションの作業量）を定式化し、単一リクエストの状態とシステム全体の状態の両方を意識する状態認識スケジューリングで、初回トークン遅延とトークン間遅延の間、およびリクエスト間のトレードオフを制御する。SLO達成率は45.5%から99.4%へ改善し、処理できるリクエスト数は最先端の方式より平均で1.04〜1.27倍になった。"
-list_summary: "固定したスケジューリング原則がSLO達成率を下げる問題に対し、リクエスト単体の状態とシステム全体の状態を見て、初回トークン遅延とトークン間遅延の配分とリクエスト間の配分を細かく制御するスケジューリング方式。達成率は45.5%から99.4%へ上がり、捌けるリクエスト数も増えた。"
-authors: ["Ke Hong", "Xiuhong Li", "Lufang Chen", "Qiuli Mao", "Xuefei Ning", "Guohao Dai", "Shengen Yan", "Yun Liang", "Yu Wang"]
-authors_affiliations: "清華大学（Hong、Ning、Wang）、Infinigence AI（Li、Chen、Mao、Yan）、上海交通大学（Dai）、北京大学（Liang）"
+title: 'SOLA: Optimizing SLO Attainment for Large Language Model Serving with State-Aware Scheduling'
+summary: LLMサービングのSLO達成率が低い主因は、イテレーションごとに固定した原則でスケジューリングすることにある。プリフィル優先はトークン間遅延を犠牲にし、リクエスト間の遅延のばらつきも大きい。本論文のSOLAは、スケジューリングの設計空間（実行順序と各イテレーションの作業量）を定式化し、単一リクエストの状態とシステム全体の状態の両方を意識する状態認識スケジューリングで、初回トークン遅延とトークン間遅延の間、およびリクエスト間のトレードオフを制御する。SLO達成率は45.5%から99.4%へ改善し、処理できるリクエスト数は最先端の方式より平均で1.04〜1.27倍になった。
+list_summary: 固定したスケジューリング原則がSLO達成率を下げる問題に対し、リクエスト単体の状態とシステム全体の状態を見て、初回トークン遅延とトークン間遅延の配分とリクエスト間の配分を細かく制御するスケジューリング方式。達成率は45.5%から99.4%へ上がり、捌けるリクエスト数も増えた。
+authors:
+- Ke Hong
+- Xiuhong Li
+- Lufang Chen
+- Qiuli Mao
+- Xuefei Ning
+- Guohao Dai
+- Shengen Yan
+- Yun Liang
+- Yu Wang
+authors_affiliations: 清華大学（Hong、Ning、Wang）、Infinigence AI（Li、Chen、Mao、Yan）、上海交通大学（Dai）、北京大学（Liang）
 published: 2025-05-01
-publication: "MLSys '25（Proceedings of the 8th MLSys Conference）"
-publication_type: "conference"
+publication: MLSys '25（Proceedings of the 8th MLSys Conference）
+publication_type: conference
 publication_status: Published
-lineage: "LLMサービングのスケジューリング系統。イテレーション単位のバッチ（Orca）やチャンク化プリフィル（Sarathi-Serve）の上で、SLO達成率そのものを目的関数として状態認識で制御する位置づけである。"
-topics: ["LLMサービング", "スケジューリング", "SLO", "初回トークン遅延", "連続バッチ"]
-importance: "スループットではなくSLO達成率を中心に据えたスケジューリング設計の代表例"
-hardware_evaluation: "A100 80GBを8台備えたサーバで、5つのモデルとデータセットの組み合わせで評価した。"
-source: "https://openreview.net/forum?id=ubIvpetAd6"
-sources: ["https://openreview.net/forum?id=ubIvpetAd6", "https://nicsefc.ee.tsinghua.edu.cn//nics_file/pdf/ce55a1f2-ff0d-45f6-8985-f4f251b2a0d4.pdf"]
-code: ""
-implementation: "vLLM（v0.4.2）へ統合して実装された。スケジューリングのオーバーヘッドは0.40〜0.45%と測定されている。論文中に公開コードの案内はない。"
+lineage: LLMサービングのスケジューリング系統。イテレーション単位のバッチ（Orca）やチャンク化プリフィル（Sarathi-Serve）の上で、SLO達成率そのものを目的関数として状態認識で制御する位置づけである。
+topics:
+- LLMサービング
+- スケジューリング
+- SLO
+- 初回トークン遅延
+- 連続バッチ
+importance: スループットではなくSLO達成率を中心に据えたスケジューリング設計の代表例
+hardware_evaluation: A100 80GBを8台備えたサーバで、5つのモデルとデータセットの組み合わせで評価した。
+source: https://openreview.net/forum?id=ubIvpetAd6
+sources:
+- https://openreview.net/forum?id=ubIvpetAd6
+- https://nicsefc.ee.tsinghua.edu.cn//nics_file/pdf/ce55a1f2-ff0d-45f6-8985-f4f251b2a0d4.pdf
+code: null
+implementation: vLLM（v0.4.2）へ統合して実装された。スケジューリングのオーバーヘッドは0.40〜0.45%と測定されている。論文中に公開コードの案内はない。
 last_checked: 2025-11-25
-worker_id: "muse-venue"
-worker_run_key: "venue-20261125-b01"
-worker_completed_at: "2026-11-25T20:32:19+09:00"
-reference_main_sha: "caf5851c42f69eb3003c93854fb7b76efa127394"
+worker_id: muse-venue
+worker_run_key: venue-20261125-b01
+worker_completed_at: '2026-11-25T20:32:19+09:00'
+reference_main_sha: caf5851c42f69eb3003c93854fb7b76efa127394
+implementation_status: official-code-not-confirmed
 ---
 
 # SOLA: Optimizing SLO Attainment for Large Language Model Serving with State-Aware Scheduling

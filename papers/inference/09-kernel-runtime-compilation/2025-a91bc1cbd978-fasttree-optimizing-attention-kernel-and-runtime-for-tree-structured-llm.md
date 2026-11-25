@@ -1,53 +1,76 @@
 ---
-canonical_id: "OpenReview:BwvHcHZ3kJ"
+canonical_id: OpenReview:BwvHcHZ3kJ
 arxiv_id: null
 doi: null
-openreview_id: "BwvHcHZ3kJ"
+openreview_id: BwvHcHZ3kJ
 arxiv_categories:
   primary: null
   cross_list: []
 last_audited: null
 audit_version: 0
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-v1"
+quality_self_review_version: 2026-10-07-v1
 quality_body_chars: 4418
 quality_method_chars: 1084
 quality_evaluation_chars: 1254
 quality_limitation_chars: 277
-storage_targets: ["KVキャッシュを基数木（radix tree）で組織し、クエリ間で共有されるプレフィックスを再利用する"]
-bottlenecks: ["共有されたKVキャッシュの冗長な読み込み（クエリごとの個別処理）", "テンソルコアの形状要件を満たせないことによる利用率低下", "長い文脈によるテール効果"]
-hardware_details: "NVIDIA H100 GPU（80GB、CUDA 12.2）で評価。アテンションカーネルはTritonで実装し、SGLangのプラグインとして組み込んだ"
-quality_effect: "アテンション計算の実行方法の最適化であり、計算結果や生成品質への影響はない"
-evidence_locations: ["要旨", "第6節 評価（カーネルベンチマークとエンドツーエンド比較）", "付録（H100向けに調整されたハイパーパラメータ）"]
+storage_targets:
+- KVキャッシュを基数木（radix tree）で組織し、クエリ間で共有されるプレフィックスを再利用する
+bottlenecks:
+- 共有されたKVキャッシュの冗長な読み込み（クエリごとの個別処理）
+- テンソルコアの形状要件を満たせないことによる利用率低下
+- 長い文脈によるテール効果
+hardware_details: NVIDIA H100 GPU（80GB、CUDA 12.2）で評価。アテンションカーネルはTritonで実装し、SGLangのプラグインとして組み込んだ
+quality_effect: アテンション計算の実行方法の最適化であり、計算結果や生成品質への影響はない
+evidence_locations:
+- 要旨
+- 第6節 評価（カーネルベンチマークとエンドツーエンド比較）
+- 付録（H100向けに調整されたハイパーパラメータ）
 references:
-  - canonical_id: "arXiv:2312.07104"
-  - canonical_id: "arXiv:2205.14135"
-  - canonical_id: "arXiv:2501.01005"
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2501.01005
 references_checked_at: 2025-11-25
 references_source: primary-reference-section
 references_total: 62
-title: "FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference"
-summary: "クエリ同士が共通のプレフィックスを持つ木構造の推論では、基数木によるKVキャッシュの共有でメモリは節約できても、従来のアテンションカーネルはクエリごとに計算するため、共有部分のKVを何度も読み直し、テンソルコアも活用できない。本論文のFastTreeは、共有文脈を持つクエリ群をまとめて処理するGPUカーネルと、木を貪欲なヒューリスティクスで分割して効率のよいグループを作る実行時最適化を備え、SGLangのスループットを最大2.2倍に改善した。"
-list_summary: "プレフィックス共有のある推論で、共有KVの読み直しとテンソルコアの無駄を解くため、共有文脈を持つクエリをまとめて計算するアテンションカーネルと、木の分割を実行時に最適化する仕組みをSGLangへ追加した。スループットは最大2.2倍になった。"
-authors: ["Zaifeng Pan", "Yitong Ding", "Yue Guan", "Zheng Wang", "Zhongkai Yu", "Xulong Tang", "Yida Wang", "Yufei Ding"]
-authors_affiliations: "UCサンディエゴ（Pan、Ding、Guan、Wang、Yu、Ding）、ピッツバーグ大学（Tang）、AWS（Yida Wang）"
+title: 'FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference'
+summary: クエリ同士が共通のプレフィックスを持つ木構造の推論では、基数木によるKVキャッシュの共有でメモリは節約できても、従来のアテンションカーネルはクエリごとに計算するため、共有部分のKVを何度も読み直し、テンソルコアも活用できない。本論文のFastTreeは、共有文脈を持つクエリ群をまとめて処理するGPUカーネルと、木を貪欲なヒューリスティクスで分割して効率のよいグループを作る実行時最適化を備え、SGLangのスループットを最大2.2倍に改善した。
+list_summary: プレフィックス共有のある推論で、共有KVの読み直しとテンソルコアの無駄を解くため、共有文脈を持つクエリをまとめて計算するアテンションカーネルと、木の分割を実行時に最適化する仕組みをSGLangへ追加した。スループットは最大2.2倍になった。
+authors:
+- Zaifeng Pan
+- Yitong Ding
+- Yue Guan
+- Zheng Wang
+- Zhongkai Yu
+- Xulong Tang
+- Yida Wang
+- Yufei Ding
+authors_affiliations: UCサンディエゴ（Pan、Ding、Guan、Wang、Yu、Ding）、ピッツバーグ大学（Tang）、AWS（Yida Wang）
 published: 2025-05-01
-publication: "MLSys '25（Proceedings of the 8th MLSys Conference）"
-publication_type: "conference"
+publication: MLSys '25（Proceedings of the 8th MLSys Conference）
+publication_type: conference
 publication_status: Published
-lineage: "プレフィックス共有とアテンションカーネルの系統。基数木によるキャッシュ共有（SGLang）を前提に、メモリ配置だけでなく計算のパターンまで木構造へ合わせた点が位置づけである。"
-topics: ["アテンションカーネル", "KVキャッシュ", "プレフィックス共有", "SGLang", "GPU最適化"]
-importance: "木構造の推論プログラム（few-shot、思考の木、文書QAなど）の実行効率を上げる具体的なカーネルと実行時の設計"
-hardware_evaluation: "NVIDIA H100（80GB）で評価し、カーネル単体とエンドツーエンドの両面で既存方式と比較した。"
-source: "https://openreview.net/forum?id=BwvHcHZ3kJ"
-sources: ["https://openreview.net/forum?id=BwvHcHZ3kJ", "https://panzaifeng.github.io/assets/pdf/mlsys25fasttree.pdf"]
-code: "https://github.com/PanZaifeng/FastTree-Artifact"
-implementation: "SGLangのプラグインとして実装され、アテンションカーネルはTritonで書かれている。プリフィルには既存の高速カーネルを用い、最適化の対象はデコードである。コードは成果物として公開されている。"
+lineage: プレフィックス共有とアテンションカーネルの系統。基数木によるキャッシュ共有（SGLang）を前提に、メモリ配置だけでなく計算のパターンまで木構造へ合わせた点が位置づけである。
+topics:
+- アテンションカーネル
+- KVキャッシュ
+- プレフィックス共有
+- SGLang
+- GPU最適化
+importance: 木構造の推論プログラム（few-shot、思考の木、文書QAなど）の実行効率を上げる具体的なカーネルと実行時の設計
+hardware_evaluation: NVIDIA H100（80GB）で評価し、カーネル単体とエンドツーエンドの両面で既存方式と比較した。
+source: https://openreview.net/forum?id=BwvHcHZ3kJ
+sources:
+- https://openreview.net/forum?id=BwvHcHZ3kJ
+- https://panzaifeng.github.io/assets/pdf/mlsys25fasttree.pdf
+code: https://github.com/PanZaifeng/FastTree-Artifact
+implementation: SGLangのプラグインとして実装され、アテンションカーネルはTritonで書かれている。プリフィルには既存の高速カーネルを用い、最適化の対象はデコードである。コードは成果物として公開されている。
 last_checked: 2025-11-25
-worker_id: "muse-venue"
-worker_run_key: "venue-20261125-b01"
-worker_completed_at: "2026-11-25T20:32:19+09:00"
-reference_main_sha: "caf5851c42f69eb3003c93854fb7b76efa127394"
+worker_id: muse-venue
+worker_run_key: venue-20261125-b01
+worker_completed_at: '2026-11-25T20:32:19+09:00'
+reference_main_sha: caf5851c42f69eb3003c93854fb7b76efa127394
+implementation_status: official-code-available
 ---
 
 # FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference

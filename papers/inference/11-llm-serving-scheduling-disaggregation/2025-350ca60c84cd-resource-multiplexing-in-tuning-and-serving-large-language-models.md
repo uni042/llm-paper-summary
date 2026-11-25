@@ -1,5 +1,5 @@
 ---
-canonical_id: "USENIX:ATC25:he-yongjun"
+canonical_id: USENIX:ATC25:he-yongjun
 arxiv_id: null
 doi: null
 openreview_id: null
@@ -9,44 +9,65 @@ arxiv_categories:
 last_audited: null
 audit_version: 0
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-v1"
+quality_self_review_version: 2026-10-07-v1
 quality_body_chars: 4481
 quality_method_chars: 1366
 quality_evaluation_chars: 1042
 quality_limitation_chars: 292
-storage_targets: ["推論用モデルと調整用アダプタの重みを、GPUとCPUのメモリ間で管理し、必要な分だけをGPUに保持する"]
-bottlenecks: ["推論のデコード段階におけるGPU計算利用率の低さ（10%未満）", "時間分割におけるモデル読み込みとエンジン初期化の切り替えコスト（秒から分）", "空間分割におけるタスク間の性能干渉"]
-hardware_details: "RTX 3090を4台備えたサーバと、H100を4台備えたサーバ（メモリ256〜512GB、ノード内NVLink）で評価"
-quality_effect: "多重化は実行順序と配置の変更であり、推論の生成品質そのものへの影響はない。調整側は通常のLoRA学習と等価な計算を行う"
-evidence_locations: ["要旨", "第4節 SLOを意識したスケジューラ", "第6節 評価（表1）", "成果物評価（USENIX ATC '25）"]
+storage_targets:
+- 推論用モデルと調整用アダプタの重みを、GPUとCPUのメモリ間で管理し、必要な分だけをGPUに保持する
+bottlenecks:
+- 推論のデコード段階におけるGPU計算利用率の低さ（10%未満）
+- 時間分割におけるモデル読み込みとエンジン初期化の切り替えコスト（秒から分）
+- 空間分割におけるタスク間の性能干渉
+hardware_details: RTX 3090を4台備えたサーバと、H100を4台備えたサーバ（メモリ256〜512GB、ノード内NVLink）で評価
+quality_effect: 多重化は実行順序と配置の変更であり、推論の生成品質そのものへの影響はない。調整側は通常のLoRA学習と等価な計算を行う
+evidence_locations:
+- 要旨
+- 第4節 SLOを意識したスケジューラ
+- 第6節 評価（表1）
+- 成果物評価（USENIX ATC '25）
 references:
-  - canonical_id: "arXiv:2309.06180"
-  - canonical_id: "arXiv:2106.09685"
+- canonical_id: arXiv:2309.06180
+- canonical_id: arXiv:2106.09685
 references_checked_at: 2025-11-25
 references_source: primary-reference-section
 references_total: 63
-title: "Resource Multiplexing in Tuning and Serving Large Language Models"
-summary: "GPUは高価だが、推論とファインチューニングを別々のGPUへ専有させると利用率が低くなる。時間分割はモデルの読み込みと初期化の切り替えコストが大きく、空間分割はタスク間の干渉で推論の遅延SLOを守れない。本論文のLLMStationは、推論のイテレーションの合間に調整の作業を細かく差し込むスケジューリング、調整タスクを中断可能なパイプラインへ変換するAutogradエンジン、推論と調整のリクエストをまとめる推論エンジンにより、空間・時間の多重化を実現する。推論のSLOを守りながら、最先端の方式の1.38〜14.77倍のスループットを達成した。"
-list_summary: "推論とファインチューニングを同じGPUへ相乗りさせるため、推論の遅延制約の中で調整作業をイテレーション単位で差し込み、調整を中断可能な形に変換し、両者のリクエストをまとめて処理する多重化システム。推論のSLOを守りながら調整のスループットが最大で約15倍になった。"
-authors: ["Yongjun He", "Haofeng Yang", "Yao Lu", "Ana Klimovic", "Gustavo Alonso"]
-authors_affiliations: "ETHチューリッヒ（He、Yang、Klimovic、Alonso）、シンガポール国立大学（Lu）"
+title: Resource Multiplexing in Tuning and Serving Large Language Models
+summary: GPUは高価だが、推論とファインチューニングを別々のGPUへ専有させると利用率が低くなる。時間分割はモデルの読み込みと初期化の切り替えコストが大きく、空間分割はタスク間の干渉で推論の遅延SLOを守れない。本論文のLLMStationは、推論のイテレーションの合間に調整の作業を細かく差し込むスケジューリング、調整タスクを中断可能なパイプラインへ変換するAutogradエンジン、推論と調整のリクエストをまとめる推論エンジンにより、空間・時間の多重化を実現する。推論のSLOを守りながら、最先端の方式の1.38〜14.77倍のスループットを達成した。
+list_summary: 推論とファインチューニングを同じGPUへ相乗りさせるため、推論の遅延制約の中で調整作業をイテレーション単位で差し込み、調整を中断可能な形に変換し、両者のリクエストをまとめて処理する多重化システム。推論のSLOを守りながら調整のスループットが最大で約15倍になった。
+authors:
+- Yongjun He
+- Haofeng Yang
+- Yao Lu
+- Ana Klimovic
+- Gustavo Alonso
+authors_affiliations: ETHチューリッヒ（He、Yang、Klimovic、Alonso）、シンガポール国立大学（Lu）
 published: 2025-07-07
-publication: "USENIX ATC '25（2025 USENIX Annual Technical Conference）"
-publication_type: "conference"
+publication: USENIX ATC '25（2025 USENIX Annual Technical Conference）
+publication_type: conference
 publication_status: Published
-lineage: "GPU多重化と共置実行の系統。推論専用・学習専用に分ける運用に対し、計算集約的な調整とメモリ集約的な推論の相補性を利用して相乗りさせる位置づけである。"
-topics: ["GPU多重化", "ファインチューニング", "LLMサービング", "SLO保証", "スケジューリング"]
-importance: "推論と調整の相乗りを、SLO保証付きで実用化した代表例"
-hardware_evaluation: "RTX 3090とH100のサーバで、Llama系の3モデルとLoRA調整を対象に評価した。"
-source: "https://www.usenix.org/conference/atc25/presentation/he-yongjun"
-sources: ["https://www.usenix.org/conference/atc25/presentation/he-yongjun", "https://www.usenix.org/system/files/atc25-he-yongjun.pdf"]
-code: ""
-implementation: "USENIX ATC '25の成果物評価委員会による評価を受けた成果物が存在する。論文中にリポジトリのURLの明記はない。"
+lineage: GPU多重化と共置実行の系統。推論専用・学習専用に分ける運用に対し、計算集約的な調整とメモリ集約的な推論の相補性を利用して相乗りさせる位置づけである。
+topics:
+- GPU多重化
+- ファインチューニング
+- LLMサービング
+- SLO保証
+- スケジューリング
+importance: 推論と調整の相乗りを、SLO保証付きで実用化した代表例
+hardware_evaluation: RTX 3090とH100のサーバで、Llama系の3モデルとLoRA調整を対象に評価した。
+source: https://www.usenix.org/conference/atc25/presentation/he-yongjun
+sources:
+- https://www.usenix.org/conference/atc25/presentation/he-yongjun
+- https://www.usenix.org/system/files/atc25-he-yongjun.pdf
+code: null
+implementation: USENIX ATC '25の成果物評価委員会による評価を受けた成果物が存在する。論文中にリポジトリのURLの明記はない。
 last_checked: 2025-11-25
-worker_id: "muse-venue"
-worker_run_key: "venue-20261125-b01"
-worker_completed_at: "2026-11-25T20:32:19+09:00"
-reference_main_sha: "caf5851c42f69eb3003c93854fb7b76efa127394"
+worker_id: muse-venue
+worker_run_key: venue-20261125-b01
+worker_completed_at: '2026-11-25T20:32:19+09:00'
+reference_main_sha: caf5851c42f69eb3003c93854fb7b76efa127394
+implementation_status: official-code-not-confirmed
 ---
 
 # Resource Multiplexing in Tuning and Serving Large Language Models
