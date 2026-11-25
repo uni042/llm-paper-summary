@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b99f42216a0dd2e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.02309",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.02309",
+    "identity_tokens": [
+      "arXiv:2609.02309"
+    ],
+    "reason": "効率的GUIエージェントを観測・メモリ・行動・実行時の最適化の観点で整理したシステムサーベイであり、推論効率の論点を含むが新規機構ではなく対象もエージェント運用全般であるため境界とする。",
+    "first_checked_at": "2026-11-25T11:45:34+00:00",
+    "last_checked_at": "2026-11-25T11:45:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient GUI Agents: A Systems Survey of Observation, Memory, Action, and Runtime Optimization"
+  },
+  "processed_at": "2026-11-25T11:45:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b99f42216a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

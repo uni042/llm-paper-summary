@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T11:44:07+00:00",
-  "record_count": 9216,
+  "updated_at": "2026-11-25T11:45:35+00:00",
+  "record_count": 9222,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -141152,6 +141152,96 @@
       ],
       "borderline_recheck_count": 0,
       "title": "FreqCache: Accelerating Embodied VLN Models with Adaptive Frequency-Guided Token Caching"
+    },
+    "arXiv:2609.02309": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.02309",
+      "identity_tokens": [
+        "arXiv:2609.02309"
+      ],
+      "reason": "効率的GUIエージェントを観測・メモリ・行動・実行時の最適化の観点で整理したシステムサーベイであり、推論効率の論点を含むが新規機構ではなく対象もエージェント運用全般であるため境界とする。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient GUI Agents: A Systems Survey of Observation, Memory, Action, and Runtime Optimization"
+    },
+    "arXiv:2610.17434": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.17434",
+      "identity_tokens": [
+        "arXiv:2610.17434"
+      ],
+      "reason": "World-T3はテスト時訓練メモリで映像世界モデルの過去観測を定数ストレージで保持するが、対象は映像生成モデルでありLLM推論システムではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "World-T3: Test-Time Training as Persistent Memory for Real-Time Video World Models"
+    },
+    "arXiv:2609.33417": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33417",
+      "identity_tokens": [
+        "arXiv:2609.33417"
+      ],
+      "reason": "MemSuitは将来のクエリに必要な証拠を残すようメモリ要約を自己蒸留で学習させる枠組みであり、エージェントメモリの要約が対象で推論実行系ではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Grounding Memory Summarization in Utility Intent"
+    },
+    "DOI:10.1016/j.neucom.2026.134750": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134750",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134750"
+      ],
+      "reason": "FMSSは単一SSMコアの再帰共有と状態圧縮でMamba-2の24.4%のパラメータで同等精度を狙う効率的アーキテクチャだが、評価はテキスト分類でありLLM推論への適用は示されていないため境界とする。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Recursive Mamba: Fractal recursive state-space networks with global memory banks for efficient sequence modeling"
+    },
+    "arXiv:2608.00765": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.00765",
+      "identity_tokens": [
+        "arXiv:2608.00765"
+      ],
+      "reason": "RAGOCRは検索文書をクエリ条件付きの視覚表現へ圧縮し解像度を動的に配分してRAGの処理コストを下げるが、光学圧縮という間接経路であり推論機構としての位置づけが弱いため境界とする。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RAGOCR: Optical Compression of Retrieval-Augmented Text via Visual Representation"
+    },
+    "arXiv:2610.08553": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.08553",
+      "identity_tokens": [
+        "arXiv:2610.08553"
+      ],
+      "reason": "DeltaTTTは非線形リカレントメモリのテスト時訓練を層別デルタ則で並列化可能にする最適化だが、言語モデリングのアーキテクチャ研究であり推論システムへの直接適用は示されていないため境界とする。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DeltaTTT: Layerwise Optimization for Nonlinear Recurrent Memory"
     }
   }
 }

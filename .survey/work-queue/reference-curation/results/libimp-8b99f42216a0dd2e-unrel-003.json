@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b99f42216a0dd2e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:f6de443b1c6f49625575735ee01d714e1d63cde6",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:f6de443b1c6f49625575735ee01d714e1d63cde6",
+    "identity_tokens": [
+      "SemanticScholar:f6de443b1c6f49625575735ee01d714e1d63cde6"
+    ],
+    "reason": "ModelKeeperは学習済みモデルの重み変換で新規DNN学習をウォームアップし学習完了を高速化するシステムであり、学習単独の高速化であって推論への適用はない。",
+    "first_checked_at": "2026-11-25T11:45:34+00:00",
+    "last_checked_at": "2026-11-25T11:45:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ModelKeeper: Accelerating DNN Training via Automated Training Warmup"
+  },
+  "processed_at": "2026-11-25T11:45:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b99f42216a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

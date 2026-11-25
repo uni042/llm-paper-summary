@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-25T11:44:07+00:00",
-  "record_count": 15630,
+  "updated_at": "2026-11-25T11:45:35+00:00",
+  "record_count": 15640,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -223980,6 +223980,146 @@
         "worker-worklist discovery_review"
       ],
       "title": "F ROM A GENT T RACES TO T RUST : E VIDENCE T RACING AND E XECUTION P ROVENANCE IN LLM A GENTS"
+    },
+    "SemanticScholar:f6de443b1c6f49625575735ee01d714e1d63cde6": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:f6de443b1c6f49625575735ee01d714e1d63cde6",
+      "identity_tokens": [
+        "SemanticScholar:f6de443b1c6f49625575735ee01d714e1d63cde6"
+      ],
+      "reason": "ModelKeeperは学習済みモデルの重み変換で新規DNN学習をウォームアップし学習完了を高速化するシステムであり、学習単独の高速化であって推論への適用はない。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "ModelKeeper: Accelerating DNN Training via Automated Training Warmup"
+    },
+    "SemanticScholar:5bd25a2d01c9d3040458434b928dc047fe066a5a": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:5bd25a2d01c9d3040458434b928dc047fe066a5a",
+      "identity_tokens": [
+        "SemanticScholar:5bd25a2d01c9d3040458434b928dc047fe066a5a"
+      ],
+      "reason": "ZeroNICはNICハードウェアとソフトスタックの協調設計でホストネットワーキングの高スループット化を図る汎用基盤であり、推論システム固有の貢献はない。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "High-throughput and Flexible Host Networking for Accelerated Computing"
+    },
+    "arXiv:2412.01798": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.01798",
+      "identity_tokens": [
+        "arXiv:2412.01798"
+      ],
+      "reason": "SEALは長編映像を場面・物体・行動の意味実体へ分解する映像表現学習であり、映像理解応用であってLLM推論システムではない。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "SEAL: SEmantic Attention Learning for Long Video Representation"
+    },
+    "DOI:10.1109/cvpr52734.2025.02142": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr52734.2025.02142",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52734.2025.02142"
+      ],
+      "reason": "タイトル自体が局所モーションデブラーリングという画像復元応用を明示している。タイトル先行走査で対象外と判定した。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Parameterized Blur Kernel Prior Learning for Local Motion Deblurring"
+    },
+    "arXiv:2603.28823": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28823",
+      "identity_tokens": [
+        "arXiv:2603.28823"
+      ],
+      "reason": "消費者向けGPUでの学習を壁時計時間制約で捉えたスケーリング則の研究であり、学習側の分析であって推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Time is Not Compute: Scaling Laws for Wall-Clock Constrained Training on Consumer GPUs"
+    },
+    "arXiv:2605.02904": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.02904",
+      "identity_tokens": [
+        "arXiv:2605.02904"
+      ],
+      "reason": "StateSMixはMamba型SSMとn-gram混合によるオンライン可逆圧縮器であり、データ圧縮応用であってLLM推論システムではない。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "StateSMix: Online Lossless Compression via Mamba State Space Models and Sparse N-gram Context Mixing"
+    },
+    "arXiv:2609.19024": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19024",
+      "identity_tokens": [
+        "arXiv:2609.19024"
+      ],
+      "reason": "OAKは共有GPUクラスタ上の分散機械学習ジョブに対する再起動・待ち時間考慮のスケジューラであり、学習ジョブの基盤であって推論サービングではない。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "OAK: Restart- and Age-Aware Scheduling for Distributed Machine Learning on Shared GPU Clusters"
+    },
+    "arXiv:2610.07713": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.07713",
+      "identity_tokens": [
+        "arXiv:2610.07713"
+      ],
+      "reason": "タイトル自体が表面筋電図デコーディングという生体信号応用を明示している。タイトル先行走査で対象外と判定した。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Neuromotor Hierarchy Network: Physiological Inductive Biases for Robust Generalization in sEMG Decoding"
+    },
+    "arXiv:2610.18652": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.18652",
+      "identity_tokens": [
+        "arXiv:2610.18652"
+      ],
+      "reason": "AMemOpsは長時間音声ストリームにおける記憶更新を測るベンチマークであり、能力評価であって推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "AMemOps: Evaluating Memory Updates in Long Audio Streams"
+    },
+    "arXiv:2611.04594": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.04594",
+      "identity_tokens": [
+        "arXiv:2611.04594"
+      ],
+      "reason": "Rondoはデータセンタのパケットスプレーイングにおける再順序制御のための多経路トランスポート設計であり、ネットワーク基盤であって推論システムではない。",
+      "first_checked_at": "2026-11-25T11:45:34+00:00",
+      "last_checked_at": "2026-11-25T11:45:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Rondo: Controlling Reordering in High-Throughput Packet Spraying"
     }
   }
 }
