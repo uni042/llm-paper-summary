@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（681本）
+## 自動生成の論文一覧（683本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2558,6 +2558,14 @@
   実装：[✓](https://github.com/llm-db/FineInfer) ・ リポジトリ内被引用：6  
   前者では微調整の処理率が低下し、後者では利用者の応答遅延が増える。FineInferは、凍結済みの基盤モデル重みを両仕事で共有し、微調整・推論の各反復を細粒度に切り替える。
 
+- **2023-12 · [DeltaZip: Efficient Serving of Multiple Full-Model-Tuned LLMs](2023-2312.05215-deltazip-efficient-serving-of-multiple-full-model-tuned-llms.md)**  
+  実装：[✓](https://github.com/eth-easl/deltazip) ・ リポジトリ内被引用：6  
+  全パラメータ調整済みモデルの多数同時提供を可能にするため、ベースモデルからの差分だけを2ビット量子化と50%プルーニングで強く圧縮し、ベースと差分の計算を分離して共有ベースのリクエストをまとめるサービング方式。精度をFP16並みに保ったまま差分を最大約14倍に圧縮し、スループットは2〜12倍になった。
+
+- **2024-11 · [SkyServe: Serving AI Models across Regions and Clouds with Spot Instances](2024-2411.01438-skyserve-serving-ai-models-across-regions-and-clouds-with-spot-instances.md)**  
+  実装：[✓](https://github.com/skypilot-org/skypilot) ・ リポジトリ内被引用：5  
+  スポットインスタンスの強制終了に弱いという問題を、レプリカを複数リージョンと複数クラウドへ分散し、安いスポットを多めに確保し、不足時はオンデマンドへ切り替える方策で解くサービングシステム。コストは平均43%減り、遅延も他のシステムより大きく改善した。
+
 - **2024-11 · [Ensuring Fair LLM Serving Amid Diverse Applications](2024-2411.15997-ensuring-fair-llm-serving-amid-diverse-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   本論文はMicrosoft Copilotの34アプリ、数千利用者、数百万件のLLM要求から利用パターンを調べ、要求回数による制限と一律なトークン受益量に基づく配分が、アプリの負荷特性や多段対話を十分に反映できないことを示した。提案するFairServeは二つの機構を組み合わせる。
@@ -2649,7 +2657,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1995  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1997  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -2669,7 +2677,7 @@
   出力トークンを1つ生成する区切りで要求（リクエスト）を一時停止・再開できるようにし、短い要求を優先しながらKVキャッシュ（KV キャッシュ）をCPUへ退避・先読みして待ち時間を減らすLLMサービングスケジューラ（serving スケジューラ）。
 
 - **2023-11 · [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)**  
-  実装：[✓](https://github.com/Hsword/SpotServe) ・ リポジトリ内被引用：95  
+  実装：[✓](https://github.com/Hsword/SpotServe) ・ リポジトリ内被引用：96  
   一覧用要約：スポットGPUの回収・獲得に合わせて並列構成を再最適化し、既存の重みとKVキャッシュを最大限再利用する配置・移行と、トークン単位の状態付き途中再開によって分散LLMの長尾遅延と運用費を抑える。
 
 - **2023-10 · [Punica: Multi-Tenant LoRA Serving](2023-2310.18547-punica-multitenant-lora-serving.md)**  
