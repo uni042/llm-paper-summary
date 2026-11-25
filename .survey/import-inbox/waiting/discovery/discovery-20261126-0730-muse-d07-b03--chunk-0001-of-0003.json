@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d07-b03::chunk-0001-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.12837",
+      "identity_tokens": [
+        "arXiv:2406.12837"
+      ],
+      "title": "LayerMerge: Neural Network Depth Compression through Layer Pruning and Merging",
+      "reason": "LayerMergeは層プルーニングと活性化除去を同時に行い推論高速化を得る深さ圧縮手法だが、対象は畳み込みネットワークでありLLM推論への直接の適用は示されていない",
+      "source_url": "https://arxiv.org/abs/2406.12837",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 312
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.02849",
+      "identity_tokens": [
+        "arXiv:2311.02849"
+      ],
+      "title": "Co-training and Co-distillation for Quality Improvement and Compression of Language Models",
+      "reason": "CTCDは大小2モデルを同時学習し相互蒸留することで圧縮と性能向上を両立させる言語モデル圧縮手法であり、推論速度の改善を狙うが対象は汎用事前学習言語モデルで機構は学習側にある",
+      "source_url": "https://arxiv.org/abs/2311.02849",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 313
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICM66518.2025.11322486",
+      "identity_tokens": [
+        "DOI:10.1109/ICM66518.2025.11322486"
+      ],
+      "title": "Efficient Pruning and Acceleration of Encoder-Based LLM Transformers on eFPGAs",
+      "reason": "WANDAプルーニングをBERTエンコーダへ適用しeFPGA向けシストリックアーキテクチャで推論効率化を図る研究だが、既存プルーニングの適用と実装が中心で対象もエンコーダ型モデルに限られる",
+      "source_url": "https://doi.org/10.1109/ICM66518.2025.11322486",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 314
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TIC68483.2026.11702837",
+      "identity_tokens": [
+        "DOI:10.1109/TIC68483.2026.11702837"
+      ],
+      "title": "Low-Latency Foundation Models in Multi-Cloud Environments Using Neural Network",
+      "reason": "基盤モデルのマルチクラウド低レイテンシ提供に向けたスケジューリングと資源配分の枠組み提案だが、機構の記述が概念的で推論システムへの具体的貢献が不明瞭である",
+      "source_url": "https://doi.org/10.1109/TIC68483.2026.11702837",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 315
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.01267",
+      "identity_tokens": [
+        "arXiv:2512.01267"
+      ],
+      "title": "ZO-ASR: Zeroth-Order Fine-Tuning of Speech Foundation Models without Back-Propagation",
+      "reason": "ZO-ASRは逆伝播なしのゼロ次最適化で音声基盤モデルを微調整し学習時メモリを抑える手法であり、学習側の効率化で推論システムの貢献ではない",
+      "source_url": "https://arxiv.org/abs/2512.01267",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 316
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.08486",
+      "identity_tokens": [
+        "arXiv:2606.08486"
+      ],
+      "title": "TRADE: Transducer-Augmented Decoder for Speech LLM",
+      "reason": "TRADEはトランスデューサ分岐を音声LLMへ組み込みフレーム同期のストリーミング推論を可能にするデコーダ拡張だが、対象は音声LLMのストリーミング実現で汎用LLMサービングへの一般性は限定的である",
+      "source_url": "https://arxiv.org/abs/2606.08486",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 317
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30611",
+      "identity_tokens": [
+        "arXiv:2606.30611"
+      ],
+      "title": "Reweighting Framewise Attention in Video Transformers for Facial Expression Understanding",
+      "reason": "MiRAは動画Transformerのフレーム周辺注意を再配分して表情理解を高めるプラグインであり、視覚感情タスクの精度改善で推論システムへの貢献はない",
+      "source_url": "https://arxiv.org/abs/2606.30611",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 318
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.08164",
+      "identity_tokens": [
+        "arXiv:2610.08164"
+      ],
+      "title": "Align, Then Correct: Training-Free Two-Stage Low-Rank Compensation for Extremely Quantized Large Language Models",
+      "reason": "量子化誤差の低ランク補償について対称キャリブレーションと二階のみ最小化という前提を外し、二段階の閉形式補償で極端に量子化したLLMの精度を回復する。LLM量子化への直接の貢献が確認できる",
+      "source_url": "https://arxiv.org/abs/2610.08164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 319
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22435",
+      "identity_tokens": [
+        "arXiv:2610.22435"
+      ],
+      "title": "TRACE: Transformer Residual Activation Codebook Encoding for Communication-efficient Distributed Edge Inference",
+      "reason": "TRACEは各層の残差活性化をベクトル量子化し、コードブック索引だけを交換して受信側がK/Vを表引きで復元することで、エッジ分散Transformer推論の通信ボトルネックを解消する。分散推論への直接の貢献が確認できる",
+      "source_url": "https://arxiv.org/abs/2610.22435",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 320
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICDCS54860.2022.00087",
+      "identity_tokens": [
+        "DOI:10.1109/ICDCS54860.2022.00087"
+      ],
+      "title": "AIACC-Training: Optimizing Distributed Deep Learning Training through Multi-streamed and Concurrent Gradient Communications",
+      "reason": "AIACC-Trainingは複数勾配通信を同時実行して分散学習の帯域利用を高める学習通信フレームワークであり、学習側の最適化で推論への適用は確認できない",
+      "source_url": "https://doi.org/10.1109/ICDCS54860.2022.00087",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 321
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2206.01299",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2206.01299"
+      ],
+      "title": "Fine-tuning Language Models over Slow Networks using Activation Compression with Guarantees",
+      "reason": "AC-SGDはパイプライン並列学習の活性化変化量を圧縮し収束保証を与える通信効率化学習手法であり、学習が対象で推論システムの貢献ではない",
+      "source_url": "https://doi.org/10.48550/arXiv.2206.01299",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 322
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.14926",
+      "identity_tokens": [
+        "arXiv:2509.14926"
+      ],
+      "title": "Patent Language Model Pretraining with ModernBERT",
+      "reason": "特許ドメイン向けにModernBERTを大規模特許コーパスで事前学習したドメイン言語モデルの研究であり、学習と下流分類性能が対象で推論システムではない",
+      "source_url": "https://arxiv.org/abs/2509.14926",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 323
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICEIC61013.2024.10457117",
+      "identity_tokens": [
+        "DOI:10.1109/ICEIC61013.2024.10457117"
+      ],
+      "title": "Lightweight Error Correction for In-Storage Acceleration of Large Language Model Inference",
+      "reason": "NANDフラッシュを用いるLLM推論アクセラレータについて、LLMの誤り耐性を利用して誤り訂正を軽量化しECC帯域を最大9.38%削減する。在ストレージ推論ハードウェアへの直接の貢献が確認できる",
+      "source_url": "https://doi.org/10.1109/ICEIC61013.2024.10457117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 324
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.13502",
+      "identity_tokens": [
+        "arXiv:2502.13502"
+      ],
+      "title": "PLDR-LLMs Learn A Generalizable Tensor Operator That Can Replace Its Own Deep Neural Net At Inference",
+      "reason": "PLDR-LLMは一度推論したエネルギー曲率テンソルで自らの深層ネットを置換できると主張しG-cacheで推論時間を改善するが、機構が特殊でLLM推論システムへの一般的な適用可能性が不明瞭である",
+      "source_url": "https://arxiv.org/abs/2502.13502",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 325
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14428/esann/2025.es2025-190",
+      "identity_tokens": [
+        "DOI:10.14428/esann/2025.es2025-190"
+      ],
+      "title": "Comparing Modern LLM Quantization Methods Across Natural Languages",
+      "reason": "多言語条件下で主要なLLM量子化手法の性能を比較評価した研究であり、量子化の計測・評価には関連するが新しい量子化機構の提案ではない",
+      "source_url": "https://doi.org/10.14428/esann/2025.es2025-190",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 326
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.04422",
+      "identity_tokens": [
+        "arXiv:2508.04422"
+      ],
+      "title": "Efficient Inter-Task Attention for Multitask Transformer Models",
+      "reason": "変形可能なタスク間自己注意でマルチタスクTransformerの注意行列計算を桁単位で削減する手法だが、評価対象は視覚マルチタスクモデルでLLM推論への適用は示されていない",
+      "source_url": "https://arxiv.org/abs/2508.04422",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 327
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06966",
+      "identity_tokens": [
+        "arXiv:2601.06966"
+      ],
+      "title": "RealMem: Benchmarking LLMs in Real-World Memory-Driven Interaction",
+      "reason": "RealMemはプロジェクト指向の長期対話でLLMの記憶能力を測るベンチマークであり、能力評価が主目的で推論システムへの技術的貢献はない",
+      "source_url": "https://arxiv.org/abs/2601.06966",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 330
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.02744",
+      "identity_tokens": [
+        "arXiv:2601.02744"
+      ],
+      "title": "SYNAPSE: Empowering LLM Agents with Episodic-Semantic Memory via Spreading Activation",
+      "reason": "SYNAPSEは拡散活性化で関連記憶を辿るLLMエージェント向け長期記憶アーキテクチャであり、推論時の文脈処理に隣接するが主対象はエージェント記憶の検索品質である",
+      "source_url": "https://arxiv.org/abs/2601.02744",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 331
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02355",
+      "identity_tokens": [
+        "arXiv:2606.02355"
+      ],
+      "title": "SIRI: Self-Internalizing Reinforcement Learning with Intrinsic Skills for LLM Agent Training",
+      "reason": "SIRIは外部スキル生成器なしでスキルを自己内在化させるLLMエージェントの強化学習フレームワークであり、学習手法で推論システムの貢献ではない",
+      "source_url": "https://arxiv.org/abs/2606.02355",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 332
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408476",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA68181.2026.11408476"
+      ],
+      "title": "ReThermal: Co-Design of Thermal-Aware Static and Dynamic Scheduling for LLM Training on Liquid-Cooled Wafer-Scale Chips",
+      "reason": "ReThermalは液冷ウェハースケールチップ上のLLM学習を熱認識スケジューリングで管理する枠組みであり、対象は学習時の熱・スケジューリングで推論ではない",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408476",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 333
+    }
+  ],
+  "parent_run_key": "muse-20261126-d07-b03",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

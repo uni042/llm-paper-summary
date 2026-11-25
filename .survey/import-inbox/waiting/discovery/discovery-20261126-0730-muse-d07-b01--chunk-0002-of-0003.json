@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d07-b01::chunk-0002-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08450",
+      "identity_tokens": [
+        "arXiv:2510.08450"
+      ],
+      "title": "gLSTM: Mitigating Over-Squashing by Increasing Storage Capacity",
+      "reason": "gLSTMはGNNの過圧縮を記憶容量の観点から捉え直しLSTM的ゲートで緩和するグラフ学習アーキテクチャであり、推論システムへの貢献はない",
+      "source_url": "https://arxiv.org/abs/2510.08450",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 221
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/asi.24971",
+      "identity_tokens": [
+        "DOI:10.1002/asi.24971"
+      ],
+      "title": "Beyond decomposition: Hierarchical dependency management in multi‐document question answering",
+      "reason": "DSRC-QCSは複数文書QAで質問を単一ホップへ反復分解するRAG処理フレームワークであり、主眼は回答精度で推論システムの効率化技術ではない",
+      "source_url": "https://doi.org/10.1002/asi.24971",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 222
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICDM51629.2021.00027",
+      "identity_tokens": [
+        "DOI:10.1109/ICDM51629.2021.00027"
+      ],
+      "title": "LAGA: Lagged AllReduce with Gradient Accumulation for Minimal Idle Time",
+      "reason": "LAGAは勾配蓄積と遅延AllReduceで分散学習のデバイス待機時間を減らす学習高速化手法であり、学習単独の高速化で推論への適用は確認できない",
+      "source_url": "https://doi.org/10.1109/ICDM51629.2021.00027",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 223
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IPCCC59868.2024.10850072",
+      "identity_tokens": [
+        "DOI:10.1109/IPCCC59868.2024.10850072"
+      ],
+      "title": "FingerMamba: Mamba-based Efficient Multi-tab Website Fingerprinting",
+      "reason": "FingerMambaはTorの複数タブ閲覧に対するウェブサイトフィンガープリンティング攻撃の分類モデルであり、推論システムとは無関係である",
+      "source_url": "https://doi.org/10.1109/IPCCC59868.2024.10850072",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 224
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/SANER56733.2023.00016",
+      "identity_tokens": [
+        "DOI:10.1109/SANER56733.2023.00016"
+      ],
+      "title": "Pseudocode to Code Based on Adaptive Global and Local Information",
+      "reason": "AGL-Codeは擬似コードからコードを生成する変換・探索合成タスクのモデルであり、生成精度の改善が目的で推論システムへの貢献はない",
+      "source_url": "https://doi.org/10.1109/SANER56733.2023.00016",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 225
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21437/interspeech.2025-2013",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2025-2013"
+      ],
+      "title": "SpeechDialogueFactory: A Framework for Natural Speech Dialogue Generation",
+      "reason": "SpeechDialogueFactoryは音声対話データセットを合成生成するフレームワークと評価プロトコルであり、データ生成が対象で推論システムとは無関係である",
+      "source_url": "https://doi.org/10.21437/interspeech.2025-2013",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 226
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.15560",
+      "identity_tokens": [
+        "arXiv:2406.15560"
+      ],
+      "title": "How to Rent GPUs on a Budget",
+      "reason": "予算制約下でGPUレンタル量を決めML学習ジョブの平均応答時間を最小化するスケジューリング理論であり、計算資源スケジューリングには関連するが推論サービングではなく学習ジョブが対象である",
+      "source_url": "https://arxiv.org/abs/2406.15560",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 228
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04159",
+      "identity_tokens": [
+        "arXiv:2410.04159"
+      ],
+      "title": "Efficient and Robust Long-Form Speech Recognition with Hybrid H3-Conformer",
+      "reason": "H3-Conformerは長尺音声認識のために状態空間モデルH3で自己注意を置換する音響モデルであり、音声認識タスクの効率化でLLM推論システムの貢献ではない",
+      "source_url": "https://arxiv.org/abs/2410.04159",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 229
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.01422",
+      "identity_tokens": [
+        "arXiv:2412.01422"
+      ],
+      "title": "MamKPD: A Simple Mamba Baseline for Real-Time 2D Keypoint Detection",
+      "reason": "MamKPDはMambaを用いたリアルタイム2Dキーポイント検出の姿勢推定モデルであり、視覚タスクのモデル設計で推論システムとは無関係である",
+      "source_url": "https://arxiv.org/abs/2412.01422",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 230
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.00980",
+      "identity_tokens": [
+        "arXiv:2505.00980"
+      ],
+      "title": "LMDepth: Lightweight Mamba-based Monocular Depth Estimation for Real-World Deployment",
+      "reason": "LMDepthは軽量Mambaによる単眼深度推定ネットワークであり、資源制約下の視覚タスク向けモデル設計でLLM推論システムへの貢献はない",
+      "source_url": "https://arxiv.org/abs/2505.00980",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 231
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.03009",
+      "identity_tokens": [
+        "arXiv:2508.03009"
+      ],
+      "title": "Enhancing Long Video Question Answering with Scene-Localized Frame Grouping",
+      "reason": "SceneQAは長尺動画QAの場面単位理解を測る新シナリオとデータセットの提案であり、MLLMの能力評価が主目的で推論システムへの技術的貢献はない",
+      "source_url": "https://arxiv.org/abs/2508.03009",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 232
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.16834",
+      "identity_tokens": [
+        "arXiv:2510.16834"
+      ],
+      "title": "Schrödinger Bridge Mamba for One-Step Speech Enhancement",
+      "reason": "Schrödinger Bridge Mambaは音声強調を1ステップ生成で行うモデルであり、音声信号処理タスクの品質と実時間性が対象でLLM推論システムとは無関係である",
+      "source_url": "https://arxiv.org/abs/2510.16834",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 233
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890015",
+      "identity_tokens": [
+        "DOI:10.1109/ICASSP49660.2025.10890015"
+      ],
+      "title": "MambaRF: A Bi-directional Mamba Structure for Radio Frequency Signal Classification of Unmanned Aerial Vehicle",
+      "reason": "MambaRFはドローンのRF信号スペクトログラムを双方向Mambaで分類する手法であり、無線信号分類タスクで推論システムへの貢献はない",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10890015",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 234
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JSEN.2025.3606150",
+      "identity_tokens": [
+        "DOI:10.1109/JSEN.2025.3606150"
+      ],
+      "title": "ARFF-VO: A Self-Supervised Monocular Visual Odometry With Adaptive Region-Based Feature Filtering in Dynamic Scenes",
+      "reason": "ARFF-VOは動的場面での単眼ビジュアルオドメトリの自己教師あり学習手法であり、ロボット位置推定タスクで推論システムとは無関係である",
+      "source_url": "https://doi.org/10.1109/JSEN.2025.3606150",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 235
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TIM.2026.3693454",
+      "identity_tokens": [
+        "DOI:10.1109/TIM.2026.3693454"
+      ],
+      "title": "Domain Knowledge Fused State Space Model for fNIRS-Based Brain–Computer Interfaces",
+      "reason": "fNIRS4DはfNIRSベース脳コンピュータインタフェースの分類にS4Dと神経科学的ドメイン知識を融合したモデルであり、医療信号分類で推論システムの貢献はない",
+      "source_url": "https://doi.org/10.1109/TIM.2026.3693454",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 236
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3746252.3761344",
+      "identity_tokens": [
+        "DOI:10.1145/3746252.3761344"
+      ],
+      "title": "MFAE: Multimodal Feature Adaptive Enhancement for Fake News Video Detection",
+      "reason": "MFAEはフェイクニュース動画検出のためのマルチモーダル特徴強調フレームワークであり、コンテンツ検出タスクで推論システムとは無関係である",
+      "source_url": "https://doi.org/10.1145/3746252.3761344",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 237
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3233/JIFS-219359",
+      "identity_tokens": [
+        "DOI:10.3233/JIFS-219359"
+      ],
+      "title": "Exploring the interpretability of the BERT model for semantic similarity",
+      "reason": "BERTの文類似度表現と解釈可能性をプーリング手法や次元削減で分析した研究であり、モデルの理解が目的で推論システムへの技術的貢献はない",
+      "source_url": "https://doi.org/10.3233/JIFS-219359",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 238
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.10832",
+      "identity_tokens": [
+        "arXiv:1910.10832"
+      ],
+      "title": "Emergent Properties of Finetuned Language Representation Models",
+      "reason": "微調整済みBERTの[CLS]埋め込みの冗長性を分析し圧縮可能性を示した表現分析の研究であり、推論システムの機構提案ではなく分析にとどまる",
+      "source_url": "https://arxiv.org/abs/1910.10832",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 240
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.12940",
+      "identity_tokens": [
+        "arXiv:2410.12940"
+      ],
+      "title": "UMambaAdj: Advancing GTV Segmentation for Head and Neck Cancer in MRI-Guided RT with UMamba and nnU-Net ResEnc Planner",
+      "reason": "UMambaAdjは頭頸部がんのMRI誘導放射線治療における腫瘍体積セグメンテーション手法であり、医療画像応用で推論システムとは無関係である",
+      "source_url": "https://arxiv.org/abs/2410.12940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 241
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.00029",
+      "identity_tokens": [
+        "arXiv:2503.00029"
+      ],
+      "title": "Streaming Looking Ahead with Token-level Self-reward",
+      "reason": "トークンレベルの自己報酬モデルをポリシーへ内蔵したReward Transformerにより、外部報酬モデルなしで先読み探索型デコードをストリーミングでも可能にする。デコードアルゴリズムという推論時技術への直接の貢献が確認できる",
+      "source_url": "https://arxiv.org/abs/2503.00029",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 242
+    }
+  ],
+  "parent_run_key": "muse-20261126-d07-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d07-b03::chunk-0003-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ACCESS.2022.3212367",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2022.3212367"
+      ],
+      "title": "Sentiment Analysis Using Pre-Trained Language Model With No Fine-Tuning and Less Resource",
+      "reason": "事前学習済み言語モデルによる感情分析というNLP応用タスクがタイトルに明示され、推論システム技術要素を含まないため対象外",
+      "source_url": "https://doi.org/10.1109/ACCESS.2022.3212367",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 354
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1907.00570",
+      "identity_tokens": [
+        "arXiv:1907.00570"
+      ],
+      "title": "Do Transformer Attention Heads Provide Transparency in Abstractive Summarization?",
+      "reason": "抽象的要約においてTransformerの注意ヘッドが透明性を与えるかを質的・量的に分析した研究であり、モデル理解が目的で推論システムの貢献はない",
+      "source_url": "https://arxiv.org/abs/1907.00570",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 355
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.02881",
+      "identity_tokens": [
+        "arXiv:2505.02881"
+      ],
+      "title": "Rewriting Pre-Training Data Boosts LLM Performance in Math and Code",
+      "reason": "事前学習データをLLMで書き換えて数学・コード性能を高めるデータセット構築の研究であり、学習データ側の成果で推論システムとは無関係である",
+      "source_url": "https://arxiv.org/abs/2505.02881",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 356
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.404",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.naacl-long.404"
+      ],
+      "title": "Scaling LLM Inference Efficiently with Optimized Sample Compute Allocation",
+      "reason": "OSCAはBest-of-NやRLロールアウトにおけるサンプル計算予算を、モデルや温度等の推論設定の混合配分として学習し最適化する。推論時計算配分というLLM推論運用への直接の貢献が確認できる",
+      "source_url": "https://doi.org/10.18653/v1/2025.naacl-long.404",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 357
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13069",
+      "identity_tokens": [
+        "arXiv:2602.13069"
+      ],
+      "title": "Memory-Efficient Structured Backpropagation for On-Device LLM Fine-Tuning",
+      "reason": "MeSPはLoRAの低ランク構造を利用した構造化逆伝播でオンデバイスLLM微調整のメモリを削減する手法であり、学習側のメモリ効率化で推論システムの貢献ではない",
+      "source_url": "https://arxiv.org/abs/2602.13069",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 358
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.03573",
+      "identity_tokens": [
+        "arXiv:2110.03573"
+      ],
+      "title": "Minimum Word Error Training For Non-Autoregressive Transformer-Based Code-Switching ASR",
+      "reason": "最小単語誤り学習による非自己回帰コードスイッチASRの学習手法であり、音声認識の学習基準の改善で推論システムへの貢献はない",
+      "source_url": "https://arxiv.org/abs/2110.03573",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 359
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2304.10593",
+      "identity_tokens": [
+        "arXiv:2304.10593"
+      ],
+      "title": "DeepReShape: Redesigning Neural Networks for Efficient Private Inference",
+      "reason": "DeepReShapeは暗号化入力に対するプライベート推論の制約下でReLU数とFLOPsを同時に最適化するようネットワークを再設計し、推論ランタイムを5.2倍改善する。プライベート推論への直接の貢献が確認できる",
+      "source_url": "https://arxiv.org/abs/2304.10593",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 360
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.15509",
+      "identity_tokens": [
+        "arXiv:2504.15509"
+      ],
+      "title": "SimulS2S-LLM: Unlocking Simultaneous Inference of Speech LLMs for Speech-to-Speech Translation",
+      "reason": "SimulS2S-LLMは境界認識プロンプトとテスト時ポリシーで音声LLMの同時通訳推論を可能にするが、対象は音声間翻訳の同時推論であり汎用LLMサービングへの一般性は限定的である",
+      "source_url": "https://arxiv.org/abs/2504.15509",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 361
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.07268",
+      "identity_tokens": [
+        "arXiv:2207.07268"
+      ],
+      "title": "Lightweight Vision Transformer with Cross Feature Attention",
+      "reason": "XFormerは交差特徴注意とモバイルCNNを組み合わせた軽量Vision Transformer骨格であり、視覚認識タスクのモデル設計でLLM推論システムの貢献はない",
+      "source_url": "https://arxiv.org/abs/2207.07268",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 362
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.11895",
+      "identity_tokens": [
+        "arXiv:2502.11895"
+      ],
+      "title": "Continual Quantization-Aware Pre-Training: When to transition from 16-bit to 1.58-bit pre-training for BitNet language models?",
+      "reason": "16ビットから1.58ビットへの量子化対応事前学習の移行時期を検証した研究であり、推論効率の高いBitNetモデルの品質に関わるが貢献は学習レシピ側にある",
+      "source_url": "https://arxiv.org/abs/2502.11895",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 363
+    }
+  ],
+  "parent_run_key": "muse-20261126-d07-b03",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 50
+}
