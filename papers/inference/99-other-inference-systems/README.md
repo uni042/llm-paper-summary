@@ -2020,6 +2020,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   SPECTREは、系列長$n$に対して二乗で増える通常の自己注意（Self-注意機構）を、実数高速フーリエ変換（Real Fast Fourier Transform、RFFT）、内容適応の周波数ゲート、逆変換の組合せで置き換える方式である。
 
+- **2025-02 · [Prompt-based Depth Pruning of Large Language Models](2025-2502.04348-prompt-based-depth-pruning-of-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  ブロックの重要度が課題で違うことに着目し、候補の省略集合を課題尤度で作りプロンプトごとに軽量ルーターが選ぶ動的深さ枝刈りPuDDingで、約22パーセント削減でも静的枝刈りより正解率を上げつつ1.2倍台の生成高速化を得る。
+
 - **2025-01 · [A Proximal Operator for Inducing 2:4-Sparsity](2025-2501.18015-a-proximal-operator-for-inducing-2-4-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   GPUの2:4疎行列演算では4重み中2つをゼロにすることで、通常の非構造化疎性よりも実行時に利用しやすい規則性が得られる。
@@ -2147,10 +2151,6 @@
 - **2025-03 · [Cost-Optimal Grouped-Query Attention for Long-Context Modeling](2025-2503.09579-cost-optimal-grouped-query-attention-for-long-context-modeling.md)**  
   実装：[✓](https://github.com/THUNLP/cost-optimal-gqa) ・ リポジトリ内被引用：1  
   Grouped-Query 注意機構（GQA）は複数のquery headでKey/Valueを共有し、通常のMulti-Head 注意機構（MHA）よりKVキャッシュ容量と読み出し量を抑える。
-
-- **2025-02 · [Prompt-based Depth Pruning of Large Language Models](2025-2502.04348-prompt-based-depth-pruning-of-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  ブロックの重要度が課題で違うことに着目し、候補の省略集合を課題尤度で作りプロンプトごとに軽量ルーターが選ぶ動的深さ枝刈りPuDDingで、約22パーセント削減でも静的枝刈りより正解率を上げつつ1.2倍台の生成高速化を得る。
 
 - **2025-02 · [M2R2: Mixture of Multi-Rate Residuals for Efficient Transformer Inference](2025-2502.02040-m2r2-mixture-of-multi-rate-residuals-for-efficient-transformer-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -2594,13 +2594,13 @@
 
 ### 3年前（2023-12〜2024-11）
 
-- **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：109  
-  本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
-
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
   実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：108  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
+
+- **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
+  実装：✓ ・ リポジトリ内被引用：108  
+  本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
   実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：73  
@@ -2718,10 +2718,6 @@
   実装：[✓](https://github.com/amazon-science/Repoformer) ・ リポジトリ内被引用：4  
   Repoformerは、ソースコードの現在のファイルだけでは分からない別ファイルの関数定義や呼出し関係を、必要な場合だけ検索するコード補完方式である。RepoEvalで複数のコード言語モデルを調べると、検索によって補完が改善した例は概ね20%以下、変わらない例が60%以上、悪化する例も約20%あった。
 
-- **2024-10 · [Scaling Laws for Mixed Quantization](2024-2410.06722-scaling-laws-for-mixed-quantization.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  低bitのLLM推論では、すべての重みや活性を同じ低精度へ変換するより、精度低下に敏感な部分を高精度で残す混合量子化が有効になる場合がある。
-
 - **2024-10 · [Rethinking Token Reduction for State Space Models](2024-2410.14725-rethinking-token-reduction-for-state-space-models.md)**  
   実装：[✓](https://github.com/wuyushuwys/ToR_SSM) ・ リポジトリ内被引用：3  
   Mamba向けに、隠れ状態由来の重要度でトークンを分類し枝刈りとマージを使い分ける学習後トークン削減を作り、演算2割減でも既存削減法より平均正解率を約9ポイント高く保つ。
@@ -2733,6 +2729,10 @@
 - **2023-12 · [The Cost of Compression: Investigating the Impact of Compression on Parametric Knowledge in Language Models](2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-param.md)**  
   実装：[✓](https://github.com/NamburiSrinath/LLMCompression) ・ リポジトリ内被引用：3  
   枝刈りと量子化が重みに蓄えた事実知識へ与える影響を三系統のモデルで系統測定し、全体の同時枝刈りが最も有害で五割超の枝刈りで知識が急落すること、注意の量子化は比較的安全で最終層の構造的枝刈りが特に危険であることを示した。
+
+- **2024-10 · [Scaling Laws for Mixed Quantization](2024-2410.06722-scaling-laws-for-mixed-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  低bitのLLM推論では、すべての重みや活性を同じ低精度へ変換するより、精度低下に敏感な部分を高精度で残す混合量子化が有効になる場合がある。
 
 - **2024-10 · [LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions](2024-2410.05462-levattention-time-space-and-streaming-efficient-algorithm-for-heavy-atte.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -3107,7 +3107,7 @@
   標準的な変換器（Transformer）の自己注意（self-注意機構）は、入力系列内のトークン間の重みを入力内容に応じて計算する。特にこの論文の「学習80%高速化」は約1.8倍の処理速度を意味し、処理時間が80%減ったという意味ではない。
 
 - **2022-02 · [Competition-Level Code Generation with AlphaCode](2022-2203.07814-competition-level-code-generation-with-alphacode.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：20  
   AlphaCodeは、自然言語で与えられた競技プログラミング問題から、正しい実行プログラムを見つけるための生成・探索・選別システムである。評価では2021年12月のCodeforcesの10大会を後から模擬し、各問題最大10提出という条件で、参加者中の順位が平均して上位54.3%に相当した。
 
 - **2022-04 · [Step-unrolled Denoising Autoencoders for Text Generation](2022-2112.06749-step-unrolled-denoising-autoencoders-for-text-generation.md)**  
@@ -3149,7 +3149,7 @@
   Transformerの自己注意機構では、クエリとキーの積から得た各スコアをsoftmaxで正規化し、値ベクトルへの重みを生成する。原著のTSMC 7nm設計評価では、非正規化部の面積0.25倍・エネルギー0.10倍、正規化部の面積0.65倍・エネルギー0.39倍、MAC等を含む演算器全体の面積0.90倍・エネルギー0.43倍を報告する。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  
-  実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：17  
   教師と生徒の注意頭数を揃える制約を外し、Query・Key・Valueのトークン間関係を共通の「関係頭」で比較する。推論速度の改善は蒸留後の小型モデルによるもので、実行時に教師を参照する方式ではない。
 
 - **2021-11 · [SimpleTRON: Simple Transformer with O(N) Complexity](2021-2111.15588-simpletron-simple-transformer-with-o-n-complexity.md)**  
@@ -3249,6 +3249,6 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：393  
+  実装：✓ ・ リポジトリ内被引用：392  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 <!-- survey:auto:end -->

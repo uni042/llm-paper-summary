@@ -2681,7 +2681,7 @@
   HexGenは、性能もメモリ容量も異なるGPUが複数のデータセンターに分散し、拠点間ネットワークの帯域と遅延も不均一な環境で、大規模言語モデル（LLM）の生成推論を提供する分散実行システムである。
 
 - **2023-09 · [LLMCarbon: Modeling the End-To-End Carbon Footprint of Large Language Models](2023-2309.14393-llmcarbon-modeling-the-end-to-end-carbon-footprint-of-large-language-mod.md)**  
-  実装：[✓](https://github.com/SotaroKaneda/MLCarbon) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/SotaroKaneda/MLCarbon) ・ リポジトリ内被引用：21  
   LLMCarbonは、大規模言語モデル（LLM）を設計・運用する前に、モデル構造とハードウェア、データセンター条件から二酸化炭素換算排出量（CO2eq）を推定するシステムである。T5、GPT-3、GShard、Switch、XLMの5モデルで既報の学習運用排出量と比較すると、LLMCarbonの推定誤差は-3.54%～+8.2%の範囲だった。
 
 - **2023-05 · [Large Language Models as Tool Makers](2023-2305.17126-large-language-models-as-tool-makers.md)**  
