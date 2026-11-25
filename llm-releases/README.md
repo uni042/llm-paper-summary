@@ -3,7 +3,7 @@
 主要LLMの新規公開・一般提供を**model family別**に整理する。
 
 - 初回バックフィル対象: **2026-03-04〜2026-09-05**
-- リリース情報の最終確認: **2026-11-19**
+- リリース情報の最終確認: **2026-11-26**
 - 用語・可読性の最終監査: **2026-09-07**
 
 2026-09-24に主要提供元の公式公開を再確認し、OpenAIのGPT-6 Sol / LunaとAnthropicのClaude Opus 5.5を追加した。GPT-6 Sol / LunaはAstra世代の能力をより低cost帯へ展開し、Claude Opus 5.5はOpus 5比の性能・効率・安全性を更新する。トップ表は各model familyの最新リリースを示す。
@@ -42,7 +42,7 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 | 2026-10-15 | Nemotron 3.5 Super VL | NVIDIA Nemotron | 総120B / 有効12Bのopen-weight視覚言語MoE。Mamba-2 / TransformerとC-RADIOを組み合わせ、最大1M context。 | [NVIDIA Nemotron系](nvidia.md) |
 | 2026-10-15 | Nemotron 3.5 Bolt 74B-A9B 24GB | NVIDIA Nemotron | 総74B / 有効9Bの視覚言語MoE。24GB GPU向け設計値と約25GBの配布ファイル表示を区別する。 | [NVIDIA Nemotron系](nvidia.md) |
 | 2026-09-20 | Step 5 Preview | StepFun | 総600B / 有効27Bの疎MoE。公式BF16重みのrepo commitは2026-09-20、最大1M context。画像入力は仕様表に記載。 | [StepFun系](stepfun.md) |
-| 2026-08-26 | GLM-5.3-Flash | GLM | 総320B / 約18B activeのnative multimodal MoE。sparse / linear attentionを組み合わせ、長context時のattention計算とKV増加を抑える設計。 | [GLM系](glm.md) |
+| 2026-11-23 | GLM-5.4 | GLM | GLM系初のLoop Transformer flagship。750B規模baseの28層を2回反復しparameter増なしで推論深度を増やす。hybrid KV cacheとsparse attention index再利用で1M context対応。GLM Coding Planで提供。 | [GLM系](glm.md) |
 | 2026-10-17 | DeepSeek-V4.1-Flash-1017 | DeepSeek | 10月17日に公式更新されたAPI snapshot。APIのmodel IDは`deepseek-flash`のまま。公式公表ベンチマークはタスクごとの条件付き比較で、hardware実測tokens/sの倍率とは区別する。 | [DeepSeek系](deepseek.md) |
 | 2026-08-12 | Grok 4.6 | Grok | 長時間agent、coding、visual / interactive taskを重点にした上位model。最大500K-token context。 | [Grok系](grok.md) |
 | 2026-06-03 | Gemma 4 12B Unified | Gemma | Gemma 4世代の12B級open-weight Unified model。大規模MoEよりweight規模が小さく、量子化時のローカル利用も検討しやすい帯域。 | [Gemma系](gemma.md) |

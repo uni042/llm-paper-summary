@@ -100,6 +100,17 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-11-25 — llama.cpp b12683〜b12703（開発ビルド）
+
+b12682の続き。対象期間の開発ビルドはb12683からb12703までで、いずれもpre-releaseの開発ビルドであり正式版ではない。番号の範囲であって全番号にreleaseがある意味ではない。重要変更だけを拾う。
+
+- **b12686: serverで skip されていた prompt cache lookup を修正**（PR #28992）。prompt cacheのlookupを slot scheduler の `select()` へ移し、cache更新の判断をplan側へ寄せた。prefix cache再利用の正確性に関わる修正で、速度倍率は公表されていない。
+- **b12683: rpcで request tensor 用の context を server 側で1つに再利用**（PR #32896）。RPC経路のcontext生成 overhead削減。
+- **b12690: HIPで VEGA20 向けに Q4_K（N8）と NVFP4（N7-8）で MMVQ の代わりに MMQ を使用**（PR #32805）。ROCm／旧世代AMD GPU向けのkernel選択変更。
+- **b12703: CUDAで RMS_NORM・MUL・MROPE/IMROPE を融合したkernelを追加し、block sizeを自動調整**。中間memory trafficとkernel launchの削減が狙い。速度倍率は一次資料にないため記録しない。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b12686 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12683 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12690 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12703
+
 ## 2026-11-24 — llama.cpp b12655〜b12682（開発ビルド）
 
 b12651の続き。対象期間の開発ビルドはb12655からb12682（2026-11-24 22:11 UTC）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。なお b12652〜b12654 / b12656 / b12660 / b12661 / b12663〜b12666 / b12672 / b12673 / b12677 は Releases API の一覧にないため、この範囲表記は「番号の範囲」であって全番号にreleaseがある意味ではない。重要変更だけを拾う。

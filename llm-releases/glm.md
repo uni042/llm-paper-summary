@@ -6,6 +6,7 @@ GLM系では長文脈・agent用途の説明に加え、MoEモデルでは**総�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-11-23 | GLM-5.4 | GLM系初のLoop Transformer flagship。750B規模のGLM-5 baseの28層を2回反復（weight共有）し、parameter数を増やさず推論深度を増やす。per-token gateによる段階的書戻し（gated progressive updates）、loop間でsparse KVを共有し第2 loopは独立sliding windowだけを追加するhybrid KV cache、sparse attention indexの再利用で、1M contextでもKV増加を抑制。公式docsでは2T〜3T級model相当の知能を主張（自社評価）。thinking mode対応、GLM Coding Plan全ユーザーへ提供（週次quotaはGLM-5.3比1.5倍）、生成速度はoff-peak最大200 tokens/s・peak時70〜80 tokens/s（Z.ai公表値）。既知の制限は長時間の「marathon thinking」。公開API・重みは公式docs時点で未確認。 | https://docs.z.ai/guides/llm/glm-5.4 |
 | 2026-08-26 | GLM-5.3-Flash | GLM-5系初のnative multimodal Flashモデル。総約320B / tokenあたり約18B activeのMoE。通常attentionだけでなくsparse / linear attentionを組み合わせ、長contextで全過去tokenへ毎回dense attentionするcostとKV cache増加を抑える設計。 | https://autoclaw.z.ai/blog/model/glm-5.3-flash/ |
 | 2026-08 | GLM-5.3 | 大規模software engineering、large codebase、長時間エージェント処理（long-horizon agentic work）向けのflagship更新。複数file・tool・stepをまたぐtaskを主用途として記録。 | https://autoclaw.z.ai/models/ |
 | 2026-06 | GLM-5.2 | 最大1M-token contextを備え、大規模project、長文document、複数stageのdevelopment taskを重視したflagship更新。長contextは入力可能量を示す値であり、実際のmemory / latencyは利用するruntimeやcache方式にも依存する。 | https://autoclaw.z.ai/models/ |
