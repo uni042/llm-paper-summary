@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T22:28:46+00:00",
-  "record_count": 9386,
+  "updated_at": "2026-11-25T22:32:41+00:00",
+  "record_count": 9391,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -143704,6 +143704,81 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Visual Para-Thinker: Divide-and-Conquer Reasoning for Visual Comprehension"
+    },
+    "arXiv:2603.10335": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.10335",
+      "identity_tokens": [
+        "arXiv:2603.10335"
+      ],
+      "reason": "大規模マルチモーダルモデルのCoT長を事前に推定するFuel Gaugeは、予測不能な推論長によるメモリ断片化と資源非効率への対処を動機とするが、成果物は長さ推定器であり実行系の実装ではない。",
+      "first_checked_at": "2026-11-25T22:32:39+00:00",
+      "last_checked_at": "2026-11-25T22:32:39+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fuel Gauge: Estimating Chain-of-Thought Length Ahead of Time in Large Multimodal Models"
+    },
+    "arXiv:2605.12160": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12160",
+      "identity_tokens": [
+        "arXiv:2605.12160"
+      ],
+      "reason": "指示入力中に部分情報でロボット行動を先行実行するPremoverはVLAポリシーの待ち時間を隠す推論タイミングの工夫だが、対象はロボット制御でありLLMサービングの機構ではない。",
+      "first_checked_at": "2026-11-25T22:32:40+00:00",
+      "last_checked_at": "2026-11-25T22:32:40+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Premover: Fast Vision-Language-Action Control via Early Execution During Instruction Delivery"
+    },
+    "arXiv:2606.29445": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.29445",
+      "identity_tokens": [
+        "arXiv:2606.29445"
+      ],
+      "reason": "VideoQAと動画誘導型エージェントタスクを汎化キーフレーム抽出で橋渡しする研究は、MLLMへの入力削減として関連するが、主眼は動画から学ぶ能力の評価と向上である。",
+      "first_checked_at": "2026-11-25T22:32:40+00:00",
+      "last_checked_at": "2026-11-25T22:32:40+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bridging VideoQA and Video-Guided Agentic Tasks via Generalized Keyframe Extraction"
+    },
+    "arXiv:2607.28642": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.28642",
+      "identity_tokens": [
+        "arXiv:2607.28642"
+      ],
+      "reason": "有界文脈で再利用可能な中間インタフェースを構築し履歴を置き換えるThinkResetは、長CoTの文脈溢れへの対処として推論時文脈管理と関連するが、主眼は推論の継続能力である。",
+      "first_checked_at": "2026-11-25T22:32:40+00:00",
+      "last_checked_at": "2026-11-25T22:32:40+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ThinkReset: Learnable Intermediate Interface Construction for Bounded-Context Long-Horizon Reasoning"
+    },
+    "arXiv:2609.25560": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25560",
+      "identity_tokens": [
+        "arXiv:2609.25560"
+      ],
+      "reason": "大規模モデルのパラメータが複数xPUに分散する際のホスト間相互接続Co-Fabricは、分散した大規模モデル実行の通信基盤として関連するが、推論・学習の区別や具体的な推論機構は要旨で明確でない。",
+      "first_checked_at": "2026-11-25T22:32:40+00:00",
+      "last_checked_at": "2026-11-25T22:32:40+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Co-Fabric: Breaking Host-Domain Boundaries for Unified xPU Interconnection"
     }
   }
 }
