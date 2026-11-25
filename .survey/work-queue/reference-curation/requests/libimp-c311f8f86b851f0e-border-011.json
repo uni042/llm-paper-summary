@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c311f8f86b851f0e-border-011",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2303.07585",
+  "reason": "本論文はBERTの第1層の注意和でトークンを選別し入力長を約6%まで短縮して分類精度を保つ手法を示すが、対象はBERTによるテキスト分類というエンコーダ時代の入力削減であり、LLMのプロンプト圧縮や推論システムとしての評価にはつながっていないため境界とする。",
+  "title": "Input-length-shortening and text generation via attention values",
+  "identity_tokens": [
+    "arXiv:2303.07585"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c311f8f86b85",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
