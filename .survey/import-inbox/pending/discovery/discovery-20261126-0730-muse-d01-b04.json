@@ -1,0 +1,487 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d01-b04",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 28,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.09944",
+      "identity_tokens": [
+        "arXiv:2610.09944"
+      ],
+      "title": "AgentTime: Can Agents Estimate and Control Their Own Runtime?",
+      "reason": "エージェントが要求された作業時間を見積もり制御できるかを測るベンチマークAgentTimeの提案であり、対象はエージェントの時間認識能力の評価であって、LLM推論システムへの直接の技術的貢献は確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2610.09944",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 173
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.13370",
+      "identity_tokens": [
+        "arXiv:2610.13370"
+      ],
+      "title": "Overcoming Data Imbalances with Expert Selection Biases",
+      "reason": "事前学習データのカテゴリ不均衡で少数カテゴリが一部の専門家へ集中する問題に対し、専門家選択バイアスで対処する研究であり、対象はMoEの事前学習という学習過程であって、推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.13370",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 174
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.17643",
+      "identity_tokens": [
+        "arXiv:2610.17643"
+      ],
+      "title": "When Should Enterprise Policy Decisions Be Learned, and When Should They Be Reasoned?",
+      "reason": "企業ポリシー下でエージェントが行動を決める際に、学習による決定と推論による決定のどちらが適するかを実証的に比較する研究であり、対象は意思決定方式の経験的検討であって、推論システムへの直接の貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.17643",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 175
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.22071",
+      "identity_tokens": [
+        "arXiv:2610.22071"
+      ],
+      "title": "The Right Byte First: How UTF-16 Helps Multilingual Boundary Prediction",
+      "reason": "階層バイトレベル言語モデルの境界予測器が符号化方式に依存する問題に対し、UTF-16の利用が多言語境界予測を助けることを示す研究であり、トークン化周辺の設計論ではあるが推論システムの実行機構への直接の貢献は薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2610.22071",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 176
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.23225",
+      "identity_tokens": [
+        "arXiv:2610.23225"
+      ],
+      "title": "ReLaDrift: Recurrent Language Generation via Drifting for Test-Time Scaling",
+      "reason": "単一関数評価で標本を生成するドリフティングモデルに再帰的な反復改良を加え、高速な並列言語生成とテスト時スケーリングを両立させるReLaDriftの提案であり、生成方式の提案ではあるが対象は生成モデリング自体であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2610.23225",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 177
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.24359",
+      "identity_tokens": [
+        "arXiv:2610.24359"
+      ],
+      "title": "Can Agents Keep Secrets They Were Never Told? Benchmarking Latent Privacy Risks Across Sessions with MemJoin",
+      "reason": "セッションをまたぐ長期メモリを持つエージェントが、教えられていない秘密を漏らしうる潜在的プライバシーリスクを測るベンチマークMemJoinの提案であり、対象はプライバシーの能力評価であって推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.24359",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 178
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.25625",
+      "identity_tokens": [
+        "arXiv:2610.25625"
+      ],
+      "title": "Zephyrus-R1: Agentic Reinforcement Learning for Weather Reporting",
+      "reason": "タイトル自体が、エージェント強化学習を気象報告へ適用するZephyrus-R1の研究であることを明示しており、気象報告という異分野応用が明白であるため、要旨を確認せずタイトル段階で対象外と判断した。",
+      "source_url": "https://arxiv.org/abs/2610.25625",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 179
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.30188",
+      "identity_tokens": [
+        "arXiv:2610.30188"
+      ],
+      "title": "Agentic Verified Optimization of Real-World Software",
+      "reason": "実世界のソフトウェア最適化をコーディングエージェントに行わせ、等価性の機械検証可能な証明を併せて生成させる枠組みの研究であり、対象はプログラム最適化の検証であって、LLM推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.30188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 180
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.36437",
+      "identity_tokens": [
+        "arXiv:2610.36437"
+      ],
+      "title": "CONCUR: Concordant Auxiliary Rewards for Multi-Task, Multi-Reward Reinforcement Learning",
+      "reason": "多タスク多報酬の強化学習で、主報酬にゲートされる補助報酬が順序を逆転させる問題に対処するCONCURの提案であり、対象はLLMの強化学習という学習手法であって、推論システムの実行機構への直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.36437",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 181
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.07477",
+      "identity_tokens": [
+        "arXiv:2611.07477"
+      ],
+      "title": "KOSMOS: Self-scheduling Persistent Kernels for Communication-Compute Overlap",
+      "reason": "テンソル・系列並列と専門家並列で集団通信がクリティカルパスになる問題に対し、消費者需要で順序付けされたキューにより作業グループが通信と計算を自己スケジューリングする永続カーネルライブラリKOSMOSの提案であり、分散推論カーネルへの直接の貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2611.07477",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 182
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TKDE.2023.3324012",
+      "identity_tokens": [
+        "DOI:10.1109/TKDE.2023.3324012"
+      ],
+      "title": "Neural Abstractive Summarization for Long Text and Multiple Tables",
+      "reason": "長文と複数の表を含む報告書文書を対象に、テキストと表の双方から重要情報を拾う抽象型要約の研究であり、対象は文書要約という応用タスクであって、LLM推論システムへの直接の技術的貢献は要旨から確認できない。",
+      "source_url": "https://doi.org/10.1109/TKDE.2023.3324012",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 183
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.00276",
+      "identity_tokens": [
+        "arXiv:2312.00276"
+      ],
+      "title": "Metalearning Continual Learning Algorithms",
+      "reason": "継続学習の壊滅的忘却に対し、自己参照型ニューラルネットワークに独自の文脈内継続メタ学習アルゴリズムを学習させるAutomated Continual Learningの研究であり、学習理論・手法が対象で推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2312.00276",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 184
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11993",
+      "identity_tokens": [
+        "arXiv:2406.11993"
+      ],
+      "title": "Delay Embedding Theory of Neural Sequence Models",
+      "reason": "言語モデルが観測されていない意味を推定できる理由を、力学系の遅延埋め込み理論で説明し検証する研究であり、対象は系列モデルの能力に関する理論的分析であって、LLM推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2406.11993",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 185
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.04012",
+      "identity_tokens": [
+        "arXiv:2501.04012"
+      ],
+      "title": "FlexCache: Flexible Approximate Cache System for Video Diffusion",
+      "reason": "テキストから動画への拡散モデルが1本の生成に数分かかる問題に対し、柔軟な近似キャッシュシステムFlexCacheで計算を削減する研究であり、キャッシュによる推論高速化の発想は近いが対象は動画拡散モデルでありLLM推論ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2501.04012",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 186
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12685",
+      "identity_tokens": [
+        "arXiv:2505.12685"
+      ],
+      "title": "Mamba-Adaptor: State Space Model Adaptor for Visual Recognition",
+      "reason": "視覚認識へMambaを適用する際の因果計算や長距離忘却といった制約に対処するアダプタMamba-Adaptorの研究であり、対象は画像認識という応用分野であって、LLM推論システムへの直接の技術的貢献は確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2505.12685",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 187
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.09701",
+      "identity_tokens": [
+        "arXiv:2307.09701"
+      ],
+      "title": "Efficiency Pentathlon: A Standardized Arena for Efficiency Evaluation",
+      "reason": "NLPシステムの効率を標準化された競技場で評価するEfficiency Pentathlonの提案であり、ハードウェア差やFLOPsと実性能の乖離といった効率評価の実務的課題を扱う点は推論効率の計測に関わるが、評価基盤の提供が主眼であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2307.09701",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 188
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.11464",
+      "identity_tokens": [
+        "arXiv:2408.11464"
+      ],
+      "title": "MambaOcc: Visual State Space Model for BEV-based Occupancy Prediction with Local Adaptive Reordering",
+      "reason": "自動運転の占有予測に局所適応的な並べ替えを持つ視覚状態空間モデルMambaOccを用いる研究であり、対象は自動運転の知覚という応用分野であって、LLM推論システムへの直接の技術的貢献は要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2408.11464",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 189
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.13524",
+      "identity_tokens": [
+        "arXiv:2505.13524"
+      ],
+      "title": "Quantum-Enhanced Channel Mixing in RWKV Models for Time Series Forecasting",
+      "reason": "時系列予測のためにRWKVのフィードフォワード部を変分量子回路で置き換えるQuantumRWKVの研究であり、対象は時系列予測という応用と量子古典ハイブリッドの表現力であって、LLM推論システムへの直接の貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2505.13524",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 190
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13261",
+      "identity_tokens": [
+        "arXiv:2511.13261"
+      ],
+      "title": "Building Egocentric Procedural AI Assistant: Methods, Benchmarks, and Challenges",
+      "reason": "一人称視点の手続き支援AIアシスタントについて、課題・ベンチマーク・課題を整理する研究であり、対象はエゴセントリック知覚に基づく支援システムの展望であって、LLM推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2511.13261",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 191
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2025.10.14.682378",
+      "identity_tokens": [
+        "DOI:10.1101/2025.10.14.682378"
+      ],
+      "title": "GeneJepa: A Predictive World Model of the Transcriptome",
+      "reason": "タイトル自体が、トランスクリプトームの予測的世界モデルGeneJepaを提案する研究であることを明示しており、生物学・遺伝子発現という異分野応用が明白であるため、要旨を確認せずタイトル段階で対象外と判断した。",
+      "source_url": "https://doi.org/10.1101/2025.10.14.682378",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 192
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2403.09040",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2403.09040"
+      ],
+      "title": "RAGGED: Towards Informed Design of Retrieval Augmented Generation Systems",
+      "reason": "検索拡張生成の有効性が構成に大きく依存する問題に対し、検索器と読み手の組合せや検索深さを体系的に評価するRAGGEDの枠組みであり、RAGシステムの設計指針には関わるが評価・分析が主眼で推論実行機構の提案ではないため境界とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2403.09040",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 193
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.06245",
+      "identity_tokens": [
+        "arXiv:2409.06245"
+      ],
+      "title": "A Two-Stage Band-Split Mamba-2 Network For Music Separation",
+      "reason": "音楽ソース分離に二段階バンド分割Mamba-2ネットワークを適用する研究であり、対象は音楽分離という音声応用分野の精度であって、LLM推論システムへの直接の技術的貢献は要旨から確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2409.06245",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 194
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.12423",
+      "identity_tokens": [
+        "arXiv:2412.12423"
+      ],
+      "title": "GG-SSMs: Graph-Generating State Space Models",
+      "reason": "固定された一次元走査では捉えられない非局所相互作用を扱うため、グラフを生成する状態空間モデルGG-SSMsを提案する研究であり、対象は画像や時系列のモデリングであって、LLM推論システムへの直接の貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2412.12423",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 195
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.04632",
+      "identity_tokens": [
+        "arXiv:2508.04632"
+      ],
+      "title": "IFDECORATOR: Wrapping Instruction Following Reinforcement Learning with Verifiable Rewards",
+      "reason": "検証可能報酬による強化学習の学習非効率と過最適化に対し、難易度評価を組み込むIFDecoratorの枠組みであり、対象は指示追従能力の学習手法であって、推論システムの実行機構への直接の技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2508.04632",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 196
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.03142",
+      "identity_tokens": [
+        "arXiv:2510.03142"
+      ],
+      "title": "MM-Nav: Multi-View VLA Model for Robust Visual Navigation via Multi-Expert Learning",
+      "reason": "合成専門家データから多視点の視覚言語行動モデルを学習して視覚ナビゲーションを頑健にするMM-Navの研究であり、対象はロボットナビゲーションという応用分野であって、LLM推論システムへの直接の貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2510.03142",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 197
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TIM.2025.3580791",
+      "identity_tokens": [
+        "DOI:10.1109/TIM.2025.3580791"
+      ],
+      "title": "Cable Overheating Localization Using Gas Sensor Array With M-Mamba Network",
+      "reason": "低圧ケーブルの過熱位置特定を、ガスセンサアレイとM-Mambaネットワークで実現する研究であり、対象は電力設備の監視という産業応用であって、LLM推論システムへの直接の技術的貢献は要旨から確認できないため対象外とする。",
+      "source_url": "https://doi.org/10.1109/TIM.2025.3580791",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 198
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app11188554",
+      "identity_tokens": [
+        "DOI:10.3390/app11188554"
+      ],
+      "title": "Revisiting Text Guide, a Truncation Method for Long Text Classification",
+      "reason": "長文テキスト分類でモデルの長さ制限を超える入力を切り捨てる手法Text Guideを再検討する研究であり、対象はテキスト分類の前処理という応用課題であって、LLM推論システムへの直接の技術的貢献は確認できない。",
+      "source_url": "https://doi.org/10.3390/app11188554",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 199
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.16824",
+      "identity_tokens": [
+        "arXiv:2409.16824"
+      ],
+      "title": "Uncertainty Representations in State-Space Layers for Deep Reinforcement Learning under Partial Observability",
+      "reason": "部分観測下の深層強化学習で、隠れ状態の不確実性を内部表現に持たない系列モデルの限界に対しカルマン的な状態空間層を提案する研究であり、対象は強化学習の表現学習であってLLM推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2409.16824",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 200
+    }
+  ]
+}
