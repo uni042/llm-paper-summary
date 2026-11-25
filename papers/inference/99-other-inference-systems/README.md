@@ -2092,6 +2092,10 @@
   実装：[✓](https://github.com/CLAIRE-Labo/RAT) ・ リポジトリ内被引用：1  
   全トークンに対するソフトマックス注意（softmax 注意機構）は、過去の任意の位置を直接参照できる一方、長文で注意演算量と鍵・値キャッシュ（KV キャッシュ）が増える。また、3072トークンの入力から1024トークンを生成する最大生成処理量では、1.3Bモデルで通常注意3152に対しRAT 31170トークン/秒、約10.2倍である。
 
+- **2025-07 · [Investigating Structural Pruning and Recovery Techniques for Compressing Multimodal Large Language Models: An Empirical Study](2025-2507.20749-investigating-structural-pruning-and-recovery-techniques-for-compressing.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  言語バックボーンの重みと演算が大きな割合を占めるため、モデルの一部を実際に削除できれば、量子化とは別の経路でメモリ・計算負担を下げられる。15%削減・回復なしのLLaVAでは幅方向の平均指標57.79、層方向46.09であり、元モデル62.28からの低下は幅方向の方が小さい。
+
 - **2025-06 · [SparseSSM: Efficient Selective Structured State Space Models Can Be Pruned in One-Shot](2025-2506.09613-sparsessm-efficient-selective-structured-state-space-models-can-be-prune.md)**  
   実装：[✓](https://github.com/CFinTech/SparseSSM) ・ リポジトリ内被引用：1  
   入力依存の離散化係数と、系列の全時刻で使い回す状態遷移パラメータが組み合わさるため、通常の線形層向け剪定手法を状態遷移重みにそのまま適用すると、削除してよい状態を見誤りやすい。正式版の要旨は、SSM重み50%を微調整なしで削除した際の品質低下が「限定的」であると説明する。
@@ -2379,10 +2383,6 @@
 - **2025-07 · [Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval](2025-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-ca.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の多段質問応答を、モンテカルロ木探索による段ごとの探索、段ごとに4千トークンぶんの重要KVを取り出す動的検索、自動ラベル学習の過程報酬モデルで解き、8Bモデルで70Bモデルの直接応答を上回るF1を示した枠組み。
-
-- **2025-07 · [Investigating Structural Pruning and Recovery Techniques for Compressing Multimodal Large Language Models: An Empirical Study](2025-2507.20749-investigating-structural-pruning-and-recovery-techniques-for-compressing.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  言語バックボーンの重みと演算が大きな割合を占めるため、モデルの一部を実際に削除できれば、量子化とは別の経路でメモリ・計算負担を下げられる。15%削減・回復なしのLLaVAでは幅方向の平均指標57.79、層方向46.09であり、元モデル62.28からの低下は幅方向の方が小さい。
 
 - **2025-07 · [GeLaCo: An Evolutionary Approach to Layer Compression](2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

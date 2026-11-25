@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:08:58+00:00",
+  "generated_at": "2026-11-25T04:13:16+00:00",
   "paper_count": 5489,
-  "edge_count": 69589,
+  "edge_count": 69586,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 30,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -169,7 +169,7 @@
     "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md": 12,
     "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md": 86,
     "papers/inference/02-adaptive-expert-computation-compression/2023-2310.09832-merging-experts-into-one-improving-computational-efficiency-of-mixture-o.md": 12,
-    "papers/inference/02-adaptive-expert-computation-compression/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md": 35,
+    "papers/inference/02-adaptive-expert-computation-compression/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md": 34,
     "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md": 141,
     "papers/inference/02-adaptive-expert-computation-compression/2024-2403.07652-harder-tasks-need-more-experts-dynamic-routing-in-moe-models.md": 21,
     "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md": 18,
@@ -1106,14 +1106,14 @@
     "papers/inference/06-moe-quantization-compression/2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.md": 0,
     "papers/inference/06-moe-quantization-compression/2026-2610.30779-proquant-preserving-expert-quality-over-quantity-in-ultra-low-bit-quanti.md": 0,
     "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md": 315,
-    "papers/inference/07-kv-cache-optimization-compression/2023-2305.13245-gqa.md": 435,
+    "papers/inference/07-kv-cache-optimization-compression/2023-2305.13245-gqa.md": 434,
     "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md": 278,
     "papers/inference/07-kv-cache-optimization-compression/2023-2306.07174-augmenting-language-models-with-long-term-memory.md": 15,
     "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md": 821,
     "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md": 890,
     "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md": 292,
     "papers/inference/07-kv-cache-optimization-compression/2023-2312.03414-compressed-context-memory-for-online-language-model-interaction.md": 19,
-    "papers/inference/07-kv-cache-optimization-compression/2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md": 58,
+    "papers/inference/07-kv-cache-optimization-compression/2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md": 59,
     "papers/inference/07-kv-cache-optimization-compression/2024-2401.03462-long-context-compression-with-activation-beacon.md": 43,
     "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md": 440,
     "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md": 53,
@@ -1810,7 +1810,7 @@
     "papers/inference/08-edge-on-device-llm-systems/2020-2011.14203-edgebert-sentence-level-energy-optimizations-for-latency-aware-multi-tas.md": 20,
     "papers/inference/08-edge-on-device-llm-systems/2021-2107.06419-flat-an-optimized-dataflow-for-mitigating-attention-performance-bottlene.md": 4,
     "papers/inference/08-edge-on-device-llm-systems/2022-2203.11086-overcoming-oscillations-in-quantization-aware-training.md": 9,
-    "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md": 60,
+    "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md": 59,
     "papers/inference/08-edge-on-device-llm-systems/2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.md": 5,
     "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md": 69,
     "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md": 37,
@@ -1974,7 +1974,7 @@
     "papers/inference/09-kernel-runtime-compilation/2024-2405.10480-lean-attention-hardware-aware-scalable-attention-mechanism.md": 16,
     "papers/inference/09-kernel-runtime-compilation/2024-2405.14597-integer-scale-a-free-lunch-for-faster-fine-grained-quantization-of-llms.md": 1,
     "papers/inference/09-kernel-runtime-compilation/2024-2405.17233-claq-pushing-the-limits-of-low-bit-post-training-quantization-for-llms.md": 0,
-    "papers/inference/09-kernel-runtime-compilation/2024-2406.00030-large-language-model-pruning.md": 23,
+    "papers/inference/09-kernel-runtime-compilation/2024-2406.00030-large-language-model-pruning.md": 28,
     "papers/inference/09-kernel-runtime-compilation/2024-2406.05981-shiftaddllm-accelerating-pretrained-llms-via-post-training-multiplicatio.md": 10,
     "papers/inference/09-kernel-runtime-compilation/2024-2406.06858-flux-fast-software-based-communication-overlap-on-gpus-through-kernel-fu.md": 32,
     "papers/inference/09-kernel-runtime-compilation/2024-2406.11016-optimized-speculative-sampling-for-gpu-hardware-accelerators.md": 2,
@@ -2000,7 +2000,7 @@
     "papers/inference/09-kernel-runtime-compilation/2025-2501.01005-flashinfer-attention-engine-serving.md": 238,
     "papers/inference/09-kernel-runtime-compilation/2025-2502.01659-longer-attention-span-increasing-transformer-context-length-with-sparse-.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2025-2502.12082-adasplash-adaptive-sparse-flash-attention.md": 0,
-    "papers/inference/09-kernel-runtime-compilation/2025-2502.12594-paser-post-training-data-selection-for-efficient-pruned-large-language-m.md": 2,
+    "papers/inference/09-kernel-runtime-compilation/2025-2502.12594-paser-post-training-data-selection-for-efficient-pruned-large-language-m.md": 1,
     "papers/inference/09-kernel-runtime-compilation/2025-2502.18403-kitsune-enabling-dataflow-execution-on-gpus-with-spatial-pipelines.md": 2,
     "papers/inference/09-kernel-runtime-compilation/2025-2503.01253-nm-spmm-accelerating-matrix-multiplication-using-n-m-sparsity-with-gpgpu.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2025-2503.10725-samoyeds-accelerating-moe-models-with-structured-sparsity-leveraging-spa.md": 1,
@@ -3711,7 +3711,7 @@
     "papers/inference/16-weight-quantization-compression/2021-2101.01321-i-bert-integer-only-bert-quantization.md": 60,
     "papers/inference/16-weight-quantization-compression/2021-2102.08124-accelerated-sparse-neural-training-a-provable-and-efficient-method-to-fi.md": 18,
     "papers/inference/16-weight-quantization-compression/2021-2109.04838-block-pruning-for-faster-transformers.md": 43,
-    "papers/inference/16-weight-quantization-compression/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md": 225,
+    "papers/inference/16-weight-quantization-compression/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md": 224,
     "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md": 345,
     "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md": 840,
     "papers/inference/16-weight-quantization-compression/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md": 737,
@@ -3749,7 +3749,7 @@
     "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md": 54,
     "papers/inference/16-weight-quantization-compression/2024-2401.02938-fast-and-effective-weight-update-for-pruned-large-language-models.md": 6,
     "papers/inference/16-weight-quantization-compression/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md": 139,
-    "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md": 168,
+    "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md": 167,
     "papers/inference/16-weight-quantization-compression/2024-2402.02446-lqer-low-rank-quantization-error-reconstruction-for-llms.md": 18,
     "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md": 78,
     "papers/inference/16-weight-quantization-compression/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md": 231,
@@ -4148,7 +4148,7 @@
     "papers/inference/18-pipeline-native-cpu-inference/2026-2608.23841-pipeline-native-transformers.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md": 138,
     "papers/inference/19-inference-evaluation-benchmarking/2021-2111.09714-you-only-sample-almost-once-linear-cost-self-attention-via-bernoulli-sam.md": 1,
-    "papers/inference/19-inference-evaluation-benchmarking/2022-2202.07105-a-survey-on-model-compression-and-acceleration-for-pretrained-language-m.md": 9,
+    "papers/inference/19-inference-evaluation-benchmarking/2022-2202.07105-a-survey-on-model-compression-and-acceleration-for-pretrained-language-m.md": 8,
     "papers/inference/19-inference-evaluation-benchmarking/2022-2208.00579-momentum-transformer-closing-the-performance-gap-between-self-attention-.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2023-2306.01768-a-quantitative-review-on-language-model-efficiency-research.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md": 23,
@@ -4235,7 +4235,7 @@
     "papers/inference/19-inference-evaluation-benchmarking/2025-73146b754a26-firewall-routing-blocking-leads-to-better-hybrid-inference-for-llms.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2025-a08ef62fbe5d-analyzing-and-modeling-llm-response-lengths-with-extreme-value-theory-an.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2025-b174259d82b3-quantization-methods-for-energy-efficient-llm-deployments.md": 0,
-    "papers/inference/19-inference-evaluation-benchmarking/2025-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md": 6,
+    "papers/inference/19-inference-evaluation-benchmarking/2025-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md": 7,
     "papers/inference/19-inference-evaluation-benchmarking/2025-d9e213765995-accelerating-rag-systems-a-performance-oriented-systematic-mapping.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2025-f103beecee83-resource-efficient-algorithms-and-systems-of-foundation-models-a-survey.md": 4,
     "papers/inference/19-inference-evaluation-benchmarking/2026-1b6cd9d3f031-benchmarking-large-language-model-inference-on-limited-resource-edge-sys.md": 0,
@@ -4493,7 +4493,7 @@
     "papers/inference/21-static-structured-pruning/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md": 89,
     "papers/inference/21-static-structured-pruning/2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md": 28,
     "papers/inference/21-static-structured-pruning/2021-0028045aea9f-dap-bert-differentiable-architecture-pruning-of-bert.md": 0,
-    "papers/inference/21-static-structured-pruning/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md": 52,
+    "papers/inference/21-static-structured-pruning/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md": 51,
     "papers/inference/21-static-structured-pruning/2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md": 46,
     "papers/inference/21-static-structured-pruning/2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.md": 0,
     "papers/inference/21-static-structured-pruning/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md": 325,
@@ -4507,7 +4507,7 @@
     "papers/inference/21-static-structured-pruning/2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large.md": 2,
     "papers/inference/21-static-structured-pruning/2024-2402.11700-why-lift-so-heavy-slimming-large-language-models-by-cutting-off-the-laye.md": 2,
-    "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md": 121,
+    "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md": 116,
     "papers/inference/21-static-structured-pruning/2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grai.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2405.05957-openba-v2-reaching-77-3-high-compression-ratio-with-fast-multi-stage-pru.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2406.00061-stat-shrinking-transformers-after-training.md": 2,
@@ -4516,7 +4516,7 @@
     "papers/inference/21-static-structured-pruning/2024-2407.05690-pruning-large-language-models-to-intra-module-low-rank-architecture-with.md": 3,
     "papers/inference/21-static-structured-pruning/2024-2407.15516-attention-is-all-you-need-but-you-don-t-need-all-of-it-for-inference-of-.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2409.13199-cfsp-an-efficient-structured-pruning-framework-for-llms-with-coarse-to-f.md": 6,
-    "papers/inference/21-static-structured-pruning/2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and.md": 1,
+    "papers/inference/21-static-structured-pruning/2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and.md": 2,
     "papers/inference/21-static-structured-pruning/2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.md": 2,
     "papers/inference/21-static-structured-pruning/2024-2412.15127-adaptive-pruning-for-large-language-models-with-structural-importance-aw.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2412.15750-extracting-interpretable-task-specific-circuits-from-large-language-mode.md": 0,
@@ -4525,7 +4525,7 @@
     "papers/inference/21-static-structured-pruning/2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.md": 0,
     "papers/inference/21-static-structured-pruning/2025-2502.14008-maskprune-mask-based-llm-pruning-for-layer-wise-uniform-structures.md": 0,
     "papers/inference/21-static-structured-pruning/2025-2503.06184-sample-aware-adaptive-structured-pruning-for-large-language-models.md": 0,
-    "papers/inference/21-static-structured-pruning/2025-2503.09657-t-r-the-pruner-structural-pruning-llms-via-global-sparsity-distribution-.md": 5,
+    "papers/inference/21-static-structured-pruning/2025-2503.09657-t-r-the-pruner-structural-pruning-llms-via-global-sparsity-distribution-.md": 6,
     "papers/inference/21-static-structured-pruning/2025-2504.03794-entropy-based-block-pruning-for-efficient-large-language-models.md": 1,
     "papers/inference/21-static-structured-pruning/2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.md": 1,
     "papers/inference/21-static-structured-pruning/2025-2505.03373-spap-structured-pruning-via-alternating-optimization-and-penalty-methods.md": 0,
@@ -4920,7 +4920,7 @@
     "papers/inference/99-other-inference-systems/2025-2507.17417-a-comprehensive-evaluation-on-quantization-techniques-for-large-language.md": 0,
     "papers/inference/99-other-inference-systems/2025-2507.19353-smooth-reading-bridging-the-gap-of-recurrent-llm-to-self-attention-llm-o.md": 0,
     "papers/inference/99-other-inference-systems/2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md": 30,
-    "papers/inference/99-other-inference-systems/2025-2507.20749-investigating-structural-pruning-and-recovery-techniques-for-compressing.md": 0,
+    "papers/inference/99-other-inference-systems/2025-2507.20749-investigating-structural-pruning-and-recovery-techniques-for-compressing.md": 1,
     "papers/inference/99-other-inference-systems/2025-2508.05282-not-all-errors-are-created-equal-ascot-addresses-late-stage-fragility-in.md": 1,
     "papers/inference/99-other-inference-systems/2025-2508.08435-fast-weight-programming-and-linear-transformers-from-machine-learning-to.md": 0,
     "papers/inference/99-other-inference-systems/2025-2508.08448-towards-efficient-and-practical-gpu-multitasking-in-the-era-of-llm.md": 5,
@@ -75209,6 +75209,7 @@
     "papers/inference/21-static-structured-pruning/2025-2505.18232-two-stage-regularization-based-structured-pruning-for-llms.md": [
       "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md",
       "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2406.00030-large-language-model-pruning.md",
       "papers/inference/16-weight-quantization-compression/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
       "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
       "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
@@ -75256,7 +75257,6 @@
       "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
       "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
       "papers/inference/21-static-structured-pruning/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
-      "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
       "papers/inference/99-other-inference-systems/2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md"
     ],
     "papers/inference/21-static-structured-pruning/2025-2506.08436-olica-efficient-structured-pruning-of-large-language-models-without-retr.md": [
@@ -75283,6 +75283,7 @@
       "papers/inference/21-static-structured-pruning/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
     ],
     "papers/inference/21-static-structured-pruning/2025-2506.20480-gptailor-large-language-model-pruning-through-layer-cutting-and-stitchin.md": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2406.00030-large-language-model-pruning.md",
       "papers/inference/16-weight-quantization-compression/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
       "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
       "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
@@ -75330,7 +75331,8 @@
       "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
     ],
     "papers/inference/21-static-structured-pruning/2025-2509.06836-compact-common-token-optimized-model-pruning-across-channels-and-tokens.md": [
-      "papers/inference/07-kv-cache-optimization-compression/2023-2305.13245-gqa.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2406.00030-large-language-model-pruning.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
       "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
       "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
@@ -75346,6 +75348,7 @@
       "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
     ],
     "papers/inference/21-static-structured-pruning/2025-2510.13832-entropy-meets-importance-a-unified-head-importance-entropy-score-for-sta.md": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2406.00030-large-language-model-pruning.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
       "papers/inference/16-weight-quantization-compression/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md",
       "papers/inference/16-weight-quantization-compression/2021-2109.04838-block-pruning-for-faster-transformers.md",
@@ -75456,7 +75459,8 @@
       "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md",
       "papers/inference/21-static-structured-pruning/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
       "papers/inference/21-static-structured-pruning/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
-      "papers/inference/21-static-structured-pruning/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md"
+      "papers/inference/21-static-structured-pruning/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md",
+      "papers/inference/21-static-structured-pruning/2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and.md"
     ],
     "papers/inference/21-static-structured-pruning/2026-2602.06127-compressing-llms-with-mop-mixture-of-pruners.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -75515,7 +75519,8 @@
       "papers/inference/21-static-structured-pruning/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
       "papers/inference/21-static-structured-pruning/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md",
       "papers/inference/21-static-structured-pruning/2023-2310.05015-compresso-structured-pruning-with-collaborative-prompting-learns-compact.md",
-      "papers/inference/21-static-structured-pruning/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      "papers/inference/21-static-structured-pruning/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+      "papers/inference/21-static-structured-pruning/2025-2503.09657-t-r-the-pruner-structural-pruning-llms-via-global-sparsity-distribution-.md"
     ],
     "papers/inference/21-static-structured-pruning/2026-2603.11881-bielik-minitron-7b-compressing-large-language-models-via-structured-prun.md": [
       "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
@@ -75523,7 +75528,6 @@
       "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
       "papers/inference/21-static-structured-pruning/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
       "papers/inference/21-static-structured-pruning/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
-      "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
       "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
     ],
     "papers/inference/21-static-structured-pruning/2026-2603.20275-understanding-pruning-regimes-in-vision-language-models-through-domain-a.md": [
@@ -75553,34 +75557,28 @@
       "papers/inference/21-static-structured-pruning/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md"
     ],
     "papers/inference/21-static-structured-pruning/2026-2604.19520-simdiff-depth-pruning-via-similarity-and-difference.md": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2406.00030-large-language-model-pruning.md",
       "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
       "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
       "papers/inference/16-weight-quantization-compression/2025-2505.23807-dlp-dynamic-layerwise-pruning-in-large-language-models.md",
       "papers/inference/21-static-structured-pruning/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
-      "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
       "papers/inference/21-static-structured-pruning/2025-2504.03794-entropy-based-block-pruning-for-efficient-large-language-models.md"
     ],
     "papers/inference/21-static-structured-pruning/2026-2604.24380-structural-pruning-of-large-vision-language-models-a-comprehensive-study.md": [
-      "papers/inference/02-adaptive-expert-computation-compression/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
       "papers/inference/04-conditional-computation/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
-      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
-      "papers/inference/09-kernel-runtime-compilation/2025-2502.12594-paser-post-training-data-selection-for-efficient-pruned-large-language-m.md",
-      "papers/inference/16-weight-quantization-compression/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
       "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
       "papers/inference/16-weight-quantization-compression/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
-      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
       "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
-      "papers/inference/19-inference-evaluation-benchmarking/2022-2202.07105-a-survey-on-model-compression-and-acceleration-for-pretrained-language-m.md",
       "papers/inference/21-static-structured-pruning/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
       "papers/inference/21-static-structured-pruning/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
       "papers/inference/21-static-structured-pruning/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
       "papers/inference/21-static-structured-pruning/2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md",
-      "papers/inference/21-static-structured-pruning/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md",
       "papers/inference/21-static-structured-pruning/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
       "papers/inference/21-static-structured-pruning/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
       "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
       "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md",
-      "papers/inference/99-other-inference-systems/2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md"
+      "papers/inference/99-other-inference-systems/2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2025-2507.20749-investigating-structural-pruning-and-recovery-techniques-for-compressing.md"
     ],
     "papers/inference/21-static-structured-pruning/2026-2605.09008-relative-kinetic-utility-calibrating-cross-layer-credit-for-global-struc.md": [
       "papers/inference/04-conditional-computation/2025-2501.02086-instruction-following-pruning-for-large-language-models.md",
@@ -75604,10 +75602,10 @@
       "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
       "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
       "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
       "papers/inference/21-static-structured-pruning/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
       "papers/inference/21-static-structured-pruning/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
-      "papers/inference/21-static-structured-pruning/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md",
-      "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      "papers/inference/21-static-structured-pruning/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md"
     ],
     "papers/inference/21-static-structured-pruning/2026-2605.18331-prune-update-and-trim-robust-structured-pruning-for-large-language-model.md": [
       "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
@@ -75617,7 +75615,6 @@
       "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
       "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md",
       "papers/inference/21-static-structured-pruning/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
-      "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
       "papers/inference/99-other-inference-systems/2025-2503.22451-stade-standard-deviation-as-a-pruning-metric.md"
     ],
     "papers/inference/21-static-structured-pruning/2026-2605.27786-locality-aware-redundancy-pruning-for-llm-depth-compression.md": [

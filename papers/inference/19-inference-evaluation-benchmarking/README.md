@@ -824,13 +824,13 @@
   実装：[✓](https://github.com/nanomaoli/llm_reproducibility) ・ リポジトリ内被引用：16  
   「温度0の貪欲復号なら同じモデルは同じ答えを返す」という前提が、GPU数・GPU種類・バッチサイズによる浮動小数点演算順序の変化だけでも崩れることを系統的に示し、重みの保存精度と計算精度を分離するLayerCastで再現性を改善する研究。
 
+- **2025-07 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2025-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
+  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：7  
+  層の入出力の類似度から重要度を測る指標BIで冗長な層を見つけ、層を丸ごと削除するShortGPTと、生成トークンだけ全層を通すShortGPT-genで、約25%の層を削っても多肢選択で約9割、生成で97%の性能を保つ枝刈り手法。
+
 - **2025-07 · [Collaborative Inference and Learning between Edge SLMs and Cloud LLMs: A Survey of Algorithms, Execution, and Open Challenges](2025-2507.16731-collaborative-inference-and-learning-between-edge-slms-and-cloud-llms-a-.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   端末で簡単な要求を処理し、必要な時だけクラウドを呼ぶ方式は自然だが、呼出し回数が増えれば往復遅延が支配的になる。
-
-- **2025-07 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2025-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
-  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：6  
-  層の入出力の類似度から重要度を測る指標BIで冗長な層を見つけ、層を丸ごと削除するShortGPTと、生成トークンだけ全層を通すShortGPT-genで、約25%の層を削っても多肢選択で約9割、生成で97%の性能を保つ枝刈り手法。
 
 - **2025-11 · [From Prompts to Power: Measuring the Energy Footprint of LLM Inference](2025-2511.05597-from-prompts-to-power-measuring-the-energy-footprint-of-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -1107,7 +1107,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-02 · [A Survey on Model Compression and Acceleration for Pretrained Language Models](2022-2202.07105-a-survey-on-model-compression-and-acceleration-for-pretrained-language-m.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：8  
   著者らは推論段階を対象に、重み共有、低ランク分解、枝刈り、量子化、知識蒸留、早期終了、トークン省略の七系統を比較する。
 
 - **2022-08 · [Momentum Transformer: Closing the Performance Gap Between Self-attention and Its Linearization](2022-2208.00579-momentum-transformer-closing-the-performance-gap-between-self-attention-.md)**  

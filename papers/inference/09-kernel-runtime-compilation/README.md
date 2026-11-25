@@ -1068,10 +1068,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：2  
   AllReduce内でブロック量子化と逆量子化を通信へ重ね、TPU/XLAの集団通信量を削減する方式。int8でBF16 AllReduce比最大1.8倍、Gemma 3 27Bプリフィル最大1.28倍を示す。
 
-- **2025-02 · [PASER: Post-Training Data Selection for Efficient Pruned Large Language Model Recovery](2025-2502.12594-paser-post-training-data-selection-for-efficient-pruned-large-language-m.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  常識推論、知識、翻訳、文章生成などの一部だけが大きく損なわれる場合、汎用instructionデータを均等に使って回復学習しても、限られた学習予算を劣化していない能力へ使ったり、互いに矛盾する指示へ過適合したりする。PASERは、剪定済みLLMのどの能力がどれだけ変化したかを元モデルとの出力分布の差で推定し、その劣化に応じて回復学習データを選ぶ方式である。
-
 - **2025-11 · [You Had One Job: Per-Task Quantization Using LLMs’ Hidden Representations](2025-2511.06516-you-had-one-job-per-task-quantization-using-llms-hidden-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   一般的な学習後量子化（Post-学習 量子化; PTQ）は、言語モデルの重みを一律に4ビットへ圧縮したり、重み再構成誤差に基づいて精度を選んだりする。原著第4版では、Qwen2.5-7B-InstructのMMLU-Proで、TAQ-KLが35.35点・重み5.95GB、均一4ビットのAWQが23.54点・5.19GBだった。
@@ -1123,6 +1119,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-03 · [Maximum Redundancy Pruning: A Principle-Driven Layerwise Sparsity Allocation for LLMs](2025-2503.18377-maximum-redundancy-pruning-a-principle-driven-layerwise-sparsity-allocat.md)**  
   実装：[✓](https://github.com/Gaochang-bjtu/MRP) ・ リポジトリ内被引用：1  
   本論文は、大規模言語モデルの重み枝刈りで「全層に同じ疎度を設定すること」が精度を損ねる理由を実験的に調べ、その結果から層別疎度を決めるMaximum Redundancy Pruning（MRP）を提案する。特に全体の70%を削る高疎度では、ある層を削ると出力が急激に悪化する一方、別の層はさらに削っても影響が小さい。
+
+- **2025-02 · [PASER: Post-Training Data Selection for Efficient Pruned Large Language Model Recovery](2025-2502.12594-paser-post-training-data-selection-for-efficient-pruned-large-language-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  常識推論、知識、翻訳、文章生成などの一部だけが大きく損なわれる場合、汎用instructionデータを均等に使って回復学習しても、限られた学習予算を劣化していない能力へ使ったり、互いに矛盾する指示へ過適合したりする。PASERは、剪定済みLLMのどの能力がどれだけ変化したかを元モデルとの出力分布の差で推定し、その劣化に応じて回復学習データを選ぶ方式である。
 
 - **2024-12 · [GQSA: Group Quantization and Sparsity for Accelerating Large Language Model Inference](2024-2412.17560-gqsa-group-quantization-and-sparsity-for-accelerating-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1283,7 +1283,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   Mirageは「既知のアルゴリズムに対して良いGPUスケジュールを探す」だけでも、「数式を書き換えて既存カーネルを組み合わせる」だけでもない。テンソル計算をGPUのカーネル・スレッドブロック・スレッド階層をまたぐμGraphで表し、数式の形、融合境界、並列化方法を同じ探索の中で変えることで、人手では実装量が大きい複合最適化を自動発見する。
 
 - **2024-05 · [Large Language Model Pruning](2024-2406.00030-large-language-model-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：28  
   ニューロン同士の相互情報量で冗長性を測り、カーネル幅の新しい推定で精度を高めた、教師なし・再学習不要の全結合層の構造的枝刈り手法。
 
 - **2024-10 · [ThunderKittens: Simple, Fast, and Adorable AI Kernels](2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md)**  
