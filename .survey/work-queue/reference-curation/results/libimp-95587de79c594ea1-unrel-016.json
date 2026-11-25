@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95587de79c594ea1-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.17432",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.17432",
+    "identity_tokens": [
+      "arXiv:2403.17432"
+    ],
+    "reason": "Mambaと階層アップサンプリングを統合した多発性硬化症病変のセグメンテーションは医用画像解析の応用であり、LLM推論とは分野が異なる。",
+    "first_checked_at": "2026-11-25T22:28:46+00:00",
+    "last_checked_at": "2026-11-25T22:28:46+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Integrating Mamba Sequence Model and Hierarchical Upsampling Network for Accurate Semantic Segmentation of Multiple Sclerosis Legion"
+  },
+  "processed_at": "2026-11-25T22:28:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95587de79c59",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

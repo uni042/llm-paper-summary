@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T22:27:32+00:00",
-  "record_count": 9383,
+  "updated_at": "2026-11-25T22:28:46+00:00",
+  "record_count": 9386,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -143659,6 +143659,51 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Agentic Keyframe Search for Video Question Answering"
+    },
+    "DOI:10.1109/lca.2025.3637718": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/lca.2025.3637718",
+      "identity_tokens": [
+        "DOI:10.1109/lca.2025.3637718"
+      ],
+      "reason": "加算とシフトを融合して内積ハードウェアを効率化する研究はAI計算の基本演算の高速化として関連するが、LLM推論に特化した機構ではなく適用範囲は汎用演算器である。",
+      "first_checked_at": "2026-11-25T22:28:45+00:00",
+      "last_checked_at": "2026-11-25T22:28:45+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fusing Adds and Shifts for Efficient Dot Products"
+    },
+    "DOI:10.24963/ijcai.2026/267": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.24963/ijcai.2026/267",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/267"
+      ],
+      "reason": "オンデバイス小型言語モデルの構造化生成を測るStructureBenchは、制約付きデコードの有効性をオンデバイス条件で評価する点で推論と関連するが、成果物はベンチマークと評価である。",
+      "first_checked_at": "2026-11-25T22:28:46+00:00",
+      "last_checked_at": "2026-11-25T22:28:46+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "StructureBench: A Unified Benchmark Suite for Multi-Scenario Structured Generation Tasks with On-Device Models"
+    },
+    "arXiv:2602.13310": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.13310",
+      "identity_tokens": [
+        "arXiv:2602.13310"
+      ],
+      "reason": "視覚理解で並列思考へ広げるVisual Para-Thinkerはテスト時スケーリングの推論時計算配分に関わるが、主眼は推論品質の向上であり計算効率の機構ではない。",
+      "first_checked_at": "2026-11-25T22:28:46+00:00",
+      "last_checked_at": "2026-11-25T22:28:46+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Visual Para-Thinker: Divide-and-Conquer Reasoning for Visual Comprehension"
     }
   }
 }
