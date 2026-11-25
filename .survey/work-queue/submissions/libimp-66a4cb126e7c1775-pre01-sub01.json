@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Parallel Context Compaction for Long-Horizon LLM Agent Serving",
+      "source_url": "https://arxiv.org/abs/2605.23296",
+      "year": 2026,
+      "published": "2026-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon LLM agents accumulate growing conversation histories that eventually exceed the model's context window. Context compaction via LLM-based summarization keeps the conversation bounded, but summarization is inherently lossy and the blocking call stalls agent inference for tens of seconds. Moreover, the operator has no fine-grained control over summary volume since prompt instructions are largely ignored, and as context grows, both the amount of output tokens the model produces and the information it retains fluctuate substantially from run to run, making the agent's retained knowledge unpredictable across runs. We introduce \\textbf{parallel compaction} for long-horizon agentic flows and characterize it against the sequential synchronous baseline across four backbones spanning 8B to 120B parameters, mixing dense and MoE architectures with reasoning and non-reasoning models, on the HotpotQA multi-hop QA and LoCoMo long-context dialogue benchmarks. Parallel compaction gives the operator fine-grained, predictable control over summary volume and enables more targeted prompt engineering per block. At matched compaction decode volume, it reduces end-to-end wall time and improves compaction throughput over the sequential baseline.",
+      "identifiers": [
+        "SemanticScholar:3dd46c0ab602825f50b522ca9f96d22c3c6925b4"
+      ],
+      "semantic_scholar_id": "3dd46c0ab602825f50b522ca9f96d22c3c6925b4",
+      "canonical_id": "arXiv:2605.23296",
+      "arxiv_id": "2605.23296",
+      "doi": "10.48550/arXiv.2605.23296",
+      "authors": [
+        "Musa Cim",
+        "Burak Topçu",
+        "C. Das",
+        "M. Kandemir"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長期エージェントサービングで要約による文脈圧縮を並列化し、推論を数十秒止めるブロッキングを回避しつつ要約量を制御可能にしたサービング手法であり対象。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-66a4cb126e7c",
+    "round": "libimp-66a4cb126e7c1775-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-66a4cb126e7c1775-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-66a4cb126e7c1775-pre01.json",
+    "receipt": "sha256:48f1e70cec2558bf7a5932e7844a197b648b07cf9712f41584962f8f85a0b741"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-66a4cb126e7c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
