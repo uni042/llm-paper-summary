@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T22:19:33+00:00",
-  "record_count": 9362,
+  "updated_at": "2026-11-25T22:22:50+00:00",
+  "record_count": 9372,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -143343,6 +143343,156 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Tailoring Memory Granularity for Multi-Hop Reasoning over Long Contexts"
+    },
+    "arXiv:2605.19075": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.19075",
+      "identity_tokens": [
+        "arXiv:2605.19075"
+      ],
+      "reason": "複数動画QAでクエリ条件付きキーフレーム選択と批評ループを組み合わせるCRAFTは、入力フレーム量の削減を通じてMLLM推論量にも関わるが、主眼は根拠づけされた回答精度である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CRAFT: Critic-Refined Adaptive Key-Frame Targeting for Multimodal Video Question Answering"
+    },
+    "arXiv:2606.02218": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.02218",
+      "identity_tokens": [
+        "arXiv:2606.02218"
+      ],
+      "reason": "GRPO等の同期オンポリシーRLで長いロールアウトの遅延者問題にグループサイズ調整で対処する研究。生成ロールアウトのスケジューリングとは関連するが、目的は学習スループットである。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Faster Synchronous On-Policy RL via Straggler-Aware Group Sizing"
+    },
+    "arXiv:2607.05355": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.05355",
+      "identity_tokens": [
+        "arXiv:2607.05355"
+      ],
+      "reason": "ニューロン選択指標がプルーニングや編集に使えるかを因果的に監査する研究。プルーニングの前提検証として関連するが、新規な推論効率化機構の提案ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Faithfulness to Refusal: A Causal Audit of Neuron Selectors"
+    },
+    "arXiv:2607.25125": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.25125",
+      "identity_tokens": [
+        "arXiv:2607.25125"
+      ],
+      "reason": "長尺動画をクエリ関連キーフレームへ凝縮するLENSはMLLMの文脈窓制約を緩和する入力削減手法だが、主眼は動画理解精度であり推論コストの定量的な扱いは補助的である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LENS: Adaptive Spatio-Temporal Zooming for Keyframe Sampling in Long-Form Videos"
+    },
+    "arXiv:2601.09434": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.09434",
+      "identity_tokens": [
+        "arXiv:2601.09434"
+      ],
+      "reason": "LLMマルチエージェントでエージェント役割とモデルの動的選択により単一エージェント比のコスト増を抑えるSC-MASは、推論コストの配分という点で関連するが、主眼は協調タスクの性能・費用バランスである。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SC-MAS: Constructing Cost-Efficient Multi-Agent Systems with Edge-Level Heterogeneous Collaboration"
+    },
+    "arXiv:2601.22055": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.22055",
+      "identity_tokens": [
+        "arXiv:2601.22055"
+      ],
+      "reason": "マルチモーダル長文書QAで二重に進化するグラフ構造により検索を行うG2-Readerは、RAGの文脈構成として関連するが、主眼は回答精度であり推論効率の機構ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "G2-Reader: Dual Evolving Graphs for Multimodal Document QA"
+    },
+    "arXiv:2605.04217": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.04217",
+      "identity_tokens": [
+        "arXiv:2605.04217"
+      ],
+      "reason": "RoPEやALiBiを一般化しジョルダンブロックで相対位置符号化を構成するJordan-RoPEは注意機構の基礎理論であり、推論効率への直接の機構や評価は要旨にない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Jordan-RoPE: Non-Semisimple Relative Positional Encoding via Complex Jordan Blocks"
+    },
+    "arXiv:2609.05274": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.05274",
+      "identity_tokens": [
+        "arXiv:2609.05274"
+      ],
+      "reason": "投機的デコードのドラフトモデルを逆用し、エージェント出力トークンから失敗予測信号を得るSpeculative Uncertainty。ドラフトモデルの推論時利用ではあるが、目的は高速化ではなくエージェントの信頼性判定である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How to Speculate about Uncertainty in Agentic Coding? A Draft-Model Gate Method"
+    },
+    "arXiv:2609.29217": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29217",
+      "identity_tokens": [
+        "arXiv:2609.29217"
+      ],
+      "reason": "全二重音声対話でサブ秒レイテンシの下で適応的な動作点を持つAdaptDuplexは、対話モデルのレイテンシ設計として関連するが、主眼は対話の自然さであり汎用推論機構ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AdaptDuplex: From Static to Adaptive Full-Duplex Spoken Dialogue"
+    },
+    "arXiv:2408.14717": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.14717",
+      "identity_tokens": [
+        "arXiv:2408.14717"
+      ],
+      "reason": "自然言語質問に対し言語モデルとデータベースの計算を統合するTAGは、LMを用いるデータシステムの実行パラダイムとして関連するが、推論効率ではなく質問応答の実行方式が主題である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Text2SQL is Not Enough: Unifying AI and Databases with TAG"
     }
   }
 }

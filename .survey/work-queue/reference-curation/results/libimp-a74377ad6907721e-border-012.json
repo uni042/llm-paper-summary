@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a74377ad6907721e-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.05274",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.05274",
+    "identity_tokens": [
+      "arXiv:2609.05274"
+    ],
+    "reason": "投機的デコードのドラフトモデルを逆用し、エージェント出力トークンから失敗予測信号を得るSpeculative Uncertainty。ドラフトモデルの推論時利用ではあるが、目的は高速化ではなくエージェントの信頼性判定である。",
+    "first_checked_at": "2026-11-25T22:22:49+00:00",
+    "last_checked_at": "2026-11-25T22:22:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "How to Speculate about Uncertainty in Agentic Coding? A Draft-Model Gate Method"
+  },
+  "processed_at": "2026-11-25T22:22:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a74377ad6907",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-311b1ea4b5e701e1-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.20517",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.20517",
+    "identity_tokens": [
+      "arXiv:2606.20517"
+    ],
+    "reason": "LiveCodeBenchを多言語へ拡張するMulti-LCBはコード生成LLMの評価ベンチマークの拡張であり、推論システムへの技術的貢献はない。",
+    "first_checked_at": "2026-11-25T22:22:49+00:00",
+    "last_checked_at": "2026-11-25T22:22:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Multi-LCB: Extending LiveCodeBench to Multiple Programming Languages"
+  },
+  "processed_at": "2026-11-25T22:22:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-311b1ea4b5e7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

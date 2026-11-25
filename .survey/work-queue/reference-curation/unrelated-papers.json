@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-25T22:19:33+00:00",
-  "record_count": 16009,
+  "updated_at": "2026-11-25T22:22:50+00:00",
+  "record_count": 16048,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -229295,6 +229295,553 @@
         "worker-worklist discovery_review"
       ],
       "title": "Sparse Attentive Memory Network for Click-through Rate Prediction with Long Sequences"
+    },
+    "arXiv:2408.09178": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.09178",
+      "identity_tokens": [
+        "arXiv:2408.09178"
+      ],
+      "reason": "状態空間モデルを複数物体追跡の運動予測に使うMambaTrackは監視・スポーツ等の追跡応用であり、LLM推論とは分野が異なる。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MambaTrack: A Simple Baseline for Multiple Object Tracking with State Space Model"
+    },
+    "arXiv:2506.15674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.15674",
+      "identity_tokens": [
+        "arXiv:2506.15674"
+      ],
+      "reason": "大規模推論モデルの推論痕跡から個人情報が漏れることを示すLeaky Thoughtsはプライバシ研究であり、推論システムの技術的貢献ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers"
+    },
+    "DOI:10.1145/3552326.3587436": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3552326.3587436",
+      "identity_tokens": [
+        "DOI:10.1145/3552326.3587436"
+      ],
+      "reason": "マルチテナント学習向けにネットワーク内集約を行うA2TPは分散学習の勾配集約通信の研究であり、対象は学習であり推論ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A2TP: Aggregator-aware In-network Aggregation for Multi-tenant Learning"
+    },
+    "arXiv:2502.20380": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.20380",
+      "identity_tokens": [
+        "arXiv:2502.20380"
+      ],
+      "reason": "単一ステップ報酬で複数ターンのコード生成を学習するμCodeはコード生成の強化学習手法であり、推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Multi-Turn Code Generation Through Single-Step Rewards"
+    },
+    "arXiv:2408.07889": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.07889",
+      "identity_tokens": [
+        "arXiv:2408.07889"
+      ],
+      "reason": "RGB-T物体追跡に時空間文脈モデリングのMambaを使うMambaVTは視覚追跡の応用であり、注意の二次計算量の指摘も追跡モデル内部の話でLLM推論とは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MambaVT: Spatio-Temporal Contextual Modeling for Robust RGB-T Tracking"
+    },
+    "arXiv:2510.13802": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13802",
+      "identity_tokens": [
+        "arXiv:2510.13802"
+      ],
+      "reason": "動画の各画素の3D軌跡場で表現するTrace Anythingは動画の時空間表現の研究であり、LLM推論システムとは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Trace Anything: Representing Any Video in 4D via Trajectory Fields"
+    },
+    "arXiv:2406.06367": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.06367",
+      "identity_tokens": [
+        "arXiv:2406.06367"
+      ],
+      "reason": "多視点拡散と状態空間系列モデリングで3Dコンテンツを生成するMVGambaは3D生成の応用であり、LLM推論とは対象が異なる。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MVGamba: Unify 3D Content Generation as State Space Sequence Modeling"
+    },
+    "arXiv:2405.12731": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.12731",
+      "identity_tokens": [
+        "arXiv:2405.12731"
+      ],
+      "reason": "AI支援プログラミングが開発者の日常を2030年までにどう変えるかを論じる展望論文であり、推論システムへの技術的貢献はない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "From Today’s Code to Tomorrow’s Symphony: The AI Transformation of Developer’s Routine by 2030"
+    },
+    "DOI:10.1038/s41598-025-92994-7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-025-92994-7",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-92994-7"
+      ],
+      "reason": "改良VM-UNetによるひび割れ画像セグメンテーションは構造物検査の画像解析応用であり、LLM推論システムとは分野が異なる。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "VM-UNet++ research on crack image segmentation based on improved VM-UNet"
+    },
+    "arXiv:2604.18058": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18058",
+      "identity_tokens": [
+        "arXiv:2604.18058"
+      ],
+      "reason": "臨床データ不足下で体幹IMUの潜在世界モデルを学ぶSonataは医療センシングの表現学習であり、LLM推論とは対象が異なる。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Sonata: A Hybrid World Model for Inertial Kinematics under Clinical Data Scarcity"
+    },
+    "arXiv:2606.20517": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20517",
+      "identity_tokens": [
+        "arXiv:2606.20517"
+      ],
+      "reason": "LiveCodeBenchを多言語へ拡張するMulti-LCBはコード生成LLMの評価ベンチマークの拡張であり、推論システムへの技術的貢献はない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Multi-LCB: Extending LiveCodeBench to Multiple Programming Languages"
+    },
+    "DOI:10.1109/tcsvt.2025.3627667": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3627667",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3627667"
+      ],
+      "reason": "点群の3D単一物体追跡で長期時間文脈をSSMで扱う研究は自動運転・ロボット向け視覚追跡の応用であり、LLM推論とは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "State Space Models for Long-Term Temporal Context in 3D Single Object Tracking"
+    },
+    "DOI:10.48550/arxiv.2604.19814": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2604.19814",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.19814",
+        "arXiv:2604.19814"
+      ],
+      "reason": "量子プロセッサと古典HPCの統合アーキテクチャを論じるサーベイであり、対象は量子・古典ハイブリッド計算基盤であってLLM推論システムではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Quantum Integrated High-Performance Computing: Foundations, Architectural Elements and Future Directions"
+    },
+    "arXiv:2603.03944": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03944",
+      "identity_tokens": [
+        "arXiv:2603.03944"
+      ],
+      "reason": "動画における未観測の過去・未来の空間状態を推測する空間因果予測タスクSCPの提案は動画理解能力の評価研究であり、推論システムの話ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "SCP: Spatial Causal Prediction in Video"
+    },
+    "arXiv:2603.27797": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.27797",
+      "identity_tokens": [
+        "arXiv:2603.27797"
+      ],
+      "reason": "ロボット操作のために画像から3D再構成モデルのコスト・品質トレードオフでルーティングする研究であり、対象はロボット知覚のパイプラインであってLLM推論ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Which Reconstruction Model Should a Robot Use? Routing Image-to-3D Models for Cost-Aware Robotic Manipulation"
+    },
+    "arXiv:2605.10117": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10117",
+      "identity_tokens": [
+        "arXiv:2605.10117"
+      ],
+      "reason": "自動運転の3D検出で場面の複雑さに応じて計算予算を適応させる知覚手法は運転知覚モデルの研究であり、LLM推論システムとは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Think as Needed: Geometry-Driven Adaptive Perception for Autonomous Driving"
+    },
+    "arXiv:2605.14750": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.14750",
+      "identity_tokens": [
+        "arXiv:2605.14750"
+      ],
+      "reason": "ジェイルブレイクへの耐性をモデル編集で得るEVAは安全性アライメントの手法であり、推論効率や実行機構を対象としていない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "EVA: Editing for Versatile Alignment Against Jailbreaks"
+    },
+    "arXiv:2609.26637": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26637",
+      "identity_tokens": [
+        "arXiv:2609.26637"
+      ],
+      "reason": "閉源フロンティアモデルの隠れた思考過程をカスタムツール経由で外部化して分析する研究であり、対象は推論過程の解釈であって推論システムの機構ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Capable yet Parsimonious: Extracting and Characterizing Hidden Chain-of-Thought in Frontier Models"
+    },
+    "DOI:10.1016/j.engappai.2025.112193": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.engappai.2025.112193",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2025.112193"
+      ],
+      "reason": "タイトルが知的交通システムにおけるリアルタイムデータ保存のための時空間インデックス構築を明示する交通データ基盤の応用であり、LLM推論との関連はタイトルに示されていない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Prebuilt spatiotemporal index: An exploration of efficient real-time data storage in intelligent transportation systems"
+    },
+    "DOI:10.1109/tcsvt.2025.3646015": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3646015",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3646015"
+      ],
+      "reason": "RGBとノイズの二流エンコーダで画像改ざん位置を特定するSSM応用は画像フォレンジクス課題であり、LLM推論とは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Adaptive Selective State Mechanism for Enhancing Image Manipulation Localization"
+    },
+    "DOI:10.1109/icassp55912.2026.11462954": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11462954",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11462954"
+      ],
+      "reason": "時空間適応Mambaによる3D人体姿勢推定STAMAMBAはモーションキャプチャ系の視覚課題への応用であり、LLM推論システムとは分野が異なる。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "STAMAMBA: Spatio-Temporal Adaptive State Space Model for 3D Human Pose Estimation"
+    },
+    "DOI:10.3389/frsen.2025.1744950": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frsen.2025.1744950",
+      "identity_tokens": [
+        "DOI:10.3389/frsen.2025.1744950"
+      ],
+      "reason": "基盤視覚モデルの精緻化・融合でリモートセンシング変化検出を行うRoCDは地球観測画像の解析応用であり、LLM推論とは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "RoCD: leveraging foundation vision models with refine-and-fuse framework for robust change detection"
+    },
+    "DOI:10.3390/rs17244065": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/rs17244065",
+      "identity_tokens": [
+        "DOI:10.3390/rs17244065"
+      ],
+      "reason": "量子着想の絡み合いMambaでハイパースペクトル画像とLiDARの土地被覆分類を行う研究はリモートセンシング分類の応用であり、LLM推論とは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Joint Hyperspectral Images and LiDAR Data Classification Combined with Quantum-Inspired Entangled Mamba"
+    },
+    "arXiv:2602.14200": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14200",
+      "identity_tokens": [
+        "arXiv:2602.14200"
+      ],
+      "reason": "時系列言語モデルの長文脈検索能力を測るTS-Haystackはベンチマークの提案であり、推論システムへの技術的貢献はない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "TS-Haystack: A Multi-Task Retrieval Benchmark for Long-Context Time-Series Reasoning"
+    },
+    "arXiv:2603.01820": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01820",
+      "identity_tokens": [
+        "arXiv:2603.01820"
+      ],
+      "reason": "標準的な時系列予測ベンチマークが金融のリスク調整後成績へどう移るかを検証する研究であり、対象は資産予測の評価であってLLM推論ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "How do standard time series forecasting benchmarks translate to finance? A broad study of risk adjusted performance"
+    },
+    "arXiv:2603.24295": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24295",
+      "identity_tokens": [
+        "arXiv:2603.24295"
+      ],
+      "reason": "状態空間圧縮で失われる詳細を補うRS-SSMは動画意味セグメンテーション向けの視覚モデルであり、LLM推論とは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "RS-SSM: Refining Forgotten Specifics in State Space Model for Video Semantic Segmentation"
+    },
+    "arXiv:2604.06622": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06622",
+      "identity_tokens": [
+        "arXiv:2604.06622"
+      ],
+      "reason": "CT金属アーチファクト除去のための軽量MambaモデルMARMambaは医用画像復元の応用であり、LLM推論システムとは分野が異なる。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Balancing Efficiency and Restoration: Lightweight Mamba-Based Model for CT Metal Artifact Reduction"
+    },
+    "arXiv:2605.23027": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23027",
+      "identity_tokens": [
+        "arXiv:2605.23027"
+      ],
+      "reason": "複数ロボットの強化学習における協調を敵対的に操作する攻撃枠組みPIMbotはマルチロボットRLの研究であり、LLM推論とは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "PIMbot: A Self-Adaptive Attack Framework for Adversarial Manipulation of Multi-Robot Reinforcement Learning"
+    },
+    "arXiv:2605.31096": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31096",
+      "identity_tokens": [
+        "arXiv:2605.31096"
+      ],
+      "reason": "視覚的根拠づけCoTを強化学習で内面化するiVGRはMLLMの推論品質を扱うが、対象は学習による推論様式の獲得であり推論システムの効率機構ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "iVGR: Internalizing Visually Grounded Reasoning for MLLMs with Reinforcement Learning"
+    },
+    "arXiv:2606.13894": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13894",
+      "identity_tokens": [
+        "arXiv:2606.13894"
+      ],
+      "reason": "AdamWのモーメント状態を共有・量子化して学習メモリを最大8倍削減するGefenは学習用オプティマイザの研究であり、推論への適用は示されていない学習単独の効率化である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Gefen: Optimized Stochastic Optimizer"
+    },
+    "arXiv:2606.31830": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31830",
+      "identity_tokens": [
+        "arXiv:2606.31830"
+      ],
+      "reason": "街路レベルの視覚事前情報を記憶拡張で使う自動運転PriorEyeは運転知覚の能力研究であり、LLM推論システムとは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "PriorEye: Geospatial Visual Priors for End-to-End Autonomous Driving"
+    },
+    "arXiv:2607.15257": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15257",
+      "identity_tokens": [
+        "arXiv:2607.15257"
+      ],
+      "reason": "オープン領域の情報探索エージェント協調を頑健化するSearchOS-V1はエージェントの作業過程の改善が主眼であり、推論実行の効率機構ではない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration"
+    },
+    "arXiv:2608.06171": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06171",
+      "identity_tokens": [
+        "arXiv:2608.06171"
+      ],
+      "reason": "ウェブエージェントの観測モード選択の学習可能性をベンチマークで測る分析研究であり、推論システムへの技術的提案は含まれない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Routing Is Least Learnable Where It Is Most Valuable: Bounds on Representation Routing for Web Agents"
+    },
+    "arXiv:2610.11156": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.11156",
+      "identity_tokens": [
+        "arXiv:2610.11156"
+      ],
+      "reason": "モノラル音声理解と空間音響の認識を統合するMiDashengLM-Spatialは音声言語モデルの能力研究であり、推論システムへの貢献は確認できない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MiDashengLM-Spatial: Unifying General Audio Understanding and Spatial Awareness"
+    },
+    "arXiv:2610.30949": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.30949",
+      "identity_tokens": [
+        "arXiv:2610.30949"
+      ],
+      "reason": "320B総パラメータのMoEエージェント基盤モデルIQuest-Q1の学習報告であり、事前学習と中間学習の安定化が主眼で推論・サービングの新規機構は示されていない。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "IQuest-Q1: Advancing Foundation Capabilities for Agentic CLI Systems"
+    },
+    "arXiv:2403.18795": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18795",
+      "identity_tokens": [
+        "arXiv:2403.18795"
+      ],
+      "reason": "ガウススプラッティングとMambaを組み合わせ単一画像から3D再構成を高速に行うGambaは3D生成の応用であり、LLM推論とは対象が異なる。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Gamba: Marry Gaussian Splatting with Mamba for single view 3D reconstruction"
+    },
+    "DOI:10.1093/bib/bbae163": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bib/bbae163",
+      "identity_tokens": [
+        "DOI:10.1093/bib/bbae163"
+      ],
+      "reason": "72種の脊椎動物RNA配列で事前学習したSpliceBERTによるスプライシング予測はゲノム配列解析の応用であり、LLM推論システムとは分野が異なる。",
+      "first_checked_at": "2026-11-25T22:22:49+00:00",
+      "last_checked_at": "2026-11-25T22:22:49+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Self-supervised learning on millions of primary RNA sequences from 72 vertebrates improves sequence-based RNA splicing prediction"
+    },
+    "arXiv:2505.23189": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23189",
+      "identity_tokens": [
+        "arXiv:2505.23189"
+      ],
+      "reason": "一人称視覚で対象を追跡するTrackVLAは身体性AIの視覚追跡モデルの研究であり、VLAの能力が主眼で推論システムの機構ではない。",
+      "first_checked_at": "2026-11-25T22:22:50+00:00",
+      "last_checked_at": "2026-11-25T22:22:50+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "TrackVLA: Embodied Visual Tracking in the Wild"
+    },
+    "arXiv:2410.02705": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02705",
+      "identity_tokens": [
+        "arXiv:2410.02705"
+      ],
+      "reason": "制御画像をトークン化して自己回帰画像生成へ組み込むControlARは画像生成の制御手法であり、LLM推論の効率・実行とは無関係である。",
+      "first_checked_at": "2026-11-25T22:22:50+00:00",
+      "last_checked_at": "2026-11-25T22:22:50+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "ControlAR: Controllable Image Generation with Autoregressive Models"
     }
   }
 }

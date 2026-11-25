@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a74377ad6907721e-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.06171",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.06171",
+    "identity_tokens": [
+      "arXiv:2608.06171"
+    ],
+    "reason": "ウェブエージェントの観測モード選択の学習可能性をベンチマークで測る分析研究であり、推論システムへの技術的提案は含まれない。",
+    "first_checked_at": "2026-11-25T22:22:49+00:00",
+    "last_checked_at": "2026-11-25T22:22:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Routing Is Least Learnable Where It Is Most Valuable: Bounds on Representation Routing for Web Agents"
+  },
+  "processed_at": "2026-11-25T22:22:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a74377ad6907",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
