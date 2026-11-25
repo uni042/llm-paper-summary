@@ -380,13 +380,13 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 
 ### 2年前（2024-12〜2025-11）
 
+- **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
+  実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：7  
+  大規模推論モデルは、数学問題などで長い思考連鎖（Chain-of-Thought; CoT）を生成する。思考の各トークンを高価な大型モデルで生成すると、逐次復号（デコード）の費用が大きくなる。一方、途中の式変形や説明のすべてが大型モデルを必要とするわけではない。基本構成は1.5Bパラメータの小型推論モデルと、8B・14B・32Bなどの大型推論モデルである。
+
 - **2025-07 · [Rethinking LLM Inference Bottlenecks: Insights from Latent Attention and Mixture-of-Experts](2025-2507.15465-rethinking-llm-inference-bottlenecks-insights-from-latent-attention-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   従来の大規模言語モデルでは、多頭注意（multi-head 注意機構、MHA）の復号時演算は過去の鍵・値キャッシュを大量に読み出すため、メモリ帯域が主要な制約と考えられてきた。
-
-- **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
-  実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：6  
-  大規模推論モデルは、数学問題などで長い思考連鎖（Chain-of-Thought; CoT）を生成する。思考の各トークンを高価な大型モデルで生成すると、逐次復号（デコード）の費用が大きくなる。一方、途中の式変形や説明のすべてが大型モデルを必要とするわけではない。基本構成は1.5Bパラメータの小型推論モデルと、8B・14B・32Bなどの大型推論モデルである。
 
 - **2025-10 · [LLM.265: Video Codecs are Secretly Tensor Codecs](2025-5a2b2924d4e3-llm-265-video-codecs-are-secretly-tensor-codecs.md)**  
   実装：[✓](https://github.com/Entropy-xcy/llm.265) ・ リポジトリ内被引用：5  
