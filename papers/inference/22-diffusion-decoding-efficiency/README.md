@@ -86,6 +86,10 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
   実装：✓ ・ リポジトリ内被引用：1  
   拡散言語モデルの確定済み近傍と予測識別子の跨ステップ一貫性から位置ごとの閾値を動的に作る学習不要のデコードで、LLaDAのMBPPで14.17倍まで高速化しながらスコアをほぼ保った。
 
+- **2026-04 · [Early Decisions Matter: Proximity Bias and Initial Trajectory Shaping in Non-Autoregressive Diffusion Language Models](2026-2604.10567-early-decisions-matter-proximity-bias-and-initial-trajectory-shaping-in-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  拡散言語モデルの完全非自己回帰デコードで、文末トークンの早期選択と隣接位置への信頼度伝播という近接バイアスが生成を崩すことを示し、初回ステップだけに軽量プランナーと文末トークンの温度アニーリングで介入して推論タスク精度を改善した研究。
+
 - **2026-04 · [Breaking Block Boundaries: Anchor-based History-stable Decoding for Diffusion Large Language Models](2026-2604.08964-breaking-block-boundaries-anchor-based-history-stable-decoding-for-diffu.md)**  
   実装：[✓](https://github.com/zs1314/AHD) ・ リポジトリ内被引用：1  
   履歴バッファと動的アンカーでトークンの安定化の軌跡を捉え、安定したトークンをブロック境界を越えて早期確定することで、拡散言語モデルのデコードステップ削減と性能向上を両立する学習不要の方式。
@@ -159,10 +163,6 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 - **2026-04 · [NI Sampling: Accelerating Discrete Diffusion Sampling by Token Order Optimization](2026-2604.18471-ni-sampling-accelerating-discrete-diffusion-sampling-by-token-order-opti.md)**  
   実装：[✓](https://github.com/imagination-research/NI-Sampling) ・ リポジトリ内被引用：0  
   そのため従来の全段階方式は一回のモデル実行で一位置だけを確定し、長さ512の出力では原則512回の推論が必要となる。ICLR 2026の論文に記載された単一GPU評価では、LLaDA-8B-InstructのMBPP、生成長512で全段階方式19.1トークン/秒に対し273.8トークン/秒（14.3倍）を報告する。
-
-- **2026-04 · [Early Decisions Matter: Proximity Bias and Initial Trajectory Shaping in Non-Autoregressive Diffusion Language Models](2026-2604.10567-early-decisions-matter-proximity-bias-and-initial-trajectory-shaping-in-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  拡散言語モデルの完全非自己回帰デコードで、文末トークンの早期選択と隣接位置への信頼度伝播という近接バイアスが生成を崩すことを示し、初回ステップだけに軽量プランナーと文末トークンの温度アニーリングで介入して推論タスク精度を改善した研究。
 
 - **2026-04 · [DepCap: Adaptive Block-Wise Parallel Decoding for Efficient Diffusion LM Inference](2026-2604.15750-depcap-adaptive-block-wise-parallel-decoding-for-efficient-diffusion-lm-.md)**  
   実装：[✓](https://github.com/X-Xia0828/DepCap) ・ リポジトリ内被引用：0  
