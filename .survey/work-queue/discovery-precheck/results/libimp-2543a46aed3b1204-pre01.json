@@ -1,0 +1,427 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2543a46aed3b1204-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2543a46aed3b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1117/12.3066920",
+    "arXiv:2408.00274",
+    "arXiv:2607.19547",
+    "arXiv:2610.34959"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f734e9d84e70d857f30f6e954fdb17931f08ea8b",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T03:15:28.914416+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1117/12.3066920",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.00274",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.19547",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.34959",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ChronoStitch: Training-Free Composition of Visual KV Memories for Long-Horizon Temporal Reasoning",
+      "source_url": "https://arxiv.org/abs/2607.19547",
+      "year": 2026,
+      "published": "2026-07-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-video question answering requires a model to preserve visual evidence over time without repeatedly reprocessing the same video. A practical approach is to store the vision-language model's internal key-value (KV) cache for each video chunk and retrieve that state at query time. However, independently cached video chunks do not compose correctly: every chunk is prefilled from local rotary position zero, so naive concatenation collides temporal phases and removes the global order required for questions about what happened first, how often events occurred, or what changed across the video. This paper presents ChronoStitch, a training-free method for composing independently stored visual KV memories. The method first re-bases stored post-rotary keys onto a global three-axis multimodal RoPE coordinate system that preserves time, height, and width structure. We show why a one-dimensional scalar re-indexing is geometrically inconsistent for visual tokens because it turns spatial order within a frame into false temporal displacement. We then address the residual content gap left by positional repair: later chunks were originally encoded without attending to earlier chunks. ChronoStitch therefore selectively recomputes a small fraction of high-deviation later-chunk visual tokens while allowing them to attend over the composed cache. On Qwen2.5-VL-3B and the temporal split of TempCompass, ChronoStitch outperforms naive composition and position-only variants, improving event-ordering accuracy while running 3.3x faster than full joint re-prefilling.",
+      "identifiers": [
+        "SemanticScholar:e21cf4ed9b6d05c506fa9b21d526a308e135d1f0"
+      ],
+      "semantic_scholar_id": "e21cf4ed9b6d05c506fa9b21d526a308e135d1f0",
+      "canonical_id": "arXiv:2607.19547",
+      "arxiv_id": "2607.19547",
+      "doi": "10.48550/arXiv.2607.19547",
+      "authors": [
+        "Santiram Tiwari",
+        "Nishant Sinha",
+        "K. Kislay"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 127,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GUIFlow: Temporal Redundancy-Aware Incremental Inference for GUI Agents",
+      "source_url": "https://arxiv.org/abs/2610.34959",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "GUI agents built on vision-language models interact with continuously evolving interfaces, yet conventional inference repeatedly recomputes representations of largely overlapping observations and histories. This mismatch makes multi-step interaction costly, while changes in context, interface content, and action arguments prevent straightforward cache reuse. We introduce GUIFlow, a framework for full-pipeline incremental inference in multi-image GUI interaction. Our central insight is that advancing a decision need not require rebuilding all supporting representations: each interaction step can instead selectively update computational states maintained across the trajectory. To support new decisions as the context evolves, GUIFlow adapts how past computation is reused: historical KV states are position-aligned and injected into the current context; change signals guide selective updates of current-observation states in the vision encoder and language model; and earlier action responses serve as speculative drafts verified by the target model. Together, these mechanisms enable cross-step reuse throughout visual encoding, prefill, and decoding without additional training, a separate draft model, or changes to the model-visible inputs and action interface. Experiments demonstrate up to 3.39x geometric-mean speedup across offline multi-image benchmarks and up to 3.49x in online, closed-loop interaction on OSWorld, while maintaining task performance broadly comparable to the dense baseline.",
+      "identifiers": [
+        "SemanticScholar:227f823e9ff936a28c76a525c7465ae3d3e30396"
+      ],
+      "semantic_scholar_id": "227f823e9ff936a28c76a525c7465ae3d3e30396",
+      "canonical_id": "arXiv:2610.34959",
+      "arxiv_id": "2610.34959",
+      "authors": [
+        "Ye Li",
+        "Haoran Ding",
+        "Hua-Nan Liu",
+        "Yuan Meng",
+        "Yu-Tian Shen",
+        "Yuan-Song Wang",
+        "Kang-Ye Ji",
+        "Han-Yun Cui",
+        "Hong-Bo Duan",
+        "Chen Tang",
+        "Jia-Wei Li",
+        "Shu-Tao Xia",
+        "Zhi Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QUITO: Accelerating Long-Context Reasoning through Query-Guided Context Compression",
+      "source_url": "https://arxiv.org/abs/2408.00274",
+      "year": 2024,
+      "published": "2024-08-01",
+      "venue": "China Conference on Information Retrieval",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In-context learning (ICL) capabilities are foundational to the success of large language models (LLMs). Recently, context compression has attracted growing interest since it can largely reduce reasoning complexities and computation costs of LLMs. In this paper, we introduce a novel Query-gUIded aTtention cOmpression (QUITO) method, which leverages attention of the question over the contexts to filter useless information. Specifically, we take a trigger token to calculate the attention distribution of the context in response to the question. Based on the distribution, we propose three different filtering methods to satisfy the budget constraints of the context length. We evaluate the QUITO using two widely-used datasets, namely, NaturalQuestions and ASQA. Experimental results demonstrate that QUITO significantly outperforms established baselines across various datasets and downstream LLMs, underscoring its effectiveness. Our code is available at https://github.com/Wenshansilvia/attention_compressor.",
+      "identifiers": [
+        "SemanticScholar:6095ce41480b4c148da427c41eef632ed1d0b88c"
+      ],
+      "semantic_scholar_id": "6095ce41480b4c148da427c41eef632ed1d0b88c",
+      "canonical_id": "arXiv:2408.00274",
+      "arxiv_id": "2408.00274",
+      "doi": "10.48550/arXiv.2408.00274",
+      "authors": [
+        "Wenshan Wang",
+        "Yihang Wang",
+        "Yi-Xing Fan",
+        "Hua-Ming Liao",
+        "J. Guo"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 846,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Optimization of reduction kernel based on Triton compiler",
+      "source_url": "https://doi.org/10.1117/12.3066920",
+      "year": 2025,
+      "published": "2025-05-09",
+      "venue": "Conference on Electronic Information Engineering and Data Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid development of deep learning models, the development of high-performance operators has become increasingly important and complex. The Triton compiler offers a more convenient and efficient solution for GPU operator development, striking a balance between flexibility and performance. Reduction operators, as fundamental components of deep learning models, play a critical role in enhancing the stability and performance of both training and inference. However, the current thread-level handling of reduction operators in the Triton compiler does not fully exploit the multilayered memory hierarchy and memory access resources of GPU. To address this issue, we propose optimizations for the code generation process of reduction operators in the Triton compiler. Specifically, we utilize Warp Shuffle instructions to optimize intra-warp processing for non-contiguous axis reduction and adopt a data-packing strategy to enhance the downgrading process of FP16 data types. These strategies effectively reduce shared memory usage during reduction and improve the parallel efficiency of computational units. Additionally, we address the warp divergence caused by masking in loops by employing a redundant masking tail-loop optimization technique, which reduces the overhead of mask loading and improves memory access efficiency. Experimental results on reduction operators with varying data scales demonstrate that the Warp Shuffle-based optimization achieves bandwidth improvements of 6.2%–32.9% for FP32 and FP16 data types. Furthermore, the packing optimization yields an average bandwidth improvement of 5.1% for FP16 data types, while the redundant masking tail-loop optimization achieves an average bandwidth improvement of 6.6%.",
+      "identifiers": [
+        "SemanticScholar:13124739e53dfee8393939d0acb533db18ce27ef"
+      ],
+      "semantic_scholar_id": "13124739e53dfee8393939d0acb533db18ce27ef",
+      "doi": "10.1117/12.3066920",
+      "canonical_id": "DOI:10.1117/12.3066920",
+      "authors": [
+        "Lin Han",
+        "Jing Li",
+        "Ying-Ying Li",
+        "Zexian Fang",
+        "Wei Gao"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 565,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.19547",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.19547",
+        "id:SemanticScholar:e21cf4ed9b6d05c506fa9b21d526a308e135d1f0",
+        "id:arXiv:2607.19547",
+        "title:chronostitch trainingfree composition of visual kv memories for longhorizon temporal reasoning",
+        "url:https://arxiv.org/abs/2607.19547"
+      ],
+      "record": {
+        "title": "ChronoStitch: Training-Free Composition of Visual KV Memories for Long-Horizon Temporal Reasoning",
+        "source_url": "https://arxiv.org/abs/2607.19547",
+        "year": 2026,
+        "published": "2026-07-21",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-video question answering requires a model to preserve visual evidence over time without repeatedly reprocessing the same video. A practical approach is to store the vision-language model's internal key-value (KV) cache for each video chunk and retrieve that state at query time. However, independently cached video chunks do not compose correctly: every chunk is prefilled from local rotary position zero, so naive concatenation collides temporal phases and removes the global order required for questions about what happened first, how often events occurred, or what changed across the video. This paper presents ChronoStitch, a training-free method for composing independently stored visual KV memories. The method first re-bases stored post-rotary keys onto a global three-axis multimodal RoPE coordinate system that preserves time, height, and width structure. We show why a one-dimensional scalar re-indexing is geometrically inconsistent for visual tokens because it turns spatial order within a frame into false temporal displacement. We then address the residual content gap left by positional repair: later chunks were originally encoded without attending to earlier chunks. ChronoStitch therefore selectively recomputes a small fraction of high-deviation later-chunk visual tokens while allowing them to attend over the composed cache. On Qwen2.5-VL-3B and the temporal split of TempCompass, ChronoStitch outperforms naive composition and position-only variants, improving event-ordering accuracy while running 3.3x faster than full joint re-prefilling.",
+        "identifiers": [
+          "SemanticScholar:e21cf4ed9b6d05c506fa9b21d526a308e135d1f0"
+        ],
+        "semantic_scholar_id": "e21cf4ed9b6d05c506fa9b21d526a308e135d1f0",
+        "canonical_id": "arXiv:2607.19547",
+        "arxiv_id": "2607.19547",
+        "doi": "10.48550/arXiv.2607.19547",
+        "authors": [
+          "Santiram Tiwari",
+          "Nishant Sinha",
+          "K. Kislay"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 127,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.34959",
+      "identity_tokens": [
+        "id:SemanticScholar:227f823e9ff936a28c76a525c7465ae3d3e30396",
+        "id:arXiv:2610.34959",
+        "title:guiflow temporal redundancyaware incremental inference for gui agents",
+        "url:https://arxiv.org/abs/2610.34959"
+      ],
+      "record": {
+        "title": "GUIFlow: Temporal Redundancy-Aware Incremental Inference for GUI Agents",
+        "source_url": "https://arxiv.org/abs/2610.34959",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "GUI agents built on vision-language models interact with continuously evolving interfaces, yet conventional inference repeatedly recomputes representations of largely overlapping observations and histories. This mismatch makes multi-step interaction costly, while changes in context, interface content, and action arguments prevent straightforward cache reuse. We introduce GUIFlow, a framework for full-pipeline incremental inference in multi-image GUI interaction. Our central insight is that advancing a decision need not require rebuilding all supporting representations: each interaction step can instead selectively update computational states maintained across the trajectory. To support new decisions as the context evolves, GUIFlow adapts how past computation is reused: historical KV states are position-aligned and injected into the current context; change signals guide selective updates of current-observation states in the vision encoder and language model; and earlier action responses serve as speculative drafts verified by the target model. Together, these mechanisms enable cross-step reuse throughout visual encoding, prefill, and decoding without additional training, a separate draft model, or changes to the model-visible inputs and action interface. Experiments demonstrate up to 3.39x geometric-mean speedup across offline multi-image benchmarks and up to 3.49x in online, closed-loop interaction on OSWorld, while maintaining task performance broadly comparable to the dense baseline.",
+        "identifiers": [
+          "SemanticScholar:227f823e9ff936a28c76a525c7465ae3d3e30396"
+        ],
+        "semantic_scholar_id": "227f823e9ff936a28c76a525c7465ae3d3e30396",
+        "canonical_id": "arXiv:2610.34959",
+        "arxiv_id": "2610.34959",
+        "authors": [
+          "Ye Li",
+          "Haoran Ding",
+          "Hua-Nan Liu",
+          "Yuan Meng",
+          "Yu-Tian Shen",
+          "Yuan-Song Wang",
+          "Kang-Ye Ji",
+          "Han-Yun Cui",
+          "Hong-Bo Duan",
+          "Chen Tang",
+          "Jia-Wei Li",
+          "Shu-Tao Xia",
+          "Zhi Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.00274",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.00274",
+        "id:SemanticScholar:6095ce41480b4c148da427c41eef632ed1d0b88c",
+        "id:arXiv:2408.00274",
+        "title:quito accelerating longcontext reasoning through queryguided context compression",
+        "url:https://arxiv.org/abs/2408.00274"
+      ],
+      "record": {
+        "title": "QUITO: Accelerating Long-Context Reasoning through Query-Guided Context Compression",
+        "source_url": "https://arxiv.org/abs/2408.00274",
+        "year": 2024,
+        "published": "2024-08-01",
+        "venue": "China Conference on Information Retrieval",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In-context learning (ICL) capabilities are foundational to the success of large language models (LLMs). Recently, context compression has attracted growing interest since it can largely reduce reasoning complexities and computation costs of LLMs. In this paper, we introduce a novel Query-gUIded aTtention cOmpression (QUITO) method, which leverages attention of the question over the contexts to filter useless information. Specifically, we take a trigger token to calculate the attention distribution of the context in response to the question. Based on the distribution, we propose three different filtering methods to satisfy the budget constraints of the context length. We evaluate the QUITO using two widely-used datasets, namely, NaturalQuestions and ASQA. Experimental results demonstrate that QUITO significantly outperforms established baselines across various datasets and downstream LLMs, underscoring its effectiveness. Our code is available at https://github.com/Wenshansilvia/attention_compressor.",
+        "identifiers": [
+          "SemanticScholar:6095ce41480b4c148da427c41eef632ed1d0b88c"
+        ],
+        "semantic_scholar_id": "6095ce41480b4c148da427c41eef632ed1d0b88c",
+        "canonical_id": "arXiv:2408.00274",
+        "arxiv_id": "2408.00274",
+        "doi": "10.48550/arXiv.2408.00274",
+        "authors": [
+          "Wenshan Wang",
+          "Yihang Wang",
+          "Yi-Xing Fan",
+          "Hua-Ming Liao",
+          "J. Guo"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 846,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1117/12.3066920",
+      "identity_tokens": [
+        "id:DOI:10.1117/12.3066920",
+        "id:SemanticScholar:13124739e53dfee8393939d0acb533db18ce27ef",
+        "title:optimization of reduction kernel based on triton compiler",
+        "url:https://doi.org/10.1117/12.3066920"
+      ],
+      "record": {
+        "title": "Optimization of reduction kernel based on Triton compiler",
+        "source_url": "https://doi.org/10.1117/12.3066920",
+        "year": 2025,
+        "published": "2025-05-09",
+        "venue": "Conference on Electronic Information Engineering and Data Processing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rapid development of deep learning models, the development of high-performance operators has become increasingly important and complex. The Triton compiler offers a more convenient and efficient solution for GPU operator development, striking a balance between flexibility and performance. Reduction operators, as fundamental components of deep learning models, play a critical role in enhancing the stability and performance of both training and inference. However, the current thread-level handling of reduction operators in the Triton compiler does not fully exploit the multilayered memory hierarchy and memory access resources of GPU. To address this issue, we propose optimizations for the code generation process of reduction operators in the Triton compiler. Specifically, we utilize Warp Shuffle instructions to optimize intra-warp processing for non-contiguous axis reduction and adopt a data-packing strategy to enhance the downgrading process of FP16 data types. These strategies effectively reduce shared memory usage during reduction and improve the parallel efficiency of computational units. Additionally, we address the warp divergence caused by masking in loops by employing a redundant masking tail-loop optimization technique, which reduces the overhead of mask loading and improves memory access efficiency. Experimental results on reduction operators with varying data scales demonstrate that the Warp Shuffle-based optimization achieves bandwidth improvements of 6.2%–32.9% for FP32 and FP16 data types. Furthermore, the packing optimization yields an average bandwidth improvement of 5.1% for FP16 data types, while the redundant masking tail-loop optimization achieves an average bandwidth improvement of 6.6%.",
+        "identifiers": [
+          "SemanticScholar:13124739e53dfee8393939d0acb533db18ce27ef"
+        ],
+        "semantic_scholar_id": "13124739e53dfee8393939d0acb533db18ce27ef",
+        "doi": "10.1117/12.3066920",
+        "canonical_id": "DOI:10.1117/12.3066920",
+        "authors": [
+          "Lin Han",
+          "Jing Li",
+          "Ying-Ying Li",
+          "Zexian Fang",
+          "Wei Gao"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 565,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:13af0224893ef0a169aa11cf1d2b59be403dd8ac479633e961d30564f99cad17",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

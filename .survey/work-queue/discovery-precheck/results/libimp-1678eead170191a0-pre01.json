@@ -1,0 +1,257 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1678eead170191a0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1678eead1701",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.11313",
+    "arXiv:2609.00667"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f734e9d84e70d857f30f6e954fdb17931f08ea8b",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T03:15:24.676226+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.11313",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.00667",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "From Saliency to Discriminability: Rank-Preserving Visual Token Pruning for VLM Rerankers",
+      "source_url": "https://arxiv.org/abs/2609.00667",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models used as listwise rerankers must jointly process visual tokens from tens of candidates per query, making token pruning essential for practical deployment. Existing pruning methods retain tokens by attention saliency, yet we show that saliency is systematically misaligned with ranking contribution: visually prominent tokens often capture order-neutral patterns shared across candidates. This mismatch is layer-dependent: saliency becomes informative only where attention is concentrated, and normalized attention entropy diagnoses the reliability shift (Pearson r=0.87). We propose RaDiCal (Rank-Discriminative Calibration), a training-free framework that uses normalized attention entropy to decide when saliency can be trusted, fusing it with an attention-free rank-discriminative prior and selecting pruning layers from the same trust landscape. Across three retrieval benchmarks and multiple VLM architectures, RaDiCal matches Dense MRR@10 on Flickr30K and surpasses it on MSCOCO at a 20% token budget, ranks first among all pruning methods on FashionIQ, and holds within 1.2 pp on Flickr30K and MSCOCO at 10% retention. It cuts FLOPs by 39--45% and delivers 1.28--1.45$\\times$ measured speedups across two VLM architectures without dataset-specific retuning.",
+      "identifiers": [
+        "SemanticScholar:d8a83e39fc307dfa3105b3e700648b273f005804"
+      ],
+      "semantic_scholar_id": "d8a83e39fc307dfa3105b3e700648b273f005804",
+      "canonical_id": "arXiv:2609.00667",
+      "arxiv_id": "2609.00667",
+      "doi": "10.18653/2026.emnlp-main.1936",
+      "authors": [
+        "Si-Yi Liu",
+        "Han-Jun Yang",
+        "Chen-Chen Zhang",
+        "Xiao-Rong Zhu",
+        "Xin-Yu Zuo",
+        "Li-Sheng Duan",
+        "Hai-Jin Liang",
+        "Jin Ma",
+        "Junfu Pu",
+        "Yong-Qi Zhang"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "DocSLM: A Small Vision-Language Model for Long Multimodal Document Understanding",
+      "source_url": "https://arxiv.org/abs/2511.11313",
+      "year": 2025,
+      "published": "2025-11-14",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) have demonstrated strong multimodal reasoning capabilities on long and complex documents. However, their high memory footprint makes them impractical for deployment on resourceconstrained edge devices. We present DocSLM, an efficient Small Vision-Language Model designed for long document understanding under constrained memory resources. DocSLM incorporates a Hierarchical Multimodal Compressor that jointly encodes visual, textual, and layout information from each page into a fixed-length sequence, greatly reducing memory consumption while preserving both local and global semantics. To enable scalable processing over arbitrarily long inputs, we further introduce a Streaming Abstention mechanism that operates on document segments sequentially and filters low-confidence responses through an entropy-based uncertainty calibrator. Across multiple long multimodal document benchmarks, DocSLM matches or surpasses state-of-the-art methods while using 82% fewer visual tokens, 75% fewer parameters, and 71% lower latency-delivering reliable multimodal document understanding on lightweight edge devices. Code is available in the supplementary.",
+      "identifiers": [
+        "SemanticScholar:88f902431bbe64a60840448f04612928bbb92879"
+      ],
+      "semantic_scholar_id": "88f902431bbe64a60840448f04612928bbb92879",
+      "canonical_id": "arXiv:2511.11313",
+      "arxiv_id": "2511.11313",
+      "doi": "10.1109/CVPRF71909.2026.00895",
+      "authors": [
+        "Tanveer Hannan",
+        "Dimitrios Mallios",
+        "Parth Pathak",
+        "Faegheh Sardari",
+        "Thomas Seidl",
+        "Gedas Bertasius",
+        "Mohsen Fayyaz",
+        "Sunando Sengupta"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 376,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.00667",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.emnlp-main.1936",
+        "id:SemanticScholar:d8a83e39fc307dfa3105b3e700648b273f005804",
+        "id:arXiv:2609.00667",
+        "title:from saliency to discriminability rankpreserving visual token pruning for vlm rerankers",
+        "url:https://arxiv.org/abs/2609.00667"
+      ],
+      "record": {
+        "title": "From Saliency to Discriminability: Rank-Preserving Visual Token Pruning for VLM Rerankers",
+        "source_url": "https://arxiv.org/abs/2609.00667",
+        "year": 2026,
+        "published": "2026-09-01",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large vision-language models used as listwise rerankers must jointly process visual tokens from tens of candidates per query, making token pruning essential for practical deployment. Existing pruning methods retain tokens by attention saliency, yet we show that saliency is systematically misaligned with ranking contribution: visually prominent tokens often capture order-neutral patterns shared across candidates. This mismatch is layer-dependent: saliency becomes informative only where attention is concentrated, and normalized attention entropy diagnoses the reliability shift (Pearson r=0.87). We propose RaDiCal (Rank-Discriminative Calibration), a training-free framework that uses normalized attention entropy to decide when saliency can be trusted, fusing it with an attention-free rank-discriminative prior and selecting pruning layers from the same trust landscape. Across three retrieval benchmarks and multiple VLM architectures, RaDiCal matches Dense MRR@10 on Flickr30K and surpasses it on MSCOCO at a 20% token budget, ranks first among all pruning methods on FashionIQ, and holds within 1.2 pp on Flickr30K and MSCOCO at 10% retention. It cuts FLOPs by 39--45% and delivers 1.28--1.45$\\times$ measured speedups across two VLM architectures without dataset-specific retuning.",
+        "identifiers": [
+          "SemanticScholar:d8a83e39fc307dfa3105b3e700648b273f005804"
+        ],
+        "semantic_scholar_id": "d8a83e39fc307dfa3105b3e700648b273f005804",
+        "canonical_id": "arXiv:2609.00667",
+        "arxiv_id": "2609.00667",
+        "doi": "10.18653/2026.emnlp-main.1936",
+        "authors": [
+          "Si-Yi Liu",
+          "Han-Jun Yang",
+          "Chen-Chen Zhang",
+          "Xiao-Rong Zhu",
+          "Xin-Yu Zuo",
+          "Li-Sheng Duan",
+          "Hai-Jin Liang",
+          "Jin Ma",
+          "Junfu Pu",
+          "Yong-Qi Zhang"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.11313",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00895",
+        "id:SemanticScholar:88f902431bbe64a60840448f04612928bbb92879",
+        "id:arXiv:2511.11313",
+        "title:docslm a small visionlanguage model for long multimodal document understanding",
+        "url:https://arxiv.org/abs/2511.11313"
+      ],
+      "record": {
+        "title": "DocSLM: A Small Vision-Language Model for Long Multimodal Document Understanding",
+        "source_url": "https://arxiv.org/abs/2511.11313",
+        "year": 2025,
+        "published": "2025-11-14",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) have demonstrated strong multimodal reasoning capabilities on long and complex documents. However, their high memory footprint makes them impractical for deployment on resourceconstrained edge devices. We present DocSLM, an efficient Small Vision-Language Model designed for long document understanding under constrained memory resources. DocSLM incorporates a Hierarchical Multimodal Compressor that jointly encodes visual, textual, and layout information from each page into a fixed-length sequence, greatly reducing memory consumption while preserving both local and global semantics. To enable scalable processing over arbitrarily long inputs, we further introduce a Streaming Abstention mechanism that operates on document segments sequentially and filters low-confidence responses through an entropy-based uncertainty calibrator. Across multiple long multimodal document benchmarks, DocSLM matches or surpasses state-of-the-art methods while using 82% fewer visual tokens, 75% fewer parameters, and 71% lower latency-delivering reliable multimodal document understanding on lightweight edge devices. Code is available in the supplementary.",
+        "identifiers": [
+          "SemanticScholar:88f902431bbe64a60840448f04612928bbb92879"
+        ],
+        "semantic_scholar_id": "88f902431bbe64a60840448f04612928bbb92879",
+        "canonical_id": "arXiv:2511.11313",
+        "arxiv_id": "2511.11313",
+        "doi": "10.1109/CVPRF71909.2026.00895",
+        "authors": [
+          "Tanveer Hannan",
+          "Dimitrios Mallios",
+          "Parth Pathak",
+          "Faegheh Sardari",
+          "Thomas Seidl",
+          "Gedas Bertasius",
+          "Mohsen Fayyaz",
+          "Sunando Sengupta"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 376,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a01f4db901d4c9d3dfe9e8fdad11efbd763f654fd7edc9ce86a4f1c237cff5a2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

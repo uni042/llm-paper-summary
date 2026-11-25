@@ -1,0 +1,819 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7cafcfa341685ff9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7cafcfa34168",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/mass66014.2025.00085",
+    "SemanticScholar:ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
+    "arXiv:2405.16148",
+    "arXiv:2504.11729",
+    "arXiv:2512.02924",
+    "arXiv:2512.11851",
+    "arXiv:2604.12376",
+    "arXiv:2605.08314",
+    "arXiv:2609.34045",
+    "arXiv:2611.03173",
+    "arXiv:2611.13378"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f734e9d84e70d857f30f6e954fdb17931f08ea8b",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T03:15:22.484924+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/mass66014.2025.00085",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2110.01786"
+    },
+    {
+      "requested_id": "arXiv:2405.16148",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.11729",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.02924",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.11851",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.51244/ijrsi.2025.12120067"
+    },
+    {
+      "requested_id": "arXiv:2604.12376",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.08314",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34045",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.03173",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:52dfa4753024d294c5e9d2b301085943f539021a"
+    },
+    {
+      "requested_id": "arXiv:2611.13378",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AutoNeural: Co-Designing Vision-Language Models for NPU Inference",
+      "source_url": "https://arxiv.org/abs/2512.02924",
+      "year": 2025,
+      "published": "2025-12-02",
+      "venue": "arXiv.org",
+      "citation_count": 23,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Neural Processing Units (NPUs) offer high theoretical efficiency for edge AI, state-of-the-art Vision--Language Models (VLMs) tailored for GPUs often falter on these substrates. We attribute this hardware-model mismatch to two primary factors: the quantization brittleness of Vision Transformers (ViTs) and the I/O-bound nature of autoregressive attention mechanisms, which fail to utilize the high arithmetic throughput of NPUs. To bridge this gap, we propose AutoNeural, an NPU-native VLM architecture co-designed for integer-only inference. We replace the standard ViT encoder with a MobileNetV5-style backbone utilizing depthwise separable convolutions, which ensures bounded activation distributions for stable INT4/8/16 quantization. Complementing this, our language backbone integrates State-Space Model (SSM) principles with Transformer layers, employing efficient gated convolutions to achieve linear-time complexity. This hybrid design eliminates the heavy memory I/O overhead of Key-Value caching during generation. Our approach delivers substantial efficiency gains, reducing quantization error of vision encoder by up to 7x and end-to-end latency by 14x compared to conventional baselines. The AutoNeural also delivers 3x decoding speed and 4x longer context window than the baseline. We validate these improvements via a real-world automotive case study on the Qualcomm SA8295P SoC, demonstrating real-time performance for cockpit applications. Our results highlight that rethinking model topology specifically for NPU constraints is a prerequisite for robust multi-modal edge intelligence.",
+      "identifiers": [
+        "SemanticScholar:0ff1faecad6ac97a9be491749c914d952aa89651"
+      ],
+      "semantic_scholar_id": "0ff1faecad6ac97a9be491749c914d952aa89651",
+      "canonical_id": "arXiv:2512.02924",
+      "arxiv_id": "2512.02924",
+      "doi": "10.48550/arXiv.2512.02924",
+      "authors": [
+        "Wei Chen",
+        "Liang Wu",
+        "Yunhai Hu",
+        "Zhi-Yuan Li",
+        "Zhiyuan Cheng",
+        "Yi-Chen Qian",
+        "Ling-Yu Zhu",
+        "Zhipeng Hu",
+        "Lu Liang",
+        "Qiang Tang",
+        "Zhen Liu",
+        "Han Yang"
+      ],
+      "priority": 123,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 23,
+        "citation_count": 23,
+        "total": 123,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 358,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast",
+      "source_url": "https://arxiv.org/abs/2605.08314",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "SVD-based Low-rank compression reduces transformer parameters and nominal FLOPs, but these savings often translate poorly into real LLM serving speedups. We show that this gap is largely a runtime problem: factorized checkpoints fragment execution paths, and the resulting overhead differs substantially between prefill and autoregressive decode. We present FlashSVD v1.5, a unified inference runtime for serving SVD-compressed transformers. FlashSVD v1.5 maps diverse public SVD compression families to a common factorized representation and combines phase-specific kernels with dense-KV decode, packed MLP execution, and per-layer CUDA-graph replay to reorganize the low-rank serving path into a thin runtime. Across representative decoder-serving settings, FlashSVD v1.5 achieves up to 2.55x decode and 2.39x end-to-end speedup, and it attains 1.48x average decode and 1.44x average end-to-end speedup across multiple popular SVD compression families. These results suggest that practical low-rank acceleration requires runtime co-design, not compression algorithms alone. Our code is available at: https://github.com/Zishan-Shao/FlashSVD.",
+      "identifiers": [
+        "SemanticScholar:3f75d6bf80b6121c222279a8b5f3e9ee89b25b1f"
+      ],
+      "semantic_scholar_id": "3f75d6bf80b6121c222279a8b5f3e9ee89b25b1f",
+      "canonical_id": "arXiv:2605.08314",
+      "arxiv_id": "2605.08314",
+      "doi": "10.48550/arXiv.2605.08314",
+      "authors": [
+        "Wenhao Wu",
+        "Zi-Shan Shao",
+        "Kang-Ning Cui",
+        "Jinhee Kim",
+        "Yi-Xiao Wang",
+        "Han-Cheng Ye",
+        "Dan-Yang Zhuo",
+        "Yi-Ran Chen"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accelerating Transformers with Spectrum-Preserving Token Merging",
+      "source_url": "https://arxiv.org/abs/2405.16148",
+      "year": 2024,
+      "published": "2024-05-25",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 60,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Increasing the throughput of the Transformer architecture, a foundational component used in numerous state-of-the-art models for vision and language tasks (e.g., GPT, LLaVa), is an important problem in machine learning. One recent and effective strategy is to merge token representations within Transformer models, aiming to reduce computational and memory requirements while maintaining accuracy. Prior works have proposed algorithms based on Bipartite Soft Matching (BSM), which divides tokens into distinct sets and merges the top k similar tokens. However, these methods have significant drawbacks, such as sensitivity to token-splitting strategies and damage to informative tokens in later layers. This paper presents a novel paradigm called PiToMe, which prioritizes the preservation of informative tokens using an additional metric termed the energy score. This score identifies large clusters of similar tokens as high-energy, indicating potential candidates for merging, while smaller (unique and isolated) clusters are considered as low-energy and preserved. Experimental findings demonstrate that PiToMe saved from 40-60\\% FLOPs of the base models while exhibiting superior off-the-shelf performance on image classification (0.5\\% average performance drop of ViT-MAE-H compared to 2.6\\% as baselines), image-text retrieval (0.3\\% average performance drop of CLIP on Flickr30k compared to 4.5\\% as others), and analogously in visual questions answering with LLaVa-7B. Furthermore, PiToMe is theoretically shown to preserve intrinsic spectral properties of the original token space under mild conditions",
+      "identifiers": [
+        "SemanticScholar:bae3e3babdf9bc7c05d765811005a4964854149c"
+      ],
+      "semantic_scholar_id": "bae3e3babdf9bc7c05d765811005a4964854149c",
+      "canonical_id": "arXiv:2405.16148",
+      "arxiv_id": "2405.16148",
+      "doi": "10.48550/arXiv.2405.16148",
+      "authors": [
+        "C. Tran",
+        "D. M. H. Nguyen",
+        "Manh-Duy Nguyen",
+        "TrungTin Nguyen",
+        "Ngan Le",
+        "Peng-Tao Xie",
+        "Daniel Sonntag",
+        "James Y. Zou",
+        "Binh Nguyen",
+        "M. Niepert"
+      ],
+      "priority": 70,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 60,
+        "citation_count": 60,
+        "total": 70,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 914,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Cooperative Memory Paging with Keyword Bookmarks for Long-Horizon LLM Conversations",
+      "source_url": "https://arxiv.org/abs/2604.12376",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "When LLM conversations grow beyond the context window, old content must be evicted -- but how does the model recover it when needed? We propose cooperative paging: evicted segments are replaced with minimal keyword bookmarks ([pN:keywords], ~8-24 tokens each), and the model is given a recall() tool to retrieve full content on demand. On the LoCoMo benchmark (10 real multi-session conversations, 300+ turns), cooperative paging achieves the highest answer quality among six methods -- outperforming truncation, BM25, word-overlap retrieval, a search-tool baseline, and full context -- on four models (GPT-4o-mini, DeepSeek-v3.2, Claude Haiku, GLM-5), confirmed by four independent LLM judges ($p=0.017$, paired bootstrap). We then study the paging design space with a 5x4 ablation over boundary strategies and eviction policies (3,176 synthetic probes, 1,600 LoCoMo probes). Key findings: (1) coarse fixed-size pages (fixed_20) reach 96.7% while content-aware topic_shift collapses to 56.7%; (2) eviction policy choice is data-dependent (FIFO best on synthetic, LFU on LoCoMo); (3) two bookmark generation strategies improve over the heuristic baseline (+4.4 and +8.7 E2E points); (4) the remaining bottleneck is bookmark discrimination -- the model triggers recall() 96% of the time but selects the correct page only 57% when bookmarks are insufficiently distinctive. Keyword specificity alone accounts for a 25 percentage point accuracy difference.",
+      "identifiers": [
+        "SemanticScholar:4c86785e86d907877b573cb4aa9ad3ecdc78e68c"
+      ],
+      "semantic_scholar_id": "4c86785e86d907877b573cb4aa9ad3ecdc78e68c",
+      "canonical_id": "arXiv:2604.12376",
+      "arxiv_id": "2604.12376",
+      "doi": "10.48550/arXiv.2604.12376",
+      "authors": [
+        "Ziyang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 225,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Kafila: Serving Large Language Models on a Trusted Set of Heterogeneous Commodity Machines",
+      "source_url": "https://arxiv.org/abs/2609.34045",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Between them, the members of a research group or a circle of friends own several consumer computers, none large enough to run a capable large language model. Existing systems pool such capacity across open swarms anyone may join, which a group admitting only trusted machines cannot use. Bounding membership removes what they depend on: a swarm holds each part of the model on several peers and routes around a slow one. A bounded session must use every device it admits. Its pipeline advances at the pace of whichever device received a share it cannot serve quickly, so the division has to be right before serving begins. We propose Kafila, whose protocol assembles a ring from behind NATs, preferring direct paths and relaying where traversal fails, while its planner measures each device's memory bandwidth, capacity and reachability, divides the model exactly for a fixed ring order, and places the head, which holds the embedding and output projection, together with that division rather than beforehand. On machines with different capabilities across three fleets, from a shared LAN to five devices spanning two continents, Kafila shortens the slowest pipeline stage by up to $5.2\\times$ against the even split of pipeline parallelism, as in GPipe, and up to $3\\times$ against the memory-proportional split of personal-device inference, as in exo, keeps 75 to 87 per cent of the committed hardware doing work where those divisions fall below half, and serves a model no uniform split can place on the fleet at all. What that is worth to a user depends on how much of a token is computation rather than network. Where the members share a network the same division returns $1.56\\times$ the throughput of a uniform split and $1.25\\times$ of a memory-proportional one, and under four concurrent users that lead compounds to $3.2\\times$ rather than fading, each user served at almost the rate of one.",
+      "identifiers": [
+        "SemanticScholar:8b56f4b37ec759f7c00854c7ec8759ae46b00d4f"
+      ],
+      "semantic_scholar_id": "8b56f4b37ec759f7c00854c7ec8759ae46b00d4f",
+      "canonical_id": "arXiv:2609.34045",
+      "arxiv_id": "2609.34045",
+      "doi": "10.48550/arXiv.2609.34045",
+      "authors": [
+        "Murtaza Rangwala",
+        "R. Sinnott",
+        "R. Buyya"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 58,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Looping Deeper Without Growing the KV Cache: Recurrent Depth for Causal Encoder-Decoders",
+      "source_url": "https://arxiv.org/abs/2611.13378",
+      "year": 2026,
+      "published": "2026-11-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped language models deepen computation without adding parameters, yet caching full-context key-value (KV) states across layers and rounds severely bounds serving batch size. We design a looped causal encoder-decoder (CED) that achieves recurrent depth with zero round-wise KV growth, addressing where and how to loop an asymmetric stack in which only sparse encoder layers generate global KV. We find that recurrence must be placed in the encoder to iteratively refine global KV representations rather than re-reading static decoder projections, which both drives language-modeling gains and preserves long-context scaling. Furthermore, training the encoder loop under stochastic recurrence depth induces a fixed-point equilibrium where every round losslessly shares the last round's KV cache. Compounding cross-layer and cross-round KV sharing, the resulting Looped CED matches an unlooped CED's minimal memory footprint and recovers 86-93% of a looped Transformer's gain with 1/6 of its global KV. To test serving at production scale, we loop the 552B-parameter DeepSeek-V4.1-Flash for 8 rounds on one 4xGB200 node: with per-layer and per-round KV the loop cannot fit a single 128K-token request, whereas Looped CED holds 36.8x less KV per token, fits 38 such requests (as many as the unlooped model), and serves 3.6x higher throughput on 8K-token prompts.",
+      "identifiers": [
+        "SemanticScholar:5682dded219c92aded066f4f3ea5d072f0aa4c26"
+      ],
+      "semantic_scholar_id": "5682dded219c92aded066f4f3ea5d072f0aa4c26",
+      "canonical_id": "arXiv:2611.13378",
+      "arxiv_id": "2611.13378",
+      "authors": [
+        "Jiaqi Leng",
+        "Min-Shen Zhang",
+        "Zhao-Feng Sun",
+        "Yuan-Pan Qian",
+        "Peng-Fei Zhao",
+        "Hao Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EdgePrompt: A Distributed Key-Value Inference Framework for LLMs in 6G Networks",
+      "source_url": "https://arxiv.org/abs/2504.11729",
+      "year": 2025,
+      "published": "2025-04-16",
+      "venue": "Conference on Computer Communications Workshops",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As sixth-generation (6G) networks advance, large language models (LLMs) are increasingly integrated into 6G infrastructure to enhance network management and intelligence. However, traditional LLMs architecture struggle to meet the stringent latency and security requirements of 6G, especially as the increasing in sequence length leads to greater task complexity. This paper proposes EdgePrompt, a cloud-edge collaborative framework based on a hierarchical attention splicing mechanism. EdgePrompt employs distributed key-value (KV) pair optimization techniques to accelerate inference and adapt to network conditions. Additionally, to reduce the risk of data leakage, EdgePrompt incorporates a privacy preserving strategy by isolating sensitive information during processing. Experiments on public dataset show that EdgePrompt effectively improves the inference throughput and reduces the latency, which provides a reliable solution for LLMs deployment in 6G environments.",
+      "identifiers": [
+        "SemanticScholar:b8fe0f47ddc38ed7643a08cae7fd2cba2f359e70"
+      ],
+      "semantic_scholar_id": "b8fe0f47ddc38ed7643a08cae7fd2cba2f359e70",
+      "canonical_id": "arXiv:2504.11729",
+      "arxiv_id": "2504.11729",
+      "doi": "10.1109/INFOCOMWKSHPS65812.2025.11152752",
+      "authors": [
+        "Jia-Hong Ning",
+        "Pengyan Zhu",
+        "Ce Zheng",
+        "Gary C. F. Lee",
+        "Su-Mei Sun",
+        "Ting-Ting Yang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 588,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Task Offloading for Collaborative Inference of LLM Agents at the Network Edge",
+      "source_url": "https://doi.org/10.1109/MASS66014.2025.00085",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": "IEEE International Conference on Mobile Adhoc and Sensor Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of large language models (LLMs) at the network edge has emerged as a critical paradigm for enabling low-latency, privacy-preserving AI services. However, resource-constrained user devices (e.g., smartphones, IoT endpoints) struggle to execute computationally intensive LLM inference tasks solely. Collaborative computing frameworks that offload subtasks to edge servers offer a promising solution but face challenges in balancing task completion latency, energy consumption, and dynamic network conditions. This paper addresses these challenges by proposing a two-stage optimization framework that jointly manages task offloading decisions and computational resource allocation, aiming to minimize the total task completion latency. Simulation results demonstrate that the proposed algorithm reduces total latency by 49.6% compared to random, greedy, and genetic baselines, exhibits robust adaptability across varying energy budgets, and achieves 97.8% energy utilization in resource-constrained edge environments.",
+      "identifiers": [
+        "SemanticScholar:757f605691d2f36ad2b2757eae96541c48d2e0f3"
+      ],
+      "semantic_scholar_id": "757f605691d2f36ad2b2757eae96541c48d2e0f3",
+      "doi": "10.1109/MASS66014.2025.00085",
+      "canonical_id": "DOI:10.1109/MASS66014.2025.00085",
+      "authors": [
+        "Yi-Xuan Yang",
+        "Yu-Tong Pan",
+        "Junhe Zhang",
+        "Wan-Li Ni"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 415,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.02924",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.02924",
+        "id:SemanticScholar:0ff1faecad6ac97a9be491749c914d952aa89651",
+        "id:arXiv:2512.02924",
+        "title:autoneural codesigning visionlanguage models for npu inference",
+        "url:https://arxiv.org/abs/2512.02924"
+      ],
+      "record": {
+        "title": "AutoNeural: Co-Designing Vision-Language Models for NPU Inference",
+        "source_url": "https://arxiv.org/abs/2512.02924",
+        "year": 2025,
+        "published": "2025-12-02",
+        "venue": "arXiv.org",
+        "citation_count": 23,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Neural Processing Units (NPUs) offer high theoretical efficiency for edge AI, state-of-the-art Vision--Language Models (VLMs) tailored for GPUs often falter on these substrates. We attribute this hardware-model mismatch to two primary factors: the quantization brittleness of Vision Transformers (ViTs) and the I/O-bound nature of autoregressive attention mechanisms, which fail to utilize the high arithmetic throughput of NPUs. To bridge this gap, we propose AutoNeural, an NPU-native VLM architecture co-designed for integer-only inference. We replace the standard ViT encoder with a MobileNetV5-style backbone utilizing depthwise separable convolutions, which ensures bounded activation distributions for stable INT4/8/16 quantization. Complementing this, our language backbone integrates State-Space Model (SSM) principles with Transformer layers, employing efficient gated convolutions to achieve linear-time complexity. This hybrid design eliminates the heavy memory I/O overhead of Key-Value caching during generation. Our approach delivers substantial efficiency gains, reducing quantization error of vision encoder by up to 7x and end-to-end latency by 14x compared to conventional baselines. The AutoNeural also delivers 3x decoding speed and 4x longer context window than the baseline. We validate these improvements via a real-world automotive case study on the Qualcomm SA8295P SoC, demonstrating real-time performance for cockpit applications. Our results highlight that rethinking model topology specifically for NPU constraints is a prerequisite for robust multi-modal edge intelligence.",
+        "identifiers": [
+          "SemanticScholar:0ff1faecad6ac97a9be491749c914d952aa89651"
+        ],
+        "semantic_scholar_id": "0ff1faecad6ac97a9be491749c914d952aa89651",
+        "canonical_id": "arXiv:2512.02924",
+        "arxiv_id": "2512.02924",
+        "doi": "10.48550/arXiv.2512.02924",
+        "authors": [
+          "Wei Chen",
+          "Liang Wu",
+          "Yunhai Hu",
+          "Zhi-Yuan Li",
+          "Zhiyuan Cheng",
+          "Yi-Chen Qian",
+          "Ling-Yu Zhu",
+          "Zhipeng Hu",
+          "Lu Liang",
+          "Qiang Tang",
+          "Zhen Liu",
+          "Han Yang"
+        ],
+        "priority": 123,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 23,
+          "citation_count": 23,
+          "total": 123,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 358,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.08314",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.08314",
+        "id:SemanticScholar:3f75d6bf80b6121c222279a8b5f3e9ee89b25b1f",
+        "id:arXiv:2605.08314",
+        "title:flashsvd v15 making lowrank transformers inference actually fast",
+        "url:https://arxiv.org/abs/2605.08314"
+      ],
+      "record": {
+        "title": "FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast",
+        "source_url": "https://arxiv.org/abs/2605.08314",
+        "year": 2026,
+        "published": "2026-05-08",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "SVD-based Low-rank compression reduces transformer parameters and nominal FLOPs, but these savings often translate poorly into real LLM serving speedups. We show that this gap is largely a runtime problem: factorized checkpoints fragment execution paths, and the resulting overhead differs substantially between prefill and autoregressive decode. We present FlashSVD v1.5, a unified inference runtime for serving SVD-compressed transformers. FlashSVD v1.5 maps diverse public SVD compression families to a common factorized representation and combines phase-specific kernels with dense-KV decode, packed MLP execution, and per-layer CUDA-graph replay to reorganize the low-rank serving path into a thin runtime. Across representative decoder-serving settings, FlashSVD v1.5 achieves up to 2.55x decode and 2.39x end-to-end speedup, and it attains 1.48x average decode and 1.44x average end-to-end speedup across multiple popular SVD compression families. These results suggest that practical low-rank acceleration requires runtime co-design, not compression algorithms alone. Our code is available at: https://github.com/Zishan-Shao/FlashSVD.",
+        "identifiers": [
+          "SemanticScholar:3f75d6bf80b6121c222279a8b5f3e9ee89b25b1f"
+        ],
+        "semantic_scholar_id": "3f75d6bf80b6121c222279a8b5f3e9ee89b25b1f",
+        "canonical_id": "arXiv:2605.08314",
+        "arxiv_id": "2605.08314",
+        "doi": "10.48550/arXiv.2605.08314",
+        "authors": [
+          "Wenhao Wu",
+          "Zi-Shan Shao",
+          "Kang-Ning Cui",
+          "Jinhee Kim",
+          "Yi-Xiao Wang",
+          "Han-Cheng Ye",
+          "Dan-Yang Zhuo",
+          "Yi-Ran Chen"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 201,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.16148",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.16148",
+        "id:SemanticScholar:bae3e3babdf9bc7c05d765811005a4964854149c",
+        "id:arXiv:2405.16148",
+        "title:accelerating transformers with spectrumpreserving token merging",
+        "url:https://arxiv.org/abs/2405.16148"
+      ],
+      "record": {
+        "title": "Accelerating Transformers with Spectrum-Preserving Token Merging",
+        "source_url": "https://arxiv.org/abs/2405.16148",
+        "year": 2024,
+        "published": "2024-05-25",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 60,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Increasing the throughput of the Transformer architecture, a foundational component used in numerous state-of-the-art models for vision and language tasks (e.g., GPT, LLaVa), is an important problem in machine learning. One recent and effective strategy is to merge token representations within Transformer models, aiming to reduce computational and memory requirements while maintaining accuracy. Prior works have proposed algorithms based on Bipartite Soft Matching (BSM), which divides tokens into distinct sets and merges the top k similar tokens. However, these methods have significant drawbacks, such as sensitivity to token-splitting strategies and damage to informative tokens in later layers. This paper presents a novel paradigm called PiToMe, which prioritizes the preservation of informative tokens using an additional metric termed the energy score. This score identifies large clusters of similar tokens as high-energy, indicating potential candidates for merging, while smaller (unique and isolated) clusters are considered as low-energy and preserved. Experimental findings demonstrate that PiToMe saved from 40-60\\% FLOPs of the base models while exhibiting superior off-the-shelf performance on image classification (0.5\\% average performance drop of ViT-MAE-H compared to 2.6\\% as baselines), image-text retrieval (0.3\\% average performance drop of CLIP on Flickr30k compared to 4.5\\% as others), and analogously in visual questions answering with LLaVa-7B. Furthermore, PiToMe is theoretically shown to preserve intrinsic spectral properties of the original token space under mild conditions",
+        "identifiers": [
+          "SemanticScholar:bae3e3babdf9bc7c05d765811005a4964854149c"
+        ],
+        "semantic_scholar_id": "bae3e3babdf9bc7c05d765811005a4964854149c",
+        "canonical_id": "arXiv:2405.16148",
+        "arxiv_id": "2405.16148",
+        "doi": "10.48550/arXiv.2405.16148",
+        "authors": [
+          "C. Tran",
+          "D. M. H. Nguyen",
+          "Manh-Duy Nguyen",
+          "TrungTin Nguyen",
+          "Ngan Le",
+          "Peng-Tao Xie",
+          "Daniel Sonntag",
+          "James Y. Zou",
+          "Binh Nguyen",
+          "M. Niepert"
+        ],
+        "priority": 70,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 60,
+          "citation_count": 60,
+          "total": 70,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 914,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.12376",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.12376",
+        "id:SemanticScholar:4c86785e86d907877b573cb4aa9ad3ecdc78e68c",
+        "id:arXiv:2604.12376",
+        "title:cooperative memory paging with keyword bookmarks for longhorizon llm conversations",
+        "url:https://arxiv.org/abs/2604.12376"
+      ],
+      "record": {
+        "title": "Cooperative Memory Paging with Keyword Bookmarks for Long-Horizon LLM Conversations",
+        "source_url": "https://arxiv.org/abs/2604.12376",
+        "year": 2026,
+        "published": "2026-04-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "When LLM conversations grow beyond the context window, old content must be evicted -- but how does the model recover it when needed? We propose cooperative paging: evicted segments are replaced with minimal keyword bookmarks ([pN:keywords], ~8-24 tokens each), and the model is given a recall() tool to retrieve full content on demand. On the LoCoMo benchmark (10 real multi-session conversations, 300+ turns), cooperative paging achieves the highest answer quality among six methods -- outperforming truncation, BM25, word-overlap retrieval, a search-tool baseline, and full context -- on four models (GPT-4o-mini, DeepSeek-v3.2, Claude Haiku, GLM-5), confirmed by four independent LLM judges ($p=0.017$, paired bootstrap). We then study the paging design space with a 5x4 ablation over boundary strategies and eviction policies (3,176 synthetic probes, 1,600 LoCoMo probes). Key findings: (1) coarse fixed-size pages (fixed_20) reach 96.7% while content-aware topic_shift collapses to 56.7%; (2) eviction policy choice is data-dependent (FIFO best on synthetic, LFU on LoCoMo); (3) two bookmark generation strategies improve over the heuristic baseline (+4.4 and +8.7 E2E points); (4) the remaining bottleneck is bookmark discrimination -- the model triggers recall() 96% of the time but selects the correct page only 57% when bookmarks are insufficiently distinctive. Keyword specificity alone accounts for a 25 percentage point accuracy difference.",
+        "identifiers": [
+          "SemanticScholar:4c86785e86d907877b573cb4aa9ad3ecdc78e68c"
+        ],
+        "semantic_scholar_id": "4c86785e86d907877b573cb4aa9ad3ecdc78e68c",
+        "canonical_id": "arXiv:2604.12376",
+        "arxiv_id": "2604.12376",
+        "doi": "10.48550/arXiv.2604.12376",
+        "authors": [
+          "Ziyang Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 225,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34045",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.34045",
+        "id:SemanticScholar:8b56f4b37ec759f7c00854c7ec8759ae46b00d4f",
+        "id:arXiv:2609.34045",
+        "title:kafila serving large language models on a trusted set of heterogeneous commodity machines",
+        "url:https://arxiv.org/abs/2609.34045"
+      ],
+      "record": {
+        "title": "Kafila: Serving Large Language Models on a Trusted Set of Heterogeneous Commodity Machines",
+        "source_url": "https://arxiv.org/abs/2609.34045",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Between them, the members of a research group or a circle of friends own several consumer computers, none large enough to run a capable large language model. Existing systems pool such capacity across open swarms anyone may join, which a group admitting only trusted machines cannot use. Bounding membership removes what they depend on: a swarm holds each part of the model on several peers and routes around a slow one. A bounded session must use every device it admits. Its pipeline advances at the pace of whichever device received a share it cannot serve quickly, so the division has to be right before serving begins. We propose Kafila, whose protocol assembles a ring from behind NATs, preferring direct paths and relaying where traversal fails, while its planner measures each device's memory bandwidth, capacity and reachability, divides the model exactly for a fixed ring order, and places the head, which holds the embedding and output projection, together with that division rather than beforehand. On machines with different capabilities across three fleets, from a shared LAN to five devices spanning two continents, Kafila shortens the slowest pipeline stage by up to $5.2\\times$ against the even split of pipeline parallelism, as in GPipe, and up to $3\\times$ against the memory-proportional split of personal-device inference, as in exo, keeps 75 to 87 per cent of the committed hardware doing work where those divisions fall below half, and serves a model no uniform split can place on the fleet at all. What that is worth to a user depends on how much of a token is computation rather than network. Where the members share a network the same division returns $1.56\\times$ the throughput of a uniform split and $1.25\\times$ of a memory-proportional one, and under four concurrent users that lead compounds to $3.2\\times$ rather than fading, each user served at almost the rate of one.",
+        "identifiers": [
+          "SemanticScholar:8b56f4b37ec759f7c00854c7ec8759ae46b00d4f"
+        ],
+        "semantic_scholar_id": "8b56f4b37ec759f7c00854c7ec8759ae46b00d4f",
+        "canonical_id": "arXiv:2609.34045",
+        "arxiv_id": "2609.34045",
+        "doi": "10.48550/arXiv.2609.34045",
+        "authors": [
+          "Murtaza Rangwala",
+          "R. Sinnott",
+          "R. Buyya"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 58,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.13378",
+      "identity_tokens": [
+        "id:SemanticScholar:5682dded219c92aded066f4f3ea5d072f0aa4c26",
+        "id:arXiv:2611.13378",
+        "title:looping deeper without growing the kv cache recurrent depth for causal encoderdecoders",
+        "url:https://arxiv.org/abs/2611.13378"
+      ],
+      "record": {
+        "title": "Looping Deeper Without Growing the KV Cache: Recurrent Depth for Causal Encoder-Decoders",
+        "source_url": "https://arxiv.org/abs/2611.13378",
+        "year": 2026,
+        "published": "2026-11-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped language models deepen computation without adding parameters, yet caching full-context key-value (KV) states across layers and rounds severely bounds serving batch size. We design a looped causal encoder-decoder (CED) that achieves recurrent depth with zero round-wise KV growth, addressing where and how to loop an asymmetric stack in which only sparse encoder layers generate global KV. We find that recurrence must be placed in the encoder to iteratively refine global KV representations rather than re-reading static decoder projections, which both drives language-modeling gains and preserves long-context scaling. Furthermore, training the encoder loop under stochastic recurrence depth induces a fixed-point equilibrium where every round losslessly shares the last round's KV cache. Compounding cross-layer and cross-round KV sharing, the resulting Looped CED matches an unlooped CED's minimal memory footprint and recovers 86-93% of a looped Transformer's gain with 1/6 of its global KV. To test serving at production scale, we loop the 552B-parameter DeepSeek-V4.1-Flash for 8 rounds on one 4xGB200 node: with per-layer and per-round KV the loop cannot fit a single 128K-token request, whereas Looped CED holds 36.8x less KV per token, fits 38 such requests (as many as the unlooped model), and serves 3.6x higher throughput on 8K-token prompts.",
+        "identifiers": [
+          "SemanticScholar:5682dded219c92aded066f4f3ea5d072f0aa4c26"
+        ],
+        "semantic_scholar_id": "5682dded219c92aded066f4f3ea5d072f0aa4c26",
+        "canonical_id": "arXiv:2611.13378",
+        "arxiv_id": "2611.13378",
+        "authors": [
+          "Jiaqi Leng",
+          "Min-Shen Zhang",
+          "Zhao-Feng Sun",
+          "Yuan-Pan Qian",
+          "Peng-Fei Zhao",
+          "Hao Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 16,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.11729",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocomwkshps65812.2025.11152752",
+        "id:SemanticScholar:b8fe0f47ddc38ed7643a08cae7fd2cba2f359e70",
+        "id:arXiv:2504.11729",
+        "title:edgeprompt a distributed keyvalue inference framework for llms in 6g networks",
+        "url:https://arxiv.org/abs/2504.11729"
+      ],
+      "record": {
+        "title": "EdgePrompt: A Distributed Key-Value Inference Framework for LLMs in 6G Networks",
+        "source_url": "https://arxiv.org/abs/2504.11729",
+        "year": 2025,
+        "published": "2025-04-16",
+        "venue": "Conference on Computer Communications Workshops",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As sixth-generation (6G) networks advance, large language models (LLMs) are increasingly integrated into 6G infrastructure to enhance network management and intelligence. However, traditional LLMs architecture struggle to meet the stringent latency and security requirements of 6G, especially as the increasing in sequence length leads to greater task complexity. This paper proposes EdgePrompt, a cloud-edge collaborative framework based on a hierarchical attention splicing mechanism. EdgePrompt employs distributed key-value (KV) pair optimization techniques to accelerate inference and adapt to network conditions. Additionally, to reduce the risk of data leakage, EdgePrompt incorporates a privacy preserving strategy by isolating sensitive information during processing. Experiments on public dataset show that EdgePrompt effectively improves the inference throughput and reduces the latency, which provides a reliable solution for LLMs deployment in 6G environments.",
+        "identifiers": [
+          "SemanticScholar:b8fe0f47ddc38ed7643a08cae7fd2cba2f359e70"
+        ],
+        "semantic_scholar_id": "b8fe0f47ddc38ed7643a08cae7fd2cba2f359e70",
+        "canonical_id": "arXiv:2504.11729",
+        "arxiv_id": "2504.11729",
+        "doi": "10.1109/INFOCOMWKSHPS65812.2025.11152752",
+        "authors": [
+          "Jia-Hong Ning",
+          "Pengyan Zhu",
+          "Ce Zheng",
+          "Gary C. F. Lee",
+          "Su-Mei Sun",
+          "Ting-Ting Yang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 588,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/mass66014.2025.00085",
+      "identity_tokens": [
+        "id:DOI:10.1109/mass66014.2025.00085",
+        "id:SemanticScholar:757f605691d2f36ad2b2757eae96541c48d2e0f3",
+        "title:task offloading for collaborative inference of llm agents at the network edge",
+        "url:https://doi.org/10.1109/MASS66014.2025.00085"
+      ],
+      "record": {
+        "title": "Task Offloading for Collaborative Inference of LLM Agents at the Network Edge",
+        "source_url": "https://doi.org/10.1109/MASS66014.2025.00085",
+        "year": 2025,
+        "published": "2025-10-06",
+        "venue": "IEEE International Conference on Mobile Adhoc and Sensor Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of large language models (LLMs) at the network edge has emerged as a critical paradigm for enabling low-latency, privacy-preserving AI services. However, resource-constrained user devices (e.g., smartphones, IoT endpoints) struggle to execute computationally intensive LLM inference tasks solely. Collaborative computing frameworks that offload subtasks to edge servers offer a promising solution but face challenges in balancing task completion latency, energy consumption, and dynamic network conditions. This paper addresses these challenges by proposing a two-stage optimization framework that jointly manages task offloading decisions and computational resource allocation, aiming to minimize the total task completion latency. Simulation results demonstrate that the proposed algorithm reduces total latency by 49.6% compared to random, greedy, and genetic baselines, exhibits robust adaptability across varying energy budgets, and achieves 97.8% energy utilization in resource-constrained edge environments.",
+        "identifiers": [
+          "SemanticScholar:757f605691d2f36ad2b2757eae96541c48d2e0f3"
+        ],
+        "semantic_scholar_id": "757f605691d2f36ad2b2757eae96541c48d2e0f3",
+        "doi": "10.1109/MASS66014.2025.00085",
+        "canonical_id": "DOI:10.1109/MASS66014.2025.00085",
+        "authors": [
+          "Yi-Xuan Yang",
+          "Yu-Tong Pan",
+          "Junhe Zhang",
+          "Wan-Li Ni"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 415,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:62a6594f834fe51609f605867f453981e7c03658de430be67fb7b0266fed065e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
