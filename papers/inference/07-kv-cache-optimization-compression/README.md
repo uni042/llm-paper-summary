@@ -249,6 +249,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：4  
   構造化エージェントメモリの一部トークンだけを再計算し、そこから推定したメモリ単位のKV残差を未再計算トークン全体へ加えて、低い再計算率で品質を回復する。
 
+- **2026-04 · [Swift-SVD: Theoretical Optimality Meets Practical Efficiency in Low-Rank LLM Compression](2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md)**  
+  実装：[✓](https://github.com/hiahei/Swift-SVD) ・ リポジトリ内被引用：4  
+  出力活性値の共分散を逐次集約して固有値分解を1回だけ行い、活性値を考慮した理論最適な低ランク圧縮を高速かつ数値安定に実現し、再構成損失と層重要度を組み合わせた動的ランク配分まで備えた学習不要の圧縮手法。
+
 - **2026-04 · [PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference](2026-2604.24971-polykv-shared-asymmetrically-compressed-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   共通文書のKVキャッシュを一度だけ非対称量子化して共有プール化し、複数エージェントへ注入して重複メモリを削減する。
@@ -460,10 +464,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-04 · [The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference](2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   数学的には、毎回すべての接頭辞を再計算する経路と同じ注意計算を実行するはずである。新しい高速化カーネルやKV圧縮方式を提案する研究ではない。さらに32ビット浮動小数点（FP32）へ切り替えると、著者らの別の対照実験ではトークン反転が0%となり、出力分布差が大幅に減った。
-
-- **2026-04 · [Swift-SVD: Theoretical Optimality Meets Practical Efficiency in Low-Rank LLM Compression](2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md)**  
-  実装：[✓](https://github.com/hiahei/Swift-SVD) ・ リポジトリ内被引用：2  
-  出力活性値の共分散を逐次集約して固有値分解を1回だけ行い、活性値を考慮した理論最適な低ランク圧縮を高速かつ数値安定に実現し、再構成損失と層重要度を組み合わせた動的ランク配分まで備えた学習不要の圧縮手法。
 
 - **2026-04 · [Sub-Token Routing for KV Cache Compression](2026-2604.21335-sub-token-routing-for-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

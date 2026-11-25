@@ -162,6 +162,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   しかし学習後量子化（Post-学習 量子化; PTQ）では、元の重みを単純に最も近い離散値へ丸めると、層の出力誤差が蓄積して言語モデルの品質が低下する。
 
+- **2026-03 · [SliderQuant: Accurate Post-Training Quantization for LLMs](2026-2603.25284-sliderquant-accurate-post-training-quantization-for-llms.md)**  
+  実装：[✓](https://github.com/deep-optimization/SliderQuant) ・ リポジトリ内被引用：2  
+  SliderQuantは、事前学習済みLLMを追加の大規模学習なしで低ビット化する事後量子化（PTQ）方式である。Llama2-7BのW4A4でWikiText2困惑度（PPL）はCBQの12.73に対し8.34、Qwen3-30B-A3BのW4A4ではOmniQuantのゼロショット平均50.11%に対し66.86%だった。
+
 - **2026-02 · [MoBiQuant: Mixture-of-Bits Quantization for Token-Adaptive Any-Precision LLM](2026-2602.20191-mobiquant-mixture-of-bits-quantization-for-token-adaptive-any-precision-.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   大規模言語モデル（Large Language モデル; LLM）の推論における重み量子化は、GPUメモリ容量と重み読み出し帯域を節約する一方、ビット幅を下げるほど丸め誤差を増やす。
@@ -253,10 +257,6 @@
 - **2026-04 · [A KL Lens on Quantization: Fast, Forward-Only Sensitivity for Mixed-Precision SSM-Transformer Models](2026-2604.13440-a-kl-lens-on-quantization-fast-forward-only-sensitivity-for-mixed-precis.md)**  
   実装：[✓](https://github.com/jasonkongie/kl-ssm-quant) ・ リポジトリ内被引用：1  
   層を一つずつ量子化して順伝播だけで出力分布のずれを測り、学生から教師へのカルバック・ライブラー距離の順位が困惑度悪化の順位と六モデル平均で相関〇・七九と最もよく一致することを示し、その順位で高精度に残す層を選ぶ混合精度が実機で困惑度を保ったまま大きさと遅延を大きく減らした。
-
-- **2026-03 · [SliderQuant: Accurate Post-Training Quantization for LLMs](2026-2603.25284-sliderquant-accurate-post-training-quantization-for-llms.md)**  
-  実装：[✓](https://github.com/deep-optimization/SliderQuant) ・ リポジトリ内被引用：1  
-  SliderQuantは、事前学習済みLLMを追加の大規模学習なしで低ビット化する事後量子化（PTQ）方式である。Llama2-7BのW4A4でWikiText2困惑度（PPL）はCBQの12.73に対し8.34、Qwen3-30B-A3BのW4A4ではOmniQuantのゼロショット平均50.11%に対し66.86%だった。
 
 - **2026-03 · [SERQ: Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization](2026-2603.08185-serq-saliency-aware-low-rank-error-reconstruction-for-llm-quantization.md)**  
   実装：[✓](https://github.com/acalabys/SERQ) ・ リポジトリ内被引用：1  
@@ -1396,6 +1396,10 @@
   実装：[✓](https://github.com/RazvanDu/LayerwiseQuant/) ・ リポジトリ内被引用：4  
   層の重要度を二つの物差しで順位付けし、重要な層を高ビット、重要でない層を低ビットに割り当てることで、平均三ビット前後まで性能の九割前後を保ちながらメモリ予算へ細かく合わせられるようにした。
 
+- **2024-10 · [SeedLM: Compressing LLM Weights into Seeds of Pseudo-Random Generators](2024-2410.10714-seedlm-compressing-llm-weights-into-seeds-of-pseudo-random-generators.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  大規模言語モデルの自己回帰生成では、1トークンを生成するたびに大量の重みを読み出す必要があり、演算器の理論性能よりもDRAM帯域が制約になる場合がある。通常の低ビット量子化は、FP16などの重みを整数値へ写像して読み出し量を減らす。速度については、専用FPGA上の行列ベクトル積でFP16基準比3.67〜3.98倍のサイクル数削減を報告する。
+
 - **2024-05 · [ReALLM: A general framework for LLM compression and fine-tuning](2024-2405.13155-reallm-a-general-framework-for-llm-compression-and-fine-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   元の行列を16ビットで保存する代わりに、学習済みの小型デコーダ、量子化した埋め込み、コードブック、必要な逆置換、低ランク行列とスケールを保存する。
@@ -1411,10 +1415,6 @@
 - **2023-12 · [DSFormer: Effective Compression of Text-Transformers by Dense-Sparse Weight Factorization](2023-2312.13211-dsformer-effective-compression-of-text-transformers-by-dense-sparse-weig.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   DSFormerは、事前学習済みTransformerの大きな線形変換行列を、密な基底行列と半構造化された疎な係数行列の積に置き換える圧縮手法である。原著Table 1のGLUE開発セットでは、BERT-baseの8タスク単純平均82.05に対して、DSFormerの2倍圧縮が83.13、2.8倍圧縮が81.85、3.57倍圧縮が79.80である。
-
-- **2024-10 · [SeedLM: Compressing LLM Weights into Seeds of Pseudo-Random Generators](2024-2410.10714-seedlm-compressing-llm-weights-into-seeds-of-pseudo-random-generators.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  大規模言語モデルの自己回帰生成では、1トークンを生成するたびに大量の重みを読み出す必要があり、演算器の理論性能よりもDRAM帯域が制約になる場合がある。通常の低ビット量子化は、FP16などの重みを整数値へ写像して読み出し量を減らす。速度については、専用FPGA上の行列ベクトル積でFP16基準比3.67〜3.98倍のサイクル数削減を報告する。
 
 - **2024-11 · [Zeroth-Order Adaptive Neuron Alignment Based Pruning without Re-Training](2024-2411.07066-zeroth-order-adaptive-neuron-alignment-based-pruning-without-re-training.md)**  
   実装：[✓](https://github.com/eliacunegatti/NeuroAL) ・ リポジトリ内被引用：1  

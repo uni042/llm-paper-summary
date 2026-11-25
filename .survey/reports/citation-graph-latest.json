@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T03:51:43+00:00",
+  "generated_at": "2026-11-25T03:56:00+00:00",
   "paper_count": 5489,
-  "edge_count": 69581,
+  "edge_count": 69584,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 30,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -1387,7 +1387,7 @@
     "papers/inference/07-kv-cache-optimization-compression/2026-2603.27819-kvsculpt-kv-cache-compression-as-distillation.md": 3,
     "papers/inference/07-kv-cache-optimization-compression/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md": 3,
     "papers/inference/07-kv-cache-optimization-compression/2026-2604.01220-universal-yoco-for-efficient-depth-scaling.md": 0,
-    "papers/inference/07-kv-cache-optimization-compression/2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md": 2,
+    "papers/inference/07-kv-cache-optimization-compression/2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md": 4,
     "papers/inference/07-kv-cache-optimization-compression/2026-2604.02570-wsvd-weighted-low-rank-approximation-for-fast-and-efficient-execution-of.md": 2,
     "papers/inference/07-kv-cache-optimization-compression/2026-2604.03270-knowledge-packs-zero-token-knowledge-delivery-via-kv-cache-injection.md": 0,
     "papers/inference/07-kv-cache-optimization-compression/2026-2604.04722-don-t-waste-bits-adaptive-kv-cache-quantization-for-lightweight-on-devic.md": 6,
@@ -3793,7 +3793,7 @@
     "papers/inference/16-weight-quantization-compression/2024-2410.05437-espace-dimensionality-reduction-of-activations-for-model-compression.md": 1,
     "papers/inference/16-weight-quantization-compression/2024-2410.08666-deltadq-ultra-high-delta-compression-for-fine-tuned-llms-via-group-wise-.md": 0,
     "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md": 91,
-    "papers/inference/16-weight-quantization-compression/2024-2410.10714-seedlm-compressing-llm-weights-into-seeds-of-pseudo-random-generators.md": 2,
+    "papers/inference/16-weight-quantization-compression/2024-2410.10714-seedlm-compressing-llm-weights-into-seeds-of-pseudo-random-generators.md": 3,
     "papers/inference/16-weight-quantization-compression/2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-.md": 17,
     "papers/inference/16-weight-quantization-compression/2024-2410.11203-error-diffusion-post-training-quantization-with-block-scaled-number-form.md": 0,
     "papers/inference/16-weight-quantization-compression/2024-2410.13229-quamba-a-post-training-quantization-recipe-for-selective-state-space-mod.md": 8,
@@ -3949,7 +3949,7 @@
     "papers/inference/16-weight-quantization-compression/2026-2603.19296-ttq-activation-aware-test-time-quantization-to-accelerate-llm-inference-.md": 0,
     "papers/inference/16-weight-quantization-compression/2026-2603.20991-structural-sensitivity-in-compressed-transformers-relative-error-propaga.md": 0,
     "papers/inference/16-weight-quantization-compression/2026-2603.22324-daq-delta-aware-quantization-for-post-training-llm-weight-compression.md": 0,
-    "papers/inference/16-weight-quantization-compression/2026-2603.25284-sliderquant-accurate-post-training-quantization-for-llms.md": 1,
+    "papers/inference/16-weight-quantization-compression/2026-2603.25284-sliderquant-accurate-post-training-quantization-for-llms.md": 2,
     "papers/inference/16-weight-quantization-compression/2026-2603.25385-glowq-group-shared-low-rank-approximation-for-quantized-llms.md": 0,
     "papers/inference/16-weight-quantization-compression/2026-2603.28845-onecomp-one-line-revolution-for-generative-ai-model-compression.md": 1,
     "papers/inference/16-weight-quantization-compression/2026-2604.07955-rethinking-residual-errors-in-compensation-based-llm-quantization.md": 4,
@@ -4507,7 +4507,7 @@
     "papers/inference/21-static-structured-pruning/2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large.md": 1,
     "papers/inference/21-static-structured-pruning/2024-2402.11700-why-lift-so-heavy-slimming-large-language-models-by-cutting-off-the-laye.md": 2,
-    "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md": 123,
+    "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md": 122,
     "papers/inference/21-static-structured-pruning/2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grai.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2405.05957-openba-v2-reaching-77-3-high-compression-ratio-with-fast-multi-stage-pru.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2406.00061-stat-shrinking-transformers-after-training.md": 2,
@@ -69393,6 +69393,7 @@
       "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
     ],
     "papers/inference/16-weight-quantization-compression/2026-2609.40146-quloc-photonic-quantum-assisted-low-rank-llm-compression.md": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md",
       "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
       "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
       "papers/inference/16-weight-quantization-compression/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
@@ -69414,6 +69415,7 @@
       "papers/inference/16-weight-quantization-compression/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
       "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
       "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md",
+      "papers/inference/16-weight-quantization-compression/2024-2410.10714-seedlm-compressing-llm-weights-into-seeds-of-pseudo-random-generators.md",
       "papers/inference/16-weight-quantization-compression/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
     ],
     "papers/inference/16-weight-quantization-compression/2026-2610.00983-the-devil-is-in-the-reconstruction-loss-scale-rethinking-optimization-in.md": [
@@ -69428,6 +69430,7 @@
       "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
       "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
       "papers/inference/16-weight-quantization-compression/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+      "papers/inference/16-weight-quantization-compression/2026-2603.25284-sliderquant-accurate-post-training-quantization-for-llms.md",
       "papers/inference/16-weight-quantization-compression/2026-2605.04738-osaq-outlier-self-absorption-for-accurate-low-bit-llm-quantization.md"
     ],
     "papers/inference/16-weight-quantization-compression/2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md": [
@@ -69502,8 +69505,7 @@
       "papers/inference/16-weight-quantization-compression/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
       "papers/inference/16-weight-quantization-compression/2025-2511.04063-dartquant-efficient-rotational-distribution-calibration-for-llm-quantiza.md",
       "papers/inference/16-weight-quantization-compression/2025-2512.24124-optrot-mitigating-weight-outliers-via-data-free-rotations-for-post-train.md",
-      "papers/inference/16-weight-quantization-compression/2026-2607.07964-kronq-llm-quantization-via-kronecker-factored-hessian.md",
-      "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      "papers/inference/16-weight-quantization-compression/2026-2607.07964-kronq-llm-quantization-via-kronecker-factored-hessian.md"
     ],
     "papers/inference/16-weight-quantization-compression/2026-2610.08231-osfp4-joint-optimization-of-diagonal-smoothing-and-block-scales-for-nvfp.md": [
       "papers/inference/09-kernel-runtime-compilation/2026-2603.04956-watersic-information-theoretically-near-optimal-linear-layer-quantizatio.md",
@@ -69646,6 +69648,7 @@
       "papers/inference/16-weight-quantization-compression/2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm.md"
     ],
     "papers/inference/16-weight-quantization-compression/2026-2610.32878-advancing-svd-based-llm-compression-via-layer-wise-error-model-search.md": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md",
       "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
       "papers/inference/16-weight-quantization-compression/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
       "papers/inference/16-weight-quantization-compression/2024-2410.23918-bitstack-any-size-compression-of-large-language-models-in-variable-memor.md",
