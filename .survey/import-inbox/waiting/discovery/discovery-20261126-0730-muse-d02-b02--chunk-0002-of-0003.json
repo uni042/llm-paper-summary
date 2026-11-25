@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d02-b02::chunk-0002-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.21136",
+      "identity_tokens": [
+        "arXiv:2504.21136"
+      ],
+      "title": "Legilimens: Performant Video Analytics on the System-on-Chip Edge",
+      "reason": "SoCエッジでの継続再学習を伴う動画解析システムLegilimensはエッジ推論システムの一種だが、対象は動画解析DNNでありLLMサービングへの直接貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2504.21136",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 279
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18604",
+      "identity_tokens": [
+        "arXiv:2505.18604"
+      ],
+      "title": "Exemplar-Free Continual Learning for State Space Models",
+      "reason": "事例なし継続学習を状態空間モデルへ適用する研究であり、対象は逐次適応時の内部状態管理という学習問題でLLM推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2505.18604",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 280
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.09570",
+      "identity_tokens": [
+        "arXiv:2507.09570"
+      ],
+      "title": "Enhancing Stereo Sound Event Detection with Bimamba and Pretrained PSELDNet",
+      "reason": "事前学習PSELDNetと双方向Mambaでステレオ音イベント検出・定位を行う音響タスクの研究であり、LLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2507.09570",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 281
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.06414",
+      "identity_tokens": [
+        "arXiv:2508.06414"
+      ],
+      "title": "What Makes In-Context Examples Effective for Code Generation?",
+      "reason": "コード生成で文脈内事例が効く要因を分析する研究であり、対象はプロンプト事例の性質という能力分析で推論システムの機構提案ではない。",
+      "source_url": "https://arxiv.org/abs/2508.06414",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 282
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.18382",
+      "identity_tokens": [
+        "arXiv:2509.18382"
+      ],
+      "title": "Evaluating the Safety and Skill Reasoning of Large Reasoning Models Under Compute Constraints",
+      "reason": "計算制約下で大規模推論モデルの安全性と技能推論を評価する研究であり、対象は評価結果そのもので推論高速化やサービングの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2509.18382",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 283
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.12285",
+      "identity_tokens": [
+        "arXiv:2510.12285"
+      ],
+      "title": "Chinese ModernBERT with Whole-Word Masking",
+      "reason": "中国語ModernBERTはアーキテクチャ・データ・システムの三軸で符号器を効率化するが、対象は中国語エンコーダの事前学習モデルであり生成LLM推論機構ではない。",
+      "source_url": "https://arxiv.org/abs/2510.12285",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 284
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.02454",
+      "identity_tokens": [
+        "arXiv:2511.02454"
+      ],
+      "title": "Improving DF-Conformer Using Hydra For High-Fidelity Generative Speech Enhancement on Discrete Codec Token",
+      "reason": "離散コーデックトークン上の生成型音声強調をDF-ConformerとHydraで高忠実化する音響処理の研究であり、LLM推論システムとは関係がない。",
+      "source_url": "https://arxiv.org/abs/2511.02454",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 285
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00208",
+      "identity_tokens": [
+        "arXiv:2512.00208"
+      ],
+      "title": "ReactionMamba: Generating Short & Long Human Reaction Sequences",
+      "reason": "運動VAEとMambaで三次元人体反応動作の長系列を生成するReactionMambaであり、対象はモーション生成タスクでLLM推論の対象外である。",
+      "source_url": "https://arxiv.org/abs/2512.00208",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 286
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.12939",
+      "identity_tokens": [
+        "arXiv:2610.12939"
+      ],
+      "title": "Surfing the Activation Wave: Analyzing the Information and Geometry of LLM Hidden States for Speculative Decoding",
+      "reason": "LLMの複数層隠れ状態の情報量と多様性をエントロピーとCKAで測り投機的デコード用ドラフタの層選択を設計する研究で、投機的デコード高速化へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2610.12939",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 287
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.05724",
+      "identity_tokens": [
+        "arXiv:2611.05724"
+      ],
+      "title": "Give the Drafter a Second Chance to Guess: Parallel Reconsideration for Speculative Decoding",
+      "reason": "投機的デコードでドラフタ自身が不確かなトークンへ並列な再検討機会を与える方式は、受理率を上げLLM推論を直接高速化するデコード機構である。",
+      "source_url": "https://arxiv.org/abs/2611.05724",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 288
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.06377",
+      "identity_tokens": [
+        "arXiv:2611.06377"
+      ],
+      "title": "NanoKV: High-Ratio KV Cache Compression for Autoregressive Video Generation",
+      "reason": "自己回帰動画生成の履歴KVキャッシュを高比率圧縮するNanoKVはKV圧縮技術そのものだが、対象が動画生成モデルでありテキストLLMサービングでの実証ではない。",
+      "source_url": "https://arxiv.org/abs/2611.06377",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 289
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.12672",
+      "identity_tokens": [
+        "arXiv:2203.12672"
+      ],
+      "title": "Deep Learning based Data Prefetching in CPU-GPU Unified Virtual Memory",
+      "reason": "CPU-GPU統合仮想メモリでの深層学習データプリフェッチはページ移行遅延を隠す機構だが、対象は汎用UVM実行でありLLM推論のKVや重み配置への適用ではない。",
+      "source_url": "https://arxiv.org/abs/2203.12672",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 290
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3770743.3804169",
+      "identity_tokens": [
+        "DOI:10.1145/3770743.3804169"
+      ],
+      "title": "An Adaptive Prediction of Tokens Fluctuation for Decoupled Prefetching to Accelerate Long-Context LLM Decoding",
+      "reason": "長文脈LLMデコードでトークン変動に適応する分離型プリフェッチによりKVアクセスの帯域律速を緩和する提案であり、LLMデコード高速化へ直接貢献する。",
+      "source_url": "https://doi.org/10.1145/3770743.3804169",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 291
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.09474",
+      "identity_tokens": [
+        "arXiv:2611.09474"
+      ],
+      "title": "Nebula: Distributed Position-Independent Caching for LLM Serving",
+      "reason": "位置独立キャッシュ断片をクラスタ全体で再利用し並列プリフィルを行うNebulaは、RAGやエージェント向けLLMサービングのKVキャッシュ基盤そのものである。",
+      "source_url": "https://arxiv.org/abs/2611.09474",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 292
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.20424",
+      "identity_tokens": [
+        "arXiv:2507.20424"
+      ],
+      "title": "Communication-Efficient Distributed Training for Collaborative Flat Optima Recovery in Deep Learning",
+      "reason": "平坦な最適解の回復を目指す分散データ並列学習の通信効率研究であり、対象は学習時の局所勾配法で推論サービングへの適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2507.20424",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 293
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.14568",
+      "identity_tokens": [
+        "arXiv:2610.14568"
+      ],
+      "title": "FrameFold: Response-Guided KV Cache Consolidation for Autoregressive Long Video Generation",
+      "reason": "自己回帰動画生成で応答誘導型に履歴KVを統合し固定キャッシュ予算を守るFrameFoldはKV管理技術だが、対象は動画生成でありLLMテキスト推論ではない。",
+      "source_url": "https://arxiv.org/abs/2610.14568",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 294
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.04783",
+      "identity_tokens": [
+        "arXiv:2604.04783"
+      ],
+      "title": "GPU Acceleration of TFHE-Based High-Precision Nonlinear Layers for Encrypted LLM Inference",
+      "reason": "TFHE暗号化LLM推論の高精度非線形層をGPUで加速する研究であり、秘匿化したままのLLM推論実行という推論システムのボトルネックへ直接取り組んでいる。",
+      "source_url": "https://arxiv.org/abs/2604.04783",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 296
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3805652",
+      "identity_tokens": [
+        "DOI:10.1145/3805652"
+      ],
+      "title": "UniCache: Unifying Prefix Cache Eviction for Heterogeneous LLM Serving Workloads",
+      "reason": "異種LLMサービングワークロードのセッション再利用と構造再利用を捉えプレフィックスキャッシュ追い出しを統一するUniCacheは、サービング中核のキャッシュ政策である。",
+      "source_url": "https://doi.org/10.1145/3805652",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 297
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2025.12.03.691688",
+      "identity_tokens": [
+        "DOI:10.64898/2025.12.03.691688"
+      ],
+      "title": "GatorSC: Multi-Scale Cell and Gene Graphs with Mixture-of-Experts Fusion for Single-Cell Transcriptomics",
+      "reason": "タイトルが単一細胞トランスクリプトミクスを明示する生命科学応用であり、MoE融合グラフの対象も細胞・遺伝子データでLLM推論システムとは分野が異なる。",
+      "source_url": "https://doi.org/10.64898/2025.12.03.691688",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 299
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39199",
+      "identity_tokens": [
+        "arXiv:2609.39199"
+      ],
+      "title": "UniAE-MoE: A Unified Audio Encoder via Mixture of Experts",
+      "reason": "多タスク音声理解向け統一音声エンコーダをMoEで構築するUniAE-MoEであり、対象は音声表現学習でLLM推論の実行機構への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2609.39199",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 300
+    }
+  ],
+  "parent_run_key": "muse-20261126-d02-b02",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}
