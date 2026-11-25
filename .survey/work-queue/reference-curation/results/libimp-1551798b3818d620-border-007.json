@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1551798b3818d620-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.07877",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.07877",
+    "identity_tokens": [
+      "arXiv:2604.07877"
+    ],
+    "reason": "MemReaderは長期メモリ抽出を担う小型抽出モデル群と能動的書き込み判断を提案するが、対象はエージェントのメモリ構築であり推論実行系の最適化ではないため境界とする。",
+    "first_checked_at": "2026-11-25T11:44:07+00:00",
+    "last_checked_at": "2026-11-25T11:44:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MemReader: From Passive to Active Extraction for Long-Term Agent Memory"
+  },
+  "processed_at": "2026-11-25T11:44:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1551798b3818",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1551798b3818d620-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.03315",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.03315",
+    "identity_tokens": [
+      "arXiv:2602.03315"
+    ],
+    "reason": "Memoraは抽象と具体を両立させる階層的メモリ表現と検索方針でエージェントの長期メモリを構成するが、対象はエージェントの知識管理でありLLM推論実行系そのものではないため境界とする。",
+    "first_checked_at": "2026-11-25T11:44:06+00:00",
+    "last_checked_at": "2026-11-25T11:44:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Memora: A Harmonic Memory Representation Balancing Abstraction and Specificity"
+  },
+  "processed_at": "2026-11-25T11:44:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1551798b3818",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

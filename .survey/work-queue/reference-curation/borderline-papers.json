@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T11:42:50+00:00",
-  "record_count": 9210,
+  "updated_at": "2026-11-25T11:44:07+00:00",
+  "record_count": 9216,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -141062,6 +141062,96 @@
       ],
       "borderline_recheck_count": 0,
       "title": "DLLG: Dynamic Logit-Level Gating of LLM Experts"
+    },
+    "arXiv:2602.03315": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.03315",
+      "identity_tokens": [
+        "arXiv:2602.03315"
+      ],
+      "reason": "Memoraは抽象と具体を両立させる階層的メモリ表現と検索方針でエージェントの長期メモリを構成するが、対象はエージェントの知識管理でありLLM推論実行系そのものではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:44:06+00:00",
+      "last_checked_at": "2026-11-25T11:44:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memora: A Harmonic Memory Representation Balancing Abstraction and Specificity"
+    },
+    "arXiv:2605.09317": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.09317",
+      "identity_tokens": [
+        "arXiv:2605.09317"
+      ],
+      "reason": "Mem-WはGUIエージェントの履歴を潜在メモリトークンとして文脈へ織り込む設計であり、文脈管理の機構は推論に触れるが対象はエージェントの記憶表現であるため境界とする。",
+      "first_checked_at": "2026-11-25T11:44:07+00:00",
+      "last_checked_at": "2026-11-25T11:44:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mem-W: Latent Memory-Native GUI Agents"
+    },
+    "arXiv:2604.07877": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07877",
+      "identity_tokens": [
+        "arXiv:2604.07877"
+      ],
+      "reason": "MemReaderは長期メモリ抽出を担う小型抽出モデル群と能動的書き込み判断を提案するが、対象はエージェントのメモリ構築であり推論実行系の最適化ではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:44:07+00:00",
+      "last_checked_at": "2026-11-25T11:44:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemReader: From Passive to Active Extraction for Long-Term Agent Memory"
+    },
+    "arXiv:2605.28046": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28046",
+      "identity_tokens": [
+        "arXiv:2605.28046"
+      ],
+      "reason": "MemCogは連想リンクグラフ上のナビゲーションを推論過程へ組み込むエージェントメモリシステムだが、LLM推論システムではなくエージェントの知識アクセス設計であるため境界とする。",
+      "first_checked_at": "2026-11-25T11:44:07+00:00",
+      "last_checked_at": "2026-11-25T11:44:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemCog: From Memory-as-Tool to Memory-as-Cognition in Conversational Agents"
+    },
+    "arXiv:2512.03643": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.03643",
+      "identity_tokens": [
+        "arXiv:2512.03643"
+      ],
+      "reason": "光学式文脈圧縮が直接的な埋め込み圧縮に劣ることを示した分析であり、長文脈推論の文脈圧縮に関わるが新規の推論機構ではなく否定的な実証にとどまるため境界とする。",
+      "first_checked_at": "2026-11-25T11:44:07+00:00",
+      "last_checked_at": "2026-11-25T11:44:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optical Context Compression Is Just (Bad) Autoencoding"
+    },
+    "arXiv:2604.24391": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.24391",
+      "identity_tokens": [
+        "arXiv:2604.24391"
+      ],
+      "reason": "FreqCacheは周波数領域の手がかりでトークンの再利用可否とキャッシュ予算を決め具身VLNモデルの重複エンコードを減らすが、対象が視覚言語ナビゲーションの推論に限定されるため境界とする。",
+      "first_checked_at": "2026-11-25T11:44:07+00:00",
+      "last_checked_at": "2026-11-25T11:44:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FreqCache: Accelerating Embodied VLN Models with Adaptive Frequency-Guided Token Caching"
     }
   }
 }
