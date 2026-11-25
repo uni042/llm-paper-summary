@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d05-b03::chunk-0002-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.17411",
+      "identity_tokens": [
+        "arXiv:2403.17411"
+      ],
+      "title": "PCToolkit: A Unified Plug-and-Play Prompt Compression Toolkit of Large Language Models",
+      "reason": "プロンプト圧縮ツールキットPCToolkitは既存圧縮器の統合利用環境であり、圧縮自体は推論コストに関わるが新規の推論機構の提案ではないため境界とする",
+      "source_url": "https://arxiv.org/abs/2403.17411",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 431
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IWQoS65803.2025.11143449",
+      "identity_tokens": [
+        "DOI:10.1109/IWQoS65803.2025.11143449"
+      ],
+      "title": "LLMConf: Knowledge-Enhanced Configuration Optimization for Large Language Model Inference",
+      "reason": "LLM推論エンジンの構成パラメータを知識強化探索で最適化するLLMConfは遅延とスループットを直接改善する推論サービス運用システムであり直接貢献が確認できる",
+      "source_url": "https://doi.org/10.1109/IWQoS65803.2025.11143449",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 435
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:697ba8e16601b0cc861fe83ef671df39519d642c",
+      "identity_tokens": [
+        "SemanticScholar:697ba8e16601b0cc861fe83ef671df39519d642c"
+      ],
+      "title": "Model Compression of Vision Transformer for Electric Motor Cogging Torque Prediction",
+      "reason": "タイトル自体が電動モータのコギングトルク予測のための視覚Transformer圧縮という工学応用を明示しており、LLM推論システムとは無関係なためタイトル段階で対象外とする",
+      "source_url": "https://www.semanticscholar.org/paper/697ba8e16601b0cc861fe83ef671df39519d642c",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 436
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.02363",
+      "identity_tokens": [
+        "arXiv:2605.02363"
+      ],
+      "title": "When Correct Isn't Usable: Improving Structured Output Reliability in Small Language Models",
+      "reason": "小型言語モデルの構造化出力の信頼性をプロンプト戦略で評価する研究は出力形式の能力評価であり、推論システムの機構提案ではないため対象外とする",
+      "source_url": "https://arxiv.org/abs/2605.02363",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 438
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.01242",
+      "identity_tokens": [
+        "arXiv:2405.01242"
+      ],
+      "title": "TRAMBA: A Hybrid Transformer and Mamba Architecture for Practical Audio and Bone Conduction Speech Super Resolution and Enhancement on Mobile and Wearable Platforms",
+      "reason": "骨伝導音声の超解像・強調向けTransformer-MambaハイブリッドTRAMBAは音響信号処理タスクのモデルでありLLM推論とは無関係であるため対象外とする",
+      "source_url": "https://arxiv.org/abs/2405.01242",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 439
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.19090",
+      "identity_tokens": [
+        "arXiv:2502.19090"
+      ],
+      "title": "EndoMamba: An Efficient Foundation Model for Endoscopic Videos",
+      "reason": "タイトル自体が内視鏡動画向け基盤モデルという医療映像応用を明示しており、効率性も当該医療タスクの文脈でありLLM推論システムへの貢献は確認できないためタイトル段階で対象外とする",
+      "source_url": "https://arxiv.org/abs/2502.19090",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 440
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/BigData66926.2025.11402169",
+      "identity_tokens": [
+        "DOI:10.1109/BigData66926.2025.11402169"
+      ],
+      "title": "Scalable Deep Learning for Greenland Ice Bed Topography Prediction",
+      "reason": "タイトル自体がグリーンランド氷床地形予測という地球科学応用を明示しており、深層学習のスケーリングも当該予測のためでLLM推論とは無関係なためタイトル段階で対象外とする",
+      "source_url": "https://doi.org/10.1109/BigData66926.2025.11402169",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 441
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14531",
+      "identity_tokens": [
+        "arXiv:2604.14531"
+      ],
+      "title": "TRACER: Trace-Based Adaptive Cost-Efficient Routing for LLM Classification",
+      "reason": "LLM分類トラフィックを軽量サロゲートへ振り分けるTRACERは推論コスト削減のルーティングだが対象が分類エンドポイントに限られ機構も代理モデル振分が中心のため境界とする",
+      "source_url": "https://arxiv.org/abs/2604.14531",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 442
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.00027",
+      "identity_tokens": [
+        "arXiv:2611.00027"
+      ],
+      "title": "SFA: A Statistical Physics-Inspired Diffusion Transformer for Efficient and High-Quality Image Generation",
+      "reason": "拡散Transformerのスケールフリー注意SFAは画像生成の注意計算を階層要約で効率化するが対象が画像生成モデルでありLLM推論ではないため境界とする",
+      "source_url": "https://arxiv.org/abs/2611.00027",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.09955",
+      "identity_tokens": [
+        "arXiv:2509.09955"
+      ],
+      "title": "Adaptive Token Merging for Efficient Transformer Semantic Communication at the Edge",
+      "reason": "意味通信向けTransformerの適応トークン統合はエッジでの表現圧縮だが主目的が通信符号化応用でありLLM推論システムへの直接性は弱いため境界とする",
+      "source_url": "https://arxiv.org/abs/2509.09955",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 444
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patter.2025.101373",
+      "identity_tokens": [
+        "DOI:10.1016/j.patter.2025.101373"
+      ],
+      "title": "Pan-microalgal dark proteome mapping via interpretable deep learning and synthetic chimeras",
+      "reason": "タイトル自体が微細藻類のダークプロテオーム写像という生物学応用を明示しており、解釈可能深層学習も当該解析のためでLLM推論システムとは無関係なためタイトル段階で対象外とする",
+      "source_url": "https://doi.org/10.1016/j.patter.2025.101373",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.06345",
+      "identity_tokens": [
+        "arXiv:2306.06345"
+      ],
+      "title": "Improving Non-Autoregressive Translation Quality With Pretrained Language Model, Embedding Distillation and Upsampling Strategy for CTC",
+      "reason": "事前学習言語モデルと蒸留で非自己回帰翻訳の品質を上げる研究は学習手法による品質改善であり、推論高速化の機構自体の提案ではないため対象外とする",
+      "source_url": "https://arxiv.org/abs/2306.06345",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 446
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.13667",
+      "identity_tokens": [
+        "arXiv:2305.13667"
+      ],
+      "title": "Optimizing Non-Autoregressive Transformers with Contrastive Learning",
+      "reason": "対照学習で非自己回帰Transformerの多峰性学習を容易化する研究は学習側の最適化であり、デコード機構の新規提案ではないため対象外とする",
+      "source_url": "https://arxiv.org/abs/2305.13667",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/WCCCT65447.2025.11027953",
+      "identity_tokens": [
+        "DOI:10.1109/WCCCT65447.2025.11027953"
+      ],
+      "title": "A Cost-and-Time-Efficient Approach of Deploying Mixture of Expert Models",
+      "reason": "MoEモデルをエッジネットワークへ配置する費用・時間効率的アプローチはMoE推論配置に関わるが、要旨では配置方式の具体的な機構が不明瞭なため境界とする",
+      "source_url": "https://doi.org/10.1109/WCCCT65447.2025.11027953",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 448
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.14699",
+      "identity_tokens": [
+        "arXiv:2512.14699"
+      ],
+      "title": "MemFlow: Flowing Adaptive Memory for Consistent and Efficient Long Video Narratives",
+      "reason": "長編動画生成の記憶バンクMemFlowは履歴フレーム参照を動的更新するが対象は動画生成の文脈保持でありLLM推論のメモリ機構とは領域が異なるため境界とする",
+      "source_url": "https://arxiv.org/abs/2512.14699",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 449
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3492321.3519557",
+      "identity_tokens": [
+        "DOI:10.1145/3492321.3519557"
+      ],
+      "title": "GNNLab: a factored system for sample-based GNN training over GPUs",
+      "reason": "サンプルベースGNN学習システムGNNLabはGPU分業による学習高速化であり、推論システムへの適用は確認できないため対象外とする",
+      "source_url": "https://doi.org/10.1145/3492321.3519557",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 450
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.13831",
+      "identity_tokens": [
+        "arXiv:2608.13831"
+      ],
+      "title": "VoiceChat-TTS: A Low-Latency Continuous Speech Synthesis Model for Interactive Agents",
+      "reason": "対話エージェント向け低遅延連続音声合成VoiceChat-TTSはストリーミング生成の遅延削減だが対象がTTSモデルでありLLM推論システムではないため境界とする",
+      "source_url": "https://arxiv.org/abs/2608.13831",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/NOMS69089.2026.11668204",
+      "identity_tokens": [
+        "DOI:10.1109/NOMS69089.2026.11668204"
+      ],
+      "title": "Coordinating CCL Re-Optimization and WAN Reconfiguration for Cross-Regional AI Acceleration",
+      "reason": "広域網越し分散学習のCCL再最適化とWAN再構成の協調は学習時集合通信の研究であり、推論基盤への適用は確認できないため対象外とする",
+      "source_url": "https://doi.org/10.1109/NOMS69089.2026.11668204",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.14432",
+      "identity_tokens": [
+        "arXiv:2602.14432"
+      ],
+      "title": "S2D: Selective Spectral Decay for Quantization-Friendly Conditioning of Neural Activations",
+      "reason": "活性化外れ値を主特異値と結び付け選択的スペクトル減衰で量子化しやすくするS2Dは、大規模Transformerの推論量子化を阻む活性化範囲の問題への直接手法である",
+      "source_url": "https://arxiv.org/abs/2602.14432",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19418",
+      "identity_tokens": [
+        "arXiv:2603.19418"
+      ],
+      "title": "Speculative Policy Orchestration: A Latency-Resilient Framework for Cloud-Robotic Manipulation",
+      "reason": "クラウドロボット操作の投機的ポリシー編成は世界モデルで先行経路を送る制御枠組みであり、LLMの投機的デコード等の推論機構とは無関係であるため対象外とする",
+      "source_url": "https://arxiv.org/abs/2603.19418",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 454
+    }
+  ],
+  "parent_run_key": "muse-20261126-d05-b03",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

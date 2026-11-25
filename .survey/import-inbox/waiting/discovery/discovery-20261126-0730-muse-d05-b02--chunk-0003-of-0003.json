@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d05-b02::chunk-0003-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/WCNC61545.2025.10978177",
+      "identity_tokens": [
+        "DOI:10.1109/WCNC61545.2025.10978177"
+      ],
+      "title": "Edge vs Cloud: How Do We Balance Cost, Latency, and Quality for Large Language Models Over 5G Networks?",
+      "reason": "5G越しのエッジ・クラウドLLM選択ルータはコスト・遅延・品質で配置を選ぶ測定駆動枠組みだが、推論エンジン自体の機構ではなく配置判断の研究のため境界とする",
+      "source_url": "https://doi.org/10.1109/WCNC61545.2025.10978177",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 395
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.13773",
+      "identity_tokens": [
+        "arXiv:2508.13773"
+      ],
+      "title": "PENGUIN: Enhancing Transformer with Periodic-Nested Group Attention for Long-term Time Series Forecasting",
+      "reason": "周期入れ子グループ注意PENGUINは長期時系列予測向けTransformerの改良であり、予測タスク応用であってLLM推論システムではないため対象外とする",
+      "source_url": "https://arxiv.org/abs/2508.13773",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 396
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/SMC53992.2023.10394310",
+      "identity_tokens": [
+        "DOI:10.1109/SMC53992.2023.10394310"
+      ],
+      "title": "Bidformer: A Transformer-Based Model via Bidirectional Sparse Self-Attention Mechanism for Long Sequence Time-Series Forecasting",
+      "reason": "双方向スパース自己注意Bidformerは長系列時系列予測のモデル研究であり、時系列応用が主目的でLLM推論への適用は確認できないため対象外とする",
+      "source_url": "https://doi.org/10.1109/SMC53992.2023.10394310",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 397
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.02220",
+      "identity_tokens": [
+        "arXiv:2312.02220"
+      ],
+      "title": "QuantAttack: Exploiting Dynamic Quantization to Attack Vision Transformers",
+      "reason": "動的量子化を悪用するVision Transformerへの攻撃QuantAttackは量子化の脆弱性研究であり、推論効率化の技術ではなく攻撃手法のため対象外とする",
+      "source_url": "https://arxiv.org/abs/2312.02220",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 398
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.11728",
+      "identity_tokens": [
+        "arXiv:2506.11728"
+      ],
+      "title": "The Cambrian Explosion of Mixed-Precision Matrix Multiplication for Quantized Deep Learning Inference",
+      "reason": "量子化深層学習推論向け混合精度行列積の動向整理は推論カーネル基盤に関わるが、新機構の提案ではなくハードウェア・ISAの発展の概説色が強いため境界とする",
+      "source_url": "https://arxiv.org/abs/2506.11728",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 399
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/FLLM67465.2025.11391055",
+      "identity_tokens": [
+        "DOI:10.1109/FLLM67465.2025.11391055"
+      ],
+      "title": "Training Strategies for Speech Large Language Models: A Comprehensive Survey",
+      "reason": "音声大規模言語モデルの学習戦略サーベイは学習設計の整理であり、推論システムの技術を扱うものではないため対象外とする",
+      "source_url": "https://doi.org/10.1109/FLLM67465.2025.11391055",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 400
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/fractalfract9120767",
+      "identity_tokens": [
+        "DOI:10.3390/fractalfract9120767"
+      ],
+      "title": "Fractal-Guided Token Pruning for Efficient Vision Transformers",
+      "reason": "フラクタル誘導トークン剪定はVision Transformerの二次計算量を下げる推論効率化だが対象が視覚モデルでありLLM・VLM推論への直接適用は不明なため境界とする",
+      "source_url": "https://doi.org/10.3390/fractalfract9120767",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 401
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.12523",
+      "identity_tokens": [
+        "arXiv:2411.12523"
+      ],
+      "title": "Data Pruning in Generative Diffusion Models",
+      "reason": "生成拡散モデルのデータ剪定は学習データの部分集合選択の研究であり、推論時のトークン剪定とは異なる学習側の話題であるため対象外とする",
+      "source_url": "https://arxiv.org/abs/2411.12523",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 402
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17296",
+      "identity_tokens": [
+        "arXiv:2506.17296"
+      ],
+      "title": "Semantic uncertainty in advanced decoding methods for LLM generation",
+      "reason": "投機的サンプリング等を含む高度デコード法の意味的不確実性の分析は出力の多様性・信頼性の評価研究であり、デコード高速化の機構提案ではないため対象外とする",
+      "source_url": "https://arxiv.org/abs/2506.17296",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 403
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CICC63670.2025.10983849",
+      "identity_tokens": [
+        "DOI:10.1109/CICC63670.2025.10983849"
+      ],
+      "title": "A 28nm 3.14 TFLOP/W BF16 LLM Fine-Tuning Processor with Asymmetric Quantization Computing for AI PC",
+      "reason": "非対称量子化演算を持つLLMファインチューニングプロセッサはAI PCでの学習側チップであり、推論アクセラレータではないため対象外とする",
+      "source_url": "https://doi.org/10.1109/CICC63670.2025.10983849",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 404
+    }
+  ],
+  "parent_run_key": "muse-20261126-d05-b02",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

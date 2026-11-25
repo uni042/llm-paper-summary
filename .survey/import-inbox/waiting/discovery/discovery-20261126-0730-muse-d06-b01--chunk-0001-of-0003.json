@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d06-b01::chunk-0001-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20776",
+      "identity_tokens": [
+        "arXiv:2505.20776"
+      ],
+      "title": "SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences",
+      "reason": "長文入力で劣化する投機的デコードに対し、追加学習なしで差し込めるSpecExtendによる受理改善機構を提案する論文。一次要旨で推論時の具体的機構と効果が確認でき、LLM推論システムへの直接の技術的貢献があるためacceptと判定した。",
+      "source_url": "https://arxiv.org/abs/2505.20776",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.914",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.914"
+      ],
+      "title": "FAEDKV: Infinite-Window Fourier Transform for Unbiased KV Cache Compression",
+      "reason": "無限窓フーリエ変換でKVキャッシュを偏りなく圧縮し、長文脈時のメモリと計算量を削減するFAEDKVの提案。一次要旨で推論時の具体的機構と効果が確認でき、LLM推論システムへの直接の技術的貢献があるためacceptと判定した。",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.914",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.02966",
+      "identity_tokens": [
+        "arXiv:2611.02966"
+      ],
+      "title": "SHq: Learnable Grids for LLM Weight Quantization",
+      "reason": "NF4等の固定グリッドに代えて学習可能なグリッドを用いるLUT形式のLLM重み量子化SHqを提案する論文。一次要旨で推論時の具体的機構と効果が確認でき、LLM推論システムへの直接の技術的貢献があるためacceptと判定した。",
+      "source_url": "https://arxiv.org/abs/2611.02966",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07716",
+      "identity_tokens": [
+        "arXiv:2610.07716"
+      ],
+      "title": "JevCascade: Readout Stability and Inference-Time Compute Allocation for Prefill-Only Decision Models",
+      "reason": "prefillのみの判定モデルについて読み出し安定性で推論時計算配分を行うJevCascadeの枠組みを扱う論文。推論効率との関連は認められるものの主目的や適用先が限定的で、推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+      "source_url": "https://arxiv.org/abs/2610.07716",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.11036",
+      "identity_tokens": [
+        "arXiv:2611.11036"
+      ],
+      "title": "When Is High-Bandwidth Flash Cost-Effective for LLM Inference?",
+      "reason": "高帯域フラッシュへ重みを置く構成がGPU追加よりLLM推論コストを下げられる条件をシミュレーションで評価する論文。一次要旨で推論時の具体的機構と効果が確認でき、LLM推論システムへの直接の技術的貢献があるためacceptと判定した。",
+      "source_url": "https://arxiv.org/abs/2611.11036",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.14899",
+      "identity_tokens": [
+        "arXiv:2509.14899"
+      ],
+      "title": "Cargo: a Framework for Confidence-Aware Routing of Large Language Models",
+      "reason": "埋め込み回帰器でプロンプトを適切なLLMへ振り分ける信頼度考慮ルーティングCARGOを提案する論文。推論効率との関連は認められるものの主目的や適用先が限定的で、推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+      "source_url": "https://arxiv.org/abs/2509.14899",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.03887",
+      "identity_tokens": [
+        "arXiv:2105.03887"
+      ],
+      "title": "Lawformer: A Pre-trained Language Model for Chinese Legal Long Documents",
+      "reason": "中国法務の長文文書向け事前学習言語モデルLawformerを扱う法務領域応用の論文。タイトル自体に当該応用領域の主題が明示されており、LLM推論システムへの直接貢献を示す技術要素はタイトルに含まれないため、タイトル先行走査でunrelatedと判定した。",
+      "source_url": "https://arxiv.org/abs/2105.03887",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:86ff6b8c3e3033f7e49b4592a46127b5d81aa097",
+      "identity_tokens": [
+        "SemanticScholar:86ff6b8c3e3033f7e49b4592a46127b5d81aa097"
+      ],
+      "title": "Delving into a Simple Linear Diffusion Transformer for Image Generation",
+      "reason": "画像生成向けの単純な線形拡散Transformerを掘り下げる画像生成領域の研究。タイトル自体に当該応用領域の主題が明示されており、LLM推論システムへの直接貢献を示す技術要素はタイトルに含まれないため、タイトル先行走査でunrelatedと判定した。",
+      "source_url": "https://www.semanticscholar.org/paper/86ff6b8c3e3033f7e49b4592a46127b5d81aa097",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.02869",
+      "identity_tokens": [
+        "arXiv:2502.02869"
+      ],
+      "title": "Towards Large-Scale In-Context Reinforcement Learning by Meta-Training in Randomized Worlds",
+      "reason": "手続き生成したAnyMDPでメタ学習し文脈内強化学習エージェントを大規模化する学習手法の論文。一次要旨を確認したが主題は推論システム技術ではなく、LLM推論への直接の技術的貢献が認められないためunrelatedと判定した。",
+      "source_url": "https://arxiv.org/abs/2502.02869",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.09385",
+      "identity_tokens": [
+        "arXiv:2410.09385"
+      ],
+      "title": "Mamba4Cast: Efficient Zero-Shot Time Series Forecasting with State Space Models",
+      "reason": "状態空間モデルでゼロショット時系列予測を行うMamba4Castの時系列応用研究。タイトル自体に当該応用領域の主題が明示されており、LLM推論システムへの直接貢献を示す技術要素はタイトルに含まれないため、タイトル先行走査でunrelatedと判定した。",
+      "source_url": "https://arxiv.org/abs/2410.09385",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.02850",
+      "identity_tokens": [
+        "arXiv:2510.02850"
+      ],
+      "title": "Reward Model Routing in Alignment",
+      "reason": "RLHFで単一報酬モデルに依存せず候補から報酬モデルを動的に選ぶルーティングをアライメント学習に使う論文。一次要旨を確認したが主題は推論システム技術ではなく、LLM推論への直接の技術的貢献が認められないためunrelatedと判定した。",
+      "source_url": "https://arxiv.org/abs/2510.02850",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.15390",
+      "identity_tokens": [
+        "arXiv:2511.15390"
+      ],
+      "title": "Automatic Pruning Discovery for Large Language Models",
+      "reason": "Wanda等の手設計に頼らずLLM向け枝刈り手法自体を自動探索するAutomatic Pruning Discoveryの提案。一次要旨で推論時の具体的機構と効果が確認でき、LLM推論システムへの直接の技術的貢献があるためacceptと判定した。",
+      "source_url": "https://arxiv.org/abs/2511.15390",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12879",
+      "identity_tokens": [
+        "arXiv:2605.12879"
+      ],
+      "title": "ASAP: Amortized Doubly-Stochastic Attention via Sliced Dual Projection",
+      "reason": "Sinkhorn反復に代わるスライス双対射影で二重確率アテンションを償却計算するASAPを提案するアーキテクチャ論文。推論効率との関連は認められるものの主目的や適用先が限定的で、推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+      "source_url": "https://arxiv.org/abs/2605.12879",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3768987",
+      "identity_tokens": [
+        "DOI:10.1145/3768987"
+      ],
+      "title": "End-to-End Coordination of RAN and Edge Server for Latency-Critical Inference Serving over Cellular Networks",
+      "reason": "セルラ網越しのエッジ推論提供で無線アクセス網とエッジサーバを端到端で協調させるDNN向け基盤の論文。推論効率との関連は認められるものの主目的や適用先が限定的で、推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+      "source_url": "https://doi.org/10.1145/3768987",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.10764",
+      "identity_tokens": [
+        "arXiv:2408.10764"
+      ],
+      "title": "Predicting Rewards Alongside Tokens: Non-disruptive Parameter Insertion for Efficient Inference Intervention in Large Language Model",
+      "reason": "トークン生成と並行して報酬を予測するパラメータ挿入で推論時介入を行う手法を提案する論文。推論効率との関連は認められるものの主目的や適用先が限定的で、推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+      "source_url": "https://arxiv.org/abs/2408.10764",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.14426",
+      "identity_tokens": [
+        "arXiv:2412.14426"
+      ],
+      "title": "All-in-One Tuning and Structural Pruning for Domain-Specific LLMs",
+      "reason": "領域特化LLM向けに調整と構造的枝刈りを一段階で統合し圧縮と適応を同時に行う手法の論文。一次要旨で推論時の具体的機構と効果が確認でき、LLM推論システムへの直接の技術的貢献があるためacceptと判定した。",
+      "source_url": "https://arxiv.org/abs/2412.14426",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20806",
+      "identity_tokens": [
+        "arXiv:2607.20806"
+      ],
+      "title": "Profiling Lightweight Large Language Models",
+      "reason": "軽量LLMをPCやエッジで動かした際のエネルギー・実行時間・メモリを実測プロファイリングする研究。推論効率との関連は認められるものの主目的や適用先が限定的で、推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+      "source_url": "https://arxiv.org/abs/2607.20806",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08160",
+      "identity_tokens": [
+        "arXiv:2601.08160"
+      ],
+      "title": "SwiftMem: Fast Agentic Memory via Query-aware Indexing",
+      "reason": "エージェント長期記憶をクエリ依存インデックスで高速検索するSwiftMemの記憶基盤に関する論文。推論効率との関連は認められるものの主目的や適用先が限定的で、推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+      "source_url": "https://arxiv.org/abs/2601.08160",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.10623",
+      "identity_tokens": [
+        "arXiv:2510.10623"
+      ],
+      "title": "ADiP: Adaptive Precision Systolic Array for Matrix Multiplication Acceleration",
+      "reason": "適応精度のシストリックアレイで行列積を加速するADiPというTransformer向けハードウェア設計の論文。推論効率との関連は認められるものの主目的や適用先が限定的で、推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+      "source_url": "https://arxiv.org/abs/2510.10623",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.13484",
+      "identity_tokens": [
+        "arXiv:2305.13484"
+      ],
+      "title": "Flover: A Temporal Fusion Framework for Efficient Autoregressive Model Parallel Inference",
+      "reason": "自己回帰モデルの時間方向依存を融合しモデル並列推論を効率化するFloverフレームワークの提案。一次要旨で推論時の具体的機構と効果が確認でき、LLM推論システムへの直接の技術的貢献があるためacceptと判定した。",
+      "source_url": "https://arxiv.org/abs/2305.13484",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 27
+    }
+  ],
+  "parent_run_key": "muse-20261126-d06-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

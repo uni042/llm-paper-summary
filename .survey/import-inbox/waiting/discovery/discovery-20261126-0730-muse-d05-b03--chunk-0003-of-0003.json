@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d05-b03::chunk-0003-of-0003",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.22311",
+      "identity_tokens": [
+        "arXiv:2610.22311"
+      ],
+      "title": "Velox: Spatial Memory Makes World Models Efficient",
+      "reason": "動画世界モデルVeloxは増大するKVキャッシュに対し視錐台対応で領域選択する注意ルータだが、対象が動画拡散世界モデルでありLLM推論ではないため境界とする",
+      "source_url": "https://arxiv.org/abs/2610.22311",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.11666",
+      "identity_tokens": [
+        "arXiv:2003.11666"
+      ],
+      "title": "Pipelined Backpropagation at Scale: Training Large Models without Batches",
+      "reason": "バッチなし大規模学習のパイプラインバックプロパゲーションは学習アルゴリズムとハードウェア特性の研究であり推論への適用はないため対象外とする",
+      "source_url": "https://arxiv.org/abs/2003.11666",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.05167",
+      "identity_tokens": [
+        "arXiv:2410.05167"
+      ],
+      "title": "Presto! Distilling Steps and Layers for Accelerating Music Generation",
+      "reason": "音楽生成拡散モデルのステップ・層蒸留Prestoは生成推論高速化だが対象がテキスト音楽生成でありLLM推論システムの範囲からは外れるため境界とする",
+      "source_url": "https://arxiv.org/abs/2410.05167",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.10562",
+      "identity_tokens": [
+        "arXiv:2204.10562"
+      ],
+      "title": "Efficient Pipeline Planning for Expedited Distributed DNN Training",
+      "reason": "分散DNN学習のパイプライン計画は同期パイプラインの学習効率化であり、推論時のパイプライン実行の研究ではないため対象外とする",
+      "source_url": "https://arxiv.org/abs/2204.10562",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/WACV56688.2023.00043",
+      "identity_tokens": [
+        "DOI:10.1109/WACV56688.2023.00043"
+      ],
+      "title": "Lightweight Video Denoising using Aggregated Shifted Window Attention",
+      "reason": "軽量な動画ノイズ除去ネットワークは映像復元のタスクモデルであり、注意の軽量化も当該タスク内の工夫でLLM推論への貢献は確認できないため対象外とする",
+      "source_url": "https://doi.org/10.1109/WACV56688.2023.00043",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.11730",
+      "identity_tokens": [
+        "arXiv:2106.11730"
+      ],
+      "title": "Learning to Inference with Early Exit in the Progressive Speech Enhancement",
+      "reason": "進行型音声強調の段階的早期終了は推論速度を条件適応させる機構だが対象が音声強調タスクでありLLM推論への直接適用は示されないため境界とする",
+      "source_url": "https://arxiv.org/abs/2106.11730",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571693",
+      "identity_tokens": [
+        "DOI:10.1109/INFOCOM59046.2026.11571693"
+      ],
+      "title": "RecFlow: Unlocking GPU Efficiency for DLRM Inference via Fine-Grained Parallelism and Incremental Batching",
+      "reason": "推薦モデルDLRM推論RecFlowは埋め込みとDNNの細粒度並列と増分バッチでGPU効率を上げるサービング枠組みだが対象が推薦推論でありLLMではないため境界とする",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571693",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSI.2025.3636104",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2025.3636104"
+      ],
+      "title": "FPGA-Based Adjoint Method Accelerator for Rapid Optical Inverse Design",
+      "reason": "光学逆設計の随伴法をFPGAで加速する研究はフォトニクス設計応用であり、LLM推論システムとは無関係であるため対象外とする",
+      "source_url": "https://doi.org/10.1109/TCSI.2025.3636104",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770743.3803937",
+      "identity_tokens": [
+        "DOI:10.1145/3770743.3803937"
+      ],
+      "title": "HierPAS: Accelerating Video Generation Models with Hierarchical Precision and Adaptive Sparsity",
+      "reason": "動画生成DiTの階層精度と適応スパース性HierPASは注意冗長性を削る生成推論高速化だが対象が動画生成モデルでありLLM推論ではないため境界とする",
+      "source_url": "https://doi.org/10.1145/3770743.3803937",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1364/JOCN.601174",
+      "identity_tokens": [
+        "DOI:10.1364/JOCN.601174"
+      ],
+      "title": "Multi-granularity collaborative scheduling method for distributed AI training in all-optical data center networks",
+      "reason": "全光データセンタ網での分散AI学習の多粒度協調スケジューリングは学習ジョブの網資源競合が主題であり推論スケジューリングではないため対象外とする",
+      "source_url": "https://doi.org/10.1364/JOCN.601174",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 464
+    }
+  ],
+  "parent_run_key": "muse-20261126-d05-b03",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 50
+}
