@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T22:24:23+00:00",
-  "record_count": 9380,
+  "updated_at": "2026-11-25T22:27:32+00:00",
+  "record_count": 9383,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -143614,6 +143614,51 @@
       ],
       "borderline_recheck_count": 0,
       "title": "ActiveRAG: Revealing the Treasures of Knowledge via Active Learning"
+    },
+    "DOI:10.1109/mic.2025.3576072": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mic.2025.3576072",
+      "identity_tokens": [
+        "DOI:10.1109/mic.2025.3576072"
+      ],
+      "reason": "エッジ接続IoT向けに生成AIサービスの配置を管理するiGenEdgeは、生成AIのエッジ展開・資源管理としてサービングと関連するが、具体的な推論実行機構の提案は薄い。",
+      "first_checked_at": "2026-11-25T22:27:31+00:00",
+      "last_checked_at": "2026-11-25T22:27:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "iGenEdge: Intelligent Generative AI Service Deployment for Edge-Connected IoT Devices"
+    },
+    "arXiv:2308.11807": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.11807",
+      "identity_tokens": [
+        "arXiv:2308.11807"
+      ],
+      "reason": "オンデバイス推論のプライバシと経済性を動機に、テキスト書き換え用の小型言語モデルを作る研究。オンデバイス推論が前提ではあるが、貢献は特定タスク向け小型モデルの学習に限られる。",
+      "first_checked_at": "2026-11-25T22:27:32+00:00",
+      "last_checked_at": "2026-11-25T22:27:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards an On-device Agent for Text Rewriting"
+    },
+    "arXiv:2503.16032": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.16032",
+      "identity_tokens": [
+        "arXiv:2503.16032"
+      ],
+      "reason": "VideoQAでエージェント的にキーフレームを探索するAKeySは入力フレーム削減による計算量低減を狙うが、主眼はQAに必要な情報抽出であり推論コストの扱いは補助的である。",
+      "first_checked_at": "2026-11-25T22:27:32+00:00",
+      "last_checked_at": "2026-11-25T22:27:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agentic Keyframe Search for Video Question Answering"
     }
   }
 }

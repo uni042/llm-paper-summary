@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f1fd16265207ae94-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.12160",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.12160",
+    "identity_tokens": [
+      "arXiv:2510.12160"
+    ],
+    "reason": "事前学習SSMのプロンプト学習で動画分類へ適応する研究は視覚タスクの適応手法であり、LLM推論システムとは無関係である。",
+    "first_checked_at": "2026-11-25T22:27:32+00:00",
+    "last_checked_at": "2026-11-25T22:27:32+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "State Space Prompting via Gathering and Spreading Spatio-Temporal Information for Video Understanding"
+  },
+  "processed_at": "2026-11-25T22:27:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f1fd16265207",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
