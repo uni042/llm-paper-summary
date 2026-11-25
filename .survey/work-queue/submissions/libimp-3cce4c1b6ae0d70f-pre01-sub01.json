@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "One Latent, Many Tokens: Jointly Learning Compressed Embeddings for Efficient Language Diffusion",
+      "source_url": "https://arxiv.org/abs/2609.33698",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most continuous diffusion language models process one latent position per token at each sampling step, making generation expensive. Two-stage methods lower the cost by reducing the latent length, but they fix the compressed embedding space before training the diffusion model. Embeddings from the fixed space can be difficult to model with diffusion and decode reliably into tokens, which limits generation quality after compression. To address this problem, we introduce JPEG-DLM (Joint-embedding Prediction for Efficient Generation with Diffusion Language Model), which jointly trains a compressor, a flow matching model and a decoding module. With joint-embedding prediction, JPEG-DLM learns compressed embeddings that are more structured, easier to model with diffusion and reliably decodable into tokens.JPEG-DLM achieves the highest throughput among recent diffusion and flow models on LM1B and OWT, with a Gen-PPL lower than most of them. At a compression rate of 0.5 on OWT, it reaches a Gen-PPL of 34.52 and approximately 2.3 times ELF's throughput. These results suggest that jointly learning compressed embeddings offers a promising path toward efficient diffusion language modeling.Code is available at https://github.com/infiniteYuanyl/JPEG-DLM.",
+      "identifiers": [
+        "SemanticScholar:d200323f8c15ee273ff37838bdf43608b1fb3061"
+      ],
+      "semantic_scholar_id": "d200323f8c15ee273ff37838bdf43608b1fb3061",
+      "canonical_id": "arXiv:2609.33698",
+      "arxiv_id": "2609.33698",
+      "doi": "10.48550/arXiv.2609.33698",
+      "authors": [
+        "Yu-Lin Yuan",
+        "Ying Zhang",
+        "Xiang-Ming Meng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      },
+      "reason": "JPEG-DLMは圧縮器・フロー生成・デコーダを共同学習し、圧縮埋め込み上で言語拡散生成を行うことで最近の拡散・フローモデル中最高のスループットを達成する効率的生成機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3cce4c1b6ae0",
+    "round": "libimp-3cce4c1b6ae0d70f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3cce4c1b6ae0d70f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3cce4c1b6ae0d70f-pre01.json",
+    "receipt": "sha256:901594b962d4babc9a87ea848eb95dbf3c61405ca241e122b50df87926f0b956"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3cce4c1b6ae0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

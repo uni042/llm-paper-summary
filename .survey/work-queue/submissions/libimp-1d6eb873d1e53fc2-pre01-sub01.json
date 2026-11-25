@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FATHOM: Fast Attention Through Optimizing Memory",
+      "source_url": "https://doi.org/10.1109/IPDPS64566.2025.00106",
+      "year": 2025,
+      "published": "2025-06-03",
+      "venue": "IEEE International Parallel and Distributed Processing Symposium",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:fdcb4abaed72a07015d20c47b9b81cbae675bfb9"
+      ],
+      "semantic_scholar_id": "fdcb4abaed72a07015d20c47b9b81cbae675bfb9",
+      "doi": "10.1109/IPDPS64566.2025.00106",
+      "canonical_id": "DOI:10.1109/IPDPS64566.2025.00106",
+      "authors": [
+        "Elliott Binder",
+        "Arvind Sudarsanam",
+        "Ravi Sunkavalli",
+        "T. Low"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 540,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FATHOMはTransformerの行列積が小規模次元でメモリ帯域律速になる点に着目し、帯域効率の良いデータレイアウトとカーネル再設計でバッチ行列積を最大6.7倍、エンドツーエンドで1.8倍高速化する注意・線形代数カーネルの最適化である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OJBKQ : Objective-Joint Babai–Klein-Based Quantization ∗",
+      "source_url": "https://www.semanticscholar.org/paper/dd0bf73fe8f83673650030fbf6845121ca82cc05",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:dd0bf73fe8f83673650030fbf6845121ca82cc05"
+      ],
+      "semantic_scholar_id": "dd0bf73fe8f83673650030fbf6845121ca82cc05",
+      "canonical_id": "SemanticScholar:dd0bf73fe8f83673650030fbf6845121ca82cc05",
+      "authors": [
+        "Xin-Yu Wang",
+        "Zi-Yu Zhao",
+        "Peng Lu",
+        "Yu Gu",
+        "Xiao-Wen Chang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OJBKQはLLMの重み量子化を活性化と重みの共同最適化として定式化し、Babai-Klein法で層別に解く学習後量子化手法であり、3-4ビットで既存PTQより低いパープレキシティを同等の計算コストで達成する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "On-Device Generative AI Model Robustness Enhancement via Quantization-Aware Normalization",
+      "source_url": "https://doi.org/10.1109/ICCE63647.2025.10930021",
+      "year": 2025,
+      "published": "2025-01-11",
+      "venue": "IEEE International Conference on Consumer Electronics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generative AI models have shown remarkable performance, but their considerable size leads to notable computational and memory overhead. Quantization is essential to deploy models on edge devices. This paper presents a novel quantization that leverages always existing normalization layers to enhance performance in terms of accuracy. We aims to minimize quantization loss in input and output feature maps by utilizing normalization layers. Our research provides valuable insights into improving efficiency and accuracy of Generative AI models, and we demonstrate additional performance gains can be achieved by plug-in to existing methods.",
+      "identifiers": [
+        "SemanticScholar:70a257c92ced7868a48b2bf1376d512da6005410"
+      ],
+      "semantic_scholar_id": "70a257c92ced7868a48b2bf1376d512da6005410",
+      "doi": "10.1109/ICCE63647.2025.10930021",
+      "canonical_id": "DOI:10.1109/ICCE63647.2025.10930021",
+      "authors": [
+        "Chang-Hyun Lee",
+        "Su-Min Song",
+        "Hyoungjun Jeon"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 683,
+        "matched_prestigious_venue": null
+      },
+      "reason": "正規化層を活用して入出力特徴マップ間の損失を抑える量子化手法を提案し、オンデバイス生成AIモデルの量子化後精度を高めるものであり、エッジ推論向けモデル量子化への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1d6eb873d1e5",
+    "round": "libimp-1d6eb873d1e53fc2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1d6eb873d1e53fc2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1d6eb873d1e53fc2-pre01.json",
+    "receipt": "sha256:5be23f4c39bc92a53fac7511923d394546096e60b4e54ef86f97d69173080c20"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1d6eb873d1e5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
