@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e6e7b86ad80479c2-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.21734",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.21734",
+    "identity_tokens": [
+      "arXiv:2606.21734"
+    ],
+    "reason": "HPPは長動画理解で知覚と推論を分離する階層的プロービングであり、VLMの処理効率に関わるが主対象は動画理解タスクの解法である。",
+    "first_checked_at": "2026-11-25T11:27:11+00:00",
+    "last_checked_at": "2026-11-25T11:27:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HPP: Hierarchical Programmatic Probing for Long Video Understanding by Decoupling Perception and Reasoning"
+  },
+  "processed_at": "2026-11-25T11:27:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e6e7b86ad804",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

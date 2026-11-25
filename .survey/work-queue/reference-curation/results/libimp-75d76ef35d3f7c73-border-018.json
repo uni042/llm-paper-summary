@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75d76ef35d3f7c73-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.18244",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.18244",
+    "identity_tokens": [
+      "arXiv:2607.18244"
+    ],
+    "reason": "本論文は動的エッジネットワークで小規模モデルとサーバLLMの異種協調を高速化する研究であり、エッジ推論の運用に関わるが競合下の協調ポリシーが主対象である。",
+    "first_checked_at": "2026-11-25T11:27:10+00:00",
+    "last_checked_at": "2026-11-25T11:27:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accelerating Heterogeneous Agent Collaboration in Dynamic Edge Networks"
+  },
+  "processed_at": "2026-11-25T11:27:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75d76ef35d3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

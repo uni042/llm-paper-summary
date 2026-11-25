@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75d76ef35d3f7c73-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.04889",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.04889",
+    "identity_tokens": [
+      "arXiv:2210.04889"
+    ],
+    "reason": "Turbo Trainingはビデオタスク向けTransformerのトークンドロップアウト学習法であり、学習の効率化が主対象で推論への適用は確認できない。",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-25T11:27:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Turbo Training with Token Dropout"
+  },
+  "processed_at": "2026-11-25T11:27:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75d76ef35d3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

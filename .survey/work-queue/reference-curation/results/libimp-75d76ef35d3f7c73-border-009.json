@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75d76ef35d3f7c73-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.19146",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.19146",
+    "identity_tokens": [
+      "arXiv:2603.19146"
+    ],
+    "reason": "D5P4は並列離散拡散デコードの多様性を決定点過程の分割で高める手法であり、デコード手順に関わるが主眼は候補の多様性であり効率機構の貢献は薄い。",
+    "first_checked_at": "2026-11-25T11:27:10+00:00",
+    "last_checked_at": "2026-11-25T11:27:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "D5P4: Partition Determinantal Point Process for Diversity in Parallel Discrete Diffusion Decoding"
+  },
+  "processed_at": "2026-11-25T11:27:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75d76ef35d3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
