@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65d7c0a5d2f8d48a-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.21906",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.21906",
+    "identity_tokens": [
+      "arXiv:2505.21906"
+    ],
+    "reason": "ChatVLA-2はロボット制御向け視覚言語行動モデルの具身推論能力を保つ学習手法であり、ロボティクス応用モデルの能力向上が主題である。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-25T22:19:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ChatVLA-2: Vision-Language-Action Model with Open-World Embodied Reasoning from Pretrained Knowledge"
+  },
+  "processed_at": "2026-11-25T22:19:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65d7c0a5d2f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

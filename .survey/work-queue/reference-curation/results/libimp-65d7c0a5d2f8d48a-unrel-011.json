@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65d7c0a5d2f8d48a-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.15936",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.15936",
+    "identity_tokens": [
+      "arXiv:2409.15936"
+    ],
+    "reason": "DepMambaは音声・映像融合によるうつ病検出のためのMambaモデルであり、精神疾患の検出という医療応用が目的である。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-25T22:19:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "DepMamba: Progressive Fusion Mamba for Multimodal Depression Detection"
+  },
+  "processed_at": "2026-11-25T22:19:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65d7c0a5d2f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

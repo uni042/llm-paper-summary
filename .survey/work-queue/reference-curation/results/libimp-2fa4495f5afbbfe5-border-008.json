@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2fa4495f5afbbfe5-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.15694",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.15694",
+    "identity_tokens": [
+      "arXiv:2511.15694"
+    ],
+    "reason": "大規模推論モデルの強化学習に対する事後量子化と量子化対応RLの性能差を系統的に測る分析。量子化が主題だが、対象は推論デプロイではなくRL学習過程への影響である。",
+    "first_checked_at": "2026-11-25T22:19:30+00:00",
+    "last_checked_at": "2026-11-25T22:19:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Impact of Quantization on Large Reasoning Model Reinforcement Learning"
+  },
+  "processed_at": "2026-11-25T22:19:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2fa4495f5afb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d954740c93511fb-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.12818",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.12818",
+    "identity_tokens": [
+      "arXiv:2609.12818"
+    ],
+    "reason": "VideoXAgentは長尺動画理解で証拠探索をオンライン化しコンテキスト腐敗と計算コストを抑えるが、主目的は動画理解エージェントの応用であり推論システムへの貢献は間接的である。",
+    "first_checked_at": "2026-11-25T22:19:29+00:00",
+    "last_checked_at": "2026-11-25T22:19:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Online Video Agent Harness for Long Video Understanding"
+  },
+  "processed_at": "2026-11-25T22:19:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d954740c935",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

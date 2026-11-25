@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fdc9d8e21abeb0a1-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.04569",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.04569",
+    "identity_tokens": [
+      "arXiv:2605.04569"
+    ],
+    "reason": "In-Context Sparse Attentionは動画編集の文脈内学習で二次コストとなる注意を疎化する機構であり注意最適化との関連は直接だが、対象は拡散型動画編集に限定される。",
+    "first_checked_at": "2026-11-25T22:19:32+00:00",
+    "last_checked_at": "2026-11-25T22:19:32+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LIVEditor-14B: Lightning Unified Video Editing via In-Context Sparse Attention"
+  },
+  "processed_at": "2026-11-25T22:19:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fdc9d8e21abe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

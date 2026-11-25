@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2fa4495f5afbbfe5-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.20461",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.20461",
+    "identity_tokens": [
+      "arXiv:2504.20461"
+    ],
+    "reason": "グラフ型近似最近傍探索でfork-join並列の非効率を改め低レイテンシとスループット維持を狙う探索システム。ベクトル検索基盤としては関連するが、LLM推論そのものへの適用・評価は要旨にない。",
+    "first_checked_at": "2026-11-25T22:19:30+00:00",
+    "last_checked_at": "2026-11-25T22:19:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Graph-Based Approximate Nearest Neighbor Search Achieving: Low Latency Without Throughput Loss"
+  },
+  "processed_at": "2026-11-25T22:19:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2fa4495f5afb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

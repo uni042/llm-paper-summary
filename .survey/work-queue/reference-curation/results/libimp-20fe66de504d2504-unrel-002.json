@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20fe66de504d2504-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icassp55912.2026.11461288",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icassp55912.2026.11461288",
+    "identity_tokens": [
+      "DOI:10.1109/icassp55912.2026.11461288"
+    ],
+    "reason": "NMGEは多言語機械翻訳のパラメータ効率微調整における専門家グループルーティングであり、翻訳タスクの学習アーキテクチャが主題である。",
+    "first_checked_at": "2026-11-25T22:19:30+00:00",
+    "last_checked_at": "2026-11-25T22:19:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "NMGE: Nested Multi-Granularity Expert Groups for Complexity-Aware Routing in Multilingual Translation"
+  },
+  "processed_at": "2026-11-25T22:19:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20fe66de504d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

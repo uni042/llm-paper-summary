@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8c97fbbafc500e65-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.04460",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.04460",
+    "identity_tokens": [
+      "arXiv:2508.04460"
+    ],
+    "reason": "LRMの過剰思考を推論と制御の分離で抑え推論コストとレイテンシを下げる方向だが、提案の主体はメタ認知的な生成制御の学習でありサービング機構としての具体性は薄い。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-25T22:19:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From \"Aha Moments\" to Controllable Thinking: Toward Meta-Cognitive Reasoning in LRMs via Decoupled Reasoning and Control"
+  },
+  "processed_at": "2026-11-25T22:19:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8c97fbbafc50",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

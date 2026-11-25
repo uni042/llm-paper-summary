@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8c97fbbafc500e65-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.11752",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.11752",
+    "identity_tokens": [
+      "arXiv:2506.11752"
+    ],
+    "reason": "DARTは自己回帰的思考連鎖を無言思考へ蒸留しレイテンシ感受性の高い用途での計算オーバーヘッド削減を狙うが、主体は蒸留という学習手法であり推論時の機構の具体性は限られる。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-25T22:19:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DART: Distilling Autoregressive Reasoning to Silent Thought"
+  },
+  "processed_at": "2026-11-25T22:19:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8c97fbbafc50",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

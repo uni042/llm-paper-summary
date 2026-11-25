@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-515dcad68f45baeb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.16423",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.16423",
+    "identity_tokens": [
+      "arXiv:2603.16423"
+    ],
+    "reason": "視覚Mambaの走査設計とデータ再配置の非効率を改めるSF-Mambaは画像タスク向け視覚エンコーダの研究であり、LLM推論の対象ではない。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-25T22:19:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SF-Mamba: Rethinking State Space Model for Vision"
+  },
+  "processed_at": "2026-11-25T22:19:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-515dcad68f45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2fa4495f5afbbfe5-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2402.13497",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2402.13497",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.13497",
+      "arXiv:2402.13497"
+    ],
+    "reason": "量子化対応学習の汎化を一貫性正則化で高めるQAT手法。量子化モデルの推論利用が最終目的ではあるが、対象・評価は視覚系QATの学習性能でありLLM推論への適用は示されていない。",
+    "first_checked_at": "2026-11-25T22:19:30+00:00",
+    "last_checked_at": "2026-11-25T22:19:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Push Quantization-Aware Training Toward Full Precision Performances via Consistency Regularization"
+  },
+  "processed_at": "2026-11-25T22:19:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2fa4495f5afb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

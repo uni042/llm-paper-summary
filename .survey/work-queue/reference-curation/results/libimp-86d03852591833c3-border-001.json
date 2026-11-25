@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86d03852591833c3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.12437",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.12437",
+    "identity_tokens": [
+      "arXiv:2609.12437"
+    ],
+    "reason": "適応型マルチモーダルRAGのルーティングに検索信号が効くかを統制実験で検証する研究で、ルーティングという推論運用との関連はあるが新規機構ではなく評価が主体である。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-25T22:19:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond the Query: Do Retrieval Signals Improve Adaptive Multimodal RAG Routing?"
+  },
+  "processed_at": "2026-11-25T22:19:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86d038525918",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
