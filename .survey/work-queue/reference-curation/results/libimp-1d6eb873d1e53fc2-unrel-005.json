@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d6eb873d1e53fc2-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.01404",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.01404",
+    "identity_tokens": [
+      "arXiv:2506.01404"
+    ],
+    "reason": "グラフフィルタリングにおける量子化雑音を誤差フィードバックで抑える信号処理の理論研究であり、モデル量子化ではなく推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-25T15:32:53+00:00",
+    "last_checked_at": "2026-11-25T15:32:53+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Quantitative Error Feedback for Quantization Noise Reduction of Filtering Over Graphs"
+  },
+  "processed_at": "2026-11-25T15:32:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d6eb873d1e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

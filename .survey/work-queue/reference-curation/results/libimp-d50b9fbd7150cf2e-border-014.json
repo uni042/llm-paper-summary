@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d50b9fbd7150cf2e-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.01002",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.01002",
+    "identity_tokens": [
+      "arXiv:2604.01002"
+    ],
+    "reason": "クエリ条件付きの証拠スコアで長編映像からキーフレームを選ぶサンプリング手法であり、MLLMの文脈・計算コスト削減に関わるが映像前処理の学習手法であるため境界とする。",
+    "first_checked_at": "2026-11-25T15:32:55+00:00",
+    "last_checked_at": "2026-11-25T15:32:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Query-Conditioned Evidential Keyframe Sampling for MLLM-Based Long-Form Video Understanding"
+  },
+  "processed_at": "2026-11-25T15:32:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d50b9fbd7150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

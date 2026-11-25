@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d6eb873d1e53fc2-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:3899616c2606859a86368940f7b2488e8c6820b0",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:3899616c2606859a86368940f7b2488e8c6820b0",
+    "identity_tokens": [
+      "SemanticScholar:3899616c2606859a86368940f7b2488e8c6820b0"
+    ],
+    "reason": "Procyonは疎ストリーミングアクセラレータに細粒度マルチテナンシーを導入しPE利用率と同時実行を改善するが、対象は汎用の疎計算アクセラレータでありLLM推論ではないため境界とする。",
+    "first_checked_at": "2026-11-25T15:32:53+00:00",
+    "last_checked_at": "2026-11-25T15:32:53+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Procyon: Promoting Fine-Grain Multi-Tenancy to Optimize Sparse Streaming Accelerators"
+  },
+  "processed_at": "2026-11-25T15:32:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d6eb873d1e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

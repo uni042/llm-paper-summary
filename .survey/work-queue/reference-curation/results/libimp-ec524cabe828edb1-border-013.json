@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ec524cabe828edb1-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.06553",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.06553",
+    "identity_tokens": [
+      "arXiv:2501.06553"
+    ],
+    "reason": "VASparseは視覚認識トークンの疎化をデコード時に行い視覚幻覚を抑える差し込み型デコード手法であり、トークン削減に触れるが主目的は幻覚緩和であるため境界とする。",
+    "first_checked_at": "2026-11-25T15:32:56+00:00",
+    "last_checked_at": "2026-11-25T15:32:56+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VASparse: Towards Efficient Visual Hallucination Mitigation via Visual-Aware Token Sparsification"
+  },
+  "processed_at": "2026-11-25T15:32:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec524cabe828",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

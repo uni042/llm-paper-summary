@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ec524cabe828edb1-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.06316",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.06316",
+    "identity_tokens": [
+      "arXiv:2303.06316"
+    ],
+    "reason": "二次ニューロン網のパラメータ効率を理論と実証で示した研究であり、アーキテクチャの表現力分析であって推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-25T15:32:56+00:00",
+    "last_checked_at": "2026-11-25T15:32:56+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "One Neuron Saved is One Neuron Earned: On Parametric Efficiency of Quadratic Networks"
+  },
+  "processed_at": "2026-11-25T15:32:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec524cabe828",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

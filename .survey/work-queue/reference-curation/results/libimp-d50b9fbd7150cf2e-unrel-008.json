@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d50b9fbd7150cf2e-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.09969",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.09969",
+    "identity_tokens": [
+      "arXiv:2605.09969"
+    ],
+    "reason": "生成トークンの隠れ状態の平均プーリングが意味表現として優れることを示した表現解析であり、推論システムへの技術的貢献はない。",
+    "first_checked_at": "2026-11-25T15:32:55+00:00",
+    "last_checked_at": "2026-11-25T15:32:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "The Truth Lies Somewhere in the Middle (of the Generated Tokens)"
+  },
+  "processed_at": "2026-11-25T15:32:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d50b9fbd7150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

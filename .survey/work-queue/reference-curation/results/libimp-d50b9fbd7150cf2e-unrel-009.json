@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d50b9fbd7150cf2e-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.06467",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.06467",
+    "identity_tokens": [
+      "arXiv:2403.06467"
+    ],
+    "reason": "Point Mambaは八分木順序付けによる点群処理用SSMバックボーンであり、3D視覚応用であってLLM推論システムではない。",
+    "first_checked_at": "2026-11-25T15:32:55+00:00",
+    "last_checked_at": "2026-11-25T15:32:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Point Mamba: A Novel Point Cloud Backbone Based on State Space Model with Octree-Based Ordering Strategy"
+  },
+  "processed_at": "2026-11-25T15:32:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d50b9fbd7150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

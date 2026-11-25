@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af8963874235c928-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.20156",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.20156",
+    "identity_tokens": [
+      "arXiv:2512.20156"
+    ],
+    "reason": "Fun-Audio-Chatは二重解像度の音声表現で共有LLMの処理を5Hzへ落としGPU使用を約50%削減する大規模音声言語モデルだが、主眼は音声対話モデルの構築であり推論機構の一般性が限られるため境界とする。",
+    "first_checked_at": "2026-11-25T15:32:55+00:00",
+    "last_checked_at": "2026-11-25T15:32:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fun-Audio-Chat Technical Report"
+  },
+  "processed_at": "2026-11-25T15:32:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af8963874235",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

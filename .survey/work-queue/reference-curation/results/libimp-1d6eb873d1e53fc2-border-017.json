@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d6eb873d1e53fc2-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.09100",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.09100",
+    "identity_tokens": [
+      "arXiv:2504.09100"
+    ],
+    "reason": "小型推論モデルの訓練・推論技術を約170本の論文で整理したサーベイであり、推論効率の論点を含むが新規機構ではなく蒸留等の学習手法も広く扱うため境界とする。",
+    "first_checked_at": "2026-11-25T15:32:53+00:00",
+    "last_checked_at": "2026-11-25T15:32:53+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Short Survey on Small Reasoning Models: Training, Inference, Applications and Research Directions"
+  },
+  "processed_at": "2026-11-25T15:32:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d6eb873d1e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

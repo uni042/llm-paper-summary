@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3cce4c1b6ae0d70f-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.12846",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.12846",
+    "identity_tokens": [
+      "arXiv:2406.12846"
+    ],
+    "reason": "DrVideoは長編映像を文書化して検索とエージェント反復で理解するシステムであり、映像処理量の削減に関わるが映像理解のパイプライン応用であるため境界とする。",
+    "first_checked_at": "2026-11-25T15:32:54+00:00",
+    "last_checked_at": "2026-11-25T15:32:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DrVideo: Document Retrieval Based Long Video Understanding"
+  },
+  "processed_at": "2026-11-25T15:32:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3cce4c1b6ae0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

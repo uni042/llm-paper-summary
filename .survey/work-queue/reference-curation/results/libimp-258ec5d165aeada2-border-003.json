@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-258ec5d165aeada2-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.20252",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.20252",
+    "identity_tokens": [
+      "arXiv:2410.20252"
+    ],
+    "reason": "適応的フレームサンプリングとフィードバック推論で長編映像理解の効率を上げるエージェント手法であり、映像処理量削減に関わるが映像理解応用であるため境界とする。",
+    "first_checked_at": "2026-11-25T15:32:54+00:00",
+    "last_checked_at": "2026-11-25T15:32:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Video Understanding Agent: Enhancing efficiency with dynamic frame sampling and feedback-driven reasoning"
+  },
+  "processed_at": "2026-11-25T15:32:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-258ec5d165ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

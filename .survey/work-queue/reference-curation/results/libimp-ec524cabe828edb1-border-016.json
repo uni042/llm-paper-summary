@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ec524cabe828edb1-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.02117",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.02117",
+    "identity_tokens": [
+      "arXiv:2410.02117"
+    ],
+    "reason": "構造化行列の連続空間で効率的な線形層を探索し計算最適スケーリングを分析する研究であり、推論計算の削減に通じるが学習時のスケーリング則が中心であるため境界とする。",
+    "first_checked_at": "2026-11-25T15:32:56+00:00",
+    "last_checked_at": "2026-11-25T15:32:56+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Searching for Efficient Linear Layers over a Continuous Space of Structured Matrices"
+  },
+  "processed_at": "2026-11-25T15:32:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec524cabe828",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

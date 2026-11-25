@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d50b9fbd7150cf2e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.22944",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.22944",
+    "identity_tokens": [
+      "arXiv:2512.22944"
+    ],
+    "reason": "MTDは複数予測ヘッド間の発散で文脈内計算量を測り、Divergence Steeringで生成の計算的性質を制御するデコード手法だが、効率化ではなく計算特性の測定と制御が主眼であるため境界とする。",
+    "first_checked_at": "2026-11-25T15:32:55+00:00",
+    "last_checked_at": "2026-11-25T15:32:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multiple Token Divergence: Measuring and Steering In-Context Computation Density"
+  },
+  "processed_at": "2026-11-25T15:32:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d50b9fbd7150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

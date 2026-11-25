@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0d0a4cfaa911914-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.26035",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.26035",
+    "identity_tokens": [
+      "arXiv:2605.26035"
+    ],
+    "reason": "Log-Depth Recurrent Unitによる長さ汎化のアーキテクチャ研究であり、正規言語タスクでの評価が中心でLLM推論システムへの適用はない。",
+    "first_checked_at": "2026-11-25T15:32:55+00:00",
+    "last_checked_at": "2026-11-25T15:32:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Length Generalization with Log-Depth Recurrent Units"
+  },
+  "processed_at": "2026-11-25T15:32:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0d0a4cfaa91",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

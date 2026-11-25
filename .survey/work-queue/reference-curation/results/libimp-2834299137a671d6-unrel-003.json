@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2834299137a671d6-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2026.semeval-1.239",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2026.semeval-1.239",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.semeval-1.239"
+    ],
+    "reason": "本論文『Semantic Vectors at SemEval-2026 Task 9: Robust Multilingual Polarization Detection via Dual-Encoder Fusion and Expert Ensembling』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+    "first_checked_at": "2026-11-25T15:32:54+00:00",
+    "last_checked_at": "2026-11-25T15:32:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Semantic Vectors at SemEval-2026 Task 9: Robust Multilingual Polarization Detection via Dual-Encoder Fusion and Expert Ensembling"
+  },
+  "processed_at": "2026-11-25T15:32:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2834299137a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
