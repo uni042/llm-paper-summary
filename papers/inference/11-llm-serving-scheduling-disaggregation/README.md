@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（683本）
+## 自動生成の論文一覧（684本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2256,6 +2256,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、推論時に複数のChain-of-Thought（CoT）枝を生成して多数決を取る自己整合性（SC）のトークン費用とリクエスト完了遅延を同時に削減するDUCHESSを提案する。
 
+- **2025-07 · [Resource Multiplexing in Tuning and Serving Large Language Models](2025-350ca60c84cd-resource-multiplexing-in-tuning-and-serving-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論とファインチューニングを同じGPUへ相乗りさせるため、推論の遅延制約の中で調整作業をイテレーション単位で差し込み、調整を中断可能な形に変換し、両者のリクエストをまとめて処理する多重化システム。推論のSLOを守りながら調整のスループットが最大で約15倍になった。
+
 - **2025-07 · [MoLink: Distributed and Efficient Serving Framework for Large Models](2025-2507.05043-molink-distributed-and-efficient-serving-framework-for-large-models.md)**  
   実装：[✓](https://github.com/oldcpple/MoLink) ・ リポジトリ内被引用：0  
   MoLinkは、専用の高速相互接続を持たないGPUを複数台集め、大きな言語モデルをパイプライン並列で提供するシステムである。100 Mbps・往復遅延10 ms・毎秒1要求のとき、MoLinkは196.142 トークン/sで、Petals 45.343、vLLM 135.86を上回る。
@@ -2323,7 +2327,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：881  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：883  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -2657,7 +2661,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1997  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1999  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

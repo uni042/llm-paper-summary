@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（402本）
+## 自動生成の論文一覧（403本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -1014,6 +1014,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   EfficientLLaVAは、画像と文章を扱う大規模視覚言語モデル（Large Vision-Language モデル; LVLM）の重みを、元の巨大な学習データを持たずに削減するための自動枝刈り方式である。
 
+- **2025-02 · [MEADOW: Memory-efficient Dataflow and Data Packing for Low Power Edge LLMs](2025-2503.11663-meadow-memory-efficient-dataflow-and-data-packing-for-low-power-edge-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  低消費電力エッジ向けに、アテンションの中間結果をオンチップへ保つトークン並列・ヘッド逐次のデータフローと、重みを一意な要素へロスレス分解するパッキングを組み合わせ、オフチップメモリへのアクセスを減らす実装フレームワーク。10W未満のFPGAでプリフィルが2.5倍、デコードが1.5倍速くなった。
+
 - **2024-12 · [RILQ: Rank-Insensitive LoRA-based Quantization Error Compensation for Boosting 2-bit Large Language Model Accuracy](2024-2412.01129-rilq-rank-insensitive-lora-based-quantization-error-compensation-for-boo.md)**  
   実装：[✓](https://github.com/aiha-lab/RILQ) ・ リポジトリ内被引用：2  
   重み量子化（重み 量子化）は、FP16などで保持していた行列を低ビット表現へ写像してモデルの重み記憶量を削減する。LLaMA-3-8BのQuIP#量子化では常識推論5課題平均が52.48%→60.61%、WikiText-2の困惑度（perplexity; PPL）が12.74→9.39となった。
@@ -1491,7 +1495,7 @@
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
-  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：390  
+  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：391  
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
@@ -1601,7 +1605,7 @@
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：737  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：738  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2022-11 · [LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md)**  

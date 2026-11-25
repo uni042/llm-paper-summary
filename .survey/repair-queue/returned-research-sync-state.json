@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a7cc3190b185132aa76864b71ee127826243598d",
+  "base_commit": "9c6b9281ad2dbf4a26941940ae3501b9d1f9c7fd",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -233,6 +233,7 @@
     "2024-2411.12758-an-exploration-of-the-effect-of-quantisation-on-energy-consumption-and-inference-time-of-starcoder2.json",
     "2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connected-layers.json",
     "2024-2411.14345-layer-pruning-with-consensus-a-triple-win-solution.json",
+    "2024-2411.15100-xgrammar-flexible-and-efficient-structured-generation-engine-for-large.json",
     "2024-2411.17773-efficient-multi-modal-large-language-models-via-visual-token-grouping.json",
     "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json",
     "2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.json",
@@ -262,6 +263,7 @@
     "2024-f34641a221bb-language-specific-pruning-for-efficient-reduction-of-large-language-models.json",
     "2024-kivi-asymmetric-2bit-kv-cache-quantization.json",
     "2025-05067fc6be56-dyorc-efficient-serving-of-dynamic-machine-learning-workflows.json",
+    "2025-092f003ff9f0-generalsparse-bridging-the-gap-in-spmm-for-pruned-large-language-model.json",
     "2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.json",
     "2025-1efbe4ec3d0b-empiric-exploring-missing-pieces-in-kv-cache-compression-for-reducing-computation-storage-and-latency-in-long-context-ll.json",
     "2025-2501.01672-practical-secure-inference-algorithm-for-a-fine-tuned-large-language-model-based-on-fully-homomorphic-encryption.json",
@@ -297,6 +299,7 @@
     "2025-2503.09304-priority-aware-preemptive-scheduling-for-mixed-priority-workloads-in-moe-inference.json",
     "2025-2503.09657-tyr-the-pruner-structural-pruning-via-global-sparsity-distribution.json",
     "2025-2503.11426-text-compression-for-efficient-language-generation.json",
+    "2025-2503.11663-meadow-memory-efficient-dataflow-and-data-packing-for-low-power-edge-llms.json",
     "2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-to-faster-inference.json",
     "2025-2503.14781-fake-runs-real-fixes-analyzing-xpu-performance-through-simulation.json",
     "2025-2503.17101-large-language-model-compression-via-the-nested-activation-aware-decomposition.json",
@@ -501,6 +504,7 @@
     "2025-2512.23029-viability-and-performance-of-a-private-llm-server-for-smbs-a-benchmark-analysis-of-qwen3-30b-on-consumer-grade-hardware.json",
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
     "2025-2601.14260-end-to-end-transformer-acceleration-through-processing-in-memory-architectures.json",
+    "2025-350ca60c84cd-resource-multiplexing-in-tuning-and-serving-large-language-models.json",
     "2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision-proxy-rounding-and-pre-searching.json",
     "2025-3b8e234e37c9-hape-hardware-aware-llm-pruning-for-efficient-on-device-inference-optimization.json",
     "2025-4b36ce92772b-towards-floating-point-based-ai-acceleration-hybrid-pim-with-non-uniform-data-format-and-reduced-multiplications.json",
@@ -512,6 +516,7 @@
     "2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-language-models.json",
     "2025-9cce4f3ac879-faster-speculative-decoding-via-effective-draft-decoder-with-pruned-candidate-tree.json",
     "2025-9d0005ab2d5d-minimizing-transformer-inference-overhead-using-controlling-element-on-shenwei-ai-accelerator.json",
+    "2025-a91bc1cbd978-fasttree-optimizing-attention-kernel-and-runtime-for-tree-structured-llm.json",
     "2025-addressing-activation-outliers-in-llms-ptq-survey.json",
     "2025-af96f29ab97d-towards-ml-system-extensibility.json",
     "2025-b174259d82b3-quantization-methods-for-energy-efficient-llm-deployments.json",
@@ -55049,6 +55054,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2411.15100": {
+      "order": [
+        "2026-11-25T11:46:43+00:00",
+        "2024-2411.15100-xgrammar-flexible-and-efficient-structured-generation-engine-for-large.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "USENIX:ATC25:wang-yaoyu": {
+      "order": [
+        "2026-11-25T11:47:49+00:00",
+        "2025-092f003ff9f0-generalsparse-bridging-the-gap-in-spmm-for-pruned-large-language-model.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2503.11663": {
+      "order": [
+        "2026-11-25T11:48:56+00:00",
+        "2025-2503.11663-meadow-memory-efficient-dataflow-and-data-packing-for-low-power-edge-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "USENIX:ATC25:he-yongjun": {
+      "order": [
+        "2026-11-25T11:50:03+00:00",
+        "2025-350ca60c84cd-resource-multiplexing-in-tuning-and-serving-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "OpenReview:BwvHcHZ3kJ": {
+      "order": [
+        "2026-11-25T11:51:09+00:00",
+        "2025-a91bc1cbd978-fasttree-optimizing-attention-kernel-and-runtime-for-tree-structured-llm.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70050,6 +70100,21 @@
     "arxiv:2411.01438": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.01438-skyserve-serving-ai-models-across-regions-and-clouds-with-spot-instances.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.01438-skyserve-serving-ai-models-across-regions-and-clouds-with-spot-instances.md"
+    ],
+    "arxiv:2411.15100": [
+      "papers/inference/99-other-inference-systems/2024-2411.15100-xgrammar-flexible-and-efficient-structured-generation-engine-for-large-l.md"
+    ],
+    "usenix:atc25:wang-yaoyu": [
+      "papers/inference/09-kernel-runtime-compilation/2025-092f003ff9f0-generalsparse-bridging-the-gap-in-spmm-for-pruned-large-language-model-i.md"
+    ],
+    "arxiv:2503.11663": [
+      "papers/inference/16-weight-quantization-compression/2025-2503.11663-meadow-memory-efficient-dataflow-and-data-packing-for-low-power-edge-llm.md"
+    ],
+    "usenix:atc25:he-yongjun": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-350ca60c84cd-resource-multiplexing-in-tuning-and-serving-large-language-models.md"
+    ],
+    "openreview:bwvhchz3kj": [
+      "papers/inference/09-kernel-runtime-compilation/2025-a91bc1cbd978-fasttree-optimizing-attention-kernel-and-runtime-for-tree-structured-llm.md"
     ]
   }
 }

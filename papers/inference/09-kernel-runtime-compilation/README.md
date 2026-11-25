@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（363本）
+## 自動生成の論文一覧（365本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -933,7 +933,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：238  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：239  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -1104,6 +1104,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   MBOK（Multiple Boolean Kernels）の基本表現は、通常の実数重み行列を複数の符号行列とチャネル別スケールの和で近似するものである。各カーネルの重みは1-bitで、入力側・出力側の実数スケールを別途持つ。元のFP重みから順に近似成分を抽出し、残差へ同じ分解を繰り返すため、単一の符号行列より表現力が高い。
 
+- **2025-05 · [FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference](2025-a91bc1cbd978-fasttree-optimizing-attention-kernel-and-runtime-for-tree-structured-llm.md)**  
+  実装：[✓](https://github.com/PanZaifeng/FastTree-Artifact) ・ リポジトリ内被引用：1  
+  プレフィックス共有のある推論で、共有KVの読み直しとテンソルコアの無駄を解くため、共有文脈を持つクエリをまとめて計算するアテンションカーネルと、木の分割を実行時に最適化する仕組みをSGLangへ追加した。スループットは最大2.2倍になった。
+
 - **2025-05 · [COUNTDOWN: Contextually Sparse Activation Filtering Out Unnecessary Weights in Down Projection](2025-2505.17701-countdown-contextually-sparse-activation-filtering-out-unnecessary-weigh.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   下方射影の重み付き和という見方から、直接係数と間接係数で残す中間次元を選ぶ二つの疎な活性化を導き、理想条件で90パーセントの計算省略と最良5.5パーセントの低下、予測器なし方式ではCATS比で最大29.4パーセント良い性能保持を示す。
@@ -1191,6 +1195,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-07 · [PoTPTQ: A Two-step Power-of-Two Post-training for LLMs](2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みを2の冪で表す量子化のスケールを、重みだけのグリッド探索と少量較正での残差学習の2段で決め、ビット操作の逆量子化で推論も速くする学習後量子化。3.25ビットで一様量子化の最先端を上回り、逆量子化は最大3.67倍高速。
+
+- **2025-07 · [GeneralSparse: Bridging the Gap in SpMM for Pruned Large Language Model Inference on GPUs](2025-092f003ff9f0-generalsparse-bridging-the-gap-in-spmm-for-pruned-large-language-model-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プルーニング済みLLMの疎行列計算を、パターンごとに最適化するのではなく、メモリアクセスと削減の抽象化から自動生成で適応させるSpMM方式。疎パターンと疎密度の違いに一貫して対応し、cuSPARSE比で最大20.82倍、推論全体で最大2.33倍速くなった。
 
 - **2025-07 · [Degrees of Freedom for Linear Attention: Distilling Softmax Attention with Optimal Feature Efficiency](2025-2507.03340-degrees-of-freedom-for-linear-attention-distilling-softmax-attention-wit.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1447,7 +1455,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：941  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：942  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  

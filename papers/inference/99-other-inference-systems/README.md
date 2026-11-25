@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（805本）
+## 自動生成の論文一覧（806本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2657,6 +2657,10 @@
 - **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
   実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：13  
   二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
+
+- **2024-11 · [XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models](2024-2411.15100-xgrammar-flexible-and-efficient-structured-generation-engine-for-large-l.md)**  
+  実装：[✓](https://github.com/mlc-ai/xgrammar) ・ リポジトリ内被引用：11  
+  構造化生成の文法チェックを高速化するため、語彙を事前検査できるトークンと実行時検査が必要なトークンに分け、前者はマスクをキャッシュし、後者は永続スタックで処理し、文法計算をGPU推論と重ねるエンジン。既存ライブラリより最大で100倍以上速く、サービング全体ではほぼゼロの追加コストになった。
 
 - **2024-10 · [Fast Best-of-N Decoding via Speculative Rejection](2024-2410.20290-fast-best-of-n-decoding-via-speculative-rejection.md)**  
   実装：[✓](https://github.com/Zanette-Labs/SpeculativeRejection) ・ リポジトリ内被引用：11  

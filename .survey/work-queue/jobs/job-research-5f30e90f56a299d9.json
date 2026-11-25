@@ -35,10 +35,15 @@
   "selection_reason": "LLMStationはLoRA調整と推論を同じGPU上で時間・空間多重化し、反復単位のプリエンプション可能なAutogradパイプラインと混合バッチングを導入する。USENIX ATC 2025公式要旨で推論SLOを守りながら既存方式比1.38～14.77倍の処理量を報告し、サービング実行基盤へ直接寄与する。",
   "semantic_scholar_id": "10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
   "source_url": "https://www.semanticscholar.org/paper/10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
-  "status": "ready",
+  "status": "superseded",
   "title": "Resource Multiplexing in Tuning and Serving Large Language Models",
   "type": "research",
   "venue": "USENIX Annual Technical Conference",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-25T11:52:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-350ca60c84cd-resource-multiplexing-in-tuning-and-serving-large-language-models.md",
+  "represented_canonical_id": "USENIX:ATC25:he-yongjun",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
