@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fd7919f6d043cb5e-border-010",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.33360",
+  "reason": "An LSTM-style looped transformer shares one KV cache across its recurrent core, cutting persistent cache sets from fifteen to four at matched FLOPs; cache sharing is inference-relevant, but the paper is an architecture study trained and evaluated as a model design, so borderline.",
+  "title": "LSTM-Style Looped Transformers with Shared KV Caches",
+  "identity_tokens": [
+    "arXiv:2610.33360"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fd7919f6d043",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

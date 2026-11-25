@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-98fbd561c89e75ff-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2507.08064",
+  "reason": "PUMA prunes MLLM layers with self-distillation to cut inference cost, but the target task is unified multimodal retrieval and the pruning is tied to retrieval quality rather than a general LLM serving or decoding mechanism, so the inference-system contribution is indirect.",
+  "title": "PUMA: Layer-Pruned Language Model for Efficient Unified Multimodal Retrieval with Modality-Adaptive Learning",
+  "identity_tokens": [
+    "arXiv:2507.08064"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98fbd561c89e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
