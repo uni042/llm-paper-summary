@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-89462ca44e128c73-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.03621",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.03621",
+    "identity_tokens": [
+      "arXiv:2412.03621"
+    ],
+    "reason": "モバイルLLMサービス向けに端末側SLMのプロンプト圧縮と無線送信電力を共同最適化しサービス時間を最小化する枠組みで、エッジ・クラウド推論として関連するが無線通信側の最適化が強いため境界。",
+    "first_checked_at": "2026-11-24T22:15:34+00:00",
+    "last_checked_at": "2026-11-25T11:41:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "JPPO++: Joint Power and Denoising-Inspired Prompt Optimization for Mobile LLM Services"
+  },
+  "processed_at": "2026-11-25T11:41:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-89462ca44e12",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

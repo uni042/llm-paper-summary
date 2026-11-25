@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a897962d818f6026-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.27387",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.27387",
+    "identity_tokens": [
+      "arXiv:2605.27387"
+    ],
+    "reason": "自己回帰LLMを拡散型の並列生成へ適応させる枠組みで、推論パラダイムの変更に関わるが手法自体は訓練側の適応であり推論システムの評価が中心ではないため境界。",
+    "first_checked_at": "2026-11-24T22:11:31+00:00",
+    "last_checked_at": "2026-11-25T11:41:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From AR to Diffusion: Efficiently Adapting Large Language Models with Strictly Causal and Elastic Horizons"
+  },
+  "processed_at": "2026-11-25T11:41:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a897962d818f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c94c1eb52cc24b6c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.08151",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.08151",
+    "identity_tokens": [
+      "arXiv:2606.08151"
+    ],
+    "reason": "ツール利用LLMエージェント向けに意思決定への寄与で証拠を選別しメモリカードへ圧縮する文脈選択層で、コンテキスト圧縮として推論効率に関連するが中核はエージェントの検索精度のため境界。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-25T11:41:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Decision-Aware Memory Cards: Counterfactual-Inspired Context Selection and Compression for Tool-Using LLM Agents"
+  },
+  "processed_at": "2026-11-25T11:41:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c94c1eb52cc2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

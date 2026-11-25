@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce07dcf8d838931d-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2101.09115",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2101.09115",
+    "identity_tokens": [
+      "arXiv:2101.09115"
+    ],
+    "reason": "本論文はBERTの注意ヘッドの機能的役割を仮説検定付きスコアで統計的に分析する解釈研究であり、対象はエンコーダモデルの理解であってLLM推論システムの効率化機構への貢献はない。",
+    "first_checked_at": "2026-11-25T11:41:27+00:00",
+    "last_checked_at": "2026-11-25T11:41:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "The heads hypothesis: A unifying statistical approach towards understanding multi-headed attention in BERT"
+  },
+  "processed_at": "2026-11-25T11:41:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce07dcf8d838",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

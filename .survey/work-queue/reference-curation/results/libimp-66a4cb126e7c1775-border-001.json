@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-66a4cb126e7c1775-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.02684",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.02684",
+    "identity_tokens": [
+      "arXiv:2404.02684"
+    ],
+    "reason": "線形コスト推論Transformerへ事前訓練済み重みを転移して再訓練コストを避ける手法で、推論効率の高いアーキテクチャの利用を促すが手法自体は訓練側の転移学習のため境界。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-25T11:41:25+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cross-Architecture Transfer Learning for Linear-Cost Inference Transformers"
+  },
+  "processed_at": "2026-11-25T11:41:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-66a4cb126e7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

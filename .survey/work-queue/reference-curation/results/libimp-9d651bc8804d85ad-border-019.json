@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d651bc8804d85ad-border-019",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.20064",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.20064",
+    "identity_tokens": [
+      "arXiv:2607.20064"
+    ],
+    "reason": "PRO-LONGは対話履歴の完全な構造化ログをプログラム的に検索するエージェント向け文脈管理で、ベースライン比4.2〜5.8倍少ないトークン使用を報告するが、対象はエージェントハーネスの文脈管理でありサービングやデコードの機構ではないため境界とする。",
+    "first_checked_at": "2026-11-25T11:41:26+00:00",
+    "last_checked_at": "2026-11-25T11:41:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning"
+  },
+  "processed_at": "2026-11-25T11:41:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d651bc8804d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

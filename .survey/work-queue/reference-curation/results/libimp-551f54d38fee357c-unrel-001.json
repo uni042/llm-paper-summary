@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-551f54d38fee357c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.14814",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.14814",
+    "identity_tokens": [
+      "arXiv:2407.14814"
+    ],
+    "reason": "FMambaは高速注意とMambaを組み合わせて多変量時系列予測の精度を競う予測モデルであり、低オーバーヘッドは設計上の性質に留まり、主題は予測タスクの性能であってLLM推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-25T11:41:25+00:00",
+    "last_checked_at": "2026-11-25T11:41:25+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "FMamba: Mamba based on Fast-attention for Multivariate Time-series Forecasting"
+  },
+  "processed_at": "2026-11-25T11:41:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-551f54d38fee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

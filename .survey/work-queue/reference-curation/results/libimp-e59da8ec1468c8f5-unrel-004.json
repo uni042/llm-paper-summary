@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e59da8ec1468c8f5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.28702",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.28702",
+    "identity_tokens": [
+      "arXiv:2610.28702"
+    ],
+    "reason": "クラウド・エッジ・IoT連続体におけるマルチエージェントLLMの構成と配置を分類した体系的マッピング研究（サーベイ）であり、推論システムの提案ではないため対象外。",
+    "first_checked_at": "2026-11-25T11:41:27+00:00",
+    "last_checked_at": "2026-11-25T11:41:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Multi-agent LLMs on the Cloud-Edge-IoT Continuum: A Systematic Mapping Study on Architectures, Deployment, and Evaluation"
+  },
+  "processed_at": "2026-11-25T11:41:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e59da8ec1468",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

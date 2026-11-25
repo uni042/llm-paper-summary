@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-764c7ed5d4049225-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.04898",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.04898",
+    "identity_tokens": [
+      "arXiv:2510.04898"
+    ],
+    "reason": "ハイパーネットワークでタスク固有の小ポリシーだけを推論時に有効化しVLAモデルの推論コストを下げるアーキテクチャであり、対象がロボティクス制御モデルでLLMサービングではないため境界。",
+    "first_checked_at": "2026-11-24T22:36:47+00:00",
+    "last_checked_at": "2026-11-25T11:41:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HyperVLA: Efficient Inference in Vision-Language-Action Models via Hypernetworks"
+  },
+  "processed_at": "2026-11-25T11:41:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-764c7ed5d404",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

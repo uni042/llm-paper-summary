@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d651bc8804d85ad-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.18130",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.18130",
+    "identity_tokens": [
+      "arXiv:2508.18130"
+    ],
+    "reason": "タイトル自体が凍結したランダム特徴（リザバー）ブロックを挟む時系列予測Transformer（FreezeTST）による長期予測を明示しており、時系列予測タスクの応用研究であってLLM推論システムとは無関係である。タイトル先行走査で対象外と判定した。",
+    "first_checked_at": "2026-11-25T11:41:26+00:00",
+    "last_checked_at": "2026-11-25T11:41:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Frozen in Time: Parameter-Efficient Time Series Transformers via Reservoir-Induced Feature Expansion and Fixed Random Dynamics"
+  },
+  "processed_at": "2026-11-25T11:41:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d651bc8804d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

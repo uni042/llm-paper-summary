@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce07dcf8d838931d-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.03792",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.03792",
+    "identity_tokens": [
+      "arXiv:2406.03792"
+    ],
+    "reason": "Light-PEFTは基盤モデルとPEFTモジュールの冗長パラメータを学習初期に剪定して微調整の効率を上げる枠組みであり、主題はファインチューニングの学習効率で、推論高速化は剪定の副次的効果に留まる。",
+    "first_checked_at": "2026-11-25T11:41:27+00:00",
+    "last_checked_at": "2026-11-25T11:41:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Light-PEFT: Lightening Parameter-Efficient Fine-Tuning via Early Pruning"
+  },
+  "processed_at": "2026-11-25T11:41:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce07dcf8d838",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

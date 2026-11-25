@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e59da8ec1468c8f5-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.00082",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.00082",
+    "identity_tokens": [
+      "arXiv:2507.00082"
+    ],
+    "reason": "端末の小型モデルとサーバのLLMを使い分けるハイブリッド推論で不確実性閾値を連合学習で最適化する枠組みであり、推論振り分けとして関連するが中核は閾値の連合学習のため境界。",
+    "first_checked_at": "2026-11-25T11:41:27+00:00",
+    "last_checked_at": "2026-11-25T11:41:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Federated Learning-Enabled Hybrid Language Models for Communication-Efficient Token Transmission"
+  },
+  "processed_at": "2026-11-25T11:41:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e59da8ec1468",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T11:27:11+00:00",
-  "record_count": 9162,
+  "updated_at": "2026-11-25T11:41:27+00:00",
+  "record_count": 9192,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -134249,9 +134249,9 @@
       "identity_tokens": [
         "arXiv:2604.07935"
       ],
-      "reason": "Mamba-1からMamba-3へのアーキテクチャ変更がハイパースケールGPU最適化に偏り、エッジでのレイテンシが28〜48%悪化することを実測で示す分析・ポジションペーパーで、推論効率の論点は直接的だが新規の推論機構の提案ではない。",
+      "reason": "Mamba-3がエッジ推論で28〜48%のレイテンシ増を招くことを実測した分析論文で、エッジ推論効率への示唆はあるが具体的な推論システムや最適化手法の提案ではないため境界。",
       "first_checked_at": "2026-11-24T21:43:55+00:00",
-      "last_checked_at": "2026-11-24T21:43:55+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134303,30 +134303,15 @@
       "borderline_recheck_count": 0,
       "title": "Bounded Personas Match Retrieval on Classification but Not Regression for a Frozen Agent"
     },
-    "arXiv:2609.35333": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2609.35333",
-      "identity_tokens": [
-        "arXiv:2609.35333"
-      ],
-      "reason": "圧縮Transformerが長い相互作用履歴を潜在トークンへ蒸留し固定サイズの潜在バッファで文脈内強化学習を拡張する手法で、推論時の履歴メモリ削減の機構はあるが、対象はRLエージェントの文脈内学習でありLLM推論システムへの適用は確認できない。",
-      "first_checked_at": "2026-11-24T21:43:55+00:00",
-      "last_checked_at": "2026-11-24T21:43:55+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Scalable In-Context Reinforcement Learning with Recurrent Algorithm Distillation"
-    },
     "arXiv:2610.11458": {
       "classification": "borderline",
       "canonical_id": "arXiv:2610.11458",
       "identity_tokens": [
         "arXiv:2610.11458"
       ],
-      "reason": "敵対的データ生成とアルゴリズム発見を交互に行う自動研究ループをKV圧縮・スパース注意等の推論課題へ適用する枠組みで、対象タスクは推論効率化だが論文自体の貢献は研究自動化のメタ手法であり、推論機構の直接の提案ではない。",
+      "reason": "KV圧縮や疎注意などの推論アルゴリズムを自動探索する敵対的ループの枠組みで、推論最適化への応用例はあるが成果物は自動研究フレームワーク自体であり推論システムではないため境界。",
       "first_checked_at": "2026-11-24T21:43:55+00:00",
-      "last_checked_at": "2026-11-24T21:43:55+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134339,9 +134324,9 @@
       "identity_tokens": [
         "DOI:10.1109/mic.2025.3575493"
       ],
-      "reason": "エッジの小規模言語モデルとクラウドの大規模モデルを協調させる推論システムの戦略と設計原則を実験的知見とともに示す概説記事で、エッジ‐クラウド協調推論の論点は対象範囲だが、新規機構の提案・実証というより指針の提示が主である。",
+      "reason": "エッジとクラウドの協調推論を論じる展望記事であり、推論配置の論点は扱うが具体的なシステムや実測評価のない論説のため境界。",
       "first_checked_at": "2026-11-24T21:43:55+00:00",
-      "last_checked_at": "2026-11-24T21:43:55+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134415,9 +134400,9 @@
       "identity_tokens": [
         "arXiv:2508.17860"
       ],
-      "reason": "AVAMは多画像QA向けに視覚トークンを適応的に圧縮する視覚アンカリングと協調デコードを提案するが、主目的はQA精度の改善であり、推論効率化は圧縮に伴う副次的効果にとどまる。",
+      "reason": "マルチモーダルLLMの複数画像質問応答向けに視覚トークンを適応圧縮し協調デコーディングも導入する手法で、推論効率の改善を含むが主眼は精度向上のため境界。",
       "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134439,30 +134424,15 @@
       "borderline_recheck_count": 0,
       "title": "RTSA: A Run-Through Sparse Attention Framework for Video Transformer"
     },
-    "arXiv:2605.30859": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2605.30859",
-      "identity_tokens": [
-        "arXiv:2605.30859"
-      ],
-      "reason": "DARTSはLLM強化学習のロールアウトで、プロンプト内の冗長な冗長性を分布認識型軌跡サンプリングと適応的冗長配分で整形し最大1.77倍加速するが、主目的はRL学習パイプラインの高速化であり、推論サービング機構への貢献は副次的である。",
-      "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "DARTS: Distribution-Aware Active Rollout Trajectory Shaping for Accelerating LLM Reinforcement Learning"
-    },
     "arXiv:2404.15198": {
       "classification": "borderline",
       "canonical_id": "arXiv:2404.15198",
       "identity_tokens": [
         "arXiv:2404.15198"
       ],
-      "reason": "基盤モデルの可逆圧縮と解凍でモデル配布のネットワーク・ストレージを50％超削減し、調整可能な非可逆版も示す研究だが、圧縮対象は配布・保存時のモデルであり、推論時の計算やメモリを削減する機構ではない。",
+      "reason": "基盤モデルの重みを可逆圧縮して保存・配信トラフィックを50%以上削減する検討で、モデル配布の効率化として関連するが推論時の圧縮や実行最適化ではないため境界。",
       "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134575,21 +134545,6 @@
       "borderline_recheck_count": 0,
       "title": "BoostViT: Booth-Serial Skipping and Tunable Scaling for Vision Transformers"
     },
-    "arXiv:2509.20581": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2509.20581",
-      "identity_tokens": [
-        "arXiv:2509.20581"
-      ],
-      "reason": "Hierarchical Resolution Transformersはウェーブレット着想の多解像度注意で系列を指数的に削減しO(n log n)計算量をうたう新アーキテクチャだが、評価の中心はGLUE等の言語理解ベンチマークであり、推論サービングへの具体的な適用は示されていない。",
-      "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Hierarchical Resolution Transformers: A Wavelet-Inspired Architecture for Multi-Scale Language Understanding"
-    },
     "DOI:10.1109/iotaai70471.2026.11607713": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1109/iotaai70471.2026.11607713",
@@ -134686,9 +134641,9 @@
       "identity_tokens": [
         "SemanticScholar:5a75d9273175682f582bc18d24f6120a09a69815"
       ],
-      "reason": "100MW級AIクラスタのプロビジョニングから実行時最適化までを扱うと題し推論基盤の運用に関わる可能性があるが、要旨を取得できず対象ワークロードと機構を一次要旨で検証できなかった。",
+      "reason": "100MW級AIクラスタの電力供給から実行時最適化までの運用経験の報告であり、推論基盤の運用に触れるが主題は訓練クラスタ中心のデータセンタ電力管理のため境界。",
       "first_checked_at": "2026-11-24T22:11:29+00:00",
-      "last_checked_at": "2026-11-24T22:11:29+00:00",
+      "last_checked_at": "2026-11-25T11:41:24+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134776,9 +134731,9 @@
       "identity_tokens": [
         "arXiv:2404.02684"
       ],
-      "reason": "XATLは共有部品の重み転移により線形コスト推論アーキテクチャへの移行時の再学習コストを下げるが、貢献自体はアーキテクチャ移行のための転移学習手法であり、推論実行時の機構そのものではない。",
+      "reason": "線形コスト推論Transformerへ事前訓練済み重みを転移して再訓練コストを避ける手法で、推論効率の高いアーキテクチャの利用を促すが手法自体は訓練側の転移学習のため境界。",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134896,9 +134851,9 @@
       "identity_tokens": [
         "arXiv:2607.08010"
       ],
-      "reason": "本番LLMエージェントで繰り返し現れる手順をデプロイ前に検証済みツールへコンパイルし、推論時のコード再生成を回避してレイテンシと信頼性を改善する運用手法であり、実システムでの遅延削減は示される。ただし対象はアラームトリアージという業務応用で、汎用の推論基盤機構としての貢献は薄い。",
+      "reason": "本番LLMエージェントの繰り返し手順を検証済みツールへ事前コンパイルしp50レイテンシを42%削減した実運用研究で、推論レイテンシ最適化に触れるが中核はエージェント設計のため境界。",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134926,9 +134881,9 @@
       "identity_tokens": [
         "arXiv:2606.08151"
       ],
-      "reason": "ツール使用エージェント向けに、検索された証拠を行動への反実仮想的な有用度で順位付けし型付きメモリカードへ圧縮する文脈選択層であり、推論時の文脈圧縮機構は備える。ただし主目的はエージェントの意思決定支援であり、LLM推論基盤への直接貢献は限定的である。",
+      "reason": "ツール利用LLMエージェント向けに意思決定への寄与で証拠を選別しメモリカードへ圧縮する文脈選択層で、コンテキスト圧縮として推論効率に関連するが中核はエージェントの検索精度のため境界。",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -134956,9 +134911,9 @@
       "identity_tokens": [
         "arXiv:2310.15594"
       ],
-      "reason": "LLMの知識を知識ストア経由で1%規模の極小モデルへ転移させる極端な圧縮パラダイムであり、デプロイ時のモデル小型化には関わる。ただし実体は小規模モデルのソフトプロンプト調整と強化学習による知識転移学習であり、推論システムの機構としての貢献は薄い。",
+      "reason": "LLMの知識を知識ストア経由で1%規模の極小モデルへ転移する極端圧縮パラダイムで、デプロイ向け圧縮として関連するが評価はGLUE等の低リソースタスクで推論効率の実測が乏しいため境界。",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135076,9 +135031,9 @@
       "identity_tokens": [
         "arXiv:2606.06309"
       ],
-      "reason": "動画生成DiTのデノイジング軌跡をフレーム間で分離しスケジューリングする学習不要の高速化であり、対象は拡散モデルの推論で、LLM推論システムへの直接の適用は示されていない。",
+      "reason": "動画生成の拡散Transformer向けにフレーム毎のデノイジング軌跡を分離して高速化する訓練不要手法で、推論高速化技術ではあるが対象がLLMではなく動画拡散モデルのため境界。",
       "first_checked_at": "2026-11-24T22:11:30+00:00",
-      "last_checked_at": "2026-11-24T22:11:30+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135100,45 +135055,15 @@
       "borderline_recheck_count": 0,
       "title": "LATIAS: A General Architecture-Operator Model for Spatial Accelerators with Complex Topology and Memory Hierarchy"
     },
-    "arXiv:2610.14644": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2610.14644",
-      "identity_tokens": [
-        "arXiv:2610.14644"
-      ],
-      "reason": "LatentMoEのエキスパート形状と層別容量配分が学習損失と下流性能に与える影響を示した設計研究であり、MoE推論効率へ間接的に関わるが学習時設計の分析が中心である。",
-      "first_checked_at": "2026-11-24T22:11:31+00:00",
-      "last_checked_at": "2026-11-24T22:11:31+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Shaping Latent Mixture-of-Experts: From Expert Geometry to Layerwise Capacity Allocation"
-    },
-    "arXiv:2505.11580": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2505.11580",
-      "identity_tokens": [
-        "arXiv:2505.11580"
-      ],
-      "reason": "FlashIPAはInvariant Point AttentionをFlashAttention流に因子分解しメモリと時間を線形化するカーネル高速化だが、対象はタンパク質・RNA構造モデルの幾何学的注意であり、LLM推論への適用は示されていない。",
-      "first_checked_at": "2026-11-24T22:11:31+00:00",
-      "last_checked_at": "2026-11-24T22:11:31+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Flash Invariant Point Attention"
-    },
     "arXiv:2505.14136": {
       "classification": "borderline",
       "canonical_id": "arXiv:2505.14136",
       "identity_tokens": [
         "arXiv:2505.14136"
       ],
-      "reason": "TTMMはモデルマージによりテスト時学習を近似し、エキスパート数を桁違いに増やしながらテスト時オーバーヘッドをほぼ回避するが、主目的はプロンプトごとの適応による性能向上であり、推論機構そのものの効率化は enabling な位置づけにとどまる。",
+      "reason": "モデルマージでテスト時訓練を近似しMoEのエキスパート数を桁違いに増やしながらテスト時オーバーヘッドをほぼ無くす手法で、推論コスト削減を主題の一つとするが中核はテスト時適応のため境界。",
       "first_checked_at": "2026-11-24T22:11:31+00:00",
-      "last_checked_at": "2026-11-24T22:11:31+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135190,30 +135115,15 @@
       "borderline_recheck_count": 0,
       "title": "Tree Search for Language Model Agents"
     },
-    "arXiv:2606.04990": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2606.04990",
-      "identity_tokens": [
-        "arXiv:2606.04990"
-      ],
-      "reason": "LLMエージェントの証拠追跡と実行来歴（プロベナンス）に関するサーベイで、ツール呼び出しやメモリ参照の検証可能性を整理するが、対象はエージェント実行の観測・監査であり推論システムの効率や基盤機構への直接貢献は薄い。",
-      "first_checked_at": "2026-11-24T22:11:31+00:00",
-      "last_checked_at": "2026-11-24T22:11:31+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "From Agent Traces to Trust: A Survey of Evidence Tracing and Execution Provenance in LLM Agents"
-    },
     "arXiv:2605.27387": {
       "classification": "borderline",
       "canonical_id": "arXiv:2605.27387",
       "identity_tokens": [
         "arXiv:2605.27387"
       ],
-      "reason": "FLUIDは厳密因果アライメントで自己回帰バックボーンを拡散生成へ効率的に適応させ、エントロピー駆動のElastic Horizonsでデノイジング歩幅を動的に変えるが、主貢献は事前学習を回避する適応（学習）枠組みであり、拡散LLM推論機構としての評価は副次的である。",
+      "reason": "自己回帰LLMを拡散型の並列生成へ適応させる枠組みで、推論パラダイムの変更に関わるが手法自体は訓練側の適応であり推論システムの評価が中心ではないため境界。",
       "first_checked_at": "2026-11-24T22:11:31+00:00",
-      "last_checked_at": "2026-11-24T22:11:31+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135241,9 +135151,9 @@
       "identity_tokens": [
         "arXiv:2412.03621"
       ],
-      "reason": "JPPO++はエッジの小規模モデルでプロンプトを圧縮し深層強化学習で圧縮率と無線送信電力を共同最適化するモバイルLLMサービス向け枠組みで、通信とプロンプト処理の削減は推論効率に触れるが主眼は無線ネットワーク側の電力・伝送最適化である。",
+      "reason": "モバイルLLMサービス向けに端末側SLMのプロンプト圧縮と無線送信電力を共同最適化しサービス時間を最小化する枠組みで、エッジ・クラウド推論として関連するが無線通信側の最適化が強いため境界。",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135361,9 +135271,9 @@
       "identity_tokens": [
         "arXiv:2402.00841"
       ],
-      "reason": "会議要約タスクで微調整した小型LLMと大型LLMを実運用環境で比較し、デプロイコストの観点から小型モデルの代替可能性を検証するが、題材は特定応用タスクの性能比較であり推論システム機構への貢献は薄い。",
+      "reason": "会議要約タスクで小型LLMと大型LLMの実運用性能を比較しFLAN-T5が大型勢に匹敵することを示した研究で、デプロイコストの観点はあるが主題はタスク性能の比較のため境界。",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135466,9 +135376,9 @@
       "identity_tokens": [
         "arXiv:2610.25835"
       ],
-      "reason": "拡散言語モデルについてタスクごとにトークン当たりフォワードパス数が大きく変わり、入力からの新規性や語の希少さで説明できることを分析した研究で、復号コストの特性評価としては有用だが削減機構や評価基盤の提供はない。",
+      "reason": "拡散言語モデルでタスクや言語によりトークン当たりのフォワードパス数が大きく変わることを分析した推論コストの計測研究であり、生成コストの理解として関連するため境界。",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135496,9 +135406,9 @@
       "identity_tokens": [
         "arXiv:2510.13940"
       ],
-      "reason": "Minimal Test-Time Interventionは推論時の不確実性が高エントロピーの少数トークンに局在する観察に基づき、その位置でのみ分類器フリーガイダンス等を介入する学習不要の枠組みだが、主目的は推論精度と安定性の改善であり計算効率化は副次的である。",
+      "reason": "高エントロピートークンにだけ分類器フリーガイダンスを適用しKVキャッシュを再利用する最小限のテスト時介入で推論効率と精度を両立する手法だが、主眼は推論精度の向上のため境界。",
       "first_checked_at": "2026-11-24T22:36:47+00:00",
-      "last_checked_at": "2026-11-24T22:36:47+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135511,29 +135421,14 @@
       "identity_tokens": [
         "arXiv:2603.28554"
       ],
-      "reason": "Hydraは単一VLMに検索用LoRAアダプタの切替でColBERT式遅延相互作用検索と自己回帰生成の二つの頭を持たせ、別モデル運用のメモリと複雑さを減らすが、主対象は文書理解の検索・生成統合という応用であり推論システム機構の新規性は限定的である。",
+      "reason": "検索と生成を単一の視覚言語モデルに統合しピークメモリを削減、KVキャッシュ配慮のデコードも扱うが、主題は文書検索と生成の統合アーキテクチャのため境界。",
       "first_checked_at": "2026-11-24T22:36:47+00:00",
-      "last_checked_at": "2026-11-24T22:36:47+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
       "borderline_recheck_count": 0,
       "title": "Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model"
-    },
-    "arXiv:2610.28702": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2610.28702",
-      "identity_tokens": [
-        "arXiv:2610.28702"
-      ],
-      "reason": "クラウド‐エッジ‐IoT連続体上のマルチエージェントLLMについて45件の一次研究をアーキテクチャ族・配置・評価で分類した系統的マッピング研究で、エッジ配置の知見はあるが推論システムへの技術的貢献は整理・分類にとどまる。",
-      "first_checked_at": "2026-11-24T22:36:47+00:00",
-      "last_checked_at": "2026-11-24T22:36:47+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Multi-agent LLMs on the Cloud-Edge-IoT Continuum: A Systematic Mapping Study on Architectures, Deployment, and Evaluation"
     },
     "DOI:10.1109/fllm67465.2025.11391052": {
       "classification": "borderline",
@@ -135631,9 +135526,9 @@
       "identity_tokens": [
         "arXiv:2510.04898"
       ],
-      "reason": "HyperVLAはハイパーネットワークでタスク固有の小型ポリシーのみを推論時に活性化しVLAモデルの推論コストを下げるが、対象はロボット制御ポリシーという応用であり、LLM推論システム一般への貢献は限定的である。",
+      "reason": "ハイパーネットワークでタスク固有の小ポリシーだけを推論時に有効化しVLAモデルの推論コストを下げるアーキテクチャであり、対象がロボティクス制御モデルでLLMサービングではないため境界。",
       "first_checked_at": "2026-11-24T22:36:47+00:00",
-      "last_checked_at": "2026-11-24T22:36:47+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135646,9 +135541,9 @@
       "identity_tokens": [
         "arXiv:2509.09660"
       ],
-      "reason": "SteerMoEは振る舞いと結び付いたエキスパートを検出し推論時に活性化・非活性化することで忠実性や安全性をファインチューニングなしに制御する枠組みで、MoE推論時のエキスパート制御という機構は持つが、目的は振る舞い制御であり推論効率化への貢献は示されていない。",
+      "reason": "MoE型LLMで振る舞いに関連するエキスパートを推論時に活性化・不活性化して安全性等を制御する枠組みで、推論時のエキスパート制御として関連するが目的は効率化ではなく振る舞い制御のため境界。",
       "first_checked_at": "2026-11-24T22:36:47+00:00",
-      "last_checked_at": "2026-11-24T22:36:47+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135706,9 +135601,9 @@
       "identity_tokens": [
         "arXiv:2504.06307"
       ],
-      "reason": "量子化とローカル推論を組み合わせたLLMデプロイメントのエネルギー効率と炭素排出を指標・事例で論じる研究で、推論基盤のエネルギー計測に触れるものの、新規の推論機構ではなく既知技術の事例研究的整理にとどまる。",
+      "reason": "量子化とローカル推論でLLMのエネルギー消費と炭素排出を最大45%削減した事例研究で、推論のエネルギー計測として関連するが枠組みは持続可能性のケーススタディのため境界。",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135910,21 +135805,6 @@
       "borderline_recheck_count": 0,
       "title": "Neighbor patches merging reduces spatial redundancy to accelerate vision transformer"
     },
-    "DOI:10.1016/j.parco.2025.103164": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1016/j.parco.2025.103164",
-      "identity_tokens": [
-        "DOI:10.1016/j.parco.2025.103164"
-      ],
-      "reason": "局所シャーディング型異種データ並列と題するが、一次要旨を取得できず機構を検証できなかったことに加え、題材は分散深層学習の学習並列化であり推論への適用は不明である。",
-      "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "LSHDP: Locally sharded heterogeneous data parallel for distributed deep learning"
-    },
     "DOI:10.1016/j.sysarc.2026.104054": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1016/j.sysarc.2026.104054",
@@ -135954,21 +135834,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Opleiding DSAI Pruning-aware Shapley values estimation for Large Language Models"
-    },
-    "arXiv:2602.06471": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2602.06471",
-      "identity_tokens": [
-        "arXiv:2602.06471"
-      ],
-      "reason": "Hourglass TransformerとしてFFNの狭‐広‐狭形状慣行を見直し、残差ストリーム幅と注意幅を分離する砂時計型MLPで深さ‐幅トレードオフを検討するアーキテクチャ研究だが、推論時の計算・メモリ削減の実測やサービングへの適用は中心ではない。",
-      "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Revisiting the Shape Convention of Transformer Language Models"
     },
     "DOI:10.1109/vts69484.2026.11563363": {
       "classification": "borderline",
@@ -136006,9 +135871,9 @@
       "identity_tokens": [
         "arXiv:2609.21899"
       ],
-      "reason": "ExpBoNは指数ノイズによるソフトBest-of-nで報酬と分布シフトのトレードオフを細かく制御するテスト時アライメント手法で、誘導型投機的推論GSIへ統合したExpGSIが計算量を14〜39％削減するが、主目的は推論時アライメントの理論と精度であり、投機的デコード機構自体の改良ではない。",
+      "reason": "Best-of-nの軟化版を理論解析しガイド付き投機的推論へ統合して計算コストを削減したテスト時アライメント手法で、投機的推論との接続はあるが主題はアライメントの理論のため境界。",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136021,44 +135886,14 @@
       "identity_tokens": [
         "arXiv:2505.20802"
       ],
-      "reason": "Leaner Transformersは多ヘッド注意が注意ブロックの条件数を改善するという理論的洞察から、ヘッド数を増やし深さを減らしてパラメータを30〜50％削減し精度を保つアーキテクチャ再設計だが、評価は画像・言語タスクの精度とパラメータ数が中心で、推論レイテンシやサービングでの実測は示されていない。",
+      "reason": "多ヘッド化で注意の条件数を改善し深さを減らしてパラメータを30〜50%削減するTransformer再設計であり、モデル圧縮に近いが推論実測ではなくアーキテクチャ理論が中心のため境界。",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
       "borderline_recheck_count": 0,
       "title": "Leaner Transformers: More Heads, Less Depth"
-    },
-    "arXiv:2505.18440": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2505.18440",
-      "identity_tokens": [
-        "arXiv:2505.18440"
-      ],
-      "reason": "小規模言語モデルへの長CoT蒸留について、冗長な推論ステップを剪定し自己生成の有効なCoTで学習することで、競合的性能を保ちながら生成時の冗長ステップを減らす手法だが、機構の中心は学習データのキュレーションという学習側の手法であり、推論時のデコード機構ではない。",
-      "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Efficient Long CoT Reasoning in Small Language Models"
-    },
-    "arXiv:2407.19610": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2407.19610",
-      "identity_tokens": [
-        "arXiv:2407.19610"
-      ],
-      "reason": "Mixture of Modular Expertsは知識蒸留とMoEを組み合わせ、多言語教師から言語・ドメイン別のモジュール型エキスパートへ蒸留して壊滅的忘却やモジュール性を扱う研究で、MoEのモジュール化要素はあるが主眼は多言語モデルの学習と適応であり、推論高速化の評価は示されていない。",
-      "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Mixture of Modular Experts: Distilling Knowledge from a Multilingual Teacher into Specialized Modular Language Models"
     },
     "SemanticScholar:6c14e3be3d7075c29c2ad879658f60f2cd93af0f": {
       "classification": "borderline",
@@ -136276,9 +136111,9 @@
       "identity_tokens": [
         "arXiv:2610.37466"
       ],
-      "reason": "H100の分散共有メモリにおけるフロアスイープ等の物理的非理想性がカーネル性能へ与える影響を実測・分析する研究で、大規模AI学習・推論双方に関わるハードウェア知見だが、LLM推論カーネルへの具体的な最適化提案ではない。",
+      "reason": "H100の物理的非理想性がカーネル性能へ与える影響を計測しFlashAttention 4のスループットを5.3%改善するクラスタリング戦略を示した研究で、カーネル性能計測として関連するが推論専用ではないため境界。",
       "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136306,9 +136141,9 @@
       "identity_tokens": [
         "arXiv:2508.06262"
       ],
-      "reason": "Llasa+は凍結したLLaMA系TTSバックボーンの後段にマルチトークン予測モジュールを差し込み、バックボーン自体で生成トークンを検証する仕組みで音声合成を高速化・ストリーミング化するが、対象はTTSという音声応用モデルであり、検証付き並列予測の機構も当該モデルへの適用にとどまる。",
+      "reason": "Llama系音声合成モデルにマルチトークン予測と検証アルゴリズムを付け1.48倍高速化とストリーミングを実現した手法で、投機的デコーディングに近いが対象がTTSモデルのため境界。",
       "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136329,21 +136164,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "One Token Is Enough: Improving Diffusion Language Models with a Sink Token"
-    },
-    "arXiv:2604.11321": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2604.11321",
-      "identity_tokens": [
-        "arXiv:2604.11321"
-      ],
-      "reason": "Winner-Take-AllスパイキングTransformerはソフトマックス不要のスパイク駆動自己注意で言語モデリングのエネルギー効率を目指すアーキテクチャ研究だが、評価はマスク言語モデリング等のモデル能力が中心で、LLM推論サービングやデコード実行への具体的な適用は示されていない。",
-      "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Winner-Take-All Spiking Transformer for Language Modeling"
     },
     "arXiv:2606.06474": {
       "classification": "borderline",
@@ -136532,9 +136352,9 @@
       "identity_tokens": [
         "arXiv:2508.21313"
       ],
-      "reason": "CDCDA-PLMはクラウド側LLMのデータ拡張で個人データを補い、PEFTで微調整した小型言語モデルを端末へ配置する枠組みで、オンデバイス推論の配置形態は含むが主貢献はパーソナライゼーション用データ拡張と学習であり、推論機構の最適化は薄い。",
+      "reason": "クラウドLLMによるデータ拡張で個人化したオンデバイス言語モデルを構築する枠組みで、オンデバイス配置を扱うが中核は個人化データの拡張という訓練側の手法のため境界。",
       "first_checked_at": "2026-11-24T22:36:50+00:00",
-      "last_checked_at": "2026-11-24T22:36:50+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136547,9 +136367,9 @@
       "identity_tokens": [
         "arXiv:2511.04768"
       ],
-      "reason": "FuseFlowはPyTorchの疎モデルを再構成可能データフローアーキテクチャ向け融合データフローグラフへ変換するコンパイラで、GPT-3とBigBird疎注意で2.7倍の高速化例はあるが、対象は汎用疎深層学習とサイクル精度シミュレータ上の設計探索であり、LLM推論実行系への直接の適用ではない。",
+      "reason": "疎な深層学習モデルを再構成可能データフローアーキテクチャ向けに融合コンパイルするFuseFlowであり、カーネル融合として関連するが対象は汎用疎DLでLLM推論専用ではないため境界。",
       "first_checked_at": "2026-11-24T22:36:50+00:00",
-      "last_checked_at": "2026-11-24T22:36:50+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -140339,6 +140159,639 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Confidence-Aware Reasoning: Optimizing Self-Guided Thinking Trajectories in Large Reasoning Models"
+    },
+    "arXiv:2606.00601": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.00601",
+      "identity_tokens": [
+        "arXiv:2606.00601"
+      ],
+      "reason": "Mamba型選択的スキャン等の再帰計算をMLIRでGPUへ下げるコンパイラ基盤で推論カーネルに近いが、対象は汎用のaffine再帰でありLLM推論としての評価が限定的なため境界。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ScanWeaver: Compiler-Driven Parallelization of Affine Recurrences via Associative Scan Lowering"
+    },
+    "arXiv:2504.05342": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.05342",
+      "identity_tokens": [
+        "arXiv:2504.05342"
+      ],
+      "reason": "複数ファインチューン済みモデルのマージと推論時ルータによる部分空間選択を提案するが、評価対象はCLIP画像分類でありLLM推論への適用が示されていないため境界。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MASS: MoErging through Adaptive Subspace Selection"
+    },
+    "SemanticScholar:37dc44f661b4d80459e7e3f0a3daf5a67736c1b2": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:37dc44f661b4d80459e7e3f0a3daf5a67736c1b2",
+      "identity_tokens": [
+        "SemanticScholar:37dc44f661b4d80459e7e3f0a3daf5a67736c1b2"
+      ],
+      "reason": "オープンドメイン質問応答のリーダに適応計算と早期終了を適用する手法であり、推論時計算の制御として関連するがタスク固有のモデル改良のため境界。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Don’t Read Too Much Into It: Adaptive Computation for Open-Domain Question Answering"
+    },
+    "arXiv:2509.12053": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.12053",
+      "identity_tokens": [
+        "arXiv:2509.12053"
+      ],
+      "reason": "LEGOはアフィン変換ベースの表現からテンソル応用向け空間アクセラレータのRTLを自動生成しGemmini比3.2倍の高速化を示す設計枠組みであり、生成AI向け加速器設計には関わるがLLM推論ランタイムの機構ではなく対象もテンソル応用全般のため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LEGO: Spatial Accelerator Generation and Optimization for Tensor Applications"
+    },
+    "DOI:10.1109/iscas66217.2026.11562233": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas66217.2026.11562233",
+      "identity_tokens": [
+        "DOI:10.1109/iscas66217.2026.11562233"
+      ],
+      "reason": "本論文は小規模モデルのトピック条件と文脈累積条件でプロンプト圧縮を導き要約品質を保つ手法であり、文脈長の削減はLLM推論コストと関連するが評価は要約ベンチマークの品質が中心で、推論時のコスト削減は測定されていないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Topic-Guided and Context-Accumulated Conditions for Prompt Compression"
+    },
+    "DOI:10.1109/ieecon68065.2026.11707019": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ieecon68065.2026.11707019",
+      "identity_tokens": [
+        "DOI:10.1109/ieecon68065.2026.11707019"
+      ],
+      "reason": "本論文は活性化考慮量子化（AWQ）におけるタイ語と英語の較正データの違いが量子化誤差や下流性能へ与える影響をQwen2.5-7Bで分析する研究であり、推論量子化の較正に関する知見ではあるが新規の量子化機構の提案ではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring Thai Language-Specific Effects in Activation-Aware Quantization"
+    },
+    "arXiv:2604.11465": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.11465",
+      "identity_tokens": [
+        "arXiv:2604.11465"
+      ],
+      "reason": "本論文は要約・実行・訂正の3役割を同一の凍結モデルに担わせる推論時スキャフォールディングで小規模エージェントのタスク完了率を上げる研究であり、文脈圧縮を含む推論時編成ではあるがランタイムやデコードの機構提案ではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Three Roles, One Model: Role Orchestration at Inference Time to Close the Performance Gap Between Small and Large Agents"
+    },
+    "arXiv:2605.22372": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22372",
+      "identity_tokens": [
+        "arXiv:2605.22372"
+      ],
+      "reason": "ASAPは注意シンクへの拡散距離でVision Transformerのトークンを剪定しスループットを最大48%上げる学習不要の手法だが、対象は画像・動画・視覚言語タスクのViT推論であり、LLM推論システムへの適用は示されていないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ASAP: Attention Sink Anchored Pruning"
+    },
+    "arXiv:2408.02502": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.02502",
+      "identity_tokens": [
+        "arXiv:2408.02502"
+      ],
+      "reason": "コミットメッセージ生成で4ビット量子化した8BのオープンLLMがGPT-4級に匹敵することを示した応用研究で、量子化モデルの実務適用として関連するが主題はタスク性能のため境界。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Context Conquers Parameters: Outperforming Proprietary Llm in Commit Message Generation"
+    },
+    "arXiv:2404.01041": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.01041",
+      "identity_tokens": [
+        "arXiv:2404.01041"
+      ],
+      "reason": "ローカルモデルと遠隔大モデルを組み合わせ推論コストを下げるカスケードに、情報漏洩を抑えるプライバシ技術を組み込んだ実現可能性の研究であり、サービング方式として関連するため境界。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Can LLMs get help from other LLMs without revealing private information?"
+    },
+    "arXiv:2502.16696": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.16696",
+      "identity_tokens": [
+        "arXiv:2502.16696"
+      ],
+      "reason": "ユーザ要件に基づきタスクを最適なLLMへ動的に振り分けるルーティングエンジンOptiRouteの提案で、推論ルーティングとして関連するが定量評価の記述が乏しく倫理基準等も含む枠組み提案のため境界。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic LLM Routing and Selection based on User Preferences: Balancing Performance, Cost, and Ethics"
+    },
+    "DOI:10.1109/icaiic68212.2026.11454159": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icaiic68212.2026.11454159",
+      "identity_tokens": [
+        "DOI:10.1109/icaiic68212.2026.11454159"
+      ],
+      "reason": "オンデバイスLLMにおけるmmapによる重み読込のI/O挙動を実測した研究であり、推論基盤の計測として関連するが提案は測定と知見の提示に留まるため境界。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond System Calls: Uncovering Hidden I/O Behavior of Mmap-Based On-Device LLMs"
+    },
+    "arXiv:2606.06745": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06745",
+      "identity_tokens": [
+        "arXiv:2606.06745"
+      ],
+      "reason": "高速な直感回答をまず生成し抑制コントローラが深い推論へ回すかを決める推論時ルーティングで、計算配分の制御として関連するが主眼は推論精度と熟考の使い分けのため境界。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When to Think Deeply: Inhibitory Deliberation for LLM Reasoning"
+    },
+    "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3",
+      "identity_tokens": [
+        "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3"
+      ],
+      "reason": "注意精緻化ネットワークでTransformerのデコーディングを高速化する提案であり、デコーディング最適化として関連するが対象はニューラル機械翻訳のアーキテクチャ変更のため境界。",
+      "first_checked_at": "2026-11-25T11:41:25+00:00",
+      "last_checked_at": "2026-11-25T11:41:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Speeding up Transformer Decoding via an Attention Refinement Network"
+    },
+    "arXiv:2609.22100": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22100",
+      "identity_tokens": [
+        "arXiv:2609.22100"
+      ],
+      "reason": "RAG向けに検索文書の関連度に応じてソフト圧縮のメモリトークン予算を配分する手法で、生成コスト削減に関連するが中核は検索拡張生成の精度と圧縮表現のため境界。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AdaMem: Adaptive Memory Token Allocation for Soft Compression in Retrieval-Augmented Generation"
+    },
+    "DOI:10.1109/icassp49357.2023.10096928": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp49357.2023.10096928",
+      "identity_tokens": [
+        "DOI:10.1109/icassp49357.2023.10096928"
+      ],
+      "reason": "DistilBERTのGLUEタスク向けに早期終了を強化する動的推論の手法であり、オンデバイス推論の高速化として関連するが対象が小型分類モデルのため境界。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pyramid Dynamic Inference: Encouraging Faster Inference Via Early Exit Boosting"
+    },
+    "DOI:10.48550/arxiv.2402.02563": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2402.02563",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.02563",
+        "arXiv:2402.02563"
+      ],
+      "reason": "小型モデル群の直感的思考と大型モデルの反省的推論を信頼度で切り替えるハイブリッドLLM推論でAPIコスト削減を狙う枠組みであり、推論の費用効率化として関連するため境界。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DefInt: A Default-interventionist Framework for Efficient Reasoning with Hybrid Large Language Models"
+    },
+    "DOI:10.1145/3617232.3624864": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3617232.3624864",
+      "identity_tokens": [
+        "DOI:10.1145/3617232.3624864"
+      ],
+      "reason": "DNNのトレーシング・プロファイリング・剪定・量子化を支援する計装フレームワークAmandaであり、推論最適化の道具立てとして関連するが対象は汎用DNNのため境界。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Amanda: Unified Instrumentation Framework for Deep Neural Networks"
+    },
+    "DOI:10.1109/cases60062.2024.00008": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cases60062.2024.00008",
+      "identity_tokens": [
+        "DOI:10.1109/cases60062.2024.00008"
+      ],
+      "reason": "本論文はスパイキングニューラルネットワークと線形再帰・状態空間モデルの類似からエネルギー効率の高い言語モデルへの道筋を探る教育セッションの拡張要旨であり、推論のエネルギー効率という方向性には関わるが具体的な推論機構や評価を提示していないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What do Transformers have to learn from Biological Spiking Neural Networks?"
+    },
+    "DOI:10.1109/slt54892.2023.10023097": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/slt54892.2023.10023097",
+      "identity_tokens": [
+        "DOI:10.1109/slt54892.2023.10023097"
+      ],
+      "reason": "Scaled Untied RPEはConformer系音声認識の自己注意における位置相関と特徴相関を分離しレイテンシを最大50.9%削減する位置符号化であるが、対象はLLMではなく音声認識エンコーダの推論であり、推論システムへの貢献は間接的なため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Untied Positional Encodings for Efficient Transformer-Based Speech Recognition"
+    },
+    "DOI:10.1109/iitcee64140.2025.10915299": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iitcee64140.2025.10915299",
+      "identity_tokens": [
+        "DOI:10.1109/iitcee64140.2025.10915299"
+      ],
+      "reason": "本論文はDistilBERTやViT等の動的ニューラルネットワークに対する最適化技法を実証分析しスループット29%改善やGPU使用量61%削減を報告するが、対象は小型エンコーダ・視覚モデルで新規機構の提案ではなく、LLM推論への適用は示されていないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Analysis of optimization Techniques for Dynamic Neural Networks"
+    },
+    "DOI:10.1109/kse68178.2025.11309551": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/kse68178.2025.11309551",
+      "identity_tokens": [
+        "DOI:10.1109/kse68178.2025.11309551"
+      ],
+      "reason": "本論文はFP8の層別特化（MLPへE4M3、注意のクエリ・キーパスへE5M2）を提案しLlama系モデルでメモリ削減を狙う量子化研究であり推論量子化に関連するが、確認できた要旨範囲では評価の中心が学習実行でありサービングでの推論利得は直接示されていないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing LLM with FP8"
+    },
+    "arXiv:2410.08711": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.08711",
+      "identity_tokens": [
+        "arXiv:2410.08711"
+      ],
+      "reason": "本論文は自己注意を局所シナプス可塑性とみなしLoihi 2ニューロモルフィックチップ上でTransformerの文脈内学習を実演するもので、オンチップ実行というオンデバイス推論との接点はあるが、貢献の中心は少数ショット分類でのオンチップ学習の実証であり推論効率の機構ではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On-Chip Learning via Transformer In-Context Learning"
+    },
+    "arXiv:2604.04853": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.04853",
+      "identity_tokens": [
+        "arXiv:2604.04853"
+      ],
+      "reason": "MemMachineは会話エピソードを原形のまま保持する個人化エージェント向けメモリシステムで、Mem0比で入力トークンを約80%削減する効率面の測定もあるが、貢献の中心は記憶の保持・検索精度であり推論ランタイムの機構ではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemMachine: A Ground-Truth-Preserving Memory System for Personalized AI Agents"
+    },
+    "arXiv:2607.20064": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20064",
+      "identity_tokens": [
+        "arXiv:2607.20064"
+      ],
+      "reason": "PRO-LONGは対話履歴の完全な構造化ログをプログラム的に検索するエージェント向け文脈管理で、ベースライン比4.2〜5.8倍少ないトークン使用を報告するが、対象はエージェントハーネスの文脈管理でありサービングやデコードの機構ではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning"
+    },
+    "DOI:10.48550/arxiv.2606.07587": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2606.07587",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.07587",
+        "arXiv:2606.07587"
+      ],
+      "reason": "LLMサービスの費用対品質を左右するルータ21手法を大規模に比較し精度が頭打ちになる現象を分析した実証研究で、サービングのコスト最適化に直結するが提案は分析とベンチマークのため境界。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Routing Plateau: Understanding and Breaking the Accuracy Limits of LLM Routers"
+    },
+    "arXiv:2603.15699": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.15699",
+      "identity_tokens": [
+        "arXiv:2603.15699"
+      ],
+      "reason": "API経由LLMの推論時間を代理指標としてエネルギー消費を推定する計測研究で、推論コストの計測として関連するが対象はエンドユーザ向けの推定手法のため境界。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "This Is Taking Too Long - Investigating Time as a Proxy for Energy Consumption of LLMs"
+    },
+    "arXiv:2607.09015": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09015",
+      "identity_tokens": [
+        "arXiv:2607.09015"
+      ],
+      "reason": "LLMルーティングを応用例とする相関付き文脈バンディットの理論研究であり、後悔保証の解析が中心で推論システムの実装・評価がないため境界。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Correlation-Aware Contextual Bandits with Surrogate Rewards for LLM Routing"
+    },
+    "DOI:10.48550/arxiv.2603.06351": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2603.06351",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.06351",
+        "arXiv:2603.06351"
+      ],
+      "reason": "拡散Transformerのトークン化を動的チャンク化し、単一チェックポイントで計算予算を弾力的に変える弾性推論を可能にする手法で、推論制御として関連するが対象が画像拡散モデルのため境界。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Chunking Diffusion Transformer"
+    },
+    "arXiv:2605.13076": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.13076",
+      "identity_tokens": [
+        "arXiv:2605.13076"
+      ],
+      "reason": "トークン長制約の下で文法的に正しいJSON生成を保証する文法制約デコーディング手法であり、デコーディング制御として関連するが目的は効率化ではなく出力の正しさのため境界。",
+      "first_checked_at": "2026-11-25T11:41:26+00:00",
+      "last_checked_at": "2026-11-25T11:41:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TruncProof: A Guardrail for LLM-based JSON Generation under Token-Length Constraints"
+    },
+    "DOI:10.1109/cvprf71909.2026.00239": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cvprf71909.2026.00239",
+      "identity_tokens": [
+        "DOI:10.1109/cvprf71909.2026.00239"
+      ],
+      "reason": "ViTを含む基盤モデル向けのデータ駆動型重み剪定TransKVであり、デプロイ向け圧縮として関連するが推論速度の実測証拠が弱いため境界。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TransKV: A Data-Driven Pruning Method for Large Foundation Models"
+    },
+    "arXiv:2412.07282": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.07282",
+      "identity_tokens": [
+        "arXiv:2412.07282"
+      ],
+      "reason": "Transformerの推論パスで不確実なトークンに追加計算を行う訓練不要の適応計算手法HARPで、推論時計算の制御として関連するが目的は効率化ではなく精度向上のため境界。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HARP: Hesitation-Aware Reframing in Transformer Inference Pass"
+    },
+    "arXiv:2606.01402": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01402",
+      "identity_tokens": [
+        "arXiv:2606.01402"
+      ],
+      "reason": "訓練済みネットワークを多項式ODEとして符号化し機能的に等価なニューロンを集約する汎用圧縮手法だが、評価は回帰ベンチマーク等の小規模モデルでLLM推論への適用が示されていないため境界。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Neural Network Compression by Approximate Differential Equivalence"
+    },
+    "arXiv:2507.16872": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.16872",
+      "identity_tokens": [
+        "arXiv:2507.16872"
+      ],
+      "reason": "剪定・量子化などのモデル圧縮がメンバーシップ推論攻撃へのプライバシ漏洩を悪化させることを評価する枠組みで、圧縮モデルを扱うが主題はプライバシリスク評価のため境界。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CompLeak: Deep Learning Model Compression Exacerbates Privacy Leakage"
+    },
+    "arXiv:2603.00503": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00503",
+      "identity_tokens": [
+        "arXiv:2603.00503"
+      ],
+      "reason": "M2は軌跡要約による内部メモリと洞察検索による外部メモリでWebエージェントの文脈を圧縮し、トークンを58.7%削減しつつ成功率を上げる枠組みだが、対象はエージェントの文脈効率であり推論サービングの機構そのものではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "M2: Dual-Memory Augmentation for Long-Horizon Web Agents via Trajectory Summarization and Insight Retrieval"
+    },
+    "arXiv:2608.22767": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22767",
+      "identity_tokens": [
+        "arXiv:2608.22767"
+      ],
+      "reason": "EARMは過去のLLMリランカの関連性スコアを行列補完で再利用し、候補の17.5%への直接スコアリングでリランキングの推論オーバーヘッドを下げる枠組みであり、推論コスト削減の機構は具体的だが対象がエージェント記憶の検索リランキングに限られるため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Retriever Should Remember: Experience-Amortized Reranking for Long-Term Agent Memory"
+    },
+    "arXiv:2604.04929": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.04929",
+      "identity_tokens": [
+        "arXiv:2604.04929"
+      ],
+      "reason": "本論文は出力トークン数がVLMのエンドツーエンドレイテンシのボトルネックであることを分析し、小規模モデルの推論トークンを再利用するマルチエージェント推論枠組みを提案するが、仕組みはモデル間の応答再利用という推論時編成に留まりランタイム機構の提案ではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking Model Efficiency: Multi-Agent Inference with Large Models"
+    },
+    "arXiv:2610.22276": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.22276",
+      "identity_tokens": [
+        "arXiv:2610.22276"
+      ],
+      "reason": "MJev-Spatialは空間理解タスクを候補スコアリングによる分類として単一フォワードパスで解き自己回帰デコードを回避して2.5〜5.6倍高速化するVLMの推論方式だが、対象が空間知能タスク専用の意思決定モデルであり汎用のLLMデコード機構ではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MJev-Spatial: System One Spatial Intelligence via Native Attention Matching"
+    },
+    "arXiv:2610.02472": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02472",
+      "identity_tokens": [
+        "arXiv:2610.02472"
+      ],
+      "reason": "APDMemは会話履歴を要約から生メッセージまでの4層で保持し、推論時に必要に応じて深掘りする段階的開示型の検索で全体の8%の参照に留める長期記憶アーキテクチャだが、対象は個人化アシスタントの記憶検索であり推論ランタイムの機構ではないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "APDMem: Agent-Controlled Progressive Disclosure for Query-Adaptive Long-Term Memory"
+    },
+    "arXiv:2406.19301": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.19301",
+      "identity_tokens": [
+        "arXiv:2406.19301"
+      ],
+      "reason": "MCNCはパラメータ空間を低次元の凍結した非線形多様体へ拘束するモデル圧縮法で高い圧縮率を示すが、評価は画像・言語タスク全般の圧縮と再構成時間であり、推論時のメモリ・レイテンシへの適用を具体的に示していないため境界とする。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MCNC: Manifold-Constrained Reparameterization for Neural Compression"
+    },
+    "arXiv:2601.16515": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.16515",
+      "identity_tokens": [
+        "arXiv:2601.16515"
+      ],
+      "reason": "動画拡散Transformer向けに線形注意ブランチを併設して90%疎性と最大2倍の推論高速化を達成する手法で、注意最適化として関連するが対象が動画生成モデルのため境界。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SALAD: Achieve High-Sparsity Attention via Efficient Linear Attention Tuning for Video Diffusion Transformer"
+    },
+    "arXiv:2507.00082": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.00082",
+      "identity_tokens": [
+        "arXiv:2507.00082"
+      ],
+      "reason": "端末の小型モデルとサーバのLLMを使い分けるハイブリッド推論で不確実性閾値を連合学習で最適化する枠組みであり、推論振り分けとして関連するが中核は閾値の連合学習のため境界。",
+      "first_checked_at": "2026-11-25T11:41:27+00:00",
+      "last_checked_at": "2026-11-25T11:41:27+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Federated Learning-Enabled Hybrid Language Models for Communication-Efficient Token Transmission"
     }
   }
 }

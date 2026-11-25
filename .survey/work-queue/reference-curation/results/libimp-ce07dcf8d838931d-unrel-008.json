@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce07dcf8d838931d-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.14086",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.14086",
+    "identity_tokens": [
+      "arXiv:2607.14086"
+    ],
+    "reason": "タイトル自体がラベルなしデータを用いる汎化可能な神経集団デコーディング（脳信号からの読み出し）を明示しており、ブレイン・コンピュータ・インターフェース向けの神経科学応用であってLLM推論システムとは無関係である。タイトル先行走査で対象外と判定した。",
+    "first_checked_at": "2026-11-25T11:41:27+00:00",
+    "last_checked_at": "2026-11-25T11:41:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Leveraging unlabelled data for generalizable neural population decoding"
+  },
+  "processed_at": "2026-11-25T11:41:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce07dcf8d838",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

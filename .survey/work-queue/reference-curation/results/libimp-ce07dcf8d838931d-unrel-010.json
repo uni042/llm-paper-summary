@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce07dcf8d838931d-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.04259",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.04259",
+    "identity_tokens": [
+      "arXiv:2210.04259"
+    ],
+    "reason": "LAFNOは線形注意とフーリエニューラルオペレータを組み合わせて三次元乱流シミュレーションの誤差を削減する科学計算モデルであり、線形注意は流体シミュレーションの道具として使われておりLLM推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-25T11:41:27+00:00",
+    "last_checked_at": "2026-11-25T11:41:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Linear attention coupled Fourier neural operator for simulation of three-dimensional turbulence"
+  },
+  "processed_at": "2026-11-25T11:41:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce07dcf8d838",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

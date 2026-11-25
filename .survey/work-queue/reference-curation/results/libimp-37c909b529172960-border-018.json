@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-37c909b529172960-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:37dc44f661b4d80459e7e3f0a3daf5a67736c1b2",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:37dc44f661b4d80459e7e3f0a3daf5a67736c1b2",
+    "identity_tokens": [
+      "SemanticScholar:37dc44f661b4d80459e7e3f0a3daf5a67736c1b2"
+    ],
+    "reason": "オープンドメイン質問応答のリーダに適応計算と早期終了を適用する手法であり、推論時計算の制御として関連するがタスク固有のモデル改良のため境界。",
+    "first_checked_at": "2026-11-25T11:41:25+00:00",
+    "last_checked_at": "2026-11-25T11:41:25+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Don’t Read Too Much Into It: Adaptive Computation for Open-Domain Question Answering"
+  },
+  "processed_at": "2026-11-25T11:41:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-37c909b52917",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

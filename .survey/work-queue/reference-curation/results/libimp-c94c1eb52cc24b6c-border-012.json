@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c94c1eb52cc24b6c-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.01402",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.01402",
+    "identity_tokens": [
+      "arXiv:2606.01402"
+    ],
+    "reason": "訓練済みネットワークを多項式ODEとして符号化し機能的に等価なニューロンを集約する汎用圧縮手法だが、評価は回帰ベンチマーク等の小規模モデルでLLM推論への適用が示されていないため境界。",
+    "first_checked_at": "2026-11-25T11:41:27+00:00",
+    "last_checked_at": "2026-11-25T11:41:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Neural Network Compression by Approximate Differential Equivalence"
+  },
+  "processed_at": "2026-11-25T11:41:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c94c1eb52cc2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

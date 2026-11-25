@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d651bc8804d85ad-unrel-020",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.22721",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.22721",
+    "identity_tokens": [
+      "arXiv:2605.22721"
+    ],
+    "reason": "DecentMemは各エージェントが活用・探索の二つのメモリプールを持つ分散型メモリ枠組みで自己進化型マルチエージェントの精度改善が主題であり、トークン削減は副次的結果でLLM推論システムの機構への貢献ではない。",
+    "first_checked_at": "2026-11-25T11:41:26+00:00",
+    "last_checked_at": "2026-11-25T11:41:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Self-Evolving Multi-Agent Systems via Decentralized Memory"
+  },
+  "processed_at": "2026-11-25T11:41:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d651bc8804d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

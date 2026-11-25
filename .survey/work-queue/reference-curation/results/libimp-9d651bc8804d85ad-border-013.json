@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d651bc8804d85ad-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.08711",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.08711",
+    "identity_tokens": [
+      "arXiv:2410.08711"
+    ],
+    "reason": "本論文は自己注意を局所シナプス可塑性とみなしLoihi 2ニューロモルフィックチップ上でTransformerの文脈内学習を実演するもので、オンチップ実行というオンデバイス推論との接点はあるが、貢献の中心は少数ショット分類でのオンチップ学習の実証であり推論効率の機構ではないため境界とする。",
+    "first_checked_at": "2026-11-25T11:41:26+00:00",
+    "last_checked_at": "2026-11-25T11:41:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On-Chip Learning via Transformer In-Context Learning"
+  },
+  "processed_at": "2026-11-25T11:41:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d651bc8804d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

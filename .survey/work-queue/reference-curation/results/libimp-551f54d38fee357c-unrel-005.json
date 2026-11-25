@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-551f54d38fee357c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.19884",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.19884",
+    "identity_tokens": [
+      "arXiv:2409.19884"
+    ],
+    "reason": "SWIMは短窓CNNとMambaでEEG信号から聴覚的空間注意の方向を判定するモデルであり、対象は脳波デコーディングの神経科学・聴覚応用であってLLM推論システムとは無関係である。",
+    "first_checked_at": "2026-11-25T11:41:25+00:00",
+    "last_checked_at": "2026-11-25T11:41:25+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SWIM: Short-Window CNN Integrated With Mamba for EEG-Based Auditory Spatial Attention Decoding"
+  },
+  "processed_at": "2026-11-25T11:41:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-551f54d38fee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce07dcf8d838931d-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.18512",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.18512",
+    "identity_tokens": [
+      "arXiv:2501.18512"
+    ],
+    "reason": "Streaming DiLoCoはパラメータ部分集合の逐次同期、同期と学習の重なり、交換データの量子化で分散学習の必要帯域を2桁削減する学習アルゴリズムであり、対象はLLMの分散学習であって推論への具体的適用は確認できない。",
+    "first_checked_at": "2026-11-25T11:41:27+00:00",
+    "last_checked_at": "2026-11-25T11:41:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Streaming DiLoCo with overlapping communication: Towards a Distributed Free Lunch"
+  },
+  "processed_at": "2026-11-25T11:41:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce07dcf8d838",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
