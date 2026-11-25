@@ -1,0 +1,153 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d50b9fbd7150cf2e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d50b9fbd7150",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.22323"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9c64c5cf27f7ba2cd982c37e08b0f982de4c8f0b",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T15:36:00.834025+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.22323",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Models Under SCOPE: Scalable and Controllable Routing via Pre-hoc Reasoning",
+      "source_url": "https://arxiv.org/abs/2601.22323",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model routing chooses which language model to use for each query. By sending easy queries to cheaper models and hard queries to stronger ones, it can significantly reduce inference cost while maintaining high accuracy. However, most existing routers treat this as a fixed choice among a small set of models, which makes them hard to adapt to new models or changing budget constraints. In this paper, we propose SCOPE (Scalable and Controllable Outcome Performance Estimator), a routing framework that goes beyond model selection by predicting their cost and performance. Trained with reinforcement learning, SCOPE makes reasoning-based predictions by retrieving how models behave on similar problems, rather than relying on fixed model names, enabling it to work with new, unseen models. Moreover, by explicitly predicting how accurate and how expensive a model will be, it turns routing into a dynamic decision problem, allowing users to easily control the trade-off between accuracy and cost. Experiments show that SCOPE is more than just a cost-saving tool. It flexibly adapts to user needs: it can boost accuracy by up to 25.7% when performance is the priority, or cut costs by up to 95.1% when efficiency matters most.",
+      "identifiers": [
+        "SemanticScholar:d476d4348677cbed1c2a0535351085d5c99d2cb1"
+      ],
+      "semantic_scholar_id": "d476d4348677cbed1c2a0535351085d5c99d2cb1",
+      "canonical_id": "arXiv:2601.22323",
+      "arxiv_id": "2601.22323",
+      "doi": "10.48550/arXiv.2601.22323",
+      "authors": [
+        "Qi Cao",
+        "Shuhao Zhang",
+        "Ruizhe Zhou",
+        "Rui-Yi Zhang",
+        "Pei-Jia Qin",
+        "Peng-Tao Xie"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 300,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.22323",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.22323",
+        "id:SemanticScholar:d476d4348677cbed1c2a0535351085d5c99d2cb1",
+        "id:arXiv:2601.22323",
+        "title:models under scope scalable and controllable routing via prehoc reasoning",
+        "url:https://arxiv.org/abs/2601.22323"
+      ],
+      "record": {
+        "title": "Models Under SCOPE: Scalable and Controllable Routing via Pre-hoc Reasoning",
+        "source_url": "https://arxiv.org/abs/2601.22323",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Model routing chooses which language model to use for each query. By sending easy queries to cheaper models and hard queries to stronger ones, it can significantly reduce inference cost while maintaining high accuracy. However, most existing routers treat this as a fixed choice among a small set of models, which makes them hard to adapt to new models or changing budget constraints. In this paper, we propose SCOPE (Scalable and Controllable Outcome Performance Estimator), a routing framework that goes beyond model selection by predicting their cost and performance. Trained with reinforcement learning, SCOPE makes reasoning-based predictions by retrieving how models behave on similar problems, rather than relying on fixed model names, enabling it to work with new, unseen models. Moreover, by explicitly predicting how accurate and how expensive a model will be, it turns routing into a dynamic decision problem, allowing users to easily control the trade-off between accuracy and cost. Experiments show that SCOPE is more than just a cost-saving tool. It flexibly adapts to user needs: it can boost accuracy by up to 25.7% when performance is the priority, or cut costs by up to 95.1% when efficiency matters most.",
+        "identifiers": [
+          "SemanticScholar:d476d4348677cbed1c2a0535351085d5c99d2cb1"
+        ],
+        "semantic_scholar_id": "d476d4348677cbed1c2a0535351085d5c99d2cb1",
+        "canonical_id": "arXiv:2601.22323",
+        "arxiv_id": "2601.22323",
+        "doi": "10.48550/arXiv.2601.22323",
+        "authors": [
+          "Qi Cao",
+          "Shuhao Zhang",
+          "Ruizhe Zhou",
+          "Rui-Yi Zhang",
+          "Pei-Jia Qin",
+          "Peng-Tao Xie"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 300,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:64fa2928088b28dd2dd4e9425bd23c3d098dcb8c4cb05aa1afe559838a9f8766",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e8e6a9969a045176-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e8e6a9969a04",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2602.02499"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9c64c5cf27f7ba2cd982c37e08b0f982de4c8f0b",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T15:35:47.261452+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2602.02499",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ROSA-Tuning: Enhancing Long-Context Modeling via Suffix Matching",
+      "source_url": "https://arxiv.org/abs/2602.02499",
+      "year": 2026,
+      "published": "2026-01-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context capability and computational efficiency are among the central challenges facing today's large language models. Existing efficient attention methods reduce computational complexity, but they typically suffer from a limited coverage of the model state. This paper proposes ROSA-Tuning, a retrieval-and-recall mechanism for enhancing the long-context modeling ability of pretrained models. Beyond the standard attention mechanism, ROSA-Tuning leverages in parallel a CPU-based ROSA (RWKV Online Suffix Automaton) retrieval module, which efficiently locates historical positions in long contexts that are relevant to the current query, and injects the retrieved information into the model state in a trainable manner; subsequent weighted fusion can then be handled by range-restricted attention. To enable end-to-end training, we employ the binary discretization strategy and the counterfactual gradient algorithm, and further optimize overall execution efficiency via an asynchronous CPU-GPU pipeline. Systematic evaluations on Qwen3-Base-1.7B show that ROSA-Tuning substantially restores the long-context modeling ability of windowed-attention models, achieving performance close to and in some cases matching global attention on benchmarks such as LongBench, while maintaining computational efficiency and GPU memory usage that are nearly comparable to windowed-attention methods, offering a new technical path for efficient long-context processing. The example code can be found at https://github.com/zyaaa-ux/ROSA-Tuning.",
+      "identifiers": [
+        "SemanticScholar:0c4285c2482cd941622e07dfb8ca07c2d65247ef"
+      ],
+      "semantic_scholar_id": "0c4285c2482cd941622e07dfb8ca07c2d65247ef",
+      "canonical_id": "arXiv:2602.02499",
+      "arxiv_id": "2602.02499",
+      "doi": "10.48550/arXiv.2602.02499",
+      "authors": [
+        "Yun Zheng",
+        "Xiao-Jie Wang",
+        "Lei Ren",
+        "Wei Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 315,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.02499",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02499",
+        "id:SemanticScholar:0c4285c2482cd941622e07dfb8ca07c2d65247ef",
+        "id:arXiv:2602.02499",
+        "title:rosatuning enhancing longcontext modeling via suffix matching",
+        "url:https://arxiv.org/abs/2602.02499"
+      ],
+      "record": {
+        "title": "ROSA-Tuning: Enhancing Long-Context Modeling via Suffix Matching",
+        "source_url": "https://arxiv.org/abs/2602.02499",
+        "year": 2026,
+        "published": "2026-01-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context capability and computational efficiency are among the central challenges facing today's large language models. Existing efficient attention methods reduce computational complexity, but they typically suffer from a limited coverage of the model state. This paper proposes ROSA-Tuning, a retrieval-and-recall mechanism for enhancing the long-context modeling ability of pretrained models. Beyond the standard attention mechanism, ROSA-Tuning leverages in parallel a CPU-based ROSA (RWKV Online Suffix Automaton) retrieval module, which efficiently locates historical positions in long contexts that are relevant to the current query, and injects the retrieved information into the model state in a trainable manner; subsequent weighted fusion can then be handled by range-restricted attention. To enable end-to-end training, we employ the binary discretization strategy and the counterfactual gradient algorithm, and further optimize overall execution efficiency via an asynchronous CPU-GPU pipeline. Systematic evaluations on Qwen3-Base-1.7B show that ROSA-Tuning substantially restores the long-context modeling ability of windowed-attention models, achieving performance close to and in some cases matching global attention on benchmarks such as LongBench, while maintaining computational efficiency and GPU memory usage that are nearly comparable to windowed-attention methods, offering a new technical path for efficient long-context processing. The example code can be found at https://github.com/zyaaa-ux/ROSA-Tuning.",
+        "identifiers": [
+          "SemanticScholar:0c4285c2482cd941622e07dfb8ca07c2d65247ef"
+        ],
+        "semantic_scholar_id": "0c4285c2482cd941622e07dfb8ca07c2d65247ef",
+        "canonical_id": "arXiv:2602.02499",
+        "arxiv_id": "2602.02499",
+        "doi": "10.48550/arXiv.2602.02499",
+        "authors": [
+          "Yun Zheng",
+          "Xiao-Jie Wang",
+          "Lei Ren",
+          "Wei Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 315,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c6167bfc2929ca9fab24e92ce459e2a3ff128c59a50cdb2244f7b87c4a32d365",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3cce4c1b6ae0d70f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3cce4c1b6ae0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2609.33698"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9c64c5cf27f7ba2cd982c37e08b0f982de4c8f0b",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T15:35:47.027567+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2609.33698",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "One Latent, Many Tokens: Jointly Learning Compressed Embeddings for Efficient Language Diffusion",
+      "source_url": "https://arxiv.org/abs/2609.33698",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most continuous diffusion language models process one latent position per token at each sampling step, making generation expensive. Two-stage methods lower the cost by reducing the latent length, but they fix the compressed embedding space before training the diffusion model. Embeddings from the fixed space can be difficult to model with diffusion and decode reliably into tokens, which limits generation quality after compression. To address this problem, we introduce JPEG-DLM (Joint-embedding Prediction for Efficient Generation with Diffusion Language Model), which jointly trains a compressor, a flow matching model and a decoding module. With joint-embedding prediction, JPEG-DLM learns compressed embeddings that are more structured, easier to model with diffusion and reliably decodable into tokens.JPEG-DLM achieves the highest throughput among recent diffusion and flow models on LM1B and OWT, with a Gen-PPL lower than most of them. At a compression rate of 0.5 on OWT, it reaches a Gen-PPL of 34.52 and approximately 2.3 times ELF's throughput. These results suggest that jointly learning compressed embeddings offers a promising path toward efficient diffusion language modeling.Code is available at https://github.com/infiniteYuanyl/JPEG-DLM.",
+      "identifiers": [
+        "SemanticScholar:d200323f8c15ee273ff37838bdf43608b1fb3061"
+      ],
+      "semantic_scholar_id": "d200323f8c15ee273ff37838bdf43608b1fb3061",
+      "canonical_id": "arXiv:2609.33698",
+      "arxiv_id": "2609.33698",
+      "doi": "10.48550/arXiv.2609.33698",
+      "authors": [
+        "Yu-Lin Yuan",
+        "Ying Zhang",
+        "Xiang-Ming Meng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.33698",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.33698",
+        "id:SemanticScholar:d200323f8c15ee273ff37838bdf43608b1fb3061",
+        "id:arXiv:2609.33698",
+        "title:one latent many tokens jointly learning compressed embeddings for efficient language diffusion",
+        "url:https://arxiv.org/abs/2609.33698"
+      ],
+      "record": {
+        "title": "One Latent, Many Tokens: Jointly Learning Compressed Embeddings for Efficient Language Diffusion",
+        "source_url": "https://arxiv.org/abs/2609.33698",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Most continuous diffusion language models process one latent position per token at each sampling step, making generation expensive. Two-stage methods lower the cost by reducing the latent length, but they fix the compressed embedding space before training the diffusion model. Embeddings from the fixed space can be difficult to model with diffusion and decode reliably into tokens, which limits generation quality after compression. To address this problem, we introduce JPEG-DLM (Joint-embedding Prediction for Efficient Generation with Diffusion Language Model), which jointly trains a compressor, a flow matching model and a decoding module. With joint-embedding prediction, JPEG-DLM learns compressed embeddings that are more structured, easier to model with diffusion and reliably decodable into tokens.JPEG-DLM achieves the highest throughput among recent diffusion and flow models on LM1B and OWT, with a Gen-PPL lower than most of them. At a compression rate of 0.5 on OWT, it reaches a Gen-PPL of 34.52 and approximately 2.3 times ELF's throughput. These results suggest that jointly learning compressed embeddings offers a promising path toward efficient diffusion language modeling.Code is available at https://github.com/infiniteYuanyl/JPEG-DLM.",
+        "identifiers": [
+          "SemanticScholar:d200323f8c15ee273ff37838bdf43608b1fb3061"
+        ],
+        "semantic_scholar_id": "d200323f8c15ee273ff37838bdf43608b1fb3061",
+        "canonical_id": "arXiv:2609.33698",
+        "arxiv_id": "2609.33698",
+        "doi": "10.48550/arXiv.2609.33698",
+        "authors": [
+          "Yu-Lin Yuan",
+          "Ying Zhang",
+          "Xiang-Ming Meng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 59,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:901594b962d4babc9a87ea848eb95dbf3c61405ca241e122b50df87926f0b956",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

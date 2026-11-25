@@ -1,0 +1,418 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6cc96d0b6df8e287-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6cc96d0b6df8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/les.2025.3600563",
+    "arXiv:2503.08668",
+    "arXiv:2610.31667",
+    "arXiv:2611.05804"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9c64c5cf27f7ba2cd982c37e08b0f982de4c8f0b",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T15:35:47.039110+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/les.2025.3600563",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.08668",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.31667",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.05804",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning",
+      "source_url": "https://arxiv.org/abs/2610.31667",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling has emerged as a key inference strategy for reasoning models, where a model generates a large number of candidate solutions in the hope of finding at least one correct solution. Running all candidate solutions to completion can be computationally demanding, so recent work prunes the candidate pool after generating only a short prefix, committing further computation only to the surviving candidates. Existing pruning strategies divide broadly into two categories: Quality-based methods assign a score to each partial solution and discard those predicted to ultimately lead to an incorrect final solution, while diversity-based methods select partial solutions that follow different reasoning trajectories and are therefore likely to cover different final solutions. The tension between these two objectives is an instance of exploration versus exploitation, yet little to no prior work on pruning exposes this trade-off directly, let alone optimizes it. In this paper, we introduce a pruning procedure that addresses this trade-off directly by optimizing pass@$k$ over the selected solution pool. In particular, it chooses the pool to maximize the probability that at least one of its partial solutions, when continued to completion, yields a correct answer. Because this objective simultaneously rewards high-quality partial solutions and penalizes redundancy among them, quality and diversity are naturally balanced by the criterion itself rather than through separate ad-hoc design choices. On eight open-weight reasoning models, our method outperforms existing quality-based and diversity-based pruning strategies. The gains are particularly pronounced when the pruning procedure keeps a moderate number of partial solutions for continued generation, highlighting the value of directly balancing quality and diversity during pruning.",
+      "identifiers": [
+        "SemanticScholar:b355a487d7b3032353fcd98e699c84299c28c615"
+      ],
+      "semantic_scholar_id": "b355a487d7b3032353fcd98e699c84299c28c615",
+      "canonical_id": "arXiv:2610.31667",
+      "arxiv_id": "2610.31667",
+      "authors": [
+        "Mahdi Salmani",
+        "Adel Javanmard",
+        "Devansh Gupta",
+        "Meisam Razaviyayn"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Matching the Training-Time Weight Rule in Inference-Time Expert Deactivation",
+      "source_url": "https://arxiv.org/abs/2611.05804",
+      "year": 2026,
+      "published": "2026-11-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The performance impact of expert deactivation depends on both the disabled set and the routing and weighting of the remaining experts. We compare removal, freezing, remaining-expert renormalization, and unnormalized re-routing on identical disabled sets across five instruction-tuned checkpoints from four model families, with a base OLMoE checkpoint as an additional comparison. A weight-sum model separates the loss of disabled contributions from changes in expert-branch scale and predicts the highest-loss implementation from the training-time weight rule, with remaining-expert renormalization for raw-probability models and unnormalized re-routing for normalized-weight models. All five checkpoints match this prediction. Matched survivor sets isolate weight handling. On one DeepSeek-V2-Lite disabled set, freezing yields a perplexity of 17.21 while renormalization yields 258,621.64. At 50 per cent deactivation using activation-based selection, perplexity reaches 1.4 to 73 times the intact baseline under the training rule and 14 to 28,740 times the baseline under a rule mismatch. The same model extends to inference-time width, where the penalty from additional renormalization grows as the number of active experts decreases, and OLMoE exhibits this trend. Multiple-choice and free-form evaluations separate likelihood collapse from answer accuracy and reveal differences in generation behavior. Training-time weight rules are therefore a practical reference for expert pruning, offloading, and width adjustment.",
+      "identifiers": [
+        "SemanticScholar:ab034bddacb81d8342871a1144b5e92ff6164d2c"
+      ],
+      "semantic_scholar_id": "ab034bddacb81d8342871a1144b5e92ff6164d2c",
+      "canonical_id": "arXiv:2611.05804",
+      "arxiv_id": "2611.05804",
+      "authors": [
+        "Hao Cheng",
+        "Han-Zhang Jia",
+        "Zhiyu Yang",
+        "Bo Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SSVQ: Unleashing the Potential of Vector Quantization with Sign-Splitting",
+      "source_url": "https://arxiv.org/abs/2503.08668",
+      "year": 2025,
+      "published": "2025-03-11",
+      "venue": "IEEE International Conference on Computer Vision",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vector Quantization (VQ) has emerged as a prominent weight compression technique, showcasing substantially lower quantization errors than uniform quantization across diverse models, particularly in extreme compression scenarios. However, its efficacy during fine-tuning is limited by the constraint of the compression format, where weight vectors assigned to the same codeword are restricted to updates in the same direction. Consequently, many quantized weights are compelled to move in directions contrary to their local gradient information. To mitigate this issue, we introduce a novel VQ paradigm, Sign-Splitting VQ $(S S V Q)$, which decouples the sign bit of weights from the codebook. Our approach involves extracting the sign bits of uncompressed weights and performing clustering and compression on all-positive weights. We then introduce latent variables for the sign bit and jointly optimize both the signs and the codebook. Additionally, we implement a progressive freezing strategy for the learnable sign to ensure training stability. Extensive experiments on various modern models and tasks demonstrate that SSVQ achieves a significantly superior compression-accuracy trade-off compared to conventional VQ. Furthermore, we validate our algorithm on a hardware accelerator, showing that SSVQ achieves a $3 \\times$ speedup over the 8-bit compressed model by reducing memory access. Our code is available at https://github.com/list0830/SSVQ.",
+      "identifiers": [
+        "SemanticScholar:de31e112864b3e5d4c5eb0c72f002df443a54e78"
+      ],
+      "semantic_scholar_id": "de31e112864b3e5d4c5eb0c72f002df443a54e78",
+      "canonical_id": "arXiv:2503.08668",
+      "arxiv_id": "2503.08668",
+      "doi": "10.1109/ICCV51701.2025.02201",
+      "authors": [
+        "Shuai-Ting Li",
+        "Juncan Deng",
+        "Cheng-Xuan Wang",
+        "Kedong Xu",
+        "Rongtao Deng",
+        "Hong Gu",
+        "Hai-Bin Shen",
+        "Ke-Jie Huang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 624,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QLlama: An FPGA-Based Microscaling Quantization Accelerator for Energy-Efficient Llama2 Inference",
+      "source_url": "https://doi.org/10.1109/LES.2025.3600563",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "IEEE Embedded Systems Letters",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To address the computational power and energy efficiency challenges in Llama2 large-model inference, this letter proposes a hardware-software co-design method and finally implements a high energy efficiency accelerator named QLlama based on FPGA. This work first employs a novel quantization method based on a microscaling data format, which allows sharing a scaling factor with E8M0 format for each subtensor block, thus enabling quantization and dequantization operations to be completed using only shift operations. Second, on this basis, a mixed precision configuration is implemented for different layers of Llama2 to balance accuracy loss and computational efficiency. Finally, a dedicated accelerator QLlama is designed, whose core units include a quantization unit for dynamic quantization, a vector-matrix multiplication unit for high density computation of quantized weights, a scaled dot product unit, and a basic operator unit. Experimental results show that this scheme achieves energy efficiency improvements of $2.13\\sim 10.66\\times $ with negligible accuracy loss, i.e., <0.2 perplexity increase. The code is available at https://github.com/wendadawen/QLlama.",
+      "identifiers": [
+        "SemanticScholar:abc22f022f3bfa0afea67022014933f237214511"
+      ],
+      "semantic_scholar_id": "abc22f022f3bfa0afea67022014933f237214511",
+      "doi": "10.1109/LES.2025.3600563",
+      "canonical_id": "DOI:10.1109/LES.2025.3600563",
+      "authors": [
+        "Hongbing Wen",
+        "Zi-Hao Wang",
+        "Jiale Dong",
+        "Wenqi Lou",
+        "Lei Gong",
+        "Chao Wang",
+        "Xue-Hai Zhou"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 420,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.31667",
+      "identity_tokens": [
+        "id:SemanticScholar:b355a487d7b3032353fcd98e699c84299c28c615",
+        "id:arXiv:2610.31667",
+        "title:direct passk optimization for thought pruning balancing quality and diversity in testtime reasoning",
+        "url:https://arxiv.org/abs/2610.31667"
+      ],
+      "record": {
+        "title": "Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning",
+        "source_url": "https://arxiv.org/abs/2610.31667",
+        "year": 2026,
+        "published": "2026-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Test-time scaling has emerged as a key inference strategy for reasoning models, where a model generates a large number of candidate solutions in the hope of finding at least one correct solution. Running all candidate solutions to completion can be computationally demanding, so recent work prunes the candidate pool after generating only a short prefix, committing further computation only to the surviving candidates. Existing pruning strategies divide broadly into two categories: Quality-based methods assign a score to each partial solution and discard those predicted to ultimately lead to an incorrect final solution, while diversity-based methods select partial solutions that follow different reasoning trajectories and are therefore likely to cover different final solutions. The tension between these two objectives is an instance of exploration versus exploitation, yet little to no prior work on pruning exposes this trade-off directly, let alone optimizes it. In this paper, we introduce a pruning procedure that addresses this trade-off directly by optimizing pass@$k$ over the selected solution pool. In particular, it chooses the pool to maximize the probability that at least one of its partial solutions, when continued to completion, yields a correct answer. Because this objective simultaneously rewards high-quality partial solutions and penalizes redundancy among them, quality and diversity are naturally balanced by the criterion itself rather than through separate ad-hoc design choices. On eight open-weight reasoning models, our method outperforms existing quality-based and diversity-based pruning strategies. The gains are particularly pronounced when the pruning procedure keeps a moderate number of partial solutions for continued generation, highlighting the value of directly balancing quality and diversity during pruning.",
+        "identifiers": [
+          "SemanticScholar:b355a487d7b3032353fcd98e699c84299c28c615"
+        ],
+        "semantic_scholar_id": "b355a487d7b3032353fcd98e699c84299c28c615",
+        "canonical_id": "arXiv:2610.31667",
+        "arxiv_id": "2610.31667",
+        "authors": [
+          "Mahdi Salmani",
+          "Adel Javanmard",
+          "Devansh Gupta",
+          "Meisam Razaviyayn"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.05804",
+      "identity_tokens": [
+        "id:SemanticScholar:ab034bddacb81d8342871a1144b5e92ff6164d2c",
+        "id:arXiv:2611.05804",
+        "title:matching the trainingtime weight rule in inferencetime expert deactivation",
+        "url:https://arxiv.org/abs/2611.05804"
+      ],
+      "record": {
+        "title": "Matching the Training-Time Weight Rule in Inference-Time Expert Deactivation",
+        "source_url": "https://arxiv.org/abs/2611.05804",
+        "year": 2026,
+        "published": "2026-11-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The performance impact of expert deactivation depends on both the disabled set and the routing and weighting of the remaining experts. We compare removal, freezing, remaining-expert renormalization, and unnormalized re-routing on identical disabled sets across five instruction-tuned checkpoints from four model families, with a base OLMoE checkpoint as an additional comparison. A weight-sum model separates the loss of disabled contributions from changes in expert-branch scale and predicts the highest-loss implementation from the training-time weight rule, with remaining-expert renormalization for raw-probability models and unnormalized re-routing for normalized-weight models. All five checkpoints match this prediction. Matched survivor sets isolate weight handling. On one DeepSeek-V2-Lite disabled set, freezing yields a perplexity of 17.21 while renormalization yields 258,621.64. At 50 per cent deactivation using activation-based selection, perplexity reaches 1.4 to 73 times the intact baseline under the training rule and 14 to 28,740 times the baseline under a rule mismatch. The same model extends to inference-time width, where the penalty from additional renormalization grows as the number of active experts decreases, and OLMoE exhibits this trend. Multiple-choice and free-form evaluations separate likelihood collapse from answer accuracy and reveal differences in generation behavior. Training-time weight rules are therefore a practical reference for expert pruning, offloading, and width adjustment.",
+        "identifiers": [
+          "SemanticScholar:ab034bddacb81d8342871a1144b5e92ff6164d2c"
+        ],
+        "semantic_scholar_id": "ab034bddacb81d8342871a1144b5e92ff6164d2c",
+        "canonical_id": "arXiv:2611.05804",
+        "arxiv_id": "2611.05804",
+        "authors": [
+          "Hao Cheng",
+          "Han-Zhang Jia",
+          "Zhiyu Yang",
+          "Bo Ma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 21,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.08668",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccv51701.2025.02201",
+        "id:SemanticScholar:de31e112864b3e5d4c5eb0c72f002df443a54e78",
+        "id:arXiv:2503.08668",
+        "title:ssvq unleashing the potential of vector quantization with signsplitting",
+        "url:https://arxiv.org/abs/2503.08668"
+      ],
+      "record": {
+        "title": "SSVQ: Unleashing the Potential of Vector Quantization with Sign-Splitting",
+        "source_url": "https://arxiv.org/abs/2503.08668",
+        "year": 2025,
+        "published": "2025-03-11",
+        "venue": "IEEE International Conference on Computer Vision",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vector Quantization (VQ) has emerged as a prominent weight compression technique, showcasing substantially lower quantization errors than uniform quantization across diverse models, particularly in extreme compression scenarios. However, its efficacy during fine-tuning is limited by the constraint of the compression format, where weight vectors assigned to the same codeword are restricted to updates in the same direction. Consequently, many quantized weights are compelled to move in directions contrary to their local gradient information. To mitigate this issue, we introduce a novel VQ paradigm, Sign-Splitting VQ $(S S V Q)$, which decouples the sign bit of weights from the codebook. Our approach involves extracting the sign bits of uncompressed weights and performing clustering and compression on all-positive weights. We then introduce latent variables for the sign bit and jointly optimize both the signs and the codebook. Additionally, we implement a progressive freezing strategy for the learnable sign to ensure training stability. Extensive experiments on various modern models and tasks demonstrate that SSVQ achieves a significantly superior compression-accuracy trade-off compared to conventional VQ. Furthermore, we validate our algorithm on a hardware accelerator, showing that SSVQ achieves a $3 \\times$ speedup over the 8-bit compressed model by reducing memory access. Our code is available at https://github.com/list0830/SSVQ.",
+        "identifiers": [
+          "SemanticScholar:de31e112864b3e5d4c5eb0c72f002df443a54e78"
+        ],
+        "semantic_scholar_id": "de31e112864b3e5d4c5eb0c72f002df443a54e78",
+        "canonical_id": "arXiv:2503.08668",
+        "arxiv_id": "2503.08668",
+        "doi": "10.1109/ICCV51701.2025.02201",
+        "authors": [
+          "Shuai-Ting Li",
+          "Juncan Deng",
+          "Cheng-Xuan Wang",
+          "Kedong Xu",
+          "Rongtao Deng",
+          "Hong Gu",
+          "Hai-Bin Shen",
+          "Ke-Jie Huang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 624,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/les.2025.3600563",
+      "identity_tokens": [
+        "id:DOI:10.1109/les.2025.3600563",
+        "id:SemanticScholar:abc22f022f3bfa0afea67022014933f237214511",
+        "title:qllama an fpgabased microscaling quantization accelerator for energyefficient llama2 inference",
+        "url:https://doi.org/10.1109/LES.2025.3600563"
+      ],
+      "record": {
+        "title": "QLlama: An FPGA-Based Microscaling Quantization Accelerator for Energy-Efficient Llama2 Inference",
+        "source_url": "https://doi.org/10.1109/LES.2025.3600563",
+        "year": 2025,
+        "published": "2025-10-01",
+        "venue": "IEEE Embedded Systems Letters",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To address the computational power and energy efficiency challenges in Llama2 large-model inference, this letter proposes a hardware-software co-design method and finally implements a high energy efficiency accelerator named QLlama based on FPGA. This work first employs a novel quantization method based on a microscaling data format, which allows sharing a scaling factor with E8M0 format for each subtensor block, thus enabling quantization and dequantization operations to be completed using only shift operations. Second, on this basis, a mixed precision configuration is implemented for different layers of Llama2 to balance accuracy loss and computational efficiency. Finally, a dedicated accelerator QLlama is designed, whose core units include a quantization unit for dynamic quantization, a vector-matrix multiplication unit for high density computation of quantized weights, a scaled dot product unit, and a basic operator unit. Experimental results show that this scheme achieves energy efficiency improvements of $2.13\\sim 10.66\\times $ with negligible accuracy loss, i.e., <0.2 perplexity increase. The code is available at https://github.com/wendadawen/QLlama.",
+        "identifiers": [
+          "SemanticScholar:abc22f022f3bfa0afea67022014933f237214511"
+        ],
+        "semantic_scholar_id": "abc22f022f3bfa0afea67022014933f237214511",
+        "doi": "10.1109/LES.2025.3600563",
+        "canonical_id": "DOI:10.1109/LES.2025.3600563",
+        "authors": [
+          "Hongbing Wen",
+          "Zi-Hao Wang",
+          "Jiale Dong",
+          "Wenqi Lou",
+          "Lei Gong",
+          "Chao Wang",
+          "Xue-Hai Zhou"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 420,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6bbf6f3fedc5198180274fb4df372cb96c7f90d4cb6c83cd6e7a7f93464d8e10",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

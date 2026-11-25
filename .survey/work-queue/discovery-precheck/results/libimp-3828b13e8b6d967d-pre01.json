@@ -1,0 +1,320 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3828b13e8b6d967d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3828b13e8b6d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2305.10818",
+    "arXiv:2602.14077",
+    "arXiv:2604.17297"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9c64c5cf27f7ba2cd982c37e08b0f982de4c8f0b",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T15:35:47.028516+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2305.10818",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.14077",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.17297",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "GTS: Inference-Time Scaling of Latent Reasoning with a Learnable Gaussian Thought Sampler",
+      "source_url": "https://arxiv.org/abs/2602.14077",
+      "year": 2026,
+      "published": "2026-02-15",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference-time scaling (ITS) in latent reasoning models typically relies on heuristic perturbations, such as dropout or fixed Gaussian noise, to generate diverse candidate trajectories. However, we show that stronger perturbations do not necessarily yield better sampling quality: they often induce larger distribution shifts without producing more useful reasoning paths or better final decisions. A key limitation is that these perturbations inject stochasticity without defining an explicit conditional sampling distribution, making latent exploration difficult to control or optimize. To address this, we propose the Gaussian Thought Sampler (GTS), a lightweight module that reformulates latent exploration as sampling from a learned conditional distribution over continuous reasoning states. GTS predicts context-dependent perturbation distributions and is trained with GRPO-style policy optimization while keeping the backbone frozen, turning heuristic perturbation into an explicit probabilistic sampling policy. Experiments across multiple benchmarks and two latent reasoning architectures show that GTS yields more reliable inference-time scaling than heuristic baselines, suggesting that effective latent ITS requires better-controlled and optimizable sampling rather than simply amplifying stochasticity.",
+      "identifiers": [
+        "SemanticScholar:a6a236c9b3bcb423fb28d75fd356e7e7b741f33f"
+      ],
+      "semantic_scholar_id": "a6a236c9b3bcb423fb28d75fd356e7e7b741f33f",
+      "canonical_id": "arXiv:2602.14077",
+      "arxiv_id": "2602.14077",
+      "doi": "10.48550/arXiv.2602.14077",
+      "authors": [
+        "Ming-Han Wang",
+        "Ye Bai",
+        "Thuy-Trang Vu",
+        "Ehsan Shareghi",
+        "G. Haffari"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "CRISP: Compressing Redundancy in Chain-of-Thought via Intrinsic Saliency Pruning",
+      "source_url": "https://arxiv.org/abs/2604.17297",
+      "year": 2026,
+      "published": "2026-04-19",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long Chain-of-Thought (CoT) reasoning is pivotal for the success of recent reasoning models but suffers from high computational overhead and latency. While prior works attempt to compress CoT via external compressor, they often fail to align with the model's internal reasoning dynamics, resulting in the loss of critical logical steps. This paper presents \\textbf{C}ompressing \\textbf{R}edundancy in Chain-of-Thought via \\textbf{I}ntrinsic \\textbf{S}aliency \\textbf{P}runing (\\textbf{CRISP}), a framework that compresses CoT by exploiting the model's intrinsic saliency. Our analysis reveals a distinct phenomenon: the reasoning termination token \\texttt{[object Object]} acts as an information anchor, where its attention pattern effectively demarcates essential reasoning from redundancy. Based on this finding, we design a policy that utilizes these intrinsic attention signals to guide atomic compression operations. In contrast to coarse-grained pruning strategies, CRISP strategically distills the reasoning chain to maximize information density while preserving logical coherence. Empirical results across various backbone models and mathematical datasets demonstrate that CRISP achieves a 50-60% reduction in token count without compromising accuracy, effectively mitigating the efficiency bottleneck of long-context reasoning. We open-source our implementation to facilitate further research in efficient reasoning.",
+      "identifiers": [
+        "SemanticScholar:39eae4c377c7730232ba9e907b6062051d87ab10"
+      ],
+      "semantic_scholar_id": "39eae4c377c7730232ba9e907b6062051d87ab10",
+      "canonical_id": "arXiv:2604.17297",
+      "arxiv_id": "2604.17297",
+      "doi": "10.48550/arXiv.2604.17297",
+      "authors": [
+        "Yangsong Lan",
+        "Hong-Liang Dai",
+        "Pi-Ji Li"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 220,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Diffusion Language Models Generation Can Be Halted Early",
+      "source_url": "https://arxiv.org/abs/2305.10818",
+      "year": 2023,
+      "published": "2023-05-18",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language models (DLMs) are a promising avenue for text generation due to their practical properties on tractable controllable generation. They also have the advantage of not having to predict text autoregressively. However, despite these notable features, DLMs have not yet reached the performance levels of their autoregressive counterparts. One of the ways to reduce the performance gap between these two types of language models is to speed up the generation of DLMs. Therefore, we propose a novel methodology to address this issue in this work. It enables the execution of more generation steps within a given time frame, leading to higher-quality outputs. Specifically, our methods estimate DLMs completeness of text generation and allow adaptive halting of the generation process. We evaluate our methods on Plaid, SSD, and CDCD DLMs and create a cohesive perspective on their generation workflows. Finally, we confirm that our methods allow halting these models and decrease the generation time by $10$-$40$\\% without a drop in the quality of model samples.",
+      "identifiers": [
+        "SemanticScholar:375de1279cc1685a116403bc378ba94aaf6a172e"
+      ],
+      "semantic_scholar_id": "375de1279cc1685a116403bc378ba94aaf6a172e",
+      "canonical_id": "arXiv:2305.10818",
+      "arxiv_id": "2305.10818",
+      "authors": [
+        "Sofia Maria Lo Cicero Vaina",
+        "Nikita Balagansky",
+        "Daniil Gavrilov"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1287,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.14077",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.14077",
+        "id:SemanticScholar:a6a236c9b3bcb423fb28d75fd356e7e7b741f33f",
+        "id:arXiv:2602.14077",
+        "title:gts inferencetime scaling of latent reasoning with a learnable gaussian thought sampler",
+        "url:https://arxiv.org/abs/2602.14077"
+      ],
+      "record": {
+        "title": "GTS: Inference-Time Scaling of Latent Reasoning with a Learnable Gaussian Thought Sampler",
+        "source_url": "https://arxiv.org/abs/2602.14077",
+        "year": 2026,
+        "published": "2026-02-15",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference-time scaling (ITS) in latent reasoning models typically relies on heuristic perturbations, such as dropout or fixed Gaussian noise, to generate diverse candidate trajectories. However, we show that stronger perturbations do not necessarily yield better sampling quality: they often induce larger distribution shifts without producing more useful reasoning paths or better final decisions. A key limitation is that these perturbations inject stochasticity without defining an explicit conditional sampling distribution, making latent exploration difficult to control or optimize. To address this, we propose the Gaussian Thought Sampler (GTS), a lightweight module that reformulates latent exploration as sampling from a learned conditional distribution over continuous reasoning states. GTS predicts context-dependent perturbation distributions and is trained with GRPO-style policy optimization while keeping the backbone frozen, turning heuristic perturbation into an explicit probabilistic sampling policy. Experiments across multiple benchmarks and two latent reasoning architectures show that GTS yields more reliable inference-time scaling than heuristic baselines, suggesting that effective latent ITS requires better-controlled and optimizable sampling rather than simply amplifying stochasticity.",
+        "identifiers": [
+          "SemanticScholar:a6a236c9b3bcb423fb28d75fd356e7e7b741f33f"
+        ],
+        "semantic_scholar_id": "a6a236c9b3bcb423fb28d75fd356e7e7b741f33f",
+        "canonical_id": "arXiv:2602.14077",
+        "arxiv_id": "2602.14077",
+        "doi": "10.48550/arXiv.2602.14077",
+        "authors": [
+          "Ming-Han Wang",
+          "Ye Bai",
+          "Thuy-Trang Vu",
+          "Ehsan Shareghi",
+          "G. Haffari"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 283,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.17297",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.17297",
+        "id:SemanticScholar:39eae4c377c7730232ba9e907b6062051d87ab10",
+        "id:arXiv:2604.17297",
+        "title:crisp compressing redundancy in chainofthought via intrinsic saliency pruning",
+        "url:https://arxiv.org/abs/2604.17297"
+      ],
+      "record": {
+        "title": "CRISP: Compressing Redundancy in Chain-of-Thought via Intrinsic Saliency Pruning",
+        "source_url": "https://arxiv.org/abs/2604.17297",
+        "year": 2026,
+        "published": "2026-04-19",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long Chain-of-Thought (CoT) reasoning is pivotal for the success of recent reasoning models but suffers from high computational overhead and latency. While prior works attempt to compress CoT via external compressor, they often fail to align with the model's internal reasoning dynamics, resulting in the loss of critical logical steps. This paper presents \\textbf{C}ompressing \\textbf{R}edundancy in Chain-of-Thought via \\textbf{I}ntrinsic \\textbf{S}aliency \\textbf{P}runing (\\textbf{CRISP}), a framework that compresses CoT by exploiting the model's intrinsic saliency. Our analysis reveals a distinct phenomenon: the reasoning termination token \\texttt{[object Object]} acts as an information anchor, where its attention pattern effectively demarcates essential reasoning from redundancy. Based on this finding, we design a policy that utilizes these intrinsic attention signals to guide atomic compression operations. In contrast to coarse-grained pruning strategies, CRISP strategically distills the reasoning chain to maximize information density while preserving logical coherence. Empirical results across various backbone models and mathematical datasets demonstrate that CRISP achieves a 50-60% reduction in token count without compromising accuracy, effectively mitigating the efficiency bottleneck of long-context reasoning. We open-source our implementation to facilitate further research in efficient reasoning.",
+        "identifiers": [
+          "SemanticScholar:39eae4c377c7730232ba9e907b6062051d87ab10"
+        ],
+        "semantic_scholar_id": "39eae4c377c7730232ba9e907b6062051d87ab10",
+        "canonical_id": "arXiv:2604.17297",
+        "arxiv_id": "2604.17297",
+        "doi": "10.48550/arXiv.2604.17297",
+        "authors": [
+          "Yangsong Lan",
+          "Hong-Liang Dai",
+          "Pi-Ji Li"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 220,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.10818",
+      "identity_tokens": [
+        "id:SemanticScholar:375de1279cc1685a116403bc378ba94aaf6a172e",
+        "id:arXiv:2305.10818",
+        "title:diffusion language models generation can be halted early",
+        "url:https://arxiv.org/abs/2305.10818"
+      ],
+      "record": {
+        "title": "Diffusion Language Models Generation Can Be Halted Early",
+        "source_url": "https://arxiv.org/abs/2305.10818",
+        "year": 2023,
+        "published": "2023-05-18",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Language models (DLMs) are a promising avenue for text generation due to their practical properties on tractable controllable generation. They also have the advantage of not having to predict text autoregressively. However, despite these notable features, DLMs have not yet reached the performance levels of their autoregressive counterparts. One of the ways to reduce the performance gap between these two types of language models is to speed up the generation of DLMs. Therefore, we propose a novel methodology to address this issue in this work. It enables the execution of more generation steps within a given time frame, leading to higher-quality outputs. Specifically, our methods estimate DLMs completeness of text generation and allow adaptive halting of the generation process. We evaluate our methods on Plaid, SSD, and CDCD DLMs and create a cohesive perspective on their generation workflows. Finally, we confirm that our methods allow halting these models and decrease the generation time by $10$-$40$\\% without a drop in the quality of model samples.",
+        "identifiers": [
+          "SemanticScholar:375de1279cc1685a116403bc378ba94aaf6a172e"
+        ],
+        "semantic_scholar_id": "375de1279cc1685a116403bc378ba94aaf6a172e",
+        "canonical_id": "arXiv:2305.10818",
+        "arxiv_id": "2305.10818",
+        "authors": [
+          "Sofia Maria Lo Cicero Vaina",
+          "Nikita Balagansky",
+          "Daniil Gavrilov"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1287,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6c82070647dae58a2821ce8295f867f854360b348920394da0eb38f9ceeb52a3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

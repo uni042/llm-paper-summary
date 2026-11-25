@@ -1,0 +1,149 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f880c9756d21ade4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f880c9756d21",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2505.12423"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9c64c5cf27f7ba2cd982c37e08b0f982de4c8f0b",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T15:36:01.544557+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2505.12423",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PSC: Extending Context Window of Large Language Models via Phase Shift Calibration",
+      "source_url": "https://arxiv.org/abs/2505.12423",
+      "year": 2025,
+      "published": "2025-05-18",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Rotary Position Embedding (RoPE) is an efficient position encoding approach and is widely utilized in numerous large language models (LLMs). Recently, a lot of methods have been put forward to further expand the context window based on RoPE. The core concept of those methods is to predefine or search for a set of factors to rescale the base frequencies of RoPE. Nevertheless, it is quite a challenge for existing methods to predefine an optimal factor due to the exponential search space. In view of this, we introduce PSC (Phase Shift Calibration), a small module for calibrating the frequencies predefined by existing methods. With the employment of PSC, we demonstrate that many existing methods can be further enhanced, like PI, YaRN, and LongRoPE. We conducted extensive experiments across multiple models and tasks. The results demonstrate that (1) when PSC is enabled, the comparative reductions in perplexity increase as the context window size is varied from 16k, to 32k, and up to 64k. (2) Our approach is broadly applicable and exhibits robustness across a variety of models and tasks.",
+      "identifiers": [
+        "SemanticScholar:eeeb3b416761e29fa0c36d155504814f5a4de805"
+      ],
+      "semantic_scholar_id": "eeeb3b416761e29fa0c36d155504814f5a4de805",
+      "canonical_id": "arXiv:2505.12423",
+      "arxiv_id": "2505.12423",
+      "doi": "10.18653/v1/2024.emnlp-main.341",
+      "authors": [
+        "Wenqiao Zhu",
+        "Chao Xu",
+        "Lulu Wang",
+        "Jun Wu"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 556,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.12423",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2024.emnlp-main.341",
+        "id:SemanticScholar:eeeb3b416761e29fa0c36d155504814f5a4de805",
+        "id:arXiv:2505.12423",
+        "title:psc extending context window of large language models via phase shift calibration",
+        "url:https://arxiv.org/abs/2505.12423"
+      ],
+      "record": {
+        "title": "PSC: Extending Context Window of Large Language Models via Phase Shift Calibration",
+        "source_url": "https://arxiv.org/abs/2505.12423",
+        "year": 2025,
+        "published": "2025-05-18",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Rotary Position Embedding (RoPE) is an efficient position encoding approach and is widely utilized in numerous large language models (LLMs). Recently, a lot of methods have been put forward to further expand the context window based on RoPE. The core concept of those methods is to predefine or search for a set of factors to rescale the base frequencies of RoPE. Nevertheless, it is quite a challenge for existing methods to predefine an optimal factor due to the exponential search space. In view of this, we introduce PSC (Phase Shift Calibration), a small module for calibrating the frequencies predefined by existing methods. With the employment of PSC, we demonstrate that many existing methods can be further enhanced, like PI, YaRN, and LongRoPE. We conducted extensive experiments across multiple models and tasks. The results demonstrate that (1) when PSC is enabled, the comparative reductions in perplexity increase as the context window size is varied from 16k, to 32k, and up to 64k. (2) Our approach is broadly applicable and exhibits robustness across a variety of models and tasks.",
+        "identifiers": [
+          "SemanticScholar:eeeb3b416761e29fa0c36d155504814f5a4de805"
+        ],
+        "semantic_scholar_id": "eeeb3b416761e29fa0c36d155504814f5a4de805",
+        "canonical_id": "arXiv:2505.12423",
+        "arxiv_id": "2505.12423",
+        "doi": "10.18653/v1/2024.emnlp-main.341",
+        "authors": [
+          "Wenqiao Zhu",
+          "Chao Xu",
+          "Lulu Wang",
+          "Jun Wu"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 556,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:130e7615618c316709c117a4ac9f2f780ed0773c1c887a3c951dabd3abb284e2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
