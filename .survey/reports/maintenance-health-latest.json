@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-24T04:06:30+00:00",
-  "status": "passed",
-  "error_count": 0,
+  "checked_at": "2026-11-25T03:16:32+00:00",
+  "status": "issues_found",
+  "error_count": 1,
   "warning_count": 0,
-  "paper_count": 5288,
-  "latest_paper_commit": "2026-11-24T03:56:03+00:00",
+  "paper_count": 5489,
+  "latest_paper_commit": "2026-11-24T23:11:31+00:00",
   "queue": {
-    "job_count": 3839,
+    "job_count": 4203,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
-        "completed": 849,
+        "completed": 869,
         "processing": 7,
         "ready": 1
       },
@@ -21,8 +21,8 @@
         "ready": 2
       },
       "research": {
-        "ready": 1495,
-        "superseded": 1454,
+        "ready": 1653,
+        "superseded": 1640,
         "deferred": 8,
         "completed": 22,
         "rejected": 1
@@ -38,43 +38,63 @@
     "failures": {
       "paper": [],
       "list_summary": [
+        "papers/inference/04-conditional-computation/2025-2508.17807-attention-debiasing-for-token-pruning-in-vision-language-models.md",
         "papers/inference/09-kernel-runtime-compilation/2025-2506.01967-turning-llm-activations-quantization-friendly.md",
         "papers/inference/09-kernel-runtime-compilation/2025-2510.17505-insum-sparse-gpu-kernels-simplified-and-optimized-with-indirect-einsums.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2609.12330-unleashing-the-power-of-equality-saturation-for-tensor-program-superopti.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.19677-adaptive-request-scheduling-for-codellm-serving-with-sla-guarantees.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.02520-huawei-cloud-model-as-a-service-on-the-cloudmatrix384-superpod.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.04087-best-of-mini-n-in-loop-sampling-a-contextual-quality-reward-model-for-re.md",
-        "papers/inference/99-other-inference-systems/2023-400218b723db-efficient-latent-space-compression-for-lightning-fast-fine-tuning-and-in.md",
-        "papers/inference/99-other-inference-systems/2025-2508.02520-huawei-cloud-model-as-a-service-on-the-cloudmatrix384-superpod.md",
-        "papers/inference/99-other-inference-systems/2025-2508.17807-attention-debiasing-for-token-pruning-in-vision-language-models.md",
-        "papers/inference/99-other-inference-systems/2026-2609.12330-unleashing-the-power-of-equality-saturation-for-tensor-program-superopti.md"
+        "papers/inference/99-other-inference-systems/2023-400218b723db-efficient-latent-space-compression-for-lightning-fast-fine-tuning-and-in.md"
       ],
       "overview": []
     },
     "new_failures": {
       "paper": [],
-      "list_summary": [],
+      "list_summary": [
+        "papers/inference/04-conditional-computation/2025-2508.17807-attention-debiasing-for-token-pruning-in-vision-language-models.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2609.12330-unleashing-the-power-of-equality-saturation-for-tensor-program-superopti.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.02520-huawei-cloud-model-as-a-service-on-the-cloudmatrix384-superpod.md"
+      ],
       "overview": []
     },
     "resolved_failures": {
       "paper": [],
-      "list_summary": [],
+      "list_summary": [
+        "papers/inference/99-other-inference-systems/2025-2508.02520-huawei-cloud-model-as-a-service-on-the-cloudmatrix384-superpod.md",
+        "papers/inference/99-other-inference-systems/2025-2508.17807-attention-debiasing-for-token-pruning-in-vision-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2609.12330-unleashing-the-power-of-equality-saturation-for-tensor-program-superopti.md"
+      ],
       "overview": []
     }
   },
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-11-24T04:05:37+00:00",
-      "total": 5288,
+      "checked_at": "2026-11-25T03:15:45+00:00",
+      "total": 5489,
       "incomplete": 0,
       "findings": []
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-11-24T04:05:37+00:00",
-      "total": 5288,
+      "checked_at": "2026-11-25T03:15:45+00:00",
+      "total": 5489,
       "incomplete": 0,
       "findings": []
     }
   },
-  "findings": []
+  "findings": [
+    {
+      "severity": "error",
+      "code": "quality_regression",
+      "detail": "New list_summary quality failures appeared since the previous maintenance baseline",
+      "scope": "list_summary",
+      "paths": [
+        "papers/inference/04-conditional-computation/2025-2508.17807-attention-debiasing-for-token-pruning-in-vision-language-models.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2609.12330-unleashing-the-power-of-equality-saturation-for-tensor-program-superopti.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.02520-huawei-cloud-model-as-a-service-on-the-cloudmatrix384-superpod.md"
+      ]
+    }
+  ]
 }
