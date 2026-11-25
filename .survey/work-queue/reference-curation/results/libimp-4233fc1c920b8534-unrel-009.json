@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4233fc1c920b8534-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.07733",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.07733",
+    "identity_tokens": [
+      "arXiv:2512.07733"
+    ],
+    "reason": "本論文『SpatialDreamer: Incentivizing Spatial Reasoning via Active Mental Imagery』の要旨で確認できる主貢献は当該分野の応用・モデル学習・能力評価であり、LLM推論・サービング・KVキャッシュ・デコード等の推論システムへの直接の技術貢献は確認できない。",
+    "first_checked_at": "2026-11-25T15:38:35+00:00",
+    "last_checked_at": "2026-11-25T15:38:35+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SpatialDreamer: Incentivizing Spatial Reasoning via Active Mental Imagery"
+  },
+  "processed_at": "2026-11-25T15:38:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4233fc1c920b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
