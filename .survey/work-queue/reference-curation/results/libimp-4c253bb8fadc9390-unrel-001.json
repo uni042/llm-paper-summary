@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c253bb8fadc9390-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/bibm62325.2024.10822121",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/bibm62325.2024.10822121",
+    "identity_tokens": [
+      "DOI:10.1109/bibm62325.2024.10822121"
+    ],
+    "reason": "純視覚状態空間モデルを高次元医用データ解析へ適用するPV-SSMは医療画像解析の応用であり、LLM推論とは無関係である。",
+    "first_checked_at": "2026-11-25T22:24:22+00:00",
+    "last_checked_at": "2026-11-25T22:24:22+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "PV-SSM: Exploring Pure Visual State Space Model for High-dimensional Medical Data Analysis"
+  },
+  "processed_at": "2026-11-25T22:24:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c253bb8fadc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

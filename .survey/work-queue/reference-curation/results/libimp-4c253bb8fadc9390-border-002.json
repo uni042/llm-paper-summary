@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c253bb8fadc9390-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.03085",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.03085",
+    "identity_tokens": [
+      "arXiv:2405.03085"
+    ],
+    "reason": "RAGで検索した長文脈をAMR概念蒸留で圧縮する手法は、LLM推論時の文脈長削減に直接関わるが、対象はRAGの回答品質改善であり圧縮の推論コスト効果は主眼ではない。",
+    "first_checked_at": "2026-11-25T22:24:22+00:00",
+    "last_checked_at": "2026-11-25T22:24:22+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compressing Long Context for Enhancing RAG with AMR-based Concept Distillation"
+  },
+  "processed_at": "2026-11-25T22:24:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c253bb8fadc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T22:22:50+00:00",
-  "record_count": 9372,
+  "updated_at": "2026-11-25T22:24:23+00:00",
+  "record_count": 9380,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -143493,6 +143493,127 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Text2SQL is Not Enough: Unifying AI and Databases with TAG"
+    },
+    "arXiv:2506.08234": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.08234",
+      "identity_tokens": [
+        "arXiv:2506.08234"
+      ],
+      "reason": "複合AIシステム全体の最適化手法を概観するサーベイは、複数LLMを含むワークフローの最適化として関連するが、推論システムの具体的な機構を新たに提案するものではない。",
+      "first_checked_at": "2026-11-25T22:24:22+00:00",
+      "last_checked_at": "2026-11-25T22:24:22+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compound AI Systems Optimization: A Survey of Methods, Challenges, and Future Directions"
+    },
+    "arXiv:2506.05065": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.05065",
+      "identity_tokens": [
+        "arXiv:2506.05065"
+      ],
+      "reason": "測定ノイズを前提にHiPPO初期化を拡張するUnHiPPOは状態空間モデルの基礎理論であり、LLMを含む系列モデルの土台とはなるが推論システムへの直接の適用はない。",
+      "first_checked_at": "2026-11-25T22:24:22+00:00",
+      "last_checked_at": "2026-11-25T22:24:22+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UnHiPPO: Uncertainty-aware Initialization for State Space Models"
+    },
+    "arXiv:2509.01088": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.01088",
+      "identity_tokens": [
+        "arXiv:2509.01088"
+      ],
+      "reason": "文書をLoRAパラメータ化するParametric RAGでプライバシと推論レイテンシの問題に取り組む研究は、RAGの推論時構成として関連するが、主眼はプライバシ保護であり効率機構は従属的である。",
+      "first_checked_at": "2026-11-25T22:24:22+00:00",
+      "last_checked_at": "2026-11-25T22:24:22+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Privacy-Preserving Reasoning with Knowledge-Distilled Parametric Retrieval Augmented Generation"
+    },
+    "arXiv:2405.03085": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.03085",
+      "identity_tokens": [
+        "arXiv:2405.03085"
+      ],
+      "reason": "RAGで検索した長文脈をAMR概念蒸留で圧縮する手法は、LLM推論時の文脈長削減に直接関わるが、対象はRAGの回答品質改善であり圧縮の推論コスト効果は主眼ではない。",
+      "first_checked_at": "2026-11-25T22:24:22+00:00",
+      "last_checked_at": "2026-11-25T22:24:22+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compressing Long Context for Enhancing RAG with AMR-based Concept Distillation"
+    },
+    "arXiv:2406.14553": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.14553",
+      "identity_tokens": [
+        "arXiv:2406.14553"
+      ],
+      "reason": "10.7B級エンコーダを使う機械翻訳評価指標xCOMETを蒸留・量子化・プルーニングで圧縮するxCOMET-liteは、モデル圧縮技術そのものを使うが対象は評価指標モデルでありLLM推論への一般化は限定的である。",
+      "first_checked_at": "2026-11-25T22:24:22+00:00",
+      "last_checked_at": "2026-11-25T22:24:22+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "xCOMET-lite: Bridging the Gap Between Efficiency and Quality in Learned MT Evaluation Metrics"
+    },
+    "arXiv:2301.13856": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2301.13856",
+      "identity_tokens": [
+        "arXiv:2301.13856"
+      ],
+      "reason": "ソフトマックス核とガウス核を不偏近似するランダム特徴SimRFは注意の核近似の基礎となり得るが、対象は核近似の理論・誤差解析であり推論システムでの実装・評価はない。",
+      "first_checked_at": "2026-11-25T22:24:22+00:00",
+      "last_checked_at": "2026-11-25T22:24:22+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Simplex Random Features"
+    },
+    "arXiv:2608.10928": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.10928",
+      "identity_tokens": [
+        "arXiv:2608.10928"
+      ],
+      "reason": "検索で補強した推論痕跡によりテスト時スケーリングの逓減を抑えるThinkRetrieveは推論時計算の配分に関わるが、主眼は推論精度であり計算効率の機構ではない。",
+      "first_checked_at": "2026-11-25T22:24:22+00:00",
+      "last_checked_at": "2026-11-25T22:24:22+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ThinkRetrieve: Retrieval-Augmented Reasoning Traces for Test-Time Scaling"
+    },
+    "DOI:10.48550/arxiv.2402.13547": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2402.13547",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.13547",
+        "arXiv:2402.13547"
+      ],
+      "reason": "外部知識の活用を能動学習の枠組みで高めるActiveRAGはRAGの文脈利用として関連するが、主眼は知識活用の質であり推論システムの効率機構ではない。",
+      "first_checked_at": "2026-11-25T22:24:22+00:00",
+      "last_checked_at": "2026-11-25T22:24:22+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ActiveRAG: Revealing the Treasures of Knowledge via Active Learning"
     }
   }
 }

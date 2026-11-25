@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c253bb8fadc9390-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.14553",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.14553",
+    "identity_tokens": [
+      "arXiv:2406.14553"
+    ],
+    "reason": "10.7B級エンコーダを使う機械翻訳評価指標xCOMETを蒸留・量子化・プルーニングで圧縮するxCOMET-liteは、モデル圧縮技術そのものを使うが対象は評価指標モデルでありLLM推論への一般化は限定的である。",
+    "first_checked_at": "2026-11-25T22:24:22+00:00",
+    "last_checked_at": "2026-11-25T22:24:22+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "xCOMET-lite: Bridging the Gap Between Efficiency and Quality in Learned MT Evaluation Metrics"
+  },
+  "processed_at": "2026-11-25T22:24:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c253bb8fadc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
