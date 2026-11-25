@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6585d32ee009d428-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.29023",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.29023",
+    "identity_tokens": [
+      "arXiv:2603.29023"
+    ],
+    "reason": "Proposes a neuroscience-grounded lifelong memory architecture for LLMs (valence vectors, System-1/System-2 retrieval escalation, thalamic gating) for infinite interaction; a conceptual memory framework whose systems implementation and evaluation are unclear.",
+    "first_checked_at": "2026-11-25T03:12:39+00:00",
+    "last_checked_at": "2026-11-25T03:12:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Human-Like Lifelong Memory: A Neuroscience-Grounded Architecture for Infinite Interaction"
+  },
+  "processed_at": "2026-11-25T03:12:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6585d32ee009",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

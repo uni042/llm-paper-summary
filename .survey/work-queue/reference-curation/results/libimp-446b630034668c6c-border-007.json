@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-446b630034668c6c-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.07464",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.07464",
+    "identity_tokens": [
+      "arXiv:2411.07464"
+    ],
+    "reason": "BudgetMLAgent combines profiling, retrieval of past observations, LLM cascades and ask-the-expert calls to cut the cost of automating ML engineering tasks by 94.2%; an application-level agent cost optimization, not an inference system.",
+    "first_checked_at": "2026-11-25T03:12:39+00:00",
+    "last_checked_at": "2026-11-25T03:12:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BudgetMLAgent: A Cost-Effective LLM Multi-Agent system for Automating Machine Learning Tasks"
+  },
+  "processed_at": "2026-11-25T03:12:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-446b63003466",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d286305d5db63f9-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.14633",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.14633",
+    "identity_tokens": [
+      "arXiv:2310.14633"
+    ],
+    "reason": "Trains language models on sub-sampled segmented sequences with positional interpolation to extend usable context 4x; a context-extension training procedure.",
+    "first_checked_at": "2026-11-25T03:12:40+00:00",
+    "last_checked_at": "2026-11-25T03:12:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Extending Input Contexts of Language Models through Training on Segmented Sequences"
+  },
+  "processed_at": "2026-11-25T03:12:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d286305d5db",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

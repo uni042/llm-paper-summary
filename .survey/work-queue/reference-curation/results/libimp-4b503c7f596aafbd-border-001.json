@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4b503c7f596aafbd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.23790",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.23790",
+    "identity_tokens": [
+      "arXiv:2609.23790"
+    ],
+    "reason": "Total Cost of Agency only decomposes and attributes memory-injection token costs in multi-agent LLM workflows for observability; it measures inference cost but proposes no serving, memory, or decoding optimization.",
+    "first_checked_at": "2026-11-25T03:12:39+00:00",
+    "last_checked_at": "2026-11-25T03:12:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Total Cost of Agency: Exact Attribution of Memory Injection Cost in Multi-Agent LLM Workflows"
+  },
+  "processed_at": "2026-11-25T03:12:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4b503c7f596a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

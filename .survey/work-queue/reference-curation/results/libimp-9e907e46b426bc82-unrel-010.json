@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e907e46b426bc82-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.04903",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.04903",
+    "identity_tokens": [
+      "arXiv:2204.04903"
+    ],
+    "reason": "PICASSO restructures GPU-centric training of wide-and-deep recommender systems to fix GPU underutilization from fragmented embedding operations; a training system for recommenders.",
+    "first_checked_at": "2026-11-25T03:12:40+00:00",
+    "last_checked_at": "2026-11-25T03:12:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "PICASSO: Unleashing the Potential of GPU-centric Training for Wide-and-deep Recommender Systems"
+  },
+  "processed_at": "2026-11-25T03:12:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e907e46b426",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8b6c31b5c9be79f-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.08325",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.08325",
+    "identity_tokens": [
+      "arXiv:2306.08325"
+    ],
+    "reason": "GCformer combines a sublinear-complexity global convolution branch with a local transformer branch for long-term multivariate time series forecasting benchmarks; a forecasting task model.",
+    "first_checked_at": "2026-11-24T21:43:56+00:00",
+    "last_checked_at": "2026-11-25T03:12:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "GCformer: An Efficient Solution for Accurate and Scalable Long-Term Multivariate Time Series Forecasting"
+  },
+  "processed_at": "2026-11-25T03:12:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8b6c31b5c9b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

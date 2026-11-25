@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-312384cd6fece303-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.14042",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.14042",
+    "identity_tokens": [
+      "arXiv:2507.14042"
+    ],
+    "reason": "MTR is a training-free token reduction framework for Vision Mamba driven by a structure-aware importance score; it compresses vision-model inference, adjacent to but not LLM/VLM inference.",
+    "first_checked_at": "2026-11-25T03:12:39+00:00",
+    "last_checked_at": "2026-11-25T03:12:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Training-free Token Reduction for Vision Mamba"
+  },
+  "processed_at": "2026-11-25T03:12:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-312384cd6fec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

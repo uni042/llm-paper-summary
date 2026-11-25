@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7cafcfa341685ff9-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.19011",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.19011",
+    "identity_tokens": [
+      "arXiv:2512.19011"
+    ],
+    "reason": "Evaluates CPU-class TF-IDF classifiers against GPU transformer pipelines for jailbreak safety screening of LLM traffic at deployment scale and cost; guardrail infrastructure evaluation adjacent to, but not part of, core LLM inference.",
+    "first_checked_at": "2026-11-25T03:12:39+00:00",
+    "last_checked_at": "2026-11-25T03:12:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Do You Really Need a GPU to Guard Your LLM? CPU-Class Classifiers and Multi-Stage Pipelines for Safety Enforcement at Scale"
+  },
+  "processed_at": "2026-11-25T03:12:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7cafcfa34168",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

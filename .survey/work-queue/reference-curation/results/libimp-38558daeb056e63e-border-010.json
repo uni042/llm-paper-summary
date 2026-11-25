@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-38558daeb056e63e-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.09637",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.09637",
+    "identity_tokens": [
+      "arXiv:2410.09637"
+    ],
+    "reason": "正規化なしLLMにおけるReLU系活性化関数の検討はプライベート推論等の動機を含むが、アーキテクチャの学習・解釈可能性が主題である。",
+    "first_checked_at": "2026-11-24T22:15:34+00:00",
+    "last_checked_at": "2026-11-25T03:12:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ReLU's Revival: On the Entropic Overload in Normalization-Free Large Language Models"
+  },
+  "processed_at": "2026-11-25T03:12:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-38558daeb056",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

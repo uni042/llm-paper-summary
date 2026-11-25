@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8b6c31b5c9be79f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3583780.3615495",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3583780.3615495",
+    "identity_tokens": [
+      "DOI:10.1145/3583780.3615495"
+    ],
+    "reason": "PS-SA progressively samples valuable item pairs to make self-attention efficient for user behavior sequence modeling in recommender systems; a recommender-systems application of sparse attention.",
+    "first_checked_at": "2026-11-24T21:39:10+00:00",
+    "last_checked_at": "2026-11-25T03:12:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "PS-SA: An Efficient Self-Attention via Progressive Sampling for User Behavior Sequence Modeling"
+  },
+  "processed_at": "2026-11-25T03:12:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8b6c31b5c9b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
