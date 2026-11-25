@@ -1,0 +1,244 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ce07dcf8d838931d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ce07dcf8d838",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2510.24940",
+    "arXiv:2607.04676"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4485d4e405cff3f3c03897858e747609e7d6d797",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T11:52:02.955513+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2510.24940",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.04676",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SemCoT: Accelerating Chain-of-Thought Reasoning through Semantically-Aligned Implicit Tokens",
+      "source_url": "https://arxiv.org/abs/2510.24940",
+      "year": 2025,
+      "published": "2025-10-28",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The verbosity of Chain-of-Thought (CoT) reasoning hinders its mass deployment in efficiency-critical applications. Recently, implicit CoT approaches have emerged, which encode reasoning steps within LLM's hidden embeddings (termed ``implicit reasoning'') rather than explicit tokens. This approach accelerates CoT by reducing the reasoning length and bypassing some LLM components. However, existing implicit CoT methods face two significant challenges: (1) they fail to preserve the semantic alignment between the implicit reasoning (when transformed to natural language) and the ground-truth reasoning, resulting in a significant CoT performance degradation, and (2) they focus on reducing the length of the implicit reasoning; however, they neglect the considerable time cost for an LLM to generate one individual implicit reasoning token. To tackle these challenges, we propose a novel semantically-aligned implicit CoT framework termed SemCoT. In particular, for the first challenge, we design a contrastively trained sentence transformer that evaluates semantic alignment between implicit and explicit reasoning, which is used to enforce semantic preservation during implicit reasoning optimization. To address the second challenge, we introduce an efficient implicit reasoning generator by finetuning a lightweight language model using knowledge distillation. This generator is guided by our sentence transformer to distill ground-truth reasoning into semantically aligned implicit reasoning, while also optimizing for accuracy. SemCoT is the first approach that enhances CoT efficiency by jointly optimizing token-level generation speed and preserving semantic alignment with ground-truth reasoning. Extensive experiments demonstrate the superior performance of SemCoT compared to state-of-the-art methods in both efficiency and effectiveness. Our code can be found at https://github.com/YinhanHe123/SemCoT/.",
+      "identifiers": [
+        "SemanticScholar:0eebd8adc57d6aa6a3964eecc2f3a9450169f917"
+      ],
+      "semantic_scholar_id": "0eebd8adc57d6aa6a3964eecc2f3a9450169f917",
+      "canonical_id": "arXiv:2510.24940",
+      "arxiv_id": "2510.24940",
+      "doi": "10.48550/arXiv.2510.24940",
+      "authors": [
+        "Yin-Han He",
+        "Wendy Zheng",
+        "Yao-Chen Zhu",
+        "Zai-Yi Zheng",
+        "Lin Su",
+        "Sriram Vasudevan",
+        "Qi Guo",
+        "Liang-Jie Hong",
+        "Jun-Dong Li"
+      ],
+      "priority": 29,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 29,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 393,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "SpCCL: A Sparsity-Aware Collective Communication Library for GPU Platforms",
+      "source_url": "https://arxiv.org/abs/2607.04676",
+      "year": 2026,
+      "published": "2026-07-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Collective communication is essential to high performance computing and machine learning workloads, yet libraries such as NCCL do not exploit sparsity in message payloads. Sending only nonzero values can reduce network traffic, but explicitly handling sparsity introduces challenges such as compression and decompression overheads. We address these challenges with sparsity-exploiting versions of all-gather, reduce-scatter, and all-reduce collectives. Our implementations use a new bitvector-based format, Pici, designed for low space overhead and fast GPU-based compression and decompression. Further, our collective algorithms adapt to the degree of sparsity in data, modifying data representations during the course of the collective. At 99% input sparsity, our collectives achieve up to 5.25$\\times$, 2.5$\\times$, and 2.66$\\times$ speedups over NCCL for all-gather, reduce-scatter, and all-reduce, respectively. Integrating our collectives into a representative deep learning application, we achieve a 26% end-to-end speedup.",
+      "identifiers": [
+        "SemanticScholar:2ba8e278b605f8f9c100676d024b3ff841fa8089"
+      ],
+      "semantic_scholar_id": "2ba8e278b605f8f9c100676d024b3ff841fa8089",
+      "canonical_id": "arXiv:2607.04676",
+      "arxiv_id": "2607.04676",
+      "authors": [
+        "Lannie Dalton Hough",
+        "Emirhan Gencer",
+        "Hoffmann Muki",
+        "A. Bhatele"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.24940",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.24940",
+        "id:SemanticScholar:0eebd8adc57d6aa6a3964eecc2f3a9450169f917",
+        "id:arXiv:2510.24940",
+        "title:semcot accelerating chainofthought reasoning through semanticallyaligned implicit tokens",
+        "url:https://arxiv.org/abs/2510.24940"
+      ],
+      "record": {
+        "title": "SemCoT: Accelerating Chain-of-Thought Reasoning through Semantically-Aligned Implicit Tokens",
+        "source_url": "https://arxiv.org/abs/2510.24940",
+        "year": 2025,
+        "published": "2025-10-28",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 19,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The verbosity of Chain-of-Thought (CoT) reasoning hinders its mass deployment in efficiency-critical applications. Recently, implicit CoT approaches have emerged, which encode reasoning steps within LLM's hidden embeddings (termed ``implicit reasoning'') rather than explicit tokens. This approach accelerates CoT by reducing the reasoning length and bypassing some LLM components. However, existing implicit CoT methods face two significant challenges: (1) they fail to preserve the semantic alignment between the implicit reasoning (when transformed to natural language) and the ground-truth reasoning, resulting in a significant CoT performance degradation, and (2) they focus on reducing the length of the implicit reasoning; however, they neglect the considerable time cost for an LLM to generate one individual implicit reasoning token. To tackle these challenges, we propose a novel semantically-aligned implicit CoT framework termed SemCoT. In particular, for the first challenge, we design a contrastively trained sentence transformer that evaluates semantic alignment between implicit and explicit reasoning, which is used to enforce semantic preservation during implicit reasoning optimization. To address the second challenge, we introduce an efficient implicit reasoning generator by finetuning a lightweight language model using knowledge distillation. This generator is guided by our sentence transformer to distill ground-truth reasoning into semantically aligned implicit reasoning, while also optimizing for accuracy. SemCoT is the first approach that enhances CoT efficiency by jointly optimizing token-level generation speed and preserving semantic alignment with ground-truth reasoning. Extensive experiments demonstrate the superior performance of SemCoT compared to state-of-the-art methods in both efficiency and effectiveness. Our code can be found at https://github.com/YinhanHe123/SemCoT/.",
+        "identifiers": [
+          "SemanticScholar:0eebd8adc57d6aa6a3964eecc2f3a9450169f917"
+        ],
+        "semantic_scholar_id": "0eebd8adc57d6aa6a3964eecc2f3a9450169f917",
+        "canonical_id": "arXiv:2510.24940",
+        "arxiv_id": "2510.24940",
+        "doi": "10.48550/arXiv.2510.24940",
+        "authors": [
+          "Yin-Han He",
+          "Wendy Zheng",
+          "Yao-Chen Zhu",
+          "Zai-Yi Zheng",
+          "Lin Su",
+          "Sriram Vasudevan",
+          "Qi Guo",
+          "Liang-Jie Hong",
+          "Jun-Dong Li"
+        ],
+        "priority": 29,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 19,
+          "citation_count": 19,
+          "total": 29,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 393,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.04676",
+      "identity_tokens": [
+        "id:SemanticScholar:2ba8e278b605f8f9c100676d024b3ff841fa8089",
+        "id:arXiv:2607.04676",
+        "title:spccl a sparsityaware collective communication library for gpu platforms",
+        "url:https://arxiv.org/abs/2607.04676"
+      ],
+      "record": {
+        "title": "SpCCL: A Sparsity-Aware Collective Communication Library for GPU Platforms",
+        "source_url": "https://arxiv.org/abs/2607.04676",
+        "year": 2026,
+        "published": "2026-07-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Collective communication is essential to high performance computing and machine learning workloads, yet libraries such as NCCL do not exploit sparsity in message payloads. Sending only nonzero values can reduce network traffic, but explicitly handling sparsity introduces challenges such as compression and decompression overheads. We address these challenges with sparsity-exploiting versions of all-gather, reduce-scatter, and all-reduce collectives. Our implementations use a new bitvector-based format, Pici, designed for low space overhead and fast GPU-based compression and decompression. Further, our collective algorithms adapt to the degree of sparsity in data, modifying data representations during the course of the collective. At 99% input sparsity, our collectives achieve up to 5.25$\\times$, 2.5$\\times$, and 2.66$\\times$ speedups over NCCL for all-gather, reduce-scatter, and all-reduce, respectively. Integrating our collectives into a representative deep learning application, we achieve a 26% end-to-end speedup.",
+        "identifiers": [
+          "SemanticScholar:2ba8e278b605f8f9c100676d024b3ff841fa8089"
+        ],
+        "semantic_scholar_id": "2ba8e278b605f8f9c100676d024b3ff841fa8089",
+        "canonical_id": "arXiv:2607.04676",
+        "arxiv_id": "2607.04676",
+        "authors": [
+          "Lannie Dalton Hough",
+          "Emirhan Gencer",
+          "Hoffmann Muki",
+          "A. Bhatele"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e886399b275e1c2117fa3f6cda760f7e638ff8aa2a0262d29c85773f3978d995",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

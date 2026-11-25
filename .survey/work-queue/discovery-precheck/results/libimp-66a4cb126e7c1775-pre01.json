@@ -1,0 +1,181 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-66a4cb126e7c1775-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-66a4cb126e7c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2026.findings-eacl.193",
+    "arXiv:2410.13299",
+    "arXiv:2507.05228",
+    "arXiv:2605.23296",
+    "arXiv:2610.21810"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4485d4e405cff3f3c03897858e747609e7d6d797",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 4,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 4,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T11:51:55.926114+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-eacl.193",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2026.findings-eacl.193"
+    },
+    {
+      "requested_id": "arXiv:2410.13299",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2410.13299"
+    },
+    {
+      "requested_id": "arXiv:2507.05228",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2507.05228"
+    },
+    {
+      "requested_id": "arXiv:2605.23296",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.21810",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:3d05d52ce814ecd610ada3a3de3e6449a3aa7613"
+    }
+  ],
+  "results": [
+    {
+      "title": "Parallel Context Compaction for Long-Horizon LLM Agent Serving",
+      "source_url": "https://arxiv.org/abs/2605.23296",
+      "year": 2026,
+      "published": "2026-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon LLM agents accumulate growing conversation histories that eventually exceed the model's context window. Context compaction via LLM-based summarization keeps the conversation bounded, but summarization is inherently lossy and the blocking call stalls agent inference for tens of seconds. Moreover, the operator has no fine-grained control over summary volume since prompt instructions are largely ignored, and as context grows, both the amount of output tokens the model produces and the information it retains fluctuate substantially from run to run, making the agent's retained knowledge unpredictable across runs. We introduce \\textbf{parallel compaction} for long-horizon agentic flows and characterize it against the sequential synchronous baseline across four backbones spanning 8B to 120B parameters, mixing dense and MoE architectures with reasoning and non-reasoning models, on the HotpotQA multi-hop QA and LoCoMo long-context dialogue benchmarks. Parallel compaction gives the operator fine-grained, predictable control over summary volume and enables more targeted prompt engineering per block. At matched compaction decode volume, it reduces end-to-end wall time and improves compaction throughput over the sequential baseline.",
+      "identifiers": [
+        "SemanticScholar:3dd46c0ab602825f50b522ca9f96d22c3c6925b4"
+      ],
+      "semantic_scholar_id": "3dd46c0ab602825f50b522ca9f96d22c3c6925b4",
+      "canonical_id": "arXiv:2605.23296",
+      "arxiv_id": "2605.23296",
+      "doi": "10.48550/arXiv.2605.23296",
+      "authors": [
+        "Musa Cim",
+        "Burak Topçu",
+        "C. Das",
+        "M. Kandemir"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.23296",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.23296",
+        "id:SemanticScholar:3dd46c0ab602825f50b522ca9f96d22c3c6925b4",
+        "id:arXiv:2605.23296",
+        "title:parallel context compaction for longhorizon llm agent serving",
+        "url:https://arxiv.org/abs/2605.23296"
+      ],
+      "record": {
+        "title": "Parallel Context Compaction for Long-Horizon LLM Agent Serving",
+        "source_url": "https://arxiv.org/abs/2605.23296",
+        "year": 2026,
+        "published": "2026-05-22",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-horizon LLM agents accumulate growing conversation histories that eventually exceed the model's context window. Context compaction via LLM-based summarization keeps the conversation bounded, but summarization is inherently lossy and the blocking call stalls agent inference for tens of seconds. Moreover, the operator has no fine-grained control over summary volume since prompt instructions are largely ignored, and as context grows, both the amount of output tokens the model produces and the information it retains fluctuate substantially from run to run, making the agent's retained knowledge unpredictable across runs. We introduce \\textbf{parallel compaction} for long-horizon agentic flows and characterize it against the sequential synchronous baseline across four backbones spanning 8B to 120B parameters, mixing dense and MoE architectures with reasoning and non-reasoning models, on the HotpotQA multi-hop QA and LoCoMo long-context dialogue benchmarks. Parallel compaction gives the operator fine-grained, predictable control over summary volume and enables more targeted prompt engineering per block. At matched compaction decode volume, it reduces end-to-end wall time and improves compaction throughput over the sequential baseline.",
+        "identifiers": [
+          "SemanticScholar:3dd46c0ab602825f50b522ca9f96d22c3c6925b4"
+        ],
+        "semantic_scholar_id": "3dd46c0ab602825f50b522ca9f96d22c3c6925b4",
+        "canonical_id": "arXiv:2605.23296",
+        "arxiv_id": "2605.23296",
+        "doi": "10.48550/arXiv.2605.23296",
+        "authors": [
+          "Musa Cim",
+          "Burak Topçu",
+          "C. Das",
+          "M. Kandemir"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 187,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:48f1e70cec2558bf7a5932e7844a197b648b07cf9712f41584962f8f85a0b741",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

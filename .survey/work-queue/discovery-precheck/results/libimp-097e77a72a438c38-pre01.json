@@ -1,0 +1,273 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-097e77a72a438c38-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-097e77a72a43",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tcad.2024.3410841",
+    "DOI:10.18653/v1/2026.acl-long.601",
+    "arXiv:2511.13023",
+    "arXiv:2602.07958",
+    "arXiv:2602.14236",
+    "arXiv:2611.07542"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4485d4e405cff3f3c03897858e747609e7d6d797",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 4,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 4,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-25T11:51:56.248764+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tcad.2024.3410841",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/tcad.2024.3410841"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.601",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2026.acl-long.601"
+    },
+    {
+      "requested_id": "arXiv:2511.13023",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.07958",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.14236",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2602.14236"
+    },
+    {
+      "requested_id": "arXiv:2611.07542",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:bfa6a71cfb91186f27300c8b89edbcb12ae8be9f"
+    }
+  ],
+  "results": [
+    {
+      "title": "Accuracy-Delay Trade-Off in LLM Offloading via Token-Level Uncertainty",
+      "source_url": "https://arxiv.org/abs/2602.07958",
+      "year": 2025,
+      "published": "2025-12-08",
+      "venue": "2025 IEEE Globecom Workshops (GC Wkshps)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) offer significant potential for intelligent mobile services but are computationally intensive for resource-constrained devices. Mobile edge computing (MEC) allows such devices to offload inference tasks to edge servers (ESs), yet introduces latency due to communication and server-side queuing, especially in multi-user environments. In this work, we propose an uncertainty-aware offloading framework that dynamically decides whether to perform inference locally or offload it to the ES, based on token-level uncertainty and resource constraints. We define a margin-based token-level uncertainty metric and demonstrate its correlation with model accuracy. Leveraging this metric, we design a greedy offloading algorithm (GOA) that minimizes delay while maintaining accuracy by prioritizing offloading for high-uncertainty queries. Our experiments show that GOA consistently achieves a favorable trade-off, outperforming baseline strategies in both accuracy and latency across varying user densities, and operates with practical computation time. These results establish GOA as a scalable and effective solution for LLM inference in MEC environments.",
+      "identifiers": [
+        "SemanticScholar:27e2d98e90c977074479388725d633912a1cf3e1"
+      ],
+      "semantic_scholar_id": "27e2d98e90c977074479388725d633912a1cf3e1",
+      "canonical_id": "arXiv:2602.07958",
+      "arxiv_id": "2602.07958",
+      "doi": "10.1109/GCWkshps68340.2025.11591100",
+      "authors": [
+        "Yumin Kim",
+        "Hyeonsu Lyu",
+        "Minjae Lee",
+        "H. Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 352,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SLMQuant: Benchmarking Small Language Model Quantization for Practical Deployment",
+      "source_url": "https://arxiv.org/abs/2511.13023",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "RichMediaGAI@MM",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite the growing interest in Small Language Models (SLMs) as resource-efficient alternatives to Large Language Models (LLMs), their deployment on edge devices remains challenging due to unresolved efficiency gaps in model compression. While quantization has proven effective for LLMs, its applicability to SLMs is significantly underexplored, with critical questions about differing quantization bottlenecks and efficiency profiles. This paper introduces SLMQuant, the first systematic benchmark for evaluating LLM compression techniques when applied to SLMs. Through comprehensive multi-track evaluations across diverse architectures and tasks, we analyze how state-of-the-art quantization methods perform on SLMs. Our findings reveal fundamental disparities between SLMs and LLMs in quantization sensitivity, demonstrating that direct transfer of LLM-optimized techniques leads to suboptimal results due to SLMs' unique architectural characteristics and training dynamics. We identify key factors governing effective SLM quantization and propose actionable design principles for SLM-tailored compression. SLMQuant establishes a foundational framework for advancing efficient SLM deployment on low-end devices in edge applications, and provides critical insights for deploying lightweight language models in resource-constrained scenarios.",
+      "identifiers": [
+        "SemanticScholar:6a4db355caf347db324143340750a28fc3b3a604"
+      ],
+      "semantic_scholar_id": "6a4db355caf347db324143340750a28fc3b3a604",
+      "canonical_id": "arXiv:2511.13023",
+      "arxiv_id": "2511.13023",
+      "doi": "10.1145/3746262.3761973",
+      "authors": [
+        "Jia-Ching Wang",
+        "Yejun Zeng",
+        "Jin-Yang Guo",
+        "Yuqing Ma",
+        "Ai-Shan Liu",
+        "Xiang-Long Liu"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 395,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.07958",
+      "identity_tokens": [
+        "id:DOI:10.1109/gcwkshps68340.2025.11591100",
+        "id:SemanticScholar:27e2d98e90c977074479388725d633912a1cf3e1",
+        "id:arXiv:2602.07958",
+        "title:accuracydelay tradeoff in llm offloading via tokenlevel uncertainty",
+        "url:https://arxiv.org/abs/2602.07958"
+      ],
+      "record": {
+        "title": "Accuracy-Delay Trade-Off in LLM Offloading via Token-Level Uncertainty",
+        "source_url": "https://arxiv.org/abs/2602.07958",
+        "year": 2025,
+        "published": "2025-12-08",
+        "venue": "2025 IEEE Globecom Workshops (GC Wkshps)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) offer significant potential for intelligent mobile services but are computationally intensive for resource-constrained devices. Mobile edge computing (MEC) allows such devices to offload inference tasks to edge servers (ESs), yet introduces latency due to communication and server-side queuing, especially in multi-user environments. In this work, we propose an uncertainty-aware offloading framework that dynamically decides whether to perform inference locally or offload it to the ES, based on token-level uncertainty and resource constraints. We define a margin-based token-level uncertainty metric and demonstrate its correlation with model accuracy. Leveraging this metric, we design a greedy offloading algorithm (GOA) that minimizes delay while maintaining accuracy by prioritizing offloading for high-uncertainty queries. Our experiments show that GOA consistently achieves a favorable trade-off, outperforming baseline strategies in both accuracy and latency across varying user densities, and operates with practical computation time. These results establish GOA as a scalable and effective solution for LLM inference in MEC environments.",
+        "identifiers": [
+          "SemanticScholar:27e2d98e90c977074479388725d633912a1cf3e1"
+        ],
+        "semantic_scholar_id": "27e2d98e90c977074479388725d633912a1cf3e1",
+        "canonical_id": "arXiv:2602.07958",
+        "arxiv_id": "2602.07958",
+        "doi": "10.1109/GCWkshps68340.2025.11591100",
+        "authors": [
+          "Yumin Kim",
+          "Hyeonsu Lyu",
+          "Minjae Lee",
+          "H. Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 352,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.13023",
+      "identity_tokens": [
+        "id:DOI:10.1145/3746262.3761973",
+        "id:SemanticScholar:6a4db355caf347db324143340750a28fc3b3a604",
+        "id:arXiv:2511.13023",
+        "title:slmquant benchmarking small language model quantization for practical deployment",
+        "url:https://arxiv.org/abs/2511.13023"
+      ],
+      "record": {
+        "title": "SLMQuant: Benchmarking Small Language Model Quantization for Practical Deployment",
+        "source_url": "https://arxiv.org/abs/2511.13023",
+        "year": 2025,
+        "published": "2025-10-26",
+        "venue": "RichMediaGAI@MM",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite the growing interest in Small Language Models (SLMs) as resource-efficient alternatives to Large Language Models (LLMs), their deployment on edge devices remains challenging due to unresolved efficiency gaps in model compression. While quantization has proven effective for LLMs, its applicability to SLMs is significantly underexplored, with critical questions about differing quantization bottlenecks and efficiency profiles. This paper introduces SLMQuant, the first systematic benchmark for evaluating LLM compression techniques when applied to SLMs. Through comprehensive multi-track evaluations across diverse architectures and tasks, we analyze how state-of-the-art quantization methods perform on SLMs. Our findings reveal fundamental disparities between SLMs and LLMs in quantization sensitivity, demonstrating that direct transfer of LLM-optimized techniques leads to suboptimal results due to SLMs' unique architectural characteristics and training dynamics. We identify key factors governing effective SLM quantization and propose actionable design principles for SLM-tailored compression. SLMQuant establishes a foundational framework for advancing efficient SLM deployment on low-end devices in edge applications, and provides critical insights for deploying lightweight language models in resource-constrained scenarios.",
+        "identifiers": [
+          "SemanticScholar:6a4db355caf347db324143340750a28fc3b3a604"
+        ],
+        "semantic_scholar_id": "6a4db355caf347db324143340750a28fc3b3a604",
+        "canonical_id": "arXiv:2511.13023",
+        "arxiv_id": "2511.13023",
+        "doi": "10.1145/3746262.3761973",
+        "authors": [
+          "Jia-Ching Wang",
+          "Yejun Zeng",
+          "Jin-Yang Guo",
+          "Yuqing Ma",
+          "Ai-Shan Liu",
+          "Xiang-Long Liu"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 395,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:73c645246b2d1484001b5bef398e15b7d7b3f90fa37e8aa73330b9f1b3c80ab8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
