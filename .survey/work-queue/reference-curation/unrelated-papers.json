@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-25T04:54:30+00:00",
-  "record_count": 15418,
+  "updated_at": "2026-11-25T04:59:40+00:00",
+  "record_count": 15420,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -216538,9 +216538,9 @@
       "identity_tokens": [
         "arXiv:2601.10926"
       ],
-      "reason": "社会科学者向けに開放性・フットプリント・学習データ等の観点から言語モデルの選び方と複製可能性の検証を論じる指針論文であり、推論システム技術への貢献はない。",
+      "reason": "This paper advises social scientists to start small and open when selecting among thousands of LLMs and to validate measures ex-post; usage guidance for a research community, not an inference contribution.",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -216552,9 +216552,9 @@
       "identity_tokens": [
         "arXiv:2603.08398"
       ],
-      "reason": "トークン条件付き生成でLLMの行動様式を推論時に切り替えられる可塑性を示し、それを強化学習で内面化するToCoRLを提案する研究で、対象は行動制御と学習であり推論効率化ではない。",
+      "reason": "Token-conditional generation exposes behavioral plasticity, switching LLMs between reasoning and direct answering at inference time, stabilized by RL; the phenomenon is behavioral control, not an inference-system efficiency or serving mechanism.",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -216580,9 +216580,9 @@
       "identity_tokens": [
         "arXiv:2506.14646"
       ],
-      "reason": "GuiLoMoは二段階最適化で学んだGuidedSelectionベクトルによりLoRA-MoEの層ごとのエキスパート数とランクを割り当てるファインチューニング手法であり、対象は学習時のパラメータ効率化で推論高速化ではない。",
+      "reason": "GuiLoMo allocates expert counts and LoRA ranks in LoRA-MoE fine-tuning via bilevel optimization; a parameter-efficient training method whose gains are in adaptation capacity, not inference execution.",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -216636,9 +216636,9 @@
       "identity_tokens": [
         "arXiv:2504.08112"
       ],
-      "reason": "タイトル自体が原子論的材料モデリング向けグラフニューラルネットのスケーリング則であり、異分野のモデル研究である。",
+      "reason": "Title explicitly limits the work to scaling laws of graph neural networks for atomistic materials modeling, a materials-science application, with no inference-system subject in the title.",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -216664,9 +216664,9 @@
       "identity_tokens": [
         "arXiv:2212.04114"
       ],
-      "reason": "タイトル自体がVision Transformer向けのグループ一般化平均プーリングであり、画像モデル内部の演算子研究でLLM推論ではない。",
+      "reason": "Group generalized mean pooling replaces class-token aggregation in vision transformers for image classification; a vision architecture detail with no LLM inference relevance.",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -217227,9 +217227,9 @@
       "identity_tokens": [
         "DOI:10.1109/itis59651.2023.10420049"
       ],
-      "reason": "インドネシア語向けに多言語T5を適応させる研究で、タイトル自体が特定言語へのモデル適応という応用課題を明示しており、推論システムの機構を扱わない。",
+      "reason": "This ITIS paper adapts multilingual T5 to Indonesian, duplicating the idT5 language-adaptation line of work; no inference-system content.",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -217311,9 +217311,9 @@
       "identity_tokens": [
         "arXiv:2606.22473"
       ],
-      "reason": "音声とテキストを交互配置した音声言語モデルについて、途中層で発話語に対応するテキストトークンが復号可能になる潜在転写現象を分析する機構解明研究であり、推論システムの効率化機構ではない。",
+      "reason": "Probing shows interleaved speech-text language models pass through a latent transcription phase in intermediate layers; an interpretability analysis of speech LMs with no inference-system content.",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -217346,20 +217346,6 @@
         "worker-worklist discovery_review"
       ],
       "title": "Zephon: Elastic Determinism for Online, Stateful Foundation Model Data Loading Pipelines"
-    },
-    "arXiv:2610.32389": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2610.32389",
-      "identity_tokens": [
-        "arXiv:2610.32389"
-      ],
-      "reason": "KnitTransはLLM強化学習におけるロールアウトから学習への軌跡転送を、ミニバッチ入場の調整やオンデマンドデータアクセスで協調させる学習システムであり、対象は学習側のパイプライン効率で、推論サービングではない。",
-      "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "title": "KnitTrans: Coordinated Trajectory Transfer for Effective and Efficient LLM Reinforcement Learning"
     },
     "DOI:10.1145/3711896.3736841": {
       "classification": "unrelated",
@@ -218279,9 +218265,9 @@
       "identity_tokens": [
         "arXiv:2610.21214"
       ],
-      "reason": "URWはルーブリック評価の基準別判定の不確実性を適合較正で重み付けし選好精度と下流RLの整合を改善するもので、対象はLLM出力の評価と報酬推定であり、推論・デコード・サービングのシステム機構への貢献はない。",
+      "reason": "Conformal weighting adds uncertainty estimates to rubric-based LLM-as-judge evaluation scores; an evaluation methodology paper with no inference-system contribution.",
       "first_checked_at": "2026-11-24T22:36:50+00:00",
-      "last_checked_at": "2026-11-24T22:36:50+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -218447,9 +218433,9 @@
       "identity_tokens": [
         "arXiv:2606.02947"
       ],
-      "reason": "タイトルが示す主題は、自己応答ブートストラップによる大規模視覚言語モデルのバックドア攻撃防御であり、モデルセキュリティ防御という応用課題が目的で、推論高速化やサービング機構への貢献はタイトル上確認できない。",
+      "reason": "BYORn detects semantically implausible poisoned responses to make supervised fine-tuning robust to backdoor attacks in vision-language models; a training-security defense with no inference contribution.",
       "first_checked_at": "2026-11-24T22:37:44+00:00",
-      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -218475,9 +218461,9 @@
       "identity_tokens": [
         "DOI:10.1145/3747291"
       ],
-      "reason": "タイトルが示す主題は、LLMを用いた高位合成（HLS）ディレクティブ設計最適化であり、電子設計自動化へのLLM応用が目的で、LLM自体の推論・サービング機構への貢献はタイトル上確認できない。",
+      "reason": "LLMs are used to optimize high-level synthesis directives for circuit design; an EDA application of LLMs as optimizers, with no inference-system contribution.",
       "first_checked_at": "2026-11-24T22:37:44+00:00",
-      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -221007,6 +220993,48 @@
         "worker-worklist discovery_review"
       ],
       "title": "Can We Optimize the Performance-Carbon Emission Break-Even Point?: The Quest for Greener LLMs"
+    },
+    "DOI:10.1109/cisat71030.2026.11682188": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cisat71030.2026.11682188",
+      "identity_tokens": [
+        "DOI:10.1109/cisat71030.2026.11682188"
+      ],
+      "reason": "Frequency-informed positional encoding improves transformer generalization for vessel trajectory prediction on AIS maritime data; a shipping-traffic application with no LLM inference relevance.",
+      "first_checked_at": "2026-11-25T04:59:39+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Frequency-Informed Positional Encoding: An Enhanced Transformer for Vessel Trajectory Prediction"
+    },
+    "arXiv:2604.06070": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06070",
+      "identity_tokens": [
+        "arXiv:2604.06070"
+      ],
+      "reason": "Long-context retrieval ability is distilled into students using only packed short-context samples via logit distillation and RoPE analysis; a training-side distillation recipe, with no inference-time mechanism, so unrelated under the training-only rule.",
+      "first_checked_at": "2026-11-25T04:59:39+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Short Data, Long Context: Distilling Positional Knowledge in Transformers"
+    },
+    "arXiv:2409.05587": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.05587",
+      "identity_tokens": [
+        "arXiv:2409.05587"
+      ],
+      "reason": "DSDFormer fuses transformer and Mamba features for driver distraction identification from vehicle imagery; an automotive safety application with no LLM inference relevance.",
+      "first_checked_at": "2026-11-25T04:59:39+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "DSDFormer: An Innovative Transformer-Mamba Framework for Robust High-Precision Driver Distraction Identification"
     }
   }
 }

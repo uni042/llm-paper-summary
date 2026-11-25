@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T04:54:30+00:00",
-  "record_count": 9066,
+  "updated_at": "2026-11-25T04:59:40+00:00",
+  "record_count": 9069,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -135511,9 +135511,9 @@
       "identity_tokens": [
         "arXiv:2506.00396"
       ],
-      "reason": "推測的報酬モデルは外部報酬割当器で最適行動を予測し推測的検証で劣る選択肢を剪定してLLMの意思決定探索を安価にする枠組みだが、対象はエージェント的探索戦略の費用対効果でありトークン生成の投機的デコードやサービング機構ではない。",
+      "reason": "A speculative reward model accelerates LLM decision-making search by cheaply estimating rewards before full evaluation; speculation is applied to reward estimation for agent decisions, not token decoding, so the inference-system link is indirect and borderline.",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135556,9 +135556,9 @@
       "identity_tokens": [
         "arXiv:2510.19871"
       ],
-      "reason": "ReDiffは視覚言語拡散モデルの並列復号で初期トークン誤りが連鎖する学習・推論乖離に対し、合成誤りの修正を学ばせる二段階学習で自己修正能力を持たせる枠組みで、対処はモデル学習側であり推論時の復号システム機構ではない。",
+      "reason": "A corrective framework reframes vision-language diffusion generation from denoising to refining to stop error cascades in parallel decoding; decoding behavior of multimodal diffusion models, adjacent to but outside LLM inference systems, hence borderline.",
       "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135834,21 +135834,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Optimizing Large Language Models: Metrics, Energy Efficiency, and Case Study Insights"
-    },
-    "arXiv:2604.06070": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2604.06070",
-      "identity_tokens": [
-        "arXiv:2604.06070"
-      ],
-      "reason": "短い文脈サンプルだけを詰めた学習で位置知識を蒸留し、長文脈検索能力を学生モデルへ移すことで長文脈事前学習を回避する研究で、長文脈推論を可能にする前提技術ではあるが、機構の中心は蒸留による学習手順であり推論システムへの直接の貢献は間接的である。",
-      "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Short Data, Long Context: Distilling Positional Knowledge in Transformers"
     },
     "SemanticScholar:eee8027bfe01c4a0de2531a49d962d0617ebe9b9": {
       "classification": "borderline",
@@ -136637,9 +136622,9 @@
       "identity_tokens": [
         "arXiv:2608.07631"
       ],
-      "reason": "PACEは全二重音声対話でクライアントの再生境界にモデル側文脈を錨付けし、割り込み後に未再生の応答を文脈から除く提供者非依存ミドルウェアだが、対象は対話整合性の回復であり、生成の高速化やサービング資源効率への直接の貢献は示されていない。",
+      "reason": "PACE is provider-independent middleware that anchors the model-facing context of full-duplex voice services to the client playback boundary; a serving-layer context management idea for voice dialogue, but narrow and unvalidated as a general inference system, so borderline.",
       "first_checked_at": "2026-11-24T22:36:50+00:00",
-      "last_checked_at": "2026-11-24T22:36:50+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -138897,6 +138882,66 @@
       ],
       "borderline_recheck_count": 0,
       "title": "LSTM-Style Looped Transformers with Shared KV Caches"
+    },
+    "arXiv:2401.16367": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.16367",
+      "identity_tokens": [
+        "arXiv:2401.16367"
+      ],
+      "reason": "TQCompressor improves Kronecker tensor decomposition via permutations to compress GPT-2 with less expressivity loss; a generic model-compression study on a small legacy model, with limited evidence as an LLM inference contribution, hence borderline.",
+      "first_checked_at": "2026-11-25T04:59:39+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TQCompressor: Improving Tensor Decomposition Methods in Neural Networks Via Permutations"
+    },
+    "DOI:10.1145/3802095": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3802095",
+      "identity_tokens": [
+        "DOI:10.1145/3802095"
+      ],
+      "reason": "OctoSelector clusters queries by difficulty-aware representations and selects LLMs per batch under accuracy, latency and cost constraints; batch-aware model selection is serving-adjacent routing, but framed as a selection framework rather than a serving system, so borderline.",
+      "first_checked_at": "2026-11-25T04:59:39+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OctoSelector: Efficient and Effective Batch-Aware Model Selection for Large Language Models"
+    },
+    "arXiv:2610.01192": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01192",
+      "identity_tokens": [
+        "arXiv:2610.01192"
+      ],
+      "reason": "FlashBack decides when streaming vision-language models should retrieve historical memory under a bounded compute budget; memory-access gating for streaming VLM perception is inference-adjacent, but tied to a video application, hence borderline.",
+      "first_checked_at": "2026-11-25T04:59:39+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlashBack: Knowing When to Remember in Streaming Vision-Language Models"
+    },
+    "arXiv:2610.32389": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.32389",
+      "identity_tokens": [
+        "arXiv:2610.32389"
+      ],
+      "reason": "KnitTrans coordinates trajectory transfer from rollout to training in LLM RL, reducing staleness from disaggregated pipelining and redundant data movement; RL training-system efficiency where generation is a component, but the target is training throughput, so borderline.",
+      "first_checked_at": "2026-11-25T04:59:39+00:00",
+      "last_checked_at": "2026-11-25T04:59:39+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KnitTrans: Coordinated Trajectory Transfer for Effective and Efficient LLM Reinforcement Learning"
     }
   }
 }
