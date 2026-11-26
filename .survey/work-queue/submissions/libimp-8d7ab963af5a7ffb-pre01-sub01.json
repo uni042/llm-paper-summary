@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MTServe: Efficient Serving for Generative Recommendation Models with Hierarchical Caches",
+      "source_url": "https://arxiv.org/abs/2604.22881",
+      "year": 2026,
+      "published": "2026-04-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generative recommendation (GR) offers superior modeling capabilities but suffers from prohibitive inference costs due to the repeated encoding of long user histories. While cross-request Key-Value (KV) cache reuse presents a significant optimization opportunity, the massive scale of individual user states creates a storage explosion that far exceeds physical GPU limits. We propose MTServe, a hierarchical cache management system that virtualizes GPU memory by leveraging host RAM as a scalable backup store. To bridge the I/O gap between tiers, MTServe introduces a suite of system-level optimizations, including a hybrid storage layout, an asynchronous data transfer pipeline, and a locality-driven replacement policy. On both public and production datasets, MTServe delivers up to 3.1* speedup while maintaining near-perfect hit ratios (>98.5%).",
+      "identifiers": [
+        "SemanticScholar:2dd9a6f2fcbdfbc3051862d8bade9c9b7e052a23"
+      ],
+      "semantic_scholar_id": "2dd9a6f2fcbdfbc3051862d8bade9c9b7e052a23",
+      "canonical_id": "arXiv:2604.22881",
+      "arxiv_id": "2604.22881",
+      "doi": "10.48550/arXiv.2604.22881",
+      "authors": [
+        "Xin Wang",
+        "Chi Ma",
+        "Shao-nan Chen",
+        "Pu Wang",
+        "Meng Zhou",
+        "Jun-Yi Qiu",
+        "Qiao-Rui Chen",
+        "Jiayu Sun",
+        "Shijie Liu",
+        "Ze-Huan Wang",
+        "Lei Yu",
+        "Chuan Liu",
+        "Fei Jiang",
+        "Wei Lin",
+        "Hao Wang",
+        "Jia-Wei Jiang",
+        "Xiao Yan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨でユーザ履歴のKVキャッシュをホストRAMへ階層化する生成推薦サービングMTServeが確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8d7ab963af5a",
+    "round": "libimp-8d7ab963af5a7ffb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8d7ab963af5a7ffb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8d7ab963af5a7ffb-pre01.json",
+    "receipt": "sha256:8c3b2a37ae64d057dd4c6a7c3de90a284558084dd26f8125eda54d443aaf8f3d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8d7ab963af5a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FlashSloth: Lightning Multimodal Large Language Models via Embedded Visual Compression",
+      "source_url": "https://arxiv.org/abs/2412.04317",
+      "year": 2024,
+      "published": "2024-12-05",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite a big leap forward in capability, multimodal large language models (MLLMs) tend to behave like a sloth in practical use, i.e., slow response and large latency. Recent efforts are devoted to building tiny MLLMs for better efficiency, but the plethora of visual tokens still used limit their actual speedup. In this paper, we propose a powerful and fast tiny MLLM called FlashSloth. Different from previous efforts, FlashSloth focuses on improving the descriptive power of visual tokens in the process of compressing their redundant semantics. In particular, FlashSloth introduces embedded visual compression designs to capture both visually salient and instruction-related image information, so as to achieving superior multimodal performance with fewer visual tokens. Extensive experiments are conducted to validate the proposed FlashSloth, and a bunch of tiny but strong MLLMs are also comprehensively compared, e.g., InternVL2, MiniCPM-V2 and Qwen2-VL. The experimental results show that compared with these advanced tiny MLLMs, our FlashSloth can greatly reduce the number of visual tokens, training memory and computation complexity while retaining high performance on various VL tasks. Our code is released at: https://github.com/codefanw/FlashSloth.",
+      "identifiers": [
+        "SemanticScholar:3e12f0356f6a24fc97e1541f881003f8c0515094"
+      ],
+      "semantic_scholar_id": "3e12f0356f6a24fc97e1541f881003f8c0515094",
+      "canonical_id": "arXiv:2412.04317",
+      "arxiv_id": "2412.04317",
+      "doi": "10.1109/CVPR52734.2025.01358",
+      "authors": [
+        "Bo-Yuan Tong",
+        "Bo-Cheng Lai",
+        "Yi-Yi Zhou",
+        "Gen Luo",
+        "Yun-Hang Shen",
+        "Ke Li",
+        "Xiao-Shuai Sun",
+        "Rong-Rong Ji"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 721,
+        "matched_prestigious_venue": null
+      },
+      "reason": "小型MLLM FlashSlothは視覚トークンの埋め込み型圧縮で記述力を保ちながら視覚トークン数を減らし応答遅延を下げる、マルチモーダルLLM推論効率化の直接手法である",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AMBER: A Unified Accelerator for Multi-Precision LLM Inference Exploiting Bit-Level Redundancy and Reconfigurability",
+      "source_url": "https://doi.org/10.1145/3770743.3804004",
+      "year": 2026,
+      "published": "2026-07-26",
+      "venue": "Design Automation Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern LLMs use diverse integer, floating-point, and microscaling (MX) precisions, but most accelerators are optimized for only a few formats. We propose AMBER, a general-purpose LLM accelerator for plug-and-play multi-precision deployment and compression of weights and KV caches in cloud and edge. AMBER introduces bit-transposed encoding that exploits bit-level statistical concentration for lossless compression across all of INT, FP, and MX formats. A precision-agnostic, stage-pipelined bit-serial PE further reuses bit-level redundancy for efficient versatile precision computation. Evaluated on 8 LLMs and 10 formats, AMBER boosts memory efficiency 1.17 x and compute 3.16x, surpassing Olive and Tender in throughput and energy.",
+      "identifiers": [
+        "SemanticScholar:2ab815d9ccd996566eddd2eb72b481d13945d61f"
+      ],
+      "semantic_scholar_id": "2ab815d9ccd996566eddd2eb72b481d13945d61f",
+      "doi": "10.1145/3770743.3804004",
+      "canonical_id": "DOI:10.1145/3770743.3804004",
+      "authors": [
+        "Yu-Bin Qin",
+        "Yang Wang",
+        "Zhi-Wei Lin",
+        "Yu-Shu Zhao",
+        "Xiao-Long Yang",
+        "Zhi-Heng Yue",
+        "Hui-Ming Han",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 123,
+        "matched_prestigious_venue": null
+      },
+      "reason": "多精度LLM推論アクセラレータAMBERはビット転置符号化で重みとKVキャッシュを可逆圧縮しビットシリアルPEで多様な数値形式に対応する推論ハードウェアの直接貢献である",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-00a2a51abfd2",
+    "round": "libimp-00a2a51abfd2c570-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-00a2a51abfd2c570-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-00a2a51abfd2c570-pre01.json",
+    "receipt": "sha256:2d884b1494debaa0faba9ab8d3a1ebba5b6e7e020b1a886076871a9ff4562804"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-00a2a51abfd2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Correlation-Aware Structured Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.22131",
+      "year": 2026,
+      "published": "2026-08-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning is a promising approach for reducing the substantial inference costs of Large Language Models (LLMs) while maintaining hardware efficiency. Many existing methods assess the importance of prunable units (e.g., channels or heads) in isolation, implicitly assuming that pruning errors are additive. This independence assumption is often invalidated by the non-orthogonality of model weights and strong correlations between unit activations, potentially leading to performance degradation. To address this, we propose a Correlation-Aware Structured Pruning method. We formulate the pruning objective as a cardinality-constrained binary quadratic program that explicitly models cross-unit dependencies in the reconstruction error. Since this binary quadratic program is NP-hard and difficult to solve exactly, we develop a greedy interaction algorithm based on dependency-aware marginal costs to optimize unit selection. Furthermore, we incorporate a gradient-based strategy to achieve adaptive layer-wise sparsity allocation across the entire model. Extensive experiments on mainstream LLMs demonstrate that incorporating correlation information yields competitive accuracy-efficiency trade-offs compared to representative structured pruning baselines.",
+      "identifiers": [
+        "SemanticScholar:3cf0199b15b46287686be154d7d2c0e6055c3a93"
+      ],
+      "semantic_scholar_id": "3cf0199b15b46287686be154d7d2c0e6055c3a93",
+      "canonical_id": "arXiv:2609.22131",
+      "arxiv_id": "2609.22131",
+      "doi": "10.48550/arXiv.2609.22131",
+      "authors": [
+        "Si-Cheng Xu",
+        "Hao Shi",
+        "Wei Zhang",
+        "Hao-Ran Pang",
+        "Zhenyu Ming",
+        "Hao Wu",
+        "Zhong-Yi Huang",
+        "Xin Yao",
+        "Gong Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 95,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨で単位間相関を考慮した基数制約付き最適化によるLLM構造化プルーニングが確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0a2f98623cb0",
+    "round": "libimp-0a2f98623cb09c64-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0a2f98623cb09c64-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0a2f98623cb09c64-pre01.json",
+    "receipt": "sha256:5ff43662f4fdb9f445b50f8dddc964200900fa950352f5e3d04444d747684348"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0a2f98623cb0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

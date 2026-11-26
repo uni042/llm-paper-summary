@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d03-b02::provider-gap",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 1,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.16162",
+      "identity_tokens": [
+        "arXiv:2505.16162"
+      ],
+      "title": "KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization",
+      "reason": "一次要旨で近傍層集合の最適化でドメイン偏移に強くする動的自己投機的デコードKNN-SSDが確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "source_url": "https://arxiv.org/abs/2505.16162",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 1
+    }
+  ],
+  "parent_run_key": "muse-20261126-d03-b02",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261126-0730-muse-d03-b02--chunk-0002-of-0003.json",
+  "provider_gap_ids": [
+    "arXiv:2505.16162"
+  ]
+}

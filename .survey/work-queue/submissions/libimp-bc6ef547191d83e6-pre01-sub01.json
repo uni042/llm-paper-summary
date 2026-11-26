@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Locality Matters for Training-Free Audio Token Compression in Audio-Language Models",
+      "source_url": "https://arxiv.org/abs/2605.25179",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Audio-language models (ALMs) are increasingly used for audio captioning, question answering, and open-ended audio understanding, but their inference cost remains high when audio inputs are represented as long prefix-token sequences. These audio prefixes consume context budget, increase memory usage, and make deployment harder in resource-constrained or latency-sensitive settings. Existing training-free audio-token reduction methods mainly rely on fixed pooling or score-based pruning. Fixed pooling is content-agnostic, while score-based pruning can preserve isolated salient tokens but discard nearby acoustic context. We propose Local Temporal Bipartite Merging (LTBM), a training-free encoder-space compression method that merges similar nearby audio tokens under an explicit temporal window constraint. Beyond introducing LTBM, we use a controlled Global Merge variant to isolate whether temporal locality itself is a useful inductive bias for audio-token compression. Experiments on AudioCaps, Clotho, and MMAU with Qwen2-Audio show evidence of a task-dependent locality effect: locality-aware merging is more favorable for captioning at several compression settings, especially under stronger compression, while global matching is more competitive for multiple-choice audio understanding. A cross-backbone validation on Audio Flamingo 3 further supports the captioning-side advantage of locality-aware merging under moderate and aggressive compression.",
+      "identifiers": [
+        "SemanticScholar:15bf86a76882a1806c1663238939e076ef6af664"
+      ],
+      "semantic_scholar_id": "15bf86a76882a1806c1663238939e076ef6af664",
+      "canonical_id": "arXiv:2605.25179",
+      "arxiv_id": "2605.25179",
+      "doi": "10.48550/arXiv.2605.25179",
+      "authors": [
+        "Jia-Le Luo",
+        "Xiao-Yu Liang",
+        "Hao-Ji Hu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 186,
+        "matched_prestigious_venue": null
+      },
+      "reason": "音声言語モデルの長い音声プレフィックストークンをlocalityに基づいて学習不要で圧縮し、コンテキスト予算とメモリ使用を減らして推論コストを下げる直接の推論効率化手法である",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Outlier-aware Low-bit Quantization for LLM-based TTS: DuQuant MLP-only W4A8 Quantization on TTS Model",
+      "source_url": "https://doi.org/10.1109/EECT68756.2026.11517795",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "2026 6th International Conference on Advances in Electrical, Electronics and Computing Technology (EECT)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) backbones are increasingly incorporated into speech generation pipelines to improve robustness and expressive prosody, yet deployment remains constrained by GPU memory footprint and inference cost. Lowbit quantization is a widely adopted compression technique for resource-efficient AI; however, most studies evaluate LLM quantization primarily on language modeling or NLP benchmarks, leaving its transferability to end-to-end text-to-speech (TTS) insufficiently understood. In this paper, we extend DuQuant—a low-bit quantization method originally proposed for LLMs—to an LLM-based TTS system (CosyVoice3-0.5B), and empirically evaluate how low-bit perturbations propagate to intelligibility and perceptual attributes. We integrate DuQuant into all Transformer MLP linear layers (gate/up/down projections) of the CosyVoice30.5B LLM component while keeping attention and non-LLM components in FP16, and adopt a W4A8 fake-quantization setting (quantize-dequantize simulation) to study numerical effects without integer kernels. We conduct (i) layer-wise sensitivity scanning using cosine similarity/MSE/max-absolute error between quantized and FP16 activations, and (ii) end-to-end TTS evaluation aligned with CV3-Eval metrics: CER (content fidelity), speaker similarity (SS), and DNSMOS (perceptual quality). On the Chinese (zh) subset with 500 samples runs, MLP-only W4A8 fake quantization increases CER from $3.717 \\pm 0.166 \\%$ (FP16 Baseline) to $\\mathbf{4. 3 2 3} \\pm \\mathbf{0. 1 3 3 \\%}$, while SS and DNSMOS remain nearly unchanged. These results suggest that DuQuant-style MLP quantization can be transferred to TTS with limited impact on speaker identity and perceived quality, but content fidelity is more sensitive and may require selective mixed precision. Finally, we discuss the limitation that fake quantization does not provide real acceleration without integer GEMM kernels and outline a path toward deployable INT-kernel inference.",
+      "identifiers": [
+        "SemanticScholar:cfabc30975fe469e4cf295a53b942d900a98dfee"
+      ],
+      "semantic_scholar_id": "cfabc30975fe469e4cf295a53b942d900a98dfee",
+      "doi": "10.1109/EECT68756.2026.11517795",
+      "canonical_id": "DOI:10.1109/EECT68756.2026.11517795",
+      "authors": [
+        "Xiu-Yu Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 244,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMバックボーンを持つTTSモデルへDuQuantを拡張しMLPのみW4A8の外れ値認識低ビット量子化でGPUメモリと推論コストを削減する、LLM量子化の推論適用として直接関係する",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Strait: Perceiving Priority and Interference in ML Inference Serving",
+      "source_url": "https://arxiv.org/abs/2604.28175",
+      "year": 2026,
+      "published": "2026-04-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Machine learning (ML) inference serving systems host deep neural network (DNN) models and schedule incoming inference requests across deployed GPUs. However, limited support for task prioritization and insufficient latency estimation under concurrent execution may restrict their applicability in on-premises scenarios. We present \\emph{Strait}, a serving system designed to enhance deadline satisfaction for dual-priority inference traffic under high GPU utilization. To improve latency estimation, Strait models potential contention during data transfer and accounts for kernel execution interference through an adaptive prediction model. By drawing on these predictions, it performs priority-aware scheduling to deliver differentiated handling. Evaluation results under intense workloads suggest that Strait reduces deadline violations for high-priority tasks by 1.02 to 11.18 percentage points while incurring acceptable costs on low-priority tasks. Compared to software-defined preemption approaches, Strait also exhibits more equitable performance.",
+      "identifiers": [
+        "SemanticScholar:270a90fd24661b33501699493ecf3273f8cd427d"
+      ],
+      "semantic_scholar_id": "270a90fd24661b33501699493ecf3273f8cd427d",
+      "canonical_id": "arXiv:2604.28175",
+      "arxiv_id": "2604.28175",
+      "doi": "10.48550/arXiv.2604.28175",
+      "authors": [
+        "Haidong Zhao",
+        "N. Georgantas"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ML推論サービングStraitは二優先度トラフィックに対しデータ転送競合とカーネル干渉をモデル化して遅延推定し締切満足を高める、推論サービングのスケジューリングへの直接貢献である",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VPRune: Efficient Training-free Pre-LLM Visual Token Pruning",
+      "source_url": "https://arxiv.org/abs/2609.24485",
+      "year": 2026,
+      "published": "2026-09-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning is a promising approach to reducing the inference cost of large vision-language models (LVLMs), yet aggressive token reduction often causes substantial performance degradation. We identify three key factors behind this degradation: text-guided selection bias, information loss from discarded tokens, and positional distortion caused by sequence compaction. Based on these observations, we propose \\textbf{VPRune}, a training-free pre-LLM pruning framework consisting of visual-only diversity selection, similarity-guided token recycling, and position-preserving restoration. Experiments on FastVLM-1.5B across multiple vision-language benchmarks demonstrate that VPRune achieves a favorable accuracy--compression trade-off, with particularly pronounced advantages under aggressive compression. Furthermore, evaluations on edge-device show that VPRune effectively reduces end-to-end inference latency while maintaining superior task performance, demonstrating its practicality for resource-constrained LVLM deployment.",
+      "identifiers": [
+        "SemanticScholar:abcacc5f990610ea511c80381d696fae0c0830b2"
+      ],
+      "semantic_scholar_id": "abcacc5f990610ea511c80381d696fae0c0830b2",
+      "canonical_id": "arXiv:2609.24485",
+      "arxiv_id": "2609.24485",
+      "doi": "10.48550/arXiv.2609.24485",
+      "authors": [
+        "Guang-Chuan Lv",
+        "Dian-Xing Shi",
+        "Ding-Jie Fu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 66,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LVLMの視覚トークン剪定VPRuneは多様性選択・類似度によるトークン再生・位置保存復元で学習不要にプレLLM段階の推論コストを削減する直接の推論効率化である",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SpectrumQuant: Spectrum Alignment for LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2610.20303",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Orthogonal transforms have emerged as an effective tool for low-bit quantization of large language models (LLMs), as they reshape activation distributions without changing the underlying model function. Existing approaches typically rely either on fixed data-agnostic transforms, such as Hadamard rotations, or on calibration-time optimization of learned rotations. We study rotation selection from first principles and show that maximizing covariance leads to spectral alignment and provides a principled criterion for constructing quantization-friendly orthogonal transforms. Based on this insight, we propose SpectrumQuant, a closed-form rotation method that estimates activation covariance from calibration data and uses it to construct a covariance-aware orthogonal transform for post-training quantization. Our formulation characterizes quantization-friendly rotations as compositions of alignment and mixing components, while recovering Hadamard matrices as a special case. Interestingly, a class of butterfly matrices belongs to this category. In the realm of LLM quantization, SpectrumQuant bridges the gap between data-agnostic structured rotations and learned rotations, providing an effective and efficient data-aware alternative for post-training quantization. Experiments on Llama and Mistral models show that SpectrumQuant is competitive with state-of-the-art rotation strategies while requiring less than one-third of the GPU memory and significantly less time than learned rotations approaches like SpinQuant and DartQuant.",
+      "identifiers": [
+        "SemanticScholar:0f4aa696514cb2eea222cd84e6d4a7669e066a80"
+      ],
+      "semantic_scholar_id": "0f4aa696514cb2eea222cd84e6d4a7669e066a80",
+      "canonical_id": "arXiv:2610.20303",
+      "arxiv_id": "2610.20303",
+      "authors": [
+        "Dwaipayan Haldar",
+        "I. Patra",
+        "Azhar Yousuf",
+        "C. Seelamantula"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM量子化SpectrumQuantは共分散最大化によるスペクトル整合で直交変換を原理的に構成し低ビット量子化の精度を保つ、LLM推論向け量子化への直接貢献である",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-bc6ef547191d",
+    "round": "libimp-bc6ef547191d83e6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-bc6ef547191d83e6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-bc6ef547191d83e6-pre01.json",
+    "receipt": "sha256:b9cdcf8ca5e9ec6c8c5016e4dab6c62e568729c3204e3345ca2d24056e47c7a8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-bc6ef547191d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

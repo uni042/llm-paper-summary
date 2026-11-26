@@ -1,0 +1,72 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-d04-b04::provider-gap",
+  "reference_main_sha": "3de229be1cf9216f77297d664df885b3fab43f2a",
+  "record_count": 3,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE64628.2025.10992781",
+      "identity_tokens": [
+        "DOI:10.23919/DATE64628.2025.10992781"
+      ],
+      "title": "EVASION: Efficient KV CAche CompreSsion vIa PrOduct QuaNtization",
+      "reason": "長文脈LLM推論で線形に増えるKVキャッシュを積量子化で低ビット化し、疎計算と非同期量子化を備えたGPU推論フレームワークまで実装するEVASIONは、KVキャッシュ圧縮という推論メモリ機構への直接貢献が確認できるため採用とした。",
+      "source_url": "https://doi.org/10.23919/DATE64628.2025.10992781",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 288
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.01704",
+      "identity_tokens": [
+        "arXiv:2611.01704"
+      ],
+      "title": "MatMoE: Matryoshka Mixture-of-Experts with Dynamic Mixed-Precision Quantization for Efficient Inference",
+      "reason": "MoE推論で専門家の重要度と遅延制約に応じてビット幅をデコード中に動的割当てするMatMoEをllama.cpp上に実装し高速化を示しており、MoEの混合精度量子化による推論効率化への直接貢献が確認できるため採用とした。",
+      "source_url": "https://arxiv.org/abs/2611.01704",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 289
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20481",
+      "identity_tokens": [
+        "arXiv:2607.20481"
+      ],
+      "title": "Routing Without Training: Controllable-Ratio LLM Offloading via Reliability Gating",
+      "reason": "ローカルLLMのサンプル間一致度を信頼度信号としてクラウドへオフロードするか判定する学習不要ルーティングCARGOにより、任意の協調比率でローカル・クラウド協調推論を制御できる直接の推論配置貢献が確認できるため採用とした。",
+      "source_url": "https://arxiv.org/abs/2607.20481",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T07:30:00+09:00",
+      "last_checked_at": "2026-11-26T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 291
+    }
+  ],
+  "parent_run_key": "muse-20261126-d04-b04",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 29,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261126-0730-muse-d04-b04--chunk-0001-of-0002.json",
+  "provider_gap_ids": [
+    "DOI:10.23919/date64628.2025.10992781",
+    "arXiv:2607.20481",
+    "arXiv:2611.01704"
+  ]
+}
