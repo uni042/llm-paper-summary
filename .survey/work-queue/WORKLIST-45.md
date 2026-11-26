@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-25T22:49:19+00:00`
+Generated: `2026-11-26T00:37:55+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -154,7 +154,7 @@ ready総数: **371** / 未claim総数: **371** / このworker向け: **123**
 | 4 | 10 | 6 | 6 | arXiv:2611.02966 | SHq: Learnable Grids for LLM Weight Quantization | 2026-11-02 |  | 0 | 6 |  | [source](https://arxiv.org/abs/2611.02966) |
 | 5 | 0 | 5 | 7 | SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3 | Dependency-Aware Semi-Structured Sparsity: Declining Roles of Outliers in Pruning GLU-based LLMs |  |  | 0 | 7 | 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://www.semanticscholar.org/paper/4a222a27a944539c5ffbb4cc44cf7de5663b57d3) |
 | 6 | 102 | 4 | 4 | arXiv:2610.07716 | JevCascade: Readout Stability and Inference-Time Compute Allocation for Prefill-Only Decision Models | 2026-10-06 |  | 2 | 4 |  | [source](https://arxiv.org/abs/2610.07716) |
-| 7 | 3 | 3 | 5 | arXiv:2510.10623 | ADiP: Adaptive-Precision Systolic Array for Matrix Multiplication Acceleration | 2025-10-12 | IEEE Open Journal of the Solid-State Circuits Society | 3 | 5 | post-training quantization / second-order compression / weight-only LLM inference, survey-transformer-compression-inference | [source](https://arxiv.org/abs/2510.10623) |
+| 7 | 4 | 3 | 5 | arXiv:2510.10623 | ADiP: Adaptive-Precision Systolic Array for Matrix Multiplication Acceleration | 2025-10-12 | IEEE Open Journal of the Solid-State Circuits Society | 4 | 5 | post-training quantization / second-order compression / weight-only LLM inference, survey-transformer-compression-inference | [source](https://arxiv.org/abs/2510.10623) |
 | 8 | 17 | 3 | 3 | arXiv:2410.10101 | Learning Linear Attention in Polynomial Time | 2024-10-14 | Neural Information Processing Systems | 7 | 3 | 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2410.10101) |
 | 9 | 3 | 3 | 3 | SemanticScholar:2cb38ec656450864e126d0662cbf34a37387bd3e | Sparsifying Transformer Models with Differentiable Representation Pooling | 2020-09-10 | arXiv.org | 3 | 3 | sparse attention / long-context Transformer | [source](https://www.semanticscholar.org/paper/2cb38ec656450864e126d0662cbf34a37387bd3e) |
 | 10 | 19 | 3 | 3 | arXiv:2502.02869 | Towards Large-Scale In-Context Reinforcement Learning by Meta-Training in Randomized Worlds | 2025-02-05 | Neural Information Processing Systems | 9 | 4 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2502.02869) |

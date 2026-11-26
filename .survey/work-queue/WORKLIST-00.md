@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-25T22:49:19+00:00`
+Generated: `2026-11-26T00:37:55+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -171,7 +171,7 @@ ready総数: **371** / 未claim総数: **371** / このworker向け: **124**
 | 20 | 10 | 2 | 4 | arXiv:2607.20806 | Profiling Lightweight Large Language Models | 2026-07-23 | arXiv.org | 0 | 4 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, survey-edge-llm | [source](https://arxiv.org/abs/2607.20806) |
 | 21 | 101 | 2 | 4 | arXiv:2604.04701 | MUXQ: Mixed-to-Uniform Precision MatriX Quantization via Low-Rank Outlier Decomposition | 2026-04-06 | arXiv.org | 1 | 4 | kv-cache-memory | [source](https://arxiv.org/abs/2604.04701) |
 | 22 | 292 | 2 | 4 | SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14 | PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination | 2020-01-24 | International Conference on Machine Learning | 282 | 4 |  | [source](https://www.semanticscholar.org/paper/94f94e8892261d0377159379ca5a166ceae19a14) |
-| 23 | 3 | 2 | 3 | DOI:10.3390/fractalfract9120767 | Fractal-Guided Token Pruning for Efficient Vision Transformers | 2025-11-25 | Fractal and Fractional | 3 | 3 | sparse attention / long-context Transformer | [source](https://doi.org/10.3390/fractalfract9120767) |
+| 23 | 4 | 2 | 3 | DOI:10.3390/fractalfract9120767 | Fractal-Guided Token Pruning for Efficient Vision Transformers | 2025-11-25 | Fractal and Fractional | 4 | 3 | sparse attention / long-context Transformer | [source](https://doi.org/10.3390/fractalfract9120767) |
 | 24 | 10 | 2 | 3 | DOI:10.1145/3820171.3806907 | Characterizing Performance–Energy Trade-offs of Large Language Models in Multi-Request Workflows | 2026-06-08 | ACM SIGMETRICS Performance Evaluation Review | 0 | 4 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3820171.3806907) |
 | 25 | 22 | 2 | 3 | DOI:10.1109/ICECET63943.2025.11471912 | Machine Translation for Long Sequences with Enhanced Attention Mechanisms | 2025-07-03 | 2025 5th International Conference on Electrical, Computer and Energy Technologies (ICECET) | 22 | 3 |  | [source](https://doi.org/10.1109/ICECET63943.2025.11471912) |
 | 26 | 42 | 2 | 3 | DOI:10.1007/s10115-022-01783-5 | Deep learning-based question answering: a survey | 2022-12-30 | Knowledge and Information Systems | 42 | 3 |  | [source](https://doi.org/10.1007/s10115-022-01783-5) |
