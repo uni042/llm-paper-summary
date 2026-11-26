@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Archon: An Architecture Search Framework for Inference-Time Techniques",
+      "source_url": "https://arxiv.org/abs/2409.15254",
+      "year": 2024,
+      "published": "2024-09-23",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 67,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference-time techniques, such as repeated sampling or iterative revisions, are emerging as powerful ways to enhance large-language models (LLMs) at test time. However, best practices for developing systems that combine these techniques remain underdeveloped due to our limited understanding of the utility of each technique across models and tasks, the interactions between them, and the massive search space for combining them. To address these challenges, we introduce Archon, a modular and automated framework for optimizing the process of selecting and combining inference-time techniques and LLMs. Given a compute budget and a set of available LLMs, Archon explores a large design space to discover optimized configurations tailored to target benchmarks. It can design custom or general-purpose architectures that advance the Pareto frontier of accuracy vs. maximum token budget compared to top-performing baselines. Across instruction-following, reasoning, and coding tasks, we show that Archon can leverage additional inference compute budget to design systems that outperform frontier models such as OpenAI's o1, GPT-4o, and Claude 3.5 Sonnet by an average of 15.1%.",
+      "identifiers": [
+        "SemanticScholar:a23f691774c794d53720bcb87a66092f53b556cf"
+      ],
+      "semantic_scholar_id": "a23f691774c794d53720bcb87a66092f53b556cf",
+      "canonical_id": "arXiv:2409.15254",
+      "arxiv_id": "2409.15254",
+      "doi": "10.48550/arXiv.2409.15254",
+      "authors": [
+        "Jon Saad-Falcon",
+        "Adrian Gamarra Lafuente",
+        "Shlok Natarajan",
+        "Nahum Maru",
+        "Hristo Todorov",
+        "E. Guha",
+        "E. K. Buchanan",
+        "Mayee Chen",
+        "Neel Guha",
+        "Christopher Ré",
+        "Azalia Mirhoseini"
+      ],
+      "priority": 77,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 67,
+        "citation_count": 67,
+        "total": 77,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 794,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "Archonは反復サンプリング等のinference-time techniquesとLLMの組合せを計算予算の下で自動探索し、トークン予算対精度のPareto frontierを前進させる推論時システム設計フレームワークを直接提案している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-be3ec97e9b65",
+    "round": "libimp-be3ec97e9b65dc6c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-be3ec97e9b65dc6c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-be3ec97e9b65dc6c-pre01.json",
+    "receipt": "sha256:960bd7a3d85ca7b3994fbaf46ef8a0dbf0f1107a13dd91bf30e31f8e2ca610fa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-be3ec97e9b65",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

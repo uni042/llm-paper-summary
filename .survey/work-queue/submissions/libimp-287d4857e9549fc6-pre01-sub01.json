@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Melhorando a Eficiência Energética na Execução de LLMs via Controle de Potência de GPUs Orientado por SLAs",
+      "source_url": "https://doi.org/10.5753/sbrc.2026.19707",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "Brazilian Symposium on Computer Networks and Distributed Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serviços de inferência de LLMs apresentam elevado consumo energético em GPUs e operam sob SLAs exigentes. Este trabalho propõe um algoritmo adaptativo e reativo de controle de potência para GPUs, que atua diretamente sobre mecanismos de power capping, ajustando dinamicamente o limite de potência com base no cumprimento de SLAs. A proposta é de baixo overhead, opera em tempo de execução e não depende de perfis offline ou modelos preditivos. A avaliação experimental em um ambiente real com múltiplas instâncias de LLM em múltiplas GPUs demonstra que limites de potência fixos podem reduzir o consumo energético, porém causam degradações severas de desempenho sob maior carga, enquanto o controle dinâmico reduz consistentemente o consumo em relação ao baseline e mitiga degradações abruptas de desempenho.",
+      "identifiers": [
+        "SemanticScholar:8c3f61bc96fd33e23fec19e4d4503608a5f983c3"
+      ],
+      "semantic_scholar_id": "8c3f61bc96fd33e23fec19e4d4503608a5f983c3",
+      "doi": "10.5753/sbrc.2026.19707",
+      "canonical_id": "DOI:10.5753/sbrc.2026.19707",
+      "authors": [
+        "Alex F. R. Trajano",
+        "Crislane Costa",
+        "F. V. Nobre",
+        "Rafael L. Gomes"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 185,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論サービスを複数GPUで運用する実環境において、SLA充足状況に応じてGPUのpower capを動的に調整する適応的電力制御アルゴリズムを提案し、固定上限より性能劣化を抑えつつ消費電力を削減する。推論サービング基盤の運用制御として直接の貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-287d4857e954",
+    "round": "libimp-287d4857e9549fc6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-287d4857e9549fc6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-287d4857e9549fc6-pre01.json",
+    "receipt": "sha256:beb4578f3d086d6e8f17e0bd4fbc9cde351a2b89e5344e36bcdba5189726cdbf"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-287d4857e954",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

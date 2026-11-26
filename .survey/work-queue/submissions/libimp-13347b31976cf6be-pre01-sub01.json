@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "RankServe: Rank-Aware CPU-GPU Scheduling for Memory-Constrained MoE Serving",
+      "source_url": "https://arxiv.org/abs/2611.31869",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models scale model capacity through sparse expert activation, but their large expert pools impose substantial memory requirements during inference. Low-rank compression reduces the memory footprint of Mixture-of-Experts (MoE) models. However, the heterogeneous expert ranks create unequal storage, transfer, and execution costs. Under limited GPU memory, expert popularity and transfer cost alone cannot determine which experts are most valuable to retain. We present RankServe, a CPU-GPU serving system for compressed MoE checkpoints with fixed expert ranks. Its key insight is to value GPU residency against the cheaper nonresident path, CPU execution or weight transfer followed by GPU execution, under each expert's rank and token load. RankServe aggregates the resulting estimated savings over routing demand and prioritizes experts by savings per byte. It updates residency from recent routing history and selects miss paths using current token loads, allowing temporary GPU execution without cache admission. A variable-rank runtime executes heterogeneous factors through grouped matrix multiplications without common-rank padding. Implemented on vLLM, RankServe is evaluated on three MoE models against six serving systems on a single CPU-GPU platform. Across five batch sizes from 1 to 32, it achieves per-model geometric-mean speedups of $1.69$--$2.29\\times$ in time to first token (TTFT) and $1.71$--$2.48\\times$ in time per output token (TPOT), relative to the fastest baseline for each configuration and metric.",
+      "identifiers": [
+        "SemanticScholar:63ed3fc584bf107fe039d3c0e537030a0477b305"
+      ],
+      "semantic_scholar_id": "63ed3fc584bf107fe039d3c0e537030a0477b305",
+      "canonical_id": "arXiv:2611.31869",
+      "arxiv_id": "2611.31869",
+      "authors": [
+        "He Zhu",
+        "Zhen-Dong Mi",
+        "Pu Zhao",
+        "Yan-Zhi Wang",
+        "Hao Wang",
+        "Shao-Yi Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低ランク圧縮したMoEチェックポイントのメモリ制約下サービングで、専門家のランクとトークン負荷からGPU常駐価値を評価して配置を決めるRankServeをvLLM上に実装し、TTFTとTPOTで最速ベースライン比1.7〜2.5倍の高速化を示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-13347b31976c",
+    "round": "libimp-13347b31976cf6be-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-13347b31976cf6be-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-13347b31976cf6be-pre01.json",
+    "receipt": "sha256:89ba55296ac571b56a776b6bf6d3995a18cebca6fa7f6690f633e71e2dccadcb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-13347b31976c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

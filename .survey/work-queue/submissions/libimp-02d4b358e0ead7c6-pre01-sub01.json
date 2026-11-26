@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Exploring Model Invariance with Discrete Search for Ultra-Low-Bit Quantization",
+      "source_url": "https://arxiv.org/abs/2502.06844",
+      "year": 2025,
+      "published": "2025-02-06",
+      "venue": "Proceedings of the 35th ACM International Conference on Information and Knowledge Management",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As language models continue to grow in size due to their success in a wide range of applications such as conversational agents and coding, there is a pressing need to make them more accessible. A popular technique is to reduce their memory footprint by post-training quantization, where we use fewer bits (e.g., 4--8 bits) to represent the model without retraining it. However, quantizing language models remains a challenging task, especially in the ultra-low-bit setup (e.g., 2 bits). In this paper, we propose InvarExplore, a unified framework that systematically explores different kinds of model invariance to maximize quantization performance. Importantly, InvarExplore features a discrete search algorithm that enables us to explore permutation invariance, which is under-studied as it cannot be optimized with gradient-based methods. Such exploration allows us to take advantage of the synergy between each type of invariance. Our results and in-depth analyses show that InvarExplore is compatible with existing state-of-the-art integer quantization methods, achieving an add-on performance improvement over strong competing methods.",
+      "identifiers": [
+        "SemanticScholar:66407e776ee8017bcd7875f06b1696f1bc82a36e"
+      ],
+      "semantic_scholar_id": "66407e776ee8017bcd7875f06b1696f1bc82a36e",
+      "canonical_id": "arXiv:2502.06844",
+      "arxiv_id": "2502.06844",
+      "doi": "10.1145/3799682.3840768",
+      "authors": [
+        "Yu-Qiao Wen",
+        "Yan-Shuai Cao",
+        "Li-Li Mou"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 658,
+        "matched_prestigious_venue": null
+      },
+      "reason": "InvarExploreは置換不変性等のモデル不変性を離散探索で同時活用する2bit級の超低ビットpost-training quantizationをLLM向けに提案し、既存PTQへの上乗せ改善を示す推論向け量子化の直接的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-02d4b358e0ea",
+    "round": "libimp-02d4b358e0ead7c6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-02d4b358e0ead7c6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-02d4b358e0ead7c6-pre01.json",
+    "receipt": "sha256:27c1273e6c4a8066db7396b4557360df12cdae64976531bdf75a134099e2a329"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-02d4b358e0ea",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

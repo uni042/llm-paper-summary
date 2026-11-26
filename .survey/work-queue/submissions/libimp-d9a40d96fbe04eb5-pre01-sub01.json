@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Shifter Quantization: Compact Representations for Native Integer Computation",
+      "source_url": "https://arxiv.org/abs/2611.33080",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Groupwise quantization is used in LLM quantization to improve accuracy at low bit widths, but grouping weights keeps standard integer MMA from spanning the full dot product for efficient GPU inference. We develop a new quantization method, Shifter Quantization (SQ), that reconstructs native-width integer operands by appending and shifting shared bits. To further extend the efficiency, we develop a special variant of SQ, Shifter Integer (SHI), to use INT4 kernels. We show that SQ and SHI formats perform better than standard groupwise quantization in quality, as measured by projection error and KL divergence, and in inference speed, as measured during decoding and prefill. For low precision like 2-bit quantization, SQ2 and SHI2 achieve 2.71-3.77x the 4,096-token prefill throughput of llama.cpp on a Q2_K checkpoint and reduce WikiText-2 KL by 6.6-7.8%. For mid precision like 4-bit quantization, SQ4 achieves 1.43-2.47x the prefill throughput of NInfer's groupwise-integer baselines across the tested models and prompt lengths, with 24-40% lower KL than the NInfer baselines. For high precision like 8-bit quantization, SQ8 achieves 27.4% higher batch-one prefill throughput and 72.7% lower KL than vLLM's online FP8.",
+      "identifiers": [
+        "SemanticScholar:7f2e50dc61dff0533cde94307d873afcf75b5119"
+      ],
+      "semantic_scholar_id": "7f2e50dc61dff0533cde94307d873afcf75b5119",
+      "canonical_id": "arXiv:2611.33080",
+      "arxiv_id": "2611.33080",
+      "authors": [
+        "Yu-Feng Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "グループ量子化が整数MMAの全ドット積を妨げる問題に対し、共有ビットの追加とシフトでネイティブ整数オペランドを再構成するShifter Quantizationで、llama.cppやvLLM比でプリフィルスループットと量子化品質を同時に改善すると示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RankCast: Phase-Aware Rank Balancing in MoE Serving",
+      "source_url": "https://arxiv.org/abs/2611.33542",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern large language model (LLM) inference increasingly adopts disaggregated architectures that separate Prefill (P) and Decode (D) phases. Meanwhile, Expert Parallelism (EP) has been widely adopted in large Mixture-of-Experts (MoE) model serving. However, load imbalance still slows down MoE inference because each layer must wait for the busiest EP rank. The main source of latency differs between prefill and decode. Prefill is compute-bound, and its MoE layers'latency is determined by the maximum token count of the busiest rank. At the same time, under moderate batch sizes, Decode is memory-bound, so the latency is dominated by the maximum active-expert count across ranks. To solve both problems under a unified framework, we present RankCast, a system that reduces rank-level maximum token counts during prefill and active-expert counts during decode. For every token, RankCast preserves the predicted Top-p experts and chooses the remaining k-p from its Top-L candidates (L>k). In prefill, RankCast yields a price per rank that steers flexible assignments to less loaded ranks. In decode, RankCast closes experts on the busiest ranks while preserving the constraints for each token. Both paths are implemented and tested in the state-of-the-art inference frameworks SGLang and DeepEP. We overlap RankCast's kernels with model execution and reuse the existing DeepEP communication channel for metadata transmission. On Qwen3-235B-A22B with EP=8 and Qwen3.5-397B-A17B with EP=16, RankCast removes over 75% of the busiest rank's excess prefill load, improves prefill input throughput by up to 19%, and reduces decode time per output token by up to 10%. The quality cost is below one percentage point.",
+      "identifiers": [
+        "SemanticScholar:cee0f7ea4e544eb534821d6731efb1eedeaca15b"
+      ],
+      "semantic_scholar_id": "cee0f7ea4e544eb534821d6731efb1eedeaca15b",
+      "canonical_id": "arXiv:2611.33542",
+      "arxiv_id": "2611.33542",
+      "authors": [
+        "Kai-Di Fu",
+        "Xu-Hao Lu",
+        "Ping-Wei Sun",
+        "Jian-Chao Tan",
+        "Yu-Chen Xie",
+        "Xun-Liang Cai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "分離型MoEサービングでプリフィルとデコードの各フェーズのボトルネックランク負荷を、専門家の柔軟な割当てで削減するRankCastをSGLangとDeepEP上に実装し、大規模MoEモデルでプリフィルスループットとデコード時間の改善を示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "State Space Attention: Learning Context-Dependent Memory Retention",
+      "source_url": "https://arxiv.org/abs/2611.33625",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Standard attention's key-value cache grows linearly with context length. Bounding it raises the question of what a sequence model should retain for long-context reasoning. We argue this choice should be learned, and introduce State Space Attention (SSA), which learns to keep a bounded set of past representations and reads them with standard attention. A learned scorer rescores every chunk against newly arriving context and the rest of memory. A fixed-context Transformer is then the special case that always keeps the most recent tokens. We train the scorer and reader jointly, either moving gradually from a differentiable soft weighting of memories to hard retention, or with hard retention from the start. To produce signal for the scorer, we generate supervised samples during training, a technique we call recovery. We compare SSA with recurrent models, bounded-memory attention methods, and full-attention Transformers across retrieval, variable tracking, multi-hop reasoning, and language modeling. On our retrieval and reasoning benchmarks, SSA matches or comes within a few points of full attention on most tasks, far outperforms a Transformer with the same readable budget on every long-context retrieval task we evaluate, and matches or outperforms one with about 4 times that budget, while using constant inference memory. The largest remaining gap to full attention at small language model scale is on RULER. SSA makes a fixed number of tokens useful over a longer context, and since it reads memory with standard attention, we propose that it can be stacked with KV cache eviction methods. We also pretrain and post-train 400M-parameter models and measure how SSA's training and inference costs scale with context length and model size. Together, these experiments examine the capabilities and limitations of learned memory retention for long-context sequence modeling.",
+      "identifiers": [
+        "SemanticScholar:58bc89cec79abd2aa35b7510fce50ad3caf1b4c6"
+      ],
+      "semantic_scholar_id": "58bc89cec79abd2aa35b7510fce50ad3caf1b4c6",
+      "canonical_id": "arXiv:2611.33625",
+      "arxiv_id": "2611.33625",
+      "authors": [
+        "Ege Çakar",
+        "Cengiz Pehlevan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KVキャッシュが文脈長に比例して増える問題に対し、保持すべき過去表現を学習するState Space Attentionで推論メモリを一定に抑え、検索や多段推論で全注意に近い性能を示すと一次要旨で述べており、長文脈推論のメモリ削減への直接的な提案である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "L2C2: Enhancing Large-scale Chiplets for Agent Long-Context LLM Inference with Sparse and Distributed Attention",
+      "source_url": "https://arxiv.org/abs/2611.33691",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference is a rising demand for LLMs, especially for agent applications. Sparse attention (SpAt) and chiplet technology are promising solutions to reduce computations and scale hardware performance. However, deploying SpAt on distributed chiplets necessitates context parallelism for workload partitioning, introducing complex distributed attention. In this work, we present L2C2, a system optimization for distributed SpAt in long-context inference. During the partial-prefill stage, we propose a novel Split-Comm Attention mechanism that leverages the high-bandwidth interconnect of chiplets to trade communication overhead for reduced memory access. We combine it with conventional Ring Attention to form a Bi-Mode method that adapts to varying input sequence lengths. During the decoding stage, we analyze the cause of memory access imbalance and address it by static interleaved token assignment. Dynamic agile cache balancing is also proposed to adapt to SpAt skewness. Evaluations show our optimization can achieve 1.45$\\times$ and 1.53$\\times$ speedup in partial-prefill and decoding with SpAt on large-scale chiplets.",
+      "identifiers": [
+        "SemanticScholar:fa161a33f02476e78d9ce4d9ca58be9f0f2dc396"
+      ],
+      "semantic_scholar_id": "fa161a33f02476e78d9ce4d9ca58be9f0f2dc396",
+      "canonical_id": "arXiv:2611.33691",
+      "arxiv_id": "2611.33691",
+      "authors": [
+        "Kang-Bo Bai",
+        "Zhong-Hua Mu",
+        "Hong-Ze Zhou",
+        "Tian-Yu Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      },
+      "reason": "チップレット上の疎注意による長文脈LLM推論に対し、部分プリフィルでの分割通信注意とデコードでの静的インターリーブ配置・動的キャッシュバランシングを組み合わせたL2C2で、プリフィルとデコードの双方を高速化すると一次要旨で示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VAPOR: Improving Multimodal Reasoning with Sparse Visual Updates",
+      "source_url": "https://arxiv.org/abs/2611.33751",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have made substantial progress in visual reasoning, but extended generation over large visual contexts remains computationally expensive. During autoregressive decoding, visual attention is recomputed for every generated token, even when consecutive tokens rely on similar visual evidence. We introduce VAPOR (Visual Attention Persistence with On-demand Refresh), a training-free framework that reduces this redundancy by reusing visual attention outputs across decoding steps and refreshing them when needed. VAPOR caches the visual attention output while continuing to update textual attention at every step, helping reduce visual grounding drift during extended reasoning. To decide when to reuse cached outputs, VAPOR estimates visual attention mass using a low-rank approximation. It also uses prefill-based attention consistency and cache age to make independent Persist and Refresh decisions for each attention head. VAPOR retains the full visual key-value (KV) cache, so all visual tokens remain available when new evidence is needed. Experiments on eight image and four video reasoning benchmarks across two MLLM families show that VAPOR improves accuracy over dense attention on nearly all benchmarks while achieving 1.11-1.21x decoding speedups. Compared with the strongest state-of-the-art acceleration baseline in each setting, VAPOR further improves accuracy by 0.35-2.15 percentage points while achieving comparable or lower decoding latency. Our code is available at https://github.com/Su-my/VAPOR.",
+      "identifiers": [
+        "SemanticScholar:322bcba61b6b353c28e8504f55464b6e2bd22d4a"
+      ],
+      "semantic_scholar_id": "322bcba61b6b353c28e8504f55464b6e2bd22d4a",
+      "canonical_id": "arXiv:2611.33751",
+      "arxiv_id": "2611.33751",
+      "authors": [
+        "Ming-Yu Su",
+        "Wei Wu",
+        "Er-Le Zhu",
+        "Cheng-Xing Xie",
+        "De-Yao Hong",
+        "Hong-Ning Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      },
+      "reason": "マルチモーダルLLMの自己回帰デコードで視覚注意出力をステップ間で再利用し、低ランク近似による注意質量推定で更新要否をヘッドごとに決めるVAPORにより、精度を保ちながらデコードを1.11〜1.21倍高速化すると一次要旨で示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d9a40d96fbe0",
+    "round": "libimp-d9a40d96fbe04eb5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d9a40d96fbe04eb5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d9a40d96fbe04eb5-pre01.json",
+    "receipt": "sha256:c420b89d75f67b8af7bf2104cb56287011eda68d1f8445563a552b4055055c37"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d9a40d96fbe0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FlashQLA: Efficient Context Parallelism for Gated DeltaNet",
+      "source_url": "https://arxiv.org/abs/2611.32039",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Gated DeltaNet (GDN) achieves linear computational complexity through recurrent state updates, but sequential dependencies between chunks limit parallelism, particularly for long-context workloads with small batch sizes or limited head-level parallelism per GPU. We present FlashQLA, a context-parallel execution framework for GDN that exposes additional sequence-level parallelism while reducing boundary-state preprocessing overhead. FlashQLA reduces boundary-state preprocessing overhead through decay-aware preparation and extends sequence parallelism across GPUs with Dual CP, which shares summary computation across parallelism levels. Workload-adaptive Auto CP and CP-aware kernel co-design further improve execution efficiency. FlashQLA achieves $1.7\\times$-$3.1\\times$ forward speedup and up to $4.4\\times$ backward speedup over Flash Linear Attention (FLA) on a single GPU. On eight GPUs with context lengths up to 1M tokens, Dual CP achieves up to $4.8\\times$ forward speedup and $4.4\\times$ speedup for combined forward and backward execution over FLA KCP.",
+      "identifiers": [
+        "SemanticScholar:888a667230da9268b265fe105e4ce100bb464484"
+      ],
+      "semantic_scholar_id": "888a667230da9268b265fe105e4ce100bb464484",
+      "canonical_id": "arXiv:2611.32039",
+      "arxiv_id": "2611.32039",
+      "authors": [
+        "Xi Lin",
+        "Chengruidong Zhang",
+        "Huiqiang Jiang",
+        "Xiao Li",
+        "Ze-Kun Wang",
+        "Jun-Da Feng",
+        "Yun-Fei Mao",
+        "Si-Qi Zhang",
+        "Si-Yu Wang",
+        "Man Yuan",
+        "Rui Men",
+        "Bo Zheng",
+        "Dayiheng Liu",
+        "Bo-Han Zhuang",
+        "Jian-Wei Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Gated DeltaNetの逐次依存で文脈並列が制限される問題に対し、境界状態の事前処理を減衰考慮で削減し二重文脈並列とカーネル協調設計を行うFlashQLAで、長文脈ワークロードのフォワードを最大4.8倍高速化すると一次要旨で示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-92ecf53dfdd7",
+    "round": "libimp-92ecf53dfdd778d4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-92ecf53dfdd778d4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-92ecf53dfdd778d4-pre01.json",
+    "receipt": "sha256:63da1347d52f1c94870580bf1cbfe17ec257cf48df5f8ef9bea9d082a99afa8b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-92ecf53dfdd7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

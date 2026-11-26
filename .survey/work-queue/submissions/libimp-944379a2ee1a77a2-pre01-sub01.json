@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Subspace Node Pruning",
+      "source_url": "https://arxiv.org/abs/2405.17506",
+      "year": 2024,
+      "published": "2024-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Node pruning is the art of removing computational units such as neurons, filters, attention heads, or even entire layers to significantly reduce inference time while retaining network performance. In this work, we show that a broad family of importance measures, from activation-based to Fisher-based, share a common quadratic form. Through a lower-triangular change of basis, this form yields a pruning subspace in which entire nodes can be removed while the impact of the lost units is simultaneously recovered via linear least squares. Furthermore, the importance measures within our subspace are decoupled and additive through an orthogonalization of the layer activations, allowing multi-node pruning within layers without interference between importance scores. Our method, Subspace Node Pruning (SNP), outperforms the compared baselines on VGG-16 and ResNet-50 on ImageNet. On OPT-125M and LLaMA-2 7B, SNP matches the state-of-the-art LLM Surgeon at a 40-shot schedule and outperforms it whenever fewer shots are used, all without any retraining after pruning.",
+      "identifiers": [
+        "SemanticScholar:b27b3ecce5a9434db6ae41a0fa6da35c46b6929b"
+      ],
+      "semantic_scholar_id": "b27b3ecce5a9434db6ae41a0fa6da35c46b6929b",
+      "canonical_id": "arXiv:2405.17506",
+      "arxiv_id": "2405.17506",
+      "doi": "10.48550/arXiv.2405.17506",
+      "authors": [
+        "Joshua Offergeld",
+        "John Chidiac",
+        "M. van Gerven",
+        "Nasir Ahmad"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 914,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重要度指標群が共通の二次形式を持つことを示し、部分空間内でノード除去と最小二乗による影響回復を同時に行うSubspace Node Pruningを提案する。推論時間の削減を目的としたプルーニング手法であり、ImageNetのCNNに加えOPT-125M等の言語モデルでも評価されているため、推論向け圧縮技術として直接の貢献がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A 62.8 TOPS/W FP-INT Digital Computing-in Memory Processor with Bit-Reordered Adder Tree and Low Active Hierarchical Accumulator",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043177",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces an energy-efficient DRAM-based FP-INT Digital Computing-in-Memory (CIM) processor for data-intensive AI workloads, addressing challenges in mixed precision, excess power consumption, and area overhead. The processor features three key innovations: 1) Bit-reordered adder tree (BRAT) that reduces adder bit width through exponent-aware reordering, achieving power and area reductions by 23% and 56%, respectively; 2) Low active hierarchical accumulator (LAHA) that conditionally updates the FP accumulator, minimizing accumulator activity by 57%; and 3) Speculative input block skipping (SIBS) to avoid unnecessary computations, reducing energy consumption by 15%. Implemented in 28nm CMOS technology, the processor achieves 62.8 TOPS/W in FP8 activation and INT4 weight precision for GPT2-Small inference. Our results show an overall energy savings of 31%, making this architecture highly efficient for modern large language models.",
+      "identifiers": [
+        "SemanticScholar:75ede966e666d4d26b19d4d3ab8e785b60ebe352"
+      ],
+      "semantic_scholar_id": "75ede966e666d4d26b19d4d3ab8e785b60ebe352",
+      "doi": "10.1109/ISCAS56072.2025.11043177",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043177",
+      "authors": [
+        "Sunjoo Whang",
+        "Sangwoo Ha",
+        "Soyeon Um",
+        "Sangjin Kim",
+        "Hoi-Jun Yoo"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 550,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DRAMベースのFP-INTデジタルCIMプロセッサを提案し、bit-reordered adder treeと低活性階層アキュムレータでFP8活性化・INT4重みのGPT2-Small推論を62.8 TOPS/Wで実行する。混合精度の推論ハードウェアそのものが対象であり、LLM推論のエネルギー効率への直接貢献が要旨で具体的に確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "An Adaptive Scheme of Threshold Adjustment for Dynamic Sparsity Extraction of Self-Attention Network",
+      "source_url": "https://doi.org/10.1109/AICAS64808.2025.11173095",
+      "year": 2025,
+      "published": "2025-04-28",
+      "venue": "International Conference on Artificial Intelligence Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) and transformers have become highly successful across various domains. However, they are notorious for their quadratic computational complexity, which increases with sequence length. To mitigate this, dynamic sparsity techniques skip near-zero-output patterns based on low-precision estimations. Values below static thresholds are pruned, reducing energy consumption and improving computation speed.By utilizing low-cost estimations of minor threshold adjustments, we continuously monitor and fine-tune the pruning strategy to avoid overly aggressive pruning. Experimental results demonstrate that the proposed adaptive threshold method provides an average accuracy improvement of 0.15%, along with an average additional 8.95% computational sparsity across the SQuAD v1.1, v2, SST-2, and MRPC datasets.",
+      "identifiers": [
+        "SemanticScholar:4fe7cd804157d173d96ff68762fc07020b91444f"
+      ],
+      "semantic_scholar_id": "4fe7cd804157d173d96ff68762fc07020b91444f",
+      "doi": "10.1109/AICAS64808.2025.11173095",
+      "canonical_id": "DOI:10.1109/AICAS64808.2025.11173095",
+      "authors": [
+        "Yong Xiao",
+        "Chia-Wei Chang",
+        "Cheng-Ting Shih",
+        "Jing-Jia Liou",
+        "Chih-Tsun Huang",
+        "Yao-Hua Chen",
+        "Juin-Ming Lu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 577,
+        "matched_prestigious_venue": null
+      },
+      "reason": "self-attentionの動的スパース化において、低精度推定で得た閾値を継続的に微調整する適応的閾値調整スキームを提案し、SQuADやSST-2等で平均8.95%の追加計算スパース化と精度改善を示す。注意計算の削減という推論コスト削減機構が要旨で具体的に確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-944379a2ee1a",
+    "round": "libimp-944379a2ee1a77a2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-944379a2ee1a77a2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-944379a2ee1a77a2-pre01.json",
+    "receipt": "sha256:5076dd7e39c4ee031106e0132e88331846b320736726b6306701dce9a519a94d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-944379a2ee1a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
