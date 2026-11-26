@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea298150067276df-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2511.22242",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2511.22242",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.22242",
+      "arXiv:2511.22242"
+    ],
+    "reason": "拡散モデルのテスト時スケーリングへノイズ認識プルーニングを導入するTTSnapは生成探索の効率化だが、対象は画像拡散でありLLM推論ではない。",
+    "first_checked_at": "2026-11-26T03:30:32+00:00",
+    "last_checked_at": "2026-11-26T03:30:32+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TTSnap: Test-Time Scaling of Diffusion Models via Noise-Aware Pruning"
+  },
+  "processed_at": "2026-11-26T03:30:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea2981500672",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T03:25:02+00:00",
-  "record_count": 9499,
+  "updated_at": "2026-11-26T03:30:33+00:00",
+  "record_count": 9521,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -145403,6 +145403,337 @@
       ],
       "borderline_recheck_count": 0,
       "title": "GraphMend: Code Transformations for Fixing Graph Breaks in PyTorch 2"
+    },
+    "DOI:10.1109/amathe65477.2025.11080874": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/amathe65477.2025.11080874",
+      "identity_tokens": [
+        "DOI:10.1109/amathe65477.2025.11080874"
+      ],
+      "reason": "一次要旨で構造化・非構造化プルーニングを比較したLLM圧縮手法の実証的対照研究が確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLM Compression for Enhanced Performance: A Comparative Study of Structured and Unstructured Pruning Techniques"
+    },
+    "arXiv:2301.04285": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2301.04285",
+      "identity_tokens": [
+        "arXiv:2301.04285"
+      ],
+      "reason": "一次要旨でノード内外帯域を考慮したトポロジー認識コストモデルによる演算子内並列戦略探索TAPSが確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TAPS: Topology-Aware Intra-Operator Parallelism Strategy Searching Algorithm for Deep Neural Networks"
+    },
+    "arXiv:2106.16006": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.16006",
+      "identity_tokens": [
+        "arXiv:2106.16006"
+      ],
+      "reason": "一次要旨でパラメータクラスタリングでメモリ転送を減らす資源制約デバイス向けTransformer効率分析が確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving the Efficiency of Transformers for Resource-Constrained Devices"
+    },
+    "arXiv:2610.15864": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.15864",
+      "identity_tokens": [
+        "arXiv:2610.15864"
+      ],
+      "reason": "一次要旨で意味ID生成における自己回帰ビーム探索とマルチトークン予測のLLM推薦での比較が確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Personalized LLM Recommendation with Semantic IDs: Autoregressive Beam Search vs. Multi-Token Prediction"
+    },
+    "arXiv:2511.11624": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.11624",
+      "identity_tokens": [
+        "arXiv:2511.11624"
+      ],
+      "reason": "一次要旨でRaspberry PiやJetson上で小型言語モデルの電力効率を実測したエッジ展開の特性評価が確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Characterizing and Understanding Energy Footprint and Efficiency of Small Language Model on Edges"
+    },
+    "arXiv:2604.12219": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.12219",
+      "identity_tokens": [
+        "arXiv:2604.12219"
+      ],
+      "reason": "一次要旨で曲率認識型の動的予算配分による精度配分スパース注意PASAでの動画生成の平滑化が確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ride the Wave: Precision-Allocated Sparse Attention for Smooth Video Generation"
+    },
+    "arXiv:2609.00551": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.00551",
+      "identity_tokens": [
+        "arXiv:2609.00551"
+      ],
+      "reason": "長動画質問応答向けにイベント中心マルチモーダルメモリを構築するEM2MemはLLMの文脈供給を扱うが、対象は動画QAのメモリ表現でありサービング機構ではない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EM^2Mem: Event-Centric Multimodal Memory for Large Language Models"
+    },
+    "arXiv:2610.07376": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07376",
+      "identity_tokens": [
+        "arXiv:2610.07376"
+      ],
+      "reason": "未見環境へ汎化するLLMエージェントのメモリ中心協調MemCoは経験再利用の仕組みだが、推論実行効率の機構としての実証は要旨で限定的である。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemCo: Memory-Centric Collaboration for Generalizing LLM Agents to Unseen Environments"
+    },
+    "arXiv:2610.11315": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.11315",
+      "identity_tokens": [
+        "arXiv:2610.11315"
+      ],
+      "reason": "マルチモーダル拡散Transformer向け階数4のW4A4量子化は低ビット圧縮技術だが、対象は拡散モデルでありLLM推論への適用ではない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deflating the Hessian: Rank-4 W4A4 Quantization for Multimodal Diffusion Transformers"
+    },
+    "arXiv:2610.16137": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.16137",
+      "identity_tokens": [
+        "arXiv:2610.16137"
+      ],
+      "reason": "個人化LLMで検索候補メモリを再帰的に順位付けし文脈へ入れる方式はメモリ選択の改善だが、推論システムのメモリ階層機構ではなく応用層の手法である。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Recall Begets Recall: Recurrent Memory Ranking for Personalized LLMs"
+    },
+    "arXiv:2611.02666": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.02666",
+      "identity_tokens": [
+        "arXiv:2611.02666"
+      ],
+      "reason": "マスク拡散言語モデルの実際のサンプラに合わせ混合尤度で微調整し少数ステップ生成を狙うが、主たる介入は学習法でありデコード機構の提案ではない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Train the Sampler You Run: Few-Step Masked Diffusion Language Models via Mixture-Likelihood Fine-Tuning"
+    },
+    "arXiv:2506.05096": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.05096",
+      "identity_tokens": [
+        "arXiv:2506.05096"
+      ],
+      "reason": "動画拡散Transformerをトークン単位で加速するAstraeaは生成推論の探索型高速化だが、対象は動画DiTでありLLM推論への直接適用ではない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Astraea: A Token-wise Acceleration Framework for Video Diffusion Transformers"
+    },
+    "arXiv:2406.11022": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.11022",
+      "identity_tokens": [
+        "arXiv:2406.11022"
+      ],
+      "reason": "Whisper系音声基盤モデルの事後量子化で外れ値をゲート注意で減らす研究であり、量子化対象が音声モデルでLLM推論への実証ではない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Outlier Reduction with Gated Attention for Improved Post-training Quantization in Large Sequence-to-sequence Speech Foundation Models"
+    },
+    "arXiv:2306.01076": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.01076",
+      "identity_tokens": [
+        "arXiv:2306.01076"
+      ],
+      "reason": "量子化認識とテンソル圧縮を併用するTransformer学習で実行遅延削減を狙うが、対象は自然言語理解用モデルの学習時圧縮でありLLMサービングではない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantization-Aware and Tensor-Compressed Training of Transformers for Natural Language Understanding"
+    },
+    "DOI:10.1109/mascots64422.2024.10786517": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mascots64422.2024.10786517",
+      "identity_tokens": [
+        "DOI:10.1109/mascots64422.2024.10786517"
+      ],
+      "reason": "多様なLLMをGPUクラスタで安く使えるようにするMIG多重化のプロファイリング方法論であり、対象は研究用クラスタ運用でサービング機構の提案ではない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing GPU Multiplexing for Efficient and Cost-Effective Access to Diverse Large Language Models in GPU Clusters"
+    },
+    "DOI:10.48550/arxiv.2511.22242": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2511.22242",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.22242",
+        "arXiv:2511.22242"
+      ],
+      "reason": "拡散モデルのテスト時スケーリングへノイズ認識プルーニングを導入するTTSnapは生成探索の効率化だが、対象は画像拡散でありLLM推論ではない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TTSnap: Test-Time Scaling of Diffusion Models via Noise-Aware Pruning"
+    },
+    "DOI:10.1145/3676641.3716262": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3676641.3716262",
+      "identity_tokens": [
+        "DOI:10.1145/3676641.3716262"
+      ],
+      "reason": "一次要旨でiTexテッセレーションでスカラ・ベクトル・テンソルユニットを同時活用するDLコンパイラ最適化が確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mosaic: Exploiting Instruction-Level Parallelism on Deep Learning Accelerators with iTex Tessellation"
+    },
+    "arXiv:2411.17367": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.17367",
+      "identity_tokens": [
+        "arXiv:2411.17367"
+      ],
+      "reason": "一次要旨でアナログインメモリ計算へTransformerを適応させる低ランクアダプタとハードウェア考慮学習が確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient transformer adaptation for analog in-memory computing via low-rank adapters"
+    },
+    "DOI:10.1109/aicas64808.2025.11173125": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aicas64808.2025.11173125",
+      "identity_tokens": [
+        "DOI:10.1109/aicas64808.2025.11173125"
+      ],
+      "reason": "一次要旨で注意マップの列方向蓄積を重要度とする動的パッチ剪定DPP-ViTとその加速器設計が確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DPP-ViT: Dynamic Patch Pruning for Low Complexity Vision Transformer Accelerator"
+    },
+    "DOI:10.1631/fitee.2400994": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1631/fitee.2400994",
+      "identity_tokens": [
+        "DOI:10.1631/fitee.2400994"
+      ],
+      "reason": "一次要旨でチャネル・トークン方向の外れ値を適応補正するビジョンTransformer向け量子化AOCQが確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An adaptive outlier correction quantization method for vision Transformers"
+    },
+    "arXiv:2411.16618": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.16618",
+      "identity_tokens": [
+        "arXiv:2411.16618"
+      ],
+      "reason": "一次要旨で文書構造に基づくマスク注意StructFormerの事前学習への影響を検証した研究が確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "StructFormer: Document Structure-based Masked Attention and its Impact on Language Model Pre-Training"
+    },
+    "arXiv:2601.19904": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.19904",
+      "identity_tokens": [
+        "arXiv:2601.19904"
+      ],
+      "reason": "一次要旨でポストムーア型データフロー加速器のLLMワークロード向け標準ベンチマークDABench-LLMが確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DABench-LLM: Standardized and In-Depth Benchmarking of Post-Moore Dataflow AI Accelerators for LLMs"
     }
   }
 }

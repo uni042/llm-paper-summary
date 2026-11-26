@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea298150067276df-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.02666",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.02666",
+    "identity_tokens": [
+      "arXiv:2611.02666"
+    ],
+    "reason": "マスク拡散言語モデルの実際のサンプラに合わせ混合尤度で微調整し少数ステップ生成を狙うが、主たる介入は学習法でありデコード機構の提案ではない。",
+    "first_checked_at": "2026-11-26T03:30:32+00:00",
+    "last_checked_at": "2026-11-26T03:30:32+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Train the Sampler You Run: Few-Step Masked Diffusion Language Models via Mixture-Likelihood Fine-Tuning"
+  },
+  "processed_at": "2026-11-26T03:30:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea2981500672",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

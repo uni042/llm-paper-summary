@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea298150067276df-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.11022",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.11022",
+    "identity_tokens": [
+      "arXiv:2406.11022"
+    ],
+    "reason": "Whisper系音声基盤モデルの事後量子化で外れ値をゲート注意で減らす研究であり、量子化対象が音声モデルでLLM推論への実証ではない。",
+    "first_checked_at": "2026-11-26T03:30:32+00:00",
+    "last_checked_at": "2026-11-26T03:30:32+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Outlier Reduction with Gated Attention for Improved Post-training Quantization in Large Sequence-to-sequence Speech Foundation Models"
+  },
+  "processed_at": "2026-11-26T03:30:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea2981500672",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

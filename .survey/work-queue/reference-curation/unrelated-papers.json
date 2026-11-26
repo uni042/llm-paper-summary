@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-26T03:25:02+00:00",
-  "record_count": 16425,
+  "updated_at": "2026-11-26T03:30:33+00:00",
+  "record_count": 16447,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -235133,6 +235133,314 @@
         "worker-worklist discovery_review"
       ],
       "title": "360Zhinao Technical Report"
+    },
+    "arXiv:2504.00824": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.00824",
+      "identity_tokens": [
+        "arXiv:2504.00824"
+      ],
+      "reason": "一次要旨で引用トークンで検索を起動するScholarCopilotによる学術執筆支援と引用精度の改善が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "ScholarCopilot: Training Large Language Models for Academic Writing with Accurate Citations"
+    },
+    "arXiv:2610.25123": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.25123",
+      "identity_tokens": [
+        "arXiv:2610.25123"
+      ],
+      "reason": "一次要旨で依存関係に紐付いたエージェント記憶の失効伝播を扱う依存テザー型メモリの分析が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Memories That Outlive Their Reasons: Dependency-Tethered Memory for Tool-Using LLM Agents"
+    },
+    "DOI:10.1016/j.procir.2024.01.012": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.procir.2024.01.012",
+      "identity_tokens": [
+        "DOI:10.1016/j.procir.2024.01.012"
+      ],
+      "reason": "一次要旨で高周波時系列での残存耐用年数予測に代替注意モジュールを適用した比較検討が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Investigation of alternative attention modules in transformer models for remaining useful life predictions: addressing challenges in high-frequency time-series data"
+    },
+    "arXiv:2511.14182": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.14182",
+      "identity_tokens": [
+        "arXiv:2511.14182"
+      ],
+      "reason": "一次要旨で注意誘導型RAGでウェブ情報を取り込むLLM推薦システムWebRecの推薦精度改善が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "WebRec: Enhancing LLM-based Recommendations with Attention-guided RAG from Web"
+    },
+    "arXiv:2410.01782": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.01782",
+      "identity_tokens": [
+        "arXiv:2410.01782"
+      ],
+      "reason": "一次要旨で密なLLMをパラメータ効率のよいスパースMoEへ変換するRAG推論強化Open-RAGが主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Open-RAG: Enhanced Retrieval-Augmented Reasoning with Open-Source Large Language Models"
+    },
+    "arXiv:2604.09034": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09034",
+      "identity_tokens": [
+        "arXiv:2604.09034"
+      ],
+      "reason": "一次要旨で単一A100・24時間制約でLLaMa2 70Bを微調整したLLM効率化チャレンジの解法報告が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "The nextAI Solution to the NeurIPS 2023 LLM Efficiency Challenge"
+    },
+    "arXiv:2508.07246": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.07246",
+      "identity_tokens": [
+        "arXiv:2508.07246"
+      ],
+      "reason": "一次要旨で線形拡散Transformerによる画像アニメーションの外観一貫性と動き遷移の改善が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Consistent and Controllable Image Animation with Motion Linear Diffusion Transformers"
+    },
+    "DOI:10.1145/3670105.3670171": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3670105.3670171",
+      "identity_tokens": [
+        "DOI:10.1145/3670105.3670171"
+      ],
+      "reason": "一次要旨で軽量CNN骨格と効率的注意で分離した物体検出TransformerであるLED-DETRのエッジ向け設計が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "LED-DETR: Lightweight, Efficient and Decoupled Object Detection with Transformers"
+    },
+    "DOI:10.1109/icaiet65052.2025.11211074": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icaiet65052.2025.11211074",
+      "identity_tokens": [
+        "DOI:10.1109/icaiet65052.2025.11211074"
+      ],
+      "reason": "一次要旨でFalcon 7BとMistral 7Bを用いた材料ベースのレシピ推薦システムの応用研究が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Recipe Suggestion Based on Ingredients Using Large Language Models"
+    },
+    "arXiv:2507.15343": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.15343",
+      "identity_tokens": [
+        "arXiv:2507.15343"
+      ],
+      "reason": "一次要旨で決定性文脈自由文法を扱うためにスタック機構を導入した大規模プッシュダウンオートマトンモデルStackTransが主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "StackTrans: From Large Language Model to Large Pushdown Automata Model"
+    },
+    "arXiv:2605.06132": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06132",
+      "identity_tokens": [
+        "arXiv:2605.06132"
+      ],
+      "reason": "一次要旨で推論能力を持つ再ランキングでエージェント長期記憶の検索精度を上げるMemRerankerが主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MemReranker: Reasoning-Aware Reranking for Agent Memory Retrieval"
+    },
+    "arXiv:2610.28146": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.28146",
+      "identity_tokens": [
+        "arXiv:2610.28146"
+      ],
+      "reason": "大規模音声言語モデルの推論へスケッチ誘導の音声対照デコードを行う研究であり、対象は音声理解の推論品質で推論システムの効率機構ではない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "SKAD: Sketch-Guided Audio-Contrastive Decoding for Reasoning in Large Audio-Language Models"
+    },
+    "DOI:10.1609/aaai.v36i1.19962": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1609/aaai.v36i1.19962",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v36i1.19962"
+      ],
+      "reason": "骨格分解で自己注意を変形する点群Transformerの研究であり、対象は点群処理の効率でLLM推論システムの範囲外である。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Modify Self-Attention via Skeleton Decomposition for Effective Point Cloud Transformer"
+    },
+    "arXiv:2312.14751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.14751",
+      "identity_tokens": [
+        "arXiv:2312.14751"
+      ],
+      "reason": "ダウンロード可能な基盤モデルの微調整容易化がもたらす危険を論じる政策寄りの研究であり、推論システムの技術機構を扱うものではない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Hazards from Increasingly Accessible Fine-Tuning of Downloadable Foundation Models"
+    },
+    "arXiv:2011.03040": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.03040",
+      "identity_tokens": [
+        "arXiv:2011.03040"
+      ],
+      "reason": "悪性URL予測という情報セキュリティ課題へTransformerを学習させる事例研究であり、対象は分類タスクでLLM推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-26T03:30:32+00:00",
+      "last_checked_at": "2026-11-26T03:30:32+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Training Transformers for Information Security Tasks: A Case Study on Malicious URL Prediction"
+    },
+    "arXiv:2403.15740": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.15740",
+      "identity_tokens": [
+        "arXiv:2403.15740"
+      ],
+      "reason": "LLM学習データ中の著作権物へ一意識別子を埋める保護手法の研究であり、対象は学習データ管理で推論システムの機構ではない。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Protecting Copyrighted Material with Unique Identifiers in Large Language Model Training"
+    },
+    "arXiv:2506.04956": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.04956",
+      "identity_tokens": [
+        "arXiv:2506.04956"
+      ],
+      "reason": "医療動画生成向け全次元効率注意Transformerの研究であり、対象は医用動画合成タスクでLLM推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "FEAT: Full-Dimensional Efficient Attention Transformer for Medical Video Generation"
+    },
+    "arXiv:2510.17021": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.17021",
+      "identity_tokens": [
+        "arXiv:2510.17021"
+      ],
+      "reason": "注意シンクを入口にLLMアンラーニングをバックドア化できるかを問う研究であり、対象は安全性評価で推論システムの効率機構ではない。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Forgetting to Forget: Attention Sink as A Gateway for Backdooring LLM Unlearning"
+    },
+    "arXiv:2506.14464": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.14464",
+      "identity_tokens": [
+        "arXiv:2506.14464"
+      ],
+      "reason": "一次要旨で再帰型スパイキングNNのBPTT代替となる前方勾配伝播によるオンライン学習方式が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A scalable hybrid training approach for recurrent spiking neural networks"
+    },
+    "DOI:10.1109/ipdpsw66978.2025.00015": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ipdpsw66978.2025.00015",
+      "identity_tokens": [
+        "DOI:10.1109/ipdpsw66978.2025.00015"
+      ],
+      "reason": "一次要旨で分散学習におけるNCCLパラメータの探索的最適化による通信同期の調整が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Exploring NCCL Tuning Strategies for Distributed Deep Learning"
+    },
+    "arXiv:2110.00929": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.00929",
+      "identity_tokens": [
+        "arXiv:2110.00929"
+      ],
+      "reason": "一次要旨で勾配計算の依存関係を利用したout-of-order backpropによる学習スケジューリングが主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Scheduling Optimization Techniques for Neural Network Training"
+    },
+    "DOI:10.1109/iccea62105.2024.10603668": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccea62105.2024.10603668",
+      "identity_tokens": [
+        "DOI:10.1109/iccea62105.2024.10603668"
+      ],
+      "reason": "一次要旨で動画インペインティング専用に注意重みを上位kへ絞るtop-k自己注意の導入が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-26T03:30:33+00:00",
+      "last_checked_at": "2026-11-26T03:30:33+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Top-k Self-Attention in Transformer for Video Inpainting"
     }
   }
 }
