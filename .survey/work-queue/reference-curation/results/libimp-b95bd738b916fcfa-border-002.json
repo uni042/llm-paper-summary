@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b95bd738b916fcfa-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.11935",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.11935",
+    "identity_tokens": [
+      "arXiv:2508.11935"
+    ],
+    "reason": "アナログCIM上のSSM推論における重み摂動への頑健性を解析し、最終射影層のSVD分解で精度劣化を抑える。推論ハードウェア寄りの貢献だが対象は汎用SSMでLLM推論への直接適用は示されていない",
+    "first_checked_at": "2026-11-26T00:55:53+00:00",
+    "last_checked_at": "2026-11-26T09:32:28+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HPD: Hybrid Projection Decomposition for Robust State Space Models on Analog CIM Hardware"
+  },
+  "processed_at": "2026-11-26T09:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b95bd738b916",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

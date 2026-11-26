@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-06196bc33f972aca-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.09827",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.09827",
+    "identity_tokens": [
+      "arXiv:2505.09827"
+    ],
+    "reason": "長期の二人組人間動作を合成するDyadic Mambaの動作生成応用研究。タイトル自体に当該応用領域の主題が明示されており、LLM推論システムへの直接貢献を示す技術要素はタイトルに含まれないため、タイトル先行走査でunrelatedと判定した。",
+    "first_checked_at": "2026-11-26T00:55:53+00:00",
+    "last_checked_at": "2026-11-26T09:32:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Dyadic Mamba: Long-term Dyadic Human Motion Synthesis"
+  },
+  "processed_at": "2026-11-26T09:32:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-06196bc33f97",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b95bd738b916fcfa-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tim.2025.3548069",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tim.2025.3548069",
+    "identity_tokens": [
+      "DOI:10.1109/tim.2025.3548069"
+    ],
+    "reason": "OSAMambaは睡眠時無呼吸検出のために双方向選択的状態空間モデルを適用した医療信号分類モデルであり、推論システムとは無関係である",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T09:32:28+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "OSAMamba: An Adaptive Bidirectional Selective State-Space Model for OSA Detection"
+  },
+  "processed_at": "2026-11-26T09:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b95bd738b916",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b95bd738b916fcfa-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.03214",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.03214",
+    "identity_tokens": [
+      "arXiv:2509.03214"
+    ],
+    "reason": "RTGMFFはfMRIから脳疾患を診断するためのROIテキスト生成とマルチモーダル融合フレームワークであり、医療診断応用で推論システムとは無関係である",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T09:32:28+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "RTGMFF: Enhanced fMRI-Based Brain Disorder Diagnosis via ROI-Driven Text Generation and Multimodal Feature Fusion"
+  },
+  "processed_at": "2026-11-26T09:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b95bd738b916",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

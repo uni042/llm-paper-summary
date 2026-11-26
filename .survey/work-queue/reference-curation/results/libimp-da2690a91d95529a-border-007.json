@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da2690a91d95529a-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.15560",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.15560",
+    "identity_tokens": [
+      "arXiv:2406.15560"
+    ],
+    "reason": "予算制約下でGPUレンタル量を決めML学習ジョブの平均応答時間を最小化するスケジューリング理論であり、計算資源スケジューリングには関連するが推論サービングではなく学習ジョブが対象である",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T09:32:28+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "How to Rent GPUs on a Budget"
+  },
+  "processed_at": "2026-11-26T09:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da2690a91d95",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b95bd738b916fcfa-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.01250",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.01250",
+    "identity_tokens": [
+      "arXiv:2504.01250"
+    ],
+    "reason": "R2DNは収縮性とLipschitz性を保証するリカレントネットワークのパラメータ化で、制御・システム同定が対象であり、平衡層を解かないことで推論も速くなるがLLM推論とは無関係である",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T09:32:28+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "R2DN: Scalable Parameterization of Contracting and Lipschitz Recurrent Deep Networks"
+  },
+  "processed_at": "2026-11-26T09:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b95bd738b916",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da2690a91d95529a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1002/asi.24971",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1002/asi.24971",
+    "identity_tokens": [
+      "DOI:10.1002/asi.24971"
+    ],
+    "reason": "DSRC-QCSは複数文書QAで質問を単一ホップへ反復分解するRAG処理フレームワークであり、主眼は回答精度で推論システムの効率化技術ではない",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T09:32:28+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Beyond decomposition: Hierarchical dependency management in multi‐document question answering"
+  },
+  "processed_at": "2026-11-26T09:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da2690a91d95",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
