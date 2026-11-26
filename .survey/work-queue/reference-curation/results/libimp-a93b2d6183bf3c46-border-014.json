@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a93b2d6183bf3c46-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.10959",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.10959",
+    "identity_tokens": [
+      "arXiv:2605.10959"
+    ],
+    "reason": "量子化ネットワークの圧縮・精度・遅延を単一指標へまとめるQuIDEを提案しLlama-3-8Bの4ビット最適性も示すが、量子化手法自体ではなく評価指標と探索用適合度である。",
+    "first_checked_at": "2026-11-26T14:43:37+00:00",
+    "last_checked_at": "2026-11-26T14:43:37+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "QuIDE: Mastering the Quantized Intelligence Trade-off via Active Optimization"
+  },
+  "processed_at": "2026-11-26T14:43:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a93b2d6183bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-492a5c09e4663f7d-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.13742",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.13742",
+    "identity_tokens": [
+      "arXiv:2505.13742"
+    ],
+    "reason": "ベイズ的アブレーションで神経網の潜在タスク表現の因果的寄与を解釈する枠組みであり、認知モデリング向け分析で推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-26T14:43:36+00:00",
+    "last_checked_at": "2026-11-26T14:43:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Understanding Task Representations in Neural Networks via Bayesian Ablation"
+  },
+  "processed_at": "2026-11-26T14:43:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-492a5c09e466",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

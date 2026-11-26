@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a93b2d6183bf3c46-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.06052",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.06052",
+    "identity_tokens": [
+      "arXiv:2601.06052"
+    ],
+    "reason": "習熟度でゲートした強化学習により過剰思考を抑え応答長を20から40％削減し推論費用と遅延を下げるが、手法は訓練時の報酬設計であり推論システム自体の変更ではない。",
+    "first_checked_at": "2026-11-26T14:43:37+00:00",
+    "last_checked_at": "2026-11-26T14:43:37+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Reinforcement Learning for Chain of Thought Compression with One-Domain-to-All Generalization"
+  },
+  "processed_at": "2026-11-26T14:43:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a93b2d6183bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

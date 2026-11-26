@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-492a5c09e4663f7d-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.11457",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.11457",
+    "identity_tokens": [
+      "arXiv:2510.11457"
+    ],
+    "reason": "推論過程を信頼度・関連性・一貫性の次元で評価する次元レベル報酬モデルによるLLM最適化であり、訓練時の過程監督が対象で推論システムではない。",
+    "first_checked_at": "2026-11-26T14:43:36+00:00",
+    "last_checked_at": "2026-11-26T14:43:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "From <Answer> to <Think>: Multidimensional Supervision of Reasoning Process for LLM Optimization"
+  },
+  "processed_at": "2026-11-26T14:43:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-492a5c09e466",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

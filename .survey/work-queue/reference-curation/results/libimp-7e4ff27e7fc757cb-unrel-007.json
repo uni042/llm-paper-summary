@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e4ff27e7fc757cb-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.08503",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.08503",
+    "identity_tokens": [
+      "arXiv:2305.08503"
+    ],
+    "reason": "事前学習言語モデルに階層的エンコーダ・デコーダを課して複数文書要約を行う手法であり、要約タスクのモデル設計で推論システムの貢献はない。",
+    "first_checked_at": "2026-11-26T14:43:36+00:00",
+    "last_checked_at": "2026-11-26T14:43:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "A Hierarchical Encoding-Decoding Scheme for Abstractive Multi-document Summarization"
+  },
+  "processed_at": "2026-11-26T14:43:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e4ff27e7fc7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

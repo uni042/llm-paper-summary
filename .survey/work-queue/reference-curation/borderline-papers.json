@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T14:42:07+00:00",
-  "record_count": 9786,
+  "updated_at": "2026-11-26T14:43:37+00:00",
+  "record_count": 9798,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -149711,6 +149711,186 @@
       ],
       "borderline_recheck_count": 0,
       "title": "HMem: A Hawkes Process Memory Framework for Long-Horizon Agents"
+    },
+    "arXiv:2507.05065": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.05065",
+      "identity_tokens": [
+        "arXiv:2507.05065"
+      ],
+      "reason": "推論時計算を思考トークンではなく状態を持つツールとの多ターン対話痕跡で置換し小規模モデルでコード修復を学習させるが、貢献は推論形式と訓練法でありサービングやデコード機構そのものではないため保留寄りである。",
+      "first_checked_at": "2026-11-26T14:43:36+00:00",
+      "last_checked_at": "2026-11-26T14:43:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Replacing thinking with tool usage enables reasoning in small language models"
+    },
+    "DOI:10.1109/iccwamtip56608.2022.10016511": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccwamtip56608.2022.10016511",
+      "identity_tokens": [
+        "DOI:10.1109/iccwamtip56608.2022.10016511"
+      ],
+      "reason": "条件付きマスク言語モデルとtop-kデコードで非自己回帰機械翻訳のデコードを約3倍高速化するが、対象は翻訳モデルの生成方式であり現代のLLM推論システムへの直接性は限定的である。",
+      "first_checked_at": "2026-11-26T14:43:36+00:00",
+      "last_checked_at": "2026-11-26T14:43:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Non-Autoregressive Machine Translation with a Novel Masked Language Model"
+    },
+    "DOI:10.63646/jaiaa.2025.030204": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.63646/jaiaa.2025.030204",
+      "identity_tokens": [
+        "DOI:10.63646/jaiaa.2025.030204"
+      ],
+      "reason": "エッジデプロイされた小型言語モデルの欺瞞的推論をリスク多様体で検出する安全監視枠組みであり、エッジLLM運用には関わるが推論高速化やサービング機構の貢献ではない。",
+      "first_checked_at": "2026-11-26T14:43:36+00:00",
+      "last_checked_at": "2026-11-26T14:43:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Risk-Manifold Analytics for Detecting Deceptive Reasoning in Edge-Deployed Large Language Models"
+    },
+    "arXiv:2604.26622": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.26622",
+      "identity_tokens": [
+        "arXiv:2604.26622"
+      ],
+      "reason": "長期エージェントの履歴を画像としてレンダリングし検索することでテキスト文脈のトークン費用を抑えるOCR-Memoryであり、文脈費用削減には関わるが対象はエージェント記憶の保存・検索である。",
+      "first_checked_at": "2026-11-26T14:43:36+00:00",
+      "last_checked_at": "2026-11-26T14:43:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OCR-Memory: Optical Context Retrieval for Long-Horizon Agent Memory"
+    },
+    "arXiv:2411.01171": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.01171",
+      "identity_tokens": [
+        "arXiv:2411.01171"
+      ],
+      "reason": "動画拡散モデル向けに特徴分割・演算子グループ化・ステップ再ハッシュで高速かつ省メモリなStreamlined Inferenceを提案するが、対象は動画拡散の推論でありLLM推論ではない。",
+      "first_checked_at": "2026-11-26T14:43:36+00:00",
+      "last_checked_at": "2026-11-26T14:43:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast and Memory-Efficient Video Diffusion Using Streamlined Inference"
+    },
+    "arXiv:2408.09442": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.09442",
+      "identity_tokens": [
+        "arXiv:2408.09442"
+      ],
+      "reason": "数え上げクエリへのオラクルで任意分布からの並列サンプリングを高速化し自己回帰モデルのサンプリング高速化も示唆するが、理論的アルゴリズムでありLLM推論実装への直接性は弱い。",
+      "first_checked_at": "2026-11-26T14:43:36+00:00",
+      "last_checked_at": "2026-11-26T14:43:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Parallel Sampling via Counting"
+    },
+    "arXiv:2311.13587": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.13587",
+      "identity_tokens": [
+        "arXiv:2311.13587"
+      ],
+      "reason": "GPUアクセスを伴うサーバレス機械学習推論の課題と最適化機会を分類するサーベイであり、推論サービングに直接関わるが新規のシステム機構の提案ではない。",
+      "first_checked_at": "2026-11-26T14:43:36+00:00",
+      "last_checked_at": "2026-11-26T14:43:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey of Serverless Machine Learning Model Inference"
+    },
+    "arXiv:2601.06052": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06052",
+      "identity_tokens": [
+        "arXiv:2601.06052"
+      ],
+      "reason": "習熟度でゲートした強化学習により過剰思考を抑え応答長を20から40％削減し推論費用と遅延を下げるが、手法は訓練時の報酬設計であり推論システム自体の変更ではない。",
+      "first_checked_at": "2026-11-26T14:43:37+00:00",
+      "last_checked_at": "2026-11-26T14:43:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reinforcement Learning for Chain of Thought Compression with One-Domain-to-All Generalization"
+    },
+    "arXiv:2605.17626": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17626",
+      "identity_tokens": [
+        "arXiv:2605.17626"
+      ],
+      "reason": "コード翻訳で構造境界ごとに検証器を呼び検証済み接頭辞を確定するデコード時検証DTVであり、デコード制御として推論に関わるが対象タスクがコード翻訳に限定される。",
+      "first_checked_at": "2026-11-26T14:43:37+00:00",
+      "last_checked_at": "2026-11-26T14:43:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Verifiers in the Loop: Decoding Time Verification for Code Translation"
+    },
+    "DOI:10.1145/3830454.3832717": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3830454.3832717",
+      "identity_tokens": [
+        "DOI:10.1145/3830454.3832717"
+      ],
+      "reason": "認証付き分散比較関数で能動的安全な機械学習推論を行うLightSharkを実装しGPTやBERTも扱うが、主貢献は暗号プロトコルであり通常のLLMサービング効率とは距離がある。",
+      "first_checked_at": "2026-11-26T14:43:37+00:00",
+      "last_checked_at": "2026-11-26T14:43:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LightShark: Actively Secure Machine-Learning Inference Based on Lightweight Authenticated Distributed Comparison Function"
+    },
+    "arXiv:2605.10959": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.10959",
+      "identity_tokens": [
+        "arXiv:2605.10959"
+      ],
+      "reason": "量子化ネットワークの圧縮・精度・遅延を単一指標へまとめるQuIDEを提案しLlama-3-8Bの4ビット最適性も示すが、量子化手法自体ではなく評価指標と探索用適合度である。",
+      "first_checked_at": "2026-11-26T14:43:37+00:00",
+      "last_checked_at": "2026-11-26T14:43:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "QuIDE: Mastering the Quantized Intelligence Trade-off via Active Optimization"
+    },
+    "arXiv:2603.03880": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.03880",
+      "identity_tokens": [
+        "arXiv:2603.03880"
+      ],
+      "reason": "RRAMやSRAMのインメモリ計算アクセラレータを複数神経網ワークロード向けに進化アルゴリズムで共同最適化する枠組みであり、推論ハードウェアには関わるがLLM特化ではない。",
+      "first_checked_at": "2026-11-26T14:43:37+00:00",
+      "last_checked_at": "2026-11-26T14:43:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Joint Hardware-Workload Co-Optimization for In-Memory Computing Accelerators"
     }
   }
 }

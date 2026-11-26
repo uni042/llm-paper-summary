@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a93b2d6183bf3c46-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.07663",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.07663",
+    "identity_tokens": [
+      "arXiv:2608.07663"
+    ],
+    "reason": "超長尺動画理解のために複数キーによるエピソード記憶を構築し推論時に時間拡張検索を行うMERITであり、動画記憶検索が対象でLLM推論基盤ではない。",
+    "first_checked_at": "2026-11-26T14:43:37+00:00",
+    "last_checked_at": "2026-11-26T14:43:37+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Keep It Simple: Multi-Key Episodic Memory Retrieval for Ultra-Long Video Understanding"
+  },
+  "processed_at": "2026-11-26T14:43:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a93b2d6183bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-492a5c09e4663f7d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.05065",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.05065",
+    "identity_tokens": [
+      "arXiv:2507.05065"
+    ],
+    "reason": "推論時計算を思考トークンではなく状態を持つツールとの多ターン対話痕跡で置換し小規模モデルでコード修復を学習させるが、貢献は推論形式と訓練法でありサービングやデコード機構そのものではないため保留寄りである。",
+    "first_checked_at": "2026-11-26T14:43:36+00:00",
+    "last_checked_at": "2026-11-26T14:43:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Replacing thinking with tool usage enables reasoning in small language models"
+  },
+  "processed_at": "2026-11-26T14:43:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-492a5c09e466",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e4ff27e7fc757cb-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.17677",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.17677",
+    "identity_tokens": [
+      "arXiv:2403.17677"
+    ],
+    "reason": "宇宙機搭載のハイパースペクトル画像向けに線単位注意の予測符号化で無損失圧縮を行う研究であり、画像圧縮が対象でLLM推論ではない。",
+    "first_checked_at": "2026-11-26T14:43:36+00:00",
+    "last_checked_at": "2026-11-26T14:43:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Onboard deep lossless and near-lossless predictive coding of hyperspectral images with line-based attention"
+  },
+  "processed_at": "2026-11-26T14:43:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e4ff27e7fc7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
