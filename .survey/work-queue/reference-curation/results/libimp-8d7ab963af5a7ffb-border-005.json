@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8d7ab963af5a7ffb-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2005.04862",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2005.04862",
+    "identity_tokens": [
+      "arXiv:2005.04862"
+    ],
+    "reason": "一次要旨でビーム探索なしの一括生成で低遅延化する非自己回帰型音声認識LASOが確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+    "first_checked_at": "2026-11-26T07:52:53+00:00",
+    "last_checked_at": "2026-11-26T07:52:53+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Listen Attentively, and Spell Once: Whole Sentence Generation via a Non-Autoregressive Architecture for Low-Latency Speech Recognition"
+  },
+  "processed_at": "2026-11-26T07:52:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8d7ab963af5a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

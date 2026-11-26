@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54fecaf6af350edb-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.23055",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.23055",
+    "identity_tokens": [
+      "arXiv:2607.23055"
+    ],
+    "reason": "LLMの原子的主張を軽量な制約伝播器で逐次検証するSymStepは、推論時の検証付き生成という実行形態には関わるが、対象は論理推論の正しさであり推論効率の機構ではないため境界とした。",
+    "first_checked_at": "2026-11-26T07:52:53+00:00",
+    "last_checked_at": "2026-11-26T07:52:53+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SymStep: Symbolic Step Verification for Logical Reasoning"
+  },
+  "processed_at": "2026-11-26T07:52:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54fecaf6af35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

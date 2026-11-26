@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d93c3a5d00672c3-border-020",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.01926",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.01926",
+    "identity_tokens": [
+      "arXiv:2611.01926"
+    ],
+    "reason": "明示的CoTの一部を連続トークンに置換し生成オーバーヘッドを下げるTAC-CoTは、ツール利用エージェントの生成効率に関わるが、サービング機構ではなくモデル側の推論形式の工夫のため境界とした。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-26T07:52:52+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TAC-CoT: Tool-Empowered Implicit Chain-of-Thought via Interleaving Explicit Tokens"
+  },
+  "processed_at": "2026-11-26T07:52:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d93c3a5d006",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

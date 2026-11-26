@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54fecaf6af350edb-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.09268",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.09268",
+    "identity_tokens": [
+      "arXiv:2608.09268"
+    ],
+    "reason": "コードを画像として描画した表現でリポジトリ級課題を解けるかを調べる探索的研究であり、エージェントの表現評価が主題で推論システムへの貢献はないため対象外とした。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-26T07:52:53+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Can Coding Agents Solve Repository-Level Issues with Rendered Code? An Exploratory Study of Visual Representations"
+  },
+  "processed_at": "2026-11-26T07:52:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54fecaf6af35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

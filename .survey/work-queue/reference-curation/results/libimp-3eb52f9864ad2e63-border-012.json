@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3eb52f9864ad2e63-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.25646",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.25646",
+    "identity_tokens": [
+      "arXiv:2610.25646"
+    ],
+    "reason": "一次要旨で単位超球面上で適応ループ停止を行う球面不動点推論器SFPRMの推論計算方式が確認できるが、対象がLLM推論そのものではなく周辺領域・応用寄りであり、推論システムへの直接の技術的貢献は限定的なためborderlineとした。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-26T07:52:52+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Spherical Fixed-Point Reasoners: Adaptive Loop Halting on the Hypersphere"
+  },
+  "processed_at": "2026-11-26T07:52:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3eb52f9864ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b5f31199b71e2d6e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.19544",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.19544",
+    "identity_tokens": [
+      "arXiv:2411.19544"
+    ],
+    "reason": "神経疾患の骨格動作認識に状態空間モデルを用いるSkelMambaの医療応用であり、臨床診断向け動作認識が目的でLLM推論システムとは無関係のため対象外とした。",
+    "first_checked_at": "2026-11-26T00:55:53+00:00",
+    "last_checked_at": "2026-11-26T07:52:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SkelMamba: A State Space Model for Efficient Skeleton Action Recognition of Neurological Disorders"
+  },
+  "processed_at": "2026-11-26T07:52:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b5f31199b71e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

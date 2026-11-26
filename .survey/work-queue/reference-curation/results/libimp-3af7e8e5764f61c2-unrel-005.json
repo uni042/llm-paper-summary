@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3af7e8e5764f61c2-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2302.01649",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2302.01649",
+    "identity_tokens": [
+      "arXiv:2302.01649"
+    ],
+    "reason": "一次要旨で構造アダプタをタンパク質言語モデルへ埋め込むLM-Designによるタンパク質設計が主題であることを確認したが、LLM推論システムの実行効率化への直接の技術的貢献は確認できないためunrelatedとした。",
+    "first_checked_at": "2026-11-26T07:52:52+00:00",
+    "last_checked_at": "2026-11-26T07:52:52+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Structure-informed Language Models Are Protein Designers"
+  },
+  "processed_at": "2026-11-26T07:52:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3af7e8e5764f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

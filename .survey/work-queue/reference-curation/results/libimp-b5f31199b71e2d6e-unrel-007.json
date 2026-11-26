@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b5f31199b71e2d6e-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.04585",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.04585",
+    "identity_tokens": [
+      "arXiv:2508.04585"
+    ],
+    "reason": "対話音声に視覚情報を加えて会話音声を合成するUniTalkerの研究であり、音声合成の表現力が対象でLLM推論システムの機構ではないため対象外とした。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T07:52:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "UniTalker: Conversational Speech-Visual Synthesis"
+  },
+  "processed_at": "2026-11-26T07:52:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b5f31199b71e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

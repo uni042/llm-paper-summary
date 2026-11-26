@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54fecaf6af350edb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.08040",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.08040",
+    "identity_tokens": [
+      "arXiv:2601.08040"
+    ],
+    "reason": "生物医学出版物の画像不正をビジョン言語と状態空間モデルで生成・検出するRescindの研究であり、研究公正の画像鑑識が対象でLLM推論システムとは無関係のため対象外とした。",
+    "first_checked_at": "2026-11-25T22:28:46+00:00",
+    "last_checked_at": "2026-11-26T07:52:53+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Rescind: Countering Image Misconduct in Biomedical Publications with Vision-Language and State-Space Modeling"
+  },
+  "processed_at": "2026-11-26T07:52:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54fecaf6af35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
