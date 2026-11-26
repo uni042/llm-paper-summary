@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea22822934768ed3-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.26596",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.26596",
+    "identity_tokens": [
+      "arXiv:2607.26596"
+    ],
+    "reason": "DVPは上位デコーダ層を視覚専用の単一Transformerブロックへ置換し視覚instruction tuningの学習パラメータを大幅に減らす枠組みで、主眼は学習効率であり推論時の利得は限定的である。",
+    "first_checked_at": "2026-11-26T12:15:50+00:00",
+    "last_checked_at": "2026-11-26T12:15:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Decoupled Visual Processing: Efficient Multimodal Adaptation via Modality-Specific Transformer Substitution"
+  },
+  "processed_at": "2026-11-26T12:15:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea2282293476",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

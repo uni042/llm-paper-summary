@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-439f8bd206723935-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.28585",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.28585",
+    "identity_tokens": [
+      "arXiv:2609.28585"
+    ],
+    "reason": "ツール呼び出しエージェントで保持されたツール返却値が後段の課金対象コンテキストへ再投入されるDenial-of-Wallet攻撃と履歴圧縮等の防御を体系化しており、実行時状態とコンテキスト費用に触れるが主貢献はセキュリティ分析である。",
+    "first_checked_at": "2026-11-26T12:15:49+00:00",
+    "last_checked_at": "2026-11-26T12:15:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Persistent Billable State: Denial-of-Wallet Attacks and Defenses in Tool-Calling LLM Agents"
+  },
+  "processed_at": "2026-11-26T12:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-439f8bd20672",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

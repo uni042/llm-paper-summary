@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aec6b751967fe433-border-020",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.06195",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.06195",
+    "identity_tokens": [
+      "arXiv:2510.06195"
+    ],
+    "reason": "音声トークンを潜在パッチへ集約して系列長を縮めるLatent Speech-Text Transformerは事前学習と推論の計算効率を上げるが、対象は音声テキスト統合モデルの構造でありLLMサービング機構ではない。",
+    "first_checked_at": "2026-11-26T12:15:50+00:00",
+    "last_checked_at": "2026-11-26T12:15:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Latent Speech-Text Transformer"
+  },
+  "processed_at": "2026-11-26T12:15:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aec6b751967f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

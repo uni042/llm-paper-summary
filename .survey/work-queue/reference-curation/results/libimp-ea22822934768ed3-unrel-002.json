@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea22822934768ed3-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.24765",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.24765",
+    "identity_tokens": [
+      "arXiv:2607.24765"
+    ],
+    "reason": "CKMはプロンプト層で事実・ヒューリスティクス・感情の状態分離を強制しLLMの行動一貫性を測る・高める研究であり、推論システムではない。",
+    "first_checked_at": "2026-11-26T12:15:50+00:00",
+    "last_checked_at": "2026-11-26T12:15:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Measuring and Improving Behavioral Consistency in Large Language Models through Fact-Heuristic-Emotion State Enforcement"
+  },
+  "processed_at": "2026-11-26T12:15:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea2282293476",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

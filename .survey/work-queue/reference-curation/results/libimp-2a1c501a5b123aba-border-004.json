@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a1c501a5b123aba-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.23919/splitech65624.2025.11091771",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.23919/splitech65624.2025.11091771",
+    "identity_tokens": [
+      "DOI:10.23919/splitech65624.2025.11091771"
+    ],
+    "reason": "スマートスペース向けにオープンLLMをラップトップ・Raspberry Pi等のエッジとクラウドへ配置し応答レイテンシと精度を実測比較しているが、応用分析基盤の性能評価に留まり推論システムの新機構はない。",
+    "first_checked_at": "2026-11-26T12:15:48+00:00",
+    "last_checked_at": "2026-11-26T12:15:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Performance of Large Language Models Across Edge and Cloud Platforms in Smart Spaces"
+  },
+  "processed_at": "2026-11-26T12:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a1c501a5b12",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

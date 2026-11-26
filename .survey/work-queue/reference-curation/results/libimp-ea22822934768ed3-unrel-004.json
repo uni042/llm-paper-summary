@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea22822934768ed3-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.28478",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.28478",
+    "identity_tokens": [
+      "arXiv:2607.28478"
+    ],
+    "reason": "SaliTrapはLLMの顕著性バイアスを測る常識推論ベンチマークとプロンプト改善の研究であり、能力評価・診断で推論システムではない。",
+    "first_checked_at": "2026-11-26T12:15:50+00:00",
+    "last_checked_at": "2026-11-26T12:15:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Would You Walk to the Car Wash? Salience Bias in LLM Commonsense Reasoning"
+  },
+  "processed_at": "2026-11-26T12:15:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea2282293476",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

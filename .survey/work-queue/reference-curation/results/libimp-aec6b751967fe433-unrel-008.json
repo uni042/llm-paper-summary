@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aec6b751967fe433-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.07585",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.07585",
+    "identity_tokens": [
+      "arXiv:2311.07585"
+    ],
+    "reason": "垂直連合学習で分割したLLMの中間埋め込みから入力文を再構成できることを示すプライバシー攻撃の研究であり、推論システムの効率化ではない。",
+    "first_checked_at": "2026-11-26T12:15:50+00:00",
+    "last_checked_at": "2026-11-26T12:15:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Input Reconstruction Attack against Vertical Federated Large Language Models"
+  },
+  "processed_at": "2026-11-26T12:15:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aec6b751967f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

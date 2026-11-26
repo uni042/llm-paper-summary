@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-439f8bd206723935-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.11252",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.11252",
+    "identity_tokens": [
+      "arXiv:2609.11252"
+    ],
+    "reason": "音響言語モデルの文脈内学習を課題認識と課題学習に分けて測る診断ベンチマークAudioICL-Benchの構築と能力評価のみで、推論システムへの提案はない。",
+    "first_checked_at": "2026-11-26T12:15:49+00:00",
+    "last_checked_at": "2026-11-26T12:15:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "AudioICL-Bench: A Benchmark for Large Audio Language Model In-Context Learning"
+  },
+  "processed_at": "2026-11-26T12:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-439f8bd20672",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

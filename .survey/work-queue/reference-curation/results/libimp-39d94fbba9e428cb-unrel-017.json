@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39d94fbba9e428cb-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.05092",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.05092",
+    "identity_tokens": [
+      "arXiv:2312.05092"
+    ],
+    "reason": "コードTransformerが表層・構文・意味の何を学んだかを15のプロービング課題で評価するINSPECTの研究で、能力・表現評価のみであり推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-26T12:15:49+00:00",
+    "last_checked_at": "2026-11-26T12:15:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "INSPECT: Intrinsic and Systematic Probing Evaluation for Code Transformers"
+  },
+  "processed_at": "2026-11-26T12:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39d94fbba9e4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39d94fbba9e428cb-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.27641",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.27641",
+    "identity_tokens": [
+      "arXiv:2610.27641"
+    ],
+    "reason": "フロー言語モデルで温度スケーリングを分布と輸送力学の両方へ整合させるBayes-Consistent Temperingの提案で、生成分布の学習・サンプリング理論であり推論システムの効率化ではない。",
+    "first_checked_at": "2026-11-26T12:15:49+00:00",
+    "last_checked_at": "2026-11-26T12:15:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "BCT: Bayes-Consistent Tempering for Flow Language Models"
+  },
+  "processed_at": "2026-11-26T12:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39d94fbba9e4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

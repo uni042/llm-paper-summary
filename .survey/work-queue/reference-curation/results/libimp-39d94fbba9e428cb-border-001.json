@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39d94fbba9e428cb-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.08563",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.08563",
+    "identity_tokens": [
+      "arXiv:2610.08563"
+    ],
+    "reason": "クエリごとに冪サンプリングのシャープ化指数を自己報酬ギャップから適応させるAdaptive Power Samplingはテスト時サンプリングの調整だが、推論コストではなく推論精度の改善を目的とする。",
+    "first_checked_at": "2026-11-26T12:15:49+00:00",
+    "last_checked_at": "2026-11-26T12:15:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Power Sampling for LLM Reasoning"
+  },
+  "processed_at": "2026-11-26T12:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39d94fbba9e4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

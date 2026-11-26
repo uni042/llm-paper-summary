@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6cb705d9f52570c3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.04913",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.04913",
+    "identity_tokens": [
+      "arXiv:2602.04913"
+    ],
+    "reason": "A2-LLMは言語・音響韻律・3D顔動作を統一しカスケード誤差と遅延を減らす対話アバタモデルで、500ms遅延は示すが主貢献はアバタ生成能力であり推論基盤技術ではない。",
+    "first_checked_at": "2026-11-26T12:15:49+00:00",
+    "last_checked_at": "2026-11-26T12:15:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A2-LLM: An End-to-end Conversational Audio Avatar Large Language Model"
+  },
+  "processed_at": "2026-11-26T12:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6cb705d9f525",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

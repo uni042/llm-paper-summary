@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-439f8bd206723935-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.37717",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.37717",
+    "identity_tokens": [
+      "arXiv:2609.37717"
+    ],
+    "reason": "デコーダ型Transformerの層wiseなloss-to-go関数の曲率とFisher作用素で隠れ軌跡の幾何を解析する理論研究であり、推論高速化の機構提案はない。",
+    "first_checked_at": "2026-11-26T12:15:49+00:00",
+    "last_checked_at": "2026-11-26T12:15:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Predictive Geometry of Hidden Trajectories in Transformers"
+  },
+  "processed_at": "2026-11-26T12:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-439f8bd20672",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6cb705d9f52570c3-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.12468",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.12468",
+    "identity_tokens": [
+      "arXiv:2602.12468"
+    ],
+    "reason": "Diffinityは正規表現制約を満たすよう連続拡散言語モデルのサンプリングを学習なしで誘導する手法で、制約付きデコード技術ではあるが対象は拡散モデルであり自己回帰LLMサービングへの適用は未確認である。",
+    "first_checked_at": "2026-11-26T12:15:49+00:00",
+    "last_checked_at": "2026-11-26T12:15:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Continuous Diffusion Models Can Obey Formal Syntax"
+  },
+  "processed_at": "2026-11-26T12:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6cb705d9f525",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
