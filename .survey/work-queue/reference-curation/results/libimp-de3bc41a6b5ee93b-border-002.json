@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-de3bc41a6b5ee93b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2210.05111",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2210.05111",
+    "identity_tokens": [
+      "arXiv:2210.05111"
+    ],
+    "reason": "ネットワーク感度と勾配を用いる深層学習モデル圧縮はエッジ配置向け汎用圧縮であり、LLM推論での機構や検証が要旨で不明瞭なため境界として分類する",
+    "first_checked_at": "2026-11-26T09:29:10+00:00",
+    "last_checked_at": "2026-11-26T09:29:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Deep learning model compression using network sensitivity and gradients"
+  },
+  "processed_at": "2026-11-26T09:29:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-de3bc41a6b5e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

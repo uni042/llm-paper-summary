@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8c7d4fdee042d914-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.36967",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.36967",
+    "identity_tokens": [
+      "arXiv:2610.36967"
+    ],
+    "reason": "イベント駆動LLMエージェントのProactive Memoryは履歴を軌跡と規則性で組織化する記憶機構だが、対象はエージェント記憶であり推論実行系ではないため境界とする",
+    "first_checked_at": "2026-11-26T09:29:09+00:00",
+    "last_checked_at": "2026-11-26T09:29:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Proactive Memory for Event-Driven LLM Agents"
+  },
+  "processed_at": "2026-11-26T09:29:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8c7d4fdee042",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

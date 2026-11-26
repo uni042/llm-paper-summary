@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1ef45fc6ce7463c5-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.27288",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.27288",
+    "identity_tokens": [
+      "arXiv:2606.27288"
+    ],
+    "reason": "ルーティングや投票など複数モデル併用の利得上限を共失敗率で示す分析はLLMルーティング設計に関わるが、具体的な推論システム機構の提案ではないため境界とする",
+    "first_checked_at": "2026-11-26T09:29:07+00:00",
+    "last_checked_at": "2026-11-26T09:29:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models"
+  },
+  "processed_at": "2026-11-26T09:29:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1ef45fc6ce74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

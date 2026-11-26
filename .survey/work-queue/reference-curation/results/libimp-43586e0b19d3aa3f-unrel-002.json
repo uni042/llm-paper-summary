@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43586e0b19d3aa3f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:697ba8e16601b0cc861fe83ef671df39519d642c",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:697ba8e16601b0cc861fe83ef671df39519d642c",
+    "identity_tokens": [
+      "SemanticScholar:697ba8e16601b0cc861fe83ef671df39519d642c"
+    ],
+    "reason": "タイトル自体が電動モータのコギングトルク予測のための視覚Transformer圧縮という工学応用を明示しており、LLM推論システムとは無関係なためタイトル段階で対象外とする",
+    "first_checked_at": "2026-11-26T09:29:08+00:00",
+    "last_checked_at": "2026-11-26T09:29:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Model Compression of Vision Transformer for Electric Motor Cogging Torque Prediction"
+  },
+  "processed_at": "2026-11-26T09:29:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43586e0b19d3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

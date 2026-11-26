@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa43af6006af2d8d-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.12818",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.12818",
+    "identity_tokens": [
+      "arXiv:2609.12818"
+    ],
+    "reason": "長尺動画理解でフレーム選択をエージェントハーネス化し文脈コストを抑えるOnline Video Agent Harnessの研究。推論効率との関連は認められるものの主目的や適用先が限定的で、推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+    "first_checked_at": "2026-11-25T22:19:29+00:00",
+    "last_checked_at": "2026-11-26T09:29:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Online Video Agent Harness for Long Video Understanding"
+  },
+  "processed_at": "2026-11-26T09:29:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa43af6006af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

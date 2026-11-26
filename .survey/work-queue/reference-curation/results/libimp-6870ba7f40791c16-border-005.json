@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6870ba7f40791c16-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.14553",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.14553",
+    "identity_tokens": [
+      "arXiv:2406.14553"
+    ],
+    "reason": "大規模エンコーダに依存する機械翻訳評価指標xCOMETを軽量化したxCOMET-liteの効率化研究。推論効率との関連は認められるものの主目的や適用先が限定的で、推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+    "first_checked_at": "2026-11-25T22:24:22+00:00",
+    "last_checked_at": "2026-11-26T09:29:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "xCOMET-lite: Bridging the Gap Between Efficiency and Quality in Learned MT Evaluation Metrics"
+  },
+  "processed_at": "2026-11-26T09:29:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6870ba7f4079",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

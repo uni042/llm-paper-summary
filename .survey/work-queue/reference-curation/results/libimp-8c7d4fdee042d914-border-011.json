@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8c7d4fdee042d914-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.16301",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.16301",
+    "identity_tokens": [
+      "arXiv:2610.16301"
+    ],
+    "reason": "二次注意なしでO(1)デコード状態を持つ草稿・改訂型言語モデルFONはデコード効率を狙うアーキテクチャだが、主貢献はモデル構造であり推論システム検証は不明瞭なため境界とする",
+    "first_checked_at": "2026-11-26T09:29:09+00:00",
+    "last_checked_at": "2026-11-26T09:29:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FON: A Draft-Revise Dual-Organ Language Model without Sequence-Level Quadratic Attention"
+  },
+  "processed_at": "2026-11-26T09:29:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8c7d4fdee042",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

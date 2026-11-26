@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ac8927f4afdb506-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.19623",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.19623",
+    "identity_tokens": [
+      "arXiv:2604.19623"
+    ],
+    "reason": "上り帯域予算下のエッジ・クラウド協調推論SAGEは送信内容の相補性で精度を上げる選択法だが、主眼は精度であり推論システムの性能機構の提示は限定的なため境界とする",
+    "first_checked_at": "2026-11-26T09:29:08+00:00",
+    "last_checked_at": "2026-11-26T09:29:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SAGE: Training-Free Semantic Evidence Composition for Edge-Cloud Inference under Hard Uplink Budgets"
+  },
+  "processed_at": "2026-11-26T09:29:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ac8927f4afd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

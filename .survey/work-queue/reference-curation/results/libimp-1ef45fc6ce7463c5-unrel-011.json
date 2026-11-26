@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1ef45fc6ce7463c5-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.16687",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.16687",
+    "identity_tokens": [
+      "arXiv:2602.16687"
+    ],
+    "reason": "離散音声基盤モデルのスケーリング実証研究は音声モデルの学習・構築の知見であり、推論システムへの技術的貢献は確認できないため対象外とする",
+    "first_checked_at": "2026-11-26T09:29:08+00:00",
+    "last_checked_at": "2026-11-26T09:29:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Scaling Open Discrete Audio Foundation Models with Interleaved Semantic, Acoustic, and Text Tokens"
+  },
+  "processed_at": "2026-11-26T09:29:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1ef45fc6ce74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

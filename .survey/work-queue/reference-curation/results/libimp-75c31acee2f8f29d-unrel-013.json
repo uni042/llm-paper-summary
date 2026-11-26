@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75c31acee2f8f29d-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.22663",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.22663",
+    "identity_tokens": [
+      "arXiv:2503.22663"
+    ],
+    "reason": "状態空間モデルで複数フローのネットワークトレースを生成するNetSSMのデータ生成研究。一次要旨を確認したが主題は推論システム技術ではなく、LLM推論への直接の技術的貢献が認められないためunrelatedと判定した。",
+    "first_checked_at": "2026-11-25T22:24:22+00:00",
+    "last_checked_at": "2026-11-26T09:29:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "NetSSM: Multi-Flow and State-Aware Network Trace Generation using State-Space Models"
+  },
+  "processed_at": "2026-11-26T09:29:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75c31acee2f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

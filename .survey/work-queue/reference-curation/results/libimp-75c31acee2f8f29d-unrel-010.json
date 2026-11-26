@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75c31acee2f8f29d-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.23962",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.23962",
+    "identity_tokens": [
+      "arXiv:2509.23962"
+    ],
+    "reason": "検証可能報酬による強化学習で条件付き優位推定を行う大規模推論モデルの学習研究。一次要旨を確認したが主題は推論システム技術ではなく、LLM推論への直接の技術的貢献が認められないためunrelatedと判定した。",
+    "first_checked_at": "2026-11-25T22:19:32+00:00",
+    "last_checked_at": "2026-11-26T09:29:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Conditional Advantage Estimation for Reinforcement Learning in Large Reasoning Models"
+  },
+  "processed_at": "2026-11-26T09:29:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75c31acee2f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

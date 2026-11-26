@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ac8927f4afdb506-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2309.04875",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2309.04875",
+    "identity_tokens": [
+      "arXiv:2309.04875"
+    ],
+    "reason": "縮小環上のReLU近似によるMPCプライベート推論は安全推論の通信量削減だが主軸は暗号プロトコルであり対象も汎用NN推論でLLM特化ではないため境界とする",
+    "first_checked_at": "2026-11-26T09:29:08+00:00",
+    "last_checked_at": "2026-11-26T09:29:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Approximating ReLU on a Reduced Ring for Efficient MPC-based Private Inference"
+  },
+  "processed_at": "2026-11-26T09:29:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ac8927f4afd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

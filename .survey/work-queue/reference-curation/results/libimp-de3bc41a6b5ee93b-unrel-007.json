@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-de3bc41a6b5ee93b-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2207.04399",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2207.04399",
+    "identity_tokens": [
+      "arXiv:2207.04399"
+    ],
+    "reason": "Transformerの水平・垂直注意による特徴マップ増強は視覚系を含むモデル表現の改良であり、推論効率の機構ではないため対象外とする",
+    "first_checked_at": "2026-11-26T09:29:10+00:00",
+    "last_checked_at": "2026-11-26T09:29:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Horizontal and Vertical Attention in Transformers"
+  },
+  "processed_at": "2026-11-26T09:29:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-de3bc41a6b5e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f53a98bae6b3067d-unrel-019",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.07854",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.07854",
+    "identity_tokens": [
+      "arXiv:2411.07854"
+    ],
+    "reason": "ポルトガル語のニューラルテキスト生成モデルTucanoを構築する言語モデル学習の研究。一次要旨を確認したが主題は推論システム技術ではなく、LLM推論への直接の技術的貢献が認められないためunrelatedと判定した。",
+    "first_checked_at": "2026-11-25T22:19:30+00:00",
+    "last_checked_at": "2026-11-26T09:29:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Tucano: Advancing neural text generation for Portuguese"
+  },
+  "processed_at": "2026-11-26T09:29:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f53a98bae6b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

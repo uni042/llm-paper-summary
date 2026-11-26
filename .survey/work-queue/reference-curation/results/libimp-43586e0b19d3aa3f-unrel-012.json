@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43586e0b19d3aa3f-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.13667",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.13667",
+    "identity_tokens": [
+      "arXiv:2305.13667"
+    ],
+    "reason": "対照学習で非自己回帰Transformerの多峰性学習を容易化する研究は学習側の最適化であり、デコード機構の新規提案ではないため対象外とする",
+    "first_checked_at": "2026-11-26T09:29:08+00:00",
+    "last_checked_at": "2026-11-26T09:29:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Optimizing Non-Autoregressive Transformers with Contrastive Learning"
+  },
+  "processed_at": "2026-11-26T09:29:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43586e0b19d3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

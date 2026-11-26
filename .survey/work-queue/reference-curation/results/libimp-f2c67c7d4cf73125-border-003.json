@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2c67c7d4cf73125-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.05167",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.05167",
+    "identity_tokens": [
+      "arXiv:2410.05167"
+    ],
+    "reason": "音楽生成拡散モデルのステップ・層蒸留Prestoは生成推論高速化だが対象がテキスト音楽生成でありLLM推論システムの範囲からは外れるため境界とする",
+    "first_checked_at": "2026-11-26T09:29:10+00:00",
+    "last_checked_at": "2026-11-26T09:29:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Presto! Distilling Steps and Layers for Accelerating Music Generation"
+  },
+  "processed_at": "2026-11-26T09:29:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2c67c7d4cf7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
