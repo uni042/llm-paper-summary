@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "HitKV: Activation Frequency Knows Which Tokens Are Important",
+      "source_url": "https://doi.org/10.1609/aaai.v40i34.40105",
+      "year": 2026,
+      "published": "2026-03-14",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The demand for long-context processing in large language models (LLMs) continues to escalate alongside rapid advancements in their capabilities. However, the intermediate attention keys and values (KV cache) employed to avoid re-computations, also grow linearly with sequence length, far exceeding the memory capacity of consumer-grade GPUs. Consequently, many studies have proposed KV cache compression methods that evict unimportant tokens based on variant attention scoring strategies. These methods typically retain the KV pairs of the top-k scoring tokens under a fixed memory budget. However, they still face several limitations. First, they disregard the activation frequency of tokens, specifically the count of times tokens achieve top-k scores in the attention distribution of following tokens. The methods based on variant attention scores may incorrectly evict some high-activation-frequency yet low final-scoring tokens. Second, the activation frequency exhibits different distribution patterns across layers and tasks. Neglecting these differences negatively impacts model performance and task adaptability. Our analysis of the actual token activation frequency and its unique characteristics across layers and task types reveals potential opportunities to address these issues. In this paper, we propose HitKV, which employs hit rates to directly characterize token activation frequencies, enabling adaptive layer-aware and task-aware KV cache eviction under the uniform memory allocation strategies. Also, HitKV can be easily integrated into layer-specific memory allocation methods. Experimental results demonstrate that HitKV maintains model performance with preserving only 3% of the KV cache, achieves high-quality generation outputs in long-text generation tasks, and delivers 4× throughput improvement over baselines.",
+      "identifiers": [
+        "SemanticScholar:1f9499b8387d634fda6f1ef8184cd8daaa0bc46f"
+      ],
+      "semantic_scholar_id": "1f9499b8387d634fda6f1ef8184cd8daaa0bc46f",
+      "doi": "10.1609/aaai.v40i34.40105",
+      "canonical_id": "DOI:10.1609/aaai.v40i34.40105",
+      "authors": [
+        "Sanle Zhao",
+        "Yu-Juan Tan",
+        "Yu-Bin Jing",
+        "Zhuo-Xin Bai",
+        "Yue Niu",
+        "J. Guo",
+        "Zong-Jie Wang",
+        "A. Ren"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      },
+      "reason": "トークンの活性化頻度（hit rate）に基づく層・タスク適応型のKVキャッシュエビクションHitKVを提案し、KVキャッシュを3%まで圧縮しながら生成品質を維持しスループットを4倍に改善したと一次要旨で具体的に示されており、LLM推論のKVキャッシュ管理への直接の技術的貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-73767a524cb4",
+    "round": "libimp-73767a524cb458e4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-73767a524cb458e4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-73767a524cb458e4-pre01.json",
+    "receipt": "sha256:b50acc36855aa6cd6a9563bb439b036c2c0062526ab793ce97de9a82df12fff7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-73767a524cb4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

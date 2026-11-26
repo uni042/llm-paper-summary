@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "When Do Fewer Visual Tokens Accelerate Multimodal Inference? A Break-Even Study Across Decision Locations and Hardware",
+      "source_url": "https://arxiv.org/abs/2608.03649",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fewer visual tokens do not guarantee lower end-to-end latency. We evaluate break-even with a reproducible protocol that accounts for decision overhead, shared work, and the operators each policy can avoid. A stage-level decomposition reconciles these components with measured end-to-end latency. In a 30-example pilot, the two tested autoregressive probes remain slower than Full despite state reuse. A lightweight post-vision predictor yields paired confidence intervals below zero on RTX 3090 and A100 and remains significant after a conservative all-pairs Holm correction. A pre-vision image-size rule also yields intervals below zero on both GPUs, although neither comparison remains significant after the same correction. Pre-vision routing has a structural opportunity unavailable to post-vision pruning: it can avoid preprocessing and vision encoding. On A100, this opportunity outweighs a nearly eightfold larger downstream token reduction by the post-vision policy. Reported quality is conditional on examples answered correctly by Full and is not benchmark accuracy.",
+      "identifiers": [
+        "SemanticScholar:184aca75e913bed2ac7a470ed4a2acde4b5d7aa7"
+      ],
+      "semantic_scholar_id": "184aca75e913bed2ac7a470ed4a2acde4b5d7aa7",
+      "canonical_id": "arXiv:2608.03649",
+      "arxiv_id": "2608.03649",
+      "doi": "10.48550/arXiv.2608.03649",
+      "authors": [
+        "Hao Dou",
+        "Rui Tian"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 114,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚トークン削減がマルチモーダル推論のエンドツーエンド遅延を実際に短縮する条件を、判断位置とハードウェアを変えた損益分岐分析と段階別分解で実測しており、マルチモーダル推論の高速化に関する直接の知見を提供している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Communication-Aware Model Distributed Inference via Latent Representation Compression",
+      "source_url": "https://arxiv.org/abs/2609.30413",
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": "ACM Interational Symposium on Mobile Ad Hoc Networking and Computing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study optimization of distributed model inference over resource-constrained edge resources. We propose a framework that optimizes the trade-off between model accuracy and communication costs by controlling latent representation compression to meet strict Quality of Service (QoS) throughput targets. For settings with known channel state information (CSI), we derive a closed-form optimal solution for single tasks and reduce the multi-task problem to a convex optimization program characterized by a per-link water-filling strategy. We extend these to handle unpredictable environments via a stochastic dual descent algorithm that relies only on causal channel estimates. We provide Lyapunov-based proofs demonstrating that our approach strictly satisfies long-term delay constraints while achieving a bounded optimality gap. Our results offer a robust, scalable blueprint for maximizing the performance of pipelined AI tasks in dynamic, resource-constrained distributed systems. We verify the effectiveness of our proposed framework through simulations and experiments with real edge devices.",
+      "identifiers": [
+        "SemanticScholar:a6fbcbb0e21592a558dad9c62132a5b48bed594d"
+      ],
+      "semantic_scholar_id": "a6fbcbb0e21592a558dad9c62132a5b48bed594d",
+      "canonical_id": "arXiv:2609.30413",
+      "arxiv_id": "2609.30413",
+      "doi": "10.1145/3842721.3849644",
+      "authors": [
+        "Peyman Gholami",
+        "Theodoros-Thirimachos Davarakis",
+        "Teng Li",
+        "Miquel Sirera Perelló",
+        "Salil Reddy",
+        "Ayberk Yarkın Yıldız",
+        "Anish Arora",
+        "Atilla Eryilmaz",
+        "Stratis Ioannidis",
+        "Cheng-Zhang Li",
+        "Hulya Seferoglu",
+        "N. Shroff"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      },
+      "reason": "資源制約のあるエッジ環境での分散モデル推論を対象に、潜在表現の圧縮率を制御して精度と通信コストのトレードオフをQoSスループット制約下で最適化する枠組みを提案しており、分散推論への直接の技術的貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4e4bb55de633",
+    "round": "libimp-4e4bb55de6334663-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4e4bb55de6334663-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4e4bb55de6334663-pre01.json",
+    "receipt": "sha256:668864f8f1d62bf96dbea2f16e987d6daf208135639f5e770f1a21c49e80d225"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4e4bb55de633",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

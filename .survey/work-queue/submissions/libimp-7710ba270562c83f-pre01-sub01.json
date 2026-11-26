@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OptiPrune: Effective Pruning Approach for Every Target Sparsity",
+      "source_url": "https://www.semanticscholar.org/paper/dd53745a3ac7d33856a7df059331893417f6f293",
+      "year": 2025,
+      "published": null,
+      "venue": "International Conference on Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293"
+      ],
+      "semantic_scholar_id": "dd53745a3ac7d33856a7df059331893417f6f293",
+      "canonical_id": "SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293",
+      "authors": [
+        "Khang Le",
+        "Ryo Sato",
+        "Dai Nakashima",
+        "Takeshi Suzuki",
+        "Minh-Quang Le Nguyen"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 513,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMのpost-training pruningについて、層別一様sparsityが低sparsityで有効・非一様が高sparsityで有効という知見に基づき、適応的deviationを持つ非一様sparsityとRIA/Hessian再構成の切替を組み合わせたOptiPruneを提案し、全sparsity域でモデルサイズと計算需要を削減するLLM圧縮手法を具体的に示しているためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Privacy-Preserving Inference for Quantized BERT Models",
+      "source_url": "https://arxiv.org/abs/2508.01636",
+      "year": 2025,
+      "published": "2025-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the increasing deployment of generative machine learning models in privacy-sensitive domains such as healthcare and personalized services, ensuring secure inference has become a critical challenge. Secure multi-party computation (MPC) enables privacy-preserving model inference but suffers from high communication and computation overhead. The main bottleneck lies in the expensive secure evaluation of floating-point operations. Quantization offers a promising solution by converting floating-point operations into lower-precision integer computations, significantly reducing overhead. However, existing MPC-based quantized inference methods either rely on public quantization parameters-posing privacy risks-or suffer from inefficiencies, particularly in handling nonlinear functions such as activations and softmax. In this work, we propose a fine-grained, layer-wise quantization scheme and support 1-bit weight fully connected layers in a secure setting. We design a multi-input lookup table protocol to evaluate softmax efficiently and securely. Furthermore, we use dual secret sharing schemes and perform precision conversions via lookup tables, eliminating truncation overhead entirely. Experimental evaluation on BERT-base models demonstrates that our approach achieves up to $8\\times$ speedup compared to Lu \\emph{et al}. (NDSS 25), $9\\times$ speedup compared to Gupta \\emph{et al}. (PETS 24) and $22 \\times$ speedup compared to Knott \\emph{et al}. (NeurIPS 21).",
+      "identifiers": [
+        "SemanticScholar:c1627df9aa1db8cef8d44cfd114275ecebbefe87"
+      ],
+      "semantic_scholar_id": "c1627df9aa1db8cef8d44cfd114275ecebbefe87",
+      "canonical_id": "arXiv:2508.01636",
+      "arxiv_id": "2508.01636",
+      "doi": "10.48550/arXiv.2508.01636",
+      "authors": [
+        "Tian-Pei Lu",
+        "Bing-Sheng Zhang",
+        "Lekun Peng",
+        "Bo-Wen Zheng",
+        "Li-Chun Li",
+        "Kui Ren"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 480,
+        "matched_prestigious_venue": null
+      },
+      "reason": "秘密計算によるプライバシー保護推論の浮動小数演算ボトルネックに対し、層別量子化と1-bit重み全結合層、多入力ルックアップテーブルによるsoftmax評価と精度変換でtruncation overheadを除去し、BERT-baseで既存手法比最大22倍の高速化を示す量子化BERTのセキュア推論手法を具体的に示しているためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7710ba270562",
+    "round": "libimp-7710ba270562c83f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7710ba270562c83f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7710ba270562c83f-pre01.json",
+    "receipt": "sha256:6df49207236e9a3d405983769a95b70e0ad1c58fc1f835705e3fb994ae2b1637"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7710ba270562",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

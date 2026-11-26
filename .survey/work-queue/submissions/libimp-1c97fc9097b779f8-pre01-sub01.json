@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Inference Perf: A Benchmarking Tool for GenAI Inference",
+      "source_url": "https://doi.org/10.21105/joss.10314",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": "Journal of Open Source Software",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:32bd1b3015a8ff2b6c1bc83993bb29a05f55dcde"
+      ],
+      "semantic_scholar_id": "32bd1b3015a8ff2b6c1bc83993bb29a05f55dcde",
+      "doi": "10.21105/joss.10314",
+      "canonical_id": "DOI:10.21105/joss.10314",
+      "authors": [
+        "A. Chandrasekar",
+        "S. Varghese",
+        "Jason Kramberger",
+        "Brendan Slabe",
+        "Chen Wang",
+        "Yuan Tang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 91,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GenAI推論の性能ベンチマークツールInference Perfを提示し、モデルサーバに依存しない形で推論デプロイメントの性能計測と比較を標準化するもので、推論の計測基盤への直接の貢献が要旨で確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Remask, Don’t Replace: Token-to-Mask Refinement in Diffusion Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/be110b75abacef3a9a1a38d7f32a91a026644f91",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:be110b75abacef3a9a1a38d7f32a91a026644f91"
+      ],
+      "semantic_scholar_id": "be110b75abacef3a9a1a38d7f32a91a026644f91",
+      "canonical_id": "SemanticScholar:be110b75abacef3a9a1a38d7f32a91a026644f91",
+      "authors": [
+        "Lin Yao"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデルの推論時補正手法Token-to-Maskを提案し、低信頼トークンを再マスクして後段のデノイジングで再予測させる学習不要なデコード機構を複数モデルとタスクで検証しており、推論デコードへの直接の技術的貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1c97fc9097b7",
+    "round": "libimp-1c97fc9097b779f8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1c97fc9097b779f8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1c97fc9097b779f8-pre01.json",
+    "receipt": "sha256:6ebe37f2553bdea4ade58f19e89e1dd3022b6e90fb56cb78c83df525c4955a82"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1c97fc9097b7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
