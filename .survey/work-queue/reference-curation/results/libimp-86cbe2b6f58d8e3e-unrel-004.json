@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86cbe2b6f58d8e3e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41598-026-44396-6",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41598-026-44396-6",
+    "identity_tokens": [
+      "DOI:10.1038/s41598-026-44396-6"
+    ],
+    "reason": "表情認識向けに画像融合エンコーダとMamba系要素を組み合わせた軽量な視覚認識フレームワークであり、応用先は表情認識タスクでLLM推論の実行機構とは無関係であるため対象外である。",
+    "first_checked_at": "2026-11-26T22:13:19+00:00",
+    "last_checked_at": "2026-11-26T22:13:19+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "FERMam: a lightweight dual-source and multi-scale fusion framework for facial expression recognition"
+  },
+  "processed_at": "2026-11-26T22:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86cbe2b6f58d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

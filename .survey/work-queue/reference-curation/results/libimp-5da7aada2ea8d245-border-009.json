@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5da7aada2ea8d245-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.14935",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.14935",
+    "identity_tokens": [
+      "arXiv:2607.14935"
+    ],
+    "reason": "動画MLLM VideoChat3で学習・推論コストを下げる効率設計を含むが、主体は動画理解モデルの公開とデータ合成であり推論基盤の貢献は副次的である。",
+    "first_checked_at": "2026-11-26T22:13:19+00:00",
+    "last_checked_at": "2026-11-26T22:13:19+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding"
+  },
+  "processed_at": "2026-11-26T22:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5da7aada2ea8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

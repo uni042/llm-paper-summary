@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8effbef513af5567-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.03283",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.03283",
+    "identity_tokens": [
+      "arXiv:2606.03283"
+    ],
+    "reason": "野外話者照合向けの証拠接地コーパスSpeakerCard-1Mを構築するデータ資源の研究であり、話者照合タスクのデータ提供であってLLM推論システムへの技術的貢献はないため対象外である。",
+    "first_checked_at": "2026-11-26T22:13:19+00:00",
+    "last_checked_at": "2026-11-26T22:13:19+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "SpeakerCard-1M: An Evidence-Grounded Corpus for In-the-Wild Speaker Verification"
+  },
+  "processed_at": "2026-11-26T22:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8effbef513af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

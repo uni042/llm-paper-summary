@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abbb82b9969c2d37-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.13262",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.13262",
+    "identity_tokens": [
+      "arXiv:2601.13262"
+    ],
+    "reason": "タイトル自体が多言語医療推論向けカリキュラム強化学習を明示しており、医療応用が主目的で推論システムとは無関係なためタイトルで除外した。",
+    "first_checked_at": "2026-11-26T22:13:20+00:00",
+    "last_checked_at": "2026-11-26T22:13:20+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning"
+  },
+  "processed_at": "2026-11-26T22:13:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abbb82b9969c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

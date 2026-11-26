@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8effbef513af5567-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.26517",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.26517",
+    "identity_tokens": [
+      "arXiv:2608.26517"
+    ],
+    "reason": "感情認識・動画生成・声クローン・動画マッティングを含む人間中心視覚知能のマルチモーダルベンチマークHUG-VISであり、評価資源の提供であって推論システムの機構への貢献はないため対象外である。",
+    "first_checked_at": "2026-11-26T22:13:19+00:00",
+    "last_checked_at": "2026-11-26T22:13:19+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "HUG-VIS: A Multimodal Benchmark for Human-centered Understanding and Generation in Visual Intelligence"
+  },
+  "processed_at": "2026-11-26T22:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8effbef513af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

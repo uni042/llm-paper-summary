@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86cbe2b6f58d8e3e-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.13830",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.13830",
+    "identity_tokens": [
+      "arXiv:2602.13830"
+    ],
+    "reason": "オープンエンド深層調査エージェント向けに知識探索グラフとアウトライン構造を分離するDualGraphメモリの提案であり、調査ワークフローの品質改善であって推論実行機構の貢献ではないため対象外である。",
+    "first_checked_at": "2026-11-26T22:13:19+00:00",
+    "last_checked_at": "2026-11-26T22:13:19+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "A Tale of Two Graphs: Separating Knowledge Exploration from Outline Structure for Open-Ended Deep Research"
+  },
+  "processed_at": "2026-11-26T22:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86cbe2b6f58d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

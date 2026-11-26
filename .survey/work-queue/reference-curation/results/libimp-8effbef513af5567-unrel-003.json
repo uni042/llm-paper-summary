@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8effbef513af5567-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.23637",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.23637",
+    "identity_tokens": [
+      "arXiv:2606.23637"
+    ],
+    "reason": "行列配慮型最適化器Muownの方向更新が角度ステップサイズ減衰と等価であることを示す学習最適化の理論解析であり、事前学習の最適化理論であって推論システムではないため対象外である。",
+    "first_checked_at": "2026-11-26T22:13:19+00:00",
+    "last_checked_at": "2026-11-26T22:13:19+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Muown Implicitly Performs Angular Step-size Decay"
+  },
+  "processed_at": "2026-11-26T22:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8effbef513af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

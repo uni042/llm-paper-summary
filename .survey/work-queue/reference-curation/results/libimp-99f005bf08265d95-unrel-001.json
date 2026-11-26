@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99f005bf08265d95-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.21968",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.21968",
+    "identity_tokens": [
+      "arXiv:2509.21968"
+    ],
+    "reason": "単一コードブックによる音声コーデックAUVの再構成品質とビットレートに関する研究であり、LLM推論やサービングへの技術的貢献は要旨に確認できない。",
+    "first_checked_at": "2026-11-26T22:13:20+00:00",
+    "last_checked_at": "2026-11-26T22:13:20+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "AUV: Teaching Audio Universal Vector Quantization with Single Nested Codebook"
+  },
+  "processed_at": "2026-11-26T22:13:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99f005bf0826",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

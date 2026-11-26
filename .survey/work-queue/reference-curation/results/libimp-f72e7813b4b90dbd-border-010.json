@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f72e7813b4b90dbd-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.07175",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.07175",
+    "identity_tokens": [
+      "arXiv:2610.07175"
+    ],
+    "reason": "レンダリングした導出を潜在状態へ圧縮してテキスト推論のオーバーヘッドを減らす潜在推論手法CALRを提案するが、内容は潜在表現の学習と推論内容の保持というモデル側の表現学習が中心で、サービングや実行機構への貢献は間接的であるためborderlineとした。",
+    "first_checked_at": "2026-11-26T22:13:20+00:00",
+    "last_checked_at": "2026-11-26T22:13:20+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CALR: Continuous Anchored Latent Reasoning via Render-of-Thought Compression"
+  },
+  "processed_at": "2026-11-26T22:13:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f72e7813b4b9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99f005bf08265d95-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.19174",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.19174",
+    "identity_tokens": [
+      "arXiv:2510.19174"
+    ],
+    "reason": "耳EEG信号からの聴覚注意デコーディング用データセットと古典的デコーダ評価であり、生体信号処理の研究で推論システムとは無関係である。",
+    "first_checked_at": "2026-11-26T22:13:20+00:00",
+    "last_checked_at": "2026-11-26T22:13:20+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Auditory Attention Decoding from Ear-EEG Signals: A Dataset with Dynamic Attention Switching and Rigorous Cross-Validation"
+  },
+  "processed_at": "2026-11-26T22:13:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99f005bf0826",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86cbe2b6f58d8e3e-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.15376",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.15376",
+    "identity_tokens": [
+      "arXiv:2606.15376"
+    ],
+    "reason": "並行実行されるLLMエージェントの共有状態に対する同時実行制御プロトコルMTPOを提案するランタイム研究だが、対象はエージェントの状態一貫性でありLLM推論・サービングの実行効率そのものではないため関連は間接的である。",
+    "first_checked_at": "2026-11-26T22:13:19+00:00",
+    "last_checked_at": "2026-11-26T22:13:19+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CoAgent: Concurrency Control for Multi-Agent Systems"
+  },
+  "processed_at": "2026-11-26T22:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86cbe2b6f58d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

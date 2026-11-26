@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86cbe2b6f58d8e3e-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.03376",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.03376",
+    "identity_tokens": [
+      "arXiv:2609.03376"
+    ],
+    "reason": "秘密計算下のベクトル検索を二値コードとクラスタ剪定で高速化するSpruceはRAGの検索基盤として推論周辺の遅延・スループットを改善するが、LLM自体の推論・生成機構ではなく検索プロトコルの貢献であるため関連は周辺的である。",
+    "first_checked_at": "2026-11-26T22:13:19+00:00",
+    "last_checked_at": "2026-11-26T22:13:19+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Spruce: Scalable Private Outsourced Retrieval Using Compact Embeddings"
+  },
+  "processed_at": "2026-11-26T22:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86cbe2b6f58d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

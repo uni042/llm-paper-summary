@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99f005bf08265d95-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tcsi.2025.3555837",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tcsi.2025.3555837",
+    "identity_tokens": [
+      "DOI:10.1109/tcsi.2025.3555837"
+    ],
+    "reason": "自動運転向け多視点交差注意の専用アクセラレータMVAtorを提案するが、用途は視覚3D知覚に限定されLLM推論との接続は薄い。",
+    "first_checked_at": "2026-11-26T22:13:20+00:00",
+    "last_checked_at": "2026-11-26T22:13:20+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Efficient Multi-View Cross-Attention Accelerator for Vision-Centric 3D Perception in Autonomous Driving"
+  },
+  "processed_at": "2026-11-26T22:13:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99f005bf0826",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

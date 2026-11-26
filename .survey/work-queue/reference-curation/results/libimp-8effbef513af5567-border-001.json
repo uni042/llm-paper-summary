@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8effbef513af5567-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.20075",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.20075",
+    "identity_tokens": [
+      "arXiv:2605.20075"
+    ],
+    "reason": "回答を先に起草してから思考するCopTは不要なトークン消費を避ける推論パイプラインの再構成を提案するが、貢献は推論手順の学習・生成方策レベルであり推論エンジンやサービング機構の具体化は要旨で限定的であるため関連は薄い。",
+    "first_checked_at": "2026-11-26T22:13:19+00:00",
+    "last_checked_at": "2026-11-26T22:13:19+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CopT: Contrastive On-Policy Thinking with Continuous Spaces for General and Agentic Reasoning"
+  },
+  "processed_at": "2026-11-26T22:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8effbef513af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

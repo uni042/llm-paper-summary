@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T22:11:50+00:00",
-  "record_count": 9896,
+  "updated_at": "2026-11-26T22:13:21+00:00",
+  "record_count": 9917,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -151369,6 +151369,321 @@
       ],
       "borderline_recheck_count": 0,
       "title": "HEART: Exploiting Head Heterogeneity in Sparse Attention for Video Diffusion"
+    },
+    "DOI:10.1145/3764944.3764950": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3764944.3764950",
+      "identity_tokens": [
+        "DOI:10.1145/3764944.3764950"
+      ],
+      "reason": "生成AI推論をクラウドとエッジに配置した場合の水消費と炭素排出をモデル化し実測比較するケーススタディであり、推論配置の計測という観点では関連するが、新しい推論機構や効率化手法の提案はないためborderlineとした。",
+      "first_checked_at": "2026-11-26T22:13:17+00:00",
+      "last_checked_at": "2026-11-26T22:13:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Case Study of Environmental Footprints for Generative AI Inference: Cloud versus Edge"
+    },
+    "arXiv:2607.07508": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.07508",
+      "identity_tokens": [
+        "arXiv:2607.07508"
+      ],
+      "reason": "LLM強化学習の非同期ロールアウト学習パイプラインを単一ロールアウト方式で安定化する提案であり、推論ではなく学習基盤寄りの貢献である。",
+      "first_checked_at": "2026-11-26T22:13:19+00:00",
+      "last_checked_at": "2026-11-26T22:13:19+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning"
+    },
+    "arXiv:2607.14935": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.14935",
+      "identity_tokens": [
+        "arXiv:2607.14935"
+      ],
+      "reason": "動画MLLM VideoChat3で学習・推論コストを下げる効率設計を含むが、主体は動画理解モデルの公開とデータ合成であり推論基盤の貢献は副次的である。",
+      "first_checked_at": "2026-11-26T22:13:19+00:00",
+      "last_checked_at": "2026-11-26T22:13:19+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding"
+    },
+    "arXiv:2608.25500": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25500",
+      "identity_tokens": [
+        "arXiv:2608.25500"
+      ],
+      "reason": "LLMエージェントのスキルライブラリ検索を因果グラフで較正するCaSKGであり、文脈コストへの言及はあるが主体は検索精度で推論基盤の貢献は薄い。",
+      "first_checked_at": "2026-11-26T22:13:19+00:00",
+      "last_checked_at": "2026-11-26T22:13:19+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CaSKG: Counterfactual-Causal Skill Graphs for Scalable Agent Skill Retrieval"
+    },
+    "arXiv:2603.00976": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00976",
+      "identity_tokens": [
+        "arXiv:2603.00976"
+      ],
+      "reason": "動画生成モデルの特徴キャッシュを精密化し推論を高速化するPreciseCacheであり、キャッシュ技術として関連するが対象は動画生成でLLMではない。",
+      "first_checked_at": "2026-11-26T22:13:19+00:00",
+      "last_checked_at": "2026-11-26T22:13:19+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PreciseCache: Precise Feature Caching for Efficient and High-fidelity Video Generation"
+    },
+    "arXiv:2604.06452": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.06452",
+      "identity_tokens": [
+        "arXiv:2604.06452"
+      ],
+      "reason": "聞き手が話者の生成を途中で中断できるマルチエージェント通信方式HANDRAISERにより通信コストを32.2%削減するが、貢献の中心はエージェント間通信パラダイムであり推論エンジン自体の機構ではないため保留寄りの関連である。",
+      "first_checked_at": "2026-11-26T22:13:19+00:00",
+      "last_checked_at": "2026-11-26T22:13:19+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning to Interrupt in Language-based Multi-agent Communication"
+    },
+    "arXiv:2606.15376": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.15376",
+      "identity_tokens": [
+        "arXiv:2606.15376"
+      ],
+      "reason": "並行実行されるLLMエージェントの共有状態に対する同時実行制御プロトコルMTPOを提案するランタイム研究だが、対象はエージェントの状態一貫性でありLLM推論・サービングの実行効率そのものではないため関連は間接的である。",
+      "first_checked_at": "2026-11-26T22:13:19+00:00",
+      "last_checked_at": "2026-11-26T22:13:19+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoAgent: Concurrency Control for Multi-Agent Systems"
+    },
+    "arXiv:2609.03376": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.03376",
+      "identity_tokens": [
+        "arXiv:2609.03376"
+      ],
+      "reason": "秘密計算下のベクトル検索を二値コードとクラスタ剪定で高速化するSpruceはRAGの検索基盤として推論周辺の遅延・スループットを改善するが、LLM自体の推論・生成機構ではなく検索プロトコルの貢献であるため関連は周辺的である。",
+      "first_checked_at": "2026-11-26T22:13:19+00:00",
+      "last_checked_at": "2026-11-26T22:13:19+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Spruce: Scalable Private Outsourced Retrieval Using Compact Embeddings"
+    },
+    "arXiv:2603.03800": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.03800",
+      "identity_tokens": [
+        "arXiv:2603.03800"
+      ],
+      "reason": "実世界の対話痕跡から学習した批評モデルをbest-of-N再順位付けや早期停止など推論時スケーリングにも使う研究だが、中心は報酬モデル学習であり推論システムの実行機構としての具体性は限定的であるため関連は薄い。",
+      "first_checked_at": "2026-11-26T22:13:19+00:00",
+      "last_checked_at": "2026-11-26T22:13:19+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Rubric-Supervised Critic from Sparse Real-World Outcomes"
+    },
+    "arXiv:2605.20075": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20075",
+      "identity_tokens": [
+        "arXiv:2605.20075"
+      ],
+      "reason": "回答を先に起草してから思考するCopTは不要なトークン消費を避ける推論パイプラインの再構成を提案するが、貢献は推論手順の学習・生成方策レベルであり推論エンジンやサービング機構の具体化は要旨で限定的であるため関連は薄い。",
+      "first_checked_at": "2026-11-26T22:13:19+00:00",
+      "last_checked_at": "2026-11-26T22:13:19+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CopT: Contrastive On-Policy Thinking with Continuous Spaces for General and Agentic Reasoning"
+    },
+    "arXiv:2605.05287": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05287",
+      "identity_tokens": [
+        "arXiv:2605.05287"
+      ],
+      "reason": "マルチテナント企業向けRAGとツール利用で関連度と認可を分離する階層分離アーキテクチャを実装しオーバーヘッドが無視できることを示すが、貢献の中心はアクセス制御とセキュリティであり推論・生成の実行機構ではないため関連は周辺的である。",
+      "first_checked_at": "2026-11-26T22:13:19+00:00",
+      "last_checked_at": "2026-11-26T22:13:19+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Securing the Agent: Vendor-Neutral, Multitenant Enterprise Retrieval and Tool Use"
+    },
+    "DOI:10.1109/smartiot62235.2024.00052": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/smartiot62235.2024.00052",
+      "identity_tokens": [
+        "DOI:10.1109/smartiot62235.2024.00052"
+      ],
+      "reason": "Mambaモデルのハイパーパラメータが学習時間と精度に与える影響の実測研究であり、推論ではなく学習側の計測で貢献も限定的である。",
+      "first_checked_at": "2026-11-26T22:13:20+00:00",
+      "last_checked_at": "2026-11-26T22:13:20+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Influence of Mamba Model Hyperparameters on Training Time and Accuracy"
+    },
+    "arXiv:2304.10306": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2304.10306",
+      "identity_tokens": [
+        "arXiv:2304.10306"
+      ],
+      "reason": "生成DNNへ条件付き早期終了枝を追加し推論計算量を削減する手法だが、対象は画像生成モデルでありLLM推論システムへの直接適用は示されていない。",
+      "first_checked_at": "2026-11-26T22:13:20+00:00",
+      "last_checked_at": "2026-11-26T22:13:20+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FIANCEE: Faster Inference of Adversarial Networks via Conditional Early Exits"
+    },
+    "DOI:10.1109/tcsi.2025.3555837": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsi.2025.3555837",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2025.3555837"
+      ],
+      "reason": "自動運転向け多視点交差注意の専用アクセラレータMVAtorを提案するが、用途は視覚3D知覚に限定されLLM推論との接続は薄い。",
+      "first_checked_at": "2026-11-26T22:13:20+00:00",
+      "last_checked_at": "2026-11-26T22:13:20+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Efficient Multi-View Cross-Attention Accelerator for Vision-Centric 3D Perception in Autonomous Driving"
+    },
+    "DOI:10.1109/icdcs63083.2025.00094": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icdcs63083.2025.00094",
+      "identity_tokens": [
+        "DOI:10.1109/icdcs63083.2025.00094"
+      ],
+      "reason": "大規模モデル学習の集合通信をShuffle-Exchange同期で効率化する提案であり、分散通信技術として関連するが主対象は学習側である。",
+      "first_checked_at": "2026-11-26T22:13:20+00:00",
+      "last_checked_at": "2026-11-26T22:13:20+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Shuffle-Exchange: Enhancing Collective Communication Efficiency for Large Model Training"
+    },
+    "arXiv:2402.04359": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.04359",
+      "identity_tokens": [
+        "arXiv:2402.04359"
+      ],
+      "reason": "適応的推論アルゴリズムの効率向上余地を理論的に定量化する枠組みであり、推論効率に直結するが具体的なシステム実装を伴わない。",
+      "first_checked_at": "2026-11-26T22:13:20+00:00",
+      "last_checked_at": "2026-11-26T22:13:20+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Inference: Theoretical Limits and Unexplored Opportunities"
+    },
+    "DOI:10.1109/ispa67752.2025.00134": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ispa67752.2025.00134",
+      "identity_tokens": [
+        "DOI:10.1109/ispa67752.2025.00134"
+      ],
+      "reason": "GPUクラスタの熱スロットリングを避ける配置スケジューラiTRAPであり、推論専用ではなくAIワークロード全般のクラスタ運用が対象である。",
+      "first_checked_at": "2026-11-26T22:13:20+00:00",
+      "last_checked_at": "2026-11-26T22:13:20+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "iTRAP: Mitigating Thermal Throttling Penalties via Strategic GPU Cluster Scheduling"
+    },
+    "arXiv:2107.10998": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2107.10998",
+      "identity_tokens": [
+        "arXiv:2107.10998"
+      ],
+      "reason": "プルーニング併用の三値量子化でモデル圧縮と推論時間を同時に狙う手法だが、検証は画像系CNN中心でありLLMへの適用は示されていない。",
+      "first_checked_at": "2026-11-26T22:13:20+00:00",
+      "last_checked_at": "2026-11-26T22:13:20+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pruning Ternary Quantization"
+    },
+    "DOI:10.1145/3806055": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3806055",
+      "identity_tokens": [
+        "DOI:10.1145/3806055"
+      ],
+      "reason": "UPMEM等のコモディティPIMハードウェア上で近似最近傍探索を高速化するPIMANNを提案しバッチスケジューリングの利用率問題を解くが、対象はANNSという検索基盤でありLLM推論そのものへの直接貢献ではないためborderlineとした。",
+      "first_checked_at": "2026-11-26T22:13:20+00:00",
+      "last_checked_at": "2026-11-26T22:13:20+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unlocking PIM-Core Capabilities for Efficient ANNS on Commodity Processing-in-Memory Hardware"
+    },
+    "arXiv:2607.18254": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.18254",
+      "identity_tokens": [
+        "arXiv:2607.18254"
+      ],
+      "reason": "MLIR方言の仕様から機械的に導いた推論時事前分布によるスキーマ由来制約付きデコードを扱うが、主たる成果は自然言語からMLIRを生成するベンチマークと生成精度であり、推論システムとしての効率や機構の改善は示されていないためborderlineとした。",
+      "first_checked_at": "2026-11-26T22:13:20+00:00",
+      "last_checked_at": "2026-11-26T22:13:20+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cross-Dialect Generalization Without Retraining: Benchmarks and Evaluation of Schema-Derived Constrained Decoding for MLIR"
+    },
+    "arXiv:2610.07175": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07175",
+      "identity_tokens": [
+        "arXiv:2610.07175"
+      ],
+      "reason": "レンダリングした導出を潜在状態へ圧縮してテキスト推論のオーバーヘッドを減らす潜在推論手法CALRを提案するが、内容は潜在表現の学習と推論内容の保持というモデル側の表現学習が中心で、サービングや実行機構への貢献は間接的であるためborderlineとした。",
+      "first_checked_at": "2026-11-26T22:13:20+00:00",
+      "last_checked_at": "2026-11-26T22:13:20+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CALR: Continuous Anchored Latent Reasoning via Render-of-Thought Compression"
     }
   }
 }

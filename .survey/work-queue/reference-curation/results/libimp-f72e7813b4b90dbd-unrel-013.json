@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f72e7813b4b90dbd-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.27607",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.27607",
+    "identity_tokens": [
+      "arXiv:2610.27607"
+    ],
+    "reason": "AIメモリに保存すべきでない情報の分類と、カテゴリ規則で記憶投入を遮断する政策ゲートFENCEの利用者研究であり、内容は記憶ガバナンスとHCI設計であって、LLM推論システムの技術ではないためunrelatedとした。",
+    "first_checked_at": "2026-11-26T22:13:21+00:00",
+    "last_checked_at": "2026-11-26T22:13:21+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "What should AI forget? A design and taxonomy for negative space governance in AI memory"
+  },
+  "processed_at": "2026-11-26T22:13:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f72e7813b4b9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
