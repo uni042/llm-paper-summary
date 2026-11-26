@@ -1,0 +1,937 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-fed442ae7d82aa32-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-fed442ae7d82",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iscas56072.2025.11043292",
+    "DOI:10.1109/pci66488.2025.11219707",
+    "DOI:10.1109/trustcom63139.2024.00233",
+    "DOI:10.1145/3728725.3728743",
+    "DOI:10.32604/cmc.2026.078473",
+    "arXiv:2311.07102",
+    "arXiv:2404.10896",
+    "arXiv:2508.21493",
+    "arXiv:2510.22936",
+    "arXiv:2512.11135"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "81c79182051536fed74a491ce607c3ae34421b07",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T03:29:00.798667+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iscas56072.2025.11043292",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/pci66488.2025.11219707",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/trustcom63139.2024.00233",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3728725.3728743",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.32604/cmc.2026.078473",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2311.07102",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.10896",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.21493",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.22936",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.11135",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PPE: Positional Preservation Embedding for Token Compression in Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.22936",
+      "year": 2025,
+      "published": "2025-10-27",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have achieved strong performance on vision-language tasks, yet often suffer from inefficiencies due to redundant visual tokens. Existing token merging methods reduce sequence length but frequently disrupt spatial layouts and temporal continuity by disregarding positional relationships. In this work, we propose a novel encoding operator dubbed as \\textbf{P}ositional \\textbf{P}reservation \\textbf{E}mbedding (\\textbf{PPE}), which has the main hallmark of preservation of spatiotemporal structure during visual token compression. PPE explicitly introduces the disentangled encoding of 3D positions in the token dimension, enabling each compressed token to encapsulate different positions from multiple original tokens. Furthermore, we show that PPE can effectively support cascade clustering -- a progressive token compression strategy that leads to better performance retention. PPE is a parameter-free and generic operator that can be seamlessly integrated into existing token merging methods without any adjustments. Applied to state-of-the-art token merging framework, PPE achieves consistent improvements of $2\\%\\sim5\\%$ across multiple vision-language benchmarks, including MMBench (general vision understanding), TextVQA (layout understanding) and VideoMME (temporal understanding). These results demonstrate that preserving positional cues is critical for efficient and effective MLLM reasoning. Our code is available at https://github.com/MouxiaoHuang/PPE.",
+      "identifiers": [
+        "SemanticScholar:087b80bf5c488a1ca66349f79b6d350f30df9883"
+      ],
+      "semantic_scholar_id": "087b80bf5c488a1ca66349f79b6d350f30df9883",
+      "canonical_id": "arXiv:2510.22936",
+      "arxiv_id": "2510.22936",
+      "authors": [
+        "Mouxiao Huang",
+        "Bo-Rui Jiang",
+        "De-Hua Zheng",
+        "Hailin Hu",
+        "Kai Han",
+        "Xing-Hao Chen"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 395,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Fovea Transformer: Efficient Long-Context Modeling with Structured Fine-To-Coarse Attention",
+      "source_url": "https://arxiv.org/abs/2311.07102",
+      "year": 2023,
+      "published": "2023-11-13",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic complexity of self-attention in Transformers has hindered the processing of long text. To alleviate this problem, previous works have proposed to sparsify the attention matrix, taking advantage of the observation that crucial information about a token can be derived from its neighbors. These methods typically combine one or another form of local attention and global attention. Such combinations introduce abrupt changes in contextual granularity when going from local to global, which may be undesirable. We believe that a smoother transition could potentially enhance model’s ability to capture long-context dependencies. In this study, we introduce Fovea Transformer, a long-context focused transformer that addresses the challenges of capturing global dependencies while maintaining computational efficiency. To achieve this, we construct a multi-scale tree from the input sequence, and use representations of context tokens with a progressively coarser granularity in the tree, as their distance to the query token increases. We evaluate our model on three long-context summarization tasks1. It achieves state-of-the-art performance on two of them, and competitive results on the third with mixed improvement and setback of the evaluation metrics.",
+      "identifiers": [
+        "SemanticScholar:9f30a9be5b31edf9c25c3dd8bdc6b2c39bc4777e"
+      ],
+      "semantic_scholar_id": "9f30a9be5b31edf9c25c3dd8bdc6b2c39bc4777e",
+      "canonical_id": "arXiv:2311.07102",
+      "arxiv_id": "2311.07102",
+      "doi": "10.1109/ICASSP48485.2024.10446483",
+      "authors": [
+        "Zi-Wei He",
+        "Jian Yuan",
+        "Le Zhou",
+        "Jingwen Leng",
+        "Bo Jiang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1109,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PPQformer: Privacy-Preserving Quantized Transformer for Efficient and Secure Inference.",
+      "source_url": "https://doi.org/10.1145/3728725.3728743",
+      "year": 2025,
+      "published": "2025-02-21",
+      "venue": "GAIIS",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In the context of the popularity of Transformer model services, the issue of privacy protection has gradually gained attention. However, the primary issues with existing private inference solutions lie in memory constraints and suboptimal computational performance. In this work, we introduce PPQformer, a framework that leverages Replicated Secret Sharing (RSS) and quantization techniques to enable efficient and secure inference of Transformer models in a Multi-Party Computation (MPC) setting. By integrating quantization into the MPC protocols, PPQformer significantly reduces memory footprint and enhances computational performance while preserving data and model privacy. Experimental results demonstrate the effectiveness of our approach, achieving competitive accuracies with reduced communication cost and inference time compared to existing methods.",
+      "identifiers": [
+        "SemanticScholar:87b0ed0695c4cd002c6c9bc03449f35a04626e54"
+      ],
+      "semantic_scholar_id": "87b0ed0695c4cd002c6c9bc03449f35a04626e54",
+      "doi": "10.1145/3728725.3728743",
+      "canonical_id": "DOI:10.1145/3728725.3728743",
+      "authors": [
+        "Benchang Dong",
+        "Zhi-Li Chen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 643,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SIRA: Scaled-Integer Range Analysis for Optimizing FPGA Dataflow Neural Network Accelerators",
+      "source_url": "https://arxiv.org/abs/2508.21493",
+      "year": 2025,
+      "published": "2025-08-29",
+      "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While neural network quantization effectively reduces the cost of matrix multiplications, aggressive quantization can expose non-matrix-multiply operations as significant performance and resource bottlenecks on embedded systems. Addressing such bottlenecks requires a comprehensive approach to tailoring the precision across operations in the inference computation. To this end, we introduce scaled-integer range analysis (SIRA), a static analysis technique employing interval arithmetic to determine the range, scale, and bias for tensors in quantized neural networks. We show how this information can be exploited to reduce the resource footprint of FPGA dataflow neural network accelerators via tailored bitwidth adaptation for accumulators and downstream operations, aggregation of scales and biases, and conversion of consecutive elementwise operations to thresholding operations. We integrate SIRA-driven optimizations into the open source FINN framework, then evaluate their effectiveness across a range of quantized neural network workloads and compare implementation alternatives for non-matrix-multiply operations. We demonstrate an average reduction of 17% for LUTs, 66% for DSPs, and 22% for accumulator bitwidths with SIRA optimizations, providing detailed benchmark analysis and analytical models to guide the implementation style for non-matrix layers. Finally, we open source SIRA to facilitate community exploration of its benefits across various applications and hardware platforms.",
+      "identifiers": [
+        "SemanticScholar:44ab1ac406f654e890db99dbc0093bfca05825a7"
+      ],
+      "semantic_scholar_id": "44ab1ac406f654e890db99dbc0093bfca05825a7",
+      "canonical_id": "arXiv:2508.21493",
+      "arxiv_id": "2508.21493",
+      "doi": "10.1145/3807510",
+      "authors": [
+        "Yaman Umuroglu",
+        "Christoph Berganski",
+        "F. Jentzsch",
+        "Michal Danilowicz",
+        "T. Kryjak",
+        "Charalampos Bezaitis",
+        "Magnus Själander",
+        "Ian Colbert",
+        "Thomas B. Preußer",
+        "Jakoba Petri-Koenig",
+        "Michaela Blott"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 454,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Privacy-Preserving Transformer Inference with Optimized Homomorphic Encryption and Secure Collaborative Computing",
+      "source_url": "https://doi.org/10.32604/cmc.2026.078473",
+      "year": 2026,
+      "published": null,
+      "venue": "Computers, Materials &amp; Continua",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ": In recent years, the rapid development of artificial intelligence has greatly promoted the application of Machine Learning as a Service (MLaaS). Users can upload their requirements through front-end applications, and the server provides model inference services after receiving the user input. However, MLaaS may lead to serious privacy breaches. Large language model services are typical representatives of MLaaS, and the Transformer is a typical structure in large language models. Therefore, this paper proposes a privacy-protected Transformer inference scheme based on the CKKS fully homomorphic encryption scheme to optimize computational and communication efficiency. Firstly, this paper implements efficient matrix multiplication based on ring multiplication and optimizes the matrix partition parameters to adapt to different types (including ciphertext-plaintext and ciphertext-ciphertext) and different matrix dimensions. Secondly, this paper optimizes and designs secure Softmax, LayerNorm, and Gelu protocols based on parameter fuzzing and collaborative computing to perform efficient, secure atomic computations over ciphertexts. Finally, experiments on text classification were conducted on the IMDB and AGNEWS datasets. The results show that, under our experimental settings (including an AMD Ryzen 7 5700G CPU with 32 GB RAM and 8-thread parallel computing using the Lattigo library), the scheme proposed in this paper completes the inference process within 3 s, with communication costs below 1 GB, and the computing accuracy is comparable to that of plaintext computing.",
+      "identifiers": [
+        "SemanticScholar:6710cec3e7cb58d22ca56e6bfa471c5c346b8125"
+      ],
+      "semantic_scholar_id": "6710cec3e7cb58d22ca56e6bfa471c5c346b8125",
+      "doi": "10.32604/cmc.2026.078473",
+      "canonical_id": "DOI:10.32604/cmc.2026.078473",
+      "authors": [
+        "Tao Bai",
+        "Yang Tang",
+        "Kuan Shao",
+        "Zhenyong Zhang",
+        "Yuan-Teng Liu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From a Lossless (~1.5: 1) Compression Algorithm for Llama2 7B Weights to Variable Precision, Variable Range, Compressed Numeric Data Types for CNNs and LLMs",
+      "source_url": "https://arxiv.org/abs/2404.10896",
+      "year": 2024,
+      "published": "2024-04-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper starts with a simple lossless ~1.5:1 compression algorithm for the weights of the Large Language Model (LLM) Llama2 7B [1] that can be implemented in ~200 LUTs in AMD FPGAs, processing over 800 million bfloat16 numbers per second. This framework is then extended to variable precision, variable range, compressed numerical data types that are a user defined super set of both floats and posits [2]. The paper then discusses a simple hardware implementation of such format based on ANS (Asymmetrical Numeral Systems) [3] that acts as a bridge between this flexible data format and a computational engine while, at the same time, achieving bandwidth reduction. An example of a token factory using weight compression and sharing is also given.",
+      "identifiers": [
+        "SemanticScholar:719fc92104adff461bcf04fdbef12bbbb59f2a1a"
+      ],
+      "semantic_scholar_id": "719fc92104adff461bcf04fdbef12bbbb59f2a1a",
+      "canonical_id": "arXiv:2404.10896",
+      "arxiv_id": "2404.10896",
+      "doi": "10.48550/arXiv.2404.10896",
+      "authors": [
+        "Vincenzo Liguori"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 954,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A 46 TOPS/W In-/Near-Memory Computing Processor for Large Language Model with Extended Sparse Attention",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043292",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A highly energy-efficient embedded DRAM (eDRAM)-based heterogeneous-in/near-memory computing (H-INMC) processor for large language model with extended sparse attention is proposed. The proposed H-INMC processor reduces external memory access (EMA) and enhances macro/system energy efficiency through three key features: 1) attention block fusion computation strategy to maximize input and intermediate data reuse, achieving 85.86% EMA reduction; 2) H-INMC architecture for addressing the imbalances in memory and computation intensity across different computation stages, reducing 77.27% of system latency; and 3) cross-read 3T1C bitcell architecture for mitigating read/write datapath conflictions between CIMs and enhancing the energy efficiency up to 46 TOPS/W with dual-row in-memory-computation. Designed with 28 nm CMOS technology, the proposed H-INMC processor achieves a 92.41% F1 score, evaluated under the Bigbird-large model on the SQuAD 1.1v dataset.",
+      "identifiers": [
+        "SemanticScholar:1ebbe60a312f6946ca1631fed5a22942e1e3d00f"
+      ],
+      "semantic_scholar_id": "1ebbe60a312f6946ca1631fed5a22942e1e3d00f",
+      "doi": "10.1109/ISCAS56072.2025.11043292",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043292",
+      "authors": [
+        "Sunhong An",
+        "Hoichang Jeong",
+        "Seung-Ju Kim",
+        "Keonhee Park",
+        "Dongwook Kim",
+        "K. Lee"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 550,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Network and Compiler Optimizations for Efficient Linear Algebra Kernels in Private Transformer Inference (Invited Paper)",
+      "source_url": "https://arxiv.org/abs/2512.11135",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) based services are primarily structured as client-server interactions, with clients sending queries directly to cloud providers that host LLMs. This approach currently compromises data privacy as all queries must be processed in the cloud and in the clear. Fully Homomorphic Encryption (FHE) is a solution to this data privacy issue by enabling computations directly upon encrypted queries. However, running encrypted transformer inference is challenging as programmers must map standard kernels to the constrained instruction set provided by FHE. In this work, we explore implementations of linear algebra kernels needed for transformer inference in FHE and understand how network optimization can help mitigate FHE costs while remaining performant.We leverage the Orion PyTorch to FHE framework to benchmark several linear algebra kernels in order to profile two linear transformation methods, packed row and BSGS, and find that BSGS outperforms packed row methods by up to 13.7× at transformer-level scales. We also incorporate network-level pruning strategies that reduce FHE runtimes of feed forward layers by up to 11.46×. Furthermore, we extend Orion to include ciphertext-ciphertext matrix-matrix products, a key component in the self-attention blocks. And finally, we perform a roofline analysis of FHE primitives and encrypted linear transformations and find that (SIMD encoded) implementations are memory-bound with primitives having roughly 0.1 integer operations per byte of DRAM traffic. These findings illustrate the need for exploring alternative encoding schemes and models of computation within CKKS to unlock scalable private transformer inference. We conduct all experiments using the Orion framework which can be found at: https://github.com/baahl-nyu/orion.",
+      "identifiers": [
+        "SemanticScholar:233ae6999a966bf251d3c68f2864505fdcbe3470"
+      ],
+      "semantic_scholar_id": "233ae6999a966bf251d3c68f2864505fdcbe3470",
+      "canonical_id": "arXiv:2512.11135",
+      "arxiv_id": "2512.11135",
+      "doi": "10.1109/ICCAD66269.2025.11240733",
+      "authors": [
+        "Karthik Garimella",
+        "Negar Neda",
+        "Austin Ebel",
+        "Nandan Kumar Jha",
+        "Brandon Reagen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 396,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "THEF: A Privacy-Preserving Framework for Transformer Inference leveraging HE and TEE",
+      "source_url": "https://doi.org/10.1109/TrustCom63139.2024.00233",
+      "year": 2024,
+      "published": "2024-12-17",
+      "venue": "International Conference on Trust, Security and Privacy in Computing and Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The transformer has profoundly driven the development of natural language processing and computer vision tasks. However, their widespread deployment has raised concerns about the potential leakage of data privacy. To address the issue, homomorphic encryption (HE) is employed as a secure technique to process user private inputs over ciphertexts. As HE only supports linear operations, non-linear functions are required to be approximated into polynomials, which leads to heavy communication and computation overhead. In this paper, we propose THEF (Tee-And-HE-based Framework), an efficient and secure inference framework for transformer inference, which uses HE to ensure data security and leverages Trusted Execution Environment (TEE) to reduce communication and computation cost. We also design a number of optimization methods, including expanding encoding matrix multiplication scheme, batch acceleration and adaptive scheme, to improve performances of the THEF. Finally, we compare the performances of THEF and the state-of-the-art methods. The experimental results demonstrate that THEF maintains a level of accuracy close to that of plaintext model, reduces end-to-end communication cost by 80% and achieves significant improvement in end-to-end run-time.",
+      "identifiers": [
+        "SemanticScholar:37f297016460e27c488d3e4dfb82b7943fcd53cc"
+      ],
+      "semantic_scholar_id": "37f297016460e27c488d3e4dfb82b7943fcd53cc",
+      "doi": "10.1109/TrustCom63139.2024.00233",
+      "canonical_id": "DOI:10.1109/TrustCom63139.2024.00233",
+      "authors": [
+        "Ze-Hao Li",
+        "Jiachun Liao",
+        "Jinhao Yu",
+        "Lei Zhang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 709,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SNN-Inspired Soft Sparsity for Bit-Efficient Transformer Quantization",
+      "source_url": "https://doi.org/10.1109/PCI66488.2025.11219707",
+      "year": 2025,
+      "published": "2025-08-26",
+      "venue": "Panhellenic Conference on Informatics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) offer high accuracy in natural language processing tasks. However, they face limitations in terms of portability and efficiency due to memory usage and computational costs. This situation restricts the applicability of these models, especially on edge devices and low-resource environments. This study proposes a quantization method inspired by biological neural systems to reduce the memory usage and computational costs of large language models (LLMs). The presented method determines channel importance levels based on Spike-Timing Dependent Plasticity (STDP) principles and adaptively quantizes the weights at two levels (INT8, FP32). In the experiments conducted on the GPT-2-medium model, the proposed STDP-inspired adaptive top-k quantization method achieved a 57% reduction in the size of the quantized MLP layers (Multi-Layer Perceptrons), resulting in a 33.3 % overall model size reduction. At the same time, no significant deterioration is observed in the language model performance. On the contrary, small improvements are achieved in perplexity and accuracy metrics. Moreover, the performance close to the original model is maintained in metrics such as FLOPs/s and latency. These results show that STDP-based adaptive quantization offers a strong alternative to traditional methods in terms of both efficiency and accuracy.",
+      "identifiers": [
+        "SemanticScholar:786748b2c0bbfc11609b67b7f1691bb8625217ff"
+      ],
+      "semantic_scholar_id": "786748b2c0bbfc11609b67b7f1691bb8625217ff",
+      "doi": "10.1109/PCI66488.2025.11219707",
+      "canonical_id": "DOI:10.1109/PCI66488.2025.11219707",
+      "authors": [
+        "Ulas Ozan Ceyhan",
+        "S. E. Amrahov"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 457,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.22936",
+      "identity_tokens": [
+        "id:SemanticScholar:087b80bf5c488a1ca66349f79b6d350f30df9883",
+        "id:arXiv:2510.22936",
+        "title:ppe positional preservation embedding for token compression in multimodal large language models",
+        "url:https://arxiv.org/abs/2510.22936"
+      ],
+      "record": {
+        "title": "PPE: Positional Preservation Embedding for Token Compression in Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2510.22936",
+        "year": 2025,
+        "published": "2025-10-27",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) have achieved strong performance on vision-language tasks, yet often suffer from inefficiencies due to redundant visual tokens. Existing token merging methods reduce sequence length but frequently disrupt spatial layouts and temporal continuity by disregarding positional relationships. In this work, we propose a novel encoding operator dubbed as \\textbf{P}ositional \\textbf{P}reservation \\textbf{E}mbedding (\\textbf{PPE}), which has the main hallmark of preservation of spatiotemporal structure during visual token compression. PPE explicitly introduces the disentangled encoding of 3D positions in the token dimension, enabling each compressed token to encapsulate different positions from multiple original tokens. Furthermore, we show that PPE can effectively support cascade clustering -- a progressive token compression strategy that leads to better performance retention. PPE is a parameter-free and generic operator that can be seamlessly integrated into existing token merging methods without any adjustments. Applied to state-of-the-art token merging framework, PPE achieves consistent improvements of $2\\%\\sim5\\%$ across multiple vision-language benchmarks, including MMBench (general vision understanding), TextVQA (layout understanding) and VideoMME (temporal understanding). These results demonstrate that preserving positional cues is critical for efficient and effective MLLM reasoning. Our code is available at https://github.com/MouxiaoHuang/PPE.",
+        "identifiers": [
+          "SemanticScholar:087b80bf5c488a1ca66349f79b6d350f30df9883"
+        ],
+        "semantic_scholar_id": "087b80bf5c488a1ca66349f79b6d350f30df9883",
+        "canonical_id": "arXiv:2510.22936",
+        "arxiv_id": "2510.22936",
+        "authors": [
+          "Mouxiao Huang",
+          "Bo-Rui Jiang",
+          "De-Hua Zheng",
+          "Hailin Hu",
+          "Kai Han",
+          "Xing-Hao Chen"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 395,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2311.07102",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp48485.2024.10446483",
+        "id:SemanticScholar:9f30a9be5b31edf9c25c3dd8bdc6b2c39bc4777e",
+        "id:arXiv:2311.07102",
+        "title:fovea transformer efficient longcontext modeling with structured finetocoarse attention",
+        "url:https://arxiv.org/abs/2311.07102"
+      ],
+      "record": {
+        "title": "Fovea Transformer: Efficient Long-Context Modeling with Structured Fine-To-Coarse Attention",
+        "source_url": "https://arxiv.org/abs/2311.07102",
+        "year": 2023,
+        "published": "2023-11-13",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic complexity of self-attention in Transformers has hindered the processing of long text. To alleviate this problem, previous works have proposed to sparsify the attention matrix, taking advantage of the observation that crucial information about a token can be derived from its neighbors. These methods typically combine one or another form of local attention and global attention. Such combinations introduce abrupt changes in contextual granularity when going from local to global, which may be undesirable. We believe that a smoother transition could potentially enhance model’s ability to capture long-context dependencies. In this study, we introduce Fovea Transformer, a long-context focused transformer that addresses the challenges of capturing global dependencies while maintaining computational efficiency. To achieve this, we construct a multi-scale tree from the input sequence, and use representations of context tokens with a progressively coarser granularity in the tree, as their distance to the query token increases. We evaluate our model on three long-context summarization tasks1. It achieves state-of-the-art performance on two of them, and competitive results on the third with mixed improvement and setback of the evaluation metrics.",
+        "identifiers": [
+          "SemanticScholar:9f30a9be5b31edf9c25c3dd8bdc6b2c39bc4777e"
+        ],
+        "semantic_scholar_id": "9f30a9be5b31edf9c25c3dd8bdc6b2c39bc4777e",
+        "canonical_id": "arXiv:2311.07102",
+        "arxiv_id": "2311.07102",
+        "doi": "10.1109/ICASSP48485.2024.10446483",
+        "authors": [
+          "Zi-Wei He",
+          "Jian Yuan",
+          "Le Zhou",
+          "Jingwen Leng",
+          "Bo Jiang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1109,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3728725.3728743",
+      "identity_tokens": [
+        "id:DOI:10.1145/3728725.3728743",
+        "id:SemanticScholar:87b0ed0695c4cd002c6c9bc03449f35a04626e54",
+        "title:ppqformer privacypreserving quantized transformer for efficient and secure inference",
+        "url:https://doi.org/10.1145/3728725.3728743"
+      ],
+      "record": {
+        "title": "PPQformer: Privacy-Preserving Quantized Transformer for Efficient and Secure Inference.",
+        "source_url": "https://doi.org/10.1145/3728725.3728743",
+        "year": 2025,
+        "published": "2025-02-21",
+        "venue": "GAIIS",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In the context of the popularity of Transformer model services, the issue of privacy protection has gradually gained attention. However, the primary issues with existing private inference solutions lie in memory constraints and suboptimal computational performance. In this work, we introduce PPQformer, a framework that leverages Replicated Secret Sharing (RSS) and quantization techniques to enable efficient and secure inference of Transformer models in a Multi-Party Computation (MPC) setting. By integrating quantization into the MPC protocols, PPQformer significantly reduces memory footprint and enhances computational performance while preserving data and model privacy. Experimental results demonstrate the effectiveness of our approach, achieving competitive accuracies with reduced communication cost and inference time compared to existing methods.",
+        "identifiers": [
+          "SemanticScholar:87b0ed0695c4cd002c6c9bc03449f35a04626e54"
+        ],
+        "semantic_scholar_id": "87b0ed0695c4cd002c6c9bc03449f35a04626e54",
+        "doi": "10.1145/3728725.3728743",
+        "canonical_id": "DOI:10.1145/3728725.3728743",
+        "authors": [
+          "Benchang Dong",
+          "Zhi-Li Chen"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 643,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.21493",
+      "identity_tokens": [
+        "id:DOI:10.1145/3807510",
+        "id:SemanticScholar:44ab1ac406f654e890db99dbc0093bfca05825a7",
+        "id:arXiv:2508.21493",
+        "title:sira scaledinteger range analysis for optimizing fpga dataflow neural network accelerators",
+        "url:https://arxiv.org/abs/2508.21493"
+      ],
+      "record": {
+        "title": "SIRA: Scaled-Integer Range Analysis for Optimizing FPGA Dataflow Neural Network Accelerators",
+        "source_url": "https://arxiv.org/abs/2508.21493",
+        "year": 2025,
+        "published": "2025-08-29",
+        "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While neural network quantization effectively reduces the cost of matrix multiplications, aggressive quantization can expose non-matrix-multiply operations as significant performance and resource bottlenecks on embedded systems. Addressing such bottlenecks requires a comprehensive approach to tailoring the precision across operations in the inference computation. To this end, we introduce scaled-integer range analysis (SIRA), a static analysis technique employing interval arithmetic to determine the range, scale, and bias for tensors in quantized neural networks. We show how this information can be exploited to reduce the resource footprint of FPGA dataflow neural network accelerators via tailored bitwidth adaptation for accumulators and downstream operations, aggregation of scales and biases, and conversion of consecutive elementwise operations to thresholding operations. We integrate SIRA-driven optimizations into the open source FINN framework, then evaluate their effectiveness across a range of quantized neural network workloads and compare implementation alternatives for non-matrix-multiply operations. We demonstrate an average reduction of 17% for LUTs, 66% for DSPs, and 22% for accumulator bitwidths with SIRA optimizations, providing detailed benchmark analysis and analytical models to guide the implementation style for non-matrix layers. Finally, we open source SIRA to facilitate community exploration of its benefits across various applications and hardware platforms.",
+        "identifiers": [
+          "SemanticScholar:44ab1ac406f654e890db99dbc0093bfca05825a7"
+        ],
+        "semantic_scholar_id": "44ab1ac406f654e890db99dbc0093bfca05825a7",
+        "canonical_id": "arXiv:2508.21493",
+        "arxiv_id": "2508.21493",
+        "doi": "10.1145/3807510",
+        "authors": [
+          "Yaman Umuroglu",
+          "Christoph Berganski",
+          "F. Jentzsch",
+          "Michal Danilowicz",
+          "T. Kryjak",
+          "Charalampos Bezaitis",
+          "Magnus Själander",
+          "Ian Colbert",
+          "Thomas B. Preußer",
+          "Jakoba Petri-Koenig",
+          "Michaela Blott"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 454,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.32604/cmc.2026.078473",
+      "identity_tokens": [
+        "id:DOI:10.32604/cmc.2026.078473",
+        "id:SemanticScholar:6710cec3e7cb58d22ca56e6bfa471c5c346b8125",
+        "title:privacypreserving transformer inference with optimized homomorphic encryption and secure collaborative computing",
+        "url:https://doi.org/10.32604/cmc.2026.078473"
+      ],
+      "record": {
+        "title": "Privacy-Preserving Transformer Inference with Optimized Homomorphic Encryption and Secure Collaborative Computing",
+        "source_url": "https://doi.org/10.32604/cmc.2026.078473",
+        "year": 2026,
+        "published": null,
+        "venue": "Computers, Materials &amp; Continua",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ": In recent years, the rapid development of artificial intelligence has greatly promoted the application of Machine Learning as a Service (MLaaS). Users can upload their requirements through front-end applications, and the server provides model inference services after receiving the user input. However, MLaaS may lead to serious privacy breaches. Large language model services are typical representatives of MLaaS, and the Transformer is a typical structure in large language models. Therefore, this paper proposes a privacy-protected Transformer inference scheme based on the CKKS fully homomorphic encryption scheme to optimize computational and communication efficiency. Firstly, this paper implements efficient matrix multiplication based on ring multiplication and optimizes the matrix partition parameters to adapt to different types (including ciphertext-plaintext and ciphertext-ciphertext) and different matrix dimensions. Secondly, this paper optimizes and designs secure Softmax, LayerNorm, and Gelu protocols based on parameter fuzzing and collaborative computing to perform efficient, secure atomic computations over ciphertexts. Finally, experiments on text classification were conducted on the IMDB and AGNEWS datasets. The results show that, under our experimental settings (including an AMD Ryzen 7 5700G CPU with 32 GB RAM and 8-thread parallel computing using the Lattigo library), the scheme proposed in this paper completes the inference process within 3 s, with communication costs below 1 GB, and the computing accuracy is comparable to that of plaintext computing.",
+        "identifiers": [
+          "SemanticScholar:6710cec3e7cb58d22ca56e6bfa471c5c346b8125"
+        ],
+        "semantic_scholar_id": "6710cec3e7cb58d22ca56e6bfa471c5c346b8125",
+        "doi": "10.32604/cmc.2026.078473",
+        "canonical_id": "DOI:10.32604/cmc.2026.078473",
+        "authors": [
+          "Tao Bai",
+          "Yang Tang",
+          "Kuan Shao",
+          "Zhenyong Zhang",
+          "Yuan-Teng Liu"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 148,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.10896",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.10896",
+        "id:SemanticScholar:719fc92104adff461bcf04fdbef12bbbb59f2a1a",
+        "id:arXiv:2404.10896",
+        "title:from a lossless 15 1 compression algorithm for llama2 7b weights to variable precision variable range compressed numeric data types for cnns and llms",
+        "url:https://arxiv.org/abs/2404.10896"
+      ],
+      "record": {
+        "title": "From a Lossless (~1.5: 1) Compression Algorithm for Llama2 7B Weights to Variable Precision, Variable Range, Compressed Numeric Data Types for CNNs and LLMs",
+        "source_url": "https://arxiv.org/abs/2404.10896",
+        "year": 2024,
+        "published": "2024-04-16",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper starts with a simple lossless ~1.5:1 compression algorithm for the weights of the Large Language Model (LLM) Llama2 7B [1] that can be implemented in ~200 LUTs in AMD FPGAs, processing over 800 million bfloat16 numbers per second. This framework is then extended to variable precision, variable range, compressed numerical data types that are a user defined super set of both floats and posits [2]. The paper then discusses a simple hardware implementation of such format based on ANS (Asymmetrical Numeral Systems) [3] that acts as a bridge between this flexible data format and a computational engine while, at the same time, achieving bandwidth reduction. An example of a token factory using weight compression and sharing is also given.",
+        "identifiers": [
+          "SemanticScholar:719fc92104adff461bcf04fdbef12bbbb59f2a1a"
+        ],
+        "semantic_scholar_id": "719fc92104adff461bcf04fdbef12bbbb59f2a1a",
+        "canonical_id": "arXiv:2404.10896",
+        "arxiv_id": "2404.10896",
+        "doi": "10.48550/arXiv.2404.10896",
+        "authors": [
+          "Vincenzo Liguori"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 954,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscas56072.2025.11043292",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas56072.2025.11043292",
+        "id:SemanticScholar:1ebbe60a312f6946ca1631fed5a22942e1e3d00f",
+        "title:a 46 topsw innearmemory computing processor for large language model with extended sparse attention",
+        "url:https://doi.org/10.1109/ISCAS56072.2025.11043292"
+      ],
+      "record": {
+        "title": "A 46 TOPS/W In-/Near-Memory Computing Processor for Large Language Model with Extended Sparse Attention",
+        "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043292",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A highly energy-efficient embedded DRAM (eDRAM)-based heterogeneous-in/near-memory computing (H-INMC) processor for large language model with extended sparse attention is proposed. The proposed H-INMC processor reduces external memory access (EMA) and enhances macro/system energy efficiency through three key features: 1) attention block fusion computation strategy to maximize input and intermediate data reuse, achieving 85.86% EMA reduction; 2) H-INMC architecture for addressing the imbalances in memory and computation intensity across different computation stages, reducing 77.27% of system latency; and 3) cross-read 3T1C bitcell architecture for mitigating read/write datapath conflictions between CIMs and enhancing the energy efficiency up to 46 TOPS/W with dual-row in-memory-computation. Designed with 28 nm CMOS technology, the proposed H-INMC processor achieves a 92.41% F1 score, evaluated under the Bigbird-large model on the SQuAD 1.1v dataset.",
+        "identifiers": [
+          "SemanticScholar:1ebbe60a312f6946ca1631fed5a22942e1e3d00f"
+        ],
+        "semantic_scholar_id": "1ebbe60a312f6946ca1631fed5a22942e1e3d00f",
+        "doi": "10.1109/ISCAS56072.2025.11043292",
+        "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043292",
+        "authors": [
+          "Sunhong An",
+          "Hoichang Jeong",
+          "Seung-Ju Kim",
+          "Keonhee Park",
+          "Dongwook Kim",
+          "K. Lee"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 550,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.11135",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccad66269.2025.11240733",
+        "id:SemanticScholar:233ae6999a966bf251d3c68f2864505fdcbe3470",
+        "id:arXiv:2512.11135",
+        "title:network and compiler optimizations for efficient linear algebra kernels in private transformer inference invited paper",
+        "url:https://arxiv.org/abs/2512.11135"
+      ],
+      "record": {
+        "title": "Network and Compiler Optimizations for Efficient Linear Algebra Kernels in Private Transformer Inference (Invited Paper)",
+        "source_url": "https://arxiv.org/abs/2512.11135",
+        "year": 2025,
+        "published": "2025-10-26",
+        "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) based services are primarily structured as client-server interactions, with clients sending queries directly to cloud providers that host LLMs. This approach currently compromises data privacy as all queries must be processed in the cloud and in the clear. Fully Homomorphic Encryption (FHE) is a solution to this data privacy issue by enabling computations directly upon encrypted queries. However, running encrypted transformer inference is challenging as programmers must map standard kernels to the constrained instruction set provided by FHE. In this work, we explore implementations of linear algebra kernels needed for transformer inference in FHE and understand how network optimization can help mitigate FHE costs while remaining performant.We leverage the Orion PyTorch to FHE framework to benchmark several linear algebra kernels in order to profile two linear transformation methods, packed row and BSGS, and find that BSGS outperforms packed row methods by up to 13.7× at transformer-level scales. We also incorporate network-level pruning strategies that reduce FHE runtimes of feed forward layers by up to 11.46×. Furthermore, we extend Orion to include ciphertext-ciphertext matrix-matrix products, a key component in the self-attention blocks. And finally, we perform a roofline analysis of FHE primitives and encrypted linear transformations and find that (SIMD encoded) implementations are memory-bound with primitives having roughly 0.1 integer operations per byte of DRAM traffic. These findings illustrate the need for exploring alternative encoding schemes and models of computation within CKKS to unlock scalable private transformer inference. We conduct all experiments using the Orion framework which can be found at: https://github.com/baahl-nyu/orion.",
+        "identifiers": [
+          "SemanticScholar:233ae6999a966bf251d3c68f2864505fdcbe3470"
+        ],
+        "semantic_scholar_id": "233ae6999a966bf251d3c68f2864505fdcbe3470",
+        "canonical_id": "arXiv:2512.11135",
+        "arxiv_id": "2512.11135",
+        "doi": "10.1109/ICCAD66269.2025.11240733",
+        "authors": [
+          "Karthik Garimella",
+          "Negar Neda",
+          "Austin Ebel",
+          "Nandan Kumar Jha",
+          "Brandon Reagen"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 396,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/trustcom63139.2024.00233",
+      "identity_tokens": [
+        "id:DOI:10.1109/trustcom63139.2024.00233",
+        "id:SemanticScholar:37f297016460e27c488d3e4dfb82b7943fcd53cc",
+        "title:thef a privacypreserving framework for transformer inference leveraging he and tee",
+        "url:https://doi.org/10.1109/TrustCom63139.2024.00233"
+      ],
+      "record": {
+        "title": "THEF: A Privacy-Preserving Framework for Transformer Inference leveraging HE and TEE",
+        "source_url": "https://doi.org/10.1109/TrustCom63139.2024.00233",
+        "year": 2024,
+        "published": "2024-12-17",
+        "venue": "International Conference on Trust, Security and Privacy in Computing and Communications",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The transformer has profoundly driven the development of natural language processing and computer vision tasks. However, their widespread deployment has raised concerns about the potential leakage of data privacy. To address the issue, homomorphic encryption (HE) is employed as a secure technique to process user private inputs over ciphertexts. As HE only supports linear operations, non-linear functions are required to be approximated into polynomials, which leads to heavy communication and computation overhead. In this paper, we propose THEF (Tee-And-HE-based Framework), an efficient and secure inference framework for transformer inference, which uses HE to ensure data security and leverages Trusted Execution Environment (TEE) to reduce communication and computation cost. We also design a number of optimization methods, including expanding encoding matrix multiplication scheme, batch acceleration and adaptive scheme, to improve performances of the THEF. Finally, we compare the performances of THEF and the state-of-the-art methods. The experimental results demonstrate that THEF maintains a level of accuracy close to that of plaintext model, reduces end-to-end communication cost by 80% and achieves significant improvement in end-to-end run-time.",
+        "identifiers": [
+          "SemanticScholar:37f297016460e27c488d3e4dfb82b7943fcd53cc"
+        ],
+        "semantic_scholar_id": "37f297016460e27c488d3e4dfb82b7943fcd53cc",
+        "doi": "10.1109/TrustCom63139.2024.00233",
+        "canonical_id": "DOI:10.1109/TrustCom63139.2024.00233",
+        "authors": [
+          "Ze-Hao Li",
+          "Jiachun Liao",
+          "Jinhao Yu",
+          "Lei Zhang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 709,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/pci66488.2025.11219707",
+      "identity_tokens": [
+        "id:DOI:10.1109/pci66488.2025.11219707",
+        "id:SemanticScholar:786748b2c0bbfc11609b67b7f1691bb8625217ff",
+        "title:snninspired soft sparsity for bitefficient transformer quantization",
+        "url:https://doi.org/10.1109/PCI66488.2025.11219707"
+      ],
+      "record": {
+        "title": "SNN-Inspired Soft Sparsity for Bit-Efficient Transformer Quantization",
+        "source_url": "https://doi.org/10.1109/PCI66488.2025.11219707",
+        "year": 2025,
+        "published": "2025-08-26",
+        "venue": "Panhellenic Conference on Informatics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) offer high accuracy in natural language processing tasks. However, they face limitations in terms of portability and efficiency due to memory usage and computational costs. This situation restricts the applicability of these models, especially on edge devices and low-resource environments. This study proposes a quantization method inspired by biological neural systems to reduce the memory usage and computational costs of large language models (LLMs). The presented method determines channel importance levels based on Spike-Timing Dependent Plasticity (STDP) principles and adaptively quantizes the weights at two levels (INT8, FP32). In the experiments conducted on the GPT-2-medium model, the proposed STDP-inspired adaptive top-k quantization method achieved a 57% reduction in the size of the quantized MLP layers (Multi-Layer Perceptrons), resulting in a 33.3 % overall model size reduction. At the same time, no significant deterioration is observed in the language model performance. On the contrary, small improvements are achieved in perplexity and accuracy metrics. Moreover, the performance close to the original model is maintained in metrics such as FLOPs/s and latency. These results show that STDP-based adaptive quantization offers a strong alternative to traditional methods in terms of both efficiency and accuracy.",
+        "identifiers": [
+          "SemanticScholar:786748b2c0bbfc11609b67b7f1691bb8625217ff"
+        ],
+        "semantic_scholar_id": "786748b2c0bbfc11609b67b7f1691bb8625217ff",
+        "doi": "10.1109/PCI66488.2025.11219707",
+        "canonical_id": "DOI:10.1109/PCI66488.2025.11219707",
+        "authors": [
+          "Ulas Ozan Ceyhan",
+          "S. E. Amrahov"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 457,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:72ddc830182ba0441290003ee04fcee26a31b922c68c712abdd16d65cf57fddd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

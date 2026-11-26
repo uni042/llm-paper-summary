@@ -1,0 +1,391 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d1bce6722bcd0949-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d1bce6722bcd",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1117/12.3114673",
+    "DOI:10.1145/3801489.3806878",
+    "DOI:10.1145/3820171.3806875",
+    "SemanticScholar:8f75ea35c30c188795ffc64afefbc4bf5c531fa4",
+    "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d",
+    "arXiv:2404.04708",
+    "arXiv:2510.15926",
+    "arXiv:2604.04701",
+    "arXiv:2609.30270",
+    "arXiv:2610.05842",
+    "arXiv:2610.35985"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "81c79182051536fed74a491ce607c3ae34421b07",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 8,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 8,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T03:29:18.647123+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1117/12.3114673",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1117/12.3114673"
+    },
+    {
+      "requested_id": "DOI:10.1145/3801489.3806878",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:optimal scheduling algorithms for llm inference theory and practice"
+    },
+    {
+      "requested_id": "DOI:10.1145/3820171.3806875",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:sageserve optimizing llm serving on cloud data centers with forecast aware autoscaling"
+    },
+    {
+      "requested_id": "SemanticScholar:8f75ea35c30c188795ffc64afefbc4bf5c531fa4",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:dynamic expert quantization for scalable mixtureofexperts inference"
+    },
+    {
+      "requested_id": "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:alpaserve statistical multiplexing with model parallelism for deep learning serving"
+    },
+    {
+      "requested_id": "arXiv:2404.04708",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.15926",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.15926"
+    },
+    {
+      "requested_id": "arXiv:2604.04701",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.04701"
+    },
+    {
+      "requested_id": "arXiv:2609.30270",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.30270"
+    },
+    {
+      "requested_id": "arXiv:2610.05842",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.35985",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "HLA: Expressive Hybrid Linear Attention via Chunk-Wise Dynamic Mixing",
+      "source_url": "https://arxiv.org/abs/2610.05842",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention enables efficient long-context autoregressive decoding by compressing history into recurrent states, but this compression can make selective access to sparse and distant information difficult. Existing chunk-based extensions increase memory capacity, yet learned chunk-mixing coefficients may remain fixed with respect to input content and therefore cannot adapt historical access to each query. We introduce \\emph{Hybrid Linear Attention} (HLA), a query-dependent chunk-level attention mechanism for Gated DeltaNet (GDN). HLA represents each completed chunk as an exact affine state transition and computes content-dependent routing gates from compact, self-attentively pooled representatives. Each gate interpolates the corresponding historical transition with the identity map, controlling both the chunk's additive memory and its transformation of earlier states. Effective-support regularization further encourages concentrated routing for sparse inference. We evaluate HLA under both pretrained adaptation and from-scratch training. Across Qwen3.5 models from 0.8B to 9B, HLA consistently improves over native GDN and fixed chunk mixing, with gains of up to 5.57 percentage points on LongBench-V2 and 3.97 points on RULER. In a controlled from-scratch 1.3B setting trained for 100B tokens with a 4K context, HLA also improves RULER performance from 4K to 32K, with gains increasing from 0.83 points at 4K to 4.22 points at 32K. These results demonstrate that query-dependent composition of recurrent memory improves long-context modeling and remains effective beyond the training context while using compact per-chunk affine summaries. Project page: https://caesarhhh.github.io/hla/",
+      "identifiers": [
+        "SemanticScholar:c137531b28fd0c7325c1f83ffbfad3cd700df2d6"
+      ],
+      "semantic_scholar_id": "c137531b28fd0c7325c1f83ffbfad3cd700df2d6",
+      "canonical_id": "arXiv:2610.05842",
+      "arxiv_id": "2610.05842",
+      "authors": [
+        "Zhuo-Kun Chen",
+        "Xi Lin",
+        "Xi-Yu Wu",
+        "Jia-Hao He",
+        "Jian-Fei Cai",
+        "Bo-Han Zhuang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Let the Gate Decide: Per-Lookup Precision for Quantized Conditional Memory in LLMs",
+      "source_url": "https://arxiv.org/abs/2610.35985",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Conditional memory layers, such as DeepSeek's Engram, attach large hashed n-gram tables to a language model, and removing them from DeepSeek-V4.1-Flash costs 36.8 PopQA points. Low-bit quantization loses long-tail facts first, and the standard remedy, giving more bits to frequently accessed rows, backfires: refining lookups by access frequency is worse than refining them at random. We trace this to the gate that scales each retrieved row. A lookup's quantization error is weighted by its gate, which is small for frequent n-grams, large for the rare n-grams of long-tail entities, and computable from a 1-bit code. GateRQ therefore stores each row as a ladder of 1-bit residual codes, keeps level 1 in GPU memory to compute the gate, and reads deeper levels only for the lookups the gate ranks highest. Without retraining, GateRQ cuts GPU table memory by 7.8x on DeepSeek-V4.1-Flash, which raises vLLM throughput by 11%-31% over FP8 tables, while losing about 1 PopQA point at 1.50 bits read per lookup and 0.2 points at 2.10 bits across two models.",
+      "identifiers": [
+        "SemanticScholar:915e8b510c1b60a9b645fb7444c048714bdde3f4"
+      ],
+      "semantic_scholar_id": "915e8b510c1b60a9b645fb7444c048714bdde3f4",
+      "canonical_id": "arXiv:2610.35985",
+      "arxiv_id": "2610.35985",
+      "authors": [
+        "Tian-Qi Chen",
+        "Xun-Chao Li",
+        "Li Xie",
+        "Guang-Hua Yu",
+        "Jian-Chen Zhu",
+        "Pei-Song Wang",
+        "Jian Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Sparse Processing-in-Memory Architecture (ESPIM) for Machine Learning Inference",
+      "source_url": "https://arxiv.org/abs/2404.04708",
+      "year": 2024,
+      "published": "2024-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Emerging machine learning (ML) models (e.g., transformers) involve memory pin bandwidth-bound matrix-vector (MV) computation in inference. By avoiding pin crossings, processing in memory (PIM) can improve performance and energy for pin-bound workloads, as evidenced by recent commercial efforts in (digital) PIM. Sparse models can improve performance and energy of inference without losing much accuracy. However, unstructured sparse inference injects the key challenges of uncertainty, irregularity, and load imbalance into a dense PIM's operation across all the banks. The dense PIM reads the matrix cells from each bank and broadcasts the vector elements to all the banks exploiting DRAM organization. To address these challenges efficiently, we propose ESPIM which makes four contributions: (1) Because matrix sparsity increases the vector broadcast bandwidth demand per matrix column-read, ESPIM employs a fine-grained interleaving of the matrix cells so that each vector broadcast is shared among multiple rows in each bank, cutting the bandwidth demand. (2) ESPIM mostly avoids on-chip control's area and energy despite sparsity's uncertainties by exploiting the observation that the sparsity is data-dependent but static and known before inference. Accordingly, ESPIM employs static data-dependent scheduling (SDDS) (3) ESPIM decouples the matrix cell values and their indices, placing the indices ahead of the values to enable prefetching of the vector elements. We extend SDDS for performance and correctness with the decoupled prefetching. (4) Finally, we simplify the switch required to select the vector elements that match the matrix cells. We extend SDDS to improve performance by reducing conflicts in the simplified switch. In our simulations, ESPIM achieves 2x average (up to 4.2x) speedup over and 34% average (up to 63%) lower energy than Newton while incurring under 5% area.",
+      "identifiers": [
+        "SemanticScholar:1b66a257ddcd549210046b84538c2982d7e7bdeb"
+      ],
+      "semantic_scholar_id": "1b66a257ddcd549210046b84538c2982d7e7bdeb",
+      "canonical_id": "arXiv:2404.04708",
+      "arxiv_id": "2404.04708",
+      "doi": "10.48550/arXiv.2404.04708",
+      "authors": [
+        "Ming-Xuan He",
+        "Mithuna Thottethodi",
+        "T. N. Vijaykumar"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 964,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.05842",
+      "identity_tokens": [
+        "id:SemanticScholar:c137531b28fd0c7325c1f83ffbfad3cd700df2d6",
+        "id:arXiv:2610.05842",
+        "title:hla expressive hybrid linear attention via chunkwise dynamic mixing",
+        "url:https://arxiv.org/abs/2610.05842"
+      ],
+      "record": {
+        "title": "HLA: Expressive Hybrid Linear Attention via Chunk-Wise Dynamic Mixing",
+        "source_url": "https://arxiv.org/abs/2610.05842",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention enables efficient long-context autoregressive decoding by compressing history into recurrent states, but this compression can make selective access to sparse and distant information difficult. Existing chunk-based extensions increase memory capacity, yet learned chunk-mixing coefficients may remain fixed with respect to input content and therefore cannot adapt historical access to each query. We introduce \\emph{Hybrid Linear Attention} (HLA), a query-dependent chunk-level attention mechanism for Gated DeltaNet (GDN). HLA represents each completed chunk as an exact affine state transition and computes content-dependent routing gates from compact, self-attentively pooled representatives. Each gate interpolates the corresponding historical transition with the identity map, controlling both the chunk's additive memory and its transformation of earlier states. Effective-support regularization further encourages concentrated routing for sparse inference. We evaluate HLA under both pretrained adaptation and from-scratch training. Across Qwen3.5 models from 0.8B to 9B, HLA consistently improves over native GDN and fixed chunk mixing, with gains of up to 5.57 percentage points on LongBench-V2 and 3.97 points on RULER. In a controlled from-scratch 1.3B setting trained for 100B tokens with a 4K context, HLA also improves RULER performance from 4K to 32K, with gains increasing from 0.83 points at 4K to 4.22 points at 32K. These results demonstrate that query-dependent composition of recurrent memory improves long-context modeling and remains effective beyond the training context while using compact per-chunk affine summaries. Project page: https://caesarhhh.github.io/hla/",
+        "identifiers": [
+          "SemanticScholar:c137531b28fd0c7325c1f83ffbfad3cd700df2d6"
+        ],
+        "semantic_scholar_id": "c137531b28fd0c7325c1f83ffbfad3cd700df2d6",
+        "canonical_id": "arXiv:2610.05842",
+        "arxiv_id": "2610.05842",
+        "authors": [
+          "Zhuo-Kun Chen",
+          "Xi Lin",
+          "Xi-Yu Wu",
+          "Jia-Hao He",
+          "Jian-Fei Cai",
+          "Bo-Han Zhuang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 52,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.35985",
+      "identity_tokens": [
+        "id:SemanticScholar:915e8b510c1b60a9b645fb7444c048714bdde3f4",
+        "id:arXiv:2610.35985",
+        "title:let the gate decide perlookup precision for quantized conditional memory in llms",
+        "url:https://arxiv.org/abs/2610.35985"
+      ],
+      "record": {
+        "title": "Let the Gate Decide: Per-Lookup Precision for Quantized Conditional Memory in LLMs",
+        "source_url": "https://arxiv.org/abs/2610.35985",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Conditional memory layers, such as DeepSeek's Engram, attach large hashed n-gram tables to a language model, and removing them from DeepSeek-V4.1-Flash costs 36.8 PopQA points. Low-bit quantization loses long-tail facts first, and the standard remedy, giving more bits to frequently accessed rows, backfires: refining lookups by access frequency is worse than refining them at random. We trace this to the gate that scales each retrieved row. A lookup's quantization error is weighted by its gate, which is small for frequent n-grams, large for the rare n-grams of long-tail entities, and computable from a 1-bit code. GateRQ therefore stores each row as a ladder of 1-bit residual codes, keeps level 1 in GPU memory to compute the gate, and reads deeper levels only for the lookups the gate ranks highest. Without retraining, GateRQ cuts GPU table memory by 7.8x on DeepSeek-V4.1-Flash, which raises vLLM throughput by 11%-31% over FP8 tables, while losing about 1 PopQA point at 1.50 bits read per lookup and 0.2 points at 2.10 bits across two models.",
+        "identifiers": [
+          "SemanticScholar:915e8b510c1b60a9b645fb7444c048714bdde3f4"
+        ],
+        "semantic_scholar_id": "915e8b510c1b60a9b645fb7444c048714bdde3f4",
+        "canonical_id": "arXiv:2610.35985",
+        "arxiv_id": "2610.35985",
+        "authors": [
+          "Tian-Qi Chen",
+          "Xun-Chao Li",
+          "Li Xie",
+          "Guang-Hua Yu",
+          "Jian-Chen Zhu",
+          "Pei-Song Wang",
+          "Jian Cheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.04708",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.04708",
+        "id:SemanticScholar:1b66a257ddcd549210046b84538c2982d7e7bdeb",
+        "id:arXiv:2404.04708",
+        "title:efficient sparse processinginmemory architecture espim for machine learning inference",
+        "url:https://arxiv.org/abs/2404.04708"
+      ],
+      "record": {
+        "title": "Efficient Sparse Processing-in-Memory Architecture (ESPIM) for Machine Learning Inference",
+        "source_url": "https://arxiv.org/abs/2404.04708",
+        "year": 2024,
+        "published": "2024-04-06",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Emerging machine learning (ML) models (e.g., transformers) involve memory pin bandwidth-bound matrix-vector (MV) computation in inference. By avoiding pin crossings, processing in memory (PIM) can improve performance and energy for pin-bound workloads, as evidenced by recent commercial efforts in (digital) PIM. Sparse models can improve performance and energy of inference without losing much accuracy. However, unstructured sparse inference injects the key challenges of uncertainty, irregularity, and load imbalance into a dense PIM's operation across all the banks. The dense PIM reads the matrix cells from each bank and broadcasts the vector elements to all the banks exploiting DRAM organization. To address these challenges efficiently, we propose ESPIM which makes four contributions: (1) Because matrix sparsity increases the vector broadcast bandwidth demand per matrix column-read, ESPIM employs a fine-grained interleaving of the matrix cells so that each vector broadcast is shared among multiple rows in each bank, cutting the bandwidth demand. (2) ESPIM mostly avoids on-chip control's area and energy despite sparsity's uncertainties by exploiting the observation that the sparsity is data-dependent but static and known before inference. Accordingly, ESPIM employs static data-dependent scheduling (SDDS) (3) ESPIM decouples the matrix cell values and their indices, placing the indices ahead of the values to enable prefetching of the vector elements. We extend SDDS for performance and correctness with the decoupled prefetching. (4) Finally, we simplify the switch required to select the vector elements that match the matrix cells. We extend SDDS to improve performance by reducing conflicts in the simplified switch. In our simulations, ESPIM achieves 2x average (up to 4.2x) speedup over and 34% average (up to 63%) lower energy than Newton while incurring under 5% area.",
+        "identifiers": [
+          "SemanticScholar:1b66a257ddcd549210046b84538c2982d7e7bdeb"
+        ],
+        "semantic_scholar_id": "1b66a257ddcd549210046b84538c2982d7e7bdeb",
+        "canonical_id": "arXiv:2404.04708",
+        "arxiv_id": "2404.04708",
+        "doi": "10.48550/arXiv.2404.04708",
+        "authors": [
+          "Ming-Xuan He",
+          "Mithuna Thottethodi",
+          "T. N. Vijaykumar"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 964,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c55ecade4dc599accd9b42d248b1ba76ed5a660244eeb4e32ea30f5036b233c6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

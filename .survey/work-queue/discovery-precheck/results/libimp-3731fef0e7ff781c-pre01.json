@@ -1,0 +1,602 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3731fef0e7ff781c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3731fef0e7ff",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3828523.3857082",
+    "DOI:10.23919/date64628.2025.10993106",
+    "DOI:10.3390/electronics14122337",
+    "arXiv:2606.19350",
+    "arXiv:2610.15398",
+    "arXiv:2611.11223"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "81c79182051536fed74a491ce607c3ae34421b07",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T03:28:54.297325+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3828523.3857082",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date64628.2025.10993106",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.3390/electronics14122337",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.19350",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.15398",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.11223",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Pruning via Causal Attribution Preserves Reasoning Performance in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2606.19350",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) excel at multi-step reasoning but incur substantial inference cost. We introduce Causal Attribution Pruning (CAP), a training-free method that identifies critical attention heads by measuring their causal impact on reasoning tasks and uses these head-level scores to guide fine-grained weight pruning. For each attention head, CAP estimates the expected performance degradation when the head is masked during forward passes on a small calibration set of reasoning problems. These causal scores are then converted into weight-level importance values for the corresponding projection matrices. Unlike magnitude-only or activation-based criteria, CAP's interventional measurement directly captures each head's functional contribution, yielding relative accuracy gains of up to 61% over Wanda on ARC-Challenge at 20% sparsity. We evaluate CAP on GSM8K, StrategyQA, and ARC-Challenge using Llama-3-8B-Instruct and Mistral-7B-Instruct at 10%, 20%, and 50% sparsity. At moderate sparsity (10-20%), CAP improves over Wanda in most model-benchmark configurations. with especially large gains on ARC-Challenge for Llama-3. Our results suggest that attention-head-level causal attribution can better preserve reasoning performance on downstream benchmarks than correlational pruning criteria at equivalent sparsity, while remaining limited by coarse MLP attribution at 50% sparsity.",
+      "identifiers": [
+        "SemanticScholar:6844263acd6ecdb9472a09eece8406fb57af8863"
+      ],
+      "semantic_scholar_id": "6844263acd6ecdb9472a09eece8406fb57af8863",
+      "canonical_id": "arXiv:2606.19350",
+      "arxiv_id": "2606.19350",
+      "doi": "10.48550/arXiv.2606.19350",
+      "authors": [
+        "Amogh Sheth",
+        "Andrew Lin",
+        "Biruk Assefa",
+        "Yi-Wen Huang",
+        "Yu Ge"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 213,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hardware Accelerator for Approximation-Based Softmax and Layer Normalization in Transformers",
+      "source_url": "https://doi.org/10.3390/electronics14122337",
+      "year": 2025,
+      "published": "2025-06-07",
+      "venue": "Electronics",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have achieved remarkable success across various AI tasks, but their growing complexity has led to significant computational and memory demands. While most optimization efforts have focused on linear operations such as matrix multiplications, non-linear functions like Softmax and layer normalization (LayerNorm) are increasingly dominating inference latency, especially for long sequences and high-dimensional inputs. To address this emerging bottleneck, we present a hardware accelerator that jointly approximates these non-linear functions using piecewise linear approximation for the exponential in Softmax and Newton–Raphson iteration for the square root in LayerNorm. The proposed unified architecture dynamically switches operation modes while reusing hardware resources. The proposed accelerator was implemented on a Xilinx VU37P FPGA and evaluated with BERT and GPT-2 models. Experimental results demonstrate speedups of up to 7.6× for Softmax and 2.0× for LayerNorm, while maintaining less than 1% accuracy degradation on classification tasks with conservative approximation settings. However, generation tasks showed greater sensitivity to approximation, underscoring the need for task-specific tuning.",
+      "identifiers": [
+        "SemanticScholar:c51a484cd639681402618e4c27a1bfb415b9767e"
+      ],
+      "semantic_scholar_id": "c51a484cd639681402618e4c27a1bfb415b9767e",
+      "doi": "10.3390/electronics14122337",
+      "canonical_id": "DOI:10.3390/electronics14122337",
+      "authors": [
+        "Raehyeong Kim",
+        "Dayoung Lee",
+        "Jinyeol Kim",
+        "Joungmin Park",
+        "Seung Eun Lee"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 537,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GA-SVD: Generation-aware Singular Value Decomposition for LLM Compression",
+      "source_url": "https://arxiv.org/abs/2610.15398",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) demonstrate strong generalization across a broad range of reasoning and generation tasks, but their large parameter counts impose substantial memory and computation costs, hindering deployment in practical resource-constrained settings. One-shot low-rank compression is a promising solution since it reduces model size and inference cost effectively. However, existing SVD-based methods primarily target multiple-choice benchmarks and often fail to preserve performance on generation tasks. Moreover, their rank allocation strategies are typically heuristic. We propose GA-SVD, a generation-aware low-rank compression framework for LLMs. First, we introduce Generation-Aware Weight Whitening (GAWW), which leverages gradients from on-policy knowledge distillation to construct whitening transformations aligned with generative behavior. Second, we develop an evolutionary global rank allocation method that searches for effective layer-wise rank allocation under a given global compression ratio. Across extensive experiments on Mistral-7B, Qwen3 series, and Llama-3.3 models, evaluated on both multiple-choice and generative benchmarks, GA-SVD consistently outperforms existing SVD-based baselines and achieves state-of-the-art (SoTA) results. We further demonstrate scalability by applying our method to models with up to 70B parameters.",
+      "identifiers": [
+        "SemanticScholar:e42ad76b68a98a27553fe6e02f4acfd10f8eabc9"
+      ],
+      "semantic_scholar_id": "e42ad76b68a98a27553fe6e02f4acfd10f8eabc9",
+      "canonical_id": "arXiv:2610.15398",
+      "arxiv_id": "2610.15398",
+      "authors": [
+        "Sheng-Kun Tang",
+        "Cong Zeng",
+        "Zong-Fang Liu",
+        "Martin Jaggi",
+        "Zhi-Qiang Shen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SGA-Sparse: Training Native SwiGLU Gates for Activation-Sparse and Low-Bit LLMs",
+      "source_url": "https://arxiv.org/abs/2611.11223",
+      "year": 2026,
+      "published": "2026-11-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Activation sparsity can reduce FFN weight traffic during single-user LLM decoding, but active channels must be identified early enough to avoid fetching unused weights. In pretrained SwiGLU models, training-free routing with the native gate performs substantially worse than routing with the up activation at high sparsity. We show that this ordering reverses after sparsity-aware training. Based on this insight, we introduce SGA-Sparse, which converts pretrained SwiGLU LLMs into fixed-budget activation-sparse models by training the existing gate projection directly as a top-k router. SGA-Sparse updates all model parameters end-to-end while preserving the original SwiGLU activation and introducing no auxiliary router parameters. After approximately 30B training tokens, LLaMA models from 1B to 8B achieve uniform per-token 75-85% FFN channel sparsity while remaining within 0.2-2.7 pp of their original dense checkpoints in average zero-shot accuracy. Because post-training quantization degrades sparsity-trained checkpoints, we further study two complementary quantization-aware training (QAT) recipes: continued-QAT largely recovers performance at 4-bit weight quantization, while joint-QAT performs better for the more aggressive sub-4-bit target. To compare activation sparsity with dense low-bit quantization, we translate the sparsity-induced reduction in weight traffic into an equivalent bit-width. Under this unified weight-traffic metric, our 2.5- and 1.5-bit-equivalent models establish a new accuracy-traffic Pareto frontier: the 2.5-bit-equivalent models match dense 3-bit QAT accuracy, while the 1.5-bit-equivalent models approach dense 2-bit models and outperform dense ternary models by 1.3 pp on average. These results establish native-gate training as a practical approach for combining high FFN sparsity with low-bit weights.",
+      "identifiers": [
+        "SemanticScholar:f0644bda6658a92a583db0b67e1ab56668836a48"
+      ],
+      "semantic_scholar_id": "f0644bda6658a92a583db0b67e1ab56668836a48",
+      "canonical_id": "arXiv:2611.11223",
+      "arxiv_id": "2611.11223",
+      "authors": [
+        "Ruokai Yin",
+        "Steven Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STRIDE: Efficient Secure Transformer Inference via Inter-Operator Protocol and Operator Co-Design",
+      "source_url": "https://doi.org/10.1145/3828523.3857082",
+      "year": 2026,
+      "published": "2026-11-14",
+      "venue": "Proceedings of the 2026 ACM SIGOPS Annual Technical Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Secure inference based on homomorphic encryption (HE) and secure multi-party computation (MPC) protects both client inputs and model weights in GPT serving. Existing systems follow two paradigms: hybrid HE–MPC uses a type-driven heuristic that maps linear operators to HE and non-linear operators to MPC, while fully homomorphic encryption (FHE) executes entirely in the ciphertext domain to eliminate communication. Despite strong security guarantees, both remain inefficient in practice. Our profiling shows that the primary bottleneck lies in inter-operator overhead rather than individual operator inefficiency: type-driven protocol assignment and locally optimized layouts leave substantial switching and layout-transformation costs. Stride targets this overhead through two inter-operator optimizations: protocol assignment that accounts for operator affinity and switching cost, and attention refinement that improves HE affinity while preserving layout compatibility with interleaved encoding and offline–online alignment. Beyond these inter-operator optimizations, Stride further accelerates the resulting HE-heavy execution through optimized polynomial evaluation and dependency-driven multi-GPU scheduling. On GPT-2 and LLaMA-7B across three network settings, Stride achieves up to 3.83 × speedup over the faster of the two GPU-based baselines, Nexus and BLB, with one GPU per system. With four GPUs, Stride achieves up to 10.62 × speedup over the same single-GPU baselines.",
+      "identifiers": [
+        "SemanticScholar:bba26db0905a04fec8dd4a1cd6174a899debba7e"
+      ],
+      "semantic_scholar_id": "bba26db0905a04fec8dd4a1cd6174a899debba7e",
+      "doi": "10.1145/3828523.3857082",
+      "canonical_id": "DOI:10.1145/3828523.3857082",
+      "authors": [
+        "Zheng-Yi Li",
+        "Yang-Jie Zhou",
+        "Zi-Han Liu",
+        "Zi-Yu Xiao",
+        "Kang Yang",
+        "Jia-Ping Gui",
+        "Yu Feng",
+        "Yun Lin",
+        "Jin-Song Dong",
+        "Yu Yu",
+        "Min-Yi Guo",
+        "Ning Liu",
+        "Jingwen Leng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OPS: Outlier-Aware Precision-Slice Framework for LLM Acceleration",
+      "source_url": "https://doi.org/10.23919/DATE64628.2025.10993106",
+      "year": 2025,
+      "published": "2025-03-31",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have transformed numerous AI applications, with on-device deployment becoming increasingly important for reducing cloud computing costs and protecting user privacy. However, the astronomical model size and limited hardware resources pose significant deployment challenges. Model quantization is a promising approach to mitigate this gap, but the presence of outliers in LLMs reduces its effectiveness. Previous efforts addressed this issue by employing compression-based encoding for mixed-precision quantization. These approaches struggle to balance model accuracy with hard-ware efficiency due to their value-wise outlier granularity and complex encoding/decoding hardware logic. To address this, we propose OPS (Outlier-aware Precision-Slicing), an acceleration framework that exploits massive sparsity in the higher-order part of LLMs by splitting 16-bit values into a 4-bit/12-bit format. Crucially, OPS introduces an early bird mechanism that leverages the high-order 4-bit computation to predict the importance of the full calculation result. This mechanism enables efficient computational skips by continuing execution only for important computations and using preset values for less significant ones. This scheme can be efficiently integrated with existing hardware accelerators like systolic arrays without complex encoding/decoding. As a result, OPS outperforms state-of-the-art outlier-aware accelerators, achieving a 1.3 − 4.3× performance boost with minimal model accuracy loss. This approach enables more efficient on-device LLM deployment, effectively balancing computational efficiency and model accuracy.",
+      "identifiers": [
+        "SemanticScholar:f9fb10e779d976207f7ad9200e1d7e3a39bff383"
+      ],
+      "semantic_scholar_id": "f9fb10e779d976207f7ad9200e1d7e3a39bff383",
+      "doi": "10.23919/DATE64628.2025.10993106",
+      "canonical_id": "DOI:10.23919/DATE64628.2025.10993106",
+      "authors": [
+        "Fang-Xin Liu",
+        "Ning Yang",
+        "Zong-Wu Wang",
+        "Xuanpeng Zhu",
+        "Haidong Yao",
+        "Xian-Kui Xiong",
+        "Qi Sun",
+        "Li Jiang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 605,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.19350",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.19350",
+        "id:SemanticScholar:6844263acd6ecdb9472a09eece8406fb57af8863",
+        "id:arXiv:2606.19350",
+        "title:pruning via causal attribution preserves reasoning performance in large language models",
+        "url:https://arxiv.org/abs/2606.19350"
+      ],
+      "record": {
+        "title": "Pruning via Causal Attribution Preserves Reasoning Performance in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2606.19350",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) excel at multi-step reasoning but incur substantial inference cost. We introduce Causal Attribution Pruning (CAP), a training-free method that identifies critical attention heads by measuring their causal impact on reasoning tasks and uses these head-level scores to guide fine-grained weight pruning. For each attention head, CAP estimates the expected performance degradation when the head is masked during forward passes on a small calibration set of reasoning problems. These causal scores are then converted into weight-level importance values for the corresponding projection matrices. Unlike magnitude-only or activation-based criteria, CAP's interventional measurement directly captures each head's functional contribution, yielding relative accuracy gains of up to 61% over Wanda on ARC-Challenge at 20% sparsity. We evaluate CAP on GSM8K, StrategyQA, and ARC-Challenge using Llama-3-8B-Instruct and Mistral-7B-Instruct at 10%, 20%, and 50% sparsity. At moderate sparsity (10-20%), CAP improves over Wanda in most model-benchmark configurations. with especially large gains on ARC-Challenge for Llama-3. Our results suggest that attention-head-level causal attribution can better preserve reasoning performance on downstream benchmarks than correlational pruning criteria at equivalent sparsity, while remaining limited by coarse MLP attribution at 50% sparsity.",
+        "identifiers": [
+          "SemanticScholar:6844263acd6ecdb9472a09eece8406fb57af8863"
+        ],
+        "semantic_scholar_id": "6844263acd6ecdb9472a09eece8406fb57af8863",
+        "canonical_id": "arXiv:2606.19350",
+        "arxiv_id": "2606.19350",
+        "doi": "10.48550/arXiv.2606.19350",
+        "authors": [
+          "Amogh Sheth",
+          "Andrew Lin",
+          "Biruk Assefa",
+          "Yi-Wen Huang",
+          "Yu Ge"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 213,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/electronics14122337",
+      "identity_tokens": [
+        "id:DOI:10.3390/electronics14122337",
+        "id:SemanticScholar:c51a484cd639681402618e4c27a1bfb415b9767e",
+        "title:hardware accelerator for approximationbased softmax and layer normalization in transformers",
+        "url:https://doi.org/10.3390/electronics14122337"
+      ],
+      "record": {
+        "title": "Hardware Accelerator for Approximation-Based Softmax and Layer Normalization in Transformers",
+        "source_url": "https://doi.org/10.3390/electronics14122337",
+        "year": 2025,
+        "published": "2025-06-07",
+        "venue": "Electronics",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models have achieved remarkable success across various AI tasks, but their growing complexity has led to significant computational and memory demands. While most optimization efforts have focused on linear operations such as matrix multiplications, non-linear functions like Softmax and layer normalization (LayerNorm) are increasingly dominating inference latency, especially for long sequences and high-dimensional inputs. To address this emerging bottleneck, we present a hardware accelerator that jointly approximates these non-linear functions using piecewise linear approximation for the exponential in Softmax and Newton–Raphson iteration for the square root in LayerNorm. The proposed unified architecture dynamically switches operation modes while reusing hardware resources. The proposed accelerator was implemented on a Xilinx VU37P FPGA and evaluated with BERT and GPT-2 models. Experimental results demonstrate speedups of up to 7.6× for Softmax and 2.0× for LayerNorm, while maintaining less than 1% accuracy degradation on classification tasks with conservative approximation settings. However, generation tasks showed greater sensitivity to approximation, underscoring the need for task-specific tuning.",
+        "identifiers": [
+          "SemanticScholar:c51a484cd639681402618e4c27a1bfb415b9767e"
+        ],
+        "semantic_scholar_id": "c51a484cd639681402618e4c27a1bfb415b9767e",
+        "doi": "10.3390/electronics14122337",
+        "canonical_id": "DOI:10.3390/electronics14122337",
+        "authors": [
+          "Raehyeong Kim",
+          "Dayoung Lee",
+          "Jinyeol Kim",
+          "Joungmin Park",
+          "Seung Eun Lee"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 537,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.15398",
+      "identity_tokens": [
+        "id:SemanticScholar:e42ad76b68a98a27553fe6e02f4acfd10f8eabc9",
+        "id:arXiv:2610.15398",
+        "title:gasvd generationaware singular value decomposition for llm compression",
+        "url:https://arxiv.org/abs/2610.15398"
+      ],
+      "record": {
+        "title": "GA-SVD: Generation-aware Singular Value Decomposition for LLM Compression",
+        "source_url": "https://arxiv.org/abs/2610.15398",
+        "year": 2026,
+        "published": "2026-10-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) demonstrate strong generalization across a broad range of reasoning and generation tasks, but their large parameter counts impose substantial memory and computation costs, hindering deployment in practical resource-constrained settings. One-shot low-rank compression is a promising solution since it reduces model size and inference cost effectively. However, existing SVD-based methods primarily target multiple-choice benchmarks and often fail to preserve performance on generation tasks. Moreover, their rank allocation strategies are typically heuristic. We propose GA-SVD, a generation-aware low-rank compression framework for LLMs. First, we introduce Generation-Aware Weight Whitening (GAWW), which leverages gradients from on-policy knowledge distillation to construct whitening transformations aligned with generative behavior. Second, we develop an evolutionary global rank allocation method that searches for effective layer-wise rank allocation under a given global compression ratio. Across extensive experiments on Mistral-7B, Qwen3 series, and Llama-3.3 models, evaluated on both multiple-choice and generative benchmarks, GA-SVD consistently outperforms existing SVD-based baselines and achieves state-of-the-art (SoTA) results. We further demonstrate scalability by applying our method to models with up to 70B parameters.",
+        "identifiers": [
+          "SemanticScholar:e42ad76b68a98a27553fe6e02f4acfd10f8eabc9"
+        ],
+        "semantic_scholar_id": "e42ad76b68a98a27553fe6e02f4acfd10f8eabc9",
+        "canonical_id": "arXiv:2610.15398",
+        "arxiv_id": "2610.15398",
+        "authors": [
+          "Sheng-Kun Tang",
+          "Cong Zeng",
+          "Zong-Fang Liu",
+          "Martin Jaggi",
+          "Zhi-Qiang Shen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.11223",
+      "identity_tokens": [
+        "id:SemanticScholar:f0644bda6658a92a583db0b67e1ab56668836a48",
+        "id:arXiv:2611.11223",
+        "title:sgasparse training native swiglu gates for activationsparse and lowbit llms",
+        "url:https://arxiv.org/abs/2611.11223"
+      ],
+      "record": {
+        "title": "SGA-Sparse: Training Native SwiGLU Gates for Activation-Sparse and Low-Bit LLMs",
+        "source_url": "https://arxiv.org/abs/2611.11223",
+        "year": 2026,
+        "published": "2026-11-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Activation sparsity can reduce FFN weight traffic during single-user LLM decoding, but active channels must be identified early enough to avoid fetching unused weights. In pretrained SwiGLU models, training-free routing with the native gate performs substantially worse than routing with the up activation at high sparsity. We show that this ordering reverses after sparsity-aware training. Based on this insight, we introduce SGA-Sparse, which converts pretrained SwiGLU LLMs into fixed-budget activation-sparse models by training the existing gate projection directly as a top-k router. SGA-Sparse updates all model parameters end-to-end while preserving the original SwiGLU activation and introducing no auxiliary router parameters. After approximately 30B training tokens, LLaMA models from 1B to 8B achieve uniform per-token 75-85% FFN channel sparsity while remaining within 0.2-2.7 pp of their original dense checkpoints in average zero-shot accuracy. Because post-training quantization degrades sparsity-trained checkpoints, we further study two complementary quantization-aware training (QAT) recipes: continued-QAT largely recovers performance at 4-bit weight quantization, while joint-QAT performs better for the more aggressive sub-4-bit target. To compare activation sparsity with dense low-bit quantization, we translate the sparsity-induced reduction in weight traffic into an equivalent bit-width. Under this unified weight-traffic metric, our 2.5- and 1.5-bit-equivalent models establish a new accuracy-traffic Pareto frontier: the 2.5-bit-equivalent models match dense 3-bit QAT accuracy, while the 1.5-bit-equivalent models approach dense 2-bit models and outperform dense ternary models by 1.3 pp on average. These results establish native-gate training as a practical approach for combining high FFN sparsity with low-bit weights.",
+        "identifiers": [
+          "SemanticScholar:f0644bda6658a92a583db0b67e1ab56668836a48"
+        ],
+        "semantic_scholar_id": "f0644bda6658a92a583db0b67e1ab56668836a48",
+        "canonical_id": "arXiv:2611.11223",
+        "arxiv_id": "2611.11223",
+        "authors": [
+          "Ruokai Yin",
+          "Steven Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 18,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3828523.3857082",
+      "identity_tokens": [
+        "id:DOI:10.1145/3828523.3857082",
+        "id:SemanticScholar:bba26db0905a04fec8dd4a1cd6174a899debba7e",
+        "title:stride efficient secure transformer inference via interoperator protocol and operator codesign",
+        "url:https://doi.org/10.1145/3828523.3857082"
+      ],
+      "record": {
+        "title": "STRIDE: Efficient Secure Transformer Inference via Inter-Operator Protocol and Operator Co-Design",
+        "source_url": "https://doi.org/10.1145/3828523.3857082",
+        "year": 2026,
+        "published": "2026-11-14",
+        "venue": "Proceedings of the 2026 ACM SIGOPS Annual Technical Conference",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Secure inference based on homomorphic encryption (HE) and secure multi-party computation (MPC) protects both client inputs and model weights in GPT serving. Existing systems follow two paradigms: hybrid HE–MPC uses a type-driven heuristic that maps linear operators to HE and non-linear operators to MPC, while fully homomorphic encryption (FHE) executes entirely in the ciphertext domain to eliminate communication. Despite strong security guarantees, both remain inefficient in practice. Our profiling shows that the primary bottleneck lies in inter-operator overhead rather than individual operator inefficiency: type-driven protocol assignment and locally optimized layouts leave substantial switching and layout-transformation costs. Stride targets this overhead through two inter-operator optimizations: protocol assignment that accounts for operator affinity and switching cost, and attention refinement that improves HE affinity while preserving layout compatibility with interleaved encoding and offline–online alignment. Beyond these inter-operator optimizations, Stride further accelerates the resulting HE-heavy execution through optimized polynomial evaluation and dependency-driven multi-GPU scheduling. On GPT-2 and LLaMA-7B across three network settings, Stride achieves up to 3.83 × speedup over the faster of the two GPU-based baselines, Nexus and BLB, with one GPU per system. With four GPUs, Stride achieves up to 10.62 × speedup over the same single-GPU baselines.",
+        "identifiers": [
+          "SemanticScholar:bba26db0905a04fec8dd4a1cd6174a899debba7e"
+        ],
+        "semantic_scholar_id": "bba26db0905a04fec8dd4a1cd6174a899debba7e",
+        "doi": "10.1145/3828523.3857082",
+        "canonical_id": "DOI:10.1145/3828523.3857082",
+        "authors": [
+          "Zheng-Yi Li",
+          "Yang-Jie Zhou",
+          "Zi-Han Liu",
+          "Zi-Yu Xiao",
+          "Kang Yang",
+          "Jia-Ping Gui",
+          "Yu Feng",
+          "Yun Lin",
+          "Jin-Song Dong",
+          "Yu Yu",
+          "Min-Yi Guo",
+          "Ning Liu",
+          "Jingwen Leng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 12,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date64628.2025.10993106",
+      "identity_tokens": [
+        "id:DOI:10.23919/date64628.2025.10993106",
+        "id:SemanticScholar:f9fb10e779d976207f7ad9200e1d7e3a39bff383",
+        "title:ops outlieraware precisionslice framework for llm acceleration",
+        "url:https://doi.org/10.23919/DATE64628.2025.10993106"
+      ],
+      "record": {
+        "title": "OPS: Outlier-Aware Precision-Slice Framework for LLM Acceleration",
+        "source_url": "https://doi.org/10.23919/DATE64628.2025.10993106",
+        "year": 2025,
+        "published": "2025-03-31",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have transformed numerous AI applications, with on-device deployment becoming increasingly important for reducing cloud computing costs and protecting user privacy. However, the astronomical model size and limited hardware resources pose significant deployment challenges. Model quantization is a promising approach to mitigate this gap, but the presence of outliers in LLMs reduces its effectiveness. Previous efforts addressed this issue by employing compression-based encoding for mixed-precision quantization. These approaches struggle to balance model accuracy with hard-ware efficiency due to their value-wise outlier granularity and complex encoding/decoding hardware logic. To address this, we propose OPS (Outlier-aware Precision-Slicing), an acceleration framework that exploits massive sparsity in the higher-order part of LLMs by splitting 16-bit values into a 4-bit/12-bit format. Crucially, OPS introduces an early bird mechanism that leverages the high-order 4-bit computation to predict the importance of the full calculation result. This mechanism enables efficient computational skips by continuing execution only for important computations and using preset values for less significant ones. This scheme can be efficiently integrated with existing hardware accelerators like systolic arrays without complex encoding/decoding. As a result, OPS outperforms state-of-the-art outlier-aware accelerators, achieving a 1.3 − 4.3× performance boost with minimal model accuracy loss. This approach enables more efficient on-device LLM deployment, effectively balancing computational efficiency and model accuracy.",
+        "identifiers": [
+          "SemanticScholar:f9fb10e779d976207f7ad9200e1d7e3a39bff383"
+        ],
+        "semantic_scholar_id": "f9fb10e779d976207f7ad9200e1d7e3a39bff383",
+        "doi": "10.23919/DATE64628.2025.10993106",
+        "canonical_id": "DOI:10.23919/DATE64628.2025.10993106",
+        "authors": [
+          "Fang-Xin Liu",
+          "Ning Yang",
+          "Zong-Wu Wang",
+          "Xuanpeng Zhu",
+          "Haidong Yao",
+          "Xian-Kui Xiong",
+          "Qi Sun",
+          "Li Jiang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 605,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ebb0681cc61998ce7cc355425c0b98d413399d07bc4444dec689fc169b5b8502",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
