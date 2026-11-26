@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-06e8fde8b4c5f1ac-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.34821",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.34821",
+    "identity_tokens": [
+      "arXiv:2611.34821"
+    ],
+    "reason": "ループ型MoEアーキテクチャのゲイン要因を分解した分析論文で、KVキャッシュを含む一致予算での比較は推論にも関係するが、主たる貢献はモデルアーキテクチャと学習レシピの理解であり、推論システム機構の提案ではないため保留とする。",
+    "first_checked_at": "2026-11-26T19:40:22+00:00",
+    "last_checked_at": "2026-11-26T19:40:22+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LoopTitan: What Does Parameter Revisit Buy a Mixture-of-Experts?"
+  },
+  "processed_at": "2026-11-26T19:40:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-06e8fde8b4c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T19:36:20+00:00",
-  "record_count": 9836,
+  "updated_at": "2026-11-26T19:40:24+00:00",
+  "record_count": 9850,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -136382,10 +136382,11 @@
       "identity_tokens": [
         "arXiv:2611.30704"
       ],
-      "reason": "自己回帰画像生成向けの自己投機的デコードについて、生成順序がドラフト・ターゲット不一致と早期棄却コストを通じて効率を決めることを理論解析し、順序を最適化するSAOを提案するが、対象は画像生成でありLLMテキスト推論ではないためborderlineとした。",
+      "reason": "自己回帰画像生成における生成順序が自己投機的デコード効率に与える影響を分析し順序最適化で高速化する内容で、投機的デコードの知見は含むが対象は画像生成であり、LLM推論への直接適用は示されていないため保留とする。",
       "first_checked_at": "2026-11-24T22:37:44+00:00",
-      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-26T19:40:23+00:00",
       "linked_from": [
+        "arxiv_api_latest_search",
         "latest_search arxiv api"
       ],
       "borderline_recheck_count": 0,
@@ -136397,10 +136398,11 @@
       "identity_tokens": [
         "arXiv:2611.30328"
       ],
-      "reason": "Draft Forcingは自己回帰ビデオ生成向けに、ターゲットの隠れ状態で条件付けした特徴レベルドラフトと学習済み検証器によるチャンク単位投機的デコードを提案するが、対象はビデオ拡散モデルの生成でありLLM推論システムではないためborderlineとした。",
+      "reason": "自己回帰動画生成にチャンク単位の投機的デコードを適用しターゲット誘導ドラフトと学習済み検証器で高速化する内容で、投機的デコード技術そのものは関連するが主目的は動画生成の高速化でありLLMデコードへの直接貢献は薄いため保留とする。",
       "first_checked_at": "2026-11-24T22:37:44+00:00",
-      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-26T19:40:23+00:00",
       "linked_from": [
+        "arxiv_api_latest_search",
         "latest_search arxiv api"
       ],
       "borderline_recheck_count": 0,
@@ -136472,10 +136474,11 @@
       "identity_tokens": [
         "arXiv:2611.31184"
       ],
-      "reason": "CodecOPSDはビデオ拡散モデルの条件トークンをビデオコーデックの冗長性検出で剪定し、KVキャッシュモードでメモリを最大73％削減してデノイジングを2倍高速化するが、対象は映像生成モデルでありLLM推論システムへの直接の貢献ではないためborderlineとした。",
+      "reason": "動画拡散モデルの条件トークンを映像コーデックの冗長性で剪定しKVキャッシュモードのメモリを最大73％減らす内容だが、対象は動画生成モデルの条件付け効率化であり、LLM推論への直接貢献は間接的であるため保留とする。",
       "first_checked_at": "2026-11-24T22:37:44+00:00",
-      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-26T19:40:22+00:00",
       "linked_from": [
+        "arxiv_api_latest_search",
         "latest_search arxiv api"
       ],
       "borderline_recheck_count": 0,
@@ -136487,29 +136490,15 @@
       "identity_tokens": [
         "arXiv:2611.30412"
       ],
-      "reason": "DMC-5は長期間エージェントの増大する対話軌跡を、汎用圧縮モデルと専門エージェントモデルの二重モデル協調でキャッシュ配慮型に圧縮する枠組みだが、主目的はエージェントの文脈管理と意思決定品質であり、推論システム機構への貢献は軌跡圧縮による入力削減にとどまるためborderlineとした。",
+      "reason": "長時間エージェントの文脈増大に対し接頭辞キャッシュを意識した文脈圧縮でエージェントモデルの入力とコストを減らす内容で、推論コスト削減に関係するが手法の主体はエージェント層の文脈管理であり推論エンジン自体への貢献は薄いため保留とする。",
       "first_checked_at": "2026-11-24T22:37:44+00:00",
-      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-26T19:40:23+00:00",
       "linked_from": [
+        "arxiv_api_latest_search",
         "latest_search arxiv api"
       ],
       "borderline_recheck_count": 0,
       "title": "DMC-5: Dual-Model Collaboration with Cache-aware Context Compression for Long-horizon Agents"
-    },
-    "arXiv:2611.30404": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2611.30404",
-      "identity_tokens": [
-        "arXiv:2611.30404"
-      ],
-      "reason": "時系列基盤モデルのエッジ展開について、因果的注意のKVキャッシュや再帰状態を持続させて予測リフレッシュを増分化し、レイテンシとピークメモリを抑える検討だが、対象は時系列予測モデルでありLLM推論ではないためborderlineとした。",
-      "first_checked_at": "2026-11-24T22:37:44+00:00",
-      "last_checked_at": "2026-11-24T22:37:44+00:00",
-      "linked_from": [
-        "latest_search arxiv api"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Time Series Foundation Models on the Edge"
     },
     "arXiv:2611.29915": {
       "classification": "borderline",
@@ -136517,10 +136506,11 @@
       "identity_tokens": [
         "arXiv:2611.29915"
       ],
-      "reason": "NVIDIA GB10（DGX Spark等）でC2Cメモリトラフィックを測るテレメトリがない問題に対し、CUPTIのL2セクタカウンタ5種でGPUメモリトラフィックを実時間計測できることを示す計測手法だが、LLM推論に特化した内容ではなく汎用GPU計測であるためborderlineとした。",
+      "reason": "NVIDIA GB10でC2CメモリトラフィックをL2カウンタから計測する手法を提示しMistral 7Bのデコード読み取り量の実測も示すが、論文の主眼は特定ハードウェアのテレメトリ手法一般であり、LLM推論基盤の計測としての位置づけは限定的なため保留とする。",
       "first_checked_at": "2026-11-24T22:37:44+00:00",
-      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-26T19:40:23+00:00",
       "linked_from": [
+        "arxiv_api_latest_search",
         "latest_search arxiv api"
       ],
       "borderline_recheck_count": 0,
@@ -150461,6 +150451,231 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Role-Aware Context Compression in Agentic AI Pipelines for Question Answering"
+    },
+    "arXiv:2611.34147": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.34147",
+      "identity_tokens": [
+        "arXiv:2611.34147"
+      ],
+      "reason": "モデル自身が文脈圧縮を制御する方式の実証研究で、推論エンジンが編集後の接頭辞KVキャッシュを再利用してプリフィル計算を最大15％削減する知見も含むが、主体はエージェントハーネスの文脈管理の比較評価であるため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:21+00:00",
+      "last_checked_at": "2026-11-26T19:40:21+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Letting Models Manage Their Own Context: Where We Stand"
+    },
+    "arXiv:2611.34241": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.34241",
+      "identity_tokens": [
+        "arXiv:2611.34241"
+      ],
+      "reason": "音声トークン言語モデルのTTSシステムでMLA重み吸収によるKVキャッシュ4分の1化やCUDAグラフデコードによる低遅延化を含むが、主目的はTTSの品質と実運用性能であり、LLMサービング一般への貢献は限定的なため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:22+00:00",
+      "last_checked_at": "2026-11-26T19:40:22+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TigerTTS: Draft-Guided Multi-Frame Parallel Speech-Token Language Model for Fast and Robust Text-to-Speech"
+    },
+    "arXiv:2611.34278": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.34278",
+      "identity_tokens": [
+        "arXiv:2611.34278"
+      ],
+      "reason": "モデル間KVキャッシュ転送という推論機構を対象に、潜在ハンドオフが安全性アライメントを損なう攻撃面とキャッシュガード防御を分析する内容で、KVキャッシュ機構には直接関係するが主目的はセキュリティ評価であるため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:22+00:00",
+      "last_checked_at": "2026-11-26T19:40:22+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems"
+    },
+    "arXiv:2611.34821": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.34821",
+      "identity_tokens": [
+        "arXiv:2611.34821"
+      ],
+      "reason": "ループ型MoEアーキテクチャのゲイン要因を分解した分析論文で、KVキャッシュを含む一致予算での比較は推論にも関係するが、主たる貢献はモデルアーキテクチャと学習レシピの理解であり、推論システム機構の提案ではないため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:22+00:00",
+      "last_checked_at": "2026-11-26T19:40:22+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LoopTitan: What Does Parameter Revisit Buy a Mixture-of-Experts?"
+    },
+    "arXiv:2611.34912": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.34912",
+      "identity_tokens": [
+        "arXiv:2611.34912"
+      ],
+      "reason": "ストリーミング動画VAEの符号化と復号を因果ウィンドウ注意で高速化しKVキャッシュを有界に保つ内容で、推論高速化の技術要素はあるものの対象は動画生成モデルのVAEであり、LLM推論システムへの直接貢献は薄いため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:22+00:00",
+      "last_checked_at": "2026-11-26T19:40:22+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE"
+    },
+    "arXiv:2611.30825": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.30825",
+      "identity_tokens": [
+        "arXiv:2611.30825"
+      ],
+      "reason": "文書をLoRAアダプタへ変換して再処理を避けるDoc-to-LoRAの適用可能性を分析しスループット測定も行うが、結論は質問応答精度と干渉の問題を指摘する否定的分析が中心で、推論システムへの技術的貢献は明確でないため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:22+00:00",
+      "last_checked_at": "2026-11-26T19:40:22+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Doc-to-LoRA Analysis: Query Conditioning, Wrong Facts, and Distractor Interference"
+    },
+    "arXiv:2611.31065": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.31065",
+      "identity_tokens": [
+        "arXiv:2611.31065"
+      ],
+      "reason": "トークン予算下のLLM推論で単一ロールアウトの不確実性から棄却を制御するTail-CRCを提案し生成コスト削減も示すが、主体は適合リスク制御による提出判断であり、サービングやデコード機構への直接貢献は限定的なため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:22+00:00",
+      "last_checked_at": "2026-11-26T19:40:22+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Decoupling Solving from Abstention: Single-Rollout Conformal Risk Control for Hard-Budget LLM Reasoning"
+    },
+    "arXiv:2611.32617": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.32617",
+      "identity_tokens": [
+        "arXiv:2611.32617"
+      ],
+      "reason": "文書解析用VLMで並列ドラフトモジュールにより自己回帰デコードのボトルネックを除きvLLM上でスループットを上げる内容を含むが、主目的はOCRの認識精度と文書解析性能であり、推論機構の新規性は補助的な位置づけのため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:23+00:00",
+      "last_checked_at": "2026-11-26T19:40:23+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VenusOCR2.0: Towards Efficient and Effective Document Parsing"
+    },
+    "arXiv:2611.29954": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.29954",
+      "identity_tokens": [
+        "arXiv:2611.29954"
+      ],
+      "reason": "ツリールーティング型再帰専門家アーキテクチャYggdrasilでCPU推論の高速化と状態追跡性能を示すが、これはモデルアーキテクチャの提案であり、LLM推論システムの機構としての評価やサービング適用は要旨で確認できないため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:23+00:00",
+      "last_checked_at": "2026-11-26T19:40:23+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Yggdrasil: Tree-Routed Recurrent Experts for State Tracking and Fast CPU Inference"
+    },
+    "arXiv:2611.30083": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.30083",
+      "identity_tokens": [
+        "arXiv:2611.30083"
+      ],
+      "reason": "複数ロボットのVLAポリシーを共有GPUでサービングし、実行スラックに基づく観測タイミングとバッチ形成を協調させるMotionServeはサービング機構そのものだが、対象はロボットポリシーの推論でありLLMサービングへの直接貢献は限定的なため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:23+00:00",
+      "last_checked_at": "2026-11-26T19:40:23+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MotionServe: Efficient Multi-Robot Serving by Exploiting Robot Execution Slack"
+    },
+    "arXiv:2611.30545": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.30545",
+      "identity_tokens": [
+        "arXiv:2611.30545"
+      ],
+      "reason": "テキスト画像生成モデルでバッチ構成やGPU種別がシード固定でも出力を変える非決定性を実測する内容で、生成推論の再現性計測としては関連するが対象は画像モデルであり、LLM推論基盤への直接貢献は薄いため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:23+00:00",
+      "last_checked_at": "2026-11-26T19:40:23+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reproducible by Seed? Not on GPUs: Batch-Dependent Non-Determinism in Text-to-Image Models"
+    },
+    "arXiv:2611.30581": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.30581",
+      "identity_tokens": [
+        "arXiv:2611.30581"
+      ],
+      "reason": "深さ再帰モデルのパイプライン並列実行を巡回ステージ向けに再設計するLoop-PPでメモリ削減とスループット向上を示すが、要旨からは対象が学習か推論サービングかが明確でなく、LLMサービングへの直接適用も示されていないため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:23+00:00",
+      "last_checked_at": "2026-11-26T19:40:23+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Pipeline-Parallel System for Depth-Recurrent Models"
+    },
+    "arXiv:2611.33268": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.33268",
+      "identity_tokens": [
+        "arXiv:2611.33268"
+      ],
+      "reason": "動画生成の注意をNVFP4量子化と疎性で高速化するカスタム推論カーネルVSQAを提案しFlashAttention比の高速化を示すが、対象は動画拡散モデルの生成パイプラインであり、LLM推論の注意機構への直接貢献は間接的なため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:24+00:00",
+      "last_checked_at": "2026-11-26T19:40:24+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "JetDiffusion: Pushing the Speed Limits of Video Generation with NVFP4 Sparse Attention"
+    },
+    "arXiv:2611.33741": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.33741",
+      "identity_tokens": [
+        "arXiv:2611.33741"
+      ],
+      "reason": "本番LLM APIの応答に検証可能な証明を付けるFlashProve-Nextで、FlashAttentionや接頭辞キャッシングを含むネイティブサービングを変更しない設計を採るが、主たる貢献はゼロ知識証明による検証可能性であり推論性能の機構ではないため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:24+00:00",
+      "last_checked_at": "2026-11-26T19:40:24+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlashProve-Next: Verifiable Inference for Production LLM APIs"
+    },
+    "arXiv:2611.33985": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.33985",
+      "identity_tokens": [
+        "arXiv:2611.33985"
+      ],
+      "reason": "3次元分子生成の八分木自己回帰モデルに投機的ツリーデコードとFlashAttention-2ベースの推測機構を組み込む内容で、デコード高速化の要素はあるが主目的は薬剤様分子の生成品質と速度であり、LLM推論への直接貢献は薄いため保留とする。",
+      "first_checked_at": "2026-11-26T19:40:24+00:00",
+      "last_checked_at": "2026-11-26T19:40:24+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MolGPAO: Molecular Generative Pre-trained Autoregressive Octree with Speculative Decoding and Sub-Millisecond Seam Healing for 3D Molecules"
     }
   }
 }

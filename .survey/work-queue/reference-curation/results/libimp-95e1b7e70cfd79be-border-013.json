@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95e1b7e70cfd79be-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.30412",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.30412",
+    "identity_tokens": [
+      "arXiv:2611.30412"
+    ],
+    "reason": "長時間エージェントの文脈増大に対し接頭辞キャッシュを意識した文脈圧縮でエージェントモデルの入力とコストを減らす内容で、推論コスト削減に関係するが手法の主体はエージェント層の文脈管理であり推論エンジン自体への貢献は薄いため保留とする。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-26T19:40:23+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search",
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DMC-5: Dual-Model Collaboration with Cache-aware Context Compression for Long-horizon Agents"
+  },
+  "processed_at": "2026-11-26T19:40:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95e1b7e70cfd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

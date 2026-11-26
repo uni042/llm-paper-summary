@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95e1b7e70cfd79be-unrel-020",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.30746",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.30746",
+    "identity_tokens": [
+      "arXiv:2611.30746"
+    ],
+    "reason": "リアルタイム量子Krylov対角化のショット配分とスペクトル再構成の統計手法であり、バッチは量子測定の単位であってLLM推論とは分野が異なるため対象外とする。",
+    "first_checked_at": "2026-11-26T19:40:23+00:00",
+    "last_checked_at": "2026-11-26T19:40:23+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "title": "Efficient Shot Allocation and Spectral Reconstruction for Real-Time Quantum Krylov Diagonalization"
+  },
+  "processed_at": "2026-11-26T19:40:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95e1b7e70cfd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

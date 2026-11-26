@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95e1b7e70cfd79be-border-019",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.30704",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.30704",
+    "identity_tokens": [
+      "arXiv:2611.30704"
+    ],
+    "reason": "自己回帰画像生成における生成順序が自己投機的デコード効率に与える影響を分析し順序最適化で高速化する内容で、投機的デコードの知見は含むが対象は画像生成であり、LLM推論への直接適用は示されていないため保留とする。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-26T19:40:23+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search",
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Speculate in the Right Order: Efficient Self-Speculative Decoding for Autoregressive Image Generation"
+  },
+  "processed_at": "2026-11-26T19:40:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95e1b7e70cfd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

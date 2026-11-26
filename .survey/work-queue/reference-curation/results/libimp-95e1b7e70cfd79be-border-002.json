@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95e1b7e70cfd79be-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.29915",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.29915",
+    "identity_tokens": [
+      "arXiv:2611.29915"
+    ],
+    "reason": "NVIDIA GB10でC2CメモリトラフィックをL2カウンタから計測する手法を提示しMistral 7Bのデコード読み取り量の実測も示すが、論文の主眼は特定ハードウェアのテレメトリ手法一般であり、LLM推論基盤の計測としての位置づけは限定的なため保留とする。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-26T19:40:23+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search",
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Measuring GPU Memory Traffic on the NVIDIA GB10 Without C2C Telemetry"
+  },
+  "processed_at": "2026-11-26T19:40:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95e1b7e70cfd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

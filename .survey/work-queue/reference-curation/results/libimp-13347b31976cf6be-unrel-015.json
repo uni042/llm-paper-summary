@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-13347b31976cf6be-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.31787",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.31787",
+    "identity_tokens": [
+      "arXiv:2611.31787"
+    ],
+    "reason": "科学論文の図から構造化データを復元するワークフローSciFig2Dataの研究であり、バッチ実行は文献処理の都合であってLLM推論システムの機構ではないため対象外とする。",
+    "first_checked_at": "2026-11-26T19:40:22+00:00",
+    "last_checked_at": "2026-11-26T19:40:22+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "title": "SciFig2Data: A Workflow for Recovering Structured Data from Scientific Figures"
+  },
+  "processed_at": "2026-11-26T19:40:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-13347b31976c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

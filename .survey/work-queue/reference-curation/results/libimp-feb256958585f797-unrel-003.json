@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-feb256958585f797-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.34618",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.34618",
+    "identity_tokens": [
+      "arXiv:2611.34618"
+    ],
+    "reason": "タイトル自体がComBatによるラジオミクス特徴量の調和のためのバッチ変数選択という医用画像分野の応用であることを明示しており、LLM推論システムとは無関係なためタイトル段階で除外する。",
+    "first_checked_at": "2026-11-26T19:40:24+00:00",
+    "last_checked_at": "2026-11-26T19:40:24+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "title": "Automated Batch-Variable Selection for ComBat-Based Radiomic Harmonization"
+  },
+  "processed_at": "2026-11-26T19:40:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-feb256958585",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

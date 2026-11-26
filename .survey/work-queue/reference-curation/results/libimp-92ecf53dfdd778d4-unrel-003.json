@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92ecf53dfdd778d4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.32013",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.32013",
+    "identity_tokens": [
+      "arXiv:2611.32013"
+    ],
+    "reason": "強化学習における批評家モデルの要否をバッチサイズ等との関係で分析する学習手法の研究であり、対象はPPO/GRPOの学習効率であって推論機構ではないため対象外とする。",
+    "first_checked_at": "2026-11-26T19:40:23+00:00",
+    "last_checked_at": "2026-11-26T19:40:23+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "title": "To Critic Or Not To Critic"
+  },
+  "processed_at": "2026-11-26T19:40:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92ecf53dfdd7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-13347b31976cf6be-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.30825",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.30825",
+    "identity_tokens": [
+      "arXiv:2611.30825"
+    ],
+    "reason": "文書をLoRAアダプタへ変換して再処理を避けるDoc-to-LoRAの適用可能性を分析しスループット測定も行うが、結論は質問応答精度と干渉の問題を指摘する否定的分析が中心で、推論システムへの技術的貢献は明確でないため保留とする。",
+    "first_checked_at": "2026-11-26T19:40:22+00:00",
+    "last_checked_at": "2026-11-26T19:40:22+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Doc-to-LoRA Analysis: Query Conditioning, Wrong Facts, and Distractor Interference"
+  },
+  "processed_at": "2026-11-26T19:40:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-13347b31976c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

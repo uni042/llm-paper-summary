@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-06e8fde8b4c5f1ac-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.34382",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.34382",
+    "identity_tokens": [
+      "arXiv:2611.34382"
+    ],
+    "reason": "有限体上の関数型バッチ符号に関する純粋数学の予想証明であり、バッチは符号理論の概念であってLLM推論のバッチ処理とは無関係であるため対象外とする。",
+    "first_checked_at": "2026-11-26T19:40:22+00:00",
+    "last_checked_at": "2026-11-26T19:40:22+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "title": "The Functional Batch Conjecture And Its Extension To All Finite Fields"
+  },
+  "processed_at": "2026-11-26T19:40:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-06e8fde8b4c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-13347b31976cf6be-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.31184",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.31184",
+    "identity_tokens": [
+      "arXiv:2611.31184"
+    ],
+    "reason": "動画拡散モデルの条件トークンを映像コーデックの冗長性で剪定しKVキャッシュモードのメモリを最大73％減らす内容だが、対象は動画生成モデルの条件付け効率化であり、LLM推論への直接貢献は間接的であるため保留とする。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-26T19:40:22+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search",
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On-Policy Codec Distillation for Efficient All-in-One Video Generation"
+  },
+  "processed_at": "2026-11-26T19:40:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-13347b31976c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

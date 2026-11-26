@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-06e8fde8b4c5f1ac-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.34313",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.34313",
+    "identity_tokens": [
+      "arXiv:2611.34313"
+    ],
+    "reason": "量子フォトニックニューラルネットワークのチップ間パラメータ転移を扱う研究であり、対象は量子光学デバイスの製造ばらつき補償であってLLM推論システムとは無関係であるため対象外とする。",
+    "first_checked_at": "2026-11-26T19:40:22+00:00",
+    "last_checked_at": "2026-11-26T19:40:22+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "title": "Cross-chip transfer in quantum photonic neural networks"
+  },
+  "processed_at": "2026-11-26T19:40:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-06e8fde8b4c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95e1b7e70cfd79be-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.30545",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.30545",
+    "identity_tokens": [
+      "arXiv:2611.30545"
+    ],
+    "reason": "テキスト画像生成モデルでバッチ構成やGPU種別がシード固定でも出力を変える非決定性を実測する内容で、生成推論の再現性計測としては関連するが対象は画像モデルであり、LLM推論基盤への直接貢献は薄いため保留とする。",
+    "first_checked_at": "2026-11-26T19:40:23+00:00",
+    "last_checked_at": "2026-11-26T19:40:23+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Reproducible by Seed? Not on GPUs: Batch-Dependent Non-Determinism in Text-to-Image Models"
+  },
+  "processed_at": "2026-11-26T19:40:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95e1b7e70cfd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

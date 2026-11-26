@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-feb256958585f797-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.32611",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.32611",
+    "identity_tokens": [
+      "arXiv:2611.32611"
+    ],
+    "reason": "タイトル自体がアゾベンゼン分子デバイスの光スイッチング性能という化学・材料分野の研究であることを明示しており、LLM推論システムとは無関係な異分野応用のためタイトル段階で除外する。",
+    "first_checked_at": "2026-11-26T19:40:24+00:00",
+    "last_checked_at": "2026-11-26T19:40:24+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "title": "Modulations of the photoswitching performances of azobenzene-based molecular devices by the π-conjugated spacers"
+  },
+  "processed_at": "2026-11-26T19:40:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-feb256958585",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

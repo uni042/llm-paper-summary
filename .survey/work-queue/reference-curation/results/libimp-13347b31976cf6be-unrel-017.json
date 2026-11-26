@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-13347b31976cf6be-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.31918",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.31918",
+    "identity_tokens": [
+      "arXiv:2611.31918"
+    ],
+    "reason": "3次元ガウシアンスプラッティングの描画と再構成を階層タイルで高速化するアーキテクチャであり、対象はグラフィクスの学習・描画であってLLM推論とは無関係であるため対象外とする。",
+    "first_checked_at": "2026-11-26T19:40:22+00:00",
+    "last_checked_at": "2026-11-26T19:40:22+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "title": "HiGS: A Hierarchical Architecture for Fast Differentiable 3D Gaussian Splatting"
+  },
+  "processed_at": "2026-11-26T19:40:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-13347b31976c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
