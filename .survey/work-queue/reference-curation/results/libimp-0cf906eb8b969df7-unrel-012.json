@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cf906eb8b969df7-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.11447",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.11447",
+    "identity_tokens": [
+      "arXiv:2412.11447"
+    ],
+    "reason": "DeDeはクラウドの資源配分最適化を分解で大規模化する手法であり、汎用最適化ソルバの高速化が主題でLLM推論サービングへの具体適用は確認できない。",
+    "first_checked_at": "2026-11-26T22:31:45+00:00",
+    "last_checked_at": "2026-11-26T22:31:45+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Decouple and Decompose: Scaling Resource Allocation with DeDe"
+  },
+  "processed_at": "2026-11-26T22:31:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cf906eb8b96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cf906eb8b969df7-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.02583",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.02583",
+    "identity_tokens": [
+      "arXiv:2405.02583"
+    ],
+    "reason": "人間と自律システムのチーミングにおける説明可能インタフェースのサーベイであり、HCI・信頼性の概説であって推論システム技術ではない。",
+    "first_checked_at": "2026-11-26T22:31:45+00:00",
+    "last_checked_at": "2026-11-26T22:31:45+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Explainable Interface for Human-Autonomy Teaming: A Survey"
+  },
+  "processed_at": "2026-11-26T22:31:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cf906eb8b96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

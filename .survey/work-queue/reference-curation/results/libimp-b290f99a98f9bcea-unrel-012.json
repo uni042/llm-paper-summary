@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b290f99a98f9bcea-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.23590",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.23590",
+    "identity_tokens": [
+      "arXiv:2505.23590"
+    ],
+    "reason": "ジグソーパズルを用いたルールベース視覚強化学習Jigsaw-R1の学習研究であり、LLM推論システムではない。",
+    "first_checked_at": "2026-11-26T22:31:46+00:00",
+    "last_checked_at": "2026-11-26T22:31:46+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Jigsaw-R1: A Study of Rule-based Visual Reinforcement Learning with Jigsaw Puzzles"
+  },
+  "processed_at": "2026-11-26T22:31:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b290f99a98f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

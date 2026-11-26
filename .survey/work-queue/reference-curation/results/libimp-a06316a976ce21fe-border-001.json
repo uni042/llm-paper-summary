@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a06316a976ce21fe-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.17273",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.17273",
+    "identity_tokens": [
+      "arXiv:2604.17273"
+    ],
+    "reason": "セッションをまたいでモデルの理解を持ち越すContinuity Layerの必要性を論じるポジションペーパーで、LLMのコンテキスト・メモリ管理とは関連するが、具体的な推論システム機構や評価が一次要旨で示されておらず貢献は概念段階にとどまる。",
+    "first_checked_at": "2026-11-26T22:31:46+00:00",
+    "last_checked_at": "2026-11-26T22:31:46+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Continuity Layer: Why Intelligence Needs an Architecture for What It Carries Forward"
+  },
+  "processed_at": "2026-11-26T22:31:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a06316a976ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

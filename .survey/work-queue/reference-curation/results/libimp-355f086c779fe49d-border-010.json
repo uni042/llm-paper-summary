@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-355f086c779fe49d-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.20182",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.20182",
+    "identity_tokens": [
+      "arXiv:2505.20182"
+    ],
+    "reason": "強モデルと弱モデルの協調によりリポジトリ規模コード生成のコストを40%削減する経験的研究で、推論コスト配分の観点では関連するが、対象はコード生成タスクの協調戦略の比較であり、推論システム自体への技術的貢献は限定的である。",
+    "first_checked_at": "2026-11-26T22:31:46+00:00",
+    "last_checked_at": "2026-11-26T22:31:46+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Empirical Study on Strong-Weak Model Collaboration for Repo-level Code Generation"
+  },
+  "processed_at": "2026-11-26T22:31:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-355f086c779f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

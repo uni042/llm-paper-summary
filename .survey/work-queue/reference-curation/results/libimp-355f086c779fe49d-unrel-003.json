@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-355f086c779fe49d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2201.11115",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2201.11115",
+    "identity_tokens": [
+      "arXiv:2201.11115"
+    ],
+    "reason": "チェコ語の自動ファクトチェック用データセットCsFEVER等の構築手法を報告するデータ資源論文であり、LLM推論システムへの技術的貢献は一次要旨に確認できない。",
+    "first_checked_at": "2026-11-26T22:31:46+00:00",
+    "last_checked_at": "2026-11-26T22:31:46+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "CsFEVER and CTKFacts: acquiring Czech data for fact verification"
+  },
+  "processed_at": "2026-11-26T22:31:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-355f086c779f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

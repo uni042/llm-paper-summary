@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-73767a524cb458e4-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.06377",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.06377",
+    "identity_tokens": [
+      "arXiv:2604.06377"
+    ],
+    "reason": "線形部分空間の整列により事後学習済み能力をモデル間で転移させるMaster Key仮説／UNLOCKの研究で、対象は能力転移のモデル編集であり、LLM推論システムへの貢献は一次要旨に確認できない。",
+    "first_checked_at": "2026-11-26T22:31:46+00:00",
+    "last_checked_at": "2026-11-26T22:31:46+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "The Master Key Hypothesis: Unlocking Cross-Model Capability Transfer via Linear Subspace Alignment"
+  },
+  "processed_at": "2026-11-26T22:31:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-73767a524cb4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cf906eb8b969df7-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.14827",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.14827",
+    "identity_tokens": [
+      "arXiv:2409.14827"
+    ],
+    "reason": "AIM 2024の動画顕著性予測チャレンジの方法と結果の報告であり、視覚顕著性タスクのコンペ報告であってLLM推論とは無関係である。",
+    "first_checked_at": "2026-11-26T22:31:45+00:00",
+    "last_checked_at": "2026-11-26T22:31:45+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "AIM 2024 Challenge on Video Saliency Prediction: Methods and Results"
+  },
+  "processed_at": "2026-11-26T22:31:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cf906eb8b96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

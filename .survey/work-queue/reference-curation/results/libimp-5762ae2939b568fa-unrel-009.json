@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5762ae2939b568fa-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.16631",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.16631",
+    "identity_tokens": [
+      "arXiv:2601.16631"
+    ],
+    "reason": "タイトルが細胞核パノプティックセグメンテーションという病理画像解析応用を明示しており、LLM推論システムの対象外であるためタイトル段階で除外した。",
+    "first_checked_at": "2026-11-26T22:31:46+00:00",
+    "last_checked_at": "2026-11-26T22:31:46+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "PanopMamba: Vision State Space Modeling for Nuclei Panoptic Segmentation"
+  },
+  "processed_at": "2026-11-26T22:31:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5762ae2939b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

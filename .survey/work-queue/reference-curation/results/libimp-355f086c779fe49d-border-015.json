@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-355f086c779fe49d-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icra57385.2026.11697598",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icra57385.2026.11697598",
+    "identity_tokens": [
+      "DOI:10.1109/icra57385.2026.11697598"
+    ],
+    "reason": "ROS 2上でVLAモデルのトークンをストリーミングし連続動作実行につなぐStream-to-Actで推論インターフェースの直列化オーバーヘッドと計画待ちの停滞を減らすとするが、対象はロボット制御パイプラインへの統合が主であり、LLM推論システムとしての汎用貢献は限定的である。",
+    "first_checked_at": "2026-11-26T22:31:46+00:00",
+    "last_checked_at": "2026-11-26T22:31:46+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Stream-to-Act: ROS 2 Native Token Streaming for Continuous Motion Execution of Vision-Language-Action Models"
+  },
+  "processed_at": "2026-11-26T22:31:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-355f086c779f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T22:28:18+00:00",
-  "record_count": 9980,
+  "updated_at": "2026-11-26T22:31:47+00:00",
+  "record_count": 9996,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -152630,6 +152630,246 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Adaptive Frequency Filters As Efficient Global Token Mixers"
+    },
+    "arXiv:2406.13692": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.13692",
+      "identity_tokens": [
+        "arXiv:2406.13692"
+      ],
+      "reason": "SynCheckはデコード過程の尤度や不確実性等のダイナミクスを用いる軽量な忠実性モニタで、デコード時に動作する点は推論過程と関わるが、目的はRAG出力の信頼性監視であり推論効率の改善機構ではないため境界とした。",
+      "first_checked_at": "2026-11-26T22:31:45+00:00",
+      "last_checked_at": "2026-11-26T22:31:45+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Synchronous Faithfulness Monitoring for Trustworthy Retrieval-Augmented Generation"
+    },
+    "arXiv:2311.17972": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.17972",
+      "identity_tokens": [
+        "arXiv:2311.17972"
+      ],
+      "reason": "Self-Infillingは自己回帰デコードにインフィリング操作を組み込むコード生成のデコード枠組みであり、デコード手順自体の拡張ではあるが目的は生成能力の拡張で推論効率の改善は要旨で確認できないため境界とした。",
+      "first_checked_at": "2026-11-26T22:31:45+00:00",
+      "last_checked_at": "2026-11-26T22:31:45+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Self-Infilling Code Generation"
+    },
+    "arXiv:2505.20182": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.20182",
+      "identity_tokens": [
+        "arXiv:2505.20182"
+      ],
+      "reason": "強モデルと弱モデルの協調によりリポジトリ規模コード生成のコストを40%削減する経験的研究で、推論コスト配分の観点では関連するが、対象はコード生成タスクの協調戦略の比較であり、推論システム自体への技術的貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Empirical Study on Strong-Weak Model Collaboration for Repo-level Code Generation"
+    },
+    "DOI:10.1109/iccea69962.2026.11743571": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccea69962.2026.11743571",
+      "identity_tokens": [
+        "DOI:10.1109/iccea69962.2026.11743571"
+      ],
+      "reason": "クロスモーダル意味情報を用いた視覚トークン選択CVTSにより視覚トークンを30%まで削減し推論時のメモリとプリフィル遅延を下げるとするが、主目的は視覚言語モデルのタスク精度維持であり、サービングシステムとしての機構や評価は一次要旨の範囲では薄い。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CVTS: Utilize Cross-Modal Information for Vision Token Selection"
+    },
+    "DOI:10.1109/icra57385.2026.11697598": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icra57385.2026.11697598",
+      "identity_tokens": [
+        "DOI:10.1109/icra57385.2026.11697598"
+      ],
+      "reason": "ROS 2上でVLAモデルのトークンをストリーミングし連続動作実行につなぐStream-to-Actで推論インターフェースの直列化オーバーヘッドと計画待ちの停滞を減らすとするが、対象はロボット制御パイプラインへの統合が主であり、LLM推論システムとしての汎用貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Stream-to-Act: ROS 2 Native Token Streaming for Continuous Motion Execution of Vision-Language-Action Models"
+    },
+    "DOI:10.1145/3813723.3813735": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3813723.3813735",
+      "identity_tokens": [
+        "DOI:10.1145/3813723.3813735"
+      ],
+      "reason": "Fat-TreeやDragonfly等の計算力ネットワークトポロジとGPipe・Megatron-LM等の分散学習アルゴリズムを総説するもので、分散基盤とは関連するが、LLM推論システムへの直接の技術的貢献を示す内容は一次要旨で確認できない。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Review of Research on Computing Power Network Topologies"
+    },
+    "DOI:10.18653/v1/2026.acl-long.1028": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1028",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1028"
+      ],
+      "reason": "教室意見進化認識向けに多タスクカスケード枠組みMECHを提案し精度・コスト・データのトレードオフを扱うが、カスケードの対象は教育ドメインの分類タスクであり、推論システム一般への貢献は一次要旨の範囲では薄い。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MECH: A Cost-Effective Multi-Task Cascade Framework for Classroom Opinion Evolution Recognition"
+    },
+    "DOI:10.23919/date69613.2026.11539401": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/date69613.2026.11539401",
+      "identity_tokens": [
+        "DOI:10.23919/date69613.2026.11539401"
+      ],
+      "reason": "ARMv9のSMEを用いたGEMM最適化KirbyMMでキャッシュ効率の良いデータパッキング等により行列積を高速化するが、対象は汎用HPCのGEMMであり、LLM推論での評価や推論特化の適用は一次要旨で確認できないため境界とする。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KirbyMM: Outer-Product Based Matrix Multiplication on ARMv9 Processor"
+    },
+    "arXiv:2602.07663": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07663",
+      "identity_tokens": [
+        "arXiv:2602.07663"
+      ],
+      "reason": "LLMサービングやGPUスケジューリングを応用先に挙げ、量子化や並列度などの構成選択とアドミッション制御をオンライン最適化として定式化するが、一次要旨では汎用の理論的枠組みと後悔 bound が中心で、LLMサービング実システムでの評価が確認できず、推論システムへの貢献は間接的である。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Two-Layer Framework for Joint Online Configuration Selection and Admission Control"
+    },
+    "arXiv:2602.13479": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.13479",
+      "identity_tokens": [
+        "arXiv:2602.13479"
+      ],
+      "reason": "ウェアラブル向けTextVQAでオンデバイスの高解像度OCRと低解像度映像ストリーミングを組み合わせ消費電力を半減させるハイブリッド構成を提案するが、主目的はウェアラブルVQAアプリケーションの実現であり、LLM推論システムへの汎用的な貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GLIMPSE : Real-Time Text Recognition and Contextual Understanding for VQA in Wearables"
+    },
+    "arXiv:2603.20217": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20217",
+      "identity_tokens": [
+        "arXiv:2603.20217"
+      ],
+      "reason": "報酬モデルの期待報酬予測を用いて推論時にプロンプトをモデルへルーティングし計算コストを制御する手法で、モデルルーティングというサービング関連の要素はあるが、中心は報酬予測の精度検証であり推論基盤の機構としての新規性は一次要旨では弱い。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Expected Reward Prediction, with Applications to Model Routing"
+    },
+    "arXiv:2603.25097": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.25097",
+      "identity_tokens": [
+        "arXiv:2603.25097"
+      ],
+      "reason": "知識グラフとベクトルストアを統合したエージェント向け認知ランタイムElephantBrokerで、予算制約付きコンテキスト組み立てや圧縮を含むとするが、中心はエージェントメモリの信頼性・安全性であり、LLM推論効率への技術的貢献は一次要旨では不明瞭である。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ElephantBroker: A Knowledge-Grounded Cognitive Runtime for Trustworthy AI Agents"
+    },
+    "arXiv:2604.17273": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.17273",
+      "identity_tokens": [
+        "arXiv:2604.17273"
+      ],
+      "reason": "セッションをまたいでモデルの理解を持ち越すContinuity Layerの必要性を論じるポジションペーパーで、LLMのコンテキスト・メモリ管理とは関連するが、具体的な推論システム機構や評価が一次要旨で示されておらず貢献は概念段階にとどまる。",
+      "first_checked_at": "2026-11-26T22:31:46+00:00",
+      "last_checked_at": "2026-11-26T22:31:46+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Continuity Layer: Why Intelligence Needs an Architecture for What It Carries Forward"
+    },
+    "DOI:10.1145/3706628.3708870": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3706628.3708870",
+      "identity_tokens": [
+        "DOI:10.1145/3706628.3708870"
+      ],
+      "reason": "AMD AI Engine向けのMLIRベースコンパイルフローARIESはAIアクセラレータ向けコンパイラ最適化として推論カーネル生成と関連するが、要旨ではLLM推論への具体的な適用や評価が示されず汎用AIチップ向けのため境界とした。",
+      "first_checked_at": "2026-11-26T22:31:47+00:00",
+      "last_checked_at": "2026-11-26T22:31:47+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ARIES: An Agile MLIR-Based Compilation Flow for Reconfigurable Devices with AI Engines"
+    },
+    "arXiv:2502.15771": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.15771",
+      "identity_tokens": [
+        "arXiv:2502.15771"
+      ],
+      "reason": "フィードバック利用をテスト時最適化として定式化するFTTTはLLMのテスト時計算に関わるが、目的は課題成功率の改善であり推論システムのスループットやレイテンシ効率化の機構は要旨で確認できないため境界とした。",
+      "first_checked_at": "2026-11-26T22:31:47+00:00",
+      "last_checked_at": "2026-11-26T22:31:47+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning to Reason from Feedback at Test-Time"
+    },
+    "DOI:10.1109/hpca61900.2025.00114": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca61900.2025.00114",
+      "identity_tokens": [
+        "DOI:10.1109/hpca61900.2025.00114"
+      ],
+      "reason": "TidalMeshはメッシュトポロジ向けのAllReduce集合通信をトポロジ駆動で最適化し推論を含む深層学習ワークロードを対象とするが、LLM推論特有の通信スケジューリングや評価は要旨で具体化されていないため境界とした。",
+      "first_checked_at": "2026-11-26T22:31:47+00:00",
+      "last_checked_at": "2026-11-26T22:31:47+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TidalMesh: Topology-Driven AllReduce Collective Communication for Mesh Topology"
     }
   }
 }

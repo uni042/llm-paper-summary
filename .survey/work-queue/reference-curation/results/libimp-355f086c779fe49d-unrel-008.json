@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-355f086c779fe49d-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2103.01148",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2103.01148",
+    "identity_tokens": [
+      "arXiv:2103.01148"
+    ],
+    "reason": "クラス平均を用いる早期終了手法E2CMをMobileNetやResNet等の画像分類ネットワークで評価する研究で、対象は汎用分類モデルの学習・推論であり、LLM推論システムへの具体的適用は一次要旨に確認できない。",
+    "first_checked_at": "2026-11-26T22:31:46+00:00",
+    "last_checked_at": "2026-11-26T22:31:46+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "E2CM: Early Exit via Class Means for Efficient Supervised and Unsupervised Learning"
+  },
+  "processed_at": "2026-11-26T22:31:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-355f086c779f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
