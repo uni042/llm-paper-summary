@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c3d05-b01::chunk-0001-of-0002",
+  "reference_main_sha": "bca22497f6e6a05536b4d4628485348ccdc21381",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460984",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11460984"
+      ],
+      "title": "AdaPrune: A Two-Stage Filter-Select Methods for Visual Token Pruning In Specialized VLMs",
+      "reason": "専門VLM向けに学習不要のFilter-Select型視覚トークンプルーニングAdaPruneを提案し、関連性で候補を絞ってから多様性で選択することで視覚トークン数を減らしVLM推論の計算量削減に直接寄与する。",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11460984",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.383",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.383"
+      ],
+      "title": "InferenceDynamics: Adaptive LLM Routing through Structured Capability and Knowledge Profiling",
+      "reason": "モデルの能力・知識プロファイルに基づくInferenceDynamicsというLLMルーティング枠組みを提案し、クエリごとに性能とコストを両立するモデルを選ぶ推論サービング層の技術である。",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.383",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 404
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.32629/jai.v7i5.1331",
+      "identity_tokens": [
+        "DOI:10.32629/jai.v7i5.1331"
+      ],
+      "title": "Automatic text summarization of scientific articles using transformers—A brief review",
+      "reason": "科学論文の自動テキスト要約手法のレビューであり、対象は要約というNLP応用そのもので、推論・デコード・サービングの効率化機構は扱われていない。",
+      "source_url": "https://doi.org/10.32629/jai.v7i5.1331",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 404
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TASLP.2023.3316459",
+      "identity_tokens": [
+        "DOI:10.1109/TASLP.2023.3316459"
+      ],
+      "title": "Multi-Document Summarization Using Selective Attention Span and Reinforcement Learning",
+      "reason": "強化学習付き選択的注意による複数文書要約モデルREISAの提案で、要約品質の改善が目的であり推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.1109/TASLP.2023.3316459",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.327",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.327"
+      ],
+      "title": "Tree-Structured Non-Autoregressive Decoding for Sequence-to-Sequence Text Generation",
+      "reason": "逐次生成のレイテンシを下げるため構文木をトップダウンに展開する木構造非自己回帰デコードTNADを提案し、層内並列生成で推論効率と品質の両立を狙うデコード方式である。",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.327",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1148",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.1148"
+      ],
+      "title": "AED-RAG: Continuous Multi-Granular Context Fusion for Retrieval-Augmented Generation via Adaptive Ensemble Decoding",
+      "reason": "RAGにおける粒度不一致へ適応的アンサンブルデコードで対処するAED-RAGだが、主目的は検索証拠と内部知識の融合による生成品質であり、推論システムとしての効率貢献は副次的である。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1148",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.199",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.199"
+      ],
+      "title": "Dual-Reasoner: Bridging Interleaved Atomicity and Streaming Latency via Thinking-while-Talking",
+      "reason": "思考しながらの発話で生じるストリーミングレイテンシに対し、Streaming Masking Mechanismを持つDual-Reasonerで音声ストリーミングを途切れさせず思考ブロックを整列させる、推論時レイテンシへの直接の機構である。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.199",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.13391",
+      "identity_tokens": [
+        "arXiv:2310.13391"
+      ],
+      "title": "Learning Successor Features with Distributed Hebbian Temporal Memory",
+      "reason": "非定常な部分観測環境でのオンライン系列学習のための分散Hebbian時間メモリと後継特徴の学習であり、神経科学に着想を得た学習アルゴリズムであってLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2310.13391",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.20275",
+      "identity_tokens": [
+        "arXiv:2503.20275"
+      ],
+      "title": "Survey of Disaggregated Memory: Cross-Layer Technique Insights for Next-Generation Datacenters",
+      "reason": "データセンター向け分離メモリのハード・ソフト横断サーベイで、階層メモリやリソース配分の論点は推論基盤と関連するが、LLM推論システムへの具体的な機構や評価は示されていない。",
+      "source_url": "https://arxiv.org/abs/2503.20275",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.22621",
+      "identity_tokens": [
+        "arXiv:2509.22621"
+      ],
+      "title": "IA2: Alignment with ICL Activations Improves Supervised Fine-Tuning",
+      "reason": "ICLの活性化パターンを用いてSFTの品質を改善するIA2の提案であり、目的は学習時のアライメント改善で、推論計算への言及は動機付けに留まる。",
+      "source_url": "https://arxiv.org/abs/2509.22621",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21465",
+      "identity_tokens": [
+        "arXiv:2505.21465"
+      ],
+      "title": "ID-Align: RoPE-Conscious Position Remapping for Dynamic High-Resolution Adaptation in Vision-Language Models",
+      "reason": "高解像度画像とサムネイルの位置IDを並べ替えるID-AlignによるVLMの性能向上であり、トークン間相互作用の改善が目的で推論効率やサービングの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2505.21465",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 403
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02713",
+      "identity_tokens": [
+        "arXiv:2506.02713"
+      ],
+      "title": "Open-Set Living Need Prediction with Large Language Models",
+      "reason": "生活サービスプラットフォームでの生活ニーズ予測をLLMでオープンセット分類として解く応用研究であり、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2506.02713",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 403
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2023.11.05.565662",
+      "identity_tokens": [
+        "DOI:10.1101/2023.11.05.565662"
+      ],
+      "title": "On prefrontal working memory and hippocampal episodic memory: Unifying memories stored in weights and activity slots",
+      "reason": "前頭前野ワーキングメモリと海馬エピソード記憶を重みと活動スロットで統一する認知神経科学の理論研究であり、機械学習の推論システムではない。",
+      "source_url": "https://doi.org/10.1101/2023.11.05.565662",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 490
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/SP61157.2025.00175",
+      "identity_tokens": [
+        "DOI:10.1109/SP61157.2025.00175"
+      ],
+      "title": "SHARK: Actively Secure Inference Using Function Secret Sharing",
+      "reason": "関数秘密分散を用いた能動的安全な二者間機械学習推論プロトコルSHARKを提案し、相関ランダムネスの量や通信・ラウンド数を抑えるプライバシー保護推論の直接の技術である。",
+      "source_url": "https://doi.org/10.1109/SP61157.2025.00175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3718958.3750513",
+      "identity_tokens": [
+        "DOI:10.1145/3718958.3750513"
+      ],
+      "title": "SkeletonHunter: Diagnosing and Localizing Network Failures in Containerized Large Model Training",
+      "reason": "コンテナ化された大規模モデル学習におけるネットワーク障害の診断・局所化ツールSkeletonHunterであり、対象は学習基盤の運用であって推論ではない。",
+      "source_url": "https://doi.org/10.1145/3718958.3750513",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1266",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.1266"
+      ],
+      "title": "Tool learning via Inference-time Scaling and Cycle Verifier",
+      "reason": "推論時スケーリングとサイクル検証を用いるが、本体の貢献はクエリ無しでのツール学習用CoTデータ合成であり、推論システムの実行機構ではないため境界とする。",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.1266",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.615",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.615"
+      ],
+      "title": "Leveraging High-Resource English Corpora for Cross-lingual Domain Adaptation in Low-Resource Japanese Medicine via Continued Pre-training",
+      "reason": "低リソース日本語医療ドメインへの継続事前学習によるクロスリンガル適応の研究であり、学習データ混合の検討であって推論ではない。",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.615",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.133",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.133"
+      ],
+      "title": "Where CoT Reasoning Commits: Entropy Traces Identify Interpretable Attention Heads",
+      "reason": "CoT生成中の注意ヘッドのエントロピー推移を追跡する解釈可能性の分析であり、推論を高速化・効率化する機構は提案されていない。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.133",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.511",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.511"
+      ],
+      "title": "A Reward-Guided Dual-Phase Framework for Adaptive Inference-Time Reasoning",
+      "reason": "報酬誘導の二相枠組みで推論時ツリー探索の計画と実行を分けるが、主目的は推論精度の向上であり、サービングやデコード効率への具体的貢献は限定的である。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.511",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.11145",
+      "identity_tokens": [
+        "arXiv:2509.11145"
+      ],
+      "title": "Text2Mem: A Unified Memory Operation Language for Memory Operating System",
+      "reason": "LLMエージェントのメモリ操作を統一する言語Text2Memとその実行仕様の提案で、エージェントのメモリ管理には関連するが、推論サービングやKVキャッシュ等の推論システム機構ではない。",
+      "source_url": "https://arxiv.org/abs/2509.11145",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 490
+    }
+  ],
+  "parent_run_key": "muse-20261126-c3d05-b01",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 40
+}

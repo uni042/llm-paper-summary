@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-cce39e730a00b5e2-border-014",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1109/TCSII.2025.3585109",
+  "reason": "Transformer向けハードウェアでsoftmaxやGELU等の非線形関数近似を逐次近似で低複雑度化し再構成可能に実装する設計であり、推論アクセラレータの要素技術ではあるが対象はBERT規模の回路設計でLLM推論システム全体への貢献は限定的なため境界とする。",
+  "title": "A Low-Complexity and Reconfigurable Design for Nonlinear Function Approximation in Transformers",
+  "identity_tokens": [
+    "DOI:10.1109/TCSII.2025.3585109"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cce39e730a00",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

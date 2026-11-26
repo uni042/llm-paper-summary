@@ -1,0 +1,287 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c3d03-b01::chunk-0002-of-0002",
+  "reference_main_sha": "bca22497f6e6a05536b4d4628485348ccdc21381",
+  "record_count": 16,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.21038",
+      "identity_tokens": [
+        "arXiv:2504.21038"
+      ],
+      "title": "Bypassing Safety Alignment via API Design: A Systematic Risk Analysis of Response Prefill in LLM Systems",
+      "reason": "応答プリフィル機能を悪用するプリフィル型ジェイルブレイクの体系的リスク分析であり、API設計の安全性研究で推論システムの効率機構ではない。",
+      "source_url": "https://arxiv.org/abs/2504.21038",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 427
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.06783",
+      "identity_tokens": [
+        "arXiv:2510.06783"
+      ],
+      "title": "TTRV: Test-Time Reinforcement Learning for Vision Language Models",
+      "reason": "テスト時にラベルなしでGRPO系適応を行うTTRVはVLMの理解精度を上げる学習手法であり、推論システムの実行機構への貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2510.06783",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 427
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IMCEC66174.2025.11332063",
+      "identity_tokens": [
+        "DOI:10.1109/IMCEC66174.2025.11332063"
+      ],
+      "title": "Automated Testing System and Method for Intelligent Computing Chips Based on Large Language Model Interaction",
+      "reason": "LLM対話で集積回路チップの自動テストAPIコードを生成するシステムであり、チップテスト業務の自動化応用でLLM推論システムは対象でない。",
+      "source_url": "https://doi.org/10.1109/IMCEC66174.2025.11332063",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 406
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461622",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11461622"
+      ],
+      "title": "Tpeformer: Temporal Patch Embedding Transformer",
+      "reason": "ResNetとMamba2位置符号化を用いるTpeformerはマルチモーダル感情認識モデルであり、感情認識応用で推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11461622",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 406
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461757",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11461757"
+      ],
+      "title": "Grey-Box Prompt Tuning With Graph Alignment for Speech-Language Models",
+      "reason": "音声言語モデルの下流適応を軽量に行うグレイーボックス・プロンプトチューニングの研究であり、適応コストの話はあっても推論サービング機構ではない。",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11461757",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 406
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/2026.emnlp-main.2278",
+      "identity_tokens": [
+        "DOI:10.18653/2026.emnlp-main.2278"
+      ],
+      "title": "STIR: Self-Distilled Latent Tools for Dynamic Control of LLM Reasoning",
+      "reason": "推論時に状態条件付き補正ベクトルを検索し短い先読みで検証するSTIRはテスト時推論制御の枠組みだが、狙いは推論精度と生成長の分離でありサービング効率の機構・計測はないため境界とする。",
+      "source_url": "https://doi.org/10.18653/2026.emnlp-main.2278",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 407
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.969",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.969"
+      ],
+      "title": "Linear Steerability in Language Models: When It Emerges and How It Evolves",
+      "reason": "線形ステアラビリティが学習のどの段階で出現するかを解析した表現介入の研究であり、解釈可能性の分析で推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.969",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 407
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.123",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.123"
+      ],
+      "title": "Temporal Token Matters: Investigating and Interpreting the Consistency of Temporal Ordering in Large Language Models",
+      "reason": "時間順序の一貫性に関するLLM内部機構を調べた解釈可能性研究であり、時間推論能力の分析で推論システム機構は扱わない。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.123",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 407
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1301",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.1301"
+      ],
+      "title": "Do Transformers Grok Succinct Algorithms? Mechanistic Evidence for Counting Circuits",
+      "reason": "Transformerが簡潔な数え上げ回路へgrokするかをLargeCounterで検証した機構的解釈可能性の研究であり、推論システムへの適用は示されない。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1301",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 408
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.24963/ijcai.2026/627",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/627"
+      ],
+      "title": "Mapping the Efficiency Landscape of Small Language Models",
+      "reason": "70超の小規模言語モデルをエネルギー・性能・スケーリングで体系比較しエッジ配置のトレードオフを示す計測研究だが、推論システムの新機構は提案しないため境界とする。",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/627",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 408
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.01293",
+      "identity_tokens": [
+        "arXiv:2205.01293"
+      ],
+      "title": "A Survey of Deep Learning Models for Structural Code Understanding",
+      "reason": "構造的コード理解の深層学習モデルを系列系とグラフ系に整理したサーベイであり、ソフトウェア工学分野の概観でLLM推論システムは対象でない。",
+      "source_url": "https://arxiv.org/abs/2205.01293",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 409
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.16119",
+      "identity_tokens": [
+        "arXiv:2312.16119"
+      ],
+      "title": "A Bi-Objective $\\epsilon $-Constrained Framework for Quality-Cost Optimization in Language Model Ensembles",
+      "reason": "複数オープンLLMのアンサンブルを品質‐コスト双目的のナップサック問題として予算内で選ぶ枠組みで推論コスト最適化に触れるが、サービング実行機構ではなくモデル選択層の最適化のため境界とする。",
+      "source_url": "https://arxiv.org/abs/2312.16119",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 409
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.17803",
+      "identity_tokens": [
+        "arXiv:2406.17803"
+      ],
+      "title": "Understanding the Role of User Profile in the Personalization of Large Language Models",
+      "reason": "ユーザープロファイルがLLMのパーソナライゼーションに効く要因を分析した研究であり、個人化の機構分析で推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2406.17803",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.06328",
+      "identity_tokens": [
+        "arXiv:2409.06328"
+      ],
+      "title": "Extracting Paragraphs from LLM Token Activations",
+      "reason": "二重改行トークンの活性化から段落内容が読み取れるかを調べた内部表現の研究であり、解釈可能性が主題で推論システム機構ではない。",
+      "source_url": "https://arxiv.org/abs/2409.06328",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.07123",
+      "identity_tokens": [
+        "arXiv:2601.07123"
+      ],
+      "title": "ENTRA: Entropy-Based Redundancy Avoidance in Large Language Model Reasoning",
+      "reason": "エントロピーベースの冗余報酬で推論チェーンの冗長生成を抑え出力長を37–53%削減するENTRAは推論コスト削減に直結するが、強化学習による学習側手法であり実行時システム機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2601.07123",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06973",
+      "identity_tokens": [
+        "arXiv:2602.06973"
+      ],
+      "title": "Does Visual Rendering Bypass Tokenization? Investigating Script-Tokenizer Misalignment in Pixel-Based Language Models",
+      "reason": "ピクセルベース言語モデルで視覚レンダリングとトークナイザの不整合を低資源言語で評価した研究であり、トークン化の言語学的分析で推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2602.06973",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 411
+    }
+  ],
+  "parent_run_key": "muse-20261126-c3d03-b01",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 36
+}

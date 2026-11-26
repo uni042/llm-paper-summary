@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c3d04-b01::chunk-0003-of-0003",
+  "reference_main_sha": "bca22497f6e6a05536b4d4628485348ccdc21381",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.09028",
+      "identity_tokens": [
+        "arXiv:2611.09028"
+      ],
+      "title": "Scout Before You Route: Predicting Task Success and Token Count from a Small LLM Prefill",
+      "reason": "小さな凍結LLMのプリフィル活性から候補モデルの成功確率と出力長を予測してルーティングするScoutにより、精度を揃えた条件で支出を9〜33%削減できることを一次要旨で具体的に示しており、プリフィルを用いた推論コスト最適化とモデルルーティングへの直接貢献が確認できるため。",
+      "source_url": "https://arxiv.org/abs/2611.09028",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 425
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/brx2.70050",
+      "identity_tokens": [
+        "DOI:10.1002/brx2.70050"
+      ],
+      "title": "Text‐to‐image generation method based on cognitive‐inspired bidirectional attention mechanisms",
+      "reason": "人間の視覚系に着想した双方向注意でtext-to-image拡散モデルの生成品質を高める画像生成手法であり、注意機構は生成モデルの内部改良であってLLM推論システムへの貢献はないため。",
+      "source_url": "https://doi.org/10.1002/brx2.70050",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/sys.70060",
+      "identity_tokens": [
+        "DOI:10.1002/sys.70060"
+      ],
+      "title": "Systems Engineering of Adaptive AI Inference Orchestration Across Heterogeneous Accelerators",
+      "reason": "異種アクセラレータ間の適応的AI推論オーケストレーションを標榜しコスト70%削減等を主張するが、一次要旨の内容はINCOSEライフサイクルや階層分解といったシステムズエンジニアリングの過程論が中心で、推論実行の具体的な機構が不明瞭なため。",
+      "source_url": "https://doi.org/10.1002/sys.70060",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CACML68972.2026.11507104",
+      "identity_tokens": [
+        "DOI:10.1109/CACML68972.2026.11507104"
+      ],
+      "title": "Airborne Software Requirements Generation Method Based on Memory-Enhanced Graph RAG",
+      "reason": "知識グラフと専門家の記憶を組み合わせたGraph RAGで航空機搭載ソフトウェアの要求生成を行う応用研究であり、LLM推論システムへの貢献はないため。",
+      "source_url": "https://doi.org/10.1109/CACML68972.2026.11507104",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CAIBDA70336.2026.11621826",
+      "identity_tokens": [
+        "DOI:10.1109/CAIBDA70336.2026.11621826"
+      ],
+      "title": "Accelerating Radix Sort on AI Accelerators via Vector–Matrix Multiplication Units",
+      "reason": "AIアクセラレータのベクトル・行列積ユニットへ基数ソートのプレフィックス和を写像するカーネル最適化であり、対象はソート基盤処理でLLM推論ワークロードへの適用は要旨に示されていないため。",
+      "source_url": "https://doi.org/10.1109/CAIBDA70336.2026.11621826",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CGO68049.2026.11395229",
+      "identity_tokens": [
+        "DOI:10.1109/CGO68049.2026.11395229"
+      ],
+      "title": "Multidirectional Propagation of Sparsity Information across Tensor Slices",
+      "reason": "テンソルコンパイラTACOにスライス単位の疎性伝播解析を導入し冗長計算とメモリを削減する静的解析であり、推論実行効率に接続しうるコンパイラ最適化だが、LLM推論への直接の適用や評価は一次要旨に示されていないため。",
+      "source_url": "https://doi.org/10.1109/CGO68049.2026.11395229",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582794",
+      "identity_tokens": [
+        "DOI:10.1109/CSCWD68734.2026.11582794"
+      ],
+      "title": "A Human–Machine Collaborative Tuning Framework for Triton Kernel Optimization on SIMD Platforms",
+      "reason": "SIMD CPU上でTritonカーネルの自動チューニングへ人間の最適化意図を組み込む協調フレームワークで平均31.7%の性能改善を示すが、対象は汎用カーネル調整でありLLM推論ワークロードでの評価は一次要旨にないため。",
+      "source_url": "https://doi.org/10.1109/CSCWD68734.2026.11582794",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CVPRF71909.2026.00293",
+      "identity_tokens": [
+        "DOI:10.1109/CVPRF71909.2026.00293"
+      ],
+      "title": "Generalized Neighborhood Attention: Multi-Dimensional Sparse Attention at the Speed of Light",
+      "reason": "Hopper/Blackwell向けに汎化近傍注意GNAの疎注意カーネル基盤を実装しFP16で最大1.3 PFLOPS級の処理を示す注意カーネルの貢献を含むが、適用・評価先はCosmosやFLUX等の視覚生成モデルでありLLM推論での検証は要旨に示されていないため。",
+      "source_url": "https://doi.org/10.1109/CVPRF71909.2026.00293",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICC59461.2026.11587641",
+      "identity_tokens": [
+        "DOI:10.1109/ICC59461.2026.11587641"
+      ],
+      "title": "Efficient Privacy-Preserving Genetic Analysis via Distributed Function Secret Sharing",
+      "reason": "分散関数秘密共有によりゲノム解析をプライバシー保護下で行う暗号プロトコルの研究であり、対象は遺伝子解析の秘匿計算であってLLM推論システムとは無関係なため。",
+      "source_url": "https://doi.org/10.1109/ICC59461.2026.11587641",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TBC.2025.3609024",
+      "identity_tokens": [
+        "DOI:10.1109/TBC.2025.3609024"
+      ],
+      "title": "Neural Image Compression With Multi-Type Feature Fusion and Multi-Distribution Mixture Likelihood",
+      "reason": "多種特徴融合と多分布混合尤度によるニューラル画像圧縮の符号化器・復号器の改良であり、画像圧縮モデル自体が対象でLLM推論システムへの貢献はないため。",
+      "source_url": "https://doi.org/10.1109/TBC.2025.3609024",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T20:35:00+09:00",
+      "last_checked_at": "2026-11-26T20:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 500
+    }
+  ],
+  "parent_run_key": "muse-20261126-c3d04-b01",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 50
+}
