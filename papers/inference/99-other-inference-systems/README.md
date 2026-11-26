@@ -1804,13 +1804,13 @@
   実装：[✓](https://github.com/NVlabs/Fast-dLLM/tree/main/v2) ・ リポジトリ内被引用：58  
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
+- **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
+  実装：✓ ・ リポジトリ内被引用：53  
+  長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
+
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
   実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：53  
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
-
-- **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
-  実装：✓ ・ リポジトリ内被引用：52  
-  長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
   実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：49  
@@ -2024,6 +2024,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   ブロックの重要度が課題で違うことに着目し、候補の省略集合を課題尤度で作りプロンプトごとに軽量ルーターが選ぶ動的深さ枝刈りPuDDingで、約22パーセント削減でも静的枝刈りより正解率を上げつつ1.2倍台の生成高速化を得る。
 
+- **2025-02 · [LLM Inference Acceleration via Efficient Operation Fusion](2025-2502.17728-llm-inference-acceleration-via-efficient-operation-fusion.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  レイヤー正規化とソフトマックスの分母集約を、後続の線形層との可換性を使って行列積の後へ繰り延べ、集約をSIMD側で並行実行して遅延を隠す代数等価な演算融合を提案し、自社アクセラレータCorsairでLlama 2/3の推論遅延を約20%削減したと報告する無損失の最適化。
+
 - **2025-01 · [A Proximal Operator for Inducing 2:4-Sparsity](2025-2501.18015-a-proximal-operator-for-inducing-2-4-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   GPUの2:4疎行列演算では4重み中2つをゼロにすることで、通常の非構造化疎性よりも実行時に利用しやすい規則性が得られる。
@@ -2155,10 +2159,6 @@
 - **2025-02 · [M2R2: Mixture of Multi-Rate Residuals for Efficient Transformer Inference](2025-2502.02040-m2r2-mixture-of-multi-rate-residuals-for-efficient-transformer-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   M2R2は、言語モデルの中間残差表現が最終層の残差表現へどれだけ早く近づくかを、追加の軽量な計算経路で制御する方式である。
-
-- **2025-02 · [LLM Inference Acceleration via Efficient Operation Fusion](2025-2502.17728-llm-inference-acceleration-via-efficient-operation-fusion.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  レイヤー正規化とソフトマックスの分母集約を、後続の線形層との可換性を使って行列積の後へ繰り延べ、集約をSIMD側で並行実行して遅延を隠す代数等価な演算融合を提案し、自社アクセラレータCorsairでLlama 2/3の推論遅延を約20%削減したと報告する無損失の最適化。
 
 - **2025-02 · [LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning](2025-2502.14644-lift-a-novel-framework-for-enhancing-long-context-understanding-of-llms-.md)**  
   実装：[✓](https://github.com/MuLabPKU/LIFT) ・ リポジトリ内被引用：1  

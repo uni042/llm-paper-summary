@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "4ed90fa9a9ef633b7837362a0bc4e42019463b7e",
+  "base_commit": "3025bd267e759d092cb4a9e3367d323e84146972",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -471,6 +471,7 @@
     "2025-2511.22599-discedge-distributed-context-management-for-large-language-models-at-the-edge.json",
     "2025-2512.00335-efficient-kernel-mapping-and-comprehensive-system-evaluation-of-llm-acceleration-on-a-cgla.json",
     "2025-2512.02351-understanding-and-harnessing-sparsity-in-unified-multimodal-models.json",
+    "2025-2512.02924-autoneural-co-designing-vision-language-models-for-npu-inference.json",
     "2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and-gauge-fixing.json",
     "2025-2512.05597-fast-scenescript-fast-and-accurate-language-based-3d-scene-understanding-via-multi-token-prediction.json",
     "2025-2512.06093-compass-co-exploration-of-mapping-and-hardware-for-heterogeneous-multi-chiplet-accelerators-targeting-llm-inference-serv.json",
@@ -503,6 +504,7 @@
     "2025-2512.22925-argus-token-aware-distributed-llm-inference-optimization.json",
     "2025-2512.23029-viability-and-performance-of-a-private-llm-server-for-smbs-a-benchmark-analysis-of-qwen3-30b-on-consumer-grade-hardware.json",
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
+    "2025-2512.23310-splitwise-collaborative-edgecloud-inference-for-llms-via-lyapunov-assisted-drl.json",
     "2025-2601.14260-end-to-end-transformer-acceleration-through-processing-in-memory-architectures.json",
     "2025-350ca60c84cd-resource-multiplexing-in-tuning-and-serving-large-language-models.json",
     "2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision-proxy-rounding-and-pre-searching.json",
@@ -618,6 +620,7 @@
     "2026-2602.07849-lqa-a-lightweight-quantized-adaptive-framework-for-vision-language-models-on-the-edge.json",
     "2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-context-inference.json",
     "2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.json",
+    "2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.json",
     "2026-2602.09555-adaptive-test-time-compute-allocation-for-block-diffusion-language-models-in-complex-reasoning.json",
     "2026-2602.10238-learning-to-evict-from-key-value-cache.json",
     "2026-2602.10254-area-efficient-in-memory-computing-for-mixture-of-experts-via-multiplexing-and-caching.json",
@@ -694,6 +697,7 @@
     "2026-2603.22324-daq-delta-aware-quantization-for-post-training-llm-weight-compression.json",
     "2026-2603.22911-forestprune-high-ratio-visual-token-compression-for-video-mllms.json",
     "2026-2603.23198-sparser-faster-lighter-transformer-language-models.json",
+    "2026-2603.23516-msa-memory-sparse-attention-for-efficient-end-to-end-memory-model-scaling-to-100m-tokens.json",
     "2026-2603.24680-rediprune-relevance-diversity-pre-projection-token-pruning-for-efficient-multimodal-llms.json",
     "2026-2603.24787-relope-from-hidden-state-probing-to-a-decision-module-for-multimodal-llm-routing.json",
     "2026-2603.25340-large-language-model-as-token-compressor-and-decompressor.json",
@@ -721,6 +725,7 @@
     "2026-2604.03270-knowledge-packs-zero-token-knowledge-delivery-via-kv-cache-injection.json",
     "2026-2604.03950-diagonal-tiled-mixed-precision-attention-for-efficient-low-bit-mxfp-inference.json",
     "2026-2604.04493-slab-sparse-lowrank-binary-decomposition-for-efficient-large-language-models.json",
+    "2026-2604.04701-muxq-mixed-to-uniform-precision-matrix-quantization-via-low-rank-outlier-decomposition.json",
     "2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.json",
     "2026-2604.04972-rcp-representation-consistency-pruner-for-mitigating-distribution-shift-in-large-vision-language-models.json",
     "2026-2604.05250-dualdiffusion-a-speculative-decoding-strategy-for-masked-diffusion-models.json",
@@ -55109,6 +55114,78 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2512.02924": {
+      "order": [
+        "2026-11-26T22:35:10+00:00",
+        "2025-2512.02924-autoneural-co-designing-vision-language-models-for-npu-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.23310": {
+      "order": [
+        "2026-11-26T22:36:46+00:00",
+        "2025-2512.23310-splitwise-collaborative-edgecloud-inference-for-llms-via-lyapunov-assisted-drl.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.08948": {
+      "order": [
+        "2026-11-26T22:36:49+00:00",
+        "2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "89a04819c3b194e627e9874c10db173a53de40699748aa68f8953c1d811a29f9",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.md",
+        "canonical_id": "arXiv:2602.08948",
+        "worker_completed_at": "2026-11-27T07:26:45+09:00",
+        "worker_run_key": "muse-20261127-b1",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 5093,
+          "body_paragraphs": 20,
+          "method_chars": 2105,
+          "method_paragraphs": 4,
+          "evaluation_chars": 482,
+          "limitation_chars": 370,
+          "insufficiency_flags": [
+            "評価説明量 482 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 482 < 500"
+        ],
+        "processed_at": "2026-11-26T22:36:49+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2603.23516": {
+      "order": [
+        "2026-11-26T22:38:26+00:00",
+        "2026-2603.23516-msa-memory-sparse-attention-for-efficient-end-to-end-memory-model-scaling-to-100m-tokens.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.04701": {
+      "order": [
+        "2026-11-26T22:40:02+00:00",
+        "2026-2604.04701-muxq-mixed-to-uniform-precision-matrix-quantization-via-low-rank-outlier-decomposition.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68646,6 +68723,18 @@
     ],
     "arxiv:2511.02647": [
       "papers/inference/99-other-inference-systems/2025-2511.02647-federated-attention-a-distributed-paradigm-for-collaborative-llm-inferen.md"
+    ],
+    "arxiv:2512.02924": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2512.02924-autoneural-co-designing-vision-language-models-for-npu-inference.md"
+    ],
+    "arxiv:2512.23310": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.23310-splitwise-collaborative-edge-cloud-inference-for-llms-via-lyapunov-assis.md"
+    ],
+    "arxiv:2603.23516": [
+      "papers/inference/13-sparse-attention/2026-2603.23516-msa-memory-sparse-attention-for-efficient-end-to-end-memory-model-scalin.md"
+    ],
+    "arxiv:2604.04701": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2604.04701-muxq-mixed-to-uniform-precision-matrix-quantization-via-low-rank-outlier.md"
     ]
   }
 }

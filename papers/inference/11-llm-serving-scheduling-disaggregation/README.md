@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（685本）
+## 自動生成の論文一覧（686本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1573,6 +1573,10 @@
 - **2025-12 · [Trustworthy and Controllable Professional Knowledge Utilization in Large Language Models with TEE-GPU Execution](2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   専門知識を分離したアダプタとしてTEE内でだけ実行し、基盤モデルはGPUで実行する分割実行システムPKUSの研究。
+
+- **2025-12 · [Splitwise: Collaborative Edge–Cloud Inference for LLMs via Lyapunov-Assisted DRL](2025-2512.23310-splitwise-collaborative-edge-cloud-inference-for-llms-via-lyapunov-assis.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モデルを注意ヘッド単位まで細かく割ってエッジとクラウドへ振り分け、その振り分けをキューの安定性を報酬へ組み込んだ強化学習で帯域変動に追随させることで、遅延1.4から2.8倍の改善と最大41パーセントの省エネルギーを実機で示した協調推論の枠組み。
 
 - **2025-12 · [ProServe: Unified Multi-Priority Request Scheduling for LLM Serving](2025-2512.12928-proserve-unified-multi-priority-request-scheduling-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（128本）
+## 自動生成の論文一覧（130本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -274,6 +274,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   SHIELDはBF16活性値を符号・指数・仮数と寿命で分け、短命な仮数のeDRAM更新を止め、長寿命KVは周期を延ばして保持エネルギーを減らす方式。
 
+- **2026-04 · [MUXQ: Mixed-to-Uniform Precision MatriX Quantization via Low-Rank Outlier Decomposition](2026-2604.04701-muxq-mixed-to-uniform-precision-matrix-quantization-via-low-rank-outlier.md)**  
+  実装：[✓](https://github.com/GillchLee/MUXQ) ・ リポジトリ内被引用：0  
+  活性値の外れ値チャネルを本体と低ランク補助行列へ分解して大きさを分散させ、混合精度を使わない一様な整数量子化で半精度に近い困惑度を保つ量子化手法。GPT-2の3規模で素朴な量子化を一貫して上回ることを示した研究。
+
 - **2026-04 · [EdgeFM: Efficient Edge Inference for Vision-Language Models](2026-2604.27476-edgefm-efficient-edge-inference-for-vision-language-models.md)**  
   実装：[✓](https://github.com/windog-labs/edge-fm-x) ・ リポジトリ内被引用：0  
   本研究は、産業用エッジ装置で視覚・言語モデル（Vision-Language モデル, VLM）と大規模言語モデル（Large Language モデル, LLM）を低遅延で動かすための推論基盤EdgeFMを提案する。
@@ -326,6 +330,10 @@
   実装：[✓](https://github.com/kmdavidds/mlfastlm) ・ リポジトリ内被引用：0  
   画像の複雑さに応じて解像度と切り抜きを変える前処理をFastVLMの前に置き、モデル無変更で視覚トークンを55パーセント超、画像あたり推論時間を50パーセント超減らす軽量な効率化。
 
+- **2025-12 · [AutoNeural: Co-Designing Vision-Language Models for NPU Inference](2025-2512.02924-autoneural-co-designing-vision-language-models-for-npu-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚エンコーダを深さ方向分離畳み込みのMobileNet系へ、言語バックボーンをTransformerと状態空間層のハイブリッドへ置き換え、量子化の脆さとKVキャッシュのメモリ入出力を構造から消すことで、車載NPU上で14倍の低遅延と7倍低い量子化誤差を実機で示したNPUネイティブな視覚言語モデルの共同設計。
+
 - **2025-12 · [Atom: Efficient On-Device Video-Language Pipelines Through Modular Reuse](2025-2512.17108-atom-efficient-on-device-video-language-pipelines-through-modular-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   動画言語パイプラインをエンコーダと共有言語デコーダのモジュールへ分解し、常駐再利用とクリップ並列で再読込と直列実行を消すことで、スマートフォン上のエンドツーエンド遅延を27〜33%削減しつつピークメモリ増を約40MBに抑えるオンデバイス実行システム。
@@ -376,6 +384,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   D²MoEは、端末上でMoEを動かすときの専門家の重みをどの精度で読み込むかと、SSDなどからの重み読込とGPU計算をどう重ねるかを同時に設計する。二重ルーティングは専門家IDとビット幅の二つの選択を意味し、トークンを二回生成する方式ではない。
 
+- **2025-06 · [CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge](2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  装置に合わせた生成型の枝刈り整形と、要求ごとの適応の混合、層境界ごとの学習型の電圧・周波数制御を束ねた端末向け協調設計で、実測で最大11.92倍の高速化と最大7.36倍のエネルギー削減を示した。
+
 - **2025-01 · [MoE²: Optimizing Collaborative Inference for Edge Large Language Models](2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   MoE²（Mixture-of-Edge-Experts）は、単一の大規模言語モデル内部に小さな専門家層を並べる方式ではなく、独立した端末・サーバーに配置された複数の大規模言語モデルそのものを専門家として扱う協調推論基盤である。
@@ -384,10 +396,6 @@
   実装：✓ ・ リポジトリ内被引用：3  
   ZeroQATは、推論時に使う低ビット重み・活性値を、学習時にも実際に量子化した状態で評価し、その結果に基づいて量子化認識学習を行う方法である。
 
-- **2025-06 · [CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge](2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  装置に合わせた生成型の枝刈り整形と、要求ごとの適応の混合、層境界ごとの学習型の電圧・周波数制御を束ねた端末向け協調設計で、実測で最大11.92倍の高速化と最大7.36倍のエネルギー削減を示した。
-
 - **2025-03 · [Optimal Expert Selection for Distributed Mixture-of-Experts at the Wireless Edge](2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   提案方式の中核は、品質制約の下で消費エネルギーが小さい専門家集合を探す動的専門家選択（動的 専門家 Selection; DES）と、無線資源割当まで結合した共同専門家・副搬送波割当（Joint 専門家 and Subcarrier Allocation; JESA）である。
@@ -395,6 +403,10 @@
 - **2025-10 · [ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models](2025-2510.27256-ecvl-router-scenario-aware-routing-for-vision-language-models.md)**  
   実装：[✓](https://anonymous.4open.science/r/ECVL-Router-977D) ・ リポジトリ内被引用：2  
   大規模なクラウドVLMは難しい質問に強い反面、すべての質問をクラウドで処理すると、単純な画像説明にも大きなモデルの計算費用と応答待ち時間がかかる。そこで、問い合わせごとに処理先を決める「モデルルーティング」が推論サービングの重要な設計問題になる。
+
+- **2025-05 · [CE-LSLM: Efficient Large-Small Language Model Inference and Communication via Cloud-Edge Collaboration](2025-2505.14085-ce-lslm-efficient-large-small-language-model-inference-and-communication.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  クラウドに大きな言語モデル（LLM）を置き、端末やエッジに小さな言語モデル（SLM）を置く場合、単純な分担には二つの問題がある。システムプロンプトのように複数ユーザー間で再利用可能な文脈と、個人の質問のようにローカルに保持すべき入力を分離できれば、両者の妥協点を作れる。
 
 - **2025-10 · [MoBiLE: Efficient Mixture-of-Experts Inference on Consumer GPU with Mixture of Big Little Experts](2025-2510.12357-mobile-efficient-mixture-of-experts-inference-on-consumer-gpu-with-mixtu.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -407,10 +419,6 @@
 - **2025-05 · [RAP: Runtime Adaptive Pruning for LLM Inference](2025-2505.17138-rap-runtime-adaptive-pruning-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   固定の剪定率でモデル重みだけを削る方式は、短い入力では過剰に品質を落とし、長い入力ではKVキャッシュの増加を補えないことがある。
-
-- **2025-05 · [CE-LSLM: Efficient Large-Small Language Model Inference and Communication via Cloud-Edge Collaboration](2025-2505.14085-ce-lslm-efficient-large-small-language-model-inference-and-communication.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  クラウドに大きな言語モデル（LLM）を置き、端末やエッジに小さな言語モデル（SLM）を置く場合、単純な分担には二つの問題がある。システムプロンプトのように複数ユーザー間で再利用可能な文脈と、個人の質問のようにローカルに保持すべき入力を分離できれば、両者の妥協点を作れる。
 
 - **2025-04 · [Mosaic: Composite Projection Pruning for Resource-efficient LLMs](2025-2504.06323-mosaic-composite-projection-pruning-for-resource-efficient-llms.md)**  
   実装：[✓](https://github.com/blessonvar/Mosaic) ・ リポジトリ内被引用：1  
@@ -486,13 +494,13 @@
   実装：[✓](https://github.com/thunlp/BlockFFN) ・ リポジトリ内被引用：5  
   要点: BlockFFNは、混合専門家（Mixture-of-Experts; MoE）の「1トークン当たりは疎でも、複数トークンをまとめるとほぼ全専門家が必要になる」という弱点を狙う。
 
+- **2024-08 · [Squid: Long Context as a New Modality for Energy-Efficient On-Device Language Models](2024-2408.15518-squid-long-context-as-a-new-modality-for-energy-efficient-on-device-lang.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Squidは、長文脈を扱う言語モデルの入力処理を小型モデルへ移し、回答を生成する大型モデルには短い潜在表現だけを渡す方式である。原著は単一のNVIDIA A100 80GB上で、直接Qwen2-7Bへ入力する方式の平均推論時間20.71秒に対してSquidは4.32秒、比率4.79倍を報告する。
+
 - **2024-08 · [FactorLLM: Factorizing Knowledge via Mixture of Experts for Large Language Models](2024-2408.11855-factorllm-factorizing-knowledge-via-mixture-of-experts-for-large-languag.md)**  
   実装：[✓](https://github.com/zhenwuweihe/FactorLLM) ・ リポジトリ内被引用：1  
   FactorLLMは、学習済みの密な言語モデルのFeed-順伝播 Network（フィードフォワード層）を複数の小さな専門家へ分割し、各トークンに必要な専門家だけを実行することで、推論時のフィードフォワード層演算量を削減する手法である。
-
-- **2024-08 · [Squid: Long Context as a New Modality for Energy-Efficient On-Device Language Models](2024-2408.15518-squid-long-context-as-a-new-modality-for-energy-efficient-on-device-lang.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Squidは、長文脈を扱う言語モデルの入力処理を小型モデルへ移し、回答を生成する大型モデルには短い潜在表現だけを渡す方式である。原著は単一のNVIDIA A100 80GB上で、直接Qwen2-7Bへ入力する方式の平均推論時間20.71秒に対してSquidは4.32秒、比率4.79倍を報告する。
 
 - **2024-07 · [Co-Designing Binarized Transformer and Hardware Accelerator for Efficient End-to-End Edge Deployment](2024-2407.12070-co-designing-binarized-transformer-and-hardware-accelerator-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

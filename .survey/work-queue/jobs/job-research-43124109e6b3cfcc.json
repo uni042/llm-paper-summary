@@ -35,10 +35,15 @@
   "selection_reason": "AutoNeural co-designs an NPU-native VLM: a MobileNetV5-style encoder with bounded activations for stable INT4/8/16 integer-only inference and an SSM-hybrid language backbone that removes KV-cache memory I/O during generation.",
   "semantic_scholar_id": "0ff1faecad6ac97a9be491749c914d952aa89651",
   "source_url": "https://arxiv.org/abs/2512.02924",
-  "status": "ready",
+  "status": "superseded",
   "title": "AutoNeural: Co-Designing Vision-Language Models for NPU Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-26T22:42:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2025-2512.02924-autoneural-co-designing-vision-language-models-for-npu-inference.md",
+  "represented_canonical_id": "arXiv:2512.02924",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

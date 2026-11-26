@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（258本）
+## 自動生成の論文一覧（259本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -629,6 +629,10 @@
 - **2026-03 · [VSPrefill: Vertical-Slash Sparse Attention with Lightweight Indexing for Long-Context Prefilling](2026-2603.04460-vsprefill-vertical-slash-sparse-attention-with-lightweight-indexing-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意の縦線と斜線の構造を使い、キーとバリューから疎パターンを線形費用で予測する小さな索引器を本体凍結の蒸留で学習し、文脈長十二万八千で全注意の精度の九十八点三五パーセントを保ちながら平均四点九五倍高速化した。
+
+- **2026-03 · [MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling to 100M Tokens](2026-2603.23516-msa-memory-sparse-attention-for-efficient-end-to-end-memory-model-scalin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文書単位の疎注意と圧縮KVキャッシュ、文書別位置符号化、GPUとCPUメモリへの階層配置を組み合わせ、学習も推論もメモリ量に対して線形の費用で1億トークン規模の長期メモリを扱い、規模を4桁広げても精度低下を9パーセント未満に抑えた端から端まで学習可能なメモリモデル。
 
 - **2026-02 · [Token Sparse Attention: Efficient Long-Context Inference with Interleaved Token Selection](2026-2602.03216-token-sparse-attention-efficient-long-context-inference-with-interleaved.md)**  
   実装：[✓](https://github.com/dongwonjo/Token-Sparse-Attention) ・ リポジトリ内被引用：0  
