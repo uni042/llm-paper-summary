@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7710ba270562c83f-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:a9dc9b50c358591a24785794925aaec3d646d3cb",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:a9dc9b50c358591a24785794925aaec3d646d3cb",
+    "identity_tokens": [
+      "SemanticScholar:a9dc9b50c358591a24785794925aaec3d646d3cb"
+    ],
+    "reason": "小規模なオープンウェイトコードLLMに対しcontext-aware decodingとRAGを推論時に適用しMBPP/HumanEvalの精度を最大31%改善する検討であり、推論時技法ではあるものの主目的はコード生成品質の向上で、スループットへの影響が小さいという言及にとどまり推論システムの効率化機構は示されていないためborderlineとした。",
+    "first_checked_at": "2026-11-26T22:28:16+00:00",
+    "last_checked_at": "2026-11-26T22:28:16+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Inference-Time Techniques for Efficient Code Generation"
+  },
+  "processed_at": "2026-11-26T22:28:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7710ba270562",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

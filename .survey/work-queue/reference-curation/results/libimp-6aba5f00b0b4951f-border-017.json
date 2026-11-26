@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6aba5f00b0b4951f-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.06854",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.06854",
+    "identity_tokens": [
+      "arXiv:2611.06854"
+    ],
+    "reason": "スクリーンショットの視覚トークンを学習型ルータで間引き、prefill最大2.9倍高速化と推論コスト最大3.3倍削減を実測するが、VLMと同時学習するモデル側トークン削減であり、推論システムの汎用機構と言えるかは本文確認を要する。",
+    "first_checked_at": "2026-11-26T22:28:15+00:00",
+    "last_checked_at": "2026-11-26T22:28:15+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Visual Token Routing: Learning to keep tokens that matter"
+  },
+  "processed_at": "2026-11-26T22:28:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6aba5f00b0b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

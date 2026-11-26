@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed92a38a9126ffa9-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2108.08771",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2108.08771",
+    "identity_tokens": [
+      "arXiv:2108.08771"
+    ],
+    "reason": "シード付きグラフマッチングネットワークで画像間の局所特徴マッチングの精度と効率を高める手法であり、コンピュータビジョンの特徴対応付けタスクが対象で推論システムとは無関係であるため。",
+    "first_checked_at": "2026-11-26T22:28:18+00:00",
+    "last_checked_at": "2026-11-26T22:28:18+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Learning to Match Features with Seeded Graph Matching Network"
+  },
+  "processed_at": "2026-11-26T22:28:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed92a38a9126",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed92a38a9126ffa9-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.14837",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.14837",
+    "identity_tokens": [
+      "arXiv:2310.14837"
+    ],
+    "reason": "注意ベースのオートエンコーダで系列長を直接操作・削減する手法を提案し系列処理の効率化に関わるが、評価は汎用機械学習タスクの性能調整であり推論システムへの直接貢献は要旨からは薄いため。",
+    "first_checked_at": "2026-11-26T22:28:18+00:00",
+    "last_checked_at": "2026-11-26T22:28:18+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Harnessing Attention Mechanisms: Efficient Sequence Reduction using Attention-based Autoencoders"
+  },
+  "processed_at": "2026-11-26T22:28:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed92a38a9126",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

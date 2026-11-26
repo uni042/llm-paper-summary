@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c97fc9097b779f8-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.26470",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.26470",
+    "identity_tokens": [
+      "arXiv:2607.26470"
+    ],
+    "reason": "複数ターン・複数ホップRAGの対話メモリをサブ質問レベルの推論トレースとして表現するCMT-RAGとそのベンチマークの提案であり、応用側の検索拡張生成の改良で推論基盤への貢献はない。",
+    "first_checked_at": "2026-11-26T22:28:14+00:00",
+    "last_checked_at": "2026-11-26T22:28:14+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "CMT-RAG: Complementary Memory Traces for Multi-turn Multi-hop RAG"
+  },
+  "processed_at": "2026-11-26T22:28:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c97fc9097b7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

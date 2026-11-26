@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ee5ee2e6af49223-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.00660",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.00660",
+    "identity_tokens": [
+      "arXiv:2604.00660"
+    ],
+    "reason": "意味的SQLにおいて高速な代理モデルと高価なオラクルLLMの間で行をルーティングし、オラクル呼び出しを最大58%削減するストリーミング・カスケード算法で推論コスト削減に直結するが、対象はクエリ処理エンジン内の振り分けであり汎用推論サービング機構ではない。",
+    "first_checked_at": "2026-11-26T22:28:16+00:00",
+    "last_checked_at": "2026-11-26T22:28:16+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Streaming Model Cascades for Semantic SQL"
+  },
+  "processed_at": "2026-11-26T22:28:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ee5ee2e6af4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

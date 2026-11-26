@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7710ba270562c83f-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2302.03494",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2302.03494",
+    "identity_tokens": [
+      "arXiv:2302.03494"
+    ],
+    "reason": "ChatGPTの失敗事例を推論・事実誤り・数学・コーディング・バイアス等の11カテゴリに分類しリスクと社会的含意を論じた能力・失敗分析であり、推論システムの機構や効率化への技術的貢献は一切示されていないためunrelatedとした。",
+    "first_checked_at": "2026-11-26T22:28:16+00:00",
+    "last_checked_at": "2026-11-26T22:28:16+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "A Categorical Archive of ChatGPT Failures"
+  },
+  "processed_at": "2026-11-26T22:28:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7710ba270562",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

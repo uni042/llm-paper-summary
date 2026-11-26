@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da39dbe0d8333d8c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.15071",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.15071",
+    "identity_tokens": [
+      "arXiv:2608.15071"
+    ],
+    "reason": "凍結エージェントの実行経験を再利用可能なスキルハーネスへコンパイルする自己改善手法で、推論効率やサービング機構の話ではない。",
+    "first_checked_at": "2026-11-26T22:28:17+00:00",
+    "last_checked_at": "2026-11-26T22:28:17+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Evo-Harness: Context-to-Harness Skill Compilation for Self-Evolving Agents"
+  },
+  "processed_at": "2026-11-26T22:28:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da39dbe0d833",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

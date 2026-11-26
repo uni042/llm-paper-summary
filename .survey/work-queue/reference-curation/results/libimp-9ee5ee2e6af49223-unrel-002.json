@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ee5ee2e6af49223-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.05389",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.05389",
+    "identity_tokens": [
+      "arXiv:2602.05389"
+    ],
+    "reason": "多変量時系列をトレンド・季節・残差に分解する状態空間モデルDecompSSMの提案で、応用先は気象・エネルギー等の予測であり対象外である。",
+    "first_checked_at": "2026-11-26T22:28:16+00:00",
+    "last_checked_at": "2026-11-26T22:28:16+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "A Decomposition-based State Space Model for Multivariate Time-Series Forecasting"
+  },
+  "processed_at": "2026-11-26T22:28:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ee5ee2e6af4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

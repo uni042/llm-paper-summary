@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4e4bb55de6334663-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.23931",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.23931",
+    "identity_tokens": [
+      "arXiv:2610.23931"
+    ],
+    "reason": "近似最近傍探索のためのベクトル量子化手法STLQを提案しIVFクラスタ内の局所参照を活かした圧縮を論じているが、対象は検索インデックスの量子化でありモデル推論の量子化や圧縮とは対象が異なる。",
+    "first_checked_at": "2026-11-26T22:28:15+00:00",
+    "last_checked_at": "2026-11-26T22:28:15+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "STLQ: Spatio-Topological Linkage Quantization for Approximate Nearest Neighbor Search"
+  },
+  "processed_at": "2026-11-26T22:28:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4e4bb55de633",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

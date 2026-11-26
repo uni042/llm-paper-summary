@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed92a38a9126ffa9-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.24801",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.24801",
+    "identity_tokens": [
+      "arXiv:2510.24801"
+    ],
+    "reason": "異種モデル群のペアワイズランキング合意によるスウォーム推論プロトコルで分散推論層のスケールを狙うが、主眼は応答品質の合意形成でありサービング効率や実行機構の改善ではないため。",
+    "first_checked_at": "2026-11-26T22:28:18+00:00",
+    "last_checked_at": "2026-11-26T22:28:18+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fortytwo: Swarm Inference with Peer-Ranked Consensus"
+  },
+  "processed_at": "2026-11-26T22:28:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed92a38a9126",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

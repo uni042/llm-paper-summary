@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3941ae488368069-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.10354",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.10354",
+    "identity_tokens": [
+      "arXiv:2503.10354"
+    ],
+    "reason": "特許文書の抽象的要約のために効率的微調整を備えたハイブリッドアーキテクチャを提案した応用研究であり、文書要約タスクが主目的で推論システムへの技術的貢献は確認できない。",
+    "first_checked_at": "2026-11-26T22:28:17+00:00",
+    "last_checked_at": "2026-11-26T22:28:17+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "A Hybrid Architecture with Efficient Fine Tuning for Abstractive Patent Document Summarization"
+  },
+  "processed_at": "2026-11-26T22:28:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3941ae48836",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

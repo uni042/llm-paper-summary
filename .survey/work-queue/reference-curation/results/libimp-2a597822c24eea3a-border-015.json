@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a597822c24eea3a-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.23605",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.23605",
+    "identity_tokens": [
+      "arXiv:2605.23605"
+    ],
+    "reason": "潜在空間と一貫性モデル蒸留でマスク拡散言語モデルのサンプリング品質とスループットのトレードオフ改善を狙うDiLaDiffを提案するが、主眼は拡散言語モデルの生成品質でありサービング機構ではないため。",
+    "first_checked_at": "2026-11-26T22:28:14+00:00",
+    "last_checked_at": "2026-11-26T22:28:14+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DiLaDiff: Distilled Latent-Augmented Diffusion for Language Modeling"
+  },
+  "processed_at": "2026-11-26T22:28:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a597822c24e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

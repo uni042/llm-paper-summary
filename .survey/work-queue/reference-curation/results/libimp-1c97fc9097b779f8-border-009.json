@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c97fc9097b779f8-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:d933334b02cef48cc7752dee2b86a69d0b05b8d8",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:d933334b02cef48cc7752dee2b86a69d0b05b8d8",
+    "identity_tokens": [
+      "SemanticScholar:d933334b02cef48cc7752dee2b86a69d0b05b8d8"
+    ],
+    "reason": "GenAI基盤モデルの効率化技法をEloベースの枠組みでベンチマーク評価する計測寄りの研究で、効率技法の比較という点で関連はあるが、推論システム自体の新たな機構提案ではなくワークショップ論文でもあり貢献は限定的である。",
+    "first_checked_at": "2026-11-26T22:28:14+00:00",
+    "last_checked_at": "2026-11-26T22:28:14+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Benchmarking Efficiency Techniques in GenAI Foundation Models Using an Elo-Based Performance Evaluation Framework"
+  },
+  "processed_at": "2026-11-26T22:28:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c97fc9097b7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

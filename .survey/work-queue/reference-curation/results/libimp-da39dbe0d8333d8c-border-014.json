@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da39dbe0d8333d8c-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.00066",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.00066",
+    "identity_tokens": [
+      "arXiv:2602.00066"
+    ],
+    "reason": "ユーザ意図をマスクしてその影響をデコード時に増幅する学習不要のデコード戦略であり、デコード過程への推論時介入ではあるが、目的は意図追従の精度向上で、推論効率やシステム機構への貢献は限定的である。",
+    "first_checked_at": "2026-11-26T22:28:17+00:00",
+    "last_checked_at": "2026-11-26T22:28:17+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "IntentCoding: Amplifying User Intent in Code Generation"
+  },
+  "processed_at": "2026-11-26T22:28:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da39dbe0d833",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

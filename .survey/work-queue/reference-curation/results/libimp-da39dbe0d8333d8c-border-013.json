@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da39dbe0d8333d8c-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.05470",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.05470",
+    "identity_tokens": [
+      "arXiv:2512.05470"
+    ],
+    "reason": "コンテキスト工学のためのファイルシステム抽象化として、トークン制約下でコンテキストを構築・配送・検証する基盤を提案するが、対象はエージェント向け文脈管理であり、KVキャッシュやサービング等の推論ランタイム機構への直接貢献は薄い。",
+    "first_checked_at": "2026-11-26T22:28:17+00:00",
+    "last_checked_at": "2026-11-26T22:28:17+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Everything is Context: Agentic File System Abstraction for Context Engineering"
+  },
+  "processed_at": "2026-11-26T22:28:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da39dbe0d833",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

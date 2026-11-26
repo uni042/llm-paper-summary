@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4e4bb55de6334663-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.06475",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.06475",
+    "identity_tokens": [
+      "arXiv:2610.06475"
+    ],
+    "reason": "新しいDRAM技術を採用しやすくする柔軟なDRAMインタフェースとメモリコントローラTerracottaの提案で、メモリサブシステムとしては推論ハードウェアにも関係し得るが、汎用的なDRAM基盤の話でありLLM推論での評価は要旨に示されていない。",
+    "first_checked_at": "2026-11-26T22:28:15+00:00",
+    "last_checked_at": "2026-11-26T22:28:15+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Terracotta: Enabling the Adoption of New DRAM Techniques via a Flexible DRAM Interface and Memory Controller"
+  },
+  "processed_at": "2026-11-26T22:28:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4e4bb55de633",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

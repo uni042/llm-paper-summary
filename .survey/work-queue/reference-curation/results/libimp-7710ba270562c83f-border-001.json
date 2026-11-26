@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7710ba270562c83f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:7fa0b661ee7f2bb911c448e9c69dc6d82307a71b",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:7fa0b661ee7f2bb911c448e9c69dc6d82307a71b",
+    "identity_tokens": [
+      "SemanticScholar:7fa0b661ee7f2bb911c448e9c69dc6d82307a71b"
+    ],
+    "reason": "高エントロピートークンに限定してclassifier-free guidanceを適用し、無条件デコードでは本体モデルのKVキャッシュを再利用するMinimal Test-Time Interventionを提案するが、主目的は推論時の推論精度・安定性の向上であり、サービングやレイテンシ等の推論システム効率の定量評価は要旨で中心になっていないためborderlineとした。",
+    "first_checked_at": "2026-11-26T22:28:16+00:00",
+    "last_checked_at": "2026-11-26T22:28:16+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Less is More: Improving LLM Reasoning with Minimal Test-Time Intervention"
+  },
+  "processed_at": "2026-11-26T22:28:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7710ba270562",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

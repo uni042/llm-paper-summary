@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a597822c24eea3a-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.07107",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.07107",
+    "identity_tokens": [
+      "arXiv:2603.07107"
+    ],
+    "reason": "半自己回帰生成とオンライン知識蒸留でパーソナライズド再ランキングの生成品質と低レイテンシ推論の両立を狙うが、応用先は推薦システムの再ランキングに限定されるため。",
+    "first_checked_at": "2026-11-26T22:28:14+00:00",
+    "last_checked_at": "2026-11-26T22:28:14+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Personalized Reranking with Semi-autoregressive Generation and Online Knowledge Distillation"
+  },
+  "processed_at": "2026-11-26T22:28:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a597822c24e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

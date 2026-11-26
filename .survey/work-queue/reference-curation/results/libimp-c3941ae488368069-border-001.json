@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3941ae488368069-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.00966",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.00966",
+    "identity_tokens": [
+      "arXiv:2405.00966"
+    ],
+    "reason": "多タスク多言語音声モデルWhisperの圧縮を検討し量子化が低資源言語や話者属性へのバイアスを増幅することを分析した研究で、量子化の影響分析としては関連するが音声モデル固有の評価であり推論機構の提案ではない。",
+    "first_checked_at": "2026-11-26T22:28:17+00:00",
+    "last_checked_at": "2026-11-26T22:28:17+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Compression of Multitask Multilingual Speech Models"
+  },
+  "processed_at": "2026-11-26T22:28:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3941ae48836",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

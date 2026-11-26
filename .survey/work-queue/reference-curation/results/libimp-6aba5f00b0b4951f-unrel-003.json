@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6aba5f00b0b4951f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2012.14583",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2012.14583",
+    "identity_tokens": [
+      "arXiv:2012.14583"
+    ],
+    "reason": "非自己回帰翻訳の知識蒸留が伝播させる低頻度語の語彙選択エラーを学習側で抑える手法であり、翻訳モデルの学習改善である。",
+    "first_checked_at": "2026-11-26T22:28:15+00:00",
+    "last_checked_at": "2026-11-26T22:28:15+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Understanding and Improving Lexical Choice in Non-Autoregressive Translation"
+  },
+  "processed_at": "2026-11-26T22:28:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6aba5f00b0b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

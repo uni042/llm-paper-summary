@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T22:18:17+00:00",
-  "record_count": 9936,
+  "updated_at": "2026-11-26T22:28:18+00:00",
+  "record_count": 9980,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -151970,6 +151970,666 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Synergistic Multi-Agent Framework with Trajectory Learning for Knowledge-Intensive Tasks"
+    },
+    "SemanticScholar:d6ad9ea25c522638321a62081b645ad81a9ee765": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:d6ad9ea25c522638321a62081b645ad81a9ee765",
+      "identity_tokens": [
+        "SemanticScholar:d6ad9ea25c522638321a62081b645ad81a9ee765"
+      ],
+      "reason": "QueryとKeyの重み行列を部分共有して軽量言語モデルのパラメータとメモリを削減する手法だが、評価はTinyBERT等の小規模モデルの事前学習損失が中心で、推論時の速度やKVキャッシュへの効果は要旨で具体的に示されていない。",
+      "first_checked_at": "2026-11-26T22:28:14+00:00",
+      "last_checked_at": "2026-11-26T22:28:14+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Partially Shared Query-Key for Lightweight Language Models"
+    },
+    "SemanticScholar:d933334b02cef48cc7752dee2b86a69d0b05b8d8": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:d933334b02cef48cc7752dee2b86a69d0b05b8d8",
+      "identity_tokens": [
+        "SemanticScholar:d933334b02cef48cc7752dee2b86a69d0b05b8d8"
+      ],
+      "reason": "GenAI基盤モデルの効率化技法をEloベースの枠組みでベンチマーク評価する計測寄りの研究で、効率技法の比較という点で関連はあるが、推論システム自体の新たな機構提案ではなくワークショップ論文でもあり貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:28:14+00:00",
+      "last_checked_at": "2026-11-26T22:28:14+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Benchmarking Efficiency Techniques in GenAI Foundation Models Using an Elo-Based Performance Evaluation Framework"
+    },
+    "DOI:10.1109/icassp55912.2026.11464469": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11464469",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11464469"
+      ],
+      "reason": "量子化した手話翻訳モデルの性能劣化を、凍結した低ビットモデルのままプロンプト調整と蒸留で回復する手法であり、量子化モデルのデプロイ効率には関係するが対象が手話翻訳タスク固有の応用である。",
+      "first_checked_at": "2026-11-26T22:28:14+00:00",
+      "last_checked_at": "2026-11-26T22:28:14+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving Quantized Gloss-Free Sign Language Translation Model via Disentangled Arithmetic-Prompting"
+    },
+    "arXiv:2603.08173": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.08173",
+      "identity_tokens": [
+        "arXiv:2603.08173"
+      ],
+      "reason": "音声モデル向けに進化戦略で活性化スケールを最適化する低ビット量子化キャリブレーション手法ESCを提案しており量子化技術としては関連するが、対象が音声信号固有の課題に特化しLLM推論での検証は要旨にない。",
+      "first_checked_at": "2026-11-26T22:28:14+00:00",
+      "last_checked_at": "2026-11-26T22:28:14+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evolution Strategy-Based Calibration for Low-Bit Quantization of Speech Models"
+    },
+    "arXiv:2604.16802": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.16802",
+      "identity_tokens": [
+        "arXiv:2604.16802"
+      ],
+      "reason": "マルチテナントGPUクラウドの価格付けとスケーリングをStackelbergゲームとして定式化しレイテンシSLOと余剰容量コストを論じているが、理論モデルの提示が中心で推論サービング基盤の実装や実測による貢献は要旨で確認できない。",
+      "first_checked_at": "2026-11-26T22:28:14+00:00",
+      "last_checked_at": "2026-11-26T22:28:14+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Stackelberg Game Framework with Drainability Guardrails for Pricing and Scaling in Multi-Tenant GPU Cloud Platforms"
+    },
+    "arXiv:2602.01148": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.01148",
+      "identity_tokens": [
+        "arXiv:2602.01148"
+      ],
+      "reason": "潜在Chain-of-Thoughtの能力と限界を確実性の観点から理論的に特徴づけ効率的推論の可能性を論じるが、提案は理論的分析であり推論システムとして実装・評価された機構ではないため。",
+      "first_checked_at": "2026-11-26T22:28:14+00:00",
+      "last_checked_at": "2026-11-26T22:28:14+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Capabilities and Fundamental Limits of Latent Chain-of-Thought"
+    },
+    "arXiv:2603.07107": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.07107",
+      "identity_tokens": [
+        "arXiv:2603.07107"
+      ],
+      "reason": "半自己回帰生成とオンライン知識蒸留でパーソナライズド再ランキングの生成品質と低レイテンシ推論の両立を狙うが、応用先は推薦システムの再ランキングに限定されるため。",
+      "first_checked_at": "2026-11-26T22:28:14+00:00",
+      "last_checked_at": "2026-11-26T22:28:14+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Personalized Reranking with Semi-autoregressive Generation and Online Knowledge Distillation"
+    },
+    "arXiv:2604.02322": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.02322",
+      "identity_tokens": [
+        "arXiv:2604.02322"
+      ],
+      "reason": "複数の問題を共有コンテキストで同時学習させるBatched Contextual Reinforcementにより推論時のトークン消費削減を狙うが、貢献の本体は学習パラダイムであり推論機構の提案ではないため。",
+      "first_checked_at": "2026-11-26T22:28:14+00:00",
+      "last_checked_at": "2026-11-26T22:28:14+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Batched Contextual Reinforcement: A Task-Scaling Law for Efficient Reasoning"
+    },
+    "arXiv:2605.23605": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.23605",
+      "identity_tokens": [
+        "arXiv:2605.23605"
+      ],
+      "reason": "潜在空間と一貫性モデル蒸留でマスク拡散言語モデルのサンプリング品質とスループットのトレードオフ改善を狙うDiLaDiffを提案するが、主眼は拡散言語モデルの生成品質でありサービング機構ではないため。",
+      "first_checked_at": "2026-11-26T22:28:14+00:00",
+      "last_checked_at": "2026-11-26T22:28:14+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DiLaDiff: Distilled Latent-Augmented Diffusion for Language Modeling"
+    },
+    "arXiv:2610.06475": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.06475",
+      "identity_tokens": [
+        "arXiv:2610.06475"
+      ],
+      "reason": "新しいDRAM技術を採用しやすくする柔軟なDRAMインタフェースとメモリコントローラTerracottaの提案で、メモリサブシステムとしては推論ハードウェアにも関係し得るが、汎用的なDRAM基盤の話でありLLM推論での評価は要旨に示されていない。",
+      "first_checked_at": "2026-11-26T22:28:15+00:00",
+      "last_checked_at": "2026-11-26T22:28:15+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Terracotta: Enabling the Adoption of New DRAM Techniques via a Flexible DRAM Interface and Memory Controller"
+    },
+    "arXiv:2610.23931": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.23931",
+      "identity_tokens": [
+        "arXiv:2610.23931"
+      ],
+      "reason": "近似最近傍探索のためのベクトル量子化手法STLQを提案しIVFクラスタ内の局所参照を活かした圧縮を論じているが、対象は検索インデックスの量子化でありモデル推論の量子化や圧縮とは対象が異なる。",
+      "first_checked_at": "2026-11-26T22:28:15+00:00",
+      "last_checked_at": "2026-11-26T22:28:15+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "STLQ: Spatio-Topological Linkage Quantization for Approximate Nearest Neighbor Search"
+    },
+    "DOI:10.26615/issn.2603-2821.2021_017": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.26615/issn.2603-2821.2021_017",
+      "identity_tokens": [
+        "DOI:10.26615/issn.2603-2821.2021_017"
+      ],
+      "reason": "感情分析タスク固有モデルへの非構造化プルーニングの学習ダイナミクスを局所対大域で比較した圧縮研究であり、圧縮技術としては関連するが小規模CNNやBERT系のタスク固有モデルが対象でLLM推論への示唆は限定的である。",
+      "first_checked_at": "2026-11-26T22:28:15+00:00",
+      "last_checked_at": "2026-11-26T22:28:15+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Does local pruning offer task-specific models to learn effectively ?"
+    },
+    "arXiv:2407.18930": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18930",
+      "identity_tokens": [
+        "arXiv:2407.18930"
+      ],
+      "reason": "異なるハードウェア制約下でのASRデプロイに向け、スーパーネットから層単位プルーニングで複数サイズのエンコーダを同時学習する手法であり、モデル圧縮とデプロイ適応には関連するが音声認識タスク固有の内容である。",
+      "first_checked_at": "2026-11-26T22:28:15+00:00",
+      "last_checked_at": "2026-11-26T22:28:15+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Encoder Size Based on Data-Driven Layer-wise Pruning for Speech Recognition"
+    },
+    "DOI:10.1145/3711702": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3711702",
+      "identity_tokens": [
+        "DOI:10.1145/3711702"
+      ],
+      "reason": "分散機械学習ジョブの通信トラフィックをJITプログラム解析で事前予測しネットワーク最適化へ活かすNetJITの提案で、分散ML基盤としては関連するが対象は主に学習ジョブの通信であり推論サービングへの直接の貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:28:15+00:00",
+      "last_checked_at": "2026-11-26T22:28:15+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NetJIT: Bridging the Gap from Traffic Prediction to Preknowledge for Distributed Machine Learning"
+    },
+    "arXiv:2611.06854": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.06854",
+      "identity_tokens": [
+        "arXiv:2611.06854"
+      ],
+      "reason": "スクリーンショットの視覚トークンを学習型ルータで間引き、prefill最大2.9倍高速化と推論コスト最大3.3倍削減を実測するが、VLMと同時学習するモデル側トークン削減であり、推論システムの汎用機構と言えるかは本文確認を要する。",
+      "first_checked_at": "2026-11-26T22:28:15+00:00",
+      "last_checked_at": "2026-11-26T22:28:15+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Visual Token Routing: Learning to keep tokens that matter"
+    },
+    "SemanticScholar:7fa0b661ee7f2bb911c448e9c69dc6d82307a71b": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:7fa0b661ee7f2bb911c448e9c69dc6d82307a71b",
+      "identity_tokens": [
+        "SemanticScholar:7fa0b661ee7f2bb911c448e9c69dc6d82307a71b"
+      ],
+      "reason": "高エントロピートークンに限定してclassifier-free guidanceを適用し、無条件デコードでは本体モデルのKVキャッシュを再利用するMinimal Test-Time Interventionを提案するが、主目的は推論時の推論精度・安定性の向上であり、サービングやレイテンシ等の推論システム効率の定量評価は要旨で中心になっていないためborderlineとした。",
+      "first_checked_at": "2026-11-26T22:28:16+00:00",
+      "last_checked_at": "2026-11-26T22:28:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Less is More: Improving LLM Reasoning with Minimal Test-Time Intervention"
+    },
+    "arXiv:2410.10319": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.10319",
+      "identity_tokens": [
+        "arXiv:2410.10319"
+      ],
+      "reason": "多層視覚特徴への分離型depthwise convolutionで空間情報を補いながら視覚トークン数を75%削減するSpatial-Aware Efficient Projectorを提案しMLLMの効率に触れるが、主貢献はマルチモーダル空間理解能力の向上とprojector設計であり、推論システムとしての速度・メモリ評価が要旨で具体化されていないためborderlineとした。",
+      "first_checked_at": "2026-11-26T22:28:16+00:00",
+      "last_checked_at": "2026-11-26T22:28:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Spatial-Aware Efficient Projector for MLLMs via Multi-Layer Feature Aggregation"
+    },
+    "SemanticScholar:a9dc9b50c358591a24785794925aaec3d646d3cb": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a9dc9b50c358591a24785794925aaec3d646d3cb",
+      "identity_tokens": [
+        "SemanticScholar:a9dc9b50c358591a24785794925aaec3d646d3cb"
+      ],
+      "reason": "小規模なオープンウェイトコードLLMに対しcontext-aware decodingとRAGを推論時に適用しMBPP/HumanEvalの精度を最大31%改善する検討であり、推論時技法ではあるものの主目的はコード生成品質の向上で、スループットへの影響が小さいという言及にとどまり推論システムの効率化機構は示されていないためborderlineとした。",
+      "first_checked_at": "2026-11-26T22:28:16+00:00",
+      "last_checked_at": "2026-11-26T22:28:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Inference-Time Techniques for Efficient Code Generation"
+    },
+    "arXiv:2602.17119": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.17119",
+      "identity_tokens": [
+        "arXiv:2602.17119"
+      ],
+      "reason": "プログラマブルなFSMによる動的データ駆動オーケストレーションと時間ずらしSIMD実行でアクセラレータの柔軟性と効率を両立させるCanonを提案するが、汎用カーネル向けアーキテクチャでありLLM推論特化ではないため。",
+      "first_checked_at": "2026-11-26T22:28:16+00:00",
+      "last_checked_at": "2026-11-26T22:28:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Data-Driven Dynamic Execution Orchestration Architecture"
+    },
+    "arXiv:2604.07988": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07988",
+      "identity_tokens": [
+        "arXiv:2604.07988"
+      ],
+      "reason": "エージェントの行動を共有ログに先行記録し投票による停止と障害回復を可能にするLogAct抽象を提案するが、対象はエージェント実行の信頼性でありLLM推論・サービング機構そのものではないため。",
+      "first_checked_at": "2026-11-26T22:28:16+00:00",
+      "last_checked_at": "2026-11-26T22:28:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LogAct: Enabling Agentic Reliability via Shared Logs"
+    },
+    "arXiv:2604.00660": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.00660",
+      "identity_tokens": [
+        "arXiv:2604.00660"
+      ],
+      "reason": "意味的SQLにおいて高速な代理モデルと高価なオラクルLLMの間で行をルーティングし、オラクル呼び出しを最大58%削減するストリーミング・カスケード算法で推論コスト削減に直結するが、対象はクエリ処理エンジン内の振り分けであり汎用推論サービング機構ではない。",
+      "first_checked_at": "2026-11-26T22:28:16+00:00",
+      "last_checked_at": "2026-11-26T22:28:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Streaming Model Cascades for Semantic SQL"
+    },
+    "arXiv:2512.08169": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.08169",
+      "identity_tokens": [
+        "arXiv:2512.08169"
+      ],
+      "reason": "推論チェーンの勾配ベース圧縮とクラウド・エッジ間ルーティングでセキュリティアラート選別の遅延を40.6%削減するが、主目的はSOCトリアージ応用であり、汎用の推論システム機構としての一般性は限られる。",
+      "first_checked_at": "2026-11-26T22:28:16+00:00",
+      "last_checked_at": "2026-11-26T22:28:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Information-Dense Reasoning for Efficient and Auditable Security Alert Triage"
+    },
+    "arXiv:2606.16295": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.16295",
+      "identity_tokens": [
+        "arXiv:2606.16295"
+      ],
+      "reason": "ストリーミングフレームのカスケードゲートとスキルバンクの圧縮でVLMエージェントのAPIコストを大幅に削減するが、中心はエージェントの自己進化と能力であり、コスト削減も入力フィルタリング中心で推論システム機構への貢献は薄い。",
+      "first_checked_at": "2026-11-26T22:28:16+00:00",
+      "last_checked_at": "2026-11-26T22:28:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VisualClaw: A Real-Time, Personalized Agent for the Physical World"
+    },
+    "DOI:10.1088/2632-2153/ae484b": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/2632-2153/ae484b",
+      "identity_tokens": [
+        "DOI:10.1088/2632-2153/ae484b"
+      ],
+      "reason": "LHC等の粒子物理実験向けマイクロ秒級ML推論と専用ハードウェアのロードマップであり推論高速化に隣接するが、LLM推論・サービングへの直接の技術的貢献は要旨で確認できないため保留寄りの境界とした。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Roadmap on fast machine learning for science"
+    },
+    "arXiv:2603.20180": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20180",
+      "identity_tokens": [
+        "arXiv:2603.20180"
+      ],
+      "reason": "長尺動画VLM推論のボトルネックである入力フレーム／視覚トークン数を、質問適応型貪欲フレーム選択で固定予算内に抑える手法であり視覚トークン削減に隣接するが、LLMサービング機構への直接貢献は薄いため境界とした。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Greedy Frame Selection for Long Video Understanding"
+    },
+    "arXiv:2604.17866": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.17866",
+      "identity_tokens": [
+        "arXiv:2604.17866"
+      ],
+      "reason": "単一LLMの隠れ状態から検索ベクトルを生成し検索回数を減らして推論効率の改善も主張するLatent Abstraction for RAGだが、主目的はRAGの精度・統合アーキテクチャであり推論システムへの貢献は副次的であるため境界とした。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Latent Abstraction for Retrieval-Augmented Generation"
+    },
+    "arXiv:2605.27361": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27361",
+      "identity_tokens": [
+        "arXiv:2605.27361"
+      ],
+      "reason": "検索エージェントのパイプライン構成（LLM・検索器・文書数等）をクエリごとに推論時選択しサービングコストと精度のトレードオフを最適化するBRANEであり推論時コストに隣接するが、対象は応用パイプライン構成選択でありLLM推論機構への直接貢献は薄いため境界とした。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Natural Language Query to Configuration for Retrieval Agents"
+    },
+    "arXiv:2405.00966": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.00966",
+      "identity_tokens": [
+        "arXiv:2405.00966"
+      ],
+      "reason": "多タスク多言語音声モデルWhisperの圧縮を検討し量子化が低資源言語や話者属性へのバイアスを増幅することを分析した研究で、量子化の影響分析としては関連するが音声モデル固有の評価であり推論機構の提案ではない。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Compression of Multitask Multilingual Speech Models"
+    },
+    "DOI:10.1117/12.3067061": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3067061",
+      "identity_tokens": [
+        "DOI:10.1117/12.3067061"
+      ],
+      "reason": "Tritonコンパイラのメモリアクセス合体最適化を改善し奇数サイズテンソルでも合体アクセスやベクトル化を可能にしてカーネルを高速化した研究で、カーネル最適化としては関連するが対象は汎用コンパイラパスであり推論特化の評価は要旨にない。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memory access coalescing optimization based on Triton compiler"
+    },
+    "arXiv:2511.11939": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.11939",
+      "identity_tokens": [
+        "arXiv:2511.11939"
+      ],
+      "reason": "集団演算を含むGPUプログラムのモジュール性を型付きパースペクティブで回復するGPU言語Prismの提案で、GPUカーネル開発基盤としては関連するが推論ワークロード特化の設計や評価は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Modular GPU Programming with Typed Perspectives"
+    },
+    "DOI:10.1109/mcsoc64144.2024.00072": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mcsoc64144.2024.00072",
+      "identity_tokens": [
+        "DOI:10.1109/mcsoc64144.2024.00072"
+      ],
+      "reason": "3D-SRAMを用いた大入力LUTのFPGAをシミュレータで評価し遅延最適化を論じたハードウェア研究であり、AIアクセラレータ一般には関係するが特定の推論システムやLLMワークロードでの検証は要旨にない。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Stacked FPGA utilizing 3D-SRAM with Latency Optimization"
+    },
+    "DOI:10.1364/jocn.563049": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1364/jocn.563049",
+      "identity_tokens": [
+        "DOI:10.1364/jocn.563049"
+      ],
+      "reason": "光・電気融合データセンタネットワークで分散AIワークロード向けにキュー認識スケジューリングとFPGA実装を行う研究だが、対象トラフィックは分散深層学習の学習ジョブであり推論サービングへの直接の貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Seamless data delivery for distributed AI workloads via dynamic queue scheduling and FPGA-based implementation in converged optical-electrical networks"
+    },
+    "arXiv:2303.06753": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.06753",
+      "identity_tokens": [
+        "arXiv:2303.06753"
+      ],
+      "reason": "6次元物体姿勢推定ネットワーク向けにモジュール構造を利用した混合精度の量子化認識学習MQATを提案しており、量子化技術としては関連するが対象は姿勢推定という視覚タスク固有のモデル圧縮である。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Modular Quantization-Aware Training for 6D Object Pose Estimation"
+    },
+    "arXiv:2509.19086": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.19086",
+      "identity_tokens": [
+        "arXiv:2509.19086"
+      ],
+      "reason": "MIG構成のGPUクラスタでジョブを原子化しスケジューラと双方向に連携させるSJAを提案しており、GPUスケジューリングとしては関連するが対象は汎用GPUジョブであり推論サービング特化の仕組みや評価は要旨に示されていない。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scheduler-Driven Job Atomization"
+    },
+    "arXiv:2512.23767": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.23767",
+      "identity_tokens": [
+        "arXiv:2512.23767"
+      ],
+      "reason": "エッジでの物理AI向けにNeural ODEベースのモデル回復をハードウェア加速する研究であり、エッジ推論の文脈はあるが対象はセンサデータからの力学同定という特殊用途でLLM推論システムとの関係は薄い。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enabling Physical AI at the Edge: Hardware-Accelerated Recovery of System Dynamics"
+    },
+    "arXiv:2512.05470": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.05470",
+      "identity_tokens": [
+        "arXiv:2512.05470"
+      ],
+      "reason": "コンテキスト工学のためのファイルシステム抽象化として、トークン制約下でコンテキストを構築・配送・検証する基盤を提案するが、対象はエージェント向け文脈管理であり、KVキャッシュやサービング等の推論ランタイム機構への直接貢献は薄い。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Everything is Context: Agentic File System Abstraction for Context Engineering"
+    },
+    "arXiv:2602.00066": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00066",
+      "identity_tokens": [
+        "arXiv:2602.00066"
+      ],
+      "reason": "ユーザ意図をマスクしてその影響をデコード時に増幅する学習不要のデコード戦略であり、デコード過程への推論時介入ではあるが、目的は意図追従の精度向上で、推論効率やシステム機構への貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:28:17+00:00",
+      "last_checked_at": "2026-11-26T22:28:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "IntentCoding: Amplifying User Intent in Code Generation"
+    },
+    "DOI:10.1109/jsac.2025.3639378": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jsac.2025.3639378",
+      "identity_tokens": [
+        "DOI:10.1109/jsac.2025.3639378"
+      ],
+      "reason": "大規模マルチモーダルモデルのエンコーダ出力をWyner-Ziv符号化で圧縮し分散配置時の通信量と高速推論版構成を論じるが、主眼は情報理論的な符号化と意味的類似度の保存であり推論システムへの貢献は間接的なため。",
+      "first_checked_at": "2026-11-26T22:28:18+00:00",
+      "last_checked_at": "2026-11-26T22:28:18+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Wyner-Ziv Coding for Compression of Large Multimodal Models"
+    },
+    "DOI:10.18653/2026.docinsights-1.21": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/2026.docinsights-1.21",
+      "identity_tokens": [
+        "DOI:10.18653/2026.docinsights-1.21"
+      ],
+      "reason": "文書QAで潜在コンテキスト圧縮と予算一致の生トークン切捨てを比較し、最小構成の圧縮器が品質と効率で優れることを示すが、対象はQA精度の比較検証であり推論システム機構そのものの提案ではないため。",
+      "first_checked_at": "2026-11-26T22:28:18+00:00",
+      "last_checked_at": "2026-11-26T22:28:18+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What Should Occupy the Context Budget? Latent Compression versus Budget-Matched Truncation in Document QA"
+    },
+    "SemanticScholar:943044a8dea5b67b66778bb30f015f15c8bde3ea": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:943044a8dea5b67b66778bb30f015f15c8bde3ea",
+      "identity_tokens": [
+        "SemanticScholar:943044a8dea5b67b66778bb30f015f15c8bde3ea"
+      ],
+      "reason": "電力制約下でコロケーションされたGPUワークロードの最適な空間分割を軽量予測で決めるPEACEを提案するが、対象はDLサービングを含む汎用GPUワークロードでありLLM推論特化の機構ではないため。",
+      "first_checked_at": "2026-11-26T22:28:18+00:00",
+      "last_checked_at": "2026-11-26T22:28:18+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PEACE: Power and Performance Aware Colocation for Efficient GPU Spatial Partitioning"
+    },
+    "SemanticScholar:ac2fc1a909494a7c051a703bd508ddff6cd9222b": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:ac2fc1a909494a7c051a703bd508ddff6cd9222b",
+      "identity_tokens": [
+        "SemanticScholar:ac2fc1a909494a7c051a703bd508ddff6cd9222b"
+      ],
+      "reason": "大規模LLMリストワイズ再ランカーをT5系エンコーダ・デコーダへ蒸留したLiT5で効率的な再ランキングを実現するが、応用先は情報検索の再ランキングであり推論システム一般への貢献は限定的なため。",
+      "first_checked_at": "2026-11-26T22:28:18+00:00",
+      "last_checked_at": "2026-11-26T22:28:18+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rerankers Into Encoder-Decoder Models"
+    },
+    "arXiv:2310.14837": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.14837",
+      "identity_tokens": [
+        "arXiv:2310.14837"
+      ],
+      "reason": "注意ベースのオートエンコーダで系列長を直接操作・削減する手法を提案し系列処理の効率化に関わるが、評価は汎用機械学習タスクの性能調整であり推論システムへの直接貢献は要旨からは薄いため。",
+      "first_checked_at": "2026-11-26T22:28:18+00:00",
+      "last_checked_at": "2026-11-26T22:28:18+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Harnessing Attention Mechanisms: Efficient Sequence Reduction using Attention-based Autoencoders"
+    },
+    "arXiv:2510.24801": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.24801",
+      "identity_tokens": [
+        "arXiv:2510.24801"
+      ],
+      "reason": "異種モデル群のペアワイズランキング合意によるスウォーム推論プロトコルで分散推論層のスケールを狙うが、主眼は応答品質の合意形成でありサービング効率や実行機構の改善ではないため。",
+      "first_checked_at": "2026-11-26T22:28:18+00:00",
+      "last_checked_at": "2026-11-26T22:28:18+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fortytwo: Swarm Inference with Peer-Ranked Consensus"
+    },
+    "arXiv:2307.14008": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.14008",
+      "identity_tokens": [
+        "arXiv:2307.14008"
+      ],
+      "reason": "適応周波数フィルタを効率的なグローバルトークンミキサーとして用いビジョンTransformerのモバイル展開の計算コスト削減を狙うが、対象は画像モデルアーキテクチャでありLLM推論との接続は間接的なため。",
+      "first_checked_at": "2026-11-26T22:28:18+00:00",
+      "last_checked_at": "2026-11-26T22:28:18+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Frequency Filters As Efficient Global Token Mixers"
     }
   }
 }

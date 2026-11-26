@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed92a38a9126ffa9-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2205.06537",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2205.06537",
+    "identity_tokens": [
+      "arXiv:2205.06537"
+    ],
+    "reason": "GitHub Copilot利用者の生産性認識と提案受諾率などの測定指標の関係を調べた事例研究であり、コード補完の利用実態調査であって推論システムへの技術的貢献はないため。",
+    "first_checked_at": "2026-11-26T22:28:18+00:00",
+    "last_checked_at": "2026-11-26T22:28:18+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Productivity assessment of neural code completion"
+  },
+  "processed_at": "2026-11-26T22:28:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed92a38a9126",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

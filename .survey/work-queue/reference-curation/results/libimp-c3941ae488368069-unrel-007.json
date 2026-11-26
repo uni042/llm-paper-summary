@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3941ae488368069-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:b71400329f26de5a0f163941ae0f1f51c202dd0e",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:b71400329f26de5a0f163941ae0f1f51c202dd0e",
+    "identity_tokens": [
+      "SemanticScholar:b71400329f26de5a0f163941ae0f1f51c202dd0e"
+    ],
+    "reason": "臨床ケースレポートの多言語要約のためにQwen2.5の72Bから0.5Bへ蒸留する教師生徒枠組みの応用研究であり、医療文書要約が主目的で推論システムへの貢献は確認できない。",
+    "first_checked_at": "2026-11-26T22:28:17+00:00",
+    "last_checked_at": "2026-11-26T22:28:17+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Using Decoder-Based Distillation for Enhancing Multilingual Clinical Case Report Summarization"
+  },
+  "processed_at": "2026-11-26T22:28:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3941ae48836",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3941ae488368069-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.11939",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.11939",
+    "identity_tokens": [
+      "arXiv:2511.11939"
+    ],
+    "reason": "集団演算を含むGPUプログラムのモジュール性を型付きパースペクティブで回復するGPU言語Prismの提案で、GPUカーネル開発基盤としては関連するが推論ワークロード特化の設計や評価は要旨に確認できない。",
+    "first_checked_at": "2026-11-26T22:28:17+00:00",
+    "last_checked_at": "2026-11-26T22:28:17+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Modular GPU Programming with Typed Perspectives"
+  },
+  "processed_at": "2026-11-26T22:28:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3941ae48836",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
