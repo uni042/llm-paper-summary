@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-413131bdefbd1592-unrel-019",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.10184",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.10184",
+    "identity_tokens": [
+      "arXiv:2606.10184"
+    ],
+    "reason": "連続潜在推論モデルへGRPOを適用するためのドロップアウトによる確率性導入Dropout-GRPOであり、潜在推論モデルの強化学習手法が中心で推論時の実行機構やサービングの提案ではないため対象外である。",
+    "first_checked_at": "2026-11-26T22:18:16+00:00",
+    "last_checked_at": "2026-11-26T22:18:16+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Dropout-GRPO: Variational Stochasticity for Continuous Latent Reasoning"
+  },
+  "processed_at": "2026-11-26T22:18:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-413131bdefbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

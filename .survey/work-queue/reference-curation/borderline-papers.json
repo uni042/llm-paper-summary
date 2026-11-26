@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T22:13:21+00:00",
-  "record_count": 9917,
+  "updated_at": "2026-11-26T22:18:17+00:00",
+  "record_count": 9936,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -151684,6 +151684,292 @@
       ],
       "borderline_recheck_count": 0,
       "title": "CALR: Continuous Anchored Latent Reasoning via Render-of-Thought Compression"
+    },
+    "DOI:10.1007/s11432-024-4101-6": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11432-024-4101-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-024-4101-6"
+      ],
+      "reason": "自然言語理解向けにエネルギー効率の高いスパイキングTransformerであるSpikingMiniLMを提案し効率的モデル構造には関わるが、対象はNLUモデル自体でありLLM推論システムやサービング機構への直接の貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SpikingMiniLM: energy-efficient spiking transformer for natural language understanding"
+    },
+    "arXiv:2607.07380": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.07380",
+      "identity_tokens": [
+        "arXiv:2607.07380"
+      ],
+      "reason": "LLM内部表現から不確実性信号を得てRAGの検索タイミングを適応制御するQAフレームワークで、推論時の計算効率に触れるが主目的は質問応答の事実性向上であり推論システム自体への貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Interpretable Uncertainty for Adaptive Retrieval and Reasoning in Question Answering"
+    },
+    "arXiv:2110.06696": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.06696",
+      "identity_tokens": [
+        "arXiv:2110.06696"
+      ],
+      "reason": "軽量でデプロイに適した事前学習モデル群Mengziの技術報告で、計算量削減と迅速な展開を志向する点は推論効率に関連するが、貢献の中心はモデル事前学習であり推論システム機構は示されていない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mengzi: Towards Lightweight yet Ingenious Pre-trained Models for Chinese"
+    },
+    "arXiv:2510.08431": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.08431",
+      "identity_tokens": [
+        "arXiv:2510.08431"
+      ],
+      "reason": "連続時間一貫性モデルの蒸留を大規模画像・動画拡散へ拡張しJVP計算の並列化基盤にも取り組むが、中心は拡散モデルの蒸留学習でありLLM推論システムへの直接の貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Large Scale Diffusion Distillation via Score-Regularized Continuous-Time Consistency"
+    },
+    "DOI:10.1109/icassp55912.2026.11462491": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11462491",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11462491"
+      ],
+      "reason": "マルチエージェント系の通信コストをトークン経済を報酬に組み込んだGSPO学習で削減するAgent-GSPOだが、貢献はエージェント方策の学習手法であり推論エンジンやサービング機構そのものではないため関連は間接的である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agent-GSPO: Communication-Efficient Multi-Agent Systems Via Group Sequence Policy Optimization"
+    },
+    "DOI:10.48550/arxiv.2602.01695": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2602.01695",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.01695",
+        "arXiv:2602.01695"
+      ],
+      "reason": "潜在推論のトークン生成コスト削減を保ちつつ疎トランスコーダを潜在遷移へ組み込むLSTRを提案するが、貢献は潜在推論の解釈可能性とモデル内部機構であり推論システムの実行基盤としての具体化は限定的であるため関連は薄い。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Dense States: Elevating Sparse Transcoders to Active Operators for Latent Reasoning"
+    },
+    "arXiv:2603.20821": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20821",
+      "identity_tokens": [
+        "arXiv:2603.20821"
+      ],
+      "reason": "複合AIワークフローの構成を負荷に応じて切り替え遅延・コスト・SLO遵守を両立させるCompassは本番配信の適応制御として推論サービングに隣接するが、対象はワークフロー構成管理でありLLM推論エンジン自体の機構ではないため関連は周辺的である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compass: Optimizing Compound AI Workflows for Dynamic Adaptation"
+    },
+    "arXiv:2604.02319": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.02319",
+      "identity_tokens": [
+        "arXiv:2604.02319"
+      ],
+      "reason": "多様な回答生成に最適なLLMをクエリごとに選ぶルータを学習する研究でモデルルーティング自体は推論配信に関わるが、最適化目的はコストや遅延ではなく回答の多様性であり推論システムとしての貢献は限定的であるため関連は薄い。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "No Single Best Model for Diversity: Learning a Router for Sample Diversity"
+    },
+    "arXiv:2605.13429": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.13429",
+      "identity_tokens": [
+        "arXiv:2605.13429"
+      ],
+      "reason": "非効率なトークン化がLLMの学習と推論を遅くするとし語彙適応のためのトークン整列TokAlign++を提案するが、貢献の中心は語彙移転と蒸留の前提整備であり推論実行機構そのものの高速化手法ではないため関連は薄い。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TokAlign++: Advancing Vocabulary Adaptation via Better Token Alignment"
+    },
+    "arXiv:2606.04883": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.04883",
+      "identity_tokens": [
+        "arXiv:2606.04883"
+      ],
+      "reason": "Lean定理証明ワークフローで失敗軌跡から成功見込みとコストを推定し試行継続を判断する行動ルーティングにより計算コストを28.9%削減するが、対象は証明探索の資源配分でありLLM推論エンジンの機構ではないため関連は応用寄りである。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing the Cost-Quality Tradeoff of Agentic Theorem Provers in Lean"
+    },
+    "arXiv:2505.18581": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.18581",
+      "identity_tokens": [
+        "arXiv:2505.18581"
+      ],
+      "reason": "多エージェント討論を検索と生成の両段階に組み込む訓練不要のRAGフレームワークDRAGで、推論時パイプラインの改良ではあるが主目的は事実性向上であり推論システムの効率化機構は示されていない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Removal of Hallucination on Hallucination: Debate-Augmented RAG"
+    },
+    "arXiv:2211.09961": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2211.09961",
+      "identity_tokens": [
+        "arXiv:2211.09961"
+      ],
+      "reason": "推論予算を増やすほど性能が上がる平衡モデルとtest-time computationの関係を論じ、推論時計算のスケーリングに関わるが、対象はモデルアーキテクチャ理論でありサービング等のシステム機構は示されていない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Path Independent Equilibrium Models Can Better Exploit Test-Time Computation"
+    },
+    "arXiv:2110.05249": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.05249",
+      "identity_tokens": [
+        "arXiv:2110.05249"
+      ],
+      "reason": "音声認識向け非自己回帰モデルの比較研究で、NARによる推論速度向上と精度低下のトレードオフを実測比較する点はデコード効率に関連するが、対象はASR応用であり新たな推論システム機構の提案ではない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Comparative Study on Non-Autoregressive Modelings for Speech-to-Text Generation"
+    },
+    "arXiv:2503.12759": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.12759",
+      "identity_tokens": [
+        "arXiv:2503.12759"
+      ],
+      "reason": "RAGの生成モデルを強化学習とカリキュラム学習で訓練し検索文脈の引用まで担わせるRAG-RLで、検索生成パイプラインには関わるが中心は生成モデルの訓練であり推論システムへの貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RAG-RL: Advancing Retrieval-Augmented Generation via RL and Curriculum Learning"
+    },
+    "arXiv:2407.09394": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09394",
+      "identity_tokens": [
+        "arXiv:2407.09394"
+      ],
+      "reason": "ユーザー中心エージェントで検索と生成を個人化するPersonaRAGの提案で、RAGの推論時パイプライン改良ではあるが主目的は回答のパーソナライズであり推論システムの効率化機構は示されていない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PersonaRAG: Enhancing Retrieval-Augmented Generation Systems with User-Centric Agents"
+    },
+    "arXiv:2203.09486": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.09486",
+      "identity_tokens": [
+        "arXiv:2203.09486"
+      ],
+      "reason": "テキスト編集向け非自己回帰系列変換モデルを模倣学習で訓練し訓練時と推論時の不一致を緩和する研究で、NARデコードには関連するが貢献の中心は編集タスク向け訓練手法であり推論システム機構ではない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Imitation Learning Curriculum for Text Editing with Non-Autoregressive Models"
+    },
+    "arXiv:2504.18070": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.18070",
+      "identity_tokens": [
+        "arXiv:2504.18070"
+      ],
+      "reason": "命題パス上のビームサーチで検索を誘導するPropRAGの提案で、RAGの検索段階を推論時に改良するが主目的は多ホップ推論の忠実度であり推論システムの効率化への貢献は限定的である。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PropRAG: Guiding Retrieval with Beam Search over Proposition Paths"
+    },
+    "arXiv:2410.18141": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.18141",
+      "identity_tokens": [
+        "arXiv:2410.18141"
+      ],
+      "reason": "検索の要否判断・クエリ書き換え・回答生成を担うポリシーネットワークと検索器を共同学習するSmartRAGで、推論時パイプラインの最適化には関わるが中心はRAGのタスク性能でありシステム機構の貢献は薄い。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SmartRAG: Jointly Learn RAG-Related Tasks From the Environment Feedback"
+    },
+    "arXiv:2407.09893": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09893",
+      "identity_tokens": [
+        "arXiv:2407.09893"
+      ],
+      "reason": "外部知識を用いる4つの専門エージェントで知識集約タスクの事実一貫性を高めるSMARTフレームワークで、マルチエージェント推論構成には関わるが主目的は応答品質であり推論システムの効率化機構は示されていない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Synergistic Multi-Agent Framework with Trajectory Learning for Knowledge-Intensive Tasks"
     }
   }
 }

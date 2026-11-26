@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-413131bdefbd1592-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icassp55912.2026.11462491",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icassp55912.2026.11462491",
+    "identity_tokens": [
+      "DOI:10.1109/icassp55912.2026.11462491"
+    ],
+    "reason": "マルチエージェント系の通信コストをトークン経済を報酬に組み込んだGSPO学習で削減するAgent-GSPOだが、貢献はエージェント方策の学習手法であり推論エンジンやサービング機構そのものではないため関連は間接的である。",
+    "first_checked_at": "2026-11-26T22:18:16+00:00",
+    "last_checked_at": "2026-11-26T22:18:16+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Agent-GSPO: Communication-Efficient Multi-Agent Systems Via Group Sequence Policy Optimization"
+  },
+  "processed_at": "2026-11-26T22:18:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-413131bdefbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c22493754f5526b6-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.18342",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.18342",
+    "identity_tokens": [
+      "arXiv:2507.18342"
+    ],
+    "reason": "一人称・三人称視点間の動画理解を測るMLLMベンチマークEgoExoBenchの提案であり、推論システムへの技術的貢献は要旨に確認できない。",
+    "first_checked_at": "2026-11-26T22:18:17+00:00",
+    "last_checked_at": "2026-11-26T22:18:17+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "EgoExoBench: A Benchmark for First- and Third-person View Video Understanding in MLLMs"
+  },
+  "processed_at": "2026-11-26T22:18:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c22493754f55",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3e7bea22761d4b2f-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2110.06696",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2110.06696",
+    "identity_tokens": [
+      "arXiv:2110.06696"
+    ],
+    "reason": "軽量でデプロイに適した事前学習モデル群Mengziの技術報告で、計算量削減と迅速な展開を志向する点は推論効率に関連するが、貢献の中心はモデル事前学習であり推論システム機構は示されていない。",
+    "first_checked_at": "2026-11-26T22:18:16+00:00",
+    "last_checked_at": "2026-11-26T22:18:16+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mengzi: Towards Lightweight yet Ingenious Pre-trained Models for Chinese"
+  },
+  "processed_at": "2026-11-26T22:18:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3e7bea22761d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

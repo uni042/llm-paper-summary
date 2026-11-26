@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-413131bdefbd1592-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.02319",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.02319",
+    "identity_tokens": [
+      "arXiv:2604.02319"
+    ],
+    "reason": "多様な回答生成に最適なLLMをクエリごとに選ぶルータを学習する研究でモデルルーティング自体は推論配信に関わるが、最適化目的はコストや遅延ではなく回答の多様性であり推論システムとしての貢献は限定的であるため関連は薄い。",
+    "first_checked_at": "2026-11-26T22:18:16+00:00",
+    "last_checked_at": "2026-11-26T22:18:16+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "No Single Best Model for Diversity: Learning a Router for Sample Diversity"
+  },
+  "processed_at": "2026-11-26T22:18:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-413131bdefbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-26T22:13:21+00:00",
-  "record_count": 17762,
+  "updated_at": "2026-11-26T22:18:17+00:00",
+  "record_count": 17804,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -253876,6 +253876,594 @@
         "worklist"
       ],
       "title": "Don't Deceive Me: Mitigating Gaslighting through Attention Reallocation in LMMs"
+    },
+    "arXiv:2606.23676": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23676",
+      "identity_tokens": [
+        "arXiv:2606.23676"
+      ],
+      "reason": "AdamWのheavy-tailed noise下での収束理論を扱う最適化理論論文であり、推論・サービング・デコード等の推論システムへの技術的貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?"
+    },
+    "arXiv:2607.03666": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03666",
+      "identity_tokens": [
+        "arXiv:2607.03666"
+      ],
+      "reason": "テキスト指示による相対的な感情音声変換（EVC）の課題とデータセット提案であり、LLM推論システムの高速化や効率化への直接の貢献は要旨にない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "TRACE-EVC: Text-Guided Relative Affective Control for Zero-Shot Emotional Voice Conversion"
+    },
+    "arXiv:2607.14660": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14660",
+      "identity_tokens": [
+        "arXiv:2607.14660"
+      ],
+      "reason": "視覚障害者支援場面でMLLMを評価する動画ベンチマークVIABenchの提案であり、推論システムの機構や効率化に関する技術的貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "VIABench: A Comprehensive Video Benchmark Collected from Blind Individuals for Visual Impairment Assistance"
+    },
+    "arXiv:2607.27788": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27788",
+      "identity_tokens": [
+        "arXiv:2607.27788"
+      ],
+      "reason": "赤外スペクトルから分子構造を再構成する際の候補較正SpecCalを扱う化学応用論文であり、LLM推論システムへの直接の技術的貢献は要旨にない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "SpecCal: Ambiguity-Aware Candidate Calibration for Infrared Spectrum-Based Molecular Structure Reconstruction"
+    },
+    "arXiv:2608.09745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09745",
+      "identity_tokens": [
+        "arXiv:2608.09745"
+      ],
+      "reason": "on-policy自己蒸留（OPSD）の教師ターゲット構築を改良する学習手法SR-OPSDの提案であり、対象は訓練時の監督信号生成で推論システムへの貢献は確認できない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "SR-OPSD: Self-Referenced On-Policy Self-Distillation"
+    },
+    "arXiv:2609.03423": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03423",
+      "identity_tokens": [
+        "arXiv:2609.03423"
+      ],
+      "reason": "全二重音声エージェントの暗黙的指示追従を評価するベンチマークDuplexSpeechBench-IFEvalの提案であり、推論・サービング機構への技術的貢献は要旨にない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "DuplexSpeechBench-IFEval: Evaluating Implicit Instruction Following in Full-Duplex Voice Agents"
+    },
+    "arXiv:2609.11355": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11355",
+      "identity_tokens": [
+        "arXiv:2609.11355"
+      ],
+      "reason": "多言語会話音声MCQチャレンジ向けにASR区間証拠を用いる応用システムSEARの報告であり、LLM推論システム一般への技術的貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "SEAR: Segment-Evidence-Aware Routing for Weak-to-Strong Multilingual Speech MCQ"
+    },
+    "arXiv:2610.12458": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.12458",
+      "identity_tokens": [
+        "arXiv:2610.12458"
+      ],
+      "reason": "音声・映像キャプション評価を診断的に行うベンチマークOmniCapBenchの提案であり、推論システムの高速化・効率化に関する貢献は要旨にない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning"
+    },
+    "arXiv:2610.26828": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.26828",
+      "identity_tokens": [
+        "arXiv:2610.26828"
+      ],
+      "reason": "コンピュータ利用エージェント訓練用の実行可能環境とタスクを合成するパイプラインWildAWMの提案であり、推論システムへの直接の貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Agent World Model in the Wild: Computer-Use Agent Environment Synthesis"
+    },
+    "arXiv:2402.01391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01391",
+      "identity_tokens": [
+        "arXiv:2402.01391"
+      ],
+      "reason": "コンパイラフィードバックを用いた強化学習でコード生成品質を高めるStepCoderの提案であり、対象は生成モデルの訓練手法で推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "StepCoder: Improve Code Generation with Reinforcement Learning from Compiler Feedback"
+    },
+    "arXiv:2409.09030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.09030",
+      "identity_tokens": [
+        "arXiv:2409.09030"
+      ],
+      "reason": "ソフトウェア工学におけるLLMエージェント利用を整理したサーベイ論文であり、推論・サービング・デコード等の推論システム技術への直接の貢献は要旨にない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Agents in software engineering: survey, landscape, and vision"
+    },
+    "arXiv:2402.15509": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.15509",
+      "identity_tokens": [
+        "arXiv:2402.15509"
+      ],
+      "reason": "テキスト列に沿って長い人体動作を継ぎ目なく生成する拡散モデルFlowMDMの提案であり、LLM推論システムへの技術的貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Seamless Human Motion Composition with Blended Positional Encodings"
+    },
+    "DOI:10.1007/s10506-021-09305-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10506-021-09305-4",
+      "identity_tokens": [
+        "DOI:10.1007/s10506-021-09305-4"
+      ],
+      "reason": "法的判決文の抽象型要約にテキスト含意を活用するNLP応用論文であり、推論システムの高速化やサービング機構への技術的貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Improving abstractive summarization of legal rulings through textual entailment"
+    },
+    "arXiv:2506.23044": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.23044",
+      "identity_tokens": [
+        "arXiv:2506.23044"
+      ],
+      "reason": "マルチモーダル理解と画像生成・編集を統合した3BパラメータモデルOvis-U1の技術報告であり、推論システムやデコード効率化への技術的貢献は要旨にない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Ovis-U1 Technical Report"
+    },
+    "arXiv:2505.19017": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19017",
+      "identity_tokens": [
+        "arXiv:2505.19017"
+      ],
+      "reason": "ワールドモデルを実世界ロボット方策の評価器として用いるWorldEvalの提案であり、対象はロボット評価基盤でLLM推論システムへの貢献は確認できない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "WorldEval: World Model as Real-World Robot Policies Evaluator"
+    },
+    "arXiv:2508.19958": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.19958",
+      "identity_tokens": [
+        "arXiv:2508.19958"
+      ],
+      "reason": "長期間ロボット操作向けのVision-Language-ActionモデルLong-VLAの提案であり、位相認識マスキング等の工夫は操作タスク向けで推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Long-VLA: Unleashing Long-Horizon Capability of Vision Language Action Model for Robot Manipulation"
+    },
+    "arXiv:2011.05268": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.05268",
+      "identity_tokens": [
+        "arXiv:2011.05268"
+      ],
+      "reason": "説明文を潜在変数として扱う解釈可能な自然言語理解フレームワークの提案であり、推論システムの効率やサービング機構に関する貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Towards Interpretable Natural Language Understanding with Explanations as Latent Variables"
+    },
+    "arXiv:2608.19669": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19669",
+      "identity_tokens": [
+        "arXiv:2608.19669"
+      ],
+      "reason": "潜在視覚ターゲット表現をSFTとRLの二段階で最適化するマルチモーダル潜在推論の学習研究であり、視覚推論の表現学習が主題で推論システムの実行機構への具体的な貢献は要旨にないため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Scaffolding Minds: Optimizing Latent Visual Target Representations for Multimodal Reasoning"
+    },
+    "DOI:10.1007/s11554-026-01872-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11554-026-01872-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11554-026-01872-6"
+      ],
+      "reason": "紙容器の微小表面欠陥を高速生産ラインで検出するIM-YOLOの産業検査応用であり、物体検出モデルの検出率改善が目的でLLM推論システムとは分野が異なるため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "IM-YOLO: lowering missed detections in real time for tiny defect inspection on paper containers"
+    },
+    "DOI:10.3390/bdcc10070231": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/bdcc10070231",
+      "identity_tokens": [
+        "DOI:10.3390/bdcc10070231"
+      ],
+      "reason": "長い動画の時間的行動検出に空間・時間分離Mambaアダプタを挿入するDST-Mambaであり、動画理解タスクの検出精度と効率が主題でLLM推論システムとは無関係であるため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "DST-Mamba: Spatial–Temporal Adapter with Boundary-Aware Mamba for Video Temporal Action Detection"
+    },
+    "arXiv:2512.13834": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.13834",
+      "identity_tokens": [
+        "arXiv:2512.13834"
+      ],
+      "reason": "YOLO系リアルタイム物体検出器VajraV1のアーキテクチャ改良を報告する技術報告であり、視覚物体検出モデルの精度と速度が主題でLLM推論システムの対象範囲ではないため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "VajraV1 - The most accurate Real Time Object Detector of the YOLO family"
+    },
+    "arXiv:2601.22889": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22889",
+      "identity_tokens": [
+        "arXiv:2601.22889"
+      ],
+      "reason": "離散テキストとトークン化音声を単一マスク拡散で統合する音声テキスト拡散モデルDiffuSpeechであり、音声生成モデルの学習・生成パラダイムが主題でLLM推論の実行機構の提案ではないため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "DiffuSpeech: Silent Thought, Spoken Answer via Unified Speech-Text Diffusion"
+    },
+    "arXiv:2602.09616": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.09616",
+      "identity_tokens": [
+        "arXiv:2602.09616"
+      ],
+      "reason": "RAGのニューラル検索器が関連実体を取りこぼす盲点を不確実性スコアで検出・是正する研究であり、検索品質の分析が中心でLLM推論・生成システムの実行機構への貢献は要旨に確認できないため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "With Argus Eyes: Assessing Retrieval Gaps via Uncertainty Scoring to Detect and Remedy Retrieval Blind Spots"
+    },
+    "arXiv:2602.23730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.23730",
+      "identity_tokens": [
+        "arXiv:2602.23730"
+      ],
+      "reason": "東南アジア向け10Bオムニ知覚モデルMERaLiON2-Omniの学習パイプラインと知覚・推論トレードオフの診断報告であり、モデル開発報告であって推論システムの実行機構への貢献はないため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Unlocking Cognitive Capabilities and Analyzing the Perception-Logic Trade-off"
+    },
+    "arXiv:2603.15916": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15916",
+      "identity_tokens": [
+        "arXiv:2603.15916"
+      ],
+      "reason": "LLMエージェントが自律設計した10,469件のML実験を分析しアーキテクチャ選択が分散の94%を説明すると示す研究であり、実験分析が主題で対象タスクもダッシュカム衝突検出であって推論システムの技術ではないため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Auto Researching, not hyperparameter tuning: Convergence Analysis of 10,000 Experiments"
+    },
+    "arXiv:2604.15729": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15729",
+      "identity_tokens": [
+        "arXiv:2604.15729"
+      ],
+      "reason": "計算病理学の全スライド画像解析にMamba系MILを使うMambaBackであり、がん診断支援という医療画像応用が主題でLLM推論システムとは分野が異なるため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "MambaBack: Bridging Local Features and Global Contexts in Whole Slide Image Analysis"
+    },
+    "arXiv:2604.17950": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17950",
+      "identity_tokens": [
+        "arXiv:2604.17950"
+      ],
+      "reason": "エージェント能力をタスク文脈ごとにベータ事後分布で較正し委任先を決めるCADMAS-CTXであり、マルチエージェントの委任判断が主題で推論・サービングの実行機構への貢献はないため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "CADMAS-CTX: Contextual Capability Calibration for Multi-Agent Delegation"
+    },
+    "arXiv:2605.23281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23281",
+      "identity_tokens": [
+        "arXiv:2605.23281"
+      ],
+      "reason": "カメラ種別ごとに単眼深度推定の専門家モデルをサンプル単位で選ぶDepthAgentであり、深度推定という視覚タスクの精度改善が目的でLLM推論システムとは無関係であるため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "DepthAgent: Towards Better Universal Depth Estimation via Sample-wise Expert Selection"
+    },
+    "arXiv:2605.27564": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27564",
+      "identity_tokens": [
+        "arXiv:2605.27564"
+      ],
+      "reason": "事実知識における生成能力と検証能力の乖離が学習の各段階でどう推移するかを追跡する分析研究であり、モデル能力の動態分析であって推論システムの実行機構への技術的貢献はないため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "The Future of Facts: Tracing the Factual Generation-Verification Gap"
+    },
+    "arXiv:2606.10184": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10184",
+      "identity_tokens": [
+        "arXiv:2606.10184"
+      ],
+      "reason": "連続潜在推論モデルへGRPOを適用するためのドロップアウトによる確率性導入Dropout-GRPOであり、潜在推論モデルの強化学習手法が中心で推論時の実行機構やサービングの提案ではないため対象外である。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Dropout-GRPO: Variational Stochasticity for Continuous Latent Reasoning"
+    },
+    "DOI:10.3390/en15093320": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/en15093320",
+      "identity_tokens": [
+        "DOI:10.3390/en15093320"
+      ],
+      "reason": "タイトル自体が太陽光発電量予測手法のレビューであることを明示しており、対象はエネルギー分野の予測応用でLLM推論システムへの技術的貢献はタイトルから明確にない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Completed Review of Various Solar Power Forecasting Techniques Considering Different Viewpoints"
+    },
+    "DOI:10.1101/2023.01.31.526427": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2023.01.31.526427",
+      "identity_tokens": [
+        "DOI:10.1101/2023.01.31.526427"
+      ],
+      "reason": "タイトル自体がpre-mRNA配列からのRNAスプライシング予測というバイオインフォマティクス応用を明示しており、LLM推論システムへの技術的貢献はタイトルから明確にない。",
+      "first_checked_at": "2026-11-26T22:18:16+00:00",
+      "last_checked_at": "2026-11-26T22:18:16+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Self-supervised learning on millions of pre-mRNA sequences improves sequence-based RNA splicing prediction"
+    },
+    "arXiv:2407.02797": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.02797",
+      "identity_tokens": [
+        "arXiv:2407.02797"
+      ],
+      "reason": "自動運転場面の生成モデルによるスケーラブルなシミュレータ構築を扱う論文であり、LLM推論システムへの直接の技術的貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Solving Motion Planning Tasks with a Scalable Generative Model"
+    },
+    "arXiv:2406.02128": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.02128",
+      "identity_tokens": [
+        "arXiv:2406.02128"
+      ],
+      "reason": "Chain-of-ThoughtがTransformer内部に生じる機構をiteration headとして分析する解釈可能性研究であり、推論システムの高速化や実装への技術的貢献は要旨にない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Iteration Head: A Mechanistic Study of Chain-of-Thought"
+    },
+    "arXiv:1812.06834": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1812.06834",
+      "identity_tokens": [
+        "arXiv:1812.06834"
+      ],
+      "reason": "自然言語向け深層潜在変数モデルのチュートリアルであり、事後推論の困難さは論じるもののLLM推論システムやサービング技術への直接の貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "A Tutorial on Deep Latent Variable Models of Natural Language"
+    },
+    "arXiv:2504.04736": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04736",
+      "identity_tokens": [
+        "arXiv:2504.04736"
+      ],
+      "reason": "多段階推論とツール利用向けの合成データ生成と段階的強化学習SWiRLの提案であり、対象はLLMの訓練手法で推論システムへの技術的貢献は要旨にない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use"
+    },
+    "arXiv:2510.11693": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.11693",
+      "identity_tokens": [
+        "arXiv:2510.11693"
+      ],
+      "reason": "言語中心のオムニモーダル表現学習のスケーリングと異方性分析を扱う表現学習論文であり、推論システムの機構や効率化への直接の貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Scaling Language-Centric Omnimodal Representation Learning"
+    },
+    "arXiv:2507.18342": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18342",
+      "identity_tokens": [
+        "arXiv:2507.18342"
+      ],
+      "reason": "一人称・三人称視点間の動画理解を測るMLLMベンチマークEgoExoBenchの提案であり、推論システムへの技術的貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "EgoExoBench: A Benchmark for First- and Third-person View Video Understanding in MLLMs"
+    },
+    "arXiv:2308.13879": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.13879",
+      "identity_tokens": [
+        "arXiv:2308.13879"
+      ],
+      "reason": "会話ジェスチャ生成チャレンジGENEA向けの拡散モデルDiffuseStyleGesture+の報告であり、LLM推論システムへの技術的貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "The DiffuseStyleGesture+ entry to the GENEA Challenge 2023"
+    },
+    "arXiv:2505.02064": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.02064",
+      "identity_tokens": [
+        "arXiv:2505.02064"
+      ],
+      "reason": "リアルタイム動画ストリームでのMLLMの知覚・理解・推論を測るRTV-Benchベンチマークの提案であり、推論システム自体の高速化や効率化の貢献は要旨にない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "RTV-Bench: Benchmarking MLLM Continuous Perception, Understanding and Reasoning through Real-Time Video"
+    },
+    "arXiv:2307.08220": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.08220",
+      "identity_tokens": [
+        "arXiv:2307.08220"
+      ],
+      "reason": "コード生成結果の脆弱性等の品質問題に対し再学習なしで安全なコードを推薦する軽量フレームワークFrancの提案であり、推論システムへの技術的貢献は要旨にない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Franc: A Lightweight Framework for High-Quality Code Generation"
+    },
+    "arXiv:2507.02097": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.02097",
+      "identity_tokens": [
+        "arXiv:2507.02097"
+      ],
+      "reason": "マルチエージェント推薦システムの定義と展望を論じるパースペクティブ論文であり、LLM推論システムの機構や効率化への直接の貢献は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T22:18:17+00:00",
+      "last_checked_at": "2026-11-26T22:18:17+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "The Future is Agentic: Definitions, Perspectives, and Open Challenges of Multi-Agent Recommender Systems"
     }
   }
 }
