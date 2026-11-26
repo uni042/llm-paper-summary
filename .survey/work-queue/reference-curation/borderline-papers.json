@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T00:55:56+00:00",
-  "record_count": 9443,
+  "updated_at": "2026-11-26T00:59:28+00:00",
+  "record_count": 9457,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -144561,6 +144561,216 @@
       ],
       "borderline_recheck_count": 0,
       "title": "FlexCache: Flexible Approximate Cache System for Video Diffusion"
+    },
+    "DOI:10.1109/indicon63790.2024.10958400": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/indicon63790.2024.10958400",
+      "identity_tokens": [
+        "DOI:10.1109/indicon63790.2024.10958400"
+      ],
+      "reason": "容量律速な大規模モデル向けにDRAM対SRAMとニアメモリ計算のトレードオフを論じるハードウェア分析だが、対象は主に学習時のメモリ容量であり具体的な推論システムの実装・評価はない。",
+      "first_checked_at": "2026-11-26T00:59:25+00:00",
+      "last_checked_at": "2026-11-26T00:59:25+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Tackling Capacity-Bound Models Using DRAMs Over SRAMs"
+    },
+    "DOI:10.1111/exsy.13732": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1111/exsy.13732",
+      "identity_tokens": [
+        "DOI:10.1111/exsy.13732"
+      ],
+      "reason": "自己注意を置き換える軽量MLP型テキスト表現モデルで線形計算量と小モデルサイズをうたうが、汎用NLP表現学習の効率化でありLLM推論・サービングへの具体的適用がabstract上薄いため境界とする。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TS‐Mixer: A lightweight text representation model based on context awareness"
+    },
+    "arXiv:2102.02705": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2102.02705",
+      "identity_tokens": [
+        "arXiv:2102.02705"
+      ],
+      "reason": "指数部のエントロピー符号化で埋め込みモデルのメモリ容量と帯域消費を減らす浮動小数点形式EFloatは圧縮技術として関連するが、対象はベクトル埋め込みモデルの保存でありLLM推論実行への適用がabstract上限定的なため境界とする。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EFloat: Entropy-coded Floating Point Format for Compressing Vector Embedding Models"
+    },
+    "arXiv:2310.19731": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.19731",
+      "identity_tokens": [
+        "arXiv:2310.19731"
+      ],
+      "reason": "並列学習と再帰推論の二重定式化を持つVision Retentionバックボーンは高速推論を志向するが、対象は画像認識バックボーンでありLLM推論システムへの直接貢献とは言えないため境界とする。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ViR: Towards Efficient Vision Retention Backbones"
+    },
+    "arXiv:1910.10832": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1910.10832",
+      "identity_tokens": [
+        "arXiv:1910.10832"
+      ],
+      "reason": "BERTのCLS埋め込みに高い冗長性があり精度低下を抑えて圧縮できることを示すが、提示されるのは表現の分析結果であり、推論時の圧縮機構やサービングへの適用が具体化されていないため境界とする。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Emergent Properties of Finetuned Language Representation Models"
+    },
+    "arXiv:2506.16738": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.16738",
+      "identity_tokens": [
+        "arXiv:2506.16738"
+      ],
+      "reason": "LM整合型の意味蒸留による音声トークン化でトークンレート低減にも触れるが、主目的は音声トークンの意味整合と再合成品質であり、推論システムとしての機構や効率評価がabstract上薄いため境界とする。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LM-SPT: LM-Aligned Semantic Distillation for Speech Tokenization"
+    },
+    "DOI:10.1109/cscwd61410.2024.10580765": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cscwd61410.2024.10580765",
+      "identity_tokens": [
+        "DOI:10.1109/cscwd61410.2024.10580765"
+      ],
+      "reason": "複数教師の循環的知識蒸留でNERモデルを22倍圧縮するが、対象は特定NLPタスクのモデル圧縮・学習手法であり、LLM推論システムへの汎用的な適用はabstract上不明瞭なため境界とする。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Named Entity Recognition Method Based on Multi-Teacher Collaborative Cyclical Knowledge Distillation"
+    },
+    "arXiv:2502.10954": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.10954",
+      "identity_tokens": [
+        "arXiv:2502.10954"
+      ],
+      "reason": "テスト時にサンプルごとの最適計算量を学習して過剰思考を止める手法は推論時計算配分に関わるが、対象は再帰型の視覚推論モデルConv-LiGRUでありLLMサービングへの直接適用は示されていない。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning to Stop Overthinking at Test Time"
+    },
+    "arXiv:2507.09768": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.09768",
+      "identity_tokens": [
+        "arXiv:2507.09768"
+      ],
+      "reason": "音声分離ネットワークに確率的早期終了（early exit）を導入し組み込み機器での可変計算を可能にする点は推論効率に関わるが、主目的は音声分離・強調タスクのモデル設計である。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Knowing When to Quit: Probabilistic Early Exits for Speech Separation"
+    },
+    "arXiv:2511.05747": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.05747",
+      "identity_tokens": [
+        "arXiv:2511.05747"
+      ],
+      "reason": "CoT-Xは思考モデルの推論トレースを圧縮して安価な回答モデルへ再利用しトークン予算下の推論コストを下げる枠組みだが、評価は医療資格試験の精度が中心でサービング機構の検証は限定的である。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoT-X: An Adaptive Framework for Cross-Model Chain-of-Thought Transfer and Optimization"
+    },
+    "arXiv:2509.05584": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.05584",
+      "identity_tokens": [
+        "arXiv:2509.05584"
+      ],
+      "reason": "ProfilingAgentは層ごとの遅延・メモリのプロファイルに基づき構造化プルーニングと学習後動的量子化を自動設計するが、評価対象はImageNet等の視覚分類モデルでありLLM推論への適用は示されていない。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ProfilingAgent: Profiling-Guided Agentic Reasoning for Adaptive Model Optimization"
+    },
+    "DOI:10.1145/3594536.3595142": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3594536.3595142",
+      "identity_tokens": [
+        "DOI:10.1145/3594536.3595142"
+      ],
+      "reason": "軽量なロジスティック回帰で前段フィルタリングする3段カスケードは長文分類の計算コスト削減に関わるが、対象は法務文書分類タスクであり汎用推論基盤としての機構は限定的である。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Don't Use a Cannon to Kill a Fly: An Efficient Cascading Pipeline for Long Documents"
+    },
+    "arXiv:2510.09474": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.09474",
+      "identity_tokens": [
+        "arXiv:2510.09474"
+      ],
+      "reason": "Multimodal Policy Internalizationは長大なポリシープロンプトをパラメータへ内在化し推論時の固定計算コストを避ける狙いだが、本質はポリシー追従の学習タスクでありサービング機構の検証はない。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multimodal Policy Internalization for Conversational Agents"
+    },
+    "DOI:10.1109/iccbdai66607.2025.11389035": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccbdai66607.2025.11389035",
+      "identity_tokens": [
+        "DOI:10.1109/iccbdai66607.2025.11389035"
+      ],
+      "reason": "SARFはMLLMの低速経路と軽量モデルの高速経路を動的ゲーティングで振り分け遅延を7倍以上削減するが、対象は人間行動認識タスクに特化しており汎用サービングへの展開は不明瞭である。",
+      "first_checked_at": "2026-11-26T00:59:26+00:00",
+      "last_checked_at": "2026-11-26T00:59:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Synergistic and Efficient Framework for Real-Time Action Recognition with MLLM and Lightweight Models"
     }
   }
 }

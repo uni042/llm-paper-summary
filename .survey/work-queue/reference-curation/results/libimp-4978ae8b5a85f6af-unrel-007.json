@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4978ae8b5a85f6af-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.09960",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.09960",
+    "identity_tokens": [
+      "arXiv:2504.09960"
+    ],
+    "reason": "イベントベース視線追跡（eye tracking）というセンシング応用の頑健性・時間モデリング改善であり、推論システムへの貢献はタイトルから確認できない。",
+    "first_checked_at": "2026-11-26T00:59:26+00:00",
+    "last_checked_at": "2026-11-26T00:59:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Dual-Path Enhancements in Event-Based Eye Tracking: Augmented Robustness and Adaptive Temporal Modeling"
+  },
+  "processed_at": "2026-11-26T00:59:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4978ae8b5a85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

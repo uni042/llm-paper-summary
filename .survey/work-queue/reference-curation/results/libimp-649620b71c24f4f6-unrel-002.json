@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-649620b71c24f4f6-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.06802",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.06802",
+    "identity_tokens": [
+      "arXiv:2501.06802"
+    ],
+    "reason": "条件付きKolmogorov複雑性の観点から学習と推論の2種のスケーリング則を統一する理論分析であり、推論システムの具体的な機構提案はない。",
+    "first_checked_at": "2026-11-26T00:59:26+00:00",
+    "last_checked_at": "2026-11-26T00:59:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Unifying Two Types of Scaling Laws from the Perspective of Conditional Kolmogorov Complexity"
+  },
+  "processed_at": "2026-11-26T00:59:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-649620b71c24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

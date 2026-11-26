@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-649620b71c24f4f6-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.10419",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.10419",
+    "identity_tokens": [
+      "arXiv:2507.10419"
+    ],
+    "reason": "LoRA-MCLは多様な文継続をデコードできるよう複数選択学習で言語モデルを訓練する学習方式であり、推論システムではなく学習単独の改良である。",
+    "first_checked_at": "2026-11-26T00:59:27+00:00",
+    "last_checked_at": "2026-11-26T00:59:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Multiple Choice Learning of Low Rank Adapters for Language Modeling"
+  },
+  "processed_at": "2026-11-26T00:59:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-649620b71c24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

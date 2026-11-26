@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4978ae8b5a85f6af-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3627673.3679866",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3627673.3679866",
+    "identity_tokens": [
+      "DOI:10.1145/3627673.3679866"
+    ],
+    "reason": "構造化状態空間によるグラフ学習のover-squashingボトルネック解消を扱うGNN表現学習の研究であり、LLM推論システムへの直接貢献はない。",
+    "first_checked_at": "2026-11-26T00:59:26+00:00",
+    "last_checked_at": "2026-11-26T00:59:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Breaking the Bottleneck on Graphs with Structured State Spaces"
+  },
+  "processed_at": "2026-11-26T00:59:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4978ae8b5a85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

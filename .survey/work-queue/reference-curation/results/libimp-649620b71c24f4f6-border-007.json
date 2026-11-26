@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-649620b71c24f4f6-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.09474",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.09474",
+    "identity_tokens": [
+      "arXiv:2510.09474"
+    ],
+    "reason": "Multimodal Policy Internalizationは長大なポリシープロンプトをパラメータへ内在化し推論時の固定計算コストを避ける狙いだが、本質はポリシー追従の学習タスクでありサービング機構の検証はない。",
+    "first_checked_at": "2026-11-26T00:59:26+00:00",
+    "last_checked_at": "2026-11-26T00:59:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multimodal Policy Internalization for Conversational Agents"
+  },
+  "processed_at": "2026-11-26T00:59:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-649620b71c24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
