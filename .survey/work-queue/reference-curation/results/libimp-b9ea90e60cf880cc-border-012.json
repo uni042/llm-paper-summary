@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b9ea90e60cf880cc-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2312.16119",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2312.16119",
+    "identity_tokens": [
+      "arXiv:2312.16119"
+    ],
+    "reason": "複数オープンLLMのアンサンブルを品質‐コスト双目的のナップサック問題として予算内で選ぶ枠組みで推論コスト最適化に触れるが、サービング実行機構ではなくモデル選択層の最適化のため境界とする。",
+    "first_checked_at": "2026-11-26T22:11:49+00:00",
+    "last_checked_at": "2026-11-26T22:11:49+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Bi-Objective $\\epsilon $-Constrained Framework for Quality-Cost Optimization in Language Model Ensembles"
+  },
+  "processed_at": "2026-11-26T22:11:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b9ea90e60cf8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

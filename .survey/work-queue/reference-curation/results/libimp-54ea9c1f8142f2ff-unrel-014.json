@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54ea9c1f8142f2ff-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2103.07601",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2103.07601",
+    "identity_tokens": [
+      "arXiv:2103.07601"
+    ],
+    "reason": "単一ヘッド注意が学習過程でどのように単語翻訳知識を獲得するかを近似する理論分析であり、推論機構の提案ではない。",
+    "first_checked_at": "2026-11-26T22:11:48+00:00",
+    "last_checked_at": "2026-11-26T22:11:48+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Approximating How Single Head Attention Learns"
+  },
+  "processed_at": "2026-11-26T22:11:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54ea9c1f8142",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

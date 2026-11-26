@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8b26a1ddf85802f-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.06607",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.06607",
+    "identity_tokens": [
+      "arXiv:2608.06607"
+    ],
+    "reason": "文書フィールド抽出で安価な信号から難易度を予測し安価／強力な抽出器へ振り分けてコストを31-33%下げるpre-inference routingの検討であり、推論ルーティングに触れるが文書抽出応用に特化し一般のLLMサービング機構としては限定的。",
+    "first_checked_at": "2026-11-26T22:11:49+00:00",
+    "last_checked_at": "2026-11-26T22:11:49+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Pre-Inference Routing for Cost-Efficient Document Field Extraction"
+  },
+  "processed_at": "2026-11-26T22:11:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8b26a1ddf85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

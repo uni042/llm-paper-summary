@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54ea9c1f8142f2ff-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2303.06740",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2303.06740",
+    "identity_tokens": [
+      "arXiv:2303.06740"
+    ],
+    "reason": "音声自己教師ありモデルのファインチューニング時にエンコーダ計算を減らしASR推論を高速化する手法比較であり、推論高速化の知見はあるが対象は音声モデルでLLM推論ではない。",
+    "first_checked_at": "2026-11-26T22:11:47+00:00",
+    "last_checked_at": "2026-11-26T22:11:47+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fine-Tuning Strategies for Faster Inference Using Speech Self-Supervised Models: A Comparative Study"
+  },
+  "processed_at": "2026-11-26T22:11:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54ea9c1f8142",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8b26a1ddf85802f-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2602.15166",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2602.15166",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.15166",
+      "arXiv:2602.15166"
+    ],
+    "reason": "テンソルアクセラレータ向けにfusionを考慮した最適mapping探索でoff-chip移動を減らすモデリング／評価ツールであり、推論基盤のシミュレーションに近いがLLM推論ワークロードへの直接適用は要旨で示されていない。",
+    "first_checked_at": "2026-11-26T22:11:49+00:00",
+    "last_checked_at": "2026-11-26T22:11:49+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fast and Fusiest: An Optimal Fusion-Aware Mapper for Accelerator Modeling and Evaluation"
+  },
+  "processed_at": "2026-11-26T22:11:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8b26a1ddf85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

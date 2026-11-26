@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-59094b584a6c2d18-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.00155",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.00155",
+    "identity_tokens": [
+      "arXiv:2606.00155"
+    ],
+    "reason": "L3/L4メタデータを言語としてRWKVで学習し perplexity で侵入を検出するネットワーク侵入検知への応用研究であり、LLM推論システムとは無関係なため。",
+    "first_checked_at": "2026-11-26T22:11:48+00:00",
+    "last_checked_at": "2026-11-26T22:11:48+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "A Protocol-Language Model for Network Intrusion (Without Deep Packet Inspection)"
+  },
+  "processed_at": "2026-11-26T22:11:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-59094b584a6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

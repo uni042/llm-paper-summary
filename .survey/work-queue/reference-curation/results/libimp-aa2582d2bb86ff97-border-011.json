@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa2582d2bb86ff97-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.18126",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.18126",
+    "identity_tokens": [
+      "arXiv:2610.18126"
+    ],
+    "reason": "決定の鮮度を6つのタイムスタンプと決定台帳で管理し、新情報を改訂期限前に該当決定へルーティングする枠組みを提案するが、対象はエージェントの意思決定の妥当性管理でありLLM推論サービングの機構ではないため。",
+    "first_checked_at": "2026-11-26T22:11:49+00:00",
+    "last_checked_at": "2026-11-26T22:11:49+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fresh at Decision, Stale at Action: Routing New Information to LLM Decisions Already Made"
+  },
+  "processed_at": "2026-11-26T22:11:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa2582d2bb86",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

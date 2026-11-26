@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8b26a1ddf85802f-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.14806",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.14806",
+    "identity_tokens": [
+      "arXiv:2603.14806"
+    ],
+    "reason": "AlphaFold 3級co-foldingモデルの推論・学習パイプラインを複数GPUへ分散するcontext parallelism基盤Fold-CPであり、分散推論技術自体は具体的だが対象が生体分子モデリング専用でLLM推論への転用は示されていない。",
+    "first_checked_at": "2026-11-26T22:11:49+00:00",
+    "last_checked_at": "2026-11-26T22:11:49+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fold-CP: A Context Parallelism Framework for Biomolecular Modeling"
+  },
+  "processed_at": "2026-11-26T22:11:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8b26a1ddf85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

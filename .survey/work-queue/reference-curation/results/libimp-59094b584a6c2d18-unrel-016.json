@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-59094b584a6c2d18-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.22529",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.22529",
+    "identity_tokens": [
+      "arXiv:2608.22529"
+    ],
+    "reason": ".NET向けにHumanEval由来85課題で4モデルのC#コード生成を正確性・静的品質・実行効率の3次元で測る評価フレームワークであり、能力評価であって推論システムではないため。",
+    "first_checked_at": "2026-11-26T22:11:48+00:00",
+    "last_checked_at": "2026-11-26T22:11:48+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Benchmarking the Titans: A Multi-Dimensional Empirical Evaluation of LLM Code Generation Quality in the .NET Ecosystem"
+  },
+  "processed_at": "2026-11-26T22:11:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-59094b584a6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

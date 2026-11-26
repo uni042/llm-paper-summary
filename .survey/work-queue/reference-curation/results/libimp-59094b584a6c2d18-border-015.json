@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-59094b584a6c2d18-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.21180",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.21180",
+    "identity_tokens": [
+      "arXiv:2607.21180"
+    ],
+    "reason": "音声対音声アシスタントのガードレールを文字起こし型とツール型で実装比較し各回答に0〜1.4秒の遅延が付くことを実測しているが、対象は自動車応用の安全策の事例研究であり汎用サービング機構の提案ではないため。",
+    "first_checked_at": "2026-11-26T22:11:48+00:00",
+    "last_checked_at": "2026-11-26T22:11:48+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Safeguards for Speech2Speech LLM-Assistants: A Case Study in Automotive Applications"
+  },
+  "processed_at": "2026-11-26T22:11:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-59094b584a6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

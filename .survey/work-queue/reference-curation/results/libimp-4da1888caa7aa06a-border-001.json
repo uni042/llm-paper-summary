@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4da1888caa7aa06a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.18886",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.18886",
+    "identity_tokens": [
+      "arXiv:2601.18886"
+    ],
+    "reason": "再ランキングモデルへ統合したzero-costな多言語context pruningでRAGコンテキストを削るXProvenceであり、入力トークン削減を通じ推論効率に触れるが主目的は多言語QAの精度維持で遅延等の実測は要旨にない。",
+    "first_checked_at": "2026-11-26T22:11:47+00:00",
+    "last_checked_at": "2026-11-26T22:11:47+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "XProvence: Zero-Cost Multilingual Context Pruning for Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-11-26T22:11:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4da1888caa7a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

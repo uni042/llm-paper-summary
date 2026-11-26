@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3fed1edfdf1e68a7-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:42e0b7830c276cca932934beefbf853721b333fe",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:42e0b7830c276cca932934beefbf853721b333fe",
+    "identity_tokens": [
+      "SemanticScholar:42e0b7830c276cca932934beefbf853721b333fe"
+    ],
+    "reason": "W-PCAに基づく勾配不要のゼロショットNASプロキシで軽量言語モデルのアーキテクチャ探索を効率化する研究であり、設計時の探索手法であって推論実行時システムではないためunrelated。",
+    "first_checked_at": "2026-11-26T22:11:47+00:00",
+    "last_checked_at": "2026-11-26T22:11:47+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "GRADIENT - FREE PROXY FOR EFFICIENT LANGUAGE MODEL SEARCH"
+  },
+  "processed_at": "2026-11-26T22:11:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3fed1edfdf1e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a768b00ec5e22b8-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2026.findings-acl.133",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2026.findings-acl.133",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.findings-acl.133"
+    ],
+    "reason": "CoT生成中の注意ヘッドのエントロピー推移を追跡する解釈可能性の分析であり、推論を高速化・効率化する機構は提案されていない。",
+    "first_checked_at": "2026-11-26T22:11:47+00:00",
+    "last_checked_at": "2026-11-26T22:11:47+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Where CoT Reasoning Commits: Entropy Traces Identify Interpretable Attention Heads"
+  },
+  "processed_at": "2026-11-26T22:11:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a768b00ec5e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa2582d2bb86ff97-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.37123",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.37123",
+    "identity_tokens": [
+      "arXiv:2609.37123"
+    ],
+    "reason": "凍結した視覚Transformerへ証拠密度に基づく領域再読と視覚トークン配分を付けるEviViTは、トークン上限下で少ない視覚トークンにより高い精度を示す効率機構を含むが、対象は視覚知覚でありLLM推論システムへの直接貢献は要旨上薄いため。",
+    "first_checked_at": "2026-11-26T22:11:49+00:00",
+    "last_checked_at": "2026-11-26T22:11:49+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EviViT: Evidence-Adaptive Vision Transformers for Fine-Grained Perception"
+  },
+  "processed_at": "2026-11-26T22:11:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa2582d2bb86",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

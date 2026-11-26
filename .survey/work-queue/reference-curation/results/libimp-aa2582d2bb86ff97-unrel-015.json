@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa2582d2bb86ff97-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.29925",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.29925",
+    "identity_tokens": [
+      "arXiv:2610.29925"
+    ],
+    "reason": "汎用LLM時代のプライバシーは文脈依存であるべきだと論じる立場論文であり、プロンプトプライバシーの統一枠組みへの批判が主で推論システム技術ではないため。",
+    "first_checked_at": "2026-11-26T22:11:49+00:00",
+    "last_checked_at": "2026-11-26T22:11:49+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Privacy in Context Is Being Overlooked in the Age of General-Purpose LLMs"
+  },
+  "processed_at": "2026-11-26T22:11:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa2582d2bb86",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

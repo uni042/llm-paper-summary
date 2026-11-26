@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a768b00ec5e22b8-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.21465",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.21465",
+    "identity_tokens": [
+      "arXiv:2505.21465"
+    ],
+    "reason": "高解像度画像とサムネイルの位置IDを並べ替えるID-AlignによるVLMの性能向上であり、トークン間相互作用の改善が目的で推論効率やサービングの機構ではない。",
+    "first_checked_at": "2026-11-26T22:11:47+00:00",
+    "last_checked_at": "2026-11-26T22:11:47+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "ID-Align: RoPE-Conscious Position Remapping for Dynamic High-Resolution Adaptation in Vision-Language Models"
+  },
+  "processed_at": "2026-11-26T22:11:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a768b00ec5e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

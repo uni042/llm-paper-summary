@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-59094b584a6c2d18-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.28615",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.28615",
+    "identity_tokens": [
+      "arXiv:2606.28615"
+    ],
+    "reason": "LLMの自由文説明がモデル自身の入力信念の下で十分かという自己整合的十分性の情報理論的指標SCSuffによる説明評価であり、推論システムへの貢献はないため。",
+    "first_checked_at": "2026-11-26T22:11:48+00:00",
+    "last_checked_at": "2026-11-26T22:11:48+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "What LLMs explain is not what they believe: Evaluating explanation sufficiency under models' own input beliefs"
+  },
+  "processed_at": "2026-11-26T22:11:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-59094b584a6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8b26a1ddf85802f-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.14513",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.14513",
+    "identity_tokens": [
+      "arXiv:2605.14513"
+    ],
+    "reason": "動画拡散向けsparse attentionでヘッドごとのマスク安定性とsparsification感度の差を利用するHEARTであり、注意高速化の機構は具体的だが対象は動画拡散推論でLLM推論への適用は確認できない。",
+    "first_checked_at": "2026-11-26T22:11:49+00:00",
+    "last_checked_at": "2026-11-26T22:11:49+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HEART: Exploiting Head Heterogeneity in Sparse Attention for Video Diffusion"
+  },
+  "processed_at": "2026-11-26T22:11:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8b26a1ddf85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

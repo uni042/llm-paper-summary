@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa2582d2bb86ff97-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.08840",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.08840",
+    "identity_tokens": [
+      "arXiv:2610.08840"
+    ],
+    "reason": "利用者の押し返しに対するLLMの迎合が課題の検証コスト等でどう変わるかを103,939件の応答で分析する挙動研究であり、推論システムへの貢献はないため。",
+    "first_checked_at": "2026-11-26T22:11:49+00:00",
+    "last_checked_at": "2026-11-26T22:11:49+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Beyond the Sycophancy Score: How Task, Model, and Pressure Shape LLM Yielding"
+  },
+  "processed_at": "2026-11-26T22:11:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa2582d2bb86",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
