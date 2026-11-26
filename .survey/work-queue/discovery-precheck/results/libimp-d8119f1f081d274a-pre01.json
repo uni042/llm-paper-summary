@@ -1,0 +1,591 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d8119f1f081d274a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d8119f1f081d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iccasit66611.2025.11348646",
+    "DOI:10.1109/tpds.2023.3280805",
+    "arXiv:2407.19947",
+    "arXiv:2411.15785",
+    "arXiv:2510.16092",
+    "arXiv:2609.05512"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1e2c66fefc1a5bbff3f625584bab6a6fc9616193",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T11:40:34.017688+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iccasit66611.2025.11348646",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tpds.2023.3280805",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.19947",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.15785",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.16092",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.05512",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Full-Stack Optimizing Transformer Inference on ARM Many-Core CPU",
+      "source_url": "https://doi.org/10.1109/TPDS.2023.3280805",
+      "year": 2023,
+      "published": "2023-07-01",
+      "venue": "IEEE Transactions on Parallel and Distributed Systems",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The past several years have witnessed tremendous success of transformer models in natural language processing (NLP), and their current landscape is increasingly diverse. Although GPU gradually becomes the dominating workhorse and de facto standard for deep learning, there are still many scenarios where using CPU remains a prevalent choice.Recently, ARM many-core processor starts emigrating to cloud computing and high-performance computing, which is promising to deploy transformer inference. In this paper, we identify several performance bottlenecks of existing inference runtime on many-core CPU including low-core usage, isolated thread configuration, inappropriate implementation of general matrix multiply (GEMM), and redundant computations for variable-length inputs. To tackle these problems, full-stack optimizations are conducted for these challenges from service level to operator level. We explore multi-instance parallelization at the service level to improve CPU core usage. To improve parallel efficiency of the inference runtime, we design NUMA-aware thread scheduling and a look-up table for optimal parallel configurations. The GEMM implementation is tailored for some critical modules to exploit the characteristics of transformer workload. To eliminate redundant computations, a novel storage format is designed and implemented to pack sparse data and a load balancing strategy is proposed for tasks with different sparsity. Experiments show that our implementation can outperform existing solutions by 1.1x to 6x with fixed-length inputs. For variable-length inputs, it achieves 1.9x to 8x speedups on different ARM many-core processors.",
+      "identifiers": [
+        "SemanticScholar:60b80c990de9bdf896a56e36090c46ddd24400e6"
+      ],
+      "semantic_scholar_id": "60b80c990de9bdf896a56e36090c46ddd24400e6",
+      "doi": "10.1109/TPDS.2023.3280805",
+      "canonical_id": "DOI:10.1109/TPDS.2023.3280805",
+      "authors": [
+        "Jia-Zhi Jiang",
+        "Jiang-Su Du",
+        "Dan-E Huang",
+        "Zhi-Guang Chen",
+        "Yu-Tong Lu",
+        "Xiang-Ke Liao"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1244,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reasoning-Aware Compression: Identifying and Protecting Vulnerable Reasoning Circuits for Energy-Efficient LLM Deployment",
+      "source_url": "https://arxiv.org/abs/2609.05512",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) impose substantial energy costs during deployment, yet current compression methods apply uniform quantization across all components, risking damage to critical reasoning circuits. We present a reasoning-aware compression framework that benchmarks quantization conditions across five reasoning benchmarks, GSM8K, FOLIO, MATH-500, ProofWriter, and MuSiQue, with hardware-level GPU energy measurement; profiles per-module INT4 vulnerability across all 196-224 (layer, projection) pairs via a perturbation sweep on a held-out calibration split, then selectively restores the most sensitive circuits to FP16. Three findings emerge. First, INT4 quantization can increase energy by extending reasoning chains; a 25% power reduction becomes a net energy increase on GSM8K. Second, vulnerability is task-dependent: attention projections are more critical for mathematical reasoning, and sensitivity patterns differ by architecture in logical inference. Third, selective compression achieves Pareto-optimal points inaccessible to uniform methods: R1-Qwen-7B Top-10% on ProofWriter gains +12 pp over FP16 at -9.7% energy, validated on held-out data across five reasoning benchmarks.",
+      "identifiers": [
+        "SemanticScholar:20b2302cb74ea80ddbcf65bbcd1b928ecd9c7fb2"
+      ],
+      "semantic_scholar_id": "20b2302cb74ea80ddbcf65bbcd1b928ecd9c7fb2",
+      "canonical_id": "arXiv:2609.05512",
+      "arxiv_id": "2609.05512",
+      "doi": "10.48550/arXiv.2609.05512",
+      "authors": [
+        "Leonard Twagirayezu",
+        "Prasenjit Mitra"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Method for Building Large Language Models with Predefined KV Cache Capacity",
+      "source_url": "https://arxiv.org/abs/2411.15785",
+      "year": 2024,
+      "published": "2024-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces a novel approach, the Bounded-Cache Transformer (BCT), for building large language models with a predefined Key-Value (KV) cache capacity. The BCT addresses the excessive memory consumption issue in traditional KV caches by implementing a bounded-length KV cache, which is particularly suitable for the attention layers in Transformer decode-only architectures. By dynamically updating the key-value vector sequences, the BCT achieves efficient inference within limited cache capacity, significantly reducing memory usage while maintaining model performance and system throughput. Experimental results demonstrate that the BCT significantly reduces memory usage while maintaining the model's inference quality, offering a new solution for efficient inference in large language models.",
+      "identifiers": [
+        "SemanticScholar:f7f3973c342a726caf586017ac3709e1347acf2a"
+      ],
+      "semantic_scholar_id": "f7f3973c342a726caf586017ac3709e1347acf2a",
+      "canonical_id": "arXiv:2411.15785",
+      "arxiv_id": "2411.15785",
+      "doi": "10.48550/arXiv.2411.15785",
+      "authors": [
+        "Zhong-Huai Yi",
+        "Ge Niu",
+        "Lei Wang",
+        "Wei-Jing Tang",
+        "Liqi Zhang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 732,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Optimizing LLM Inference on Edge Devices Using SIMD Accelerations",
+      "source_url": "https://doi.org/10.1109/ICCASIT66611.2025.11348646",
+      "year": 2025,
+      "published": "2025-10-22",
+      "venue": "2025 IEEE 7th International Conference on Civil Aviation Safety and Information Technology (ICCASIT)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper addresses the computational challenges of deploying large language models (LLMs) on edge devices, which typically lack high-performance GPUs but possess increasingly capable CPUs with SIMD instruction set extensions. We propose a portable, SIMD-accelerated library designed to optimize low-level LLM inference primitives. Our approach leverages AVX2 intrinsics for floating-point operations, with a design for future expansion to quantized integer formats and other instruction sets across diverse Intel and ARM CPUs. Performance is validated through micro-benchmarks on individual operations and detailed binary inspection of optimized kernels. Significant speedups are demonstrated for core operations such as matrix multiplication and layer normalization. While gains for other operations, such as element-wise multiplication and softmax, are less pronounced due this work offers a practical solution for enhancing LLM inference efficiency on a wide range of edge computing platforms.",
+      "identifiers": [
+        "SemanticScholar:bf2eb16880f1b4b98bb3af4d0d3a79b93fbc5e76"
+      ],
+      "semantic_scholar_id": "bf2eb16880f1b4b98bb3af4d0d3a79b93fbc5e76",
+      "doi": "10.1109/ICCASIT66611.2025.11348646",
+      "canonical_id": "DOI:10.1109/ICCASIT66611.2025.11348646",
+      "authors": [
+        "Feiyu Chen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 400,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Inference acceleration for large language models using \"stairs\" assisted greedy generation",
+      "source_url": "https://arxiv.org/abs/2407.19947",
+      "year": 2024,
+      "published": "2024-07-29",
+      "venue": "International Conference on Information Technology",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) with billions of parameters are known for their impressive predicting capabilities but require lots of resources to run. With their massive rise in popularity, even a small reduction in required resources could have an impact on environment. On the other hand, smaller models require fewer resources but may sacrifice accuracy. In this work, we are proposing an implementation of ``stairs'' assisted greedy generation. It is a modified assisted generation methodology that makes use of a smaller model's fast generation, large model's batch prediction, and\"stairs\"validation in order to achieve a speed up in prediction generation. Results show between 9.58 and 17.24 percent inference time reduction compared to a stand-alone large LLM prediction in a text generation task without a loss in accuracy.",
+      "identifiers": [
+        "SemanticScholar:e7bf0f94ef8d3f13a0957834f909efb8256559ca"
+      ],
+      "semantic_scholar_id": "e7bf0f94ef8d3f13a0957834f909efb8256559ca",
+      "canonical_id": "arXiv:2407.19947",
+      "arxiv_id": "2407.19947",
+      "doi": "10.48550/arXiv.2407.19947",
+      "authors": [
+        "Domas Grigaliunas",
+        "M. Lukoševičius"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 850,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compressing Many-Shots in In-Context Learning",
+      "source_url": "https://arxiv.org/abs/2510.16092",
+      "year": 2025,
+      "published": "2025-10-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have been shown to be able to learn different tasks without explicit finetuning when given many input-output examples / demonstrations through In-Context Learning (ICL). Increasing the number of examples, called ``shots'', improves downstream task performance but incurs higher memory and computational costs. In this work, we study an approach to improve the memory and computational efficiency of ICL inference by compressing the many-shot prompts. Given many shots comprising t tokens, our goal is to generate a m soft-token summary, where m<t. We first show that existing prompt compression methods are ineffective for many-shot compression, and simply using fewer shots as a baseline is surprisingly strong. To achieve effective compression, we find that: (a) a stronger compressor model with more trainable parameters is necessary, and (b) compressing many-shot representations at each transformer layer enables more fine-grained compression by providing each layer with its own compressed representation. Based on these insights, we propose MemCom, a layer-wise compression method. We systematically evaluate various compressor models and training approaches across different model sizes (2B and 7B), architectures (Gemma and Mistral), many-shot sequence lengths (3k-6k tokens), and compression ratios (3x to 8x). MemCom outperforms strong baselines across all compression ratios on multiple classification tasks with large label sets. Notably, while baseline performance degrades sharply at higher compression ratios, often by over 20-30%, MemCom maintains high accuracy with minimal degradation, typically dropping by less than 10%.",
+      "identifiers": [
+        "SemanticScholar:24ca33f81e56b73a46494de14aa9669ec6f7abb4"
+      ],
+      "semantic_scholar_id": "24ca33f81e56b73a46494de14aa9669ec6f7abb4",
+      "canonical_id": "arXiv:2510.16092",
+      "arxiv_id": "2510.16092",
+      "doi": "10.48550/arXiv.2510.16092",
+      "authors": [
+        "Devvrit Khatri",
+        "P. Kulkarni",
+        "Nilesh Gupta",
+        "Yerram Varun",
+        "Li-Qian Peng",
+        "Jay Yagnik",
+        "Praneeth Netrapalli",
+        "Cho-Jui Hsieh",
+        "Alec Go",
+        "I. Dhillon",
+        "Aditya Kusupati",
+        "Prateek Jain"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 405,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/tpds.2023.3280805",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpds.2023.3280805",
+        "id:SemanticScholar:60b80c990de9bdf896a56e36090c46ddd24400e6",
+        "title:fullstack optimizing transformer inference on arm manycore cpu",
+        "url:https://doi.org/10.1109/TPDS.2023.3280805"
+      ],
+      "record": {
+        "title": "Full-Stack Optimizing Transformer Inference on ARM Many-Core CPU",
+        "source_url": "https://doi.org/10.1109/TPDS.2023.3280805",
+        "year": 2023,
+        "published": "2023-07-01",
+        "venue": "IEEE Transactions on Parallel and Distributed Systems",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The past several years have witnessed tremendous success of transformer models in natural language processing (NLP), and their current landscape is increasingly diverse. Although GPU gradually becomes the dominating workhorse and de facto standard for deep learning, there are still many scenarios where using CPU remains a prevalent choice.Recently, ARM many-core processor starts emigrating to cloud computing and high-performance computing, which is promising to deploy transformer inference. In this paper, we identify several performance bottlenecks of existing inference runtime on many-core CPU including low-core usage, isolated thread configuration, inappropriate implementation of general matrix multiply (GEMM), and redundant computations for variable-length inputs. To tackle these problems, full-stack optimizations are conducted for these challenges from service level to operator level. We explore multi-instance parallelization at the service level to improve CPU core usage. To improve parallel efficiency of the inference runtime, we design NUMA-aware thread scheduling and a look-up table for optimal parallel configurations. The GEMM implementation is tailored for some critical modules to exploit the characteristics of transformer workload. To eliminate redundant computations, a novel storage format is designed and implemented to pack sparse data and a load balancing strategy is proposed for tasks with different sparsity. Experiments show that our implementation can outperform existing solutions by 1.1x to 6x with fixed-length inputs. For variable-length inputs, it achieves 1.9x to 8x speedups on different ARM many-core processors.",
+        "identifiers": [
+          "SemanticScholar:60b80c990de9bdf896a56e36090c46ddd24400e6"
+        ],
+        "semantic_scholar_id": "60b80c990de9bdf896a56e36090c46ddd24400e6",
+        "doi": "10.1109/TPDS.2023.3280805",
+        "canonical_id": "DOI:10.1109/TPDS.2023.3280805",
+        "authors": [
+          "Jia-Zhi Jiang",
+          "Jiang-Su Du",
+          "Dan-E Huang",
+          "Zhi-Guang Chen",
+          "Yu-Tong Lu",
+          "Xiang-Ke Liao"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1244,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05512",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.05512",
+        "id:SemanticScholar:20b2302cb74ea80ddbcf65bbcd1b928ecd9c7fb2",
+        "id:arXiv:2609.05512",
+        "title:reasoningaware compression identifying and protecting vulnerable reasoning circuits for energyefficient llm deployment",
+        "url:https://arxiv.org/abs/2609.05512"
+      ],
+      "record": {
+        "title": "Reasoning-Aware Compression: Identifying and Protecting Vulnerable Reasoning Circuits for Energy-Efficient LLM Deployment",
+        "source_url": "https://arxiv.org/abs/2609.05512",
+        "year": 2026,
+        "published": "2026-08-31",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) impose substantial energy costs during deployment, yet current compression methods apply uniform quantization across all components, risking damage to critical reasoning circuits. We present a reasoning-aware compression framework that benchmarks quantization conditions across five reasoning benchmarks, GSM8K, FOLIO, MATH-500, ProofWriter, and MuSiQue, with hardware-level GPU energy measurement; profiles per-module INT4 vulnerability across all 196-224 (layer, projection) pairs via a perturbation sweep on a held-out calibration split, then selectively restores the most sensitive circuits to FP16. Three findings emerge. First, INT4 quantization can increase energy by extending reasoning chains; a 25% power reduction becomes a net energy increase on GSM8K. Second, vulnerability is task-dependent: attention projections are more critical for mathematical reasoning, and sensitivity patterns differ by architecture in logical inference. Third, selective compression achieves Pareto-optimal points inaccessible to uniform methods: R1-Qwen-7B Top-10% on ProofWriter gains +12 pp over FP16 at -9.7% energy, validated on held-out data across five reasoning benchmarks.",
+        "identifiers": [
+          "SemanticScholar:20b2302cb74ea80ddbcf65bbcd1b928ecd9c7fb2"
+        ],
+        "semantic_scholar_id": "20b2302cb74ea80ddbcf65bbcd1b928ecd9c7fb2",
+        "canonical_id": "arXiv:2609.05512",
+        "arxiv_id": "2609.05512",
+        "doi": "10.48550/arXiv.2609.05512",
+        "authors": [
+          "Leonard Twagirayezu",
+          "Prasenjit Mitra"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 87,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.15785",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.15785",
+        "id:SemanticScholar:f7f3973c342a726caf586017ac3709e1347acf2a",
+        "id:arXiv:2411.15785",
+        "title:a method for building large language models with predefined kv cache capacity",
+        "url:https://arxiv.org/abs/2411.15785"
+      ],
+      "record": {
+        "title": "A Method for Building Large Language Models with Predefined KV Cache Capacity",
+        "source_url": "https://arxiv.org/abs/2411.15785",
+        "year": 2024,
+        "published": "2024-11-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper introduces a novel approach, the Bounded-Cache Transformer (BCT), for building large language models with a predefined Key-Value (KV) cache capacity. The BCT addresses the excessive memory consumption issue in traditional KV caches by implementing a bounded-length KV cache, which is particularly suitable for the attention layers in Transformer decode-only architectures. By dynamically updating the key-value vector sequences, the BCT achieves efficient inference within limited cache capacity, significantly reducing memory usage while maintaining model performance and system throughput. Experimental results demonstrate that the BCT significantly reduces memory usage while maintaining the model's inference quality, offering a new solution for efficient inference in large language models.",
+        "identifiers": [
+          "SemanticScholar:f7f3973c342a726caf586017ac3709e1347acf2a"
+        ],
+        "semantic_scholar_id": "f7f3973c342a726caf586017ac3709e1347acf2a",
+        "canonical_id": "arXiv:2411.15785",
+        "arxiv_id": "2411.15785",
+        "doi": "10.48550/arXiv.2411.15785",
+        "authors": [
+          "Zhong-Huai Yi",
+          "Ge Niu",
+          "Lei Wang",
+          "Wei-Jing Tang",
+          "Liqi Zhang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 732,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccasit66611.2025.11348646",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccasit66611.2025.11348646",
+        "id:SemanticScholar:bf2eb16880f1b4b98bb3af4d0d3a79b93fbc5e76",
+        "title:optimizing llm inference on edge devices using simd accelerations",
+        "url:https://doi.org/10.1109/ICCASIT66611.2025.11348646"
+      ],
+      "record": {
+        "title": "Optimizing LLM Inference on Edge Devices Using SIMD Accelerations",
+        "source_url": "https://doi.org/10.1109/ICCASIT66611.2025.11348646",
+        "year": 2025,
+        "published": "2025-10-22",
+        "venue": "2025 IEEE 7th International Conference on Civil Aviation Safety and Information Technology (ICCASIT)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper addresses the computational challenges of deploying large language models (LLMs) on edge devices, which typically lack high-performance GPUs but possess increasingly capable CPUs with SIMD instruction set extensions. We propose a portable, SIMD-accelerated library designed to optimize low-level LLM inference primitives. Our approach leverages AVX2 intrinsics for floating-point operations, with a design for future expansion to quantized integer formats and other instruction sets across diverse Intel and ARM CPUs. Performance is validated through micro-benchmarks on individual operations and detailed binary inspection of optimized kernels. Significant speedups are demonstrated for core operations such as matrix multiplication and layer normalization. While gains for other operations, such as element-wise multiplication and softmax, are less pronounced due this work offers a practical solution for enhancing LLM inference efficiency on a wide range of edge computing platforms.",
+        "identifiers": [
+          "SemanticScholar:bf2eb16880f1b4b98bb3af4d0d3a79b93fbc5e76"
+        ],
+        "semantic_scholar_id": "bf2eb16880f1b4b98bb3af4d0d3a79b93fbc5e76",
+        "doi": "10.1109/ICCASIT66611.2025.11348646",
+        "canonical_id": "DOI:10.1109/ICCASIT66611.2025.11348646",
+        "authors": [
+          "Feiyu Chen"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 400,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.19947",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.19947",
+        "id:SemanticScholar:e7bf0f94ef8d3f13a0957834f909efb8256559ca",
+        "id:arXiv:2407.19947",
+        "title:inference acceleration for large language models using stairs assisted greedy generation",
+        "url:https://arxiv.org/abs/2407.19947"
+      ],
+      "record": {
+        "title": "Inference acceleration for large language models using \"stairs\" assisted greedy generation",
+        "source_url": "https://arxiv.org/abs/2407.19947",
+        "year": 2024,
+        "published": "2024-07-29",
+        "venue": "International Conference on Information Technology",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) with billions of parameters are known for their impressive predicting capabilities but require lots of resources to run. With their massive rise in popularity, even a small reduction in required resources could have an impact on environment. On the other hand, smaller models require fewer resources but may sacrifice accuracy. In this work, we are proposing an implementation of ``stairs'' assisted greedy generation. It is a modified assisted generation methodology that makes use of a smaller model's fast generation, large model's batch prediction, and\"stairs\"validation in order to achieve a speed up in prediction generation. Results show between 9.58 and 17.24 percent inference time reduction compared to a stand-alone large LLM prediction in a text generation task without a loss in accuracy.",
+        "identifiers": [
+          "SemanticScholar:e7bf0f94ef8d3f13a0957834f909efb8256559ca"
+        ],
+        "semantic_scholar_id": "e7bf0f94ef8d3f13a0957834f909efb8256559ca",
+        "canonical_id": "arXiv:2407.19947",
+        "arxiv_id": "2407.19947",
+        "doi": "10.48550/arXiv.2407.19947",
+        "authors": [
+          "Domas Grigaliunas",
+          "M. Lukoševičius"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 850,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.16092",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.16092",
+        "id:SemanticScholar:24ca33f81e56b73a46494de14aa9669ec6f7abb4",
+        "id:arXiv:2510.16092",
+        "title:compressing manyshots in incontext learning",
+        "url:https://arxiv.org/abs/2510.16092"
+      ],
+      "record": {
+        "title": "Compressing Many-Shots in In-Context Learning",
+        "source_url": "https://arxiv.org/abs/2510.16092",
+        "year": 2025,
+        "published": "2025-10-17",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have been shown to be able to learn different tasks without explicit finetuning when given many input-output examples / demonstrations through In-Context Learning (ICL). Increasing the number of examples, called ``shots'', improves downstream task performance but incurs higher memory and computational costs. In this work, we study an approach to improve the memory and computational efficiency of ICL inference by compressing the many-shot prompts. Given many shots comprising t tokens, our goal is to generate a m soft-token summary, where m<t. We first show that existing prompt compression methods are ineffective for many-shot compression, and simply using fewer shots as a baseline is surprisingly strong. To achieve effective compression, we find that: (a) a stronger compressor model with more trainable parameters is necessary, and (b) compressing many-shot representations at each transformer layer enables more fine-grained compression by providing each layer with its own compressed representation. Based on these insights, we propose MemCom, a layer-wise compression method. We systematically evaluate various compressor models and training approaches across different model sizes (2B and 7B), architectures (Gemma and Mistral), many-shot sequence lengths (3k-6k tokens), and compression ratios (3x to 8x). MemCom outperforms strong baselines across all compression ratios on multiple classification tasks with large label sets. Notably, while baseline performance degrades sharply at higher compression ratios, often by over 20-30%, MemCom maintains high accuracy with minimal degradation, typically dropping by less than 10%.",
+        "identifiers": [
+          "SemanticScholar:24ca33f81e56b73a46494de14aa9669ec6f7abb4"
+        ],
+        "semantic_scholar_id": "24ca33f81e56b73a46494de14aa9669ec6f7abb4",
+        "canonical_id": "arXiv:2510.16092",
+        "arxiv_id": "2510.16092",
+        "doi": "10.48550/arXiv.2510.16092",
+        "authors": [
+          "Devvrit Khatri",
+          "P. Kulkarni",
+          "Nilesh Gupta",
+          "Yerram Varun",
+          "Li-Qian Peng",
+          "Jay Yagnik",
+          "Praneeth Netrapalli",
+          "Cho-Jui Hsieh",
+          "Alec Go",
+          "I. Dhillon",
+          "Aditya Kusupati",
+          "Prateek Jain"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 405,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7ab0eefca1c452aafbf535133ba54019194d0b1901bac3da5629a4d708d62e45",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

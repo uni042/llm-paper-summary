@@ -1,0 +1,227 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7d56cd3d8f350aa6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7d56cd3d8f35",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:44041470bcc088789a6cf14d7121d34f77577e20",
+    "SemanticScholar:9e69dee950937279d6742dd2c7496e3bef4f8234"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1e2c66fefc1a5bbff3f625584bab6a6fc9616193",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T11:40:19.306790+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:44041470bcc088789a6cf14d7121d34f77577e20",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:9e69dee950937279d6742dd2c7496e3bef4f8234",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "OPTQ: A CCURATE P OST -T RAINING Q UANTIZATION FOR G ENERATIVE P RE - TRAINED T RANSFORMERS",
+      "source_url": "https://www.semanticscholar.org/paper/44041470bcc088789a6cf14d7121d34f77577e20",
+      "year": 2023,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:44041470bcc088789a6cf14d7121d34f77577e20"
+      ],
+      "semantic_scholar_id": "44041470bcc088789a6cf14d7121d34f77577e20",
+      "canonical_id": "SemanticScholar:44041470bcc088789a6cf14d7121d34f77577e20",
+      "authors": [
+        "Elias Frantar",
+        "T. Hoefler"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1244,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Supplementary Materials for AirCache: Activating Inter-modal Relevancy KV Cache Compression for Efficient Large Vision-Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/9e69dee950937279d6742dd2c7496e3bef4f8234",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:9e69dee950937279d6742dd2c7496e3bef4f8234"
+      ],
+      "semantic_scholar_id": "9e69dee950937279d6742dd2c7496e3bef4f8234",
+      "canonical_id": "SemanticScholar:9e69dee950937279d6742dd2c7496e3bef4f8234",
+      "authors": [
+        "Kai Huang",
+        "Hao Zou",
+        "Bo-Chen Wang",
+        "Ye Xi",
+        "Zhenlu Xie",
+        "Hao Wang",
+        "Alibaba Group"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:SemanticScholar:44041470bcc088789a6cf14d7121d34f77577e20",
+      "identity_tokens": [
+        "id:SemanticScholar:44041470bcc088789a6cf14d7121d34f77577e20",
+        "title:optq a ccurate p ost t raining q uantization for g enerative p re trained t ransformers",
+        "url:https://www.semanticscholar.org/paper/44041470bcc088789a6cf14d7121d34f77577e20"
+      ],
+      "record": {
+        "title": "OPTQ: A CCURATE P OST -T RAINING Q UANTIZATION FOR G ENERATIVE P RE - TRAINED T RANSFORMERS",
+        "source_url": "https://www.semanticscholar.org/paper/44041470bcc088789a6cf14d7121d34f77577e20",
+        "year": 2023,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:44041470bcc088789a6cf14d7121d34f77577e20"
+        ],
+        "semantic_scholar_id": "44041470bcc088789a6cf14d7121d34f77577e20",
+        "canonical_id": "SemanticScholar:44041470bcc088789a6cf14d7121d34f77577e20",
+        "authors": [
+          "Elias Frantar",
+          "T. Hoefler"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1244,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:9e69dee950937279d6742dd2c7496e3bef4f8234",
+      "identity_tokens": [
+        "id:SemanticScholar:9e69dee950937279d6742dd2c7496e3bef4f8234",
+        "title:supplementary materials for aircache activating intermodal relevancy kv cache compression for efficient large visionlanguage model inference",
+        "url:https://www.semanticscholar.org/paper/9e69dee950937279d6742dd2c7496e3bef4f8234"
+      ],
+      "record": {
+        "title": "Supplementary Materials for AirCache: Activating Inter-modal Relevancy KV Cache Compression for Efficient Large Vision-Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/9e69dee950937279d6742dd2c7496e3bef4f8234",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:9e69dee950937279d6742dd2c7496e3bef4f8234"
+        ],
+        "semantic_scholar_id": "9e69dee950937279d6742dd2c7496e3bef4f8234",
+        "canonical_id": "SemanticScholar:9e69dee950937279d6742dd2c7496e3bef4f8234",
+        "authors": [
+          "Kai Huang",
+          "Hao Zou",
+          "Bo-Chen Wang",
+          "Ye Xi",
+          "Zhenlu Xie",
+          "Hao Wang",
+          "Alibaba Group"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e182f3cdc53a59ac9923567fd36b3469407b7bda646d722696e7aa47c9bb3653",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

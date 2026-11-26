@@ -1,0 +1,1360 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-63d3dd4e0a85a5d1-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-63d3dd4e0a85",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2611.31937",
+    "arXiv:2611.32083",
+    "arXiv:2611.32264",
+    "arXiv:2611.32269",
+    "arXiv:2611.32295",
+    "arXiv:2611.32423",
+    "arXiv:2611.32572",
+    "arXiv:2611.32624",
+    "arXiv:2611.32634",
+    "arXiv:2611.32873",
+    "arXiv:2611.32881",
+    "arXiv:2611.32954",
+    "arXiv:2611.32989",
+    "arXiv:2611.33004",
+    "arXiv:2611.33111"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 15,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1e2c66fefc1a5bbff3f625584bab6a6fc9616193",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 15,
+  "provider_progress": {
+    "requested_count": 15,
+    "status_counts": {
+      "allowed": 15,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T11:40:19.066686+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2611.31937",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32083",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32264",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32269",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32295",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32423",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32572",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32624",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32634",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32873",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32881",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32954",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.32989",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.33004",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.33111",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Native Block-Quantized Matrix Multiplication and Explicit K/V Residency with Dual-View Access for LLM Inference on RISC-V Vector Processors",
+      "source_url": "https://arxiv.org/abs/2611.31937",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Some key execution states in large language model inference persist across multiple instructions and are difficult to express and exploit within RVV semantics centered on individual operations. We define specialization boundaries according to data-state lifetimes and propose Quantized Block Streams (QBS) and Attention/KV Context (AKV) while preserving RVV programmability. QBS organizes native-block format processing, block traversal, integer computation, and ordered FP32 accumulation into a unified execution process, whereas AKV maintains local K/V residency and supplies operand views aligned with the computation direction while leaving Attention arithmetic on RVV. Cycle-accurate RTL evaluation shows that QBS achieves geometric-mean speedups of 35.68x and 51.34x for projection Compute and Matmul, respectively, while AKV achieves a 1.45x geometric-mean speedup over Tiled RVV for Decode Attention. Compared with the baseline, the complete design increases total area by 12.65%; on the evaluated projection workloads, throughput per area and energy efficiency improve by 46.63x and 19.78x, respectively. Further evaluation demonstrates applicability across multiple block-quantization formats and across models with different Attention organizations.",
+      "identifiers": [
+        "SemanticScholar:132463aac3a09c4f9c5544c778b4c2c4a3a45143"
+      ],
+      "semantic_scholar_id": "132463aac3a09c4f9c5544c778b4c2c4a3a45143",
+      "canonical_id": "arXiv:2611.31937",
+      "arxiv_id": "2611.31937",
+      "authors": [
+        "Wei-Ying Wang",
+        "Yuan-Yang Xiang",
+        "Zhi-Wei Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Inference-Aware Congestion Control for Distributed MoE Inference",
+      "source_url": "https://arxiv.org/abs/2611.32083",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Congestion control is central to low-latency datacenter communication, yet link utilization and queue state do not reveal whether delivered bytes advance an application. This distinction matters in distributed mixture-of-experts (MoE) inference: collective transfers jointly satisfy GPU dependencies, while computation may overlap with communication. The transfer limiting a consumer can therefore change over time, and extra bandwidth may have little effect while that consumer is still computing. We study this interaction and present IACC, which combines ACK/INT feedback with collective and consumer progress when allocating QP rates. A fixed-snapshot analysis characterizes budget conservation and weighted max-min allocation. Across five trace-guided workloads at baseline arrival density, IACC lowers mean TTFT and TPOT relative to HPCC by 6.32%-19.41% and 7.02%-27.33%, respectively. Across tested workload-density settings through 1.25x, mean and p95 TTFT are also lower.",
+      "identifiers": [
+        "SemanticScholar:e299ade10720d123332d0c9d44ca85fe16572e52"
+      ],
+      "semantic_scholar_id": "e299ade10720d123332d0c9d44ca85fe16572e52",
+      "canonical_id": "arXiv:2611.32083",
+      "arxiv_id": "2611.32083",
+      "authors": [
+        "Wei-Ye Chen",
+        "Qi Xin",
+        "A. M. Abdelmoniem"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mayfly: Lifecycle-Aware High-Bandwidth Flash for Recursive Self-Improvement",
+      "source_url": "https://arxiv.org/abs/2611.32264",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recursive self-improvement (RSI) lets an LLM improve its agent system by proposing and evaluating candidate variants across tasks. A generation's sessions grow their KV caches together and release them as they finish, creating a burst followed by a decline. At high concurrency, even the KV of sessions ready to run exceeds the GPU's HBM. Offloading that KV to host DRAM or SSDs adds capacity but leaves ready sessions waiting for HBM space before execution. High-Bandwidth Flash (HBF) can serve the overflow in place, but excessive reads lengthen decode steps and repeated writes consume flash endurance. Our key insight is that where ready KV is read should follow the burst and its decline: from HBF in place while the burst overflows HBM, as much as each step's bandwidth allows, and from HBM again as the decline frees it. A switch between ready and parked decides only whether a block is read, so its flash copy stays valid, and a session's end, which the orchestrator announces, decides when its private KV dies. We present Mayfly, lifecycle-guided HBF management for RSI. Mayfly bounds per-step HBF reads during overflow and returns KV to HBM as sessions finish and free space. It retains a valid backing copy of each block evicted from HBM to avoid rewrites across state transitions, and forwards session-end signals to the controller to avoid copying dead KV during garbage collection. Experimental results show that, at 128 sessions per generation on four added HBF sites, Mayfly finishes 34% sooner than parking the same KV on HBF and 23% sooner than reading it from HBF whenever HBM is full; its gain over parking grows with concurrency, to 55% at 256 sessions on eight sites. Keeping one flash copy per block and trimming at announced session ends avoid write amplification.",
+      "identifiers": [
+        "SemanticScholar:b8a978c66f4294cfea36d2f960180797d5dd2f56"
+      ],
+      "semantic_scholar_id": "b8a978c66f4294cfea36d2f960180797d5dd2f56",
+      "canonical_id": "arXiv:2611.32264",
+      "arxiv_id": "2611.32264",
+      "authors": [
+        "Chun-Lin Tian",
+        "Ming-Jia Fan",
+        "Feng Yu",
+        "Qing-Yun Zou",
+        "Wen-Ju Zhao",
+        "Weng-Fai Wong",
+        "Bing-Sheng He"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pando: Noise-Coupled Parallel Draft Trees for Efficient Edge Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.32269",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive (AR) decoding emits one token per forward pass, reloading the full model each time, so LLM inference on edge devices is memory-bound while the compute units sit idle. Speculative decoding puts that idle compute to work by verifying several drafted tokens in a single pass. State-of-the-art parallel drafters such as DFlash and DSpark propose an entire block of draft tokens in one forward pass, which makes drafting compute-efficient. However, they are deployed with draft chains whose length is capped by the block size they are trained for, leaving most of the computational budget for verification unused. To tackle this problem, we propose Pando, which builds dynamic draft trees on top of a parallel drafter and thereby removes this cap. Pando employs noise-coupled pruning, which draws the target model's sampling noise before drafting and ranks candidate branches under that noise, so the tree retains the branches the target will actually sample. Noise coupling is lossless and requires no retraining or additional model pass, yet increases acceptance length by up to $8.4\\%$ on Qwen3-8B. To optimize and evaluate Pando configurations across hardware, we normalize an operator-level roofline to AR decoding, reducing every platform to its ridge point. On a representative edge device, a 16-node Pando tree attains $5.3\\times$ speedup and $4.2\\times$ energy reduction over AR decoding: $25\\%$ faster than DSpark's released chain, and $27\\%$ faster and $72\\%$ more energy-efficient than an EAGLE-3 tree. The best configurations remain memory-bound on every edge device we model, so added compute capacity does not reduce their latency.",
+      "identifiers": [
+        "SemanticScholar:bdb5fa0983d21d138870672a74e3c4e170f3a1bb"
+      ],
+      "semantic_scholar_id": "bdb5fa0983d21d138870672a74e3c4e170f3a1bb",
+      "canonical_id": "arXiv:2611.32269",
+      "arxiv_id": "2611.32269",
+      "authors": [
+        "Joren Dumoulin",
+        "Hyoukjun Kwon",
+        "Subhankar Pal",
+        "Steven Li",
+        "Vignesh Vivekraja",
+        "M. Verhelst"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Norn: Context-Length-Aware Optimization of Weight and KV Cache Placement for Offloaded LLM Inference",
+      "source_url": "https://arxiv.org/abs/2611.32295",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Offloading model weights and the key-value (KV) cache to host memory enables large language models (LLMs) to run on a single memory-constrained GPU. As the KV cache grows during decoding, GPU memory requirements and the costs of KV cache transfers and attention computation change. However, existing offloading methods generally use static computation assignments and placements of model weights and the KV cache, preventing them from adapting to these changes and degrading inference performance. We propose Norn, a context-length-aware offloaded LLM inference method. Based on offline profiling, Norn co-optimizes computation assignments and placements at the sublayer level, precomputing multiple execution plans and their switching points. During decoding, Norn switches plans as context length increases, overlapping computation and data transfers without knowing the output length in advance. For prefill, Norn employs operator-major chunked prefill to avoid repeated weight transfers and automatically selects the chunk size. Experiments with Qwen3-14B and Qwen3-32B on two single-GPU systems show up to a 16.8$\\times$ speedup in end-to-end latency over Pipelined Sharding and a 4.2$\\times$ speedup over its oracle variant with known input and output lengths.",
+      "identifiers": [
+        "SemanticScholar:94c25b4b7e94be6c608e9f1654ca1d2930f2431d"
+      ],
+      "semantic_scholar_id": "94c25b4b7e94be6c608e9f1654ca1d2930f2431d",
+      "canonical_id": "arXiv:2611.32295",
+      "arxiv_id": "2611.32295",
+      "authors": [
+        "Nao Sugiura",
+        "Hiroki Matsutani"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Factorized Context Attention: From Emulated to Native Grid Probing",
+      "source_url": "https://arxiv.org/abs/2611.32423",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Models read a book, an hour of video, or an image in one forward pass. As the context grows, this pass slows down, loses accuracy, and stops at the context window. Sparse attention is efficient, but keeps the other two limitations. Grid probing, a recent training-free method, recovers the accuracy and extends the reach by asking a frozen model the same question about short local and strided spans of the input, but every question repeats the whole computation, since each span is encoded again. Our insight is that grid probing is emulated attention, an attention pattern reproduced from outside the model through prompts, since each probe only restricts which part of the input the question can see. We introduce Factorized Context Attention (FCA), a training-free block-sparse attention that runs the same pattern natively, as the attention of the model itself. FCA encodes the input once into a KV cache, reads all spans as masked sequences in one batched forward, and uses a stair position schedule to keep every span inside the trained position range. Across long video understanding, long-context text inference and image grounding, FCA matches the accuracy and the reach of grid probing at a fraction of its cost. It gains about 10 points over the single pass on long video and 9 to 14 points on long novels, finds needles in videos of over a thousand frames and in texts four times the length of the window, and answers a later question about the same input in as little as a tenth of the time of grid probing. Native attention thus keeps what emulated attention gains without its cost, all with existing frozen language and vision-language models.",
+      "identifiers": [
+        "SemanticScholar:7ed200c105168460e30caf8d9ea086364c39fba0"
+      ],
+      "semantic_scholar_id": "7ed200c105168460e30caf8d9ea086364c39fba0",
+      "canonical_id": "arXiv:2611.32423",
+      "arxiv_id": "2611.32423",
+      "authors": [
+        "Mohamed Eltahir",
+        "Manar Eyad",
+        "Yara Alzahrani",
+        "Fatimah Albesher",
+        "Duaa M. Tahir",
+        "Tanveer Hussain",
+        "Naeemullah Khan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Breaking Routing And Inter-device Dependencies in Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2611.32572",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Mixture-of-Experts (MoE) models scale, Expert Parallelism (EP) becomes increasingly important for distributing experts across devices. However, the resulting token dispatch and combine operations can become a major bottleneck during inference. Overlapping these communication phases with computation is constrained by the sequential dependencies of standard MoE architectures. We introduce BRAID-MoE, an architecture that pairs laddered residual connections with early routing to relax these dependencies. Laddered residuals enable each expert combine to be deferred to the following block, while early routing computes the next routing decision from the pre-combine residual, with experts still receiving the updated post-combine hidden state. This creates an extended communication window in which the preceding combine and next dispatch can execute back-to-back on a dedicated communication stream, overlapping attention computation. On Qwen3-shaped MoEs with 0.4B-A0.1B and 2.5B-A0.5B parameters, BRAID closely matches sequential training at matched compute, with validation-loss increases of only 1% and 0.5%, respectively. We further demonstrate that existing MoE checkpoints can be adapted to BRAID with limited additional training, largely recovering their original accuracy. On a converted Qwen3-30B-A3B model, BRAID achieves speedups of up to 1.29$\\times$ in prefill and 1.37$\\times$ in decode, and at least 1.12$\\times$ across diverse workloads and EP configurations on one or two four-H100 nodes. It outperforms competing overlap strategies in all tested settings, with the strongest gains when communication is a major latency bottleneck and its duration approaches the available computation window. These results demonstrate that early routing enables more effective communication-computation overlap in MoE inference at a modest cost in model quality.",
+      "identifiers": [
+        "SemanticScholar:07030257fe8c8593ae101300fae1c7c7c39bede4"
+      ],
+      "semantic_scholar_id": "07030257fe8c8593ae101300fae1c7c7c39bede4",
+      "canonical_id": "arXiv:2611.32572",
+      "arxiv_id": "2611.32572",
+      "authors": [
+        "J. Zarka",
+        "Danyal Ahmed",
+        "Eugene Belilovsky",
+        "Edouard Oyallon"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HiCal: Offline Calibration for Hierarchical Scale Encoding in Accurate HiF4 Quantization",
+      "source_url": "https://arxiv.org/abs/2611.32624",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block floating-point (BFP) quantization is widely adopted for efficient low-bit large language model (LLM) inference, where the choice of block scales plays a critical role in quantization accuracy. HiFloat4 (HiF4) employs a hierarchical scale encoding scheme consisting of a global E6M2 scale and two levels of binary scale extensions. However, its conventional rounding rule and fixed scale extension thresholds may not fully capture the statistical characteristics of the quantized tensors in practice, leading to suboptimal scale representations. In this work, we propose HiCal, an offline calibration approach that improves HiF4 quantization accuracy by refining the encoding decisions across all three scale levels. Specifically, we introduce a calibrated rounding bias for the Level-1 E6M2 scale and optimize the scale-extension thresholds at Levels 2 and 3 based on the empirical distributions of local group magnitudes. The resulting calibration parameters are determined offline and remain fixed during inference, while the hierarchical encoding continues to adapt to individual blocks through their local values. This design eliminates the need for per-block multi-candidate scale search while preserving the original deterministic HiF4 encoding procedure. Experiments across five synthetic and real activation distributions show that the proposed method reduces quantization MSE by 9.91%-23.50% relative to the original HiF4 scheme, including a 13.00% reduction on real Qwen3-8B activations. End-to-end evaluations across six benchmarks further show average-score improvements of 0.91 and 1.25 percentage points on Qwen3-8B and Qwen3-30B-A3B, respectively, without per-block multi-candidate search during inference.",
+      "identifiers": [
+        "SemanticScholar:79da039b2ab2192b0baa869dfd590e120f3d8a72"
+      ],
+      "semantic_scholar_id": "79da039b2ab2192b0baa869dfd590e120f3d8a72",
+      "canonical_id": "arXiv:2611.32624",
+      "arxiv_id": "2611.32624",
+      "authors": [
+        "Zhi-Yuan Zhang",
+        "Yan-Zhao Li",
+        "Hui-Lin Dong",
+        "Si-Fan Cheng",
+        "Min-Gen Zheng",
+        "Hui Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ModelLess: A Serverless System for Multi-Tier LLM Inference on Shared GPUs",
+      "source_url": "https://arxiv.org/abs/2611.32634",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference platforms sell online, asynchronous, batch and rollout products on GPUs provisioned per product, so a service's cards sit idle between bursts while other work waits. We present ModelLess, a serverless system for LLM inference. Users declare model services and the platform owns the instances. An idle service scales to zero: its instances go to sleep with their weights in host memory (release about 1 s, wake about 4 s for GLM-5.2 at TP8, against a cold start of over four minutes). Billing follows the time a service holds GPUs. The GPUs that sleeping instances free are lent to lower tiers. Cluster managers preempt low-priority tasks and treat eviction as all-or-nothing, but an LLM instance's eviction cost depends on which of its weights, execution state, KV cache and in-flight requests survive. ModelLess therefore gives each tier (online, job, flex) eviction semantics that state what it may lose when preempted, and runs a preemption protocol that closes admission before it releases memory, re-enqueues a request durably before it aborts it, and fails closed. Four components (entry, dispatcher, node agent, SGLang plugin) enforce it with sleep/wake, pause/resume of in-flight requests for flex, and a weight-copy path (follow/seal) for RL rollout. Replaying a week of traces from 1,100 H20 cards serving long-tail online models shows that about 38% of GPU-time (417 equivalent GPUs) could be lent under a coarse latency target with one fixed idle threshold. This is an idealized upper bound, and it holds only if recovery takes seconds: with a 240 s cold start under 8% remains even with per-service thresholds. On one node, a single four-hour run per policy shows that pausing yields 22% more borrower tokens per held GPU sample than abort-and-requeue, with the same median online latency. The job tier and follow/seal are not yet evaluated end to end.",
+      "identifiers": [
+        "SemanticScholar:c53c7037cc0042f8b4d087f9e83cfeba7ee93bc4"
+      ],
+      "semantic_scholar_id": "c53c7037cc0042f8b4d087f9e83cfeba7ee93bc4",
+      "canonical_id": "arXiv:2611.32634",
+      "arxiv_id": "2611.32634",
+      "authors": [
+        "Ding Shi",
+        "Wei Wu",
+        "Jia-Yuan Chen",
+        "Cheng-Hu Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MXFP4 for LLM Inference: Complementary Post-Training Quantization Techniques and Their Interactions",
+      "source_url": "https://arxiv.org/abs/2611.32873",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in low-precision representation have introduced several microscaling numerical formats for LLM quantization. By sharing a scale factor across groups of 16 or 32 elements, these formats enable aggressive low-precision quantization with minimal accuracy degradation, particularly when combined with modern PTQ algorithms. Their accuracy depends on how the numerical format interacts with rotation, PTQ, and scale selection. We study the composability of PTQ configurations across six LLMs and three microscaling formats: MXFP6, MXFP4, and NVFP4, systematically varying Hadamard rotation granularity, PTQ algorithm, and scale-selection strategy. Our central finding is that effective quantization recipes are format dependent: both MXFP4 and NVFP4 support accurate 4-bit inference, but techniques that benefit one do not necessarily transfer to the other. MXFP4 benefits substantially from rotation and error-correcting PTQ, whereas NVFP4 gains less from rotation, consistent with its finer-grained scales capturing more within-block variation. Building on these findings, we introduce Midmax, a calibration-free scale-selection strategy that mitigates clipping error in power-of-two block scales and improves accuracy across a majority of the evaluated MXFP4 configurations. We show that pairing MXFP6 activations with MXFP4 weights recovers most of the accuracy lost at 4-bit and, on Llama-3.1-8B, matches or exceeds our in-house BF16 baseline. An additional study finds that augmenting MXFP4 with a per-tensor macroscale, a mechanism intrinsic to NVFP4, does not improve average accuracy, suggesting that global rescaling alone does not address the limitations of E8M0 block scales for MXFP4 quantization. Together, these results provide practical guidance for combining numerical formats, rotation, PTQ, and scale selection for accurate low-precision LLM inference.",
+      "identifiers": [
+        "SemanticScholar:f1de2319debe6d696f2e946a378a06f7677ce92d"
+      ],
+      "semantic_scholar_id": "f1de2319debe6d696f2e946a378a06f7677ce92d",
+      "canonical_id": "arXiv:2611.32873",
+      "arxiv_id": "2611.32873",
+      "authors": [
+        "Natalia Frumkin",
+        "Alireza Khodamoradi",
+        "K. Denolf",
+        "Eric Dellinger",
+        "S. Biles"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scalable Placement for Disaggregated LLM Serving on Heterogeneous Edge Fleets",
+      "source_url": "https://arxiv.org/abs/2611.32881",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving large language models (LLMs) at the edge is increasingly desirable for privacy-sensitive applications and scenarios that require data to remain on local devices. However, edge environments are constrained by limited computational resources and exhibit substantial device heterogeneity, making efficient LLM serving challenging. These limitations become particularly pronounced under bursty demand, where congestion and queue buildup can significantly increase response latency. Replicating the model into multiple pipeline instances can improve serving capacity and reduce congestion. Yet, deciding how devices should be grouped into replicas, assigning replicas to prefill or decode functions, and partitioning model layers across heterogeneous devices jointly creates a large combinatorial optimization problem. We present Spade, a scalable and runtime-efficient placement planner for disaggregated LLM serving with pipeline replication across heterogeneous edge clusters. Spade introduces a dominance-based pruning technique that discards inferior replica candidates and recursively eliminates larger candidates that contain them, dramatically shrinking the search space. It further combines a water-filling approach for layer partitioning with a bounded multidimensional knapsack formulation that optimizes placement under a congestion-aware objective. On a synthetic fleet of 30 devices spanning five hardware classes, Spade finds the optimal placement in 441ms. In contrast, a genetic-search baseline augmented with dynamic-programming partitioning requires approximately two hours and still produces solutions with a 19.7% worse congestion objective. When evaluated on fleets containing ten device types, Spade's pruning strategy eliminates 99.6% of candidate placements while yielding the same surviving candidate set as exhaustive enumeration.",
+      "identifiers": [
+        "SemanticScholar:1ab399755a6e6e626a514ee0b1b3c71cc915cbe9"
+      ],
+      "semantic_scholar_id": "1ab399755a6e6e626a514ee0b1b3c71cc915cbe9",
+      "canonical_id": "arXiv:2611.32881",
+      "arxiv_id": "2611.32881",
+      "authors": [
+        "T. Le",
+        "Hoang-Loc La",
+        "Amirhosein Taherkordi",
+        "F. Eliassen",
+        "P. H. Ha"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LoomKV: Lossless KV Cache Compression from GPU Memory to SSD for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2611.32954",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving engines offload the key/value (KV) cache from GPU memory to host DRAM and SSD so multi-turn and agent requests can reuse prompt prefixes. Capacity then limits service at two levels: external tiers govern prefix reuse before eviction, while the GPU KV pool bounds concurrent long requests, and lossy compression alters KV values and outputs. LoomKV brings lossless KV compression to both external tiers (tier mode) and the GPU pool (pool mode) on an unmodified engine. Using a calibrated per-head two-level 3-bit code over BF16 high bytes (sign and upper seven exponent bits), LoomKV stores BF16 KV at 0.71 of its raw size across nine models and FP8 KV at 0.85-0.87. In tier mode, TileStream writes exact-length records with length readback off the load path, leaving tier storage, eviction, and prefetch unchanged, and decompresses fetched records straight into scattered GPU pages. In pool mode, FragPack packs variable-length records into smaller shared-budget GPU pages read in place by a fused decode-attention kernel faster than FlashAttention-3 on BF16. Built with LMCache and vLLM, LoomKV makes compressed tiers act as 1.4x larger raw tiers on AgentX: across LMCache's LRU cliff, tier mode delivers 2.7-3.6x raw's goodput and 1.9-3.1x lower mean time-to-first-token (TTFT), shifts the cliff identically under other simulated replacement policies, and cuts repeated-prompt TTFT up to 1.7x via SSD-to-DRAM promotion. When tiers hold the working set, pool mode fits 1.31-1.34x as many GPU tokens, admitting 12 long requests with roughly raw's queue and goodput at 8. On an AI IDE trace where both tiers and the GPU pool are constrained, tier and pool modes raise goodput by 1.24x and 1.59x. Where raw capacity suffices, compression costs at most 2.2% throughput; tier mode is bit-exact with raw tiers, and pool mode matches FlashAttention-3's numerical accuracy.",
+      "identifiers": [
+        "SemanticScholar:d64d58e0f7c7eeb621646f6c7c4a4b7d5930696b"
+      ],
+      "semantic_scholar_id": "d64d58e0f7c7eeb621646f6c7c4a4b7d5930696b",
+      "canonical_id": "arXiv:2611.32954",
+      "arxiv_id": "2611.32954",
+      "authors": [
+        "Wen-Tao Zhu",
+        "Zi-Nan Sheng",
+        "Peng Deng",
+        "Hui-Qi Hu",
+        "Xuan Zhou",
+        "Xing Wei",
+        "Zhuang Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AVQ-Attention-2: Adaptive Vector-Quantized Attention with Exact Local Blocks and Linear-Cost Training",
+      "source_url": "https://arxiv.org/abs/2611.32989",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention costs $\\mathcal{O}(N^2)$ in the number of tokens. Vector-quantized attention reduces this to $\\mathcal{O}(NM)$ by clustering the $N$ keys, attending to the $M$ codewords instead, and its adaptive form, AVQ-attention, concentrates codebook resolution where a query's attention mass actually falls. We present AVQ-Attention-2, a better design that merges it with exact local attention and attends to the mean of each cluster's keys rather than to a codeword. We show three improvements: consistently better quality at comparable cost; training that now also costs $\\mathcal{O}(NM)$ rather than $\\mathcal{O}(N^2)$; and an approximation accurate enough that the layer can be dropped into a pretrained transformer without fine-tuning. Across a variety of sequence lengths the result is competitive not merely with other approximate attention but with exact dense attention, running faster than FlashAttention at little to no loss in quality.",
+      "identifiers": [
+        "SemanticScholar:a722b3b72e8ff9ba458a330b63ad99b64f38caab"
+      ],
+      "semantic_scholar_id": "a722b3b72e8ff9ba458a330b63ad99b64f38caab",
+      "canonical_id": "arXiv:2611.32989",
+      "arxiv_id": "2611.32989",
+      "authors": [
+        "W. van den Dool",
+        "P. Forré",
+        "A. Habibian",
+        "Yuki Markus Asano",
+        "M. Welling"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LEGOSpec: A Composable and Efficient Framework for Speculative Draft Design and Training",
+      "source_url": "https://arxiv.org/abs/2611.33004",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) generation using a lightweight draft. Existing methods evaluate complete recipes under different training configurations, leaving component effects, interactions, and composition benefits unclear. Therefore, we present LEGOSpec, a composable framework for speculative draft design and training. LEGOSpec decomposes draft models into Context, Backbone, Proposal, and Objective components that share a unified training infrastructure. Using LEGOSpec, we systematically vary components and evaluate selected combinations under matched training conditions to isolate their effects and interactions. These experiments reveal three findings: (1) Different workloads favor different backbones, depending on context length and memory budget, with within-block dependency modeling particularly important for long contexts. (2) Proposal design must balance acceptance and latency. (3) The training objective should match token distributions locally and optimize acceptance length across the block. These findings guide workload-aware configurations and DFlux, a balanced general-purpose draft combining a convolution-equipped SWA--GQA hybrid backbone, Residual Corrector, and hierarchical supervision. Across Qwen and Gemma models, DFlux improves acceptance length over the strongest baseline by up to 13.7% on regular benchmarks and 34.7% on long-context workloads. To support efficient training, LEGOSpec integrates metadata-aware scheduling and asynchronous execution, increasing training throughput by up to 79% and accelerating offline supervision preparation by up to $3.11\\times$ over SpecForge.",
+      "identifiers": [
+        "SemanticScholar:88915ba75ee2629205b67cde502c955878400e33"
+      ],
+      "semantic_scholar_id": "88915ba75ee2629205b67cde502c955878400e33",
+      "canonical_id": "arXiv:2611.33004",
+      "arxiv_id": "2611.33004",
+      "authors": [
+        "Han-Zhen Wang",
+        "Jia-Ming Xu",
+        "Guo-Hao Dai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions",
+      "source_url": "https://arxiv.org/abs/2611.33111",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by employing a lightweight draft model to propose draft tokens and allowing the target model to verify the new tokens in parallel to improve inference-time compute utilization. The speedup relies on the acceptance probability of draft tokens in target verification, which is directly related to the gap $\\|p-q\\|_1$ between the target distribution $p$ and the draft distribution $q$. In this paper, we study draft calibration of speculative decoding to improve the speedup of speculative decoding, where we employ post-hoc methods to calibrate the draft distribution to mitigate the distribution gap. We observe that though current community open-source draft models may learn the top candidate token correctly, they are generally underconfident compared to the target model, suggesting a consistent distribution mismatch. To mitigate the effect of this mismatch on the acceptance rate of the draft models, we try various post-hoc calibration methods, including standard temperature scaling and token-wise calibration. Our results suggest that a standard temperature scaling applied to the draft distribution improves the acceptance length by up to approximately 10\\% with almost no additional cost across different tasks. Throughput analysis further verifies that this improvement in serving efficiency. Analysis of more general calibration methods reveals further potential room for improvement.",
+      "identifiers": [
+        "SemanticScholar:eba760c1bcf13c3b32ad3264cc625a42a595ee7f"
+      ],
+      "semantic_scholar_id": "eba760c1bcf13c3b32ad3264cc625a42a595ee7f",
+      "canonical_id": "arXiv:2611.33111",
+      "arxiv_id": "2611.33111",
+      "authors": [
+        "Yuxing Liu",
+        "Wei Zuo",
+        "Walid Krichene",
+        "Tong Zhang",
+        "Li Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.31937",
+      "identity_tokens": [
+        "id:SemanticScholar:132463aac3a09c4f9c5544c778b4c2c4a3a45143",
+        "id:arXiv:2611.31937",
+        "title:native blockquantized matrix multiplication and explicit kv residency with dualview access for llm inference on riscv vector processors",
+        "url:https://arxiv.org/abs/2611.31937"
+      ],
+      "record": {
+        "title": "Native Block-Quantized Matrix Multiplication and Explicit K/V Residency with Dual-View Access for LLM Inference on RISC-V Vector Processors",
+        "source_url": "https://arxiv.org/abs/2611.31937",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Some key execution states in large language model inference persist across multiple instructions and are difficult to express and exploit within RVV semantics centered on individual operations. We define specialization boundaries according to data-state lifetimes and propose Quantized Block Streams (QBS) and Attention/KV Context (AKV) while preserving RVV programmability. QBS organizes native-block format processing, block traversal, integer computation, and ordered FP32 accumulation into a unified execution process, whereas AKV maintains local K/V residency and supplies operand views aligned with the computation direction while leaving Attention arithmetic on RVV. Cycle-accurate RTL evaluation shows that QBS achieves geometric-mean speedups of 35.68x and 51.34x for projection Compute and Matmul, respectively, while AKV achieves a 1.45x geometric-mean speedup over Tiled RVV for Decode Attention. Compared with the baseline, the complete design increases total area by 12.65%; on the evaluated projection workloads, throughput per area and energy efficiency improve by 46.63x and 19.78x, respectively. Further evaluation demonstrates applicability across multiple block-quantization formats and across models with different Attention organizations.",
+        "identifiers": [
+          "SemanticScholar:132463aac3a09c4f9c5544c778b4c2c4a3a45143"
+        ],
+        "semantic_scholar_id": "132463aac3a09c4f9c5544c778b4c2c4a3a45143",
+        "canonical_id": "arXiv:2611.31937",
+        "arxiv_id": "2611.31937",
+        "authors": [
+          "Wei-Ying Wang",
+          "Yuan-Yang Xiang",
+          "Zhi-Wei Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32083",
+      "identity_tokens": [
+        "id:SemanticScholar:e299ade10720d123332d0c9d44ca85fe16572e52",
+        "id:arXiv:2611.32083",
+        "title:inferenceaware congestion control for distributed moe inference",
+        "url:https://arxiv.org/abs/2611.32083"
+      ],
+      "record": {
+        "title": "Inference-Aware Congestion Control for Distributed MoE Inference",
+        "source_url": "https://arxiv.org/abs/2611.32083",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Congestion control is central to low-latency datacenter communication, yet link utilization and queue state do not reveal whether delivered bytes advance an application. This distinction matters in distributed mixture-of-experts (MoE) inference: collective transfers jointly satisfy GPU dependencies, while computation may overlap with communication. The transfer limiting a consumer can therefore change over time, and extra bandwidth may have little effect while that consumer is still computing. We study this interaction and present IACC, which combines ACK/INT feedback with collective and consumer progress when allocating QP rates. A fixed-snapshot analysis characterizes budget conservation and weighted max-min allocation. Across five trace-guided workloads at baseline arrival density, IACC lowers mean TTFT and TPOT relative to HPCC by 6.32%-19.41% and 7.02%-27.33%, respectively. Across tested workload-density settings through 1.25x, mean and p95 TTFT are also lower.",
+        "identifiers": [
+          "SemanticScholar:e299ade10720d123332d0c9d44ca85fe16572e52"
+        ],
+        "semantic_scholar_id": "e299ade10720d123332d0c9d44ca85fe16572e52",
+        "canonical_id": "arXiv:2611.32083",
+        "arxiv_id": "2611.32083",
+        "authors": [
+          "Wei-Ye Chen",
+          "Qi Xin",
+          "A. M. Abdelmoniem"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32264",
+      "identity_tokens": [
+        "id:SemanticScholar:b8a978c66f4294cfea36d2f960180797d5dd2f56",
+        "id:arXiv:2611.32264",
+        "title:mayfly lifecycleaware highbandwidth flash for recursive selfimprovement",
+        "url:https://arxiv.org/abs/2611.32264"
+      ],
+      "record": {
+        "title": "Mayfly: Lifecycle-Aware High-Bandwidth Flash for Recursive Self-Improvement",
+        "source_url": "https://arxiv.org/abs/2611.32264",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recursive self-improvement (RSI) lets an LLM improve its agent system by proposing and evaluating candidate variants across tasks. A generation's sessions grow their KV caches together and release them as they finish, creating a burst followed by a decline. At high concurrency, even the KV of sessions ready to run exceeds the GPU's HBM. Offloading that KV to host DRAM or SSDs adds capacity but leaves ready sessions waiting for HBM space before execution. High-Bandwidth Flash (HBF) can serve the overflow in place, but excessive reads lengthen decode steps and repeated writes consume flash endurance. Our key insight is that where ready KV is read should follow the burst and its decline: from HBF in place while the burst overflows HBM, as much as each step's bandwidth allows, and from HBM again as the decline frees it. A switch between ready and parked decides only whether a block is read, so its flash copy stays valid, and a session's end, which the orchestrator announces, decides when its private KV dies. We present Mayfly, lifecycle-guided HBF management for RSI. Mayfly bounds per-step HBF reads during overflow and returns KV to HBM as sessions finish and free space. It retains a valid backing copy of each block evicted from HBM to avoid rewrites across state transitions, and forwards session-end signals to the controller to avoid copying dead KV during garbage collection. Experimental results show that, at 128 sessions per generation on four added HBF sites, Mayfly finishes 34% sooner than parking the same KV on HBF and 23% sooner than reading it from HBF whenever HBM is full; its gain over parking grows with concurrency, to 55% at 256 sessions on eight sites. Keeping one flash copy per block and trimming at announced session ends avoid write amplification.",
+        "identifiers": [
+          "SemanticScholar:b8a978c66f4294cfea36d2f960180797d5dd2f56"
+        ],
+        "semantic_scholar_id": "b8a978c66f4294cfea36d2f960180797d5dd2f56",
+        "canonical_id": "arXiv:2611.32264",
+        "arxiv_id": "2611.32264",
+        "authors": [
+          "Chun-Lin Tian",
+          "Ming-Jia Fan",
+          "Feng Yu",
+          "Qing-Yun Zou",
+          "Wen-Ju Zhao",
+          "Weng-Fai Wong",
+          "Bing-Sheng He"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32269",
+      "identity_tokens": [
+        "id:SemanticScholar:bdb5fa0983d21d138870672a74e3c4e170f3a1bb",
+        "id:arXiv:2611.32269",
+        "title:pando noisecoupled parallel draft trees for efficient edge speculative decoding",
+        "url:https://arxiv.org/abs/2611.32269"
+      ],
+      "record": {
+        "title": "Pando: Noise-Coupled Parallel Draft Trees for Efficient Edge Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2611.32269",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive (AR) decoding emits one token per forward pass, reloading the full model each time, so LLM inference on edge devices is memory-bound while the compute units sit idle. Speculative decoding puts that idle compute to work by verifying several drafted tokens in a single pass. State-of-the-art parallel drafters such as DFlash and DSpark propose an entire block of draft tokens in one forward pass, which makes drafting compute-efficient. However, they are deployed with draft chains whose length is capped by the block size they are trained for, leaving most of the computational budget for verification unused. To tackle this problem, we propose Pando, which builds dynamic draft trees on top of a parallel drafter and thereby removes this cap. Pando employs noise-coupled pruning, which draws the target model's sampling noise before drafting and ranks candidate branches under that noise, so the tree retains the branches the target will actually sample. Noise coupling is lossless and requires no retraining or additional model pass, yet increases acceptance length by up to $8.4\\%$ on Qwen3-8B. To optimize and evaluate Pando configurations across hardware, we normalize an operator-level roofline to AR decoding, reducing every platform to its ridge point. On a representative edge device, a 16-node Pando tree attains $5.3\\times$ speedup and $4.2\\times$ energy reduction over AR decoding: $25\\%$ faster than DSpark's released chain, and $27\\%$ faster and $72\\%$ more energy-efficient than an EAGLE-3 tree. The best configurations remain memory-bound on every edge device we model, so added compute capacity does not reduce their latency.",
+        "identifiers": [
+          "SemanticScholar:bdb5fa0983d21d138870672a74e3c4e170f3a1bb"
+        ],
+        "semantic_scholar_id": "bdb5fa0983d21d138870672a74e3c4e170f3a1bb",
+        "canonical_id": "arXiv:2611.32269",
+        "arxiv_id": "2611.32269",
+        "authors": [
+          "Joren Dumoulin",
+          "Hyoukjun Kwon",
+          "Subhankar Pal",
+          "Steven Li",
+          "Vignesh Vivekraja",
+          "M. Verhelst"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32295",
+      "identity_tokens": [
+        "id:SemanticScholar:94c25b4b7e94be6c608e9f1654ca1d2930f2431d",
+        "id:arXiv:2611.32295",
+        "title:norn contextlengthaware optimization of weight and kv cache placement for offloaded llm inference",
+        "url:https://arxiv.org/abs/2611.32295"
+      ],
+      "record": {
+        "title": "Norn: Context-Length-Aware Optimization of Weight and KV Cache Placement for Offloaded LLM Inference",
+        "source_url": "https://arxiv.org/abs/2611.32295",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Offloading model weights and the key-value (KV) cache to host memory enables large language models (LLMs) to run on a single memory-constrained GPU. As the KV cache grows during decoding, GPU memory requirements and the costs of KV cache transfers and attention computation change. However, existing offloading methods generally use static computation assignments and placements of model weights and the KV cache, preventing them from adapting to these changes and degrading inference performance. We propose Norn, a context-length-aware offloaded LLM inference method. Based on offline profiling, Norn co-optimizes computation assignments and placements at the sublayer level, precomputing multiple execution plans and their switching points. During decoding, Norn switches plans as context length increases, overlapping computation and data transfers without knowing the output length in advance. For prefill, Norn employs operator-major chunked prefill to avoid repeated weight transfers and automatically selects the chunk size. Experiments with Qwen3-14B and Qwen3-32B on two single-GPU systems show up to a 16.8$\\times$ speedup in end-to-end latency over Pipelined Sharding and a 4.2$\\times$ speedup over its oracle variant with known input and output lengths.",
+        "identifiers": [
+          "SemanticScholar:94c25b4b7e94be6c608e9f1654ca1d2930f2431d"
+        ],
+        "semantic_scholar_id": "94c25b4b7e94be6c608e9f1654ca1d2930f2431d",
+        "canonical_id": "arXiv:2611.32295",
+        "arxiv_id": "2611.32295",
+        "authors": [
+          "Nao Sugiura",
+          "Hiroki Matsutani"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32423",
+      "identity_tokens": [
+        "id:SemanticScholar:7ed200c105168460e30caf8d9ea086364c39fba0",
+        "id:arXiv:2611.32423",
+        "title:factorized context attention from emulated to native grid probing",
+        "url:https://arxiv.org/abs/2611.32423"
+      ],
+      "record": {
+        "title": "Factorized Context Attention: From Emulated to Native Grid Probing",
+        "source_url": "https://arxiv.org/abs/2611.32423",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Models read a book, an hour of video, or an image in one forward pass. As the context grows, this pass slows down, loses accuracy, and stops at the context window. Sparse attention is efficient, but keeps the other two limitations. Grid probing, a recent training-free method, recovers the accuracy and extends the reach by asking a frozen model the same question about short local and strided spans of the input, but every question repeats the whole computation, since each span is encoded again. Our insight is that grid probing is emulated attention, an attention pattern reproduced from outside the model through prompts, since each probe only restricts which part of the input the question can see. We introduce Factorized Context Attention (FCA), a training-free block-sparse attention that runs the same pattern natively, as the attention of the model itself. FCA encodes the input once into a KV cache, reads all spans as masked sequences in one batched forward, and uses a stair position schedule to keep every span inside the trained position range. Across long video understanding, long-context text inference and image grounding, FCA matches the accuracy and the reach of grid probing at a fraction of its cost. It gains about 10 points over the single pass on long video and 9 to 14 points on long novels, finds needles in videos of over a thousand frames and in texts four times the length of the window, and answers a later question about the same input in as little as a tenth of the time of grid probing. Native attention thus keeps what emulated attention gains without its cost, all with existing frozen language and vision-language models.",
+        "identifiers": [
+          "SemanticScholar:7ed200c105168460e30caf8d9ea086364c39fba0"
+        ],
+        "semantic_scholar_id": "7ed200c105168460e30caf8d9ea086364c39fba0",
+        "canonical_id": "arXiv:2611.32423",
+        "arxiv_id": "2611.32423",
+        "authors": [
+          "Mohamed Eltahir",
+          "Manar Eyad",
+          "Yara Alzahrani",
+          "Fatimah Albesher",
+          "Duaa M. Tahir",
+          "Tanveer Hussain",
+          "Naeemullah Khan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32572",
+      "identity_tokens": [
+        "id:SemanticScholar:07030257fe8c8593ae101300fae1c7c7c39bede4",
+        "id:arXiv:2611.32572",
+        "title:breaking routing and interdevice dependencies in mixtureofexperts",
+        "url:https://arxiv.org/abs/2611.32572"
+      ],
+      "record": {
+        "title": "Breaking Routing And Inter-device Dependencies in Mixture-of-Experts",
+        "source_url": "https://arxiv.org/abs/2611.32572",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As Mixture-of-Experts (MoE) models scale, Expert Parallelism (EP) becomes increasingly important for distributing experts across devices. However, the resulting token dispatch and combine operations can become a major bottleneck during inference. Overlapping these communication phases with computation is constrained by the sequential dependencies of standard MoE architectures. We introduce BRAID-MoE, an architecture that pairs laddered residual connections with early routing to relax these dependencies. Laddered residuals enable each expert combine to be deferred to the following block, while early routing computes the next routing decision from the pre-combine residual, with experts still receiving the updated post-combine hidden state. This creates an extended communication window in which the preceding combine and next dispatch can execute back-to-back on a dedicated communication stream, overlapping attention computation. On Qwen3-shaped MoEs with 0.4B-A0.1B and 2.5B-A0.5B parameters, BRAID closely matches sequential training at matched compute, with validation-loss increases of only 1% and 0.5%, respectively. We further demonstrate that existing MoE checkpoints can be adapted to BRAID with limited additional training, largely recovering their original accuracy. On a converted Qwen3-30B-A3B model, BRAID achieves speedups of up to 1.29$\\times$ in prefill and 1.37$\\times$ in decode, and at least 1.12$\\times$ across diverse workloads and EP configurations on one or two four-H100 nodes. It outperforms competing overlap strategies in all tested settings, with the strongest gains when communication is a major latency bottleneck and its duration approaches the available computation window. These results demonstrate that early routing enables more effective communication-computation overlap in MoE inference at a modest cost in model quality.",
+        "identifiers": [
+          "SemanticScholar:07030257fe8c8593ae101300fae1c7c7c39bede4"
+        ],
+        "semantic_scholar_id": "07030257fe8c8593ae101300fae1c7c7c39bede4",
+        "canonical_id": "arXiv:2611.32572",
+        "arxiv_id": "2611.32572",
+        "authors": [
+          "J. Zarka",
+          "Danyal Ahmed",
+          "Eugene Belilovsky",
+          "Edouard Oyallon"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32624",
+      "identity_tokens": [
+        "id:SemanticScholar:79da039b2ab2192b0baa869dfd590e120f3d8a72",
+        "id:arXiv:2611.32624",
+        "title:hical offline calibration for hierarchical scale encoding in accurate hif4 quantization",
+        "url:https://arxiv.org/abs/2611.32624"
+      ],
+      "record": {
+        "title": "HiCal: Offline Calibration for Hierarchical Scale Encoding in Accurate HiF4 Quantization",
+        "source_url": "https://arxiv.org/abs/2611.32624",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block floating-point (BFP) quantization is widely adopted for efficient low-bit large language model (LLM) inference, where the choice of block scales plays a critical role in quantization accuracy. HiFloat4 (HiF4) employs a hierarchical scale encoding scheme consisting of a global E6M2 scale and two levels of binary scale extensions. However, its conventional rounding rule and fixed scale extension thresholds may not fully capture the statistical characteristics of the quantized tensors in practice, leading to suboptimal scale representations. In this work, we propose HiCal, an offline calibration approach that improves HiF4 quantization accuracy by refining the encoding decisions across all three scale levels. Specifically, we introduce a calibrated rounding bias for the Level-1 E6M2 scale and optimize the scale-extension thresholds at Levels 2 and 3 based on the empirical distributions of local group magnitudes. The resulting calibration parameters are determined offline and remain fixed during inference, while the hierarchical encoding continues to adapt to individual blocks through their local values. This design eliminates the need for per-block multi-candidate scale search while preserving the original deterministic HiF4 encoding procedure. Experiments across five synthetic and real activation distributions show that the proposed method reduces quantization MSE by 9.91%-23.50% relative to the original HiF4 scheme, including a 13.00% reduction on real Qwen3-8B activations. End-to-end evaluations across six benchmarks further show average-score improvements of 0.91 and 1.25 percentage points on Qwen3-8B and Qwen3-30B-A3B, respectively, without per-block multi-candidate search during inference.",
+        "identifiers": [
+          "SemanticScholar:79da039b2ab2192b0baa869dfd590e120f3d8a72"
+        ],
+        "semantic_scholar_id": "79da039b2ab2192b0baa869dfd590e120f3d8a72",
+        "canonical_id": "arXiv:2611.32624",
+        "arxiv_id": "2611.32624",
+        "authors": [
+          "Zhi-Yuan Zhang",
+          "Yan-Zhao Li",
+          "Hui-Lin Dong",
+          "Si-Fan Cheng",
+          "Min-Gen Zheng",
+          "Hui Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32634",
+      "identity_tokens": [
+        "id:SemanticScholar:c53c7037cc0042f8b4d087f9e83cfeba7ee93bc4",
+        "id:arXiv:2611.32634",
+        "title:modelless a serverless system for multitier llm inference on shared gpus",
+        "url:https://arxiv.org/abs/2611.32634"
+      ],
+      "record": {
+        "title": "ModelLess: A Serverless System for Multi-Tier LLM Inference on Shared GPUs",
+        "source_url": "https://arxiv.org/abs/2611.32634",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM inference platforms sell online, asynchronous, batch and rollout products on GPUs provisioned per product, so a service's cards sit idle between bursts while other work waits. We present ModelLess, a serverless system for LLM inference. Users declare model services and the platform owns the instances. An idle service scales to zero: its instances go to sleep with their weights in host memory (release about 1 s, wake about 4 s for GLM-5.2 at TP8, against a cold start of over four minutes). Billing follows the time a service holds GPUs. The GPUs that sleeping instances free are lent to lower tiers. Cluster managers preempt low-priority tasks and treat eviction as all-or-nothing, but an LLM instance's eviction cost depends on which of its weights, execution state, KV cache and in-flight requests survive. ModelLess therefore gives each tier (online, job, flex) eviction semantics that state what it may lose when preempted, and runs a preemption protocol that closes admission before it releases memory, re-enqueues a request durably before it aborts it, and fails closed. Four components (entry, dispatcher, node agent, SGLang plugin) enforce it with sleep/wake, pause/resume of in-flight requests for flex, and a weight-copy path (follow/seal) for RL rollout. Replaying a week of traces from 1,100 H20 cards serving long-tail online models shows that about 38% of GPU-time (417 equivalent GPUs) could be lent under a coarse latency target with one fixed idle threshold. This is an idealized upper bound, and it holds only if recovery takes seconds: with a 240 s cold start under 8% remains even with per-service thresholds. On one node, a single four-hour run per policy shows that pausing yields 22% more borrower tokens per held GPU sample than abort-and-requeue, with the same median online latency. The job tier and follow/seal are not yet evaluated end to end.",
+        "identifiers": [
+          "SemanticScholar:c53c7037cc0042f8b4d087f9e83cfeba7ee93bc4"
+        ],
+        "semantic_scholar_id": "c53c7037cc0042f8b4d087f9e83cfeba7ee93bc4",
+        "canonical_id": "arXiv:2611.32634",
+        "arxiv_id": "2611.32634",
+        "authors": [
+          "Ding Shi",
+          "Wei Wu",
+          "Jia-Yuan Chen",
+          "Cheng-Hu Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32873",
+      "identity_tokens": [
+        "id:SemanticScholar:f1de2319debe6d696f2e946a378a06f7677ce92d",
+        "id:arXiv:2611.32873",
+        "title:mxfp4 for llm inference complementary posttraining quantization techniques and their interactions",
+        "url:https://arxiv.org/abs/2611.32873"
+      ],
+      "record": {
+        "title": "MXFP4 for LLM Inference: Complementary Post-Training Quantization Techniques and Their Interactions",
+        "source_url": "https://arxiv.org/abs/2611.32873",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in low-precision representation have introduced several microscaling numerical formats for LLM quantization. By sharing a scale factor across groups of 16 or 32 elements, these formats enable aggressive low-precision quantization with minimal accuracy degradation, particularly when combined with modern PTQ algorithms. Their accuracy depends on how the numerical format interacts with rotation, PTQ, and scale selection. We study the composability of PTQ configurations across six LLMs and three microscaling formats: MXFP6, MXFP4, and NVFP4, systematically varying Hadamard rotation granularity, PTQ algorithm, and scale-selection strategy. Our central finding is that effective quantization recipes are format dependent: both MXFP4 and NVFP4 support accurate 4-bit inference, but techniques that benefit one do not necessarily transfer to the other. MXFP4 benefits substantially from rotation and error-correcting PTQ, whereas NVFP4 gains less from rotation, consistent with its finer-grained scales capturing more within-block variation. Building on these findings, we introduce Midmax, a calibration-free scale-selection strategy that mitigates clipping error in power-of-two block scales and improves accuracy across a majority of the evaluated MXFP4 configurations. We show that pairing MXFP6 activations with MXFP4 weights recovers most of the accuracy lost at 4-bit and, on Llama-3.1-8B, matches or exceeds our in-house BF16 baseline. An additional study finds that augmenting MXFP4 with a per-tensor macroscale, a mechanism intrinsic to NVFP4, does not improve average accuracy, suggesting that global rescaling alone does not address the limitations of E8M0 block scales for MXFP4 quantization. Together, these results provide practical guidance for combining numerical formats, rotation, PTQ, and scale selection for accurate low-precision LLM inference.",
+        "identifiers": [
+          "SemanticScholar:f1de2319debe6d696f2e946a378a06f7677ce92d"
+        ],
+        "semantic_scholar_id": "f1de2319debe6d696f2e946a378a06f7677ce92d",
+        "canonical_id": "arXiv:2611.32873",
+        "arxiv_id": "2611.32873",
+        "authors": [
+          "Natalia Frumkin",
+          "Alireza Khodamoradi",
+          "K. Denolf",
+          "Eric Dellinger",
+          "S. Biles"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32881",
+      "identity_tokens": [
+        "id:SemanticScholar:1ab399755a6e6e626a514ee0b1b3c71cc915cbe9",
+        "id:arXiv:2611.32881",
+        "title:scalable placement for disaggregated llm serving on heterogeneous edge fleets",
+        "url:https://arxiv.org/abs/2611.32881"
+      ],
+      "record": {
+        "title": "Scalable Placement for Disaggregated LLM Serving on Heterogeneous Edge Fleets",
+        "source_url": "https://arxiv.org/abs/2611.32881",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving large language models (LLMs) at the edge is increasingly desirable for privacy-sensitive applications and scenarios that require data to remain on local devices. However, edge environments are constrained by limited computational resources and exhibit substantial device heterogeneity, making efficient LLM serving challenging. These limitations become particularly pronounced under bursty demand, where congestion and queue buildup can significantly increase response latency. Replicating the model into multiple pipeline instances can improve serving capacity and reduce congestion. Yet, deciding how devices should be grouped into replicas, assigning replicas to prefill or decode functions, and partitioning model layers across heterogeneous devices jointly creates a large combinatorial optimization problem. We present Spade, a scalable and runtime-efficient placement planner for disaggregated LLM serving with pipeline replication across heterogeneous edge clusters. Spade introduces a dominance-based pruning technique that discards inferior replica candidates and recursively eliminates larger candidates that contain them, dramatically shrinking the search space. It further combines a water-filling approach for layer partitioning with a bounded multidimensional knapsack formulation that optimizes placement under a congestion-aware objective. On a synthetic fleet of 30 devices spanning five hardware classes, Spade finds the optimal placement in 441ms. In contrast, a genetic-search baseline augmented with dynamic-programming partitioning requires approximately two hours and still produces solutions with a 19.7% worse congestion objective. When evaluated on fleets containing ten device types, Spade's pruning strategy eliminates 99.6% of candidate placements while yielding the same surviving candidate set as exhaustive enumeration.",
+        "identifiers": [
+          "SemanticScholar:1ab399755a6e6e626a514ee0b1b3c71cc915cbe9"
+        ],
+        "semantic_scholar_id": "1ab399755a6e6e626a514ee0b1b3c71cc915cbe9",
+        "canonical_id": "arXiv:2611.32881",
+        "arxiv_id": "2611.32881",
+        "authors": [
+          "T. Le",
+          "Hoang-Loc La",
+          "Amirhosein Taherkordi",
+          "F. Eliassen",
+          "P. H. Ha"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32954",
+      "identity_tokens": [
+        "id:SemanticScholar:d64d58e0f7c7eeb621646f6c7c4a4b7d5930696b",
+        "id:arXiv:2611.32954",
+        "title:loomkv lossless kv cache compression from gpu memory to ssd for llm serving",
+        "url:https://arxiv.org/abs/2611.32954"
+      ],
+      "record": {
+        "title": "LoomKV: Lossless KV Cache Compression from GPU Memory to SSD for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2611.32954",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) serving engines offload the key/value (KV) cache from GPU memory to host DRAM and SSD so multi-turn and agent requests can reuse prompt prefixes. Capacity then limits service at two levels: external tiers govern prefix reuse before eviction, while the GPU KV pool bounds concurrent long requests, and lossy compression alters KV values and outputs. LoomKV brings lossless KV compression to both external tiers (tier mode) and the GPU pool (pool mode) on an unmodified engine. Using a calibrated per-head two-level 3-bit code over BF16 high bytes (sign and upper seven exponent bits), LoomKV stores BF16 KV at 0.71 of its raw size across nine models and FP8 KV at 0.85-0.87. In tier mode, TileStream writes exact-length records with length readback off the load path, leaving tier storage, eviction, and prefetch unchanged, and decompresses fetched records straight into scattered GPU pages. In pool mode, FragPack packs variable-length records into smaller shared-budget GPU pages read in place by a fused decode-attention kernel faster than FlashAttention-3 on BF16. Built with LMCache and vLLM, LoomKV makes compressed tiers act as 1.4x larger raw tiers on AgentX: across LMCache's LRU cliff, tier mode delivers 2.7-3.6x raw's goodput and 1.9-3.1x lower mean time-to-first-token (TTFT), shifts the cliff identically under other simulated replacement policies, and cuts repeated-prompt TTFT up to 1.7x via SSD-to-DRAM promotion. When tiers hold the working set, pool mode fits 1.31-1.34x as many GPU tokens, admitting 12 long requests with roughly raw's queue and goodput at 8. On an AI IDE trace where both tiers and the GPU pool are constrained, tier and pool modes raise goodput by 1.24x and 1.59x. Where raw capacity suffices, compression costs at most 2.2% throughput; tier mode is bit-exact with raw tiers, and pool mode matches FlashAttention-3's numerical accuracy.",
+        "identifiers": [
+          "SemanticScholar:d64d58e0f7c7eeb621646f6c7c4a4b7d5930696b"
+        ],
+        "semantic_scholar_id": "d64d58e0f7c7eeb621646f6c7c4a4b7d5930696b",
+        "canonical_id": "arXiv:2611.32954",
+        "arxiv_id": "2611.32954",
+        "authors": [
+          "Wen-Tao Zhu",
+          "Zi-Nan Sheng",
+          "Peng Deng",
+          "Hui-Qi Hu",
+          "Xuan Zhou",
+          "Xing Wei",
+          "Zhuang Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.32989",
+      "identity_tokens": [
+        "id:SemanticScholar:a722b3b72e8ff9ba458a330b63ad99b64f38caab",
+        "id:arXiv:2611.32989",
+        "title:avqattention2 adaptive vectorquantized attention with exact local blocks and linearcost training",
+        "url:https://arxiv.org/abs/2611.32989"
+      ],
+      "record": {
+        "title": "AVQ-Attention-2: Adaptive Vector-Quantized Attention with Exact Local Blocks and Linear-Cost Training",
+        "source_url": "https://arxiv.org/abs/2611.32989",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention costs $\\mathcal{O}(N^2)$ in the number of tokens. Vector-quantized attention reduces this to $\\mathcal{O}(NM)$ by clustering the $N$ keys, attending to the $M$ codewords instead, and its adaptive form, AVQ-attention, concentrates codebook resolution where a query's attention mass actually falls. We present AVQ-Attention-2, a better design that merges it with exact local attention and attends to the mean of each cluster's keys rather than to a codeword. We show three improvements: consistently better quality at comparable cost; training that now also costs $\\mathcal{O}(NM)$ rather than $\\mathcal{O}(N^2)$; and an approximation accurate enough that the layer can be dropped into a pretrained transformer without fine-tuning. Across a variety of sequence lengths the result is competitive not merely with other approximate attention but with exact dense attention, running faster than FlashAttention at little to no loss in quality.",
+        "identifiers": [
+          "SemanticScholar:a722b3b72e8ff9ba458a330b63ad99b64f38caab"
+        ],
+        "semantic_scholar_id": "a722b3b72e8ff9ba458a330b63ad99b64f38caab",
+        "canonical_id": "arXiv:2611.32989",
+        "arxiv_id": "2611.32989",
+        "authors": [
+          "W. van den Dool",
+          "P. Forré",
+          "A. Habibian",
+          "Yuki Markus Asano",
+          "M. Welling"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.33004",
+      "identity_tokens": [
+        "id:SemanticScholar:88915ba75ee2629205b67cde502c955878400e33",
+        "id:arXiv:2611.33004",
+        "title:legospec a composable and efficient framework for speculative draft design and training",
+        "url:https://arxiv.org/abs/2611.33004"
+      ],
+      "record": {
+        "title": "LEGOSpec: A Composable and Efficient Framework for Speculative Draft Design and Training",
+        "source_url": "https://arxiv.org/abs/2611.33004",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model (LLM) generation using a lightweight draft. Existing methods evaluate complete recipes under different training configurations, leaving component effects, interactions, and composition benefits unclear. Therefore, we present LEGOSpec, a composable framework for speculative draft design and training. LEGOSpec decomposes draft models into Context, Backbone, Proposal, and Objective components that share a unified training infrastructure. Using LEGOSpec, we systematically vary components and evaluate selected combinations under matched training conditions to isolate their effects and interactions. These experiments reveal three findings: (1) Different workloads favor different backbones, depending on context length and memory budget, with within-block dependency modeling particularly important for long contexts. (2) Proposal design must balance acceptance and latency. (3) The training objective should match token distributions locally and optimize acceptance length across the block. These findings guide workload-aware configurations and DFlux, a balanced general-purpose draft combining a convolution-equipped SWA--GQA hybrid backbone, Residual Corrector, and hierarchical supervision. Across Qwen and Gemma models, DFlux improves acceptance length over the strongest baseline by up to 13.7% on regular benchmarks and 34.7% on long-context workloads. To support efficient training, LEGOSpec integrates metadata-aware scheduling and asynchronous execution, increasing training throughput by up to 79% and accelerating offline supervision preparation by up to $3.11\\times$ over SpecForge.",
+        "identifiers": [
+          "SemanticScholar:88915ba75ee2629205b67cde502c955878400e33"
+        ],
+        "semantic_scholar_id": "88915ba75ee2629205b67cde502c955878400e33",
+        "canonical_id": "arXiv:2611.33004",
+        "arxiv_id": "2611.33004",
+        "authors": [
+          "Han-Zhen Wang",
+          "Jia-Ming Xu",
+          "Guo-Hao Dai"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.33111",
+      "identity_tokens": [
+        "id:SemanticScholar:eba760c1bcf13c3b32ad3264cc625a42a595ee7f",
+        "id:arXiv:2611.33111",
+        "title:draft calibration for speculative decoding accelerating llm serving by matching draft and target distributions",
+        "url:https://arxiv.org/abs/2611.33111"
+      ],
+      "record": {
+        "title": "Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions",
+        "source_url": "https://arxiv.org/abs/2611.33111",
+        "year": 2026,
+        "published": "2026-11-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model (LLM) inference by employing a lightweight draft model to propose draft tokens and allowing the target model to verify the new tokens in parallel to improve inference-time compute utilization. The speedup relies on the acceptance probability of draft tokens in target verification, which is directly related to the gap $\\|p-q\\|_1$ between the target distribution $p$ and the draft distribution $q$. In this paper, we study draft calibration of speculative decoding to improve the speedup of speculative decoding, where we employ post-hoc methods to calibrate the draft distribution to mitigate the distribution gap. We observe that though current community open-source draft models may learn the top candidate token correctly, they are generally underconfident compared to the target model, suggesting a consistent distribution mismatch. To mitigate the effect of this mismatch on the acceptance rate of the draft models, we try various post-hoc calibration methods, including standard temperature scaling and token-wise calibration. Our results suggest that a standard temperature scaling applied to the draft distribution improves the acceptance length by up to approximately 10\\% with almost no additional cost across different tasks. Throughput analysis further verifies that this improvement in serving efficiency. Analysis of more general calibration methods reveals further potential room for improvement.",
+        "identifiers": [
+          "SemanticScholar:eba760c1bcf13c3b32ad3264cc625a42a595ee7f"
+        ],
+        "semantic_scholar_id": "eba760c1bcf13c3b32ad3264cc625a42a595ee7f",
+        "canonical_id": "arXiv:2611.33111",
+        "arxiv_id": "2611.33111",
+        "authors": [
+          "Yuxing Liu",
+          "Wei Zuo",
+          "Walid Krichene",
+          "Tong Zhang",
+          "Li Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8bd0afe72070f8e00486615543f430c1c1bf4ef8e59773bc29c1f5988d20fdd0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
