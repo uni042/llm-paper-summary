@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c2d08-b01::chunk-0001-of-0003",
+  "reference_main_sha": "2e85ebc167be60aa08d41b8b857b3b8fb4d30936",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043177",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS56072.2025.11043177"
+      ],
+      "title": "A 62.8 TOPS/W FP-INT Digital Computing-in Memory Processor with Bit-Reordered Adder Tree and Low Active Hierarchical Accumulator",
+      "reason": "DRAMベースのFP-INTデジタルCIMプロセッサを提案し、bit-reordered adder treeと低活性階層アキュムレータでFP8活性化・INT4重みのGPT2-Small推論を62.8 TOPS/Wで実行する。混合精度の推論ハードウェアそのものが対象であり、LLM推論のエネルギー効率への直接貢献が要旨で具体的に確認できる。",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043177",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 440
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5715/jnlp.29.762",
+      "identity_tokens": [
+        "DOI:10.5715/jnlp.29.762"
+      ],
+      "title": "A Peek Into the Memory of T5: Investigating the Factual Knowledge Memory in a Closed-Book QA Setting and Finding Responsible Parts",
+      "reason": "T5がclosed-book QAで事実知識をどのattention headに保持するかをhead importance scoringとpruning実験で分析する解釈可能性研究であり、推論の高速化・省メモリ化など推論システムへの技術的貢献は要旨に示されていない。",
+      "source_url": "https://doi.org/10.5715/jnlp.29.762",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 441
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.17506",
+      "identity_tokens": [
+        "arXiv:2405.17506"
+      ],
+      "title": "Subspace Node Pruning",
+      "reason": "重要度指標群が共通の二次形式を持つことを示し、部分空間内でノード除去と最小二乗による影響回復を同時に行うSubspace Node Pruningを提案する。推論時間の削減を目的としたプルーニング手法であり、ImageNetのCNNに加えOPT-125M等の言語モデルでも評価されているため、推論向け圧縮技術として直接の貢献がある。",
+      "source_url": "https://arxiv.org/abs/2405.17506",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 442
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.16821",
+      "identity_tokens": [
+        "arXiv:2411.16821"
+      ],
+      "title": "Logit-KL Flow Matching: Non-Autoregressive Text Generation via Sampling-Hybrid Inference",
+      "reason": "logit空間のKL測地線に基づくconditional flow matchingで非自己回帰テキスト生成を定式化し、denoise/re-noiseを繰り返すsampling-hybrid inference戦略を提案する。生成の逐次ボトルネック回避という推論面の動機はあるが、主貢献は生成モデルの学習目的とサンプリング分布の理論であり、推論システム技術としての具体性は薄い。",
+      "source_url": "https://arxiv.org/abs/2411.16821",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.09394",
+      "identity_tokens": [
+        "arXiv:2507.09394"
+      ],
+      "title": "A Random Matrix Theory Perspective on the Learning Dynamics of Multi-head Latent Attention",
+      "reason": "KVメモリ圧縮手法であるMulti-head Latent Attentionについて、ランダム行列理論のMarchenko-Pastur診断で事前学習中のスペクトルとrank collapseを分析する研究である。MLA自体はKVキャッシュ圧縮に直結するが、本論文は学習ダイナミクスの診断に留まり、推論時の機構や効率改善の提案は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2507.09394",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 444
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.07457",
+      "identity_tokens": [
+        "arXiv:2510.07457"
+      ],
+      "title": "Comparison of Fully Homomorphic Encryption and Garbled Circuit Techniques in Privacy-Preserving Machine Learning Inference",
+      "reason": "CKKS方式の完全準同型暗号（Microsoft SEAL）とTinyGarble2.0のgarbled circuitを、2層ニューラルネットの安全な推論で比較評価する研究である。対象はLLMではなく小規模NNの秘匿推論プロトコル比較であり、LLM推論システムへの直接貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2510.07457",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/AICAS64808.2025.11173095",
+      "identity_tokens": [
+        "DOI:10.1109/AICAS64808.2025.11173095"
+      ],
+      "title": "An Adaptive Scheme of Threshold Adjustment for Dynamic Sparsity Extraction of Self-Attention Network",
+      "reason": "self-attentionの動的スパース化において、低精度推定で得た閾値を継続的に微調整する適応的閾値調整スキームを提案し、SQuADやSST-2等で平均8.95%の追加計算スパース化と精度改善を示す。注意計算の削減という推論コスト削減機構が要旨で具体的に確認できる。",
+      "source_url": "https://doi.org/10.1109/AICAS64808.2025.11173095",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 446
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CCNIS69465.2025.00025",
+      "identity_tokens": [
+        "DOI:10.1109/CCNIS69465.2025.00025"
+      ],
+      "title": "A Practical Recipe for Structured Pruning of MotionGPT: Dependency-Graph Pruning and FFN Channel Reduction",
+      "reason": "dependency-graph pruningとFFNチャネル削減を組み合わせたMotionGPT向け構造化プルーニングの実践レシピであり、パラメータを約14%削減する。プルーニング技術自体はモデル圧縮だが、対象はモーション生成モデルMotionGPTに限定された応用適用であり、LLM推論への一般的な貢献は薄い。",
+      "source_url": "https://doi.org/10.1109/CCNIS69465.2025.00025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11229356",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11229356"
+      ],
+      "title": "Slide-CLIP: A Simple and Effective Pruning Method for CLIP",
+      "reason": "SparseGPT系の高速プルーニングと層間スライディング蒸留を組み合わせたCLIP向けプルーニング手法Slide-CLIPを提案する。モデル圧縮の観点はあるが対象は視覚言語モデルCLIPのプルーニング工程の省GPU時間化であり、LLM推論システムへの直接貢献とは言い難い。",
+      "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11229356",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 449
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/WACV61041.2025.00710",
+      "identity_tokens": [
+        "DOI:10.1109/WACV61041.2025.00710"
+      ],
+      "title": "A 0-Shot Self-Attention Mechanism for Accelerated Diagonal Attention",
+      "reason": "Vision Transformerの注意行列の規則性を利用し、再学習なしで線形コストの対角注意を実現する0-shot手法を提案する。注意計算の高速化機構は推論効率に関連するが、評価・対象がImageNetのViTに限定され、LLM推論への適用は要旨に示されていない。",
+      "source_url": "https://doi.org/10.1109/WACV61041.2025.00710",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 450
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03684",
+      "identity_tokens": [
+        "arXiv:2310.03684"
+      ],
+      "title": "SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks",
+      "reason": "入力プロンプトへ文字レベルのランダム摂動を加えた複数コピーの予測を集約してjailbreak攻撃を検出するSmoothLLMを提案するセキュリティ防御研究であり、推論の効率・基盤ではなく攻撃耐性が目的であるため、LLM推論システムの範囲外である。",
+      "source_url": "https://arxiv.org/abs/2310.03684",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.03957",
+      "identity_tokens": [
+        "arXiv:2010.03957"
+      ],
+      "title": "Transformers for Modeling Physical Systems",
+      "reason": "Koopman埋め込みで物理系の力学系をベクトル表現へ写像しTransformerで将来を予測する科学機械学習の研究であり、言語モデルの推論処理やサービングに関する内容は要旨に含まれない。",
+      "source_url": "https://arxiv.org/abs/2010.03957",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:ba612bafda906c9e26b8e81d2548a7dde6434183",
+      "identity_tokens": [
+        "SemanticScholar:ba612bafda906c9e26b8e81d2548a7dde6434183"
+      ],
+      "title": "Probabilistic Transformer For Time Series Analysis",
+      "reason": "状態空間モデルとTransformerを組み合わせた確率的時系列生成モデルProTranを提案し、時系列予測と人体モーション予測で評価する研究である。多変量時系列の生成モデリングが主題であり、LLM推論システムへの貢献はない。",
+      "source_url": "https://www.semanticscholar.org/paper/ba612bafda906c9e26b8e81d2548a7dde6434183",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.02231",
+      "identity_tokens": [
+        "arXiv:2512.02231"
+      ],
+      "title": "See, Hear, and Understand: Benchmarking Audiovisual Human Speech Understanding in Multimodal Large Language Models",
+      "reason": "話者中心の音声映像推論を測る3,212問のマルチモーダルLLMベンチマークAV-SpeakerBenchを構築・評価する研究であり、推論処理の高速化やサービング機構の提案は含まれない。",
+      "source_url": "https://arxiv.org/abs/2512.02231",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1073/pnas.2411962122",
+      "identity_tokens": [
+        "DOI:10.1073/pnas.2411962122"
+      ],
+      "title": "Transforming literature screening: The emerging role of large language models in systematic reviews",
+      "reason": "システマティックレビューの文献スクリーニングに18種のLLMを用い、人手選択との重なりを評価した応用研究であり、LLMを道具として使う側の検証であって推論システム技術の提案ではない。",
+      "source_url": "https://doi.org/10.1073/pnas.2411962122",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20531",
+      "identity_tokens": [
+        "arXiv:2607.20531"
+      ],
+      "title": "DynamicMCPBench: A Trace-Grounded, Effect-Scored Benchmark for LLM Agents over Live MCP Servers",
+      "reason": "ライブなMCPサーバ上でLLMエージェントの効果達成を採点するDynamicMCPBenchという評価フレームワークの提案であり、エージェントのタスク遂行能力の測定が主題で、推論基盤やデコード機構への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2607.20531",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.multra.2026.100308",
+      "identity_tokens": [
+        "DOI:10.1016/j.multra.2026.100308"
+      ],
+      "title": "Harnessing Large Language Models for Intelligent Transportation Systems: A Systematic Review",
+      "reason": "知的交通システム（ITS）へのLLM応用129件を整理したシステマティックレビューであり、交通モデリングへの応用動向の総説であって、LLM推論システムの技術提案ではない。",
+      "source_url": "https://doi.org/10.1016/j.multra.2026.100308",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07187",
+      "identity_tokens": [
+        "arXiv:2602.07187"
+      ],
+      "title": "PreFlect: From Retrospective to Prospective Reflection in Large Language Model Agents",
+      "reason": "エージェントが実行前に計画を批判・修正するprospective reflection機構PreFlectと動的再計画を提案する研究であり、計画品質の改善が主題で、推論処理の効率化やサービングへの貢献は要旨に示されていない。",
+      "source_url": "https://arxiv.org/abs/2602.07187",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02642",
+      "identity_tokens": [
+        "arXiv:2606.02642"
+      ],
+      "title": "SVHalluc: Benchmarking Speech-Vision Hallucination in Audio-Visual Large Language Models",
+      "reason": "音声内容が誘発する音声映像LLMのハルシネーションを意味・時間の両面から診断するベンチマークSVHallucの提案であり、モデルの信頼性評価が主題で推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2606.02642",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.05647",
+      "identity_tokens": [
+        "arXiv:2601.05647"
+      ],
+      "title": "Transformer Is Inherently a Causal Learner",
+      "reason": "自己回帰学習したTransformerの勾配感度から多変量時系列の時間遅延因果グラフを復元できることを示す因果発見の研究であり、対象は時系列の因果構造学習であってLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2601.05647",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    }
+  ],
+  "parent_run_key": "muse-20261126-c2d08-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 55
+}
