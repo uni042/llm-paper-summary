@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ActiveEye: Enabling Continuous and Responsive Video Understanding for Smart Eyewear Systems",
+      "source_url": "https://doi.org/10.1145/3770641",
+      "year": 2025,
+      "published": "2025-11-28",
+      "venue": "Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Integrating vision-language models (VLMs) with wearable devices offers great potential for continuous and responsive video understanding, a key capability for applications such as smart eyewear-based conversational assistants. However, achieving this on resource-constrained devices is challenging due to the high energy demands of continuous spatial-temporal sampling and transmission. We propose ActiveEye, a VLM designed for energy-efficient and responsive video understanding. ActiveEye separates visual and motion semantic representations and incorporates an active perception-based feedback path to adaptively adjust spatial-temporal sampling and transmission rates. Implemented as a wearable-mobile-cloud system, ActiveEye is evaluated for energy efficiency, real-time semantic change detection, and video understanding in both laboratory and field studies. Using the EgoSchema dataset, ActiveEye reduces the front-end energy consumption by 49.14%, supporting 8.37 hours of continuous operation on a 2.1 Wh battery. It achieves the highest F1 score (0.80) and the lowest average time difference (1.30 s) compared with heuristic-based event detection algorithms, validating its timely semantic detection. Furthermore, ActiveEye achieves a visual question answering (VQA) accuracy of 61.6%, which is comparable to state-of-the-art VLM agents, despite their reliance on larger language decoders and more computationally intensive frame selection strategies. Two rounds of in-field user evaluations further confirm its effectiveness in real-world settings, demonstrating its practical viability as a continuous and responsive video understanding system, conversational assistant, and wearable companion.",
+      "identifiers": [
+        "SemanticScholar:a288a8e2cab4dbf5d494848a0029aec8b8275d47"
+      ],
+      "semantic_scholar_id": "a288a8e2cab4dbf5d494848a0029aec8b8275d47",
+      "doi": "10.1145/3770641",
+      "canonical_id": "DOI:10.1145/3770641",
+      "authors": [
+        "Zhen-Yu Xu",
+        "Tianxi Lu",
+        "Yingying Zhao",
+        "Yujiang Wang",
+        "Mingzhi Dong",
+        "Yuhu Chang",
+        "Qin Lv",
+        "R. Dick",
+        "Fan Yang",
+        "Tun Lu",
+        "Ning Gu",
+        "Li Shang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 363,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ActiveEyeはウェアラブル・モバイル・クラウド構成でVLMの時空間サンプリングと送信を適応制御し、リソース制約下で連続映像理解のエネルギー効率と応答性を両立する推論システムである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-49b2587af737",
+    "round": "libimp-49b2587af737dcb0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-49b2587af737dcb0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-49b2587af737dcb0-pre01.json",
+    "receipt": "sha256:794e2dd166685b0fbd1fbba767e14fca01449d6d66bbafc7918d594097d14690"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-49b2587af737",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

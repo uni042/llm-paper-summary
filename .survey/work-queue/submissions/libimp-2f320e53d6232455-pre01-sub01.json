@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FPGA-Based Softmax Approximation: Analytical Cost–Error Modeling and Pareto Optimization",
+      "source_url": "https://doi.org/10.1109/OJCAS.2026.3731578",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Open Journal of Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The softmax function is a significant bottleneck in FPGA-based Transformer inference. This paper presents a comprehensive analytical framework for the design and optimization of base-2 softmax on FPGAs through systematic design-space exploration. We derive a high-accuracy LUT6 cost model that captures all major pipeline components, along with a closed-form error model for the exponential approximation, validated against Monte Carlo simulation with deviations below 10% for MSE and within 2% for MAE. By jointly leveraging these models, we exhaustively explore the design space and identify Pareto-optimal configurations that minimize LUT6 usage for a given relative error target. We further propose a negligible-cost fixed-maximum-subtraction scheme that eliminates the sorting network required by prior work, and introduce a bipartite exponential architecture that removes the intrinsic approximation floor of piecewise-linear methods. Synthesis and implementation on a Xilinx UltraScale+ FPGA confirm the effectiveness of the proposed approach. For a single-lane configuration, the optimized core requires only 201 LUT6s to achieve a relative MSE below $10^{-10}$ , corresponding to an approximately 49% reduction in resource utilization compared to the closest prior work at comparable accuracy.",
+      "identifiers": [
+        "SemanticScholar:e1cc15753d2d67ed8587869c2cfba15204cd14dc"
+      ],
+      "semantic_scholar_id": "e1cc15753d2d67ed8587869c2cfba15204cd14dc",
+      "doi": "10.1109/OJCAS.2026.3731578",
+      "canonical_id": "DOI:10.1109/OJCAS.2026.3731578",
+      "authors": [
+        "Mouna Djellouli",
+        "Amirhossein Zarei",
+        "Atik Mahabub",
+        "Hamza Bendaoudi",
+        "S. Vakili"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FPGA上のTransformer推論でボトルネックとなるsoftmaxについて、LUTコストと近似誤差の解析モデルとPareto最適化、二分指数アーキテクチャを提示する、推論カーネル／ハードウェアへの直接貢献がabstractで確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2f320e53d623",
+    "round": "libimp-2f320e53d6232455-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2f320e53d6232455-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2f320e53d6232455-pre01.json",
+    "receipt": "sha256:5e37cd45c78fd6a877516b8e953ad49fa44c19cec82bb1a3b9c2358d8899085a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2f320e53d623",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

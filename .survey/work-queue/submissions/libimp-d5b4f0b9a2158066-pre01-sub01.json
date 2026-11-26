@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Cache Locally, Recompute Selectively for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2610.29229",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming video understanding (SVU) requires video-LLMs to process incoming video continuously while answering user queries with low latency. Recent methods reduce query-time cost by prefilling frames into KV caches during idle time and reusing the cached KVs at query time. To bound per-frame computation over unbounded video streams, these methods restrict the context available during prefill. This creates a fundamental context mismatch: the restricted context may omit information needed to properly contextualize video tokens, yet, still contain information irrelevant to the eventual query, which is unknown during prefill. We propose FrameBlend, a simple yet effective plug-and-play method to address this mismatch through selective KV recomputation, without requiring any additional training. At query time, FrameBlend re-prefills selected video tokens using query-relevant context and replaces their cached KVs with recomputed ones. Crucially, this recomputation enables shorter attention windows during idle-time prefill, substantially reducing prefill cost while improving accuracy. Experiments across three SVU frameworks and five streaming and offline benchmarks demonstrate accuracy gains of up to 3.9 pp. On RVS-Ego, FrameBlend reduces per-frame prefill FLOPs by over 20% and total processing time by 14-59% for retrieval-based frameworks, including the cost of query-time recomputation. These results demonstrate that a simple change in how contextualization is distributed between idle time and query time can improve the accuracy-efficiency trade-off for SVU.",
+      "identifiers": [
+        "SemanticScholar:b37fbc3015fcfc0c10eb0963b2050a4a67bba0b1"
+      ],
+      "semantic_scholar_id": "b37fbc3015fcfc0c10eb0963b2050a4a67bba0b1",
+      "canonical_id": "arXiv:2610.29229",
+      "arxiv_id": "2610.29229",
+      "authors": [
+        "Junhyeok Lee",
+        "Sangyoon Lee",
+        "Jaeho Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ストリーミング動画理解でアイドル時間にフレームをKVキャッシュへプリフィルし、クエリ時にキャッシュ再利用と選択的再計算を組み合わせて低遅延応答を実現する手法であり、video-LLM推論のKVキャッシュ管理への直接の貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d5b4f0b9a215",
+    "round": "libimp-d5b4f0b9a2158066-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d5b4f0b9a2158066-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d5b4f0b9a2158066-pre01.json",
+    "receipt": "sha256:b07c88f1a916e272478902687352bdff1c10a5e8ef87ec588dd0686500d675c3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d5b4f0b9a215",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

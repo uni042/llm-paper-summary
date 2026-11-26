@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Leftovers for LLaMA",
+      "source_url": "https://doi.org/10.1145/3629526.3645045",
+      "year": 2024,
+      "published": "2024-05-07",
+      "venue": "International Conference on Performance Engineering",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "n recent years, large language models (LLMs) have become pervasive in our day-to-day lives, with enterprises utilizing their services for a wide range of NLP-based applications. The exponential growth in the size of LLMs poses a significant challenge for efficiently utilizing these models for inference tasks, which require a substantial amount of memory and compute. Enterprises often possess multiple resources (workers, nodes, servers) with unused (leftover) capacity, providing an opportunity to address this challenge by distributing large models across these resources. Recent work such as Petals, provides a platform for distributing LLM models in a cluster of resources. Petals require that users use their discretion to distribute blocks on a given cluster, consequently leading to a non-optimal placement of blocks. In this paper, we propose LLaMPS - a large language model placement system that aims to optimize the placement of transformer blocks on the available enterprise resources, by utilizing the leftover capacity of the worker nodes. Our approach considers leftover memory capacity along with available CPU cores, when distributing transformer blocks optimally across worker nodes. Furthermore, we enhance the scalability of the system by maximizing the number of clients that can be served concurrently. We validate the efficacy of our approach by conducting extensive experiments using open-source large language models - BLOOM (1b, 3b, and 7b parameters), Falcon, and LLaMA. Our experiments demonstrate that LLaMPS facilitates optimal placement of transformer blocks by utilizing leftover resources, thus enabling enterprise-level deployment of large language models",
+      "identifiers": [
+        "SemanticScholar:a84160675bf6cdaded3ff35dc29ac8e04e9d1f95"
+      ],
+      "semantic_scholar_id": "a84160675bf6cdaded3ff35dc29ac8e04e9d1f95",
+      "doi": "10.1145/3629526.3645045",
+      "canonical_id": "DOI:10.1145/3629526.3645045",
+      "authors": [
+        "R. Singh",
+        "Likhith Bandamudi",
+        "Shruti Kunde",
+        "Mayank Mishra",
+        "Rekha Singhal"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 933,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLaMPSは未使用の余剰リソース（leftovers）を持つ複数ノードへLLMのブロック配置を最適化して分散推論する配置システムであり、メモリ・計算制約下でのLLM推論基盤への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4978ae8b5a85",
+    "round": "libimp-4978ae8b5a85f6af-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4978ae8b5a85f6af-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4978ae8b5a85f6af-pre01.json",
+    "receipt": "sha256:dbe08bcb5a8e9574d1abd81802a15aa90a1d7f57ec1394e12b7a644505faedaf"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4978ae8b5a85",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

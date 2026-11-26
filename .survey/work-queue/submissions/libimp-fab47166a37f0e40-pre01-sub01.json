@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KOSMOS: Self-scheduling Persistent Kernels for Communication-Compute Overlap",
+      "source_url": "https://arxiv.org/abs/2611.07477",
+      "year": 2026,
+      "published": "2026-11-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tensor and sequence parallelism (TP+SP) and expert parallelism (EP) put collectives on the critical path of transformer layers. State-of-the-art fused kernels mitigate this with fixed roles or schedules, but this rigidity leaves large idle windows. Predicting a communication-computation split does not remove them either; a predetermined split cannot follow data readiness. We present KOSMOS, a library for self-scheduling persistent kernels whose workgroups use queues ordered by consumer demand to switch between communication and computation roles as data become ready, with no scheduler, per-call cost model, or tuned split. KOSMOS fuses every TP+SP collective of a transformer layer with its GEMM, and runs an entire expert layer, from router to fold, in one launch per direction. Evaluated on AMD Instinct MI350X and AMD Instinct MI355X GPUs, KOSMOS speeds up TP+SP end-to-end training in Megatron-LM by 1.10-1.28x in BF16 and 1.10-1.25x in MXFP8. KOSMOS accelerates end-to-end training of DeepSeek-V3 and Qwen3-235B proxies by 1.29-1.83x over DeepEP.",
+      "identifiers": [
+        "SemanticScholar:959f30f871c98932659cb665c40a7c23cee77666"
+      ],
+      "semantic_scholar_id": "959f30f871c98932659cb665c40a7c23cee77666",
+      "canonical_id": "arXiv:2611.07477",
+      "arxiv_id": "2611.07477",
+      "authors": [
+        "Alexander Magro",
+        "Aristotle X. Martin",
+        "Ye Wang",
+        "Wen Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "要旨ではテンソル・系列並列とエキスパート並列の集団通信を計算と重ねるため、需要順キューで役割を切り替える自己スケジューリング永続カーネルKOSMOSを提案しており、分散Transformer実行カーネルへの直接の技術的貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fab47166a37f",
+    "round": "libimp-fab47166a37f0e40-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fab47166a37f0e40-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fab47166a37f0e40-pre01.json",
+    "receipt": "sha256:3a075aab23ae29b3f93a6ae38ceb4b7de741c5b458098a74898d7080897a2453"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fab47166a37f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

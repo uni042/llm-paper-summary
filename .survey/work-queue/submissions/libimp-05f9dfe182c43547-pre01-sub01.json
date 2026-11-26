@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Streaming Looking Ahead with Token-level Self-reward",
+      "source_url": "https://arxiv.org/abs/2503.00029",
+      "year": 2025,
+      "published": "2025-02-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding algorithms that use only past information often cannot guarantee the best performance. Recently, people discovered that looking-ahead algorithms such as Monte Carlo Tree Search (MCTS) with external reward models (RMs) can significantly improve models' output by allowing them to think ahead and leverage future outputs and associated rewards to guide the current generation. Such techniques can help the reinforcement fine-tuning phase by sampling better trajectories and the inference phase by selecting the better output. However, their high computational cost limits their applications, especially in streaming scenarios. To address this issue, we propose equipping the policy model with token-level self-reward modeling (TRM) capability to eliminate the need for external models and extra communication. We name the new architecture as Reward Transformer. In addition, we propose a streaming-looking-ahead (SLA) algorithm to further boost search efficiency with better parallelization. Experiments show that SLA achieves an overall win rate of 79.7\\% against the baseline greedy decoding algorithm on three general-domain datasets with a frozen policy model while maintaining streaming efficiency. If we combine SLA with reinforcement fine-tuning techniques such as DPO, SLA achieves an overall win rate of 89.4\\%.",
+      "identifiers": [
+        "SemanticScholar:de3d7a05e1630518f5cf6ca2390f6995da3bc62a"
+      ],
+      "semantic_scholar_id": "de3d7a05e1630518f5cf6ca2390f6995da3bc62a",
+      "canonical_id": "arXiv:2503.00029",
+      "arxiv_id": "2503.00029",
+      "doi": "10.48550/arXiv.2503.00029",
+      "authors": [
+        "Hong-Ming Zhang",
+        "Rui-Xin Hong",
+        "Dong Yu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 640,
+        "matched_prestigious_venue": null
+      },
+      "reason": "トークンレベルの自己報酬モデルをポリシーへ組み込み外部報酬モデルと通信を不要化し、ストリーミング先読みデコードを並列化して貪欲デコード比で勝率を上げる、デコード推論そのものへの直接の技術的貢献がabstractで確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-05f9dfe182c4",
+    "round": "libimp-05f9dfe182c43547-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-05f9dfe182c43547-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-05f9dfe182c43547-pre01.json",
+    "receipt": "sha256:913aa5d85c768ef0b87b432f60ca4f5dca65826920e12b0f66cb0b3fb001da8a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-05f9dfe182c4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

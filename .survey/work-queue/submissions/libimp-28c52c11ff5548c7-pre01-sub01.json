@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Towards Resource-Efficient Multimodal Intelligence: Learned Routing among Specialized Expert Models",
+      "source_url": "https://arxiv.org/abs/2511.06441",
+      "year": 2025,
+      "published": "2025-11-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As AI moves beyond text, large language models (LLMs) increasingly power vision, audio, and document understanding; however, their high inference costs hinder real-time, scalable deployment. Conversely, smaller open-source models offer cost advantages but struggle with complex or multimodal queries. We introduce a unified, modular framework that intelligently routes each query - textual, multimodal, or complex - to the most fitting expert model, using a learned routing network that balances cost and quality. For vision tasks, we employ a two-stage open-source pipeline optimized for efficiency and reviving efficient classical vision components where they remain SOTA for sub-tasks. On benchmarks such as Massive Multitask Language Understanding (MMLU) and Visual Question Answering (VQA), we match or exceed the performance of always-premium LLM (monolithic systems with one model serving all query types) performance, yet reduce the reliance on costly models by over 67%. With its extensible, multi-agent orchestration, we deliver high-quality, resource-efficient AI at scale.",
+      "identifiers": [
+        "SemanticScholar:4de61d5887c656b74a85ff19010273079fb8e807"
+      ],
+      "semantic_scholar_id": "4de61d5887c656b74a85ff19010273079fb8e807",
+      "canonical_id": "arXiv:2511.06441",
+      "arxiv_id": "2511.06441",
+      "doi": "10.48550/arXiv.2511.06441",
+      "authors": [
+        "Mayank Saini",
+        "A. K. Bishwas"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 382,
+        "matched_prestigious_venue": null
+      },
+      "reason": "学習型ルーティングネットワークがクエリごとに専門モデルへ振り分け、品質を保ちながら高コストモデルへの依存を67%以上削減するマルチモデル推論基盤の枠組みを実証している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-28c52c11ff55",
+    "round": "libimp-28c52c11ff5548c7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-28c52c11ff5548c7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-28c52c11ff5548c7-pre01.json",
+    "receipt": "sha256:a43f43dc003652674516524a189333c3217158ee6f6fc71a6782e6fd56d65452"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-28c52c11ff55",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
