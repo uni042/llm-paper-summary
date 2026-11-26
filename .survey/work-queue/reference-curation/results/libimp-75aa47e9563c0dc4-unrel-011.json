@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75aa47e9563c0dc4-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:3d64ddcc5f1dbc4a7e242b51151ae82fadec55d4",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:3d64ddcc5f1dbc4a7e242b51151ae82fadec55d4",
+    "identity_tokens": [
+      "SemanticScholar:3d64ddcc5f1dbc4a7e242b51151ae82fadec55d4"
+    ],
+    "reason": "コーデックベース音声LLMの継続事前学習はASR/TTS/音声翻訳の理解と生成のバランスを取る学習研究であり、推論基盤ではない。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Balancing Speech Understanding and Generation Using Continual Pre-training for Codec-based Speech LLM"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75aa47e9563c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

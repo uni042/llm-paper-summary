@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-287d4857e9549fc6-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.10725",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.10725",
+    "identity_tokens": [
+      "arXiv:2407.10725"
+    ],
+    "reason": "大規模LLMと微調整した小規模LLMを組み合わせてLLM生成文の価値観を適応的・汎化的に評価するCLAVEの提案であり、価値アラインメント評価が主題で推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-26T19:36:18+00:00",
+    "last_checked_at": "2026-11-26T19:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "CLAVE: An Adaptive Framework for Evaluating Values of LLM Generated Responses"
+  },
+  "processed_at": "2026-11-26T19:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-287d4857e954",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

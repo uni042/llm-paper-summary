@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b43cdb9a6150ee8e-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.15444",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.15444",
+    "identity_tokens": [
+      "arXiv:2505.15444"
+    ],
+    "reason": "役割別トークン最適化により単一LLMインスタンス内でRAGの6つのサブタスクを動的に切り替える統合フレームワークRoleRAGを提案し、デプロイメントの効率化を掲げる。単一インスタンス運用という配備面の工夫はあるが、機構の実体は役割トークンの学習であり推論システムとしての貢献は薄い。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Single LLM, Multiple Roles: A Unified Retrieval-Augmented Generation Framework Using Role-Specific Token Optimization"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b43cdb9a6150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

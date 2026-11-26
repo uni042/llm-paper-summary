@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-944379a2ee1a77a2-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.09394",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.09394",
+    "identity_tokens": [
+      "arXiv:2507.09394"
+    ],
+    "reason": "KVメモリ圧縮手法であるMulti-head Latent Attentionについて、ランダム行列理論のMarchenko-Pastur診断で事前学習中のスペクトルとrank collapseを分析する研究である。MLA自体はKVキャッシュ圧縮に直結するが、本論文は学習ダイナミクスの診断に留まり、推論時の機構や効率改善の提案は要旨に確認できない。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Random Matrix Theory Perspective on the Learning Dynamics of Multi-head Latent Attention"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-944379a2ee1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

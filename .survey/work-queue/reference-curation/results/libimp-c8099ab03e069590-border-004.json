@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c8099ab03e069590-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.15277",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.15277",
+    "identity_tokens": [
+      "arXiv:2410.15277"
+    ],
+    "reason": "BRIEFは検索文書をquery-awareに圧縮した要約をin-context RAGへ入れることで推論の高速化・コスト削減を狙うが、主成果はmulti-hop QAの圧縮率と精度であり推論基盤技術ではない。",
+    "first_checked_at": "2026-11-26T19:36:20+00:00",
+    "last_checked_at": "2026-11-26T19:36:20+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BRIEF: Bridging Retrieval and Inference for Multi-hop Reasoning via Compression"
+  },
+  "processed_at": "2026-11-26T19:36:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c8099ab03e06",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

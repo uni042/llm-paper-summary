@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b43cdb9a6150ee8e-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.16768",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.16768",
+    "identity_tokens": [
+      "arXiv:2504.16768"
+    ],
+    "reason": "Bloom・Gemma・Llama等の生成LLMが要求分類タスクでどの程度有効かを検証した要求工学の応用研究であり、LLMを分類器として使う評価であって推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "How Effective are Generative Large Language Models in Performing Requirements Classification?"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b43cdb9a6150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

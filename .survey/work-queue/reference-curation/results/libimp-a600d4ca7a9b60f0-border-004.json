@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a600d4ca7a9b60f0-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.16261",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.16261",
+    "identity_tokens": [
+      "arXiv:2610.16261"
+    ],
+    "reason": "Token-Group QuantizationはMamba超解像向けにtoken群別clippingを静的予測するhardware-friendlyな活性化PTQでJetsonで2.23倍高速化を示すが、対象モデルはLLMではなく画像復元である。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hardware-Friendly Token-Group Activation Quantization for Low-Bit Mamba Super-Resolution"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a600d4ca7a9b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

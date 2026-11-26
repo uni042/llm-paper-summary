@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T14:45:00+00:00",
-  "record_count": 9801,
+  "updated_at": "2026-11-26T19:36:20+00:00",
+  "record_count": 9836,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -149936,6 +149936,531 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Cerberus: Triple Mode Acceleration of Sparse Matrix and Vector Multiplication"
+    },
+    "DOI:10.1109/iscas58744.2024.10558554": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas58744.2024.10558554",
+      "identity_tokens": [
+        "DOI:10.1109/iscas58744.2024.10558554"
+      ],
+      "reason": "ニアデータ処理向けに局所適応的な非構造化重みスパース化LauWSを提案しGPT-2やOPT-125mでも速度向上を示すが、評価の中心はMLP等の汎用DNNでありLLM推論への貢献は限定的である。",
+      "first_checked_at": "2026-11-26T19:36:18+00:00",
+      "last_checked_at": "2026-11-26T19:36:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LauWS: Local Adaptive Unstructured Weight Sparsity of Load Balance for DNN in Near-Data Processing"
+    },
+    "arXiv:2403.17698": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.17698",
+      "identity_tokens": [
+        "arXiv:2403.17698"
+      ],
+      "reason": "ALiBi系の相対位置符号化を複数カーネルで拡張し長さ外挿を改善するMEPであり、推論時の長文処理に関わる注意機構の改良だが、推論システムとしての効率化やサービングへの貢献は示されていない。",
+      "first_checked_at": "2026-11-26T19:36:18+00:00",
+      "last_checked_at": "2026-11-26T19:36:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MEP: Multiple Kernel Learning Enhancing Relative Positional Encoding Length Extrapolation"
+    },
+    "arXiv:2411.05882": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.05882",
+      "identity_tokens": [
+        "arXiv:2411.05882"
+      ],
+      "reason": "1.58bit（三値）学習がMLP・GNN・各種Transformer言語モデルで成り立つかを底上げ的に検証する研究であり、効率的推論を動機とする量子化学習だが、推論機構やサービングの提案はない。",
+      "first_checked_at": "2026-11-26T19:36:18+00:00",
+      "last_checked_at": "2026-11-26T19:36:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When are 1.58 bits enough? A Bottom-up Exploration of BitNet Quantization"
+    },
+    "DOI:10.1109/ijcnn64981.2025.11227973": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ijcnn64981.2025.11227973",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn64981.2025.11227973"
+      ],
+      "reason": "医療QA向け小規模LLMのLoRA・量子化とエネルギー消費を実機でプロファイルするが、主目的は医療QAの微調整と性能・エネルギー比較であり推論基盤そのものの機構提案ではないため境界域とする。",
+      "first_checked_at": "2026-11-26T19:36:18+00:00",
+      "last_checked_at": "2026-11-26T19:36:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Domain-Specific LLMs: Energy Profiling in Medical QA Tasks"
+    },
+    "arXiv:2509.17930": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.17930",
+      "identity_tokens": [
+        "arXiv:2509.17930"
+      ],
+      "reason": "Transformer Encoder Treeは非自己回帰の並列デコードで推論計算60%削減と7〜14倍高速化をうたうが、多言語機械翻訳専用のエンコーダ構造であり汎用LLMデコード機構ではないため境界域とする。",
+      "first_checked_at": "2026-11-26T19:36:18+00:00",
+      "last_checked_at": "2026-11-26T19:36:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transformer-Encoder Trees for Efficient Multilingual Machine Translation and Speech Translation"
+    },
+    "arXiv:2512.07461": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.07461",
+      "identity_tokens": [
+        "arXiv:2512.07461"
+      ],
+      "reason": "Native Parallel ReasonerはSGLangのメモリ管理とフロー制御を改変したNPR Engineで並列推論の高速化も示すが、主貢献は自己蒸留RLによる並列推論能力の学習法であり実行系の改変は学習基盤向けのため境界域とする。",
+      "first_checked_at": "2026-11-26T19:36:18+00:00",
+      "last_checked_at": "2026-11-26T19:36:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning"
+    },
+    "DOI:10.1145/3805712.3809646": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805712.3809646",
+      "identity_tokens": [
+        "DOI:10.1145/3805712.3809646"
+      ],
+      "reason": "Dynamic Memory Forestは長期対話の履歴を統合・成長させるメモリ枠組みで文脈管理に触れるが、対象は会話履歴の意味的整理でありKVキャッシュ等の推論時メモリ機構ではないため境界域とする。",
+      "first_checked_at": "2026-11-26T19:36:18+00:00",
+      "last_checked_at": "2026-11-26T19:36:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Memory Forest: Constructing and Tracing Conversational Trajectories for Long-Term Conversation"
+    },
+    "arXiv:2607.25600": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.25600",
+      "identity_tokens": [
+        "arXiv:2607.25600"
+      ],
+      "reason": "言語モデルの言語化された信頼度に基づき、低信頼の質問だけに検索と再回答を行わせるretrieval routing方策BeyondUncertaintyを提案し、不要な検索と追加計算の回避を図る。計算量削減の側面はあるが主目的はRAGの回答精度方策であり、推論システムとしての貢献は間接的で薄い。",
+      "first_checked_at": "2026-11-26T19:36:18+00:00",
+      "last_checked_at": "2026-11-26T19:36:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Self-Knowledge: Propagating Uncertainty Across Reasoning and Retrieval in LLMs"
+    },
+    "SemanticScholar:2de8019fd7d04e3d1305d5efaeeb591f0d966550": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:2de8019fd7d04e3d1305d5efaeeb591f0d966550",
+      "identity_tokens": [
+        "SemanticScholar:2de8019fd7d04e3d1305d5efaeeb591f0d966550"
+      ],
+      "reason": "マスク予測型の非自己回帰Transformer（A-CMLM/A-FMLM）で音声認識を行い、自己回帰Transformerと同等精度で7倍の高速化を示す。非自己回帰デコードという推論高速化機構は具体的だが、対象はASR専用モデルでありLLM推論への直接の適用は要旨に示されていない。",
+      "first_checked_at": "2026-11-26T19:36:18+00:00",
+      "last_checked_at": "2026-11-26T19:36:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Listen and Fill in the Missing Letters: Non-Autoregressive Transformer for Speech Recognition"
+    },
+    "arXiv:2610.12768": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.12768",
+      "identity_tokens": [
+        "arXiv:2610.12768"
+      ],
+      "reason": "意味クエリ処理で過去のLLMラベルをsemantic viewとして再利用し高価なLLM呼び出しを28-45%削減するSemViewsであり、LLM呼び出しコスト削減のシステム手法だが、対象は意味フィルタ処理であり通常のLLMサービング基盤とは異なる。",
+      "first_checked_at": "2026-11-26T19:36:18+00:00",
+      "last_checked_at": "2026-11-26T19:36:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Semantic Views: Certified Reuse of LLM Labels Across Semantic Queries"
+    },
+    "arXiv:2601.17532": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.17532",
+      "identity_tokens": [
+        "arXiv:2601.17532"
+      ],
+      "reason": "Information Gain PruningはRAGの証拠選択で入力トークンを76〜79%削減し品質・コスト比を改善するが、主対象は検索リランキングであり生成器側の推論機構ではないため境界域とする。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Less is More for RAG: Information Gain Pruning for Generator-Aligned Reranking and Evidence Selection"
+    },
+    "arXiv:2506.00911": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.00911",
+      "identity_tokens": [
+        "arXiv:2506.00911"
+      ],
+      "reason": "Conformal ArbitrageはPrimaryモデルとGuardian間のAPIレベルルーティングを共形リスク制御で調整しコスト配分にも触れるが、主貢献は安全性と有用性のリスク制御であり推論実行効率の機構ではないため境界域とする。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Conformal Arbitrage: Risk-Controlled Balancing of Competing Objectives in Language Models"
+    },
+    "SemanticScholar:2cb38ec656450864e126d0662cbf34a37387bd3e": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:2cb38ec656450864e126d0662cbf34a37387bd3e",
+      "identity_tokens": [
+        "SemanticScholar:2cb38ec656450864e126d0662cbf34a37387bd3e"
+      ],
+      "reason": "表現プーリングで注意を疎化し二次計算量を亜線形化、推論4.5倍高速化やデコーダ効率13倍を報告するが、対象は長文要約用エンコーダ・デコーダTransformerのモデル構造改変でありLLM推論システムへの直接適用ではないため境界域とする。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sparsifying Transformer Models with Differentiable Representation Pooling"
+    },
+    "SemanticScholar:8f6bccf637f5688b20322beaa5efbfe50d998b66": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:8f6bccf637f5688b20322beaa5efbfe50d998b66",
+      "identity_tokens": [
+        "SemanticScholar:8f6bccf637f5688b20322beaa5efbfe50d998b66"
+      ],
+      "reason": "Tenureはセッション横断メモリを型付き信念ストアとBM25検索で管理し文脈注入する代理層だが、対象は利用者の信念状態管理でありKVキャッシュ等の推論時メモリ機構ではないため境界域とする。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Similarity Search: Tenure and the Case for Structured Belief State in LLM Memory"
+    },
+    "arXiv:2411.16821": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.16821",
+      "identity_tokens": [
+        "arXiv:2411.16821"
+      ],
+      "reason": "logit空間のKL測地線に基づくconditional flow matchingで非自己回帰テキスト生成を定式化し、denoise/re-noiseを繰り返すsampling-hybrid inference戦略を提案する。生成の逐次ボトルネック回避という推論面の動機はあるが、主貢献は生成モデルの学習目的とサンプリング分布の理論であり、推論システム技術としての具体性は薄い。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Logit-KL Flow Matching: Non-Autoregressive Text Generation via Sampling-Hybrid Inference"
+    },
+    "arXiv:2507.09394": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.09394",
+      "identity_tokens": [
+        "arXiv:2507.09394"
+      ],
+      "reason": "KVメモリ圧縮手法であるMulti-head Latent Attentionについて、ランダム行列理論のMarchenko-Pastur診断で事前学習中のスペクトルとrank collapseを分析する研究である。MLA自体はKVキャッシュ圧縮に直結するが、本論文は学習ダイナミクスの診断に留まり、推論時の機構や効率改善の提案は要旨に確認できない。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Random Matrix Theory Perspective on the Learning Dynamics of Multi-head Latent Attention"
+    },
+    "DOI:10.1109/ccnis69465.2025.00025": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ccnis69465.2025.00025",
+      "identity_tokens": [
+        "DOI:10.1109/ccnis69465.2025.00025"
+      ],
+      "reason": "dependency-graph pruningとFFNチャネル削減を組み合わせたMotionGPT向け構造化プルーニングの実践レシピであり、パラメータを約14%削減する。プルーニング技術自体はモデル圧縮だが、対象はモーション生成モデルMotionGPTに限定された応用適用であり、LLM推論への一般的な貢献は薄い。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Practical Recipe for Structured Pruning of MotionGPT: Dependency-Graph Pruning and FFN Channel Reduction"
+    },
+    "DOI:10.1109/ijcnn64981.2025.11229356": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ijcnn64981.2025.11229356",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn64981.2025.11229356"
+      ],
+      "reason": "SparseGPT系の高速プルーニングと層間スライディング蒸留を組み合わせたCLIP向けプルーニング手法Slide-CLIPを提案する。モデル圧縮の観点はあるが対象は視覚言語モデルCLIPのプルーニング工程の省GPU時間化であり、LLM推論システムへの直接貢献とは言い難い。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Slide-CLIP: A Simple and Effective Pruning Method for CLIP"
+    },
+    "DOI:10.1109/wacv61041.2025.00710": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/wacv61041.2025.00710",
+      "identity_tokens": [
+        "DOI:10.1109/wacv61041.2025.00710"
+      ],
+      "reason": "Vision Transformerの注意行列の規則性を利用し、再学習なしで線形コストの対角注意を実現する0-shot手法を提案する。注意計算の高速化機構は推論効率に関連するが、評価・対象がImageNetのViTに限定され、LLM推論への適用は要旨に示されていない。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A 0-Shot Self-Attention Mechanism for Accelerated Diagonal Attention"
+    },
+    "arXiv:2610.05097": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05097",
+      "identity_tokens": [
+        "arXiv:2610.05097"
+      ],
+      "reason": "ReMAPは推論時の潜在視覚記憶でMLLMの視覚tokenを51-76.8%削減しつつ多画像推論精度を上げるが、主眼は視覚グラウンディングの回復でありサービング効率の検証は限定的である。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReMAP: Restoring the Perceptual Cycle with Reasoning-Time Latent Visual Memory"
+    },
+    "arXiv:2610.16261": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.16261",
+      "identity_tokens": [
+        "arXiv:2610.16261"
+      ],
+      "reason": "Token-Group QuantizationはMamba超解像向けにtoken群別clippingを静的予測するhardware-friendlyな活性化PTQでJetsonで2.23倍高速化を示すが、対象モデルはLLMではなく画像復元である。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware-Friendly Token-Group Activation Quantization for Low-Bit Mamba Super-Resolution"
+    },
+    "arXiv:2611.07976": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.07976",
+      "identity_tokens": [
+        "arXiv:2611.07976"
+      ],
+      "reason": "QRAEはattention entropyで保持すべき検索chunkを選ぶオンライン文脈圧縮でDeepSearchエージェントのlatencyを30%、tokenを45%削減するが、対象はエージェントの文脈管理であり汎用推論基盤ではない。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "QRAE: Query-Relevant Attention Entropy for Context Compression in DeepSearch Agents"
+    },
+    "arXiv:2305.01519": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.01519",
+      "identity_tokens": [
+        "arXiv:2305.01519"
+      ],
+      "reason": "BCEdgeはSLOを意識した適応バッチングと同時実行でエッジ上のDNN推論サービスをスケジューリングする枠組みであり、推論サービング技術ではあるが対象はLLMではなく汎用DNNである。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BCEdge: SLO-Aware DNN Inference Services with Adaptive Batching on Edge Platforms"
+    },
+    "DOI:10.1109/iscas56072.2025.11044026": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas56072.2025.11044026",
+      "identity_tokens": [
+        "DOI:10.1109/iscas56072.2025.11044026"
+      ],
+      "reason": "SSMAはSelective SSMの再配置・融合演算とtile-stationary dataflowでMamba向けメモリ効率アクセラレータをFPGA実装するが、対象はMamba単体のエッジ実装でありLLM推論システムとしての評価ではない。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SSMA: A Memory-Efficient Accelerator for State Space Model in the Mamba"
+    },
+    "DOI:10.1109/ccgrid64434.2025.00032": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ccgrid64434.2025.00032",
+      "identity_tokens": [
+        "DOI:10.1109/ccgrid64434.2025.00032"
+      ],
+      "reason": "CarbonDISは異種GPU上でDNN推論ジョブを炭素排出とlatencyのトレードオフでスケジューリングするが、対象は汎用DNN推論でありLLMサービングではない。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CarbonDIS: Carbon-Aware DNN Inference Scheduling on Heterogeneous GPUs"
+    },
+    "arXiv:2509.08016": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.08016",
+      "identity_tokens": [
+        "arXiv:2509.08016"
+      ],
+      "reason": "Video Parallel Scalingはフレーム部分集合ごとの並列推論ストリームの確率集約でVideoLLMの知覚帯域を文脈長を増やさず広げるinference-time手法だが、主成果は動画理解精度であり効率改善は副次的である。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Video Parallel Scaling: Aggregating Diverse Frame Subsets for VideoLLMs"
+    },
+    "arXiv:2505.15444": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.15444",
+      "identity_tokens": [
+        "arXiv:2505.15444"
+      ],
+      "reason": "役割別トークン最適化により単一LLMインスタンス内でRAGの6つのサブタスクを動的に切り替える統合フレームワークRoleRAGを提案し、デプロイメントの効率化を掲げる。単一インスタンス運用という配備面の工夫はあるが、機構の実体は役割トークンの学習であり推論システムとしての貢献は薄い。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Single LLM, Multiple Roles: A Unified Retrieval-Augmented Generation Framework Using Role-Specific Token Optimization"
+    },
+    "arXiv:2605.27570": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27570",
+      "identity_tokens": [
+        "arXiv:2605.27570"
+      ],
+      "reason": "LaneRoPEはbest-of-N等の並列test-time scalingで生成系列間のattention maskとRoPE拡張による協調を提案するが、主成果は数学推論の精度向上であり、推論時のオーバーヘッドが小さいという言及に留まりサービング効率の直接改善は示されていない。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LaneRoPE: Positional Encoding for Collaborative Parallel Reasoning and Generation"
+    },
+    "arXiv:2512.06243": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06243",
+      "identity_tokens": [
+        "arXiv:2512.06243"
+      ],
+      "reason": "INT8/INT4量子化でバックドア防御の検出率が0%に崩れることを示す実証研究で、量子化済みモデルのデプロイ実態には関わるが、推論向け量子化手法そのものの提案ではない。",
+      "first_checked_at": "2026-11-26T19:36:19+00:00",
+      "last_checked_at": "2026-11-26T19:36:19+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantization Blindspots: How Model Compression Breaks Backdoor Defenses"
+    },
+    "arXiv:2602.10410": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.10410",
+      "identity_tokens": [
+        "arXiv:2602.10410"
+      ],
+      "reason": "LUCIDはkey-key類似度によるpreconditionerでsoftmax attentionの拡散を抑え長文脈retrievalを改善するattention改変であり、同等の計算量を謳うもののLLM推論・KV処理の効率化を直接扱っていない。",
+      "first_checked_at": "2026-11-26T19:36:20+00:00",
+      "last_checked_at": "2026-11-26T19:36:20+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LUCID: Attention with Preconditioned Representations"
+    },
+    "arXiv:2610.22751": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.22751",
+      "identity_tokens": [
+        "arXiv:2610.22751"
+      ],
+      "reason": "MedSTPは医療VQA向けに部分空間と遷移証拠を保つtraining-freeなpre-decoding視覚トークンpruningであり、トークン削減機構は推論効率に関連するが主目的は医療VQAの精度保持である。",
+      "first_checked_at": "2026-11-26T19:36:20+00:00",
+      "last_checked_at": "2026-11-26T19:36:20+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MedSTP: Preserving Subspace and Transition Evidence for Medical VQA Token Pruning"
+    },
+    "arXiv:2507.00698": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.00698",
+      "identity_tokens": [
+        "arXiv:2507.00698"
+      ],
+      "reason": "MALAはQueryのmagnitudeを組み込むMagnitude-Aware Linear Attentionで線形複雑度を保つ汎用attention改変であり、画像・NLP・音声など広範なタスク評価が中心でLLM推論実行への直接適用は示されていない。",
+      "first_checked_at": "2026-11-26T19:36:20+00:00",
+      "last_checked_at": "2026-11-26T19:36:20+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rectifying Magnitude Neglect in Linear Attention"
+    },
+    "arXiv:2410.15277": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.15277",
+      "identity_tokens": [
+        "arXiv:2410.15277"
+      ],
+      "reason": "BRIEFは検索文書をquery-awareに圧縮した要約をin-context RAGへ入れることで推論の高速化・コスト削減を狙うが、主成果はmulti-hop QAの圧縮率と精度であり推論基盤技術ではない。",
+      "first_checked_at": "2026-11-26T19:36:20+00:00",
+      "last_checked_at": "2026-11-26T19:36:20+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BRIEF: Bridging Retrieval and Inference for Multi-hop Reasoning via Compression"
+    },
+    "arXiv:2502.11276": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.11276",
+      "identity_tokens": [
+        "arXiv:2502.11276"
+      ],
+      "reason": "RoPEが長距離retrieval用attention headの一部次元を非効率化し得ることをLLM3種の分析で示すが、新たな推論手法の提案はなく分析に留まる。",
+      "first_checked_at": "2026-11-26T19:36:20+00:00",
+      "last_checked_at": "2026-11-26T19:36:20+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Rotary Position Embedding May Cause Dimension Inefficiency in Attention Heads for Long-Distance Retrieval"
+    },
+    "DOI:10.1109/icauc68182.2026.11441156": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icauc68182.2026.11441156",
+      "identity_tokens": [
+        "DOI:10.1109/icauc68182.2026.11441156"
+      ],
+      "reason": "Retriever/Reasoner/Verifierの役割ごとに圧縮方針を変えるrole-aware context compressionで文脈を50%削減しQAのF1を保つ提案であり、LLMエージェントの文脈処理効率には関わるが推論基盤そのものではない。",
+      "first_checked_at": "2026-11-26T19:36:20+00:00",
+      "last_checked_at": "2026-11-26T19:36:20+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Role-Aware Context Compression in Agentic AI Pipelines for Question Answering"
     }
   }
 }

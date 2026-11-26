@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3405f268b8982f58-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.12768",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.12768",
+    "identity_tokens": [
+      "arXiv:2610.12768"
+    ],
+    "reason": "意味クエリ処理で過去のLLMラベルをsemantic viewとして再利用し高価なLLM呼び出しを28-45%削減するSemViewsであり、LLM呼び出しコスト削減のシステム手法だが、対象は意味フィルタ処理であり通常のLLMサービング基盤とは異なる。",
+    "first_checked_at": "2026-11-26T19:36:18+00:00",
+    "last_checked_at": "2026-11-26T19:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Semantic Views: Certified Reuse of LLM Labels Across Semantic Queries"
+  },
+  "processed_at": "2026-11-26T19:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3405f268b898",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

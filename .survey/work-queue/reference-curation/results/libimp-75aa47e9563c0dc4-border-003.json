@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75aa47e9563c0dc4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:2cb38ec656450864e126d0662cbf34a37387bd3e",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:2cb38ec656450864e126d0662cbf34a37387bd3e",
+    "identity_tokens": [
+      "SemanticScholar:2cb38ec656450864e126d0662cbf34a37387bd3e"
+    ],
+    "reason": "表現プーリングで注意を疎化し二次計算量を亜線形化、推論4.5倍高速化やデコーダ効率13倍を報告するが、対象は長文要約用エンコーダ・デコーダTransformerのモデル構造改変でありLLM推論システムへの直接適用ではないため境界域とする。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Sparsifying Transformer Models with Differentiable Representation Pooling"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75aa47e9563c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

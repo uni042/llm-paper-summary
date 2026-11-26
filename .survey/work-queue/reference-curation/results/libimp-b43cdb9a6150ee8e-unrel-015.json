@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b43cdb9a6150ee8e-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.20680",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.20680",
+    "identity_tokens": [
+      "arXiv:2405.20680"
+    ],
+    "reason": "検索拡張LLMの性能不一致を劣化挙動の分解で分析し、複数リトリーバを適応的に統合するEnsemble of Retrieversを提案する研究であり、RAGの事実性改善が主題で推論実行システムへの貢献は示されていない。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Unraveling and Mitigating Retriever Inconsistencies in Retrieval-Augmented Large Language Models"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b43cdb9a6150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

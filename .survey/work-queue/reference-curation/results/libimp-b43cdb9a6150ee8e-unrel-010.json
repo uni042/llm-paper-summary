@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b43cdb9a6150ee8e-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.04418",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.04418",
+    "identity_tokens": [
+      "arXiv:2511.04418"
+    ],
+    "reason": "曖昧な質問の下では既存の不確実性定量化手法がほぼランダムまで劣化することを示す研究であり、UQの評価問題が主題で推論システム技術の提案ではない。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "The Illusion of Certainty: Uncertainty quantification for LLMs fails under ambiguity"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b43cdb9a6150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

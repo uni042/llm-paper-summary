@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75aa47e9563c0dc4-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:e7a2ffd26cd76e5b662ecb8624ecb3e177dbb8da",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:e7a2ffd26cd76e5b662ecb8624ecb3e177dbb8da",
+    "identity_tokens": [
+      "SemanticScholar:e7a2ffd26cd76e5b662ecb8624ecb3e177dbb8da"
+    ],
+    "reason": "静的言語モデリングの落とし穴は時間的汎化と評価プロトコルの問題提起であり、推論実行効率への貢献はない。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Pitfalls of Static Language Modelling"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75aa47e9563c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

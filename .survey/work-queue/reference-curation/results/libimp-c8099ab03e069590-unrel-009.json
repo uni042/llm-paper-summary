@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c8099ab03e069590-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3472456.3472523",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3472456.3472523",
+    "identity_tokens": [
+      "DOI:10.1145/3472456.3472523"
+    ],
+    "reason": "Marsは対照学習による計算グラフ表現で大規模モデルのデバイス配置を最適化するが、評価はInception-V3/GNMT/BERTの訓練ステップ時間であり推論配置ではない。",
+    "first_checked_at": "2026-11-26T19:36:20+00:00",
+    "last_checked_at": "2026-11-26T19:36:20+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Accelerated Device Placement Optimization with Contrastive Learning"
+  },
+  "processed_at": "2026-11-26T19:36:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c8099ab03e06",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

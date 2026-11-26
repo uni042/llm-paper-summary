@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a600d4ca7a9b60f0-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2305.01519",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2305.01519",
+    "identity_tokens": [
+      "arXiv:2305.01519"
+    ],
+    "reason": "BCEdgeはSLOを意識した適応バッチングと同時実行でエッジ上のDNN推論サービスをスケジューリングする枠組みであり、推論サービング技術ではあるが対象はLLMではなく汎用DNNである。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BCEdge: SLO-Aware DNN Inference Services with Adaptive Batching on Edge Platforms"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a600d4ca7a9b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

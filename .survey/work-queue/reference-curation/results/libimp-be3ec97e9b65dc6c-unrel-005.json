@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be3ec97e9b65dc6c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.00562",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.00562",
+    "identity_tokens": [
+      "arXiv:2606.00562"
+    ],
+    "reason": "DeepLatentはLatentFormerによる並列潜在視覚推論と連続空間RLでVLMの『画像で考える』推論様式を改善する研究であり、推論基盤やデコード効率の技術ではない。",
+    "first_checked_at": "2026-11-26T19:36:20+00:00",
+    "last_checked_at": "2026-11-26T19:36:20+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "DeepLatent: Think with Images via Parallel Latent Visual Reasoning"
+  },
+  "processed_at": "2026-11-26T19:36:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be3ec97e9b65",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

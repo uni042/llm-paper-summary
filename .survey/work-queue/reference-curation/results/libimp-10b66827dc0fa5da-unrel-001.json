@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10b66827dc0fa5da-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.15282",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.15282",
+    "identity_tokens": [
+      "arXiv:2407.15282"
+    ],
+    "reason": "Point Transformer V3 ExtremeはWaymo意味セグメンテーションの競技解法報告であり、点群認識応用であってLLM推論とは無関係である。",
+    "first_checked_at": "2026-11-26T19:36:18+00:00",
+    "last_checked_at": "2026-11-26T19:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Point Transformer V3 Extreme: 1st Place Solution for 2024 Waymo Open Dataset Challenge in Semantic Segmentation"
+  },
+  "processed_at": "2026-11-26T19:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10b66827dc0f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

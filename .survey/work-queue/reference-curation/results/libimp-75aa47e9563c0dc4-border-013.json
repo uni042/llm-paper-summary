@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75aa47e9563c0dc4-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:8f6bccf637f5688b20322beaa5efbfe50d998b66",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:8f6bccf637f5688b20322beaa5efbfe50d998b66",
+    "identity_tokens": [
+      "SemanticScholar:8f6bccf637f5688b20322beaa5efbfe50d998b66"
+    ],
+    "reason": "Tenureはセッション横断メモリを型付き信念ストアとBM25検索で管理し文脈注入する代理層だが、対象は利用者の信念状態管理でありKVキャッシュ等の推論時メモリ機構ではないため境界域とする。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Similarity Search: Tenure and the Case for Structured Belief State in LLM Memory"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75aa47e9563c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

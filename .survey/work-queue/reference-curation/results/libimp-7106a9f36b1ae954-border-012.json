@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7106a9f36b1ae954-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.00911",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.00911",
+    "identity_tokens": [
+      "arXiv:2506.00911"
+    ],
+    "reason": "Conformal ArbitrageはPrimaryモデルとGuardian間のAPIレベルルーティングを共形リスク制御で調整しコスト配分にも触れるが、主貢献は安全性と有用性のリスク制御であり推論実行効率の機構ではないため境界域とする。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Conformal Arbitrage: Risk-Controlled Balancing of Competing Objectives in Language Models"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7106a9f36b1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

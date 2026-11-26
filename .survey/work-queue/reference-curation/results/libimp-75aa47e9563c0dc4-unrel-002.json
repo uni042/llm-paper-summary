@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75aa47e9563c0dc4-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:01e19fa9c7d32549b310b0e0b609623ea0ffcc52",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:01e19fa9c7d32549b310b0e0b609623ea0ffcc52",
+    "identity_tokens": [
+      "SemanticScholar:01e19fa9c7d32549b310b0e0b609623ea0ffcc52"
+    ],
+    "reason": "MTGNN-SUMは異種グラフとグラフ注意で抽出型長文要約を行うモデルであり、推論基盤ではなく要約タスクの研究である。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Multi Graph Neural Network for Extractive Long Document Summarization"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75aa47e9563c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

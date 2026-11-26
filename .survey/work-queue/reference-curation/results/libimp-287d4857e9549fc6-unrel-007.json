@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-287d4857e9549fc6-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.04241",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.04241",
+    "identity_tokens": [
+      "arXiv:2609.04241"
+    ],
+    "reason": "歌唱への専門家フィードバック生成能力を測る音声言語モデル用ベンチマークVocalCoachBenchの提案であり、専門家注釈による評価設計が主題で、推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-26T19:36:18+00:00",
+    "last_checked_at": "2026-11-26T19:36:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "VocalCoachBench: Benchmarking Audio-Language Models on Expert Feedback for Singing"
+  },
+  "processed_at": "2026-11-26T19:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-287d4857e954",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

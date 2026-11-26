@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b43cdb9a6150ee8e-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.22874",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.22874",
+    "identity_tokens": [
+      "arXiv:2410.22874"
+    ],
+    "reason": "対照的説明で検索文書の関連性を明示させるContrastive-RAGによりRAGの批判的推論を促す研究であり、回答品質の改善が主題で、推論の実行効率や基盤への貢献は要旨に示されていない。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Eliciting Critical Reasoning in Retrieval-Augmented Language Models via Contrastive Explanations"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b43cdb9a6150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

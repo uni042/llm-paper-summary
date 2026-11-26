@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75aa47e9563c0dc4-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:f23bea0ef8360a07d686447b55cf851d201ac566",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:f23bea0ef8360a07d686447b55cf851d201ac566",
+    "identity_tokens": [
+      "SemanticScholar:f23bea0ef8360a07d686447b55cf851d201ac566"
+    ],
+    "reason": "EDELINE系の拡散-SSM統合は強化学習用ワールドモデルの記憶と想像一貫性を扱い、LLM推論システムとは無関係である。",
+    "first_checked_at": "2026-11-26T19:36:19+00:00",
+    "last_checked_at": "2026-11-26T19:36:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Unbounded Memory and Consistent Imagination via Unified Diffusion–SSM World Models"
+  },
+  "processed_at": "2026-11-26T19:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75aa47e9563c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

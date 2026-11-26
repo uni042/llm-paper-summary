@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be3ec97e9b65dc6c-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.12145",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.12145",
+    "identity_tokens": [
+      "arXiv:2604.12145"
+    ],
+    "reason": "動画で補強した音声トークナイザのpre-quantization fusionは音声離散表現の再構成品質に関する研究であり、ここでのquantizationはモデル量子化ではなくLLM推論とは無関係である。",
+    "first_checked_at": "2026-11-26T19:36:20+00:00",
+    "last_checked_at": "2026-11-26T19:36:20+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Why Your Tokenizer Fails in Information Fusion: A Timing-Aware Pre-Quantization Fusion for Video-Enhanced Audio Tokenization"
+  },
+  "processed_at": "2026-11-26T19:36:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be3ec97e9b65",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
