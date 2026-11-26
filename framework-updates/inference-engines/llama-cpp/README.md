@@ -100,6 +100,20 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-11-26 — llama.cpp v1.1.0（正式版）＋ b12704〜b12791（開発ビルド）
+
+b12703の続き。正式版 v1.1.0 が 2026-11-26 09:16 UTC に公開された（version bump は b12752）。あわせて開発ビルドは b12791（2026-11-26 22:10 UTC）まで進んだ。番号の範囲であって全番号にreleaseがある意味ではない。重要変更だけを拾う。
+
+- **v1.1.0: 旧 `llama_batch` API を非推奨化し `llama_batch_ext` / `llama_process` へ移行**（PR #32306 / #32356）。移行先の拡張batch API自体は v0.6.0 で導入済みで、本版で旧APIが deprecated になった点が breaking に近い変更。
+- **v1.1.0: DFlash投機的デコードを方式別に分割**。`llama_dflash_variant` を追加し、draft方式を `draft-dflash` / `draft-dflash2` / `draft-dspark` / `draft-lilicorr` へ分離（PR #32016 ほか）。推論時のdraft head選択が明示的になった。
+- **v1.1.0: 新モデル対応**。Inkling 2 系（base / Mini / DSpark、text+vision）、Domyn Edge 4B、Zaya1 8B、RAON-1-mini（30B-A4B MoE）、Hy4 flash（220B・活性12B、DSA iSWA cache）、MiniMax-M3.1 の変換対応。いずれも他社モデルの runtime 対応であり、モデル自体の新規公開ではない。TTS・音声モデル（Kokoro、VoxCPM2、Fish S2 等）も多数追加されたが、LLM推論の主対象外のため個別には記録しない。
+- **v1.1.0: 量子化の自動目標指定**。`llama_model_quantize_params` に `target_bpw` / `target_size` を追加し、目標bpw／ファイルサイズへ向けた tensor ごとの量子化型自動選択に対応（PR #15550、開発ビルド b12669 で先行導入された機能の正式版取り込み）。
+- **v1.1.0: server の slot scheduling refactor と token-aware chat parsing、named `tool_choice` 対応**。ggml は v1.1.1 へ更新。一般的な生成速度の倍率は一次資料に公表されていないため記録しない。
+- **b12785: Inkling-2-Mini 向け DFlash2 対応**（PR #33073）。**b12780: ggml の MUL_MAT / MUL_MAT_ID で BF16 src1 に対応（CPU / CUDA）**（PR #32533）。**b12778: CUDA で top-k MoE の weight norm と additive sum bias を融合**（PR #32943）。
+- **b12722: OpenCL に coopmat MoE kernel を追加**（Q4_0 / Q4_1 / Q4_K / Q5_0 / Q5_1 / Q5_K / Q6_K / MXFP4、PR #32971、Qualcomm系経路）。**b12732: ggml で入力の非同期copyを許可**し、split ごとの blocking copy を削減（PR #30685）。**b12734: Metal で graph commit を chunk 分割**（PR #32947）。いずれも速度倍率は公表されていない。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/v1.1.0 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12785 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12780 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12722
+
 ## 2026-11-25 — llama.cpp b12683〜b12703（開発ビルド）
 
 b12682の続き。対象期間の開発ビルドはb12683からb12703までで、いずれもpre-releaseの開発ビルドであり正式版ではない。番号の範囲であって全番号にreleaseがある意味ではない。重要変更だけを拾う。

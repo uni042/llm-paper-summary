@@ -2,7 +2,7 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-11-26**
+- フレームワーク差分の最終確認: **2026-11-27**
 - 用語・可読性の最終監査: **2026-09-07**
 
 この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。
@@ -68,6 +68,12 @@
 ---
 
 ## 最新更新
+
+### 2026-11-27 — llama.cpp v1.1.0（正式版）
+
+- **llama.cpp v1.1.0（2026-11-26 UTC）**: 旧 `llama_batch` API の非推奨化と `llama_batch_ext` への移行、DFlash投機的デコードの方式別分割、量子化の target_bpw / target_size 自動指定、server の slot scheduling refactor を含む正式版。開発ビルドは b12791 まで進んだ。速度倍率は未公表。[llama.cpp](inference-engines/llama-cpp/)
+- **モデル新規公開は0件**。vLLM v0.34.0 / SGLang v0.5.23 / TensorRT-LLM v1.3.0 / LMDeploy v0.18.0 / Ollama v0.40.18 が引き続き最新正式版で、Ollama v0.40.19-rc0 は公開候補版のため記録対象外とした。
+
 
 ### 2026-10-20〜21 — DeepSeek / ローカル推論の更新
 
