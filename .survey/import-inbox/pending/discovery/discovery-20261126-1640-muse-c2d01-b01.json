@@ -1,0 +1,946 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261126-c2d01-b01",
+ "reference_main_sha": "2e85ebc167be60aa08d41b8b857b3b8fb4d30936",
+ "record_count": 55,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "accept",
+   "canonical_id": "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+   "identity_tokens": [
+    "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3"
+   ],
+   "title": "Dependency-Aware Semi-Structured Sparsity: Declining Roles of Outliers in Pruning GLU-based LLMs",
+   "reason": "DaSS prunes GLU-based LLMs (LLaMA2/Mistral/Gemma) with a dependency-aware semi-structured metric combining weight magnitude and MLP intermediate activation norms, explicitly targeting serving memory size and token-generation latency with hardware-friendly N:M sparsity patterns outperforming SparseGPT and Wanda.",
+   "source_url": "https://www.semanticscholar.org/paper/4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 5
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:0c58c12c706f0b6515cb93460d2d33f0a4647c86",
+   "identity_tokens": [
+    "SemanticScholar:0c58c12c706f0b6515cb93460d2d33f0a4647c86"
+   ],
+   "title": "Adaptive Inverse Transform Sampling For Efficient Vision Transformers",
+   "reason": "Adaptive Token Sampling inserts a parameter-free module into vision transformers that scores tokens by class-token attention and samples a per-image token count, halving GFLOPs on ImageNet/video classification; it is token-reduction for ViT inference efficiency, but the target is vision classification rather than LLM inference.",
+   "source_url": "https://www.semanticscholar.org/paper/0c58c12c706f0b6515cb93460d2d33f0a4647c86",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 8
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:5599a7b4cbb0690e25ba0d3774f1bd7bfec5fadb",
+   "identity_tokens": [
+    "SemanticScholar:5599a7b4cbb0690e25ba0d3774f1bd7bfec5fadb"
+   ],
+   "title": "Arabic Compact Language Modelling for Resource Limited Devices",
+   "reason": "Trains a compact Arabic BERT-style language model for resource-limited devices and applies distillation and quantization to shrink it further (largest model 2x smaller than baseline with better task scores); on-device motivation is real, but the contribution is language-model training for Arabic NLP, not an inference system or measured serving technique.",
+   "source_url": "https://www.semanticscholar.org/paper/5599a7b4cbb0690e25ba0d3774f1bd7bfec5fadb",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 9
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc",
+   "identity_tokens": [
+    "SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc"
+   ],
+   "title": "RECAP: Training-Free Compensation for Coarse Activation Channel Pruning in Compressed LLMs",
+   "reason": "RECAP compensates training-free for coarse activation-channel pruning in compressed LLMs: it estimates the activation error from removing a channel and transfers it into the corresponding weights with grouped outlier-robust statistics, restoring LLaMA3-8B BoolQ accuracy from 38.75% to 72.48% at 70% activation-channel sparsity while keeping hardware-friendly channel sparsity.",
+   "source_url": "https://www.semanticscholar.org/paper/e41cf15d54a15ce4317e1c902a8b216ae231defc",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 12
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.52202/085713-0190",
+   "identity_tokens": [
+    "DOI:10.52202/085713-0190"
+   ],
+   "title": "TF-MAS: Training-free Mamba2 Architecture Search",
+   "reason": "TF-MAS is a training-free neural architecture search for Mamba2 that scores candidate SSD-block architectures with a rank-collapse proxy over transformation matrices; it searches model architectures for accuracy, with no inference system, serving, or deployment measurement.",
+   "source_url": "https://doi.org/10.52202/085713-0190",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 13
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:73e85f61a1cc0367af74bc87207a051ea5dbd93c",
+   "identity_tokens": [
+    "SemanticScholar:73e85f61a1cc0367af74bc87207a051ea5dbd93c"
+   ],
+   "title": "LLM-Guided Autoscheduling for Large-Scale Sparse Machine Learning",
+   "reason": "Autosparse uses an LLM to propose fusion groupings and legal dataflow orders inside a sparse-ML compiler for GCN/GraphSAGE workloads; the LLM is a search tool for sparse tensor scheduling, and there is no contribution to LLM inference, serving, or decoding.",
+   "source_url": "https://www.semanticscholar.org/paper/73e85f61a1cc0367af74bc87207a051ea5dbd93c",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 18
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1007/978-3-031-29315-3_12",
+   "identity_tokens": [
+    "DOI:10.1007/978-3-031-29315-3_12"
+   ],
+   "title": "A Black-Box Graph Partitioner for Generalized Deep Neural Network Parallelization",
+   "reason": "BBGraP is a model- and device-agnostic black-box graph partitioner that generates data-parallel execution plans for deep-learning inference across heterogeneous nodes, removing redundant transfers and synchronization for a 30% latency reduction on three nodes; it is distributed inference partitioning, but demonstrated only as a proof of concept on generic DNNs, not LLMs.",
+   "source_url": "https://doi.org/10.1007/978-3-031-29315-3_12",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 19
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:3466ad09d3c2e961243ea23b69c94228a56a8e9c",
+   "identity_tokens": [
+    "SemanticScholar:3466ad09d3c2e961243ea23b69c94228a56a8e9c"
+   ],
+   "title": "Less is More: Improving LLM Reasoning with Minimal Test-Time Intervention",
+   "reason": "Minimal Test-Time Intervention detects high-entropy tokens during reasoning and applies selective classifier-free guidance only there, reusing the main model's KV cache to approximate the unconditional branch cheaply; it is a decoding-time algorithm, but its measured contribution is reasoning accuracy (+9.28% average) rather than inference-system performance.",
+   "source_url": "https://www.semanticscholar.org/paper/3466ad09d3c2e961243ea23b69c94228a56a8e9c",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 20
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:d5f8fc9b0db83d0c11c9534525d0c56e609f1068",
+   "identity_tokens": [
+    "SemanticScholar:d5f8fc9b0db83d0c11c9534525d0c56e609f1068"
+   ],
+   "title": "2.5-dimensional Distributed Model Training",
+   "reason": "SUMMA2.5-LM proposes 2.5-dimensional tensor parallelism that cuts per-layer transmission cost for distributed language-model training (1.45x weak-scaling efficiency over 2D); the work is entirely about training parallelization, not inference or serving.",
+   "source_url": "https://www.semanticscholar.org/paper/d5f8fc9b0db83d0c11c9534525d0c56e609f1068",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 23
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:d1ed4e32dbdb614da0f9014aa5d1ead06d246715",
+   "identity_tokens": [
+    "SemanticScholar:d1ed4e32dbdb614da0f9014aa5d1ead06d246715"
+   ],
+   "title": "RGP: Achieving Memory-Efficient Model Fine-tuning Via Randomized Gradient Projection",
+   "reason": "RGP projects gradients with random matrices to cut optimizer-state memory during LLM fine-tuning, beating GaLore on GLUE while training 74% faster; it optimizes the training/fine-tuning loop and makes no inference or serving contribution.",
+   "source_url": "https://www.semanticscholar.org/paper/d1ed4e32dbdb614da0f9014aa5d1ead06d246715",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 24
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:fd76383a3a30e3c5b319d1e5b668389445d8e696",
+   "identity_tokens": [
+    "SemanticScholar:fd76383a3a30e3c5b319d1e5b668389445d8e696"
+   ],
+   "title": "Mixture of Virtual Prompts: Efficient Fine-tuning with Virtual Prompts for Natural Language Understanding",
+   "reason": "Mixture of Virtual Prompts learns sets of virtual prompts of distinct capacities and dynamically aggregates them to adapt frozen pre-trained models to NLU tasks with 0.03% of parameters; this is parameter-efficient fine-tuning for task adaptation, not inference efficiency or serving.",
+   "source_url": "https://www.semanticscholar.org/paper/fd76383a3a30e3c5b319d1e5b668389445d8e696",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 27
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1016/j.asoc.2025.113150",
+   "identity_tokens": [
+    "DOI:10.1016/j.asoc.2025.113150"
+   ],
+   "title": "Efficient and performant Transformer private inference with heterogeneous attention mechanisms",
+   "reason": "EPTI-style private Transformer inference under secure two-party secret sharing replaces expensive Softmax/GELU evaluations with specialized operator approximations (Multiplicative Residual Softmax), cutting communication volume 10.2-25.4% and end-to-end latency up to 41.7% on WAN emulation; it targets private-inference efficiency for generic Transformers rather than LLM serving specifically.",
+   "source_url": "https://doi.org/10.1016/j.asoc.2025.113150",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 154
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:49964af6d9315b3e377db62965f588e3cb9c255e",
+   "identity_tokens": [
+    "SemanticScholar:49964af6d9315b3e377db62965f588e3cb9c255e"
+   ],
+   "title": "Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory",
+   "reason": "PlanFence is a dependency-scoped validation protocol for distributed LLM-agent shared memory: plans cite their input records and executors validate only action-relevant dependencies before acting, eliminating stale-plan execution in 30 five-agent workflows; it concerns agent coordination correctness, not model inference systems.",
+   "source_url": "https://www.semanticscholar.org/paper/49964af6d9315b3e377db62965f588e3cb9c255e",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 157
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:d2eeac902af2ae46d24fb7b755c48171717ca99e",
+   "identity_tokens": [
+    "SemanticScholar:d2eeac902af2ae46d24fb7b755c48171717ca99e"
+   ],
+   "title": "Scalable Binary-Quantized Neural Networks for Energy-Efficient Vision",
+   "reason": "Proposes a Tower architecture and unified training scheme for vision networks with integer weights/activations down to binary, plus a refined resource-usage estimation methodology; binary quantization is inference-relevant, but the contribution is training vision models and no LLM or serving evaluation is provided.",
+   "source_url": "https://www.semanticscholar.org/paper/d2eeac902af2ae46d24fb7b755c48171717ca99e",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 160
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2508.14285",
+   "identity_tokens": [
+    "arXiv:2508.14285"
+   ],
+   "title": "Meta-Learning at Scale for Large Language Models via Low-Rank Amortized Bayesian Meta-Learning",
+   "reason": "ABMLL amortizes Bayesian meta-learning into LoRA variables so LLMs can be adapted to multiple datasets for few-shot generalization (CrossFit/Unified-QA); it is a fine-tuning/meta-learning method for training-time adaptation, with no inference-system or serving contribution.",
+   "source_url": "https://arxiv.org/abs/2508.14285",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 343
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2511.08150",
+   "identity_tokens": [
+    "arXiv:2511.08150"
+   ],
+   "title": "DiffuGR: Generative Document Retrieval with Diffusion Language Models",
+   "reason": "DiffuGR reframes generative document retrieval as discrete diffusion over DocIDs, generating tokens in parallel with a controllable number of denoising steps that explicitly trades retrieval quality against latency at inference; the decoding mechanism is inference-relevant, but the contribution is a retrieval application, not LLM serving.",
+   "source_url": "https://arxiv.org/abs/2511.08150",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 344
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00130",
+   "identity_tokens": [
+    "DOI:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00130"
+   ],
+   "title": "Key Factor Selection Transformer for Multivariate Time Series Forecasting",
+   "reason": "Key Factor Selection Transformer forecasts multivariate time series (transportation, meteorology, finance) with a two-stage variable-selection network, Prob-sparse self-attention and a GRU; it is a forecasting application model with no LLM inference or serving content.",
+   "source_url": "https://doi.org/10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00130",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 345
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/ICSE55347.2025.00082",
+   "identity_tokens": [
+    "DOI:10.1109/ICSE55347.2025.00082"
+   ],
+   "title": "Unseen Horizons: Unveiling the Real Capability of LLM Code Generation Beyond the Familiar",
+   "reason": "OBFusEval benchmarks LLM code-generation capability using three-level code obfuscation over 1,354 cases from five real projects to avoid training-data familiarity; it evaluates model capability and does not touch inference systems, decoding, or serving.",
+   "source_url": "https://doi.org/10.1109/ICSE55347.2025.00082",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 346
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/TASLPRO.2026.3677587",
+   "identity_tokens": [
+    "DOI:10.1109/TASLPRO.2026.3677587"
+   ],
+   "title": "PlanEval: Augmenting Large Language Models With a Small-Scale Planner-Evaluator for Knowledge-Intensive Tasks",
+   "reason": "PlanEval offloads planning and retrieval evaluation to a small-scale planner-evaluator model so the LLM is invoked less for knowledge-intensive multi-step tasks, motivated by the cost and edge-deployment latency of LLM-heavy prompting; the contribution is a task-level agent framework, not an inference-system mechanism.",
+   "source_url": "https://doi.org/10.1109/TASLPRO.2026.3677587",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 347
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1145/3703187.3703205",
+   "identity_tokens": [
+    "DOI:10.1145/3703187.3703205"
+   ],
+   "title": "LF Transformer: A novel lightweight network for machine translation",
+   "reason": "LF Transformer is a lightweight dual-branch funnel-structured network designed for machine translation that reduces parameter count and the computational load of training and inference; it is a task-specific NMT architecture rather than a general LLM inference or serving technique.",
+   "source_url": "https://doi.org/10.1145/3703187.3703205",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 348
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.48550/arXiv.2408.04556",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2408.04556"
+   ],
+   "title": "Bias-Aware Low-Rank Adaptation: Mitigating Catastrophic Inheritance of Large Language Models",
+   "reason": "BA-LoRA decomposes LoRA's catastrophic inheritance of pre-training bias into knowledge drift, representation collapse and overfitting, and mitigates it during parameter-efficient fine-tuning; it is about fine-tuning quality/fairness, with no inference or serving contribution.",
+   "source_url": "https://doi.org/10.48550/arXiv.2408.04556",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 349
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2410.04731",
+   "identity_tokens": [
+    "arXiv:2410.04731"
+   ],
+   "title": "Efficient transformer with reinforced position embedding for language models",
+   "reason": "Concatenates reinforced positional embeddings with token embeddings and reuses the normalized embedding matrix as attention values in a small encoder-decoder Transformer, improving training/validation loss and epoch time on Portuguese-English translation; the efficiency measured is training time for a translation model, not LLM inference.",
+   "source_url": "https://arxiv.org/abs/2410.04731",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 350
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.12268",
+   "identity_tokens": [
+    "arXiv:2505.12268"
+   ],
+   "title": "K-MSHC: Unmasking Minimally Sufficient Head Circuits in Large Language Models with Experiments on Syntactic Classification Tasks",
+   "reason": "K-MSHC identifies minimally sufficient attention-head circuits in Gemma-9B for grammar acceptability and arithmetic tasks and analyzes cross-task head overlap; it is mechanistic interpretability of model internals, with no inference acceleration, compression, or serving mechanism.",
+   "source_url": "https://arxiv.org/abs/2505.12268",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 351
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2509.02241",
+   "identity_tokens": [
+    "arXiv:2509.02241"
+   ],
+   "title": "LLMs for LLMs: A Structured Prompting Methodology for Long Legal Documents",
+   "reason": "Applies structured prompting with document chunking/augmentation and distribution-based candidate selection heuristics to Qwen-2 for information retrieval over long CUAD legal contracts; a legal-domain prompting application, not an inference system.",
+   "source_url": "https://arxiv.org/abs/2509.02241",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 352
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.25557",
+   "identity_tokens": [
+    "arXiv:2510.25557"
+   ],
+   "title": "Hybrid Quantum-Classical Recurrent Neural Networks",
+   "reason": "QRNN realizes the recurrent core as a parametrized quantum circuit whose unitary hidden state is read out via mid-circuit Pauli expectations, evaluated in simulation on sentiment, MNIST and translation; a quantum model architecture study with no LLM inference-system relevance.",
+   "source_url": "https://arxiv.org/abs/2510.25557",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 353
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/ICCR67387.2025.11291744",
+   "identity_tokens": [
+    "DOI:10.1109/ICCR67387.2025.11291744"
+   ],
+   "title": "Automated Code Generation Algorithm Using GPT-Based Language Models for Secure Software Development",
+   "reason": "Presents a GPT-based automated code-generation algorithm combining prompt engineering, reinforcement learning and fine-tuning on programming datasets, plus a code validation module for secure software development; an application of LLMs to coding, not an inference system.",
+   "source_url": "https://doi.org/10.1109/ICCR67387.2025.11291744",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 354
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/UEMCON62879.2024.10754699",
+   "identity_tokens": [
+    "DOI:10.1109/UEMCON62879.2024.10754699"
+   ],
+   "title": "Enhancing Abstraction in Large Language Models Through Nature-Inspired Semantic Patterns",
+   "reason": "Proposes enhancing LLM abstraction by mapping a fourfold nature-inspired semantic pattern (Kn/Po/Pr/H) onto language structure to improve theme recognition and implicit inference; a conceptual NLP proposal with no inference, serving, or efficiency mechanism.",
+   "source_url": "https://doi.org/10.1109/UEMCON62879.2024.10754699",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 355
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2407.10105",
+   "identity_tokens": [
+    "arXiv:2407.10105"
+   ],
+   "title": "Hierarchical Multi-Modal Transformer for Cross-Modal Long Document Classification",
+   "reason": "HMT fuses text and image features hierarchically with a dynamic mask transfer module for cross-modal long document classification on newly built datasets; a multimodal classification model, not an inference or serving contribution.",
+   "source_url": "https://arxiv.org/abs/2407.10105",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 356
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2412.11536",
+   "identity_tokens": [
+    "arXiv:2412.11536"
+   ],
+   "title": "Let your LLM generate a few tokens and you will reduce the need for retrieval",
+   "reason": "Distills an LLM-as-judge into an IK (I Know) classifier that decides whether a RAG query needs retrieval, cutting search/reranking steps by over 50% at 80% accuracy; it is a RAG gating classifier trained by distillation, not an inference-system technique.",
+   "source_url": "https://arxiv.org/abs/2412.11536",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 357
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2507.15773",
+   "identity_tokens": [
+    "arXiv:2507.15773"
+   ],
+   "title": "Supernova: Achieving More with Less in Transformer Architectures",
+   "reason": "Supernova is a 650M decoder-only model combining RoPE, 3:1 GQA and a custom 128k BPE tokenizer to reach 90% of 1B-model performance with 35% fewer parameters and 100B training tokens; GQA/tokenizer choices are inference-relevant, but the paper reports model quality versus training budget, not inference latency or serving behavior.",
+   "source_url": "https://arxiv.org/abs/2507.15773",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 358
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2012.10885",
+   "identity_tokens": [
+    "arXiv:2012.10885"
+   ],
+   "title": "LieTransformer: Equivariant self-attention for Lie Groups",
+   "reason": "LieTransformer builds Lie-group-equivariant self-attention layers and evaluates on point-cloud shape counting, molecular property regression and Hamiltonian particle trajectories; a geometric deep-learning architecture for science applications, unrelated to LLM inference.",
+   "source_url": "https://arxiv.org/abs/2012.10885",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 361
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.03411",
+   "identity_tokens": [
+    "arXiv:2602.03411"
+   ],
+   "title": "SWE-Master: Unleashing the Potential of Software Engineering Agents via Post-Training",
+   "reason": "SWE-Master is a reproducible post-training framework (trajectory synthesis, long-horizon SFT, RL with execution feedback) that raises Qwen2.5-Coder-32B to 61.4% on SWE-bench Verified; despite mentioning inference framework design, the contribution is agent post-training, not inference systems.",
+   "source_url": "https://arxiv.org/abs/2602.03411",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 362
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2601.06411",
+   "identity_tokens": [
+    "arXiv:2601.06411"
+   ],
+   "title": "Structured Episodic Event Memory",
+   "reason": "SEEM organizes LLM-agent long-term memory into graph relational facts plus episodic event frames with reverse provenance expansion, improving LoCoMo/LongMemEval narrative coherence; it is an agent memory/retrieval framework, not the model's inference memory or serving stack.",
+   "source_url": "https://arxiv.org/abs/2601.06411",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 363
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2601.18130",
+   "identity_tokens": [
+    "arXiv:2601.18130"
+   ],
+   "title": "RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
+   "reason": "RouteMoA routes queries in a Mixture-of-Agents pool with a lightweight scorer that screens candidate models before any inference and a judge mixture that corrects scores, cutting MoA cost by 89.8% and latency by 63.6% in large pools; it is inference-time model routing at the agent-framework level rather than a serving system for a model.",
+   "source_url": "https://arxiv.org/abs/2601.18130",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 364
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2512.19443",
+   "identity_tokens": [
+    "arXiv:2512.19443"
+   ],
+   "title": "D2Pruner: Debiased Importance and Structural Diversity for MLLM Token Pruning",
+   "reason": "D2Pruner prunes visual tokens in MLLMs by combining a debiased attention-based importance score with maximal-independent-set selection over a spatial-semantic hybrid graph, reducing LLaVA-1.5-7B FLOPs by 74.2% while retaining 99.2% performance and sustaining 85.7% at 90% token reduction on InternVL localization; a direct inference-acceleration technique for multimodal LLMs.",
+   "source_url": "https://arxiv.org/abs/2512.19443",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 365
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.23959",
+   "identity_tokens": [
+    "arXiv:2512.23959"
+   ],
+   "title": "HGMEM: Hypergraph-based Working Memory to Improve Multi-step RAG for Long-Context Complex Relational Modeling",
+   "reason": "HGMEM represents RAG working memory as a hypergraph whose hyperedges link facts and thoughts for multi-step relational reasoning over long contexts; it targets reasoning quality in retrieval pipelines, not inference efficiency or serving.",
+   "source_url": "https://arxiv.org/abs/2512.23959",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 366
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2604.02971",
+   "identity_tokens": [
+    "arXiv:2604.02971"
+   ],
+   "title": "InfoSeeker: A Scalable Hierarchical Parallel Agent Framework for Web Information Seeking",
+   "reason": "InfoSeeker organizes web information-seeking agents into Host/Manager/parallel Worker layers with context isolation, reporting 3-5x task-execution speedup on WideSearch/BrowseComp; the parallelism is agent workflow orchestration, not model inference.",
+   "source_url": "https://arxiv.org/abs/2604.02971",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 367
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2607.24850",
+   "identity_tokens": [
+    "arXiv:2607.24850"
+   ],
+   "title": "SearchArt: Training Long-Horizon Search Agent with Scalable Synthetic and Verified Task",
+   "reason": "SearchArt synthesizes verified long-horizon search tasks and trajectories from web documents and evidence graphs, then trains search agents with SFT plus RL; a training-data and post-training framework for agents, not inference.",
+   "source_url": "https://arxiv.org/abs/2607.24850",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 368
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.14253",
+   "identity_tokens": [
+    "arXiv:2512.14253"
+   ],
+   "title": "FLAME: Flow Enhanced Legendre Memory Models for General Time Series Forecasting",
+   "reason": "FLAME is a lightweight time-series foundation model family using translated/scaled Legendre memory and a normalizing-flow forecasting head, benchmarked on TSFM-Bench/ProbTS/TFB; a forecasting application model unrelated to LLM inference systems.",
+   "source_url": "https://arxiv.org/abs/2512.14253",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 369
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2602.18116",
+   "identity_tokens": [
+    "arXiv:2602.18116"
+   ],
+   "title": "Cut Less, Fold More: Model Compression through the Lens of Projection Geometry",
+   "reason": "Formalizes structured pruning as axis-aligned projection and model folding as low-rank projection via weight clustering, proving folding's smaller reconstruction error within rank distance one and validating on 1000+ checkpoints of ResNet/ViT/CLIP plus small 60M/130M LLaMA models; compression theory relevant to inference, but LLM evidence is limited to tiny models and no latency is measured.",
+   "source_url": "https://arxiv.org/abs/2602.18116",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 370
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/TMC.2025.3592647",
+   "identity_tokens": [
+    "DOI:10.1109/TMC.2025.3592647"
+   ],
+   "title": "Squeezer: Efficient Multi-DNN Inference for Edge Video Analytics via Cross-Model Scheduling",
+   "reason": "Squeezer is a serving framework that holistically schedules multiple DNN models for edge video analytics on a single GPU, decoupling cross-model scheduling into balanced operator grouping and model-level scheduling; it is genuine inference serving/scheduling, but for vision DNN pipelines rather than LLMs.",
+   "source_url": "https://doi.org/10.1109/TMC.2025.3592647",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 371
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2606.04555",
+   "identity_tokens": [
+    "arXiv:2606.04555"
+   ],
+   "title": "Temporal Order Matters for Agentic Memory: Segment Trees for Long-Horizon Agents",
+   "reason": "SegTreeMem stores conversation history in a temporally ordered segment tree over utterances and propagates retrieval relevance through the hierarchy for long-horizon conversational agents; an external agent-memory retrieval design, not model inference memory or serving.",
+   "source_url": "https://arxiv.org/abs/2606.04555",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 372
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/TED.2025.3640599",
+   "identity_tokens": [
+    "DOI:10.1109/TED.2025.3640599"
+   ],
+   "title": "High-Accuracy, High-Performance In-Memory Computing With High-Resistance Spin-Orbit Torque (SOT) Magnetic Memory",
+   "reason": "Demonstrates 1-bit quantized networks on spin-orbit-torque MRAM in-memory-computing arrays, addressing device variation, IR drop and program-verify overhead at the circuit/device level; it is memory-device research for generic AI accelerators, not an LLM inference system contribution.",
+   "source_url": "https://doi.org/10.1109/TED.2025.3640599",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 373
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2602.11212",
+   "identity_tokens": [
+    "arXiv:2602.11212"
+   ],
+   "title": "Towards Compressive and Scalable Recurrent Memory",
+   "reason": "Elastic Memory uses HiPPO-based online compression to encode history into a fixed-size recurrent state with polynomial-sampling retrieval, beating Memorizing Transformer with 16x less memory on 32k+ context tasks and running faster than Melodi at 4x scale; a long-context memory architecture relevant to inference cost, but evaluated as a model architecture rather than a serving system.",
+   "source_url": "https://arxiv.org/abs/2602.11212",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 374
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.12477",
+   "identity_tokens": [
+    "arXiv:2605.12477"
+   ],
+   "title": "MEME: Multi-entity & Evolving Memory Evaluation",
+   "reason": "MEME benchmarks agent memory systems on six multi-entity/evolving tasks (Cascade, Absence, Deletion) over 100 controlled episodes, finding dependency-reasoning collapse across paradigms; an evaluation of agent memory behavior, not an inference technique.",
+   "source_url": "https://arxiv.org/abs/2605.12477",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 375
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2608.21909",
+   "identity_tokens": [
+    "arXiv:2608.21909"
+   ],
+   "title": "CD-LoRA: Consistency-Driven Low-Rank Adaptation for Multi-Task Fine-Tuning",
+   "reason": "CD-LoRA removes routers from multi-adapter LoRA and aligns task representations in a shared low-rank space to fix a training-inference routing discrepancy in multi-task fine-tuning; despite the word inference, the contribution is PEFT training stability, not inference systems.",
+   "source_url": "https://arxiv.org/abs/2608.21909",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 376
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/ISSCC49663.2026.11409083",
+   "identity_tokens": [
+    "DOI:10.1109/ISSCC49663.2026.11409083"
+   ],
+   "title": "17.3 ARIES and REGULUS: A Unified and Scalable hardware–software co-designed NPU SoC Family for On-Device and On-Premises Multimodal Inference",
+   "reason": "ARIES/REGULUS is a silicon-proven NPU SoC family for on-device and on-premises multimodal inference spanning vision to LLMs, with unified cross-chip scaling, bound- and distribution-aware mixed-precision quantization and piecewise-linear activation handling, showing near-linear performance scaling and high power/bandwidth efficiency in measurements.",
+   "source_url": "https://doi.org/10.1109/ISSCC49663.2026.11409083",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 377
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.17466",
+   "identity_tokens": [
+    "arXiv:2512.17466"
+   ],
+   "title": "Linear Attention for Joint Power Optimization and User-Centric Clustering in Cell-Free Networks",
+   "reason": "Uses a lightweight transformer with customized linear attention to jointly predict AP clustering and power allocation from spatial coordinates in user-centric cell-free massive MIMO networks; a wireless-network optimization application, not LLM inference.",
+   "source_url": "https://arxiv.org/abs/2512.17466",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 378
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2603.05105",
+   "identity_tokens": [
+    "arXiv:2603.05105"
+   ],
+   "title": "Diff-ES: Stage-wise Structural Diffusion Pruning via Evolutionary Search",
+   "reason": "Diff-ES searches stage-wise sparsity schedules for diffusion models by evolutionary search and executes them via memory-efficient weight routing without duplicating pruned models, achieving wall-clock speedups on DiT/SDXL; it is inference-oriented structured pruning, but for image diffusion models rather than LLMs.",
+   "source_url": "https://arxiv.org/abs/2603.05105",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 379
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2603.15642",
+   "identity_tokens": [
+    "arXiv:2603.15642"
+   ],
+   "title": "CraniMem: Cranial Inspired Gated and Bounded Memory for Agentic Systems",
+   "reason": "CraniMem gives LLM agents a gated bounded episodic buffer plus a long-term knowledge graph with scheduled consolidation, improving robustness over RAG/Mem0 on long-horizon benchmarks under noise; an agent memory-management design, not model inference.",
+   "source_url": "https://arxiv.org/abs/2603.15642",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 380
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.08453",
+   "identity_tokens": [
+    "arXiv:2605.08453"
+   ],
+   "title": "Sink vs. diagonal patterns as mechanisms for attention switch and oversmoothing prevention",
+   "reason": "Provides a theoretical analysis of attention sink versus diagonal patterns, proving conditions for oversmoothing prevention and an equivalence between sinks and hard attention switch in pretrained transformers; attention theory without an inference mechanism, kernel, or measured system effect.",
+   "source_url": "https://arxiv.org/abs/2605.08453",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 381
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2608.10676",
+   "identity_tokens": [
+    "arXiv:2608.10676"
+   ],
+   "title": "Self-Correcting Long-Horizon Search Agents via Tree-Structured Memory",
+   "reason": "ReTree maintains a bounded per-step reasoning context for search agents as an evidence tree with source-linked summaries, revising branches when new evidence contradicts earlier claims; context management for agent accuracy, not an inference-system contribution.",
+   "source_url": "https://arxiv.org/abs/2608.10676",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 383
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2410.15926",
+   "identity_tokens": [
+    "arXiv:2410.15926"
+   ],
+   "title": "Mitigating Object Hallucination via Concentric Causal Attention",
+   "reason": "Concentric Causal Attention reorders visual-token positions to counter RoPE long-term decay and reduce object hallucination in large vision-language models; the goal is generation factuality on hallucination benchmarks, with no inference efficiency or serving mechanism.",
+   "source_url": "https://arxiv.org/abs/2410.15926",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 384
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2103.02800",
+   "identity_tokens": [
+    "arXiv:2103.02800"
+   ],
+   "title": "Hardware Acceleration of Fully Quantized BERT for Efficient Natural Language Processing",
+   "reason": "FQ-BERT fully quantizes BERT weights, activations, softmax, layer normalization and intermediates for an FPGA accelerator on ZCU102/ZCU111, achieving 7.94x weight compression and 3.18 fps/W (28.91x over CPU, 12.72x over GPU); a concrete quantization-plus-hardware contribution to Transformer inference on edge devices.",
+   "source_url": "https://arxiv.org/abs/2103.02800",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 385
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/TGRS.2025.3562185",
+   "identity_tokens": [
+    "DOI:10.1109/TGRS.2025.3562185"
+   ],
+   "title": "A Lightweight Semantic Segmentation Network Based on Self-Attention Mechanism and State Space Model for Efficient Urban Scene Segmentation",
+   "reason": "UMFormer combines self-attention and a Mamba state-space model in an encoder-decoder network for remote-sensing urban scene semantic segmentation; a vision application model whose efficiency claims serve segmentation accuracy, not LLM inference.",
+   "source_url": "https://doi.org/10.1109/TGRS.2025.3562185",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 386
+  }
+ ]
+}
