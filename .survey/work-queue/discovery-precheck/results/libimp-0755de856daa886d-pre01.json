@@ -1,0 +1,153 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0755de856daa886d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0755de856daa",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.08595"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7e152207b3cc31f4ec67487e5a94d4d86f3bf061",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T19:38:00.219087+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.08595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Chopping Trees: Semantic Similarity Based Dynamic Pruning for Tree-of-Thought Reasoning",
+      "source_url": "https://arxiv.org/abs/2511.08595",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tree-of-Thought (ToT) reasoning boosts the problem-solving abilities of Large Language Models (LLMs) but is computationally expensive due to semantic redundancy, where distinct branches explore equivalent reasoning paths. We introduce Semantic Similarity-Based Dynamic Pruning (SSDP), a lightweight method that, to the best of our knowledge, is the first framework to integrate online semantic merging into parallelized tree search, enabling the clustering and pruning of redundant steps in real time. Across reasoning benchmarks, including GSM8K and MATH500, SSDP achieves up to a 2.3x speedup over state-of-the-art tree-search baselines while maintaining competitive accuracy (typically within 5% of the strongest baseline) and reducing the number of explored nodes by 85-90%, demonstrating a practical approach to efficient, scalable LLM reasoning. The implementation of SSDP is publicly available at https://github.com/kimjoonghokim/SSDP.",
+      "identifiers": [
+        "SemanticScholar:677920a5f6179634cf0f728384cfc426d0232949"
+      ],
+      "semantic_scholar_id": "677920a5f6179634cf0f728384cfc426d0232949",
+      "canonical_id": "arXiv:2511.08595",
+      "arxiv_id": "2511.08595",
+      "doi": "10.48550/arXiv.2511.08595",
+      "authors": [
+        "Joonghoon Kim",
+        "Xi-Rui Huang",
+        "Zarreen Reza",
+        "Gabriel Grand",
+        "Kevin Zhu",
+        "Ryan Lagasse"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 392,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.08595",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.08595",
+        "id:SemanticScholar:677920a5f6179634cf0f728384cfc426d0232949",
+        "id:arXiv:2511.08595",
+        "title:chopping trees semantic similarity based dynamic pruning for treeofthought reasoning",
+        "url:https://arxiv.org/abs/2511.08595"
+      ],
+      "record": {
+        "title": "Chopping Trees: Semantic Similarity Based Dynamic Pruning for Tree-of-Thought Reasoning",
+        "source_url": "https://arxiv.org/abs/2511.08595",
+        "year": 2025,
+        "published": "2025-10-30",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Tree-of-Thought (ToT) reasoning boosts the problem-solving abilities of Large Language Models (LLMs) but is computationally expensive due to semantic redundancy, where distinct branches explore equivalent reasoning paths. We introduce Semantic Similarity-Based Dynamic Pruning (SSDP), a lightweight method that, to the best of our knowledge, is the first framework to integrate online semantic merging into parallelized tree search, enabling the clustering and pruning of redundant steps in real time. Across reasoning benchmarks, including GSM8K and MATH500, SSDP achieves up to a 2.3x speedup over state-of-the-art tree-search baselines while maintaining competitive accuracy (typically within 5% of the strongest baseline) and reducing the number of explored nodes by 85-90%, demonstrating a practical approach to efficient, scalable LLM reasoning. The implementation of SSDP is publicly available at https://github.com/kimjoonghokim/SSDP.",
+        "identifiers": [
+          "SemanticScholar:677920a5f6179634cf0f728384cfc426d0232949"
+        ],
+        "semantic_scholar_id": "677920a5f6179634cf0f728384cfc426d0232949",
+        "canonical_id": "arXiv:2511.08595",
+        "arxiv_id": "2511.08595",
+        "doi": "10.48550/arXiv.2511.08595",
+        "authors": [
+          "Joonghoon Kim",
+          "Xi-Rui Huang",
+          "Zarreen Reza",
+          "Gabriel Grand",
+          "Kevin Zhu",
+          "Ryan Lagasse"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 392,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e1bd39ae2f62bf0546065e2ebf4a829f998512d2cd7c2c3c6ceef49b9e665fb6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

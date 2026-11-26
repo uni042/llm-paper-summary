@@ -1,0 +1,327 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-944379a2ee1a77a2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-944379a2ee1a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/aicas64808.2025.11173095",
+    "DOI:10.1109/iscas56072.2025.11043177",
+    "arXiv:2405.17506"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7e152207b3cc31f4ec67487e5a94d4d86f3bf061",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T19:38:00.206295+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/aicas64808.2025.11173095",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iscas56072.2025.11043177",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.17506",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Subspace Node Pruning",
+      "source_url": "https://arxiv.org/abs/2405.17506",
+      "year": 2024,
+      "published": "2024-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Node pruning is the art of removing computational units such as neurons, filters, attention heads, or even entire layers to significantly reduce inference time while retaining network performance. In this work, we show that a broad family of importance measures, from activation-based to Fisher-based, share a common quadratic form. Through a lower-triangular change of basis, this form yields a pruning subspace in which entire nodes can be removed while the impact of the lost units is simultaneously recovered via linear least squares. Furthermore, the importance measures within our subspace are decoupled and additive through an orthogonalization of the layer activations, allowing multi-node pruning within layers without interference between importance scores. Our method, Subspace Node Pruning (SNP), outperforms the compared baselines on VGG-16 and ResNet-50 on ImageNet. On OPT-125M and LLaMA-2 7B, SNP matches the state-of-the-art LLM Surgeon at a 40-shot schedule and outperforms it whenever fewer shots are used, all without any retraining after pruning.",
+      "identifiers": [
+        "SemanticScholar:b27b3ecce5a9434db6ae41a0fa6da35c46b6929b"
+      ],
+      "semantic_scholar_id": "b27b3ecce5a9434db6ae41a0fa6da35c46b6929b",
+      "canonical_id": "arXiv:2405.17506",
+      "arxiv_id": "2405.17506",
+      "doi": "10.48550/arXiv.2405.17506",
+      "authors": [
+        "Joshua Offergeld",
+        "John Chidiac",
+        "M. van Gerven",
+        "Nasir Ahmad"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 914,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A 62.8 TOPS/W FP-INT Digital Computing-in Memory Processor with Bit-Reordered Adder Tree and Low Active Hierarchical Accumulator",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043177",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces an energy-efficient DRAM-based FP-INT Digital Computing-in-Memory (CIM) processor for data-intensive AI workloads, addressing challenges in mixed precision, excess power consumption, and area overhead. The processor features three key innovations: 1) Bit-reordered adder tree (BRAT) that reduces adder bit width through exponent-aware reordering, achieving power and area reductions by 23% and 56%, respectively; 2) Low active hierarchical accumulator (LAHA) that conditionally updates the FP accumulator, minimizing accumulator activity by 57%; and 3) Speculative input block skipping (SIBS) to avoid unnecessary computations, reducing energy consumption by 15%. Implemented in 28nm CMOS technology, the processor achieves 62.8 TOPS/W in FP8 activation and INT4 weight precision for GPT2-Small inference. Our results show an overall energy savings of 31%, making this architecture highly efficient for modern large language models.",
+      "identifiers": [
+        "SemanticScholar:75ede966e666d4d26b19d4d3ab8e785b60ebe352"
+      ],
+      "semantic_scholar_id": "75ede966e666d4d26b19d4d3ab8e785b60ebe352",
+      "doi": "10.1109/ISCAS56072.2025.11043177",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043177",
+      "authors": [
+        "Sunjoo Whang",
+        "Sangwoo Ha",
+        "Soyeon Um",
+        "Sangjin Kim",
+        "Hoi-Jun Yoo"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 550,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "An Adaptive Scheme of Threshold Adjustment for Dynamic Sparsity Extraction of Self-Attention Network",
+      "source_url": "https://doi.org/10.1109/AICAS64808.2025.11173095",
+      "year": 2025,
+      "published": "2025-04-28",
+      "venue": "International Conference on Artificial Intelligence Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) and transformers have become highly successful across various domains. However, they are notorious for their quadratic computational complexity, which increases with sequence length. To mitigate this, dynamic sparsity techniques skip near-zero-output patterns based on low-precision estimations. Values below static thresholds are pruned, reducing energy consumption and improving computation speed.By utilizing low-cost estimations of minor threshold adjustments, we continuously monitor and fine-tune the pruning strategy to avoid overly aggressive pruning. Experimental results demonstrate that the proposed adaptive threshold method provides an average accuracy improvement of 0.15%, along with an average additional 8.95% computational sparsity across the SQuAD v1.1, v2, SST-2, and MRPC datasets.",
+      "identifiers": [
+        "SemanticScholar:4fe7cd804157d173d96ff68762fc07020b91444f"
+      ],
+      "semantic_scholar_id": "4fe7cd804157d173d96ff68762fc07020b91444f",
+      "doi": "10.1109/AICAS64808.2025.11173095",
+      "canonical_id": "DOI:10.1109/AICAS64808.2025.11173095",
+      "authors": [
+        "Yong Xiao",
+        "Chia-Wei Chang",
+        "Cheng-Ting Shih",
+        "Jing-Jia Liou",
+        "Chih-Tsun Huang",
+        "Yao-Hua Chen",
+        "Juin-Ming Lu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 577,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2405.17506",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.17506",
+        "id:SemanticScholar:b27b3ecce5a9434db6ae41a0fa6da35c46b6929b",
+        "id:arXiv:2405.17506",
+        "title:subspace node pruning",
+        "url:https://arxiv.org/abs/2405.17506"
+      ],
+      "record": {
+        "title": "Subspace Node Pruning",
+        "source_url": "https://arxiv.org/abs/2405.17506",
+        "year": 2024,
+        "published": "2024-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Node pruning is the art of removing computational units such as neurons, filters, attention heads, or even entire layers to significantly reduce inference time while retaining network performance. In this work, we show that a broad family of importance measures, from activation-based to Fisher-based, share a common quadratic form. Through a lower-triangular change of basis, this form yields a pruning subspace in which entire nodes can be removed while the impact of the lost units is simultaneously recovered via linear least squares. Furthermore, the importance measures within our subspace are decoupled and additive through an orthogonalization of the layer activations, allowing multi-node pruning within layers without interference between importance scores. Our method, Subspace Node Pruning (SNP), outperforms the compared baselines on VGG-16 and ResNet-50 on ImageNet. On OPT-125M and LLaMA-2 7B, SNP matches the state-of-the-art LLM Surgeon at a 40-shot schedule and outperforms it whenever fewer shots are used, all without any retraining after pruning.",
+        "identifiers": [
+          "SemanticScholar:b27b3ecce5a9434db6ae41a0fa6da35c46b6929b"
+        ],
+        "semantic_scholar_id": "b27b3ecce5a9434db6ae41a0fa6da35c46b6929b",
+        "canonical_id": "arXiv:2405.17506",
+        "arxiv_id": "2405.17506",
+        "doi": "10.48550/arXiv.2405.17506",
+        "authors": [
+          "Joshua Offergeld",
+          "John Chidiac",
+          "M. van Gerven",
+          "Nasir Ahmad"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 914,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscas56072.2025.11043177",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas56072.2025.11043177",
+        "id:SemanticScholar:75ede966e666d4d26b19d4d3ab8e785b60ebe352",
+        "title:a 628 topsw fpint digital computingin memory processor with bitreordered adder tree and low active hierarchical accumulator",
+        "url:https://doi.org/10.1109/ISCAS56072.2025.11043177"
+      ],
+      "record": {
+        "title": "A 62.8 TOPS/W FP-INT Digital Computing-in Memory Processor with Bit-Reordered Adder Tree and Low Active Hierarchical Accumulator",
+        "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043177",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper introduces an energy-efficient DRAM-based FP-INT Digital Computing-in-Memory (CIM) processor for data-intensive AI workloads, addressing challenges in mixed precision, excess power consumption, and area overhead. The processor features three key innovations: 1) Bit-reordered adder tree (BRAT) that reduces adder bit width through exponent-aware reordering, achieving power and area reductions by 23% and 56%, respectively; 2) Low active hierarchical accumulator (LAHA) that conditionally updates the FP accumulator, minimizing accumulator activity by 57%; and 3) Speculative input block skipping (SIBS) to avoid unnecessary computations, reducing energy consumption by 15%. Implemented in 28nm CMOS technology, the processor achieves 62.8 TOPS/W in FP8 activation and INT4 weight precision for GPT2-Small inference. Our results show an overall energy savings of 31%, making this architecture highly efficient for modern large language models.",
+        "identifiers": [
+          "SemanticScholar:75ede966e666d4d26b19d4d3ab8e785b60ebe352"
+        ],
+        "semantic_scholar_id": "75ede966e666d4d26b19d4d3ab8e785b60ebe352",
+        "doi": "10.1109/ISCAS56072.2025.11043177",
+        "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043177",
+        "authors": [
+          "Sunjoo Whang",
+          "Sangwoo Ha",
+          "Soyeon Um",
+          "Sangjin Kim",
+          "Hoi-Jun Yoo"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 550,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/aicas64808.2025.11173095",
+      "identity_tokens": [
+        "id:DOI:10.1109/aicas64808.2025.11173095",
+        "id:SemanticScholar:4fe7cd804157d173d96ff68762fc07020b91444f",
+        "title:an adaptive scheme of threshold adjustment for dynamic sparsity extraction of selfattention network",
+        "url:https://doi.org/10.1109/AICAS64808.2025.11173095"
+      ],
+      "record": {
+        "title": "An Adaptive Scheme of Threshold Adjustment for Dynamic Sparsity Extraction of Self-Attention Network",
+        "source_url": "https://doi.org/10.1109/AICAS64808.2025.11173095",
+        "year": 2025,
+        "published": "2025-04-28",
+        "venue": "International Conference on Artificial Intelligence Circuits and Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) and transformers have become highly successful across various domains. However, they are notorious for their quadratic computational complexity, which increases with sequence length. To mitigate this, dynamic sparsity techniques skip near-zero-output patterns based on low-precision estimations. Values below static thresholds are pruned, reducing energy consumption and improving computation speed.By utilizing low-cost estimations of minor threshold adjustments, we continuously monitor and fine-tune the pruning strategy to avoid overly aggressive pruning. Experimental results demonstrate that the proposed adaptive threshold method provides an average accuracy improvement of 0.15%, along with an average additional 8.95% computational sparsity across the SQuAD v1.1, v2, SST-2, and MRPC datasets.",
+        "identifiers": [
+          "SemanticScholar:4fe7cd804157d173d96ff68762fc07020b91444f"
+        ],
+        "semantic_scholar_id": "4fe7cd804157d173d96ff68762fc07020b91444f",
+        "doi": "10.1109/AICAS64808.2025.11173095",
+        "canonical_id": "DOI:10.1109/AICAS64808.2025.11173095",
+        "authors": [
+          "Yong Xiao",
+          "Chia-Wei Chang",
+          "Cheng-Ting Shih",
+          "Jing-Jia Liou",
+          "Chih-Tsun Huang",
+          "Yao-Hua Chen",
+          "Juin-Ming Lu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 577,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5076dd7e39c4ee031106e0132e88331846b320736726b6306701dce9a519a94d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

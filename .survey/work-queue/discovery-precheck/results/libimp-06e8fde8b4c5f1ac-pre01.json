@@ -1,0 +1,712 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-06e8fde8b4c5f1ac-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-06e8fde8b4c5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2611.34092",
+    "arXiv:2611.34492",
+    "arXiv:2611.34521",
+    "arXiv:2611.34584",
+    "arXiv:2611.34615",
+    "arXiv:2611.34630",
+    "arXiv:2611.34776"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7e152207b3cc31f4ec67487e5a94d4d86f3bf061",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T19:38:00.215899+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2611.34092",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.34492",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.34521",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.34584",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.34615",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.34630",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.34776",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Improving Tail-Augmented Speculative Drafting with Hidden State Mixing and Gradient Detach",
+      "source_url": "https://arxiv.org/abs/2611.34092",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-token prediction (MTP) modules and EAGLE-style drafters support efficient speculative decoding by reusing target-model hidden states. Their autoregressive use, however, introduces a training-inference mismatch: training supplies sequences of hidden states from the backbone or a single MTP step, whereas inference attends to a target-model prefix followed by a growing tail of recurrently generated MTP states. EAGLE-3's training-time test (TTT) explicitly simulates this behavior during training, at the cost of additional memory and specialized attention masks. We introduce two training-only methods for improving autoregressive drafting. Hidden State Mixing (HSM) samples among backbone and MTP hidden states aligned to the same prediction target, exposing the drafter to mixtures of states from different MTP steps without explicitly simulating inference. Hidden State Gradient Detach (HSGD) is a regularization method that stochastically blocks gradients through hidden state and embedding pathways while preserving the forward computation. Neither method adds inference cost. In joint pretraining followed by supervised fine-tuning, HSGD yields the highest acceptance rates at early draft positions, while HSM performs best later in the draft. These acceptance rate trends favor HSM for long-draft-length serving and HSGD for short-draft-length serving. Furthermore, across four Nemotron models and DeepSeek-V4-Pro, HSM-based MTP boosting with a frozen backbone improves mean acceptance length by up to 52.2% over the co-trained MTP. For EAGLE-3 drafters, HSM offers competitive acceptance with TTT, with 48% lower peak reserved training memory in a four-step Qwen3-8B comparison. HSM implementations are publicly available in Megatron-LM and NVIDIA Model Optimizer.",
+      "identifiers": [
+        "SemanticScholar:aa507542ada87d6d8671b0bfb2b72f084ad0bb6b"
+      ],
+      "semantic_scholar_id": "aa507542ada87d6d8671b0bfb2b72f084ad0bb6b",
+      "canonical_id": "arXiv:2611.34092",
+      "arxiv_id": "2611.34092",
+      "authors": [
+        "Yaniv Galron",
+        "Rabeeh Mahabadi",
+        "Maor Ashkenazi",
+        "R. Waleffe",
+        "Talor Abramovich",
+        "Tiyasa Mitra",
+        "Yoav Miron",
+        "Dor Tsur",
+        "S. Satheesh",
+        "Jimmy Zhang",
+        "Jia-Ji Huang",
+        "Yonatan Geifman",
+        "M. Patwary",
+        "Mohammad Shoeybi",
+        "B. Rouhani",
+        "Ran Zilberstein"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlyingStart: Learned Cross-Token Warm Starts for Fixed-Point Decoding in Recurrent-Depth Language Models",
+      "source_url": "https://arxiv.org/abs/2611.34492",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recurrent-depth language models generate each token by iterating a shared block of layers until its hidden state converges. Inference methods for these models decide when to stop the iteration, yet every token still starts from random noise and pays the full cost of converging. We show that where the iteration starts is a second, independent lever. A token's fixed point is predictable from the state at which the previous token stopped, after a learned change of coordinates, and we introduce FlyingStart, a linear warm start that is fitted in closed form on the frozen model and costs under 5% of one loop. The iteration and its stopping rule are unchanged, so the exit criterion certifies the same distance to the fixed point from any start: a better start removes loops at unchanged accuracy. On Huginn-0125, FlyingStart matches the accuracy of the strongest training-free baseline with 14--19% fewer decoding layers, raises batched throughput by 16--18% in two serving engines, and adds a further 10--14% on top of self-speculative decoding. A contraction analysis predicts the number of loops saved on all four models we study, including one where the prediction was recorded before any evaluation, and token by token on Huginn, and it identifies when a warm start pays off: the saving grows with the number of loops a model needs to converge.",
+      "identifiers": [
+        "SemanticScholar:d0296bb850cd5bd3b133018fdb3f3d6da2c52648"
+      ],
+      "semantic_scholar_id": "d0296bb850cd5bd3b133018fdb3f3d6da2c52648",
+      "canonical_id": "arXiv:2611.34492",
+      "arxiv_id": "2611.34492",
+      "authors": [
+        "Run-Guo Li",
+        "De-Zhen Lu",
+        "Zi-Xiang Ni"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PURA: Video Token Pruning via Unified Spatiotemporal Redundancy Assessment",
+      "source_url": "https://arxiv.org/abs/2611.34521",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large language models incur substantial inference costs from long visual token sequences. Existing video token compression methods mitigate these costs by exploiting spatial redundancy within frames and temporal redundancy across frames. However, many approaches impose predefined processing orders or fixed allocation ratios for spatial and temporal compression, limiting their ability to adapt to the varying balance of spatiotemporal redundancy across videos. To address this limitation, we propose PURA, a training-free method that prunes visual tokens through unified spatiotemporal redundancy assessment. For each token, PURA constructs spatial and temporal reference candidates and selects the reference with the lowest representation error across the two dimensions. The representation error is combined with token importance to determine each token's removal cost. To avoid the time overhead of removing the lowest-cost token one by one, we introduce Coordinated Pruning, which iteratively groups mutually compatible low-cost removals into batches for simultaneous execution and updates the pruning state after each batch until the target budget is reached. Extensive experiments on three video large language models and five video understanding benchmarks demonstrate that PURA achieves a favorable trade-off between task performance and inference efficiency.",
+      "identifiers": [
+        "SemanticScholar:a118c1f2b5fe69f88a90a06df75c540074539468"
+      ],
+      "semantic_scholar_id": "a118c1f2b5fe69f88a90a06df75c540074539468",
+      "canonical_id": "arXiv:2611.34521",
+      "arxiv_id": "2611.34521",
+      "authors": [
+        "Yu-Yao Sun",
+        "Hong-Lin Yuan",
+        "Shuang-Hua Li",
+        "Tao Deng",
+        "De-Qing Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Routing and Cache Retention for Multi-Turn LLM Inference: Theory and Implementation",
+      "source_url": "https://arxiv.org/abs/2611.34584",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-turn AI agents execute iterative loops of large language model (LLM) inference and external tool calls, transforming cluster serving into a dynamic resource-allocation problem where routing and key-value (KV) cache retention jointly govern prefix reuse across inter-turn delays. We formulate a fluid approximation of this system and show that optimal admission, routing, and eviction are governed by endpoint-specific shadow prices for computation and memory together with session continuation values. Building on this structure, we propose an asymptotically optimal buffer-reserve policy that absorbs stochastic fluctuations using a vanishing share of capacity. To handle asynchronous arrivals, delayed load reports, and engine-local memory management in production clusters, we translate these principles into a practical controller named PARK, which pairs online projected subgradient price updates and one-turn migration lookahead with a local KV retention index ranked by expected reuse value per byte-epoch. In real GPU cluster experiments serving a 197-billion-parameter mixture-of-experts model on multi-turn software-engineering agent benchmarks (SWE and Terminal-Bench), PARK outperforms all five load-balancing and prefix-aware baselines across contrasting traffic regimes. On 16 H200 GPUs, PARK raises output throughput by $24.2\\%$ over the strongest baseline ($336.9\\%$ over round robin) on turn-intensive SWE trajectories and by $40.0\\%$ over the strongest baseline ($63.3\\%$ over round robin) on generation-intensive Terminal-Bench trajectories. Controlled single-replica ablations show that our retention index alone cuts prior-prefix token loss from $13.26\\%$ to $2.17\\%$ and increases throughput by $36.7\\%$ over least-recently-used (LRU) eviction, while 128-GPU scale-up experiments sustain 50,789 to 67,363 output tokens/s across 16~replicas with prefix cache hit rates of $91.3\\%$ to $97.4\\%$.",
+      "identifiers": [
+        "SemanticScholar:92de84436d089c1df1822573b2d1e995123c0aaf"
+      ],
+      "semantic_scholar_id": "92de84436d089c1df1822573b2d1e995123c0aaf",
+      "canonical_id": "arXiv:2611.34584",
+      "arxiv_id": "2611.34584",
+      "authors": [
+        "Sen-Tao Miao",
+        "Tian-Jiao Nie",
+        "Yuan Zhou",
+        "Song Yuan",
+        "Yuan-Wei Lu",
+        "Yi-Bo Zhu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PipeAxes: Decoupling Compute and Communication Granularities for Pipeline-Parallel LLM Serving",
+      "source_url": "https://arxiv.org/abs/2611.34615",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pipeline parallelism can serve long-context language models on PCIe servers and across heterogeneous GPU clusters. Existing engines split prefill into token chunks to limit decode stalls. The chunk size also sets the GPU batch width and the size of activation transfers between stages. Small chunks reload model weights more often. Large chunks can keep the GPU and the link busy long enough to delay interactive requests. PipeAxes runs wide prefill batches a few layers at a time so decodes can run between slices. A fused Triton Hadamard-INT4 codec compresses activations, which travel in independently sized row groups over parallel TCP sockets. The scheduler uses latency slack to choose batch width, slice depth, and row-group size. We evaluated PipeAxes in 97 replays covering 5,016 requests on A800, RTX 4090, and RTX 3090 GPUs. All 74 requests met their latency targets during a tenfold bandwidth swing. In a four-stage mixture-of-experts pipeline, PipeAxes served requests within their latency targets at 23.3x the rate of calibrated Revisit-PP and 4.44x the rate of Fixed-4096 with Express. In a mixed 64K-context workload, p95 time to first token for short requests fell from 129.8 s with native vLLM to 512 ms. With INT4 transport, MMLU accuracy rose by 0.06 percentage points and GSM8K accuracy fell by 0.46 percentage points relative to BF16.",
+      "identifiers": [
+        "SemanticScholar:4350c0b233ebe8017466171173ef7f3097044211"
+      ],
+      "semantic_scholar_id": "4350c0b233ebe8017466171173ef7f3097044211",
+      "canonical_id": "arXiv:2611.34615",
+      "arxiv_id": "2611.34615",
+      "authors": [
+        "Xiao-Qiang Guo",
+        "Yi-Fan Lin",
+        "Yang Liu",
+        "Jia-Nan Zhang",
+        "Ying-Qi Peng",
+        "Jia-Mei Lv",
+        "Yi Gao",
+        "Wei Dong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Differential Computing Accelerator for LLM Inference Leveraging Bit-Slice Transition Sparsity",
+      "source_url": "https://arxiv.org/abs/2611.34630",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have become foundational to modern artificial intelligence. Driven by scaling laws, their rapid growth poses increasing computational and memory challenges for deployment. To accelerate the general matrix multiplication (GEMM) operations that dominate LLM computation, bit-slice architectures decompose quantized operands along the bit dimension, exposing slice-level sparsity and redundancy. However, existing bit-slice designs primarily exploit sparsity in high-order slices, while dense low-order slices still offer substantial untapped reuse opportunities. We observe that bit-slice vectors (BSVs) are highly clustered in Hamming space, with many BSVs lying only a few bit flips away from a small set of representative patterns. Based on this observation, we propose ISTS, an algorithm-hardware co-designed accelerator that leverages representative BSV patterns as shared Steiner points to reuse partial sums across slices, substantially reducing computation. Specifically, the partial sum of each target BSV can be reconstructed from that of its assigned Steiner point using only a few additions or subtractions. On the algorithmic side, we propose Steiner Absorption Table Construction (SATC), which selects a compact set of Steiner points to absorb BSVs with only a few bidirectional bit flips, while FlipPrune selectively prunes flips to further expand the reusable BSV population. On the hardware side, we design a lightweight accelerator that supports Steiner reuse for static linear layer weights and runtime-generated attention K/V tensors. Comprehensive evaluations show that ISTS achieves average speedups of $3.09\\times$, $2.41\\times$, $2.18\\times$, $1.27\\times$, and $1.41\\times$ over the state-of-the-art accelerators ANT, BBS, LUT Tensor Core, Transitive Array, and MCBP-BRCR, respectively.",
+      "identifiers": [
+        "SemanticScholar:4b38e111f7b507a59bfdf5a71767d7411bef6d0f"
+      ],
+      "semantic_scholar_id": "4b38e111f7b507a59bfdf5a71767d7411bef6d0f",
+      "canonical_id": "arXiv:2611.34630",
+      "arxiv_id": "2611.34630",
+      "authors": [
+        "Yi-Fan Wang",
+        "Ze-Tao Guo",
+        "You Xiao",
+        "Wen-Di Sun",
+        "Song Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DFly2: Turbocharging Long-Context Speculative Decoding by Sharing the Target's Sparsity",
+      "source_url": "https://arxiv.org/abs/2611.34776",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To avoid the quadratic cost of dense attention over long contexts, models such as DeepSeek-V4 and Hy4 have turned natively sparse, and speculative decoding, which matters most where decoding is slowest, increasingly runs on them. Their drafters, however, still keep a context cache of their own, over the whole prompt or a sliding window. Beyond memory, such a cache costs prefill time, prefix-cache hits and decode concurrency. Drafters that read the target's cache avoid one of their own, but settle only which cache, not which positions, and still read everything or a recent window. Neither rule is made for the query at hand, and computing a selection per query in the drafter would cost more as the context grows. Yet a natively sparse target already picks positions for each query, over a cache it keeps anyway. Both of the drafter's choices are therefore already made, and paid for, by the target: its cache and its selection. We measure how far one selection carries: made a step early, it still covers close to nine tenths of what each later token selects on DS-V4.1-Flash. We present DFly2, a block-parallel drafter that shares the target's sparsity. Each draft layer reads the KV its paired target layer cached (KV sharing), at the positions that layer's indexer selected, a fixed number anywhere in the context (Index sharing). DFly2 thus runs no scoring pass and keeps no cache of its own. On DS-V4.1-Flash, GLM-5.3-Flash and Hy4~flash, whose sparse attention and architecture differ, it accepts more tokens per step than DFlash and DSpark trained on the same recipe, over general, long-context and agentic benchmarks. Its margin over the stronger baseline widens from 3.9%-10.5% on general workloads to 10.0%-31.5% on long-context and agentic ones. At high concurrency on DS-V4.1-Flash, at matched per-user decode speed, its throughput is 62% and 81% higher on two 64K sets.",
+      "identifiers": [
+        "SemanticScholar:a18ed3a341a847ef76a7e7038488adfc45158de6"
+      ],
+      "semantic_scholar_id": "a18ed3a341a847ef76a7e7038488adfc45158de6",
+      "canonical_id": "arXiv:2611.34776",
+      "arxiv_id": "2611.34776",
+      "authors": [
+        "Hong Liu",
+        "Rui Cen",
+        "Jun-Han Shi",
+        "Lin Niu",
+        "Run-Zhi Fan",
+        "Zhao-Jing Zhou",
+        "Hao Lei",
+        "Jie-Bin Zhang",
+        "Sai-Yong Yang",
+        "Jun-Qiang Zheng",
+        "Zheng-Hai Xue",
+        "Guang-Hua Yu",
+        "Jian-Chen Zhu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.34092",
+      "identity_tokens": [
+        "id:SemanticScholar:aa507542ada87d6d8671b0bfb2b72f084ad0bb6b",
+        "id:arXiv:2611.34092",
+        "title:improving tailaugmented speculative drafting with hidden state mixing and gradient detach",
+        "url:https://arxiv.org/abs/2611.34092"
+      ],
+      "record": {
+        "title": "Improving Tail-Augmented Speculative Drafting with Hidden State Mixing and Gradient Detach",
+        "source_url": "https://arxiv.org/abs/2611.34092",
+        "year": 2026,
+        "published": "2026-11-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-token prediction (MTP) modules and EAGLE-style drafters support efficient speculative decoding by reusing target-model hidden states. Their autoregressive use, however, introduces a training-inference mismatch: training supplies sequences of hidden states from the backbone or a single MTP step, whereas inference attends to a target-model prefix followed by a growing tail of recurrently generated MTP states. EAGLE-3's training-time test (TTT) explicitly simulates this behavior during training, at the cost of additional memory and specialized attention masks. We introduce two training-only methods for improving autoregressive drafting. Hidden State Mixing (HSM) samples among backbone and MTP hidden states aligned to the same prediction target, exposing the drafter to mixtures of states from different MTP steps without explicitly simulating inference. Hidden State Gradient Detach (HSGD) is a regularization method that stochastically blocks gradients through hidden state and embedding pathways while preserving the forward computation. Neither method adds inference cost. In joint pretraining followed by supervised fine-tuning, HSGD yields the highest acceptance rates at early draft positions, while HSM performs best later in the draft. These acceptance rate trends favor HSM for long-draft-length serving and HSGD for short-draft-length serving. Furthermore, across four Nemotron models and DeepSeek-V4-Pro, HSM-based MTP boosting with a frozen backbone improves mean acceptance length by up to 52.2% over the co-trained MTP. For EAGLE-3 drafters, HSM offers competitive acceptance with TTT, with 48% lower peak reserved training memory in a four-step Qwen3-8B comparison. HSM implementations are publicly available in Megatron-LM and NVIDIA Model Optimizer.",
+        "identifiers": [
+          "SemanticScholar:aa507542ada87d6d8671b0bfb2b72f084ad0bb6b"
+        ],
+        "semantic_scholar_id": "aa507542ada87d6d8671b0bfb2b72f084ad0bb6b",
+        "canonical_id": "arXiv:2611.34092",
+        "arxiv_id": "2611.34092",
+        "authors": [
+          "Yaniv Galron",
+          "Rabeeh Mahabadi",
+          "Maor Ashkenazi",
+          "R. Waleffe",
+          "Talor Abramovich",
+          "Tiyasa Mitra",
+          "Yoav Miron",
+          "Dor Tsur",
+          "S. Satheesh",
+          "Jimmy Zhang",
+          "Jia-Ji Huang",
+          "Yonatan Geifman",
+          "M. Patwary",
+          "Mohammad Shoeybi",
+          "B. Rouhani",
+          "Ran Zilberstein"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.34492",
+      "identity_tokens": [
+        "id:SemanticScholar:d0296bb850cd5bd3b133018fdb3f3d6da2c52648",
+        "id:arXiv:2611.34492",
+        "title:flyingstart learned crosstoken warm starts for fixedpoint decoding in recurrentdepth language models",
+        "url:https://arxiv.org/abs/2611.34492"
+      ],
+      "record": {
+        "title": "FlyingStart: Learned Cross-Token Warm Starts for Fixed-Point Decoding in Recurrent-Depth Language Models",
+        "source_url": "https://arxiv.org/abs/2611.34492",
+        "year": 2026,
+        "published": "2026-11-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recurrent-depth language models generate each token by iterating a shared block of layers until its hidden state converges. Inference methods for these models decide when to stop the iteration, yet every token still starts from random noise and pays the full cost of converging. We show that where the iteration starts is a second, independent lever. A token's fixed point is predictable from the state at which the previous token stopped, after a learned change of coordinates, and we introduce FlyingStart, a linear warm start that is fitted in closed form on the frozen model and costs under 5% of one loop. The iteration and its stopping rule are unchanged, so the exit criterion certifies the same distance to the fixed point from any start: a better start removes loops at unchanged accuracy. On Huginn-0125, FlyingStart matches the accuracy of the strongest training-free baseline with 14--19% fewer decoding layers, raises batched throughput by 16--18% in two serving engines, and adds a further 10--14% on top of self-speculative decoding. A contraction analysis predicts the number of loops saved on all four models we study, including one where the prediction was recorded before any evaluation, and token by token on Huginn, and it identifies when a warm start pays off: the saving grows with the number of loops a model needs to converge.",
+        "identifiers": [
+          "SemanticScholar:d0296bb850cd5bd3b133018fdb3f3d6da2c52648"
+        ],
+        "semantic_scholar_id": "d0296bb850cd5bd3b133018fdb3f3d6da2c52648",
+        "canonical_id": "arXiv:2611.34492",
+        "arxiv_id": "2611.34492",
+        "authors": [
+          "Run-Guo Li",
+          "De-Zhen Lu",
+          "Zi-Xiang Ni"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.34521",
+      "identity_tokens": [
+        "id:SemanticScholar:a118c1f2b5fe69f88a90a06df75c540074539468",
+        "id:arXiv:2611.34521",
+        "title:pura video token pruning via unified spatiotemporal redundancy assessment",
+        "url:https://arxiv.org/abs/2611.34521"
+      ],
+      "record": {
+        "title": "PURA: Video Token Pruning via Unified Spatiotemporal Redundancy Assessment",
+        "source_url": "https://arxiv.org/abs/2611.34521",
+        "year": 2026,
+        "published": "2026-11-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video large language models incur substantial inference costs from long visual token sequences. Existing video token compression methods mitigate these costs by exploiting spatial redundancy within frames and temporal redundancy across frames. However, many approaches impose predefined processing orders or fixed allocation ratios for spatial and temporal compression, limiting their ability to adapt to the varying balance of spatiotemporal redundancy across videos. To address this limitation, we propose PURA, a training-free method that prunes visual tokens through unified spatiotemporal redundancy assessment. For each token, PURA constructs spatial and temporal reference candidates and selects the reference with the lowest representation error across the two dimensions. The representation error is combined with token importance to determine each token's removal cost. To avoid the time overhead of removing the lowest-cost token one by one, we introduce Coordinated Pruning, which iteratively groups mutually compatible low-cost removals into batches for simultaneous execution and updates the pruning state after each batch until the target budget is reached. Extensive experiments on three video large language models and five video understanding benchmarks demonstrate that PURA achieves a favorable trade-off between task performance and inference efficiency.",
+        "identifiers": [
+          "SemanticScholar:a118c1f2b5fe69f88a90a06df75c540074539468"
+        ],
+        "semantic_scholar_id": "a118c1f2b5fe69f88a90a06df75c540074539468",
+        "canonical_id": "arXiv:2611.34521",
+        "arxiv_id": "2611.34521",
+        "authors": [
+          "Yu-Yao Sun",
+          "Hong-Lin Yuan",
+          "Shuang-Hua Li",
+          "Tao Deng",
+          "De-Qing Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.34584",
+      "identity_tokens": [
+        "id:SemanticScholar:92de84436d089c1df1822573b2d1e995123c0aaf",
+        "id:arXiv:2611.34584",
+        "title:routing and cache retention for multiturn llm inference theory and implementation",
+        "url:https://arxiv.org/abs/2611.34584"
+      ],
+      "record": {
+        "title": "Routing and Cache Retention for Multi-Turn LLM Inference: Theory and Implementation",
+        "source_url": "https://arxiv.org/abs/2611.34584",
+        "year": 2026,
+        "published": "2026-11-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-turn AI agents execute iterative loops of large language model (LLM) inference and external tool calls, transforming cluster serving into a dynamic resource-allocation problem where routing and key-value (KV) cache retention jointly govern prefix reuse across inter-turn delays. We formulate a fluid approximation of this system and show that optimal admission, routing, and eviction are governed by endpoint-specific shadow prices for computation and memory together with session continuation values. Building on this structure, we propose an asymptotically optimal buffer-reserve policy that absorbs stochastic fluctuations using a vanishing share of capacity. To handle asynchronous arrivals, delayed load reports, and engine-local memory management in production clusters, we translate these principles into a practical controller named PARK, which pairs online projected subgradient price updates and one-turn migration lookahead with a local KV retention index ranked by expected reuse value per byte-epoch. In real GPU cluster experiments serving a 197-billion-parameter mixture-of-experts model on multi-turn software-engineering agent benchmarks (SWE and Terminal-Bench), PARK outperforms all five load-balancing and prefix-aware baselines across contrasting traffic regimes. On 16 H200 GPUs, PARK raises output throughput by $24.2\\%$ over the strongest baseline ($336.9\\%$ over round robin) on turn-intensive SWE trajectories and by $40.0\\%$ over the strongest baseline ($63.3\\%$ over round robin) on generation-intensive Terminal-Bench trajectories. Controlled single-replica ablations show that our retention index alone cuts prior-prefix token loss from $13.26\\%$ to $2.17\\%$ and increases throughput by $36.7\\%$ over least-recently-used (LRU) eviction, while 128-GPU scale-up experiments sustain 50,789 to 67,363 output tokens/s across 16~replicas with prefix cache hit rates of $91.3\\%$ to $97.4\\%$.",
+        "identifiers": [
+          "SemanticScholar:92de84436d089c1df1822573b2d1e995123c0aaf"
+        ],
+        "semantic_scholar_id": "92de84436d089c1df1822573b2d1e995123c0aaf",
+        "canonical_id": "arXiv:2611.34584",
+        "arxiv_id": "2611.34584",
+        "authors": [
+          "Sen-Tao Miao",
+          "Tian-Jiao Nie",
+          "Yuan Zhou",
+          "Song Yuan",
+          "Yuan-Wei Lu",
+          "Yi-Bo Zhu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.34615",
+      "identity_tokens": [
+        "id:SemanticScholar:4350c0b233ebe8017466171173ef7f3097044211",
+        "id:arXiv:2611.34615",
+        "title:pipeaxes decoupling compute and communication granularities for pipelineparallel llm serving",
+        "url:https://arxiv.org/abs/2611.34615"
+      ],
+      "record": {
+        "title": "PipeAxes: Decoupling Compute and Communication Granularities for Pipeline-Parallel LLM Serving",
+        "source_url": "https://arxiv.org/abs/2611.34615",
+        "year": 2026,
+        "published": "2026-11-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pipeline parallelism can serve long-context language models on PCIe servers and across heterogeneous GPU clusters. Existing engines split prefill into token chunks to limit decode stalls. The chunk size also sets the GPU batch width and the size of activation transfers between stages. Small chunks reload model weights more often. Large chunks can keep the GPU and the link busy long enough to delay interactive requests. PipeAxes runs wide prefill batches a few layers at a time so decodes can run between slices. A fused Triton Hadamard-INT4 codec compresses activations, which travel in independently sized row groups over parallel TCP sockets. The scheduler uses latency slack to choose batch width, slice depth, and row-group size. We evaluated PipeAxes in 97 replays covering 5,016 requests on A800, RTX 4090, and RTX 3090 GPUs. All 74 requests met their latency targets during a tenfold bandwidth swing. In a four-stage mixture-of-experts pipeline, PipeAxes served requests within their latency targets at 23.3x the rate of calibrated Revisit-PP and 4.44x the rate of Fixed-4096 with Express. In a mixed 64K-context workload, p95 time to first token for short requests fell from 129.8 s with native vLLM to 512 ms. With INT4 transport, MMLU accuracy rose by 0.06 percentage points and GSM8K accuracy fell by 0.46 percentage points relative to BF16.",
+        "identifiers": [
+          "SemanticScholar:4350c0b233ebe8017466171173ef7f3097044211"
+        ],
+        "semantic_scholar_id": "4350c0b233ebe8017466171173ef7f3097044211",
+        "canonical_id": "arXiv:2611.34615",
+        "arxiv_id": "2611.34615",
+        "authors": [
+          "Xiao-Qiang Guo",
+          "Yi-Fan Lin",
+          "Yang Liu",
+          "Jia-Nan Zhang",
+          "Ying-Qi Peng",
+          "Jia-Mei Lv",
+          "Yi Gao",
+          "Wei Dong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.34630",
+      "identity_tokens": [
+        "id:SemanticScholar:4b38e111f7b507a59bfdf5a71767d7411bef6d0f",
+        "id:arXiv:2611.34630",
+        "title:a differential computing accelerator for llm inference leveraging bitslice transition sparsity",
+        "url:https://arxiv.org/abs/2611.34630"
+      ],
+      "record": {
+        "title": "A Differential Computing Accelerator for LLM Inference Leveraging Bit-Slice Transition Sparsity",
+        "source_url": "https://arxiv.org/abs/2611.34630",
+        "year": 2026,
+        "published": "2026-11-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have become foundational to modern artificial intelligence. Driven by scaling laws, their rapid growth poses increasing computational and memory challenges for deployment. To accelerate the general matrix multiplication (GEMM) operations that dominate LLM computation, bit-slice architectures decompose quantized operands along the bit dimension, exposing slice-level sparsity and redundancy. However, existing bit-slice designs primarily exploit sparsity in high-order slices, while dense low-order slices still offer substantial untapped reuse opportunities. We observe that bit-slice vectors (BSVs) are highly clustered in Hamming space, with many BSVs lying only a few bit flips away from a small set of representative patterns. Based on this observation, we propose ISTS, an algorithm-hardware co-designed accelerator that leverages representative BSV patterns as shared Steiner points to reuse partial sums across slices, substantially reducing computation. Specifically, the partial sum of each target BSV can be reconstructed from that of its assigned Steiner point using only a few additions or subtractions. On the algorithmic side, we propose Steiner Absorption Table Construction (SATC), which selects a compact set of Steiner points to absorb BSVs with only a few bidirectional bit flips, while FlipPrune selectively prunes flips to further expand the reusable BSV population. On the hardware side, we design a lightweight accelerator that supports Steiner reuse for static linear layer weights and runtime-generated attention K/V tensors. Comprehensive evaluations show that ISTS achieves average speedups of $3.09\\times$, $2.41\\times$, $2.18\\times$, $1.27\\times$, and $1.41\\times$ over the state-of-the-art accelerators ANT, BBS, LUT Tensor Core, Transitive Array, and MCBP-BRCR, respectively.",
+        "identifiers": [
+          "SemanticScholar:4b38e111f7b507a59bfdf5a71767d7411bef6d0f"
+        ],
+        "semantic_scholar_id": "4b38e111f7b507a59bfdf5a71767d7411bef6d0f",
+        "canonical_id": "arXiv:2611.34630",
+        "arxiv_id": "2611.34630",
+        "authors": [
+          "Yi-Fan Wang",
+          "Ze-Tao Guo",
+          "You Xiao",
+          "Wen-Di Sun",
+          "Song Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.34776",
+      "identity_tokens": [
+        "id:SemanticScholar:a18ed3a341a847ef76a7e7038488adfc45158de6",
+        "id:arXiv:2611.34776",
+        "title:dfly2 turbocharging longcontext speculative decoding by sharing the targets sparsity",
+        "url:https://arxiv.org/abs/2611.34776"
+      ],
+      "record": {
+        "title": "DFly2: Turbocharging Long-Context Speculative Decoding by Sharing the Target's Sparsity",
+        "source_url": "https://arxiv.org/abs/2611.34776",
+        "year": 2026,
+        "published": "2026-11-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To avoid the quadratic cost of dense attention over long contexts, models such as DeepSeek-V4 and Hy4 have turned natively sparse, and speculative decoding, which matters most where decoding is slowest, increasingly runs on them. Their drafters, however, still keep a context cache of their own, over the whole prompt or a sliding window. Beyond memory, such a cache costs prefill time, prefix-cache hits and decode concurrency. Drafters that read the target's cache avoid one of their own, but settle only which cache, not which positions, and still read everything or a recent window. Neither rule is made for the query at hand, and computing a selection per query in the drafter would cost more as the context grows. Yet a natively sparse target already picks positions for each query, over a cache it keeps anyway. Both of the drafter's choices are therefore already made, and paid for, by the target: its cache and its selection. We measure how far one selection carries: made a step early, it still covers close to nine tenths of what each later token selects on DS-V4.1-Flash. We present DFly2, a block-parallel drafter that shares the target's sparsity. Each draft layer reads the KV its paired target layer cached (KV sharing), at the positions that layer's indexer selected, a fixed number anywhere in the context (Index sharing). DFly2 thus runs no scoring pass and keeps no cache of its own. On DS-V4.1-Flash, GLM-5.3-Flash and Hy4~flash, whose sparse attention and architecture differ, it accepts more tokens per step than DFlash and DSpark trained on the same recipe, over general, long-context and agentic benchmarks. Its margin over the stronger baseline widens from 3.9%-10.5% on general workloads to 10.0%-31.5% on long-context and agentic ones. At high concurrency on DS-V4.1-Flash, at matched per-user decode speed, its throughput is 62% and 81% higher on two 64K sets.",
+        "identifiers": [
+          "SemanticScholar:a18ed3a341a847ef76a7e7038488adfc45158de6"
+        ],
+        "semantic_scholar_id": "a18ed3a341a847ef76a7e7038488adfc45158de6",
+        "canonical_id": "arXiv:2611.34776",
+        "arxiv_id": "2611.34776",
+        "authors": [
+          "Hong Liu",
+          "Rui Cen",
+          "Jun-Han Shi",
+          "Lin Niu",
+          "Run-Zhi Fan",
+          "Zhao-Jing Zhou",
+          "Hao Lei",
+          "Jie-Bin Zhang",
+          "Sai-Yong Yang",
+          "Jun-Qiang Zheng",
+          "Zheng-Hai Xue",
+          "Guang-Hua Yu",
+          "Jian-Chen Zhu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ed40f96bd5403001c7c7559b571aaed66e49660b9f0d8491eab746f37ea9a65a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
