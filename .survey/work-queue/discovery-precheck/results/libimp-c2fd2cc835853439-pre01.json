@@ -1,0 +1,331 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c2fd2cc835853439-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c2fd2cc83585",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tc.2025.3528125",
+    "DOI:10.4218/etrij.2024-0111",
+    "arXiv:2511.11608"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "68936270bc1ef3c08ebf48f664ecff52836d2a65",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T14:49:47.186309+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tc.2025.3528125",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.4218/etrij.2024-0111",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.11608",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SLOpt: Serving Real-Time Inference Pipeline With Strict Latency Constraint",
+      "source_url": "https://doi.org/10.1109/TC.2025.3528125",
+      "year": 2025,
+      "published": "2025-04-01",
+      "venue": "IEEE transactions on computers",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rise of machine learning as a service (MLaaS) has driven the demand for complex and customized real-time inference tasks, often requiring cascading multiple deep neural network (DNN) models into inference pipelines. However, these pipelines pose significant challenges due to scheduling complexity, particularly in maintaining strict latency service level objectives (SLOs). Existing systems serve pipelines with model-independent scheduling policies, which ignore the unique workload characteristics introduced by model cascading in the inference pipeline, leading to SLO violations and resource inefficiencies. In this paper, we propose that the serving system should exploit the model-cascading nature and intermodel workload dependency of the inference pipeline to ensure strict latency SLO cost-effectively. Based on this, we design and implement <monospace>SLOpt</monospace>, a serving system optimized for real-time inference pipelines with a three-stage codesign of workload estimation, resource provisioning, and request execution. <monospace>SLOpt</monospace> proposes cascade workload estimation and ahead-of-time tuning, which together address the challenge of cascade blocking and head-of-line blocking in workload estimation and resource provisioning. <monospace>SLOpt</monospace> further implements an adaptive batch drop policy to mitigate latency amplification issues within the pipeline. These innovations enable <monospace>SLOpt</monospace> to reduce the 99th percentile latency (P99 latency) by <inline-formula><tex-math notation=\"LaTeX\">$1.4$</tex-math><alternatives><mml:math><mml:mn>1.4</mml:mn></mml:math><inline-graphic xlink:href=\"hu-ieq1-3528125.gif\"/></alternatives></inline-formula> to <inline-formula><tex-math notation=\"LaTeX\">$2.5$</tex-math><alternatives><mml:math><mml:mn>2.5</mml:mn></mml:math><inline-graphic xlink:href=\"hu-ieq2-3528125.gif\"/></alternatives></inline-formula> times compared to the state of the arts while lowering serving costs by up to <inline-formula><tex-math notation=\"LaTeX\">$29\\%$</tex-math><alternatives><mml:math><mml:mn>29</mml:mn><mml:mi mathvariant=\"normal\">%</mml:mi></mml:math><inline-graphic xlink:href=\"hu-ieq3-3528125.gif\"/></alternatives></inline-formula>. Moreover, to achieve comparable P99 latency, <monospace>SLOpt</monospace> requires up to <inline-formula><tex-math notation=\"LaTeX\">$70\\%$</tex-math><alternatives><mml:math><mml:mn>70</mml:mn><mml:mi mathvariant=\"normal\">%</mml:mi></mml:math><inline-graphic xlink:href=\"hu-ieq4-3528125.gif\"/></alternatives></inline-formula> less cost than existing systems. Extensive evaluations on a 64-GPU cluster demonstrate <monospace>SLOpt</monospace>'s effectiveness in meeting strict P99 latency SLOs under diverse real-world workloads.",
+      "identifiers": [
+        "SemanticScholar:e389add7c327127ba7a0440520fb2eb33af83d83"
+      ],
+      "semantic_scholar_id": "e389add7c327127ba7a0440520fb2eb33af83d83",
+      "doi": "10.1109/TC.2025.3528125",
+      "canonical_id": "DOI:10.1109/TC.2025.3528125",
+      "authors": [
+        "Zhi-Xin Zhao",
+        "Yi-Tao Hu",
+        "Guo-Tao Yang",
+        "Zi-Qi Gong",
+        "Chen Shen",
+        "Lai-Ping Zhao",
+        "Wen-Xin Li",
+        "Xiu-Long Liu",
+        "Wen-Yu Qu"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 604,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PF‐GEMV: Utilization maximizing architecture in fast matrix–vector multiplication for GPT‐2 inference",
+      "source_url": "https://doi.org/10.4218/etrij.2024-0111",
+      "year": 2024,
+      "published": "2024-10-01",
+      "venue": "ETRI Journal",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Owing to the widespread advancement of transformer‐based artificial neural networks, artificial intelligence (AI) processors are now required to perform matrix–vector multiplication in addition to the conventional matrix–matrix multiplication. However, current AI processor architectures are optimized for general matrix–matrix multiplications (GEMMs), which causes significant throughput degradation when processing general matrix–vector multiplications (GEMVs). In this study, we proposed a port‐folding GEMV (PF‐GEMV) scheme employing multiformat and low‐precision techniques while reusing an outer product‐based processor optimized for conventional GEMM operations. This approach achieves 93.7% utilization in GEMV operations with an 8‐bit format on an 8 × 8 processor, thus resulting in a 7.5 × increase in throughput compared with that of the original scheme. Furthermore, when applied to the matrix operation of the GPT‐2 large model, an increase in speed by 7 × is achieved in single‐batch inferences.",
+      "identifiers": [
+        "SemanticScholar:daae34e47694456bb180ffa2b821af8c4364f03f"
+      ],
+      "semantic_scholar_id": "daae34e47694456bb180ffa2b821af8c4364f03f",
+      "doi": "10.4218/etrij.2024-0111",
+      "canonical_id": "DOI:10.4218/etrij.2024-0111",
+      "authors": [
+        "Hyeji Kim",
+        "Yeongmin Lee",
+        "C. Lyuh"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 786,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Why Should the Server Do It All?: A Scalable, Versatile, and Model-Agnostic Framework for Server-Light DNN Inference over Massively Distributed Clients via Training-Free Intermediate Feature Compression",
+      "source_url": "https://arxiv.org/abs/2511.11608",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern DNNs often rely on edge-cloud model partitioning (MP), but widely used schemes fix shallow, static split points that underutilize edge compute and concentrate latency and energy on the server. The problem is exacerbated in autoregressive (AR) LLM inference, where per-token forward passes repeatedly generate bulky intermediate features (IFs). We introduce SLICER, a retraining-free, architecture-agnostic framework that compresses IFs to reduce both communication and server load in split computing. SLICER combines (i) asymmetric top-K filtering (ATKF) to sparsify low-magnitude activations, (ii) magnitude-splitting (MS) to group the remaining non-zeros into equal-cardinality blocks, and (iii) adaptive bit quantization (ABQ) that selects per-block bitwidths under a distortion budget. Across standard vision and LLM workloads (e.g., ImageNet/COCO; HellaSwag, PIQA, ARC-E/C, GSM8K, HumanEval), SLICER reduces uplink volume by up to 10x and server GPU time by up to 4.4x, while keeping task quality within ~0-3 pp of baseline. In multi-device settings and AR LLMs, SLICER scales by shifting meaningful compute to the edge and lowering bits-per-token and server time per token, stabilizing per-step traffic. The codec attaches to off-the-shelf models without retraining or architectural changes, offering a plug-and-play path to scalable, low-latency distributed inference. Code is provided in the supplementary material.",
+      "identifiers": [
+        "SemanticScholar:e752763b46507bb8c5d1ae396644bfc0304cfcd9"
+      ],
+      "semantic_scholar_id": "e752763b46507bb8c5d1ae396644bfc0304cfcd9",
+      "canonical_id": "arXiv:2511.11608",
+      "arxiv_id": "2511.11608",
+      "doi": "10.48550/arXiv.2511.11608",
+      "authors": [
+        "Ming-Yu Sung",
+        "Suhwan Im",
+        "Daeho Bang",
+        "Il-Min Kim",
+        "Sangseok Yun",
+        "Jae-Mo Kang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 388,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/tc.2025.3528125",
+      "identity_tokens": [
+        "id:DOI:10.1109/tc.2025.3528125",
+        "id:SemanticScholar:e389add7c327127ba7a0440520fb2eb33af83d83",
+        "title:slopt serving realtime inference pipeline with strict latency constraint",
+        "url:https://doi.org/10.1109/TC.2025.3528125"
+      ],
+      "record": {
+        "title": "SLOpt: Serving Real-Time Inference Pipeline With Strict Latency Constraint",
+        "source_url": "https://doi.org/10.1109/TC.2025.3528125",
+        "year": 2025,
+        "published": "2025-04-01",
+        "venue": "IEEE transactions on computers",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rise of machine learning as a service (MLaaS) has driven the demand for complex and customized real-time inference tasks, often requiring cascading multiple deep neural network (DNN) models into inference pipelines. However, these pipelines pose significant challenges due to scheduling complexity, particularly in maintaining strict latency service level objectives (SLOs). Existing systems serve pipelines with model-independent scheduling policies, which ignore the unique workload characteristics introduced by model cascading in the inference pipeline, leading to SLO violations and resource inefficiencies. In this paper, we propose that the serving system should exploit the model-cascading nature and intermodel workload dependency of the inference pipeline to ensure strict latency SLO cost-effectively. Based on this, we design and implement <monospace>SLOpt</monospace>, a serving system optimized for real-time inference pipelines with a three-stage codesign of workload estimation, resource provisioning, and request execution. <monospace>SLOpt</monospace> proposes cascade workload estimation and ahead-of-time tuning, which together address the challenge of cascade blocking and head-of-line blocking in workload estimation and resource provisioning. <monospace>SLOpt</monospace> further implements an adaptive batch drop policy to mitigate latency amplification issues within the pipeline. These innovations enable <monospace>SLOpt</monospace> to reduce the 99th percentile latency (P99 latency) by <inline-formula><tex-math notation=\"LaTeX\">$1.4$</tex-math><alternatives><mml:math><mml:mn>1.4</mml:mn></mml:math><inline-graphic xlink:href=\"hu-ieq1-3528125.gif\"/></alternatives></inline-formula> to <inline-formula><tex-math notation=\"LaTeX\">$2.5$</tex-math><alternatives><mml:math><mml:mn>2.5</mml:mn></mml:math><inline-graphic xlink:href=\"hu-ieq2-3528125.gif\"/></alternatives></inline-formula> times compared to the state of the arts while lowering serving costs by up to <inline-formula><tex-math notation=\"LaTeX\">$29\\%$</tex-math><alternatives><mml:math><mml:mn>29</mml:mn><mml:mi mathvariant=\"normal\">%</mml:mi></mml:math><inline-graphic xlink:href=\"hu-ieq3-3528125.gif\"/></alternatives></inline-formula>. Moreover, to achieve comparable P99 latency, <monospace>SLOpt</monospace> requires up to <inline-formula><tex-math notation=\"LaTeX\">$70\\%$</tex-math><alternatives><mml:math><mml:mn>70</mml:mn><mml:mi mathvariant=\"normal\">%</mml:mi></mml:math><inline-graphic xlink:href=\"hu-ieq4-3528125.gif\"/></alternatives></inline-formula> less cost than existing systems. Extensive evaluations on a 64-GPU cluster demonstrate <monospace>SLOpt</monospace>'s effectiveness in meeting strict P99 latency SLOs under diverse real-world workloads.",
+        "identifiers": [
+          "SemanticScholar:e389add7c327127ba7a0440520fb2eb33af83d83"
+        ],
+        "semantic_scholar_id": "e389add7c327127ba7a0440520fb2eb33af83d83",
+        "doi": "10.1109/TC.2025.3528125",
+        "canonical_id": "DOI:10.1109/TC.2025.3528125",
+        "authors": [
+          "Zhi-Xin Zhao",
+          "Yi-Tao Hu",
+          "Guo-Tao Yang",
+          "Zi-Qi Gong",
+          "Chen Shen",
+          "Lai-Ping Zhao",
+          "Wen-Xin Li",
+          "Xiu-Long Liu",
+          "Wen-Yu Qu"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 604,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.4218/etrij.2024-0111",
+      "identity_tokens": [
+        "id:DOI:10.4218/etrij.2024-0111",
+        "id:SemanticScholar:daae34e47694456bb180ffa2b821af8c4364f03f",
+        "title:pfgemv utilization maximizing architecture in fast matrixvector multiplication for gpt2 inference",
+        "url:https://doi.org/10.4218/etrij.2024-0111"
+      ],
+      "record": {
+        "title": "PF‐GEMV: Utilization maximizing architecture in fast matrix–vector multiplication for GPT‐2 inference",
+        "source_url": "https://doi.org/10.4218/etrij.2024-0111",
+        "year": 2024,
+        "published": "2024-10-01",
+        "venue": "ETRI Journal",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Owing to the widespread advancement of transformer‐based artificial neural networks, artificial intelligence (AI) processors are now required to perform matrix–vector multiplication in addition to the conventional matrix–matrix multiplication. However, current AI processor architectures are optimized for general matrix–matrix multiplications (GEMMs), which causes significant throughput degradation when processing general matrix–vector multiplications (GEMVs). In this study, we proposed a port‐folding GEMV (PF‐GEMV) scheme employing multiformat and low‐precision techniques while reusing an outer product‐based processor optimized for conventional GEMM operations. This approach achieves 93.7% utilization in GEMV operations with an 8‐bit format on an 8 × 8 processor, thus resulting in a 7.5 × increase in throughput compared with that of the original scheme. Furthermore, when applied to the matrix operation of the GPT‐2 large model, an increase in speed by 7 × is achieved in single‐batch inferences.",
+        "identifiers": [
+          "SemanticScholar:daae34e47694456bb180ffa2b821af8c4364f03f"
+        ],
+        "semantic_scholar_id": "daae34e47694456bb180ffa2b821af8c4364f03f",
+        "doi": "10.4218/etrij.2024-0111",
+        "canonical_id": "DOI:10.4218/etrij.2024-0111",
+        "authors": [
+          "Hyeji Kim",
+          "Yeongmin Lee",
+          "C. Lyuh"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 786,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.11608",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.11608",
+        "id:SemanticScholar:e752763b46507bb8c5d1ae396644bfc0304cfcd9",
+        "id:arXiv:2511.11608",
+        "title:why should the server do it all a scalable versatile and modelagnostic framework for serverlight dnn inference over massively distributed clients via trainingfree intermediate feature compression",
+        "url:https://arxiv.org/abs/2511.11608"
+      ],
+      "record": {
+        "title": "Why Should the Server Do It All?: A Scalable, Versatile, and Model-Agnostic Framework for Server-Light DNN Inference over Massively Distributed Clients via Training-Free Intermediate Feature Compression",
+        "source_url": "https://arxiv.org/abs/2511.11608",
+        "year": 2025,
+        "published": "2025-11-03",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern DNNs often rely on edge-cloud model partitioning (MP), but widely used schemes fix shallow, static split points that underutilize edge compute and concentrate latency and energy on the server. The problem is exacerbated in autoregressive (AR) LLM inference, where per-token forward passes repeatedly generate bulky intermediate features (IFs). We introduce SLICER, a retraining-free, architecture-agnostic framework that compresses IFs to reduce both communication and server load in split computing. SLICER combines (i) asymmetric top-K filtering (ATKF) to sparsify low-magnitude activations, (ii) magnitude-splitting (MS) to group the remaining non-zeros into equal-cardinality blocks, and (iii) adaptive bit quantization (ABQ) that selects per-block bitwidths under a distortion budget. Across standard vision and LLM workloads (e.g., ImageNet/COCO; HellaSwag, PIQA, ARC-E/C, GSM8K, HumanEval), SLICER reduces uplink volume by up to 10x and server GPU time by up to 4.4x, while keeping task quality within ~0-3 pp of baseline. In multi-device settings and AR LLMs, SLICER scales by shifting meaningful compute to the edge and lowering bits-per-token and server time per token, stabilizing per-step traffic. The codec attaches to off-the-shelf models without retraining or architectural changes, offering a plug-and-play path to scalable, low-latency distributed inference. Code is provided in the supplementary material.",
+        "identifiers": [
+          "SemanticScholar:e752763b46507bb8c5d1ae396644bfc0304cfcd9"
+        ],
+        "semantic_scholar_id": "e752763b46507bb8c5d1ae396644bfc0304cfcd9",
+        "canonical_id": "arXiv:2511.11608",
+        "arxiv_id": "2511.11608",
+        "doi": "10.48550/arXiv.2511.11608",
+        "authors": [
+          "Ming-Yu Sung",
+          "Suhwan Im",
+          "Daeho Bang",
+          "Il-Min Kim",
+          "Sangseok Yun",
+          "Jae-Mo Kang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 388,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:da1003557e14155ed6619e4e7be74a480998cf15fc12b6fc4bfee70ad62efee5",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,419 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a93b2d6183bf3c46-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a93b2d6183bf",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2512.12701",
+    "arXiv:2602.10021",
+    "arXiv:2603.27299",
+    "arXiv:2605.11381"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "68936270bc1ef3c08ebf48f664ecff52836d2a65",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T14:49:51.239775+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2512.12701",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.10021",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.27299",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.11381",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Kairos: A Scalable Serving System for Physical AI",
+      "source_url": "https://arxiv.org/abs/2605.11381",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Physical AI is experiencing rapid growth with frontier foundation models increasing its capabilities across general environments. Physical AI tasks are characterized by inference properties that are markedly different from digital AI. They consist of multiple rounds of inference and action execution, generating a chunk of actions in each inference round, and asynchronously interleaving inference and execution. This makes existing digital AI serving systems unsuited for physical AI; a shortcoming that is critical for enabling their wide adoption, considering their size and the scale of the robot fleets they have to serve. To fill this gap, we design Kairos, the first multi-robot serving system that makes the generate-execute loop a first-class citizen, with active involvement in the execution phase. Across a wide range of physical AI models and robots, Kairos reduces the average end-to-end task latency by 31.8--66.5% over state-of-the-art digital AI serving practices, with gains scaling with the robot fleet size.",
+      "identifiers": [
+        "SemanticScholar:51644547363a419afe7c832e90c9cd4c5176484d"
+      ],
+      "semantic_scholar_id": "51644547363a419afe7c832e90c9cd4c5176484d",
+      "canonical_id": "arXiv:2605.11381",
+      "arxiv_id": "2605.11381",
+      "doi": "10.48550/arXiv.2605.11381",
+      "authors": [
+        "Yinwei Dai",
+        "Ganesh Ananthanarayanan",
+        "Landon P. Cox",
+        "Xenofon Foukas",
+        "Bozidar Radunovic",
+        "Ravi Netravali"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 198,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Inference Routing to Agent Orchestration: Declarative Policy Compilation with Cross-Layer Verification",
+      "source_url": "https://arxiv.org/abs/2603.27299",
+      "year": 2026,
+      "published": "2026-03-28",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Semantic Router DSL is a non-Turing-complete policy language deployed in production for per-request LLM inference routing: content signals (embedding similarity, PII detection, jailbreak scoring) feed into weighted projections and priority-ordered decision trees that select a model, enforce privacy policies, and produce structured audit traces -- all from a single declarative source file. Prior work established conflict-free compilation for probabilistic predicates and positioned the DSL within the Workload-Router-Pool inference architecture. This paper extends the same language from stateless, per-request routing to multi-step agent workflows -- the full path from inference gateway to agent orchestration to infrastructure deployment. The DSL compiler emits verified decision nodes for orchestration frameworks (LangGraph, OpenClaw), Kubernetes artifacts (NetworkPolicy, Sandbox CRD, ConfigMap), YANG/NETCONF payloads, and protocol-boundary gates (MCP, A2A) -- all from the same source. Because the language is non-Turing-complete, the compiler guarantees exhaustive routing, conflict-free branching, referential integrity, and audit traces structurally coupled to the decision logic. Because signal definitions are shared across targets, a threshold change propagates from inference gateway to agent gate to infrastructure artifact in one compilation step -- eliminating cross-team coordination as the primary source of policy drift. We ground the approach in four pillars -- auditability, cost efficiency, verifiability, and tunability -- and identify the verification boundary at each layer.",
+      "identifiers": [
+        "SemanticScholar:b4309c21532d73069c42221299d950f412a73a3d"
+      ],
+      "semantic_scholar_id": "b4309c21532d73069c42221299d950f412a73a3d",
+      "canonical_id": "arXiv:2603.27299",
+      "arxiv_id": "2603.27299",
+      "doi": "10.48550/arXiv.2603.27299",
+      "authors": [
+        "Hua-Min Chen",
+        "Xun-Zhuo Liu",
+        "Bo-Wei He",
+        "Xue Liu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Vision-Language Reasoning via Adaptive Token Pruning",
+      "source_url": "https://arxiv.org/abs/2512.12701",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Real-world deployment of Vision-Language Models (VLMs) is hindered by high computational demands, as existing architectures inefficiently process all tokens uniformly. We introduce Adaptive Token Pruning (ATP), a dynamic inference mechanism that retains only the most informative tokens based on contextual relevance. ATP operates at the vision-language interface, assigning a hybrid importance score combining ViT CLS attention (intra-modal saliency) and CLIP text-image similarity (inter-modal relevance) to keep top-K tokens for the LLM. Unlike static compression, ATP adapts to each input without modifying the backbone. Proposed as a lightweight gating module, ATP is compatible with popular backbones like BLIP-2, LLaVA, and Flamingo. Preliminary evaluations across VQAv2, GQA, and COCO indicate that ATP reduces inference FLOPs by around 40% and achieves roughly 1.5x speedups in end-to-end latency with negligible accuracy loss (less than 1%). Qualitative analyses suggest ATP preserves visual grounding and enhances interpretability. Beyond efficiency, we investigate robustness under corruptions; observations suggest adaptive pruning suppresses spurious correlations, improving stability. These findings imply that resource-constrained inference and model reliability are not competing objectives. Finally, we discuss ATP's role in efficient multimodal edge computing pipelines.",
+      "identifiers": [
+        "SemanticScholar:c28333e48be6f40fbcd8a71a48f99254afe0f8e8"
+      ],
+      "semantic_scholar_id": "c28333e48be6f40fbcd8a71a48f99254afe0f8e8",
+      "canonical_id": "arXiv:2512.12701",
+      "arxiv_id": "2512.12701",
+      "doi": "10.48550/arXiv.2512.12701",
+      "authors": [
+        "Xue Li",
+        "Xiao-Nan Song",
+        "Henry Hu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 347,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Decoupled Reasoning with Implicit Fact Tokens (DRIFT): A Dual-Model Framework for Efficient Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2602.10021",
+      "year": 2026,
+      "published": "2026-02-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of extensive, dynamic knowledge into Large Language Models (LLMs) remains a significant challenge due to the inherent entanglement of factual data and reasoning patterns. Existing solutions, ranging from non-parametric Retrieval-Augmented Generation (RAG) to parametric knowledge editing, are often constrained in practice by finite context windows, retriever noise, or the risk of catastrophic forgetting. In this paper, we propose DRIFT, a novel dual-model architecture designed to explicitly decouple knowledge extraction from the reasoning process. Unlike static prompt compression, DRIFT employs a lightweight knowledge model to dynamically compress document chunks into implicit fact tokens conditioned on the query. These dense representations are projected into the reasoning model's embedding space, replacing raw, redundant text while maintaining inference accuracy. Extensive experiments show that DRIFT significantly improves performance on long-context tasks, outperforming strong baselines among comparably sized models. Our approach provides a scalable and efficient paradigm for extending the effective context window and reasoning capabilities of LLMs. Our code is available at https://github.com/Lancelot-Xie/DRIFT.",
+      "identifiers": [
+        "SemanticScholar:8630e880829c82269861d396f61f23a8ada3db1f"
+      ],
+      "semantic_scholar_id": "8630e880829c82269861d396f61f23a8ada3db1f",
+      "canonical_id": "arXiv:2602.10021",
+      "arxiv_id": "2602.10021",
+      "doi": "10.48550/arXiv.2602.10021",
+      "authors": [
+        "Wenxuan Xie",
+        "Yu-Jia Wang",
+        "Xin Tan",
+        "Chao-Chao Lu",
+        "Xia Hu",
+        "Xuhong Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 289,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.11381",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.11381",
+        "id:SemanticScholar:51644547363a419afe7c832e90c9cd4c5176484d",
+        "id:arXiv:2605.11381",
+        "title:kairos a scalable serving system for physical ai",
+        "url:https://arxiv.org/abs/2605.11381"
+      ],
+      "record": {
+        "title": "Kairos: A Scalable Serving System for Physical AI",
+        "source_url": "https://arxiv.org/abs/2605.11381",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Physical AI is experiencing rapid growth with frontier foundation models increasing its capabilities across general environments. Physical AI tasks are characterized by inference properties that are markedly different from digital AI. They consist of multiple rounds of inference and action execution, generating a chunk of actions in each inference round, and asynchronously interleaving inference and execution. This makes existing digital AI serving systems unsuited for physical AI; a shortcoming that is critical for enabling their wide adoption, considering their size and the scale of the robot fleets they have to serve. To fill this gap, we design Kairos, the first multi-robot serving system that makes the generate-execute loop a first-class citizen, with active involvement in the execution phase. Across a wide range of physical AI models and robots, Kairos reduces the average end-to-end task latency by 31.8--66.5% over state-of-the-art digital AI serving practices, with gains scaling with the robot fleet size.",
+        "identifiers": [
+          "SemanticScholar:51644547363a419afe7c832e90c9cd4c5176484d"
+        ],
+        "semantic_scholar_id": "51644547363a419afe7c832e90c9cd4c5176484d",
+        "canonical_id": "arXiv:2605.11381",
+        "arxiv_id": "2605.11381",
+        "doi": "10.48550/arXiv.2605.11381",
+        "authors": [
+          "Yinwei Dai",
+          "Ganesh Ananthanarayanan",
+          "Landon P. Cox",
+          "Xenofon Foukas",
+          "Bozidar Radunovic",
+          "Ravi Netravali"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 198,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.27299",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.27299",
+        "id:SemanticScholar:b4309c21532d73069c42221299d950f412a73a3d",
+        "id:arXiv:2603.27299",
+        "title:from inference routing to agent orchestration declarative policy compilation with crosslayer verification",
+        "url:https://arxiv.org/abs/2603.27299"
+      ],
+      "record": {
+        "title": "From Inference Routing to Agent Orchestration: Declarative Policy Compilation with Cross-Layer Verification",
+        "source_url": "https://arxiv.org/abs/2603.27299",
+        "year": 2026,
+        "published": "2026-03-28",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Semantic Router DSL is a non-Turing-complete policy language deployed in production for per-request LLM inference routing: content signals (embedding similarity, PII detection, jailbreak scoring) feed into weighted projections and priority-ordered decision trees that select a model, enforce privacy policies, and produce structured audit traces -- all from a single declarative source file. Prior work established conflict-free compilation for probabilistic predicates and positioned the DSL within the Workload-Router-Pool inference architecture. This paper extends the same language from stateless, per-request routing to multi-step agent workflows -- the full path from inference gateway to agent orchestration to infrastructure deployment. The DSL compiler emits verified decision nodes for orchestration frameworks (LangGraph, OpenClaw), Kubernetes artifacts (NetworkPolicy, Sandbox CRD, ConfigMap), YANG/NETCONF payloads, and protocol-boundary gates (MCP, A2A) -- all from the same source. Because the language is non-Turing-complete, the compiler guarantees exhaustive routing, conflict-free branching, referential integrity, and audit traces structurally coupled to the decision logic. Because signal definitions are shared across targets, a threshold change propagates from inference gateway to agent gate to infrastructure artifact in one compilation step -- eliminating cross-team coordination as the primary source of policy drift. We ground the approach in four pillars -- auditability, cost efficiency, verifiability, and tunability -- and identify the verification boundary at each layer.",
+        "identifiers": [
+          "SemanticScholar:b4309c21532d73069c42221299d950f412a73a3d"
+        ],
+        "semantic_scholar_id": "b4309c21532d73069c42221299d950f412a73a3d",
+        "canonical_id": "arXiv:2603.27299",
+        "arxiv_id": "2603.27299",
+        "doi": "10.48550/arXiv.2603.27299",
+        "authors": [
+          "Hua-Min Chen",
+          "Xun-Zhuo Liu",
+          "Bo-Wei He",
+          "Xue Liu"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 243,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.12701",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.12701",
+        "id:SemanticScholar:c28333e48be6f40fbcd8a71a48f99254afe0f8e8",
+        "id:arXiv:2512.12701",
+        "title:efficient visionlanguage reasoning via adaptive token pruning",
+        "url:https://arxiv.org/abs/2512.12701"
+      ],
+      "record": {
+        "title": "Efficient Vision-Language Reasoning via Adaptive Token Pruning",
+        "source_url": "https://arxiv.org/abs/2512.12701",
+        "year": 2025,
+        "published": "2025-12-14",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Real-world deployment of Vision-Language Models (VLMs) is hindered by high computational demands, as existing architectures inefficiently process all tokens uniformly. We introduce Adaptive Token Pruning (ATP), a dynamic inference mechanism that retains only the most informative tokens based on contextual relevance. ATP operates at the vision-language interface, assigning a hybrid importance score combining ViT CLS attention (intra-modal saliency) and CLIP text-image similarity (inter-modal relevance) to keep top-K tokens for the LLM. Unlike static compression, ATP adapts to each input without modifying the backbone. Proposed as a lightweight gating module, ATP is compatible with popular backbones like BLIP-2, LLaVA, and Flamingo. Preliminary evaluations across VQAv2, GQA, and COCO indicate that ATP reduces inference FLOPs by around 40% and achieves roughly 1.5x speedups in end-to-end latency with negligible accuracy loss (less than 1%). Qualitative analyses suggest ATP preserves visual grounding and enhances interpretability. Beyond efficiency, we investigate robustness under corruptions; observations suggest adaptive pruning suppresses spurious correlations, improving stability. These findings imply that resource-constrained inference and model reliability are not competing objectives. Finally, we discuss ATP's role in efficient multimodal edge computing pipelines.",
+        "identifiers": [
+          "SemanticScholar:c28333e48be6f40fbcd8a71a48f99254afe0f8e8"
+        ],
+        "semantic_scholar_id": "c28333e48be6f40fbcd8a71a48f99254afe0f8e8",
+        "canonical_id": "arXiv:2512.12701",
+        "arxiv_id": "2512.12701",
+        "doi": "10.48550/arXiv.2512.12701",
+        "authors": [
+          "Xue Li",
+          "Xiao-Nan Song",
+          "Henry Hu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 347,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.10021",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.10021",
+        "id:SemanticScholar:8630e880829c82269861d396f61f23a8ada3db1f",
+        "id:arXiv:2602.10021",
+        "title:decoupled reasoning with implicit fact tokens drift a dualmodel framework for efficient longcontext inference",
+        "url:https://arxiv.org/abs/2602.10021"
+      ],
+      "record": {
+        "title": "Decoupled Reasoning with Implicit Fact Tokens (DRIFT): A Dual-Model Framework for Efficient Long-Context Inference",
+        "source_url": "https://arxiv.org/abs/2602.10021",
+        "year": 2026,
+        "published": "2026-02-10",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The integration of extensive, dynamic knowledge into Large Language Models (LLMs) remains a significant challenge due to the inherent entanglement of factual data and reasoning patterns. Existing solutions, ranging from non-parametric Retrieval-Augmented Generation (RAG) to parametric knowledge editing, are often constrained in practice by finite context windows, retriever noise, or the risk of catastrophic forgetting. In this paper, we propose DRIFT, a novel dual-model architecture designed to explicitly decouple knowledge extraction from the reasoning process. Unlike static prompt compression, DRIFT employs a lightweight knowledge model to dynamically compress document chunks into implicit fact tokens conditioned on the query. These dense representations are projected into the reasoning model's embedding space, replacing raw, redundant text while maintaining inference accuracy. Extensive experiments show that DRIFT significantly improves performance on long-context tasks, outperforming strong baselines among comparably sized models. Our approach provides a scalable and efficient paradigm for extending the effective context window and reasoning capabilities of LLMs. Our code is available at https://github.com/Lancelot-Xie/DRIFT.",
+        "identifiers": [
+          "SemanticScholar:8630e880829c82269861d396f61f23a8ada3db1f"
+        ],
+        "semantic_scholar_id": "8630e880829c82269861d396f61f23a8ada3db1f",
+        "canonical_id": "arXiv:2602.10021",
+        "arxiv_id": "2602.10021",
+        "doi": "10.48550/arXiv.2602.10021",
+        "authors": [
+          "Wenxuan Xie",
+          "Yu-Jia Wang",
+          "Xin Tan",
+          "Chao-Chao Lu",
+          "Xia Hu",
+          "Xuhong Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 289,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:32cf0d9e49bd6dfb4f68e98b44fc51b7c62318c092f9c090ee1e9fa159ffdb7d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

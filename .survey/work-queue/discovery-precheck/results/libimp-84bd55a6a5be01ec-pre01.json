@@ -1,0 +1,162 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-84bd55a6a5be01ec-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-84bd55a6a5be",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2611.16384"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "68936270bc1ef3c08ebf48f664ecff52836d2a65",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T14:49:44.890638+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2611.16384",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Beyond Compressing Everything: Contrastive Memory Learning for Selective Context Compression",
+      "source_url": "https://arxiv.org/abs/2611.16384",
+      "year": 2026,
+      "published": "2026-11-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) advance toward increasingly long inputs, soft context compression offers a promising approach to efficient inference by converting long inputs into compact memory slots. Under limited memory budgets, effective context compression remains challenging because task-relevant evidence varies substantially across queries, ranging from localized evidence to multiple distant spans or information dispersed throughout the full document. Instead of compressing everything indiscriminately, we propose CoMem, a query-guided selective context compression framework that learns memory representations conditioned on both the document and the query. CoMem develops Contrastive Compressor Learning to achieve query-sensitive yet context-preserving memory representations. To inject a strong prior over query-dependent evidence distributions, we devise a same-context hard negative mining strategy by pairing a single document with multiple queries, requiring the compressor to selectively retain information according to each query's distinct evidence needs. To address the restricted information flow imposed by causal masking, we further enable bidirectional attention among memory slots. Experiments demonstrate that CoMem consistently outperforms existing context compression methods across compression ratios on question answering and RULER-NIAH benchmarks. Our code is available at https://github.com/scar-on/CoMem.",
+      "identifiers": [
+        "SemanticScholar:42d2cb9a196a3c352c89887a463c96a1e2f9e547"
+      ],
+      "semantic_scholar_id": "42d2cb9a196a3c352c89887a463c96a1e2f9e547",
+      "canonical_id": "arXiv:2611.16384",
+      "arxiv_id": "2611.16384",
+      "authors": [
+        "Si-Kui Zhang",
+        "Hao-Wei Liu",
+        "Zi-Yun Gan",
+        "Chun-Feng Yuan",
+        "Guang-Ze Gao",
+        "Nian Liu",
+        "Bo-Yu Cai",
+        "Bo Li",
+        "Xiao Lv",
+        "Jun Gao",
+        "Bing Li",
+        "Wei-Ming Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.16384",
+      "identity_tokens": [
+        "id:SemanticScholar:42d2cb9a196a3c352c89887a463c96a1e2f9e547",
+        "id:arXiv:2611.16384",
+        "title:beyond compressing everything contrastive memory learning for selective context compression",
+        "url:https://arxiv.org/abs/2611.16384"
+      ],
+      "record": {
+        "title": "Beyond Compressing Everything: Contrastive Memory Learning for Selective Context Compression",
+        "source_url": "https://arxiv.org/abs/2611.16384",
+        "year": 2026,
+        "published": "2026-11-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) advance toward increasingly long inputs, soft context compression offers a promising approach to efficient inference by converting long inputs into compact memory slots. Under limited memory budgets, effective context compression remains challenging because task-relevant evidence varies substantially across queries, ranging from localized evidence to multiple distant spans or information dispersed throughout the full document. Instead of compressing everything indiscriminately, we propose CoMem, a query-guided selective context compression framework that learns memory representations conditioned on both the document and the query. CoMem develops Contrastive Compressor Learning to achieve query-sensitive yet context-preserving memory representations. To inject a strong prior over query-dependent evidence distributions, we devise a same-context hard negative mining strategy by pairing a single document with multiple queries, requiring the compressor to selectively retain information according to each query's distinct evidence needs. To address the restricted information flow imposed by causal masking, we further enable bidirectional attention among memory slots. Experiments demonstrate that CoMem consistently outperforms existing context compression methods across compression ratios on question answering and RULER-NIAH benchmarks. Our code is available at https://github.com/scar-on/CoMem.",
+        "identifiers": [
+          "SemanticScholar:42d2cb9a196a3c352c89887a463c96a1e2f9e547"
+        ],
+        "semantic_scholar_id": "42d2cb9a196a3c352c89887a463c96a1e2f9e547",
+        "canonical_id": "arXiv:2611.16384",
+        "arxiv_id": "2611.16384",
+        "authors": [
+          "Si-Kui Zhang",
+          "Hao-Wei Liu",
+          "Zi-Yun Gan",
+          "Chun-Feng Yuan",
+          "Guang-Ze Gao",
+          "Nian Liu",
+          "Bo-Yu Cai",
+          "Bo Li",
+          "Xiao Lv",
+          "Jun Gao",
+          "Bing Li",
+          "Wei-Ming Hu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 14,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9d63374c5f87a1fdc068814ea6fdd0dc3e36a48239a081359520077ff9baaaab",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

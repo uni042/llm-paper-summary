@@ -1,0 +1,221 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7cf5609bb953bb8c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7cf5609bb953",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+    "SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "68936270bc1ef3c08ebf48f664ecff52836d2a65",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T14:49:30.250842+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "RECAP: Training-Free Compensation for Coarse Activation Channel Pruning in Compressed LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/e41cf15d54a15ce4317e1c902a8b216ae231defc",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc"
+      ],
+      "semantic_scholar_id": "e41cf15d54a15ce4317e1c902a8b216ae231defc",
+      "canonical_id": "SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc",
+      "authors": [
+        "Mingyu Lee",
+        "Akshat Ramachandran",
+        "Tushar Krishna"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dependency-Aware Semi-Structured Sparsity: Declining Roles of Outliers in Pruning GLU-based LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3"
+      ],
+      "semantic_scholar_id": "4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+      "canonical_id": "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+      "authors": [
+        "Zhi-Yu Guo",
+        "Hidetaka Kamigaito",
+        "Taro Watanabe"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc",
+      "identity_tokens": [
+        "id:SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc",
+        "title:recap trainingfree compensation for coarse activation channel pruning in compressed llms",
+        "url:https://www.semanticscholar.org/paper/e41cf15d54a15ce4317e1c902a8b216ae231defc"
+      ],
+      "record": {
+        "title": "RECAP: Training-Free Compensation for Coarse Activation Channel Pruning in Compressed LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/e41cf15d54a15ce4317e1c902a8b216ae231defc",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc"
+        ],
+        "semantic_scholar_id": "e41cf15d54a15ce4317e1c902a8b216ae231defc",
+        "canonical_id": "SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc",
+        "authors": [
+          "Mingyu Lee",
+          "Akshat Ramachandran",
+          "Tushar Krishna"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+      "identity_tokens": [
+        "id:SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+        "title:dependencyaware semistructured sparsity declining roles of outliers in pruning glubased llms",
+        "url:https://www.semanticscholar.org/paper/4a222a27a944539c5ffbb4cc44cf7de5663b57d3"
+      ],
+      "record": {
+        "title": "Dependency-Aware Semi-Structured Sparsity: Declining Roles of Outliers in Pruning GLU-based LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3"
+        ],
+        "semantic_scholar_id": "4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+        "canonical_id": "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+        "authors": [
+          "Zhi-Yu Guo",
+          "Hidetaka Kamigaito",
+          "Taro Watanabe"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:671fc97684eb18c8efa72f8d684d5a2e24858cb4e5e189a9d8488d0dc712ffba",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
