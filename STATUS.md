@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-26 12:14:01 JST**
+> 自動生成: **2026-11-26 12:25:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **1782** |
 | 直近24hのResearch処理完了 | **10** |
 | 最終Research処理完了 | **11-25 20:32:19 JST** |
-| 最終Discovery探索完了 | **11-26 10:20:24 JST** |
+| 最終Discovery探索完了 | **11-26 12:23:52 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -55,9 +55,9 @@
 | 処理済み | **31293** |
 | 未処理Discovery候補 | **123577** |
 | 収録済み | **5491** |
-| Research / Audit候補へ昇格済み | **411** |
-| 無関係として除外 | **16219** |
-| 微妙として除外 | **9172** |
+| Research / Audit候補へ昇格済み | **405** |
+| 無関係として除外 | **16220** |
+| 微妙として除外 | **9177** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -89,7 +89,7 @@
 
 - 消化率: **20.2%**
 - 現在の生在庫: 後方references **63592件** / 前方引用 **62102件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **124484件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **124478件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-26 09:24:18 JST（2時間49分前）** |
+| 最終maintenance完了 | **11-26 09:24:18 JST（3時間1分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **125** |
-| 直近6hのDiscovery本文確認・分類 | **2039** |
+| 直近6hのDiscovery run | **155** |
+| 直近6hのDiscovery本文確認・分類 | **2493** |
 | 最終Research完了 | **11-25 20:32:19 JST** |
-| 最終Discovery完了 | **11-26 10:20:24 JST** |
+| 最終Discovery完了 | **11-26 12:23:52 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-25 20:32:19 JST** / worker — / run venue-20261125-b01 / 成果 **10件**
   - evidence: .survey/import-inbox/results/research/2023-2312.05215-deltazip-efficient-serving-of-multiple-full-model-tuned-llms.json
-- Discovery: **11-26 10:20:24 JST** / worker muse / run muse-20261125-c02-b01::chunk-0001-of-0003
-  - 本文確認・分類 **20件** / accept **5件** / unrelated+borderline **15件**
-  - evidence: .survey/import-inbox/results/discovery/discovery-20261125-1210-muse-c02-b01--chunk-0001-of-0003.json
+- Discovery: **11-26 12:23:52 JST** / worker muse / run muse-20261126-d01-b02::chunk-0001-of-0003
+  - 本文確認・分類 **20件** / accept **0件** / unrelated+borderline **20件**
+  - evidence: .survey/import-inbox/results/discovery/discovery-20261126-0730-muse-d01-b02--chunk-0001-of-0003.json
 
 ### Codex探索成果の反映状況
 
