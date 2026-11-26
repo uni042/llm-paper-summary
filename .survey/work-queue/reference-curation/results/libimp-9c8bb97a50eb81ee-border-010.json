@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9c8bb97a50eb81ee-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.11167",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.11167",
+    "identity_tokens": [
+      "arXiv:2509.11167"
+    ],
+    "reason": "能力別のSFTチェックポイントを最適化軌跡の曲率情報で統合するOTAマージの研究であり、LLMの配備前統合として関連するが、推論実行時の機構ではなく重みの事後統合手法のため境界とした。",
+    "first_checked_at": "2026-11-26T07:54:18+00:00",
+    "last_checked_at": "2026-11-26T07:54:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Harnessing Optimization Dynamics for Curvature-Informed Model Merging"
+  },
+  "processed_at": "2026-11-26T07:54:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9c8bb97a50eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

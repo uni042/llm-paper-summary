@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-26T07:52:54+00:00",
-  "record_count": 16481,
+  "updated_at": "2026-11-26T07:54:19+00:00",
+  "record_count": 16490,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -231110,9 +231110,9 @@
       "identity_tokens": [
         "arXiv:2401.06762"
       ],
-      "reason": "航空画像の道路セグメンテーション用ベンチマークと長距離文脈理解の失敗分析であり、評価データセットの提供のみで推論システムの手法はない。",
+      "reason": "タイトル自体が航空画像における空間依存性モデリングのベンチマークというリモートセンシングの主題を明示しており、LLM推論の技術要素語も含まないため、タイトル走査のみで対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231124,9 +231124,9 @@
       "identity_tokens": [
         "arXiv:2410.02751"
       ],
-      "reason": "64kステップ文脈内RLのための部分更新とSink-KVを提案するが、対象は身体性エージェントの適応学習でありLLMサービングのKVキャッシュ管理とは文脈が異なる。",
+      "reason": "64kステップの文脈内強化学習で身体性エージェントを適応させるReLICの研究であり、エージェントの学習レシピが主題でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231138,9 +231138,9 @@
       "identity_tokens": [
         "arXiv:2411.11717"
       ],
-      "reason": "sRGBからRAWへの逆レンダリングをMambaで統一する画像処理手法であり、写真現像応用でLLM推論とは無関係である。",
+      "reason": "sRGB画像からRAWデータを復元するデレンダリングに状態空間モデルを用いるRAWMambaの研究であり、画像処理が対象でLLM推論システムの技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231152,9 +231152,9 @@
       "identity_tokens": [
         "arXiv:2503.23818"
       ],
-      "reason": "L2ゲイン制約付き構造化SSMのパラメトライズと安定性理論であり、システム同定・制御向けの基礎理論でLLM推論実行への直接適用は示されていない。",
+      "reason": "L2ノルムの上限を prescribed した構造化状態空間モデルL2RUの理論的研究であり、SSMの安定性理論が主題で推論実行の効率化機構ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231166,9 +231166,9 @@
       "identity_tokens": [
         "arXiv:2507.23595"
       ],
-      "reason": "V2X車両LiDARを用いる路側カメラの無ターゲット校正手法であり、交通インフラ計測応用でLLM推論システムとは無関係である。",
+      "reason": "路側カメラの無目標キャリブレーションに状態空間モデルを用いるMamV2XCalibの研究であり、交通インフラの較正が対象でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231180,9 +231180,9 @@
       "identity_tokens": [
         "arXiv:2510.08513"
       ],
-      "reason": "事前学習済みネットワークのランダムな部分ネットワーク微調整が十分であることを示す理論研究であり、対象は適応学習の理論で推論高速化ではない。",
+      "reason": "事前学習網のランダムな部分網の微調整で十分な理由を理論化するSliceFineの研究であり、ファインチューニング理論が主題で推論システムの技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231194,9 +231194,9 @@
       "identity_tokens": [
         "arXiv:2511.18312"
       ],
-      "reason": "時系列データの拡散生成にMambaを適用する生成モデリング手法であり、プライバシー向け合成データ生成が目的でLLM推論とは無関係である。",
+      "reason": "時系列の生成モデリングに選択的状態空間モデルと拡散を橋渡しするDiM-TSの研究であり、合成データ生成が対象でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231208,9 +231208,9 @@
       "identity_tokens": [
         "DOI:10.1109/jiot.2024.3510395"
       ],
-      "reason": "手首回転動作による携帯電話ロック解除の生体認証手法であり、モバイル認証応用でLLM推論システムへの貢献はない。",
+      "reason": "タイトル自体が携帯電話のロック解除のための手首回転動作認識という生体認証の応用主題を明示しており、LLM推論の技術要素語も含まないため、タイトル走査のみで対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231222,9 +231222,9 @@
       "identity_tokens": [
         "DOI:10.1109/tim.2026.3659681"
       ],
-      "reason": "イベントカメラ単眼深度推定専用のSSMアーキテクチャESDepthであり、深度計測応用でLLM推論基盤とは無関係である。",
+      "reason": "イベントカメラの単眼深度推定にイベント向け状態空間モデルを用いる研究であり、深度計測のセンシング応用でLLM推論システムとは無関係のため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231236,9 +231236,9 @@
       "identity_tokens": [
         "DOI:10.1145/3746027.3755521"
       ],
-      "reason": "パンシャープニングのための空間・周波数二重ドメインRWKVであり、衛星画像融合応用に限られLLM推論への貢献はない。",
+      "reason": "パンシャープニングにRWKVの双域再帰走査を用いるFreq-RWKVの研究であり、リモートセンシング画像の鮮鋭化が対象でLLM推論との関係はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231250,27 +231250,13 @@
       "identity_tokens": [
         "DOI:10.21437/interspeech.2023-1168"
       ],
-      "reason": "音声翻訳・ASRで冗長フレームを間引く情報量ベース動的サブサンプリングであり、音声モデル内部の計算削減に留まりLLM推論システムの機構ではない。",
+      "reason": "音声テキスト変換で情報量に基づく動的サブサンプリングを行う研究であり、ASRの前処理効率が対象でLLM推論システムへの貢献は確認できないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
       "title": "Information Magnitude Based Dynamic Sub-sampling for Speech-to-text"
-    },
-    "DOI:10.69987/jacs.2024.40810": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.69987/jacs.2024.40810",
-      "identity_tokens": [
-        "DOI:10.69987/jacs.2024.40810"
-      ],
-      "reason": "売掛債権RWAの契約・保険条項分析に特化した長文書RAGの評価パイプラインであり、金融RegTech応用が主目的で汎用推論基盤の貢献はない。",
-      "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "title": "Long-Document RAG for Contractual and Insurance Clause Analysis in Receivables RWA Structures"
     },
     "arXiv:2502.19429": {
       "classification": "unrelated",
@@ -231278,9 +231264,9 @@
       "identity_tokens": [
         "arXiv:2502.19429"
       ],
-      "reason": "神経変性疾患の単核RNAシーケンシング解析用事前学習モデルであり、バイオメディカル応用でLLM推論システムとは無関係である。",
+      "reason": "神経変性疾患の単一核RNA解析向け事前学習モデルscMambaの生命科学応用であり、疾患データ解析が目的でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231292,9 +231278,9 @@
       "identity_tokens": [
         "arXiv:2504.03442"
       ],
-      "reason": "工業製品の多クラス異常検出・局在化のためのピラミッド走査SSMであり、MVTec向け外観検査応用でLLM推論への貢献はない。",
+      "reason": "ピラミッド型Mambaによる多クラス教師なし異常検出の研究であり、画像異常検出タスクへの応用でLLM推論システムとの関係はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231306,9 +231292,9 @@
       "identity_tokens": [
         "arXiv:2505.23615"
       ],
-      "reason": "表形式回帰向けの微分可能論理ネットワークで解釈性と低推論コストを狙うが、対象は表データ回帰モデル自体でありLLM推論基盤ではない。",
+      "reason": "表形式回帰向けに解釈可能な微分可能論理ネットワークを学ぶ研究であり、推論コストへの言及はあるが対象は表データのモデル自体でLLM推論システムの技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -231320,9 +231306,9 @@
       "identity_tokens": [
         "arXiv:2507.21567"
       ],
-      "reason": "自動運転のオンラインHDマップ構築にMoE意味事前分布を組み込む知覚フレームワークであり、運転支援応用でLLM推論システムとは無関係である。",
+      "reason": "オンラインHDマップ構築を空間関係と意味事前知識で強化するRelMapの自動運転向け研究であり、地図構築が対象でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:53+00:00",
-      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232118,9 +232104,9 @@
       "identity_tokens": [
         "DOI:10.1080/00437956.2024.2414515"
       ],
-      "reason": "Harrisの分布仮説が分布意味論からLLMへ至った系譜を概観する哲学的・歴史的論考であり、推論実行・サービングの仕組みへの技術的貢献はabstractにない。",
+      "reason": "Harrisの分布主義プログラムが分布意味論からLLMへ与えた影響をたどる言語学史の概説であり、歴史的展望が主題で推論システムの技術への貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232132,9 +232118,9 @@
       "identity_tokens": [
         "DOI:10.1109/access.2025.3565823"
       ],
-      "reason": "依存フォレストを組み込んだ生成要約モデルで長文書要約の一貫性とROUGEを改善する応用研究であり、LLM推論システムの高速化や資源削減ではない。",
+      "reason": "長文要約の一貫性を依存森の意味関係で改善する生成要約モデルの研究であり、要約品質が対象でLLM推論システムの実行機構への貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232146,9 +232132,9 @@
       "identity_tokens": [
         "DOI:10.1109/eit63098.2024.10762107"
       ],
-      "reason": "高齢者向け在宅ケア用の音声対話システムをRWKVのLoRA微調整で構築した応用事例であり、推論基盤への貢献ではなく対話応答の流暢さが評価軸である。",
+      "reason": "高齢者向け在宅介護の音声対話システムをRWKVモデルで構築した応用報告であり、対話システムの適用が主題で推論システムの技術への貢献は確認できないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232160,9 +232146,9 @@
       "identity_tokens": [
         "DOI:10.1109/ijcnn64981.2025.11227404"
       ],
-      "reason": "Mambaを画像-テキスト融合に使うマルチモーダル感情分析モデルであり、対象は感情分類精度で、LLM推論・サービングへの貢献はない。",
+      "reason": "画像とテキストの相互作用を使う多スケール系列融合のマルチモーダル感情分析モデルであり、感情分類タスクが対象でLLM推論システムとは無関係のため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232174,9 +232160,9 @@
       "identity_tokens": [
         "DOI:10.1117/12.3057080"
       ],
-      "reason": "画像のモアレ除去を視覚状態空間モデルで行う画像処理応用であり、線形計算量はモデル選択の動機に過ぎず推論システムの対象ではない。",
+      "reason": "画像のモアレ除去に視覚状態空間モデルを用いるDemoiréingMambaの研究であり、画像復元タスクが対象でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232189,9 +232175,9 @@
         "DOI:10.48550/arxiv.2502.06521",
         "arXiv:2502.06521"
       ],
-      "reason": "プロベナンスグラフと意図分析でAPTを検出するセキュリティ応用であり、LLM推論システムとは無関係な脅威検出精度の研究である。",
+      "reason": "持続的標的型攻撃をプロベナンスグラフと振る舞い意図分析で検出するSentientのセキュリティ研究であり、脅威検出が対象でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232217,9 +232203,9 @@
       "identity_tokens": [
         "arXiv:2502.20852"
       ],
-      "reason": "Meta-in-Context LearningとDelta則を組み合わせたMRI超解像モデルであり、対象は医用画像の解像度向上で推論システムへの貢献はない。",
+      "reason": "MRI超解像にメタ文脈内学習器Delta-WKVを用いる医療画像応用であり、画像再構成が目的でLLM推論システムへの技術的貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232231,27 +232217,13 @@
       "identity_tokens": [
         "arXiv:2506.00588"
       ],
-      "reason": "睡眠相で生成したチャンクタグで系列パターンを認識する神経着想のパイロット研究であり、合成環境での学習能力の検証で推論実行の高速化ではない。",
+      "reason": "時間系列を文脈タグ付きチャンクへ圧縮して暗黙パターンの認識を高める神経着想の pilot 研究であり、系列学習の認知モデルが主題でLLM推論システムの技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
       "title": "Temporal Chunking Enhances Recognition of Implicit Sequential Patterns"
-    },
-    "arXiv:2509.11167": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2509.11167",
-      "identity_tokens": [
-        "arXiv:2509.11167"
-      ],
-      "reason": "SFTチェックポイント群を曲率情報で重み付け統合するモデルマージ手法であり、対象は学習後統合の干渉低減で、推論時の計算やメモリへの貢献はない。",
-      "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "title": "Harnessing Optimization Dynamics for Curvature-Informed Model Merging"
     },
     "arXiv:2510.06532": {
       "classification": "unrelated",
@@ -232259,9 +232231,9 @@
       "identity_tokens": [
         "arXiv:2510.06532"
       ],
-      "reason": "共有ansatzの全量子トークンミキサでテキスト分類を行う量子NLPの試作であり、古典LLM推論システムの実行効率を扱うものではない。",
+      "reason": "テキスト分類向けの全量子トークンミキサCLAQSの量子NLP研究であり、量子回路による分類器が対象で古典的なLLM推論システムへの貢献は確認できないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232273,9 +232245,9 @@
       "identity_tokens": [
         "arXiv:2511.12671"
       ],
-      "reason": "非因果SSMでオプティカルフローと視差を推定するリアルタイム視覚知覚モデルであり、対象は3D知覚精度とその推論時間でLLM推論基盤ではない。",
+      "reason": "光学フローと視差推定を非因果状態空間双対性で実時間化するVision Mambaの研究であり、密な視覚知覚タスクが対象でLLM推論システムの技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232287,9 +232259,9 @@
       "identity_tokens": [
         "DOI:10.1109/icmcce63640.2024.11163448"
       ],
-      "reason": "CNN-Mamba等を音声性能分析タスクで比較する信号処理応用であり、モデル比較が中心で推論システムへの技術的貢献はない。",
+      "reason": "CNNとMambaを組み合わせて音声パフォーマンスを分析する研究であり、音声タスクへのモデル適用が対象でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232301,9 +232273,9 @@
       "identity_tokens": [
         "DOI:10.1109/jsen.2025.3620206"
       ],
-      "reason": "EEG記録から眼球アーティファクトを除去する状態空間モデルの医用信号処理応用であり、モバイル言及もLLM推論とは無関係である。",
+      "reason": "EEG記録から眼球アーティファクトを状態空間モデルで除去する研究であり、脳波信号処理の応用が対象でLLM推論システムとは無関係のため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232315,9 +232287,9 @@
       "identity_tokens": [
         "DOI:10.1109/tip.2025.3597041"
       ],
-      "reason": "点群補完専用のSSMネットワークで、局所SSMとshape-aware MambaによりMVP/PCNでの3D形状再構成精度を競う内容であり、LLM推論システムへの技術的貢献はない。",
+      "reason": "点群補完に状態空間モデルを用いるCompletionMambaの研究であり、3D形状再構成が対象であってLLM推論システムの技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232329,9 +232301,9 @@
       "identity_tokens": [
         "DOI:10.1145/3746027.3755677"
       ],
-      "reason": "音楽条件付きダンス振付生成フレームワークで、Mamba2の並列スキャンはダンス拡散モデルの軽量化用途に限られ、LLM推論基盤とは無関係である。",
+      "reason": "舞踊ジャンルの基本動作から長いダンスモーションを効率生成するEDMGの研究であり、動作生成の応用が対象でLLM推論システムとは無関係のため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232357,9 +232329,9 @@
       "identity_tokens": [
         "arXiv:2210.10300"
       ],
-      "reason": "deformable attentionでフレーム特徴をサンプリングするVideoQAの組成推論手法であり、対象は映像質問応答の能力向上で、LLMサービングやデコード最適化ではない。",
+      "reason": "複合的推論を要するVideoQAを密な手法で解く初期のTransformer研究であり、動画質問応答の精度が対象でLLM推論システムへの貢献は確認できないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232371,9 +232343,9 @@
       "identity_tokens": [
         "arXiv:2410.06285"
       ],
-      "reason": "LiDARマップに対する単眼カメラ位置認識のためのVMamba記述子学習であり、自動運転のローカライゼーション応用で、LLM推論システムとは無関係である。",
+      "reason": "LiDARマップ内での単眼カメラ位置認識に跨モーダル状態空間モデルを用いる研究であり、自己位置推定が対象でLLM推論システムの技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232385,9 +232357,9 @@
       "identity_tokens": [
         "arXiv:2501.16384"
       ],
-      "reason": "画像誘導の点群補完・強調を対象とする集約型選択的SSMモデルであり、3Dビジョン応用の精度改善が目的で、LLM推論への直接貢献はない。",
+      "reason": "選択的状態空間モデルで跨モーダル点群を強調するMambaTronの研究であり、点群補完・強調が対象でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232399,9 +232371,9 @@
       "identity_tokens": [
         "arXiv:2506.06275"
       ],
-      "reason": "長編映画理解を測るベンチマークMF2の提案とVLM評価のみであり、推論システムの機構や高速化手法は含まれていない。",
+      "reason": "長編映画の物語理解を測るベンチマークMF2の提案であり、ビジョン言語モデルの能力評価が主題で推論システムの実行技術への貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232413,9 +232385,9 @@
       "identity_tokens": [
         "arXiv:2510.06915"
       ],
-      "reason": "長文脈報酬モデルの評価ベンチマークLong-RewardBenchと多段階学習戦略の提案で、対象は報酬モデルの能力・整合性であり推論実行系の貢献ではない。",
+      "reason": "長文脈での報酬モデルの文脈境界を明らかにするLongRMの研究であり、選好整合のための報酬モデルが対象で推論システムの機構ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232427,9 +232399,9 @@
       "identity_tokens": [
         "DOI:10.21437/interspeech.2025-1624"
       ],
-      "reason": "低資源ASRにおけるConformerとConMambaの性能・効率の比較評価であり、音声認識応用の実証に留まりLLM推論システムの新機構はない。",
+      "reason": "低資源言語の音声認識でMamba系ASRの性能と効率を評価した研究であり、ASRモデルの比較評価が対象でLLM推論システムへの貢献は確認できないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232441,9 +232413,9 @@
       "identity_tokens": [
         "arXiv:2409.10376"
       ],
-      "reason": "マルチチャネル音声強調のためのスペクトル・空間学習モデルMCMambaであり、音響信号処理応用でLLM推論基盤とは無関係である。",
+      "reason": "多チャネル音声強調にスペクトルと空間の joint 学習とMAMBAを用いる研究であり、音声信号処理が対象でLLM推論システムの技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232455,9 +232427,9 @@
       "identity_tokens": [
         "arXiv:2502.17873"
       ],
-      "reason": "長系列EEG信号の自己教師あり表現学習フレームワークであり、生体信号モデリング応用で、LLM推論システムへの貢献はない。",
+      "reason": "長系列EEGモデリングのための効率的自己教師あり枠組みの研究であり、脳波信号の表現学習が対象でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232469,9 +232441,9 @@
       "identity_tokens": [
         "arXiv:2505.04201"
       ],
-      "reason": "触覚常識推論のデータセットとMoEによる触覚・言語統合フレームワークであり、マルチモーダル能力応用で推論基盤の機構ではない。",
+      "reason": "触覚と言語を統合し触覚常識推論を行うSToLaの研究であり、触覚モダリティの理解が主題でLLM推論システムの実行技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232483,9 +232455,9 @@
       "identity_tokens": [
         "arXiv:2509.23655"
       ],
-      "reason": "VLAモデルの視覚トークン化を物体中心に変えて学習効率を上げる提案であり、対象はロボット操作学習の訓練高速化で推論サービングではない。",
+      "reason": "視覚言語行動モデルの視覚トークン化を物体中心にして学習コストを下げる研究であり、ロボット学習の効率化が対象で推論時の実行機構への貢献ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232497,9 +232469,9 @@
       "identity_tokens": [
         "arXiv:2511.08872"
       ],
-      "reason": "3D人体姿勢推定のための構造認識ストライドSSMであり、姿勢推定応用の精度改善が目的でLLM推論とは無関係である。",
+      "reason": "3D人体姿勢推定に軽量な構造認識型状態空間モデルを用いるSasMambaの研究であり、姿勢推定タスクが対象でLLM推論システムへの貢献はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232511,9 +232483,9 @@
       "identity_tokens": [
         "DOI:10.1109/icme59968.2025.11208900"
       ],
-      "reason": "mmWaveレーダ点群による行動認識のための時空間Point Mambaであり、センシング応用でLLM推論システムとは無関係である。",
+      "reason": "ミリ波レーダ点群による行動認識に時空間Point Mambaを用いる研究であり、レーダ sensing の認識応用でLLM推論システムとは無関係のため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232525,9 +232497,9 @@
       "identity_tokens": [
         "DOI:10.1109/jstars.2025.3627916"
       ],
-      "reason": "ハイパースペクトル・マルチスペクトル画像融合のノイズ耐性SSMネットワークであり、リモートセンシング画像処理応用に限られる。",
+      "reason": "ハイパースペクトルとマルチスペクトルの画像融合にSSM系の抗ノイズ網を用いるAHMNetの研究であり、リモートセンシング画像処理が対象でLLM推論との関係はないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232539,9 +232511,9 @@
       "identity_tokens": [
         "DOI:10.1145/3774887"
       ],
-      "reason": "不完全点群の補完を構造化SSMで高効率化する3Dビジョン手法であり、対象は点群再構成の精度と効率でLLM推論基盤への貢献はない。",
+      "reason": "点群補完を高効率に行う構造化状態空間モデルの研究であり、3D形状再構成が対象であってLLM推論システムの技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:19+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232553,9 +232525,9 @@
       "identity_tokens": [
         "DOI:10.23919/date64628.2025.10992973"
       ],
-      "reason": "姿勢データを線形回帰ユニットで処理するエッジ向け時間的行動分節モデルであり、対象は行動認識タスクのリアルタイム性でLLM推論基盤ではない。",
+      "reason": "エッジデバイス向けのオンライン長範囲行動分節モデルOLORASの研究であり、行動分節タスクのエッジ実装が対象でLLM推論システムの技術ではないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -232568,9 +232540,9 @@
         "DOI:10.48550/arxiv.2509.08150",
         "arXiv:2509.08150"
       ],
-      "reason": "LLMと保証付きアルゴリズムを組み合わせるverbalized algorithmsという推論パラダイムの提案であり、推論実行系の速度・メモリ・スケジューリングへの貢献はない。",
+      "reason": "LLMの自由形式推論に保証付きアルゴリズムを言語化して組み合わせる範式の提案であり、推論の方法論が主題で推論システムの実行効率への貢献は確認できないため対象外とした。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -235918,6 +235890,161 @@
         "worker-worklist discovery_review"
       ],
       "title": "A Practical Study on Fine-Tuning Large Multimodal Models for Power Industry Applications: From Domestic Hardware Adaptation to Deployment in Smart Safety Systems"
+    },
+    "DOI:10.1145/3729292": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3729292",
+      "identity_tokens": [
+        "DOI:10.1145/3729292"
+      ],
+      "reason": "ブラックボックスなサブルーチン合成の局所性を高める軽量な合成手法の研究であり、対象は一般のソフトウェア合成と演算子融合でLLM推論システムへの直接の貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Lightweight and Locality-Aware Composition of Black-Box Subroutines"
+    },
+    "arXiv:2505.01224": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.01224",
+      "identity_tokens": [
+        "arXiv:2505.01224"
+      ],
+      "reason": "水中画像強調に価値駆動の再順序走査を用いるVRS-UIEの研究であり、画像強調タスクが対象でLLM推論システムへの貢献はないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "VRS-UIE: Value-Driven Reordering Scanning for Underwater Image Enhancement"
+    },
+    "arXiv:2506.12810": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.12810",
+      "identity_tokens": [
+        "arXiv:2506.12810"
+      ],
+      "reason": "カオスの onset におけるLyapunov学習で非定常時系列へ適応する研究であり、オンライン学習の理論・手法が主題でLLM推論システムの技術ではないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Lyapunov Learning at the Onset of Chaos"
+    },
+    "arXiv:2508.09153": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.09153",
+      "identity_tokens": [
+        "arXiv:2508.09153"
+      ],
+      "reason": "時系列解析で系列ミキサを密な処理に置き換えるJustDenseの研究であり、時系列モデルの構造論が対象でLLM推論システムへの貢献はないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "JustDense: Just Using Dense Instead of Sequence Mixer for Time Series Analysis"
+    },
+    "arXiv:2509.20789": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.20789",
+      "identity_tokens": [
+        "arXiv:2509.20789"
+      ],
+      "reason": "状態空間モデルの帰納バイアスをデータ効率のよい汎化へ整合させる研究であり、学習のデータ効率が主題で推論実行の効率化機構ではないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Aligning Inductive Bias for Data-Efficient Generalization in State Space Models"
+    },
+    "arXiv:2510.13163": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13163",
+      "identity_tokens": [
+        "arXiv:2510.13163"
+      ],
+      "reason": "グラフ構造の抽象コード生成をLLMで扱う表現の問題を論じる研究であり、コード生成の表現形式が対象で推論システムの実行技術への貢献はないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Matter of Representation: Towards Graph-Based Abstract Code Generation"
+    },
+    "arXiv:2511.15077": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.15077",
+      "identity_tokens": [
+        "arXiv:2511.15077"
+      ],
+      "reason": "LiDAR点群の3D物体追跡に状態空間モデルを用いるMambaTrack3Dの研究であり、自動運転向け追跡タスクが対象でLLM推論システムの技術ではないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MambaTrack3D: A State Space Model Framework for LiDAR-Based Object Tracking under High Temporal Variation"
+    },
+    "arXiv:2512.00647": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00647",
+      "identity_tokens": [
+        "arXiv:2512.00647"
+      ],
+      "reason": "Vision Mambaのトークンを粗密に絞って効率化するMambaScopeの研究であり、視覚モデルの入力削減が対象でLLM推論システムへの直接の貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MambaScope: Coarse-to-Fine Scoping for Efficient Vision Mamba"
+    },
+    "DOI:10.1145/3772356.3772410": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3772356.3772410",
+      "identity_tokens": [
+        "DOI:10.1145/3772356.3772410"
+      ],
+      "reason": "データセンター間のインキャストをプロキシで緩和するネットワーク研究であり、対象は多対一通信の輻輳制御でLLM推論の実行機構への直接の貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Mitigating Inter-datacenter Incast with a Proxy: The shortest path is not necessarily the fastest"
+    },
+    "arXiv:2012.01839": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.01839",
+      "identity_tokens": [
+        "arXiv:2012.01839"
+      ],
+      "reason": "ニューラルネットの分散学習とハイパーパラメータ最適化を論じる研究であり、学習側の計算資源の話でLLM推論システムへの貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Distributed Training and Optimization Of Neural Networks"
+    },
+    "DOI:10.48550/arxiv.2405.18884": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2405.18884",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2405.18884",
+        "arXiv:2405.18884"
+      ],
+      "reason": "ブラックボックス離散最適化のための汎用ニューラル最適化器MEGOの研究であり、ここでの専門家混合は最適化器の構造であってLLM推論システムへの貢献はないため対象外とした。",
+      "first_checked_at": "2026-11-26T07:54:18+00:00",
+      "last_checked_at": "2026-11-26T07:54:18+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Learning Mixture-of-Experts for General-Purpose Black-Box Discrete Optimization"
     }
   }
 }

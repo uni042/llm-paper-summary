@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8c74e444b6e6d5c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.06285",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.06285",
+    "identity_tokens": [
+      "arXiv:2410.06285"
+    ],
+    "reason": "LiDARマップ内での単眼カメラ位置認識に跨モーダル状態空間モデルを用いる研究であり、自己位置推定が対象でLLM推論システムの技術ではないため対象外とした。",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T07:54:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Monocular Visual Place Recognition in LiDAR Maps via Cross-Modal State Space Model and Multi-View Matching"
+  },
+  "processed_at": "2026-11-26T07:54:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8c74e444b6e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

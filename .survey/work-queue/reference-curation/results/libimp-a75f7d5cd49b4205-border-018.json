@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a75f7d5cd49b4205-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.06441",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.06441",
+    "identity_tokens": [
+      "arXiv:2511.06441"
+    ],
+    "reason": "テキストやマルチモーダルのクエリを学習型ルータで適切な専門家モデルへ振り分け高価なLLM利用を67%減らす枠組みであり、推論コスト削減には直接関わるが、機構はクエリ単位のモデル選択という上位の編成にとどまるため境界とした。",
+    "first_checked_at": "2026-11-26T07:54:18+00:00",
+    "last_checked_at": "2026-11-26T07:54:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Resource-Efficient Multimodal Intelligence: Learned Routing among Specialized Expert Models"
+  },
+  "processed_at": "2026-11-26T07:54:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a75f7d5cd49b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

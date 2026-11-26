@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c93fd5e24d3a3384-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.09647",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.09647",
+    "identity_tokens": [
+      "arXiv:2510.09647"
+    ],
+    "reason": "モデル量子化の丸めを悪用してバックドアを埋め込む攻撃QuRAの研究であり、量子化という推論配備技術の安全性には関わるが、効率化の機構ではなく攻撃手法のため境界とした。",
+    "first_checked_at": "2026-11-26T07:54:18+00:00",
+    "last_checked_at": "2026-11-26T07:54:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rounding-Guided Backdoor Injection in Deep Learning Model Quantization"
+  },
+  "processed_at": "2026-11-26T07:54:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c93fd5e24d3a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

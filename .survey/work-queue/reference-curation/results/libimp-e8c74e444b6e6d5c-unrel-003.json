@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8c74e444b6e6d5c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.10300",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.10300",
+    "identity_tokens": [
+      "arXiv:2210.10300"
+    ],
+    "reason": "複合的推論を要するVideoQAを密な手法で解く初期のTransformer研究であり、動画質問応答の精度が対象でLLM推論システムへの貢献は確認できないため対象外とした。",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T07:54:19+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Dense but Efficient VideoQA for Intricate Compositional Reasoning"
+  },
+  "processed_at": "2026-11-26T07:54:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8c74e444b6e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

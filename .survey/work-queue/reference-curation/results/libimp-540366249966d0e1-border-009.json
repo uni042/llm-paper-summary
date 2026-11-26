@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-540366249966d0e1-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.18113",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.18113",
+    "identity_tokens": [
+      "arXiv:2501.18113"
+    ],
+    "reason": "gem5のGPUモデルへ行列コアのMFMA命令サポートを追加しMLワークロードのシミュレーションを可能にする研究であり、推論ハードウェアの計測基盤としては関連するが、対象はシミュレータ拡張であり実行機構そのものではないため境界とした。",
+    "first_checked_at": "2026-11-26T07:54:18+00:00",
+    "last_checked_at": "2026-11-26T07:54:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adding MFMA Support to gem5"
+  },
+  "processed_at": "2026-11-26T07:54:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-540366249966",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

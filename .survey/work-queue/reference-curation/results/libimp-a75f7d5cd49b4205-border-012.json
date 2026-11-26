@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a75f7d5cd49b4205-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.10263",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.10263",
+    "identity_tokens": [
+      "arXiv:2406.10263"
+    ],
+    "reason": "コード補完で検索を適応的に行い批評モデルで文脈を選ぶ軽量枠組みであり、LLMへ渡す文脈と生成回数の削減という推論入力効率には関わるが、補完システムの工夫にとどまるため境界とした。",
+    "first_checked_at": "2026-11-26T00:55:53+00:00",
+    "last_checked_at": "2026-11-26T07:54:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Lightweight Framework for Adaptive Retrieval In Code Completion With Critique Model"
+  },
+  "processed_at": "2026-11-26T07:54:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a75f7d5cd49b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

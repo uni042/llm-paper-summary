@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9c8bb97a50eb81ee-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.00588",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.00588",
+    "identity_tokens": [
+      "arXiv:2506.00588"
+    ],
+    "reason": "時間系列を文脈タグ付きチャンクへ圧縮して暗黙パターンの認識を高める神経着想の pilot 研究であり、系列学習の認知モデルが主題でLLM推論システムの技術ではないため対象外とした。",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T07:54:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Temporal Chunking Enhances Recognition of Implicit Sequential Patterns"
+  },
+  "processed_at": "2026-11-26T07:54:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9c8bb97a50eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

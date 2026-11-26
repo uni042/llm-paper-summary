@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c93fd5e24d3a3384-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2012.01839",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2012.01839",
+    "identity_tokens": [
+      "arXiv:2012.01839"
+    ],
+    "reason": "ニューラルネットの分散学習とハイパーパラメータ最適化を論じる研究であり、学習側の計算資源の話でLLM推論システムへの貢献は確認できないため対象外とした。",
+    "first_checked_at": "2026-11-26T07:54:18+00:00",
+    "last_checked_at": "2026-11-26T07:54:18+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Distributed Training and Optimization Of Neural Networks"
+  },
+  "processed_at": "2026-11-26T07:54:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c93fd5e24d3a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
