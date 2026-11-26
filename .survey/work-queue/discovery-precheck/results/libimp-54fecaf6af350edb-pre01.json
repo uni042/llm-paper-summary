@@ -1,0 +1,149 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-54fecaf6af350edb-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-54fecaf6af35",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2603.10335"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3a1b4e21861dd9823ba1c48f1081a377aad4b16b",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T08:05:25.555755+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2603.10335",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Fuel Gauge: Estimating Chain-of-Thought Length Ahead of Time in Large Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2603.10335",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning Large Multi-modality Models (LMMs) have become the de facto choice for many applications. However, these models rely on a Chain-of-Thought (CoT) process that is lengthy and unpredictable at runtime, often resulting in inefficient use of computational resources (due to memory fragmentation) and sub-optimal accuracy (due to under- and over-thinking). We observe empirically that the CoT process follows a very simple form, whose behavior is independent of the specific generated samples. This suggests that the CoT length can be estimated ahead of time based on a hidden parameter representing the amount of\"fuel\"available to support the reasoning process. Based on this insight, we propose Fuel Gauge, the first method which extracts this hidden signal and predicts CoT length ahead of time. We demonstrate the utility on the Fuel Gauge on two downstream tasks: predictive KV cache allocation, which addresses memory fragmentation in LMM serving systems, and CoT length modulation, which mitigates under-thinking and over-thinking. Extensive experiments on LMMs across text-only, image-text, and video-text question answering benchmarks demonstrate the effectiveness, generalizability, and practical value of our Fuel Gauge. For example, on the GPQA-Diamond benchmark, our Fuel Gauge achieves less than half the CoT length prediction error compared to the baseline; this translates into a 13.37x reduction in the memory allocation frequency.",
+      "identifiers": [
+        "SemanticScholar:ae3bf5ab73d987116bc27cd7776bb00f36cd6f53"
+      ],
+      "semantic_scholar_id": "ae3bf5ab73d987116bc27cd7776bb00f36cd6f53",
+      "canonical_id": "arXiv:2603.10335",
+      "arxiv_id": "2603.10335",
+      "doi": "10.48550/arXiv.2603.10335",
+      "authors": [
+        "Yue-Dong Yang",
+        "Xi-Wen Wei",
+        "Mustafa Munir",
+        "R. Mărculescu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 260,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.10335",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.10335",
+        "id:SemanticScholar:ae3bf5ab73d987116bc27cd7776bb00f36cd6f53",
+        "id:arXiv:2603.10335",
+        "title:fuel gauge estimating chainofthought length ahead of time in large multimodal models",
+        "url:https://arxiv.org/abs/2603.10335"
+      ],
+      "record": {
+        "title": "Fuel Gauge: Estimating Chain-of-Thought Length Ahead of Time in Large Multimodal Models",
+        "source_url": "https://arxiv.org/abs/2603.10335",
+        "year": 2026,
+        "published": "2026-03-11",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning Large Multi-modality Models (LMMs) have become the de facto choice for many applications. However, these models rely on a Chain-of-Thought (CoT) process that is lengthy and unpredictable at runtime, often resulting in inefficient use of computational resources (due to memory fragmentation) and sub-optimal accuracy (due to under- and over-thinking). We observe empirically that the CoT process follows a very simple form, whose behavior is independent of the specific generated samples. This suggests that the CoT length can be estimated ahead of time based on a hidden parameter representing the amount of\"fuel\"available to support the reasoning process. Based on this insight, we propose Fuel Gauge, the first method which extracts this hidden signal and predicts CoT length ahead of time. We demonstrate the utility on the Fuel Gauge on two downstream tasks: predictive KV cache allocation, which addresses memory fragmentation in LMM serving systems, and CoT length modulation, which mitigates under-thinking and over-thinking. Extensive experiments on LMMs across text-only, image-text, and video-text question answering benchmarks demonstrate the effectiveness, generalizability, and practical value of our Fuel Gauge. For example, on the GPQA-Diamond benchmark, our Fuel Gauge achieves less than half the CoT length prediction error compared to the baseline; this translates into a 13.37x reduction in the memory allocation frequency.",
+        "identifiers": [
+          "SemanticScholar:ae3bf5ab73d987116bc27cd7776bb00f36cd6f53"
+        ],
+        "semantic_scholar_id": "ae3bf5ab73d987116bc27cd7776bb00f36cd6f53",
+        "canonical_id": "arXiv:2603.10335",
+        "arxiv_id": "2603.10335",
+        "doi": "10.48550/arXiv.2603.10335",
+        "authors": [
+          "Yue-Dong Yang",
+          "Xi-Wen Wei",
+          "Mustafa Munir",
+          "R. Mărculescu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 260,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:70bb27c1a5251cf9c5db2f8fb0e0afa1bea2f88e259e55395787aed9dd4283b3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

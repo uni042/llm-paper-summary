@@ -1,0 +1,518 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-720f83283f884387-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-720f83283f88",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tmc.2026.3723098",
+    "arXiv:2209.09130",
+    "arXiv:2603.01960",
+    "arXiv:2604.08585",
+    "arXiv:2605.20936"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3a1b4e21861dd9823ba1c48f1081a377aad4b16b",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T08:05:27.928008+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tmc.2026.3723098",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2209.09130",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.01960",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.08585",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.20936",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SAMP: A Model Inference Toolkit of Post-Training Quantization for Text Processing via Self-Adaptive Mixed-Precision",
+      "source_url": "https://arxiv.org/abs/2209.09130",
+      "year": 2022,
+      "published": "2022-09-19",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The latest industrial inference engines, such as FasterTransformer and TurboTransformers, have verified that half-precision floating point (FP16) and 8-bit integer (INT8) quantization can greatly improve model inference speed. However, the existing INT8 quantization methods are too complicated, and improper usage will lead to model performance damage greatly. In this paper, we develop a toolkit for users to easily quantize their models for inference, in which Self-Adaptive Mixed-Precision (SAMP) is proposed to automatically control quantization rate by a mixed-precision architecture to balance model accuracy and efficiency. Experimental results show that our SAMP toolkit has a higher speedup than PyTorch and FasterTransformer while ensuring the required accuracy. In addition, SAMP is based on a modular design, decoupling the tokenizer, embedding, encoder and target layers, which allows users to handle various downstream tasks and can be seamlessly integrated into PyTorch.",
+      "identifiers": [
+        "SemanticScholar:dc6d6690ba94fb8472fdc283576b048a7da5f1a4"
+      ],
+      "semantic_scholar_id": "dc6d6690ba94fb8472fdc283576b048a7da5f1a4",
+      "canonical_id": "arXiv:2209.09130",
+      "arxiv_id": "2209.09130",
+      "doi": "10.18653/v1/2023.emnlp-industry.13",
+      "authors": [
+        "Rong Tian",
+        "Zi-Jing Zhao",
+        "Wei-Jie Liu",
+        "Haoyan Liu",
+        "Weiquan Mao",
+        "Zhe Zhao",
+        "Kan Zhou"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1529,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "TiledAttention: a CUDA Tile SDPA Kernel for PyTorch",
+      "source_url": "https://arxiv.org/abs/2603.01960",
+      "year": 2026,
+      "published": "2026-03-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "TiledAttention is a scaled dot-product attention (SDPA) forward operator for SDPA research on NVIDIA GPUs. Implemented in cuTile Python (TileIR) and exposed as a PyTorch-callable function, it is easier to modify than low-level CUDA templates while retaining realistic behavior via online softmax and tiled $K,V$ streaming. Algorithmically, TiledAttention follows the established FlashAttention-style online-softmax formulation; our novelty is the cuTile/TileIR implementation strategy, schedule-level modifiability, and reproducible benchmarking/profiling workflow. The approach is both performant and directly editable at the schedule level from Python (tile shapes, staging, shared-memory layout), enabling rapid, reproducible kernel research without template-heavy CUDA/CUTLASS rewrites. We benchmark TiledAttention on an NVIDIA DGX GB10 node with a reproducible harness and compare against PyTorch SDPA (auto-dispatch), explicit unfused baselines (torch_sdpa_math, standard eager attention), and forced backend probes (FlashAttention2, EffecientAttention, CuDNN Attention) across sequence length, head dimension, and precision (FP16/BF16). While production fused baselines remain stronger overall, TiledAttention delivers large speedups over standard eager attention paths and is available for direct use within PyTorch workflows, providing a practical balance between performance and customizability.",
+      "identifiers": [
+        "SemanticScholar:037775ffc2769645924be442fb42f5f3035977ef"
+      ],
+      "semantic_scholar_id": "037775ffc2769645924be442fb42f5f3035977ef",
+      "canonical_id": "arXiv:2603.01960",
+      "arxiv_id": "2603.01960",
+      "doi": "10.48550/arXiv.2603.01960",
+      "authors": [
+        "Taimur Khan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 269,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QCFuse: Query-Centric Cache Fusion for Efficient RAG Inference",
+      "source_url": "https://arxiv.org/abs/2604.08585",
+      "year": 2026,
+      "published": "2026-03-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cache fusion accelerates generation process of LLMs equipped with RAG through KV caching and selective token recomputation, thereby reducing computational costs and improving efficiency. However, existing methods primarily rely on local perspectives for token selection and lack global awareness from the user query. Utilizing this global awareness is challenging due to the high cost of obtaining context-aware query representations and the strict pipeline constraints required for efficient attention analysis. Thus, this demonstration introduces QCFuse, an innovative KV cache fusion system centered on the user query. QCFuse leverages semantic summary anchors to enhance query representations and selectively recomputes query-related tokens to improve accuracy, updating tokens based on the attention distribution of the most critical Transformer layer to preserve the high efficiency of the pipeline structure. Evaluations on real-world datasets demonstrate that QCFuse significantly improves the response efficiency of LLMs by 40\\% while maintaining equivalent accuracy compared to current methods. Additionally, in certain scenarios, QCFuse achieves an attention denoising effect that yields higher response accuracy, demonstrating substantial potential in the optimization of LLM inference.",
+      "identifiers": [
+        "SemanticScholar:165de4811dbe7c8bef61eeb8c46abcd8c23fe3fb"
+      ],
+      "semantic_scholar_id": "165de4811dbe7c8bef61eeb8c46abcd8c23fe3fb",
+      "canonical_id": "arXiv:2604.08585",
+      "arxiv_id": "2604.08585",
+      "doi": "10.48550/arXiv.2604.08585",
+      "authors": [
+        "Jianxin Yan",
+        "Zeheng Qian",
+        "Wang-Ze Ni",
+        "Zhi-Tao Shen",
+        "Zhiping Wang",
+        "Hao-Yang Li",
+        "Jia Zhu",
+        "Lei Chen",
+        "Kui Ren"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 241,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DASH: Fast Differentiable Architecture Search for Hybrid Attention in Minutes on a Single GPU",
+      "source_url": "https://arxiv.org/abs/2605.20936",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid attention architectures are becoming an increasingly important paradigm for improving LLM inference efficiency while preserving model quality, making hybrid architecture design a central problem. Existing designs often rely on manual empirical rules or proxy-based selector signals for layer-wise operator allocation. Recent NAS-style systems such as Jet-Nemotron demonstrate the promise of automated hybrid architecture search. However, Jet-Nemotron's PostNAS search stages alone use 200B tokens, making such search pipelines difficult to use as routine methods for hybrid architecture design. We introduce DASH, a fast differentiable search framework for hybrid attention architecture design, which relaxes discrete layer-wise attention operator placement into continuous architecture logits, prepares reusable teacher-aligned linear candidates, and performs architecture-only search with model and operator weights frozen to significantly enhance search efficiency. On Qwen2.5-3B-Instruct, DASH consistently outperforms a comprehensive suite of existing selector-style hybrid attention design baselines, showing that direct differentiable search can discover stronger hybrid architectures. Moreover, DASH achieves stronger RULER performance than released Jet-Nemotron models while remaining competitive on overlapping short-context and general benchmarks. Notably, each DASH search run uses only 12.3M tokens and takes about 20 minutes on a single RTX Pro 6000 GPU, corresponding to merely 0.006% of the PostNAS search tokens reported by Jet-Nemotron. These results suggest that high-quality hybrid attention architectures can be obtained through minutes-level differentiable search, providing a promising direction for hybrid architecture design.",
+      "identifiers": [
+        "SemanticScholar:f7590f70662386c94c9c700bff8f0249ab8a8b05"
+      ],
+      "semantic_scholar_id": "f7590f70662386c94c9c700bff8f0249ab8a8b05",
+      "canonical_id": "arXiv:2605.20936",
+      "arxiv_id": "2605.20936",
+      "doi": "10.48550/arXiv.2605.20936",
+      "authors": [
+        "Wei-Zhe Chen",
+        "Miao Zhang",
+        "Jun-Peng Jiang",
+        "Ya-Ping Li",
+        "Wei-Li Guan",
+        "Li-Qiang Nie"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Communication-Budgeted Chunk-Aware Mixed Model Parallelism for Collaborative Inference",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3723098",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": "IEEE Transactions on Mobile Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Collaborative inference enables large Transformer models to run on resource-constrained edge clusters by partitioning computation across heterogeneous devices. However, edge links are often bandwidth limited and volatile, making static parallel configurations fragile. This paper presents ChAMP+, a communication-budgeted and chunk-aware mixed model parallelism system that adapts the mix of tensor parallelism (TP) and pipeline parallelism (PP) through fine-grained Transformer execution chunks, including TP groups, head-level and FFN-width shards, PP layer segments, and TP-prefix mixed execution. ChAMP+ leverages a window and slice based bandwidth model to derive conservative communication budgets, and uses a Model Predictive Control (MPC) planner to select participating devices, form a TP group, decide the TP shard fractions, and determine the PP layer splits, including the TP-prefix ratio in the mixed plan. To avoid excessive plan churn under fast fluctuations, we use Reinforcement Learning (RL) only as a lightweight learning-augmented calibration layer that corrects residual scoring errors from online logs and adaptively strengthens the switching regularization when telemetry becomes spiky, while leaving MPC plan selection, feasibility checks, and slice-budget enforcement unchanged. We evaluate ChAMP+ on Jetson-based heterogeneous edge clusters and compare against MegatronLM-style TP, Galaxy+, and PP. ChAMP+ achieves up to 4.69× higher throughput than TP under low bandwidth budgets, and matches the strongest baseline under higher budgets, while consistently reducing latency variance under both bandwidth and device performance dynamics.",
+      "identifiers": [
+        "SemanticScholar:7a443a757fff03f7171f69364af39a374bb33b6a"
+      ],
+      "semantic_scholar_id": "7a443a757fff03f7171f69364af39a374bb33b6a",
+      "doi": "10.1109/TMC.2026.3723098",
+      "canonical_id": "DOI:10.1109/TMC.2026.3723098",
+      "authors": [
+        "Yulin Chen",
+        "Chao Qiu",
+        "Xiao-Fei Wang",
+        "Zhi-Cheng Liu",
+        "Yun-Feng Zhao",
+        "Ying-Gui Wang",
+        "Tao Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2209.09130",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2023.emnlp-industry.13",
+        "id:SemanticScholar:dc6d6690ba94fb8472fdc283576b048a7da5f1a4",
+        "id:arXiv:2209.09130",
+        "title:samp a model inference toolkit of posttraining quantization for text processing via selfadaptive mixedprecision",
+        "url:https://arxiv.org/abs/2209.09130"
+      ],
+      "record": {
+        "title": "SAMP: A Model Inference Toolkit of Post-Training Quantization for Text Processing via Self-Adaptive Mixed-Precision",
+        "source_url": "https://arxiv.org/abs/2209.09130",
+        "year": 2022,
+        "published": "2022-09-19",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The latest industrial inference engines, such as FasterTransformer and TurboTransformers, have verified that half-precision floating point (FP16) and 8-bit integer (INT8) quantization can greatly improve model inference speed. However, the existing INT8 quantization methods are too complicated, and improper usage will lead to model performance damage greatly. In this paper, we develop a toolkit for users to easily quantize their models for inference, in which Self-Adaptive Mixed-Precision (SAMP) is proposed to automatically control quantization rate by a mixed-precision architecture to balance model accuracy and efficiency. Experimental results show that our SAMP toolkit has a higher speedup than PyTorch and FasterTransformer while ensuring the required accuracy. In addition, SAMP is based on a modular design, decoupling the tokenizer, embedding, encoder and target layers, which allows users to handle various downstream tasks and can be seamlessly integrated into PyTorch.",
+        "identifiers": [
+          "SemanticScholar:dc6d6690ba94fb8472fdc283576b048a7da5f1a4"
+        ],
+        "semantic_scholar_id": "dc6d6690ba94fb8472fdc283576b048a7da5f1a4",
+        "canonical_id": "arXiv:2209.09130",
+        "arxiv_id": "2209.09130",
+        "doi": "10.18653/v1/2023.emnlp-industry.13",
+        "authors": [
+          "Rong Tian",
+          "Zi-Jing Zhao",
+          "Wei-Jie Liu",
+          "Haoyan Liu",
+          "Weiquan Mao",
+          "Zhe Zhao",
+          "Kan Zhou"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1529,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.01960",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.01960",
+        "id:SemanticScholar:037775ffc2769645924be442fb42f5f3035977ef",
+        "id:arXiv:2603.01960",
+        "title:tiledattention a cuda tile sdpa kernel for pytorch",
+        "url:https://arxiv.org/abs/2603.01960"
+      ],
+      "record": {
+        "title": "TiledAttention: a CUDA Tile SDPA Kernel for PyTorch",
+        "source_url": "https://arxiv.org/abs/2603.01960",
+        "year": 2026,
+        "published": "2026-03-02",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "TiledAttention is a scaled dot-product attention (SDPA) forward operator for SDPA research on NVIDIA GPUs. Implemented in cuTile Python (TileIR) and exposed as a PyTorch-callable function, it is easier to modify than low-level CUDA templates while retaining realistic behavior via online softmax and tiled $K,V$ streaming. Algorithmically, TiledAttention follows the established FlashAttention-style online-softmax formulation; our novelty is the cuTile/TileIR implementation strategy, schedule-level modifiability, and reproducible benchmarking/profiling workflow. The approach is both performant and directly editable at the schedule level from Python (tile shapes, staging, shared-memory layout), enabling rapid, reproducible kernel research without template-heavy CUDA/CUTLASS rewrites. We benchmark TiledAttention on an NVIDIA DGX GB10 node with a reproducible harness and compare against PyTorch SDPA (auto-dispatch), explicit unfused baselines (torch_sdpa_math, standard eager attention), and forced backend probes (FlashAttention2, EffecientAttention, CuDNN Attention) across sequence length, head dimension, and precision (FP16/BF16). While production fused baselines remain stronger overall, TiledAttention delivers large speedups over standard eager attention paths and is available for direct use within PyTorch workflows, providing a practical balance between performance and customizability.",
+        "identifiers": [
+          "SemanticScholar:037775ffc2769645924be442fb42f5f3035977ef"
+        ],
+        "semantic_scholar_id": "037775ffc2769645924be442fb42f5f3035977ef",
+        "canonical_id": "arXiv:2603.01960",
+        "arxiv_id": "2603.01960",
+        "doi": "10.48550/arXiv.2603.01960",
+        "authors": [
+          "Taimur Khan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 269,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.08585",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.08585",
+        "id:SemanticScholar:165de4811dbe7c8bef61eeb8c46abcd8c23fe3fb",
+        "id:arXiv:2604.08585",
+        "title:qcfuse querycentric cache fusion for efficient rag inference",
+        "url:https://arxiv.org/abs/2604.08585"
+      ],
+      "record": {
+        "title": "QCFuse: Query-Centric Cache Fusion for Efficient RAG Inference",
+        "source_url": "https://arxiv.org/abs/2604.08585",
+        "year": 2026,
+        "published": "2026-03-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Cache fusion accelerates generation process of LLMs equipped with RAG through KV caching and selective token recomputation, thereby reducing computational costs and improving efficiency. However, existing methods primarily rely on local perspectives for token selection and lack global awareness from the user query. Utilizing this global awareness is challenging due to the high cost of obtaining context-aware query representations and the strict pipeline constraints required for efficient attention analysis. Thus, this demonstration introduces QCFuse, an innovative KV cache fusion system centered on the user query. QCFuse leverages semantic summary anchors to enhance query representations and selectively recomputes query-related tokens to improve accuracy, updating tokens based on the attention distribution of the most critical Transformer layer to preserve the high efficiency of the pipeline structure. Evaluations on real-world datasets demonstrate that QCFuse significantly improves the response efficiency of LLMs by 40\\% while maintaining equivalent accuracy compared to current methods. Additionally, in certain scenarios, QCFuse achieves an attention denoising effect that yields higher response accuracy, demonstrating substantial potential in the optimization of LLM inference.",
+        "identifiers": [
+          "SemanticScholar:165de4811dbe7c8bef61eeb8c46abcd8c23fe3fb"
+        ],
+        "semantic_scholar_id": "165de4811dbe7c8bef61eeb8c46abcd8c23fe3fb",
+        "canonical_id": "arXiv:2604.08585",
+        "arxiv_id": "2604.08585",
+        "doi": "10.48550/arXiv.2604.08585",
+        "authors": [
+          "Jianxin Yan",
+          "Zeheng Qian",
+          "Wang-Ze Ni",
+          "Zhi-Tao Shen",
+          "Zhiping Wang",
+          "Hao-Yang Li",
+          "Jia Zhu",
+          "Lei Chen",
+          "Kui Ren"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 241,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.20936",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.20936",
+        "id:SemanticScholar:f7590f70662386c94c9c700bff8f0249ab8a8b05",
+        "id:arXiv:2605.20936",
+        "title:dash fast differentiable architecture search for hybrid attention in minutes on a single gpu",
+        "url:https://arxiv.org/abs/2605.20936"
+      ],
+      "record": {
+        "title": "DASH: Fast Differentiable Architecture Search for Hybrid Attention in Minutes on a Single GPU",
+        "source_url": "https://arxiv.org/abs/2605.20936",
+        "year": 2026,
+        "published": "2026-05-20",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid attention architectures are becoming an increasingly important paradigm for improving LLM inference efficiency while preserving model quality, making hybrid architecture design a central problem. Existing designs often rely on manual empirical rules or proxy-based selector signals for layer-wise operator allocation. Recent NAS-style systems such as Jet-Nemotron demonstrate the promise of automated hybrid architecture search. However, Jet-Nemotron's PostNAS search stages alone use 200B tokens, making such search pipelines difficult to use as routine methods for hybrid architecture design. We introduce DASH, a fast differentiable search framework for hybrid attention architecture design, which relaxes discrete layer-wise attention operator placement into continuous architecture logits, prepares reusable teacher-aligned linear candidates, and performs architecture-only search with model and operator weights frozen to significantly enhance search efficiency. On Qwen2.5-3B-Instruct, DASH consistently outperforms a comprehensive suite of existing selector-style hybrid attention design baselines, showing that direct differentiable search can discover stronger hybrid architectures. Moreover, DASH achieves stronger RULER performance than released Jet-Nemotron models while remaining competitive on overlapping short-context and general benchmarks. Notably, each DASH search run uses only 12.3M tokens and takes about 20 minutes on a single RTX Pro 6000 GPU, corresponding to merely 0.006% of the PostNAS search tokens reported by Jet-Nemotron. These results suggest that high-quality hybrid attention architectures can be obtained through minutes-level differentiable search, providing a promising direction for hybrid architecture design.",
+        "identifiers": [
+          "SemanticScholar:f7590f70662386c94c9c700bff8f0249ab8a8b05"
+        ],
+        "semantic_scholar_id": "f7590f70662386c94c9c700bff8f0249ab8a8b05",
+        "canonical_id": "arXiv:2605.20936",
+        "arxiv_id": "2605.20936",
+        "doi": "10.48550/arXiv.2605.20936",
+        "authors": [
+          "Wei-Zhe Chen",
+          "Miao Zhang",
+          "Jun-Peng Jiang",
+          "Ya-Ping Li",
+          "Wei-Li Guan",
+          "Li-Qiang Nie"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 190,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tmc.2026.3723098",
+      "identity_tokens": [
+        "id:DOI:10.1109/tmc.2026.3723098",
+        "id:SemanticScholar:7a443a757fff03f7171f69364af39a374bb33b6a",
+        "title:communicationbudgeted chunkaware mixed model parallelism for collaborative inference",
+        "url:https://doi.org/10.1109/TMC.2026.3723098"
+      ],
+      "record": {
+        "title": "Communication-Budgeted Chunk-Aware Mixed Model Parallelism for Collaborative Inference",
+        "source_url": "https://doi.org/10.1109/TMC.2026.3723098",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": "IEEE Transactions on Mobile Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Collaborative inference enables large Transformer models to run on resource-constrained edge clusters by partitioning computation across heterogeneous devices. However, edge links are often bandwidth limited and volatile, making static parallel configurations fragile. This paper presents ChAMP+, a communication-budgeted and chunk-aware mixed model parallelism system that adapts the mix of tensor parallelism (TP) and pipeline parallelism (PP) through fine-grained Transformer execution chunks, including TP groups, head-level and FFN-width shards, PP layer segments, and TP-prefix mixed execution. ChAMP+ leverages a window and slice based bandwidth model to derive conservative communication budgets, and uses a Model Predictive Control (MPC) planner to select participating devices, form a TP group, decide the TP shard fractions, and determine the PP layer splits, including the TP-prefix ratio in the mixed plan. To avoid excessive plan churn under fast fluctuations, we use Reinforcement Learning (RL) only as a lightweight learning-augmented calibration layer that corrects residual scoring errors from online logs and adaptively strengthens the switching regularization when telemetry becomes spiky, while leaving MPC plan selection, feasibility checks, and slice-budget enforcement unchanged. We evaluate ChAMP+ on Jetson-based heterogeneous edge clusters and compare against MegatronLM-style TP, Galaxy+, and PP. ChAMP+ achieves up to 4.69× higher throughput than TP under low bandwidth budgets, and matches the strongest baseline under higher budgets, while consistently reducing latency variance under both bandwidth and device performance dynamics.",
+        "identifiers": [
+          "SemanticScholar:7a443a757fff03f7171f69364af39a374bb33b6a"
+        ],
+        "semantic_scholar_id": "7a443a757fff03f7171f69364af39a374bb33b6a",
+        "doi": "10.1109/TMC.2026.3723098",
+        "canonical_id": "DOI:10.1109/TMC.2026.3723098",
+        "authors": [
+          "Yulin Chen",
+          "Chao Qiu",
+          "Xiao-Fei Wang",
+          "Zhi-Cheng Liu",
+          "Yun-Feng Zhao",
+          "Ying-Gui Wang",
+          "Tao Luo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 25,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8ebb3006f2ca7a58c814473bc8a4620935d14c098b678267b4783d1eea46ad6d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
