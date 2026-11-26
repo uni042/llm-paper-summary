@@ -1,0 +1,623 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261126-c2d03-b01",
+ "reference_main_sha": "2e85ebc167be60aa08d41b8b857b3b8fb4d30936",
+ "record_count": 36,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.18653/v1/2022.acl-long.107",
+   "identity_tokens": [
+    "DOI:10.18653/v1/2022.acl-long.107"
+   ],
+   "title": "Structured Pruning Learns Compact and Accurate Models",
+   "reason": "一次要旨で、増大する言語モデルの圧縮に対し構造化プルーニングで重みを段階的に除去し小さく正確なモデルを学習する手法が具体的に示され、推論向けモデル圧縮への直接貢献が確認できるため。",
+   "source_url": "https://doi.org/10.18653/v1/2022.acl-long.107",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 6
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2606.08425",
+   "identity_tokens": [
+    "arXiv:2606.08425"
+   ],
+   "title": "TinyGiantALM: A Compact Audio-Language Model for Intent-Aware Reasoning under Resource Constraints",
+   "reason": "一次要旨はリソース制約下向けに1.5Bのコンパクトな音声言語モデルとQuery-guided Projectorによる効率指向の構成を述べるが、貢献の中心はモデル学習・精度であり推論サービング機構の具体性が薄いため。",
+   "source_url": "https://arxiv.org/abs/2606.08425",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 471
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2402.10866",
+   "identity_tokens": [
+    "arXiv:2402.10866"
+   ],
+   "title": "EcoRank: Budget-Constrained Text Re-ranking Using Large Language Models",
+   "reason": "一次要旨はLLM APIのトークン課金予算内で再ランキング性能を最大化する予算配分最適化を述べ、LLM利用コスト管理には関連するが対象は再ランキング応用であり推論基盤への直接貢献は薄いため。",
+   "source_url": "https://arxiv.org/abs/2402.10866",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 498
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.24052",
+   "identity_tokens": [
+    "arXiv:2512.24052"
+   ],
+   "title": "AHA: Aligning Large Audio-Language Models for Reasoning Hallucinations via Counterfactual Hard Negatives",
+   "reason": "一次要旨は大規模音声言語モデルの推論幻覚（イベント欠落・誤同定等の分類と対照的ハードネガティブによる整合）を扱い、推論システムの高速化・サービング機構への貢献は示されていないため。",
+   "source_url": "https://arxiv.org/abs/2512.24052",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 457
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2606.01629",
+   "identity_tokens": [
+    "arXiv:2606.01629"
+   ],
+   "title": "Benchmarking LLM-as-a-Judge for Long-Form Output Evaluation",
+   "reason": "一次要旨は長文出力評価におけるLLM-as-a-Judgeの信頼性をベンチマークする評価研究であり、推論実行・デコード・キャッシュ等のシステム機構は扱われていないため。",
+   "source_url": "https://arxiv.org/abs/2606.01629",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 458
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2311.11690",
+   "identity_tokens": [
+    "arXiv:2311.11690"
+   ],
+   "title": "Refactoring Programs Using Large Language Models with Few-Shot Examples",
+   "reason": "一次要旨はFew-Shot例を用いたLLMによるプログラムリファクタリング手法であり、コード保守の応用であってLLM推論システムへの技術的貢献はないため。",
+   "source_url": "https://arxiv.org/abs/2311.11690",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 459
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.04296",
+   "identity_tokens": [
+    "arXiv:2602.04296"
+   ],
+   "title": "ProxyWar: Dynamic Assessment of LLM Code Generation in Game Arenas",
+   "reason": "一次要旨はゲームアリーナ内でLLM生成エージェントを競わせるコード生成の動的評価フレームワークProxyWarであり、推論基盤の計測ではなく能力評価であるため。",
+   "source_url": "https://arxiv.org/abs/2602.04296",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 460
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2608.01263",
+   "identity_tokens": [
+    "arXiv:2608.01263"
+   ],
+   "title": "Distill What the Student Can See: Fisher-Projected On-Policy Distillation for Vision-Language Models",
+   "reason": "一次要旨は視覚言語モデルのオンポリシー蒸留をFisher射影で学生が見える分布に合わせる学習手法であり、推論時のサービングやデコード高速化の機構ではないため。",
+   "source_url": "https://arxiv.org/abs/2608.01263",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 461
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2607.21656",
+   "identity_tokens": [
+    "arXiv:2607.21656"
+   ],
+   "title": "Cross-Model LLM Code Review: Should you use Claude to review Codex or vice versa?",
+   "reason": "一次要旨はClaudeとCodexの相互コードレビューの順序・コスト対効果を116課題で実験した研究であり、推論システムの機構への貢献は示されていないため。",
+   "source_url": "https://arxiv.org/abs/2607.21656",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 462
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2601.21681",
+   "identity_tokens": [
+    "arXiv:2601.21681"
+   ],
+   "title": "LLM4Fluid: Large Language Models as Generalizable Neural Solvers for Fluid Dynamics",
+   "reason": "一次要旨はLLMを流体力学の汎化可能なニューラルソルバーとして使うLLM4Fluidであり、流体予測という異分野応用が主目的で推論システムへの貢献はないため。",
+   "source_url": "https://arxiv.org/abs/2601.21681",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 464
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2606.11105",
+   "identity_tokens": [
+    "arXiv:2606.11105"
+   ],
+   "title": "PhantomBench: Benchmarking the Non-existential Threat of Language Models",
+   "reason": "一次要旨は言語モデルの非実在的事実への幻覚リスクを測るPhantomBenchベンチマークであり、推論実行機構ではなく信頼性評価であるため。",
+   "source_url": "https://arxiv.org/abs/2606.11105",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 465
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/icassp55912.2026.11462979",
+   "identity_tokens": [
+    "DOI:10.1109/icassp55912.2026.11462979"
+   ],
+   "title": "MSBench: Can Speech Language Models Generate Multi-Speaker Dialogues in One Passƒ",
+   "reason": "一次要旨は音声言語モデルが複数話者対話を一括生成できるかを測るMSBenchベンチマークの提案であり、推論サービングやデコード機構の貢献は示されていないため。",
+   "source_url": "https://doi.org/10.1109/icassp55912.2026.11462979",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 467
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.13650",
+   "identity_tokens": [
+    "arXiv:2602.13650"
+   ],
+   "title": "KorMedMCQA-V: A Multimodal Benchmark for Evaluating Vision-Language Models on the Korean Medical Licensing Examination",
+   "reason": "一次要旨は韓国医師国家試験形式のマルチモーダル問題で視覚言語モデルを評価するKorMedMCQA-Vベンチマークであり、医療分野の能力評価であって推論システムではないため。",
+   "source_url": "https://arxiv.org/abs/2602.13650",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 468
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.18449",
+   "identity_tokens": [
+    "arXiv:2602.18449"
+   ],
+   "title": "Prompt Optimization Via Diffusion Language Models",
+   "reason": "一次要旨は拡散言語モデルのマスク付きデノイジングでシステムプロンプトを反復最適化する手法であり、対象はプロンプト改善であって推論基盤の高速化ではないため。",
+   "source_url": "https://arxiv.org/abs/2602.18449",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 469
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2603.23626",
+   "identity_tokens": [
+    "arXiv:2603.23626"
+   ],
+   "title": "A Theory of LLM Information Susceptibility",
+   "reason": "一次要旨はエージェント系で最適化モジュールとして使われるLLMの情報感受性に関する理論であり、推論システムの実装・計測への直接貢献は示されていないため。",
+   "source_url": "https://arxiv.org/abs/2603.23626",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 470
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2608.12034",
+   "identity_tokens": [
+    "arXiv:2608.12034"
+   ],
+   "title": "The SLT 2026 SmartGlasses Challenge: Benchmarking Egocentric Multi-Talker Speech Recognition and Understanding with Audio-Language Models",
+   "reason": "一次要旨はスマートグラス上の複数話者音声認識・理解を競うSLT 2026チャレンジのベンチマーク紹介であり、推論機構ではなく音声認識タスクの評価であるため。",
+   "source_url": "https://arxiv.org/abs/2608.12034",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 472
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2610.05094",
+   "identity_tokens": [
+    "arXiv:2610.05094"
+   ],
+   "title": "How Much Do LLM-as-a-Judge Design Choices Matter? A Systematic Comparison of Prompt Designs, Rating Scales, and Models",
+   "reason": "一次要旨はLLM-as-a-Judgeのプロンプト設計・評価尺度・モデル選択が判定へ与える影響の系統的比較であり、推論システムへの貢献はないため。",
+   "source_url": "https://arxiv.org/abs/2610.05094",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 473
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2506.19676",
+   "identity_tokens": [
+    "arXiv:2506.19676"
+   ],
+   "title": "A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures",
+   "reason": "一次要旨はLLM駆動AIエージェント間通信のプロトコル・セキュリティリスク・防御策のサーベイであり、推論サービングや実行最適化を扱っていないため。",
+   "source_url": "https://arxiv.org/abs/2506.19676",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 474
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2306.03438",
+   "identity_tokens": [
+    "arXiv:2306.03438"
+   ],
+   "title": "Large Language Models of Code Fail at Completing Code with Potential Bugs",
+   "reason": "一次要旨は潜在的バグを含む文脈でのコードLLMの補完失敗を分析する研究であり、コード知能の品質問題であって推論システムの機構ではないため。",
+   "source_url": "https://arxiv.org/abs/2306.03438",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 476
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2401.00288",
+   "identity_tokens": [
+    "arXiv:2401.00288"
+   ],
+   "title": "Deep Learning for Code Intelligence: Survey, Benchmark and Toolkit",
+   "reason": "一次要旨はコード知能向け深層学習のサーベイ・ベンチマーク・ツールキットであり、LLM推論の実行・圧縮・スケジューリングは対象外であるため。",
+   "source_url": "https://arxiv.org/abs/2401.00288",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 477
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2507.10535",
+   "identity_tokens": [
+    "arXiv:2507.10535"
+   ],
+   "title": "CodeJudgeBench: Benchmarking LLM-as-a-Judge for Coding Tasks",
+   "reason": "一次要旨はコーディング課題におけるLLM-as-a-Judgeを測るCodeJudgeBenchベンチマークであり、評価手法の研究であって推論基盤への貢献はないため。",
+   "source_url": "https://arxiv.org/abs/2507.10535",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 478
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2411.01834",
+   "identity_tokens": [
+    "arXiv:2411.01834"
+   ],
+   "title": "Align-SLM: Textless Spoken Language Models with Reinforcement Learning from AI Feedback",
+   "reason": "一次要旨はAIフィードバックによる強化学習でテキストなし音声言語モデルの意味的一貫性を高めるAlign-SLMであり、学習手法であって推論システムではないため。",
+   "source_url": "https://arxiv.org/abs/2411.01834",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 480
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2507.00191",
+   "identity_tokens": [
+    "arXiv:2507.00191"
+   ],
+   "title": "Beyond Sensor Data: Foundation Models of Behavioral Data from Wearables Improve Health Predictions",
+   "reason": "一次要旨はウェアラブルの行動データ基盤モデルで57の健康予測タスクを評価する研究であり、健康予測応用が主目的でLLM推論システムへの貢献はないため。",
+   "source_url": "https://arxiv.org/abs/2507.00191",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 481
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2506.05984",
+   "identity_tokens": [
+    "arXiv:2506.05984"
+   ],
+   "title": "Audio-Aware Large Language Models as Judges for Speaking Styles",
+   "reason": "一次要旨は音声対応LLMを話し方スタイルの自動審査員として使う評価研究であり、推論実行機構ではなく音声生成の評価であるため。",
+   "source_url": "https://arxiv.org/abs/2506.05984",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 482
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2311.17431",
+   "identity_tokens": [
+    "arXiv:2311.17431"
+   ],
+   "title": "Grounding Foundation Models through Federated Transfer Learning: A General Framework",
+   "reason": "一次要旨は基盤モデルのドメイン適応を連合転移学習で行う枠組みと分類のサーベイであり、効率化は論点の一つに過ぎず推論サービングへの直接貢献は示されていないため。",
+   "source_url": "https://arxiv.org/abs/2311.17431",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 483
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2406.14979",
+   "identity_tokens": [
+    "arXiv:2406.14979"
+   ],
+   "title": "Retrieve-Plan-Generation: An Iterative Planning and Answering Framework for Knowledge-Intensive LLM Generation",
+   "reason": "一次要旨は検索拡張生成で計画トークンを生成し関連段落を選ぶRPGフレームワークであり、生成品質の手法であって推論システムの高速化機構ではないため。",
+   "source_url": "https://arxiv.org/abs/2406.14979",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 484
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2310.17903",
+   "identity_tokens": [
+    "arXiv:2310.17903"
+   ],
+   "title": "Pitfalls in Language Models for Code Intelligence: A Taxonomy and Survey",
+   "reason": "一次要旨はコード知能向け言語モデルの落とし穴をデータ・設計・評価・展開の4観点で分類したサーベイであり、推論基盤の技術的貢献はないため。",
+   "source_url": "https://arxiv.org/abs/2310.17903",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 485
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2506.02318",
+   "identity_tokens": [
+    "arXiv:2506.02318"
+   ],
+   "title": "Absorb and Converge: Provable Convergence Guarantee for Absorbing Discrete Diffusion Models",
+   "reason": "一次要旨は吸収型離散拡散モデルの有限時間誤差 bound とサンプラーの収束保証を与える理論研究であり、LLM推論システムの実装や計測ではないため。",
+   "source_url": "https://arxiv.org/abs/2506.02318",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 486
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2502.04295",
+   "identity_tokens": [
+    "arXiv:2502.04295"
+   ],
+   "title": "Beyond Prompt Content: Enhancing LLM Performance via Content-Format Integrated Prompt Optimization",
+   "reason": "一次要旨はプロンプトの内容と書式を統合最適化するCFPOによる性能改善であり、プロンプト工学の研究であって推論実行機構への貢献はないため。",
+   "source_url": "https://arxiv.org/abs/2502.04295",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 487
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2405.16081",
+   "identity_tokens": [
+    "arXiv:2405.16081"
+   ],
+   "title": "A Study on Developer Behaviors for Validating and Repairing LLM-Generated Code Using Eye Tracking and IDE Actions",
+   "reason": "一次要旨はCopilot生成コードの検証・修復時の開発者行動を視線追跡とIDE操作で調べた実証研究であり、推論システムの機構は扱われていないため。",
+   "source_url": "https://arxiv.org/abs/2405.16081",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 488
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2411.11203",
+   "identity_tokens": [
+    "arXiv:2411.11203"
+   ],
+   "title": "Debiasing Watermarks for Large Language Models via Maximal Coupling",
+   "reason": "一次要旨は最大結合で分布バイアスを補正するLLM透かし手法であり、生成テキスト検出が目的で推論サービングや高速化への貢献は示されていないため。",
+   "source_url": "https://arxiv.org/abs/2411.11203",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 489
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2403.11802",
+   "identity_tokens": [
+    "arXiv:2403.11802"
+   ],
+   "title": "Counting-Stars: A Multi-evidence, Position-aware, and Scalable Benchmark for Evaluating Long-Context Large Language Models",
+   "reason": "一次要旨は長文文脈LLMの多証拠検索能力を数える課題で測るCounting-Starsベンチマークであり、長文推論の実行機構ではなく能力評価であるため。",
+   "source_url": "https://arxiv.org/abs/2403.11802",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 491
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/ICCV48922.2021.00407",
+   "identity_tokens": [
+    "DOI:10.1109/ICCV48922.2021.00407"
+   ],
+   "title": "STAR: A Structure-aware Lightweight Transformer for Real-time Image Enhancement",
+   "reason": "一次要旨はスマートフォン上の低照度補正等の画像強調向けに構造認識型の軽量Transformerを提案するもので、対象は画像処理モデルの効率化でありLLM推論システムではないため。",
+   "source_url": "https://doi.org/10.1109/ICCV48922.2021.00407",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 456
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.14178",
+   "identity_tokens": [
+    "arXiv:2505.14178"
+   ],
+   "title": "Tokenization Constraints in LLMs: A Study of Symbolic and Arithmetic Reasoning Limits",
+   "reason": "一次要旨はBPE等のトークン化が記号・算術推論を制約するという理論・実証研究であり、トークン化の推論性能への影響分析であって推論システム機構の提案ではないため。",
+   "source_url": "https://arxiv.org/abs/2505.14178",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 494
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2507.08924",
+   "identity_tokens": [
+    "arXiv:2507.08924"
+   ],
+   "title": "From KMMLU-Redux to Pro: A Professional Korean Benchmark Suite for LLM Evaluation",
+   "reason": "一次要旨は韓国の国家技術資格・専門職免許試験から構築したLLM評価ベンチマークKMMLU-Redux/Proの紹介であり、推論システムへの貢献はないため。",
+   "source_url": "https://arxiv.org/abs/2507.08924",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 496
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.48550/arXiv.2404.12957",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2404.12957"
+   ],
+   "title": "Towards Reliable Latent Knowledge Estimation in LLMs: In-Context Learning vs. Prompting Based Factual Knowledge Extraction",
+   "reason": "一次要旨はプロンプト工学を排してLLM内部の事実知識を推定するZP-LKE手法であり、知識探査の研究であって推論サービングや圧縮の機構ではないため。",
+   "source_url": "https://doi.org/10.48550/arXiv.2404.12957",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T16:40:00+09:00",
+   "last_checked_at": "2026-11-26T16:40:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 500
+  }
+ ]
+}
