@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CARES: Context-Aware Resolution Selector for VLMs",
+      "source_url": "https://arxiv.org/abs/2510.19496",
+      "year": 2025,
+      "published": "2025-10-22",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (VLMs) commonly process images at native or high resolution to remain effective across tasks. This inflates visual tokens ofter to 97-99% of total tokens, resulting in high compute and latency, even when low-resolution images would suffice. We introduce \\emph{CARES}-a \\textbf{C}ontext-\\textbf{A}ware \\textbf{R}esolution \\textbf{S}elector, a lightweight preprocessing module that, given an image-query pair, predicts the \\emph{minimal} sufficient input resolution. CARES uses a compact VLM (350M) to extract features and predict when a target pretrained VLM's response converges to its peak ability to answer correctly. Though trained as a discrete classifier over a set of optional resolutions, CARES interpolates continuous resolutions at inference for fine-grained control. Across five multimodal benchmarks spanning documents and natural images, as well as diverse target VLMs, CARES preserves task performance while reducing compute by up to 80%.",
+      "identifiers": [
+        "SemanticScholar:90350ab33d61cf5a9ff323426287f2c51ab2d1f0"
+      ],
+      "semantic_scholar_id": "90350ab33d61cf5a9ff323426287f2c51ab2d1f0",
+      "canonical_id": "arXiv:2510.19496",
+      "arxiv_id": "2510.19496",
+      "doi": "10.48550/arXiv.2510.19496",
+      "authors": [
+        "Moshe Kimhi",
+        "Nimrod Shabtay",
+        "R. Giryes",
+        "Chaim Baskin",
+        "Eli Schwartz"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 400,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "視覚トークンが全体の97〜99%を占めるVLMで、画像とクエリから必要解像度を予測するCARESは、低解像度で足りる入力の計算とレイテンシを直接削減する推論前処理機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-42b3d7c4068b",
+    "round": "libimp-42b3d7c4068b96ca-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-42b3d7c4068b96ca-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-42b3d7c4068b96ca-pre01.json",
+    "receipt": "sha256:4b2d17bfa32d38b5ff9c7c22f14120b7c3a22c5e866d24c005528ada9d347709"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-42b3d7c4068b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Preserving Updates in Low-Bit Recurrent State Quantization",
+      "source_url": "https://arxiv.org/abs/2610.15709",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention and recurrent models compress past tokens into a fixed-size state that is updated at every step. However, storing these states in high precision incurs substantial memory and bandwidth costs at large batch sizes, motivating low-bit state quantization. Unlike weights and key--value caches, a recurrent state is requantized after every update, so its quantization errors accumulate across steps. Our analysis shows that these errors are highly coherent across steps, so reducing per-step errors alone is insufficient. This coherence arises mainly from small updates that are lost in rounding. To preserve these updates, we intervene both before and at rounding. Before rounding, we propose Low-Rank Bypass (LRB), which accumulates small updates in a compact low-rank buffer and periodically merges its sufficiently large elements into the state. At rounding, we observe that a state element can even move opposite to its update, and such reversals prove particularly harmful. Therefore, we propose Bounded Directional Rounding (BDR), which rounds reversed elements toward their updates without additional storage. Although BDR enlarges the rounding error, it improves the model, suggesting that the direction of an update matters more than its rounding error at a single step. Across Gated DeltaNet, GLA, Mamba2, and RetNet, our training-free method substantially outperforms INT4, while reducing state memory by up to 5.3$\\times$ and speeding up decoding by up to 1.9$\\times$ relative to FP32 states.",
+      "identifiers": [
+        "SemanticScholar:fc64cca0c6e23befa6d567c299f20d7610a43eb9"
+      ],
+      "semantic_scholar_id": "fc64cca0c6e23befa6d567c299f20d7610a43eb9",
+      "canonical_id": "arXiv:2610.15709",
+      "arxiv_id": "2610.15709",
+      "authors": [
+        "Hao-Tian Li",
+        "Li-Ran Dong",
+        "Kai-Cheng Xiao",
+        "Guo-Liang Xing"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低ビット再帰状態量子化は線形注意・再帰モデルが各ステップで再量子化される状態の誤差蓄積を解析し、大バッチ時のメモリと帯域コストを下げる推論量子化であり、KVキャッシュ量子化に準じる直接の貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fdc9d8e21abe",
+    "round": "libimp-fdc9d8e21abeb0a1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fdc9d8e21abeb0a1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fdc9d8e21abeb0a1-pre01.json",
+    "receipt": "sha256:48d49f0aad228fef218c42fa2d026ab9b2ebc0c9e7facf7ebc4a52b2c49b89ee"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fdc9d8e21abe",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

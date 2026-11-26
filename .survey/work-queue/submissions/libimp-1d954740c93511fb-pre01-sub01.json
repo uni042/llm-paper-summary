@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Beyond the Eye: Efficient Multimodal Reasoning via Self-Regulated Implicit Visual Tools",
+      "source_url": "https://arxiv.org/abs/2607.11106",
+      "year": 2026,
+      "published": "2026-07-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent multimodal large language models (MLLMs) have made remarkable progress on fine-grained perception tasks under the\"Thinking with Images\"(TwI) paradigm by iteratively performing various visual tool operations. However, this paradigm relies heavily on frequent external tool calls and repeated image re-encoding, which leads to substantial computational overhead and inference latency. To address these issues, we propose Beyond the Eye (BEE), a novel implicit visual tool paradigm centered on self-regulated capability. BEE directly incorporates visual tool invocation behaviors into the training objective and encourages the model to develop a self-regulated invocation mechanism. This design enables the model to adaptively balance internal knowledge and implicit tools, avoiding redundant tool usage while substantially reducing inference latency. Specifically, BEE involves a two-stage training process: (1) Formalized Chain-of-Thought (CoT) Supervised Fine-tuning (SFT). We construct CoT trajectories with structured tool slots and mixed invocation states. This stage activates the model's implicit tool representations and adaptive switching capability. (2) Self-regulated Reward-Driven Alignment. To address redundant tool usage caused by ambiguous cognitive boundaries, we first introduce the Net Tool Gain (NTG) metric to quantify this phenomenon. Based on this observation, we further propose a self-regulated reward mechanism. This mechanism penalizes ineffective tool dependency and encourages the model to perform knowledge routing, ensuring that implicit tools are invoked only when the model's internal knowledge is insufficient. BEE achieves state-of-the-art performance in fine-grained visual perception while remaining competitive in general reasoning tasks and achieving substantial gains in inference efficiency.",
+      "identifiers": [
+        "SemanticScholar:4b118a40808ab617c8a6c3a8bf4d83975e627ce1"
+      ],
+      "semantic_scholar_id": "4b118a40808ab617c8a6c3a8bf4d83975e627ce1",
+      "canonical_id": "arXiv:2607.11106",
+      "arxiv_id": "2607.11106",
+      "doi": "10.48550/arXiv.2607.11106",
+      "authors": [
+        "Xiu-Wei Chen",
+        "Quan-Lin Chen",
+        "Wen-Tao Hu",
+        "Zi-Sheng Chen",
+        "Kun Xiang",
+        "Ze-Hua Ma",
+        "Ming-Yang Zhang",
+        "Jian-Hua Han",
+        "Han-Hui Li",
+        "Hang Xu",
+        "Xiao-Dan Liang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 136,
+        "matched_prestigious_venue": null
+      },
+      "reason": "BEEは外部視覚ツールの反復呼び出しと画像再エンコードによる推論レイテンシを、自己制御型の暗黙的視覚ツールで削減する機構を提案し、MLLM推論オーバーヘッドへの直接の貢献が要旨で具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1d954740c935",
+    "round": "libimp-1d954740c93511fb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1d954740c93511fb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1d954740c93511fb-pre01.json",
+    "receipt": "sha256:c4c1f721b5ccc1325a8feff69afbb7ce2c1184511f355e93ea458599da05ab25"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1d954740c935",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

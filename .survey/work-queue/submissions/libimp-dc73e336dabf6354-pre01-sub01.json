@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PACE: Predictive and Adaptive Multimodal Cache Enhancement for Cross-Modal Task Chains",
+      "source_url": "https://doi.org/10.1109/ICC59461.2026.11586993",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "ICC 2026 - IEEE International Conference on Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid rise of Agentic AI, multimodal generative tasks are increasingly executed through task chains—pipelines of functionally independent yet data-correlated models collaborating to fulfill complex cross-modal requests. However, the isolated execution of these models prevents effective cache sharing, leading to redundant storage and repeated inference, which severely limits end-to-end system efficiency. We present Predictive and Adaptive multimodal Caching Enhancement (PACE), a unified caching framework designed to address cache inefficiency in multimodal task chains. PACE employs a PatchTST-based predictive model to estimate cache entry reuse probability by jointly analyzing request semantics, task attributes, and historical access patterns. This predictive insight drives a value-guided online policy for cache admission and eviction, optimizing performance under strict memory constraints. Experiments on a text-to-video generation workload comprising 10,000 task chain instances demonstrate that PACE achieves a 61.2% cache hit rate, reducing end-to-end latency by 59.2% over no-caching and by 19.3% compared with state-of-the-art baselines. Consistent performance gains were observed across different modalities, with hit rates improving by 1.1% for text, 3.5% for images, and 3.2% for video. These results demonstrate PACE’s effectiveness in eliminating cross-modal cache redundancy and enhancing overall service responsiveness.",
+      "identifiers": [
+        "SemanticScholar:7ee5f497dfa0a30cd617442d79032a70c90aa0b4"
+      ],
+      "semantic_scholar_id": "7ee5f497dfa0a30cd617442d79032a70c90aa0b4",
+      "doi": "10.1109/ICC59461.2026.11586993",
+      "canonical_id": "DOI:10.1109/ICC59461.2026.11586993",
+      "authors": [
+        "Zhongtian Zhang",
+        "Tian-Cheng Zhang",
+        "Jingchao Tan",
+        "Cheng Zhang",
+        "Xiaofei Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 186,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PACEはエージェント型マルチモーダルタスクチェーンでモデル間のキャッシュ共有を可能にし、冗長な保存と繰り返し推論を削減する予測的・適応的キャッシュ機構であり、推論システム効率への直接貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dc73e336dabf",
+    "round": "libimp-dc73e336dabf6354-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dc73e336dabf6354-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dc73e336dabf6354-pre01.json",
+    "receipt": "sha256:cca7399375d3a86f1569f8eb08dc62aaac2c18f3e8e63fabd925cd4da9598abd"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dc73e336dabf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

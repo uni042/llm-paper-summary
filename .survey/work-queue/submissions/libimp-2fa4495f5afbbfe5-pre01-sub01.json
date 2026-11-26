@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ICP: Immediate Compensation Pruning for Mid-to-high Sparsity",
+      "source_url": "https://doi.org/10.1109/CVPR52734.2025.00886",
+      "year": 2025,
+      "published": "2025-06-10",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The increasing adoption of large-scale models under 7 billion parameters in both language and vision domains enables inference tasks on a single consumer-grade GPU but makes fine-tuning models of this scale, especially 7B models, challenging. This limits the applicability of pruning methods that require full fine-tuning. Meanwhile, pruning methods that do not require fine-tuning perform well at low sparsity levels (10%-50%) but struggle at mid-to-high sparsity levels (50%-70%), where the error behaves equivalently to that of semi-structured pruning. To address these issues, this paper introduces ICP, which finds a balance between full fine-tuning and zero fine-tuning. First, Sparsity Rearrange is used to reorganize the predefined sparsity levels, followed by Block-wise Compensate Pruning, which alternates pruning and compensation on the model’s backbone, fully utilizing inference results while avoiding full model fine-tuning. Experiments show that ICP improves performance at mid-to-high sparsity levels compared to baselines, with only a slight increase in pruning time and no additional peak memory overhead.",
+      "identifiers": [
+        "SemanticScholar:ca5a9a25aede58e6e2bbbfddeb55bd82f1ef7eda"
+      ],
+      "semantic_scholar_id": "ca5a9a25aede58e6e2bbbfddeb55bd82f1ef7eda",
+      "doi": "10.1109/CVPR52734.2025.00886",
+      "canonical_id": "DOI:10.1109/CVPR52734.2025.00886",
+      "authors": [
+        "Xin Luo",
+        "Xue-Ming Lu",
+        "Zi-Hang Jiang",
+        "S. K. Zhou"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 534,
+        "matched_prestigious_venue": null
+      },
+      "reason": "7B級の言語・視覚モデルを対象に、中〜高スパース率でも再学習コストを抑える即時補償プルーニングICPを提案する。単一コンシューマGPUでの推論を前提としたモデル圧縮であり、推論向けスパース化への直接の貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2fa4495f5afb",
+    "round": "libimp-2fa4495f5afbbfe5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2fa4495f5afbbfe5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2fa4495f5afbbfe5-pre01.json",
+    "receipt": "sha256:6453576bd61e55107cfd7dac0d8da855c56306d2584d3fa16c005d1e70ab2343"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2fa4495f5afb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
