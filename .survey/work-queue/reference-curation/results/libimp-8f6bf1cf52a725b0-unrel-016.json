@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f6bf1cf52a725b0-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.05094",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.05094",
+    "identity_tokens": [
+      "arXiv:2610.05094"
+    ],
+    "reason": "一次要旨はLLM-as-a-Judgeのプロンプト設計・評価尺度・モデル選択が判定へ与える影響の系統的比較であり、推論システムへの貢献はないため。",
+    "first_checked_at": "2026-11-26T14:42:06+00:00",
+    "last_checked_at": "2026-11-26T14:42:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "How Much Do LLM-as-a-Judge Design Choices Matter? A Systematic Comparison of Prompt Designs, Rating Scales, and Models"
+  },
+  "processed_at": "2026-11-26T14:42:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f6bf1cf52a7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

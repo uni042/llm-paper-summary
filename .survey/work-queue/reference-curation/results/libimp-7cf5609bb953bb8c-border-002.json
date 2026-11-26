@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7cf5609bb953bb8c-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:5599a7b4cbb0690e25ba0d3774f1bd7bfec5fadb",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:5599a7b4cbb0690e25ba0d3774f1bd7bfec5fadb",
+    "identity_tokens": [
+      "SemanticScholar:5599a7b4cbb0690e25ba0d3774f1bd7bfec5fadb"
+    ],
+    "reason": "Trains a compact Arabic BERT-style language model for resource-limited devices and applies distillation and quantization to shrink it further (largest model 2x smaller than baseline with better task scores); on-device motivation is real, but the contribution is language-model training for Arabic NLP, not an inference system or measured serving technique.",
+    "first_checked_at": "2026-11-26T14:42:06+00:00",
+    "last_checked_at": "2026-11-26T14:42:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Arabic Compact Language Modelling for Resource Limited Devices"
+  },
+  "processed_at": "2026-11-26T14:42:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7cf5609bb953",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

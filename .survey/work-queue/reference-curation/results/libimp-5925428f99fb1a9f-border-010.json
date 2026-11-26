@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5925428f99fb1a9f-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.15773",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.15773",
+    "identity_tokens": [
+      "arXiv:2507.15773"
+    ],
+    "reason": "Supernova is a 650M decoder-only model combining RoPE, 3:1 GQA and a custom 128k BPE tokenizer to reach 90% of 1B-model performance with 35% fewer parameters and 100B training tokens; GQA/tokenizer choices are inference-relevant, but the paper reports model quality versus training budget, not inference latency or serving behavior.",
+    "first_checked_at": "2026-11-26T14:42:05+00:00",
+    "last_checked_at": "2026-11-26T14:42:05+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Supernova: Achieving More with Less in Transformer Architectures"
+  },
+  "processed_at": "2026-11-26T14:42:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5925428f99fb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7cf5609bb953bb8c-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:d5f8fc9b0db83d0c11c9534525d0c56e609f1068",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:d5f8fc9b0db83d0c11c9534525d0c56e609f1068",
+    "identity_tokens": [
+      "SemanticScholar:d5f8fc9b0db83d0c11c9534525d0c56e609f1068"
+    ],
+    "reason": "SUMMA2.5-LM proposes 2.5-dimensional tensor parallelism that cuts per-layer transmission cost for distributed language-model training (1.45x weak-scaling efficiency over 2D); the work is entirely about training parallelization, not inference or serving.",
+    "first_checked_at": "2026-11-26T14:42:06+00:00",
+    "last_checked_at": "2026-11-26T14:42:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "2.5-dimensional Distributed Model Training"
+  },
+  "processed_at": "2026-11-26T14:42:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7cf5609bb953",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

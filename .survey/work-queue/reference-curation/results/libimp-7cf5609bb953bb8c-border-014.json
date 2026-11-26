@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7cf5609bb953bb8c-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.08150",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.08150",
+    "identity_tokens": [
+      "arXiv:2511.08150"
+    ],
+    "reason": "DiffuGR reframes generative document retrieval as discrete diffusion over DocIDs, generating tokens in parallel with a controllable number of denoising steps that explicitly trades retrieval quality against latency at inference; the decoding mechanism is inference-relevant, but the contribution is a retrieval application, not LLM serving.",
+    "first_checked_at": "2026-11-26T14:42:06+00:00",
+    "last_checked_at": "2026-11-26T14:42:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DiffuGR: Generative Document Retrieval with Diffusion Language Models"
+  },
+  "processed_at": "2026-11-26T14:42:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7cf5609bb953",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

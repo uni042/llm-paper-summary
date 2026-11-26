@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7cf5609bb953bb8c-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:d2eeac902af2ae46d24fb7b755c48171717ca99e",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:d2eeac902af2ae46d24fb7b755c48171717ca99e",
+    "identity_tokens": [
+      "SemanticScholar:d2eeac902af2ae46d24fb7b755c48171717ca99e"
+    ],
+    "reason": "Proposes a Tower architecture and unified training scheme for vision networks with integer weights/activations down to binary, plus a refined resource-usage estimation methodology; binary quantization is inference-relevant, but the contribution is training vision models and no LLM or serving evaluation is provided.",
+    "first_checked_at": "2026-11-26T14:42:06+00:00",
+    "last_checked_at": "2026-11-26T14:42:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Scalable Binary-Quantized Neural Networks for Energy-Efficient Vision"
+  },
+  "processed_at": "2026-11-26T14:42:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7cf5609bb953",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

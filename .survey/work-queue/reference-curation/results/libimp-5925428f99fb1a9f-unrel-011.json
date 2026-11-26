@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5925428f99fb1a9f-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2012.10885",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2012.10885",
+    "identity_tokens": [
+      "arXiv:2012.10885"
+    ],
+    "reason": "LieTransformer builds Lie-group-equivariant self-attention layers and evaluates on point-cloud shape counting, molecular property regression and Hamiltonian particle trajectories; a geometric deep-learning architecture for science applications, unrelated to LLM inference.",
+    "first_checked_at": "2026-11-26T14:42:05+00:00",
+    "last_checked_at": "2026-11-26T14:42:05+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "LieTransformer: Equivariant self-attention for Lie Groups"
+  },
+  "processed_at": "2026-11-26T14:42:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5925428f99fb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

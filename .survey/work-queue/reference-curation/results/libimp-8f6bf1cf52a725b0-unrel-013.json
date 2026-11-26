@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f6bf1cf52a725b0-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.18449",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.18449",
+    "identity_tokens": [
+      "arXiv:2602.18449"
+    ],
+    "reason": "一次要旨は拡散言語モデルのマスク付きデノイジングでシステムプロンプトを反復最適化する手法であり、対象はプロンプト改善であって推論基盤の高速化ではないため。",
+    "first_checked_at": "2026-11-26T14:42:06+00:00",
+    "last_checked_at": "2026-11-26T14:42:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Prompt Optimization Via Diffusion Language Models"
+  },
+  "processed_at": "2026-11-26T14:42:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f6bf1cf52a7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

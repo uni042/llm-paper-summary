@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-efaa8b30172941ae-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.13831",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.13831",
+    "identity_tokens": [
+      "arXiv:2501.13831"
+    ],
+    "reason": "ASR後編集の書き換えを句単位の編集表現で圧縮しLLMデコードの出力長と計算を減らす試みだが、対象タスクが書き換え応用に限られ汎用デコード機構としての検証は薄いため。",
+    "first_checked_at": "2026-11-26T14:42:07+00:00",
+    "last_checked_at": "2026-11-26T14:42:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Predicting Compact Phrasal Rewrites with Large Language Models for ASR Post Editing"
+  },
+  "processed_at": "2026-11-26T14:42:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-efaa8b301729",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

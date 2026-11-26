@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5925428f99fb1a9f-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.03411",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.03411",
+    "identity_tokens": [
+      "arXiv:2602.03411"
+    ],
+    "reason": "SWE-Master is a reproducible post-training framework (trajectory synthesis, long-horizon SFT, RL with execution feedback) that raises Qwen2.5-Coder-32B to 61.4% on SWE-bench Verified; despite mentioning inference framework design, the contribution is agent post-training, not inference systems.",
+    "first_checked_at": "2026-11-26T14:42:05+00:00",
+    "last_checked_at": "2026-11-26T14:42:05+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SWE-Master: Unleashing the Potential of Software Engineering Agents via Post-Training"
+  },
+  "processed_at": "2026-11-26T14:42:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5925428f99fb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

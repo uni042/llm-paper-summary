@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7cf5609bb953bb8c-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:49964af6d9315b3e377db62965f588e3cb9c255e",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:49964af6d9315b3e377db62965f588e3cb9c255e",
+    "identity_tokens": [
+      "SemanticScholar:49964af6d9315b3e377db62965f588e3cb9c255e"
+    ],
+    "reason": "PlanFence is a dependency-scoped validation protocol for distributed LLM-agent shared memory: plans cite their input records and executors validate only action-relevant dependencies before acting, eliminating stale-plan execution in 30 five-agent workflows; it concerns agent coordination correctness, not model inference systems.",
+    "first_checked_at": "2026-11-26T14:42:06+00:00",
+    "last_checked_at": "2026-11-26T14:42:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory"
+  },
+  "processed_at": "2026-11-26T14:42:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7cf5609bb953",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

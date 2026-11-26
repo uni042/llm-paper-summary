@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7cf5609bb953bb8c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:0c58c12c706f0b6515cb93460d2d33f0a4647c86",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:0c58c12c706f0b6515cb93460d2d33f0a4647c86",
+    "identity_tokens": [
+      "SemanticScholar:0c58c12c706f0b6515cb93460d2d33f0a4647c86"
+    ],
+    "reason": "Adaptive Token Sampling inserts a parameter-free module into vision transformers that scores tokens by class-token attention and samples a per-image token count, halving GFLOPs on ImageNet/video classification; it is token-reduction for ViT inference efficiency, but the target is vision classification rather than LLM inference.",
+    "first_checked_at": "2026-11-26T14:42:06+00:00",
+    "last_checked_at": "2026-11-26T14:42:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Inverse Transform Sampling For Efficient Vision Transformers"
+  },
+  "processed_at": "2026-11-26T14:42:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7cf5609bb953",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

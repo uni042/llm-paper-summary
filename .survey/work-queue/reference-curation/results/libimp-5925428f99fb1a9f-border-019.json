@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5925428f99fb1a9f-border-019",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.18116",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.18116",
+    "identity_tokens": [
+      "arXiv:2602.18116"
+    ],
+    "reason": "Formalizes structured pruning as axis-aligned projection and model folding as low-rank projection via weight clustering, proving folding's smaller reconstruction error within rank distance one and validating on 1000+ checkpoints of ResNet/ViT/CLIP plus small 60M/130M LLaMA models; compression theory relevant to inference, but LLM evidence is limited to tiny models and no latency is measured.",
+    "first_checked_at": "2026-11-26T14:42:05+00:00",
+    "last_checked_at": "2026-11-26T14:42:05+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cut Less, Fold More: Model Compression through the Lens of Projection Geometry"
+  },
+  "processed_at": "2026-11-26T14:42:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5925428f99fb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

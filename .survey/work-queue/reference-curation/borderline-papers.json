@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T12:15:50+00:00",
-  "record_count": 9750,
+  "updated_at": "2026-11-26T14:42:07+00:00",
+  "record_count": 9786,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -149171,6 +149171,546 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Decoupled Visual Processing: Efficient Multimodal Adaptation via Modality-Specific Transformer Substitution"
+    },
+    "arXiv:2507.15773": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.15773",
+      "identity_tokens": [
+        "arXiv:2507.15773"
+      ],
+      "reason": "Supernova is a 650M decoder-only model combining RoPE, 3:1 GQA and a custom 128k BPE tokenizer to reach 90% of 1B-model performance with 35% fewer parameters and 100B training tokens; GQA/tokenizer choices are inference-relevant, but the paper reports model quality versus training budget, not inference latency or serving behavior.",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Supernova: Achieving More with Less in Transformer Architectures"
+    },
+    "arXiv:2601.18130": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.18130",
+      "identity_tokens": [
+        "arXiv:2601.18130"
+      ],
+      "reason": "RouteMoA routes queries in a Mixture-of-Agents pool with a lightweight scorer that screens candidate models before any inference and a judge mixture that corrects scores, cutting MoA cost by 89.8% and latency by 63.6% in large pools; it is inference-time model routing at the agent-framework level rather than a serving system for a model.",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents"
+    },
+    "arXiv:2602.18116": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.18116",
+      "identity_tokens": [
+        "arXiv:2602.18116"
+      ],
+      "reason": "Formalizes structured pruning as axis-aligned projection and model folding as low-rank projection via weight clustering, proving folding's smaller reconstruction error within rank distance one and validating on 1000+ checkpoints of ResNet/ViT/CLIP plus small 60M/130M LLaMA models; compression theory relevant to inference, but LLM evidence is limited to tiny models and no latency is measured.",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cut Less, Fold More: Model Compression through the Lens of Projection Geometry"
+    },
+    "DOI:10.1109/jiot.2025.3583280": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jiot.2025.3583280",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2025.3583280"
+      ],
+      "reason": "敵対的ネットワーク下でのエッジLLMサービシングの通信をStackelbergゲームとマルチエージェント強化学習で扱いサービング配置に関わるが、核は通信遅延攻撃への対処で推論実行系の機構は薄いため。",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Collaborative Communication for Edge LLM Servicing in Adversarial Networks: An MARL-Empowered Stackelberg Game Approach"
+    },
+    "arXiv:2406.11307": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.11307",
+      "identity_tokens": [
+        "arXiv:2406.11307"
+      ],
+      "reason": "事前学習Transformerの行列分解によるモデル圧縮を段階的分解等で安定化させる実証研究で、推論時のモデルサイズ削減に関わるが評価は圧縮品質中心でLLMサービングでの効果は示されていないため。",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Empirical Investigation of Matrix Factorization Methods for Pre-trained Transformers"
+    },
+    "DOI:10.1109/tmc.2025.3592647": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2025.3592647",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2025.3592647"
+      ],
+      "reason": "Squeezer is a serving framework that holistically schedules multiple DNN models for edge video analytics on a single GPU, decoupling cross-model scheduling into balanced operator grouping and model-level scheduling; it is genuine inference serving/scheduling, but for vision DNN pipelines rather than LLMs.",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Squeezer: Efficient Multi-DNN Inference for Edge Video Analytics via Cross-Model Scheduling"
+    },
+    "arXiv:2602.11212": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.11212",
+      "identity_tokens": [
+        "arXiv:2602.11212"
+      ],
+      "reason": "Elastic Memory uses HiPPO-based online compression to encode history into a fixed-size recurrent state with polynomial-sampling retrieval, beating Memorizing Transformer with 16x less memory on 32k+ context tasks and running faster than Melodi at 4x scale; a long-context memory architecture relevant to inference cost, but evaluated as a model architecture rather than a serving system.",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Compressive and Scalable Recurrent Memory"
+    },
+    "arXiv:2603.05105": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.05105",
+      "identity_tokens": [
+        "arXiv:2603.05105"
+      ],
+      "reason": "Diff-ES searches stage-wise sparsity schedules for diffusion models by evolutionary search and executes them via memory-efficient weight routing without duplicating pruned models, achieving wall-clock speedups on DiT/SDXL; it is inference-oriented structured pruning, but for image diffusion models rather than LLMs.",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Diff-ES: Stage-wise Structural Diffusion Pruning via Evolutionary Search"
+    },
+    "arXiv:2101.04073": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2101.04073",
+      "identity_tokens": [
+        "arXiv:2101.04073"
+      ],
+      "reason": "制約付き深層学習モデル最適化のブラックボックスフレームワークで圧縮によるオンデバイス配置を扱うが、対象は汎用DLモデルでLLM推論システムへの具体的な適用や機構は要旨で確認できないため。",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deeplite Neutrino: An End-to-End Framework for Constrained Deep Learning Model Optimization"
+    },
+    "arXiv:2503.15944": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.15944",
+      "identity_tokens": [
+        "arXiv:2503.15944"
+      ],
+      "reason": "LLMの推論時スケーリングにおける思考の断片化と計算量増大を原子単位操作と認知ルーティングで扱うが、サービングやデコード実行系の機構ではなく推論戦略レベルの提案にとどまるため。",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Chaos to Order: The Atomic Reasoner Framework for Fine-grained Reasoning in Large Language Models"
+    },
+    "arXiv:2511.21437": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.21437",
+      "identity_tokens": [
+        "arXiv:2511.21437"
+      ],
+      "reason": "実環境の異種ファインチューン済みLLMチェックポイントのモデルマージを大規模評価する研究で、モデル再利用には関わるが推論実行時の効率化機構は示されていないため。",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Systematic Study of In-the-Wild Model Merging for Large Language Models"
+    },
+    "arXiv:2407.04641": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.04641",
+      "identity_tokens": [
+        "arXiv:2407.04641"
+      ],
+      "reason": "RNN-T型ASRに音声接頭辞付き言語モデルで先読みさせる投機的音声認識で遅延削減を狙うが、投機的デコードの対象は音声認識でありLLMデコードへの直接適用は確認できないため。",
+      "first_checked_at": "2026-11-26T14:42:05+00:00",
+      "last_checked_at": "2026-11-26T14:42:05+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Speculative Speech Recognition by Audio-Prefixed Low-Rank Adaptation of Language Models"
+    },
+    "SemanticScholar:0c58c12c706f0b6515cb93460d2d33f0a4647c86": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:0c58c12c706f0b6515cb93460d2d33f0a4647c86",
+      "identity_tokens": [
+        "SemanticScholar:0c58c12c706f0b6515cb93460d2d33f0a4647c86"
+      ],
+      "reason": "Adaptive Token Sampling inserts a parameter-free module into vision transformers that scores tokens by class-token attention and samples a per-image token count, halving GFLOPs on ImageNet/video classification; it is token-reduction for ViT inference efficiency, but the target is vision classification rather than LLM inference.",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Inverse Transform Sampling For Efficient Vision Transformers"
+    },
+    "SemanticScholar:5599a7b4cbb0690e25ba0d3774f1bd7bfec5fadb": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:5599a7b4cbb0690e25ba0d3774f1bd7bfec5fadb",
+      "identity_tokens": [
+        "SemanticScholar:5599a7b4cbb0690e25ba0d3774f1bd7bfec5fadb"
+      ],
+      "reason": "Trains a compact Arabic BERT-style language model for resource-limited devices and applies distillation and quantization to shrink it further (largest model 2x smaller than baseline with better task scores); on-device motivation is real, but the contribution is language-model training for Arabic NLP, not an inference system or measured serving technique.",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Arabic Compact Language Modelling for Resource Limited Devices"
+    },
+    "DOI:10.1007/978-3-031-29315-3_12": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/978-3-031-29315-3_12",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-031-29315-3_12"
+      ],
+      "reason": "BBGraP is a model- and device-agnostic black-box graph partitioner that generates data-parallel execution plans for deep-learning inference across heterogeneous nodes, removing redundant transfers and synchronization for a 30% latency reduction on three nodes; it is distributed inference partitioning, but demonstrated only as a proof of concept on generic DNNs, not LLMs.",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Black-Box Graph Partitioner for Generalized Deep Neural Network Parallelization"
+    },
+    "SemanticScholar:3466ad09d3c2e961243ea23b69c94228a56a8e9c": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:3466ad09d3c2e961243ea23b69c94228a56a8e9c",
+      "identity_tokens": [
+        "SemanticScholar:3466ad09d3c2e961243ea23b69c94228a56a8e9c"
+      ],
+      "reason": "Minimal Test-Time Intervention detects high-entropy tokens during reasoning and applies selective classifier-free guidance only there, reusing the main model's KV cache to approximate the unconditional branch cheaply; it is a decoding-time algorithm, but its measured contribution is reasoning accuracy (+9.28% average) rather than inference-system performance.",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Less is More: Improving LLM Reasoning with Minimal Test-Time Intervention"
+    },
+    "DOI:10.1016/j.asoc.2025.113150": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.asoc.2025.113150",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2025.113150"
+      ],
+      "reason": "EPTI-style private Transformer inference under secure two-party secret sharing replaces expensive Softmax/GELU evaluations with specialized operator approximations (Multiplicative Residual Softmax), cutting communication volume 10.2-25.4% and end-to-end latency up to 41.7% on WAN emulation; it targets private-inference efficiency for generic Transformers rather than LLM serving specifically.",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient and performant Transformer private inference with heterogeneous attention mechanisms"
+    },
+    "SemanticScholar:d2eeac902af2ae46d24fb7b755c48171717ca99e": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:d2eeac902af2ae46d24fb7b755c48171717ca99e",
+      "identity_tokens": [
+        "SemanticScholar:d2eeac902af2ae46d24fb7b755c48171717ca99e"
+      ],
+      "reason": "Proposes a Tower architecture and unified training scheme for vision networks with integer weights/activations down to binary, plus a refined resource-usage estimation methodology; binary quantization is inference-relevant, but the contribution is training vision models and no LLM or serving evaluation is provided.",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scalable Binary-Quantized Neural Networks for Energy-Efficient Vision"
+    },
+    "arXiv:2511.08150": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.08150",
+      "identity_tokens": [
+        "arXiv:2511.08150"
+      ],
+      "reason": "DiffuGR reframes generative document retrieval as discrete diffusion over DocIDs, generating tokens in parallel with a controllable number of denoising steps that explicitly trades retrieval quality against latency at inference; the decoding mechanism is inference-relevant, but the contribution is a retrieval application, not LLM serving.",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DiffuGR: Generative Document Retrieval with Diffusion Language Models"
+    },
+    "DOI:10.1109/taslpro.2026.3677587": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/taslpro.2026.3677587",
+      "identity_tokens": [
+        "DOI:10.1109/taslpro.2026.3677587"
+      ],
+      "reason": "PlanEval offloads planning and retrieval evaluation to a small-scale planner-evaluator model so the LLM is invoked less for knowledge-intensive multi-step tasks, motivated by the cost and edge-deployment latency of LLM-heavy prompting; the contribution is a task-level agent framework, not an inference-system mechanism.",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PlanEval: Augmenting Large Language Models With a Small-Scale Planner-Evaluator for Knowledge-Intensive Tasks"
+    },
+    "DOI:10.1145/3703187.3703205": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3703187.3703205",
+      "identity_tokens": [
+        "DOI:10.1145/3703187.3703205"
+      ],
+      "reason": "LF Transformer is a lightweight dual-branch funnel-structured network designed for machine translation that reduces parameter count and the computational load of training and inference; it is a task-specific NMT architecture rather than a general LLM inference or serving technique.",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LF Transformer: A novel lightweight network for machine translation"
+    },
+    "arXiv:2610.19472": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.19472",
+      "identity_tokens": [
+        "arXiv:2610.19472"
+      ],
+      "reason": "対話を原子メモリ単位へ書き換えコードブックの離散意味表現で長期エージェントメモリを検索するMemCodeで、メモリアクセス機構には関連するがLLM推論自体への貢献は薄い。",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemCode: Discrete Semantic Representations for Long-Term Agent Memory"
+    },
+    "arXiv:2611.00450": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.00450",
+      "identity_tokens": [
+        "arXiv:2611.00450"
+      ],
+      "reason": "検索知識をパラメトリックメモリへ蒸留しオンライン検索を避けるResMemで推論時コスト削減を狙うが、主眼はRAGのQA品質とメモリ学習であり推論機構への貢献は限定的。",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Lookups to Lessons: Turning Retrieved Knowledge into Parametric Memory"
+    },
+    "arXiv:2606.08425": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.08425",
+      "identity_tokens": [
+        "arXiv:2606.08425"
+      ],
+      "reason": "一次要旨はリソース制約下向けに1.5Bのコンパクトな音声言語モデルとQuery-guided Projectorによる効率指向の構成を述べるが、貢献の中心はモデル学習・精度であり推論サービング機構の具体性が薄いため。",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TinyGiantALM: A Compact Audio-Language Model for Intent-Aware Reasoning under Resource Constraints"
+    },
+    "arXiv:2402.10866": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.10866",
+      "identity_tokens": [
+        "arXiv:2402.10866"
+      ],
+      "reason": "一次要旨はLLM APIのトークン課金予算内で再ランキング性能を最大化する予算配分最適化を述べ、LLM利用コスト管理には関連するが対象は再ランキング応用であり推論基盤への直接貢献は薄いため。",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EcoRank: Budget-Constrained Text Re-ranking Using Large Language Models"
+    },
+    "arXiv:2504.03708": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.03708",
+      "identity_tokens": [
+        "arXiv:2504.03708"
+      ],
+      "reason": "通信事業者の地域・ネットワークインフラで基盤モデルの推論レイテンシを下げる枠組みの提示だが、具体的なサービング機構や定量評価が要旨で不明瞭。",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Solving AI Foundational Model Latency with Telco Infrastructure"
+    },
+    "arXiv:2410.11298": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.11298",
+      "identity_tokens": [
+        "arXiv:2410.11298"
+      ],
+      "reason": "CIMクロスバー上の非構造スパースDNNでADCエネルギーを下げるsorted weight sectioningだが、対象は汎用DNNでありLLM推論への直接評価はない。",
+      "first_checked_at": "2026-11-26T14:42:06+00:00",
+      "last_checked_at": "2026-11-26T14:42:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sorted Weight Sectioning for Energy-Efficient Unstructured Sparse DNNs on Compute-in-Memory Crossbars"
+    },
+    "arXiv:2501.13831": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.13831",
+      "identity_tokens": [
+        "arXiv:2501.13831"
+      ],
+      "reason": "ASR後編集の書き換えを句単位の編集表現で圧縮しLLMデコードの出力長と計算を減らす試みだが、対象タスクが書き換え応用に限られ汎用デコード機構としての検証は薄いため。",
+      "first_checked_at": "2026-11-26T14:42:07+00:00",
+      "last_checked_at": "2026-11-26T14:42:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Predicting Compact Phrasal Rewrites with Large Language Models for ASR Post Editing"
+    },
+    "arXiv:2508.01459": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.01459",
+      "identity_tokens": [
+        "arXiv:2508.01459"
+      ],
+      "reason": "SMILES変換Transformerの多段階逆合成計画を投機的ビーム探索とMedusa型ドラフトで高速化し推論遅延を直接下げるが、適用先は化学合成計画システムに特化しLLM推論基盤への一般性は限られるため。",
+      "first_checked_at": "2026-11-26T14:42:07+00:00",
+      "last_checked_at": "2026-11-26T14:42:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast and scalable retrosynthetic planning with a transformer neural network and speculative beam search"
+    },
+    "arXiv:2511.17129": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17129",
+      "identity_tokens": [
+        "arXiv:2511.17129"
+      ],
+      "reason": "文脈圧縮を事前タスクとしてLLMにコンパクトなメモリトークンを生成させテキスト表現に使う研究で、文脈圧縮自体は推論時の文脈削減と関わるが目的は埋め込み表現であり推論効率の評価は確認できないため。",
+      "first_checked_at": "2026-11-26T14:42:07+00:00",
+      "last_checked_at": "2026-11-26T14:42:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning to Compress: Unlocking the Potential of Large Language Models for Text Representation"
+    },
+    "arXiv:2305.15065": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.15065",
+      "identity_tokens": [
+        "arXiv:2305.15065"
+      ],
+      "reason": "デコード時に軽量なポリシーアダプタでGPT-3級モデルを誘導する推論時手法だが、目的は目的関数へのtailoringでありサービング効率やデコード機構への直接貢献は薄い。",
+      "first_checked_at": "2026-11-26T14:42:07+00:00",
+      "last_checked_at": "2026-11-26T14:42:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Inference-Time Policy Adapters (IPA): Tailoring Extreme-Scale LMs without Fine-tuning"
+    },
+    "arXiv:2603.14219": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.14219",
+      "identity_tokens": [
+        "arXiv:2603.14219"
+      ],
+      "reason": "VLMの安全関連サブネットワークをone-shot pruningで増幅するが、目的はjailbreak防御であり圧縮による推論効率化の評価は主眼でないため関連は薄い。",
+      "first_checked_at": "2026-11-26T14:42:07+00:00",
+      "last_checked_at": "2026-11-26T14:42:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Safety-Potential Pruning for Enhancing Safety Prompts Against VLM Jailbreaking Without Retraining"
+    },
+    "arXiv:2407.01873": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.01873",
+      "identity_tokens": [
+        "arXiv:2407.01873"
+      ],
+      "reason": "GPU-poor環境で小規模オープンGLMを自動作文採点に使う性能・効率分析であり、推論基盤への新規機構はなく応用評価が主目的。",
+      "first_checked_at": "2026-11-26T14:42:07+00:00",
+      "last_checked_at": "2026-11-26T14:42:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Automated Text Scoring in the Age of Generative AI for the GPU-poor"
+    },
+    "arXiv:2201.08916": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2201.08916",
+      "identity_tokens": [
+        "arXiv:2201.08916"
+      ],
+      "reason": "DNN・GNN・科学計算向けスパーステンソル加速を異種アクセラレータで柔軟化する提案だが、LLM推論ワークロードへの直接評価はなく汎用加速に留まる。",
+      "first_checked_at": "2026-11-26T14:42:07+00:00",
+      "last_checked_at": "2026-11-26T14:42:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enabling Flexibility for Sparse Tensor Acceleration via Heterogeneity"
+    },
+    "DOI:10.1109/iciice69672.2026.11565461": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iciice69672.2026.11565461",
+      "identity_tokens": [
+        "DOI:10.1109/iciice69672.2026.11565461"
+      ],
+      "reason": "長期エージェントワークフローのcontext driftをメモリ拡張検索で抑える企業向けアーキテクチャで、コンテキスト管理には関連するがLLM推論機構への貢献は間接的。",
+      "first_checked_at": "2026-11-26T14:42:07+00:00",
+      "last_checked_at": "2026-11-26T14:42:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Context Drift Mitigation in Long-Horizon Agentic Workflows: A Memory-Augmented Retrieval Architecture for Enterprise Process Continuity"
+    },
+    "DOI:10.1109/ijcnn69854.2026.11728985": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ijcnn69854.2026.11728985",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn69854.2026.11728985"
+      ],
+      "reason": "Hawkes過程の自己励起と時間減衰で長期エージェントメモリの組織化・検索を行うHMemで、長文脈メモリ管理には関連するがLLM推論機構そのものへの貢献は薄い。",
+      "first_checked_at": "2026-11-26T14:42:07+00:00",
+      "last_checked_at": "2026-11-26T14:42:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HMem: A Hawkes Process Memory Framework for Long-Horizon Agents"
     }
   }
 }

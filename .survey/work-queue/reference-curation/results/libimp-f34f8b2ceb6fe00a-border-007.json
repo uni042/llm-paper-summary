@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f34f8b2ceb6fe00a-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.14219",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.14219",
+    "identity_tokens": [
+      "arXiv:2603.14219"
+    ],
+    "reason": "VLMの安全関連サブネットワークをone-shot pruningで増幅するが、目的はjailbreak防御であり圧縮による推論効率化の評価は主眼でないため関連は薄い。",
+    "first_checked_at": "2026-11-26T14:42:07+00:00",
+    "last_checked_at": "2026-11-26T14:42:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Safety-Potential Pruning for Enhancing Safety Prompts Against VLM Jailbreaking Without Retraining"
+  },
+  "processed_at": "2026-11-26T14:42:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f34f8b2ceb6f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

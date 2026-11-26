@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d43ce56c5cf63713-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/isbi52829.2022.9761518",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/isbi52829.2022.9761518",
+    "identity_tokens": [
+      "DOI:10.1109/isbi52829.2022.9761518"
+    ],
+    "reason": "腫瘍オンチップのビデオ顕微鏡系列を自己注意GANで生成するSAVGANであり、生物医学画像生成が目的。",
+    "first_checked_at": "2026-11-26T14:42:07+00:00",
+    "last_checked_at": "2026-11-26T14:42:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SAVGAN: Self-Attention Based Generation of Tumour on Chip Videos"
+  },
+  "processed_at": "2026-11-26T14:42:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d43ce56c5cf6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
