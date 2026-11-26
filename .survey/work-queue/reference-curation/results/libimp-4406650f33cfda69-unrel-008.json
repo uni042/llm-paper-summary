@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4406650f33cfda69-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/iccwamtip68645.2025.11352613",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/iccwamtip68645.2025.11352613",
+    "identity_tokens": [
+      "DOI:10.1109/iccwamtip68645.2025.11352613"
+    ],
+    "reason": "LLMの複雑推論を強化する手法を推論時最適化・自己修正・外部拡張・構造革新に分類したサーベイであり、対象は推論能力の向上手法で推論システムの効率化機構ではないため対象外。",
+    "first_checked_at": "2026-11-26T11:37:00+00:00",
+    "last_checked_at": "2026-11-26T11:37:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "A Survey of Complex Reasoning Enhancement Methods for Large Language Models"
+  },
+  "processed_at": "2026-11-26T11:37:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4406650f33cf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

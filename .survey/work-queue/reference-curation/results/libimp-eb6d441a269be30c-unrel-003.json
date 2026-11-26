@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb6d441a269be30c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.07375",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.07375",
+    "identity_tokens": [
+      "arXiv:2508.07375"
+    ],
+    "reason": "TurnGuideは全二重音声対話モデルでテキストと音声をターン単位にインターリーブ生成させる方式であり、対話の自然さが目的で推論システムの効率化ではない",
+    "first_checked_at": "2026-11-26T00:59:26+00:00",
+    "last_checked_at": "2026-11-26T11:37:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "TurnGuide: Enhancing Meaningful Full Duplex Spoken Interactions via Dynamic Turn-Level Text-Speech Interleaving"
+  },
+  "processed_at": "2026-11-26T11:37:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb6d441a269b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

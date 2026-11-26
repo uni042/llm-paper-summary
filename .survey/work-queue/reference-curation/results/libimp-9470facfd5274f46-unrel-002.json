@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9470facfd5274f46-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/s25051330",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/s25051330",
+    "identity_tokens": [
+      "DOI:10.3390/s25051330"
+    ],
+    "reason": "ハイパースペクトル画像による焼損度検出という環境リモートセンシング応用がタイトルに明示され、推論システム技術要素を含まないため対象外",
+    "first_checked_at": "2026-11-26T00:59:26+00:00",
+    "last_checked_at": "2026-11-26T11:37:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Research on a Burn Severity Detection Method Based on Hyperspectral Imaging"
+  },
+  "processed_at": "2026-11-26T11:37:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9470facfd527",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

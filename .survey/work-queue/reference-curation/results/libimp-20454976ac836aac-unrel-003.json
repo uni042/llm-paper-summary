@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20454976ac836aac-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.02881",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.02881",
+    "identity_tokens": [
+      "arXiv:2505.02881"
+    ],
+    "reason": "事前学習データをLLMで書き換えて数学・コード性能を高めるデータセット構築の研究であり、学習データ側の成果で推論システムとは無関係である",
+    "first_checked_at": "2026-11-26T11:37:00+00:00",
+    "last_checked_at": "2026-11-26T11:37:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Rewriting Pre-Training Data Boosts LLM Performance in Math and Code"
+  },
+  "processed_at": "2026-11-26T11:37:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20454976ac83",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

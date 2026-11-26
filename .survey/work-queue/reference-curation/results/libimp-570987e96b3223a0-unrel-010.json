@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-570987e96b3223a0-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.13734",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.13734",
+    "identity_tokens": [
+      "arXiv:2609.13734"
+    ],
+    "reason": "PolicyMemは自然言語ポリシーを低ランク部分空間へ変換して再利用するLLMガバナンスの枠組みであり、安全判定・訂正の運用が対象で推論システムの貢献ではない",
+    "first_checked_at": "2026-11-26T11:37:01+00:00",
+    "last_checked_at": "2026-11-26T11:37:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "PolicyMem: Geometric Policy Memory for LLM Governance"
+  },
+  "processed_at": "2026-11-26T11:37:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-570987e96b32",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

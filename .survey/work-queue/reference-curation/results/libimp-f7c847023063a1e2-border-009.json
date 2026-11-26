@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7c847023063a1e2-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.12946",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.12946",
+    "identity_tokens": [
+      "arXiv:2603.12946"
+    ],
+    "reason": "秘匿ニューラル推論のバッチ処理へ優先入力のキュージャンプをスロット再利用でほぼ無償に組み込むPrivQJであり、推論スケジューリングの要素はあるが対象は暗号ベースの汎用NN推論サービスのため境界とする。",
+    "first_checked_at": "2026-11-26T11:37:02+00:00",
+    "last_checked_at": "2026-11-26T11:37:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Almost-Free Queue Jumping for Prior Inputs in Private Neural Inference"
+  },
+  "processed_at": "2026-11-26T11:37:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7c847023063",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

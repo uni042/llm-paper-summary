@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bef99d5969ea66ac-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/hpca68181.2026.11408444",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/hpca68181.2026.11408444",
+    "identity_tokens": [
+      "DOI:10.1109/hpca68181.2026.11408444"
+    ],
+    "reason": "圧縮対応勾配分割は分散学習の集合通信で圧縮勾配のサイズ不均一による帯域浪費を抑える学習側手法であり、推論への適用は確認できない",
+    "first_checked_at": "2026-11-26T11:37:01+00:00",
+    "last_checked_at": "2026-11-26T11:37:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Compression-Aware Gradient Splitting for Collective Communications in Distributed Training"
+  },
+  "processed_at": "2026-11-26T11:37:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bef99d5969ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8119f1f081d274a-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.01795",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.01795",
+    "identity_tokens": [
+      "arXiv:2602.01795"
+    ],
+    "reason": "RedVisorはゼロコピーKVキャッシュ再利用をプロンプトインジェクション防御へ転用する枠組みであり、KVキャッシュ機構を使うものの主目的は攻撃防御で推論効率への貢献は副次的である",
+    "first_checked_at": "2026-11-26T11:37:01+00:00",
+    "last_checked_at": "2026-11-26T11:37:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RedVisor: Reasoning-Aware Prompt Injection Defense via Zero-Copy KV Cache Reuse"
+  },
+  "processed_at": "2026-11-26T11:37:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8119f1f081d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

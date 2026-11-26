@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bd58edb10ca1d5f3-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.01267",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.01267",
+    "identity_tokens": [
+      "arXiv:2512.01267"
+    ],
+    "reason": "ZO-ASRは逆伝播なしのゼロ次最適化で音声基盤モデルを微調整し学習時メモリを抑える手法であり、学習側の効率化で推論システムの貢献ではない",
+    "first_checked_at": "2026-11-26T11:37:01+00:00",
+    "last_checked_at": "2026-11-26T11:37:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ZO-ASR: Zeroth-Order Fine-Tuning of Speech Foundation Models without Back-Propagation"
+  },
+  "processed_at": "2026-11-26T11:37:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bd58edb10ca1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

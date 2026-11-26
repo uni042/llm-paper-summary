@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7c847023063a1e2-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.17672",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.17672",
+    "identity_tokens": [
+      "arXiv:2504.17672"
+    ],
+    "reason": "地域をまたぐ分散LLM学習で通信と計算の重ね合わせと遅延補償により広域網の同期待ちを緩和するCoCoDCであり、対象が学習の分散実行に限られるため対象外。",
+    "first_checked_at": "2026-11-26T11:37:02+00:00",
+    "last_checked_at": "2026-11-26T11:37:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Cross-region Model Training with Communication-Computation Overlapping and Delay Compensation"
+  },
+  "processed_at": "2026-11-26T11:37:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7c847023063",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

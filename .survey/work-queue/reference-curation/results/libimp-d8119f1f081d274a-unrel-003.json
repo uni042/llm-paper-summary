@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8119f1f081d274a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.08774",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.08774",
+    "identity_tokens": [
+      "arXiv:2510.08774"
+    ],
+    "reason": "Struc-EMBはハイパーリンク等の構造情報をLLM内部エンコーディングへ組み込むテキスト埋め込み手法であり、埋め込み品質の改善が目的で推論システムではない",
+    "first_checked_at": "2026-11-26T11:37:01+00:00",
+    "last_checked_at": "2026-11-26T11:37:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Struc-EMB: The Potential of Structure-Aware Encoding in Language Embeddings"
+  },
+  "processed_at": "2026-11-26T11:37:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8119f1f081d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

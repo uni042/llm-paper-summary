@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bd58edb10ca1d5f3-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.48550/arxiv.2206.01299",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.48550/arxiv.2206.01299",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2206.01299",
+      "arXiv:2206.01299"
+    ],
+    "reason": "AC-SGDはパイプライン並列学習の活性化変化量を圧縮し収束保証を与える通信効率化学習手法であり、学習が対象で推論システムの貢献ではない",
+    "first_checked_at": "2026-11-26T11:37:01+00:00",
+    "last_checked_at": "2026-11-26T11:37:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Fine-tuning Language Models over Slow Networks using Activation Compression with Guarantees"
+  },
+  "processed_at": "2026-11-26T11:37:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bd58edb10ca1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

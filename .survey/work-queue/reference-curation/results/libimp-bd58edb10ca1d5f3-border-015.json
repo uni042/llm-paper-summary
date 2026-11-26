@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bd58edb10ca1d5f3-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.02744",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.02744",
+    "identity_tokens": [
+      "arXiv:2601.02744"
+    ],
+    "reason": "SYNAPSEは拡散活性化で関連記憶を辿るLLMエージェント向け長期記憶アーキテクチャであり、推論時の文脈処理に隣接するが主対象はエージェント記憶の検索品質である",
+    "first_checked_at": "2026-11-26T11:37:01+00:00",
+    "last_checked_at": "2026-11-26T11:37:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SYNAPSE: Empowering LLM Agents with Episodic-Semantic Memory via Spreading Activation"
+  },
+  "processed_at": "2026-11-26T11:37:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bd58edb10ca1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

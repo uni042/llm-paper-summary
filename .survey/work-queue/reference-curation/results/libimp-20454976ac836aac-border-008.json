@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20454976ac836aac-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.11895",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.11895",
+    "identity_tokens": [
+      "arXiv:2502.11895"
+    ],
+    "reason": "16ビットから1.58ビットへの量子化対応事前学習の移行時期を検証した研究であり、推論効率の高いBitNetモデルの品質に関わるが貢献は学習レシピ側にある",
+    "first_checked_at": "2026-11-26T11:37:00+00:00",
+    "last_checked_at": "2026-11-26T11:37:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Continual Quantization-Aware Pre-Training: When to transition from 16-bit to 1.58-bit pre-training for BitNet language models?"
+  },
+  "processed_at": "2026-11-26T11:37:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20454976ac83",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

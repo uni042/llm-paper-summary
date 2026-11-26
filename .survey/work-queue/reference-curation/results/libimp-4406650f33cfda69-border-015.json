@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4406650f33cfda69-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.01381",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.01381",
+    "identity_tokens": [
+      "arXiv:2602.01381"
+    ],
+    "reason": "逐次モンテカルロによる推論時スケーリングで近似報酬モデルのBellman誤差が有効性を支配するという理論解析であり、推論時計算配分の理解には資するが実行システムやサービング機構の提案ではないため境界とする。",
+    "first_checked_at": "2026-11-26T11:37:00+00:00",
+    "last_checked_at": "2026-11-26T11:37:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On the Power of (Approximate) Reward Models for Inference-Time Scaling"
+  },
+  "processed_at": "2026-11-26T11:37:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4406650f33cf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-570987e96b3223a0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.01430",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.01430",
+    "identity_tokens": [
+      "arXiv:2404.01430"
+    ],
+    "reason": "位置バイアスを抑える位置認識型パラメータ効率微調整は事前学習済みLLMの微調整手法であり、学習側の改善で推論システムへの貢献はない",
+    "first_checked_at": "2026-11-26T11:37:01+00:00",
+    "last_checked_at": "2026-11-26T11:37:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Position-Aware Parameter Efficient Fine-Tuning Approach for Reducing Positional Bias in LLMs"
+  },
+  "processed_at": "2026-11-26T11:37:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-570987e96b32",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

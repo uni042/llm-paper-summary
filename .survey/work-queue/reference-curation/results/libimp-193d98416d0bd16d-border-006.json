@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-193d98416d0bd16d-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.27249",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.27249",
+    "identity_tokens": [
+      "arXiv:2609.27249"
+    ],
+    "reason": "LLMエージェントでOpenVINOやTensorRT等へのモデル変換・検証を自動化する配置手法であり、推論ランタイムへの展開支援ではあるが推論機構そのものの貢献は間接的である",
+    "first_checked_at": "2026-11-26T11:37:00+00:00",
+    "last_checked_at": "2026-11-26T11:37:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From PyTorch to the NPU: LLM-Agent-Driven Model Conversion Across Heterogeneous Inference Runtimes"
+  },
+  "processed_at": "2026-11-26T11:37:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-193d98416d0b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

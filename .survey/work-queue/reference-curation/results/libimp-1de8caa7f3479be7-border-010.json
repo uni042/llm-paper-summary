@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1de8caa7f3479be7-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.22334",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.22334",
+    "identity_tokens": [
+      "arXiv:2511.22334"
+    ],
+    "reason": "CPU・GPU・NPUの各バックエンドで小規模言語モデルの推論性能とエネルギー効率を比較した実測研究であり、エッジ推論の計測には関連するが新しい推論機構の提案ではない",
+    "first_checked_at": "2026-11-26T11:37:00+00:00",
+    "last_checked_at": "2026-11-26T11:37:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Edge Deployment of Small Language Models, a comprehensive comparison of CPU, GPU and NPU backends"
+  },
+  "processed_at": "2026-11-26T11:37:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1de8caa7f347",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
