@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c1d03-b01::chunk-0002-of-0003",
+  "reference_main_sha": "70e79b336cf3a79dad322f396eaad81d497fa5be",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30014",
+      "identity_tokens": [
+        "arXiv:2605.30014"
+      ],
+      "title": "From GPS Points to Travel Patterns: Flexible and Semantic Trajectory Generation with LLMs",
+      "reason": "GPS点列から移動パターンを生成する都市軌跡生成の応用研究であり、プライバシー下の合成軌跡が目的で推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2605.30014",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 382
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25391",
+      "identity_tokens": [
+        "arXiv:2606.25391"
+      ],
+      "title": "From Sounds to Scenes: A Benchmark for Evaluating Context-Aware Auditory Scene Understanding in Large Audio Language Models",
+      "reason": "大規模音声言語モデルの文脈-aware聴覚シーン理解を測るベンチマークであり、能力評価のみで推論機構の提案は含まれない。",
+      "source_url": "https://arxiv.org/abs/2606.25391",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 383
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.05651",
+      "identity_tokens": [
+        "arXiv:2608.05651"
+      ],
+      "title": "Relay, Don't Route: Adaptive Population Handoff for Cost-Efficient LLM-Driven Evolution",
+      "reason": "LLM駆動の進化的プログラム探索で安価なモデルと強いモデル間の引き継ぎを推論予算下で最適化するが、主対象は探索応用のコスト配分であり汎用サービング機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2608.05651",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 383
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11263-026-02872-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-026-02872-6"
+      ],
+      "title": "Dynamic Token Masking in Spiking Neural Network",
+      "reason": "スパイキングニューラルネットワークの動的トークンマスキングによる視覚処理の省エネ化であり、LLM推論ではなくSNN変換の効率が対象である。",
+      "source_url": "https://doi.org/10.1007/s11263-026-02872-6",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 383
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-54840-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-54840-2"
+      ],
+      "title": "Predictive metacognition: a neuro-computational framework for self-monitoring in large language models",
+      "reason": "LLMの過信や幻覚といったメタ認知の欠陥を予測処理に基づく枠組みで扱う研究であり、自己監視の認知モデルが中心で推論システムの効率貢献はない。",
+      "source_url": "https://doi.org/10.1038/s41598-026-54840-2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 384
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/NAECON70028.2026.11675008",
+      "identity_tokens": [
+        "DOI:10.1109/NAECON70028.2026.11675008"
+      ],
+      "title": "Neuromorphic Orchestration for Efficient LLM Infrastructure via Utility-Optimized Decision-Making",
+      "reason": "密なGPU計算へ一律に流すLLM基盤に対しスパイキング型ワークロードマネージャで階層間ルーティングしGPUコスト削減を主張するが、機構の詳細や評価条件が要旨では薄く即acceptの根拠が弱いため境界とする。",
+      "source_url": "https://doi.org/10.1109/NAECON70028.2026.11675008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 384
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3786206",
+      "identity_tokens": [
+        "DOI:10.1145/3786206"
+      ],
+      "title": "Multi-Task–Driven Adapter-Based Foundation Model for Locomotion Prediction in Virtual Reality",
+      "reason": "VRにおける移動予測のためのアダプタ型基盤モデルであり、仮想現実のインタラクション応用が主目的でLLM推論とは無関係である。",
+      "source_url": "https://doi.org/10.1145/3786206",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 384
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2608.03838",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2608.03838"
+      ],
+      "title": "LatentGuard: Efficient and Inspectable Latent Reasoning for LLM Safeguards",
+      "reason": "推論ベースLLMセーフガードの明示的根拠生成によるデコード負荷を潜在推論で減らす効率化を狙うが、主目的は安全性分類であり汎用推論システムへの貢献は限定的なため境界とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2608.03838",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 385
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2025.12.22.695962",
+      "identity_tokens": [
+        "DOI:10.64898/2025.12.22.695962"
+      ],
+      "title": "Large generative mRNA language foundation model for efficient coding sequence generation and design with mRNA-GPT",
+      "reason": "mRNA設計のための生成言語基盤モデルmRNA-GPTの生物学応用であり、合成生物学・ワクチン開発が目的でLLM推論システムとは無関係である。",
+      "source_url": "https://doi.org/10.64898/2025.12.22.695962",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 385
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.18772",
+      "identity_tokens": [
+        "arXiv:2512.18772"
+      ],
+      "title": "In-Context Audio Control of Video Diffusion Transformers",
+      "reason": "動画拡散Transformerへの音声によるin-context制御の研究であり、動画生成の条件付けが対象でLLM推論の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2512.18772",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 385
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24014",
+      "identity_tokens": [
+        "arXiv:2512.24014"
+      ],
+      "title": "iCLP: Large Language Model Reasoning with Implicit Cognition Latent Planning",
+      "reason": "明示的テキスト計画の幻覚を避ける潜在計画によるLLM推論能力の改善であり、対象は推論精度であって推論システムの速度や資源効率ではない。",
+      "source_url": "https://arxiv.org/abs/2512.24014",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 386
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12100",
+      "identity_tokens": [
+        "arXiv:2602.12100"
+      ],
+      "title": "AssetFormer: Modular 3D Assets Generation with Autoregressive Transformer",
+      "reason": "テキストからモジュール式3Dアセットを自己回帰生成するAssetFormerの研究であり、3Dコンテンツ生成応用でLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2602.12100",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 386
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15863",
+      "identity_tokens": [
+        "arXiv:2602.15863"
+      ],
+      "title": "Not the Example, but the Process: How Self-Generated Examples Enhance LLM Reasoning",
+      "reason": "自己生成few-shot例がLLMの推論性能を高める仕組みの分析であり、プロンプティングの理解が目的で推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2602.15863",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 386
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.17917",
+      "identity_tokens": [
+        "arXiv:2603.17917"
+      ],
+      "title": "Weight Clustering Reveals the Importance of Relative Rank in Large Language Models",
+      "reason": "事前学習済みLLMの重みをスカラーK-meansで16〜64個の共有値へ置換し再学習なしで精度を保つ重みクラスタリングを示しており、モデル圧縮による推論メモリ削減へ直接つながる。",
+      "source_url": "https://arxiv.org/abs/2603.17917",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 387
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09624",
+      "identity_tokens": [
+        "arXiv:2604.09624"
+      ],
+      "title": "Self-Calibrating Language Models via Test-Time Discriminative Distillation",
+      "reason": "テスト時識別蒸留でLLMの過信を校正する研究であり、推論コスト増への言及はあるが目的はキャリブレーション精度で推論効率化の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2604.09624",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 387
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.23235",
+      "identity_tokens": [
+        "arXiv:2604.23235"
+      ],
+      "title": "Measuring Temporal Linguistic Emergence in Diffusion Language Models",
+      "reason": "拡散言語モデルのノイズ除去軌跡で言語情報がいつ現れるかを測る測定研究であり、生成過程の分析のみで推論システムの改善は含まれない。",
+      "source_url": "https://arxiv.org/abs/2604.23235",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 387
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26132",
+      "identity_tokens": [
+        "arXiv:2605.26132"
+      ],
+      "title": "Self-Verified Distillation: Your Language Model Is Secretly Its Own Synthetic Data Pipeline",
+      "reason": "ラベルなしプロンプトだけでLLMが自己検証蒸留により自己改善する学習手法であり、対象は事後学習であって推論時の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2605.26132",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 388
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30587",
+      "identity_tokens": [
+        "arXiv:2605.30587"
+      ],
+      "title": "ReGuLaR: Relation-Grounded Latent Reasoning for Large Vision-Language Models",
+      "reason": "視覚言語モデルの関係に基づく潜在推論でCoTの表現力を高める研究であり、推論精度の改善が目的で推論システムの効率貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2605.30587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 388
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08728",
+      "identity_tokens": [
+        "arXiv:2606.08728"
+      ],
+      "title": "Artificial Intelligence for Mathematical Reasoning: An Integrated Survey of Language Models, Neuro-symbolic Systems, and Verified Discovery",
+      "reason": "数学的推論における言語モデルやニューロシンボリック手法の統合サーベイであり、分野の歴史整理が目的で推論システムへの新規貢献はない。",
+      "source_url": "https://arxiv.org/abs/2606.08728",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 388
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.08960",
+      "identity_tokens": [
+        "arXiv:2607.08960"
+      ],
+      "title": "Eluna: An Agentic LLM System for Automating Warehouse Operations with Reasoning and Task Execution",
+      "reason": "倉庫業務の標準手順をLLMエージェントで自動化するElunaの応用システムであり、手順遵守が課題でLLM推論基盤の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2607.08960",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 389
+    }
+  ],
+  "parent_run_key": "muse-20261126-c1d03-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 52
+}

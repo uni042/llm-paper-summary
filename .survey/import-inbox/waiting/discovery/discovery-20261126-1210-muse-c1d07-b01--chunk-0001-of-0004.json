@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c1d07-b01::chunk-0001-of-0004",
+  "reference_main_sha": "70e79b336cf3a79dad322f396eaad81d497fa5be",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.23968",
+      "identity_tokens": [
+        "arXiv:2608.23968"
+      ],
+      "title": "When LLMs Slow Down: How Environmental Impacts Mediate University Students LLM Usage",
+      "reason": "大学生89名を対象にレイテンシと炭素排出のトレードオフを示すエコフィードバック界面の利用行動を調べたHCI研究であり、LLM推論システム自体への技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2608.23968",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.28008",
+      "identity_tokens": [
+        "arXiv:2608.28008"
+      ],
+      "title": "Visual Token Coding for Video Multimodal Large Language Models",
+      "reason": "動画MLLM向けにHEVCのI/Pフレーム予測と残差で視覚トークンの冗長性を測り圧縮するVisual Token Codingを提案し、50%圧縮で性能保持率98.4%を示しており、プリフィル計算を直接減らす推論効率化である。",
+      "source_url": "https://arxiv.org/abs/2608.28008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.30158",
+      "identity_tokens": [
+        "arXiv:2608.30158"
+      ],
+      "title": "CPR for LLMs: Critical-Point Routing against Catastrophic Forgetting in Domain Adaptation",
+      "reason": "ベースモデルとSFT専門モデルをトークン単位でルーティングする推論手順を併せ持つが、主目的はドメイン適応時の壊滅的忘却の回避であり、推論システムとしての貢献はルータ呼び出しの仕組みに限られる。",
+      "source_url": "https://arxiv.org/abs/2608.30158",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02940",
+      "identity_tokens": [
+        "arXiv:2609.02940"
+      ],
+      "title": "Listen to the Latents: Self-Correcting Speech Recognition in Large Audio Language Models Through Hidden-State Interactions",
+      "reason": "LoRA適応した音声認識モデルとベースLLMの隠れ状態の相互作用を使いASR誤りを自己修正するHybrid Searchの提案で、対象は音声認識精度でありLLM推論基盤ではない。",
+      "source_url": "https://arxiv.org/abs/2609.02940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11252",
+      "identity_tokens": [
+        "arXiv:2609.11252"
+      ],
+      "title": "AudioICL-Bench: A Benchmark for Large Audio Language Model In-Context Learning",
+      "reason": "音響言語モデルの文脈内学習を課題認識と課題学習に分けて測る診断ベンチマークAudioICL-Benchの構築と能力評価のみで、推論システムへの提案はない。",
+      "source_url": "https://arxiv.org/abs/2609.11252",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.17443",
+      "identity_tokens": [
+        "arXiv:2609.17443"
+      ],
+      "title": "BrainFocus: EEG-Guided ROI Selection for Efficient Vision-Language Models",
+      "reason": "EEGで予測したカテゴリと検出器でVLMの入力を関心領域に切り抜き計算量を下げる枠組みだが、脳波計測を前提とするVQA応用が主目的で、推論効率化の機構は信頼度閾値による全画像処理へのフォールバックに留まる。",
+      "source_url": "https://arxiv.org/abs/2609.17443",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18041",
+      "identity_tokens": [
+        "arXiv:2609.18041"
+      ],
+      "title": "Correlation-Guided Encoder Selection for Multi-Encoder Large Audio-Language Models",
+      "reason": "複数音響エンコーダの性能プロファイル間の相関から融合構成を選ぶ軽量ヒューリスティクスCUESの提案で、対象は音響言語モデルの構成選択であり推論実行の高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.18041",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.28585",
+      "identity_tokens": [
+        "arXiv:2609.28585"
+      ],
+      "title": "Persistent Billable State: Denial-of-Wallet Attacks and Defenses in Tool-Calling LLM Agents",
+      "reason": "ツール呼び出しエージェントで保持されたツール返却値が後段の課金対象コンテキストへ再投入されるDenial-of-Wallet攻撃と履歴圧縮等の防御を体系化しており、実行時状態とコンテキスト費用に触れるが主貢献はセキュリティ分析である。",
+      "source_url": "https://arxiv.org/abs/2609.28585",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29238",
+      "identity_tokens": [
+        "arXiv:2609.29238"
+      ],
+      "title": "Exploring a Single Autoregressive LLM for Unified Target Speech Extraction across Synchronous and Asynchronous Cues",
+      "reason": "唇動作や登録音声など同期・非同期の手がかりを単一自己回帰LLMで統合する目標話者抽出TSE-Omniの研究で、音声信号処理応用でありLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2609.29238",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31652",
+      "identity_tokens": [
+        "arXiv:2609.31652"
+      ],
+      "title": "Open-Qwen-Music: An Auditable Framework for LLM-Based Music Composition and Diffusion Rendering",
+      "reason": "LLMによる楽曲構成と拡散レンダリングを組み合わせたテキスト音楽生成システムのオープン再実装であり、音楽生成応用であって推論効率の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2609.31652",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33903",
+      "identity_tokens": [
+        "arXiv:2609.33903"
+      ],
+      "title": "Can Prompt Anonymity Protect Your Identity From LLM Providers?",
+      "reason": "匿名化プロキシ経由のプロンプトから利用者を再同定できるかを測るPromptAnonBenchによるプライバシー評価であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2609.33903",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34136",
+      "identity_tokens": [
+        "arXiv:2609.34136"
+      ],
+      "title": "Waggle: Learning One Anonymous Local Law for Self-Organizing LLM Swarms",
+      "reason": "匿名の局所則を共有してLLMスウォームの協調を自己組織化させるWaggleとその蒸留学習法の研究で、マルチエージェント協調の学習が主題であり推論基盤ではない。",
+      "source_url": "https://arxiv.org/abs/2609.34136",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36115",
+      "identity_tokens": [
+        "arXiv:2609.36115"
+      ],
+      "title": "Koa-action: Fast and Consistent Structured Decision Making with Generative LLMs",
+      "reason": "分類等の原子決定を単一トークンの制約付き生成に帰着させ低レイテンシ化するKoa-actionを提案するが、タスクごとの教師あり微調整を前提とする応用分類の枠組みであり、汎用デコード機構としての新規性は限定的である。",
+      "source_url": "https://arxiv.org/abs/2609.36115",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37717",
+      "identity_tokens": [
+        "arXiv:2609.37717"
+      ],
+      "title": "Predictive Geometry of Hidden Trajectories in Transformers",
+      "reason": "デコーダ型Transformerの層wiseなloss-to-go関数の曲率とFisher作用素で隠れ軌跡の幾何を解析する理論研究であり、推論高速化の機構提案はない。",
+      "source_url": "https://arxiv.org/abs/2609.37717",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39382",
+      "identity_tokens": [
+        "arXiv:2609.39382"
+      ],
+      "title": "SkillFM: Generating Skills for LLM Agents via Latent Flow Matching",
+      "reason": "潜在フロー matchingでエージェント用テキストスキルを生成するSkillFMの提案で、推論時の単一ステップ潜在サンプリングはスキル生成器側の話でありLLMサービングの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.39382",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39560",
+      "identity_tokens": [
+        "arXiv:2609.39560"
+      ],
+      "title": "Self-Repulsive Sampling for Diffusion Language Models",
+      "reason": "マスク拡散言語モデル向けにピアの確定トークンでlogitを罰し多様なサンプル経路を得るSelf-Repulsionを提案し追加の順伝播なしで実装されるが、狙いは投票精度の向上であり推論コスト削減ではない。",
+      "source_url": "https://arxiv.org/abs/2609.39560",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00706",
+      "identity_tokens": [
+        "arXiv:2610.00706"
+      ],
+      "title": "AnchorPrompt: Self-Distilled Soft Prompts for Robust Audio-Language Models",
+      "reason": "凍結した音響言語モデルのデコーダ入力へ自己蒸留で学んだソフトプロンプトを挿入し摂動への頑健性を上げるAnchorPromptの研究で、対象は音声質問応答の精度・一貫性である。",
+      "source_url": "https://arxiv.org/abs/2610.00706",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.05373",
+      "identity_tokens": [
+        "arXiv:2610.05373"
+      ],
+      "title": "Towards Unbiased On-Policy Distillation for Block Diffusion Language Models",
+      "reason": "ブロック拡散言語モデルのオンポリシー蒸留における文脈不整合と最適化バイアスを除く学習法Un-OPDの提案で、学習単独の安定化であり推論への具体的適用はない。",
+      "source_url": "https://arxiv.org/abs/2610.05373",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.06955",
+      "identity_tokens": [
+        "arXiv:2610.06955"
+      ],
+      "title": "ROMA: LLM System for Real-World Object-Centric Multi-Sensory Active Perception",
+      "reason": "視覚・音響・触覚・力を統合し不足証拠を能動的に集めるロボット知覚システムROMAと実世界データセットの構築であり、ロボット応用が主目的である。",
+      "source_url": "https://arxiv.org/abs/2610.06955",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07533",
+      "identity_tokens": [
+        "arXiv:2610.07533"
+      ],
+      "title": "SkillFormer: Skill-Decomposed Adaptation for Audio Language Models",
+      "reason": "音響言語モデルのスキル別低ランクアダプタを推論時に学習済みルータで合成するSkillFormerを提案するが、目的はマルチスキル音声理解の精度向上であり推論システムの効率化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2610.07533",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 464
+    }
+  ],
+  "parent_run_key": "muse-20261126-c1d07-b01",
+  "chunk_index": 1,
+  "chunk_count": 4,
+  "source_record_count": 65
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5f8bbecf26a4b615-border-020",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2405.03085",
+  "reason": "RAGで検索された長文文書のノイズが回答を薄める問題に対し、AMRベースの概念蒸留で長文脈を圧縮してから入力する手法であり、LLMへ渡す文脈量の削減は推論コストに関わるが主眼は検索拡張生成の品質改善であるため境界とする。",
+  "title": "Compressing Long Context for Enhancing RAG with AMR-based Concept Distillation",
+  "identity_tokens": [
+    "arXiv:2405.03085"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f8bbecf26a4",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

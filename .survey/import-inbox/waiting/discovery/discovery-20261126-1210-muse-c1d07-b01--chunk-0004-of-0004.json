@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c1d07-b01::chunk-0004-of-0004",
+  "reference_main_sha": "70e79b336cf3a79dad322f396eaad81d497fa5be",
+  "record_count": 5,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.09586",
+      "identity_tokens": [
+        "arXiv:2510.09586"
+      ],
+      "title": "Vision Language Models: A Survey of 26K Papers",
+      "reason": "26,104本の会議論文の題名と要旨を語彙照合して視覚言語モデルの研究動向を測る計量サーベイであり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2510.09586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TNSM.2024.3479076",
+      "identity_tokens": [
+        "DOI:10.1109/TNSM.2024.3479076"
+      ],
+      "title": "UCBEE: A Multi Armed Bandit Approach for Early-Exit in Neural Networks",
+      "reason": "画像分類等の汎用DNN向けに早期終了の閾値を多腕バンディットで動的調整するUCBEEの提案で、LLM推論を対象としておらず直接の貢献はない。",
+      "source_url": "https://doi.org/10.1109/TNSM.2024.3479076",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3696410.3714800",
+      "identity_tokens": [
+        "DOI:10.1145/3696410.3714800"
+      ],
+      "title": "LargePiG for Hallucination-Free Query Generation: Your Large Language Model is Secretly a Pointer Generator",
+      "reason": "LLMの注意重みをポインタ分布として再利用しクエリ生成の幻覚を抑えるLargePiGの提案で、情報検索クエリ生成の忠実性が主題であり推論効率ではない。",
+      "source_url": "https://doi.org/10.1145/3696410.3714800",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/SpliTech65624.2025.11091771",
+      "identity_tokens": [
+        "DOI:10.23919/SpliTech65624.2025.11091771"
+      ],
+      "title": "Performance of Large Language Models Across Edge and Cloud Platforms in Smart Spaces",
+      "reason": "スマートスペース向けにオープンLLMをラップトップ・Raspberry Pi等のエッジとクラウドへ配置し応答レイテンシと精度を実測比較しているが、応用分析基盤の性能評価に留まり推論システムの新機構はない。",
+      "source_url": "https://doi.org/10.23919/SpliTech65624.2025.11091771",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s25226815",
+      "identity_tokens": [
+        "DOI:10.3390/s25226815"
+      ],
+      "title": "Enhanced Deep Neural Network for Prostate Segmentation in Micro-Ultrasound Images",
+      "reason": "マイクロ超音波画像の前立腺セグメンテーション向け二重エンコーダDNNの提案で、医用画像解析でありLLM推論とは明白に無関係である。",
+      "source_url": "https://doi.org/10.3390/s25226815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 479
+    }
+  ],
+  "parent_run_key": "muse-20261126-c1d07-b01",
+  "chunk_index": 4,
+  "chunk_count": 4,
+  "source_record_count": 65
+}

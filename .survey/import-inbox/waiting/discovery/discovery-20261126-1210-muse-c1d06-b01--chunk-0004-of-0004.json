@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c1d06-b01::chunk-0004-of-0004",
+  "reference_main_sha": "70e79b336cf3a79dad322f396eaad81d497fa5be",
+  "record_count": 5,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24507",
+      "identity_tokens": [
+        "arXiv:2607.24507"
+      ],
+      "title": "UNIFUSION: Adapting Autoregressive Language Models into Discrete Diffusion under a Unified Reverse-Rate Objective",
+      "reason": "UNIFUSIONは自己回帰LLMを一様ノイズ拡散へ継続事前学習で適応させる学習手法であり、推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2607.24507",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24765",
+      "identity_tokens": [
+        "arXiv:2607.24765"
+      ],
+      "title": "Measuring and Improving Behavioral Consistency in Large Language Models through Fact-Heuristic-Emotion State Enforcement",
+      "reason": "CKMはプロンプト層で事実・ヒューリスティクス・感情の状態分離を強制しLLMの行動一貫性を測る・高める研究であり、推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2607.24765",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.26596",
+      "identity_tokens": [
+        "arXiv:2607.26596"
+      ],
+      "title": "Decoupled Visual Processing: Efficient Multimodal Adaptation via Modality-Specific Transformer Substitution",
+      "reason": "DVPは上位デコーダ層を視覚専用の単一Transformerブロックへ置換し視覚instruction tuningの学習パラメータを大幅に減らす枠組みで、主眼は学習効率であり推論時の利得は限定的である。",
+      "source_url": "https://arxiv.org/abs/2607.26596",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28478",
+      "identity_tokens": [
+        "arXiv:2607.28478"
+      ],
+      "title": "Would You Walk to the Car Wash? Salience Bias in LLM Commonsense Reasoning",
+      "reason": "SaliTrapはLLMの顕著性バイアスを測る常識推論ベンチマークとプロンプト改善の研究であり、能力評価・診断で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2607.28478",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.13571",
+      "identity_tokens": [
+        "arXiv:2608.13571"
+      ],
+      "title": "Not All Tokens Are Equal: Inflation-Aware Routing for Agentic LLM Systems",
+      "reason": "InflationAgentは再試行によるトークン膨張を実ワークフローコストとして測り、CoT Branching Entropyで難易度を予測してモデルを振り分けることで固定予算下でトークンを31%削減するエージェント型LLMシステムのルーティング機構である。",
+      "source_url": "https://arxiv.org/abs/2608.13571",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    }
+  ],
+  "parent_run_key": "muse-20261126-c1d06-b01",
+  "chunk_index": 4,
+  "chunk_count": 4,
+  "source_record_count": 65
+}

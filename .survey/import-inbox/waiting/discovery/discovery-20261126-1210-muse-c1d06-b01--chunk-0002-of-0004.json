@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c1d06-b01::chunk-0002-of-0004",
+  "reference_main_sha": "70e79b336cf3a79dad322f396eaad81d497fa5be",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.108867",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.108867"
+      ],
+      "title": "WARGM-PDPG: A dual-phase policy gradient graph mamba neural network for device placement algorithms",
+      "reason": "WARGM-PDPGはグラフMamba埋め込みと二相方策勾配で計算グラフのデバイス配置を最適化し実行時間を改善するが、要旨の主目的は並列学習戦略でありLLM推論配置への適用は確認できない。",
+      "source_url": "https://doi.org/10.1016/j.neunet.2026.108867",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41598-026-49886-1",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-49886-1"
+      ],
+      "title": "EnergyRoute: energy-based uncertainty routing for selective retrieval and large language model assistance in the hierarchical classification of biotechnology R&D projects",
+      "reason": "EnergyRouteは不確実性でエンコーダ・検索・LLMの3層へ振り分けバイオテク分類でのLLM使用を約5分の1に減らすが、特定の階層分類業務への応用が主目的であり汎用推論機構とは言い難い。",
+      "source_url": "https://doi.org/10.1038/s41598-026-49886-1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/HPSR68369.2026.11615182",
+      "identity_tokens": [
+        "DOI:10.1109/HPSR68369.2026.11615182"
+      ],
+      "title": "Dynamic Task Scheduling and Function Orchestration for Serverless LLM",
+      "reason": "Knative上でAIMDアドミッション制御と関数構成最適化によりサーバレスLLM推論の動的タスクスケジューリングとオートスケーリングを行い、SLA違反0.19%とvCPU32%削減を示した直接の推論サービング研究である。",
+      "source_url": "https://doi.org/10.1109/HPSR68369.2026.11615182",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 444
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICC59461.2026.11586827",
+      "identity_tokens": [
+        "DOI:10.1109/ICC59461.2026.11586827"
+      ],
+      "title": "LLM4Imp: Leveraging Frozen Large Language Models with Spectral Prompts for Time-Series Imputation",
+      "reason": "LLM4Impは凍結したGPT-2をスペクトルプロンプト等で再プログラミングする多変量時系列補完の応用研究であり、推論システムとは無関係である。",
+      "source_url": "https://doi.org/10.1109/ICC59461.2026.11586827",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 444
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICMEW69720.2026.11720743",
+      "identity_tokens": [
+        "DOI:10.1109/ICMEW69720.2026.11720743"
+      ],
+      "title": "HiSQRot4: Smoothquant-Rotation HiFloat4 PTQ for W4A4 Text-to-Video Diffusion Models",
+      "reason": "HiSQRot4はW4A4のPTQをテキスト動画拡散モデルの推論へ適用する量子化手法だが、対象がLLMではなく拡散モデルであり、LLM推論への直接適用は示されていない。",
+      "source_url": "https://doi.org/10.1109/ICMEW69720.2026.11720743",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 444
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICSTW72326.2026.00015",
+      "identity_tokens": [
+        "DOI:10.1109/ICSTW72326.2026.00015"
+      ],
+      "title": "STARouter: Internal State based LLM Router for Software Testing Tasks",
+      "reason": "STARouterは内部状態からローカルSLMとリモートLLMの成否を予測して振り分けるルータだが、ソフトウェアテスト課題専用に学習される設計で汎用サービング機構としての位置づけは弱い。",
+      "source_url": "https://doi.org/10.1109/ICSTW72326.2026.00015",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/PRMVAI70103.2026.11605929",
+      "identity_tokens": [
+        "DOI:10.1109/PRMVAI70103.2026.11605929"
+      ],
+      "title": "DHVI: Digital Human Voice Interaction Driven By Edge-based Large Language Model",
+      "reason": "DHVIはASR・LLM・TTSをエッジに統合し遅延を26%削減するデジタルヒューマン音声対話アーキテクチャだが、特定応用向けの統合実装であり汎用LLM推論基盤の貢献は限定的である。",
+      "source_url": "https://doi.org/10.1109/PRMVAI70103.2026.11605929",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/SERA69989.2026.11618670",
+      "identity_tokens": [
+        "DOI:10.1109/SERA69989.2026.11618670"
+      ],
+      "title": "Benchmarking Open-Source Large Language Models: A Comparative Performance Study",
+      "reason": "オープンソースLLM3種をローカルGPUでTPSや生成時間により比較するベンチマーク研究であり、推論システムの新たな機構の提案はない。",
+      "source_url": "https://doi.org/10.1109/SERA69989.2026.11618670",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/1.JRS.20.026508",
+      "identity_tokens": [
+        "DOI:10.1117/1.JRS.20.026508"
+      ],
+      "title": "BiMamba2-Tunnel: an efficient and high-fidelity hybrid SSM-transformer framework for tunnel point cloud completion",
+      "reason": "BiMamba2-Tunnelはトンネル点群補完のためのSSM-Transformerハイブリッドであり、3次元計測応用でLLM推論とは無関係である。",
+      "source_url": "https://doi.org/10.1117/1.JRS.20.026508",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 446
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3107769",
+      "identity_tokens": [
+        "DOI:10.1117/12.3107769"
+      ],
+      "title": "Research on the security protection mechanism of transformer-based power data mining facing sequence sensitivity",
+      "reason": "電力負荷予測用Transformerの系列感度に対する敵対的攻撃と防御の研究であり、電力データマイニングのセキュリティが主題で推論システムではない。",
+      "source_url": "https://doi.org/10.1117/12.3107769",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 446
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3777912.3839799",
+      "identity_tokens": [
+        "DOI:10.1145/3777912.3839799"
+      ],
+      "title": "Characterizing the Ecosystem of Open-Source Uncensored Large Language Models: Supply Chain, Governance, and Risks",
+      "reason": "無検閲オープンソースLLMの供給網・ガバナンス・リスクを分析するエコシステム調査であり、推論システム技術の提案はない。",
+      "source_url": "https://doi.org/10.1145/3777912.3839799",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 446
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s13020-026-01489-8",
+      "identity_tokens": [
+        "DOI:10.1186/s13020-026-01489-8"
+      ],
+      "title": "Large language models linking traditional Chinese medicine knowledge and clinical practice",
+      "reason": "伝統中国医学の知識と臨床へのLLM応用を整理したレビューであり、医療応用の概観で推論システムとは無関係である。",
+      "source_url": "https://doi.org/10.1186/s13020-026-01489-8",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/812",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/812"
+      ],
+      "title": "Improving Scientific Formula Verbalization in Large Speech Language Models for Accessible Learning",
+      "reason": "盲・弱視学習者向けに科学公式を音声化する大規模音声言語モデルの研究であり、アクセシビリティ応用で推論システムではない。",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/812",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2411.17792",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2411.17792"
+      ],
+      "title": "H3Fusion: Helpful, Harmless, Honest Fusion of Aligned LLMs",
+      "reason": "H3Fusionはhelpful・harmless・honestなアライメントをMoE融合で両立させる手法であり、MoEはアライメント統合の手段で推論効率化の貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2411.17792",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.05861",
+      "identity_tokens": [
+        "arXiv:2403.05861"
+      ],
+      "title": "DeepVM: Integrating Spot and On-Demand VMs for Cost-Efficient Deep Learning Clusters in the Cloud",
+      "reason": "DeepVMはスポットVMとオンデマンドVMの混成で深層学習の学習クラスタとチェックポイントのコストを下げる研究であり、対象は学習基盤でLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2403.05861",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 448
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.19670",
+      "identity_tokens": [
+        "arXiv:2405.19670"
+      ],
+      "title": "One Token Can Help! Learning Scalable and Pluggable Virtual Tokens for Retrieval-Augmented Large Language Models",
+      "reason": "検索拡張生成のために学習可能な仮想トークンを差し込む手法で、QA精度の向上が目的であり推論システムの効率機構ではない。",
+      "source_url": "https://arxiv.org/abs/2405.19670",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 448
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.04319",
+      "identity_tokens": [
+        "arXiv:2411.04319"
+      ],
+      "title": "Towards Optimizing SQL Generation via LLM Routing",
+      "reason": "Text-to-SQL専用に精度・コストでLLMを振り分ける初のルーティング手法であり、ルーティング自体はサービング技術だが単一応用課題に特化しているため境界とする。",
+      "source_url": "https://arxiv.org/abs/2411.04319",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 448
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.16331",
+      "identity_tokens": [
+        "arXiv:2504.16331"
+      ],
+      "title": "Can Code Language Models Learn Clarification-Seeking Behaviors?",
+      "reason": "コードLLMに曖昧な要件への確認質問行動をinstruction-tuningで学習させる研究であり、能力・振る舞いの改善で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2504.16331",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 449
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19896",
+      "identity_tokens": [
+        "arXiv:2505.19896"
+      ],
+      "title": "Large Language Models as Autonomous Spacecraft Operators in Kerbal Space Program",
+      "reason": "Kerbal Space ProgramでLLMエージェントに衛星を自律運用させる宇宙制御への応用研究であり、推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2505.19896",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 449
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02566",
+      "identity_tokens": [
+        "arXiv:2601.02566"
+      ],
+      "title": "Shallow- and Deep-fake Image Manipulation Localization Using Vision Mamba and Guided Graph Neural Network",
+      "reason": "Vision Mambaと誘導GNNで偽造画像の操作位置を特定する画像フォレンジクス研究であり、LLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2601.02566",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 449
+    }
+  ],
+  "parent_run_key": "muse-20261126-c1d06-b01",
+  "chunk_index": 2,
+  "chunk_count": 4,
+  "source_record_count": 65
+}

@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c1d06-b01::chunk-0003-of-0004",
+  "reference_main_sha": "70e79b336cf3a79dad322f396eaad81d497fa5be",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.04913",
+      "identity_tokens": [
+        "arXiv:2602.04913"
+      ],
+      "title": "A2-LLM: An End-to-end Conversational Audio Avatar Large Language Model",
+      "reason": "A2-LLMは言語・音響韻律・3D顔動作を統一しカスケード誤差と遅延を減らす対話アバタモデルで、500ms遅延は示すが主貢献はアバタ生成能力であり推論基盤技術ではない。",
+      "source_url": "https://arxiv.org/abs/2602.04913",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 450
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.08625",
+      "identity_tokens": [
+        "arXiv:2602.08625"
+      ],
+      "title": "Do Multilingual LLMs have specialized language heads?",
+      "reason": "多言語LLMの言語特化注意ヘッドを同定し不要言語ヘッド除去による展開効率化の可能性を示す分析だが、実際の削減システムや推論評価は提示されていない。",
+      "source_url": "https://arxiv.org/abs/2602.08625",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 450
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12468",
+      "identity_tokens": [
+        "arXiv:2602.12468"
+      ],
+      "title": "Continuous Diffusion Models Can Obey Formal Syntax",
+      "reason": "Diffinityは正規表現制約を満たすよう連続拡散言語モデルのサンプリングを学習なしで誘導する手法で、制約付きデコード技術ではあるが対象は拡散モデルであり自己回帰LLMサービングへの適用は未確認である。",
+      "source_url": "https://arxiv.org/abs/2602.12468",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 450
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13958",
+      "identity_tokens": [
+        "arXiv:2602.13958"
+      ],
+      "title": "Chemical Language Models for Natural Products: A State-Space Model Approach",
+      "reason": "天然物向け化学言語モデルとしてMamba系とGPTを事前学習し分子生成・物性予測を比較する創薬分野の研究であり、LLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2602.13958",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21961",
+      "identity_tokens": [
+        "arXiv:2602.21961"
+      ],
+      "title": "Robustness in sparse artificial neural networks trained with adaptive topology",
+      "reason": "適応トポロジで学習するスパースANNのMNIST等での頑健性分析であり、LLM推論のスパース化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2602.21961",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15919",
+      "identity_tokens": [
+        "arXiv:2603.15919"
+      ],
+      "title": "Sparse but not Simpler: A Multi-Level Interpretability Analysis of Vision Transformers",
+      "reason": "プルーニングしたVision Transformerの解釈可能性を多層で評価する研究であり、圧縮の解釈可能性が主題でLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2603.15919",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.21705",
+      "identity_tokens": [
+        "arXiv:2603.21705"
+      ],
+      "title": "Data-Free Layer-Adaptive Merging via Fisher Information for Long-to-Short Reasoning LLMs",
+      "reason": "FIM-MergingはFisher情報で層適応的に長思考モデルをマージし応答長を91.9%短縮するが、主手法はモデルマージであり推論時の実行機構ではなく短縮はマージの副次効果である。",
+      "source_url": "https://arxiv.org/abs/2603.21705",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25841",
+      "identity_tokens": [
+        "arXiv:2603.25841"
+      ],
+      "title": "GazeQwen: Lightweight Gaze-Conditioned LLM Modulation for Streaming Video Understanding",
+      "reason": "GazeQwenは視線条件付けでストリーミング動画理解の精度を上げるマルチモーダル手法であり、能力向上が目的で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2603.25841",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.19826",
+      "identity_tokens": [
+        "arXiv:2604.19826"
+      ],
+      "title": "Co-located Tests, Better AI Code: How Test Syntax Structure Affects Foundation Model Code Generation",
+      "reason": "テストコードの配置構文が基盤モデルのコード生成品質に与える影響を調べた実証研究であり、推論システム技術ではない。",
+      "source_url": "https://arxiv.org/abs/2604.19826",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.22771",
+      "identity_tokens": [
+        "arXiv:2604.22771"
+      ],
+      "title": "The Randomness Floor: Measuring Intrinsic Non-Randomness in Language Model Token Distributions",
+      "reason": "言語モデルのトークン分布に内在する非ランダム性をEntropic Deviationで測定する分析研究であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2604.22771",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.26951",
+      "identity_tokens": [
+        "arXiv:2604.26951"
+      ],
+      "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+      "reason": "TIDEは8B・16B教師から0.6B学生へアーキテクチャを跨いで拡散LLMを蒸留する枠組みで、小型化は推論に資するが主対象は拡散LLMの学習側蒸留でありサービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2604.26951",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.06402",
+      "identity_tokens": [
+        "arXiv:2605.06402"
+      ],
+      "title": "SparseForge: Efficient Semi-Structured LLM Sparsification via Annealing of Hessian-Guided Soft-Mask",
+      "reason": "SparseForgeはHessian誘導のソフトマスクアニーリングで2:4半構造スパース化を学習後処理として行い、ハードウェア支援のあるLLM推論高速化を少ない再学習トークンで実現する直接の圧縮・高速化手法である。",
+      "source_url": "https://arxiv.org/abs/2605.06402",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19859",
+      "identity_tokens": [
+        "arXiv:2605.19859"
+      ],
+      "title": "Eyes on VLM: Benchmarking Gaze Following and Social Gaze Prediction in Vision Language Models",
+      "reason": "EyeVLMはVLMの視線追従と社会的視線予測の能力を測る評価フレームワークであり、能力ベンチマークで推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2605.19859",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.26436",
+      "identity_tokens": [
+        "arXiv:2605.26436"
+      ],
+      "title": "Targeted Remasking: Replacing Token Editing with Token-to-Mask Refinement in Discrete Diffusion Language Models",
+      "reason": "Token-to-Mask再マスキングは離散拡散言語モデルの推論時編集方針を置き換え誤トークンを浄化するが、主眼は生成品質の修復であり高速化やサービング機構の実証はない。",
+      "source_url": "https://arxiv.org/abs/2605.26436",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27566",
+      "identity_tokens": [
+        "arXiv:2605.27566"
+      ],
+      "title": "DynaSchedBench: Calibrated Dynamic Scheduling Benchmarks and Observability Paradox in LLM-based Scheduling Agents",
+      "reason": "DynaSchedBenchは動的ジョブショップスケジューリングを解くLLMエージェントのベンチマークであり、LLM自体のスケジューリング基盤ではなく応用側の評価である。",
+      "source_url": "https://arxiv.org/abs/2605.27566",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.30981",
+      "identity_tokens": [
+        "arXiv:2605.30981"
+      ],
+      "title": "Cognitive Fatigue in Autoregressive Transformers: Formalization and Measurement",
+      "reason": "Fatigue Indexは長生成時の劣化を注意減衰等の信号で検出する本番LLM向け診断指標だが、監視・診断に留まり推論システムの改善機構そのものではない。",
+      "source_url": "https://arxiv.org/abs/2605.30981",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04473",
+      "identity_tokens": [
+        "arXiv:2606.04473"
+      ],
+      "title": "ChessMimic: Per-Rating Transformer Models for Human Move, Clock, and Outcome Prediction in Online Blitz Chess",
+      "reason": "ChessMimicはレーティング帯別Transformerで人間のチェス指し手・時計・勝敗を予測する研究であり、ゲーム応用でLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2606.04473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06031",
+      "identity_tokens": [
+        "arXiv:2606.06031"
+      ],
+      "title": "NAVIRA: Decoupled Stochastic Remasking for Masked Diffusion Language Models",
+      "reason": "NAVIRAはマスク拡散言語モデルの推論時再マスキングを検出と再生成の2パスに分離するデコード方針だが、170Mモデルでの品質検証に留まりLLMサービングへの適用は未確認である。",
+      "source_url": "https://arxiv.org/abs/2606.06031",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.04593",
+      "identity_tokens": [
+        "arXiv:2607.04593"
+      ],
+      "title": "TORINO: Token Reduction via Interpretable Concept Overlap in Vision-Language Models",
+      "reason": "TORINOはスパースオートエンコーダの概念重なりで視覚トークンを適応的に削減・統合し、VLMの推論コストを支配する視覚トークン数を学習なしで減らす直接の推論効率化手法である。",
+      "source_url": "https://arxiv.org/abs/2607.04593",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21445",
+      "identity_tokens": [
+        "arXiv:2607.21445"
+      ],
+      "title": "When Trivia Is Not Trivial: Everyday Knowledge Failures in Multilingual LLMs",
+      "reason": "TriviaRoomQAは多言語LLMの日常・長尾知識を測るクイズベンチマークであり、能力評価のみで推論システムの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2607.21445",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 456
+    }
+  ],
+  "parent_run_key": "muse-20261126-c1d06-b01",
+  "chunk_index": 3,
+  "chunk_count": 4,
+  "source_record_count": 65
+}

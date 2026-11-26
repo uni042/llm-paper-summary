@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c1d07-b01::chunk-0003-of-0004",
+  "reference_main_sha": "70e79b336cf3a79dad322f396eaad81d497fa5be",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12146",
+      "identity_tokens": [
+        "arXiv:2402.12146"
+      ],
+      "title": "Enabling Weak LLMs to Judge Response Reliability via Meta Ranking",
+      "reason": "弱いLLMに参照クエリとのペア比較ランキングで応答信頼性を判定させるMeta Rankingの提案で、評価・審査の精度手法であり推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2402.12146",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 471
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.05798",
+      "identity_tokens": [
+        "arXiv:2406.05798"
+      ],
+      "title": "Hidden Holes: topological aspects of language models",
+      "reason": "自己回帰言語モデルの表現多様体の位相的複雑さをperforation指標で解析する理論・分析研究であり、推論機構の提案はない。",
+      "source_url": "https://arxiv.org/abs/2406.05798",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14865",
+      "identity_tokens": [
+        "arXiv:2410.14865"
+      ],
+      "title": "Joint Verification and Refinement of Language Models for Safety-Constrained Planning",
+      "reason": "LLMが生成したロボットプログラムをオートマトンへ変換して安全仕様を検証し微調整へ返す手法であり、ロボット計画の正確性が主題で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2410.14865",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10573",
+      "identity_tokens": [
+        "arXiv:2503.10573"
+      ],
+      "title": "Evaluating Mathematical Reasoning Across Large Language Models: A Fine-Grained Approach",
+      "reason": "8つのLLMの数学推論能力を3つのベンチマークで細粒度に比較した評価研究であり、能力評価のみで推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2503.10573",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CVPRW59228.2023.00208",
+      "identity_tokens": [
+        "DOI:10.1109/CVPRW59228.2023.00208"
+      ],
+      "title": "Sparse Multimodal Vision Transformer for Weakly Supervised Semantic Segmentation",
+      "reason": "弱教師あり意味セグメンテーション向けに注意ヘッドへゲーティングでスパース性を課す視覚Transformerの提案で、リモートセンシング画像解析でありLLM推論とは無関係である。",
+      "source_url": "https://doi.org/10.1109/CVPRW59228.2023.00208",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3576025",
+      "identity_tokens": [
+        "DOI:10.1145/3576025"
+      ],
+      "title": "Multi-task Label-wise Transformer for Chinese Named Entity Recognition",
+      "reason": "中国語固有表現認識向けに下層へ境界・型予測タスクを割り当てるマルチタスクlabel-wise Transformerの提案で、NLPタスクのモデル改良であり推論システムではない。",
+      "source_url": "https://doi.org/10.1145/3576025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3611643.3616369",
+      "identity_tokens": [
+        "DOI:10.1145/3611643.3616369"
+      ],
+      "title": "Efficient Text-to-Code Retrieval with Cascaded Fast and Slow Transformer Models",
+      "reason": "テキストからコードを検索する実用システム向けに高速Transformer検索と低速再ランキングを単一エンコーダ共有でカスケード化しメモリ費用も下げる提案だが、対象はコード検索サービスの検索推論でありLLM推論基盤ではない。",
+      "source_url": "https://doi.org/10.1145/3611643.3616369",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.07585",
+      "identity_tokens": [
+        "arXiv:2311.07585"
+      ],
+      "title": "Input Reconstruction Attack against Vertical Federated Large Language Models",
+      "reason": "垂直連合学習で分割したLLMの中間埋め込みから入力文を再構成できることを示すプライバシー攻撃の研究であり、推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2311.07585",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.19532",
+      "identity_tokens": [
+        "arXiv:2506.19532"
+      ],
+      "title": "Toward the Explainability of Protein Language Models",
+      "reason": "タンパク質言語モデルへの説明可能AIの適用を情報文脈ごとに整理したサーベイであり、タンパク質研究向けでLLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2506.19532",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.12587",
+      "identity_tokens": [
+        "arXiv:2510.12587"
+      ],
+      "title": "Teaching Language Models to Faithfully Express their Uncertainty",
+      "reason": "サンプル一貫性に合わせたヘッジ表現でLLMに不確実性を忠実に表明させる微調整FUTの研究で、出力の忠実性が主題であり推論機構ではない。",
+      "source_url": "https://arxiv.org/abs/2510.12587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/HPEC43674.2020.9286195",
+      "identity_tokens": [
+        "DOI:10.1109/HPEC43674.2020.9286195"
+      ],
+      "title": "Studying the Effects of Hashing of Sparse Deep Neural Networks on Data and Model Parallelisms",
+      "reason": "スパースDNNのハッシュがデータ・モデル並列の負荷不均衡へ与える影響をSpMM中心に調べた汎用DNNの学習・推論スケーリング研究で、LLM推論システムを対象としていない。",
+      "source_url": "https://doi.org/10.1109/HPEC43674.2020.9286195",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSS.2022.3223621",
+      "identity_tokens": [
+        "DOI:10.1109/TCSS.2022.3223621"
+      ],
+      "title": "A Novel Model Combining Transformer and Bi-LSTM for News Categorization",
+      "reason": "ニュース分類向けにTransformerの自己注意をBi-LSTMへ置換した分類モデルの提案で、テキスト分類タスクの精度改良であり推論システムではない。",
+      "source_url": "https://doi.org/10.1109/TCSS.2022.3223621",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.02206",
+      "identity_tokens": [
+        "arXiv:2309.02206"
+      ],
+      "title": "Language Models for Novelty Detection in System Call Traces",
+      "reason": "システムコール列の言語モデルで新規挙動を検出する手法の研究で、OS異常検知への応用でありLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2309.02206",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.05178",
+      "identity_tokens": [
+        "arXiv:2310.05178"
+      ],
+      "title": "Optimizing Large Language Models to Expedite the Development of Smart Contracts",
+      "reason": "スマートコントラクト生成用に微調整したMazzumaGPTの開発と機能正確性の評価であり、ブロックチェーン開発支援の応用で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2310.05178",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.15928",
+      "identity_tokens": [
+        "arXiv:2405.15928"
+      ],
+      "title": "PatchProt: hydrophobic patch prediction using protein foundation models",
+      "reason": "タンパク質基盤モデルESM-2を微調整して疎水性パッチを予測するPatchProtの研究で、タンパク質科学への応用でありLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2405.15928",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.01342",
+      "identity_tokens": [
+        "arXiv:2501.01342"
+      ],
+      "title": "DeepFilter: A Transformer-Style Framework for Accurate and Efficient Process Monitoring",
+      "reason": "プロセス監視ログ向けに自己注意を改変したDeepFilterの提案で、産業プロセス監視の精度・効率が対象でありLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2501.01342",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.00409",
+      "identity_tokens": [
+        "arXiv:2504.00409"
+      ],
+      "title": "Semantic Mastery: Enhancing LLMs with Advanced Natural Language Understanding",
+      "reason": "意味解析・知識グラフ・RAG等でLLMの自然言語理解を高める手法群を論じる総説的論文であり、推論システムへの具体的な機構提案はない。",
+      "source_url": "https://arxiv.org/abs/2504.00409",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.02827",
+      "identity_tokens": [
+        "arXiv:2504.02827"
+      ],
+      "title": "On Vanishing Variance in Transformer Length Generalization",
+      "reason": "Transformerの長さ汎化失敗を注意出力の分散消失から説明し層正規化配置で改善する分析研究で、学習・汎化の理論が主題であり推論高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2504.02827",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.19894",
+      "identity_tokens": [
+        "arXiv:2509.19894"
+      ],
+      "title": "PromptCoT 2.0: Scaling Prompt Synthesis for Large Language Model Reasoning",
+      "reason": "根拠をEMループで精緻化して難易度の高い合成問題を生成するPromptCoT 2.0は学習データ合成の枠組みであり、推論システムへの適用はない。",
+      "source_url": "https://arxiv.org/abs/2509.19894",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.06195",
+      "identity_tokens": [
+        "arXiv:2510.06195"
+      ],
+      "title": "Latent Speech-Text Transformer",
+      "reason": "音声トークンを潜在パッチへ集約して系列長を縮めるLatent Speech-Text Transformerは事前学習と推論の計算効率を上げるが、対象は音声テキスト統合モデルの構造でありLLMサービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2510.06195",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 478
+    }
+  ],
+  "parent_run_key": "muse-20261126-c1d07-b01",
+  "chunk_index": 3,
+  "chunk_count": 4,
+  "source_record_count": 65
+}
