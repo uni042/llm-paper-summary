@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "reference_main_sha": "05c5ae8b1da7be5e909fcd38ed5f9607e5e3558b",
+  "origin": "discovery_latest_search",
+  "run_key": "muse-20261126-c2latest-b01::chunk-0003-of-0005",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32004",
+      "identity_tokens": [
+        "arXiv:2611.32004"
+      ],
+      "title": "Beyond Classical Minimax Rates: Quantum Sampling in Gradient-Based Simulation Optimization",
+      "reason": "勾配ベースシミュレーション最適化に量子平均推定を適用する理論研究であり、バッチサイズは推定の適応パラメータであってLLM推論とは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32004",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32008",
+      "identity_tokens": [
+        "arXiv:2611.32008"
+      ],
+      "title": "LIBRA: Runtime Co-Tuning of Batch Size and Parallelism for Time-Efficient LLM Training",
+      "reason": "LLMの学習におけるバッチサイズと並列構成の同時調整フレームワークLIBRAであり、対象は学習の収束時間であって推論サービングの構成調整ではないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32013",
+      "identity_tokens": [
+        "arXiv:2611.32013"
+      ],
+      "title": "To Critic Or Not To Critic",
+      "reason": "強化学習における批評家モデルの要否をバッチサイズ等との関係で分析する学習手法の研究であり、対象はPPO/GRPOの学習効率であって推論機構ではないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32013",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.32039",
+      "identity_tokens": [
+        "arXiv:2611.32039"
+      ],
+      "title": "FlashQLA: Efficient Context Parallelism for Gated DeltaNet",
+      "reason": "Gated DeltaNetの逐次依存で文脈並列が制限される問題に対し、境界状態の事前処理を減衰考慮で削減し二重文脈並列とカーネル協調設計を行うFlashQLAで、長文脈ワークロードのフォワードを最大4.8倍高速化すると一次要旨で示している。",
+      "source_url": "https://arxiv.org/abs/2611.32039",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32050",
+      "identity_tokens": [
+        "arXiv:2611.32050"
+      ],
+      "title": "Do Clinician-Scored Examples Help LLMs Code ADOS-2 from Hour-Long Transcripts?",
+      "reason": "自閉症診断観察スケールの転写をLLMに採点させる臨床応用の評価研究であり、LLMは採点者として使われるだけで、推論システムへの技術的貢献は要旨で確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32050",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32071",
+      "identity_tokens": [
+        "arXiv:2611.32071"
+      ],
+      "title": "KKT Atlas: Learning Low-Dimensional Local Scenario Models for Contextual Stochastic Optimization",
+      "reason": "文脈付き確率的最適化のシナリオ削減手法KKT Atlasの研究であり、バッチ展開の高速化は最適化問題の文脈であってLLM推論スケジューリングとは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32071",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32113",
+      "identity_tokens": [
+        "arXiv:2611.32113"
+      ],
+      "title": "PhysRF-WorldJEPA: Transforming Heterogeneous Large Language Models into Manifold-Decoupled Millimeter-Wave Radar World Models",
+      "reason": "ミリ波レーダのワールドモデルへLLMを適応させる研究であり、対象は物理シーン理解の応用であって、LLM推論の高速化やサービング機構への貢献は示されていないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32113",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32208",
+      "identity_tokens": [
+        "arXiv:2611.32208"
+      ],
+      "title": "FlashSegmentator: High-Throughput TotalSegmentator Inference without Loss of Accuracy",
+      "reason": "医用画像セグメンテーションTotalSegmentatorの推論パイプラインを高速化する研究であり、対象はCT/MRIの医療応用に特化しており、LLM推論システムへの直接貢献は要旨で確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32208",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33228",
+      "identity_tokens": [
+        "arXiv:2611.33228"
+      ],
+      "title": "Soft Decentralized Expected SARSA: Equilibrium Selection via Gradual Adaptation",
+      "reason": "分散Q学習の変種であるソフト分散期待SARSAの収束と均衡選択の理論研究であり、バッチサイズは学習の収束条件であってLLM推論とは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33228",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32389",
+      "identity_tokens": [
+        "arXiv:2611.32389"
+      ],
+      "title": "AgentBank: Banking on Blockchain Agentic Payments",
+      "reason": "AIエージェントの支払いをブロックチェーン上で銀行的に処理するAgentBankの提案であり、対象は決済プロトコルであってLLM推論システムへの貢献は確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32389",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32402",
+      "identity_tokens": [
+        "arXiv:2611.32402"
+      ],
+      "title": "Optimal Transport Meets t-SNE: Integrated Visualization without Batch Effects in OT-tSNE",
+      "reason": "単一細胞データのバッチ効果を最適輸送で除去する可視化手法OT-tSNEの研究であり、ここでのバッチは実験ロットを指し、LLM推論のバッチ処理とは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32402",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32415",
+      "identity_tokens": [
+        "arXiv:2611.32415"
+      ],
+      "title": "Within-task hazards of AI agents: unidentified by time-horizon curves, identified by repeated runs",
+      "reason": "AIエージェントのタスク内ハザードを生存モデルで同定する分析研究であり、バッチは実行ロットの区別に過ぎず、推論システムの機構に関する貢献は要旨にないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32415",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.32617",
+      "identity_tokens": [
+        "arXiv:2611.32617"
+      ],
+      "title": "VenusOCR2.0: Towards Efficient and Effective Document Parsing",
+      "reason": "文書解析用VLMで並列ドラフトモジュールにより自己回帰デコードのボトルネックを除きvLLM上でスループットを上げる内容を含むが、主目的はOCRの認識精度と文書解析性能であり、推論機構の新規性は補助的な位置づけのため保留とする。",
+      "source_url": "https://arxiv.org/abs/2611.32617",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32662",
+      "identity_tokens": [
+        "arXiv:2611.32662"
+      ],
+      "title": "OpenWoud: Vendor-Unlocked Scalable Adaptive Random Forest Accelerator",
+      "reason": "適応ランダムフォレストをFPGAで高速化するフレームワークであり、対象はオンライン機械学習の古典的手法のハードウェア実装であってLLM推論とは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32662",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32781",
+      "identity_tokens": [
+        "arXiv:2611.32781"
+      ],
+      "title": "NABLA: A Noise-Adaptive Blockwise Left-Right Preconditioning Algorithm for Stochastic Optimization",
+      "reason": "ミニバッチ確率的最適化のための前処理アルゴリズムNABLAの提案であり、対象は学習の最適化であって推論時の計算機構やサービングではないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32781",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32812",
+      "identity_tokens": [
+        "arXiv:2611.32812"
+      ],
+      "title": "Breaking the Joint Action Space Dependence in Distributionally Robust Multi-Agent Reinforcement Learning",
+      "reason": "分布頑健マルチエージェント強化学習のサンプル複雑性の理論研究であり、バッチは生成モデルからのサンプル収集を指し、LLM推論システムへの貢献は確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32812",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33245",
+      "identity_tokens": [
+        "arXiv:2611.33245"
+      ],
+      "title": "Feedback Rounds and Query Costs in Sparse Product Pure Exploration",
+      "reason": "疎な積構造の純粋探索におけるフィードバックラウンドとクエリコストの理論研究であり、バッチは測定の回数を指す抽象概念であってLLM推論とは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33245",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32848",
+      "identity_tokens": [
+        "arXiv:2611.32848"
+      ],
+      "title": "Measurement Artifacts in Trustworthiness Evaluations of Quantized Small Language Models",
+      "reason": "量子化した小規模言語モデルの信頼性評価における測定アーティファクトの分析であり、量子化モデルの評価方法論が主題で、推論機構や量子化手法自体への技術的貢献は要旨で確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32848",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32899",
+      "identity_tokens": [
+        "arXiv:2611.32899"
+      ],
+      "title": "Label leakage through file headers: geometry and batch confounds in public mammography datasets, and a pre-training acceptance gate",
+      "reason": "マンモグラフィデータセットのファイルヘッダ等からのラベル漏洩を検出する研究であり、バッチ交絡は医用画像データの品質問題であってLLM推論システムとは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32899",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32947",
+      "identity_tokens": [
+        "arXiv:2611.32947"
+      ],
+      "title": "Online V-Learning with Adaptive Longitudinal Data",
+      "reason": "モバイルヘルスにおける動的治療レジメン推定のオンラインV学習の統計理論であり、バッチ更新は統計的推定の単位であってLLM推論とは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.32947",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261126-c2latest-b01",
+  "chunk_index": 3,
+  "chunk_count": 5,
+  "source_record_count": 100
+}

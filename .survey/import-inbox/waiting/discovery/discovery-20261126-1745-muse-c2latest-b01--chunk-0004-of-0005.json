@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "reference_main_sha": "05c5ae8b1da7be5e909fcd38ed5f9607e5e3558b",
+  "origin": "discovery_latest_search",
+  "run_key": "muse-20261126-c2latest-b01::chunk-0004-of-0005",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.33080",
+      "identity_tokens": [
+        "arXiv:2611.33080"
+      ],
+      "title": "Shifter Quantization: Compact Representations for Native Integer Computation",
+      "reason": "グループ量子化が整数MMAの全ドット積を妨げる問題に対し、共有ビットの追加とシフトでネイティブ整数オペランドを再構成するShifter Quantizationで、llama.cppやvLLM比でプリフィルスループットと量子化品質を同時に改善すると示している。",
+      "source_url": "https://arxiv.org/abs/2611.33080",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33102",
+      "identity_tokens": [
+        "arXiv:2611.33102"
+      ],
+      "title": "Reinforcement Learning Can Be Recovered From Its Own Rollouts",
+      "reason": "強化学習のロールアウトを再生して方策性能を回復できるかを調べる学習手法の研究であり、推論サービングやデコードの機構に関する貢献は要旨にないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33102",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.33268",
+      "identity_tokens": [
+        "arXiv:2611.33268"
+      ],
+      "title": "JetDiffusion: Pushing the Speed Limits of Video Generation with NVFP4 Sparse Attention",
+      "reason": "動画生成の注意をNVFP4量子化と疎性で高速化するカスタム推論カーネルVSQAを提案しFlashAttention比の高速化を示すが、対象は動画拡散モデルの生成パイプラインであり、LLM推論の注意機構への直接貢献は間接的なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2611.33268",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33469",
+      "identity_tokens": [
+        "arXiv:2611.33469"
+      ],
+      "title": "Differentially Private Policy Optimization in Linear MDPs with Adversarial Rewards",
+      "reason": "線形MDPにおける差分プライベート方策最適化の理論研究であり、バッチ化PPOは学習アルゴリズムの一部であってLLM推論の機構とは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33469",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.33542",
+      "identity_tokens": [
+        "arXiv:2611.33542"
+      ],
+      "title": "RankCast: Phase-Aware Rank Balancing in MoE Serving",
+      "reason": "分離型MoEサービングでプリフィルとデコードの各フェーズのボトルネックランク負荷を、専門家の柔軟な割当てで削減するRankCastをSGLangとDeepEP上に実装し、大規模MoEモデルでプリフィルスループットとデコード時間の改善を示している。",
+      "source_url": "https://arxiv.org/abs/2611.33542",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33587",
+      "identity_tokens": [
+        "arXiv:2611.33587"
+      ],
+      "title": "Geometry-Time Graph Attention for 3-D TOA Localization in Underwater Acoustic Sensor Networks",
+      "reason": "水中音響センサネットワークの到達時間による3次元位置推定のためのグラフ注意ネットワークであり、分野が異なりLLM推論システムへの貢献は確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.33625",
+      "identity_tokens": [
+        "arXiv:2611.33625"
+      ],
+      "title": "State Space Attention: Learning Context-Dependent Memory Retention",
+      "reason": "KVキャッシュが文脈長に比例して増える問題に対し、保持すべき過去表現を学習するState Space Attentionで推論メモリを一定に抑え、検索や多段推論で全注意に近い性能を示すと一次要旨で述べており、長文脈推論のメモリ削減への直接的な提案である。",
+      "source_url": "https://arxiv.org/abs/2611.33625",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33678",
+      "identity_tokens": [
+        "arXiv:2611.33678"
+      ],
+      "title": "Online Network Design with Batch Processing",
+      "reason": "バッチ処理を伴うオンラインネットワーク設計の競合比を解析する理論研究であり、対象はTCP確認応答等の抽象問題であってLLM推論スケジューリングへの適用は示されていないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33678",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.33691",
+      "identity_tokens": [
+        "arXiv:2611.33691"
+      ],
+      "title": "L2C2: Enhancing Large-scale Chiplets for Agent Long-Context LLM Inference with Sparse and Distributed Attention",
+      "reason": "チップレット上の疎注意による長文脈LLM推論に対し、部分プリフィルでの分割通信注意とデコードでの静的インターリーブ配置・動的キャッシュバランシングを組み合わせたL2C2で、プリフィルとデコードの双方を高速化すると一次要旨で示している。",
+      "source_url": "https://arxiv.org/abs/2611.33691",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33692",
+      "identity_tokens": [
+        "arXiv:2611.33692"
+      ],
+      "title": "Rethinking Sequential Locate-Then-Edit: Optimality and Stability",
+      "reason": "LLMの知識編集における逐次編集とバッチ編集の性能差を埋める手法の研究であり、ここでのバッチは編集のまとめ処理を指し、推論時のバッチ処理やサービング機構ではないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33692",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33698",
+      "identity_tokens": [
+        "arXiv:2611.33698"
+      ],
+      "title": "Efficient Scene-Distribution-Aware Second-Order Optimization for 3D Gaussian Splatting",
+      "reason": "3次元ガウシアンスプラッティングの二階最適化をマルチビュー処理で高速化する研究であり、対象は3次元再構成の学習であってLLM推論とは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33698",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33731",
+      "identity_tokens": [
+        "arXiv:2611.33731"
+      ],
+      "title": "RoboJackVR: Turning Robot Tasks into VR Games for Scalable Demonstration Collection",
+      "reason": "VRゲームとしてロボット操作デモンストレーションを収集するシステムの研究であり、対象はロボット学習のデータ収集であってLLM推論システムへの貢献は確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33731",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.33741",
+      "identity_tokens": [
+        "arXiv:2611.33741"
+      ],
+      "title": "FlashProve-Next: Verifiable Inference for Production LLM APIs",
+      "reason": "本番LLM APIの応答に検証可能な証明を付けるFlashProve-Nextで、FlashAttentionや接頭辞キャッシングを含むネイティブサービングを変更しない設計を採るが、主たる貢献はゼロ知識証明による検証可能性であり推論性能の機構ではないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2611.33741",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.33751",
+      "identity_tokens": [
+        "arXiv:2611.33751"
+      ],
+      "title": "VAPOR: Improving Multimodal Reasoning with Sparse Visual Updates",
+      "reason": "マルチモーダルLLMの自己回帰デコードで視覚注意出力をステップ間で再利用し、低ランク近似による注意質量推定で更新要否をヘッドごとに決めるVAPORにより、精度を保ちながらデコードを1.11〜1.21倍高速化すると一次要旨で示している。",
+      "source_url": "https://arxiv.org/abs/2611.33751",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33759",
+      "identity_tokens": [
+        "arXiv:2611.33759"
+      ],
+      "title": "Understanding Double Descent through Universal Compression",
+      "reason": "二重降下現象を普遍圧縮の観点から説明する学習理論の研究であり、バッチ後悔は理論量であって推論時の計算機構やサービングとは無関係であるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33759",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33767",
+      "identity_tokens": [
+        "arXiv:2611.33767"
+      ],
+      "title": "RHOPE: LLM-Augmented Adaptive Experimental Design with Complex Contextual Information",
+      "reason": "LLMを代理結果の生成に使う適応的実験計画の統計手法であり、LLMは道具として使われるだけで推論システムへの技術的貢献は要旨で確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2611.33767",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.33896",
+      "identity_tokens": [
+        "arXiv:2611.33896"
+      ],
+      "title": "Looped Models are Fast Multi-Token Predictors",
+      "reason": "ループ型言語モデルの浅いループをドラフタとして複数トークンを並列予測する自己投機的デコードFloodgatesを提案し、複数モデルとベンチマークで無損失デコードとして最大7.5倍の高速化を一次要旨で示しており、LLMデコード高速化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2611.33896",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.33981",
+      "identity_tokens": [
+        "arXiv:2611.33981"
+      ],
+      "title": "MixMoMo: Accelerating Extra--Large MoE Inference with Mixed--Precision GPU--NPU Execution on Mobile Devices",
+      "reason": "モバイルSoC上の超大規模MoE推論に対し、専門家の量子化感度をオフライン特性と実行時リスクで推定して混合精度を割り当て、GPUとNPUへ精度構造化実行で分散するMixMoMoでデコードを平均3.72倍高速化すると一次要旨で示している。",
+      "source_url": "https://arxiv.org/abs/2611.33981",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.33985",
+      "identity_tokens": [
+        "arXiv:2611.33985"
+      ],
+      "title": "MolGPAO: Molecular Generative Pre-trained Autoregressive Octree with Speculative Decoding and Sub-Millisecond Seam Healing for 3D Molecules",
+      "reason": "3次元分子生成の八分木自己回帰モデルに投機的ツリーデコードとFlashAttention-2ベースの推測機構を組み込む内容で、デコード高速化の要素はあるが主目的は薬剤様分子の生成品質と速度であり、LLM推論への直接貢献は薄いため保留とする。",
+      "source_url": "https://arxiv.org/abs/2611.33985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.34010",
+      "identity_tokens": [
+        "arXiv:2611.34010"
+      ],
+      "title": "Asymmetric Speculative Decoding: Unlocking In-Context Learning in Draft Models",
+      "reason": "ドラフトモデルとターゲットモデルへ異なるプロンプトを与える非対称投機的デコードAsymSpecで、ドラフトの文脈内学習効果を増幅して受理率を高め、推論・コード・要約で2.29〜4.95倍の高速化を示すと一次要旨で述べており直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2611.34010",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T17:45:00+09:00",
+      "last_checked_at": "2026-11-26T17:45:00+09:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261126-c2latest-b01",
+  "chunk_index": 4,
+  "chunk_count": 5,
+  "source_record_count": 100
+}
