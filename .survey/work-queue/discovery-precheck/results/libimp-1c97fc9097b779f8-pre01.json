@@ -1,0 +1,226 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1c97fc9097b779f8-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1c97fc9097b7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.21105/joss.10314",
+    "SemanticScholar:be110b75abacef3a9a1a38d7f32a91a026644f91"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0a37dd3a86f30c012edfa1e2c97ee4b7a88c5112",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T22:30:20.936087+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.21105/joss.10314",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:be110b75abacef3a9a1a38d7f32a91a026644f91",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Inference Perf: A Benchmarking Tool for GenAI Inference",
+      "source_url": "https://doi.org/10.21105/joss.10314",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": "Journal of Open Source Software",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:32bd1b3015a8ff2b6c1bc83993bb29a05f55dcde"
+      ],
+      "semantic_scholar_id": "32bd1b3015a8ff2b6c1bc83993bb29a05f55dcde",
+      "doi": "10.21105/joss.10314",
+      "canonical_id": "DOI:10.21105/joss.10314",
+      "authors": [
+        "A. Chandrasekar",
+        "S. Varghese",
+        "Jason Kramberger",
+        "Brendan Slabe",
+        "Chen Wang",
+        "Yuan Tang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 91,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Remask, Don’t Replace: Token-to-Mask Refinement in Diffusion Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/be110b75abacef3a9a1a38d7f32a91a026644f91",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:be110b75abacef3a9a1a38d7f32a91a026644f91"
+      ],
+      "semantic_scholar_id": "be110b75abacef3a9a1a38d7f32a91a026644f91",
+      "canonical_id": "SemanticScholar:be110b75abacef3a9a1a38d7f32a91a026644f91",
+      "authors": [
+        "Lin Yao"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.21105/joss.10314",
+      "identity_tokens": [
+        "id:DOI:10.21105/joss.10314",
+        "id:SemanticScholar:32bd1b3015a8ff2b6c1bc83993bb29a05f55dcde",
+        "title:inference perf a benchmarking tool for genai inference",
+        "url:https://doi.org/10.21105/joss.10314"
+      ],
+      "record": {
+        "title": "Inference Perf: A Benchmarking Tool for GenAI Inference",
+        "source_url": "https://doi.org/10.21105/joss.10314",
+        "year": 2026,
+        "published": "2026-08-27",
+        "venue": "Journal of Open Source Software",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:32bd1b3015a8ff2b6c1bc83993bb29a05f55dcde"
+        ],
+        "semantic_scholar_id": "32bd1b3015a8ff2b6c1bc83993bb29a05f55dcde",
+        "doi": "10.21105/joss.10314",
+        "canonical_id": "DOI:10.21105/joss.10314",
+        "authors": [
+          "A. Chandrasekar",
+          "S. Varghese",
+          "Jason Kramberger",
+          "Brendan Slabe",
+          "Chen Wang",
+          "Yuan Tang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 91,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:be110b75abacef3a9a1a38d7f32a91a026644f91",
+      "identity_tokens": [
+        "id:SemanticScholar:be110b75abacef3a9a1a38d7f32a91a026644f91",
+        "title:remask dont replace tokentomask refinement in diffusion large language models",
+        "url:https://www.semanticscholar.org/paper/be110b75abacef3a9a1a38d7f32a91a026644f91"
+      ],
+      "record": {
+        "title": "Remask, Don’t Replace: Token-to-Mask Refinement in Diffusion Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/be110b75abacef3a9a1a38d7f32a91a026644f91",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:be110b75abacef3a9a1a38d7f32a91a026644f91"
+        ],
+        "semantic_scholar_id": "be110b75abacef3a9a1a38d7f32a91a026644f91",
+        "canonical_id": "SemanticScholar:be110b75abacef3a9a1a38d7f32a91a026644f91",
+        "authors": [
+          "Lin Yao"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6ebe37f2553bdea4ade58f19e89e1dd3022b6e90fb56cb78c83df525c4955a82",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

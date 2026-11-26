@@ -1,0 +1,237 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7710ba270562c83f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7710ba270562",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293",
+    "arXiv:2508.01636"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0a37dd3a86f30c012edfa1e2c97ee4b7a88c5112",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T22:30:18.774365+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.01636",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "OptiPrune: Effective Pruning Approach for Every Target Sparsity",
+      "source_url": "https://www.semanticscholar.org/paper/dd53745a3ac7d33856a7df059331893417f6f293",
+      "year": 2025,
+      "published": null,
+      "venue": "International Conference on Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293"
+      ],
+      "semantic_scholar_id": "dd53745a3ac7d33856a7df059331893417f6f293",
+      "canonical_id": "SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293",
+      "authors": [
+        "Khang Le",
+        "Ryo Sato",
+        "Dai Nakashima",
+        "Takeshi Suzuki",
+        "Minh-Quang Le Nguyen"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 513,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Privacy-Preserving Inference for Quantized BERT Models",
+      "source_url": "https://arxiv.org/abs/2508.01636",
+      "year": 2025,
+      "published": "2025-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the increasing deployment of generative machine learning models in privacy-sensitive domains such as healthcare and personalized services, ensuring secure inference has become a critical challenge. Secure multi-party computation (MPC) enables privacy-preserving model inference but suffers from high communication and computation overhead. The main bottleneck lies in the expensive secure evaluation of floating-point operations. Quantization offers a promising solution by converting floating-point operations into lower-precision integer computations, significantly reducing overhead. However, existing MPC-based quantized inference methods either rely on public quantization parameters-posing privacy risks-or suffer from inefficiencies, particularly in handling nonlinear functions such as activations and softmax. In this work, we propose a fine-grained, layer-wise quantization scheme and support 1-bit weight fully connected layers in a secure setting. We design a multi-input lookup table protocol to evaluate softmax efficiently and securely. Furthermore, we use dual secret sharing schemes and perform precision conversions via lookup tables, eliminating truncation overhead entirely. Experimental evaluation on BERT-base models demonstrates that our approach achieves up to $8\\times$ speedup compared to Lu \\emph{et al}. (NDSS 25), $9\\times$ speedup compared to Gupta \\emph{et al}. (PETS 24) and $22 \\times$ speedup compared to Knott \\emph{et al}. (NeurIPS 21).",
+      "identifiers": [
+        "SemanticScholar:c1627df9aa1db8cef8d44cfd114275ecebbefe87"
+      ],
+      "semantic_scholar_id": "c1627df9aa1db8cef8d44cfd114275ecebbefe87",
+      "canonical_id": "arXiv:2508.01636",
+      "arxiv_id": "2508.01636",
+      "doi": "10.48550/arXiv.2508.01636",
+      "authors": [
+        "Tian-Pei Lu",
+        "Bing-Sheng Zhang",
+        "Lekun Peng",
+        "Bo-Wen Zheng",
+        "Li-Chun Li",
+        "Kui Ren"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 480,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293",
+      "identity_tokens": [
+        "id:SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293",
+        "title:optiprune effective pruning approach for every target sparsity",
+        "url:https://www.semanticscholar.org/paper/dd53745a3ac7d33856a7df059331893417f6f293"
+      ],
+      "record": {
+        "title": "OptiPrune: Effective Pruning Approach for Every Target Sparsity",
+        "source_url": "https://www.semanticscholar.org/paper/dd53745a3ac7d33856a7df059331893417f6f293",
+        "year": 2025,
+        "published": null,
+        "venue": "International Conference on Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293"
+        ],
+        "semantic_scholar_id": "dd53745a3ac7d33856a7df059331893417f6f293",
+        "canonical_id": "SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293",
+        "authors": [
+          "Khang Le",
+          "Ryo Sato",
+          "Dai Nakashima",
+          "Takeshi Suzuki",
+          "Minh-Quang Le Nguyen"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 513,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.01636",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.01636",
+        "id:SemanticScholar:c1627df9aa1db8cef8d44cfd114275ecebbefe87",
+        "id:arXiv:2508.01636",
+        "title:privacypreserving inference for quantized bert models",
+        "url:https://arxiv.org/abs/2508.01636"
+      ],
+      "record": {
+        "title": "Privacy-Preserving Inference for Quantized BERT Models",
+        "source_url": "https://arxiv.org/abs/2508.01636",
+        "year": 2025,
+        "published": "2025-08-03",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the increasing deployment of generative machine learning models in privacy-sensitive domains such as healthcare and personalized services, ensuring secure inference has become a critical challenge. Secure multi-party computation (MPC) enables privacy-preserving model inference but suffers from high communication and computation overhead. The main bottleneck lies in the expensive secure evaluation of floating-point operations. Quantization offers a promising solution by converting floating-point operations into lower-precision integer computations, significantly reducing overhead. However, existing MPC-based quantized inference methods either rely on public quantization parameters-posing privacy risks-or suffer from inefficiencies, particularly in handling nonlinear functions such as activations and softmax. In this work, we propose a fine-grained, layer-wise quantization scheme and support 1-bit weight fully connected layers in a secure setting. We design a multi-input lookup table protocol to evaluate softmax efficiently and securely. Furthermore, we use dual secret sharing schemes and perform precision conversions via lookup tables, eliminating truncation overhead entirely. Experimental evaluation on BERT-base models demonstrates that our approach achieves up to $8\\times$ speedup compared to Lu \\emph{et al}. (NDSS 25), $9\\times$ speedup compared to Gupta \\emph{et al}. (PETS 24) and $22 \\times$ speedup compared to Knott \\emph{et al}. (NeurIPS 21).",
+        "identifiers": [
+          "SemanticScholar:c1627df9aa1db8cef8d44cfd114275ecebbefe87"
+        ],
+        "semantic_scholar_id": "c1627df9aa1db8cef8d44cfd114275ecebbefe87",
+        "canonical_id": "arXiv:2508.01636",
+        "arxiv_id": "2508.01636",
+        "doi": "10.48550/arXiv.2508.01636",
+        "authors": [
+          "Tian-Pei Lu",
+          "Bing-Sheng Zhang",
+          "Lekun Peng",
+          "Bo-Wen Zheng",
+          "Li-Chun Li",
+          "Kui Ren"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 480,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6df49207236e9a3d405983769a95b70e0ad1c58fc1f835705e3fb994ae2b1637",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,249 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4e4bb55de6334663-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4e4bb55de633",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2608.03649",
+    "arXiv:2609.30413"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0a37dd3a86f30c012edfa1e2c97ee4b7a88c5112",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T22:30:20.862572+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2608.03649",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.30413",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "When Do Fewer Visual Tokens Accelerate Multimodal Inference? A Break-Even Study Across Decision Locations and Hardware",
+      "source_url": "https://arxiv.org/abs/2608.03649",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fewer visual tokens do not guarantee lower end-to-end latency. We evaluate break-even with a reproducible protocol that accounts for decision overhead, shared work, and the operators each policy can avoid. A stage-level decomposition reconciles these components with measured end-to-end latency. In a 30-example pilot, the two tested autoregressive probes remain slower than Full despite state reuse. A lightweight post-vision predictor yields paired confidence intervals below zero on RTX 3090 and A100 and remains significant after a conservative all-pairs Holm correction. A pre-vision image-size rule also yields intervals below zero on both GPUs, although neither comparison remains significant after the same correction. Pre-vision routing has a structural opportunity unavailable to post-vision pruning: it can avoid preprocessing and vision encoding. On A100, this opportunity outweighs a nearly eightfold larger downstream token reduction by the post-vision policy. Reported quality is conditional on examples answered correctly by Full and is not benchmark accuracy.",
+      "identifiers": [
+        "SemanticScholar:184aca75e913bed2ac7a470ed4a2acde4b5d7aa7"
+      ],
+      "semantic_scholar_id": "184aca75e913bed2ac7a470ed4a2acde4b5d7aa7",
+      "canonical_id": "arXiv:2608.03649",
+      "arxiv_id": "2608.03649",
+      "doi": "10.48550/arXiv.2608.03649",
+      "authors": [
+        "Hao Dou",
+        "Rui Tian"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 114,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Communication-Aware Model Distributed Inference via Latent Representation Compression",
+      "source_url": "https://arxiv.org/abs/2609.30413",
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": "ACM Interational Symposium on Mobile Ad Hoc Networking and Computing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study optimization of distributed model inference over resource-constrained edge resources. We propose a framework that optimizes the trade-off between model accuracy and communication costs by controlling latent representation compression to meet strict Quality of Service (QoS) throughput targets. For settings with known channel state information (CSI), we derive a closed-form optimal solution for single tasks and reduce the multi-task problem to a convex optimization program characterized by a per-link water-filling strategy. We extend these to handle unpredictable environments via a stochastic dual descent algorithm that relies only on causal channel estimates. We provide Lyapunov-based proofs demonstrating that our approach strictly satisfies long-term delay constraints while achieving a bounded optimality gap. Our results offer a robust, scalable blueprint for maximizing the performance of pipelined AI tasks in dynamic, resource-constrained distributed systems. We verify the effectiveness of our proposed framework through simulations and experiments with real edge devices.",
+      "identifiers": [
+        "SemanticScholar:a6fbcbb0e21592a558dad9c62132a5b48bed594d"
+      ],
+      "semantic_scholar_id": "a6fbcbb0e21592a558dad9c62132a5b48bed594d",
+      "canonical_id": "arXiv:2609.30413",
+      "arxiv_id": "2609.30413",
+      "doi": "10.1145/3842721.3849644",
+      "authors": [
+        "Peyman Gholami",
+        "Theodoros-Thirimachos Davarakis",
+        "Teng Li",
+        "Miquel Sirera Perelló",
+        "Salil Reddy",
+        "Ayberk Yarkın Yıldız",
+        "Anish Arora",
+        "Atilla Eryilmaz",
+        "Stratis Ioannidis",
+        "Cheng-Zhang Li",
+        "Hulya Seferoglu",
+        "N. Shroff"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.03649",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.03649",
+        "id:SemanticScholar:184aca75e913bed2ac7a470ed4a2acde4b5d7aa7",
+        "id:arXiv:2608.03649",
+        "title:when do fewer visual tokens accelerate multimodal inference a breakeven study across decision locations and hardware",
+        "url:https://arxiv.org/abs/2608.03649"
+      ],
+      "record": {
+        "title": "When Do Fewer Visual Tokens Accelerate Multimodal Inference? A Break-Even Study Across Decision Locations and Hardware",
+        "source_url": "https://arxiv.org/abs/2608.03649",
+        "year": 2026,
+        "published": "2026-08-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Fewer visual tokens do not guarantee lower end-to-end latency. We evaluate break-even with a reproducible protocol that accounts for decision overhead, shared work, and the operators each policy can avoid. A stage-level decomposition reconciles these components with measured end-to-end latency. In a 30-example pilot, the two tested autoregressive probes remain slower than Full despite state reuse. A lightweight post-vision predictor yields paired confidence intervals below zero on RTX 3090 and A100 and remains significant after a conservative all-pairs Holm correction. A pre-vision image-size rule also yields intervals below zero on both GPUs, although neither comparison remains significant after the same correction. Pre-vision routing has a structural opportunity unavailable to post-vision pruning: it can avoid preprocessing and vision encoding. On A100, this opportunity outweighs a nearly eightfold larger downstream token reduction by the post-vision policy. Reported quality is conditional on examples answered correctly by Full and is not benchmark accuracy.",
+        "identifiers": [
+          "SemanticScholar:184aca75e913bed2ac7a470ed4a2acde4b5d7aa7"
+        ],
+        "semantic_scholar_id": "184aca75e913bed2ac7a470ed4a2acde4b5d7aa7",
+        "canonical_id": "arXiv:2608.03649",
+        "arxiv_id": "2608.03649",
+        "doi": "10.48550/arXiv.2608.03649",
+        "authors": [
+          "Hao Dou",
+          "Rui Tian"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 114,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30413",
+      "identity_tokens": [
+        "id:DOI:10.1145/3842721.3849644",
+        "id:SemanticScholar:a6fbcbb0e21592a558dad9c62132a5b48bed594d",
+        "id:arXiv:2609.30413",
+        "title:communicationaware model distributed inference via latent representation compression",
+        "url:https://arxiv.org/abs/2609.30413"
+      ],
+      "record": {
+        "title": "Communication-Aware Model Distributed Inference via Latent Representation Compression",
+        "source_url": "https://arxiv.org/abs/2609.30413",
+        "year": 2026,
+        "published": "2026-09-24",
+        "venue": "ACM Interational Symposium on Mobile Ad Hoc Networking and Computing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We study optimization of distributed model inference over resource-constrained edge resources. We propose a framework that optimizes the trade-off between model accuracy and communication costs by controlling latent representation compression to meet strict Quality of Service (QoS) throughput targets. For settings with known channel state information (CSI), we derive a closed-form optimal solution for single tasks and reduce the multi-task problem to a convex optimization program characterized by a per-link water-filling strategy. We extend these to handle unpredictable environments via a stochastic dual descent algorithm that relies only on causal channel estimates. We provide Lyapunov-based proofs demonstrating that our approach strictly satisfies long-term delay constraints while achieving a bounded optimality gap. Our results offer a robust, scalable blueprint for maximizing the performance of pipelined AI tasks in dynamic, resource-constrained distributed systems. We verify the effectiveness of our proposed framework through simulations and experiments with real edge devices.",
+        "identifiers": [
+          "SemanticScholar:a6fbcbb0e21592a558dad9c62132a5b48bed594d"
+        ],
+        "semantic_scholar_id": "a6fbcbb0e21592a558dad9c62132a5b48bed594d",
+        "canonical_id": "arXiv:2609.30413",
+        "arxiv_id": "2609.30413",
+        "doi": "10.1145/3842721.3849644",
+        "authors": [
+          "Peyman Gholami",
+          "Theodoros-Thirimachos Davarakis",
+          "Teng Li",
+          "Miquel Sirera Perelló",
+          "Salil Reddy",
+          "Ayberk Yarkın Yıldız",
+          "Anish Arora",
+          "Atilla Eryilmaz",
+          "Stratis Ioannidis",
+          "Cheng-Zhang Li",
+          "Hulya Seferoglu",
+          "N. Shroff"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 63,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:668864f8f1d62bf96dbea2f16e987d6daf208135639f5e770f1a21c49e80d225",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
