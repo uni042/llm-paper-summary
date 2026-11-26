@@ -1,0 +1,246 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d817054da07ea0ea-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d817054da07e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d",
+    "arXiv:2510.15926",
+    "arXiv:2511.15390"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "58cc25aafd3860a0fa3b230f91e26c994b0eee84",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T00:20:29.902434+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:alpaserve statistical multiplexing with model parallelism for deep learning serving"
+    },
+    {
+      "requested_id": "arXiv:2510.15926",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.15390",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "TeLLMe v2: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs",
+      "source_url": "https://arxiv.org/abs/2510.15926",
+      "year": 2025,
+      "published": "2025-10-03",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the emergence of wearable devices and other embedded systems, deploying large language models (LLMs) on edge platforms has become an urgent need. However, this is challenging because of their high computational and memory demands. Although recent low-bit quantization methods (e.g., BitNet, DeepSeek) compress weights to as low as 1.58~bits with minimal accuracy loss, edge deployment is still constrained by limited on-chip resources, power budgets, and the often-neglected long latency of the prefill stage. We present \\textbf{TeLLMe}, the first table-lookup-based ternary LLM accelerator for low-power edge FPGAs that fully supports both prefill and autoregressive decoding using 1.58-bit weights and 8-bit activations. TeLLMe incorporates several novel techniques, including (1) a table-lookup-based ternary matrix multiplication (TLMM) engine utilizing grouped activations and online precomputation for low resource utilization and high throughput; (2) a fine-grained analytic URAM-based weight buffer management scheme for efficient loading and compute engine access; (3) a streaming dataflow architecture that fuses floating-point element-wise operations with linear computations to hide latency; (4) a reversed-reordered prefill stage attention with fused attention operations for high memory efficiency; and (5) a resource-efficient specialized decoding stage attention. Under a 5~W power budget, TeLLMe delivers up to 25~tokens/s decoding throughput and 0.45--0.96~s time-to-first-token (TTFT) for 64--128 token prompts, marking a significant energy-efficiency advancement in LLM inference on edge FPGAs.",
+      "identifiers": [
+        "SemanticScholar:006e72fe32abeb60da1f36548abe448c43fb4ea6"
+      ],
+      "semantic_scholar_id": "006e72fe32abeb60da1f36548abe448c43fb4ea6",
+      "canonical_id": "arXiv:2510.15926",
+      "arxiv_id": "2510.15926",
+      "doi": "10.48550/arXiv.2510.15926",
+      "authors": [
+        "Ye Qiao",
+        "Zhiheng Chen",
+        "Yifan Zhang",
+        "Yian Wang",
+        "Si-Tao Huang"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 419,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Automatic Pruning Discovery for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2511.15390",
+      "year": 2025,
+      "published": "2025-11-19",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved remarkable performance on a wide range of tasks, hindering real-world deployment due to their massive size. Existing pruning methods (e.g., Wanda) tailored for LLMs rely heavily on manual design pruning algorithms, thereby leading to huge labor costs and requires expert knowledge. Furthermore, we are the first to identify the serious outlier value issue behind dramatic performance degradation under high pruning ratios that are caused by uniform sparsity, raising an additional concern about how to design adaptive pruning sparsity ideal for LLMs. Can LLMs prune by themselves? In this work, we introduce an affirmative answer by proposing a novel pruning method called AutoPrune, which first overcomes expert knowledge limits by leveraging LLMs to design optimal pruning algorithm for themselves automatically without any expert knowledge. Specifically, to mitigate the black-box nature of LLMs, we propose a Graph-driven Chain-of-Thought (GCoT) to optimize prompts, significantly enhancing the reasoning process in learning the pruning algorithm and enabling us to generate pruning algorithms with superior performance and interpretability in the next generation. Finally, grounded in insights of outlier value issue, we introduce Skew-aware Dynamic Sparsity Allocation (SDSA) to overcome the outlier value issue, mitigating performance degradation under high pruning ratios. We conduct extensive experiments on mainstream LLMs benchmarks, demonstrating the superiority of AutoPrune, which consistently excels state-of-the-art competitors.",
+      "identifiers": [
+        "SemanticScholar:10974c9c9c4ef7cc0de372b5502c30e1853b9dc1"
+      ],
+      "semantic_scholar_id": "10974c9c9c4ef7cc0de372b5502c30e1853b9dc1",
+      "canonical_id": "arXiv:2511.15390",
+      "arxiv_id": "2511.15390",
+      "authors": [
+        "Hai-Dong Kang",
+        "Li-Hong Lin",
+        "En-Neng Yang",
+        "Hong-Ning Dai",
+        "Hao Wang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 372,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.15926",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.15926",
+        "id:SemanticScholar:006e72fe32abeb60da1f36548abe448c43fb4ea6",
+        "id:arXiv:2510.15926",
+        "title:tellme v2 an efficient endtoend ternary llm prefill and decode accelerator with tablelookup matmul on edge fpgas",
+        "url:https://arxiv.org/abs/2510.15926"
+      ],
+      "record": {
+        "title": "TeLLMe v2: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs",
+        "source_url": "https://arxiv.org/abs/2510.15926",
+        "year": 2025,
+        "published": "2025-10-03",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the emergence of wearable devices and other embedded systems, deploying large language models (LLMs) on edge platforms has become an urgent need. However, this is challenging because of their high computational and memory demands. Although recent low-bit quantization methods (e.g., BitNet, DeepSeek) compress weights to as low as 1.58~bits with minimal accuracy loss, edge deployment is still constrained by limited on-chip resources, power budgets, and the often-neglected long latency of the prefill stage. We present \\textbf{TeLLMe}, the first table-lookup-based ternary LLM accelerator for low-power edge FPGAs that fully supports both prefill and autoregressive decoding using 1.58-bit weights and 8-bit activations. TeLLMe incorporates several novel techniques, including (1) a table-lookup-based ternary matrix multiplication (TLMM) engine utilizing grouped activations and online precomputation for low resource utilization and high throughput; (2) a fine-grained analytic URAM-based weight buffer management scheme for efficient loading and compute engine access; (3) a streaming dataflow architecture that fuses floating-point element-wise operations with linear computations to hide latency; (4) a reversed-reordered prefill stage attention with fused attention operations for high memory efficiency; and (5) a resource-efficient specialized decoding stage attention. Under a 5~W power budget, TeLLMe delivers up to 25~tokens/s decoding throughput and 0.45--0.96~s time-to-first-token (TTFT) for 64--128 token prompts, marking a significant energy-efficiency advancement in LLM inference on edge FPGAs.",
+        "identifiers": [
+          "SemanticScholar:006e72fe32abeb60da1f36548abe448c43fb4ea6"
+        ],
+        "semantic_scholar_id": "006e72fe32abeb60da1f36548abe448c43fb4ea6",
+        "canonical_id": "arXiv:2510.15926",
+        "arxiv_id": "2510.15926",
+        "doi": "10.48550/arXiv.2510.15926",
+        "authors": [
+          "Ye Qiao",
+          "Zhiheng Chen",
+          "Yifan Zhang",
+          "Yian Wang",
+          "Si-Tao Huang"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 419,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.15390",
+      "identity_tokens": [
+        "id:SemanticScholar:10974c9c9c4ef7cc0de372b5502c30e1853b9dc1",
+        "id:arXiv:2511.15390",
+        "title:automatic pruning discovery for large language models",
+        "url:https://arxiv.org/abs/2511.15390"
+      ],
+      "record": {
+        "title": "Automatic Pruning Discovery for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2511.15390",
+        "year": 2025,
+        "published": "2025-11-19",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved remarkable performance on a wide range of tasks, hindering real-world deployment due to their massive size. Existing pruning methods (e.g., Wanda) tailored for LLMs rely heavily on manual design pruning algorithms, thereby leading to huge labor costs and requires expert knowledge. Furthermore, we are the first to identify the serious outlier value issue behind dramatic performance degradation under high pruning ratios that are caused by uniform sparsity, raising an additional concern about how to design adaptive pruning sparsity ideal for LLMs. Can LLMs prune by themselves? In this work, we introduce an affirmative answer by proposing a novel pruning method called AutoPrune, which first overcomes expert knowledge limits by leveraging LLMs to design optimal pruning algorithm for themselves automatically without any expert knowledge. Specifically, to mitigate the black-box nature of LLMs, we propose a Graph-driven Chain-of-Thought (GCoT) to optimize prompts, significantly enhancing the reasoning process in learning the pruning algorithm and enabling us to generate pruning algorithms with superior performance and interpretability in the next generation. Finally, grounded in insights of outlier value issue, we introduce Skew-aware Dynamic Sparsity Allocation (SDSA) to overcome the outlier value issue, mitigating performance degradation under high pruning ratios. We conduct extensive experiments on mainstream LLMs benchmarks, demonstrating the superiority of AutoPrune, which consistently excels state-of-the-art competitors.",
+        "identifiers": [
+          "SemanticScholar:10974c9c9c4ef7cc0de372b5502c30e1853b9dc1"
+        ],
+        "semantic_scholar_id": "10974c9c9c4ef7cc0de372b5502c30e1853b9dc1",
+        "canonical_id": "arXiv:2511.15390",
+        "arxiv_id": "2511.15390",
+        "authors": [
+          "Hai-Dong Kang",
+          "Li-Hong Lin",
+          "En-Neng Yang",
+          "Hong-Ning Dai",
+          "Hao Wang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 372,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cf4b2ecbb220122d2e1a1b15a524ebd0c7b127a860fcd4b0aaea78733fbe561c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

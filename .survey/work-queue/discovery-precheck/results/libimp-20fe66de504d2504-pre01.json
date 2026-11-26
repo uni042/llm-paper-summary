@@ -1,0 +1,330 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-20fe66de504d2504-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-20fe66de504d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tc.2026.3725429",
+    "DOI:10.1145/3799682.3840849",
+    "DOI:10.1145/3856827"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "58cc25aafd3860a0fa3b230f91e26c994b0eee84",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T00:20:15.528082+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tc.2026.3725429",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3799682.3840849",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3856827",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "EcoMLC: An Energy-Efficient Machine Learning Compilation Framework via Cache Reuse and Frequency Scaling",
+      "source_url": "https://doi.org/10.1145/3856827",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While modern machine learning compilers (MLCs) are pushing deep neural network (DNN) inference latency to its theoretical limits, the accompanying energy overhead has become a critical bottleneck for large-scale deployment. Excessive energy consumption not only increases electricity costs, but also affects the sustainability of edge platforms. Traditional performance-first optimizations often lead to significant energy waste, as they overlook the complex interplay between kernel configurations, cache behaviors and frequency scaling. This article presents EcoMLC, an energy-efficient machine learning compilation framework. EcoMLC introduces a reverse scheduling policy combined with an explicit cache priority mechanism, mitigating cache thrashing inherent in standard least recently used (LRU) policies. EcoMLC employs an end-to-end frequency-sweeping analysis to identify optimal energy operating points and enables fine-grained tradeoffs between performance and energy under diverse service level objective (SLO) constraints. Experimental results demonstrate that EcoMLC effectively optimizes various workloads, achieving an average of 43% and 26% energy savings (in J/request and J/token) over NVIDIA’s TensorRT and vLLM, and 22% energy savings on an AMD GPU compared with vLLM. For certain large language model (LLM) configurations, EcoMLC achieves a 33.9% reduction in energy consumption at the cost of a marginal 7% decline in performance.",
+      "identifiers": [
+        "SemanticScholar:8d3d02df27bb981ad40a78d94a47dfcbfe7392aa"
+      ],
+      "semantic_scholar_id": "8d3d02df27bb981ad40a78d94a47dfcbfe7392aa",
+      "doi": "10.1145/3856827",
+      "canonical_id": "DOI:10.1145/3856827",
+      "authors": [
+        "Chao-Yang Gu",
+        "Zhan-Yuan Di",
+        "Le-Ping Wang",
+        "Ding-Wen Tao",
+        "En Shao",
+        "Guang-Ming Tan",
+        "N. Sun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast LM Head via Coarse-Fine Decomposition and Tile-Wise Weight Clustering",
+      "source_url": "https://doi.org/10.1109/TC.2026.3725429",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": "IEEE transactions on computers",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) reuse each generated token as the next input during autoregressive decoding, making per-token latency a critical factor in practical inference performance. In this process, the LM Head performs a large-scale linear projection from the hidden state to the full vocabulary space at every decoding step, becoming one of the major bottlenecks in terms of memory bandwidth and latency. Existing output-layer approximation or vocabulary-pruning approaches can reduce the LM Head cost, but they may cause accuracy degradation due to logit-ranking distortion or task-dependent candidate omission. This paper reinterprets the LM Head as a candidate-screening problem and proposes a coarse-fine LM Head algorithm that restructures it into coarse and fine stages. The proposed method converts the LM Head weights into a compact codebook and an index map through tile-wise k-means clustering, and during online decoding, it computes full-vocabulary coarse scores using tile-wise LUTs and index streaming. Then, exact GEMV or GEMM using the original LM Head weights is performed only for the selected top-<inline-formula><tex-math notation=\"LaTeX\">$k$</tex-math><alternatives><mml:math><mml:mi>k</mml:mi></mml:math><inline-graphic xlink:href=\"seo-ieq1-3725429.gif\"/></alternatives></inline-formula> candidates. Experimental results show that the proposed method limits the average accuracy change to -0.21%p compared with the original LM Head across nine downstream benchmarks, while accelerating the LM Head computation by 5.82<inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"seo-ieq2-3725429.gif\"/></alternatives></inline-formula> on average and up to 12.7<inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"seo-ieq3-3725429.gif\"/></alternatives></inline-formula>. In addition, end-to-end TPOT measurements demonstrate a speed-up of up to 1.18<inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"seo-ieq4-3725429.gif\"/></alternatives></inline-formula> on DGX Spark, and the method operates stably under various decoding lengths, batch sizes, and sampling conditions. The implementation and evaluation scripts are publicly available at <uri>https://github.com/HigherIdeal/CFHead</uri>.",
+      "identifiers": [
+        "SemanticScholar:bc3d735dad836a21fbcaf251eb1db73d3f4c1600"
+      ],
+      "semantic_scholar_id": "bc3d735dad836a21fbcaf251eb1db73d3f4c1600",
+      "doi": "10.1109/TC.2026.3725429",
+      "canonical_id": "DOI:10.1109/TC.2026.3725429",
+      "authors": [
+        "Jungwoo Kim",
+        "Seunghwan Yoon",
+        "Hye-Rin Lee",
+        "Hakbum Lee",
+        "Sumin Oh",
+        "Seung-Yoon Kang",
+        "Young-Ho Seo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CriticRouter: Criticality-aware Step Router for Small-Large Collaborative Reasoning",
+      "source_url": "https://doi.org/10.1145/3799682.3840849",
+      "year": 2026,
+      "published": "2026-11-06",
+      "venue": "Proceedings of the 35th ACM International Conference on Information and Knowledge Management",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) achieve strong performance on complex reasoning tasks, but their long chain-of-thought trajectories incur substantial inference latency and computational cost. Small-large model collaborative reasoning mitigates this issue by offloading part of the reasoning steps to a small language model (SLM) while preserving large language model (LLM) computation for more demanding steps. Existing draft-and-verify methods use an external verifier to reject low-scoring SLM steps and regenerate them with the LLM, introducing per-step verification overhead. Moreover, we observe that many LLM rewrites remain semantically close to the rejected SLM drafts, causing unnecessary decoding cost. Further analysis shows that these redundant rewrites often occur on local derivation steps, whose content is largely constrained by recent context. Motivated by these observations, we propose CriticRouter, a verifier-free step-wise routing framework that reduces redundancy based on structural criticality as a routing signal. Specifically, structural criticality measures how sensitive the SLM's next-step generation is to perturbations in earlier reasoning history, and low-criticality steps are viewed as locally stable and delegated to the SLM, whereas high-criticality steps are treated as history-sensitive and routed to the LLM. To reduce probing overhead, CriticRouter further adopts short concurrent probes and progressive mask advancement for better cache reuse. Experiments on multiple benchmarks show that CriticRouter achieves comparable accuracy to standard LLM reasoning while significantly reducing latency, demonstrating a better utility-efficiency trade-off.",
+      "identifiers": [
+        "SemanticScholar:67f2f6811fb785cf9e65622a6f5293bbfb21dbd2"
+      ],
+      "semantic_scholar_id": "67f2f6811fb785cf9e65622a6f5293bbfb21dbd2",
+      "doi": "10.1145/3799682.3840849",
+      "canonical_id": "DOI:10.1145/3799682.3840849",
+      "authors": [
+        "Yi-Bin Wang",
+        "Xiyu Liu",
+        "Xiao-Ying Jiang",
+        "Xiao-Yan Gu",
+        "Wei-Ping Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3856827",
+      "identity_tokens": [
+        "id:DOI:10.1145/3856827",
+        "id:SemanticScholar:8d3d02df27bb981ad40a78d94a47dfcbfe7392aa",
+        "title:ecomlc an energyefficient machine learning compilation framework via cache reuse and frequency scaling",
+        "url:https://doi.org/10.1145/3856827"
+      ],
+      "record": {
+        "title": "EcoMLC: An Energy-Efficient Machine Learning Compilation Framework via Cache Reuse and Frequency Scaling",
+        "source_url": "https://doi.org/10.1145/3856827",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While modern machine learning compilers (MLCs) are pushing deep neural network (DNN) inference latency to its theoretical limits, the accompanying energy overhead has become a critical bottleneck for large-scale deployment. Excessive energy consumption not only increases electricity costs, but also affects the sustainability of edge platforms. Traditional performance-first optimizations often lead to significant energy waste, as they overlook the complex interplay between kernel configurations, cache behaviors and frequency scaling. This article presents EcoMLC, an energy-efficient machine learning compilation framework. EcoMLC introduces a reverse scheduling policy combined with an explicit cache priority mechanism, mitigating cache thrashing inherent in standard least recently used (LRU) policies. EcoMLC employs an end-to-end frequency-sweeping analysis to identify optimal energy operating points and enables fine-grained tradeoffs between performance and energy under diverse service level objective (SLO) constraints. Experimental results demonstrate that EcoMLC effectively optimizes various workloads, achieving an average of 43% and 26% energy savings (in J/request and J/token) over NVIDIA’s TensorRT and vLLM, and 22% energy savings on an AMD GPU compared with vLLM. For certain large language model (LLM) configurations, EcoMLC achieves a 33.9% reduction in energy consumption at the cost of a marginal 7% decline in performance.",
+        "identifiers": [
+          "SemanticScholar:8d3d02df27bb981ad40a78d94a47dfcbfe7392aa"
+        ],
+        "semantic_scholar_id": "8d3d02df27bb981ad40a78d94a47dfcbfe7392aa",
+        "doi": "10.1145/3856827",
+        "canonical_id": "DOI:10.1145/3856827",
+        "authors": [
+          "Chao-Yang Gu",
+          "Zhan-Yuan Di",
+          "Le-Ping Wang",
+          "Ding-Wen Tao",
+          "En Shao",
+          "Guang-Ming Tan",
+          "N. Sun"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 52,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tc.2026.3725429",
+      "identity_tokens": [
+        "id:DOI:10.1109/tc.2026.3725429",
+        "id:SemanticScholar:bc3d735dad836a21fbcaf251eb1db73d3f4c1600",
+        "title:fast lm head via coarsefine decomposition and tilewise weight clustering",
+        "url:https://doi.org/10.1109/TC.2026.3725429"
+      ],
+      "record": {
+        "title": "Fast LM Head via Coarse-Fine Decomposition and Tile-Wise Weight Clustering",
+        "source_url": "https://doi.org/10.1109/TC.2026.3725429",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": "IEEE transactions on computers",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) reuse each generated token as the next input during autoregressive decoding, making per-token latency a critical factor in practical inference performance. In this process, the LM Head performs a large-scale linear projection from the hidden state to the full vocabulary space at every decoding step, becoming one of the major bottlenecks in terms of memory bandwidth and latency. Existing output-layer approximation or vocabulary-pruning approaches can reduce the LM Head cost, but they may cause accuracy degradation due to logit-ranking distortion or task-dependent candidate omission. This paper reinterprets the LM Head as a candidate-screening problem and proposes a coarse-fine LM Head algorithm that restructures it into coarse and fine stages. The proposed method converts the LM Head weights into a compact codebook and an index map through tile-wise k-means clustering, and during online decoding, it computes full-vocabulary coarse scores using tile-wise LUTs and index streaming. Then, exact GEMV or GEMM using the original LM Head weights is performed only for the selected top-<inline-formula><tex-math notation=\"LaTeX\">$k$</tex-math><alternatives><mml:math><mml:mi>k</mml:mi></mml:math><inline-graphic xlink:href=\"seo-ieq1-3725429.gif\"/></alternatives></inline-formula> candidates. Experimental results show that the proposed method limits the average accuracy change to -0.21%p compared with the original LM Head across nine downstream benchmarks, while accelerating the LM Head computation by 5.82<inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"seo-ieq2-3725429.gif\"/></alternatives></inline-formula> on average and up to 12.7<inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"seo-ieq3-3725429.gif\"/></alternatives></inline-formula>. In addition, end-to-end TPOT measurements demonstrate a speed-up of up to 1.18<inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"seo-ieq4-3725429.gif\"/></alternatives></inline-formula> on DGX Spark, and the method operates stably under various decoding lengths, batch sizes, and sampling conditions. The implementation and evaluation scripts are publicly available at <uri>https://github.com/HigherIdeal/CFHead</uri>.",
+        "identifiers": [
+          "SemanticScholar:bc3d735dad836a21fbcaf251eb1db73d3f4c1600"
+        ],
+        "semantic_scholar_id": "bc3d735dad836a21fbcaf251eb1db73d3f4c1600",
+        "doi": "10.1109/TC.2026.3725429",
+        "canonical_id": "DOI:10.1109/TC.2026.3725429",
+        "authors": [
+          "Jungwoo Kim",
+          "Seunghwan Yoon",
+          "Hye-Rin Lee",
+          "Hakbum Lee",
+          "Sumin Oh",
+          "Seung-Yoon Kang",
+          "Young-Ho Seo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 25,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3799682.3840849",
+      "identity_tokens": [
+        "id:DOI:10.1145/3799682.3840849",
+        "id:SemanticScholar:67f2f6811fb785cf9e65622a6f5293bbfb21dbd2",
+        "title:criticrouter criticalityaware step router for smalllarge collaborative reasoning",
+        "url:https://doi.org/10.1145/3799682.3840849"
+      ],
+      "record": {
+        "title": "CriticRouter: Criticality-aware Step Router for Small-Large Collaborative Reasoning",
+        "source_url": "https://doi.org/10.1145/3799682.3840849",
+        "year": 2026,
+        "published": "2026-11-06",
+        "venue": "Proceedings of the 35th ACM International Conference on Information and Knowledge Management",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) achieve strong performance on complex reasoning tasks, but their long chain-of-thought trajectories incur substantial inference latency and computational cost. Small-large model collaborative reasoning mitigates this issue by offloading part of the reasoning steps to a small language model (SLM) while preserving large language model (LLM) computation for more demanding steps. Existing draft-and-verify methods use an external verifier to reject low-scoring SLM steps and regenerate them with the LLM, introducing per-step verification overhead. Moreover, we observe that many LLM rewrites remain semantically close to the rejected SLM drafts, causing unnecessary decoding cost. Further analysis shows that these redundant rewrites often occur on local derivation steps, whose content is largely constrained by recent context. Motivated by these observations, we propose CriticRouter, a verifier-free step-wise routing framework that reduces redundancy based on structural criticality as a routing signal. Specifically, structural criticality measures how sensitive the SLM's next-step generation is to perturbations in earlier reasoning history, and low-criticality steps are viewed as locally stable and delegated to the SLM, whereas high-criticality steps are treated as history-sensitive and routed to the LLM. To reduce probing overhead, CriticRouter further adopts short concurrent probes and progressive mask advancement for better cache reuse. Experiments on multiple benchmarks show that CriticRouter achieves comparable accuracy to standard LLM reasoning while significantly reducing latency, demonstrating a better utility-efficiency trade-off.",
+        "identifiers": [
+          "SemanticScholar:67f2f6811fb785cf9e65622a6f5293bbfb21dbd2"
+        ],
+        "semantic_scholar_id": "67f2f6811fb785cf9e65622a6f5293bbfb21dbd2",
+        "doi": "10.1145/3799682.3840849",
+        "canonical_id": "DOI:10.1145/3799682.3840849",
+        "authors": [
+          "Yi-Bin Wang",
+          "Xiyu Liu",
+          "Xiao-Ying Jiang",
+          "Xiao-Yan Gu",
+          "Wei-Ping Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8b04410b52a15fc45fafd008da5da21fec27f13cfd2cc755f8b043945cc61268",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

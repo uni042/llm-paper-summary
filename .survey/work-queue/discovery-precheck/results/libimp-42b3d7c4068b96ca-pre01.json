@@ -1,0 +1,151 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-42b3d7c4068b96ca-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-42b3d7c4068b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2510.19496"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "58cc25aafd3860a0fa3b230f91e26c994b0eee84",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T00:20:13.596737+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2510.19496",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CARES: Context-Aware Resolution Selector for VLMs",
+      "source_url": "https://arxiv.org/abs/2510.19496",
+      "year": 2025,
+      "published": "2025-10-22",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (VLMs) commonly process images at native or high resolution to remain effective across tasks. This inflates visual tokens ofter to 97-99% of total tokens, resulting in high compute and latency, even when low-resolution images would suffice. We introduce \\emph{CARES}-a \\textbf{C}ontext-\\textbf{A}ware \\textbf{R}esolution \\textbf{S}elector, a lightweight preprocessing module that, given an image-query pair, predicts the \\emph{minimal} sufficient input resolution. CARES uses a compact VLM (350M) to extract features and predict when a target pretrained VLM's response converges to its peak ability to answer correctly. Though trained as a discrete classifier over a set of optional resolutions, CARES interpolates continuous resolutions at inference for fine-grained control. Across five multimodal benchmarks spanning documents and natural images, as well as diverse target VLMs, CARES preserves task performance while reducing compute by up to 80%.",
+      "identifiers": [
+        "SemanticScholar:90350ab33d61cf5a9ff323426287f2c51ab2d1f0"
+      ],
+      "semantic_scholar_id": "90350ab33d61cf5a9ff323426287f2c51ab2d1f0",
+      "canonical_id": "arXiv:2510.19496",
+      "arxiv_id": "2510.19496",
+      "doi": "10.48550/arXiv.2510.19496",
+      "authors": [
+        "Moshe Kimhi",
+        "Nimrod Shabtay",
+        "R. Giryes",
+        "Chaim Baskin",
+        "Eli Schwartz"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 400,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.19496",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.19496",
+        "id:SemanticScholar:90350ab33d61cf5a9ff323426287f2c51ab2d1f0",
+        "id:arXiv:2510.19496",
+        "title:cares contextaware resolution selector for vlms",
+        "url:https://arxiv.org/abs/2510.19496"
+      ],
+      "record": {
+        "title": "CARES: Context-Aware Resolution Selector for VLMs",
+        "source_url": "https://arxiv.org/abs/2510.19496",
+        "year": 2025,
+        "published": "2025-10-22",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large vision-language models (VLMs) commonly process images at native or high resolution to remain effective across tasks. This inflates visual tokens ofter to 97-99% of total tokens, resulting in high compute and latency, even when low-resolution images would suffice. We introduce \\emph{CARES}-a \\textbf{C}ontext-\\textbf{A}ware \\textbf{R}esolution \\textbf{S}elector, a lightweight preprocessing module that, given an image-query pair, predicts the \\emph{minimal} sufficient input resolution. CARES uses a compact VLM (350M) to extract features and predict when a target pretrained VLM's response converges to its peak ability to answer correctly. Though trained as a discrete classifier over a set of optional resolutions, CARES interpolates continuous resolutions at inference for fine-grained control. Across five multimodal benchmarks spanning documents and natural images, as well as diverse target VLMs, CARES preserves task performance while reducing compute by up to 80%.",
+        "identifiers": [
+          "SemanticScholar:90350ab33d61cf5a9ff323426287f2c51ab2d1f0"
+        ],
+        "semantic_scholar_id": "90350ab33d61cf5a9ff323426287f2c51ab2d1f0",
+        "canonical_id": "arXiv:2510.19496",
+        "arxiv_id": "2510.19496",
+        "doi": "10.48550/arXiv.2510.19496",
+        "authors": [
+          "Moshe Kimhi",
+          "Nimrod Shabtay",
+          "R. Giryes",
+          "Chaim Baskin",
+          "Eli Schwartz"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 20,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 400,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4b2d17bfa32d38b5ff9c7c22f14120b7c3a22c5e866d24c005528ada9d347709",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
