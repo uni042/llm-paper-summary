@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e56ddf5f4867115c-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:a9a206097ff8e7a22d8a1ba4675c3840dbacbdce",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:a9a206097ff8e7a22d8a1ba4675c3840dbacbdce",
+    "identity_tokens": [
+      "SemanticScholar:a9a206097ff8e7a22d8a1ba4675c3840dbacbdce"
+    ],
+    "reason": "タイトルが指示表現理解のためのグラフ強化Transformerと明示しており、視覚・言語の参照理解タスクが主題で推論システムではないためタイトル走査で対象外とする。",
+    "first_checked_at": "2026-11-26T11:38:29+00:00",
+    "last_checked_at": "2026-11-26T11:38:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Graph-enhanced Transformers for Referring Expressions Comprehension"
+  },
+  "processed_at": "2026-11-26T11:38:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e56ddf5f4867",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

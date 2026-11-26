@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a6678fdfe64f531e-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:1f797e0c38d4597196d630d1f9c4b2df0dda5371",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:1f797e0c38d4597196d630d1f9c4b2df0dda5371",
+    "identity_tokens": [
+      "SemanticScholar:1f797e0c38d4597196d630d1f9c4b2df0dda5371"
+    ],
+    "reason": "LoRAモジュールの混合によるマルチタスク向けパラメータ効率ファインチューニングMoDEの提案であり、学習時の適応手法が主題で推論効率化への具体的適用が要旨に確認できないため対象外とする。",
+    "first_checked_at": "2026-11-26T11:38:29+00:00",
+    "last_checked_at": "2026-11-26T11:38:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "MoDE: Effective Multi-task Parameter Efﬁcient Fine-Tuning with a Mixture of Dyadic Experts"
+  },
+  "processed_at": "2026-11-26T11:38:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a6678fdfe64f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a6678fdfe64f531e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14",
+    "identity_tokens": [
+      "SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14"
+    ],
+    "reason": "BERTの単語ベクトルの冗長性を自己注意に基づく重要度で測り段階的に除去して推論時間を最大4.5倍短縮するPoWER-BERTだが、対象はエンコーダ型BERTの推論でありLLMサービングへの直接適用ではないため境界とする。",
+    "first_checked_at": "2026-11-26T11:38:29+00:00",
+    "last_checked_at": "2026-11-26T11:38:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination"
+  },
+  "processed_at": "2026-11-26T11:38:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a6678fdfe64f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

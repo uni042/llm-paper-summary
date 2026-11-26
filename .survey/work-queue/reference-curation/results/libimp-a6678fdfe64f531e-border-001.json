@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a6678fdfe64f531e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:dbc88fc157d871d7dde56b3a2cefb34dfc785e7a",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:dbc88fc157d871d7dde56b3a2cefb34dfc785e7a",
+    "identity_tokens": [
+      "SemanticScholar:dbc88fc157d871d7dde56b3a2cefb34dfc785e7a"
+    ],
+    "reason": "Dense・GQA・MoE・Mamba等のモデルとチャンキングや投機的デコード等のサービング最適化を入力に、LLM推論性能指標とSLOを満たすAIプラットフォーム設計を解析的に見積もるGenZツールであり、推論基盤の計測・設計支援に留まりサービング機構自体の提案ではないため境界とする。",
+    "first_checked_at": "2026-11-26T11:38:29+00:00",
+    "last_checked_at": "2026-11-26T11:38:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models"
+  },
+  "processed_at": "2026-11-26T11:38:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a6678fdfe64f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

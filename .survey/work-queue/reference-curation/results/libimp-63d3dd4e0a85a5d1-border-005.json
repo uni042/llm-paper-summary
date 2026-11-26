@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-63d3dd4e0a85a5d1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.31892",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.31892",
+    "identity_tokens": [
+      "arXiv:2611.31892"
+    ],
+    "reason": "ブロック因果ビデオ拡散で永続KVキャッシュの更新コストを、陳腐化したKVの再構成と部分リフレッシュで下げるSAMRはKV管理の機構を含むが、対象はビデオDiTの生成推論であり、LLM推論システムへの直接の適用や転用可能性は一次要旨からは確認できないため境界とした。",
+    "first_checked_at": "2026-11-26T11:38:28+00:00",
+    "last_checked_at": "2026-11-26T11:38:28+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cheap Memory Costs Future Compute: Co-Designing Persistent KV and GPU Execution for Efficient Streaming Video Diffusion"
+  },
+  "processed_at": "2026-11-26T11:38:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63d3dd4e0a85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

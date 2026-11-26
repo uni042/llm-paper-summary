@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a6678fdfe64f531e-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:a238109c3969ae681eee0d4f1bf2012f28850593",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:a238109c3969ae681eee0d4f1bf2012f28850593",
+    "identity_tokens": [
+      "SemanticScholar:a238109c3969ae681eee0d4f1bf2012f28850593"
+    ],
+    "reason": "トークン間相互作用なしに注意重みを合成するSynthesizerを提案し機械翻訳や言語モデリングで競合性能を示すが、推論時の計算量や遅延の削減効果を主目的として検証していないため境界とする。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T11:38:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Synthesizer: Rethinking Self-Attention in Transformer Models"
+  },
+  "processed_at": "2026-11-26T11:38:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a6678fdfe64f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

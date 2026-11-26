@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-63d3dd4e0a85a5d1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.32855",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.32855",
+    "identity_tokens": [
+      "arXiv:2611.32855"
+    ],
+    "reason": "Semantic ID生成推薦のtop-K検索をツリー注意で一括採点し厳密性を証明付きで保証するSIDECARは投機的実行の機構を使うが、対象は推薦システムの検索精度と呼び出し回数であり、LLM推論システム自体への貢献は間接的で応用が主目的であるため境界とした。",
+    "first_checked_at": "2026-11-26T11:38:28+00:00",
+    "last_checked_at": "2026-11-26T11:38:28+00:00",
+    "linked_from": [
+      "arxiv_api_latest_search"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Speculative Decoding for Semantic-ID-Based Generative Recommendations"
+  },
+  "processed_at": "2026-11-26T11:38:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63d3dd4e0a85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

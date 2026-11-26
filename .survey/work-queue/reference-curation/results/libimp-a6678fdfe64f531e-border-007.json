@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a6678fdfe64f531e-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731",
+    "identity_tokens": [
+      "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731"
+    ],
+    "reason": "浮動小数点指数の偏りをエントロピー符号化するEFloat形式でベクトル埋め込みモデルを圧縮する提案であり、数値形式としての関連はあるがLLM推論システムでの量子化適用や速度検証が要旨にないため境界とする。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T11:38:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EFloat: Entropy-coded Floating Point Format for Deep Learning"
+  },
+  "processed_at": "2026-11-26T11:38:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a6678fdfe64f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

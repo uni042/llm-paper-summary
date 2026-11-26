@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T11:37:02+00:00",
-  "record_count": 9675,
+  "updated_at": "2026-11-26T11:38:29+00:00",
+  "record_count": 9685,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -143799,9 +143799,9 @@
       "identity_tokens": [
         "SemanticScholar:a238109c3969ae681eee0d4f1bf2012f28850593"
       ],
-      "reason": "要旨ではドット積自己注意を合成した注意重みで置き換えるSynthesizerを提案し注意機構そのものには関わるが、評価の主眼はモデル性能であり推論時の計算量やメモリ削減の定量的な裏付けは要旨からは不明瞭である。",
+      "reason": "トークン間相互作用なしに注意重みを合成するSynthesizerを提案し機械翻訳や言語モデリングで競合性能を示すが、推論時の計算量や遅延の削減効果を主目的として検証していないため境界とする。",
       "first_checked_at": "2026-11-26T00:55:54+00:00",
-      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T11:38:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -143934,9 +143934,9 @@
       "identity_tokens": [
         "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731"
       ],
-      "reason": "浮動小数点指数の偏りを利用するエントロピー符号化数値形式EFloatで埋め込み等のデータを圧縮する手法であり、推論メモリ削減と関連はあるがLLM推論への適用や効果は要旨で示されていない。",
+      "reason": "浮動小数点指数の偏りをエントロピー符号化するEFloat形式でベクトル埋め込みモデルを圧縮する提案であり、数値形式としての関連はあるがLLM推論システムでの量子化適用や速度検証が要旨にないため境界とする。",
       "first_checked_at": "2026-11-26T00:55:54+00:00",
-      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T11:38:29+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -148045,6 +148045,156 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Whisfusion: Parallel ASR Decoding with Masked Diffusion"
+    },
+    "arXiv:2611.32855": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.32855",
+      "identity_tokens": [
+        "arXiv:2611.32855"
+      ],
+      "reason": "Semantic ID生成推薦のtop-K検索をツリー注意で一括採点し厳密性を証明付きで保証するSIDECARは投機的実行の機構を使うが、対象は推薦システムの検索精度と呼び出し回数であり、LLM推論システム自体への貢献は間接的で応用が主目的であるため境界とした。",
+      "first_checked_at": "2026-11-26T11:38:28+00:00",
+      "last_checked_at": "2026-11-26T11:38:28+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Speculative Decoding for Semantic-ID-Based Generative Recommendations"
+    },
+    "arXiv:2611.32736": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.32736",
+      "identity_tokens": [
+        "arXiv:2611.32736"
+      ],
+      "reason": "タイル単位の自己回帰生成と対角方向へ並列化するWavefront-AutoRegressive推論スケジュールで単一画像レイテンシ削減をうたうが、論文の主目的は4K画像生成の品質改善であり、推論システムへの貢献は生成モデル本体に従属する補助的なものにとどまるため境界とした。",
+      "first_checked_at": "2026-11-26T11:38:28+00:00",
+      "last_checked_at": "2026-11-26T11:38:28+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Qwen-Image-HD: Autoregressive Diffusion for High Definition Image Generation"
+    },
+    "arXiv:2611.32073": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.32073",
+      "identity_tokens": [
+        "arXiv:2611.32073"
+      ],
+      "reason": "LLM比較の結果を推移性グラフへ記録して不要な再問い合わせを避ける意味的ORDER BY演算子TBSは、LLM呼び出し回数とコストの削減を示すが、対象はデータベースのクエリ処理でありLLM推論システム自体の機構ではなく、LLM利用側の応用最適化が主目的であるため境界とした。",
+      "first_checked_at": "2026-11-26T11:38:28+00:00",
+      "last_checked_at": "2026-11-26T11:38:28+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Semantic ORDER BY via Transitivity-Aware LLM Batch Sorting"
+    },
+    "arXiv:2611.31944": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.31944",
+      "identity_tokens": [
+        "arXiv:2611.31944"
+      ],
+      "reason": "対話型ビデオワールドモデルで履歴KVキャッシュを幾何的根拠と関連度で検索し、CPUオフロードとタイル単位ストリーミング注意でレイテンシとGPUメモリを削減するが、対象はビデオ生成モデルの一貫性維持であり、LLM推論システムへの適用は一次要旨では示されていないため境界とした。",
+      "first_checked_at": "2026-11-26T11:38:28+00:00",
+      "last_checked_at": "2026-11-26T11:38:28+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DraftKV: Protecting Persistent Worlds through Hierarchical Streaming Retrieval"
+    },
+    "arXiv:2611.31892": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.31892",
+      "identity_tokens": [
+        "arXiv:2611.31892"
+      ],
+      "reason": "ブロック因果ビデオ拡散で永続KVキャッシュの更新コストを、陳腐化したKVの再構成と部分リフレッシュで下げるSAMRはKV管理の機構を含むが、対象はビデオDiTの生成推論であり、LLM推論システムへの直接の適用や転用可能性は一次要旨からは確認できないため境界とした。",
+      "first_checked_at": "2026-11-26T11:38:28+00:00",
+      "last_checked_at": "2026-11-26T11:38:28+00:00",
+      "linked_from": [
+        "arxiv_api_latest_search"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cheap Memory Costs Future Compute: Co-Designing Persistent KV and GPU Execution for Efficient Streaming Video Diffusion"
+    },
+    "SemanticScholar:dbc88fc157d871d7dde56b3a2cefb34dfc785e7a": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:dbc88fc157d871d7dde56b3a2cefb34dfc785e7a",
+      "identity_tokens": [
+        "SemanticScholar:dbc88fc157d871d7dde56b3a2cefb34dfc785e7a"
+      ],
+      "reason": "Dense・GQA・MoE・Mamba等のモデルとチャンキングや投機的デコード等のサービング最適化を入力に、LLM推論性能指標とSLOを満たすAIプラットフォーム設計を解析的に見積もるGenZツールであり、推論基盤の計測・設計支援に留まりサービング機構自体の提案ではないため境界とする。",
+      "first_checked_at": "2026-11-26T11:38:29+00:00",
+      "last_checked_at": "2026-11-26T11:38:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models"
+    },
+    "arXiv:2404.11502": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.11502",
+      "identity_tokens": [
+        "arXiv:2404.11502"
+      ],
+      "reason": "複数の推論コードライブラリの効率を4つの利用シナリオで粗粒度に比較し、Transformer各モジュールへ細粒度に分析する評価研究であり、推論効率の理解には寄与するが新しい推論高速化機構の提案ではないため境界とする。",
+      "first_checked_at": "2026-11-26T11:38:29+00:00",
+      "last_checked_at": "2026-11-26T11:38:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Coarse-to-Fine Evaluation of Inference Efficiency for Large Language Models"
+    },
+    "DOI:10.1109/iscas46773.2023.10181465": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas46773.2023.10181465",
+      "identity_tokens": [
+        "DOI:10.1109/iscas46773.2023.10181465"
+      ],
+      "reason": "自己注意のボトルネックであるSoftmaxをFPGA向けにハードウェア効率良く近似し事前学習済みTransformerへ差し替え可能とする回路提案だが、対象は汎用NLP向け自己注意ネットワークでLLM推論への適用確認が弱いため境界とする。",
+      "first_checked_at": "2026-11-26T11:38:29+00:00",
+      "last_checked_at": "2026-11-26T11:38:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware-efficient Softmax Approximation for Self-Attention Networks"
+    },
+    "SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14",
+      "identity_tokens": [
+        "SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14"
+      ],
+      "reason": "BERTの単語ベクトルの冗長性を自己注意に基づく重要度で測り段階的に除去して推論時間を最大4.5倍短縮するPoWER-BERTだが、対象はエンコーダ型BERTの推論でありLLMサービングへの直接適用ではないため境界とする。",
+      "first_checked_at": "2026-11-26T11:38:29+00:00",
+      "last_checked_at": "2026-11-26T11:38:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination"
+    },
+    "DOI:10.1109/dac63849.2025.11132475": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/dac63849.2025.11132475",
+      "identity_tokens": [
+        "DOI:10.1109/dac63849.2025.11132475"
+      ],
+      "reason": "注意機構のビットレベルスパース性を利用し、ワークロード不均衡を調整するビットスパース注意ハードウェアBlazeを提案するが、汎用NLP注意推論向けの回路設計でありLLMサービングでの検証が要旨からは確認できないため境界とする。",
+      "first_checked_at": "2026-11-26T11:38:29+00:00",
+      "last_checked_at": "2026-11-26T11:38:29+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Blaze: An Efficient Bit-Sparse Attention Architecture With Workload Orchestration Optimization"
     }
   }
 }
