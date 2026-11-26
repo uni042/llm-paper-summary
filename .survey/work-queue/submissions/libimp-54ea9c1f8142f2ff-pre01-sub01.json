@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GLAT: Glancing at Latent Variables for Parallel Text Generation",
+      "source_url": "https://arxiv.org/abs/2204.02030",
+      "year": 2022,
+      "published": "2022-04-05",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 43,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, parallel text generation has received widespread attention due to its success in generation efficiency. Although many advanced techniques are proposed to improve its generation quality, they still need the help of an autoregressive model for training to overcome the one-to-many multi-modal phenomenon in the dataset, limiting their applications. In this paper, we propose GLAT, which employs the discrete latent variables to capture word categorical information and invoke an advanced curriculum learning technique, alleviating the multi-modality problem. Experiment results show that our method outperforms strong baselines without the help of an autoregressive model, which further broadens the application scenarios of the parallel decoding paradigm.",
+      "identifiers": [
+        "SemanticScholar:b83763308e481e029e6903a2bbca7a19070a44ae"
+      ],
+      "semantic_scholar_id": "b83763308e481e029e6903a2bbca7a19070a44ae",
+      "canonical_id": "arXiv:2204.02030",
+      "arxiv_id": "2204.02030",
+      "doi": "10.48550/arXiv.2204.02030",
+      "authors": [
+        "Yu Bao",
+        "Hao Zhou",
+        "Shu-Jian Huang",
+        "Dongqi Wang",
+        "Lihua Qian",
+        "Xin-Yu Dai",
+        "Jia-Jun Chen",
+        "Lei Li"
+      ],
+      "priority": 53,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 43,
+        "citation_count": 43,
+        "total": 53,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1696,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "離散潜在変数で多峰性を緩和するlatent-GLATにより自己回帰モデル無しで並列テキスト生成を行う方式であり、生成効率を目的とする非自己回帰デコードの技術である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Linear-time Minimum Bayes Risk Decoding with Reference Aggregation",
+      "source_url": "https://arxiv.org/abs/2402.04251",
+      "year": 2024,
+      "published": "2024-02-06",
+      "venue": "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)",
+      "citation_count": 29,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Minimum Bayes Risk (MBR) decoding is a text generation technique that has been shown to improve the quality of machine translations, but is expensive, even if a sampling-based approximation is used. Besides requiring a large number of sampled sequences, it requires the pairwise calculation of a utility metric, which has quadratic complexity. In this paper, we propose to approximate pairwise metric scores with scores calculated against aggregated reference representations. This changes the complexity of utility estimation from $O(n^2)$ to $O(n)$, while empirically preserving most of the quality gains of MBR decoding. We release our source code at https://github.com/ZurichNLP/mbr",
+      "identifiers": [
+        "SemanticScholar:f0b2779c29af8296db21aedc3388b16082988428"
+      ],
+      "semantic_scholar_id": "f0b2779c29af8296db21aedc3388b16082988428",
+      "canonical_id": "arXiv:2402.04251",
+      "arxiv_id": "2402.04251",
+      "doi": "10.48550/arXiv.2402.04251",
+      "authors": [
+        "Jannis Vamvas",
+        "R. Sennrich"
+      ],
+      "priority": 39,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 29,
+        "citation_count": 29,
+        "total": 39,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1024,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "最小ベイズリスクデコードのペアワイズ効用計算を参照集約でO(n^2)からO(n)へ下げる線形時間MBRデコードを提案し、テキスト生成デコードの計算量削減に直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-54ea9c1f8142",
+    "round": "libimp-54ea9c1f8142f2ff-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-54ea9c1f8142f2ff-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-54ea9c1f8142f2ff-pre01.json",
+    "receipt": "sha256:9639ee76f80e476b578f3fe80acc106db483d95053bb2848abe7bbcf63c89ae7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-54ea9c1f8142",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

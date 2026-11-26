@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Scout Before You Route: Predicting Task Success and Token Count from a Small LLM Prefill",
+      "source_url": "https://arxiv.org/abs/2611.09028",
+      "year": 2026,
+      "published": "2026-11-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Routers typically choose a model per query by trading predicted correctness against cost. Most price each model at a fixed cost, as if every query used the same number of output tokens, but the output length of reasoning models varies by an order of magnitude across queries. When is per-query cost worth predicting? What factors drive cost? How cheaply can predictions be made? We predict both the success probability and the output length of candidate models from the prefill activations of a single small frozen LLM, the scout. With reasoning candidates, perfect per-query cost knowledge would save 29-61% of spending on eight of nine datasets, and much less with non-reasoning candidates on the same problems. On those eight datasets, our predicted costs save 9-33% at matched accuracy relative to median-length pricing, up to 69% of what perfect knowledge would save. They are significantly cheaper than each estimator we reimplemented or adapted from published work, including ZeroRouter and a MixLLM-style predictor, on a majority of datasets. Output length depends mostly on the problem. On most math and code datasets, harder problems are longer, so predicted success alone prices cost nearly as well. On knowledge and mixed-format datasets they are not, and predicted success falls well behind a probe trained on length. The probe keeps most of its saving with 20 labelled problems and transfers without labels to four of seven new benchmarks. On a mixture of all nine benchmarks, it saves 22% beyond pricing each benchmark at its own median length. Savings stop growing at about a 2B scout, so above 4B a larger scout costs more than it adds.",
+      "identifiers": [
+        "SemanticScholar:f7c46dd2403f042ba13491ea8234858171908106"
+      ],
+      "semantic_scholar_id": "f7c46dd2403f042ba13491ea8234858171908106",
+      "canonical_id": "arXiv:2611.09028",
+      "arxiv_id": "2611.09028",
+      "authors": [
+        "Aristides Milios",
+        "C. Pal"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "小さな凍結LLMのプリフィル活性から候補モデルの成功確率と出力長を予測してルーティングするScoutにより、精度を揃えた条件で支出を9〜33%削減できることを一次要旨で具体的に示しており、プリフィルを用いた推論コスト最適化とモデルルーティングへの直接貢献が確認できるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-92b5049f0e9c",
+    "round": "libimp-92b5049f0e9c6129-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-92b5049f0e9c6129-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-92b5049f0e9c6129-pre01.json",
+    "receipt": "sha256:597262cd7e3ee868f66f8c3a3edcb1fc6021a7cb9f7d968e66f7f48be900873c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-92b5049f0e9c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

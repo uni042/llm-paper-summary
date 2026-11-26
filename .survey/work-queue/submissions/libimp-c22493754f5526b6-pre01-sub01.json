@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "An EM Approach to Non-autoregressive Conditional Sequence Generation",
+      "source_url": "https://arxiv.org/abs/2006.16378",
+      "year": 2020,
+      "published": "2020-06-29",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 44,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive (AR) models have been the dominating approach to conditional sequence generation, but are suffering from the issue of high inference latency. Non-autoregressive (NAR) models have been recently proposed to reduce the latency by generating all output tokens in parallel but could only achieve inferior accuracy compared to their autoregressive counterparts, primarily due to a difficulty in dealing with the multi-modality in sequence generation. This paper proposes a new approach that jointly optimizes both AR and NAR models in a unified Expectation-Maximization (EM) framework. In the E-step, an AR model learns to approximate the regularized posterior of the NAR model. In the M-step, the NAR model is updated on the new posterior and selects the training examples for the next AR model. This iterative process can effectively guide the system to remove the multi-modality in the output sequences. To our knowledge, this is the first EM approach to NAR sequence generation. We evaluate our method on the task of machine translation. Experimental results on benchmark data sets show that the proposed approach achieves competitive, if not better, performance with existing NAR models and significantly reduces the inference latency.",
+      "identifiers": [
+        "SemanticScholar:3dd6ceabc36725fa8f8debdaa4a87ec4e35e8c22"
+      ],
+      "semantic_scholar_id": "3dd6ceabc36725fa8f8debdaa4a87ec4e35e8c22",
+      "canonical_id": "arXiv:2006.16378",
+      "arxiv_id": "2006.16378",
+      "doi": "10.48550/arXiv.2006.16378",
+      "authors": [
+        "Zhiqing Sun",
+        "Yiming Yang"
+      ],
+      "priority": 54,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 44,
+        "citation_count": 44,
+        "total": 54,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2341,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "自己回帰モデルの高推論レイテンシに対し非自己回帰モデルとEM枠組みで統合最適化し、並列生成による系列生成の高速化を図るデコード手法であり、推論レイテンシ削減への直接の技術的貢献が要旨で確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c22493754f55",
+    "round": "libimp-c22493754f5526b6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c22493754f5526b6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c22493754f5526b6-pre01.json",
+    "receipt": "sha256:8c9f635d6629db6a2769933ca866876565ac48aac819fbe38d3e8e687253b105"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c22493754f55",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

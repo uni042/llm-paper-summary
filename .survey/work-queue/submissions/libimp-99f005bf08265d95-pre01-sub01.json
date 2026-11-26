@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Fused Kernel Library: A C++ API to Develop Highly-Efficient GPU Libraries",
+      "source_url": "https://arxiv.org/abs/2508.07071",
+      "year": 2025,
+      "published": "2025-08-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing GPU libraries often struggle to fully exploit the parallel resources and on-chip memory (SRAM) of GPUs when chaining multiple GPU functions as individual kernels. While Kernel Fusion (KF) techniques like Horizontal Fusion (HF) and Vertical Fusion (VF) can mitigate this, current library implementations often require library developers to manually create fused kernels. Hence, library users rely on limited sets of pre-compiled or template-based fused kernels. This limits the use cases that can benefit from HF and VF and increases development costs. In order to solve these issues, we present a novel methodology for building GPU libraries that enables automatic on-demand HF and VF for arbitrary combinations of GPU library functions. Our methodology defines reusable, fusionable components that users combine via high-level programming interfaces. Leveraging C++17 metaprogramming features available in compilers like nvcc, our methodology generates a single and optimized fused kernel tailored to the user's specific sequence of operations at compile time, without needing a custom compiler or manual development and pre-compilation of kernel combinations. This approach abstracts low-level GPU complexities while maximizing GPU resource utilization and keeping intermediate data in SRAM. We provide an open-source implementation demonstrating significant speedups compared to traditional libraries in various benchmarks, validating the effectiveness of this methodology for improving GPU performance in the range of 2x to more than 1000x, while preserving high-level programmability.",
+      "identifiers": [
+        "SemanticScholar:7b838a154839502a796bf0a858af25f2ac737f9e"
+      ],
+      "semantic_scholar_id": "7b838a154839502a796bf0a858af25f2ac737f9e",
+      "canonical_id": "arXiv:2508.07071",
+      "arxiv_id": "2508.07071",
+      "doi": "10.48550/arXiv.2508.07071",
+      "authors": [
+        "Oscar Amoros",
+        "Albert Andaluz",
+        "J. Nunez",
+        "Antonio J. Peña"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 474,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GPUカーネル融合を自動でオンデマンドに行うFused Kernel Libraryを提案し、SRAM活用とカーネル起動効率を高めるカーネル層の直接的貢献がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Lightweight Attention Mechanisms Using Nyström Low-Rank Approximation and Their Computational Architectures",
+      "source_url": "https://doi.org/10.1587/nolta.2026ncp0012",
+      "year": 2026,
+      "published": null,
+      "venue": "Nonlinear Theory and Its Applications IEICE",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:2d68a8406bcfe0cd9abd4351a3fd03a68d8a3ee2"
+      ],
+      "semantic_scholar_id": "2d68a8406bcfe0cd9abd4351a3fd03a68d8a3ee2",
+      "doi": "10.1587/nolta.2026ncp0012",
+      "canonical_id": "DOI:10.1587/nolta.2026ncp0012",
+      "authors": [
+        "Yushi Furuta",
+        "K. Ando",
+        "T. Marukame",
+        "T. Asai"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Nyström低ランク近似による軽量注意機構とその計算アーキテクチャを提案し、エッジ上のTransformerのメモリと計算量を抑える具体的貢献がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Nona: A Stochastic Congestion-Aware Job Scheduler for Real-Time Inference Queries",
+      "source_url": "https://doi.org/10.1109/CloudNet62863.2024.10815926",
+      "year": 2024,
+      "published": "2024-11-27",
+      "venue": "2024 IEEE 13th International Conference on Cloud Networking (CloudNet)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper proposes a novel queueing-theoretic approach to enable stochastic congestion-aware scheduling for distributed machine learning inference queries. Our proposed framework, called Nona, combines a stochastic scheduler with an offline optimization formulation rooted in queueing-theoretic principles to minimize the average completion time of heterogeneous inference queries. At its core, Nona incorporates the fundamental tradeoffs between compute and network resources to make efficient scheduling decisions. Nona's formulation uses the Pollaczek-Khinchine formula to estimate queueing latency and to predict system congestion. Builind upon conventional Jackson networks, it captures the dependency between the computation and communication operations of interfering jobs. From this formulation, we derive an optimization problem and use its results as inputs for the scheduler. We introduce a novel graph contraction procedure to enable cloud providers to solve Nona's optimization formulation in practical settings. We evaluate Nona with real-world machine learning models (AlexNet, ResNet, DenseNet, VGG, and GPT2) and demonstrate that Nona outperforms state-of-the-art schedulers by up to 350×.",
+      "identifiers": [
+        "SemanticScholar:55218a6a3928d3b82a8d42b099c933e8aaf79df2"
+      ],
+      "semantic_scholar_id": "55218a6a3928d3b82a8d42b099c933e8aaf79df2",
+      "doi": "10.1109/CloudNet62863.2024.10815926",
+      "canonical_id": "DOI:10.1109/CloudNet62863.2024.10815926",
+      "authors": [
+        "Benoit Pit-Claudel",
+        "Derya Malak",
+        "Alejandro Cohen",
+        "M. Médard",
+        "Manya Ghobadi"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 729,
+        "matched_prestigious_venue": null
+      },
+      "reason": "分散ML推論クエリ向けに待ち行列理論に基づく混雑考慮スケジューラNonaを提案し、推論リクエストの平均完了時間を下げるサービング貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-99f005bf0826",
+    "round": "libimp-99f005bf08265d95-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-99f005bf08265d95-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-99f005bf08265d95-pre01.json",
+    "receipt": "sha256:ff223998b28d0c306703f12d1d053b072abf034a0d01544cdb6e206e1caaeb61"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-99f005bf0826",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

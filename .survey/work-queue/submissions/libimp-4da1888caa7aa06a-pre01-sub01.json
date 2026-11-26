@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SpotCC: Facilitating Coded Computation for Prediction Serving Systems on Spot Instances",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408557",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing adoption of prediction serving systems (PSSes) has made cost-saving deployment on preemptible spot instances crucial, yet frequent preemptions severely harm availability. While coded computation (CC) can keep availability cost-effectively by encoding original jobs into parity ones, its direct application to spot instances incurs prohibitive decoding overhead and tail latency under frequent preemptions. We identify two findings for optimization: (i) decoding asymmetry (only original job failures require decoding); (ii) preemption unevenness (variation in preemption rates across cloud regions). Leveraging these findings, we propose SpotCC, a new CC framework that strategically dispatches parity jobs to high-preemption (volatile) regions and original jobs to low-preemption (stable) regions. SpotCC designs locality-based and fine-grained volatility identification to reduce decoding operations and mitigate job congestion, respectively, and adaptively tunes configurations for decoding minimization. Experiments show that SpotCC improves P99 latency by 83.9% over state-of-the-arts, while maintaining ultra-low monetary costs.",
+      "identifiers": [
+        "SemanticScholar:6d917373d34717f94c8a9527129c68dbf6dc06db"
+      ],
+      "semantic_scholar_id": "6d917373d34717f94c8a9527129c68dbf6dc06db",
+      "doi": "10.1109/HPCA68181.2026.11408557",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408557",
+      "authors": [
+        "Lin Wang",
+        "Yu-Chong Hu",
+        "Ziling Duan",
+        "Ming-Qi Li",
+        "Chen-Xuan Yao",
+        "Fei-Fan Liu",
+        "Xiao-Lu Li",
+        "Lei-Hua Qin",
+        "Dan Feng"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "スポットインスタンス上のprediction serving systemでcoded computationの復号オーバーヘッドと尾遅延を、復号非対称性とpreemptionの地域差を利用して抑えるSpotCCは、サービングシステムへの直接の技術的貢献が要旨で具体的。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Trivance: Latency-Optimal AllReduce by Shortcutting Multiport Networks",
+      "source_url": "https://arxiv.org/abs/2602.17254",
+      "year": 2026,
+      "published": "2026-02-19",
+      "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AllReduce is a fundamental collective communication operation in distributed computing and a key performance bottleneck for large-scale training and inference. Its completion time is determined by the number of communication steps, which dominate latency-sensitive workloads, and the communication distance affecting both latency- and bandwidth-bound regimes. Direct-connect topologies, such as Google's TPUv4 tori, are particularly prone to large communication distances due to limited bisection bandwidth. In this paper, we present Trivance, a novel AllReduce algorithm that completes within log3 nsteps—a 50% improvement in comparison to Swing and Recursive Doubling, while reducing congestion compared to Bruck's algorithm by a factor of three and preserving bandwidth-optimality. Trivance exploits both transmission ports of a bidirectional ring within each step to triple the communication distance along both directions simultaneously. By performing joint reductions, Trivance improves both the number of steps and network congestion. We further show that Trivance extends naturally to multidimensional torus networks, retaining its latency advantage while achieving performance comparable to bandwidth-optimal algorithms for large AllReduce sizes. Our packet-level SST simulation shows that Trivance improves state-of-the-art approaches by 5–30% for AllReduce sizes up to 8 MiB, in high-bandwidth settings up to 32 MiB and for 3D tori up to 128 MiB. Throughout the evaluation, Trivance remains the best-performing latency-optimal algorithm.",
+      "identifiers": [
+        "SemanticScholar:4b33c0ea49438864aa81a2a9e46b8e1157f41d05"
+      ],
+      "semantic_scholar_id": "4b33c0ea49438864aa81a2a9e46b8e1157f41d05",
+      "canonical_id": "arXiv:2602.17254",
+      "arxiv_id": "2602.17254",
+      "doi": "10.1145/3789240.3829181",
+      "authors": [
+        "Anton Juerss",
+        "Vamsi Addanki",
+        "Stefan Schmid"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AllReduceをlog_3 nステップで完了するTrivanceは分散学習・推論のボトルネックである集合通信の遅延を直接削減するアルゴリズムであり、直接接続トポロジでの輻輳削減まで要旨で具体的に示されている。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4da1888caa7a",
+    "round": "libimp-4da1888caa7aa06a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4da1888caa7aa06a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4da1888caa7aa06a-pre01.json",
+    "receipt": "sha256:913b0508f4cc198f01f2f15157716259dd5b763071e9467421f5525ac50b4d6c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4da1888caa7a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "F ASTER , C HEAPER , J UST AS G OOD : C OST - AND L ATENCY -C ONSTRAINED R OUTING FOR LLM S",
+      "source_url": "https://www.semanticscholar.org/paper/81ecef9d40ac25fd4215c17a5f3843374b0ac289",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:81ecef9d40ac25fd4215c17a5f3843374b0ac289"
+      ],
+      "semantic_scholar_id": "81ecef9d40ac25fd4215c17a5f3843374b0ac289",
+      "canonical_id": "SemanticScholar:81ecef9d40ac25fd4215c17a5f3843374b0ac289",
+      "authors": [
+        "Javid Lakha",
+        "Min-Lan Yu",
+        "Rana Shahout"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SCOREはリクエストごとに各モデルの応答品質と長を予測し、ユーザ指定のコスト・レイテンシ制約の下でモデル選択と負荷分散をオンライン適応させるLLMルーティングシステムで、サービングのスケジューリングへの直接貢献が確認できるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Inference Serving with Heterogeneous GPUs",
+      "source_url": "https://www.semanticscholar.org/paper/86a6f4ad4e152322404c4bb9ca6923b22ad4629a",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:86a6f4ad4e152322404c4bb9ca6923b22ad4629a"
+      ],
+      "semantic_scholar_id": "86a6f4ad4e152322404c4bb9ca6923b22ad4629a",
+      "canonical_id": "SemanticScholar:86a6f4ad4e152322404c4bb9ca6923b22ad4629a",
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Helixは異種GPUクラスタ上のLLMサービングをmax-flow問題として定式化し、モデル配置とリクエストスケジューリングをMILPで共同最適化してスループット最大3.3倍・デコードレイテンシ削減を示す分散推論システムでありaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Breaking the Tradeoff: Elastic and Isolated GPU Sharing with Ghost",
+      "source_url": "https://www.semanticscholar.org/paper/e0e60e2113e57a37a3e9f0af6a3a12865669991d",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e0e60e2113e57a37a3e9f0af6a3a12865669991d"
+      ],
+      "semantic_scholar_id": "e0e60e2113e57a37a3e9f0af6a3a12865669991d",
+      "canonical_id": "SemanticScholar:e0e60e2113e57a37a3e9f0af6a3a12865669991d",
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Ghost/GVMはGPUドライバ内のOSレベル仮想化層として、cgroup的コンテナ抽象・ページテーブルによるメモリスワッピング・特権スケジューリングとプリエンプションで弾力性と分離を両立し、AIワークロード共置でスループット最大2倍・レイテンシ大幅削減を示すGPU共有システムであり、推論基盤への直接貢献が確認できるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3fed1edfdf1e",
+    "round": "libimp-3fed1edfdf1e68a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3fed1edfdf1e68a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3fed1edfdf1e68a7-pre01.json",
+    "receipt": "sha256:17d1f1e15f3fbff9bd3fed89a3c81e8d0616be959ceae0f88c01043be586063d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3fed1edfdf1e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
