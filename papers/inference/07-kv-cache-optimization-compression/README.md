@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（701本）
+## 自動生成の論文一覧（702本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1422,6 +1422,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [MCPO: Modality-Contrastive Preference Optimization for Multimodal Chain-of-Thought Compression](2026-2609.04947-mcpo-modality-contrastive-preference-optimization-for-multimodal-chain-o.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   思考連鎖の各ステップの視覚依存度を画像ありと画像なしの尤度差で測って視覚に依存しないステップを枝刈りし、画像ありと画像なしで勾配の急さが異なる非対称な選好損失で短く視覚に根ざした推論様式を学習させる、マルチモーダル思考連鎖の二段階圧縮手法。
+
+- **2026-09 · [Learning to Predict Middle-Layer Attention in MLLMs for Visual Token Pruning](2026-2608.06411-learning-to-predict-middle-layer-attention-in-mllms-for-visual-token-pru.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  質問に最も応答する中間層はサンプルごとに異なるため、質問対照で選んだ教師層の注意を言語モデル処理前に動く軽量予測器へ蒸留し、注意マップなしで視覚トークンの5.56%まで削って性能の97.5%を保持した研究。
 
 - **2026-09 · [Learning Functional Subspaces for Neural Network Compression](2026-2609.40127-learning-functional-subspaces-for-neural-network-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

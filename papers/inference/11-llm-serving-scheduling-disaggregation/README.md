@@ -400,6 +400,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   本論文は、金融時系列、センサ、ログのようにデータが継続的に追加され、利用者からの質問がときどき到着する用途に対し、質問の到着を待たずにデータを処理する状態保持型（Stateful）LLM推論を提案する。
 
+- **2026-04 · [RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving](2026-2604.10907-routerwise-resource-allocation-routing.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  GPU割当とプロンプト振り分けを構成別遅延モデルと双対価格で共同最適化し、同一クラスタでも配備構成がSLO下の達成品質を最大87%変えることを示す。
+
 - **2026-03 · [SLO-Aware Compute Resource Allocation for Prefill-Decode Disaggregated LLM Inference](2026-2603.04716-slo-aware-compute-resource-allocation-for-prefill-decode-disaggregated-l.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   LLM推論の事前処理（プリフィル）と逐次生成（デコード）を分離した配備で、要求総トークン量、入力・出力長、初回トークン遅延TTFT、生成トークン間隔TPOTから必要なP/Dインスタンス数を求める方法。
@@ -540,6 +544,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   各デコードワーカーの将来バッチ枠とKV容量へ影価格を付け、SLO報酬が資源費を上回る要求だけをルーティングして、平均・末尾遅延とスループットの優先順位を切り替える。
 
+- **2026-07 · [LMEdge: QoS-Aware LLM Inference Orchestration on Edge Clusters](2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  問いごとにモデルの系統・規模・量子化水準・実行装置を同時に選ぶエッジ向け調整方式で、精度の下限を制約に入れた最適化を5種類の予測器と近似手順で解き、実機57台で応答時間と資源利用を改善した。
+
 - **2026-07 · [KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling](2026-2607.09153-kv-prm-efficient-process-reward-modeling-via-kv-cache-transfer-for-multi.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ここで$d$は隠れ次元であり、KVの生成自体を省く方式ではない。NVIDIA GH200 120GBで8B・4096トークンの採点は172.0ミリ秒から4.6ミリ秒へ短縮した。
@@ -655,10 +663,6 @@
 - **2026-04 · [TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving](2026-2604.00368-tent-declarative-slice-spraying-data-movement.md)**  
   実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：1  
   KVキャッシュなどの大容量転送を細粒度スライスへ分け、実時間の混雑や障害に応じてRDMA・NVLink等の複数経路へ動的分散し、分離型LLMサービングの帯域利用と障害回復を改善する転送基盤。
-
-- **2026-04 · [RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving](2026-2604.10907-routerwise-resource-allocation-routing.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  GPU割当とプロンプト振り分けを構成別遅延モデルと双対価格で共同最適化し、同一クラスタでも配備構成がSLO下の達成品質を最大87%変えることを示す。
 
 - **2026-04 · [Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees](2026-2604.11001-flow-controlled-scheduling-stability.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1201,10 +1205,6 @@
 - **2026-07 · [MoE-Balance: Unleashing the Full Potential of CPU-GPU Heterogeneity for Efficient MoE Inference](2026-250fdcfdf661-moe-balance-unleashing-the-full-potential-of-cpu-gpu-heterogeneity-for-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   専門家の実行時間を実測してCPUとGPUの負荷を均等化し、層跨ぎプリフェッチとチャンク転送でPCIe転送を隠すことで、メモリ制約下のMoE推論で最先端ハイブリッド比スループット1.6倍と遅延37.5パーセント減を達成したシステム。
-
-- **2026-07 · [LMEdge: QoS-Aware LLM Inference Orchestration on Edge Clusters](2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  問いごとにモデルの系統・規模・量子化水準・実行装置を同時に選ぶエッジ向け調整方式で、精度の下限を制約に入れた最適化を5種類の予測器と近似手順で解き、実機57台で応答時間と資源利用を改善した。
 
 - **2026-07 · [Kalypso: Relational LLM Serving](2026-2607.23815-kalypso-relational-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2669,7 +2669,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2000  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2001  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

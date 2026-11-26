@@ -51,8 +51,12 @@
   常に最高性能のモデルを呼ぶと料金が膨らむ一方、全問い合わせに固定額を課すと、容易な問い合わせで節約した予算を難しい問い合わせへ振り向けられない。過去のモデル応答をすべて持つWR-Offlineと、限られた応答だけを逐次観測するWR-Onlineの二方式がある。
 
 - **2026-04 · [Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios](2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthes.md)**  
-  実装：[✓](https://github.com/less-and-less-bugs/ColdStartLLMRouter) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/less-and-less-bugs/ColdStartLLMRouter) ・ リポジトリ内被引用：2  
   ドメイン内学習データがないコールドスタートでもLLMルーティングを可能にするため、階層タスク分類から質問応答データを合成して学習し、潜在タスクタイプ変数と分類由来の事前分布による正則化で回帰型ルーターの汎化を高めた研究。
+
+- **2026-03 · [Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints](2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-an.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  バッチ全体の割当てを整数線形計画で解いて費用と容量を直接守る経路選択の枠組みで、敵対的なバッチ構成では問い単位の方式より最大24パーセント高い精度を示した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
@@ -87,10 +91,6 @@
 - **2026-04 · [RankGuide: Tensor-Rank-Guided Routing and Steering for Efficient Reasoning](2026-2604.16694-rankguide-tensor-rank-guided-routing-and-steering-for-efficient-reasonin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   隠れ状態のテンソルランクの崩壊を小さい推論モデルの失敗信号として使い、過信型の誤りを大きいモデルへ回し、高ランク校正だけで作ったステアリングベクトルで再検証を減らす協調推論の枠組み。
-
-- **2026-03 · [Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints](2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-an.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  バッチ全体の割当てを整数線形計画で解いて費用と容量を直接守る経路選択の枠組みで、敵対的なバッチ構成では問い単位の方式より最大24パーセント高い精度を示した。
 
 - **2026-03 · [Confidence-Calibrated Small-Large Language Model Collaboration for Cost-Efficient Reasoning](2026-2603.03752-confidence-calibrated-small-large-language-model-collaboration-for-cost-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

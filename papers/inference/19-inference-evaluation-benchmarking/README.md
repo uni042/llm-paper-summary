@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（278本）
+## 自動生成の論文一覧（280本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -414,6 +414,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）を低ビット量子化して端末へ載せるとき、一般的には困惑度（perplexity）や選択式問題の正答率がどれだけ落ちるかを確認する。例えばLLaMA-3.1-8BのMMLUでは、Q4KとQ40の正答率はそれぞれ32.2%と32.1%でほぼ等しいのに、BF16に対するTVDは0.055と0.221で約4倍異なる。
 
+- **2026-08 · [Total Recall at What Cost? Benchmarking the Serving Cost of Agentic Memory Systems](2026-2608.11879-total-recall-at-what-cost-benchmarking-the-serving-cost-of-agentic-memor.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェント向けメモリ3方式と参照2方式を同一バックボーン・同一料金で最大400ターンまで測り、メモリ方式のコストは会話長とメッセージサイズだけでは予測できず保持外誤差が18〜69パーセントに達すること、全履歴より安くなる損益分岐ターンが方式とバックボーンで即時から400ターン超まで大きく散ることを示した計測研究。
+
 - **2026-08 · [To Think or Not to Think: Allocating Reasoning Where It Helps](2026-2609.29664-to-think-or-not-to-think-allocating-reasoning-where-it-helps.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論長の効果が部分的に解ける問題へ集中することを示し、サンプリングした応答群の短半分と長半分の正解率比較から長さ調整の方向だけを推定してGRPOの報酬へ入れるCAREにより、精度を上げながら推論トークンを最大で約37パーセント減らした学習手法の研究。
@@ -457,6 +461,10 @@
 - **2026-08 · [Dynamic Resolution Routing for Efficient Egocentric Grounding](2026-2608.01638-dynamic-resolution-routing-for-efficient-egocentric-grounding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低解像度画像で対象らしい場所を予測し、選ばれたパッチだけを高解像度で符号化して低解像度文脈へ順序を保って差し込む解像度ルーティングで、視覚トークンを最大67パーセント減らしながら全解像度性能の86.4パーセントを保ち、枝刈り方式より最大1.66倍速くする。
+
+- **2026-08 · [DRLM: Deep Reinforcement Learning-Based LLM Query Orchestration in Edge Environments](2026-2609.00442-drlm-deep-reinforcement-learning-based-llm-query-orchestration-in-edge-e.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  クエリの意味分類に基づく品質推定と特徴ベースの遅延予測を、装置の負荷状態とともに因子化PPOへ入力し、エッジ上のモデル・装置・量子化の割当てをクエリごとに決めるLLMオーケストレーション。遅延最大51パーセント減と引き換えに正解率は最大8パーセント低下する。
 
 - **2026-08 · [Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces](2026-2608.00423-bottleneck-preserving-witnessing.md)**  
   実装：[✓](https://github.com/llmllmllm/BPW) ・ リポジトリ内被引用：0  

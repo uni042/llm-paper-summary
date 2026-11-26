@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（807本）
+## 自動生成の論文一覧（809本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -878,6 +878,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   KVキャッシュ、入力プロンプト、固定長内部状態、エージェント記憶の圧縮を率歪み最適化で統一し、7軸分類とCOMPACT-Benchを提案するサーベイ。RTX 4060・Qwen2.5-1.5Bの参照実験では、KV保持予算約25%未満でneedle検索がほぼ失敗し、反復要約の事実再現率0.33〜0.56に対して検索可能な原文アーカイブは約0.95だった。
 
+- **2026-07 · [VDAR-Router: Adaptive LLMs Routing via Verbalized Query Difficulty Analysis Retrieval](2026-2607.18098-vdar-router-adaptive-llms-routing-via-verbalized-query-difficulty-analys.md)**  
+  実装：[✓](https://github.com/NYCU-NLP-Lab/VDAR-Router) ・ リポジトリ内被引用：0  
+  クエリ本文ではなく、必要な能力と難易度を言語化した分析文を検索キーにして似た難易度の過去事例を引き、その事例での性能と費用から報酬でモデルを選ぶ、学習不要の難易度認識型ルーティング。
+
 - **2026-07 · [Token Reduction Is Not Cost Reduction](2026-2607.12161-token-reduction-is-not-cost-reduction.md)**  
   実装：[✓](https://github.com/PointFiveLabs/ai-efficiency-benchmark) ・ リポジトリ内被引用：0  
   コーディングエージェントの文脈削減を2908回の課金実行で対照測定し、費用の大半がプロンプトキャッシュであり、ツール出力を38パーセント削っても費用が6.8パーセント増えるなど、トークン削減と費用削減が切り離されることを示した実証研究。
@@ -901,6 +905,10 @@
 - **2026-07 · [Reflex: Real-Time VLA Control through Streaming Inference](2026-2607.14695-reflex-real-time-vla-control-through-streaming-inference.md)**  
   実装：[✓](https://github.com/9yc/Reflex) ・ リポジトリ内被引用：0  
   フローマッチング型行動モデルの文脈を3領域へ分ける分割注意で正しいキャッシュ再利用を可能にし、非同期実行と組み合わせて推論2.58倍高速化と反応遅延の最大54パーセント削減を達成する。
+
+- **2026-07 · [OS-Pruner: Pruning Chains-of-Thought of Reasoning Models via Optimal Stopping](2026-2607.11089-os-pruner-pruning-chains-of-thought-of-reasoning-models-via-optimal-stop.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  思考連鎖の打ち切りを最適停止問題として定式化し、凍結した基礎モデルへ小さな停止方策を差し込むことで、数学推論で生成長を20〜60パーセント減らしながら精度をほぼ保ち、固定しきい値の分類型早期終了より良い精度と効率の交換を示した研究。
 
 - **2026-07 · [Omni-Prune: Query-Aware Unified Token Pruning for Efficient Omnimodal Large Language Models](2026-2607.23445-omni-prune-query-aware-unified-token-pruning-for-efficient-omnimodal-lar.md)**  
   実装：[✓](https://github.com/kimberlyii/Omni-Prune) ・ リポジトリ内被引用：0  
@@ -1817,11 +1825,11 @@
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
-  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：49  
+  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：50  
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
-  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：48  
+  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：49  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
@@ -1853,7 +1861,7 @@
   大規模推論モデルは、最終回答の前に長い思考列（chain of thought、CoT）を生成することで数学、プログラミング、定理証明の精度を高めている。形式定理証明では長い思考より3.3～3.7倍少ないトークンで同程度のpass@kを得る。
 
 - **2024-12 · [Compressed Chain of Thought: Efficient Reasoning Through Dense Representations](2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md)**  
-  実装：✓ ・ リポジトリ内被引用：26  
+  実装：✓ ・ リポジトリ内被引用：27  
   本研究は、言語モデルの推論精度を高めるために長い自然言語の思考連鎖（Chain of Thought; CoT）を生成すると、回答前の自己回帰復号に多くの時間がかかる問題を扱う。自然言語の思考文を一度すべて生成してから圧縮する方式ではない。
 
 - **2025-02 · [BumbleBee: Secure Two-party Inference Framework for Large Transformers](2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md)**  

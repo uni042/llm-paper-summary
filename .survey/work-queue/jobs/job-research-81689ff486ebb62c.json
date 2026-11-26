@@ -35,10 +35,15 @@
   "selection_reason": "中間層注意の予測（MAP）は、サンプルごとに最適な教師層が異なる問題に対し質問対照型の教師層選択と中間層注意の学習型予測で視覚トークン剪定を行い、多数の視覚トークンを深い層まで処理する無駄を省くMLLM推論の視覚トークン削減手法である。",
   "semantic_scholar_id": "76ee3ab6386faaeca1a22c30c05c47d56960184f",
   "source_url": "https://arxiv.org/abs/2608.06411",
-  "status": "ready",
+  "status": "superseded",
   "title": "Learning to Predict Middle-Layer Attention in MLLMs for Visual Token Prunin",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-26T23:03:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.06411-learning-to-predict-middle-layer-attention-in-mllms-for-visual-token-pru.md",
+  "represented_canonical_id": "arXiv:2608.06411",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
