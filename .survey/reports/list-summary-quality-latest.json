@@ -18007,6 +18007,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/09-kernel-runtime-compilation/2025-092f003ff9f0-generalsparse-bridging-the-gap-in-spmm-for-pruned-large-language-model-i.md",
+      "status": "PASS",
+      "summary": "プルーニング済みLLMの疎行列計算を、パターンごとに最適化するのではなく、メモリアクセスと削減の抽象化から自動生成で適応させるSpMM方式。疎パターンと疎密度の違いに一貫して対応し、cuSPARSE比で最大20.82倍、推論全体で最大2.33倍速くなった。",
+      "char_count": 128,
+      "japanese_ratio": 0.9245283018867925,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/09-kernel-runtime-compilation/2025-2501.01005-flashinfer-attention-engine-serving.md",
       "status": "PASS",
       "summary": "多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。",
@@ -18020,6 +18029,15 @@
       "status": "PASS",
       "summary": "注意機構 マスクをグラフ辺として扱い、COO/CSRと暗黙マスクのCUDAカーネルで必要なQK演算だけ実施。A100の単一ヘッド/FP16/160M長でLocalは密 FlashAttention比51.06倍だが、1.6M長では約3.58倍遅い。",
       "char_count": 124,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2025-2502.04563-waferllm-large-language-model-inference-at-wafer-scale.md",
+      "status": "PASS",
+      "summary": "ウェハスケールチップの85万コアと分散したオンチップメモリを使い切るため、ハードウェア特性をPLMRモデルとして定式化し、メッシュ向けの行列演算とシフト型KVキャッシュ管理を設計した初のウェハスケールLLM推論システム。A100上のSGLangと比べて推論全体が10〜20倍高速になった。",
+      "char_count": 144,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -18783,6 +18801,15 @@
       "status": "PASS",
       "summary": "Whisper推論の実測分解で読み込みと起動が全体の最大96パーセントを占めることを示し、アクセラレータ上の制御要素へ制御を寄せる三層スケジューリング、ゼロコピー、高速読み込みで起動費用と読み込み時間を桁違いに削る研究。",
       "char_count": 110,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2025-a91bc1cbd978-fasttree-optimizing-attention-kernel-and-runtime-for-tree-structured-llm.md",
+      "status": "PASS",
+      "summary": "プレフィックス共有のある推論で、共有KVの読み直しとテンソルコアの無駄を解くため、共有文脈を持つクエリをまとめて計算するアテンションカーネルと、木の分割を実行時に最適化する仕組みをSGLangへ追加した。スループットは最大2.2倍になった。",
+      "char_count": 120,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -22193,6 +22220,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05215-deltazip-efficient-serving-of-multiple-full-model-tuned-llms.md",
+      "status": "PASS",
+      "summary": "全パラメータ調整済みモデルの多数同時提供を可能にするため、ベースモデルからの差分だけを2ビット量子化と50%プルーニングで強く圧縮し、ベースと差分の計算を分離して共有ベースのリクエストをまとめるサービング方式。精度をFP16並みに保ったまま差分を最大約14倍に圧縮し、スループットは2〜12倍になった。",
+      "char_count": 151,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
       "status": "PASS",
       "summary": "会話履歴の鍵値をGPU・CPUにリクエスト間保持し、再プリフィルを削減。再計算費用に応じた退避と複数トークン注意で最大3.0倍の処理量。",
@@ -22836,6 +22872,15 @@
       "status": "PASS",
       "summary": "モデルズーからリクエストごとにモデルを選ぶ際、SLA違反の累積を表す仮想キューと精度予測器を使って、平均精度のSLAを守りながらエネルギー消費を最小化するオンライン確率的最適化MESS+を提案し、最大モデル固定比で最大4.6倍のエネルギー削減を示した研究。",
       "char_count": 128,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.01438-skyserve-serving-ai-models-across-regions-and-clouds-with-spot-instances.md",
+      "status": "PASS",
+      "summary": "スポットインスタンスの強制終了に弱いという問題を、レプリカを複数リージョンと複数クラウドへ分散し、安いスポットを多めに確保し、不足時はオンデマンドへ切り替える方策で解くサービングシステム。コストは平均43%減り、遅延も他のシステムより大きく改善した。",
+      "char_count": 125,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -24617,6 +24662,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-350ca60c84cd-resource-multiplexing-in-tuning-and-serving-large-language-models.md",
+      "status": "PASS",
+      "summary": "推論とファインチューニングを同じGPUへ相乗りさせるため、推論の遅延制約の中で調整作業をイテレーション単位で差し込み、調整を中断可能な形に変換し、両者のリクエストをまとめて処理する多重化システム。推論のSLOを守りながら調整のスループットが最大で約15倍になった。",
+      "char_count": 132,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md",
       "status": "PASS",
       "summary": "トークン単位の先取り自動スケーリングと高速モデル切替で多数LLMをGPUプールへ集約し、実運用でGPU数を82%削減したマルチモデル推論基盤。",
@@ -24653,6 +24707,15 @@
       "warnings": [
         "日本語比率 77.6% < 警告基準 80.0%"
       ]
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-72feac01c8db-enabling-efficient-gpu-communication-over-multiple-nics-with-fuselink.md",
+      "status": "PASS",
+      "summary": "GPUとネットワークカードの静的な結び付けによる帯域の無駄を解くため、サーバ内のGPU間接続を使って空いているカードへトラフィックを中継する通信方式。バッファの再マッピングで中継し、実行中のタスクを妨げないよう優先度付きで制御する。サーバ間帯域は最大212GB/s、LLMサービングの初回トークン遅延は最大2.73倍短縮した。",
+      "char_count": 163,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computatio.md",
@@ -24742,6 +24805,15 @@
       "status": "PASS",
       "summary": "1〜2層の小型代理モデルから配備構成の遅延・メモリを推定し、GPUの空き領域に層を不均等配置することで、事前計測GPU時間を7〜15倍、運用費を3.8〜8.3倍削減するLLMサービング基盤。",
       "char_count": 95,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-f8e12a3f2fb1-sola-optimizing-slo-attainment-for-large-language-model-serving-with-sta.md",
+      "status": "PASS",
+      "summary": "固定したスケジューリング原則がSLO達成率を下げる問題に対し、リクエスト単体の状態とシステム全体の状態を見て、初回トークン遅延とトークン間遅延の配分とリクエスト間の配分を細かく制御するスケジューリング方式。達成率は45.5%から99.4%へ上がり、捌けるリクエスト数も増えた。",
+      "char_count": 138,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -34567,6 +34639,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2025-2503.11663-meadow-memory-efficient-dataflow-and-data-packing-for-low-power-edge-llm.md",
+      "status": "PASS",
+      "summary": "低消費電力エッジ向けに、アテンションの中間結果をオンチップへ保つトークン並列・ヘッド逐次のデータフローと、重みを一意な要素へロスレス分解するパッキングを組み合わせ、オフチップメモリへのアクセスを減らす実装フレームワーク。10W未満のFPGAでプリフィルが2.5倍、デコードが1.5倍速くなった。",
+      "char_count": 147,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2025-2503.13089-cluscomp-a-simple-paradigm-for-model-compression-and-efficient-finetunin.md",
       "status": "PASS",
       "summary": "重みをFP16重心と固定索引に分離して低ビット保存し、ブロック出力の誤差補正と重心だけの追加学習によって圧縮精度と省メモリ微調整を両立する。",
@@ -43372,6 +43453,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2411.15100-xgrammar-flexible-and-efficient-structured-generation-engine-for-large-l.md",
+      "status": "PASS",
+      "summary": "構造化生成の文法チェックを高速化するため、語彙を事前検査できるトークンと実行時検査が必要なトークンに分け、前者はマスクをキャッシュし、後者は永続スタックで処理し、文法計算をGPU推論と重ねるエンジン。既存ライブラリより最大で100倍以上速く、サービング全体ではほぼゼロの追加コストになった。",
+      "char_count": 145,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2411.17426-clover-cross-layer-orthogonal-vectors-pruning-and-fine-tuning.md",
       "status": "PASS",
       "summary": "注意射影行列対のSVD再表現を利用し、直交方向の重要度に沿った剪定と特異値のみの全ランク微調整を行うCLOVER。",
@@ -49597,8 +49687,8 @@
   ],
   "coverage": {
     "mode": "changed_plus_rotation_merged",
-    "audited_today": 959,
-    "carried_forward": 4530,
-    "total": 5489
+    "audited_today": 823,
+    "carried_forward": 4676,
+    "total": 5499
   }
 }
