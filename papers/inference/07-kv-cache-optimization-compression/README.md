@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（702本）
+## 自動生成の論文一覧（703本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -34,7 +34,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   拡散型LLMの安定した注意重要度を利用した遅延双方向鍵値破棄で、長文脈推論を最大10倍高速化する。
 
 - **2026-09 · [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：28  
+  実装：✓ ・ リポジトリ内被引用：29  
   CED・CSA2の層間KV再利用・FP4 KV・SWA限定再実行を統合し、100万トークン対応552B MoEのグローバルKVを890 bytes/トークン、永続KVを前世代比約1/8へ圧縮する。
 
 - **2026-02 · [Fast KV Compaction via Attention Matching](2026-2602.16284-fast-kv-compaction-via-attention-matching.md)**  
@@ -125,6 +125,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/daniel-eai/Output-Aware-INT2-KV-Cache-Quantization) ・ リポジトリ内被引用：6  
   OptRは、長文脈推論でKVキャッシュを2ビット整数へ量子化したとき、キーや値そのものの再構成誤差が小さくても、注意重みと出力射影を通過した後のモデル内部表現には大きな誤差が残り得る問題を扱う。
 
+- **2026-07 · [Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers](2026-2607.15456-looped-latent-attention-cross-loop-kv-compression-for-looped-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  ループ型Transformerは、同じTransformerブロックを何度も適用することで、モデルの深さに相当する反復計算を少ない重みで実現する。Ouro-1.4Bを用いた同一キャッシュ容量比較では、4倍圧縮のLLAはGSM8K厳密正解率0.800を記録し、教師の0.794とほぼ同等だった。
+
 - **2026-07 · [HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching](2026-2607.01299-hypic-hybrid-attention-position-independent-caching.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   線形注意区間の累積遷移演算子とゼロ始動状態を保存して位置非依存に合成し、完全注意層は境界窓だけ再計算、未保存区間は複数実体で並列処理することで、ハイブリッド注意言語モデルの初トークン待ち時間を平均3.25倍短縮する。
@@ -144,10 +148,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [SemPIC: Learning Semantic Position-Independent KV Caches](2026-2607.28069-sempic-learning-semantic-position-independent-kv-caches.md)**  
   実装：[✓](https://github.com/jn12-29/SemPIC) ・ リポジトリ内被引用：5  
   SemPICは、検索拡張生成（Retrieval-Augmented Generation、RAG）やエージェントの長い文書文脈を、問い合わせや文書順序が変わっても再利用するための位置非依存キャッシュ（Position-Independent Caching、PIC）方式である。
-
-- **2026-07 · [Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers](2026-2607.15456-looped-latent-attention-cross-loop-kv-compression-for-looped-transformer.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  ループ型Transformerは、同じTransformerブロックを何度も適用することで、モデルの深さに相当する反復計算を少ない重みで実現する。Ouro-1.4Bを用いた同一キャッシュ容量比較では、4倍圧縮のLLAはGSM8K厳密正解率0.800を記録し、教師の0.794とほぼ同等だった。
 
 - **2026-06 · [Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving](2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -825,6 +825,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/wuyou2002/YOCO-plus) ・ リポジトリ内被引用：1  
   下半分の各層で最下層のキーと値を重み付きで混ぜてからキャッシュすることで、キャッシュ半減の効率を保ったままYOCOの品質低下を回復し標準モデルも上回った。
 
+- **2026-04 · [Universal YOCO for Efficient Depth Scaling](2026-2604.01220-universal-yoco-for-efficient-depth-scaling.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  YOCOの自己デコーダだけをパラメータ共有で再帰化し、全体KVキャッシュを一定に保ちながら深さ方向の計算スケーリングを実現したアーキテクチャ研究。
+
 - **2026-04 · [Retrospective Sparse Attention for Efficient Long-Context Generation](2026-2508.09001-retrospective-sparse-attention-for-efficient-long-context-generation.md)**  
   実装：[✓](https://github.com/csh3695/RetroAttention) ・ リポジトリ内被引用：1  
   arXiv:2508.09001の2026年5月20日改訂版（v2）を一次資料とし、本文・表・付録の実験条件を確認した。目的は、長い入力を一度読むプリフィルだけでなく、数千トークンに及ぶ生成の途中で疎な注意計算の近似誤差が蓄積する問題を軽減することにある。提案名はRetrospective Sparse 注意機構、実装名はRetroAttentionである。
@@ -1018,6 +1022,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [The Token-Energy Law of LLM Decode: Active Bytes and Realized Time Account for Joules per Token](2026-2610.28576-the-token-energy-law-of-llm-decode-active-bytes-and-realized-time-accoun.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   共有重みバイト、固有KVバイト、実現時間の3座標でデコードのトークンあたりエネルギーを表す法則を立て、係数固定のまま未観測条件・別装置・離脱条件へ当てて最大誤差3.73パーセントで検証した計測研究。
+
+- **2026-10 · [The Surprising Effectiveness of Shared Memory in Looped Transformers](2026-2610.02383-the-surprising-effectiveness-of-shared-memory-in-looped-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ループTransformerのKVキャッシュを最初の再帰だけが書き、後続は共有キャッシュと短い自前ウィンドウを読むよう事前学習すると、コンテキストメモリを最大で約5分の1にしながらパープレキシティと下流精度がむしろ改善することを示した研究。
 
 - **2026-10 · [The Price of Precision: A Calibrated Cost Model for Mixed-Precision LLM Serving](2026-2610.15629-the-price-of-precision-a-calibrated-cost-model-for-mixed-precision-llm-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1882,10 +1890,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Augmenting Attention with Exponentially Decaying Memory Improves Query-Aware KV Sparsity](2026-2605.28640-augmenting-attention-with-exponentially-decaying-memory-improves-query-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   キーとバリューへ指数減衰メモリを混ぜるバックボーンを使うと、Quest・MoBA・SnapKVのスパース推論が同じKV予算でも正解率を大きく保てることを、干し草タスク8種と選択命中率・ランダム選択の分析実験で示した研究。
-
-- **2026-04 · [Universal YOCO for Efficient Depth Scaling](2026-2604.01220-universal-yoco-for-efficient-depth-scaling.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  YOCOの自己デコーダだけをパラメータ共有で再帰化し、全体KVキャッシュを一定に保ちながら深さ方向の計算スケーリングを実現したアーキテクチャ研究。
 
 - **2026-04 · [Sequential KV Cache Compression via Probabilistic Language Tries: Beyond the Per-Vector Shannon Limit](2026-2604.15356-sequential-kv-cache-compression-via-probabilistic-language-tries-beyond-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

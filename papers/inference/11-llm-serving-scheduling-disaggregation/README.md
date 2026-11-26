@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（686本）
+## 自動生成の論文一覧（688本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -826,6 +826,10 @@
   実装：[✓](https://github.com/purlin-project/purlin) ・ リポジトリ内被引用：0  
   集団通信をレイアウトによる意味の指定、仕様から協調を導く調整手続きSNAC、コピーとリダクションだけを担うハードウェア固有のAtomへ分離し、調整を再利用したまま転送機構を世代ごとに差し替えられる通信基盤。
 
+- **2026-10 · [Preserving Updates in Low-Bit Recurrent State Quantization](2026-2610.15709-preserving-updates-in-low-bit-recurrent-state-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  再帰状態の低ビット量子化で失われる小さな更新を、低ランクバイパスへの蓄積と方向を守る丸めで保存し、状態メモリ最大5.3倍削減とデコード最大1.9倍高速化を品質を保って達成した学習不要の量子化方式。
+
 - **2026-10 · [PhaseGate: Phase-Aware CPU Retrieval Scheduling for On-Device LLMs on Unified Memory](2026-2610.04537-phasegate-phase-aware-cpu-retrieval-scheduling-for-on-device-llms-on-uni.md)**  
   実装：[✓](https://github.com/SeoyoonYum/PhaseGate) ・ リポジトリ内被引用：0  
   統合メモリ上でデコードが検索の干渉に弱いことを測り、プリフィルとデコードでCPU検索の同時実行上限を切り替えることで、遅延を守りながら検索処理量を2倍にした受付制御の研究。
@@ -1013,6 +1017,10 @@
 - **2026-09 · [HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms](2026-2609.12449-heatcache-thermal-aware-energy-efficient-llm-inference-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HeatCacheはAIO液冷ループの残存熱容量を熱予算として推定し、ジョブ別の発熱予測とTTFT/TPOT制約を使ってvLLMのバッチ・GPU割当・周波数を再順位付けする。48℃級の実機環境で計算エネルギーを最大18.0%削減し、熱スロットリング曝露を大幅に抑える。
+
+- **2026-09 · [From Saliency to Discriminability: Rank-Preserving Visual Token Pruning for VLM Rerankers](2026-2609.00667-from-saliency-to-discriminability-rank-preserving-visual-token-pruning-f.md)**  
+  実装：[✓](https://github.com/ssui-liu/RaDiCal) ・ リポジトリ内被引用：0  
+  リランキングでは顕著なトークンではなく順位を分けるトークンが要るという診断に基づき、弁別性スコアと顕著さスコアを注意エントロピーで校正して融合し、保持率20パーセントでも未圧縮と同等の順位品質と1.28から1.45倍の実測高速化を両立した学習不要の視覚トークン枝刈り。
 
 - **2026-09 · [Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo](2026-2609.25451-fast-recovery-for-llm-serving-via-decoupled-device-memory-lifetime-in-dy.md)**  
   実装：[✓](https://github.com/ai-dynamo/dynamo) ・ リポジトリ内被引用：0  

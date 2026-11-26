@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-26T22:51:30+00:00",
+  "generated_at": "2026-11-26T23:10:00+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -400,10 +400,10 @@
     },
     {
       "canonical_id": "arXiv:2602.08948",
-      "title": null,
+      "title": "CoRefine: Confidence-Guided Self-Refinement for Adaptive Test-Time Compute",
       "source_url": "https://arxiv.org/abs/2602.08948",
-      "returned_at": "2026-11-26T22:36:49+00:00",
-      "return_count": 2,
+      "returned_at": "2026-11-26T23:08:08+00:00",
+      "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -421,8 +421,8 @@
           "評価説明量 482 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e438396e97e9--2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e438396e97e9--2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.json",
       "worker_run_key": "muse-20261127-b1"
     }
   ]

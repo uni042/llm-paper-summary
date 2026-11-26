@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "cd25cc6d2acf5e877192c36dcf1fb0570ae9380d",
+  "base_commit": "803299f238324d500bf99fde2a030cfc45c4355a",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1114,6 +1114,7 @@
     "2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-optimization.json",
     "2026-2609.00442-drlm-deep-reinforcement-learning-based-llm-query-orchestration-in-edge-environments.json",
     "2026-2609.00643-revise-validity-guided-recovery-for-online-revisions-in-agent-workflows.json",
+    "2026-2609.00667-from-saliency-to-discriminability-rank-preserving-visual-token-pruning-for-vlm-rerankers.json",
     "2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-models.json",
     "2026-2609.01224-s2prune-spatially-structured-visual-token-pruning-for-multimodal-large-language-models.json",
     "2026-2609.01925-crisp-cliff-aware-input-adaptive-sparse-prefilling-with-structural-mass-motivated-routing.json",
@@ -1233,6 +1234,7 @@
     "2026-2610.02233-budgeted-cache-repair-for-cross-context-kv-cache-reuse.json",
     "2026-2610.02241-hardware-native-joint-sparse-quantization-for-trillion-scale-mixture-of-experts.json",
     "2026-2610.02251-rank-aware-speculative-sampling-for-diffusion-draft-trees.json",
+    "2026-2610.02383-the-surprising-effectiveness-of-shared-memory-in-looped-transformers.json",
     "2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on-offloaded-weights.json",
     "2026-2610.02670-leap-learning-efficient-action-proposals-for-llm-agents.json",
     "2026-2610.02713-wakekv-reactive-reversible-kv-residency-for-heads-that-change-their-minds.json",
@@ -1356,6 +1358,7 @@
     "2026-2610.15579-approximation-algorithms-for-dual-memory-request-scheduling-in-disaggregated-llm-inference.json",
     "2026-2610.15629-the-price-of-precision-a-calibrated-cost-model-for-mixed-precision-llm-serving.json",
     "2026-2610.15640-context-aware-precision-scheduling-for-small-language-models.json",
+    "2026-2610.15709-preserving-updates-in-low-bit-recurrent-state-quantization.json",
     "2026-2610.15721-to-cache-or-not-to-cache-understanding-and-mitigating-safety-incompatibility-in-cross-model-kv-cache-reuse.json",
     "2026-2610.15755-native-dual-pools-or-shared-paging-memory-organization-for-concurrent-hybrid-llm-serving.json",
     "2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-across-gpu-architectures.json",
@@ -7800,6 +7803,7 @@
     "retry-research-e23aa58d4dc4--libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.json",
     "retry-research-e27c61914cab--libfile_67ba937edf848191b88ce6ac39ca9b1a--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding-research-20261016-0330-scheduled-ch.json",
     "retry-research-e2e4704c599c--libfile_77550488f61881918a5535cf3f8e86f5--2026-2608.09595-icbq-seam-interleaved-ptq-research-20261030-0449-scheduled-chat-45-r02.json",
+    "retry-research-e438396e97e9--2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.json",
     "retry-research-e4bb5ffc9a76--libfile_0f918e678f248191a1dc706dedf93fcc--2026-2607.15456-looped-latent-attention-cross-loop-kv-research-20261029-0803-scheduled-ch.json",
     "retry-research-e4cba646d12e--libfile_100cdec9b5e88191b68288e5b2c58e76--2026-laco-layerwise-compensation-returned-repair-20261013-2357-scheduled-chat-00-r01.json",
     "retry-research-e4e5de9c0ae2--libfile_6b21c4d4c5a88191b8d5fa040a937eda--2022-doi-10.18653-v1-2022.findings-acl.189-hashee-hash-early-exit-research-20261027-1948-.json",
@@ -55145,8 +55149,8 @@
     },
     "arXiv:2602.08948": {
       "order": [
-        "2026-11-26T22:36:49+00:00",
-        "2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.json"
+        "2026-11-26T23:08:08+00:00",
+        "retry-research-e438396e97e9--2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.json"
       ],
       "status": "blocked_quality",
       "result": {
@@ -55156,7 +55160,7 @@
         "source_sha256": "89a04819c3b194e627e9874c10db173a53de40699748aa68f8953c1d811a29f9",
         "normalized_source_sha256": null,
         "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.md",
+        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e438396e97e9--2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.md",
         "canonical_id": "arXiv:2602.08948",
         "worker_completed_at": "2026-11-27T07:26:45+09:00",
         "worker_run_key": "muse-20261127-b1",
@@ -55175,9 +55179,9 @@
         "failures": [
           "説明不足トリガー: 評価説明量 482 < 500"
         ],
-        "processed_at": "2026-11-26T22:36:49+00:00"
+        "processed_at": "2026-11-26T23:08:08+00:00"
       },
-      "return_count": 2
+      "return_count": 3
     },
     "arXiv:2603.23516": {
       "order": [
@@ -55282,6 +55286,33 @@
       "order": [
         "2026-11-26T23:00:50+00:00",
         "2026-2609.00442-drlm-deep-reinforcement-learning-based-llm-query-orchestration-in-edge-environments.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.00667": {
+      "order": [
+        "2026-11-26T23:05:52+00:00",
+        "2026-2609.00667-from-saliency-to-discriminability-rank-preserving-visual-token-pruning-for-vlm-rerankers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.02383": {
+      "order": [
+        "2026-11-26T23:06:59+00:00",
+        "2026-2610.02383-the-surprising-effectiveness-of-shared-memory-in-looped-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15709": {
+      "order": [
+        "2026-11-26T23:08:06+00:00",
+        "2026-2610.15709-preserving-updates-in-low-bit-recurrent-state-quantization.json"
       ],
       "status": "imported",
       "result": null,
@@ -68879,6 +68910,15 @@
     "arxiv:2609.00442": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2609.00442-drlm-deep-reinforcement-learning-based-llm-query-orchestration-in-edge-e.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2609.00442-drlm-deep-reinforcement-learning-based-llm-query-orchestration-in-edge-e.md"
+    ],
+    "arxiv:2609.00667": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.00667-from-saliency-to-discriminability-rank-preserving-visual-token-pruning-f.md"
+    ],
+    "arxiv:2610.02383": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.02383-the-surprising-effectiveness-of-shared-memory-in-looped-transformers.md"
+    ],
+    "arxiv:2610.15709": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.15709-preserving-updates-in-low-bit-recurrent-state-quantization.md"
     ]
   }
 }

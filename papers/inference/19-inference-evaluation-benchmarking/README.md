@@ -132,6 +132,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   PARCELは、視覚トークンの数を16、64、256など異なる予算へ縮めても、空間的な位置関係と画像の細部を両立して保つための、可変予算の視覚表現設計である。27種類の評価課題を横断した全体平均の性能保持率は、視覚トークン256個で95.6%、64個で95.3%、16個で88.3%と報告された。
 
+- **2026-05 · [Evading Visual Aphasia: Contrastive Adaptive Semantic Token Pruning for Vision-Language Models](2026-2605.09429-evading-visual-aphasia-contrastive-adaptive-semantic-token-pruning-for-v.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  たとえば、画像内で目立つ動物より周辺の店名看板を尋ねているのに、初期層の注意が動物へ集中した結果、看板のトークンが枝刈りされ、モデルが架空の店名を答える。LLaVA-v1.5-7Bで画像トークンを576個から128個へ77.8%削減した条件では、七つの評価セットを正規化した平均性能を98.64%保持し、遅延を167.50ミリ秒から77.94ミリ秒へ短縮した。
+
 - **2026-05 · [AsymVLM: Asymmetric Token Pruning for Efficient Vision-Language Model Inference](2026-2605.29535-asymvlm-asymmetric-token-pruning-for-efficient-vision-language-model-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   視覚トークンはプリフィル前に学習済みスコアラーで強く枝刈りし、テキストトークンは予算超過時だけエビクションするという非対称な圧縮で、最大54%のFLOPs削減と文書・図表理解での精度向上を両立する視覚言語モデルの推論方式。
@@ -637,10 +641,6 @@
 - **2026-05 · [HEED: Density-Weighted Residual Alignment for Hybrid Vision-Language Model Distillation](2026-2605.17093-heed-density-weighted-residual-alignment-for-hybrid-vision-language-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ハイブリッドVLMへの蒸留で細部の視覚情報だけが落ちる失敗を、残差のずれが高密度パッチへ集中する現象として診断し、整列損失の重みをパッチ密度で配り直すHEEDで、推論費用を変えずにOCR系の成績を回復させる研究。
-
-- **2026-05 · [Evading Visual Aphasia: Contrastive Adaptive Semantic Token Pruning for Vision-Language Models](2026-2605.09429-evading-visual-aphasia-contrastive-adaptive-semantic-token-pruning-for-v.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  たとえば、画像内で目立つ動物より周辺の店名看板を尋ねているのに、初期層の注意が動物へ集中した結果、看板のトークンが枝刈りされ、モデルが架空の店名を答える。LLaVA-v1.5-7Bで画像トークンを576個から128個へ77.8%削減した条件では、七つの評価セットを正規化した平均性能を98.64%保持し、遅延を167.50ミリ秒から77.94ミリ秒へ短縮した。
 
 - **2026-05 · [CSR: Infinite-Horizon Real-Time Policies With Massive Cached State Representations](2026-2605.07325-csr-infinite-horizon-real-time-policies-with-massive-cached-state-repres.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
