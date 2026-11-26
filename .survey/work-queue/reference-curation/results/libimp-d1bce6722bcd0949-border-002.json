@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1bce6722bcd0949-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.28379",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.28379",
+    "identity_tokens": [
+      "arXiv:2606.28379"
+    ],
+    "reason": "長大な構造化文書へのエージェント編集において依存グラフに基づく検索で必要コンテキストだけを選択するLEDGERの提案であり、コンテキスト工学の応用手法であってLLM推論システムの実行機構への貢献は間接的であるため境界とする。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-26T03:23:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LEDGER: Scaling Agentic Document Editing with Dependency-aware Graph Retrieval"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1bce6722bcd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

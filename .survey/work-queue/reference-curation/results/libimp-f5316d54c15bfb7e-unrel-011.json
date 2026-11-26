@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5316d54c15bfb7e-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.15291",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.15291",
+    "identity_tokens": [
+      "arXiv:2505.15291"
+    ],
+    "reason": "長文要約など長い応答生成でハルシネーションが末尾に集中する現象を事例研究として調査する論文であり、対象は生成の忠実性に関する分析であって、LLM推論システムへの直接の技術的貢献は要旨から確認できない。",
+    "first_checked_at": "2026-11-25T22:19:32+00:00",
+    "last_checked_at": "2026-11-26T03:23:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Hallucinate at the Last in Long Response Generation: A Case Study on Long Document Summarization"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5316d54c15b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

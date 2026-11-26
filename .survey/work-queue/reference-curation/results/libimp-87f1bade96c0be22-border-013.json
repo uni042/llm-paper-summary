@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87f1bade96c0be22-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.04012",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.04012",
+    "identity_tokens": [
+      "arXiv:2501.04012"
+    ],
+    "reason": "テキストから動画への拡散モデルが1本の生成に数分かかる問題に対し、柔軟な近似キャッシュシステムFlexCacheで計算を削減する研究であり、キャッシュによる推論高速化の発想は近いが対象は動画拡散モデルでありLLM推論ではないため境界とする。",
+    "first_checked_at": "2026-11-26T00:55:56+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FlexCache: Flexible Approximate Cache System for Video Diffusion"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87f1bade96c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

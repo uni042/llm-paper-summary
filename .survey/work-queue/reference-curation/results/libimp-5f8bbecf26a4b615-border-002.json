@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f8bbecf26a4b615-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.04217",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.04217",
+    "identity_tokens": [
+      "arXiv:2605.04217"
+    ],
+    "reason": "回転位置符号化RoPEとALiBiを統一的に捉え、複素ジョルダンブロックによる非半単純な相対位置符号化Jordan-RoPEを理論的に検討する研究であり、注意の位置符号化には関わるが理論検討が中心で推論システムへの直接の貢献は薄いため境界とする。",
+    "first_checked_at": "2026-11-25T22:22:49+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Jordan-RoPE: Non-Semisimple Relative Positional Encoding via Complex Jordan Blocks"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f8bbecf26a4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

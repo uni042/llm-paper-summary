@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abc4e0ed30f1614c-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2211.15595",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2211.15595",
+    "identity_tokens": [
+      "arXiv:2211.15595"
+    ],
+    "reason": "画像のスペクトル特性を利用して計算量を線形まで抑えた周波数自己注意をセマンティックセグメンテーションへ適用するFsaNetの研究であり、対象は画像分割の精度であってLLM推論システムへの直接の貢献は確認できない。",
+    "first_checked_at": "2026-11-25T22:19:33+00:00",
+    "last_checked_at": "2026-11-26T03:23:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "FsaNet: Frequency Self-Attention for Semantic Segmentation"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abc4e0ed30f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

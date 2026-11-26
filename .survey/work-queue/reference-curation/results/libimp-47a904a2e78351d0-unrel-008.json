@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-47a904a2e78351d0-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/machines14050574",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/machines14050574",
+    "identity_tokens": [
+      "DOI:10.3390/machines14050574"
+    ],
+    "reason": "タイトル自体が、偏心を事例とする電気機械の故障の検出と定量化にニューラル演算子とMambaを用いる研究であることを明示しており、産業機械の故障診断という異分野応用が明白であるためタイトル段階で対象外と判断した。",
+    "first_checked_at": "2026-11-25T22:19:30+00:00",
+    "last_checked_at": "2026-11-26T03:23:37+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "The Unreasonable Effectiveness of Neural Operators and Mambas in Detecting and Quantifying Electrical Machine Faults: A Case Study on Eccentricity"
+  },
+  "processed_at": "2026-11-26T03:23:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-47a904a2e783",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abc4e0ed30f1614c-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.29528",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.29528",
+    "identity_tokens": [
+      "arXiv:2608.29528"
+    ],
+    "reason": "縦断的な臨床エージェントが複数受診にまたがる患者状態を保持するためのメモリ設計を、ベンチマーク上でキュレーション・組織化・検索の観点から検討するMedCacheの研究であり、エージェントメモリの設計知見ではあるが臨床応用が主目的のため境界とする。",
+    "first_checked_at": "2026-11-25T22:19:33+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MedCache: Efficient and Temporally Valid Memory for Longitudinal Clinical Agents"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abc4e0ed30f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

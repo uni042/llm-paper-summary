@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4613760253ba83e-unrel-019",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.09768",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.09768",
+    "identity_tokens": [
+      "arXiv:2507.09768"
+    ],
+    "reason": "単一チャネル音声分離に確率的早期終了を導入する研究で、計算適応の発想はあるものの対象は音声分離ネットワークでありLLM推論への適用は示されていない。",
+    "first_checked_at": "2026-11-26T03:23:39+00:00",
+    "last_checked_at": "2026-11-26T03:23:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Knowing When to Quit: Probabilistic Early Exits for Speech Separation"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4613760253b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

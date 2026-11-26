@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1bce6722bcd0949-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.08620",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.08620",
+    "identity_tokens": [
+      "arXiv:2306.08620"
+    ],
+    "reason": "記号音楽生成の制御タスクに向け、イベント過程と制御過程をインターリーブして先行的に生成するAnticipatory Music Transformerの研究であり、音楽生成という応用分野の手法でLLM推論システムへの直接の貢献は確認できない。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T03:23:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Anticipatory Music Transformer"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1bce6722bcd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

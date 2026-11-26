@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39105ae12ef7922f-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.00328",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.00328",
+    "identity_tokens": [
+      "arXiv:2410.00328"
+    ],
+    "reason": "高速メモリと低速メモリを組み合わせた階層メモリで、ページマイグレーションのモデル化に基づいて高速メモリ容量を調整する研究であり、階層メモリ管理という推論基盤と響く主題ではあるが対象は生産環境の汎用ワークロードであるため境界とする。",
+    "first_checked_at": "2026-11-25T22:19:30+00:00",
+    "last_checked_at": "2026-11-26T03:23:37+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Tuning Fast Memory Size based on Modeling of Page Migration for Tiered Memory"
+  },
+  "processed_at": "2026-11-26T03:23:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39105ae12ef7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

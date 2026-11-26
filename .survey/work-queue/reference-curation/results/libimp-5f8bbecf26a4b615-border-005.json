@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f8bbecf26a4b615-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.11106",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.11106",
+    "identity_tokens": [
+      "arXiv:2607.11106"
+    ],
+    "reason": "マルチモーダルLLMの画像思考パラダイムが外部ツール呼び出しと画像再符号化で推論遅延を増やす問題に対し、暗黙的視覚ツールで自己調整するBEEの提案であり、推論遅延の削減に関わるが主眼はマルチモーダル推論の方式であるため境界とする。",
+    "first_checked_at": "2026-11-26T03:23:38+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond the Eye: Efficient Multimodal Reasoning via Self-Regulated Implicit Visual Tools"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f8bbecf26a4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

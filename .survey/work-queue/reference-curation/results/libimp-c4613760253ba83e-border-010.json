@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4613760253ba83e-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2102.02705",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2102.02705",
+    "identity_tokens": [
+      "arXiv:2102.02705"
+    ],
+    "reason": "埋め込みベクトルの浮動小数点指数の偏りを利用するエントロピー符号化フォーマットEFloatはモデル圧縮の一種だが、対象は単語・DB埋め込みでLLM推論メモリ削減への実証はない。",
+    "first_checked_at": "2026-11-26T00:59:26+00:00",
+    "last_checked_at": "2026-11-26T03:23:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EFloat: Entropy-coded Floating Point Format for Compressing Vector Embedding Models"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4613760253b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

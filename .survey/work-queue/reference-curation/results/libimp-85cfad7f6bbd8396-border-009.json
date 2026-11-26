@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-85cfad7f6bbd8396-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.02353",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.02353",
+    "identity_tokens": [
+      "arXiv:2610.02353"
+    ],
+    "reason": "個人化LLMでユーザーごとの適応状態を持つ設計が人口規模で膨らむ問題に対し、適応容量の共有可能性を実証的に分析する研究であり、マルチLoRAサービングの容量配分に関わる知見ではあるが実行機構の提案ではないため境界とする。",
+    "first_checked_at": "2026-11-26T00:55:56+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Does Every User Need a Private LoRA? Decoupling Personalization from Per-User Adaptation"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-85cfad7f6bbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98358bd1c9082dab-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.15715",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.15715",
+    "identity_tokens": [
+      "arXiv:2408.15715"
+    ],
+    "reason": "イジング臨界近傍での自己回帰モデルの経路依存性を論じる統計物理寄りの理論研究で、言語モデルの推論高速化やサービング機構を扱うものではない。",
+    "first_checked_at": "2026-11-26T00:59:26+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Autoregressive model path dependence near Ising criticality"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98358bd1c908",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

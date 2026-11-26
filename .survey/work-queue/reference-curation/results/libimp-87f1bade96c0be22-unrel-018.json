@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87f1bade96c0be22-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.13261",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.13261",
+    "identity_tokens": [
+      "arXiv:2511.13261"
+    ],
+    "reason": "一人称視点の手続き支援AIアシスタントについて、課題・ベンチマーク・課題を整理する研究であり、対象はエゴセントリック知覚に基づく支援システムの展望であって、LLM推論システムへの直接の技術的貢献は確認できない。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Building Egocentric Procedural AI Assistant: Methods, Benchmarks, and Challenges"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87f1bade96c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

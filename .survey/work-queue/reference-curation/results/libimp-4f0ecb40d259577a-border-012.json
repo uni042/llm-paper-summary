@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4f0ecb40d259577a-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.02218",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.02218",
+    "identity_tokens": [
+      "arXiv:2606.02218"
+    ],
+    "reason": "GRPO等の同期的オンポリシー強化学習で、長いロールアウトが全体を止めるストラグラー問題に対しグループサイズを動的に制御するSAGCの提案であり、ロールアウト生成は推論ワークロードを含むが主目的は学習スループットであるため境界とする。",
+    "first_checked_at": "2026-11-25T22:22:49+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Faster Synchronous On-Policy RL via Straggler-Aware Group Sizing"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4f0ecb40d259",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

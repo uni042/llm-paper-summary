@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f8bbecf26a4b615-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.05500",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.05500",
+    "identity_tokens": [
+      "arXiv:2503.05500"
+    ],
+    "reason": "欧州言語向けの多言語エンコーダ系列EuroBERTを、デコーダ側の進歩を取り入れて構築する研究であり、対象は埋め込みモデルの学習と能力であって、LLM推論システムの実行機構への直接の技術的貢献は確認できない。",
+    "first_checked_at": "2026-11-25T22:19:31+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "EuroBERT: Scaling Multilingual Encoders for European Languages"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f8bbecf26a4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

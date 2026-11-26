@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f8bbecf26a4b615-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2110.15766",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2110.15766",
+    "identity_tokens": [
+      "arXiv:2110.15766"
+    ],
+    "reason": "オンライン展開時の遅延制約を踏まえ、専用ハードウェアのNxMスパース性に適合するようADMMでTransformerを半構造的に疎化するNxMTransformerの研究であり、推論向け圧縮には関わるが対象はNLUエンコーダで手法は学習過程であるため境界とする。",
+    "first_checked_at": "2026-11-26T03:23:38+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "NxMTransformer: Semi-Structured Sparsification for Natural Language Understanding via ADMM"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f8bbecf26a4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

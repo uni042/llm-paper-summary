@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-85cfad7f6bbd8396-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.31432",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.31432",
+    "identity_tokens": [
+      "arXiv:2606.31432"
+    ],
+    "reason": "医療多肢選択質問応答に向けて、単一アダプタのランクをゲート制御するBiRG-LoRAの提案であり、対象は医療QAへのパラメータ効率適応という学習手法と応用の組合せであって、推論システムへの直接の技術的貢献は確認できない。",
+    "first_checked_at": "2026-11-25T22:32:40+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Clinically Structured Rank-Gated LoRA for Cross-Benchmark Medical Question Answering"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-85cfad7f6bbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1bce6722bcd0949-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.17052",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.17052",
+    "identity_tokens": [
+      "arXiv:2607.17052"
+    ],
+    "reason": "視覚言語モデルが全質問に同じ視覚エンコーダを実行する無駄に対し、固定予算でスキップする視覚ブロックの組合せを進化的に探索する研究であり、VLM推論の計算削減には関わるが対象は視覚側の枝刈りで能力評価が中心であるため境界とする。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T03:23:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Searching for Task-Specific Vision Paths: Evolutionary Block Pruning Across Vision-Language Models"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1bce6722bcd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

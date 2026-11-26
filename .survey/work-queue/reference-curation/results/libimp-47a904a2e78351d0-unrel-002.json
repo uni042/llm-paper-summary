@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-47a904a2e78351d0-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/iccworkshops63917.2026.11586456",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/iccworkshops63917.2026.11586456",
+    "identity_tokens": [
+      "DOI:10.1109/iccworkshops63917.2026.11586456"
+    ],
+    "reason": "次世代Wi-Fiの複数アクセスポイント協調を、プロトコル規則でなくエージェント型AIで実現するAI-Genie Wi-Fiの枠組みであり、対象は無線ネットワークの制御であって、LLM推論システムへの直接の技術的貢献は確認できない。",
+    "first_checked_at": "2026-11-25T22:28:46+00:00",
+    "last_checked_at": "2026-11-26T03:23:37+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Agentic AI-Enabled Multi-AP Cooperation for Next-Generation Wi-Fi"
+  },
+  "processed_at": "2026-11-26T03:23:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-47a904a2e783",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

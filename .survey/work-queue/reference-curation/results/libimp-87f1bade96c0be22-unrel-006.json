@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87f1bade96c0be22-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.24359",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.24359",
+    "identity_tokens": [
+      "arXiv:2610.24359"
+    ],
+    "reason": "セッションをまたぐ長期メモリを持つエージェントが、教えられていない秘密を漏らしうる潜在的プライバシーリスクを測るベンチマークMemJoinの提案であり、対象はプライバシーの能力評価であって推論システムへの貢献は確認できない。",
+    "first_checked_at": "2026-11-26T00:55:56+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Can Agents Keep Secrets They Were Never Told? Benchmarking Latent Privacy Risks Across Sessions with MemJoin"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87f1bade96c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

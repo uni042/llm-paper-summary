@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1bce6722bcd0949-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/978-981-95-2725-0_16",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/978-981-95-2725-0_16",
+    "identity_tokens": [
+      "DOI:10.1007/978-981-95-2725-0_16"
+    ],
+    "reason": "LLMの推論効率を粗い粒度から細かい粒度へ段階的に評価し、既存の最適化コードライブラリ間の性能差とその要因を分析する評価研究であり、推論効率の計測には関わるが推論システム自体への新たな機構の提案ではないため境界とする。",
+    "first_checked_at": "2026-11-25T22:34:18+00:00",
+    "last_checked_at": "2026-11-26T03:23:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Coarse-to-Fine Evaluation of Inference Efficiency for Large Language Models"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1bce6722bcd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

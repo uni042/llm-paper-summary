@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98358bd1c9082dab-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/itc-cscc62988.2024.10628393",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/itc-cscc62988.2024.10628393",
+    "identity_tokens": [
+      "DOI:10.1109/itc-cscc62988.2024.10628393"
+    ],
+    "reason": "視覚状態空間モデルのクロススキャンへパッチ正則化を加える dense prediction 向け研究で、物体検出・分割用バックボーンの改良でありLLM推論とは関係がない。",
+    "first_checked_at": "2026-11-26T00:59:26+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Patch Regularization in Visual State Space Model"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98358bd1c908",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

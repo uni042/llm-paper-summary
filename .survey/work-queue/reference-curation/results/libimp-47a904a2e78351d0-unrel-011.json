@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-47a904a2e78351d0-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.12219",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.12219",
+    "identity_tokens": [
+      "arXiv:2512.12219"
+    ],
+    "reason": "未見の細粒度カテゴリを認識するゼロショット学習で、属性の絡み合いを属性中心の表現で解く研究であり、対象は画像認識という応用分野であって、LLM推論システムへの直接の技術的貢献は要旨から確認できない。",
+    "first_checked_at": "2026-11-25T22:19:30+00:00",
+    "last_checked_at": "2026-11-26T03:23:37+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Fine-Grained Zero-Shot Learning with Attribute-Centric Representations"
+  },
+  "processed_at": "2026-11-26T03:23:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-47a904a2e783",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

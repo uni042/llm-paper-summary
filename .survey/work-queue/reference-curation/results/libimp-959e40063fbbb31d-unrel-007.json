@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-959e40063fbbb31d-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.00450",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.00450",
+    "identity_tokens": [
+      "arXiv:2512.00450"
+    ],
+    "reason": "タイトルが人事応用での性格・面接成績予測データセットを明示する応用研究であり、対象も採用面接の行動分析でLLM推論システムとは無関係である。",
+    "first_checked_at": "2026-11-26T00:59:27+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "RecruitView: A Multimodal Dataset for Predicting Personality and Interview Performance for Human Resources Applications"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-959e40063fbb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

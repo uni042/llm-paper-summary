@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f8bbecf26a4b615-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.11156",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.11156",
+    "identity_tokens": [
+      "arXiv:2610.11156"
+    ],
+    "reason": "モノラル音声理解と空間音声理解を統一する音声言語モデルMiDashengLM-Spatialの研究であり、対象は音声理解の能力拡張であって、LLM推論システムの実行効率や機構への直接の技術的貢献は要旨から確認できない。",
+    "first_checked_at": "2026-11-25T22:22:49+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "MiDashengLM-Spatial: Unifying General Audio Understanding and Spatial Awareness"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f8bbecf26a4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

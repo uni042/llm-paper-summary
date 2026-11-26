@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abc4e0ed30f1614c-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/access.2026.3663141",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/access.2026.3663141",
+    "identity_tokens": [
+      "DOI:10.1109/access.2026.3663141"
+    ],
+    "reason": "タイトル自体が、次世代の車両ルーティングにマルチモーダル大規模言語モデルを用いる経路最適化の研究であることを明示しており、物流の経路計画という異分野応用が明白であるためタイトル段階で対象外と判断した。",
+    "first_checked_at": "2026-11-25T22:19:32+00:00",
+    "last_checked_at": "2026-11-26T03:23:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Route Optimization Reimagined: Multi-Modal Large Language Models for Next-Generation Vehicle Routing"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abc4e0ed30f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

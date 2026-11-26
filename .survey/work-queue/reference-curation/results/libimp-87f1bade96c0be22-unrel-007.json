@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87f1bade96c0be22-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.25625",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.25625",
+    "identity_tokens": [
+      "arXiv:2610.25625"
+    ],
+    "reason": "タイトル自体が、エージェント強化学習を気象報告へ適用するZephyrus-R1の研究であることを明示しており、気象報告という異分野応用が明白であるため、要旨を確認せずタイトル段階で対象外と判断した。",
+    "first_checked_at": "2026-11-26T00:55:56+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Zephyrus-R1: Agentic Reinforcement Learning for Weather Reporting"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87f1bade96c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

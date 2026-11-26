@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-47a904a2e78351d0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/jssc.2025.3622515",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/jssc.2025.3622515",
+    "identity_tokens": [
+      "DOI:10.1109/jssc.2025.3622515"
+    ],
+    "reason": "動画拡散モデルによるコンテンツ生成向けに、外れ値と混合表現の計算や意味定義型の命令生成を備えたコンテンツ生成エンジンCCEの提案であり、拡散推論のアクセラレータではあるが対象は動画生成でありLLM推論ではないため境界とする。",
+    "first_checked_at": "2026-11-25T22:19:32+00:00",
+    "last_checked_at": "2026-11-26T03:23:37+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CCE: A Content Creation Engine With Outlier and Mixed-Representation Computing, Semantic-Defined Instruction Generation for Video Diffusion"
+  },
+  "processed_at": "2026-11-26T03:23:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-47a904a2e783",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1bce6722bcd0949-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.15380",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.15380",
+    "identity_tokens": [
+      "arXiv:2411.15380"
+    ],
+    "reason": "Mamba2を基に1次元時系列から3次元ボリュームデータまでを扱う双方向アーキテクチャNd-BiMamba2の提案であり、効率的な系列処理とは関わるものの対象は多次元データ処理全般で、LLM推論への具体的適用が示されないため境界とする。",
+    "first_checked_at": "2026-11-26T03:23:39+00:00",
+    "last_checked_at": "2026-11-26T03:23:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Nd-BiMamba2: A Unified Bidirectional Architecture for Multi-Dimensional Data Processing"
+  },
+  "processed_at": "2026-11-26T03:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1bce6722bcd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

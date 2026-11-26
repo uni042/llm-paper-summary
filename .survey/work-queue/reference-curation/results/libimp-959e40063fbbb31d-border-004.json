@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-959e40063fbbb31d-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.10419",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.10419",
+    "identity_tokens": [
+      "arXiv:2507.10419"
+    ],
+    "reason": "低ランクアダプタの多選択学習で推論時に多様な文継続をデコードできるようにするLoRA-MCLだが、主眼は学習方式でありデコード機構やサービングの改善ではない。",
+    "first_checked_at": "2026-11-26T03:23:38+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multiple Choice Learning of Low Rank Adapters for Language Modeling"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-959e40063fbb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

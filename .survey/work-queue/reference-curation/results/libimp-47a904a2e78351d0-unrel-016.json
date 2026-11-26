@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-47a904a2e78351d0-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.27443",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.27443",
+    "identity_tokens": [
+      "arXiv:2604.27443"
+    ],
+    "reason": "部分観測で条件付けされた連続時間・連続空間の確率過程生成を、非マルコフ拡散ブリッジによる任意部分集合自己回帰ABCで扱う研究であり、対象は動画や気象の生成モデリングであって推論システムへの直接の貢献は確認できない。",
+    "first_checked_at": "2026-11-25T22:32:40+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ABC: Any-Subset Autoregression via Non-Markovian Diffusion Bridges in Continuous Time and Space"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-47a904a2e783",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

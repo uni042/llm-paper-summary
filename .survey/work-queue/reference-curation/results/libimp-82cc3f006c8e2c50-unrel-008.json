@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-82cc3f006c8e2c50-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.16824",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.16824",
+    "identity_tokens": [
+      "arXiv:2409.16824"
+    ],
+    "reason": "部分観測下の深層強化学習で、隠れ状態の不確実性を内部表現に持たない系列モデルの限界に対しカルマン的な状態空間層を提案する研究であり、対象は強化学習の表現学習であってLLM推論システムへの貢献は確認できない。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Uncertainty Representations in State-Space Layers for Deep Reinforcement Learning under Partial Observability"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-82cc3f006c8e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

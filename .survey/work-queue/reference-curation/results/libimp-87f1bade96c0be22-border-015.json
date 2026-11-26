@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87f1bade96c0be22-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2307.09701",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2307.09701",
+    "identity_tokens": [
+      "arXiv:2307.09701"
+    ],
+    "reason": "NLPシステムの効率を標準化された競技場で評価するEfficiency Pentathlonの提案であり、ハードウェア差やFLOPsと実性能の乖離といった効率評価の実務的課題を扱う点は推論効率の計測に関わるが、評価基盤の提供が主眼であるため境界とする。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T03:23:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficiency Pentathlon: A Standardized Arena for Efficiency Evaluation"
+  },
+  "processed_at": "2026-11-26T03:23:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87f1bade96c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
