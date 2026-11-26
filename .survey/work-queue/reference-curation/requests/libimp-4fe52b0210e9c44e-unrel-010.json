@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-4fe52b0210e9c44e-unrel-010",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2604.08826",
+  "reason": "Ascend NPUでの言語モデル事前学習向け4ビット浮動小数HiFloat4は学習時の数値安定化が主題であり、推論時の量子化や実行への適用は確認できないため対象外とする",
+  "title": "HiFloat4 Format for Language Model Pre-training on Ascend NPUs",
+  "identity_tokens": [
+    "arXiv:2604.08826"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fe52b0210e9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
