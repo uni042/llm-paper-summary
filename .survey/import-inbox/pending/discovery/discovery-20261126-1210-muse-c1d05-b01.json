@@ -1,0 +1,1116 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261126-c1d05-b01",
+ "reference_main_sha": "70e79b336cf3a79dad322f396eaad81d497fa5be",
+ "record_count": 65,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2411.07111",
+   "identity_tokens": [
+    "arXiv:2411.07111"
+   ],
+   "title": "Building a Taiwanese Mandarin Spoken Language Model: A First Attempt",
+   "reason": "台湾華語の音声対話用spoken LLMの構築報告であり、学習データ合成と全二重対話のモデル開発が主題で、LLM推論・サービングの効率化機構は扱われていない。",
+   "source_url": "https://arxiv.org/abs/2411.07111",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 415
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2411.13623",
+   "identity_tokens": [
+    "arXiv:2411.13623"
+   ],
+   "title": "Unsupervised Foundation Model-Agnostic Slide-Level Representation Learning",
+   "reason": "病理whole-slide画像のスライドレベル表現学習（COBRA）という医用画像の自己教師あり学習手法であり、LLM推論システムとは無関係である。",
+   "source_url": "https://arxiv.org/abs/2411.13623",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 415
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2302.03038",
+   "identity_tokens": [
+    "arXiv:2302.03038"
+   ],
+   "title": "Single Cells Are Spatial Tokens: Transformers for Spatial Transcriptomic Data Imputation",
+   "reason": "単一細胞を空間トークンとみなす空間トランスクリプトミクスデータ補完手法であり、生命科学データ処理へのTransformer応用で、推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2302.03038",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 415
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2401.12947",
+   "identity_tokens": [
+    "arXiv:2401.12947"
+   ],
+   "title": "Transformer-Based Models Are Not Yet Perfect At Learning to Emulate Structural Recursion",
+   "reason": "Transformerが構造的再帰を模倣学習できるかを調べる能力・表現力の分析研究であり、推論の高速化やサービング機構は対象外である。",
+   "source_url": "https://arxiv.org/abs/2401.12947",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 416
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2210.00400",
+   "identity_tokens": [
+    "arXiv:2210.00400"
+   ],
+   "title": "Systematic Generalization and Emergent Structures in Transformers Trained on Structured Tasks",
+   "reason": "構造化課題で学習したTransformerの系統的汎化と創発構造を調べる学習能力の研究であり、推論システム技術ではない。",
+   "source_url": "https://arxiv.org/abs/2210.00400",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 416
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2311.13657",
+   "identity_tokens": [
+    "arXiv:2311.13657"
+   ],
+   "title": "Efficient Transformer Knowledge Distillation: A Performance Review",
+   "reason": "効率的attentionを持つTransformerへの知識蒸留によるモデル圧縮のコスト・性能トレードオフ評価であり、圧縮は推論効率と関連するが、対象はNER等のエンコーダ課題の評価でLLM推論への直接機構は示されていない。",
+   "source_url": "https://arxiv.org/abs/2311.13657",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 416
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2401.10119",
+   "identity_tokens": [
+    "arXiv:2401.10119"
+   ],
+   "title": "Towards Principled Graph Transformers",
+   "reason": "k-WL階層に基づくグラフTransformerの表現力を論じるグラフ学習の理論研究であり、LLM推論とは無関係である。",
+   "source_url": "https://arxiv.org/abs/2401.10119",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 417
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2401.14267",
+   "identity_tokens": [
+    "arXiv:2401.14267"
+   ],
+   "title": "Transformers and cortical waves: encoders for pulling in context across time",
+   "reason": "Transformerの自己注意と皮質波の対応を論じる神経科学寄りのエンコーダ考察であり、推論システムの効率化には寄与しない。",
+   "source_url": "https://arxiv.org/abs/2401.14267",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 417
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2402.15989",
+   "identity_tokens": [
+    "arXiv:2402.15989"
+   ],
+   "title": "PIDformer: Transformer Meets Control Theory",
+   "reason": "自己注意を状態空間モデルとみなしPID制御フィードバックを組み込むアーキテクチャ理論の提案であり、対象は表現のランク崩壊対策で、LLM推論効率の機構ではない。",
+   "source_url": "https://arxiv.org/abs/2402.15989",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 417
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2403.11340",
+   "identity_tokens": [
+    "arXiv:2403.11340"
+   ],
+   "title": "StainDiffuser: MultiTask Dual Diffusion Model for Virtual Staining",
+   "reason": "病理画像の仮想染色（H&EからIHCへの変換）を行う拡散モデルStainDiffuserであり、医用画像生成への応用で推論システムとは無関係である。",
+   "source_url": "https://arxiv.org/abs/2403.11340",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 418
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2407.10366",
+   "identity_tokens": [
+    "arXiv:2407.10366"
+   ],
+   "title": "Accessing Vision Foundation Models via ImageNet-1K",
+   "reason": "ImageNet-1Kのみで視覚基盤モデルを小型モデルへ蒸留するProteusの提案であり、画像モデルの学習手法であってLLM推論とは無関係である。",
+   "source_url": "https://arxiv.org/abs/2407.10366",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 418
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2411.08034",
+   "identity_tokens": [
+    "arXiv:2411.08034"
+   ],
+   "title": "Scaling Properties of Diffusion Models For Perceptual Tasks",
+   "reason": "深度推定や光学フロー等の知覚課題における拡散モデルの学習・テスト時計算のスケーリング特性分析であり、LLM推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2411.08034",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 418
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2501.09706",
+   "identity_tokens": [
+    "arXiv:2501.09706"
+   ],
+   "title": "Domain Adaptation of Foundation LLMs for e-Commerce",
+   "reason": "Llama 3.1をeコマース領域データで継続事前学習したe-Llamaの開発報告であり、領域適応学習が主題で推論効率化の機構はない。",
+   "source_url": "https://arxiv.org/abs/2501.09706",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 419
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2509.21990",
+   "identity_tokens": [
+    "arXiv:2509.21990"
+   ],
+   "title": "WAVE: Learning Unified & Versatile Audio-Visual Embeddings with Multimodal LLM",
+   "reason": "テキスト・音声・映像を統一表現空間へ埋め込むマルチモーダルLLM埋め込みWAVEの学習手法であり、推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2509.21990",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 419
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2009.09523",
+   "identity_tokens": [
+    "arXiv:2009.09523"
+   ],
+   "title": "VirtualFlow: Decoupling Deep Learning Models from the Underlying Hardware",
+   "reason": "仮想ノード処理でモデルとハードウェアを分離しバッチを時分割してメモリ要求を下げるVirtualFlowは実行系の仕組みだが、主対象は深層学習全般の学習・再現性と資源弾力性であり、LLM推論への具体化は示されていない。",
+   "source_url": "https://arxiv.org/abs/2009.09523",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 419
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2307.15370",
+   "identity_tokens": [
+    "arXiv:2307.15370"
+   ],
+   "title": "Private-Library-Oriented Code Generation with Large Language Models",
+   "reason": "私的ライブラリ向けコード生成でLLMが未学習APIを扱うための手法であり、コード生成能力の応用研究で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2307.15370",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 420
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2502.18228",
+   "identity_tokens": [
+    "arXiv:2502.18228"
+   ],
+   "title": "Debt Collection Negotiations with Large Language Models: An Evaluation System and Optimizing Decision Making with Multi-Agent",
+   "reason": "債権回収交渉をLLMマルチエージェントで自動化する評価枠組みの研究であり、金融業務への応用で推論効率とは無関係である。",
+   "source_url": "https://arxiv.org/abs/2502.18228",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 420
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.3390/electronics13040767",
+   "identity_tokens": [
+    "DOI:10.3390/electronics13040767"
+   ],
+   "title": "AI-Assisted Programming Tasks Using Code Embeddings and Transformers",
+   "reason": "コード埋め込みとTransformerによるAI支援プログラミング（補完・バグ検出・要約）のレビュー記事であり、推論システム技術は扱われていない。",
+   "source_url": "https://doi.org/10.3390/electronics13040767",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 420
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.3390/sym17101591",
+   "identity_tokens": [
+    "DOI:10.3390/sym17101591"
+   ],
+   "title": "Symmetry-Aware Transformers for Asymmetric Causal Discovery in Financial Time Series",
+   "reason": "金融時系列の非対称因果発見に特化した対称性配慮Transformer（CausalFormer）の提案であり、金融データ分析への応用でLLM推論とは無関係である。",
+   "source_url": "https://doi.org/10.3390/sym17101591",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 421
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2508.07519",
+   "identity_tokens": [
+    "arXiv:2508.07519"
+   ],
+   "title": "Exploring Multimodal Diffusion Transformers for Enhanced Prompt-Based Image Editing",
+   "reason": "マルチモーダル拡散Transformerによるプロンプトに基づく画像編集の研究であり、画像生成モデルの改良でLLM推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2508.07519",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 421
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.08632",
+   "identity_tokens": [
+    "arXiv:2510.08632"
+   ],
+   "title": "Next Semantic Scale Prediction via Hierarchical Diffusion Language Models",
+   "reason": "階層語彙を用いる離散拡散言語モデルHDLMの生成モデリング提案であり、言語モデルの学習・生成方式の研究でサービング効率の機構はない。",
+   "source_url": "https://arxiv.org/abs/2510.08632",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 421
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2303.01200",
+   "identity_tokens": [
+    "arXiv:2303.01200"
+   ],
+   "title": "Retrieval for Extremely Long Queries and Documents with RPRS: A Highly Efficient and Effective Transformer-based Re-Ranker",
+   "reason": "極長クエリ・文書のQuery-by-Document検索向け再ランカーRPRSの提案であり、情報検索の精度・効率が主題でLLM推論システムの対象外である。",
+   "source_url": "https://arxiv.org/abs/2303.01200",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 422
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2304.08809",
+   "identity_tokens": [
+    "arXiv:2304.08809"
+   ],
+   "title": "SViTT: Temporal Learning of Sparse Video-Text Transformers",
+   "reason": "動画-テキストTransformerの時間的学習（SViTT）を扱うマルチモーダル学習研究であり、推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2304.08809",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 422
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2406.16746",
+   "identity_tokens": [
+    "arXiv:2406.16746"
+   ],
+   "title": "The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources",
+   "reason": "責任ある基盤モデル開発のためのツール・リソース250件超を集めたチートシート（調査）であり、技術的な推論システム貢献はない。",
+   "source_url": "https://arxiv.org/abs/2406.16746",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 422
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1145/3829441.3829510",
+   "identity_tokens": [
+    "DOI:10.1145/3829441.3829510"
+   ],
+   "title": "Research on Specific Domain Terminology Extraction and QA Pair Generation Based on Large Language Models",
+   "reason": "LLMによる専門領域用語抽出とQAペア生成の手法であり、特定ドメインNLPへの応用で推論効率化とは無関係である。",
+   "source_url": "https://doi.org/10.1145/3829441.3829510",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 423
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2311.02225",
+   "identity_tokens": [
+    "arXiv:2311.02225"
+   ],
+   "title": "Multi-scale Time-stepping of Partial Differential Equations with Transformers",
+   "reason": "偏微分方程式のマルチスケール時間発展をTransformerで学習する科学計算サロゲートの研究であり、LLM推論とは無関係である。",
+   "source_url": "https://arxiv.org/abs/2311.02225",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 423
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2312.02969",
+   "identity_tokens": [
+    "arXiv:2312.02969"
+   ],
+   "title": "Rank-without-GPT: Building GPT-Independent Listwise Rerankers on Open-Source Large Language Models",
+   "reason": "GPTに依存しないオープンソースLLM製リストワイズ再ランカーの構築であり、検索ランキング応用の研究で推論システム機構は扱われていない。",
+   "source_url": "https://arxiv.org/abs/2312.02969",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 423
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2408.13442",
+   "identity_tokens": [
+    "arXiv:2408.13442"
+   ],
+   "title": "A Law of Next-Token Prediction in Large Language Models",
+   "reason": "事前学習LLMの次トークン予測における層ごとの寄与を定量化した法則の分析研究であり、モデルの内部理解が主題で推論高速化には使われていない。",
+   "source_url": "https://arxiv.org/abs/2408.13442",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 424
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2501.01558",
+   "identity_tokens": [
+    "arXiv:2501.01558"
+   ],
+   "title": "Predicting the Performance of Black-box Language Models with Follow-up Queries",
+   "reason": "追質問への応答確率を表現としてブラックボックス言語モデルの正誤等を予測する手法であり、モデル挙動の評価・予測が主題で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2501.01558",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 424
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2212.10079",
+   "identity_tokens": [
+    "arXiv:2212.10079"
+   ],
+   "title": "A Survey on Pretrained Language Models for Neural Code Intelligence",
+   "reason": "ニューラルコードインテリジェンス向け事前学習言語モデルのサーベイであり、コード解析応用の概説で推論システム技術は対象外である。",
+   "source_url": "https://arxiv.org/abs/2212.10079",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 424
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2303.12208",
+   "identity_tokens": [
+    "arXiv:2303.12208"
+   ],
+   "title": "MAGVLT: Masked Generative Vision-and-Language Transformer",
+   "reason": "画像とテキストの両方を生成するマスク生成型視覚言語Transformer（MAGVLT）の提案であり、マルチモーダル生成モデルの研究でLLM推論とは無関係である。",
+   "source_url": "https://arxiv.org/abs/2303.12208",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 425
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2410.00168",
+   "identity_tokens": [
+    "arXiv:2410.00168"
+   ],
+   "title": "SSR: Alignment-Aware Modality Connector for Speech Language Models",
+   "reason": "音声言語モデル向けに音声-テキスト整列で音声特徴を分割・圧縮するモダリティコネクタSSRの学習手法であり、音声モデルの融合が主題で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2410.00168",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 425
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1007/s42979-024-02809-1",
+   "identity_tokens": [
+    "DOI:10.1007/s42979-024-02809-1"
+   ],
+   "title": "Towards Data- and Compute-Efficient Fake-News Detection: An Approach Combining Active Learning and Pre-Trained Language Models",
+   "reason": "能動学習と事前学習言語モデルを組み合わせたフェイクニュース検出手法であり、コンテンツ分類への応用で推論効率とは無関係である。",
+   "source_url": "https://doi.org/10.1007/s42979-024-02809-1",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 425
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1007/s44336-025-00024-x",
+   "identity_tokens": [
+    "DOI:10.1007/s44336-025-00024-x"
+   ],
+   "title": "Tool learning with language models: a comprehensive survey of methods, pipelines, and benchmarks",
+   "reason": "言語モデルのツール学習（計画・選択・呼び出し）の方法・パイプライン・ベンチマークをまとめたサーベイであり、推論システムの効率化機構は扱われていない。",
+   "source_url": "https://doi.org/10.1007/s44336-025-00024-x",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 426
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1111/jebm.70031",
+   "identity_tokens": [
+    "DOI:10.1111/jebm.70031"
+   ],
+   "title": "Large Language Models in Integrative Medicine: Progress, Challenges, and Opportunities",
+   "reason": "統合医療（中医学と現代医学の融合）におけるLLM応用の進展と課題をまとめたレビューであり、医療応用で推論システムとは無関係である。",
+   "source_url": "https://doi.org/10.1111/jebm.70031",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 426
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2409.03659",
+   "identity_tokens": [
+    "arXiv:2409.03659"
+   ],
+   "title": "LLM-based multi-agent poetry generation in non-cooperative environments",
+   "reason": "非協調的マルチエージェント社会学習によるLLM詩生成の多様化を狙う生成応用研究であり、推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2409.03659",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 426
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2411.13757",
+   "identity_tokens": [
+    "arXiv:2411.13757"
+   ],
+   "title": "GenBFA: An Evolutionary Optimization Approach to Bit-Flip Attacks on LLMs",
+   "reason": "進化的最適化でLLMへのビットフリップ攻撃の重要パラメータを探索するGenBFAであり、ハードウェア攻撃・セキュリティの研究で推論効率化ではない。",
+   "source_url": "https://arxiv.org/abs/2411.13757",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 427
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2508.19720",
+   "identity_tokens": [
+    "arXiv:2508.19720"
+   ],
+   "title": "Continuously Steering LLMs Sensitivity to Contextual Knowledge with Proxy Models",
+   "reason": "小規模プロキシモデルの出力差分でLLMの文脈知識への感度を連続調整するCSKSであり、知識競合への対処が主題で推論システムの効率機構ではない。",
+   "source_url": "https://arxiv.org/abs/2508.19720",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 427
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/JETCAS.2023.3237582",
+   "identity_tokens": [
+    "DOI:10.1109/JETCAS.2023.3237582"
+   ],
+   "title": "Memristor-Based Light-Weight Transformer Circuit Implementation for Speech Recognizing",
+   "reason": "メモリスタ回路で軽量Transformerを実装しエッジ向けにエネルギー overheadを下げるハードウェア提案だが、検証対象は音声コマンド認識であり、LLM推論への適用や規模の根拠は示されていない。",
+   "source_url": "https://doi.org/10.1109/JETCAS.2023.3237582",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 427
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.11754",
+   "identity_tokens": [
+    "arXiv:2505.11754"
+   ],
+   "title": "Masking in Multi-hop QA: An Analysis of How Language Models Perform with Context Permutation",
+   "reason": "文脈順序の置換に対する言語モデルのマルチホップQA性能を分析した研究であり、能力分析が主題で推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2505.11754",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 428
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.22010",
+   "identity_tokens": [
+    "arXiv:2505.22010"
+   ],
+   "title": "VulBinLLM: LLM-powered Vulnerability Detection for Stripped Binaries",
+   "reason": "剥離済みバイナリの脆弱性検出にLLMを用いるVulBinLLMの応用研究であり、ソフトウェアセキュリティ用途で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2505.22010",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 428
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2508.00264",
+   "identity_tokens": [
+    "arXiv:2508.00264"
+   ],
+   "title": "Calibrated Language Models and How to Find Them with Label Smoothing",
+   "reason": "ラベルスムージングによる言語モデルの信頼度キャリブレーション改善を調べる研究であり、出力の較正が主題で推論効率とは無関係である。",
+   "source_url": "https://arxiv.org/abs/2508.00264",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 428
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2508.07173",
+   "identity_tokens": [
+    "arXiv:2508.07173"
+   ],
+   "title": "Omni-SafetyBench: A Benchmark for Safety Evaluation of Audio-Visual Large Language Models",
+   "reason": "音声・視覚LLMの安全性を評価するベンチマークOmni-SafetyBenchの提案であり、能力・安全性評価のみで推論システム貢献はない。",
+   "source_url": "https://arxiv.org/abs/2508.07173",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 429
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.11498",
+   "identity_tokens": [
+    "arXiv:2510.11498"
+   ],
+   "title": "ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding",
+   "reason": "マルチモーダルLLMを批評者とする視覚接地RLでWebフロントエンドコーディングエージェントを学習するReLookであり、エージェント学習の応用で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2510.11498",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 429
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2510.15304",
+   "identity_tokens": [
+    "arXiv:2510.15304"
+   ],
+   "title": "Layer as Puzzle Pieces: Compressing Large Language Models through Layer Concatenation",
+   "reason": "LLMの層構造プルーニングに際し、隣接層の重要チャネルを連結で融合するCoMeと階層蒸留による回復学習を組み合わせ、能力を保ちながらモデルサイズと計算・保存コストを削減する推論向け圧縮手法である。",
+   "source_url": "https://arxiv.org/abs/2510.15304",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 429
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:1911.04908",
+   "identity_tokens": [
+    "arXiv:1911.04908"
+   ],
+   "title": "Non-Autoregressive Transformer Automatic Speech Recognition",
+   "reason": "非自己回帰Transformerによる自動音声認識（A-CMLM/A-FMLM）のデコード方式であり、対象は音声認識モデルの推論であってLLM推論システムの範囲外である。",
+   "source_url": "https://arxiv.org/abs/1911.04908",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 430
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2406.06576",
+   "identity_tokens": [
+    "arXiv:2406.06576"
+   ],
+   "title": "OccamLLM: Fast and Exact Language Model Arithmetic in a Single Step",
+   "reason": "隠れ状態で記号アーキテクチャを制御し1ステップで正確な算術を行うOccamLLMであり、算術能力の拡張が主題で推論の高速化・サービング機構ではない。",
+   "source_url": "https://arxiv.org/abs/2406.06576",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 430
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2508.01473",
+   "identity_tokens": [
+    "arXiv:2508.01473"
+   ],
+   "title": "TreeDiff: AST-Guided Code Generation with Diffusion LLMs",
+   "reason": "AST誘導で拡散LLMのコード生成の構文精度を上げるTreeDiffであり、コード生成品質の改善が主題で推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2508.01473",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 430
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.33096/ilkom.v15i1.1532.124-131",
+   "identity_tokens": [
+    "DOI:10.33096/ilkom.v15i1.1532.124-131"
+   ],
+   "title": "Abstractive Text Summarization using Pre-Trained Language Model \"Text-to-Text Transfer Transformer (T5)\"",
+   "reason": "事前学習済みT5を用いたインドネシア語の抽象型テキスト要約の応用研究であり、推論システム技術は扱われていない。",
+   "source_url": "https://doi.org/10.33096/ilkom.v15i1.1532.124-131",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 431
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2310.14211",
+   "identity_tokens": [
+    "arXiv:2310.14211"
+   ],
+   "title": "LUNA: A Model-Based Universal Analysis Framework for Large Language Models",
+   "reason": "LLMの信頼性をモデルベースで分析する汎用フレームワークLUNAの提案であり、分析・評価の枠組みで推論効率化の機構はない。",
+   "source_url": "https://arxiv.org/abs/2310.14211",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 431
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2504.02398",
+   "identity_tokens": [
+    "arXiv:2504.02398"
+   ],
+   "title": "Scaling Analysis of Interleaved Speech-Text Language Models",
+   "reason": "音声-テキスト交互配置型の音声言語モデルのスケーリング分析であり、学習時の計算・データ効率の検証が主題で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2504.02398",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 431
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2509.06926",
+   "identity_tokens": [
+    "arXiv:2509.06926"
+   ],
+   "title": "Continuous Audio Language Models",
+   "reason": "連続表現で音声を扱うContinuous Audio Language Modelsの生成モデリング研究であり、音声生成モデルの方式提案でLLMサービングとは無関係である。",
+   "source_url": "https://arxiv.org/abs/2509.06926",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 432
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.07239",
+   "identity_tokens": [
+    "arXiv:2510.07239"
+   ],
+   "title": "Red-Bandit: Test-Time Adaptation for LLM Red-Teaming via Bandit-Guided LoRA Experts",
+   "reason": "バンディット誘導LoRA専門家でLLMレッドチーミングをテスト時に適応させるRed-Banditであり、安全性監査の手法で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2510.07239",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 432
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/JBHI.2023.3307584",
+   "identity_tokens": [
+    "DOI:10.1109/JBHI.2023.3307584"
+   ],
+   "title": "Sparse and Hierarchical Transformer for Survival Analysis on Whole Slide Images",
+   "reason": "whole slide画像に対する生存分析用スパース階層Transformerであり、医用画像の予後予測への応用でLLM推論とは無関係である。",
+   "source_url": "https://doi.org/10.1109/JBHI.2023.3307584",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 432
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/TCSVT.2024.3366935",
+   "identity_tokens": [
+    "DOI:10.1109/TCSVT.2024.3366935"
+   ],
+   "title": "Hierarchical Multi-Modal Prompting Transformer for Multi-Modal Long Document Classification",
+   "reason": "テキストと画像を含むマルチモーダル長文書分類のための階層プロンプトTransformerであり、文書分類への応用で推論システムではない。",
+   "source_url": "https://doi.org/10.1109/TCSVT.2024.3366935",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 433
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.21437/interspeech.2020-1164",
+   "identity_tokens": [
+    "DOI:10.21437/interspeech.2020-1164"
+   ],
+   "title": "LVCSR with Transformer Language Models",
+   "reason": "大語彙連続音声認識にTransformer言語モデルを一パス認識へ組み込む研究であり、バッチ自己注意の冗長計算削減も音声認識用途に限定され、LLM推論システムの対象外である。",
+   "source_url": "https://doi.org/10.21437/interspeech.2020-1164",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 433
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2206.14366",
+   "identity_tokens": [
+    "arXiv:2206.14366"
+   ],
+   "title": "Knowledge Distillation of Transformer-based Language Models Revisited",
+   "reason": "Transformer言語モデルの知識蒸留を知識種別・一致戦略等の要素に分解して大規模実験で分析し実践指針を示す研究であり、動機はモデル圧縮と実行時レイテンシだが、LLM推論系での検証や具体的サービング機構は含まれない。",
+   "source_url": "https://arxiv.org/abs/2206.14366",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 433
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2211.05781",
+   "identity_tokens": [
+    "arXiv:2211.05781"
+   ],
+   "title": "Demystify Transformers & Convolutions in Modern Image Deep Networks",
+   "reason": "現代画像ネットワークにおけるTransformerと畳み込みの実質的な利得を分析した研究であり、画像バックボーンの設計分析でLLM推論とは無関係である。",
+   "source_url": "https://arxiv.org/abs/2211.05781",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 434
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2310.19292",
+   "identity_tokens": [
+    "arXiv:2310.19292"
+   ],
+   "title": "Fusing Temporal Graphs into Transformers for Time-Sensitive Question Answering",
+   "reason": "時間グラフをTransformerへ融合して時間依存質問応答を行う手法であり、QA応用の精度改善が主題で推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2310.19292",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 434
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.17051",
+   "identity_tokens": [
+    "arXiv:2505.17051"
+   ],
+   "title": "Embedding-to-Prefix: Parameter-Efficient Personalization for Pre-Trained Large Language Models",
+   "reason": "ユーザー埋め込みを単一ソフトトークンのプレフィックスへ射影してLLMを個人化するE2Pであり、パーソナライゼーション手法であって推論効率化の機構ではない。",
+   "source_url": "https://arxiv.org/abs/2505.17051",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 434
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1145/3551349.3560414",
+   "identity_tokens": [
+    "DOI:10.1145/3551349.3560414"
+   ],
+   "title": "A Transferable Time Series Forecasting Service Using Deep Transformer Model for Online Systems",
+   "reason": "オンラインシステムのソフトウェア品質指標を予測する深層Transformer時系列予測サービスTTSFの提案であり、時系列予測への応用でLLM推論とは無関係である。",
+   "source_url": "https://doi.org/10.1145/3551349.3560414",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 435
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2205.12602",
+   "identity_tokens": [
+    "arXiv:2205.12602"
+   ],
+   "title": "VTP: volumetric transformer for multi-view multi-person 3D pose estimation",
+   "reason": "多視点多人数3D姿勢推定のための体積Transformer（VTP）の提案であり、コンピュータビジョン応用で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2205.12602",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 435
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2310.02842",
+   "identity_tokens": [
+    "arXiv:2310.02842"
+   ],
+   "title": "Sweeping Heterogeneity with Smart MoPs: Mixture of Prompts for LLM Task Adaptation",
+   "reason": "プロンプトの混合（MoPs）とスマートゲーティングでLLMを異種タスクへ適応させる手法であり、プロンプト学習によるタスク適応が主題で推論システム機構はない。",
+   "source_url": "https://arxiv.org/abs/2310.02842",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 435
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2403.05314",
+   "identity_tokens": [
+    "arXiv:2403.05314"
+   ],
+   "title": "Advances of Deep Learning in Protein Science: A Comprehensive Survey",
+   "reason": "タンパク質科学における深層学習（表現学習・創薬応用）の包括的サーベイであり、生命科学分野の概説でLLM推論とは無関係である。",
+   "source_url": "https://arxiv.org/abs/2403.05314",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 436
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2404.01591",
+   "identity_tokens": [
+    "arXiv:2404.01591"
+   ],
+   "title": "Language Model Guided Interpretable Video Action Reasoning",
+   "reason": "言語モデルの知識で動画行動認識モデルの解釈可能性を高めるLaIARであり、動画理解への応用で推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2404.01591",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-26T12:10:00+09:00",
+   "last_checked_at": "2026-11-26T12:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 436
+  }
+ ]
+}
