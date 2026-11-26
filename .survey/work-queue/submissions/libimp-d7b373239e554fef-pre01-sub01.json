@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Co-Fabric: Breaking Host-Domain Boundaries for Unified xPU Interconnection",
+      "source_url": "https://arxiv.org/abs/2609.25560",
+      "year": 2026,
+      "published": "2026-09-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-model parameters have grown beyond the capacity of a single xPU, dispersing across multiple xPUs spanning distinct host domains, where xPU-to-xPU communication dominates overall system efficiency. Existing scale-up interconnect remains inadequate: network-based solutions built on Ethernet--such as RoCE (RDMA over Converged Ethernet)--introduce specific message-semantics and protocol-stack characteristics, and rely on fragmented per-host addressing, while conventional host-based fabrics are confined to a single host domain and lack cross-host unified addressing. This paper presents Co-Fabric, a bus-based interconnect that, unlike conventional bus designs, breaks host-domain boundaries to deliver unified xPU interconnection for scale-up superpods. Co-Fabric makes three contributions: a streamlined four-layer protocol stack achieving nanosecond-scale processing latency with native reliability; a cross-domain scaling and P2P mechanism that routes using port identifiers embedded in the packet header; and a unified address space built on shadow-device auto-enumeration. On a 64-xPU 3D-Mesh system, Co-Fabric cuts inter-node communication latency by over 50% and improves bandwidth by 2-5x over RoCE, accelerating DeepSeek R1 inference by 30%-80%. Moreover, since its streamlined four-layer protocol stack and higher data-communication efficiency reduce protocol and processing overhead relative to the Ethernet-based RoCE stack, Co-Fabric cuts the cost and power of the interconnect itself by up to 80% and 5%, respectively. These results demonstrate Co-Fabric's advantage for AI computing centers.",
+      "identifiers": [
+        "SemanticScholar:ae85cf963f16c75b5ad86df3711763d9eed8a63e"
+      ],
+      "semantic_scholar_id": "ae85cf963f16c75b5ad86df3711763d9eed8a63e",
+      "canonical_id": "arXiv:2609.25560",
+      "arxiv_id": "2609.25560",
+      "doi": "10.48550/arXiv.2609.25560",
+      "authors": [
+        "Zhe-Zhe Peng",
+        "Jia-Ming Huang",
+        "Chao-Fan Chen",
+        "Zhao-De Zhang",
+        "An Wu",
+        "Bao-Yang Liu",
+        "Xing-Long Wang",
+        "Tanlong Ci",
+        "Jin-Feng Li",
+        "Xue-Ke Duan",
+        "Hao Wang",
+        "Xi Chen",
+        "Shun Zhang",
+        "Zhi-Yu Su",
+        "Zhuo-Qian Cao",
+        "Zhi-Chong Dou",
+        "Shao-Hua Wu",
+        "Lucas Jing",
+        "Yu-Xin Yuan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 65,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ホスト境界を越えてxPU間相互接続を統一し大規模モデルの通信効率を高めるCo-Fabricの基盤論文。一次要旨で推論時の具体的機構と効果が確認でき、LLM推論システムへの直接の技術的貢献があるためacceptと判定した。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d7b373239e55",
+    "round": "libimp-d7b373239e554fef-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d7b373239e554fef-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d7b373239e554fef-pre01.json",
+    "receipt": "sha256:c1b595b886bd1daf0f128f869fa6bd7fb71b2ed72260ba305cb0400c5da0ef7c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d7b373239e55",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

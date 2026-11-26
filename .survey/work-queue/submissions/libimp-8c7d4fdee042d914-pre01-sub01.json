@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "RI-Prune: Relation and Information Aware Visual Token Pruning for Multi-Image Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2611.06047",
+      "year": 2026,
+      "published": "2026-11-04",
+      "venue": "Proceedings of the 35th ACM International Conference on Information and Knowledge Management",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (LVLMs) have recently been extended to handle multiple input images, but this extension dramatically increases the visual token budget, making visual-token pruning not merely an efficiency option but a practical necessity. Existing visual-token pruning methods, primarily designed for the single-image setting, rely on attention-derived saliency signals to estimate per-token importance. However, this attention-centric design transfers poorly to the multi-image regime: it causes substantial performance degradation on multi-image benchmarks, suffers from strong positional bias, and loses discriminative attention signals as the number of input images increases. To test whether attention-selected tokens are truly important for multi-image reasoning, we conduct two complementary causal probes—Leave-One-In and Leave-One-Deletion—which measure token importance by restoring individual tokens to a zeroed visual sequence or removing them from the full sequence. Attention-based pruners provide only marginal gains over random selection, showing that attention is a weak proxy for visual-token importance in multi-image reasoning. Motivated by this gap, we propose Relation and Information Aware Pruning (RI-Prune), a training-free, attention-free pre-decoder selector for multi-image visual token pruning. RI-Prune scores each visual token using a z-normalized combination of three signals computed from projector outputs: query relevance, cross-image correspondence with compact per-image prototypes, and intra-image representativeness. By integrating these signals, RI-Prune performs balanced per-image Top-K selection to preserve information across input images. Across multiple multi-image benchmarks and three LVLM backbones, RI-Prune achieves a stronger trade-off between token reduction and task performance than prior pruning methods, particularly under aggressive token budgets.",
+      "identifiers": [
+        "SemanticScholar:9a6ee8ad4c45c09b3f73f0b37b5b93f6e20cc9ce"
+      ],
+      "semantic_scholar_id": "9a6ee8ad4c45c09b3f73f0b37b5b93f6e20cc9ce",
+      "canonical_id": "arXiv:2611.06047",
+      "arxiv_id": "2611.06047",
+      "doi": "10.1145/3799682.3841123",
+      "authors": [
+        "Dong-Jin Lee",
+        "Eunju Lee",
+        "Jinhee Jang",
+        "Yoonji Lee",
+        "Youngbin Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数画像LVLM向けRI-Pruneは関係と情報量を意識した視覚トークン剪定で単一画像前提手法の精度劣化を抑えつつ視覚トークン予算と推論コストを削減する直接手法である",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Measured Coupling for Parallel Decoding in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2611.08307",
+      "year": 2026,
+      "published": "2026-11-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models can write many tokens per step, but must choose which tokens are safe to commit together. Mean-field decoding penalizes pairs of positions whose predictions look alike. We replace this proxy with the coupling itself: how much committing one token changes the model's confidence at another. Cheap probes inside the main forward pass measure it, with no training or extra model, and it plugs into the same mean-field rule. On three models and four benchmarks, our method needs far fewer steps than mean-field decoding and is faster in most settings, also with a key-value cache, at an average accuracy cost of 1.1 points. Shuffling the couplings or replacing them with a uniform bonus loses this gain.",
+      "identifiers": [
+        "SemanticScholar:fdff05af4a369d8a1a6b9a25f0090ed53aab66e5"
+      ],
+      "semantic_scholar_id": "fdff05af4a369d8a1a6b9a25f0090ed53aab66e5",
+      "canonical_id": "arXiv:2611.08307",
+      "arxiv_id": "2611.08307",
+      "authors": [
+        "Tal Oved",
+        "Lior Wolf"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデルの並列デコードについてトークン間の実結合を前方パス内プローブで測り確定単位を決める手法は、デコードステップ数を減らす推論高速化への直接貢献である",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Parse Trees Guided LLM Prompt Compression",
+      "source_url": "https://arxiv.org/abs/2409.15395",
+      "year": 2024,
+      "published": "2024-09-23",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Offering rich contexts to Large Language Models (LLMs) has shown to boost the performance in various tasks, but the resulting longer prompt would increase the computational cost and might exceed the input limit of LLMs. Recently, some prompt compression methods have been suggested to shorten the length of prompts by using language models to generate shorter prompts or by developing computational models to select important parts of original prompt. The generative compression methods would suffer from issues like hallucination, while the selective compression methods have not involved linguistic rules and overlook the global structure of prompt. To this end, we propose a novel selective compression method called PartPrompt. It first obtains a parse tree for each sentence based on linguistic rules, and calculates local information entropy for each node in a parse tree. These local parse trees are then organized into a global tree according to the hierarchical structure such as the dependency of sentences, paragraphs, and sections. After that, the root-ward propagation and leaf-ward propagation are proposed to adjust node values over the global tree. Finally, a recursive algorithm is developed to prune the global tree based on the adjusted node values. The experiments show that PartPrompt receives the state-of-the-art performance across various datasets, metrics, compression ratios, and target LLMs for inference. The in-depth ablation studies confirm the effectiveness of designs in PartPrompt, and other additional experiments also demonstrate its superiority in terms of the coherence of compressed prompts and in the extreme long prompt scenario.",
+      "identifiers": [
+        "SemanticScholar:c15ee85f84d37339afa71ff2408deed92b472e73"
+      ],
+      "semantic_scholar_id": "c15ee85f84d37339afa71ff2408deed92b472e73",
+      "canonical_id": "arXiv:2409.15395",
+      "arxiv_id": "2409.15395",
+      "doi": "10.1109/TPAMI.2025.3609956",
+      "authors": [
+        "Wenhao Mao",
+        "Cheng-Bin Hou",
+        "Tianyu Zhang",
+        "Xin-Yu Lin",
+        "Ke Tang",
+        "Hai-Rong Lv"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 794,
+        "matched_prestigious_venue": null
+      },
+      "reason": "構文解析木誘導のLLMプロンプト圧縮は重要部分選択でプロンプト長を短縮し計算コストと入力上限の問題を緩和する、推論コスト削減に直接つながる手法である",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8c7d4fdee042",
+    "round": "libimp-8c7d4fdee042d914-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8c7d4fdee042d914-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8c7d4fdee042d914-pre01.json",
+    "receipt": "sha256:f3f2d02cb0ff5876f9ceff9657d7ca63bc7cc9a67baf15d432be4fa75d718176"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8c7d4fdee042",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

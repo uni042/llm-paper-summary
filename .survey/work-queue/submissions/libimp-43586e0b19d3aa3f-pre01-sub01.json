@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "S2D: Selective Spectral Decay for Quantization-Friendly Conditioning of Neural Activations",
+      "source_url": "https://arxiv.org/abs/2602.14432",
+      "year": 2026,
+      "published": "2026-02-16",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Activation outliers in large-scale transformer models pose a fundamental challenge to model quantization, creating excessively large ranges that cause severe accuracy drops during quantization. We empirically observe that outlier severity intensifies with pre-training scale (e.g., progressing from CLIP to the more extensively trained SigLIP and SigLIP2). Through theoretical analysis as well as empirical correlation studies, we establish the direct link between these activation outliers and dominant singular values of the weights. Building on this insight, we propose Selective Spectral Decay ($S^2D$), a geometrically-principled conditioning method that surgically regularizes only the weight components corresponding to the largest singular values during fine-tuning. Through extensive experiments, we demonstrate that $S^2D$ significantly reduces activation outliers and produces well-conditioned representations that are inherently quantization-friendly. Models trained with $S^2D$ achieve up to 7% improved PTQ accuracy on ImageNet under W4A4 quantization and 4% gains when combined with QAT. These improvements also generalize across downstream tasks and vision-language models, enabling the scaling of increasingly large and rigorously trained models without sacrificing deployment efficiency.",
+      "identifiers": [
+        "SemanticScholar:5d85c01c2813afd42734971b17d701e9093ebab3"
+      ],
+      "semantic_scholar_id": "5d85c01c2813afd42734971b17d701e9093ebab3",
+      "canonical_id": "arXiv:2602.14432",
+      "arxiv_id": "2602.14432",
+      "doi": "10.48550/arXiv.2602.14432",
+      "authors": [
+        "Arnav Chavan",
+        "Nahush Lele",
+        "Udbhav Bamba",
+        "Sankalp Dayal",
+        "Aditi Raghunathan",
+        "Deepak Gupta"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": null
+      },
+      "reason": "活性化外れ値を主特異値と結び付け選択的スペクトル減衰で量子化しやすくするS2Dは、大規模Transformerの推論量子化を阻む活性化範囲の問題への直接手法である",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LLMConf: Knowledge-Enhanced Configuration Optimization for Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/IWQoS65803.2025.11143449",
+      "year": 2025,
+      "published": "2025-07-02",
+      "venue": "International Workshop on Quality of Service",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:c4c1344615f8d4dd64d37ea9130d32370acb132f"
+      ],
+      "semantic_scholar_id": "c4c1344615f8d4dd64d37ea9130d32370acb132f",
+      "doi": "10.1109/IWQoS65803.2025.11143449",
+      "canonical_id": "DOI:10.1109/IWQoS65803.2025.11143449",
+      "authors": [
+        "Jing-Kai He",
+        "Peng-Fei Chen",
+        "Yi-Lun Wang",
+        "Hai-Yu Huang",
+        "Chuan-Fu Zhang",
+        "Hao-Jia Huang",
+        "Dan-Wen Chen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 512,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論エンジンの構成パラメータを知識強化探索で最適化するLLMConfは遅延とスループットを直接改善する推論サービス運用システムであり直接貢献が確認できる",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-43586e0b19d3",
+    "round": "libimp-43586e0b19d3aa3f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-43586e0b19d3aa3f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-43586e0b19d3aa3f-pre01.json",
+    "receipt": "sha256:70acdd8ddfcd7545cb2b88305cf79726b48d7c7932c266b9b453474906ed375e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-43586e0b19d3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
