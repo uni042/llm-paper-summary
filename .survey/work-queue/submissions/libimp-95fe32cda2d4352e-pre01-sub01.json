@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Deeploy: Enabling Energy-Efficient Deployment of Small Language Models on Heterogeneous Microcontrollers",
+      "source_url": "https://arxiv.org/abs/2408.04413",
+      "year": 2024,
+      "published": "2024-08-08",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 40,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rise of embodied foundation models (EFMs), most notably small language models (SLMs), adapting Transformers for the edge applications has become a very active field of research. However, achieving the end-to-end deployment of SLMs on the microcontroller (MCU)-class chips without high-bandwidth off-chip main memory access is still an open challenge. In this article, we demonstrate high efficiency end-to-end SLM deployment on a multicore RISC-V (RV32) MCU augmented with ML instruction extensions and a hardware neural processing unit (NPU). To automate the exploration of the constrained, multidimensional memory versus computation tradeoffs involved in the aggressive SLM deployment on the heterogeneous (multicore+NPU) resources, we introduce Deeploy, a novel deep neural network (DNN) compiler, which generates highly optimized C code requiring minimal runtime support. We demonstrate that Deeploy generates the end-to-end code for executing SLMs, fully exploiting the RV32 cores’ instruction extensions and the NPU. We achieve leading-edge energy and throughput of $490 \\; \\mu $ J per token, at 340 token per second for an SLM trained on the TinyStories dataset, running for the first time on an MCU-class device without the external memory.",
+      "identifiers": [
+        "SemanticScholar:1b47527e8ab7f2de303151f9d5d62d6666913f90"
+      ],
+      "semantic_scholar_id": "1b47527e8ab7f2de303151f9d5d62d6666913f90",
+      "canonical_id": "arXiv:2408.04413",
+      "arxiv_id": "2408.04413",
+      "doi": "10.1109/TCAD.2024.3443718",
+      "authors": [
+        "Moritz Scherer",
+        "Luka Macan",
+        "V. J. Jung",
+        "Philip Wiese",
+        "Luca Bompani",
+        "A. Burrello",
+        "F. Conti",
+        "L. Benini"
+      ],
+      "priority": 40,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 40,
+        "citation_count": 40,
+        "total": 40,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 840,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Deeployは外部メモリなしのマイコン級RISC-V＋NPU上に小規模言語モデルをエンドツーエンド配置するDNNコンパイラで、メモリと計算のトレードオフ探索により490µJ/token・340token/sを実測しており、オンデバイス推論への直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VELO: A Vector Database-Assisted Cloud-Edge Collaborative LLM QoS Optimization Framework",
+      "source_url": "https://arxiv.org/abs/2406.13399",
+      "year": 2024,
+      "published": "2024-06-19",
+      "venue": "2024 IEEE International Conference on Web Services (ICWS)",
+      "citation_count": 30,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Large Language Model (LLM) has gained significant popularity and is extensively utilized across various domains. Most LLM deployments occur within cloud data centers, where they encounter substantial response delays and incur high costs, thereby impacting the Quality of Services (QoS) at the network edge. Leveraging vector database caching to store LLM request results at the edge can substantially mitigate response delays and cost associated with similar requests, which has been overlooked by previous research. Addressing these gaps, this paper introduces a novel Vector database-assisted cloud-Edge collaborative LLM QoS Optimization (VELO) framework. Firstly, we propose the VELO framework, which ingeniously employs vector database to cache the results of some LLM requests at the edge to reduce the response time of subsequent similar requests. Diverging from direct optimization of the LLM, our VELO framework does not necessitate altering the internal structure of LLM and is broadly applicable to diverse LLMs. Subsequently, building upon the VELO framework, we formulate the QoS optimization problem as a Markov Decision Process (MDP) and devise an algorithm grounded in Multi-Agent Reinforcement Learning (MARL) to decide whether to request the LLM in the cloud or directly return the results from the vector database at the edge. Moreover, to enhance request feature extraction and expedite training, we refine the policy network of MARL and integrate expert demonstrations. Finally, we implement the proposed algorithm within a real edge system. Experimental findings confirm that our VELO framework substantially enhances user satisfaction by concurrently diminishing delay and resource consumption for edge users utilizing LLMs.",
+      "identifiers": [
+        "SemanticScholar:29c67918f2a4dfd167e4d4b878defad093dd3824"
+      ],
+      "semantic_scholar_id": "29c67918f2a4dfd167e4d4b878defad093dd3824",
+      "canonical_id": "arXiv:2406.13399",
+      "arxiv_id": "2406.13399",
+      "doi": "10.1109/ICWS62655.2024.00105",
+      "authors": [
+        "Zhi Yao",
+        "Zhi-Qing Tang",
+        "Jiong Lou",
+        "Ping Shen",
+        "Wei-Jia Jia"
+      ],
+      "priority": 30,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 30,
+        "citation_count": 30,
+        "total": 30,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 890,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VELOはベクトルDBにLLM応答をエッジでキャッシュし、クラウド問い合わせかキャッシュ返却かを多エージェント強化学習で決めるクラウド・エッジ協調枠組みを実エッジシステムに実装し、LLMサービスの遅延と資源消費の削減を実測しており、サービングへの直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-95fe32cda2d4",
+    "round": "libimp-95fe32cda2d4352e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-95fe32cda2d4352e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-95fe32cda2d4352e-pre01.json",
+    "receipt": "sha256:abc39ed967340740d35fa721d3eadbb34e86501d26ea9362ae5d178d25bd96dd"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-95fe32cda2d4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

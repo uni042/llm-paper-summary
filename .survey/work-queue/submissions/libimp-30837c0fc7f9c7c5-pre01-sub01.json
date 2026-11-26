@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Layer as Puzzle Pieces: Compressing Large Language Models through Layer Concatenation",
+      "source_url": "https://arxiv.org/abs/2510.15304",
+      "year": 2025,
+      "published": "2025-10-17",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models excel at natural language processing tasks, but their massive size leads to high computational and storage demands. Recent works have sought to reduce their model size through layer-wise structured pruning. However, they tend to ignore retaining the capabilities in the pruned part. In this work, we re-examine structured pruning paradigms and uncover several key limitations: 1) notable performance degradation due to direct layer removal, 2) incompetent linear weight layer aggregation, and 3) the lack of effective post-training recovery mechanisms. To address these limitations, we propose CoMe, including a progressive layer pruning framework with a Concatenation-based Merging technology and a hierarchical distillation post-training process. Specifically, we introduce a channel sensitivity metric that utilizes activation intensity and weight norms for fine-grained channel selection. Subsequently, we employ a concatenation-based layer merging method to fuse the most critical channels across adjacent layers, enabling progressive model size reduction. Finally, we propose a hierarchical distillation protocol that leverages the correspondences between the original and pruned model layers established during pruning, thereby enabling efficient knowledge transfer. Experiments on seven benchmarks show that CoMe achieves state-of-the-art performance; when pruning 30% of LLaMA-2-7b's parameters, the pruned model retains 83% of its original average accuracy. Our code is available at https://github.com/MPI-Lab/CoMe.",
+      "identifiers": [
+        "SemanticScholar:f1f197a33558d5b410d738bf4e5d932c98d9a628"
+      ],
+      "semantic_scholar_id": "f1f197a33558d5b410d738bf4e5d932c98d9a628",
+      "canonical_id": "arXiv:2510.15304",
+      "arxiv_id": "2510.15304",
+      "doi": "10.48550/arXiv.2510.15304",
+      "authors": [
+        "Fei Wang",
+        "Liping Shen",
+        "Liang Ding",
+        "Chao Xue",
+        "Ye Liu",
+        "Changxing Ding"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 405,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "LLMの層構造プルーニングに際し、隣接層の重要チャネルを連結で融合するCoMeと階層蒸留による回復学習を組み合わせ、能力を保ちながらモデルサイズと計算・保存コストを削減する推論向け圧縮手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-30837c0fc7f9",
+    "round": "libimp-30837c0fc7f9c7c5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-30837c0fc7f9c7c5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-30837c0fc7f9c7c5-pre01.json",
+    "receipt": "sha256:4be703a0be34aac07e28ef13d072372715ee775e288088f101fb42447e115bb4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-30837c0fc7f9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

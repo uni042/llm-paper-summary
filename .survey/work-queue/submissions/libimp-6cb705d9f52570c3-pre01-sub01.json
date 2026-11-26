@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SparseForge: Efficient Semi-Structured LLM Sparsification via Annealing of Hessian-Guided Soft-Mask",
+      "source_url": "https://arxiv.org/abs/2605.06402",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Semi-structured sparsity provides a practical path to accelerate large language models (LLMs) with native hardware support, but post-training semi-structured pruning often suffers from substantial quality degradation due to strong structural coupling. Existing methods rely on large-scale sparse retraining to recover accuracy, resulting in high computational cost. We propose SparseForge, a post-training framework that improves recovery efficiency by directly optimizing the sparsity mask rather than scaling up retraining tokens. SparseForge combines Hessian-aware importance estimation with progressive annealing of soft masks into hardware-executable structured sparsity, enabling stable and efficient sparse recovery. On LLaMA-2-7B under 2:4 sparsity, SparseForge achieves 57.27% average zero-shot accuracy with only $\\textbf{5B}$ retraining tokens, surpassing the dense model's 56.43% accuracy and approaching the 57.52% result of a state-of-the-art method using $\\textbf{40B}$ tokens. Such improvements on the accuracy-efficiency trade-off from SparseForge are shown to be consistent across model families.",
+      "identifiers": [
+        "SemanticScholar:f5d409c9c4328389b4d168a902db7133f1fa0e82"
+      ],
+      "semantic_scholar_id": "f5d409c9c4328389b4d168a902db7133f1fa0e82",
+      "canonical_id": "arXiv:2605.06402",
+      "arxiv_id": "2605.06402",
+      "doi": "10.48550/arXiv.2605.06402",
+      "authors": [
+        "Han-Lin Liu",
+        "Chao-Fan Lin",
+        "Wei-Xuan Sun",
+        "Yulong Wang",
+        "Rayying",
+        "Ming-Yu Gao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SparseForgeはHessian誘導のソフトマスクアニーリングで2:4半構造スパース化を学習後処理として行い、ハードウェア支援のあるLLM推論高速化を少ない再学習トークンで実現する直接の圧縮・高速化手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TORINO: Token Reduction via Interpretable Concept Overlap in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2607.04593",
+      "year": 2026,
+      "published": "2026-07-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have demonstrated impressive capabilities across different tasks, but their computational cost is dominated by the large number of visual tokens fed to the language model. Existing token reduction methods rely on attention-based scores or pairwise similarity, without an explicit semantic representation of each token. We introduce TORINO (TOken Reduction via Interpretable coNcept Overlap), a plug-and-play framework for adaptive visual token reduction in VLMs that requires no fine-tuning of the underlying model. TORINO leverages Sparse Autoencoders (SAEs) to project visual tokens into an interpretable latent space where token relationships can be analyzed through shared concept activations. Specifically, we define concept overlap as the degree of agreement between active SAE latents and use it to group tokens that share semantic content. Reduction within each group is then performed by either pruning or merging, providing a unified framework that preserves semantically important visual information while removing redundancy. Unlike fixed-budget approaches, TORINO dynamically adapts the reduction rate to input complexity, allowing different images to retain different numbers of tokens. Experiments across multiple vision-language benchmarks show that TORINO achieves favorable efficiency-accuracy trade-offs, reducing the number of visual tokens with minimal performance loss. Source code released at https://eidoslab.github.io/TORINO.",
+      "identifiers": [
+        "SemanticScholar:8bbc97a18629e909c32dd71575ea9a2d8cd20469"
+      ],
+      "semantic_scholar_id": "8bbc97a18629e909c32dd71575ea9a2d8cd20469",
+      "canonical_id": "arXiv:2607.04593",
+      "arxiv_id": "2607.04593",
+      "doi": "10.48550/arXiv.2607.04593",
+      "authors": [
+        "Riccardo Renzulli",
+        "Gabriele Spadaro",
+        "Shruthi Gowda",
+        "A. Mazouz",
+        "Van-Tam Nguyen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TORINOはスパースオートエンコーダの概念重なりで視覚トークンを適応的に削減・統合し、VLMの推論コストを支配する視覚トークン数を学習なしで減らす直接の推論効率化手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6cb705d9f525",
+    "round": "libimp-6cb705d9f52570c3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6cb705d9f52570c3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6cb705d9f52570c3-pre01.json",
+    "receipt": "sha256:b80a38f6ebee1150a171db5310f6f52e7a4607e97e36c297c43ba08a5a1afe7c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6cb705d9f525",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

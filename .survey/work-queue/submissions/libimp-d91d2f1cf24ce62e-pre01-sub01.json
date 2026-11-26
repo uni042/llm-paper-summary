@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Design of Low-Latency Floating-Point Units for Softmax Computation in Transformer-Based Large Language Models",
+      "source_url": "https://doi.org/10.1109/IKT69652.2025.11626766",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "Conference on Information and Knowledge Technology",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have emerged as one of the most desirable and widely used interactive digital tools in the world in the last decade. Softmax is one of the key steps in LLMs where the output is a vector of probabilities for each token in the model dictionary. The softmax computation is time-consuming due to the large vocabulary size, which can significantly increase the exponential computations and normalization, impacting the overall speed of the model. Given the importance of accuracy and speed, some of the main operations and computations of softmax are performed on the floating-point units. Speculative computations are considered when the result of the computations can be estimated from a path shorter than the critical path, with improved speedup. In this paper, speculative 32-bit floating-point computation is proposed by merging two formats, 32-bit and 16-bit, for softmax computations. Both the floating-point adder and the floating-point multiplier use this strategy. The proposed design, based on the input data of the softmax function, speculates that the 32-bit floating-point computations can be obtained by concatenating the result of 16-bit format and a part of the 32-bit format result, that gives a correct result most of the time with less delay. If speculation is unsuccessful, the critical path through the conventional 32-bit floating-point unit is activated at the cost of a slightly longer critical path. Experimental results show that speculative floating-point units lead to a reduction in delay with only marginal overhead in area and power consumption.",
+      "identifiers": [
+        "SemanticScholar:52bb36374cb97104c8c0e18788d833b57bc0ee88"
+      ],
+      "semantic_scholar_id": "52bb36374cb97104c8c0e18788d833b57bc0ee88",
+      "doi": "10.1109/IKT69652.2025.11626766",
+      "canonical_id": "DOI:10.1109/IKT69652.2025.11626766",
+      "authors": [
+        "Hoda Ghabeli",
+        "A. Molahosseini"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 360,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformerのsoftmax演算を対象に、32bitと16bit形式を統合した投機的浮動小数点演算ユニットで低レイテンシ化を図るハードウェア設計であり、LLM推論のボトルネック演算への直接貢献が要旨で確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MLFormer: a high performance MPC linear inference framework for transformers",
+      "source_url": "https://doi.org/10.1007/s13389-024-00365-1",
+      "year": 2024,
+      "published": "2024-11-19",
+      "venue": "Journal of Cryptographic Engineering",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:cb5636f64e49438ad103c2205303cb3b5c25a6b7"
+      ],
+      "semantic_scholar_id": "cb5636f64e49438ad103c2205303cb3b5c25a6b7",
+      "doi": "10.1007/s13389-024-00365-1",
+      "canonical_id": "DOI:10.1007/s13389-024-00365-1",
+      "authors": [
+        "Siqi Liu",
+        "Zhu-Sen Liu",
+        "Dong-Long Chen",
+        "Wang-Chen Dai",
+        "Lu Zhou",
+        "Zhe Liu",
+        "Ray C. C. Cheung",
+        "Ç. Koç"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 737,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MPC下のTransformer私的推論枠組みとして、softmaxを線形アテンションへ置換しMPC向け指数・逆数プロトコルとCUDAカーネルで推論時間とGPUメモリを削減しており、推論システムへの直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Faster Lookup Table Evaluation with Application to Secure LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/90126e2e4684781200b8a0965e34fae6c9a09128",
+      "year": 2024,
+      "published": null,
+      "venue": "IACR Cryptology ePrint Archive",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:90126e2e4684781200b8a0965e34fae6c9a09128"
+      ],
+      "semantic_scholar_id": "90126e2e4684781200b8a0965e34fae6c9a09128",
+      "canonical_id": "SemanticScholar:90126e2e4684781200b8a0965e34fae6c9a09128",
+      "authors": [
+        "Xiaoyang Hou",
+        "Jian Liu",
+        "Jing-Yu Li",
+        "Jia-Wen Zhang",
+        "Kui Ren"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 878,
+        "matched_prestigious_venue": null
+      },
+      "reason": "セキュア2者計算でのLLM推論に不可欠なルックアップテーブル評価について、秘密共有ローテーションに基づくROTLプロトコルでFLUTE比最大11.6倍の高速化を示しており、安全なLLM推論への直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VLM-PTQ: Efficient Post-Training Quantization for Large Vision-Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+      "year": 2026,
+      "published": null,
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:eab8a215a82ad635c5ef61daf1d87af1fe9bceaf"
+      ],
+      "semantic_scholar_id": "eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+      "canonical_id": "SemanticScholar:eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+      "authors": [
+        "Juncan Deng",
+        "Ke-Jie Huang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      },
+      "reason": "大規模視覚言語モデルの学習後量子化として、残差を考慮した閉形式補正項とモダリティ-awareな量子化で低ビット時の精度劣化を抑えるVLM-PTQを提案し、推論時のメモリ・計算削減に直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d91d2f1cf24c",
+    "round": "libimp-d91d2f1cf24ce62e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d91d2f1cf24ce62e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d91d2f1cf24ce62e-pre01.json",
+    "receipt": "sha256:27f39ead68b21a5108d07a37c52714c618ce5238ebc1a6efeed41c4e19c6eba7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d91d2f1cf24c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

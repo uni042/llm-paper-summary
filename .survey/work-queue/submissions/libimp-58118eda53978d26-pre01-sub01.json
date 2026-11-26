@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Weight Clustering Reveals the Importance of Relative Rank in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.17917",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) contain billions of parameters, but many exact weight values are not essential. We apply scalar $K$-means clustering to pretrained models, replacing each weight matrix with only 16--64 shared values. For Llama~3.1-8B-Instruct and SmolLM2-135M, this preserves strong accuracy without retraining, providing a simple way to compress LLMs on disk. Fine-tuning only the cluster centroids further recovers 30--40\\% of the remaining accuracy loss. Using clustering as an analysis tool, we then keep the cluster assignments fixed and perturb only the shared values, to study which of their properties matter most. We find that preserving their \\emph{relative rank} (which connections are stronger or weaker than others) is more important than preserving their exact magnitudes. Breaking this ordering greatly increases perplexity, while changing the values but keeping the ordering causes little loss in many middle and late layers. However, rank preservation alone is not sufficient. Model performance also depends on maintaining the variance of the reconstructed weights, while early layers remain more sensitive; perturbing the cluster assignments themselves shows that their spatial geometry is also load-bearing. We observe the same behavior across four LLMs from two architecture families. These results suggest that the ordering of weights, together with their overall variance, plays a central role in LLM compression and robustness.",
+      "identifiers": [
+        "SemanticScholar:12016f03374c06cdc0e0ec3635c32f4077507a65"
+      ],
+      "semantic_scholar_id": "12016f03374c06cdc0e0ec3635c32f4077507a65",
+      "canonical_id": "arXiv:2603.17917",
+      "arxiv_id": "2603.17917",
+      "authors": [
+        "Borja Aizpurua",
+        "Sukhbinder Singh",
+        "R. Orús"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": null
+      },
+      "reason": "事前学習済みLLMの重みをスカラーK-meansで16〜64個の共有値へ置換し再学習なしで精度を保つ重みクラスタリングを示しており、モデル圧縮による推論メモリ削減へ直接つながる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-58118eda5397",
+    "round": "libimp-58118eda53978d26-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-58118eda53978d26-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-58118eda53978d26-pre01.json",
+    "receipt": "sha256:09b7260f0029c518cca11744b90e2baa7d808ac6d5124db9920e6548be26102b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-58118eda5397",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
