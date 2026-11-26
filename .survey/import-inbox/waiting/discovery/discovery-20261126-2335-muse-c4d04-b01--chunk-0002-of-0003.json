@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c4d04-b01::chunk-0002-of-0003",
+  "reference_main_sha": "0ec0a4cfc977ffd362699fec9e1fb456798e70c2",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.02797",
+      "identity_tokens": [
+        "arXiv:2407.02797"
+      ],
+      "title": "Solving Motion Planning Tasks with a Scalable Generative Model",
+      "reason": "自動運転場面の生成モデルによるスケーラブルなシミュレータ構築を扱う論文であり、LLM推論システムへの直接の技術的貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2407.02797",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.18581",
+      "identity_tokens": [
+        "arXiv:2505.18581"
+      ],
+      "title": "Removal of Hallucination on Hallucination: Debate-Augmented RAG",
+      "reason": "多エージェント討論を検索と生成の両段階に組み込む訓練不要のRAGフレームワークDRAGで、推論時パイプラインの改良ではあるが主目的は事実性向上であり推論システムの効率化機構は示されていない。",
+      "source_url": "https://arxiv.org/abs/2505.18581",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2006.16378",
+      "identity_tokens": [
+        "arXiv:2006.16378"
+      ],
+      "title": "An EM Approach to Non-autoregressive Conditional Sequence Generation",
+      "reason": "自己回帰モデルの高推論レイテンシに対し非自己回帰モデルとEM枠組みで統合最適化し、並列生成による系列生成の高速化を図るデコード手法であり、推論レイテンシ削減への直接の技術的貢献が要旨で確認できる。",
+      "source_url": "https://arxiv.org/abs/2006.16378",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.02128",
+      "identity_tokens": [
+        "arXiv:2406.02128"
+      ],
+      "title": "Iteration Head: A Mechanistic Study of Chain-of-Thought",
+      "reason": "Chain-of-ThoughtがTransformer内部に生じる機構をiteration headとして分析する解釈可能性研究であり、推論システムの高速化や実装への技術的貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2406.02128",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 480
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2211.09961",
+      "identity_tokens": [
+        "arXiv:2211.09961"
+      ],
+      "title": "Path Independent Equilibrium Models Can Better Exploit Test-Time Computation",
+      "reason": "推論予算を増やすほど性能が上がる平衡モデルとtest-time computationの関係を論じ、推論時計算のスケーリングに関わるが、対象はモデルアーキテクチャ理論でありサービング等のシステム機構は示されていない。",
+      "source_url": "https://arxiv.org/abs/2211.09961",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 481
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.05249",
+      "identity_tokens": [
+        "arXiv:2110.05249"
+      ],
+      "title": "A Comparative Study on Non-Autoregressive Modelings for Speech-to-Text Generation",
+      "reason": "音声認識向け非自己回帰モデルの比較研究で、NARによる推論速度向上と精度低下のトレードオフを実測比較する点はデコード効率に関連するが、対象はASR応用であり新たな推論システム機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2110.05249",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 482
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.12759",
+      "identity_tokens": [
+        "arXiv:2503.12759"
+      ],
+      "title": "RAG-RL: Advancing Retrieval-Augmented Generation via RL and Curriculum Learning",
+      "reason": "RAGの生成モデルを強化学習とカリキュラム学習で訓練し検索文脈の引用まで担わせるRAG-RLで、検索生成パイプラインには関わるが中心は生成モデルの訓練であり推論システムへの貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2503.12759",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 483
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1812.06834",
+      "identity_tokens": [
+        "arXiv:1812.06834"
+      ],
+      "title": "A Tutorial on Deep Latent Variable Models of Natural Language",
+      "reason": "自然言語向け深層潜在変数モデルのチュートリアルであり、事後推論の困難さは論じるもののLLM推論システムやサービング技術への直接の貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/1812.06834",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 484
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04736",
+      "identity_tokens": [
+        "arXiv:2504.04736"
+      ],
+      "title": "Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use",
+      "reason": "多段階推論とツール利用向けの合成データ生成と段階的強化学習SWiRLの提案であり、対象はLLMの訓練手法で推論システムへの技術的貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2504.04736",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 485
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.11693",
+      "identity_tokens": [
+        "arXiv:2510.11693"
+      ],
+      "title": "Scaling Language-Centric Omnimodal Representation Learning",
+      "reason": "言語中心のオムニモーダル表現学習のスケーリングと異方性分析を扱う表現学習論文であり、推論システムの機構や効率化への直接の貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2510.11693",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 486
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09394",
+      "identity_tokens": [
+        "arXiv:2407.09394"
+      ],
+      "title": "PersonaRAG: Enhancing Retrieval-Augmented Generation Systems with User-Centric Agents",
+      "reason": "ユーザー中心エージェントで検索と生成を個人化するPersonaRAGの提案で、RAGの推論時パイプライン改良ではあるが主目的は回答のパーソナライズであり推論システムの効率化機構は示されていない。",
+      "source_url": "https://arxiv.org/abs/2407.09394",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 488
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18342",
+      "identity_tokens": [
+        "arXiv:2507.18342"
+      ],
+      "title": "EgoExoBench: A Benchmark for First- and Third-person View Video Understanding in MLLMs",
+      "reason": "一人称・三人称視点間の動画理解を測るMLLMベンチマークEgoExoBenchの提案であり、推論システムへの技術的貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2507.18342",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.09486",
+      "identity_tokens": [
+        "arXiv:2203.09486"
+      ],
+      "title": "An Imitation Learning Curriculum for Text Editing with Non-Autoregressive Models",
+      "reason": "テキスト編集向け非自己回帰系列変換モデルを模倣学習で訓練し訓練時と推論時の不一致を緩和する研究で、NARデコードには関連するが貢献の中心は編集タスク向け訓練手法であり推論システム機構ではない。",
+      "source_url": "https://arxiv.org/abs/2203.09486",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.18070",
+      "identity_tokens": [
+        "arXiv:2504.18070"
+      ],
+      "title": "PropRAG: Guiding Retrieval with Beam Search over Proposition Paths",
+      "reason": "命題パス上のビームサーチで検索を誘導するPropRAGの提案で、RAGの検索段階を推論時に改良するが主目的は多ホップ推論の忠実度であり推論システムの効率化への貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2504.18070",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.18141",
+      "identity_tokens": [
+        "arXiv:2410.18141"
+      ],
+      "title": "SmartRAG: Jointly Learn RAG-Related Tasks From the Environment Feedback",
+      "reason": "検索の要否判断・クエリ書き換え・回答生成を担うポリシーネットワークと検索器を共同学習するSmartRAGで、推論時パイプラインの最適化には関わるが中心はRAGのタスク性能でありシステム機構の貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2410.18141",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.13879",
+      "identity_tokens": [
+        "arXiv:2308.13879"
+      ],
+      "title": "The DiffuseStyleGesture+ entry to the GENEA Challenge 2023",
+      "reason": "会話ジェスチャ生成チャレンジGENEA向けの拡散モデルDiffuseStyleGesture+の報告であり、LLM推論システムへの技術的貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2308.13879",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.02064",
+      "identity_tokens": [
+        "arXiv:2505.02064"
+      ],
+      "title": "RTV-Bench: Benchmarking MLLM Continuous Perception, Understanding and Reasoning through Real-Time Video",
+      "reason": "リアルタイム動画ストリームでのMLLMの知覚・理解・推論を測るRTV-Benchベンチマークの提案であり、推論システム自体の高速化や効率化の貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2505.02064",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.08220",
+      "identity_tokens": [
+        "arXiv:2307.08220"
+      ],
+      "title": "Franc: A Lightweight Framework for High-Quality Code Generation",
+      "reason": "コード生成結果の脆弱性等の品質問題に対し再学習なしで安全なコードを推薦する軽量フレームワークFrancの提案であり、推論システムへの技術的貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2307.08220",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.02097",
+      "identity_tokens": [
+        "arXiv:2507.02097"
+      ],
+      "title": "The Future is Agentic: Definitions, Perspectives, and Open Challenges of Multi-Agent Recommender Systems",
+      "reason": "マルチエージェント推薦システムの定義と展望を論じるパースペクティブ論文であり、LLM推論システムの機構や効率化への直接の貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2507.02097",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09893",
+      "identity_tokens": [
+        "arXiv:2407.09893"
+      ],
+      "title": "Synergistic Multi-Agent Framework with Trajectory Learning for Knowledge-Intensive Tasks",
+      "reason": "外部知識を用いる4つの専門エージェントで知識集約タスクの事実一貫性を高めるSMARTフレームワークで、マルチエージェント推論構成には関わるが主目的は応答品質であり推論システムの効率化機構は示されていない。",
+      "source_url": "https://arxiv.org/abs/2407.09893",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 499
+    }
+  ],
+  "parent_run_key": "muse-20261126-c4d04-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 41
+}

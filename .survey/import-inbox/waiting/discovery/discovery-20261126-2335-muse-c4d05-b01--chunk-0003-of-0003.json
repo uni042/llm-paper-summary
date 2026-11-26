@@ -1,0 +1,270 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c4d05-b01::chunk-0003-of-0003",
+  "reference_main_sha": "0ec0a4cfc977ffd362699fec9e1fb456798e70c2",
+  "record_count": 15,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.00966",
+      "identity_tokens": [
+        "arXiv:2405.00966"
+      ],
+      "title": "Efficient Compression of Multitask Multilingual Speech Models",
+      "reason": "多タスク多言語音声モデルWhisperの圧縮を検討し量子化が低資源言語や話者属性へのバイアスを増幅することを分析した研究で、量子化の影響分析としては関連するが音声モデル固有の評価であり推論機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2405.00966",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 340
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10354",
+      "identity_tokens": [
+        "arXiv:2503.10354"
+      ],
+      "title": "A Hybrid Architecture with Efficient Fine Tuning for Abstractive Patent Document Summarization",
+      "reason": "特許文書の抽象的要約のために効率的微調整を備えたハイブリッドアーキテクチャを提案した応用研究であり、文書要約タスクが主目的で推論システムへの技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2503.10354",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 341
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3731545.3731581",
+      "identity_tokens": [
+        "DOI:10.1145/3731545.3731581"
+      ],
+      "title": "SAFusion: Efficient Tensor Fusion with Sparsification Ahead for High-Performance Distributed DNN Training",
+      "reason": "分散DNN学習の勾配テンソル融合をスパース化の前倒しで改善するSAFusionの提案であり、通信効率化の対象は学習時の勾配同期であって推論ではないため対象外である。",
+      "source_url": "https://doi.org/10.1145/3731545.3731581",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 342
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.06825",
+      "identity_tokens": [
+        "arXiv:2408.06825"
+      ],
+      "title": "Membership Inference Attack Against Masked Image Modeling",
+      "reason": "マスク画像モデリングで事前学習したエンコーダへのメンバーシップ推論攻撃を提案したプライバシー研究であり、ここでの推論は攻撃手法を指しモデル推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2408.06825",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 343
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3710434",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3710434"
+      ],
+      "title": "Accelerating Safety-Critical Automotive Software Development Through Reproducible AI-Assisted Requirements Engineering",
+      "reason": "安全-criticalな自動車ソフトウェアの要求工学を再現可能なAI支援で加速するCADREの提案であり、要求仕様の生成と追跡可能性が対象で推論システムへの技術的貢献はない。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3710434",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 344
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3067061",
+      "identity_tokens": [
+        "DOI:10.1117/12.3067061"
+      ],
+      "title": "Memory access coalescing optimization based on Triton compiler",
+      "reason": "Tritonコンパイラのメモリアクセス合体最適化を改善し奇数サイズテンソルでも合体アクセスやベクトル化を可能にしてカーネルを高速化した研究で、カーネル最適化としては関連するが対象は汎用コンパイラパスであり推論特化の評価は要旨にない。",
+      "source_url": "https://doi.org/10.1117/12.3067061",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 345
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:b71400329f26de5a0f163941ae0f1f51c202dd0e",
+      "identity_tokens": [
+        "SemanticScholar:b71400329f26de5a0f163941ae0f1f51c202dd0e"
+      ],
+      "title": "Using Decoder-Based Distillation for Enhancing Multilingual Clinical Case Report Summarization",
+      "reason": "臨床ケースレポートの多言語要約のためにQwen2.5の72Bから0.5Bへ蒸留する教師生徒枠組みの応用研究であり、医療文書要約が主目的で推論システムへの貢献は確認できない。",
+      "source_url": "https://www.semanticscholar.org/paper/b71400329f26de5a0f163941ae0f1f51c202dd0e",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 346
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.13975",
+      "identity_tokens": [
+        "arXiv:2208.13975"
+      ],
+      "title": "MRL: Learning to Mix with Attention and Convolutions",
+      "reason": "自己注意と畳み込みを組み合わせて特徴を混合する視覚向けニューラルブロックMRLの提案であり、画像認識のアーキテクチャ研究でLLM推論システムへの貢献は要旨に示されていない。",
+      "source_url": "https://arxiv.org/abs/2208.13975",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 347
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.11939",
+      "identity_tokens": [
+        "arXiv:2511.11939"
+      ],
+      "title": "Modular GPU Programming with Typed Perspectives",
+      "reason": "集団演算を含むGPUプログラムのモジュール性を型付きパースペクティブで回復するGPU言語Prismの提案で、GPUカーネル開発基盤としては関連するが推論ワークロード特化の設計や評価は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2511.11939",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 348
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MCSoC64144.2024.00072",
+      "identity_tokens": [
+        "DOI:10.1109/MCSoC64144.2024.00072"
+      ],
+      "title": "A Stacked FPGA utilizing 3D-SRAM with Latency Optimization",
+      "reason": "3D-SRAMを用いた大入力LUTのFPGAをシミュレータで評価し遅延最適化を論じたハードウェア研究であり、AIアクセラレータ一般には関係するが特定の推論システムやLLMワークロードでの検証は要旨にない。",
+      "source_url": "https://doi.org/10.1109/MCSoC64144.2024.00072",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 350
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1364/JOCN.563049",
+      "identity_tokens": [
+        "DOI:10.1364/JOCN.563049"
+      ],
+      "title": "Seamless data delivery for distributed AI workloads via dynamic queue scheduling and FPGA-based implementation in converged optical-electrical networks",
+      "reason": "光・電気融合データセンタネットワークで分散AIワークロード向けにキュー認識スケジューリングとFPGA実装を行う研究だが、対象トラフィックは分散深層学習の学習ジョブであり推論サービングへの直接の貢献は限定的である。",
+      "source_url": "https://doi.org/10.1364/JOCN.563049",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 351
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.06753",
+      "identity_tokens": [
+        "arXiv:2303.06753"
+      ],
+      "title": "Modular Quantization-Aware Training for 6D Object Pose Estimation",
+      "reason": "6次元物体姿勢推定ネットワーク向けにモジュール構造を利用した混合精度の量子化認識学習MQATを提案しており、量子化技術としては関連するが対象は姿勢推定という視覚タスク固有のモデル圧縮である。",
+      "source_url": "https://arxiv.org/abs/2303.06753",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 353
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.14404",
+      "identity_tokens": [
+        "arXiv:2406.14404"
+      ],
+      "title": "Predicting Probabilities of Error to Combine Quantization and Early Exiting: QuEE",
+      "reason": "量子化と早期終了を組み合わせた動的ネットワークQuEEを提案し、誤差確率の予測に基づいて推論時の計算量を削減する一般的な枠組みを提示しており、推論計算削減への直接の技術的貢献が要旨で具体的に確認できる。",
+      "source_url": "https://arxiv.org/abs/2406.14404",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 354
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.19086",
+      "identity_tokens": [
+        "arXiv:2509.19086"
+      ],
+      "title": "Scheduler-Driven Job Atomization",
+      "reason": "MIG構成のGPUクラスタでジョブを原子化しスケジューラと双方向に連携させるSJAを提案しており、GPUスケジューリングとしては関連するが対象は汎用GPUジョブであり推論サービング特化の仕組みや評価は要旨に示されていない。",
+      "source_url": "https://arxiv.org/abs/2509.19086",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 355
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.23767",
+      "identity_tokens": [
+        "arXiv:2512.23767"
+      ],
+      "title": "Enabling Physical AI at the Edge: Hardware-Accelerated Recovery of System Dynamics",
+      "reason": "エッジでの物理AI向けにNeural ODEベースのモデル回復をハードウェア加速する研究であり、エッジ推論の文脈はあるが対象はセンサデータからの力学同定という特殊用途でLLM推論システムとの関係は薄い。",
+      "source_url": "https://arxiv.org/abs/2512.23767",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 356
+    }
+  ],
+  "parent_run_key": "muse-20261126-c4d05-b01",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 55
+}

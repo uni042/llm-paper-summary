@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c4d01-b01::chunk-0001-of-0002",
+  "reference_main_sha": "0ec0a4cfc977ffd362699fec9e1fb456798e70c2",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-35492-8",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-35492-8"
+      ],
+      "title": "Automated identification of contextually relevant biomedical entities with grounded LLMs",
+      "reason": "研究論文中の生物医学エンティティ注釈をLLMの生成ワークフローで自動化し精度をメタ解析で評価した研究であり、対象は生物医学文献への応用そのもので、推論システムへの技術的貢献は要旨に示されていないためunrelatedとした。",
+      "source_url": "https://doi.org/10.1038/s41598-026-35492-8",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 247
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3806055",
+      "identity_tokens": [
+        "DOI:10.1145/3806055"
+      ],
+      "title": "Unlocking PIM-Core Capabilities for Efficient ANNS on Commodity Processing-in-Memory Hardware",
+      "reason": "UPMEM等のコモディティPIMハードウェア上で近似最近傍探索を高速化するPIMANNを提案しバッチスケジューリングの利用率問題を解くが、対象はANNSという検索基盤でありLLM推論そのものへの直接貢献ではないためborderlineとした。",
+      "source_url": "https://doi.org/10.1145/3806055",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 311
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.01945",
+      "identity_tokens": [
+        "arXiv:2507.01945"
+      ],
+      "title": "LongAnimation: Long Animation Generation with Dynamic Global-Local Memory",
+      "reason": "動画生成モデルによる長編アニメーションの自動彩色を扱い、動的グローバル・ローカルメモリで色一貫性を保つLongAnimationの提案であり、対象はアニメ制作という応用生成タスクで、LLM推論システムへの貢献は確認できないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2507.01945",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 313
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03806",
+      "identity_tokens": [
+        "arXiv:2603.03806"
+      ],
+      "title": "Separators in Enhancing Autoregressive Pretraining for Vision Mamba",
+      "reason": "視覚Mambaの自己回帰事前学習に画像境界を示す分離子を導入し系列長を伸ばすSTARの提案であり、対象は視覚モデルの事前学習手法であって、推論時の実行効率やサービング機構を扱っていないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2603.03806",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 314
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07863",
+      "identity_tokens": [
+        "arXiv:2604.07863"
+      ],
+      "title": "Task-Adaptive Retrieval over Agentic Multi-Modal Web Histories via Learned Graph Memory",
+      "reason": "エージェントのマルチモーダルなウェブ操作履歴から関連観測を検索する学習型グラフメモリ検索器ACGMの提案であり、評価軸も検索品質とタスク成功であって、LLM推論・サービング機構への直接の技術的貢献は要旨に確認できないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2604.07863",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 315
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08633",
+      "identity_tokens": [
+        "arXiv:2605.08633"
+      ],
+      "title": "Transforming the Use of Earth Observation Data: Exascale Training of a Generative Compression Model with Historical Priors for up to 10,000x Data Reduction",
+      "reason": "地球観測データの生成圧縮モデルをエクサスケールで学習し最大1万倍のデータ削減を目指す研究であり、カーネルや並列化の共最適化も地球観測データ処理と学習が主目的で、LLM推論システムへの貢献は確認できないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2605.08633",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 316
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.18254",
+      "identity_tokens": [
+        "arXiv:2607.18254"
+      ],
+      "title": "Cross-Dialect Generalization Without Retraining: Benchmarks and Evaluation of Schema-Derived Constrained Decoding for MLIR",
+      "reason": "MLIR方言の仕様から機械的に導いた推論時事前分布によるスキーマ由来制約付きデコードを扱うが、主たる成果は自然言語からMLIRを生成するベンチマークと生成精度であり、推論システムとしての効率や機構の改善は示されていないためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2607.18254",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 317
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.03026",
+      "identity_tokens": [
+        "arXiv:2608.03026"
+      ],
+      "title": "Pruning-Aware Multi-Cluster Co-Inference for Large AI Models in AI-RANs",
+      "reason": "複数ユーザクラスタとGPU搭載エッジサーバが協調して大規模AIモデルの推論を実行するマルチクラスタ協調推論フレームワークを提案し、枝刈り率と協調推論性能のトレードオフを理論的に特徴付けており、分散推論への直接貢献が要旨で確認できるためacceptとした。",
+      "source_url": "https://arxiv.org/abs/2608.03026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 318
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24971",
+      "identity_tokens": [
+        "arXiv:2609.24971"
+      ],
+      "title": "DolphinBench: Mapping the Pareto Frontier of Agent Memory",
+      "reason": "エージェントの長期記憶を、会話QAではなく知識労働タスクの完遂で評価するベンチマークDolphinBenchの提案であり、評価対象はエージェント記憶システムであってLLM推論・サービング機構ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2609.24971",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 319
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39067",
+      "identity_tokens": [
+        "arXiv:2609.39067"
+      ],
+      "title": "Argus: A Real-EKS Study of When Predicting Spot Interruptions Beats Simple Checkpointing",
+      "reason": "EC2スポット中断を予測するか単純なチェックポイントで対処するかを実EKS環境で比較するArgusの研究であり、対象は多ノード学習ジョブの耐障害運用であって、LLM推論システムへの直接貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2609.39067",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 320
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.04837",
+      "identity_tokens": [
+        "arXiv:2610.04837"
+      ],
+      "title": "CARET: Training-Free Test-Time Scaling for Repository-Level Code Completion",
+      "reason": "リポジトリ規模コード補完で、キャッシュ済みプロンプト接頭辞を再利用して候補サンプリングを行い長い検索文脈を一度だけ符号化するテスト時スケーリング手法CARETを提案しており、接頭辞キャッシュ活用による生成段階の推論効率化が具体的に示されているためacceptとした。",
+      "source_url": "https://arxiv.org/abs/2610.04837",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 321
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07175",
+      "identity_tokens": [
+        "arXiv:2610.07175"
+      ],
+      "title": "CALR: Continuous Anchored Latent Reasoning via Render-of-Thought Compression",
+      "reason": "レンダリングした導出を潜在状態へ圧縮してテキスト推論のオーバーヘッドを減らす潜在推論手法CALRを提案するが、内容は潜在表現の学習と推論内容の保持というモデル側の表現学習が中心で、サービングや実行機構への貢献は間接的であるためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2610.07175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 322
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.08586",
+      "identity_tokens": [
+        "arXiv:2610.08586"
+      ],
+      "title": "MINDSET: Energy-based Memory Evolution for Long Conversational Agents",
+      "reason": "長期対話エージェントの記憶を、LLM呼び出しなしのエネルギー目的関数で版管理するメモリ制御器MINDSETの提案であり、扱うのはエージェント記憶の一貫性管理であって、LLMの推論実行やサービングの機構ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.08586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 323
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.16691",
+      "identity_tokens": [
+        "arXiv:2610.16691"
+      ],
+      "title": "StageBreaker: Shifting Video RL Post-Training Scheduling from Stages down to Data Dependencies",
+      "reason": "自己回帰動画モデルの強化学習ポストトレーニングを、段階単位からデータ依存単位へ細粒度化してスケジューリングするStageBreakerの提案であり、対象は学習・ポストトレーニングの実行基盤であって推論サービングではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.16691",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 324
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20836",
+      "identity_tokens": [
+        "arXiv:2610.20836"
+      ],
+      "title": "Confidence-Calibrated Inference Expansion for Evaluator-Guided Test-Time Reasoning",
+      "reason": "評価器ガイド付き推論の拡張可否を、成功予測とロールアウト継続成功の代理指標で判定し計算コストを明示的に価格付けする制御器を提案し、オンライン計算を約30%削減しており、テスト時推論計算の配分という推論システム課題への直接貢献が要旨で確認できるためacceptとした。",
+      "source_url": "https://arxiv.org/abs/2610.20836",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 325
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.27607",
+      "identity_tokens": [
+        "arXiv:2610.27607"
+      ],
+      "title": "What should AI forget? A design and taxonomy for negative space governance in AI memory",
+      "reason": "AIメモリに保存すべきでない情報の分類と、カテゴリ規則で記憶投入を遮断する政策ゲートFENCEの利用者研究であり、内容は記憶ガバナンスとHCI設計であって、LLM推論システムの技術ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.27607",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 326
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32448",
+      "identity_tokens": [
+        "arXiv:2610.32448"
+      ],
+      "title": "POSEIDON: Scaling Training Environments for Scientific Agents from Code Repositories",
+      "reason": "科学コードリポジトリから検証可能な学習環境を大規模に自動生成するPOSEIDONと環境集合Pearlの構築であり、対象は科学エージェントの学習環境供給であって、LLM推論システムへの技術的貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.32448",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 327
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.02912",
+      "identity_tokens": [
+        "arXiv:2611.02912"
+      ],
+      "title": "A State Change Is Local, Its Consequences Are Not: Dependency-Aware State Revision for Long-Term Agent Memory",
+      "reason": "長期エージェント記憶で上流事実の変更が依存する状態へ波及する問題を、依存グラフと反実仮想検証で改訂するStateGraphの提案であり、扱うのはエージェント記憶の整合性であってLLM推論実行機構ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2611.02912",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 328
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.21917",
+      "identity_tokens": [
+        "arXiv:2611.21917"
+      ],
+      "title": "Lost in a Few Heads: Diagnosing and Repairing Block Selection in Sparse Attention",
+      "reason": "スパース注意のブロック選択が長文脈検索精度を落とす原因をヘッド単位で診断し、選択され損なった針への注意量と対数確率回復量から盲点ヘッドを特定して修復する手法を示しており、スパース注意機構そのものへの直接の技術的貢献が確認できるためacceptとした。",
+      "source_url": "https://arxiv.org/abs/2611.21917",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 329
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.09456",
+      "identity_tokens": [
+        "arXiv:2504.09456"
+      ],
+      "title": "Don't Deceive Me: Mitigating Gaslighting through Attention Reallocation in LMMs",
+      "reason": "大規模マルチモーダルモデルが否定的な誤誘導入力に惑わされるガスライティング脆弱性を、注意重み再配分で緩和するGasEraserの提案であり、目的はモデルの頑健性向上であって推論システムの効率や実行機構への貢献ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2504.09456",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T23:35:00+09:00",
+      "last_checked_at": "2026-11-26T23:35:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 330
+    }
+  ],
+  "parent_run_key": "muse-20261126-c4d01-b01",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 23
+}
