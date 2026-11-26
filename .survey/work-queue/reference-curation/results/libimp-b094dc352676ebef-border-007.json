@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b094dc352676ebef-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.03009",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.03009",
+    "identity_tokens": [
+      "arXiv:2508.03009"
+    ],
+    "reason": "長動画QAでMLLMが処理するフレームを場面局所化で絞り込む手法であり、推論時の入力削減に関わるが、主目的は動画QAの精度向上で推論機構自体の提案ではない。",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T00:55:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Enhancing Long Video Question Answering with Scene-Localized Frame Grouping"
+  },
+  "processed_at": "2026-11-26T00:55:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b094dc352676",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

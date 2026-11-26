@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fab47166a37f0e40-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.17643",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.17643",
+    "identity_tokens": [
+      "arXiv:2610.17643"
+    ],
+    "reason": "要旨の対象は企業ポリシー判断を学習するか推論させるかの運用比較であり、固定モデルの出力形式と安定性の評価であって推論システムの新しい機構や効率化は提案されていない。",
+    "first_checked_at": "2026-11-26T00:55:56+00:00",
+    "last_checked_at": "2026-11-26T00:55:56+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "When Should Enterprise Policy Decisions Be Learned, and When Should They Be Reasoned?"
+  },
+  "processed_at": "2026-11-26T00:55:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fab47166a37f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

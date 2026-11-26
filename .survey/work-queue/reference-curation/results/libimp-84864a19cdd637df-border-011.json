@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-84864a19cdd637df-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.20806",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.20806",
+    "identity_tokens": [
+      "arXiv:2607.20806"
+    ],
+    "reason": "軽量LLMをローカル・エッジ環境でエネルギー・実行時間・メモリの観点から実測するプロファイリング枠組みであり、推論計測には関連するがシステム最適化機構の提案ではない。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T00:55:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Profiling Lightweight Large Language Models"
+  },
+  "processed_at": "2026-11-26T00:55:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-84864a19cdd6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

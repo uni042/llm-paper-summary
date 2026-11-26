@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-84864a19cdd637df-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:56f32a568a3be4122c3399d79803c4976246d45b",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:56f32a568a3be4122c3399d79803c4976246d45b",
+    "identity_tokens": [
+      "SemanticScholar:56f32a568a3be4122c3399d79803c4976246d45b"
+    ],
+    "reason": "NLPにおける深層学習の解釈可能性・頑健性・効率を概観する総説的章であり、特定のLLM推論システム技術の提案ではない。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T00:55:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Principled Approaches Applications Interpretability Robustness Efficiency Deep Learning Systems Natural Language Processing Computer Vision Mathematical Modeling"
+  },
+  "processed_at": "2026-11-26T00:55:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-84864a19cdd6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

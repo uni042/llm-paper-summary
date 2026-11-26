@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fab47166a37f0e40-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.35791",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.35791",
+    "identity_tokens": [
+      "arXiv:2609.35791"
+    ],
+    "reason": "要旨の対象はストリーミング全二重音声の意味的エンドポイント検出FD-VADという音声対話の応用モデルであり、LLM推論の効率や実行機構への貢献は確認できない。",
+    "first_checked_at": "2026-11-26T00:55:56+00:00",
+    "last_checked_at": "2026-11-26T00:55:56+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "FD-VAD: Semantic Endpoint Detection for Streaming Full-Duplex Speech"
+  },
+  "processed_at": "2026-11-26T00:55:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fab47166a37f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

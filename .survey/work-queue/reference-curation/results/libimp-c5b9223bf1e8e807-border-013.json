@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5b9223bf1e8e807-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.04077",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.04077",
+    "identity_tokens": [
+      "arXiv:2508.04077"
+    ],
+    "reason": "疎行列積をグラフ計算・GNN・科学計算横断で統一的に扱うサーベイで、推論カーネルと接点はあるがLLM推論に特化した機構や実測は示されていない。",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T00:55:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Ubiquitous Sparse Matrix-Matrix Products"
+  },
+  "processed_at": "2026-11-26T00:55:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5b9223bf1e8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

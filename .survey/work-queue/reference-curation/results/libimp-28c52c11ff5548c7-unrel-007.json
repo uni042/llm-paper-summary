@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-28c52c11ff5548c7-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.18312",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.18312",
+    "identity_tokens": [
+      "arXiv:2511.18312"
+    ],
+    "reason": "時系列データの拡散生成にMambaを適用する生成モデリング手法であり、プライバシー向け合成データ生成が目的でLLM推論とは無関係である。",
+    "first_checked_at": "2026-11-26T00:55:53+00:00",
+    "last_checked_at": "2026-11-26T00:55:53+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "DiM-TS: Bridge the Gap between Selective State Space Models and Time Series for Generative Modeling"
+  },
+  "processed_at": "2026-11-26T00:55:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-28c52c11ff55",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

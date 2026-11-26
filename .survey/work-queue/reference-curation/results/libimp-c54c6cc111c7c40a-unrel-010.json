@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c54c6cc111c7c40a-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:82c09015f3a18e35d6ddfbf4ce197b0a1f568c1e",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:82c09015f3a18e35d6ddfbf4ce197b0a1f568c1e",
+    "identity_tokens": [
+      "SemanticScholar:82c09015f3a18e35d6ddfbf4ce197b0a1f568c1e"
+    ],
+    "reason": "タイトル自体が科学論文に対する長文脈推論のベンチマーク評価であり、能力評価のみで推論システムへの直接の技術的貢献はない。",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T00:55:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Who Gets Cited Most? Benchmarking Long-Context Reasoning on Scientific Articles"
+  },
+  "processed_at": "2026-11-26T00:55:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c54c6cc111c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

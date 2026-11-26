@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a6aeecd68a8e474-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.02869",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.02869",
+    "identity_tokens": [
+      "arXiv:2502.02869"
+    ],
+    "reason": "要旨の対象はランダム化した世界でのメタ学習による文脈内強化学習の規模拡大であり、エージェントの学習手法であって推論時の実行効率への貢献は確認できない。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T00:55:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Towards Large-Scale In-Context Reinforcement Learning by Meta-Training in Randomized Worlds"
+  },
+  "processed_at": "2026-11-26T00:55:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a6aeecd68a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

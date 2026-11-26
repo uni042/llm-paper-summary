@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f82be3046b9a8ff-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.11935",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.11935",
+    "identity_tokens": [
+      "arXiv:2508.11935"
+    ],
+    "reason": "アナログCIMハードウェアの素子ばらつきに対する状態空間モデルの頑健性を射影分解で高めるHPDであり、推論ハードウェアと関連するが対象はSSM一般でありLLM推論への適用は確認できない。",
+    "first_checked_at": "2026-11-26T00:55:53+00:00",
+    "last_checked_at": "2026-11-26T00:55:53+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HPD: Hybrid Projection Decomposition for Robust State Space Models on Analog CIM Hardware"
+  },
+  "processed_at": "2026-11-26T00:55:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f82be3046b9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

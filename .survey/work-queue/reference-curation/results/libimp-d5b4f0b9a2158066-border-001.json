@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5b4f0b9a2158066-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:430783cbe639a504e2463f1ec7435c4a3772e6b7",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:430783cbe639a504e2463f1ec7435c4a3772e6b7",
+    "identity_tokens": [
+      "SemanticScholar:430783cbe639a504e2463f1ec7435c4a3772e6b7"
+    ],
+    "reason": "分析クエリ処理とAI推論を同居させる際のPCIeデータ移動ボトルネックに着目したGPU共有機構であり、推論ワークロードを含むが主対象はデータプラットフォーム側の資源共有である。",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T00:55:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Data Movement-Aware GPU Sharing for Data-Intensive Systems"
+  },
+  "processed_at": "2026-11-26T00:55:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5b4f0b9a215",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

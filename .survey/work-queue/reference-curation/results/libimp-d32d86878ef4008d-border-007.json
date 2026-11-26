@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d32d86878ef4008d-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.13019",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.13019",
+    "identity_tokens": [
+      "arXiv:2502.13019"
+    ],
+    "reason": "RAGで検索したチャンクを生成前に再構成する小型プラグインモジュールを提案するが、主目的は検索ノイズ除去による生成品質向上であり、推論効率の改善は副次的に触れる程度である。",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T00:55:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Oreo: A Plug-in Context Reconstructor to Enhance Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-11-26T00:55:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d32d86878ef4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a6aeecd68a8e474-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.17052",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.17052",
+    "identity_tokens": [
+      "arXiv:2607.17052"
+    ],
+    "reason": "要旨では視覚言語モデルの視覚エンコーダのブロックを進化探索で枝刈りし推論計算を減らすが、削減対象は視覚側の符号化に限られLLM本体のデコードやKVキャッシュ等の推論機構への貢献は確認できないため境界とする。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T00:55:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Searching for Task-Specific Vision Paths: Evolutionary Block Pruning Across Vision-Language Models"
+  },
+  "processed_at": "2026-11-26T00:55:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a6aeecd68a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a6aeecd68a8e474-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.07716",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.07716",
+    "identity_tokens": [
+      "arXiv:2610.07716"
+    ],
+    "reason": "要旨ではprefillのみの判定モデルに対する推論時計算配分JevCascadeを扱いキャッシュ済み初回分布の再利用は推論効率に関わるが、対象はメニュー採点型の判定モデルに限られ通常のLLM生成・サービングへの適用範囲が狭く貢献が限定的である。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T00:55:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "JevCascade: Readout Stability and Inference-Time Compute Allocation for Prefill-Only Decision Models"
+  },
+  "processed_at": "2026-11-26T00:55:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a6aeecd68a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

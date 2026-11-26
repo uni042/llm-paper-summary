@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92576c3dcbc000ad-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2307.09701",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2307.09701",
+    "identity_tokens": [
+      "arXiv:2307.09701"
+    ],
+    "reason": "要旨では推論を中心にモデル効率を総合的・現実的に測る標準化評価アリーナEfficiency Pentathlonを提案し推論効率の計測基盤には関わるが、提示されるのは評価手法であり推論を高速化する機構ではないため境界とする。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T00:55:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficiency Pentathlon: A Standardized Arena for Efficiency Evaluation"
+  },
+  "processed_at": "2026-11-26T00:55:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92576c3dcbc0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

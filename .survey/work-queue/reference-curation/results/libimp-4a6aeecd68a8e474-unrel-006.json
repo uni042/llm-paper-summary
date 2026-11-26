@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a6aeecd68a8e474-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:b93b2799ad3e9ac9cb2b6764e4dde6b9a2fb1f6a",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:b93b2799ad3e9ac9cb2b6764e4dde6b9a2fb1f6a",
+    "identity_tokens": [
+      "SemanticScholar:b93b2799ad3e9ac9cb2b6764e4dde6b9a2fb1f6a"
+    ],
+    "reason": "取得した要旨の内容は視覚言語行動モデルのオープン世界での頑健性と失敗モード分類に関する枠組み・調査であり、推論システムの効率や実行機構への技術的貢献は確認できない。",
+    "first_checked_at": "2026-11-26T00:55:54+00:00",
+    "last_checked_at": "2026-11-26T00:55:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "H YPER CLIP: A DAPTING V ISION -L ANGUAGE MODELS WITH H YPERNETWORKS"
+  },
+  "processed_at": "2026-11-26T00:55:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a6aeecd68a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

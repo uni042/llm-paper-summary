@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-25T22:34:18+00:00",
-  "record_count": 9401,
+  "updated_at": "2026-11-26T00:55:56+00:00",
+  "record_count": 9443,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -143929,6 +143929,638 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Enhancing Long-Video VLM Embeddings with Query-Aware Streaming Latent Reasoning"
+    },
+    "arXiv:2508.05970": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.05970",
+      "identity_tokens": [
+        "arXiv:2508.05970"
+      ],
+      "reason": "リポジトリレベルコード補完で検索した他ファイルコンテキストの影響度を尤度指標で測り有害なチャンクを除く Impact-driven Context Filtering は推論時コンテキストの選別に関わるが、主目的は補完精度の改善であるため",
+      "first_checked_at": "2026-11-26T00:55:52+00:00",
+      "last_checked_at": "2026-11-26T00:55:52+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Impact-driven Context Filtering For Cross-file Code Completion"
+    },
+    "arXiv:2508.11935": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.11935",
+      "identity_tokens": [
+        "arXiv:2508.11935"
+      ],
+      "reason": "アナログCIMハードウェアの素子ばらつきに対する状態空間モデルの頑健性を射影分解で高めるHPDであり、推論ハードウェアと関連するが対象はSSM一般でありLLM推論への適用は確認できない。",
+      "first_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HPD: Hybrid Projection Decomposition for Robust State Space Models on Analog CIM Hardware"
+    },
+    "arXiv:2406.10263": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.10263",
+      "identity_tokens": [
+        "arXiv:2406.10263"
+      ],
+      "reason": "RAGコード補完で検索要否をcritiqueモデルで判定し検索回数と遅延を削減するが、対象はコード補完応用に組み込む軽量判定器であり汎用サービング機構ではない。",
+      "first_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Lightweight Framework for Adaptive Retrieval In Code Completion With Critique Model"
+    },
+    "arXiv:2509.21865": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.21865",
+      "identity_tokens": [
+        "arXiv:2509.21865"
+      ],
+      "reason": "長文脈投入より学習型検索でトークン量とdistractionを減らすRAG検索器LDARであり、推論コストに間接的に効くが中核は検索学習でサービング機構ではない。",
+      "first_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond RAG vs. Long-Context: Learning Distraction-Aware Retrieval for Efficient Knowledge Grounding"
+    },
+    "arXiv:2610.26453": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.26453",
+      "identity_tokens": [
+        "arXiv:2610.26453"
+      ],
+      "reason": "生涯エージェントが再利用価値のある経験だけを記憶へ残す学習を資源制約下で論じる研究であり、推論時の記憶利用の効率に関連はするが、機構は自己改善方策の学習寄りで推論システムへの直接貢献は薄いため",
+      "first_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning What to Remember: Resource-Efficient Self-Improvement for Lifelong Agents"
+    },
+    "arXiv:2610.33811": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.33811",
+      "identity_tokens": [
+        "arXiv:2610.33811"
+      ],
+      "reason": "整流フローでノイズからトークン埋め込みへ輸送し少数ステップで文章生成するReLFは並列・高速生成を狙う生成モデル自体の提案であり、既存LLMの推論システム機構ではないため",
+      "first_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rectified Language Flow"
+    },
+    "arXiv:2611.00518": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.00518",
+      "identity_tokens": [
+        "arXiv:2611.00518"
+      ],
+      "reason": "多ターン会話でアシスタント発話によるコンテキスト汚染を解析モデルで整理するAC3は学習不要のコンテキスト管理だが、目的は応答品質の維持であり推論コストやKV管理への技術的貢献は示されていないため",
+      "first_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agentic Context Management for Multi-Turn Human-AI Conversations"
+    },
+    "DOI:10.1145/3698038.3698548": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3698038.3698548",
+      "identity_tokens": [
+        "DOI:10.1145/3698038.3698548"
+      ],
+      "reason": "サーバレスGPUクラスタでMLジョブの性能を予測して弾力的にスケーリングするFaPESは推論ジョブも対象に含む基盤技術だが、LLM特化ではなく学習ジョブも含む汎用MLプラットフォームの資源配分であるため",
+      "first_checked_at": "2026-11-26T00:55:53+00:00",
+      "last_checked_at": "2026-11-26T00:55:53+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FaPES: Enabling Efficient Elastic Scaling for Serverless Machine Learning Platforms"
+    },
+    "arXiv:2610.07716": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07716",
+      "identity_tokens": [
+        "arXiv:2610.07716"
+      ],
+      "reason": "要旨ではprefillのみの判定モデルに対する推論時計算配分JevCascadeを扱いキャッシュ済み初回分布の再利用は推論効率に関わるが、対象はメニュー採点型の判定モデルに限られ通常のLLM生成・サービングへの適用範囲が狭く貢献が限定的である。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "JevCascade: Readout Stability and Inference-Time Compute Allocation for Prefill-Only Decision Models"
+    },
+    "arXiv:2607.17052": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.17052",
+      "identity_tokens": [
+        "arXiv:2607.17052"
+      ],
+      "reason": "要旨では視覚言語モデルの視覚エンコーダのブロックを進化探索で枝刈りし推論計算を減らすが、削減対象は視覚側の符号化に限られLLM本体のデコードやKVキャッシュ等の推論機構への貢献は確認できないため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Searching for Task-Specific Vision Paths: Evolutionary Block Pruning Across Vision-Language Models"
+    },
+    "SemanticScholar:a238109c3969ae681eee0d4f1bf2012f28850593": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a238109c3969ae681eee0d4f1bf2012f28850593",
+      "identity_tokens": [
+        "SemanticScholar:a238109c3969ae681eee0d4f1bf2012f28850593"
+      ],
+      "reason": "要旨ではドット積自己注意を合成した注意重みで置き換えるSynthesizerを提案し注意機構そのものには関わるが、評価の主眼はモデル性能であり推論時の計算量やメモリ削減の定量的な裏付けは要旨からは不明瞭である。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Synthesizer: Rethinking Self-Attention in Transformer Models"
+    },
+    "DOI:10.1109/icassp55912.2026.11460793": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460793",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11460793"
+      ],
+      "reason": "要旨では音声LLMのデコード中に音声キーへの注意が減衰する問題に対し、区間と時刻を意識した注意ロジット再スケーリングAttnAdapterを提案するが、目的は音声グラウンディングの精度維持であり推論効率化への貢献ではないため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Keeping Models Listening: Segment- and time-aware attention rescaling at decoding time"
+    },
+    "DOI:10.1117/12.3114227": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3114227",
+      "identity_tokens": [
+        "DOI:10.1117/12.3114227"
+      ],
+      "reason": "要旨では学習後量子化の頑健性を、量子化誤差シミュレーションAQESで学習段階から高める枠組みを扱い量子化ワークフローには関わるが、提案の主体は学習時の耐性付与であり推論側の量子化機構そのものではないため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AQES: enhancing post-training quantization robustness via statistical activation quantization error simulation"
+    },
+    "arXiv:2507.08119": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.08119",
+      "identity_tokens": [
+        "arXiv:2507.08119"
+      ],
+      "reason": "要旨ではMLデータセンタのレール型ファブリックを光回路スイッチで実現するPhotonic Railsを提案し分散実行基盤には関わるが、前提は大規模学習のスケールアウト通信でありLLM推論への直接の適用・評価は要旨にないため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Photonic Rails in ML Datacenters"
+    },
+    "arXiv:2508.17756": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.17756",
+      "identity_tokens": [
+        "arXiv:2508.17756"
+      ],
+      "reason": "要旨では超高解像度動画生成を超解像プラットフォーム上で行うタイル分割ベースの生成系SuperGenを提案し生成推論のシステム技術ではあるが、対象は動画拡散モデルでありLLM推論への直接貢献ではないため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SuperGen: An Efficient Ultra-high-resolution Video Generation System with Sketching and Tiling"
+    },
+    "arXiv:2510.01889": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.01889",
+      "identity_tokens": [
+        "arXiv:2510.01889"
+      ],
+      "reason": "要旨では推論時のモデル選択によってAIのエネルギー消費を減らす方針を検討しており推論運用には関わるが、提案はモデル選択の実践論であり推論システムの機構的な貢献は薄いため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Small is Sufficient: Reducing the World AI Energy Consumption Through Model Selection"
+    },
+    "SemanticScholar:89654f548e541a8ef233be6585316ce6cc201535": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:89654f548e541a8ef233be6585316ce6cc201535",
+      "identity_tokens": [
+        "SemanticScholar:89654f548e541a8ef233be6585316ce6cc201535"
+      ],
+      "reason": "事前学習済み言語モデルへの構造化プルーニングでコンパクトなタスクモデルを得る圧縮手法だが、要旨では蒸留ほどの推論速度向上は得にくいとされ、LLMサービングへの具体的効果が薄い。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Structured Pruning Learns Compact and Accurate Models"
+    },
+    "arXiv:2611.05917": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.05917",
+      "identity_tokens": [
+        "arXiv:2611.05917"
+      ],
+      "reason": "ビデオ拡散Transformerの疎注意を分離して学習なしで高速化するDecoupAttnであり、注意計算削減の機構は推論高速化技術だが、対象はLLMではなくビデオ拡散モデルの推論である。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DecoupAttn: Decoupled Sparse Attention for Training-Free Acceleration of Video Diffusion"
+    },
+    "arXiv:2412.14426": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.14426",
+      "identity_tokens": [
+        "arXiv:2412.14426"
+      ],
+      "reason": "ドメイン特化LLM向けにチューニングと構造化プルーニングを一体化する手法だが、主眼はドメイン適応の精度維持であり、推論時のメモリや速度への効果は要旨で具体化されていない。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "All-in-One Tuning and Structural Pruning for Domain-Specific LLMs"
+    },
+    "arXiv:2607.20806": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20806",
+      "identity_tokens": [
+        "arXiv:2607.20806"
+      ],
+      "reason": "軽量LLMをローカル・エッジ環境でエネルギー・実行時間・メモリの観点から実測するプロファイリング枠組みであり、推論計測には関連するがシステム最適化機構の提案ではない。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Profiling Lightweight Large Language Models"
+    },
+    "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731",
+      "identity_tokens": [
+        "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731"
+      ],
+      "reason": "浮動小数点指数の偏りを利用するエントロピー符号化数値形式EFloatで埋め込み等のデータを圧縮する手法であり、推論メモリ削減と関連はあるがLLM推論への適用や効果は要旨で示されていない。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EFloat: Entropy-coded Floating Point Format for Deep Learning"
+    },
+    "SemanticScholar:0f0156fba32ad42d59e1cc8ab16ec3c1f5bf2e80": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:0f0156fba32ad42d59e1cc8ab16ec3c1f5bf2e80",
+      "identity_tokens": [
+        "SemanticScholar:0f0156fba32ad42d59e1cc8ab16ec3c1f5bf2e80"
+      ],
+      "reason": "高エントロピートークンへの最小限のテスト時介入でLLM推論の正確さを上げるMTIであり、推論時計算には関係するが、主目的は推論能力の改善でシステム効率への貢献は副次的である。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Less is More: Improving LLM Reasoning with Minimal Test-Time Intervention"
+    },
+    "arXiv:2307.09701": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.09701",
+      "identity_tokens": [
+        "arXiv:2307.09701"
+      ],
+      "reason": "要旨では推論を中心にモデル効率を総合的・現実的に測る標準化評価アリーナEfficiency Pentathlonを提案し推論効率の計測基盤には関わるが、提示されるのは評価手法であり推論を高速化する機構ではないため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficiency Pentathlon: A Standardized Arena for Efficiency Evaluation"
+    },
+    "DOI:10.48550/arxiv.2403.09040": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2403.09040",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.09040",
+        "arXiv:2403.09040"
+      ],
+      "reason": "要旨では検索拡張生成システムの構成要素を体系的に評価するRAGGEDを提案しRAGの推論時構成への設計示唆はあるが、内容は評価フレームワークであり推論を高速化・効率化する機構の提案ではないため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:54+00:00",
+      "last_checked_at": "2026-11-26T00:55:54+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RAGGED: Towards Informed Design of Retrieval Augmented Generation Systems"
+    },
+    "arXiv:2406.15560": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.15560",
+      "identity_tokens": [
+        "arXiv:2406.15560"
+      ],
+      "reason": "予算制約下でクラウドGPUを借りる際の需要指定とコストを扱うが、対象ジョブはML学習であり、推論サービングのスケジューリングや資源管理への直接の適用は示されていない。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How to Rent GPUs on a Budget"
+    },
+    "arXiv:2508.03009": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.03009",
+      "identity_tokens": [
+        "arXiv:2508.03009"
+      ],
+      "reason": "長動画QAでMLLMが処理するフレームを場面局所化で絞り込む手法であり、推論時の入力削減に関わるが、主目的は動画QAの精度向上で推論機構自体の提案ではない。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing Long Video Question Answering with Scene-Localized Frame Grouping"
+    },
+    "DOI:10.1145/3772356.3772410": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3772356.3772410",
+      "identity_tokens": [
+        "DOI:10.1145/3772356.3772410"
+      ],
+      "reason": "データセンタ間incastをプロキシで緩和するネットワーク研究で、対象用途はストレージやML学習とされ、LLM推論サービングへの直接適用や評価はabstractに示されていない。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mitigating Inter-datacenter Incast with a Proxy: The shortest path is not necessarily the fastest"
+    },
+    "DOI:10.3389/fcomp.2025.1626346": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/fcomp.2025.1626346",
+      "identity_tokens": [
+        "DOI:10.3389/fcomp.2025.1626346"
+      ],
+      "reason": "LLaVAを軽量化して低資源デバイスへ配備可能にしたマルチモーダルアーキテクチャだが、貢献の中心はモデル規模削減と精度であり、推論実行系の仕組みではない。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLaVA-GM: lightweight LLaVA multimodal architecture"
+    },
+    "DOI:10.1109/cluster59342.2025.11186495": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cluster59342.2025.11186495",
+      "identity_tokens": [
+        "DOI:10.1109/cluster59342.2025.11186495"
+      ],
+      "reason": "分散コンピューティング向けFIFOキャッシュの多点退避ポリシを提案するが、対象は一般オブジェクトキャッシュであり、LLMのKVキャッシュや推論メモリ管理への適用は示されていない。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FIFO-MEP: An Efficient Multi-Eviction-Point FIFO Cache with Stable Demotion for Burst-Oriented Access Mitigation"
+    },
+    "DOI:10.1145/3729292": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3729292",
+      "identity_tokens": [
+        "DOI:10.1145/3729292"
+      ],
+      "reason": "ブラックボックスサブルーチン合成時の演算子融合で局所性とメモリを改善する汎用ソフトウェア最適化であり、推論カーネル融合と近接するがLLM推論への適用・評価はabstractにない。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lightweight and Locality-Aware Composition of Black-Box Subroutines"
+    },
+    "arXiv:2508.04077": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.04077",
+      "identity_tokens": [
+        "arXiv:2508.04077"
+      ],
+      "reason": "疎行列積をグラフ計算・GNN・科学計算横断で統一的に扱うサーベイで、推論カーネルと接点はあるがLLM推論に特化した機構や実測は示されていない。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Ubiquitous Sparse Matrix-Matrix Products"
+    },
+    "DOI:10.1109/access.2026.3658502": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2026.3658502",
+      "identity_tokens": [
+        "DOI:10.1109/access.2026.3658502"
+      ],
+      "reason": "資源制約環境でのコード分類・生成をプロンプトテンプレートと意味誘導の少数例選択で回す枠組みで、推論実行系の機構ではなくプロンプト設計に留まるため関連は薄い。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TIPS: A Prompt Engineering Framework for Code Classification and Generation on Resource-Constrained Systems"
+    },
+    "DOI:10.48550/arxiv.2507.07634": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2507.07634",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.07634",
+        "arXiv:2507.07634"
+      ],
+      "reason": "多段QAで検索ステップ数を難易度適応的に削減するRL微調整手法で、推論時コスト削減に触れるが主眼は検索ポリシーの学習でありサービング機構ではない。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FrugalRAG: Learning to retrieve and reason for multi-hop QA"
+    },
+    "arXiv:2502.13019": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.13019",
+      "identity_tokens": [
+        "arXiv:2502.13019"
+      ],
+      "reason": "RAGで検索したチャンクを生成前に再構成する小型プラグインモジュールを提案するが、主目的は検索ノイズ除去による生成品質向上であり、推論効率の改善は副次的に触れる程度である。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Oreo: A Plug-in Context Reconstructor to Enhance Retrieval-Augmented Generation"
+    },
+    "SemanticScholar:430783cbe639a504e2463f1ec7435c4a3772e6b7": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:430783cbe639a504e2463f1ec7435c4a3772e6b7",
+      "identity_tokens": [
+        "SemanticScholar:430783cbe639a504e2463f1ec7435c4a3772e6b7"
+      ],
+      "reason": "分析クエリ処理とAI推論を同居させる際のPCIeデータ移動ボトルネックに着目したGPU共有機構であり、推論ワークロードを含むが主対象はデータプラットフォーム側の資源共有である。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Data Movement-Aware GPU Sharing for Data-Intensive Systems"
+    },
+    "arXiv:2609.34192": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.34192",
+      "identity_tokens": [
+        "arXiv:2609.34192"
+      ],
+      "reason": "マルチモーダル再ランク付けモデルのスコア不足を検索スコアとの閉形式融合で補い全候補を高コストに評価せずに済ませるRidgeRankであり、推論コスト削減の要素はあるが主対象は視覚文書検索の応用である。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RidgeRank: Efficient Visual Document Reranking via Score Fusion and a Shallow Linear Readout"
+    },
+    "arXiv:2610.24107": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.24107",
+      "identity_tokens": [
+        "arXiv:2610.24107"
+      ],
+      "reason": "文書をLoRA更新へ内在化してデコード文脈を保持せずに回答させるContext-to-LoRA手法の診断研究であり、推論時文脈コストと関連はあるが主眼は事実保持の信頼性分析である。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cache2LoRA: Understanding and Improving Context Internalization"
+    },
+    "arXiv:2610.25250": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.25250",
+      "identity_tokens": [
+        "arXiv:2610.25250"
+      ],
+      "reason": "全注意層のKVキャッシュへ効率層から多ホップ検索でアクセスさせるハイブリッド系列アーキテクチャの表現力改善であり、KVキャッシュ利用と関連するが目的は推論効率ではなくモデル表現力である。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving the Expressive Power of Hybrid Sequence Models via Multi-Hop Retrieval"
+    },
+    "arXiv:2611.04998": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.04998",
+      "identity_tokens": [
+        "arXiv:2611.04998"
+      ],
+      "reason": "実行をまたいで知識を蓄積しGPUカーネルを自己進化させるForgeKernelであり、カーネル生成は推論高速化と関連しうるが、LLM推論カーネルへの特化や効果は要旨で確認できない。",
+      "first_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ForgeKernel: Self-Evolving Kernels Catching and Surpassing Experts and Agents"
+    },
+    "arXiv:2610.02353": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02353",
+      "identity_tokens": [
+        "arXiv:2610.02353"
+      ],
+      "reason": "要旨ではユーザーごとのLoRA適応状態を共有方向と固有方向へ分ける容量配分を分析しサービング時のアダプタ保持量に関わりうるが、主眼はパーソナライゼーションの容量分析であり推論システムとしての機構提案は弱いため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:56+00:00",
+      "last_checked_at": "2026-11-26T00:55:56+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Does Every User Need a Private LoRA? Decoupling Personalization from Per-User Adaptation"
+    },
+    "arXiv:2610.23225": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.23225",
+      "identity_tokens": [
+        "arXiv:2610.23225"
+      ],
+      "reason": "要旨ではドリフティングモデルを反復精緻化する高速並列言語生成ReLaDriftを提案し生成の推論時スケーリングには関わるが、対象は生成モデル方式そのものでありLLMサービングやデコード基盤への適用・評価は不明瞭なため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:56+00:00",
+      "last_checked_at": "2026-11-26T00:55:56+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReLaDrift: Recurrent Language Generation via Drifting for Test-Time Scaling"
+    },
+    "arXiv:2501.04012": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.04012",
+      "identity_tokens": [
+        "arXiv:2501.04012"
+      ],
+      "reason": "要旨では動画拡散モデル向けの柔軟な近似キャッシュ系FlexCacheを提案しキャッシュによる生成高速化の機構は推論システム技術に通じるが、対象はLLMではなく動画拡散モデルであり直接の適用先が異なるため境界とする。",
+      "first_checked_at": "2026-11-26T00:55:56+00:00",
+      "last_checked_at": "2026-11-26T00:55:56+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlexCache: Flexible Approximate Cache System for Video Diffusion"
     }
   }
 }

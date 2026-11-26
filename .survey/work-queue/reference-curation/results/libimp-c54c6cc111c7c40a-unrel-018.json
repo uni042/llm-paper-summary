@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c54c6cc111c7c40a-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/jsen.2025.3620206",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/jsen.2025.3620206",
+    "identity_tokens": [
+      "DOI:10.1109/jsen.2025.3620206"
+    ],
+    "reason": "EEG記録から眼球アーティファクトを除去する状態空間モデルの医用信号処理応用であり、モバイル言及もLLM推論とは無関係である。",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T00:55:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Efficient Ocular Artifacts Removal From EEG Recordings Using State-Space Model"
+  },
+  "processed_at": "2026-11-26T00:55:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c54c6cc111c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

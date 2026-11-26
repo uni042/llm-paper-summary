@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4080a9b9c089b0fc-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.33811",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.33811",
+    "identity_tokens": [
+      "arXiv:2610.33811"
+    ],
+    "reason": "整流フローでノイズからトークン埋め込みへ輸送し少数ステップで文章生成するReLFは並列・高速生成を狙う生成モデル自体の提案であり、既存LLMの推論システム機構ではないため",
+    "first_checked_at": "2026-11-26T00:55:53+00:00",
+    "last_checked_at": "2026-11-26T00:55:53+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rectified Language Flow"
+  },
+  "processed_at": "2026-11-26T00:55:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4080a9b9c089",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
