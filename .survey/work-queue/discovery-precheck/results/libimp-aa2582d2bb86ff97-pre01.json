@@ -1,0 +1,142 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-aa2582d2bb86ff97-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-aa2582d2bb86",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2611.00881"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6f6a22e71731316fd24a91a2435f00b07eba67be",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T22:15:28.706842+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2611.00881",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LADS: Lease-Aware Delivery Scheduling of Tool Results for Language Model Agents",
+      "source_url": "https://arxiv.org/abs/2611.00881",
+      "year": 2026,
+      "published": "2026-10-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Web agents complete multi-step online tasks through repeated browser actions and model calls. Their returned observations lie on the critical path to subsequent decisions. When concurrent browser actions finish in bursts, observations can accumulate on a constrained return path to a shared inference service, while waiting histories compete for reusable cache state. Conventional delivery rules prioritize short transfers or immediate cache reuse but overlook how sending a result earlier can help a request resume sooner and free cache-protection capacity for other waiting requests. We present LADS (Lease-Aware Delivery Scheduling), a tool-result scheduler that couples cache-aware delivery with bounded prefix leases. Its key insight is that resumption lets extra protection references retire, making lease quota available to protect another waiting history. LADS prioritizes timely handoffs using current lease ownership and an estimated resumption delay, with bounded departures from Cache-first order. Compared with ReAct using first-in, first-out (FIFO) tool-result delivery, LADS reduces mean complete-workflow latency by 44.6% under bursty tool returns and by 42.4% on Web-derived burst replay.",
+      "identifiers": [
+        "SemanticScholar:0ebfe54c90aa20b0e90cbefc287cced41ad3ce3f"
+      ],
+      "semantic_scholar_id": "0ebfe54c90aa20b0e90cbefc287cced41ad3ce3f",
+      "canonical_id": "arXiv:2611.00881",
+      "arxiv_id": "2611.00881",
+      "authors": [
+        "Yuxuan Hou",
+        "Lin-Chuang Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.00881",
+      "identity_tokens": [
+        "id:SemanticScholar:0ebfe54c90aa20b0e90cbefc287cced41ad3ce3f",
+        "id:arXiv:2611.00881",
+        "title:lads leaseaware delivery scheduling of tool results for language model agents",
+        "url:https://arxiv.org/abs/2611.00881"
+      ],
+      "record": {
+        "title": "LADS: Lease-Aware Delivery Scheduling of Tool Results for Language Model Agents",
+        "source_url": "https://arxiv.org/abs/2611.00881",
+        "year": 2026,
+        "published": "2026-10-31",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Web agents complete multi-step online tasks through repeated browser actions and model calls. Their returned observations lie on the critical path to subsequent decisions. When concurrent browser actions finish in bursts, observations can accumulate on a constrained return path to a shared inference service, while waiting histories compete for reusable cache state. Conventional delivery rules prioritize short transfers or immediate cache reuse but overlook how sending a result earlier can help a request resume sooner and free cache-protection capacity for other waiting requests. We present LADS (Lease-Aware Delivery Scheduling), a tool-result scheduler that couples cache-aware delivery with bounded prefix leases. Its key insight is that resumption lets extra protection references retire, making lease quota available to protect another waiting history. LADS prioritizes timely handoffs using current lease ownership and an estimated resumption delay, with bounded departures from Cache-first order. Compared with ReAct using first-in, first-out (FIFO) tool-result delivery, LADS reduces mean complete-workflow latency by 44.6% under bursty tool returns and by 42.4% on Web-derived burst replay.",
+        "identifiers": [
+          "SemanticScholar:0ebfe54c90aa20b0e90cbefc287cced41ad3ce3f"
+        ],
+        "semantic_scholar_id": "0ebfe54c90aa20b0e90cbefc287cced41ad3ce3f",
+        "canonical_id": "arXiv:2611.00881",
+        "arxiv_id": "2611.00881",
+        "authors": [
+          "Yuxuan Hou",
+          "Lin-Chuang Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:45a0fc82195548c4f8ec727f3b7c30a306c4ab67d1a7897ec4f93bce2d1220f0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

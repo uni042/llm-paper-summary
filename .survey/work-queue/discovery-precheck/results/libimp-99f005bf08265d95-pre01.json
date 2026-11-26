@@ -1,0 +1,321 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-99f005bf08265d95-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-99f005bf0826",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/cloudnet62863.2024.10815926",
+    "DOI:10.1587/nolta.2026ncp0012",
+    "arXiv:2508.07071"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6f6a22e71731316fd24a91a2435f00b07eba67be",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T22:15:28.750064+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/cloudnet62863.2024.10815926",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1587/nolta.2026ncp0012",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.07071",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "The Fused Kernel Library: A C++ API to Develop Highly-Efficient GPU Libraries",
+      "source_url": "https://arxiv.org/abs/2508.07071",
+      "year": 2025,
+      "published": "2025-08-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing GPU libraries often struggle to fully exploit the parallel resources and on-chip memory (SRAM) of GPUs when chaining multiple GPU functions as individual kernels. While Kernel Fusion (KF) techniques like Horizontal Fusion (HF) and Vertical Fusion (VF) can mitigate this, current library implementations often require library developers to manually create fused kernels. Hence, library users rely on limited sets of pre-compiled or template-based fused kernels. This limits the use cases that can benefit from HF and VF and increases development costs. In order to solve these issues, we present a novel methodology for building GPU libraries that enables automatic on-demand HF and VF for arbitrary combinations of GPU library functions. Our methodology defines reusable, fusionable components that users combine via high-level programming interfaces. Leveraging C++17 metaprogramming features available in compilers like nvcc, our methodology generates a single and optimized fused kernel tailored to the user's specific sequence of operations at compile time, without needing a custom compiler or manual development and pre-compilation of kernel combinations. This approach abstracts low-level GPU complexities while maximizing GPU resource utilization and keeping intermediate data in SRAM. We provide an open-source implementation demonstrating significant speedups compared to traditional libraries in various benchmarks, validating the effectiveness of this methodology for improving GPU performance in the range of 2x to more than 1000x, while preserving high-level programmability.",
+      "identifiers": [
+        "SemanticScholar:7b838a154839502a796bf0a858af25f2ac737f9e"
+      ],
+      "semantic_scholar_id": "7b838a154839502a796bf0a858af25f2ac737f9e",
+      "canonical_id": "arXiv:2508.07071",
+      "arxiv_id": "2508.07071",
+      "doi": "10.48550/arXiv.2508.07071",
+      "authors": [
+        "Oscar Amoros",
+        "Albert Andaluz",
+        "J. Nunez",
+        "Antonio J. Peña"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 474,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Lightweight Attention Mechanisms Using Nyström Low-Rank Approximation and Their Computational Architectures",
+      "source_url": "https://doi.org/10.1587/nolta.2026ncp0012",
+      "year": 2026,
+      "published": null,
+      "venue": "Nonlinear Theory and Its Applications IEICE",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:2d68a8406bcfe0cd9abd4351a3fd03a68d8a3ee2"
+      ],
+      "semantic_scholar_id": "2d68a8406bcfe0cd9abd4351a3fd03a68d8a3ee2",
+      "doi": "10.1587/nolta.2026ncp0012",
+      "canonical_id": "DOI:10.1587/nolta.2026ncp0012",
+      "authors": [
+        "Yushi Furuta",
+        "K. Ando",
+        "T. Marukame",
+        "T. Asai"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Nona: A Stochastic Congestion-Aware Job Scheduler for Real-Time Inference Queries",
+      "source_url": "https://doi.org/10.1109/CloudNet62863.2024.10815926",
+      "year": 2024,
+      "published": "2024-11-27",
+      "venue": "2024 IEEE 13th International Conference on Cloud Networking (CloudNet)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper proposes a novel queueing-theoretic approach to enable stochastic congestion-aware scheduling for distributed machine learning inference queries. Our proposed framework, called Nona, combines a stochastic scheduler with an offline optimization formulation rooted in queueing-theoretic principles to minimize the average completion time of heterogeneous inference queries. At its core, Nona incorporates the fundamental tradeoffs between compute and network resources to make efficient scheduling decisions. Nona's formulation uses the Pollaczek-Khinchine formula to estimate queueing latency and to predict system congestion. Builind upon conventional Jackson networks, it captures the dependency between the computation and communication operations of interfering jobs. From this formulation, we derive an optimization problem and use its results as inputs for the scheduler. We introduce a novel graph contraction procedure to enable cloud providers to solve Nona's optimization formulation in practical settings. We evaluate Nona with real-world machine learning models (AlexNet, ResNet, DenseNet, VGG, and GPT2) and demonstrate that Nona outperforms state-of-the-art schedulers by up to 350×.",
+      "identifiers": [
+        "SemanticScholar:55218a6a3928d3b82a8d42b099c933e8aaf79df2"
+      ],
+      "semantic_scholar_id": "55218a6a3928d3b82a8d42b099c933e8aaf79df2",
+      "doi": "10.1109/CloudNet62863.2024.10815926",
+      "canonical_id": "DOI:10.1109/CloudNet62863.2024.10815926",
+      "authors": [
+        "Benoit Pit-Claudel",
+        "Derya Malak",
+        "Alejandro Cohen",
+        "M. Médard",
+        "Manya Ghobadi"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 729,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2508.07071",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.07071",
+        "id:SemanticScholar:7b838a154839502a796bf0a858af25f2ac737f9e",
+        "id:arXiv:2508.07071",
+        "title:the fused kernel library a c api to develop highlyefficient gpu libraries",
+        "url:https://arxiv.org/abs/2508.07071"
+      ],
+      "record": {
+        "title": "The Fused Kernel Library: A C++ API to Develop Highly-Efficient GPU Libraries",
+        "source_url": "https://arxiv.org/abs/2508.07071",
+        "year": 2025,
+        "published": "2025-08-09",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing GPU libraries often struggle to fully exploit the parallel resources and on-chip memory (SRAM) of GPUs when chaining multiple GPU functions as individual kernels. While Kernel Fusion (KF) techniques like Horizontal Fusion (HF) and Vertical Fusion (VF) can mitigate this, current library implementations often require library developers to manually create fused kernels. Hence, library users rely on limited sets of pre-compiled or template-based fused kernels. This limits the use cases that can benefit from HF and VF and increases development costs. In order to solve these issues, we present a novel methodology for building GPU libraries that enables automatic on-demand HF and VF for arbitrary combinations of GPU library functions. Our methodology defines reusable, fusionable components that users combine via high-level programming interfaces. Leveraging C++17 metaprogramming features available in compilers like nvcc, our methodology generates a single and optimized fused kernel tailored to the user's specific sequence of operations at compile time, without needing a custom compiler or manual development and pre-compilation of kernel combinations. This approach abstracts low-level GPU complexities while maximizing GPU resource utilization and keeping intermediate data in SRAM. We provide an open-source implementation demonstrating significant speedups compared to traditional libraries in various benchmarks, validating the effectiveness of this methodology for improving GPU performance in the range of 2x to more than 1000x, while preserving high-level programmability.",
+        "identifiers": [
+          "SemanticScholar:7b838a154839502a796bf0a858af25f2ac737f9e"
+        ],
+        "semantic_scholar_id": "7b838a154839502a796bf0a858af25f2ac737f9e",
+        "canonical_id": "arXiv:2508.07071",
+        "arxiv_id": "2508.07071",
+        "doi": "10.48550/arXiv.2508.07071",
+        "authors": [
+          "Oscar Amoros",
+          "Albert Andaluz",
+          "J. Nunez",
+          "Antonio J. Peña"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 474,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1587/nolta.2026ncp0012",
+      "identity_tokens": [
+        "id:DOI:10.1587/nolta.2026ncp0012",
+        "id:SemanticScholar:2d68a8406bcfe0cd9abd4351a3fd03a68d8a3ee2",
+        "title:lightweight attention mechanisms using nyström lowrank approximation and their computational architectures",
+        "url:https://doi.org/10.1587/nolta.2026ncp0012"
+      ],
+      "record": {
+        "title": "Lightweight Attention Mechanisms Using Nyström Low-Rank Approximation and Their Computational Architectures",
+        "source_url": "https://doi.org/10.1587/nolta.2026ncp0012",
+        "year": 2026,
+        "published": null,
+        "venue": "Nonlinear Theory and Its Applications IEICE",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:2d68a8406bcfe0cd9abd4351a3fd03a68d8a3ee2"
+        ],
+        "semantic_scholar_id": "2d68a8406bcfe0cd9abd4351a3fd03a68d8a3ee2",
+        "doi": "10.1587/nolta.2026ncp0012",
+        "canonical_id": "DOI:10.1587/nolta.2026ncp0012",
+        "authors": [
+          "Yushi Furuta",
+          "K. Ando",
+          "T. Marukame",
+          "T. Asai"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 148,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cloudnet62863.2024.10815926",
+      "identity_tokens": [
+        "id:DOI:10.1109/cloudnet62863.2024.10815926",
+        "id:SemanticScholar:55218a6a3928d3b82a8d42b099c933e8aaf79df2",
+        "title:nona a stochastic congestionaware job scheduler for realtime inference queries",
+        "url:https://doi.org/10.1109/CloudNet62863.2024.10815926"
+      ],
+      "record": {
+        "title": "Nona: A Stochastic Congestion-Aware Job Scheduler for Real-Time Inference Queries",
+        "source_url": "https://doi.org/10.1109/CloudNet62863.2024.10815926",
+        "year": 2024,
+        "published": "2024-11-27",
+        "venue": "2024 IEEE 13th International Conference on Cloud Networking (CloudNet)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper proposes a novel queueing-theoretic approach to enable stochastic congestion-aware scheduling for distributed machine learning inference queries. Our proposed framework, called Nona, combines a stochastic scheduler with an offline optimization formulation rooted in queueing-theoretic principles to minimize the average completion time of heterogeneous inference queries. At its core, Nona incorporates the fundamental tradeoffs between compute and network resources to make efficient scheduling decisions. Nona's formulation uses the Pollaczek-Khinchine formula to estimate queueing latency and to predict system congestion. Builind upon conventional Jackson networks, it captures the dependency between the computation and communication operations of interfering jobs. From this formulation, we derive an optimization problem and use its results as inputs for the scheduler. We introduce a novel graph contraction procedure to enable cloud providers to solve Nona's optimization formulation in practical settings. We evaluate Nona with real-world machine learning models (AlexNet, ResNet, DenseNet, VGG, and GPT2) and demonstrate that Nona outperforms state-of-the-art schedulers by up to 350×.",
+        "identifiers": [
+          "SemanticScholar:55218a6a3928d3b82a8d42b099c933e8aaf79df2"
+        ],
+        "semantic_scholar_id": "55218a6a3928d3b82a8d42b099c933e8aaf79df2",
+        "doi": "10.1109/CloudNet62863.2024.10815926",
+        "canonical_id": "DOI:10.1109/CloudNet62863.2024.10815926",
+        "authors": [
+          "Benoit Pit-Claudel",
+          "Derya Malak",
+          "Alejandro Cohen",
+          "M. Médard",
+          "Manya Ghobadi"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 729,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ff223998b28d0c306703f12d1d053b072abf034a0d01544cdb6e206e1caaeb61",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

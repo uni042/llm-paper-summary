@@ -1,0 +1,506 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2a768b00ec5e22b8-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2a768b00ec5e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icassp55912.2026.11460984",
+    "DOI:10.1109/sp61157.2025.00175",
+    "DOI:10.18653/v1/2025.findings-emnlp.327",
+    "DOI:10.18653/v1/2026.acl-long.383",
+    "DOI:10.18653/v1/2026.findings-acl.199"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6f6a22e71731316fd24a91a2435f00b07eba67be",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T22:15:28.747903+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icassp55912.2026.11460984",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/sp61157.2025.00175",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-emnlp.327",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.383",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-acl.199",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SHARK: Actively Secure Inference Using Function Secret Sharing",
+      "source_url": "https://doi.org/10.1109/SP61157.2025.00175",
+      "year": 2025,
+      "published": "2025-05-12",
+      "venue": "IEEE Symposium on Security and Privacy",
+      "citation_count": 17,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We consider the problem of actively secure two-party machine-learning inference in the preprocessing model, where the parties obtain (input-independent) correlated randomness in an offline phase that they can then use to run an efficient protocol in the (input-dependent) online phase. In this setting, the state-of-the-art is the work of Escudero et al. (Crypto 2020); unfortunately, that protocol requires a large amount of correlated randomness, extensive communication, and many rounds of interaction, which leads to poor performance. In this work, we show protocols for this setting based on function secret sharing (FSS) that beat the state-of-the-art in all parameters: they use less correlated randomness and fewer rounds, and require lower communication and computation. We achieve this in part by allowing for a mix of boolean and arithmetic values in FSS-based protocols (something not done in prior work), as well as by relying on “interactive FSS;’ a generalization of FSS we introduce. To demonstrate the effectiveness of our approach we build SHARK-the first FSS-based system for actively secure inference-which outperforms the state-of-the-art by up to 2300×.",
+      "identifiers": [
+        "SemanticScholar:c2e9ecae80b5172e7fc0b283db9a3abe9cdc17ff"
+      ],
+      "semantic_scholar_id": "c2e9ecae80b5172e7fc0b283db9a3abe9cdc17ff",
+      "doi": "10.1109/SP61157.2025.00175",
+      "canonical_id": "DOI:10.1109/SP61157.2025.00175",
+      "authors": [
+        "Kanav Gupta",
+        "N. Chandran",
+        "Divya Gupta",
+        "Jonathan Katz",
+        "Rahul Sharma"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 17,
+        "citation_count": 17,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 563,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Tree-Structured Non-Autoregressive Decoding for Sequence-to-Sequence Text Generation",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.327",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:272b1191c4992446e778c3e04e5bd91afb3a0382"
+      ],
+      "semantic_scholar_id": "272b1191c4992446e778c3e04e5bd91afb3a0382",
+      "doi": "10.18653/v1/2025.findings-emnlp.327",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.327",
+      "authors": [
+        "Peng-Yu Ji",
+        "Yu-Fei Liu",
+        "Xiang Hu",
+        "Ke-Wei Tu"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 513,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "InferenceDynamics: Adaptive LLM Routing through Structured Capability and Knowledge Profiling",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.383",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) routing is a pivotal technique for navigating a diverse landscape of LLMs, enabling the selection of the best-performing LLMs for specific user queries while balancing performance and cost. However, current routing approaches often face limitations in scalability when dealing with a large pool of specialized LLMs, or in their adapt-ability to extending model scope and evolving capability domains. To overcome those challenges, we propose InferenceDynamics , a flexible and scalable multi-dimensional routing framework by modeling the capability and knowledge of models. We operate it on our comprehensive dataset RouteMix , and demonstrate its effectiveness and generalizability in group-level routing using modern benchmarks including MMLU-Pro, GPQA, BigGen-Bench, and LiveBench, showcasing its ability to identify and leverage top-performing models for given tasks, leading to superior outcomes with cost efficiency. The broader adoption of InferenceDynamics can empower users to harness the full specialized potential of the LLM ecosystem, and our code are publicly available at https://github.com/HKUST-KnowComp/InferenceDynamics.",
+      "identifiers": [
+        "SemanticScholar:ced5a724e570a094c674557ab43f581c704a2940"
+      ],
+      "semantic_scholar_id": "ced5a724e570a094c674557ab43f581c704a2940",
+      "doi": "10.18653/v1/2026.acl-long.383",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.383",
+      "authors": [
+        "Hao-Chen Shi",
+        "Tianshi ZHENG",
+        "Weiqi Wang",
+        "Bai-Xuan Xu",
+        "Chun-Yang Li",
+        "Chunkit Chan",
+        "Tao Fan",
+        "Yang-Qiu Song"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Dual-Reasoner: Bridging Interleaved Atomicity and Streaming Latency via Thinking-while-Talking",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.199",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:4c5bbd452896d603d4879ff5ae4b89b6b388c1d8"
+      ],
+      "semantic_scholar_id": "4c5bbd452896d603d4879ff5ae4b89b6b388c1d8",
+      "doi": "10.18653/v1/2026.findings-acl.199",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.199",
+      "authors": [
+        "Yang-Zhuo Li",
+        "Shengpeng Ji",
+        "Yi-Fu Chen",
+        "Tian-Le Liang",
+        "Haoyu Yang",
+        "Jun-Bo Li",
+        "Jun Fang",
+        "Lin Li",
+        "Q. Hong"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "AdaPrune: A Two-Stage Filter-Select Methods for Visual Token Pruning In Specialized VLMs",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11460984",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:bbe432d21bcb43dcef492db60c4f610c80a00e85"
+      ],
+      "semantic_scholar_id": "bbe432d21bcb43dcef492db60c4f610c80a00e85",
+      "doi": "10.1109/icassp55912.2026.11460984",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460984",
+      "authors": [
+        "Xiu-Yuan Zhu",
+        "Ke Lu",
+        "Hao Wu",
+        "Jian Xue"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 207,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/sp61157.2025.00175",
+      "identity_tokens": [
+        "id:DOI:10.1109/sp61157.2025.00175",
+        "id:SemanticScholar:c2e9ecae80b5172e7fc0b283db9a3abe9cdc17ff",
+        "title:shark actively secure inference using function secret sharing",
+        "url:https://doi.org/10.1109/SP61157.2025.00175"
+      ],
+      "record": {
+        "title": "SHARK: Actively Secure Inference Using Function Secret Sharing",
+        "source_url": "https://doi.org/10.1109/SP61157.2025.00175",
+        "year": 2025,
+        "published": "2025-05-12",
+        "venue": "IEEE Symposium on Security and Privacy",
+        "citation_count": 17,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We consider the problem of actively secure two-party machine-learning inference in the preprocessing model, where the parties obtain (input-independent) correlated randomness in an offline phase that they can then use to run an efficient protocol in the (input-dependent) online phase. In this setting, the state-of-the-art is the work of Escudero et al. (Crypto 2020); unfortunately, that protocol requires a large amount of correlated randomness, extensive communication, and many rounds of interaction, which leads to poor performance. In this work, we show protocols for this setting based on function secret sharing (FSS) that beat the state-of-the-art in all parameters: they use less correlated randomness and fewer rounds, and require lower communication and computation. We achieve this in part by allowing for a mix of boolean and arithmetic values in FSS-based protocols (something not done in prior work), as well as by relying on “interactive FSS;’ a generalization of FSS we introduce. To demonstrate the effectiveness of our approach we build SHARK-the first FSS-based system for actively secure inference-which outperforms the state-of-the-art by up to 2300×.",
+        "identifiers": [
+          "SemanticScholar:c2e9ecae80b5172e7fc0b283db9a3abe9cdc17ff"
+        ],
+        "semantic_scholar_id": "c2e9ecae80b5172e7fc0b283db9a3abe9cdc17ff",
+        "doi": "10.1109/SP61157.2025.00175",
+        "canonical_id": "DOI:10.1109/SP61157.2025.00175",
+        "authors": [
+          "Kanav Gupta",
+          "N. Chandran",
+          "Divya Gupta",
+          "Jonathan Katz",
+          "Rahul Sharma"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 17,
+          "citation_count": 17,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 563,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-emnlp.327",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-emnlp.327",
+        "id:SemanticScholar:272b1191c4992446e778c3e04e5bd91afb3a0382",
+        "title:treestructured nonautoregressive decoding for sequencetosequence text generation",
+        "url:https://doi.org/10.18653/v1/2025.findings-emnlp.327"
+      ],
+      "record": {
+        "title": "Tree-Structured Non-Autoregressive Decoding for Sequence-to-Sequence Text Generation",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.327",
+        "year": 2025,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:272b1191c4992446e778c3e04e5bd91afb3a0382"
+        ],
+        "semantic_scholar_id": "272b1191c4992446e778c3e04e5bd91afb3a0382",
+        "doi": "10.18653/v1/2025.findings-emnlp.327",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.327",
+        "authors": [
+          "Peng-Yu Ji",
+          "Yu-Fei Liu",
+          "Xiang Hu",
+          "Ke-Wei Tu"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 513,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.383",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.383",
+        "id:SemanticScholar:ced5a724e570a094c674557ab43f581c704a2940",
+        "title:inferencedynamics adaptive llm routing through structured capability and knowledge profiling",
+        "url:https://doi.org/10.18653/v1/2026.acl-long.383"
+      ],
+      "record": {
+        "title": "InferenceDynamics: Adaptive LLM Routing through Structured Capability and Knowledge Profiling",
+        "source_url": "https://doi.org/10.18653/v1/2026.acl-long.383",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) routing is a pivotal technique for navigating a diverse landscape of LLMs, enabling the selection of the best-performing LLMs for specific user queries while balancing performance and cost. However, current routing approaches often face limitations in scalability when dealing with a large pool of specialized LLMs, or in their adapt-ability to extending model scope and evolving capability domains. To overcome those challenges, we propose InferenceDynamics , a flexible and scalable multi-dimensional routing framework by modeling the capability and knowledge of models. We operate it on our comprehensive dataset RouteMix , and demonstrate its effectiveness and generalizability in group-level routing using modern benchmarks including MMLU-Pro, GPQA, BigGen-Bench, and LiveBench, showcasing its ability to identify and leverage top-performing models for given tasks, leading to superior outcomes with cost efficiency. The broader adoption of InferenceDynamics can empower users to harness the full specialized potential of the LLM ecosystem, and our code are publicly available at https://github.com/HKUST-KnowComp/InferenceDynamics.",
+        "identifiers": [
+          "SemanticScholar:ced5a724e570a094c674557ab43f581c704a2940"
+        ],
+        "semantic_scholar_id": "ced5a724e570a094c674557ab43f581c704a2940",
+        "doi": "10.18653/v1/2026.acl-long.383",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.383",
+        "authors": [
+          "Hao-Chen Shi",
+          "Tianshi ZHENG",
+          "Weiqi Wang",
+          "Bai-Xuan Xu",
+          "Chun-Yang Li",
+          "Chunkit Chan",
+          "Tao Fan",
+          "Yang-Qiu Song"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 148,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-acl.199",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.199",
+        "id:SemanticScholar:4c5bbd452896d603d4879ff5ae4b89b6b388c1d8",
+        "title:dualreasoner bridging interleaved atomicity and streaming latency via thinkingwhiletalking",
+        "url:https://doi.org/10.18653/v1/2026.findings-acl.199"
+      ],
+      "record": {
+        "title": "Dual-Reasoner: Bridging Interleaved Atomicity and Streaming Latency via Thinking-while-Talking",
+        "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.199",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:4c5bbd452896d603d4879ff5ae4b89b6b388c1d8"
+        ],
+        "semantic_scholar_id": "4c5bbd452896d603d4879ff5ae4b89b6b388c1d8",
+        "doi": "10.18653/v1/2026.findings-acl.199",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.199",
+        "authors": [
+          "Yang-Zhuo Li",
+          "Shengpeng Ji",
+          "Yi-Fu Chen",
+          "Tian-Le Liang",
+          "Haoyu Yang",
+          "Jun-Bo Li",
+          "Jun Fang",
+          "Lin Li",
+          "Q. Hong"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 148,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11460984",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11460984",
+        "id:SemanticScholar:bbe432d21bcb43dcef492db60c4f610c80a00e85",
+        "title:adaprune a twostage filterselect methods for visual token pruning in specialized vlms",
+        "url:https://doi.org/10.1109/icassp55912.2026.11460984"
+      ],
+      "record": {
+        "title": "AdaPrune: A Two-Stage Filter-Select Methods for Visual Token Pruning In Specialized VLMs",
+        "source_url": "https://doi.org/10.1109/icassp55912.2026.11460984",
+        "year": 2026,
+        "published": "2026-05-03",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:bbe432d21bcb43dcef492db60c4f610c80a00e85"
+        ],
+        "semantic_scholar_id": "bbe432d21bcb43dcef492db60c4f610c80a00e85",
+        "doi": "10.1109/icassp55912.2026.11460984",
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11460984",
+        "authors": [
+          "Xiu-Yuan Zhu",
+          "Ke Lu",
+          "Hao Wu",
+          "Jian Xue"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 207,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d8f32ad4dbb8d056f655ab47a8bc4fc7043b328da0f0ad58847fce066d2745b1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

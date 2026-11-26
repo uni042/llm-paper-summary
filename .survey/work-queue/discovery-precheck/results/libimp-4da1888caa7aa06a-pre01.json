@@ -1,0 +1,242 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4da1888caa7aa06a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4da1888caa7a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/hpca68181.2026.11408557",
+    "arXiv:2602.17254"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6f6a22e71731316fd24a91a2435f00b07eba67be",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T22:15:28.728996+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/hpca68181.2026.11408557",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.17254",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SpotCC: Facilitating Coded Computation for Prediction Serving Systems on Spot Instances",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408557",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing adoption of prediction serving systems (PSSes) has made cost-saving deployment on preemptible spot instances crucial, yet frequent preemptions severely harm availability. While coded computation (CC) can keep availability cost-effectively by encoding original jobs into parity ones, its direct application to spot instances incurs prohibitive decoding overhead and tail latency under frequent preemptions. We identify two findings for optimization: (i) decoding asymmetry (only original job failures require decoding); (ii) preemption unevenness (variation in preemption rates across cloud regions). Leveraging these findings, we propose SpotCC, a new CC framework that strategically dispatches parity jobs to high-preemption (volatile) regions and original jobs to low-preemption (stable) regions. SpotCC designs locality-based and fine-grained volatility identification to reduce decoding operations and mitigate job congestion, respectively, and adaptively tunes configurations for decoding minimization. Experiments show that SpotCC improves P99 latency by 83.9% over state-of-the-arts, while maintaining ultra-low monetary costs.",
+      "identifiers": [
+        "SemanticScholar:6d917373d34717f94c8a9527129c68dbf6dc06db"
+      ],
+      "semantic_scholar_id": "6d917373d34717f94c8a9527129c68dbf6dc06db",
+      "doi": "10.1109/HPCA68181.2026.11408557",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408557",
+      "authors": [
+        "Lin Wang",
+        "Yu-Chong Hu",
+        "Ziling Duan",
+        "Ming-Qi Li",
+        "Chen-Xuan Yao",
+        "Fei-Fan Liu",
+        "Xiao-Lu Li",
+        "Lei-Hua Qin",
+        "Dan Feng"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      }
+    },
+    {
+      "title": "Trivance: Latency-Optimal AllReduce by Shortcutting Multiport Networks",
+      "source_url": "https://arxiv.org/abs/2602.17254",
+      "year": 2026,
+      "published": "2026-02-19",
+      "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AllReduce is a fundamental collective communication operation in distributed computing and a key performance bottleneck for large-scale training and inference. Its completion time is determined by the number of communication steps, which dominate latency-sensitive workloads, and the communication distance affecting both latency- and bandwidth-bound regimes. Direct-connect topologies, such as Google's TPUv4 tori, are particularly prone to large communication distances due to limited bisection bandwidth. In this paper, we present Trivance, a novel AllReduce algorithm that completes within log3 nsteps—a 50% improvement in comparison to Swing and Recursive Doubling, while reducing congestion compared to Bruck's algorithm by a factor of three and preserving bandwidth-optimality. Trivance exploits both transmission ports of a bidirectional ring within each step to triple the communication distance along both directions simultaneously. By performing joint reductions, Trivance improves both the number of steps and network congestion. We further show that Trivance extends naturally to multidimensional torus networks, retaining its latency advantage while achieving performance comparable to bandwidth-optimal algorithms for large AllReduce sizes. Our packet-level SST simulation shows that Trivance improves state-of-the-art approaches by 5–30% for AllReduce sizes up to 8 MiB, in high-bandwidth settings up to 32 MiB and for 3D tori up to 128 MiB. Throughout the evaluation, Trivance remains the best-performing latency-optimal algorithm.",
+      "identifiers": [
+        "SemanticScholar:4b33c0ea49438864aa81a2a9e46b8e1157f41d05"
+      ],
+      "semantic_scholar_id": "4b33c0ea49438864aa81a2a9e46b8e1157f41d05",
+      "canonical_id": "arXiv:2602.17254",
+      "arxiv_id": "2602.17254",
+      "doi": "10.1145/3789240.3829181",
+      "authors": [
+        "Anton Juerss",
+        "Vamsi Addanki",
+        "Stefan Schmid"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/hpca68181.2026.11408557",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca68181.2026.11408557",
+        "id:SemanticScholar:6d917373d34717f94c8a9527129c68dbf6dc06db",
+        "title:spotcc facilitating coded computation for prediction serving systems on spot instances",
+        "url:https://doi.org/10.1109/HPCA68181.2026.11408557"
+      ],
+      "record": {
+        "title": "SpotCC: Facilitating Coded Computation for Prediction Serving Systems on Spot Instances",
+        "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408557",
+        "year": 2026,
+        "published": "2026-01-31",
+        "venue": "International Symposium on High-Performance Computer Architecture",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The growing adoption of prediction serving systems (PSSes) has made cost-saving deployment on preemptible spot instances crucial, yet frequent preemptions severely harm availability. While coded computation (CC) can keep availability cost-effectively by encoding original jobs into parity ones, its direct application to spot instances incurs prohibitive decoding overhead and tail latency under frequent preemptions. We identify two findings for optimization: (i) decoding asymmetry (only original job failures require decoding); (ii) preemption unevenness (variation in preemption rates across cloud regions). Leveraging these findings, we propose SpotCC, a new CC framework that strategically dispatches parity jobs to high-preemption (volatile) regions and original jobs to low-preemption (stable) regions. SpotCC designs locality-based and fine-grained volatility identification to reduce decoding operations and mitigate job congestion, respectively, and adaptively tunes configurations for decoding minimization. Experiments show that SpotCC improves P99 latency by 83.9% over state-of-the-arts, while maintaining ultra-low monetary costs.",
+        "identifiers": [
+          "SemanticScholar:6d917373d34717f94c8a9527129c68dbf6dc06db"
+        ],
+        "semantic_scholar_id": "6d917373d34717f94c8a9527129c68dbf6dc06db",
+        "doi": "10.1109/HPCA68181.2026.11408557",
+        "canonical_id": "DOI:10.1109/HPCA68181.2026.11408557",
+        "authors": [
+          "Lin Wang",
+          "Yu-Chong Hu",
+          "Ziling Duan",
+          "Ming-Qi Li",
+          "Chen-Xuan Yao",
+          "Fei-Fan Liu",
+          "Xiao-Lu Li",
+          "Lei-Hua Qin",
+          "Dan Feng"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 299,
+          "matched_prestigious_venue": "High-Performance Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.17254",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3829181",
+        "id:SemanticScholar:4b33c0ea49438864aa81a2a9e46b8e1157f41d05",
+        "id:arXiv:2602.17254",
+        "title:trivance latencyoptimal allreduce by shortcutting multiport networks",
+        "url:https://arxiv.org/abs/2602.17254"
+      ],
+      "record": {
+        "title": "Trivance: Latency-Optimal AllReduce by Shortcutting Multiport Networks",
+        "source_url": "https://arxiv.org/abs/2602.17254",
+        "year": 2026,
+        "published": "2026-02-19",
+        "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AllReduce is a fundamental collective communication operation in distributed computing and a key performance bottleneck for large-scale training and inference. Its completion time is determined by the number of communication steps, which dominate latency-sensitive workloads, and the communication distance affecting both latency- and bandwidth-bound regimes. Direct-connect topologies, such as Google's TPUv4 tori, are particularly prone to large communication distances due to limited bisection bandwidth. In this paper, we present Trivance, a novel AllReduce algorithm that completes within log3 nsteps—a 50% improvement in comparison to Swing and Recursive Doubling, while reducing congestion compared to Bruck's algorithm by a factor of three and preserving bandwidth-optimality. Trivance exploits both transmission ports of a bidirectional ring within each step to triple the communication distance along both directions simultaneously. By performing joint reductions, Trivance improves both the number of steps and network congestion. We further show that Trivance extends naturally to multidimensional torus networks, retaining its latency advantage while achieving performance comparable to bandwidth-optimal algorithms for large AllReduce sizes. Our packet-level SST simulation shows that Trivance improves state-of-the-art approaches by 5–30% for AllReduce sizes up to 8 MiB, in high-bandwidth settings up to 32 MiB and for 3D tori up to 128 MiB. Throughout the evaluation, Trivance remains the best-performing latency-optimal algorithm.",
+        "identifiers": [
+          "SemanticScholar:4b33c0ea49438864aa81a2a9e46b8e1157f41d05"
+        ],
+        "semantic_scholar_id": "4b33c0ea49438864aa81a2a9e46b8e1157f41d05",
+        "canonical_id": "arXiv:2602.17254",
+        "arxiv_id": "2602.17254",
+        "doi": "10.1145/3789240.3829181",
+        "authors": [
+          "Anton Juerss",
+          "Vamsi Addanki",
+          "Stefan Schmid"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 280,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:913b0508f4cc198f01f2f15157716259dd5b763071e9467421f5525ac50b4d6c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
