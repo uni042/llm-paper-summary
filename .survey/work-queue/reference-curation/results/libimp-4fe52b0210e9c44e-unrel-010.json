@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4fe52b0210e9c44e-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.08826",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.08826",
+    "identity_tokens": [
+      "arXiv:2604.08826"
+    ],
+    "reason": "Ascend NPUでの言語モデル事前学習向け4ビット浮動小数HiFloat4は学習時の数値安定化が主題であり、推論時の量子化や実行への適用は確認できないため対象外とする",
+    "first_checked_at": "2026-11-26T07:55:31+00:00",
+    "last_checked_at": "2026-11-26T07:55:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "HiFloat4 Format for Language Model Pre-training on Ascend NPUs"
+  },
+  "processed_at": "2026-11-26T07:55:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fe52b0210e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

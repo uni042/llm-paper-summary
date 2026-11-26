@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4fe52b0210e9c44e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.10715",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.10715",
+    "identity_tokens": [
+      "arXiv:2602.10715"
+    ],
+    "reason": "LLMエージェントの認知的長期記憶を測るLoCoMo-Plusは能力評価ベンチマークであり、推論システムの機構や効率への技術的貢献はないため対象外とする",
+    "first_checked_at": "2026-11-26T07:55:31+00:00",
+    "last_checked_at": "2026-11-26T07:55:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Locomo-Plus: Beyond-Factual Cognitive Memory Evaluation Framework for LLM Agents"
+  },
+  "processed_at": "2026-11-26T07:55:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fe52b0210e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4fe52b0210e9c44e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.14915",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.14915",
+    "identity_tokens": [
+      "arXiv:2504.14915"
+    ],
+    "reason": "音声基盤モデル向け層適応PTQ StableQuantは量子化技術として推論圧縮に有効だが対象が音声モデルでありLLM推論システムへの直接性が弱いため境界とする",
+    "first_checked_at": "2026-11-26T07:55:31+00:00",
+    "last_checked_at": "2026-11-26T07:55:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "StableQuant: Layer Adaptive Post-Training Quantization for Speech Foundation Models"
+  },
+  "processed_at": "2026-11-26T07:55:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fe52b0210e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

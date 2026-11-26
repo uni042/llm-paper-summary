@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc6ef547191d83e6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.14493",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.14493",
+    "identity_tokens": [
+      "arXiv:2604.14493"
+    ],
+    "reason": "オンデバイス streaming ASRについて50超構成をベンチマークし低遅延推論の構成選定を示すが、対象は音声認識でありLLM推論システムへの直接の技術的貢献は限定的であるため保留寄りに分類する",
+    "first_checked_at": "2026-11-26T07:55:31+00:00",
+    "last_checked_at": "2026-11-26T07:55:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Pushing the Limits of On-Device Streaming ASR: A Compact, High-Accuracy English Model for Low-Latency Inference"
+  },
+  "processed_at": "2026-11-26T07:55:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc6ef547191d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

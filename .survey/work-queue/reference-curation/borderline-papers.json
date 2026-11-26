@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T07:54:19+00:00",
-  "record_count": 9547,
+  "updated_at": "2026-11-26T07:55:31+00:00",
+  "record_count": 9560,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -146123,6 +146123,201 @@
       ],
       "borderline_recheck_count": 0,
       "title": "How Sparse Probability Maps Shape Mixture-of-Experts Routing"
+    },
+    "arXiv:2610.05732": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05732",
+      "identity_tokens": [
+        "arXiv:2610.05732"
+      ],
+      "reason": "来歴認識型の連鎖的記憶無効化PACMIは長期エージェント記憶の依存追跡と履歴保存を行うが、対象はエージェント記憶の整合性管理であり推論実行系ではないため境界とする",
+      "first_checked_at": "2026-11-26T07:55:30+00:00",
+      "last_checked_at": "2026-11-26T07:55:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PACMI: Provenance-Aware Cascading Memory Invalidation for Long-Term LLM Agents"
+    },
+    "arXiv:2504.14915": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.14915",
+      "identity_tokens": [
+        "arXiv:2504.14915"
+      ],
+      "reason": "音声基盤モデル向け層適応PTQ StableQuantは量子化技術として推論圧縮に有効だが対象が音声モデルでありLLM推論システムへの直接性が弱いため境界とする",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "StableQuant: Layer Adaptive Post-Training Quantization for Speech Foundation Models"
+    },
+    "arXiv:2506.11586": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.11586",
+      "identity_tokens": [
+        "arXiv:2506.11586"
+      ],
+      "reason": "ImageNet規模CNNの安全な外部委託推論SecONNdsはGMWプロトコルで安全推論の通信・計算コストを下げるが、対象がCNNでLLM推論ではないため境界として分類する",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SecONNds: Secure Outsourced Neural Network Inference on ImageNet"
+    },
+    "DOI:10.62051/ijcsit.v4n2.16": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.62051/ijcsit.v4n2.16",
+      "identity_tokens": [
+        "DOI:10.62051/ijcsit.v4n2.16"
+      ],
+      "reason": "KVキャッシュ量子化を扱うが本論文の貢献はLLM悪用リスクの安全性ベンチマークであり、量子化技術自体の改良や推論性能の機構提示ではないため境界とする",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Key-Value Cache Quantization in Large Language Models: A Safety Benchmark"
+    },
+    "arXiv:2603.04549": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.04549",
+      "identity_tokens": [
+        "arXiv:2603.04549"
+      ],
+      "reason": "LLMエージェントの長期記憶への入場制御A-MACは記憶保持ポリシーを制御する枠組みだが、対象はエージェント記憶管理であり推論実行系への貢献は間接的なため境界とする",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Memory Admission Control for LLM Agents"
+    },
+    "arXiv:2601.06377": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06377",
+      "identity_tokens": [
+        "arXiv:2601.06377"
+      ],
+      "reason": "階層型長期記憶HiMemはエピソード記憶とノート記憶でエージェントの長期対話を支えるが、推論サービングやKVキャッシュ等の推論システム機構ではないため境界とする",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HiMem: Hierarchical Long-Term Memory for LLM Long-Horizon Agents"
+    },
+    "arXiv:2604.19540": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.19540",
+      "identity_tokens": [
+        "arXiv:2604.19540"
+      ],
+      "reason": "マルチエージェントLLMの認知状態共有のためのMesh Memory Protocolは意味的基盤の提案だが、推論実行やメモリ階層の具体的な性能機構が不明瞭なため境界とする",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mesh Memory Protocol: Semantic Infrastructure for Multi-Agent LLM Systems"
+    },
+    "arXiv:2601.22752": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.22752",
+      "identity_tokens": [
+        "arXiv:2601.22752"
+      ],
+      "reason": "難読化意味ヌル空間OSNIPはクライアント側暗号でプライバシー保護LLM推論を行うが主目的はプライバシーであり推論性能機構の提示は軽量性の主張に留まるため境界とする",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OSNIP: Breaking the Privacy-Utility-Efficiency Trilemma in LLM Inference via Obfuscated Semantic Null Space"
+    },
+    "arXiv:2604.04514": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.04514",
+      "identity_tokens": [
+        "arXiv:2604.04514"
+      ],
+      "reason": "生物学着想の忘却や認知的量子化を持つローカル型エージェント記憶SuperLocalMemoryは記憶システムの提案だがLLM推論実行系ではなくエージェント記憶管理のため境界とする",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SuperLocalMemory V3.3: The Living Brain - Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems"
+    },
+    "arXiv:2604.14493": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14493",
+      "identity_tokens": [
+        "arXiv:2604.14493"
+      ],
+      "reason": "オンデバイス streaming ASRについて50超構成をベンチマークし低遅延推論の構成選定を示すが、対象は音声認識でありLLM推論システムへの直接の技術的貢献は限定的であるため保留寄りに分類する",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pushing the Limits of On-Device Streaming ASR: A Compact, High-Accuracy English Model for Low-Latency Inference"
+    },
+    "DOI:10.1145/3759441.3759447": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3759441.3759447",
+      "identity_tokens": [
+        "DOI:10.1145/3759441.3759447"
+      ],
+      "reason": "重み共有SuperNetによる学習と推論サービングの効率化を扱う概説だが、サーベイ論文であり推論サービング側の具体的な新機構の提示が薄いため境界として分類する",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Toward Weight Sharing Paradigm for Efficient AI: Training and Inference Serving"
+    },
+    "DOI:10.1109/tcsvt.2026.3707561": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsvt.2026.3707561",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2026.3707561"
+      ],
+      "reason": "重み分布を多峰化して量子化器に合わせるDIMQは汎用DNN向け量子化であり、LLM推論での検証やKVキャッシュ等への適用が要旨で不明瞭なため境界として分類する",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DIMQ: Distribution-Induced Multi-Peak Quantization for Deep Neural Networks"
+    },
+    "arXiv:2604.07674": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07674",
+      "identity_tokens": [
+        "arXiv:2604.07674"
+      ],
+      "reason": "医療基盤モデル向けの重みグループ単位PTQ Permutation-COMQは量子化手法自体は汎用だが、主目的が医療画像端末適用でありLLM推論への貢献は間接的なため境界とする",
+      "first_checked_at": "2026-11-26T07:55:31+00:00",
+      "last_checked_at": "2026-11-26T07:55:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Weight Group-wise Post-Training Quantization for Medical Foundation Model"
     }
   }
 }

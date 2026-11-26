@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-46238a852e8b87a1-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.11257",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.11257",
+    "identity_tokens": [
+      "arXiv:2406.11257"
+    ],
+    "reason": "重みとモメンタムの共同縮小によるLLMチェックポイント圧縮ExCPは学習チェックポイントの保存容量削減が目的であり推論時の圧縮ではないため対象外とする",
+    "first_checked_at": "2026-11-26T07:55:31+00:00",
+    "last_checked_at": "2026-11-26T07:55:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ExCP: Extreme LLM Checkpoint Compression via Weight-Momentum Joint Shrinking"
+  },
+  "processed_at": "2026-11-26T07:55:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-46238a852e8b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
