@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T14:43:37+00:00",
-  "record_count": 9798,
+  "updated_at": "2026-11-26T14:45:00+00:00",
+  "record_count": 9801,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -149891,6 +149891,51 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Joint Hardware-Workload Co-Optimization for In-Memory Computing Accelerators"
+    },
+    "arXiv:2604.07760": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07760",
+      "identity_tokens": [
+        "arXiv:2604.07760"
+      ],
+      "reason": "軌道上計算衛星向けに太陽電池・計算・放熱を一体化したパネルアレイを提案し推論専用LLMの実行例も示すが、主題は衛星の電力・質量・熱設計というハードウェア構想であり、LLM推論システムのソフトウェア機構への貢献は薄い。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reduced-Mass Orbital AI Inference via Integrated Solar, Compute, and Radiator Panels"
+    },
+    "arXiv:2609.26823": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.26823",
+      "identity_tokens": [
+        "arXiv:2609.26823"
+      ],
+      "reason": "Qwen2-Audio-7Bの固定混合4/8bit量子化配分を翻訳と感情課題で評価するケーススタディであり、推論向け量子化に直接関わるが、新しい量子化手法ではなく評価知見の提示にとどまる。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Text Scores Can Miss Waveform Use: A Qwen2-Audio Quantization Case Study"
+    },
+    "DOI:10.1145/3653020": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3653020",
+      "identity_tokens": [
+        "DOI:10.1145/3653020"
+      ],
+      "reason": "疎行列ベクトル積（SpMV）の3モードアクセラレータCerberusを提案し疎ニューラルネットのカーネル高速化に関わるが、対象は汎用HPCカーネルでありLLM推論への特化や評価は確認できない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cerberus: Triple Mode Acceleration of Sparse Matrix and Vector Multiplication"
     }
   }
 }

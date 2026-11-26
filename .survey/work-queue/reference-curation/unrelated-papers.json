@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-26T14:43:37+00:00",
-  "record_count": 17229,
+  "updated_at": "2026-11-26T14:45:00+00:00",
+  "record_count": 17243,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -246403,6 +246403,202 @@
         "worker-worklist discovery_review"
       ],
       "title": "BrainDistill: Implantable Motor Decoding with Task-Specific Knowledge Distillation"
+    },
+    "arXiv:2606.07527": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.07527",
+      "identity_tokens": [
+        "arXiv:2606.07527"
+      ],
+      "reason": "SFTとRLによる大規模post-trainingを教師あり学習への回帰と論じるposition paperであり、学習パラダイムの批判が主題で推論・サービング機構は扱われていない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Post-training is (Massive) Supervised Learning"
+    },
+    "arXiv:2609.31874": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31874",
+      "identity_tokens": [
+        "arXiv:2609.31874"
+      ],
+      "reason": "失敗行動への反事実メモリを世界モデルで検証して言語エージェントのタスク成功を上げるCOUNTERMEMであり、エージェントの記憶構築・強化学習が主題で推論システム機構ではない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "COUNTERMEM: World-Model Verified Counter-Factual Memory for Language Agents"
+    },
+    "arXiv:2610.07258": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.07258",
+      "identity_tokens": [
+        "arXiv:2610.07258"
+      ],
+      "reason": "企業AIエージェント共有メモリの派生系譜に基づく列レベルアクセス制御（AMU）を提案するガバナンス枠組みであり、推論の高速化やサービングとは無関係である。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Lineage-Aware Memory Governance: A Derivation-Gated Framework for Privacy-Preserving Column-Level Access Control in Enterprise AI Agents"
+    },
+    "arXiv:2610.22959": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.22959",
+      "identity_tokens": [
+        "arXiv:2610.22959"
+      ],
+      "reason": "エージェントメモリ内の主張に権限ラベルを付け未承認の影響を防ぐSAFE-Memというセキュリティ・ガバナンス手法であり、LLM推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "SAFE-Mem: Secure Agentic Memory with Fine-Grained Authority and Governance-Aware Retrieval"
+    },
+    "arXiv:2610.27400": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.27400",
+      "identity_tokens": [
+        "arXiv:2610.27400"
+      ],
+      "reason": "感覚知覚から将来の意図を想起するprospective memoryで先回り支援を行うProMemAgentとCPMBenchの提案であり、エージェント応用・ベンチマークが主題で推論機構ではない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "ProMemAgent: Long-Horizon Proactive Assistance with Context-Aware Prospective Memory from Sensory Perceptions"
+    },
+    "arXiv:2610.34833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.34833",
+      "identity_tokens": [
+        "arXiv:2610.34833"
+      ],
+      "reason": "生データを保存せず1ステップBPTTで学習するストリーミング向けリカレント記憶SRMのモデル・学習研究であり、LLM推論システムの対象ではない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Streaming Recurrent Memory"
+    },
+    "arXiv:2610.38332": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.38332",
+      "identity_tokens": [
+        "arXiv:2610.38332"
+      ],
+      "reason": "科学コーディングエージェント向けに多層メモリを実行時注入するMUSEであり、エージェントの経験再利用が主題で、推論サービングの効率化機構ではない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MUSE: Multi-Level Memory with Selective Runtime Injection for Scientific Coding Agents"
+    },
+    "arXiv:2611.04449": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.04449",
+      "identity_tokens": [
+        "arXiv:2611.04449"
+      ],
+      "reason": "ゲート付き系列モデルでほぼゼロのトークン埋め込みが学習を停滞させる現象とGroupClip等の学習時対策を報告する研究であり、対象は事前学習の不具合で推論システムではない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Near-Zero Token Embeddings Silently Stall Training in Gated Sequence Models"
+    },
+    "DOI:10.1111/cgf.14912": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1111/cgf.14912",
+      "identity_tokens": [
+        "DOI:10.1111/cgf.14912"
+      ],
+      "reason": "Transformerエンコーダと相対位置符号化による非剛体形状マッチングの分析であり、3D形状対応付けというコンピュータグラフィクス課題でLLM推論とは無関係である。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Attention And Positional Encoding Are (Almost) All You Need For Shape Matching"
+    },
+    "DOI:10.1109/bigdata47090.2019.9006175": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/bigdata47090.2019.9006175",
+      "identity_tokens": [
+        "DOI:10.1109/bigdata47090.2019.9006175"
+      ],
+      "reason": "CNN学習の並列化作業をMPIベースで自動化するAuto-CNNpフレームワークであり、CNNの学習並列化が主題でLLM推論システムではない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Auto-CNNp: a component-based framework for automating CNN parallelism"
+    },
+    "DOI:10.21437/interspeech.2021-67": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21437/interspeech.2021-67",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2021-67"
+      ],
+      "reason": "wav2vec 2.0の事前学習に畳み込みと自己注意を組み合わせ音声認識のWERを下げる改良であり、音声モデルの学習手法で推論システムとは無関係である。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "An Improved Wav2Vec 2.0 Pre-Training Approach Using Enhanced Local Dependency Modeling for Speech Recognition"
+    },
+    "arXiv:2201.13195": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.13195",
+      "identity_tokens": [
+        "arXiv:2201.13195"
+      ],
+      "reason": "大きな線形層の逆伝播をランダム化行列積で省メモリ化する手法であり、対象は学習時のbackpropagationであって推論ではない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Memory-Efficient Backpropagation through Large Linear Layers"
+    },
+    "arXiv:2204.08688": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.08688",
+      "identity_tokens": [
+        "arXiv:2204.08688"
+      ],
+      "reason": "因果的注意マスクでBERTの位置符号化能力を高める事前学習モデルDecBERTの提案であり、言語理解モデルの学習が主題で推論システムではない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "DecBERT: Enhancing the Language Understanding of BERT with Causal Attention Masks"
+    },
+    "arXiv:2507.04559": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.04559",
+      "identity_tokens": [
+        "arXiv:2507.04559"
+      ],
+      "reason": "Mamba型エンコーダとchannel-split量子化による離散ビデオトークナイザMambaVideoであり、量子化はビデオトークン化のためのものでLLM推論の量子化ではない。",
+      "first_checked_at": "2026-11-26T14:44:59+00:00",
+      "last_checked_at": "2026-11-26T14:44:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MambaVideo for Discrete Video Tokenization with Channel-Split Quantization"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83ff6ac33aa8d0e2-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.26823",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.26823",
+    "identity_tokens": [
+      "arXiv:2609.26823"
+    ],
+    "reason": "Qwen2-Audio-7Bの固定混合4/8bit量子化配分を翻訳と感情課題で評価するケーススタディであり、推論向け量子化に直接関わるが、新しい量子化手法ではなく評価知見の提示にとどまる。",
+    "first_checked_at": "2026-11-26T14:44:59+00:00",
+    "last_checked_at": "2026-11-26T14:44:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Text Scores Can Miss Waveform Use: A Qwen2-Audio Quantization Case Study"
+  },
+  "processed_at": "2026-11-26T14:44:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83ff6ac33aa8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
