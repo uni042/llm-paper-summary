@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OPS: Outlier-Aware Precision-Slice Framework for LLM Acceleration",
+      "source_url": "https://doi.org/10.23919/DATE64628.2025.10993106",
+      "year": 2025,
+      "published": "2025-03-31",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have transformed numerous AI applications, with on-device deployment becoming increasingly important for reducing cloud computing costs and protecting user privacy. However, the astronomical model size and limited hardware resources pose significant deployment challenges. Model quantization is a promising approach to mitigate this gap, but the presence of outliers in LLMs reduces its effectiveness. Previous efforts addressed this issue by employing compression-based encoding for mixed-precision quantization. These approaches struggle to balance model accuracy with hard-ware efficiency due to their value-wise outlier granularity and complex encoding/decoding hardware logic. To address this, we propose OPS (Outlier-aware Precision-Slicing), an acceleration framework that exploits massive sparsity in the higher-order part of LLMs by splitting 16-bit values into a 4-bit/12-bit format. Crucially, OPS introduces an early bird mechanism that leverages the high-order 4-bit computation to predict the importance of the full calculation result. This mechanism enables efficient computational skips by continuing execution only for important computations and using preset values for less significant ones. This scheme can be efficiently integrated with existing hardware accelerators like systolic arrays without complex encoding/decoding. As a result, OPS outperforms state-of-the-art outlier-aware accelerators, achieving a 1.3 − 4.3× performance boost with minimal model accuracy loss. This approach enables more efficient on-device LLM deployment, effectively balancing computational efficiency and model accuracy.",
+      "identifiers": [
+        "SemanticScholar:f9fb10e779d976207f7ad9200e1d7e3a39bff383"
+      ],
+      "semantic_scholar_id": "f9fb10e779d976207f7ad9200e1d7e3a39bff383",
+      "doi": "10.23919/DATE64628.2025.10993106",
+      "canonical_id": "DOI:10.23919/DATE64628.2025.10993106",
+      "authors": [
+        "Fang-Xin Liu",
+        "Ning Yang",
+        "Zong-Wu Wang",
+        "Xuanpeng Zhu",
+        "Haidong Yao",
+        "Xian-Kui Xiong",
+        "Qi Sun",
+        "Li Jiang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 605,
+        "matched_prestigious_venue": null
+      },
+      "reason": "外れ値に配慮した精度スライス枠組みOPSはオンデバイスLLM加速のための量子化であり、LLM推論のモデルサイズと演算削減へ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3731fef0e7ff",
+    "round": "libimp-3731fef0e7ff781c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3731fef0e7ff781c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3731fef0e7ff781c-pre01.json",
+    "receipt": "sha256:ebb0681cc61998ce7cc355425c0b98d413399d07bc4444dec689fc169b5b8502"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3731fef0e7ff",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

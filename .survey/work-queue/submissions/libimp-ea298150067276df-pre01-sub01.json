@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Structured Pruning of Large Language Models via Power Transformation and Sign-Preserving Score Aggregation with Adaptive Feature Retention",
+      "source_url": "https://arxiv.org/abs/2607.08027",
+      "year": 2026,
+      "published": "2026-07-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper proposes an improved structured pruning method for large language models (LLMs) that addresses key challenges in adapting Adaptive Feature Retention (AFR), an unstructured pruning technique, to structured pruning. When applying AFR to structured pruning, three major problems arise: distribution mismatch between heterogeneous pruning scores, loss of sign information indicating optimization direction consistency, and influence of outliers. To address these issues, we propose a unified approach combining power transformation for nonlinear distribution alignment, sign-preserving score aggregation, and percentile-based outlier removal. Experiments on Llama-3-8B, Vicuna-v1.5-13B, and LLaVA-v1.5-13B demonstrate that our method maintains accuracy comparable to unstructured pruning while achieving practical inference speedup through structured pruning.",
+      "identifiers": [
+        "SemanticScholar:f9aa6bc15b0756b9279851809ceeb9aa18324d61"
+      ],
+      "semantic_scholar_id": "f9aa6bc15b0756b9279851809ceeb9aa18324d61",
+      "canonical_id": "arXiv:2607.08027",
+      "arxiv_id": "2607.08027",
+      "doi": "10.48550/arXiv.2607.08027",
+      "authors": [
+        "Ryota Kobayashi",
+        "Tsubasa Hirakawa",
+        "Takayoshi Yamashita",
+        "H. Fujiyoshi",
+        "Yasunori Ishii",
+        "Tomoyuki Okuno",
+        "Kazuki Kozuka"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "冪変換と符号保存スコア集約でLLMの構造化プルーニングを行う手法は、LLMの推論向け圧縮として配備時の計算・メモリ削減へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DictLLM: Post-training Compression of Large Language Model with Dictionary Kernels",
+      "source_url": "https://arxiv.org/abs/2611.08082",
+      "year": 2026,
+      "published": "2026-11-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient deployment of large language models (LLMs) on mobile devices requires balancing performance with compute and memory constraints. Post-training compression is an effective approach to managing this trade-off, while requiring much less computation than in-training counterparts. We propose DictLLM, a dictionary-based compression scheme in which weight matrices within grouped layers are decomposed into a shared dictionary and layer-specific sparse coefficients, directly obtained from a pre-trained model without further training. Specifically, we cast DictLLM as a four-step post-training optimization. First, we obtain shared dictionaries via singular value decomposition (SVD) of input-scaled weight matrices, amortizing rank across grouped layers; second, we sparsify the layer-specific coefficients to the target compression ratio using a dictionary-aware Hessian; and third, we refine the dictionaries given the resulting sparse coefficients. Finally, we aggressively quantize both components using factor-specific Hessian information: input covariance for the dictionaries and the dictionary-aware Hessian for the coefficients. The resulting representation reduces memory footprint by storing a single shared dictionary per layer group, along with sparse layer-specific coefficients. On language modeling and zero-shot reasoning benchmarks, DictLLM consistently outperforms existing post-training low-rank compression methods and pushes the Pareto frontier between model size and performance. DictLLM compresses the original LLaMA-7B model by 5.1x with only a 2.9-point increase in WikiText-2 perplexity, achieving a 3.6x higher compression ratio than the state-of-the-art low-rank method.",
+      "identifiers": [
+        "SemanticScholar:ab5ad4e2fb6523c96696dd9196bb4b8ca2e3a9f1"
+      ],
+      "semantic_scholar_id": "ab5ad4e2fb6523c96696dd9196bb4b8ca2e3a9f1",
+      "canonical_id": "arXiv:2611.08082",
+      "arxiv_id": "2611.08082",
+      "authors": [
+        "Jinho Park",
+        "Se-Young Chun",
+        "M. Seok"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "辞書カーネルでLLM重み行列を事後圧縮しモバイル配備を狙うDictLLMは、LLM推論向けモデル圧縮としてメモリと計算の削減へ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PrivTF: Efficient and Privacy-Preserving Transformer Inference With Optimized Protocols for Secure NLP",
+      "source_url": "https://doi.org/10.1109/TNSE.2025.3605623",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Network Science and Engineering",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As many natural language processing services employ language models like Transformer in the cloud, privacy concerns arise for both users and model owners. Secure inference is proposed in the literature to perform the computing service securely. While prior schemes have studied convolutional neural networks and analogous models, they do not easily apply to Transformer because it requires more efficient protocols of different layers with large-sized weight matrices and complex non-linear functions on high-dimensional vectors. Therefore, we propose a privacy-preserving scheme PrivTF for secure transformer inference. PrivTF consists of protocols for Transformer-unique layers (encoder/decoder layer and their attention sub-layer) with our specialized design. Specifically, we present protocols of base sub-layers to address the heavy performance overhead: a new protocol of embedding layer, protocols of matrix multiplication and softmax that make use of mixed bitwidths, and protocols of the GeLU functionfunctions and normalization. Analysis and experiments demonstrate that our protocols outperform previous secure inference works and maintain accuracy on practical inference tasks.",
+      "identifiers": [
+        "SemanticScholar:fcab1e4c3eb3a07c44836deb5f3b93bf8aeb2b37"
+      ],
+      "semantic_scholar_id": "fcab1e4c3eb3a07c44836deb5f3b93bf8aeb2b37",
+      "doi": "10.1109/TNSE.2025.3605623",
+      "canonical_id": "DOI:10.1109/TNSE.2025.3605623",
+      "authors": [
+        "Zi-Wei Peng",
+        "Kaiping Xue",
+        "Bin Zhu",
+        "Ya-Xuan Huang",
+        "Jian Li",
+        "Meng Hao",
+        "Tian-Wei Zhang"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      },
+      "reason": "クラウドNLP向けに秘匿Transformer推論プロトコルを最適化するPrivTFは、プライバシーを保つ推論実行の効率化という推論システム課題へ直接取り組む。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ea2981500672",
+    "round": "libimp-ea298150067276df-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ea298150067276df-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ea298150067276df-pre01.json",
+    "receipt": "sha256:adddf7eea7ea95ac745122251883304a98d97954b25874a34d627c730c8785da"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ea2981500672",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

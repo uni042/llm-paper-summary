@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Zero-Shot Dynamic Quantization for Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2211.09744",
+      "year": 2022,
+      "published": "2022-11-17",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce a novel run-time method for significantly reducing the accuracy loss associated with quantizing BERT-like models to 8-bit integers. Existing methods for quantizing models either modify the training procedure,or they require an additional calibration step to adjust parameters that also requires a selected held-out dataset. Our method permits taking advantage of quantization without the need for these adjustments. We present results on several NLP tasks demonstrating the usefulness of this technique.",
+      "identifiers": [
+        "SemanticScholar:f7da898ff5aa14106edf0d197214790cb65f0dc1"
+      ],
+      "semantic_scholar_id": "f7da898ff5aa14106edf0d197214790cb65f0dc1",
+      "canonical_id": "arXiv:2211.09744",
+      "arxiv_id": "2211.09744",
+      "doi": "10.48550/arXiv.2211.09744",
+      "authors": [
+        "Yousef El-Kurdi",
+        "Jerry Quinn",
+        "Avirup Sil"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1470,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "一次要旨で較正データなしでBERT系モデルを8ビット化する実行時ゼロショット動的量子化が確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "First Finish Search: Efficient Test-Time Scaling in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2505.18149",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling (TTS), which involves dynamic allocation of compute during inference, offers a promising way to improve reasoning in large language models. While existing TTS methods work well, they often rely on long decoding paths or require a large number of samples to be generated, increasing the token usage and inference latency. We observe the surprising fact that for reasoning tasks, shorter traces are much more likely to be correct than longer ones. Motivated by this, we introduce First Finish Search (FFS), a training-free parallel decoding strategy that launches $n$ independent samples and returns as soon as any one completes. We evaluate FFS alongside simple decoding, beam search, majority voting, and budget forcing on four reasoning models (DeepSeek-R1, R1-Distill-Qwen-32B, QwQ-32B and Phi-4-Reasoning-Plus) and across four datasets (AIME24, AIME25-I, AIME25-II and GPQA Diamond). With DeepSeek-R1, FFS achieves $82.23\\%$ accuracy on the AIME datasets, a $15\\%$ improvement over DeepSeek-R1's standalone accuracy, nearly matching OpenAI's o4-mini performance. Our theoretical analysis explains why stopping at the shortest trace is likely to yield a correct answer and identifies the conditions under which early stopping may be suboptimal. The elegance and simplicity of FFS demonstrate that straightforward TTS strategies can perform remarkably well, revealing the untapped potential of simple approaches at inference time.",
+      "identifiers": [
+        "SemanticScholar:7421c7342a15c24fc57832be4af7bd61d8b7927c"
+      ],
+      "semantic_scholar_id": "7421c7342a15c24fc57832be4af7bd61d8b7927c",
+      "canonical_id": "arXiv:2505.18149",
+      "arxiv_id": "2505.18149",
+      "doi": "10.48550/arXiv.2505.18149",
+      "authors": [
+        "Aradhye Agarwal",
+        "Ayan Sengupta",
+        "Tanmoy Chakraborty"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 552,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨で最速で完了したサンプルを返すFirst Finish Searchによるテスト時スケーリングの並列デコードが確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Semantic-Guided Slow-Fast Pruning of Visual Tokens for Vision-Language Models",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11460400",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:567da58b815f00fae780263ab4c17b6a95d040a1"
+      ],
+      "semantic_scholar_id": "567da58b815f00fae780263ab4c17b6a95d040a1",
+      "doi": "10.1109/icassp55912.2026.11460400",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460400",
+      "authors": [
+        "Zheng-Wei Liu",
+        "Eugene Lee",
+        "Jui-Huang Tsai",
+        "Jia-Jie Diao",
+        "Chen-Yi Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 207,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨で画像エンコーダの意味マップを使うSlow-Fast時間剪定SFTPによる映像トークン削減が確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c47075a60d2e",
+    "round": "libimp-c47075a60d2e216b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c47075a60d2e216b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c47075a60d2e216b-pre01.json",
+    "receipt": "sha256:b093bcdbf435fe09eef7f13e2115bff2eda3871212fbebe6b1768b5fb5ac4596"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c47075a60d2e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

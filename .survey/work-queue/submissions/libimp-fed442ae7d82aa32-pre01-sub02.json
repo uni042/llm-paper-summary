@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "From a Lossless (~1.5: 1) Compression Algorithm for Llama2 7B Weights to Variable Precision, Variable Range, Compressed Numeric Data Types for CNNs and LLMs",
+      "source_url": "https://arxiv.org/abs/2404.10896",
+      "year": 2024,
+      "published": "2024-04-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper starts with a simple lossless ~1.5:1 compression algorithm for the weights of the Large Language Model (LLM) Llama2 7B [1] that can be implemented in ~200 LUTs in AMD FPGAs, processing over 800 million bfloat16 numbers per second. This framework is then extended to variable precision, variable range, compressed numerical data types that are a user defined super set of both floats and posits [2]. The paper then discusses a simple hardware implementation of such format based on ANS (Asymmetrical Numeral Systems) [3] that acts as a bridge between this flexible data format and a computational engine while, at the same time, achieving bandwidth reduction. An example of a token factory using weight compression and sharing is also given.",
+      "identifiers": [
+        "SemanticScholar:719fc92104adff461bcf04fdbef12bbbb59f2a1a"
+      ],
+      "semantic_scholar_id": "719fc92104adff461bcf04fdbef12bbbb59f2a1a",
+      "canonical_id": "arXiv:2404.10896",
+      "arxiv_id": "2404.10896",
+      "doi": "10.48550/arXiv.2404.10896",
+      "authors": [
+        "Vincenzo Liguori"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 954,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨でLlama2 7B重みの可逆圧縮から発展した可変精度・可変範囲の圧縮数値型とFPGA実装が確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A 46 TOPS/W In-/Near-Memory Computing Processor for Large Language Model with Extended Sparse Attention",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043292",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A highly energy-efficient embedded DRAM (eDRAM)-based heterogeneous-in/near-memory computing (H-INMC) processor for large language model with extended sparse attention is proposed. The proposed H-INMC processor reduces external memory access (EMA) and enhances macro/system energy efficiency through three key features: 1) attention block fusion computation strategy to maximize input and intermediate data reuse, achieving 85.86% EMA reduction; 2) H-INMC architecture for addressing the imbalances in memory and computation intensity across different computation stages, reducing 77.27% of system latency; and 3) cross-read 3T1C bitcell architecture for mitigating read/write datapath conflictions between CIMs and enhancing the energy efficiency up to 46 TOPS/W with dual-row in-memory-computation. Designed with 28 nm CMOS technology, the proposed H-INMC processor achieves a 92.41% F1 score, evaluated under the Bigbird-large model on the SQuAD 1.1v dataset.",
+      "identifiers": [
+        "SemanticScholar:1ebbe60a312f6946ca1631fed5a22942e1e3d00f"
+      ],
+      "semantic_scholar_id": "1ebbe60a312f6946ca1631fed5a22942e1e3d00f",
+      "doi": "10.1109/ISCAS56072.2025.11043292",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043292",
+      "authors": [
+        "Sunhong An",
+        "Hoichang Jeong",
+        "Seung-Ju Kim",
+        "Keonhee Park",
+        "Dongwook Kim",
+        "K. Lee"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 550,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨で注意ブロック融合とeDRAM近接メモリ計算で外部メモリアクセスを85%削減するLLMプロセッサが確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Network and Compiler Optimizations for Efficient Linear Algebra Kernels in Private Transformer Inference (Invited Paper)",
+      "source_url": "https://arxiv.org/abs/2512.11135",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) based services are primarily structured as client-server interactions, with clients sending queries directly to cloud providers that host LLMs. This approach currently compromises data privacy as all queries must be processed in the cloud and in the clear. Fully Homomorphic Encryption (FHE) is a solution to this data privacy issue by enabling computations directly upon encrypted queries. However, running encrypted transformer inference is challenging as programmers must map standard kernels to the constrained instruction set provided by FHE. In this work, we explore implementations of linear algebra kernels needed for transformer inference in FHE and understand how network optimization can help mitigate FHE costs while remaining performant.We leverage the Orion PyTorch to FHE framework to benchmark several linear algebra kernels in order to profile two linear transformation methods, packed row and BSGS, and find that BSGS outperforms packed row methods by up to 13.7× at transformer-level scales. We also incorporate network-level pruning strategies that reduce FHE runtimes of feed forward layers by up to 11.46×. Furthermore, we extend Orion to include ciphertext-ciphertext matrix-matrix products, a key component in the self-attention blocks. And finally, we perform a roofline analysis of FHE primitives and encrypted linear transformations and find that (SIMD encoded) implementations are memory-bound with primitives having roughly 0.1 integer operations per byte of DRAM traffic. These findings illustrate the need for exploring alternative encoding schemes and models of computation within CKKS to unlock scalable private transformer inference. We conduct all experiments using the Orion framework which can be found at: https://github.com/baahl-nyu/orion.",
+      "identifiers": [
+        "SemanticScholar:233ae6999a966bf251d3c68f2864505fdcbe3470"
+      ],
+      "semantic_scholar_id": "233ae6999a966bf251d3c68f2864505fdcbe3470",
+      "canonical_id": "arXiv:2512.11135",
+      "arxiv_id": "2512.11135",
+      "doi": "10.1109/ICCAD66269.2025.11240733",
+      "authors": [
+        "Karthik Garimella",
+        "Negar Neda",
+        "Austin Ebel",
+        "Nandan Kumar Jha",
+        "Brandon Reagen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 396,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨でFHE制約下の線形代数カーネルに対するネットワーク・コンパイラ最適化による秘匿Transformer推論が確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "THEF: A Privacy-Preserving Framework for Transformer Inference leveraging HE and TEE",
+      "source_url": "https://doi.org/10.1109/TrustCom63139.2024.00233",
+      "year": 2024,
+      "published": "2024-12-17",
+      "venue": "International Conference on Trust, Security and Privacy in Computing and Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The transformer has profoundly driven the development of natural language processing and computer vision tasks. However, their widespread deployment has raised concerns about the potential leakage of data privacy. To address the issue, homomorphic encryption (HE) is employed as a secure technique to process user private inputs over ciphertexts. As HE only supports linear operations, non-linear functions are required to be approximated into polynomials, which leads to heavy communication and computation overhead. In this paper, we propose THEF (Tee-And-HE-based Framework), an efficient and secure inference framework for transformer inference, which uses HE to ensure data security and leverages Trusted Execution Environment (TEE) to reduce communication and computation cost. We also design a number of optimization methods, including expanding encoding matrix multiplication scheme, batch acceleration and adaptive scheme, to improve performances of the THEF. Finally, we compare the performances of THEF and the state-of-the-art methods. The experimental results demonstrate that THEF maintains a level of accuracy close to that of plaintext model, reduces end-to-end communication cost by 80% and achieves significant improvement in end-to-end run-time.",
+      "identifiers": [
+        "SemanticScholar:37f297016460e27c488d3e4dfb82b7943fcd53cc"
+      ],
+      "semantic_scholar_id": "37f297016460e27c488d3e4dfb82b7943fcd53cc",
+      "doi": "10.1109/TrustCom63139.2024.00233",
+      "canonical_id": "DOI:10.1109/TrustCom63139.2024.00233",
+      "authors": [
+        "Ze-Hao Li",
+        "Jiachun Liao",
+        "Jinhao Yu",
+        "Lei Zhang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 709,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨で準同型暗号とTEEを併用し非線形関数の多項式近似負荷を下げる秘匿Transformer推論THEFが確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SNN-Inspired Soft Sparsity for Bit-Efficient Transformer Quantization",
+      "source_url": "https://doi.org/10.1109/PCI66488.2025.11219707",
+      "year": 2025,
+      "published": "2025-08-26",
+      "venue": "Panhellenic Conference on Informatics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) offer high accuracy in natural language processing tasks. However, they face limitations in terms of portability and efficiency due to memory usage and computational costs. This situation restricts the applicability of these models, especially on edge devices and low-resource environments. This study proposes a quantization method inspired by biological neural systems to reduce the memory usage and computational costs of large language models (LLMs). The presented method determines channel importance levels based on Spike-Timing Dependent Plasticity (STDP) principles and adaptively quantizes the weights at two levels (INT8, FP32). In the experiments conducted on the GPT-2-medium model, the proposed STDP-inspired adaptive top-k quantization method achieved a 57% reduction in the size of the quantized MLP layers (Multi-Layer Perceptrons), resulting in a 33.3 % overall model size reduction. At the same time, no significant deterioration is observed in the language model performance. On the contrary, small improvements are achieved in perplexity and accuracy metrics. Moreover, the performance close to the original model is maintained in metrics such as FLOPs/s and latency. These results show that STDP-based adaptive quantization offers a strong alternative to traditional methods in terms of both efficiency and accuracy.",
+      "identifiers": [
+        "SemanticScholar:786748b2c0bbfc11609b67b7f1691bb8625217ff"
+      ],
+      "semantic_scholar_id": "786748b2c0bbfc11609b67b7f1691bb8625217ff",
+      "doi": "10.1109/PCI66488.2025.11219707",
+      "canonical_id": "DOI:10.1109/PCI66488.2025.11219707",
+      "authors": [
+        "Ulas Ozan Ceyhan",
+        "S. E. Amrahov"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 457,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨でSTDP原理でチャネル重要度を決めるSNN着想のソフトスパース性によるLLM量子化が確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fed442ae7d82",
+    "round": "libimp-fed442ae7d82aa32-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fed442ae7d82aa32-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fed442ae7d82aa32-pre01.json",
+    "receipt": "sha256:72ddc830182ba0441290003ee04fcee26a31b922c68c712abdd16d65cf57fddd"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fed442ae7d82",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
