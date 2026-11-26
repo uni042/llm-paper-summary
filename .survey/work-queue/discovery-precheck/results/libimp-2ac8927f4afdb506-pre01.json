@@ -1,0 +1,318 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2ac8927f4afdb506-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2ac8927f4afd",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tccn.2026.3713352",
+    "arXiv:2603.07598",
+    "arXiv:2610.35489"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5d5393485af63d63724989d5b0161751a4c7c31e",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T09:31:00.445403+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tccn.2026.3713352",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.07598",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.35489",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SCA: Segment-Wise CoT Compression with Answer Alignment",
+      "source_url": "https://arxiv.org/abs/2603.07598",
+      "year": 2026,
+      "published": "2026-03-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-thought (CoT) reasoning improves problem solving, but long think traces increase inference cost. Existing CoT compression methods usually optimize completion-level length. For structured thinking models, however, a completion contains both a think segment and an answer segment, so completion-level compression can save tokens by compressing not only the CoT but also the answer. We call this failure mode answer drift. We propose Segment-wise CoT Compression with Answer Alignment (SCA), an answer-preserving think-compression method. SCA parses completions into functional segments, routes compression rewards only to successful think tokens, and protects answer tokens through length and distribution alignment to a frozen base model. Experiments show that, across datasets from multiple domains, SCA achieves state-of-the-art-level chain-of-thought compression while preserving the base model's performance and answer alignment. Training data and code are included in the supplementary code and data package.",
+      "identifiers": [
+        "SemanticScholar:34add89d05be76afaa1112bb65361328a264001c"
+      ],
+      "semantic_scholar_id": "34add89d05be76afaa1112bb65361328a264001c",
+      "canonical_id": "arXiv:2603.07598",
+      "arxiv_id": "2603.07598",
+      "authors": [
+        "Ye Tian",
+        "Hong-Yu Lin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 263,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TP-JSCC: Efficient Token Pruning and Joint Source-Channel Coding for LVLMs-based 3D-VQA in Cloud-Edge Collaboration",
+      "source_url": "https://arxiv.org/abs/2610.35489",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large vision-language models (LVLMs) on resource-constrained embodied agents for 3D visual question answering necessitates cloud-edge collaboration. However, offloading massive visual data to the cloud over bandwidth-limited and noisy channels introduces severe latency and transmission distortion. To address this, we propose TP-JSCC, an efficient token pruning and joint source-channel coding method for LVLMs-based 3D-VQA in Cloud-Edge Collaboration. First, we develop a Local and Global Semantics-based Hybrid Token Pruning (LGS-HTP) module to significantly reduce the visual token count. By decoupling foreground-background tokens and jointly selecting local and global semantics, LGS-HTP effectively reduces redundancy while preserving reasoning-critical tokens. Second, we introduce a lightweight Token Joint Source-Channel Coding (T-JSCC) module to further compress the pruned tokens and ensure their robust transmission over error-prone channels. By employing lightweight cascaded linear layers and Signal-to-Noise Ratio (SNR)-adaptive mechanism, this module adapts to fluctuating channel conditions while maintaining minimal computational overhead. Extensive experiments on ScanQA and SQA3D datasets indicate the exceptional efficiency and robustness of our approach. Specifically, on ScanQA validation set, the LGS-HTP module could achieve 90% pruning ratio while incurring less than a 1% CIDEr loss. Building on this, the T-JSCC further compresses the tokens by 18 times, resulting in an overall 180 times data volume reduction for robust transmission, while saving 90% in computational complexity for LVLM deployment. Our code is available at https://github.com/yuanhui0325/TP-JSCC.",
+      "identifiers": [
+        "SemanticScholar:b4b89bb983e11c0c1332fc6525e28a956e57ea26"
+      ],
+      "semantic_scholar_id": "b4b89bb983e11c0c1332fc6525e28a956e57ea26",
+      "canonical_id": "arXiv:2610.35489",
+      "arxiv_id": "2610.35489",
+      "authors": [
+        "Zheng-Xin Li",
+        "Chong-Zhen Tian",
+        "H. Yuan",
+        "Hao Liu",
+        "S. Kwong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hierarchical Meta-Graph Reinforcement Learning for Collaborative GenAI Model Caching and Inference Scheduling",
+      "source_url": "https://doi.org/10.1109/TCCN.2026.3713352",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Cognitive Communications and Networking",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Enabling collaborative generative AI (GenAI) inference at the network edge is challenging due to limited caching capacity, heterogeneous computing resources, and highly dynamic, latency-sensitive service demands. In this paper, we investigate the joint optimization of GenAI model caching, inference offloading, and resource allocation in a collaborative cloud–edge–end architecture. To address the strong coupling between long-term caching decisions and short-term scheduling dynamics, we propose a Hierarchical Meta-Graph Reinforcement Learning framework, termed HMGRL. Specifically, a heat-greedy model caching strategy is developed to capture time-varying model popularity and to reduce switching overhead on a slow timescale, while a graph-enhanced dueling deep reinforcement learning algorithm with prioritized experience replay enables topology-aware collaborative inference offloading and resource allocation on a fast timescale. Extensive simulations demonstrate that HMGRL consistently outperforms representative baselines in terms of system utility, cache and computing-resource utilization, convergence stability, and performance robustness. These results validate the effectiveness of the proposed hierarchical learning framework for practical GenAI applications at the network edge.",
+      "identifiers": [
+        "SemanticScholar:0bef98ee56f48295435b394c4a41a8359a6cec03"
+      ],
+      "semantic_scholar_id": "0bef98ee56f48295435b394c4a41a8359a6cec03",
+      "doi": "10.1109/TCCN.2026.3713352",
+      "canonical_id": "DOI:10.1109/TCCN.2026.3713352",
+      "authors": [
+        "Liang Zhao",
+        "Jing Wei",
+        "Huan Zhou",
+        "Zhen Chen",
+        "Tong Wu",
+        "Victor C. M. Leung"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.07598",
+      "identity_tokens": [
+        "id:SemanticScholar:34add89d05be76afaa1112bb65361328a264001c",
+        "id:arXiv:2603.07598",
+        "title:sca segmentwise cot compression with answer alignment",
+        "url:https://arxiv.org/abs/2603.07598"
+      ],
+      "record": {
+        "title": "SCA: Segment-Wise CoT Compression with Answer Alignment",
+        "source_url": "https://arxiv.org/abs/2603.07598",
+        "year": 2026,
+        "published": "2026-03-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-thought (CoT) reasoning improves problem solving, but long think traces increase inference cost. Existing CoT compression methods usually optimize completion-level length. For structured thinking models, however, a completion contains both a think segment and an answer segment, so completion-level compression can save tokens by compressing not only the CoT but also the answer. We call this failure mode answer drift. We propose Segment-wise CoT Compression with Answer Alignment (SCA), an answer-preserving think-compression method. SCA parses completions into functional segments, routes compression rewards only to successful think tokens, and protects answer tokens through length and distribution alignment to a frozen base model. Experiments show that, across datasets from multiple domains, SCA achieves state-of-the-art-level chain-of-thought compression while preserving the base model's performance and answer alignment. Training data and code are included in the supplementary code and data package.",
+        "identifiers": [
+          "SemanticScholar:34add89d05be76afaa1112bb65361328a264001c"
+        ],
+        "semantic_scholar_id": "34add89d05be76afaa1112bb65361328a264001c",
+        "canonical_id": "arXiv:2603.07598",
+        "arxiv_id": "2603.07598",
+        "authors": [
+          "Ye Tian",
+          "Hong-Yu Lin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 263,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.35489",
+      "identity_tokens": [
+        "id:SemanticScholar:b4b89bb983e11c0c1332fc6525e28a956e57ea26",
+        "id:arXiv:2610.35489",
+        "title:tpjscc efficient token pruning and joint sourcechannel coding for lvlmsbased 3dvqa in cloudedge collaboration",
+        "url:https://arxiv.org/abs/2610.35489"
+      ],
+      "record": {
+        "title": "TP-JSCC: Efficient Token Pruning and Joint Source-Channel Coding for LVLMs-based 3D-VQA in Cloud-Edge Collaboration",
+        "source_url": "https://arxiv.org/abs/2610.35489",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large vision-language models (LVLMs) on resource-constrained embodied agents for 3D visual question answering necessitates cloud-edge collaboration. However, offloading massive visual data to the cloud over bandwidth-limited and noisy channels introduces severe latency and transmission distortion. To address this, we propose TP-JSCC, an efficient token pruning and joint source-channel coding method for LVLMs-based 3D-VQA in Cloud-Edge Collaboration. First, we develop a Local and Global Semantics-based Hybrid Token Pruning (LGS-HTP) module to significantly reduce the visual token count. By decoupling foreground-background tokens and jointly selecting local and global semantics, LGS-HTP effectively reduces redundancy while preserving reasoning-critical tokens. Second, we introduce a lightweight Token Joint Source-Channel Coding (T-JSCC) module to further compress the pruned tokens and ensure their robust transmission over error-prone channels. By employing lightweight cascaded linear layers and Signal-to-Noise Ratio (SNR)-adaptive mechanism, this module adapts to fluctuating channel conditions while maintaining minimal computational overhead. Extensive experiments on ScanQA and SQA3D datasets indicate the exceptional efficiency and robustness of our approach. Specifically, on ScanQA validation set, the LGS-HTP module could achieve 90% pruning ratio while incurring less than a 1% CIDEr loss. Building on this, the T-JSCC further compresses the tokens by 18 times, resulting in an overall 180 times data volume reduction for robust transmission, while saving 90% in computational complexity for LVLM deployment. Our code is available at https://github.com/yuanhui0325/TP-JSCC.",
+        "identifiers": [
+          "SemanticScholar:b4b89bb983e11c0c1332fc6525e28a956e57ea26"
+        ],
+        "semantic_scholar_id": "b4b89bb983e11c0c1332fc6525e28a956e57ea26",
+        "canonical_id": "arXiv:2610.35489",
+        "arxiv_id": "2610.35489",
+        "authors": [
+          "Zheng-Xin Li",
+          "Chong-Zhen Tian",
+          "H. Yuan",
+          "Hao Liu",
+          "S. Kwong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tccn.2026.3713352",
+      "identity_tokens": [
+        "id:DOI:10.1109/tccn.2026.3713352",
+        "id:SemanticScholar:0bef98ee56f48295435b394c4a41a8359a6cec03",
+        "title:hierarchical metagraph reinforcement learning for collaborative genai model caching and inference scheduling",
+        "url:https://doi.org/10.1109/TCCN.2026.3713352"
+      ],
+      "record": {
+        "title": "Hierarchical Meta-Graph Reinforcement Learning for Collaborative GenAI Model Caching and Inference Scheduling",
+        "source_url": "https://doi.org/10.1109/TCCN.2026.3713352",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Transactions on Cognitive Communications and Networking",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Enabling collaborative generative AI (GenAI) inference at the network edge is challenging due to limited caching capacity, heterogeneous computing resources, and highly dynamic, latency-sensitive service demands. In this paper, we investigate the joint optimization of GenAI model caching, inference offloading, and resource allocation in a collaborative cloud–edge–end architecture. To address the strong coupling between long-term caching decisions and short-term scheduling dynamics, we propose a Hierarchical Meta-Graph Reinforcement Learning framework, termed HMGRL. Specifically, a heat-greedy model caching strategy is developed to capture time-varying model popularity and to reduce switching overhead on a slow timescale, while a graph-enhanced dueling deep reinforcement learning algorithm with prioritized experience replay enables topology-aware collaborative inference offloading and resource allocation on a fast timescale. Extensive simulations demonstrate that HMGRL consistently outperforms representative baselines in terms of system utility, cache and computing-resource utilization, convergence stability, and performance robustness. These results validate the effectiveness of the proposed hierarchical learning framework for practical GenAI applications at the network edge.",
+        "identifiers": [
+          "SemanticScholar:0bef98ee56f48295435b394c4a41a8359a6cec03"
+        ],
+        "semantic_scholar_id": "0bef98ee56f48295435b394c4a41a8359a6cec03",
+        "doi": "10.1109/TCCN.2026.3713352",
+        "canonical_id": "DOI:10.1109/TCCN.2026.3713352",
+        "authors": [
+          "Liang Zhao",
+          "Jing Wei",
+          "Huan Zhou",
+          "Zhen Chen",
+          "Tong Wu",
+          "Victor C. M. Leung"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 148,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d181b2b7a3660d394815dba0fad869c665df7ee33de437545a6033f5718bd5ed",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
