@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c2d07-b01::chunk-0004-of-0004",
+  "reference_main_sha": "2e85ebc167be60aa08d41b8b857b3b8fb4d30936",
+  "record_count": 4,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3468264.3473104",
+      "identity_tokens": [
+        "DOI:10.1145/3468264.3473104"
+      ],
+      "title": "Freeing hybrid distributed AI training configuration",
+      "reason": "並列意味解析でhybrid parallelismの構成を自動化しDNN訓練を高速化する手法であり、推論ではなく訓練構成の研究である。",
+      "source_url": "https://doi.org/10.1145/3468264.3473104",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 435
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.11858",
+      "identity_tokens": [
+        "arXiv:2408.11858"
+      ],
+      "title": "Convexity-based Pruning of Speech Representation Models",
+      "reason": "分類領域の凸性基準による音声表現Transformerの層pruningであり、対象は音声・話者認識等の音響モデルでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2408.11858",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 436
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.06844",
+      "identity_tokens": [
+        "arXiv:2502.06844"
+      ],
+      "title": "Exploring Model Invariance with Discrete Search for Ultra-Low-Bit Quantization",
+      "reason": "InvarExploreは置換不変性等のモデル不変性を離散探索で同時活用する2bit級の超低ビットpost-training quantizationをLLM向けに提案し、既存PTQへの上乗せ改善を示す推論向け量子化の直接的貢献である。",
+      "source_url": "https://arxiv.org/abs/2502.06844",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 437
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.21292",
+      "identity_tokens": [
+        "arXiv:2504.21292"
+      ],
+      "title": "Can We Achieve Efficient Diffusion without Self-Attention? Distilling Self-Attention into Convolutions",
+      "reason": "事前学習済み拡散モデルのself-attentionを畳み込みへ蒸留するΔConvFusionは画像生成拡散モデルの効率化であり、LLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2504.21292",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 438
+    }
+  ],
+  "parent_run_key": "muse-20261126-c2d07-b01",
+  "chunk_index": 4,
+  "chunk_count": 4,
+  "source_record_count": 64
+}

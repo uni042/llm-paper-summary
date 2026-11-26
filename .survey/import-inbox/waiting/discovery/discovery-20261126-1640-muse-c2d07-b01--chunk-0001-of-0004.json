@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c2d07-b01::chunk-0001-of-0004",
+  "reference_main_sha": "2e85ebc167be60aa08d41b8b857b3b8fb4d30936",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27570",
+      "identity_tokens": [
+        "arXiv:2605.27570"
+      ],
+      "title": "LaneRoPE: Positional Encoding for Collaborative Parallel Reasoning and Generation",
+      "reason": "LaneRoPEはbest-of-N等の並列test-time scalingで生成系列間のattention maskとRoPE拡張による協調を提案するが、主成果は数学推論の精度向上であり、推論時のオーバーヘッドが小さいという言及に留まりサービング効率の直接改善は示されていない。",
+      "source_url": "https://arxiv.org/abs/2605.27570",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 371
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36720",
+      "identity_tokens": [
+        "arXiv:2609.36720"
+      ],
+      "title": "T$^2$Mem: Learning Test-Time Memory for Robotics",
+      "reason": "T2Memはロボット操作ポリシーにtest-time trainingで観察履歴をfast weightsへ符号化する枠組みであり、対象はvision-language-actionポリシーの記憶能力で、LLM推論システムへの貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2609.36720",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 372
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02241",
+      "identity_tokens": [
+        "arXiv:2601.02241"
+      ],
+      "title": "From Mice to Trains: Amortized Bayesian Inference on Graph Data",
+      "reason": "グラフデータに対する償却ベイズ推論をsummary networkとneural posterior estimatorで実現する統計的推論の研究であり、LLMの推論・サービング技術とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2601.02241",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 373
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.05336",
+      "identity_tokens": [
+        "arXiv:2604.05336"
+      ],
+      "title": "TRACE: Capability-Targeted Agentic Training",
+      "reason": "TRACEはエージェントの失敗軌跡から不足能力を特定し合成環境とLoRAのRLで訓練する自己改善手法であり、推論システムではなく訓練手法である。",
+      "source_url": "https://arxiv.org/abs/2604.05336",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 374
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00562",
+      "identity_tokens": [
+        "arXiv:2606.00562"
+      ],
+      "title": "DeepLatent: Think with Images via Parallel Latent Visual Reasoning",
+      "reason": "DeepLatentはLatentFormerによる並列潜在視覚推論と連続空間RLでVLMの『画像で考える』推論様式を改善する研究であり、推論基盤やデコード効率の技術ではない。",
+      "source_url": "https://arxiv.org/abs/2606.00562",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 375
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.05303",
+      "identity_tokens": [
+        "arXiv:2610.05303"
+      ],
+      "title": "ASCENT: Online Test-Time Training of Long-Horizon Agents via Self-Distillation of Verified Experience",
+      "reason": "ASCENTはデプロイ中のエージェント軌跡を自己蒸留してLoRA fast weightsをオンライン更新するtest-time trainingであり、推論実行系ではなく継続学習手法である。",
+      "source_url": "https://arxiv.org/abs/2610.05303",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 376
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06243",
+      "identity_tokens": [
+        "arXiv:2512.06243"
+      ],
+      "title": "Quantization Blindspots: How Model Compression Breaks Backdoor Defenses",
+      "reason": "INT8/INT4量子化でバックドア防御の検出率が0%に崩れることを示す実証研究で、量子化済みモデルのデプロイ実態には関わるが、推論向け量子化手法そのものの提案ではない。",
+      "source_url": "https://arxiv.org/abs/2512.06243",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 377
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.10410",
+      "identity_tokens": [
+        "arXiv:2602.10410"
+      ],
+      "title": "LUCID: Attention with Preconditioned Representations",
+      "reason": "LUCIDはkey-key類似度によるpreconditionerでsoftmax attentionの拡散を抑え長文脈retrievalを改善するattention改変であり、同等の計算量を謳うもののLLM推論・KV処理の効率化を直接扱っていない。",
+      "source_url": "https://arxiv.org/abs/2602.10410",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 378
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14212",
+      "identity_tokens": [
+        "arXiv:2603.14212"
+      ],
+      "title": "Memory as Asset: From Agent-centric to Human-centric Memory Management",
+      "reason": "Memory-as-Assetは個人記憶の所有・共有・集合的進化を説く人間中心メモリのパラダイム提案であり、具体的なLLM推論システム技術を含まない。",
+      "source_url": "https://arxiv.org/abs/2603.14212",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 379
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12145",
+      "identity_tokens": [
+        "arXiv:2604.12145"
+      ],
+      "title": "Why Your Tokenizer Fails in Information Fusion: A Timing-Aware Pre-Quantization Fusion for Video-Enhanced Audio Tokenization",
+      "reason": "動画で補強した音声トークナイザのpre-quantization fusionは音声離散表現の再構成品質に関する研究であり、ここでのquantizationはモデル量子化ではなくLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2604.12145",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 380
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13050",
+      "identity_tokens": [
+        "arXiv:2605.13050"
+      ],
+      "title": "Context Training with Active Information Seeking",
+      "reason": "Wikipedia検索等を備えたcontext optimizerによる文脈訓練は重みを更新しない適応手法であり、推論システムの効率・実行技術ではない。",
+      "source_url": "https://arxiv.org/abs/2605.13050",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 381
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04442",
+      "identity_tokens": [
+        "arXiv:2606.04442"
+      ],
+      "title": "MemoryDocDataSet: A Benchmark for Joint Conversational Memory and Long Document Reasoning",
+      "reason": "MemoryDocDataSetは会話記憶と長文読解を同時評価する合成ベンチマークの提案であり、推論システム技術の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2606.04442",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 382
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.22751",
+      "identity_tokens": [
+        "arXiv:2610.22751"
+      ],
+      "title": "MedSTP: Preserving Subspace and Transition Evidence for Medical VQA Token Pruning",
+      "reason": "MedSTPは医療VQA向けに部分空間と遷移証拠を保つtraining-freeなpre-decoding視覚トークンpruningであり、トークン削減機構は推論効率に関連するが主目的は医療VQAの精度保持である。",
+      "source_url": "https://arxiv.org/abs/2610.22751",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 383
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.15254",
+      "identity_tokens": [
+        "arXiv:2409.15254"
+      ],
+      "title": "Archon: An Architecture Search Framework for Inference-Time Techniques",
+      "reason": "Archonは反復サンプリング等のinference-time techniquesとLLMの組合せを計算予算の下で自動探索し、トークン予算対精度のPareto frontierを前進させる推論時システム設計フレームワークを直接提案している。",
+      "source_url": "https://arxiv.org/abs/2409.15254",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 384
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.12406",
+      "identity_tokens": [
+        "arXiv:2204.12406"
+      ],
+      "title": "A survey on attention mechanisms for medical applications: are we moving towards better algorithms?",
+      "reason": "医療応用におけるattention機構のサーベイと医療画像分類の事例研究であり、LLM推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2204.12406",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 385
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.14902",
+      "identity_tokens": [
+        "arXiv:2007.14902"
+      ],
+      "title": "Linear Attention Mechanism: An Efficient Attention for Semantic Segmentation",
+      "reason": "semantic segmentation向けにdot-product attentionを近似するLinear Attention Mechanismの提案であり、対象は画像セグメンテーションでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2007.14902",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 386
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.02884",
+      "identity_tokens": [
+        "arXiv:2202.02884"
+      ],
+      "title": "Exploring Self-Attention Mechanisms for Speech Separation",
+      "reason": "SepFormer系の音声分離・音声強調におけるself-attentionと効率的attention変種の検討であり、対象は音声処理でLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2202.02884",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 387
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.00698",
+      "identity_tokens": [
+        "arXiv:2507.00698"
+      ],
+      "title": "Rectifying Magnitude Neglect in Linear Attention",
+      "reason": "MALAはQueryのmagnitudeを組み込むMagnitude-Aware Linear Attentionで線形複雑度を保つ汎用attention改変であり、画像・NLP・音声など広範なタスク評価が中心でLLM推論実行への直接適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2507.00698",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 388
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.17543",
+      "identity_tokens": [
+        "arXiv:2502.17543"
+      ],
+      "title": "Training a Generally Curious Agent",
+      "reason": "Paprikaは合成対話データで言語モデルに汎用的な探索・意思決定をfine-tuningする訓練手法であり、推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2502.17543",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 389
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3442442.3452055",
+      "identity_tokens": [
+        "DOI:10.1145/3442442.3452055"
+      ],
+      "title": "Parallelizing DNN Training on GPUs: Challenges and Opportunities",
+      "reason": "複数GPUでのDNN訓練のdata/model parallelismの課題を扱うサーベイ兼最適化であり、対象は訓練スループットで推論ではない。",
+      "source_url": "https://doi.org/10.1145/3442442.3452055",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 390
+    }
+  ],
+  "parent_run_key": "muse-20261126-c2d07-b01",
+  "chunk_index": 1,
+  "chunk_count": 4,
+  "source_record_count": 64
+}
