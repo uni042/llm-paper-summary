@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-00a2a51abfd2c570-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.18911",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.18911",
+    "identity_tokens": [
+      "arXiv:2412.18911"
+    ],
+    "reason": "拡散Transformerのトークン単位特徴キャッシュDual Feature Cachingは生成推論の高速化だが対象が画像・動画拡散モデルでありLLM推論ではないため境界とする",
+    "first_checked_at": "2026-11-26T08:02:36+00:00",
+    "last_checked_at": "2026-11-26T08:02:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking Token-Wise Feature Caching: Accelerating Diffusion Transformers With Dual Feature Caching"
+  },
+  "processed_at": "2026-11-26T08:02:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-00a2a51abfd2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

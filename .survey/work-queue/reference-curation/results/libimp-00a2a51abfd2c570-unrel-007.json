@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-00a2a51abfd2c570-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2006.03108",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2006.03108",
+    "identity_tokens": [
+      "arXiv:2006.03108"
+    ],
+    "reason": "線形代数的アプローチによるモデル並列は学習時のテンソル分散配置の定式化であり、推論時の分散実行への具体的適用は確認できないため対象外とする",
+    "first_checked_at": "2026-11-26T08:02:37+00:00",
+    "last_checked_at": "2026-11-26T08:02:37+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "A Linear Algebraic Approach to Model Parallelism in Deep Learning"
+  },
+  "processed_at": "2026-11-26T08:02:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-00a2a51abfd2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

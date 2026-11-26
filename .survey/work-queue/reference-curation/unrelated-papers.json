@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-26T07:55:32+00:00",
-  "record_count": 16517,
+  "updated_at": "2026-11-26T08:02:38+00:00",
+  "record_count": 16530,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -236424,6 +236424,188 @@
         "worker-worklist discovery_review"
       ],
       "title": "Scalable Peptide Design via Memory-Efficient Equivariant Transformer"
+    },
+    "arXiv:2008.11421": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.11421",
+      "identity_tokens": [
+        "arXiv:2008.11421"
+      ],
+      "reason": "アクセラレータメモリを超える分散学習KARMAは層スワップと再計算によるアウトオブコア学習が主題で、推論への適用は確認できないため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Scaling Distributed Deep Learning Workloads beyond the Memory Capacity with KARMA"
+    },
+    "arXiv:2401.00912": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.00912",
+      "identity_tokens": [
+        "arXiv:2401.00912"
+      ],
+      "reason": "点群理解向けの散乱線形注意ScatterFormerは3次元視覚タスクのモデル効率化であり、LLM推論システムへの貢献は確認できないため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "ScatterFormer: Efficient Voxel Transformer with Scattered Linear Attention"
+    },
+    "arXiv:2507.18504": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18504",
+      "identity_tokens": [
+        "arXiv:2507.18504"
+      ],
+      "reason": "言語モデルによる表形式データ生成の依存学習GraDeはデータ生成タスクの研究であり、推論システムの効率や実行機構とは無関係であるため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Not All Features Deserve Attention: Graph-Guided Dependency Learning for Tabular Data Generation with Language Models"
+    },
+    "arXiv:2405.13985": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.13985",
+      "identity_tokens": [
+        "arXiv:2405.13985"
+      ],
+      "reason": "Vision Transformerの位置符号化を方向性注意に替えるLookHereは視覚モデルの汎化研究であり、LLM推論への適用は確認できないため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "LookHere: Vision Transformers with Directed Attention Generalize and Extrapolate"
+    },
+    "arXiv:2006.03108": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.03108",
+      "identity_tokens": [
+        "arXiv:2006.03108"
+      ],
+      "reason": "線形代数的アプローチによるモデル並列は学習時のテンソル分散配置の定式化であり、推論時の分散実行への具体的適用は確認できないため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Linear Algebraic Approach to Model Parallelism in Deep Learning"
+    },
+    "arXiv:2308.05219": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.05219",
+      "identity_tokens": [
+        "arXiv:2308.05219"
+      ],
+      "reason": "言語Transformerの層別サリエンシーを勾配法で同定する研究は解釈可能性が主題であり、推論システムへの技術的貢献はないため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Decoding Layer Saliency in Language Transformers"
+    },
+    "DOI:10.18653/v1/2025.acl-long.835": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.835",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.835"
+      ],
+      "reason": "分割学習型LLMファインチューニングのデータ再構成攻撃への防御DualGuardは学習時のプライバシー防御であり推論システムではないため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "DualGuard: A Parameter Space Transformation Approach for Bidirectional Defense in Split-Based LLM Fine-Tuning"
+    },
+    "arXiv:2204.13561": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.13561",
+      "identity_tokens": [
+        "arXiv:2204.13561"
+      ],
+      "reason": "サーバーレス基盤での深層学習モデル学習パイプラインFuncPipeは学習実行基盤の研究であり、推論サービングへの適用は確認できないため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "FuncPipe: A Pipelined Serverless Framework for Fast and Cost-Efficient Training of Deep Learning Models"
+    },
+    "arXiv:2508.20697": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.20697",
+      "identity_tokens": [
+        "arXiv:2508.20697"
+      ],
+      "reason": "強化学習型有害ファインチューニングへの防御Token Buncherは安全性の研究であり、トークン操作も防御目的で推論効率の機構ではないため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Token Buncher: Shielding LLMs from Harmful Reinforcement Learning Fine-Tuning"
+    },
+    "arXiv:2510.17515": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.17515",
+      "identity_tokens": [
+        "arXiv:2510.17515"
+      ],
+      "reason": "グラフ極限によるニューラルネットワーク剪定の理論枠組みは学習可能性の理論研究であり、推論時の剪定実行や効率検証への接続が不明なため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "The Graphon Limit Hypothesis: Understanding Neural Network Pruning via Infinite Width Analysis"
+    },
+    "arXiv:2310.13824": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.13824",
+      "identity_tokens": [
+        "arXiv:2310.13824"
+      ],
+      "reason": "GPTの注意ヘッドにおける妥当性処理の分析は言語理解の認知的研究であり、推論システムへの技術的貢献は確認できないため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Plausibility Processing in Transformer Language Models: Focusing on the Role of Attention Heads in GPT"
+    },
+    "DOI:10.1109/infocom59046.2026.11571620": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/infocom59046.2026.11571620",
+      "identity_tokens": [
+        "DOI:10.1109/infocom59046.2026.11571620"
+      ],
+      "reason": "地理分散LLM学習の階層的集約はデータセンター間学習の通信ボトルネック解消が主題であり、推論分散実行の研究ではないため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Aggregate Local, Sync Global: A Hierarchical Approach to Efficient Geo-Distributed LLM Training"
+    },
+    "DOI:10.3390/fractalfract8070433": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/fractalfract8070433",
+      "identity_tokens": [
+        "DOI:10.3390/fractalfract8070433"
+      ],
+      "reason": "分数階Lipschitz RNNと周波数領域ゲート注意による時系列予測は予測タスクのモデル研究であり、LLM推論システムとは無関係であるため対象外とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "FLRNN-FGA: Fractional-Order Lipschitz Recurrent Neural Network with Frequency-Domain Gated Attention Mechanism for Time Series Forecasting"
     }
   }
 }

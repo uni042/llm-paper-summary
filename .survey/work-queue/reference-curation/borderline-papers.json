@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T07:55:31+00:00",
-  "record_count": 9560,
+  "updated_at": "2026-11-26T08:02:38+00:00",
+  "record_count": 9565,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -146318,6 +146318,81 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Weight Group-wise Post-Training Quantization for Medical Foundation Model"
+    },
+    "arXiv:2412.18911": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.18911",
+      "identity_tokens": [
+        "arXiv:2412.18911"
+      ],
+      "reason": "拡散Transformerのトークン単位特徴キャッシュDual Feature Cachingは生成推論の高速化だが対象が画像・動画拡散モデルでありLLM推論ではないため境界とする",
+      "first_checked_at": "2026-11-26T08:02:36+00:00",
+      "last_checked_at": "2026-11-26T08:02:36+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking Token-Wise Feature Caching: Accelerating Diffusion Transformers With Dual Feature Caching"
+    },
+    "arXiv:2506.12707": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.12707",
+      "identity_tokens": [
+        "arXiv:2506.12707"
+      ],
+      "reason": "プロンプト圧縮によるジェイルブレイク防御SecurityLinguaは圧縮で推論コストも下がるが主目的は安全性防御であり推論システムとしての貢献は副次的なため境界とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SecurityLingua: Efficient Defense of LLM Jailbreak Attacks via Security-Aware Prompt Compression"
+    },
+    "arXiv:2505.11557": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.11557",
+      "identity_tokens": [
+        "arXiv:2505.11557"
+      ],
+      "reason": "権限別LoRAアダプタと文書埋め込みでアクセス制御する企業LLMチャットボットAC-LoRAはシステム提案だが主目的は情報隔離であり推論性能への貢献は薄いため境界とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AC-LoRA: (Almost) Training-Free Access Control-Aware Multi-Modal LLMs"
+    },
+    "DOI:10.1109/aibdf67964.2025.11440890": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aibdf67964.2025.11440890",
+      "identity_tokens": [
+        "DOI:10.1109/aibdf67964.2025.11440890"
+      ],
+      "reason": "CNN-Transformerハイブリッド向け整数PTQはエッジ視覚モデルの量子化であり手法は推論圧縮だが対象が視覚モデルでLLM推論への直接性が弱いため境界とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hybrid Integer Post-Training Quantization for CNN-Transformer Neural Networks"
+    },
+    "DOI:10.1109/tdsc.2026.3731217": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tdsc.2026.3731217",
+      "identity_tokens": [
+        "DOI:10.1109/tdsc.2026.3731217"
+      ],
+      "reason": "TEE支援の安全なTransformer推論サービスSETTLERは線形層のGPU外部委託で安全推論を効率化するが主軸はセキュリティでありLLMサービング機構の提示は限定的なため境界とする",
+      "first_checked_at": "2026-11-26T08:02:37+00:00",
+      "last_checked_at": "2026-11-26T08:02:37+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SETTLER: A Hardware-Assisted Secure and Efficient Transformer Inference Service"
     }
   }
 }
