@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58118eda53978d26-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/naecon70028.2026.11675008",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/naecon70028.2026.11675008",
+    "identity_tokens": [
+      "DOI:10.1109/naecon70028.2026.11675008"
+    ],
+    "reason": "密なGPU計算へ一律に流すLLM基盤に対しスパイキング型ワークロードマネージャで階層間ルーティングしGPUコスト削減を主張するが、機構の詳細や評価条件が要旨では薄く即acceptの根拠が弱いため境界とする。",
+    "first_checked_at": "2026-11-26T12:11:10+00:00",
+    "last_checked_at": "2026-11-26T12:11:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Neuromorphic Orchestration for Efficient LLM Infrastructure via Utility-Optimized Decision-Making"
+  },
+  "processed_at": "2026-11-26T12:11:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58118eda5397",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

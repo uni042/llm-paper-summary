@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c1462aaaf10e918-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:49a5a1a550d0ce757befbad7715f373d8a5b3b87",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:49a5a1a550d0ce757befbad7715f373d8a5b3b87",
+    "identity_tokens": [
+      "SemanticScholar:49a5a1a550d0ce757befbad7715f373d8a5b3b87"
+    ],
+    "reason": "機械翻訳の転移学習ではクロスアテンションのみの微調整で全パラメータ微調整に匹敵するという分析（EMNLP 2021）であり、学習時のパラメータ効率の知見で推論システムではない。",
+    "first_checked_at": "2026-11-26T12:11:11+00:00",
+    "last_checked_at": "2026-11-26T12:11:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "On the Strengths of Cross-Attention in Pretrained Transformers for Machine Translation"
+  },
+  "processed_at": "2026-11-26T12:11:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c1462aaaf10",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5fc9dbafa3a7099-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:bfdb04a99190d142da45af12ae797db73a859461",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:bfdb04a99190d142da45af12ae797db73a859461",
+    "identity_tokens": [
+      "SemanticScholar:bfdb04a99190d142da45af12ae797db73a859461"
+    ],
+    "reason": "大規模な事前学習済みモデルを小規模な同系モデルへ初期化と継続事前学習で変換する際の転移特性を調べた研究であり、学習側のモデル変換の分析で推論システムではない。",
+    "first_checked_at": "2026-11-26T12:11:11+00:00",
+    "last_checked_at": "2026-11-26T12:11:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "W IRING B EATS B LENDING : W HAT T RANSFERS B E - TWEEN T RANSFORMER S IZES — AND W HAT D OESN ’ T"
+  },
+  "processed_at": "2026-11-26T12:11:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5fc9dbafa3a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

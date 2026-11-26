@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6d992c657affabe0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.15630",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.15630",
+    "identity_tokens": [
+      "arXiv:2504.15630"
+    ],
+    "reason": "CaLEはV-usable informationで特定した層の文脈情報を増幅する内部表現への介入手法で、デコード時の文脈忠実度は扱うが推論効率・サービング機構の改善は示されておらず関連性は薄い。",
+    "first_checked_at": "2026-11-26T12:11:10+00:00",
+    "last_checked_at": "2026-11-26T12:11:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Exploiting Contextual Knowledge in LLMs through V-usable Information based Layer Enhancement"
+  },
+  "processed_at": "2026-11-26T12:11:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6d992c657aff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

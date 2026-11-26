@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58118eda53978d26-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.05651",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.05651",
+    "identity_tokens": [
+      "arXiv:2608.05651"
+    ],
+    "reason": "LLM駆動の進化的プログラム探索で安価なモデルと強いモデル間の引き継ぎを推論予算下で最適化するが、主対象は探索応用のコスト配分であり汎用サービング機構ではないため境界とする。",
+    "first_checked_at": "2026-11-26T12:11:10+00:00",
+    "last_checked_at": "2026-11-26T12:11:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Relay, Don't Route: Adaptive Population Handoff for Cost-Efficient LLM-Driven Evolution"
+  },
+  "processed_at": "2026-11-26T12:11:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58118eda5397",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

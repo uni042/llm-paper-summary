@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5c767e11ce216de9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.07111",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.07111",
+    "identity_tokens": [
+      "arXiv:2411.07111"
+    ],
+    "reason": "台湾華語の音声対話用spoken LLMの構築報告であり、学習データ合成と全二重対話のモデル開発が主題で、LLM推論・サービングの効率化機構は扱われていない。",
+    "first_checked_at": "2026-11-26T12:11:10+00:00",
+    "last_checked_at": "2026-11-26T12:11:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Building a Taiwanese Mandarin Spoken Language Model: A First Attempt"
+  },
+  "processed_at": "2026-11-26T12:11:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5c767e11ce21",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

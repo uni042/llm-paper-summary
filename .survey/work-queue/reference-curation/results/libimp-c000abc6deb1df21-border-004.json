@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c000abc6deb1df21-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2206.05975",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2206.05975",
+    "identity_tokens": [
+      "arXiv:2206.05975"
+    ],
+    "reason": "非自己回帰Transformerは並列デコードで遅延削減を狙うが、本論文の貢献はその学習困難さの理論・実証分析と学習目的の統一的視点であり、推論実行系の実装機構は示されていない。",
+    "first_checked_at": "2026-11-26T12:11:11+00:00",
+    "last_checked_at": "2026-11-26T12:11:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On the Learning of Non-Autoregressive Transformers"
+  },
+  "processed_at": "2026-11-26T12:11:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c000abc6deb1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

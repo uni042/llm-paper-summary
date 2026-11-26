@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5c767e11ce216de9-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2311.13657",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2311.13657",
+    "identity_tokens": [
+      "arXiv:2311.13657"
+    ],
+    "reason": "効率的attentionを持つTransformerへの知識蒸留によるモデル圧縮のコスト・性能トレードオフ評価であり、圧縮は推論効率と関連するが、対象はNER等のエンコーダ課題の評価でLLM推論への直接機構は示されていない。",
+    "first_checked_at": "2026-11-26T12:11:10+00:00",
+    "last_checked_at": "2026-11-26T12:11:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Transformer Knowledge Distillation: A Performance Review"
+  },
+  "processed_at": "2026-11-26T12:11:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5c767e11ce21",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

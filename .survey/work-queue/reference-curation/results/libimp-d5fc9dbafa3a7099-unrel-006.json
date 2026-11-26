@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5fc9dbafa3a7099-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:d370004a3feecf7b6e1ea73ecb67e0da6ba92a5c",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:d370004a3feecf7b6e1ea73ecb67e0da6ba92a5c",
+    "identity_tokens": [
+      "SemanticScholar:d370004a3feecf7b6e1ea73ecb67e0da6ba92a5c"
+    ],
+    "reason": "Stanford CS224NのデフォルトプロジェクトとしてBiDAFとQANetをSQuAD 2.0向けに再実装・比較した課程レポートであり、古典的QAモデルの演習でLLM推論システムの研究ではない。",
+    "first_checked_at": "2026-11-26T12:11:11+00:00",
+    "last_checked_at": "2026-11-26T12:11:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "BiDAF and QANet Model Variations on SQuAD2.0 Stanford CS224N Default Project IID SQuAD track"
+  },
+  "processed_at": "2026-11-26T12:11:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5fc9dbafa3a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

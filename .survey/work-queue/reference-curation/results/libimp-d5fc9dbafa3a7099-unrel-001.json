@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5fc9dbafa3a7099-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:93db155699d9c5a9dc984b4f0483d9b781d22707",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:93db155699d9c5a9dc984b4f0483d9b781d22707",
+    "identity_tokens": [
+      "SemanticScholar:93db155699d9c5a9dc984b4f0483d9b781d22707"
+    ],
+    "reason": "全二重音声言語モデル向けに音響・意味モダリティを分離・整列させる階層的モデリングLychee-FDのモデルアーキテクチャ提案であり、推論効率の機構ではなく音声対話モデルの設計である。",
+    "first_checked_at": "2026-11-26T12:11:11+00:00",
+    "last_checked_at": "2026-11-26T12:11:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Hierarchical Intelligent Acoustic-Semantic Modeling: Modality Separation and Alignment for Full-Duplex SLMs"
+  },
+  "processed_at": "2026-11-26T12:11:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5fc9dbafa3a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

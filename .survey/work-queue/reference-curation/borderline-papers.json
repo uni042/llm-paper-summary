@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T11:43:09+00:00",
-  "record_count": 9698,
+  "updated_at": "2026-11-26T12:11:12+00:00",
+  "record_count": 9720,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -148390,6 +148390,337 @@
       ],
       "borderline_recheck_count": 0,
       "title": "An efficient privacy-preserving transformer inference scheme for cloud-based intelligent decision-making in AIoT"
+    },
+    "arXiv:2206.14366": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2206.14366",
+      "identity_tokens": [
+        "arXiv:2206.14366"
+      ],
+      "reason": "Transformer言語モデルの知識蒸留を知識種別・一致戦略等の要素に分解して大規模実験で分析し実践指針を示す研究であり、動機はモデル圧縮と実行時レイテンシだが、LLM推論系での検証や具体的サービング機構は含まれない。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Knowledge Distillation of Transformer-based Language Models Revisited"
+    },
+    "arXiv:2502.12018": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12018",
+      "identity_tokens": [
+        "arXiv:2502.12018"
+      ],
+      "reason": "Atom of Thoughtsは履歴依存を断つマルコフ的推論過程でテスト時スケーリングの冗長計算を減らすが、主眼は推論軌跡の分解という推論手法であり、サービングやデコード実行系の機構は提示されていない。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Atom of Thoughts for Markov LLM Test-Time Scaling"
+    },
+    "arXiv:2608.05651": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.05651",
+      "identity_tokens": [
+        "arXiv:2608.05651"
+      ],
+      "reason": "LLM駆動の進化的プログラム探索で安価なモデルと強いモデル間の引き継ぎを推論予算下で最適化するが、主対象は探索応用のコスト配分であり汎用サービング機構ではないため境界とする。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Relay, Don't Route: Adaptive Population Handoff for Cost-Efficient LLM-Driven Evolution"
+    },
+    "DOI:10.1109/naecon70028.2026.11675008": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/naecon70028.2026.11675008",
+      "identity_tokens": [
+        "DOI:10.1109/naecon70028.2026.11675008"
+      ],
+      "reason": "密なGPU計算へ一律に流すLLM基盤に対しスパイキング型ワークロードマネージャで階層間ルーティングしGPUコスト削減を主張するが、機構の詳細や評価条件が要旨では薄く即acceptの根拠が弱いため境界とする。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Neuromorphic Orchestration for Efficient LLM Infrastructure via Utility-Optimized Decision-Making"
+    },
+    "DOI:10.48550/arxiv.2608.03838": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2608.03838",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2608.03838",
+        "arXiv:2608.03838"
+      ],
+      "reason": "推論ベースLLMセーフガードの明示的根拠生成によるデコード負荷を潜在推論で減らす効率化を狙うが、主目的は安全性分類であり汎用推論システムへの貢献は限定的なため境界とする。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LatentGuard: Efficient and Inspectable Latent Reasoning for LLM Safeguards"
+    },
+    "arXiv:2311.13657": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.13657",
+      "identity_tokens": [
+        "arXiv:2311.13657"
+      ],
+      "reason": "効率的attentionを持つTransformerへの知識蒸留によるモデル圧縮のコスト・性能トレードオフ評価であり、圧縮は推論効率と関連するが、対象はNER等のエンコーダ課題の評価でLLM推論への直接機構は示されていない。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Transformer Knowledge Distillation: A Performance Review"
+    },
+    "arXiv:2009.09523": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2009.09523",
+      "identity_tokens": [
+        "arXiv:2009.09523"
+      ],
+      "reason": "仮想ノード処理でモデルとハードウェアを分離しバッチを時分割してメモリ要求を下げるVirtualFlowは実行系の仕組みだが、主対象は深層学習全般の学習・再現性と資源弾力性であり、LLM推論への具体化は示されていない。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VirtualFlow: Decoupling Deep Learning Models from the Underlying Hardware"
+    },
+    "arXiv:2504.15630": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.15630",
+      "identity_tokens": [
+        "arXiv:2504.15630"
+      ],
+      "reason": "CaLEはV-usable informationで特定した層の文脈情報を増幅する内部表現への介入手法で、デコード時の文脈忠実度は扱うが推論効率・サービング機構の改善は示されておらず関連性は薄い。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploiting Contextual Knowledge in LLMs through V-usable Information based Layer Enhancement"
+    },
+    "arXiv:2010.11358": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2010.11358",
+      "identity_tokens": [
+        "arXiv:2010.11358"
+      ],
+      "reason": "N-ODE Transformerは神経ODEで深さを入力適応的に変えるアーキテクチャ変種だが、検証はパリティ問題の理論的限界に限られ、LLM推論での効率改善は実証されていないため境界とする。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "N-ODE Transformer: A Depth-Adaptive Variant of the Transformer Using Neural Ordinary Differential Equations"
+    },
+    "arXiv:2406.17167": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.17167",
+      "identity_tokens": [
+        "arXiv:2406.17167"
+      ],
+      "reason": "一層Transformerの勾配更新が低ランク・スパースになることの理論解析で、LoRAやプルーニングの根拠には触れるが推論システムの具体機構を提案・評価してはいない。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning on Transformers is Provable Low-Rank and Sparse: A One-layer Analysis"
+    },
+    "arXiv:2406.13621": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.13621",
+      "identity_tokens": [
+        "arXiv:2406.13621"
+      ],
+      "reason": "LaMIは複数生成画像の予測確率をテキストLLMと後段融合するテスト時手法で、推論時融合の形は取るが目的は視覚常識推論の能力向上でありシステム効率の貢献は小さい。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LaMI: Augmenting Large Language Models via Late Multi-Image Fusion"
+    },
+    "arXiv:2512.01099": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.01099",
+      "identity_tokens": [
+        "arXiv:2512.01099"
+      ],
+      "reason": "定量的な性能特性をLLMオーケストレータのモデル選択に組み込むコスト配慮型選択法だが、対象は汎用AIシステムのモデル編成でありLLMサービング基盤としての機構は限定的である。",
+      "first_checked_at": "2026-11-26T12:11:10+00:00",
+      "last_checked_at": "2026-11-26T12:11:10+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cost-Aware Model Orchestration for LLM-based Systems"
+    },
+    "arXiv:2505.19284": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.19284",
+      "identity_tokens": [
+        "arXiv:2505.19284"
+      ],
+      "reason": "RankLLMはLLMリランキング用Pythonパッケージで推論フレームワークとの統合を含むが、提示されるのは再現・利用のためのツール基盤であり、推論システム自体の高速化機構は示されていない。",
+      "first_checked_at": "2026-11-26T12:11:11+00:00",
+      "last_checked_at": "2026-11-26T12:11:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RankLLM: A Python Package for Reranking with LLMs"
+    },
+    "arXiv:2504.21311": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.21311",
+      "identity_tokens": [
+        "arXiv:2504.21311"
+      ],
+      "reason": "無線経由の安全なLLMサービス向けにサプライザル誘導のプロンプト圧縮と暗号化で送信遅延を最小化するが、主目的は秘匿通信であり、推論サービング内部の機構ではなくネットワーク側の最適化にとどまる。",
+      "first_checked_at": "2026-11-26T12:11:11+00:00",
+      "last_checked_at": "2026-11-26T12:11:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Covert Prompt Transmission for Secure Large Language Model Services"
+    },
+    "arXiv:2305.11129": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.11129",
+      "identity_tokens": [
+        "arXiv:2305.11129"
+      ],
+      "reason": "mLongT5はLongT5系の効率的長系列Text-to-Text Transformerを多言語化したものだが、評価は要約・質問応答の精度中心で、推論時のメモリや遅延の改善量は要旨で具体的に示されていない。",
+      "first_checked_at": "2026-11-26T12:11:11+00:00",
+      "last_checked_at": "2026-11-26T12:11:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "mLongT5: A Multilingual and Efficient Text-To-Text Transformer for Longer Sequences"
+    },
+    "arXiv:2205.07459": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.07459",
+      "identity_tokens": [
+        "arXiv:2205.07459"
+      ],
+      "reason": "全トークン並列生成でデコードレイテンシを下げる非自己回帰Transformerを有向非循環構造で改善するが、対象は機械翻訳の小規模モデルであり現代のLLM推論への適用は要旨で限定的なため境界とする。",
+      "first_checked_at": "2026-11-26T12:11:11+00:00",
+      "last_checked_at": "2026-11-26T12:11:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Directed Acyclic Transformer for Non-Autoregressive Machine Translation"
+    },
+    "DOI:10.1109/lsp.2020.3044547": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/lsp.2020.3044547",
+      "identity_tokens": [
+        "DOI:10.1109/lsp.2020.3044547"
+      ],
+      "reason": "自動音声認識で自己回帰の計算量が展開の障害になる問題に対し非自己回帰Transformerの並列デコードを検討するが、対象はASR専用モデルでありLLM推論への一般性は限られるため境界とする。",
+      "first_checked_at": "2026-11-26T12:11:11+00:00",
+      "last_checked_at": "2026-11-26T12:11:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Non-Autoregressive Transformer for Speech Recognition"
+    },
+    "arXiv:2206.05975": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2206.05975",
+      "identity_tokens": [
+        "arXiv:2206.05975"
+      ],
+      "reason": "非自己回帰Transformerは並列デコードで遅延削減を狙うが、本論文の貢献はその学習困難さの理論・実証分析と学習目的の統一的視点であり、推論実行系の実装機構は示されていない。",
+      "first_checked_at": "2026-11-26T12:11:11+00:00",
+      "last_checked_at": "2026-11-26T12:11:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On the Learning of Non-Autoregressive Transformers"
+    },
+    "DOI:10.1109/jetcas.2023.3237582": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jetcas.2023.3237582",
+      "identity_tokens": [
+        "DOI:10.1109/jetcas.2023.3237582"
+      ],
+      "reason": "メモリスタ回路で軽量Transformerを実装しエッジ向けにエネルギー overheadを下げるハードウェア提案だが、検証対象は音声コマンド認識であり、LLM推論への適用や規模の根拠は示されていない。",
+      "first_checked_at": "2026-11-26T12:11:11+00:00",
+      "last_checked_at": "2026-11-26T12:11:11+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memristor-Based Light-Weight Transformer Circuit Implementation for Speech Recognizing"
+    },
+    "DOI:10.1007/s42979-025-04190-z": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s42979-025-04190-z",
+      "identity_tokens": [
+        "DOI:10.1007/s42979-025-04190-z"
+      ],
+      "reason": "ニューラルネットワークのセキュア推論に関するレビューで、同形暗号やMPCによる推論の効率課題を扱うが、LLM推論システムへの新規の技術的貢献ではなく対象も汎用NNに広いため境界とする。",
+      "first_checked_at": "2026-11-26T12:11:12+00:00",
+      "last_checked_at": "2026-11-26T12:11:12+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Review on Secure Inference From Neural Networks"
+    },
+    "arXiv:2601.09719": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.09719",
+      "identity_tokens": [
+        "arXiv:2601.09719"
+      ],
+      "reason": "Pre-LayerNormの統計計算オーバーヘッドと深さの呪いに対し有界双曲線正接を代替として提案するが、主眼は事前学習の安定性であり推論時の効率改善の具体的な評価が要旨で弱いため境界とする。",
+      "first_checked_at": "2026-11-26T12:11:12+00:00",
+      "last_checked_at": "2026-11-26T12:11:12+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bounded Hyperbolic Tangent: A Stable and Efficient Alternative to Pre-Layer Normalization in Large Language Models"
+    },
+    "arXiv:2603.04799": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.04799",
+      "identity_tokens": [
+        "arXiv:2603.04799"
+      ],
+      "reason": "大規模コーパス上の意味クエリ処理でLLM呼び出しを線形に行わない意味フィルタ範式を提案し効率を論じるが、主対象はデータベース的クエリ処理応用でありLLMサービング基盤そのものではないため境界とする。",
+      "first_checked_at": "2026-11-26T12:11:12+00:00",
+      "last_checked_at": "2026-11-26T12:11:12+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Linear LLM Invocation: An Efficient and Effective Semantic Filter Paradigm"
     }
   }
 }

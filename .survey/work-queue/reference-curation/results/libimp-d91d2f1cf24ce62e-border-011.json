@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d91d2f1cf24ce62e-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.04799",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.04799",
+    "identity_tokens": [
+      "arXiv:2603.04799"
+    ],
+    "reason": "大規模コーパス上の意味クエリ処理でLLM呼び出しを線形に行わない意味フィルタ範式を提案し効率を論じるが、主対象はデータベース的クエリ処理応用でありLLMサービング基盤そのものではないため境界とする。",
+    "first_checked_at": "2026-11-26T12:11:12+00:00",
+    "last_checked_at": "2026-11-26T12:11:12+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Linear LLM Invocation: An Efficient and Effective Semantic Filter Paradigm"
+  },
+  "processed_at": "2026-11-26T12:11:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d91d2f1cf24c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

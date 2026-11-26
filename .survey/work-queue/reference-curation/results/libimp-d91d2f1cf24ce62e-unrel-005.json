@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d91d2f1cf24ce62e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/bigdata66926.2025.11402199",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/bigdata66926.2025.11402199",
+    "identity_tokens": [
+      "DOI:10.1109/bigdata66926.2025.11402199"
+    ],
+    "reason": "構造化出力のためのfew-shot例の数が制約付き生成の信頼性に与える影響を評価したプロンプティング研究であり、デコード機構や推論システムの改良は含まれない。",
+    "first_checked_at": "2026-11-26T12:11:12+00:00",
+    "last_checked_at": "2026-11-26T12:11:12+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Two Shots are Enough: Reliable Constrained Generation with LLMs"
+  },
+  "processed_at": "2026-11-26T12:11:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d91d2f1cf24c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

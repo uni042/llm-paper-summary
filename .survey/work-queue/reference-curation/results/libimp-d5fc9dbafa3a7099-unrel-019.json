@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5fc9dbafa3a7099-unrel-019",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:af6f8906cc3dc73fe8eab5a06eab5ac70798e06f",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:af6f8906cc3dc73fe8eab5a06eab5ac70798e06f",
+    "identity_tokens": [
+      "SemanticScholar:af6f8906cc3dc73fe8eab5a06eab5ac70798e06f"
+    ],
+    "reason": "異種DNNのアンサンブル学習を資源配分とデータ共有で効率化するFLEET（MLSys 2020）であり、対象はアーキテクチャ探索やハイパーパラメータ調整のための学習基盤で推論ではない。",
+    "first_checked_at": "2026-11-26T12:11:12+00:00",
+    "last_checked_at": "2026-11-26T12:11:12+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "FLEET: Flexible Efficient Ensemble Training for Heterogeneous Deep Neural Networks"
+  },
+  "processed_at": "2026-11-26T12:11:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5fc9dbafa3a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

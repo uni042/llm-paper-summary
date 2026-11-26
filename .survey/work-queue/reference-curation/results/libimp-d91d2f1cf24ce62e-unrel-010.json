@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d91d2f1cf24ce62e-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.00885",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.00885",
+    "identity_tokens": [
+      "arXiv:2602.00885"
+    ],
+    "reason": "ファインチューニングや蒸留のための有益データ選択を決定点過程で改善する研究であり、言及されるtoken pruningも学習データ側の文脈で、推論システムへの具体的適用は確認できない。",
+    "first_checked_at": "2026-11-26T12:11:12+00:00",
+    "last_checked_at": "2026-11-26T12:11:12+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Reliability-Aware Determinantal Point Processes for Robust Informative Data Selection in Large Language Models"
+  },
+  "processed_at": "2026-11-26T12:11:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d91d2f1cf24c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

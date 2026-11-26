@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d91d2f1cf24ce62e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.29123",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.29123",
+    "identity_tokens": [
+      "arXiv:2605.29123"
+    ],
+    "reason": "マスク拡散モデルの信頼度優先デコードが長距離依存を無視するconfidence shortcutという推論失敗様式の分析であり、デコード高速化や推論システムの提案ではない。",
+    "first_checked_at": "2026-11-26T12:11:12+00:00",
+    "last_checked_at": "2026-11-26T12:11:12+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "The Confidence Shortcut: A Reasoning Failure Mode of Masked Diffusion Models"
+  },
+  "processed_at": "2026-11-26T12:11:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d91d2f1cf24c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

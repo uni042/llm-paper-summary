@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4589d9396f3a28bf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:da44248c3ced760711c56032ca91d9f400ecea38",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:da44248c3ced760711c56032ca91d9f400ecea38",
+    "identity_tokens": [
+      "SemanticScholar:da44248c3ced760711c56032ca91d9f400ecea38"
+    ],
+    "reason": "タイトル自体が被子植物の種間機能アノテーション用DNA言語モデルPlantCAD2であることを明示しており、ゲノム解析の応用モデルでLLM推論システムの対象外である。",
+    "first_checked_at": "2026-11-26T00:55:55+00:00",
+    "last_checked_at": "2026-11-26T12:11:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "PlantCAD2: A Long-Context DNA Language 1 Model for Cross-Species Functional Annotation 2 in Angiosperms 3"
+  },
+  "processed_at": "2026-11-26T12:11:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4589d9396f3a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6d992c657affabe0-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41598-025-08688-7",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41598-025-08688-7",
+    "identity_tokens": [
+      "DOI:10.1038/s41598-025-08688-7"
+    ],
+    "reason": "EHDGTは辺位置符号化と線形注意を組み合わせたグラフ表現学習手法で、ワイン産業知識グラフへの応用が中心でありLLM推論とは無関係である。",
+    "first_checked_at": "2026-11-26T12:11:10+00:00",
+    "last_checked_at": "2026-11-26T12:11:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Graph representation learning via enhanced GNNs and transformers"
+  },
+  "processed_at": "2026-11-26T12:11:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6d992c657aff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
