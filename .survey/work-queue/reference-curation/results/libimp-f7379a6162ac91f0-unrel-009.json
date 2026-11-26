@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7379a6162ac91f0-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.16911",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.16911",
+    "identity_tokens": [
+      "arXiv:2505.16911"
+    ],
+    "reason": "能動的音声強調という新しいパラダイムで雑音抑圧と音声強調を行う音響信号処理の研究であり、LLM推論の計算・メモリ機構とは関係がない。",
+    "first_checked_at": "2026-11-26T00:59:27+00:00",
+    "last_checked_at": "2026-11-26T03:25:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Active Speech Enhancement: Active Speech Denoising Decliping and Deveraberation"
+  },
+  "processed_at": "2026-11-26T03:25:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7379a6162ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

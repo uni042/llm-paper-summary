@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3731fef0e7ff781c-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.24841",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.24841",
+    "identity_tokens": [
+      "arXiv:2607.24841"
+    ],
+    "reason": "スパース性とブロックデノイジングで拡散言語モデルの計算・メモリ律速を解く神経形態的アプローチだが、新奇アーキテクチャ段階でサービング実証は薄い。",
+    "first_checked_at": "2026-11-26T03:25:00+00:00",
+    "last_checked_at": "2026-11-26T03:25:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Neuromorphic Diffusion Language Models: Addressing Compute and Memory Bottlenecks via Sparsity and Block Denoising"
+  },
+  "processed_at": "2026-11-26T03:25:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3731fef0e7ff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

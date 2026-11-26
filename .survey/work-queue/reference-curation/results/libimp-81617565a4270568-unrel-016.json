@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-81617565a4270568-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.02992",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.02992",
+    "identity_tokens": [
+      "arXiv:2402.02992"
+    ],
+    "reason": "デコード時再整列で言語モデルを人間選好へ合わせる研究であり、対象は整列の最適化問題で推論効率やサービング機構の改善ではない。",
+    "first_checked_at": "2026-11-26T03:25:01+00:00",
+    "last_checked_at": "2026-11-26T03:25:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Decoding-time Realignment of Language Models"
+  },
+  "processed_at": "2026-11-26T03:25:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81617565a427",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

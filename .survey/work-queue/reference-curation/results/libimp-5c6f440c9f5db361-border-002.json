@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5c6f440c9f5db361-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.08997",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.08997",
+    "identity_tokens": [
+      "arXiv:2508.08997"
+    ],
+    "reason": "構造化文脈メモリで異種マルチエージェントLLMの文脈一貫性を保つ枠組みだが、対象はエージェント協調のメモリ設計でありサービング機構ではない。",
+    "first_checked_at": "2026-11-26T03:25:01+00:00",
+    "last_checked_at": "2026-11-26T03:25:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Intrinsic Memory Agents: Heterogeneous Multi-Agent LLM Systems through Structured Contextual Memory"
+  },
+  "processed_at": "2026-11-26T03:25:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5c6f440c9f5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

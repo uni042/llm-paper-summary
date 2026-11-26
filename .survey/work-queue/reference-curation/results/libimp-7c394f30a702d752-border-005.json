@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c394f30a702d752-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.13191",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.13191",
+    "identity_tokens": [
+      "arXiv:2310.13191"
+    ],
+    "reason": "敵対的頑健性を保つ言語モデルの適応的知識保持プルーニングだが、主目的は頑健性であり推論メモリ・遅延削減の機構としての位置づけは二次的である。",
+    "first_checked_at": "2026-11-26T03:25:01+00:00",
+    "last_checked_at": "2026-11-26T03:25:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Robust Pruning: An Adaptive Knowledge-Retention Pruning Strategy for Language Models"
+  },
+  "processed_at": "2026-11-26T03:25:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c394f30a702",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

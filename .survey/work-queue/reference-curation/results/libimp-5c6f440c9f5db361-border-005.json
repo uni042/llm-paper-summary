@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5c6f440c9f5db361-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2010.07109",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2010.07109",
+    "identity_tokens": [
+      "arXiv:2010.07109"
+    ],
+    "reason": "事前学習言語モデルの量子化方式を調査する初期の研究であり、対象はBERT級モデルのサイズ削減で現代LLM推論サービングへの直接性は弱い。",
+    "first_checked_at": "2026-11-26T03:25:01+00:00",
+    "last_checked_at": "2026-11-26T03:25:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Investigation on Different Underlying Quantization Schemes for Pre-trained Language Models"
+  },
+  "processed_at": "2026-11-26T03:25:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5c6f440c9f5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

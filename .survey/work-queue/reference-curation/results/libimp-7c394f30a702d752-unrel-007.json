@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c394f30a702d752-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.10163",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.10163",
+    "identity_tokens": [
+      "arXiv:2402.10163"
+    ],
+    "reason": "進行波で作業メモリ変数を束ねる再帰ネットワークの理論モデルであり、対象は神経科学と理論でLLM推論システムの機構ではない。",
+    "first_checked_at": "2026-11-26T03:25:01+00:00",
+    "last_checked_at": "2026-11-26T03:25:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Hidden Traveling Waves bind Working Memory Variables in Recurrent Neural Networks"
+  },
+  "processed_at": "2026-11-26T03:25:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c394f30a702",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

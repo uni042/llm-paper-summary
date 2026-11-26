@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5aee8b49f266449-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.22442",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.22442",
+    "identity_tokens": [
+      "arXiv:2601.22442"
+    ],
+    "reason": "データ・パイプライン並列の両軸で非同期更新を許すAsyncMeshは分散学習の通信削減が目的であり、推論サービングを対象とするものではない。",
+    "first_checked_at": "2026-11-26T03:25:01+00:00",
+    "last_checked_at": "2026-11-26T03:25:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "AsyncMesh: Fully Asynchronous Optimization for Data and Pipeline Parallelism"
+  },
+  "processed_at": "2026-11-26T03:25:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5aee8b49f26",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

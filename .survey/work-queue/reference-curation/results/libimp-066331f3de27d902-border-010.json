@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-066331f3de27d902-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2203.12672",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2203.12672",
+    "identity_tokens": [
+      "arXiv:2203.12672"
+    ],
+    "reason": "CPU-GPU統合仮想メモリでの深層学習データプリフェッチはページ移行遅延を隠す機構だが、対象は汎用UVM実行でありLLM推論のKVや重み配置への適用ではない。",
+    "first_checked_at": "2026-11-26T03:25:00+00:00",
+    "last_checked_at": "2026-11-26T03:25:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Deep Learning based Data Prefetching in CPU-GPU Unified Virtual Memory"
+  },
+  "processed_at": "2026-11-26T03:25:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-066331f3de27",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

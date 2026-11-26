@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3731fef0e7ff781c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/infocom59046.2026.11571517",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/infocom59046.2026.11571517",
+    "identity_tokens": [
+      "DOI:10.1109/infocom59046.2026.11571517"
+    ],
+    "reason": "LLM学習の3次元並列へネットワーク内集約を統合する3D-INAであり、対象は学習時 all-reduce の輻輳緩和で推論サービングの機構ではない。",
+    "first_checked_at": "2026-11-26T03:25:00+00:00",
+    "last_checked_at": "2026-11-26T03:25:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "3D-INA: An Exploration of Integrating In-Network Aggregation into 3D Parallelism for LLM Training"
+  },
+  "processed_at": "2026-11-26T03:25:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3731fef0e7ff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

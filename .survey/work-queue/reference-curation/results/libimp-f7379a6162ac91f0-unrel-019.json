@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7379a6162ac91f0-unrel-019",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:1471bb4115fee0af2976588ad6a79854ec6586c4",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:1471bb4115fee0af2976588ad6a79854ec6586c4",
+    "identity_tokens": [
+      "SemanticScholar:1471bb4115fee0af2976588ad6a79854ec6586c4"
+    ],
+    "reason": "生成モデルの暗黙三次元事前知識をMLLMの場面理解へ活かす研究であり、対象は空間推論能力の改善で推論実行やメモリ機構の貢献ではない。",
+    "first_checked_at": "2026-11-26T03:25:02+00:00",
+    "last_checked_at": "2026-11-26T03:25:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding"
+  },
+  "processed_at": "2026-11-26T03:25:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7379a6162ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

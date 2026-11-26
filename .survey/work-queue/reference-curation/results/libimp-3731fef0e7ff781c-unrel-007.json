@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3731fef0e7ff781c-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icassp48485.2024.10446916",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icassp48485.2024.10446916",
+    "identity_tokens": [
+      "DOI:10.1109/icassp48485.2024.10446916"
+    ],
+    "reason": "整数計画法でTransformerの三次元並列学習戦略を求める研究であり、対象は分散学習の並列構成最適化で推論サービングの機構ではない。",
+    "first_checked_at": "2026-11-26T03:25:00+00:00",
+    "last_checked_at": "2026-11-26T03:25:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "3D Parallelism for Transformers via Integer Programming"
+  },
+  "processed_at": "2026-11-26T03:25:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3731fef0e7ff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
