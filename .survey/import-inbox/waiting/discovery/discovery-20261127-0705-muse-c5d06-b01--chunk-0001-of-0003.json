@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261127-c5d06-b01::chunk-0001-of-0003",
+  "reference_main_sha": "475c12b134c3fe91eee6203b044933dd3af00bab",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10269",
+      "identity_tokens": [
+        "arXiv:2605.10269"
+      ],
+      "title": "Increasing the Efficiency of DETR for Maritime High-Resolution Images",
+      "reason": "海上高解像度画像向けにVision Mambaバックボーンと特徴ピラミッドでDETR物体検出を効率化する研究で、対象は無人水上艇の障害物検出という画像応用であり、LLM推論システムへの貢献は要旨にないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2605.10269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 438
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.05079",
+      "identity_tokens": [
+        "arXiv:2606.05079"
+      ],
+      "title": "Fast & Faithful Function Vectors",
+      "reason": "LLMのin-context learningで得るfunction vectorについて、LRPによる注意ヘッド選択と分散ステアリングで効率と精度を改善する研究だが、主眼は表現の定式化と解釈可能性であり、推論サービングやデコード機構への直接貢献は薄いためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2606.05079",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 441
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09432",
+      "identity_tokens": [
+        "arXiv:2606.09432"
+      ],
+      "title": "Graph Mamba Operator: A Latent Simulator for Interacting Particle Systems",
+      "reason": "グラフニューラルネットと状態空間モデルを結合した潜在シミュレータGraMOで相互作用粒子系の長時間ダイナミクスをモデル化する研究であり、物理シミュレーションが対象でLLM推論とは無関係なためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2606.09432",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 442
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01960",
+      "identity_tokens": [
+        "arXiv:2607.01960"
+      ],
+      "title": "NAVER LABS Europe Submission to the Instruction-following 2026 Short Track",
+      "reason": "IWSLT 2026の指示追従音声処理ショートトラックへの参加システム記述で、ASR・音声翻訳・音声QAの多段学習パイプラインと合成データが内容であり、推論システムへの技術的貢献は示されていないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2607.01960",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16692",
+      "identity_tokens": [
+        "arXiv:2607.16692"
+      ],
+      "title": "Dependency-Guided Code Generation: Structured Matrix Decomposition and Consistency-Guided Refinement",
+      "reason": "コード実体間の依存を量子化行列と低ランク分解でモデル化し一貫性誘導リファインメントでコード生成の論理的完全性を高める枠組みであり、コード生成手法そのものが対象で推論効率化の機構はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2607.16692",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.14561",
+      "identity_tokens": [
+        "arXiv:2608.14561"
+      ],
+      "title": "A Biophysically-Inspired Feedback Controller for Multi-Class Cache Fairness",
+      "reason": "マルチテナントLLMサービングでシステムプロンプト・文書・コード文脈・会話履歴が単一のエビクションプールを共有する条件を対象に、クラス別フラックス式でパラメータ化したキャッシュ置換ポリシーを提案し、最悪クラスのミス率の公平性を改善する。要旨で対象・機構・評価条件が具体的に確認できるサービング向けキャッシュ管理の直接貢献でありacceptとした。",
+      "source_url": "https://arxiv.org/abs/2608.14561",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17282",
+      "identity_tokens": [
+        "arXiv:2608.17282"
+      ],
+      "title": "DeAR: Decentralized Agentic Reasoning via Capability Grounding and Collaborative Thought Navigation",
+      "reason": "中央集権プロトコルの代わりに能力グラウンディングと思考マップ航行によるピアツーピアな分散エージェント協調でマルチモーダル推論の精度を上げる枠組みであり、エージェント協調手法が対象でLLM推論システムの効率化機構ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2608.17282",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 448
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.23011",
+      "identity_tokens": [
+        "arXiv:2608.23011"
+      ],
+      "title": "Coarse Indexing, Fine Evidence: Decoupling Temporal Granularity in Long-Video RAG",
+      "reason": "長尺動画RAGで粗い検索インデックスと細粒度エビデンスを分離する密度適応グラフ構築を提案する研究だが、対象は動画理解のための検索インデックス設計であり、LLMの推論・サービング機構への貢献ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2608.23011",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 449
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26535",
+      "identity_tokens": [
+        "arXiv:2608.26535"
+      ],
+      "title": "Multi2AV-Safety: Benchmarking Safety in Multimodal-to-Audio-Video Generation",
+      "reason": "マルチモーダル条件付き音声・動画生成への攻撃を集めたレッドチームベンチマークMulti2AV-Safetyの構築と安全ガード評価が内容であり、能力・安全性評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2608.26535",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 450
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29958",
+      "identity_tokens": [
+        "arXiv:2608.29958"
+      ],
+      "title": "RIDGE: Region-Informed Derivative-Guided Evidence Selection for Long Video Understanding",
+      "reason": "大規模視覚言語モデルの固定された視覚トークン予算の下で、フレームとクエリの類似度曲線の微分情報を用いてエビデンスフレームを選ぶRIDGEを提案し長尺動画理解の入力削減に関わるが、主目的は動画理解の精度であり推論システム機構としての位置づけは補助的なためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2608.29958",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05596",
+      "identity_tokens": [
+        "arXiv:2609.05596"
+      ],
+      "title": "Time-Aware Assistive Navigation",
+      "reason": "視覚障害者の都市環境ナビゲーションを題材に、マルチモーダルLLMエージェントが応答タイミングを計画できるかを測るベンチマーク研究であり、応用タスクの評価が中心で推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2609.05596",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09903",
+      "identity_tokens": [
+        "arXiv:2609.09903"
+      ],
+      "title": "SphereVAE: Hyperspherical Latent Autoencoders for Robust Autoregressive Speech Representation Modeling",
+      "reason": "表現力の高い音声生成のためVAE潜在空間を超球面に制約するSphereVAEで自己回帰音声表現の潜在ドリフトを抑える研究であり、音声コーデック表現の学習が対象でLLM推論とは無関係なためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2609.09903",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.17019",
+      "identity_tokens": [
+        "arXiv:2609.17019"
+      ],
+      "title": "SKIP: a Self-knowledge-guided Step-wise Preference Learning Framework for Concise Reasoning",
+      "reason": "自己知識プロービングと段階的選好学習（DPO）でLLMの過剰なChain-of-Thoughtを圧縮し推論レイテンシと計算量を下げることを狙うSKIPだが、機構は学習側の選好最適化であり推論時のシステム機構ではないためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2609.17019",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22162",
+      "identity_tokens": [
+        "arXiv:2609.22162"
+      ],
+      "title": "Beyond Raw Context Transfer: Representation-based Federated Retrieval-Augmented Generation",
+      "reason": "医療など分散環境の連合RAGで生文書を共有せずコンパクトな潜在表現だけを交換するFedRepRAGを提案し推論時の計算オーバーヘッド削減にも触れるが、主貢献は連合検索のプロトコルとプライバシーでありLLMサービング機構への直接性は弱いためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2609.22162",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.24090",
+      "identity_tokens": [
+        "arXiv:2609.24090"
+      ],
+      "title": "Incremental Consistency Execution for Autonomous Intelligent Systems",
+      "reason": "LLMや外部APIを含む自律システムで、タスク事実契約とフィールド単位の依存マスクにより変更時の再実行範囲を最小化する増分一貫性実行を提案し冗長な再計算の削減を狙うが、対象は汎用の自律システム実行でありLLM推論基盤としての具体性は限られるためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2609.24090",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27378",
+      "identity_tokens": [
+        "arXiv:2609.27378"
+      ],
+      "title": "Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models",
+      "reason": "全二重音声対話モデルへの心理音響マスキング閾値以下の摂動による攻撃を定式化し、潜在平滑化による防御で推論時コストなしに堅牢性を高める研究であり、音声モデルの敵対的堅牢性が対象でLLM推論システムではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2609.27378",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29780",
+      "identity_tokens": [
+        "arXiv:2609.29780"
+      ],
+      "title": "Joint Analysis of Latent Dimensionality and Frame Rate in Continuous Audio Encoders",
+      "reason": "連続音声エンコーダの潜在次元とフレームレートの組合せを16構成で学習しASRや音声QAへの影響を分析した研究であり、音声表現の設計分析が対象でLLM推論への適用は示されていないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2609.29780",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33271",
+      "identity_tokens": [
+        "arXiv:2609.33271"
+      ],
+      "title": "Next Thoughts Are Distributions: Generative Autoregressive Reasoning in the Latent Space",
+      "reason": "次の連続思考を多峰分布として拡散ヘッドで生成するAutoregressive Thought Flowにより、コンパクトな潜在トレースで潜在空間推論を行う手法だが、主貢献は推論手法の精度と表現形式であり、推論システムの実行機構への直接貢献は確認できないためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2609.33271",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34363",
+      "identity_tokens": [
+        "arXiv:2609.34363"
+      ],
+      "title": "SyncRA: Learning Temporal Correspondence in Omni-Modal Models",
+      "reason": "オムニモーダルモデルで音声と映像の時間的対応を中間表現の対照学習で強化するSyncRAの提案であり、マルチモーダル知覚の学習手法が対象で推論効率化の機構はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2609.34363",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35532",
+      "identity_tokens": [
+        "arXiv:2609.35532"
+      ],
+      "title": "ARISE: Adapting to Evolving Capability Gaps in Agentic Reinforcement Learning",
+      "reason": "長期エージェントの能力ギャップの変化に合わせルーブリックとスキルを共進化させる強化学習枠組みARISEであり、エージェント学習の適応が対象で推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2609.35532",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 461
+    }
+  ],
+  "parent_run_key": "muse-20261127-c5d06-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 55
+}

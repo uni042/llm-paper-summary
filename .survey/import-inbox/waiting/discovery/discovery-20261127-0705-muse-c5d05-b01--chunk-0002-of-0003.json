@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261127-c5d05-b01::chunk-0002-of-0003",
+  "reference_main_sha": "475c12b134c3fe91eee6203b044933dd3af00bab",
+  "origin": "discovery_worklist",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3805042",
+      "identity_tokens": [
+        "DOI:10.1145/3805042"
+      ],
+      "title": "Multi-modal Temporal Relation Network for Video Understanding",
+      "reason": "マルチモーダル動画理解向けの時間関係ネットワークの提案で、対象は動画記述生成の理解精度であり、LLM推論システムへの貢献は一次要旨に確認できない。",
+      "source_url": "https://doi.org/10.1145/3805042",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 408
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3813723.3813735",
+      "identity_tokens": [
+        "DOI:10.1145/3813723.3813735"
+      ],
+      "title": "A Review of Research on Computing Power Network Topologies",
+      "reason": "Fat-TreeやDragonfly等の計算力ネットワークトポロジとGPipe・Megatron-LM等の分散学習アルゴリズムを総説するもので、分散基盤とは関連するが、LLM推論システムへの直接の技術的貢献を示す内容は一次要旨で確認できない。",
+      "source_url": "https://doi.org/10.1145/3813723.3813735",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 409
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1609/aaai.v40i34.40105",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v40i34.40105"
+      ],
+      "title": "HitKV: Activation Frequency Knows Which Tokens Are Important",
+      "reason": "トークンの活性化頻度（hit rate）に基づく層・タスク適応型のKVキャッシュエビクションHitKVを提案し、KVキャッシュを3%まで圧縮しながら生成品質を維持しスループットを4倍に改善したと一次要旨で具体的に示されており、LLM推論のKVキャッシュ管理への直接の技術的貢献が確認できる。",
+      "source_url": "https://doi.org/10.1609/aaai.v40i34.40105",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1028",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1028"
+      ],
+      "title": "MECH: A Cost-Effective Multi-Task Cascade Framework for Classroom Opinion Evolution Recognition",
+      "reason": "教室意見進化認識向けに多タスクカスケード枠組みMECHを提案し精度・コスト・データのトレードオフを扱うが、カスケードの対象は教育ドメインの分類タスクであり、推論システム一般への貢献は一次要旨の範囲では薄い。",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1028",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 411
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539401",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539401"
+      ],
+      "title": "KirbyMM: Outer-Product Based Matrix Multiplication on ARMv9 Processor",
+      "reason": "ARMv9のSMEを用いたGEMM最適化KirbyMMでキャッシュ効率の良いデータパッキング等により行列積を高速化するが、対象は汎用HPCのGEMMであり、LLM推論での評価や推論特化の適用は一次要旨で確認できないため境界とする。",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539401",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 412
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2603.22121",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2603.22121"
+      ],
+      "title": "Mamba-VMR: Multimodal Query Augmentation via Generated Videos for Precise Temporal Grounding",
+      "reason": "生成動画を時間的 prior として用いる動画コーパスモーメント検索Mamba-VMR／GenSpanの提案で、対象は動画検索タスクの精度であり、LLM推論システムへの貢献は一次要旨に確認できない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2603.22121",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 414
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.56553/popets-2026-0085",
+      "identity_tokens": [
+        "DOI:10.56553/popets-2026-0085"
+      ],
+      "title": "Understanding Privacy and Quality Tradeoffs in Synthetic Network Data",
+      "reason": "差分プライバシーで学習した合成ネットワークデータのプライバシーと品質のトレードオフを分析する研究で、対象はネットワークデータ生成のプライバシー評価であり、LLM推論システムへの貢献は一次要旨に確認できない。",
+      "source_url": "https://doi.org/10.56553/popets-2026-0085",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 415
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2209.09756",
+      "identity_tokens": [
+        "arXiv:2209.09756"
+      ],
+      "title": "ESPnet-ONNX: Bridging a Gap Between Research and Production",
+      "reason": "音声処理ツールキットESPnetをONNX変換・量子化等で製品デプロイ向けに最適化する報告で、対象は音声モデルの配布最適化であり、LLM推論システムへの貢献は一次要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2209.09756",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 416
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.08031",
+      "identity_tokens": [
+        "arXiv:2509.08031"
+      ],
+      "title": "AU-Harness: An Open-Source Toolkit for Efficient and Unified Evaluation of AudioLLMs",
+      "reason": "大規模音声言語モデルの評価ツールキットAU-Harnessの提案で、対象はモデル能力評価の標準化であり、LLM推論システムへの技術的貢献は一次要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2509.08031",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 418
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.07100",
+      "identity_tokens": [
+        "arXiv:2512.07100"
+      ],
+      "title": "Dual Refinement Cycle Learning: Unsupervised Text Classification of Mamba and Community Detection on Text Attributed Graph",
+      "reason": "Mambaとコミュニティ検出を組み合わせたテキスト付きグラフの教師なし分類DRCLの提案で、対象はテキスト分類・コミュニティ検出タスクであり、LLM推論システムへの貢献は一次要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2512.07100",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 419
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03424",
+      "identity_tokens": [
+        "arXiv:2601.03424"
+      ],
+      "title": "Spectral Archaeology: The Causal Topology of Model Evolution",
+      "reason": "注意グラフのスペクトルでモデルの内部進化を解析するメカニスティックプローブの研究で、対象はモデルの解釈可能性分析であり、LLM推論システムの実行効率への貢献は一次要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2601.03424",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 420
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07663",
+      "identity_tokens": [
+        "arXiv:2602.07663"
+      ],
+      "title": "A Two-Layer Framework for Joint Online Configuration Selection and Admission Control",
+      "reason": "LLMサービングやGPUスケジューリングを応用先に挙げ、量子化や並列度などの構成選択とアドミッション制御をオンライン最適化として定式化するが、一次要旨では汎用の理論的枠組みと後悔 bound が中心で、LLMサービング実システムでの評価が確認できず、推論システムへの貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2602.07663",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 423
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.13479",
+      "identity_tokens": [
+        "arXiv:2602.13479"
+      ],
+      "title": "GLIMPSE : Real-Time Text Recognition and Contextual Understanding for VQA in Wearables",
+      "reason": "ウェアラブル向けTextVQAでオンデバイスの高解像度OCRと低解像度映像ストリーミングを組み合わせ消費電力を半減させるハイブリッド構成を提案するが、主目的はウェアラブルVQAアプリケーションの実現であり、LLM推論システムへの汎用的な貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2602.13479",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 424
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19409",
+      "identity_tokens": [
+        "arXiv:2602.19409"
+      ],
+      "title": "AuditoryHuM: Auditory Scene Label Generation and Clustering using Human-MLLM Collaboration",
+      "reason": "人間とMLLMの協調で音響シーンラベルを発見・クラスタリングするAuditoryHuMの提案で、対象は音響データのアノテーション応用であり、LLM推論システムへの貢献は一次要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2602.19409",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 425
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15008",
+      "identity_tokens": [
+        "arXiv:2603.15008"
+      ],
+      "title": "Clue Matters: Leveraging Latent Visual Clues to Empower Video Reasoning",
+      "reason": "潜在視覚的手がかりを活用して動画質問応答の推論を強化するClueNetの提案で、対象はVideoQAの精度と解釈性であり、LLM推論システムへの貢献は一次要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2603.15008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 427
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20217",
+      "identity_tokens": [
+        "arXiv:2603.20217"
+      ],
+      "title": "Expected Reward Prediction, with Applications to Model Routing",
+      "reason": "報酬モデルの期待報酬予測を用いて推論時にプロンプトをモデルへルーティングし計算コストを制御する手法で、モデルルーティングというサービング関連の要素はあるが、中心は報酬予測の精度検証であり推論基盤の機構としての新規性は一次要旨では弱い。",
+      "source_url": "https://arxiv.org/abs/2603.20217",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 428
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.25097",
+      "identity_tokens": [
+        "arXiv:2603.25097"
+      ],
+      "title": "ElephantBroker: A Knowledge-Grounded Cognitive Runtime for Trustworthy AI Agents",
+      "reason": "知識グラフとベクトルストアを統合したエージェント向け認知ランタイムElephantBrokerで、予算制約付きコンテキスト組み立てや圧縮を含むとするが、中心はエージェントメモリの信頼性・安全性であり、LLM推論効率への技術的貢献は一次要旨では不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2603.25097",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 429
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01849",
+      "identity_tokens": [
+        "arXiv:2604.01849"
+      ],
+      "title": "From Guessing to Placeholding: A Cost-Theoretic Framework for Uncertainty-Aware Code Completion",
+      "reason": "不確実な位置にプレースホルダを出す適応型コード補完APCの学習枠組みで、対象はコード補完の編集コストという利用体験であり、LLM推論システムの実行機構への貢献は一次要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2604.01849",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 430
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06377",
+      "identity_tokens": [
+        "arXiv:2604.06377"
+      ],
+      "title": "The Master Key Hypothesis: Unlocking Cross-Model Capability Transfer via Linear Subspace Alignment",
+      "reason": "線形部分空間の整列により事後学習済み能力をモデル間で転移させるMaster Key仮説／UNLOCKの研究で、対象は能力転移のモデル編集であり、LLM推論システムへの貢献は一次要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2604.06377",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 431
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10449",
+      "identity_tokens": [
+        "arXiv:2604.10449"
+      ],
+      "title": "AdverMCTS: Combating Pseudo-Correctness in Code Generation via Adversarial Monte Carlo Tree Search",
+      "reason": "敵対的モンテカルロ木探索でコード生成の擬似正解に対処するAdverMCTSの提案で、対象はコード生成の探索・検証戦略であり、LLM推論システムの実行機構への貢献は一次要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2604.10449",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 432
+    }
+  ],
+  "parent_run_key": "muse-20261127-c5d05-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 42
+}

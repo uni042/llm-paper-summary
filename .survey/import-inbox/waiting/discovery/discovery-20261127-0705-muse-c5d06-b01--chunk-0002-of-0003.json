@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261127-c5d06-b01::chunk-0002-of-0003",
+  "reference_main_sha": "475c12b134c3fe91eee6203b044933dd3af00bab",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36626",
+      "identity_tokens": [
+        "arXiv:2609.36626"
+      ],
+      "title": "Semantic Projection for Continual Self-Evolution of Language Agents",
+      "reason": "自然言語スキルの継続的改訂で過去タスクの手順が上書きされる問題に、勾配射影の原理を振る舞い空間へ移したSSPEで対処する研究であり、言語エージェントの継続学習が対象で推論システムではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2609.36626",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39632",
+      "identity_tokens": [
+        "arXiv:2609.39632"
+      ],
+      "title": "Towards Better Exploration in Sequential Test-Time Scaling",
+      "reason": "逐次テスト時スケーリングがアトラクタに捕捉され探索が止まる現象を分析し探索継続の改善を示す研究で、推論時計算の使い方には関わるが、内容は推論戦略の挙動分析が中心でありサービングやデコードのシステム機構としての貢献は薄いためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2609.39632",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.04882",
+      "identity_tokens": [
+        "arXiv:2610.04882"
+      ],
+      "title": "ResOPD: Tail Residualization for Sparse On-Policy Distillation",
+      "reason": "オンポリシー蒸留で疎な教師分布しか送れない条件の下、尾部残差化で全語彙逆KL勾配を不偏推定するResOPDであり、対象は蒸留学習の通信・メモリボトルネックであって推論高速化ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.04882",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.05070",
+      "identity_tokens": [
+        "arXiv:2610.05070"
+      ],
+      "title": "Outcome-Guided On-Policy Self-Distillation",
+      "reason": "結果正しさの信号を取り入れたオンポリシー自己蒸留の目的関数を解析・改良する研究であり、学習時の教師監督の信頼性が対象で推論システムへの具体的適用は確認できないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.05070",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 465
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.05241",
+      "identity_tokens": [
+        "arXiv:2610.05241"
+      ],
+      "title": "StateWise: Diagnosing and Repairing Persistent Operational State Before Agent Actions",
+      "reason": "LLMエージェントが再利用する永続的な運用記録の無効化を、反実仮想リプランニングで診断し行動前に修復するStateWiseの提案であり、エージェントの状態管理が対象で推論システムの機構ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.05241",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 466
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.06782",
+      "identity_tokens": [
+        "arXiv:2610.06782"
+      ],
+      "title": "T-Search: An Open Agentic Retriever and Playground for Hard Multi-Step Search",
+      "reason": "困難な多段階検索向けに有界な多ラウンド検索を行うオープンなエージェント検索器T-Searchとその学習・ベンチマークの公開であり、検索精度が主眼でLLM推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.06782",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 467
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.10624",
+      "identity_tokens": [
+        "arXiv:2610.10624"
+      ],
+      "title": "SAVU-BENCH: A Real-World Benchmark for Spatial Audio-Visual Understanding",
+      "reason": "実世界の空間音声・視覚理解を3つの能力レベルで測るSAVU-BENCHと診断セットの構築・評価が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.10624",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 468
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.16338",
+      "identity_tokens": [
+        "arXiv:2610.16338"
+      ],
+      "title": "SyncReward: Human-Aligned Synchronization Reward for Audio-Visual Generation",
+      "reason": "音声・映像生成の同期品質について人手評価データセットとベンチマーク、同期報酬モデルを構築するSyncRewardの研究であり、生成品質の評価・報酬学習が対象で推論システムではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.16338",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.18391",
+      "identity_tokens": [
+        "arXiv:2610.18391"
+      ],
+      "title": "HULK: An Efficient Algorithm for Enabling Fast Bulk Bitwise Operations on Homomorphically Encrypted Data",
+      "reason": "準同型暗号化データに対するバルクビット演算を高速化するHULKの提案で、分析対象はデータベース・グラフ・ゲノム解析等の暗号化計算であり、LLM推論への適用は要旨に示されていないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.18391",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 470
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.19872",
+      "identity_tokens": [
+        "arXiv:2610.19872"
+      ],
+      "title": "RCCM: Diagnosing Gains and Harms in Reasoning-Prompt Transfer",
+      "reason": "推論プロンプトの移転による利得と害を生成終了記録と対応付けて診断するRCCMの実証研究であり、プロンプト戦略の評価・診断が中心で推論システムの機構的貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.19872",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 471
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.21138",
+      "identity_tokens": [
+        "arXiv:2610.21138"
+      ],
+      "title": "CleanRM: Reward Modeling from Noisy Feedback with a Few Clean Feedback for RLHF",
+      "reason": "少量のクリーンなフィードバックでサンプルごとのノイズ率を較正し報酬モデルを学習するCleanRMの提案であり、RLHFの学習手法が対象で推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.21138",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.22448",
+      "identity_tokens": [
+        "arXiv:2610.22448"
+      ],
+      "title": "Lean4AgenticRL: Advancing Agentic RL with Verifiable Multi-level Process Rewards",
+      "reason": "Lean4形式化に基づく多レベル過程報酬でエージェント強化学習を進めるLean4AgenticRLの枠組みであり、ソフトウェア工学エージェントの学習が対象で推論高速化の機構ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.22448",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.24030",
+      "identity_tokens": [
+        "arXiv:2610.24030"
+      ],
+      "title": "When Does Evidence-Graph Structure Predict Answer Correctness? Label-Free Abstention for Structured Retrieval",
+      "reason": "構造化検索でエビデンスグラフの境界カットを信号にラベルなし棄却を行う手法の提案であり、検索回答の信頼性判定が対象でLLM推論システムの実行機構への貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.24030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.24590",
+      "identity_tokens": [
+        "arXiv:2610.24590"
+      ],
+      "title": "Scene-Adaptive VLA: Efficient Autonomous Driving via Dynamic Layer Routing",
+      "reason": "自動運転向けVision-Language-Actionモデルのオンボード推論で、シーンと予測不確実性に応じて活性化する層を動的にルーティングし計算量と消費電力を削減するScene-Adaptive VLAだが、対象が自動運転VLAという特定応用モデルに限られ汎用LLM推論基盤への直接性は弱いためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2610.24590",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.25512",
+      "identity_tokens": [
+        "arXiv:2610.25512"
+      ],
+      "title": "When Interpretations Persist: Downstream Influence in Gaze-Aware Assistants",
+      "reason": "視線対応アシスタントで過去の解釈を持ち越すことが後段の予測や出力へ与える影響を実験的に調べた研究であり、アシスタントの振る舞い分析が中心で推論システムへの技術的貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.25512",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.27256",
+      "identity_tokens": [
+        "arXiv:2610.27256"
+      ],
+      "title": "TxnQA: Benchmarking Analytical Reasoning and Evidence Grounding over Transaction Event Sequences",
+      "reason": "商取引イベント系列に対する分析的推論とエビデンス grounding を測るTxnQAベンチマークの構築とモデル評価が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.27256",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.28444",
+      "identity_tokens": [
+        "arXiv:2610.28444"
+      ],
+      "title": "EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning",
+      "reason": "音声・視覚エビデンスに基づく推論過程まで評価できるよう人手注釈したEvaOmniベンチマークの構築が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.28444",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.28945",
+      "identity_tokens": [
+        "arXiv:2610.28945"
+      ],
+      "title": "Self-Improving Agents with World Model Predictive Paths",
+      "reason": "世界モデルで候補行動の結果を予測しMPPI的な重み付けで行動を選ぶ、デプロイ時に自己改善するLLMエージェントのテスト時枠組みであり、エージェントの意思決定手法が対象で推論システムの効率化機構ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.28945",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.30215",
+      "identity_tokens": [
+        "arXiv:2610.30215"
+      ],
+      "title": "AI Mindmeld: A Latent Interconnect Protocol",
+      "reason": "専門モデルとLLMの間でテキストを介さず潜在表現を直接交換するLatent Interconnect Protocolを提案し、コネクタ学習のみで複数専門家を接続するが、応用は科学エージェントの情報交換であり、推論サービング機構としての評価や直接貢献は限定的なためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2610.30215",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 480
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32268",
+      "identity_tokens": [
+        "arXiv:2610.32268"
+      ],
+      "title": "RVG-Bench: A Benchmark for Reasoning-Driven Audio-Visual Temporal Grounding",
+      "reason": "意図の推論を要するクエリで動画区間を特定するRVG-Benchという時間的グラウンディング用ベンチマークの構築と22モデルの評価が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.32268",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 481
+    }
+  ],
+  "parent_run_key": "muse-20261127-c5d06-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 55
+}

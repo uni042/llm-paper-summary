@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261127-c5d04-b01::chunk-0002-of-0003",
+  "origin": "discovery_worklist",
+  "reference_main_sha": "475c12b134c3fe91eee6203b044933dd3af00bab",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.13692",
+      "identity_tokens": [
+        "arXiv:2406.13692"
+      ],
+      "title": "Synchronous Faithfulness Monitoring for Trustworthy Retrieval-Augmented Generation",
+      "reason": "SynCheckはデコード過程の尤度や不確実性等のダイナミクスを用いる軽量な忠実性モニタで、デコード時に動作する点は推論過程と関わるが、目的はRAG出力の信頼性監視であり推論効率の改善機構ではないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2406.13692",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 344
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04262",
+      "identity_tokens": [
+        "arXiv:2601.04262"
+      ],
+      "title": "Safety-Utility Conflicts Are Not Global: Surgical Alignment via Head-Level Diagnosis",
+      "reason": "注意ヘッド単位の診断による安全性アライメント手法であり、学習時の安全・有用性トレードオフが主題で推論システムの効率化への貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2601.04262",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 345
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18769",
+      "identity_tokens": [
+        "arXiv:2605.18769"
+      ],
+      "title": "ClusterRAG: Cluster-Based Collaborative Filtering for Personalized Retrieval-Augmented Generation",
+      "reason": "ClusterRAGは協調フィルタリングで個人化RAGの文書選択を行う手法であり、検索精度と個人化が目的でLLM推論サービングの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2605.18769",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 346
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.15234",
+      "identity_tokens": [
+        "arXiv:2609.15234"
+      ],
+      "title": "CWM: Controllable White-Box Meta-Prompting for Adaptive Retrieval-Augmented Generation and Reasoning Ability",
+      "reason": "CWMは適応的RAGと推論能力のための制御可能なメタプロンプティング手法であり、プロンプト設計による能力改善が主題で推論システムの実行機構ではない。",
+      "source_url": "https://arxiv.org/abs/2609.15234",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 347
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.04829",
+      "identity_tokens": [
+        "arXiv:2210.04829"
+      ],
+      "title": "Hierarchical3D Adapters for Long Video-to-text Summarization",
+      "reason": "長尺動画からテキストへの要約のための階層3Dアダプタであり、動画理解タスクの精度が目的でLLM推論効率化とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2210.04829",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 349
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.13850",
+      "identity_tokens": [
+        "arXiv:2403.13850"
+      ],
+      "title": "Spatio-Temporal Fluid Dynamics Modeling via Physical-Awareness and Parameter Diffusion Guidance",
+      "reason": "物理認識とパラメータ拡散による時空間流体力学モデリングであり、科学シミュレーション応用であってLLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2403.13850",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 350
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14086",
+      "identity_tokens": [
+        "arXiv:2410.14086"
+      ],
+      "title": "In-context learning and Occam's razor",
+      "reason": "インコンテキスト学習とオッカムの剃刀の関係を論じる学習理論の研究であり、推論時の計算効率化の具体機構は示されていない。",
+      "source_url": "https://arxiv.org/abs/2410.14086",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 351
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.07093",
+      "identity_tokens": [
+        "arXiv:2504.07093"
+      ],
+      "title": "FlashDepth: Real-Time Streaming Video Depth Estimation at 2K Resolution",
+      "reason": "FlashDepthは2Kストリーミング動画のリアルタイム深度推定モデルであり、コンピュータビジョンの知覚処理が主題でLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2504.07093",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 352
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.03222",
+      "identity_tokens": [
+        "arXiv:2212.03222"
+      ],
+      "title": "LawngNLI: A Long-Premise Benchmark for In-Domain Generalization from Short to Long Contexts and for Implication-Based Retrieval",
+      "reason": "LawngNLIは長文法意見文を前提とする自然言語推論ベンチマークであり、データセットと評価が目的で推論システムの効率化機構はない。",
+      "source_url": "https://arxiv.org/abs/2212.03222",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 354
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14827",
+      "identity_tokens": [
+        "arXiv:2409.14827"
+      ],
+      "title": "AIM 2024 Challenge on Video Saliency Prediction: Methods and Results",
+      "reason": "AIM 2024の動画顕著性予測チャレンジの方法と結果の報告であり、視覚顕著性タスクのコンペ報告であってLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2409.14827",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 355
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.02583",
+      "identity_tokens": [
+        "arXiv:2405.02583"
+      ],
+      "title": "Explainable Interface for Human-Autonomy Teaming: A Survey",
+      "reason": "人間と自律システムのチーミングにおける説明可能インタフェースのサーベイであり、HCI・信頼性の概説であって推論システム技術ではない。",
+      "source_url": "https://arxiv.org/abs/2405.02583",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 356
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.11447",
+      "identity_tokens": [
+        "arXiv:2412.11447"
+      ],
+      "title": "Decouple and Decompose: Scaling Resource Allocation with DeDe",
+      "reason": "DeDeはクラウドの資源配分最適化を分解で大規模化する手法であり、汎用最適化ソルバの高速化が主題でLLM推論サービングへの具体適用は確認できない。",
+      "source_url": "https://arxiv.org/abs/2412.11447",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 357
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16845",
+      "identity_tokens": [
+        "arXiv:2505.16845"
+      ],
+      "title": "Unlocking Temporal Flexibility: Neural Speech Codec with Variable Frame Rate",
+      "reason": "可変フレームレートを導入したニューラル音声コーデックであり、音声符号化のビットレート効率が主題でLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2505.16845",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 358
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.15505",
+      "identity_tokens": [
+        "arXiv:2508.15505"
+      ],
+      "title": "Task-Generalized Adaptive Cross-Domain Learning for Multimodal Image Fusion",
+      "reason": "マルチモーダル画像融合のタスク汎用適応学習であり、リモートセンシングや医用画像等の融合応用が目的でLLM推論への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2508.15505",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 359
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2406.10221",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2406.10221"
+      ],
+      "title": "Short Film Dataset (SFD): A Benchmark for Story-Level Video Understanding",
+      "reason": "Short Film Datasetは物語レベルの動画理解のためのベンチマークであり、長尺動画データセットの提供が目的でLLM推論システムの機構は扱われていない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2406.10221",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 360
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.17972",
+      "identity_tokens": [
+        "arXiv:2311.17972"
+      ],
+      "title": "Self-Infilling Code Generation",
+      "reason": "Self-Infillingは自己回帰デコードにインフィリング操作を組み込むコード生成のデコード枠組みであり、デコード手順自体の拡張ではあるが目的は生成能力の拡張で推論効率の改善は要旨で確認できないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2311.17972",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 361
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.08421",
+      "identity_tokens": [
+        "arXiv:2412.08421"
+      ],
+      "title": "PointCFormer: a Relation-based Progressive Feature Extraction Network for Point Cloud Completion",
+      "reason": "PointCFormerは点群補完のための特徴抽出ネットワークであり、3D形状再構成タスクが主題でLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2412.08421",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 362
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.08842",
+      "identity_tokens": [
+        "arXiv:2505.08842"
+      ],
+      "title": "LibVulnWatch: A Deep Assessment Agent System and Leaderboard for Uncovering Hidden Vulnerabilities in Open-Source AI Libraries",
+      "reason": "LibVulnWatchはオープンソースAIライブラリの脆弱性を評価するエージェントシステムとリーダーボードであり、ソフトウェア供給網のリスク評価であって推論システム技術ではない。",
+      "source_url": "https://arxiv.org/abs/2505.08842",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 363
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08308",
+      "identity_tokens": [
+        "arXiv:2510.08308"
+      ],
+      "title": "First Try Matters: Revisiting the Role of Reflection in Reasoning Models",
+      "reason": "推論モデルにおける反省的振る舞いの役割をロールアウト分析で検証する研究であり、推論能力の分析が目的で推論実行の効率化機構は提案されていない。",
+      "source_url": "https://arxiv.org/abs/2510.08308",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 364
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1108/ria-04-2023-0047",
+      "identity_tokens": [
+        "DOI:10.1108/ria-04-2023-0047"
+      ],
+      "title": "A novel multi-layer feature fusion-based BERT-CNN for sentence representation learning and classification",
+      "reason": "BERT-CNNによる文表現学習とテキスト分類モデルであり、文分類応用が目的でLLM推論システムへの技術的貢献はない。",
+      "source_url": "https://doi.org/10.1108/ria-04-2023-0047",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 365
+    }
+  ],
+  "parent_run_key": "muse-20261127-c5d04-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 52
+}

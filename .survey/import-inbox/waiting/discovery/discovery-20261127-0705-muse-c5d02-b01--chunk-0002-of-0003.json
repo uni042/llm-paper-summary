@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261127-c5d02-b01::chunk-0002-of-0003",
+  "reference_main_sha": "475c12b134c3fe91eee6203b044933dd3af00bab",
+  "origin": "discovery_worklist",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.04970",
+      "identity_tokens": [
+        "arXiv:2605.04970"
+      ],
+      "title": "Skill Neologisms: Towards Skill-based Continual Learning",
+      "reason": "語彙に統合したソフトトークンで新スキルを獲得する継続学習手法であり、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2605.04970",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 213
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05389",
+      "identity_tokens": [
+        "arXiv:2602.05389"
+      ],
+      "title": "A Decomposition-based State Space Model for Multivariate Time-Series Forecasting",
+      "reason": "多変量時系列をトレンド・季節・残差に分解する状態空間モデルDecompSSMの提案で、応用先は気象・エネルギー等の予測であり対象外である。",
+      "source_url": "https://arxiv.org/abs/2602.05389",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 221
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.00660",
+      "identity_tokens": [
+        "arXiv:2604.00660"
+      ],
+      "title": "Streaming Model Cascades for Semantic SQL",
+      "reason": "意味的SQLにおいて高速な代理モデルと高価なオラクルLLMの間で行をルーティングし、オラクル呼び出しを最大58%削減するストリーミング・カスケード算法で推論コスト削減に直結するが、対象はクエリ処理エンジン内の振り分けであり汎用推論サービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2604.00660",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 222
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05416",
+      "identity_tokens": [
+        "arXiv:2605.05416"
+      ],
+      "title": "From Cradle to Cloud: A Life Cycle Review of AI's Environmental Footprint",
+      "reason": "AIの環境フットプリントを八段階のライフサイクルで整理した文献レビューで、推論システムの技術提案ではない。",
+      "source_url": "https://arxiv.org/abs/2605.05416",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 223
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06538",
+      "identity_tokens": [
+        "arXiv:2606.06538"
+      ],
+      "title": "WorldBench: A Challenging and Visually Diverse Multimodal Reasoning Benchmark",
+      "reason": "視覚概念の分類体系に基づきMLLMの視覚的多様性を測るWorldBenchというベンチマークで、能力評価のみである。",
+      "source_url": "https://arxiv.org/abs/2606.06538",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 224
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14681",
+      "identity_tokens": [
+        "arXiv:2607.14681"
+      ],
+      "title": "ReBind: Multi-Reference Video Editing via Structured Instructions with Explicit Reference Relationships",
+      "reason": "参照トークンを埋め込んだ指示で複数参照条件付き動画編集を行うReBind枠組みであり、動画生成タスクの話である。",
+      "source_url": "https://arxiv.org/abs/2607.14681",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 225
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.01607",
+      "identity_tokens": [
+        "arXiv:2609.01607"
+      ],
+      "title": "Uncovering Understanding-Generation Synergy in Native Unified Multimodal Models: From Representation, Task to System",
+      "reason": "統合マルチモーダルモデルで理解と生成の相乗効果を表現・タスク・システムの各層で分析した研究で、推論システム機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2609.01607",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 226
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11390-026-6076-1",
+      "identity_tokens": [
+        "DOI:10.1007/s11390-026-6076-1"
+      ],
+      "title": "HEC: Heterogeneity-Enriched Communication for AI Symphony",
+      "reason": "CPU/GPU/DPUのマルチレール異種通信を論じるHPC・分散学習寄りの通信論であり、LLM推論サービングへの直接の機構提案は確認できない。",
+      "source_url": "https://doi.org/10.1007/s11390-026-6076-1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 227
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.08169",
+      "identity_tokens": [
+        "arXiv:2512.08169"
+      ],
+      "title": "Information-Dense Reasoning for Efficient and Auditable Security Alert Triage",
+      "reason": "推論チェーンの勾配ベース圧縮とクラウド・エッジ間ルーティングでセキュリティアラート選別の遅延を40.6%削減するが、主目的はSOCトリアージ応用であり、汎用の推論システム機構としての一般性は限られる。",
+      "source_url": "https://arxiv.org/abs/2512.08169",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 228
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.11141",
+      "identity_tokens": [
+        "arXiv:2601.11141"
+      ],
+      "title": "FlashLabs Chroma 1.0: A Real-Time End-to-End Spoken Dialogue Model with Personalized Voice Cloning",
+      "reason": "音声トークンとテキストのインターリーブで低遅延をうたう音声対話モデルChromaの提案であり、モデル設計の話でLLM推論サービング機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2601.11141",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 229
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06098",
+      "identity_tokens": [
+        "arXiv:2602.06098"
+      ],
+      "title": "A Theoretical Analysis of Test-Driven Code Generation",
+      "reason": "テスト駆動コード生成における環境フィードバック利用戦略を確率的に定式化した理論分析で、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2602.06098",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 230
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03744",
+      "identity_tokens": [
+        "arXiv:2603.03744"
+      ],
+      "title": "DAGE: Dual-Stream Architecture for Efficient and Fine-Grained Geometry Estimation",
+      "reason": "低解像度と高解像度の二流でマルチビュー幾何推定を行うDAGEという3Dビジョンモデルの提案である。",
+      "source_url": "https://arxiv.org/abs/2603.03744",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 231
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.09184",
+      "identity_tokens": [
+        "arXiv:2603.09184"
+      ],
+      "title": "Latent-DARM: Bridging Discrete Diffusion And Autoregressive Models For Reasoning",
+      "reason": "拡散言語モデルと自己回帰モデルの潜在空間通信で協調推論の精度を上げるLatent-DARMの提案で、推論システム機構ではない。",
+      "source_url": "https://arxiv.org/abs/2603.09184",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 232
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03455",
+      "identity_tokens": [
+        "arXiv:2604.03455"
+      ],
+      "title": "Lightweight Query Routing for Adaptive RAG: A Baseline Study on RAGRouter-Bench",
+      "reason": "RAGの検索戦略を選択する軽量分類器をRAGRouter-Bench上で比較した基礎研究で、モデル推論の機構提案はない。",
+      "source_url": "https://arxiv.org/abs/2604.03455",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 234
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.00529",
+      "identity_tokens": [
+        "arXiv:2605.00529"
+      ],
+      "title": "Hierarchical Abstract Tree for Cross-Document Retrieval-Augmented Generation",
+      "reason": "文書横断RAG向けに階層抽象ツリー索引と多粒度検索エージェントを提案する検索側の話であり、LLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2605.00529",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 235
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19950",
+      "identity_tokens": [
+        "arXiv:2605.19950"
+      ],
+      "title": "AffectVerse: Emotional World Models for Multimodal Affective Computing",
+      "reason": "感情の潜在予測を行うEmotion World Moduleを備えたマルチモーダル感情認識モデルAffectVerseの提案で、感情コンピューティング応用である。",
+      "source_url": "https://arxiv.org/abs/2605.19950",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 236
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30062",
+      "identity_tokens": [
+        "arXiv:2605.30062"
+      ],
+      "title": "FakeVLM-R1: Internalizing Physical Laws via CoT for Synthetic Image Detection",
+      "reason": "物理法則のCoT内在化で合成画像検出を行うFakeVLM-R1の提案であり、メディア鑑識応用で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2605.30062",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 237
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.16295",
+      "identity_tokens": [
+        "arXiv:2606.16295"
+      ],
+      "title": "VisualClaw: A Real-Time, Personalized Agent for the Physical World",
+      "reason": "ストリーミングフレームのカスケードゲートとスキルバンクの圧縮でVLMエージェントのAPIコストを大幅に削減するが、中心はエージェントの自己進化と能力であり、コスト削減も入力フィルタリング中心で推論システム機構への貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2606.16295",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 238
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00148",
+      "identity_tokens": [
+        "arXiv:2607.00148"
+      ],
+      "title": "3D Point World Models: Point Completion Enables More Accurate Dynamics Learning",
+      "reason": "部分点群を補完してからダイナミクスを学ぶロボット世界モデル3DPWMの提案で、ロボティクス応用である。",
+      "source_url": "https://arxiv.org/abs/2607.00148",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 239
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20849",
+      "identity_tokens": [
+        "arXiv:2609.20849"
+      ],
+      "title": "Enhancing Audio Reasoning via Semantic Summary Prediction",
+      "reason": "結論と整合するレジスタートークンで音声言語モデルの推論を改善するSPAREの提案であり、音声推論タスクのモデル改善である。",
+      "source_url": "https://arxiv.org/abs/2609.20849",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 240
+    }
+  ],
+  "parent_run_key": "muse-20261127-c5d02-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 57
+}

@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261127-c5d03-b01::chunk-0001-of-0003",
+  "reference_main_sha": "475c12b134c3fe91eee6203b044933dd3af00bab",
+  "origin": "discovery_worklist",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/2632-2153/ae484b",
+      "identity_tokens": [
+        "DOI:10.1088/2632-2153/ae484b"
+      ],
+      "title": "Roadmap on fast machine learning for science",
+      "reason": "LHC等の粒子物理実験向けマイクロ秒級ML推論と専用ハードウェアのロードマップであり推論高速化に隣接するが、LLM推論・サービングへの直接の技術的貢献は要旨で確認できないため保留寄りの境界とした。",
+      "source_url": "https://doi.org/10.1088/2632-2153/ae484b",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 259
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.02643",
+      "identity_tokens": [
+        "arXiv:2512.02643"
+      ],
+      "title": "Leveraging Large-Scale Pretrained Spatial-Spectral Priors for General Zero-Shot Pansharpening",
+      "reason": "衛星リモートセンシング画像のパンシャープニング向けに大規模模擬データで空間・スペクトル事前知識を事前学習する手法であり、LLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2512.02643",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 262
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21157",
+      "identity_tokens": [
+        "arXiv:2601.21157"
+      ],
+      "title": "Bridging the Arithmetic Gap: The Cognitive Complexity Benchmark and Financial-PoT for Robust Financial Reasoning",
+      "reason": "中国A株年次報告書に基づく金融定量推論の認知複雑性ベンチマークとFinancial-PoT枠組みの評価研究であり、推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2601.21157",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 263
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07978",
+      "identity_tokens": [
+        "arXiv:2602.07978"
+      ],
+      "title": "Cross-Linguistic Persona-Driven Data Synthesis for Robust Multimodal Cognitive Decline Detection",
+      "reason": "音声バイオマーカーによる軽度認知障害検出のための多言語データ合成とCoT微調整であり、臨床診断応用であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2602.07978",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 264
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10542",
+      "identity_tokens": [
+        "arXiv:2602.10542"
+      ],
+      "title": "Predictive-State Communication: Innovation Coding and Reconciliation under Delay",
+      "reason": "送受信側が予測状態を共有し革新情報だけを送るPredictive-State Communicationの通信理論的枠組みであり、LLMサービングやデコード機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2602.10542",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 265
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12712",
+      "identity_tokens": [
+        "arXiv:2603.12712"
+      ],
+      "title": "Design-Specification Tiling for ICL-based CAD Code Generation",
+      "reason": "ICL 기반 CADコード生成のための設計仕様タイリング手法であり、対象はCAD生成精度であってLLM推論基盤ではない。",
+      "source_url": "https://arxiv.org/abs/2603.12712",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 266
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20180",
+      "identity_tokens": [
+        "arXiv:2603.20180"
+      ],
+      "title": "Adaptive Greedy Frame Selection for Long Video Understanding",
+      "reason": "長尺動画VLM推論のボトルネックである入力フレーム／視覚トークン数を、質問適応型貪欲フレーム選択で固定予算内に抑える手法であり視覚トークン削減に隣接するが、LLMサービング機構への直接貢献は薄いため境界とした。",
+      "source_url": "https://arxiv.org/abs/2603.20180",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 267
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28548",
+      "identity_tokens": [
+        "arXiv:2603.28548"
+      ],
+      "title": "Seen2Scene: Completing Realistic 3D Scenes with Visibility-Guided Flow",
+      "reason": "可視性誘導フローで実写3Dシーンを補完するSeen2Sceneの3D生成研究であり、LLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2603.28548",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 268
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10034",
+      "identity_tokens": [
+        "arXiv:2604.10034"
+      ],
+      "title": "AI Achieves a Perfect LSAT Score",
+      "reason": "AIがLSATで満点を取ったとする能力報告であり、推論システムの機構・効率化への技術的貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2604.10034",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 269
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.17866",
+      "identity_tokens": [
+        "arXiv:2604.17866"
+      ],
+      "title": "Latent Abstraction for Retrieval-Augmented Generation",
+      "reason": "単一LLMの隠れ状態から検索ベクトルを生成し検索回数を減らして推論効率の改善も主張するLatent Abstraction for RAGだが、主目的はRAGの精度・統合アーキテクチャであり推論システムへの貢献は副次的であるため境界とした。",
+      "source_url": "https://arxiv.org/abs/2604.17866",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 270
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12807",
+      "identity_tokens": [
+        "arXiv:2605.12807"
+      ],
+      "title": "Multi-Marginal Couplings for Metropolis-Hastings",
+      "reason": "Metropolis-Hastings向けMulti-Marginal Couplingsのサンプリング理論研究であり、LLM推論の実行機構とは関係しない。",
+      "source_url": "https://arxiv.org/abs/2605.12807",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 271
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19975",
+      "identity_tokens": [
+        "arXiv:2605.19975"
+      ],
+      "title": "Learning with Foresight: Enhancing Neural Routing Policy via Multi-Node Lookahead Prediction",
+      "reason": "多ノード先読み予測でニューラルルーティング方策を強化する組合せ最適化研究であり、LLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2605.19975",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 272
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27361",
+      "identity_tokens": [
+        "arXiv:2605.27361"
+      ],
+      "title": "Natural Language Query to Configuration for Retrieval Agents",
+      "reason": "検索エージェントのパイプライン構成（LLM・検索器・文書数等）をクエリごとに推論時選択しサービングコストと精度のトレードオフを最適化するBRANEであり推論時コストに隣接するが、対象は応用パイプライン構成選択でありLLM推論機構への直接貢献は薄いため境界とした。",
+      "source_url": "https://arxiv.org/abs/2605.27361",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 273
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00851",
+      "identity_tokens": [
+        "arXiv:2606.00851"
+      ],
+      "title": "Sympatheia: Emotionally Adaptive Voice Assistant with Continuous Affect Conditioning",
+      "reason": "連続的な感情条件付けを行う感情適応型音声アシスタントSympatheiaの対話応用であり、推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2606.00851",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 274
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09585",
+      "identity_tokens": [
+        "arXiv:2606.09585"
+      ],
+      "title": "Optical Reasoning: Rethinking Images as an Expressive Reasoning Medium Beyond Text",
+      "reason": "画像をテキストを超える表現的推論媒体として再考するOptical Reasoningの能力研究であり、LLM推論基盤への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2606.09585",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 275
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23080",
+      "identity_tokens": [
+        "arXiv:2606.23080"
+      ],
+      "title": "AudioCALM: Continuous Autoregressive Language Modeling for Universal Audio Generation",
+      "reason": "連続自己回帰言語モデリングによる汎用音声生成AudioCALMの生成モデル研究であり、LLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2606.23080",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 276
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31435",
+      "identity_tokens": [
+        "arXiv:2606.31435"
+      ],
+      "title": "CDR-Bench: Evaluating Faithful Execution of Compositional, Order-Sensitive Data Refinement Recipes",
+      "reason": "合成的で順序依存なデータ精製レシピの忠実実行を測るCDR-Benchという評価ベンチマークであり、推論機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2606.31435",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 277
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06720",
+      "identity_tokens": [
+        "arXiv:2607.06720"
+      ],
+      "title": "When Does In-Context Search Help? A Sampling-Complexity Theory of Reflection-Driven Reasoning",
+      "reason": "文脈内探索が有効な条件をサンプリング複雑性で理論化したReflection駆動推論の理論研究であり、推論システムの実装・効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2607.06720",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 278
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10114",
+      "identity_tokens": [
+        "arXiv:2607.10114"
+      ],
+      "title": "Cost of Reasoning in non-English Languages: A Case Study on Japanese",
+      "reason": "日本語で推論する言語モデルの訓練可能性とコストを事例研究したもので、訓練と能力評価が中心であり推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2607.10114",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 279
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27109",
+      "identity_tokens": [
+        "arXiv:2607.27109"
+      ],
+      "title": "MMAC: A Massive Multi-dimensional Benchmark for Audio Captioning",
+      "reason": "音声キャプションの多次元ベンチマークMMACの構築・評価研究であり、LLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2607.27109",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 280
+    }
+  ],
+  "parent_run_key": "muse-20261127-c5d03-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 56
+}

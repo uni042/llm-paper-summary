@@ -1,0 +1,270 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261127-c5d06-b01::chunk-0003-of-0003",
+  "reference_main_sha": "475c12b134c3fe91eee6203b044933dd3af00bab",
+  "record_count": 15,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.34350",
+      "identity_tokens": [
+        "arXiv:2610.34350"
+      ],
+      "title": "Beyond the Opening: Tracing the First Token's Persistent Influence on Reasoning Length",
+      "reason": "推論の最初のトークンを変えると後続の推論長が持続的に変わる現象を、次トークン分布と注意遮断で追跡した分析研究であり、推論モデルの挙動理解が中心で効率化のシステム機構は提案されていないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.34350",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 482
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.35333",
+      "identity_tokens": [
+        "arXiv:2610.35333"
+      ],
+      "title": "RepoTrace: Improving Requirement Tracing in Multi-Round Agent Interactions",
+      "reason": "多ラウンド対話でコードエージェントの要求焦点がずれる問題に、リポジトリ構造と要求意味から対応表を作り文脈へ注入するRepoTraceの提案であり、コードエージェントのハーネス改善が対象で推論システムではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2610.35333",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 483
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.00117",
+      "identity_tokens": [
+        "arXiv:2611.00117"
+      ],
+      "title": "AnchorKV: Lossless Key-Value Cache Reconstruction from Layer-Sparse Residual Anchors",
+      "reason": "残差ストリームの疎なアンカーからTransformerのKVキャッシュをビット単位で無損失に再構成するAnchorKVを提案し、アーキテクチャ依存の損益分岐規則、カスケード再生による再構成の高速化、スライディングウィンドウ向けの厳密な動的計画法によるアンカー配置までを複数バックエンドで検証している。KVキャッシュのメモリ削減と再構成という推論システムへの直接貢献が要旨で具体的に確認できるためacceptとした。",
+      "source_url": "https://arxiv.org/abs/2611.00117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 484
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.03834",
+      "identity_tokens": [
+        "arXiv:2611.03834"
+      ],
+      "title": "Low-Rank Hierarchical Merging for Efficient Long-to-Short Reasoning",
+      "reason": "長Chain-of-Thoughtモデルと簡潔なベースモデルを低ランクHessian近似に基づく階層マージで統合し長から短への推論を効率化する学習不要な手法だが、主貢献はモデルマージの係数決定であり推論時の実行機構への直接貢献は間接的なためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2611.03834",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 485
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.04867",
+      "identity_tokens": [
+        "arXiv:2611.04867"
+      ],
+      "title": "One Assistant, Many Memories: Benchmarking Real-World Group Assistance When Recall Is Not Enough",
+      "reason": "実世界グループ会話の履歴を用い、複数参加者の情報を統合した支援を測るGroupAssistBenchというメモリベンチマークの構築が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2611.04867",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 486
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.09006",
+      "identity_tokens": [
+        "arXiv:2611.09006"
+      ],
+      "title": "Rethinking Latent Reasoning for Generative Recommendation: Beyond Teacher-Generated CoT and Recurrent Hidden-State Feedback",
+      "reason": "生成推薦の潜在推論で教師生成CoTの代わりにアイテム履歴から意味的ターゲットを構成するPHiTの提案であり、推薦システムという応用が主目的でLLM推論基盤への貢献は示されていないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2611.09006",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 487
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IROS58592.2024.10801981",
+      "identity_tokens": [
+        "DOI:10.1109/IROS58592.2024.10801981"
+      ],
+      "title": "Force and Velocity Prediction in Human-Robot Collaborative Transportation Tasks through Video Retentive Networks",
+      "reason": "Retentive Networksを動画入力へ一般化し、人間とロボットの協調搬送タスクで力と速度を予測する研究で、推論時間の改善にも触れるが対象はロボット協調制御という応用そのものであり、LLM推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://doi.org/10.1109/IROS58592.2024.10801981",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 488
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2412.06412",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2412.06412"
+      ],
+      "title": "StarWhisper Telescope: Agent-Based Observation Assistant System to Approach AI Astrophysicist",
+      "reason": "大規模望遠鏡アレイの観測計画・データ処理・追観測提案をLLMエージェントで自動化するStarWhisper Telescopeシステムの天文運用への適用報告であり、応用システムの構築が中心で推論基盤への技術的貢献はないためunrelatedとした。",
+      "source_url": "https://doi.org/10.48550/arXiv.2412.06412",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.13209",
+      "identity_tokens": [
+        "arXiv:2109.13209"
+      ],
+      "title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+      "reason": "フランス語読解データセットFQuADに回答不能な質問を追加したFQuAD2.0の構築を報告する研究であり、データセット整備が対象で推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2109.13209",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 490
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.01468",
+      "identity_tokens": [
+        "arXiv:2406.01468"
+      ],
+      "title": "Understanding Token Probability Encoding in Output Embeddings",
+      "reason": "言語モデルの出力埋め込みにトークン確率が対数線形に符号化されていることを示し、出力と無関係な次元の3割超を削除しても分布がほぼ変わらないことを確認した分析だが、推論時の圧縮機構として実装・評価されたものではなく解釈可能性研究の域にあるためborderlineとした。",
+      "source_url": "https://arxiv.org/abs/2406.01468",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.15004",
+      "identity_tokens": [
+        "arXiv:2505.15004"
+      ],
+      "title": "EASY: Emotion-aware Speaker Anonymization via Factorized Distillation",
+      "reason": "感情を保持しながら話者を匿名化するため、話者性・言語内容・感情を因子化蒸留で分離するEASYの提案であり、音声プライバシー処理が対象でLLM推論とは無関係なためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2505.15004",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.05478",
+      "identity_tokens": [
+        "arXiv:2510.05478"
+      ],
+      "title": "AQA-TTRL: Self-Adaptation in Audio Question Answering with Test-Time Reinforcement Learning",
+      "reason": "大規模音声言語モデルをラベルなしテストデータでテスト時強化学習により適応させるAQA-TTRLの提案であり、音声質問応答の精度改善が目的で推論システムの効率化機構ではないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2510.05478",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.22982",
+      "identity_tokens": [
+        "arXiv:2511.22982"
+      ],
+      "title": "Ovis-Image Technical Report",
+      "reason": "テキスト描画に最適化した7Bのテキスト画像生成モデルOvis-Imageの技術報告で、限られた計算資源での運用可能性にも触れるが、主内容は拡散型画像生成モデルの学習と品質でありLLM推論システムへの貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2511.22982",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3724/sp.j.1089.2024-00281",
+      "identity_tokens": [
+        "DOI:10.3724/sp.j.1089.2024-00281"
+      ],
+      "title": "AIGC-Based Image and Video Generation Method: A Review",
+      "reason": "AIGCによる画像・動画生成手法を条件別モデルや動画拡散モデルを中心に概観したレビュー論文であり、生成モデル一般の総説でLLM推論システムへの技術的貢献は扱われていないためunrelatedとした。",
+      "source_url": "https://doi.org/10.3724/sp.j.1089.2024-00281",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.14004",
+      "identity_tokens": [
+        "arXiv:2405.14004"
+      ],
+      "title": "Towards A Comprehensive Assessment of AI's Environmental Impact",
+      "reason": "AI・機械学習のライフサイクル全体の環境影響を監視し政策へ活かすための評価フレームワークを論じる研究であり、環境影響評価が対象で推論システムの技術的貢献はないためunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2405.14004",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-27T07:05:00+09:00",
+      "last_checked_at": "2026-11-27T07:05:00+09:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "worklist_rank": 497
+    }
+  ],
+  "parent_run_key": "muse-20261127-c5d06-b01",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 55
+}
