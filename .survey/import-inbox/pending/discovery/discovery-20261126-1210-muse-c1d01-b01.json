@@ -1,0 +1,266 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c1d01-b01",
+  "reference_main_sha": "70e79b336cf3a79dad322f396eaad81d497fa5be",
+  "record_count": 15,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:bb0c8059c2e4312820ad152f5e212b9326694c29",
+      "identity_tokens": [
+        "SemanticScholar:bb0c8059c2e4312820ad152f5e212b9326694c29"
+      ],
+      "title": "xDeepServe: Model-as-a-Service on Huawei CloudMatrix384 xDeepServe Team @ Huawei",
+      "reason": "CloudMatrix384 SuperPod上でTransformerlessによりattention・FFN・MoEを分離実行し、Prefill-Decode分離とMoE-Attention分離、XCCL通信とFlowServeで大規模MoE LLMサービングを行う実運用システムであり、推論システムへの直接貢献が要旨で確認できる。",
+      "source_url": "https://www.semanticscholar.org/paper/bb0c8059c2e4312820ad152f5e212b9326694c29",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:26737389fd1c3ab8d0a5c9157c64be732c4684bd",
+      "identity_tokens": [
+        "SemanticScholar:26737389fd1c3ab8d0a5c9157c64be732c4684bd"
+      ],
+      "title": "BALANCE: Hybrid Autoregressive-Speculative LLM Inference in Wireless Edge Networks",
+      "reason": "異種エッジノードに小モデルと大モデルを配置し、小モデルのドラフトを大モデルが並列検証する投機的デコード型のエッジLLMサービング枠組みで、無線エッジでの推論遅延削減を狙う直接的な推論システム貢献が確認できる。",
+      "source_url": "https://www.semanticscholar.org/paper/26737389fd1c3ab8d0a5c9157c64be732c4684bd",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:c5fffaf2a39b3c94891bf640999654409f162882",
+      "identity_tokens": [
+        "SemanticScholar:c5fffaf2a39b3c94891bf640999654409f162882"
+      ],
+      "title": "Smart Routing: Cost-Effective Multi-LLM Serving for Multi-Core AIOS",
+      "reason": "複数LLMサービング向けに能力・コスト予測器と制約付き最適化でクエリごとにモデルを割り当てるECCOSスケジューリング枠組みを提案し、品質制約下で推論コストを下げるサービング機構が要旨で具体的に示されている。",
+      "source_url": "https://www.semanticscholar.org/paper/c5fffaf2a39b3c94891bf640999654409f162882",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:c4a54a26100d339d10c59db6b8cc56ac481534c8",
+      "identity_tokens": [
+        "SemanticScholar:c4a54a26100d339d10c59db6b8cc56ac481534c8"
+      ],
+      "title": "V ESTIGE KV: T HE N O PE-MLA KV C ACHE C ARRIES I TS O WN E VICTION S IGNAL IN A V ESTIGIAL B RANCH",
+      "reason": "NoPE-MLAのKVキャッシュ内に残る痕跡的ブランチの信号からクエリ非依存の顕著性を読み取り、学習なしでKVキャッシュを階層化して圧縮するVestigeKVを提案しており、KVキャッシュエビクションへの直接貢献が確認できる。",
+      "source_url": "https://www.semanticscholar.org/paper/c4a54a26100d339d10c59db6b8cc56ac481534c8",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c",
+      "identity_tokens": [
+        "SemanticScholar:7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c"
+      ],
+      "title": "T WIN KV: A C OMPOSABLE R EPAIR P ASS FOR KV C ACHE E VICTION VIA P AIRWISE K EY R EDUNDANCY",
+      "reason": "キー同士の近重複という冗長性信号で、既存エビクションポリシーの保持集合から重複ドナーを特定し、重複のない孤児トークンと入れ替えるTwinKV修復パスを提案しており、KVキャッシュエビクションへの直接貢献が確認できる。",
+      "source_url": "https://www.semanticscholar.org/paper/7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
+      "identity_tokens": [
+        "SemanticScholar:ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6"
+      ],
+      "title": "MoEfication: Conditional Computation of Transformer Models for Efficient Inference",
+      "reason": "事前学習TransformerのFFNを機能分割して専門家化し、入力ごとに使う専門家を選ぶルータでFFNパラメータの10〜30%だけを条件付きに活性化するMoEficationにより、性能を保ちつつ推論時の計算を削減する機構が確認できる。",
+      "source_url": "https://www.semanticscholar.org/paper/ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:dbc88fc157d871d7dde56b3a2cefb34dfc785e7a",
+      "identity_tokens": [
+        "SemanticScholar:dbc88fc157d871d7dde56b3a2cefb34dfc785e7a"
+      ],
+      "title": "Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models",
+      "reason": "Dense・GQA・MoE・Mamba等のモデルとチャンキングや投機的デコード等のサービング最適化を入力に、LLM推論性能指標とSLOを満たすAIプラットフォーム設計を解析的に見積もるGenZツールであり、推論基盤の計測・設計支援に留まりサービング機構自体の提案ではないため境界とする。",
+      "source_url": "https://www.semanticscholar.org/paper/dbc88fc157d871d7dde56b3a2cefb34dfc785e7a",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.11502",
+      "identity_tokens": [
+        "arXiv:2404.11502"
+      ],
+      "title": "Towards Coarse-to-Fine Evaluation of Inference Efficiency for Large Language Models",
+      "reason": "複数の推論コードライブラリの効率を4つの利用シナリオで粗粒度に比較し、Transformer各モジュールへ細粒度に分析する評価研究であり、推論効率の理解には寄与するが新しい推論高速化機構の提案ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2404.11502",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCAS46773.2023.10181465",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS46773.2023.10181465"
+      ],
+      "title": "Hardware-efficient Softmax Approximation for Self-Attention Networks",
+      "reason": "自己注意のボトルネックであるSoftmaxをFPGA向けにハードウェア効率良く近似し事前学習済みTransformerへ差し替え可能とする回路提案だが、対象は汎用NLP向け自己注意ネットワークでLLM推論への適用確認が弱いため境界とする。",
+      "source_url": "https://doi.org/10.1109/ISCAS46773.2023.10181465",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14",
+      "identity_tokens": [
+        "SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14"
+      ],
+      "title": "PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination",
+      "reason": "BERTの単語ベクトルの冗長性を自己注意に基づく重要度で測り段階的に除去して推論時間を最大4.5倍短縮するPoWER-BERTだが、対象はエンコーダ型BERTの推論でありLLMサービングへの直接適用ではないため境界とする。",
+      "source_url": "https://www.semanticscholar.org/paper/94f94e8892261d0377159379ca5a166ceae19a14",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a238109c3969ae681eee0d4f1bf2012f28850593",
+      "identity_tokens": [
+        "SemanticScholar:a238109c3969ae681eee0d4f1bf2012f28850593"
+      ],
+      "title": "Synthesizer: Rethinking Self-Attention in Transformer Models",
+      "reason": "トークン間相互作用なしに注意重みを合成するSynthesizerを提案し機械翻訳や言語モデリングで競合性能を示すが、推論時の計算量や遅延の削減効果を主目的として検証していないため境界とする。",
+      "source_url": "https://www.semanticscholar.org/paper/a238109c3969ae681eee0d4f1bf2012f28850593",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11132475",
+      "identity_tokens": [
+        "DOI:10.1109/DAC63849.2025.11132475"
+      ],
+      "title": "Blaze: An Efficient Bit-Sparse Attention Architecture With Workload Orchestration Optimization",
+      "reason": "注意機構のビットレベルスパース性を利用し、ワークロード不均衡を調整するビットスパース注意ハードウェアBlazeを提案するが、汎用NLP注意推論向けの回路設計でありLLMサービングでの検証が要旨からは確認できないため境界とする。",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11132475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731",
+      "identity_tokens": [
+        "SemanticScholar:f5f58f9886f27ddd97b503d63ac42051b1d00731"
+      ],
+      "title": "EFloat: Entropy-coded Floating Point Format for Deep Learning",
+      "reason": "浮動小数点指数の偏りをエントロピー符号化するEFloat形式でベクトル埋め込みモデルを圧縮する提案であり、数値形式としての関連はあるがLLM推論システムでの量子化適用や速度検証が要旨にないため境界とする。",
+      "source_url": "https://www.semanticscholar.org/paper/f5f58f9886f27ddd97b503d63ac42051b1d00731",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:e1e58d0339944946230275c47c78778cc1bdf886",
+      "identity_tokens": [
+        "SemanticScholar:e1e58d0339944946230275c47c78778cc1bdf886"
+      ],
+      "title": "Theoretical Beneﬁt and Limitation of Diffusion Language Model",
+      "reason": "マスク拡散言語モデルの効率と精度のトレードオフを、パープレキシティと系列誤り率の観点から理論的に解析した研究であり、推論システムの機構提案ではなく理論的性質の解明が主目的のため対象外とする。",
+      "source_url": "https://www.semanticscholar.org/paper/e1e58d0339944946230275c47c78778cc1bdf886",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:1f797e0c38d4597196d630d1f9c4b2df0dda5371",
+      "identity_tokens": [
+        "SemanticScholar:1f797e0c38d4597196d630d1f9c4b2df0dda5371"
+      ],
+      "title": "MoDE: Effective Multi-task Parameter Efﬁcient Fine-Tuning with a Mixture of Dyadic Experts",
+      "reason": "LoRAモジュールの混合によるマルチタスク向けパラメータ効率ファインチューニングMoDEの提案であり、学習時の適応手法が主題で推論効率化への具体的適用が要旨に確認できないため対象外とする。",
+      "source_url": "https://www.semanticscholar.org/paper/1f797e0c38d4597196d630d1f9c4b2df0dda5371",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 37
+    }
+  ]
+}
