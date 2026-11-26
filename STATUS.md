@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-26 12:34:23 JST**
+> 自動生成: **2026-11-26 14:25:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1782** |
-| 未claim Research job | **1782** |
+| 収録候補論文数 | **1816** |
+| 未claim Research job | **1816** |
 | 直近24hのResearch処理完了 | **10** |
 | 最終Research処理完了 | **11-25 20:32:19 JST** |
-| 最終Discovery探索完了 | **11-26 12:30:26 JST** |
+| 最終Discovery探索完了 | **11-26 12:41:06 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1782** |
+| canonical_id確認済みの一意な候補論文 | **1816** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1782** |
+| 非終端Research job合計 | **1816** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,10 +52,10 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **154870** |
-| 処理済み | **31423** |
-| 未処理Discovery候補 | **123447** |
+| 処理済み | **31457** |
+| 未処理Discovery候補 | **123413** |
 | 収録済み | **5491** |
-| Research / Audit候補へ昇格済み | **404** |
+| Research / Audit候補へ昇格済み | **438** |
 | 無関係として除外 | **16292** |
 | 微妙として除外 | **9236** |
 
@@ -63,18 +63,18 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **123447** |
+| 未処理候補（フィルタ前） | **123413** |
 | 機械規則による暫定隔離 | **2212** |
 | 拡張機械規則による追加隔離 | **1418** |
-| 機械規則通過後 | **119817** |
-| 系統内前方引用スコアによる選抜保留 | **29954** |
-| 暫定隔離合計 | **33584** |
-| **読解可能候補（隔離後）** | **89863** |
-| 前方引用が同一系統で2本以上の候補 | **3767** |
-| 前方引用が同一系統で3本以上の候補 | **91** |
+| 機械規則通過後 | **119783** |
+| 系統内前方引用スコアによる選抜保留 | **29945** |
+| 暫定隔離合計 | **33575** |
+| **読解可能候補（隔離後）** | **89838** |
+| 前方引用が同一系統で2本以上の候補 | **3733** |
+| 前方引用が同一系統で3本以上の候補 | **90** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **75.0%** / 目標 **89863件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **75.0%** / 目標 **89838件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -116,14 +116,14 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-26 09:24:18 JST（3時間10分前）** |
+| 最終maintenance完了 | **11-26 14:25:29 JST（4秒前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
 | health errors / warnings | **0 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **651** |
+| GC削除件数 | **91** |
 | queue snapshot repaired | **true** |
 | index repairs | **0** |
 | quality regressions | **0** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **155** |
-| 直近6hのDiscovery本文確認・分類 | **2493** |
+| 直近6hのDiscovery run | **85** |
+| 直近6hのDiscovery本文確認・分類 | **1372** |
 | 最終Research完了 | **11-25 20:32:19 JST** |
-| 最終Discovery完了 | **11-26 12:30:26 JST** |
+| 最終Discovery完了 | **11-26 12:41:06 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-25 20:32:19 JST** / worker — / run venue-20261125-b01 / 成果 **10件**
   - evidence: .survey/import-inbox/results/research/2023-2312.05215-deltazip-efficient-serving-of-multiple-full-model-tuned-llms.json
-- Discovery: **11-26 12:30:26 JST** / worker muse / run muse-20261126-d01-b01::chunk-0002-of-0003
-  - 本文確認・分類 **20件** / accept **1件** / unrelated+borderline **19件**
-  - evidence: .survey/import-inbox/results/discovery/discovery-20261126-0730-muse-d01-b01--chunk-0002-of-0003.json
+- Discovery: **11-26 12:41:06 JST** / worker muse / run muse-20261126-d01-b01::chunk-0001-of-0003
+  - 本文確認・分類 **20件** / accept **11件** / unrelated+borderline **9件**
+  - evidence: .survey/import-inbox/results/discovery/discovery-20261126-0730-muse-d01-b01--chunk-0001-of-0003.json
 
 ### Codex探索成果の反映状況
 
@@ -288,7 +288,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1782** |
+| ready | **1816** |
 
 ### 候補の重複・識別情報欠損
 
@@ -316,11 +316,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **295** |
+| 成功result未照合のimmutable submission | **282** |
 | └ Research | **71** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **79** |
+| └ Other/Unknown | **66** |
 
 ### 厳格検証が未成立のcompleted job
 
