@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Aggregating Visual Information with Optimal Transport for VideoLM Token Compression",
+      "source_url": "https://arxiv.org/abs/2608.20473",
+      "year": 2026,
+      "published": "2026-08-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video language models process videos as dense visual-token sequences with substantial representational redundancy. Compressing these sequences is therefore essential for reducing the visual-token burden on language-model decoding. The central challenge is to preserve visual information dispersed across frames under such compression. To this end, we introduce Aggregating Visual Information with Optimal Transport (AVIOT), which casts video token compression as transporting a dense empirical measure of frame observations onto a compact target measure. The resulting source-to-target coupling induces a distribution over source observations for each target support, directly specifying how the compressed video representation is constructed. We further adapt this construction along task and spatial axes. Question conditioning modulates the transport cost between source frames and target supports, while influencing how many supports are allocated to each temporal segment, thereby directing representation capacity toward question-relevant content. At multiple spatial granularities, AVIOT computes region-specific temporal transport plans and adaptively fuses the representations they yield, allowing different regions within the same compact representation to draw from different moments. Evaluations across varying compression ratios show that AVIOT matches or outperforms the uncompressed baseline on multiple video-understanding benchmarks while retaining strong performance at higher compression ratios.",
+      "identifiers": [
+        "SemanticScholar:93bbd0e74e15ebf88c67de0fbebcb6156c47567e"
+      ],
+      "semantic_scholar_id": "93bbd0e74e15ebf88c67de0fbebcb6156c47567e",
+      "canonical_id": "arXiv:2608.20473",
+      "arxiv_id": "2608.20473",
+      "doi": "10.48550/arXiv.2608.20473",
+      "authors": [
+        "Wen-Ti Yin",
+        "Xiao-Tian Han",
+        "Jun-Yuan Shang",
+        "Yu-Chen Ding",
+        "Shuo-Huan Wang",
+        "Dian-Hai Yu",
+        "Chang-Xin Gao",
+        "N. Sang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 98,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VideoLMの視覚トークン列を最適輸送で圧縮するAVIOTを提案し、言語モデルのデコードにおける視覚トークン負担を圧縮率を変えて直接削減・評価しており、推論時のトークン圧縮への具体的な貢献がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scute: Exact Batched Serving for PEFT Adapters Beyond LoRA",
+      "source_url": "https://arxiv.org/abs/2611.01089",
+      "year": 2026,
+      "published": "2026-10-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing serving systems for large language models batch requests for many different LoRA adapters on one GPU. However, these systems reject adapters from other parameter-efficient fine-tuning (PEFT) methods such as DoRA, (IA), VeRA and OFT. One solution to this is to convert these adapters to LoRA, but this induces a significant memory and accuracy cost. Instead, we show that, under some modifications, a batched LoRA kernel can serve all of these methods exactly and efficiently. We achieve this by writing each method in one normal form, a LoRA computation with six slots for an adapter's own vectors and matrices. Some slots can merge into an adapter's weights at load time; the others remain live and induce a cost. We give ways to efficiently pay this cost and predict it from a zero-parameter byte model. We package this system, Scute, and build it on top of vLLM. Scute serves all five methods, coming as checkpoints from the Hugging Face PEFT library, in one batch, and it matches that library with a mean error of at most 1.5% of each adapter's effect. Under a burst of requests on an RTX A6000, a mix of these methods takes 5-17% more decode time than the same number of LoRA adapters. Furthermore, using Scute, the same GPU can serve 64 to 1024 (IA) and VeRA adapters at 1.5x to at least 2.5x the request rate of their LoRA conversions.",
+      "identifiers": [
+        "SemanticScholar:64b72dd898a941368e1624d243f903c53356a284"
+      ],
+      "semantic_scholar_id": "64b72dd898a941368e1624d243f903c53356a284",
+      "canonical_id": "arXiv:2611.01089",
+      "arxiv_id": "2611.01089",
+      "authors": [
+        "Thomas Walker",
+        "R. Baraniuk"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DoRA・(IA)^3・VeRA・OFT等のPEFTアダプタをLoRA正規形で表現しvLLM上で混在バッチを正確にサービングするScuteを実装・評価しており、LLMサービングへの直接の技術的貢献が具体的に確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DEAR-PIM: Processing-in-Memory Architecture with Disaggregated Execution of All-bank Requests",
+      "source_url": "https://doi.org/10.23919/DATE64628.2025.10992691",
+      "year": 2025,
+      "published": "2025-03-31",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Emerging transformer-based large language models (LLMs) involve many low-arithmetic intensity operations, which result in sub-optimal performance on general-purpose CPUs and GPUs. Processing-in-Memory (PIM) has shown promise in enhancing performance by reducing data movement bottlenecks. Commodity near-bank PIMs enable in-memory computation through bank-level compute units and typically rely on all-bank commands, which simultaneously operate the compute units of all banks to maximize internal bandwidth and parallelism. However, activating all banks simultaneously before issuing all-bank commands generally requires high peak power, which may exceed system power limit, when stacking multiple PIM devices for LLM inference. Additionally, under a DRAM power constraint, all-bank commands are only issued after all banks are fully activated through a sequence of single-bank activations, incurring bubble cycles and degrading overall performance. To address these shortcomings, this study proposes DEAR-PIM, a novel PIM architecture with Disaggregated Execution of All-bank Requests. DEAR-PIM incorporates disaggregated command queue, allowing it to buffer all-bank commands and provide them to each bank sequentially without waiting to complete all-bank activations. However, since all banks must finish their disaggregated execution before simultaneous post-processing, synchronization between early-activated and last-activated banks is necessary. To tackle the issue, DEAR-PIM introduces a column-aware synchronization command scheme that inserts no-op-like commands into unused columns without modifying the memory controller. Experiments demonstrate that DEAR-PIM achieves a speedup of 2.03-3.33′ over an A100 GPU and improves performance by 1.11-1.52′ compared to the sequential activation scheme. DEAR-PIM also reduces the peak power consumption by 21.3-41.7% compared to the simultaneous activation scheme.",
+      "identifiers": [
+        "SemanticScholar:6f989a10a8101b3c22cff419e6990f636049ba0c"
+      ],
+      "semantic_scholar_id": "6f989a10a8101b3c22cff419e6990f636049ba0c",
+      "doi": "10.23919/DATE64628.2025.10992691",
+      "canonical_id": "DOI:10.23919/DATE64628.2025.10992691",
+      "authors": [
+        "Jungi Hyun",
+        "Minseok Seo",
+        "Seongho Jeong",
+        "Hyuk-Jae Lee",
+        "Xuan Truong Nguyen"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 605,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論の低演算強度演算を対象に、全バンク要求を分離実行してピーク電力とバブルサイクルを抑えるPIMアーキテクチャDEAR-PIMを提案しA100比の高速化を示しており、推論基盤への直接の貢献がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-83ff6ac33aa8",
+    "round": "libimp-83ff6ac33aa8d0e2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-83ff6ac33aa8d0e2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-83ff6ac33aa8d0e2-pre01.json",
+    "receipt": "sha256:3341d10535b43768ebdbea292c1c8273a61365d6ba38b054f11de82f457447e6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-83ff6ac33aa8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

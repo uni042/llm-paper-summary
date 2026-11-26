@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TurboBatch—Rate-Safe Asynchronous Batch Processing for Cloud LLM APIs",
+      "source_url": "https://doi.org/10.1109/IC2E65552.2025.00014",
+      "year": 2025,
+      "published": "2025-09-23",
+      "venue": "2025 IEEE International Conference on Cloud Engineering (IC2E)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present TURBOBATCH, an asynchronous batch processing system enabling large-scale LLM inference under strict API rate limits. Existing approaches to LLM workloads require manual tuning and operator oversight to avoid quota violations, limiting scalability and increasing cost. TurboBatch combines accurate token usage prediction with adaptive rate control to fully automate batch processing of millions of LLM requests—a previously unaddressed gap in client-side orchestration for quota-constrained LLM APIs. In production tests, the system achieves sustained high throughput, demonstrating its practical viability for real-world LLM applications beyond OpenAI APIs.",
+      "identifiers": [
+        "SemanticScholar:0e568a7a3b5bbf73e5b8b0b12da64b8373b31516"
+      ],
+      "semantic_scholar_id": "0e568a7a3b5bbf73e5b8b0b12da64b8373b31516",
+      "doi": "10.1109/IC2E65552.2025.00014",
+      "canonical_id": "DOI:10.1109/IC2E65552.2025.00014",
+      "authors": [
+        "Rayan Syed",
+        "Noah Robitshek"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 429,
+        "matched_prestigious_venue": null
+      },
+      "reason": "厳しいAPIレート制限下でトークン使用量予測と適応的レート制御により数百万件のLLMリクエストを自動バッチ処理するTurboBatchを提示し、クォータ制約下のLLM推論オーケストレーションへ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-492a5c09e466",
+    "round": "libimp-492a5c09e4663f7d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-492a5c09e4663f7d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-492a5c09e4663f7d-pre01.json",
+    "receipt": "sha256:f551a70fc4f6b14ae445ddcaa67fdf163c3deec359db965e3ffb8c4715b889b0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-492a5c09e466",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

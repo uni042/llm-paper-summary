@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Beyond Compressing Everything: Contrastive Memory Learning for Selective Context Compression",
+      "source_url": "https://arxiv.org/abs/2611.16384",
+      "year": 2026,
+      "published": "2026-11-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) advance toward increasingly long inputs, soft context compression offers a promising approach to efficient inference by converting long inputs into compact memory slots. Under limited memory budgets, effective context compression remains challenging because task-relevant evidence varies substantially across queries, ranging from localized evidence to multiple distant spans or information dispersed throughout the full document. Instead of compressing everything indiscriminately, we propose CoMem, a query-guided selective context compression framework that learns memory representations conditioned on both the document and the query. CoMem develops Contrastive Compressor Learning to achieve query-sensitive yet context-preserving memory representations. To inject a strong prior over query-dependent evidence distributions, we devise a same-context hard negative mining strategy by pairing a single document with multiple queries, requiring the compressor to selectively retain information according to each query's distinct evidence needs. To address the restricted information flow imposed by causal masking, we further enable bidirectional attention among memory slots. Experiments demonstrate that CoMem consistently outperforms existing context compression methods across compression ratios on question answering and RULER-NIAH benchmarks. Our code is available at https://github.com/scar-on/CoMem.",
+      "identifiers": [
+        "SemanticScholar:42d2cb9a196a3c352c89887a463c96a1e2f9e547"
+      ],
+      "semantic_scholar_id": "42d2cb9a196a3c352c89887a463c96a1e2f9e547",
+      "canonical_id": "arXiv:2611.16384",
+      "arxiv_id": "2611.16384",
+      "authors": [
+        "Si-Kui Zhang",
+        "Hao-Wei Liu",
+        "Zi-Yun Gan",
+        "Chun-Feng Yuan",
+        "Guang-Ze Gao",
+        "Nian Liu",
+        "Bo-Yu Cai",
+        "Bo Li",
+        "Xiao Lv",
+        "Jun Gao",
+        "Bing Li",
+        "Wei-Ming Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文入力をクエリ誘導で選択的にソフト圧縮してコンパクトなメモリスロット化するCoMemにより、限られたメモリ予算での効率的推論を直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-84bd55a6a5be",
+    "round": "libimp-84bd55a6a5be01ec-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-84bd55a6a5be01ec-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-84bd55a6a5be01ec-pre01.json",
+    "receipt": "sha256:9d63374c5f87a1fdc068814ea6fdd0dc3e36a48239a081359520077ff9baaaab"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-84bd55a6a5be",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

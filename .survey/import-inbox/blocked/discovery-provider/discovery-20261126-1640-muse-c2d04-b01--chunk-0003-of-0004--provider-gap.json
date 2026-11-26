@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c2d04-b01::provider-gap",
+  "reference_main_sha": "2e85ebc167be60aa08d41b8b857b3b8fb4d30936",
+  "record_count": 1,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.01628",
+      "identity_tokens": [
+        "arXiv:2305.01628"
+      ],
+      "title": "The Benefits of Bad Advice: Autocontrastive Decoding across Model Layers",
+      "reason": "生成時に上位層と下位層の次トークン予測の対照を利用して退化的生成を抑える自己対照デコーディングを提案し、推論時のデコード手法へ直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2305.01628",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T16:40:00+09:00",
+      "last_checked_at": "2026-11-26T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 387
+    }
+  ],
+  "parent_run_key": "muse-20261126-c2d04-b01",
+  "chunk_index": 3,
+  "chunk_count": 4,
+  "source_record_count": 65,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261126-1640-muse-c2d04-b01--chunk-0003-of-0004.json",
+  "provider_gap_ids": [
+    "arXiv:2305.01628"
+  ]
+}

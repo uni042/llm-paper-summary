@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "RECAP: Training-Free Compensation for Coarse Activation Channel Pruning in Compressed LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/e41cf15d54a15ce4317e1c902a8b216ae231defc",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc"
+      ],
+      "semantic_scholar_id": "e41cf15d54a15ce4317e1c902a8b216ae231defc",
+      "canonical_id": "SemanticScholar:e41cf15d54a15ce4317e1c902a8b216ae231defc",
+      "authors": [
+        "Mingyu Lee",
+        "Akshat Ramachandran",
+        "Tushar Krishna"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RECAP compensates training-free for coarse activation-channel pruning in compressed LLMs: it estimates the activation error from removing a channel and transfers it into the corresponding weights with grouped outlier-robust statistics, restoring LLaMA3-8B BoolQ accuracy from 38.75% to 72.48% at 70% activation-channel sparsity while keeping hardware-friendly channel sparsity.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dependency-Aware Semi-Structured Sparsity: Declining Roles of Outliers in Pruning GLU-based LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3"
+      ],
+      "semantic_scholar_id": "4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+      "canonical_id": "SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3",
+      "authors": [
+        "Zhi-Yu Guo",
+        "Hidetaka Kamigaito",
+        "Taro Watanabe"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DaSS prunes GLU-based LLMs (LLaMA2/Mistral/Gemma) with a dependency-aware semi-structured metric combining weight magnitude and MLP intermediate activation norms, explicitly targeting serving memory size and token-generation latency with hardware-friendly N:M sparsity patterns outperforming SparseGPT and Wanda.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7cf5609bb953",
+    "round": "libimp-7cf5609bb953bb8c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7cf5609bb953bb8c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7cf5609bb953bb8c-pre01.json",
+    "receipt": "sha256:671fc97684eb18c8efa72f8d684d5a2e24858cb4e5e189a9d8488d0dc712ffba"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7cf5609bb953",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

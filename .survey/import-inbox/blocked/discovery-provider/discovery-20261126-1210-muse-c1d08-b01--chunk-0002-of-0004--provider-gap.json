@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261126-c1d08-b01::provider-gap",
+  "reference_main_sha": "70e79b336cf3a79dad322f396eaad81d497fa5be",
+  "record_count": 1,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/A-SSCC58667.2023.10347953",
+      "identity_tokens": [
+        "DOI:10.1109/A-SSCC58667.2023.10347953"
+      ],
+      "title": "A 28nm 49.7TOPS/W Sparse Transformer Processor with Random-Projection-Based Speculation, Multi-Stationary Dataflow, and Redundant Partial Product Elimination",
+      "reason": "ランダム射影によるスパース注意の投機、多重定常データフロー、冗長部分積除去を備えた28nmスパースTransformerプロセッサで、Transformer推論のスループットと電力効率をハードウェアで直接改善するため。",
+      "source_url": "https://doi.org/10.1109/A-SSCC58667.2023.10347953",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-26T12:10:00+09:00",
+      "last_checked_at": "2026-11-26T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 487
+    }
+  ],
+  "parent_run_key": "muse-20261126-c1d08-b01",
+  "chunk_index": 2,
+  "chunk_count": 4,
+  "source_record_count": 63,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261126-1210-muse-c1d08-b01--chunk-0002-of-0004.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/a-sscc58667.2023.10347953"
+  ]
+}
