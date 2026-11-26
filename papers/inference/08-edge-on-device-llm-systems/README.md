@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（130本）
+## 自動生成の論文一覧（131本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -221,6 +221,10 @@
 - **2026-07 · [Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices](2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ATSInferはテンソルごとのGPU常駐価値を実測し、CPU計算・PCIe転送・GPU計算を重ねて、VRAM不足時の転送待ちとCPU律速を減らす方式。
+
+- **2026-06 · [Ternary Mamba: Grouped Quantization-Aware Training of W1.58A16 State Space Models](2026-2606.18114-ternary-mamba-grouped-quantization-aware-training-of-w1-58a16-state-spac.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  学習済みMamba-2 1.3Bへグループ単位の三値量子化対応学習と知識蒸留を適用し、わずか1億トークン規模の追加学習で重みを3.61倍圧縮してゼロからの二値学習にほぼ並ぶ精度へ届かせ、学習可能スケールによるゼロ比率崩壊と事後補正の不転移を明らかにした研究。
 
 - **2026-06 · [Multi-Objective Structured Pruning of LLMs for Latency and Model Size Optimization](2026-2607.22583-multi-objective-structured-pruning-of-llms-for-latency-and-model-size-op.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

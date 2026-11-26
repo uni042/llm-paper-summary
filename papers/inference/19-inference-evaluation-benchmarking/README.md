@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（276本）
+## 自動生成の論文一覧（278本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -526,6 +526,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   推論の長さと深さを担う2つのLoRAアダプタを別々に強化学習で鍛え、問題の難しさに応じて重みを線形補間することで、考えすぎを削りながら難しい問題の精度も伸ばす適応型推論の枠組み。
 
+- **2026-06 · [Unveiling the Entropy Dynamics of Chain-of-Thought Reasoning](2026-2606.02020-unveiling-the-entropy-dynamics-of-chain-of-thought-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CoTの予測エントロピーが探索局面から収束局面へ急峻に遷移することを示し、その遷移をCUSUM変化点検出で学習なしに捉えて早期終了と重み付き投票に使うことで、精度を保ちながらトークンを11.1%削減した研究。
+
 - **2026-06 · [Understanding Evaluation Illusion in Diffusion Large Language Models](2026-2606.29228-understanding-evaluation-illusion-in-diffusion-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は新しい復号器の提案ではなく、既存の復号方式を同じ条件で比較するための評価方法論の研究である。結果は、少し異なるテンプレートを使うだけで方式間の優劣が逆転し、単一テンプレートで測った「品質を維持した高速化」が再現しない場合があるというものだった。
@@ -613,6 +617,10 @@
 - **2026-05 · [KernelBrain: Coarse-to-Fine, Budget-Aware Search for Agentic GPU Kernel Optimization](2026-2608.02611-kernelbrain-coarse-to-fine-budget-aware-search-for-agentic-gpu-kernel-op.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Tritonカーネルの自動最適化を、専門家誘導の多様な候補生成と多忠実度のふるいとプロファイラ診断付き変異で回し、PyTorch比最大6.72倍と最先端エージェント比最大1.4倍を最適化時間最大48%減で得るエージェント研究。
+
+- **2026-05 · [INAR-VL: Input-Aware Routing for Edge–Cloud Vision–Language Inference](2026-2605.18853-inar-vl-input-aware-routing-for-edge-cloud-vision-language-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  画像品質とテキスト複雑さの軽い事前信号からモデルと配置と解像度をリクエストごとに選ぶ端末・クラウド振り分けシステムで、36パーセントを端末処理しながらクラウドのみ比で遅延24パーセント・エネルギー26パーセント削減と精度の97パーセント維持を実機で示した研究。
 
 - **2026-05 · [Identifying and Mitigating Systemic Measurement Bias in Production LLM Inference Benchmarks](2026-2605.24217-identifying-and-mitigating-systemic-measurement-bias-in-production-llm-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
