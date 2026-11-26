@@ -1,0 +1,181 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261127-c5d01-b01",
+ "reference_main_sha": "475c12b134c3fe91eee6203b044933dd3af00bab",
+ "record_count": 10,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:7fa0b661ee7f2bb911c448e9c69dc6d82307a71b",
+   "identity_tokens": [
+    "SemanticScholar:7fa0b661ee7f2bb911c448e9c69dc6d82307a71b"
+   ],
+   "title": "Less is More: Improving LLM Reasoning with Minimal Test-Time Intervention",
+   "reason": "高エントロピートークンに限定してclassifier-free guidanceを適用し、無条件デコードでは本体モデルのKVキャッシュを再利用するMinimal Test-Time Interventionを提案するが、主目的は推論時の推論精度・安定性の向上であり、サービングやレイテンシ等の推論システム効率の定量評価は要旨で中心になっていないためborderlineとした。",
+   "source_url": "https://www.semanticscholar.org/paper/7fa0b661ee7f2bb911c448e9c69dc6d82307a71b",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:05:00+09:00",
+   "last_checked_at": "2026-11-27T07:05:00+09:00",
+   "linked_from": [
+    "worklist"
+   ],
+   "worklist_rank": 8
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2410.10319",
+   "identity_tokens": [
+    "arXiv:2410.10319"
+   ],
+   "title": "Spatial-Aware Efficient Projector for MLLMs via Multi-Layer Feature Aggregation",
+   "reason": "多層視覚特徴への分離型depthwise convolutionで空間情報を補いながら視覚トークン数を75%削減するSpatial-Aware Efficient Projectorを提案しMLLMの効率に触れるが、主貢献はマルチモーダル空間理解能力の向上とprojector設計であり、推論システムとしての速度・メモリ評価が要旨で具体化されていないためborderlineとした。",
+   "source_url": "https://arxiv.org/abs/2410.10319",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:05:00+09:00",
+   "last_checked_at": "2026-11-27T07:05:00+09:00",
+   "linked_from": [
+    "worklist"
+   ],
+   "worklist_rank": 12
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/ICSE55347.2025.00133",
+   "identity_tokens": [
+    "DOI:10.1109/ICSE55347.2025.00133"
+   ],
+   "title": "ROCODE: Integrating Backtracking Mechanism and Program Analysis in Large Language Models for Code Generation",
+   "reason": "LLMによるコード生成中のプログラム解析とbacktrackingでコンパイルエラーを早期に巻き戻すROCODEの提案であり、対象はコード生成の正しさ向上という応用手法で、トークンコスト削減も生成品質の副次効果にとどまり推論システムへの技術的貢献はないためunrelatedとした。",
+   "source_url": "https://doi.org/10.1109/ICSE55347.2025.00133",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:05:00+09:00",
+   "last_checked_at": "2026-11-27T07:05:00+09:00",
+   "linked_from": [
+    "worklist"
+   ],
+   "worklist_rank": 62
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1016/j.eij.2024.100555",
+   "identity_tokens": [
+    "DOI:10.1016/j.eij.2024.100555"
+   ],
+   "title": "Delay probability in adaptive systems based on activation function of classical neural networks",
+   "reason": "離散時間非線形システム設計における閉形式の象徴的応答の導出法と適応システム・古典的ニューラルネットワークの活性化関数に基づく遅延確率の解析であり、LLM推論や推論実行基盤とは無関係な制御・システム理論の研究であるためunrelatedとした。",
+   "source_url": "https://doi.org/10.1016/j.eij.2024.100555",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:05:00+09:00",
+   "last_checked_at": "2026-11-27T07:05:00+09:00",
+   "linked_from": [
+    "worklist"
+   ],
+   "worklist_rank": 71
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293",
+   "identity_tokens": [
+    "SemanticScholar:dd53745a3ac7d33856a7df059331893417f6f293"
+   ],
+   "title": "OptiPrune: Effective Pruning Approach for Every Target Sparsity",
+   "reason": "LLMのpost-training pruningについて、層別一様sparsityが低sparsityで有効・非一様が高sparsityで有効という知見に基づき、適応的deviationを持つ非一様sparsityとRIA/Hessian再構成の切替を組み合わせたOptiPruneを提案し、全sparsity域でモデルサイズと計算需要を削減するLLM圧縮手法を具体的に示しているためacceptとした。",
+   "source_url": "https://www.semanticscholar.org/paper/dd53745a3ac7d33856a7df059331893417f6f293",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:05:00+09:00",
+   "last_checked_at": "2026-11-27T07:05:00+09:00",
+   "linked_from": [
+    "worklist"
+   ],
+   "worklist_rank": 159
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:a9dc9b50c358591a24785794925aaec3d646d3cb",
+   "identity_tokens": [
+    "SemanticScholar:a9dc9b50c358591a24785794925aaec3d646d3cb"
+   ],
+   "title": "Inference-Time Techniques for Efficient Code Generation",
+   "reason": "小規模なオープンウェイトコードLLMに対しcontext-aware decodingとRAGを推論時に適用しMBPP/HumanEvalの精度を最大31%改善する検討であり、推論時技法ではあるものの主目的はコード生成品質の向上で、スループットへの影響が小さいという言及にとどまり推論システムの効率化機構は示されていないためborderlineとした。",
+   "source_url": "https://www.semanticscholar.org/paper/a9dc9b50c358591a24785794925aaec3d646d3cb",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:05:00+09:00",
+   "last_checked_at": "2026-11-27T07:05:00+09:00",
+   "linked_from": [
+    "worklist"
+   ],
+   "worklist_rank": 184
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:b5da6510b5216e558eb49a14f65edbd4cd593ee7",
+   "identity_tokens": [
+    "SemanticScholar:b5da6510b5216e558eb49a14f65edbd4cd593ee7"
+   ],
+   "title": "Inside Out: Evolving User-Centric Core Memory Trees for Long-Term Personalized Dialogue Systems",
+   "reason": "長期パーソナライズド対話向けにPersonaTreeでユーザープロファイルを保持し軽量MemListenerで記憶操作を学習するInside Outの提案であり、対象は対話パーソナライゼーションという応用と記憶表現そのもので、LLM推論の実行効率やサービング機構への貢献は要旨に示されていないためunrelatedとした。",
+   "source_url": "https://www.semanticscholar.org/paper/b5da6510b5216e558eb49a14f65edbd4cd593ee7",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:05:00+09:00",
+   "last_checked_at": "2026-11-27T07:05:00+09:00",
+   "linked_from": [
+    "worklist"
+   ],
+   "worklist_rank": 185
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2508.01636",
+   "identity_tokens": [
+    "arXiv:2508.01636"
+   ],
+   "title": "Privacy-Preserving Inference for Quantized BERT Models",
+   "reason": "秘密計算によるプライバシー保護推論の浮動小数演算ボトルネックに対し、層別量子化と1-bit重み全結合層、多入力ルックアップテーブルによるsoftmax評価と精度変換でtruncation overheadを除去し、BERT-baseで既存手法比最大22倍の高速化を示す量子化BERTのセキュア推論手法を具体的に示しているためacceptとした。",
+   "source_url": "https://arxiv.org/abs/2508.01636",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:05:00+09:00",
+   "last_checked_at": "2026-11-27T07:05:00+09:00",
+   "linked_from": [
+    "worklist"
+   ],
+   "worklist_rank": 188
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2302.03494",
+   "identity_tokens": [
+    "arXiv:2302.03494"
+   ],
+   "title": "A Categorical Archive of ChatGPT Failures",
+   "reason": "ChatGPTの失敗事例を推論・事実誤り・数学・コーディング・バイアス等の11カテゴリに分類しリスクと社会的含意を論じた能力・失敗分析であり、推論システムの機構や効率化への技術的貢献は一切示されていないためunrelatedとした。",
+   "source_url": "https://arxiv.org/abs/2302.03494",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:05:00+09:00",
+   "last_checked_at": "2026-11-27T07:05:00+09:00",
+   "linked_from": [
+    "worklist"
+   ],
+   "worklist_rank": 190
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2411.17040",
+   "identity_tokens": [
+    "arXiv:2411.17040"
+   ],
+   "title": "Multimodal Alignment and Fusion: A Survey",
+   "reason": "テキスト・画像・音声・動画のマルチモーダルalignmentとfusionを構造と手法の観点で260件超の研究から整理したサーベイであり、計算ボトルネックへの言及は課題列挙にとどまり、LLM推論システムへの具体的な技術的貢献を提案するものではないためunrelatedとした。",
+   "source_url": "https://arxiv.org/abs/2411.17040",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:05:00+09:00",
+   "last_checked_at": "2026-11-27T07:05:00+09:00",
+   "linked_from": [
+    "worklist"
+   ],
+   "worklist_rank": 191
+  }
+ ]
+}
