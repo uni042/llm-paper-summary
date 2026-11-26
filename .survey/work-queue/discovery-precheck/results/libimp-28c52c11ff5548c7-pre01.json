@@ -1,0 +1,145 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-28c52c11ff5548c7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-28c52c11ff55",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.06441"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "83fa6f17275e1879433ed7184407a72e6732fb8c",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T00:58:24.074978+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.06441",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Towards Resource-Efficient Multimodal Intelligence: Learned Routing among Specialized Expert Models",
+      "source_url": "https://arxiv.org/abs/2511.06441",
+      "year": 2025,
+      "published": "2025-11-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As AI moves beyond text, large language models (LLMs) increasingly power vision, audio, and document understanding; however, their high inference costs hinder real-time, scalable deployment. Conversely, smaller open-source models offer cost advantages but struggle with complex or multimodal queries. We introduce a unified, modular framework that intelligently routes each query - textual, multimodal, or complex - to the most fitting expert model, using a learned routing network that balances cost and quality. For vision tasks, we employ a two-stage open-source pipeline optimized for efficiency and reviving efficient classical vision components where they remain SOTA for sub-tasks. On benchmarks such as Massive Multitask Language Understanding (MMLU) and Visual Question Answering (VQA), we match or exceed the performance of always-premium LLM (monolithic systems with one model serving all query types) performance, yet reduce the reliance on costly models by over 67%. With its extensible, multi-agent orchestration, we deliver high-quality, resource-efficient AI at scale.",
+      "identifiers": [
+        "SemanticScholar:4de61d5887c656b74a85ff19010273079fb8e807"
+      ],
+      "semantic_scholar_id": "4de61d5887c656b74a85ff19010273079fb8e807",
+      "canonical_id": "arXiv:2511.06441",
+      "arxiv_id": "2511.06441",
+      "doi": "10.48550/arXiv.2511.06441",
+      "authors": [
+        "Mayank Saini",
+        "A. K. Bishwas"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 382,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.06441",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.06441",
+        "id:SemanticScholar:4de61d5887c656b74a85ff19010273079fb8e807",
+        "id:arXiv:2511.06441",
+        "title:towards resourceefficient multimodal intelligence learned routing among specialized expert models",
+        "url:https://arxiv.org/abs/2511.06441"
+      ],
+      "record": {
+        "title": "Towards Resource-Efficient Multimodal Intelligence: Learned Routing among Specialized Expert Models",
+        "source_url": "https://arxiv.org/abs/2511.06441",
+        "year": 2025,
+        "published": "2025-11-09",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As AI moves beyond text, large language models (LLMs) increasingly power vision, audio, and document understanding; however, their high inference costs hinder real-time, scalable deployment. Conversely, smaller open-source models offer cost advantages but struggle with complex or multimodal queries. We introduce a unified, modular framework that intelligently routes each query - textual, multimodal, or complex - to the most fitting expert model, using a learned routing network that balances cost and quality. For vision tasks, we employ a two-stage open-source pipeline optimized for efficiency and reviving efficient classical vision components where they remain SOTA for sub-tasks. On benchmarks such as Massive Multitask Language Understanding (MMLU) and Visual Question Answering (VQA), we match or exceed the performance of always-premium LLM (monolithic systems with one model serving all query types) performance, yet reduce the reliance on costly models by over 67%. With its extensible, multi-agent orchestration, we deliver high-quality, resource-efficient AI at scale.",
+        "identifiers": [
+          "SemanticScholar:4de61d5887c656b74a85ff19010273079fb8e807"
+        ],
+        "semantic_scholar_id": "4de61d5887c656b74a85ff19010273079fb8e807",
+        "canonical_id": "arXiv:2511.06441",
+        "arxiv_id": "2511.06441",
+        "doi": "10.48550/arXiv.2511.06441",
+        "authors": [
+          "Mayank Saini",
+          "A. K. Bishwas"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 382,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a43f43dc003652674516524a189333c3217158ee6f6fc71a6782e6fd56d65452",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

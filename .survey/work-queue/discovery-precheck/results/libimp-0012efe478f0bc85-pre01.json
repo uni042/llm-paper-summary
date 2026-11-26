@@ -1,0 +1,157 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0012efe478f0bc85-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0012efe478f0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2509.16248"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "83fa6f17275e1879433ed7184407a72e6732fb8c",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T00:57:55.935080+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2509.16248",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "GraphMend: Code Transformations for Fixing Graph Breaks in PyTorch 2",
+      "source_url": "https://arxiv.org/abs/2509.16248",
+      "year": 2025,
+      "published": "2025-09-17",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents GraphMend, a compiler technique that automatically fixes FX graph breaks in PyTorch 2 programs. Although PyTorch 2 introduced TorchDynamo and TorchInductor to enable just-in-time graph compilation, certain code patterns still cause graph breaks that force execution to fall back to Python eager mode, introducing costly CPU-GPU synchronization and reducing optimization opportunities. Our investigation of 195 Hugging Face models reveals that 13.8% of models exhibit graph breaks. GraphMend automatically eliminates fixable breaks through source-level program analysis and transformations. It analyzes AST-level program structure to identify graph-break patterns and applies transformations only when their semantic preservation can be statically established. These transformations enable PyTorch to capture larger, uninterrupted FX graphs without manual refactoring by developers. We evaluate GraphMend on all 27 models found to exhibit graph breaks in our investigation. GraphMend eliminates 107 of 147 graph breaks (73%), fully fixing all breaks in 21 models. In our experiments on NVIDIA GPUs, GraphMend achieves up to 26x cold-start speedup, 5x on average, and up to 1.39x steady-state forward pass speedup. These results demonstrate that semantics-aware source-level analysis and transformation are effective complements to PyTorch's dynamic JIT compilation pipeline, substantially improving both usability and performance.",
+      "identifiers": [
+        "SemanticScholar:596384f6259309bd48c5e9086b4e418ae7a4b8d7"
+      ],
+      "semantic_scholar_id": "596384f6259309bd48c5e9086b4e418ae7a4b8d7",
+      "canonical_id": "arXiv:2509.16248",
+      "arxiv_id": "2509.16248",
+      "doi": "10.48550/arXiv.2509.16248",
+      "authors": [
+        "Kashmira Savini",
+        "Jayanaka L. Dantanarayana",
+        "Thamirawaran Sathiyalogeswaran",
+        "Yi-Chao Yuan",
+        "Nishil Talati",
+        "Krisztián Flautner",
+        "Ling-Jia Tang",
+        "Jason Mars"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 435,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2509.16248",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.16248",
+        "id:SemanticScholar:596384f6259309bd48c5e9086b4e418ae7a4b8d7",
+        "id:arXiv:2509.16248",
+        "title:graphmend code transformations for fixing graph breaks in pytorch 2",
+        "url:https://arxiv.org/abs/2509.16248"
+      ],
+      "record": {
+        "title": "GraphMend: Code Transformations for Fixing Graph Breaks in PyTorch 2",
+        "source_url": "https://arxiv.org/abs/2509.16248",
+        "year": 2025,
+        "published": "2025-09-17",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper presents GraphMend, a compiler technique that automatically fixes FX graph breaks in PyTorch 2 programs. Although PyTorch 2 introduced TorchDynamo and TorchInductor to enable just-in-time graph compilation, certain code patterns still cause graph breaks that force execution to fall back to Python eager mode, introducing costly CPU-GPU synchronization and reducing optimization opportunities. Our investigation of 195 Hugging Face models reveals that 13.8% of models exhibit graph breaks. GraphMend automatically eliminates fixable breaks through source-level program analysis and transformations. It analyzes AST-level program structure to identify graph-break patterns and applies transformations only when their semantic preservation can be statically established. These transformations enable PyTorch to capture larger, uninterrupted FX graphs without manual refactoring by developers. We evaluate GraphMend on all 27 models found to exhibit graph breaks in our investigation. GraphMend eliminates 107 of 147 graph breaks (73%), fully fixing all breaks in 21 models. In our experiments on NVIDIA GPUs, GraphMend achieves up to 26x cold-start speedup, 5x on average, and up to 1.39x steady-state forward pass speedup. These results demonstrate that semantics-aware source-level analysis and transformation are effective complements to PyTorch's dynamic JIT compilation pipeline, substantially improving both usability and performance.",
+        "identifiers": [
+          "SemanticScholar:596384f6259309bd48c5e9086b4e418ae7a4b8d7"
+        ],
+        "semantic_scholar_id": "596384f6259309bd48c5e9086b4e418ae7a4b8d7",
+        "canonical_id": "arXiv:2509.16248",
+        "arxiv_id": "2509.16248",
+        "doi": "10.48550/arXiv.2509.16248",
+        "authors": [
+          "Kashmira Savini",
+          "Jayanaka L. Dantanarayana",
+          "Thamirawaran Sathiyalogeswaran",
+          "Yi-Chao Yuan",
+          "Nishil Talati",
+          "Krisztián Flautner",
+          "Ling-Jia Tang",
+          "Jason Mars"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 435,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:238ce0c9d61ef68b63cb901bcd44c00850d018494a403436705ec5057465e6f2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

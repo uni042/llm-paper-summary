@@ -1,0 +1,250 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d32d86878ef4008d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d32d86878ef4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2311.17065",
+    "arXiv:2411.09289"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "83fa6f17275e1879433ed7184407a72e6732fb8c",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T00:58:00.556811+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2311.17065",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.09289",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Turbocharge Speech Understanding with Pilot Inference",
+      "source_url": "https://arxiv.org/abs/2311.17065",
+      "year": 2023,
+      "published": "2023-11-22",
+      "venue": null,
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern speech understanding (SU) runs a sophisticated pipeline: ingesting streaming voice input, the pipeline executes encoder-decoder based deep neural networks repeatedly; by doing so, the pipeline generates tentative outputs (called hypotheses), and periodically scores the hypotheses. This paper sets to accelerate SU on resource-constrained edge devices. It takes a hybrid approach: to speed up on-device execution; to offload inputs that are beyond the device's capacity. While the approach is well-known, we address SU's unique challenges with novel techniques: (1) late contextualization, which executes a model's attentive encoder in parallel to the input ingestion; (2) pilot inference, which mitigates the SU pipeline's temporal load imbalance; (3) autoregression offramps, which evaluate offloading decisions based on pilot inferences and hypotheses. Our techniques are compatible with existing speech models, pipelines, and frameworks; they can be applied independently or in combination. Our prototype, called PASU, is tested on Arm platforms with 6 - 8 cores: it delivers SOTA accuracy; it reduces the end-to-end latency by 2x and reduces the offloading needs by 2x.",
+      "identifiers": [
+        "SemanticScholar:e8f333751d9ee637df9fd6ff22840fe10c0e7eaa"
+      ],
+      "semantic_scholar_id": "e8f333751d9ee637df9fd6ff22840fe10c0e7eaa",
+      "canonical_id": "arXiv:2311.17065",
+      "arxiv_id": "2311.17065",
+      "authors": [
+        "Rong-Xiang Wang",
+        "Felix Xiaozhu Lin"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1100,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "StreamAdapter: Efficient Test Time Adaptation from Contextual Streams",
+      "source_url": "https://arxiv.org/abs/2411.09289",
+      "year": 2024,
+      "published": "2024-11-14",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In-context learning (ICL) allows large language models (LLMs) to adapt to new tasks directly from the given demonstrations without requiring gradient updates. While recent advances have expanded context windows to accommodate more demonstrations, this approach increases inference costs without necessarily improving performance. To mitigate these issues, We propose StreamAdapter, a novel approach that directly updates model parameters from context at test time, eliminating the need for explicit in-context demonstrations. StreamAdapter employs context mapping and weight absorption mechanisms to dynamically transform ICL demonstrations into parameter updates with minimal additional parameters. By reducing reliance on numerous in-context examples, StreamAdapter significantly reduce inference costs and allows for efficient inference with constant time complexity, regardless of demonstration count. Extensive experiments across diverse tasks and model architectures demonstrate that StreamAdapter achieves comparable or superior adaptation capability to ICL while requiring significantly fewer demonstrations. The superior task adaptation and context encoding capabilities of StreamAdapter on both language understanding and generation tasks provides a new perspective for adapting LLMs at test time using context, allowing for more efficient adaptation across scenarios and more cost-effective inference",
+      "identifiers": [
+        "SemanticScholar:4afaebc19ae298b17de29afa3209f425a3d7d0e6"
+      ],
+      "semantic_scholar_id": "4afaebc19ae298b17de29afa3209f425a3d7d0e6",
+      "canonical_id": "arXiv:2411.09289",
+      "arxiv_id": "2411.09289",
+      "doi": "10.48550/arXiv.2411.09289",
+      "authors": [
+        "Dilxat Muhtar",
+        "Yelong Shen",
+        "Ya-Ming Yang",
+        "Xiao-Dong Liu",
+        "Ya-Dong Lu",
+        "Jian-Feng Liu",
+        "Yue-Feng Zhan",
+        "Hao Sun",
+        "Wei-Wei Deng",
+        "Feng Sun",
+        "Xueliang Zhang",
+        "Jian-Feng Gao",
+        "Weizhu Chen",
+        "Qi Zhang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 742,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2311.17065",
+      "identity_tokens": [
+        "id:SemanticScholar:e8f333751d9ee637df9fd6ff22840fe10c0e7eaa",
+        "id:arXiv:2311.17065",
+        "title:turbocharge speech understanding with pilot inference",
+        "url:https://arxiv.org/abs/2311.17065"
+      ],
+      "record": {
+        "title": "Turbocharge Speech Understanding with Pilot Inference",
+        "source_url": "https://arxiv.org/abs/2311.17065",
+        "year": 2023,
+        "published": "2023-11-22",
+        "venue": null,
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern speech understanding (SU) runs a sophisticated pipeline: ingesting streaming voice input, the pipeline executes encoder-decoder based deep neural networks repeatedly; by doing so, the pipeline generates tentative outputs (called hypotheses), and periodically scores the hypotheses. This paper sets to accelerate SU on resource-constrained edge devices. It takes a hybrid approach: to speed up on-device execution; to offload inputs that are beyond the device's capacity. While the approach is well-known, we address SU's unique challenges with novel techniques: (1) late contextualization, which executes a model's attentive encoder in parallel to the input ingestion; (2) pilot inference, which mitigates the SU pipeline's temporal load imbalance; (3) autoregression offramps, which evaluate offloading decisions based on pilot inferences and hypotheses. Our techniques are compatible with existing speech models, pipelines, and frameworks; they can be applied independently or in combination. Our prototype, called PASU, is tested on Arm platforms with 6 - 8 cores: it delivers SOTA accuracy; it reduces the end-to-end latency by 2x and reduces the offloading needs by 2x.",
+        "identifiers": [
+          "SemanticScholar:e8f333751d9ee637df9fd6ff22840fe10c0e7eaa"
+        ],
+        "semantic_scholar_id": "e8f333751d9ee637df9fd6ff22840fe10c0e7eaa",
+        "canonical_id": "arXiv:2311.17065",
+        "arxiv_id": "2311.17065",
+        "authors": [
+          "Rong-Xiang Wang",
+          "Felix Xiaozhu Lin"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1100,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.09289",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.09289",
+        "id:SemanticScholar:4afaebc19ae298b17de29afa3209f425a3d7d0e6",
+        "id:arXiv:2411.09289",
+        "title:streamadapter efficient test time adaptation from contextual streams",
+        "url:https://arxiv.org/abs/2411.09289"
+      ],
+      "record": {
+        "title": "StreamAdapter: Efficient Test Time Adaptation from Contextual Streams",
+        "source_url": "https://arxiv.org/abs/2411.09289",
+        "year": 2024,
+        "published": "2024-11-14",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In-context learning (ICL) allows large language models (LLMs) to adapt to new tasks directly from the given demonstrations without requiring gradient updates. While recent advances have expanded context windows to accommodate more demonstrations, this approach increases inference costs without necessarily improving performance. To mitigate these issues, We propose StreamAdapter, a novel approach that directly updates model parameters from context at test time, eliminating the need for explicit in-context demonstrations. StreamAdapter employs context mapping and weight absorption mechanisms to dynamically transform ICL demonstrations into parameter updates with minimal additional parameters. By reducing reliance on numerous in-context examples, StreamAdapter significantly reduce inference costs and allows for efficient inference with constant time complexity, regardless of demonstration count. Extensive experiments across diverse tasks and model architectures demonstrate that StreamAdapter achieves comparable or superior adaptation capability to ICL while requiring significantly fewer demonstrations. The superior task adaptation and context encoding capabilities of StreamAdapter on both language understanding and generation tasks provides a new perspective for adapting LLMs at test time using context, allowing for more efficient adaptation across scenarios and more cost-effective inference",
+        "identifiers": [
+          "SemanticScholar:4afaebc19ae298b17de29afa3209f425a3d7d0e6"
+        ],
+        "semantic_scholar_id": "4afaebc19ae298b17de29afa3209f425a3d7d0e6",
+        "canonical_id": "arXiv:2411.09289",
+        "arxiv_id": "2411.09289",
+        "doi": "10.48550/arXiv.2411.09289",
+        "authors": [
+          "Dilxat Muhtar",
+          "Yelong Shen",
+          "Ya-Ming Yang",
+          "Xiao-Dong Liu",
+          "Ya-Dong Lu",
+          "Jian-Feng Liu",
+          "Yue-Feng Zhan",
+          "Hao Sun",
+          "Wei-Wei Deng",
+          "Feng Sun",
+          "Xueliang Zhang",
+          "Jian-Feng Gao",
+          "Weizhu Chen",
+          "Qi Zhang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 742,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b8c2b1a347e6260322f36467f835a445c5bf8bb1a2d1a49e1040780dafeeda82",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c54c6cc111c7c40a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c54c6cc111c7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.22937"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "83fa6f17275e1879433ed7184407a72e6732fb8c",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T00:58:00.451709+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.22937",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SSM-RDU: A Reconfigurable Dataflow Unit for Long-Sequence State-Space Models",
+      "source_url": "https://arxiv.org/abs/2503.22937",
+      "year": 2025,
+      "published": "2025-03-29",
+      "venue": "ICCD",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-sequence state-space models (SSMs) such as Hyena and Mamba replace the quadratic complexity of self-attention with more efficient FFT and scan operations. However, modern accelerators like GPUs are poorly suited to these non-GEMM workloads due to rigid execution models and specialization for dense matrix operations. This paper proposes architectural extensions to a baseline Reconfigurable Dataflow Unit (RDU) that efficiently support FFT-based and scan-based SSMs. By introducing lightweight interconnect enhancements within compute tiles, the extended RDU enables spatial mapping of FFT and scan dataflows with less than 1% area and power overhead. The resulting architecture achieves a $2 \\times-5.95 \\times$ speedup over the NVIDIA A100 GPU and a $1.95 \\times$ speedup over the baseline RDU for Hyena, and a $2.12 \\times$ and $1.75 \\times$ speedup over the A100 GPU and baseline RDU, respectively, for Mamba.",
+      "identifiers": [
+        "SemanticScholar:8697683c00664a0aeaae3bb57bd576acf4264941"
+      ],
+      "semantic_scholar_id": "8697683c00664a0aeaae3bb57bd576acf4264941",
+      "canonical_id": "arXiv:2503.22937",
+      "arxiv_id": "2503.22937",
+      "doi": "10.1109/ICCD65941.2025.00095",
+      "authors": [
+        "Sho Ko",
+        "K. Olukotun"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 607,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2503.22937",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccd65941.2025.00095",
+        "id:SemanticScholar:8697683c00664a0aeaae3bb57bd576acf4264941",
+        "id:arXiv:2503.22937",
+        "title:ssmrdu a reconfigurable dataflow unit for longsequence statespace models",
+        "url:https://arxiv.org/abs/2503.22937"
+      ],
+      "record": {
+        "title": "SSM-RDU: A Reconfigurable Dataflow Unit for Long-Sequence State-Space Models",
+        "source_url": "https://arxiv.org/abs/2503.22937",
+        "year": 2025,
+        "published": "2025-03-29",
+        "venue": "ICCD",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-sequence state-space models (SSMs) such as Hyena and Mamba replace the quadratic complexity of self-attention with more efficient FFT and scan operations. However, modern accelerators like GPUs are poorly suited to these non-GEMM workloads due to rigid execution models and specialization for dense matrix operations. This paper proposes architectural extensions to a baseline Reconfigurable Dataflow Unit (RDU) that efficiently support FFT-based and scan-based SSMs. By introducing lightweight interconnect enhancements within compute tiles, the extended RDU enables spatial mapping of FFT and scan dataflows with less than 1% area and power overhead. The resulting architecture achieves a $2 \\times-5.95 \\times$ speedup over the NVIDIA A100 GPU and a $1.95 \\times$ speedup over the baseline RDU for Hyena, and a $2.12 \\times$ and $1.75 \\times$ speedup over the A100 GPU and baseline RDU, respectively, for Mamba.",
+        "identifiers": [
+          "SemanticScholar:8697683c00664a0aeaae3bb57bd576acf4264941"
+        ],
+        "semantic_scholar_id": "8697683c00664a0aeaae3bb57bd576acf4264941",
+        "canonical_id": "arXiv:2503.22937",
+        "arxiv_id": "2503.22937",
+        "doi": "10.1109/ICCD65941.2025.00095",
+        "authors": [
+          "Sho Ko",
+          "K. Olukotun"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 607,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e306dfa1b453fb7f24710701693336b5f6b1f5fae0a4e6f7a47d016cfc200247",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
