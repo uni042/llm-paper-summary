@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Align, Then Correct: Training-Free Two-Stage Low-Rank Compensation for Extremely Quantized Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.08164",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-rank quantization error compensation (LQEC) recovers the accuracy lost under aggressive weight quantization by attaching a closed-form rank-$r$ adapter beside each frozen quantized weight, without any training. We show that existing compensators are limited by two shared simplifications. They calibrate symmetrically, evaluating the full-precision and compensated weights on the same activation, which yields a compensation target that is inherently high-rank -- so a fixed rank budget captures only a small fraction of it. And they minimize only the second-order term of the loss, although the compensated model is not stationary: a first-order descent direction larger than the applied compensation itself remains in every layer, and no reconstruction objective can absorb it. We propose a two-stage closed-form framework that removes both simplifications. Stage 1 aligns each layer's output with the full-precision model under a Fisher-weighted asymmetric objective, concentrating the rank budget on a rank-compressible target. Stage 2 re-measures statistics on the compensated model and applies a rank-constrained natural-gradient step that absorbs the remaining first-order signal. Every adapter is the result of a single truncated SVD; backward passes serve only to collect statistics. At 2 bits under QuIP#, our method reduces WikiText-2 perplexity from 12.43 to 10.26 on Qwen3-8B and from 21.11 to 13.22 on Qwen3-4B. On the held-out C4 corpus, it recovers 51% and 84% of the gap to FP16, versus 31% and 63% for the strongest baseline, with consistent gains in the seven-task zero-shot average, at higher bit-widths, and under a distinct quantizer.",
+      "identifiers": [
+        "SemanticScholar:ef2173b97f158ce5c9221a3c5d7b60c73d7f9209"
+      ],
+      "semantic_scholar_id": "ef2173b97f158ce5c9221a3c5d7b60c73d7f9209",
+      "canonical_id": "arXiv:2610.08164",
+      "arxiv_id": "2610.08164",
+      "authors": [
+        "Seobin Song",
+        "Geonho Lee",
+        "Janghwan Lee",
+        "Jungwook Choi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "量子化誤差の低ランク補償について対称キャリブレーションと二階のみ最小化という前提を外し、二段階の閉形式補償で極端に量子化したLLMの精度を回復する。LLM量子化への直接の貢献が確認できる",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TRACE: Transformer Residual Activation Codebook Encoding for Communication-efficient Distributed Edge Inference",
+      "source_url": "https://arxiv.org/abs/2610.22435",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Distributed Transformer inference across co-located edge devices is fundamentally communication-bound, as exchanging activations between sequence-parallel partitions dominates inference latency under commodity edge bandwidths. Existing compression schemes reduce this cost but retain a structural bottleneck: the received data must still undergo key/value projection before attention can proceed, serializing computation behind communication. This paper presents Transformer Residual Activation Codebook Encoding (Trace), a framework that addresses these limitations. Trace places a Vector Quantizer (VQ) at the post-attention residual of every Transformer layer and precomputes codebook-indexed key/value representations. During inference, exchanged activations are encoded into compact codebook indices, allowing receivers to directly recover keys and values through table lookup instead of executing the downstream computations required to derive them. By eliminating the received data downstream computation, Trace enables communication--computation overlap and reduces a key latency bottleneck in distributed Transformer inference. A hierarchical clustering further structures the learned codebook into a multi-resolution hierarchy, enabling runtime adaptation of the communication bitrate without retraining. The framework supports two operating variants: one prioritizing accuracy and the other balancing accuracy and efficiency through buffer-compatible quantization. Experiments on ViT-Base (ImageNet-1K and CIFAR-100) and ViViT-B (UCF-101) show that Trace achieves up to 1.89% higher accuracy and up to 1.27x end-to-end inference speedup compared with the state-of-the-art VQ-based distributed inference framework. Compared with uncompressed sequence-parallel inference, Trace reduces communication overhead by up to 22,624x.",
+      "identifiers": [
+        "SemanticScholar:5a61c6f01bafc240e961df939817a2596b08dec9"
+      ],
+      "semantic_scholar_id": "5a61c6f01bafc240e961df939817a2596b08dec9",
+      "canonical_id": "arXiv:2610.22435",
+      "arxiv_id": "2610.22435",
+      "authors": [
+        "Muhammad Azlan Qazi",
+        "Alexandros Iosifidis",
+        "Qi Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TRACEは各層の残差活性化をベクトル量子化し、コードブック索引だけを交換して受信側がK/Vを表引きで復元することで、エッジ分散Transformer推論の通信ボトルネックを解消する。分散推論への直接の貢献が確認できる",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Lightweight Error Correction for In-Storage Acceleration of Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/ICEIC61013.2024.10457117",
+      "year": 2024,
+      "published": "2024-01-28",
+      "venue": "International Conference on Electronics, Information and Communications",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) expand their sizes, conventional GPU-based LLM inference systems face memory bandwidth and capacity limitations. An LLM inference accelerator using NAND flash storage has been proposed to overcome these challenges. However, this necessitates a significant expansion of flash channels to ensure adequate bandwidth for inference, subsequently escalating error correction code (ECC) costs. This paper examines the impact of flash memory errors on LLM inference accuracy and explores the possibility of lightweight ECC by leveraging LLM's inherent error resilience. We analyze the impact of 1) high-order bit indices masking for FP32 LLM parameters, 2) clipping, and 3) a dependency by parameter type of error robustness, and show that a combination of them can reduce ECC bandwidth by up to 9.38%.",
+      "identifiers": [
+        "SemanticScholar:6cc2bfdbbe3a8cb6ee618578fb3184ec5efd886e"
+      ],
+      "semantic_scholar_id": "6cc2bfdbbe3a8cb6ee618578fb3184ec5efd886e",
+      "doi": "10.1109/ICEIC61013.2024.10457117",
+      "canonical_id": "DOI:10.1109/ICEIC61013.2024.10457117",
+      "authors": [
+        "Jinwoo Jeong",
+        "Byungmin Ahn",
+        "Dong-Min Shin",
+        "Jungwook Choi"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1033,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NANDフラッシュを用いるLLM推論アクセラレータについて、LLMの誤り耐性を利用して誤り訂正を軽量化しECC帯域を最大9.38%削減する。在ストレージ推論ハードウェアへの直接の貢献が確認できる",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-bd58edb10ca1",
+    "round": "libimp-bd58edb10ca1d5f3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-bd58edb10ca1d5f3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-bd58edb10ca1d5f3-pre01.json",
+    "receipt": "sha256:5b308c7221dfe0fc69b39dc264690ea45fcb4a1ad9b87bc9d386864540378aa3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-bd58edb10ca1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

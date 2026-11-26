@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Compressing Many-Shots in In-Context Learning",
+      "source_url": "https://arxiv.org/abs/2510.16092",
+      "year": 2025,
+      "published": "2025-10-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have been shown to be able to learn different tasks without explicit finetuning when given many input-output examples / demonstrations through In-Context Learning (ICL). Increasing the number of examples, called ``shots'', improves downstream task performance but incurs higher memory and computational costs. In this work, we study an approach to improve the memory and computational efficiency of ICL inference by compressing the many-shot prompts. Given many shots comprising t tokens, our goal is to generate a m soft-token summary, where m<t. We first show that existing prompt compression methods are ineffective for many-shot compression, and simply using fewer shots as a baseline is surprisingly strong. To achieve effective compression, we find that: (a) a stronger compressor model with more trainable parameters is necessary, and (b) compressing many-shot representations at each transformer layer enables more fine-grained compression by providing each layer with its own compressed representation. Based on these insights, we propose MemCom, a layer-wise compression method. We systematically evaluate various compressor models and training approaches across different model sizes (2B and 7B), architectures (Gemma and Mistral), many-shot sequence lengths (3k-6k tokens), and compression ratios (3x to 8x). MemCom outperforms strong baselines across all compression ratios on multiple classification tasks with large label sets. Notably, while baseline performance degrades sharply at higher compression ratios, often by over 20-30%, MemCom maintains high accuracy with minimal degradation, typically dropping by less than 10%.",
+      "identifiers": [
+        "SemanticScholar:24ca33f81e56b73a46494de14aa9669ec6f7abb4"
+      ],
+      "semantic_scholar_id": "24ca33f81e56b73a46494de14aa9669ec6f7abb4",
+      "canonical_id": "arXiv:2510.16092",
+      "arxiv_id": "2510.16092",
+      "doi": "10.48550/arXiv.2510.16092",
+      "authors": [
+        "Devvrit Khatri",
+        "P. Kulkarni",
+        "Nilesh Gupta",
+        "Yerram Varun",
+        "Li-Qian Peng",
+        "Jay Yagnik",
+        "Praneeth Netrapalli",
+        "Cho-Jui Hsieh",
+        "Alec Go",
+        "I. Dhillon",
+        "Aditya Kusupati",
+        "Prateek Jain"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 405,
+        "matched_prestigious_venue": null
+      },
+      "reason": "多ショット文脈内学習のデモンストレーションを少数のソフトトークンへ圧縮し、ICL推論のメモリと計算コストを削減する手法であり、LLM推論効率化への直接の技術的貢献が確認できる",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d8119f1f081d",
+    "round": "libimp-d8119f1f081d274a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d8119f1f081d274a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d8119f1f081d274a-pre01.json",
+    "receipt": "sha256:7ab0eefca1c452aafbf535133ba54019194d0b1901bac3da5629a4d708d62e45"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d8119f1f081d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

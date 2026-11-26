@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FactorSpec: Serving Exact Relational Constraints as Speculative Drafts",
+      "source_url": "https://arxiv.org/abs/2611.02297",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding speeds up LLM serving by drafting tokens that the target model verifies in one pass, and its gain grows with the drafts the target accepts. Structured outputs should be an ideal case, because much of a record follows from relations among its fields: an itinerary's days follow from its cities'stays and flights. Serving engines, however, draft such text by proposing it from the prompt or a learned head, and their grammar masks enforce only syntax, so the model must satisfy the relations, which it violates: on NATURAL PLAN's trip problems, Qwen3-8B writes a valid itinerary for 10%, and retries that name the violated relation raise this to 14%. We present FactorSpec, which serves exact relational constraints as speculative drafts. FactorSpec compiles a JSON Schema and its relations into a factor graph with an exact feasibility check, drafts every token the constraint determines as certain, verifies each request at a width chosen for it, and computes the masks in worker processes outside the scheduler while the GPU runs. In SGLang, its drafts yield up to 10.5 tokens per verify step, up to 1.9x those of the fastest n-gram drafter, and it decodes up to 1.43x faster than speculators tuned per load, at a grammar mask's cost; it also leads in vLLM. Because every record is also valid, it serves up to 13.9x the valid records per GPU-second of syntax-only baselines.",
+      "identifiers": [
+        "SemanticScholar:be40dba7cd2f95a57ecde32eb618a2fb906ea239"
+      ],
+      "semantic_scholar_id": "be40dba7cd2f95a57ecde32eb618a2fb906ea239",
+      "canonical_id": "arXiv:2611.02297",
+      "arxiv_id": "2611.02297",
+      "authors": [
+        "Jian-Chang Su",
+        "Da-Wei Xiang",
+        "Wei Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      },
+      "reason": "JSON Schemaと関係制約を因子グラフへコンパイルし制約で確定するトークンを投機的ドラフトとして提示・検証するFactorSpecをLLMサービングへ組み込み、構造化出力の受理率と生成成功率を高める投機的デコードの直接の貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f7c847023063",
+    "round": "libimp-f7c847023063a1e2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f7c847023063a1e2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f7c847023063a1e2-pre01.json",
+    "receipt": "sha256:96c6ee10121a195505cd1b07cbaa8dc3be4be60d304fea429b8afb6e9ba8ede0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f7c847023063",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

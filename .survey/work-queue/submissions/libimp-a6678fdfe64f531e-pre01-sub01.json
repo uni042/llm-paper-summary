@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Smart Routing: Cost-Effective Multi-LLM Serving for Multi-Core AIOS",
+      "source_url": "https://www.semanticscholar.org/paper/c5fffaf2a39b3c94891bf640999654409f162882",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:c5fffaf2a39b3c94891bf640999654409f162882"
+      ],
+      "semantic_scholar_id": "c5fffaf2a39b3c94891bf640999654409f162882",
+      "canonical_id": "SemanticScholar:c5fffaf2a39b3c94891bf640999654409f162882",
+      "authors": [
+        "Kai Mei",
+        "Wu-Jiang Xu",
+        "Shu-Hang Lin",
+        "Yongfeng Zhang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数LLMサービング向けに能力・コスト予測器と制約付き最適化でクエリごとにモデルを割り当てるECCOSスケジューリング枠組みを提案し、品質制約下で推論コストを下げるサービング機構が要旨で具体的に示されている。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "V ESTIGE KV: T HE N O PE-MLA KV C ACHE C ARRIES I TS O WN E VICTION S IGNAL IN A V ESTIGIAL B RANCH",
+      "source_url": "https://www.semanticscholar.org/paper/c4a54a26100d339d10c59db6b8cc56ac481534c8",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:c4a54a26100d339d10c59db6b8cc56ac481534c8"
+      ],
+      "semantic_scholar_id": "c4a54a26100d339d10c59db6b8cc56ac481534c8",
+      "canonical_id": "SemanticScholar:c4a54a26100d339d10c59db6b8cc56ac481534c8",
+      "authors": [
+        "Wen-Jie Fan"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NoPE-MLAのKVキャッシュ内に残る痕跡的ブランチの信号からクエリ非依存の顕著性を読み取り、学習なしでKVキャッシュを階層化して圧縮するVestigeKVを提案しており、KVキャッシュエビクションへの直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a6678fdfe64f",
+    "round": "libimp-a6678fdfe64f531e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a6678fdfe64f531e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a6678fdfe64f531e-pre01.json",
+    "receipt": "sha256:5250900a66e3c785e595040214e7ab7cf6b6e334d151d9abbedc6de088f27605"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a6678fdfe64f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

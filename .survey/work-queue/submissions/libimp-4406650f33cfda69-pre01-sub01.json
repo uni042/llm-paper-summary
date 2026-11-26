@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling to 100M Tokens",
+      "source_url": "https://arxiv.org/abs/2603.23516",
+      "year": 2026,
+      "published": "2026-03-06",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-term memory is a cornerstone of human intelligence. Enabling AI to process lifetime-scale information remains a long-standing pursuit in the field. Due to the constraints of full-attention architectures, the effective context length of large language models (LLMs) is typically limited to 1M tokens. Existing approaches, such as hybrid linear attention, fixed-size memory states (e.g., RNNs), and external storage methods like RAG or agent systems, attempt to extend this limit. However, they often suffer from severe precision degradation and rapidly increasing latency as context length grows, an inability to dynamically modify memory content, or a lack of end-to-end optimization. These bottlenecks impede complex scenarios like large-corpus summarization, Digital Twins, and long-history agent reasoning, while limiting memory capacity and slowing inference. We present Memory Sparse Attention (MSA), an end-to-end trainable, efficient, and massively scalable memory model framework. Through core innovations including scalable sparse attention and document-wise RoPE, MSA achieves linear complexity in both training and inference while maintaining exceptional stability, exhibiting less than 9% degradation when scaling from 16K to 100M tokens. Furthermore, KV cache compression, combined with Memory Parallel, enables 100M-token inference on 2xA800 GPUs. We also propose Memory Interleaving to facilitate complex multi-hop reasoning across scattered memory segments. MSA significantly surpasses frontier LLMs, state-of-the-art RAG systems, and leading memory agents in long-context benchmarks. These results demonstrate that by decoupling memory capacity from reasoning, MSA provides a scalable foundation to endow general-purpose models with intrinsic, lifetime-scale memory.",
+      "identifiers": [
+        "SemanticScholar:51c0861aebcc7042be27d64da9a08f3b939875d5"
+      ],
+      "semantic_scholar_id": "51c0861aebcc7042be27d64da9a08f3b939875d5",
+      "canonical_id": "arXiv:2603.23516",
+      "arxiv_id": "2603.23516",
+      "doi": "10.48550/arXiv.2603.23516",
+      "authors": [
+        "Yu Chen",
+        "Run Chen",
+        "Shengwei Yi",
+        "Xinda Zhao",
+        "Xiao-Hong Li",
+        "Jian-Jin Zhang",
+        "Jun Sun",
+        "Chuan-Rui Hu",
+        "Yun-Yun Han",
+        "L. Bing",
+        "Ya-Feng Deng",
+        "Tian-Qi Chen"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 265,
+        "matched_prestigious_venue": null
+      },
+      "reason": "フル注意の文脈長制約に対し、エンドツーエンドで学習可能なメモリ疎注意MSAで1億トークン規模までのメモリモデル拡張を実現し、長文脈推論の精度劣化とレイテンシ増大を抑える注意・メモリ機構そのものの提案でありLLM推論への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HealthServe: A Public Health-Aware Inference Framework",
+      "source_url": "https://doi.org/10.1145/3805638",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "Proceedings of the ACM on Measurement and Analysis of Computing Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference consumes substantial datacenter energy and produces both carbon emissions and criteria pollutants (PM2.5, SO2, NOx). These criteria pollutants impact public health depending on the meteorological conditions of emission regions and population exposure. We apply health impact assessment to LLM inference, a use case of growing concern due to its rapidly rising energy consumption, and characterize health impacts from datacenter energy consumption as quantifiable health cost metrics. We then present HealthServe, a systems-level framework for health-aware LLM inference serving, which jointly minimizes carbon emissions and health costs across geo-distributed GPU clusters while meeting latency SLOs. HealthServe employs a hierarchical scheduling architecture with Social Cognitive Optimization (SCO) that maintains condition-indexed decision libraries for configuration reuse under recurring operating conditions. Evaluation on a heterogeneous GPU cluster across different U.S. datacenter locations demonstrates over 50% carbon footprint and over 25% health cost reductions over the state-of-the-art energy-aware LLM inference serving solutions. Additionally, we show that HealthServe can be augmented with existing carbon-aware serving approaches to provide additive sustainability benefits.",
+      "identifiers": [
+        "SemanticScholar:88fce822c3c3f93cb9a6abab39da8c60bd5e3f6f"
+      ],
+      "semantic_scholar_id": "88fce822c3c3f93cb9a6abab39da8c60bd5e3f6f",
+      "doi": "10.1145/3805638",
+      "canonical_id": "DOI:10.1145/3805638",
+      "authors": [
+        "Sicheng Zhou",
+        "Rohan Basu Roy"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 181,
+        "matched_prestigious_venue": null
+      },
+      "reason": "地理分散GPUクラスタ上で炭素排出と公衆衛生コストをレイテンシSLO制約のもと共同最小化する階層スケジューリングを持つLLM推論サービングフレームワークHealthServeであり、サービング基盤への直接のシステム貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fast Polynomial Transcendentals for LLMs",
+      "source_url": "https://arxiv.org/abs/2610.00049",
+      "year": 2026,
+      "published": "2026-09-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Graphics processing unit (GPU) generations scale matrix, special-function, and memory pipelines at different rates, so kernel bottlenecks move as hardware evolves. FlashAttention-4 exposed this imbalance inside attention on NVIDIA Blackwell. We test whether short polynomial programs can accelerate other special-function-unit (SFU) operations in large language models (LLMs). We first compare native PyTorch evaluation with packed fused multiply--add (FMA) programs in an isolated IEEE binary16 (FP16) sweep spanning L2-resident and high-bandwidth-memory (HBM)-resident working sets. We then replace native sigmoid, tanh, and sigmoid linear unit (SiLU) with degree-3 or degree-4 bfloat16 (BF16) programs in four GB200 integration tasks: dense SiLU, tanh-softcapped attention, sigmoid attention, and routed-expert Swish-gated linear unit (SwiGLU). The programs combine analytical symmetry, target-format rounding, and packed arithmetic inside consuming kernels. The isolated paths improve by 1.19--2.19x in L2 and 1.00--1.70x in HBM. The dense-SiLU, tanh-softcapped-attention, and routed-expert substitutions improve complete training-step throughput by 2.7\\%, 2.9\\%, and 8.0\\%, respectively. The sigmoid-attention substitution improves complete-attention forward by 7.4\\% and the complete GPU step by 0.3\\%. Same-checkpoint open-weight ablations and one paired pre-training comparison per task extend the evaluation to model behavior. At common horizons near 100 billion tokens, the final smoothed training-loss differences (polynomial minus native) range from $-0.107$ to $+0.079$ across the four tasks.",
+      "identifiers": [
+        "SemanticScholar:d47aac19ee693d4cedc6f63d7058499b2700a9a4"
+      ],
+      "semantic_scholar_id": "d47aac19ee693d4cedc6f63d7058499b2700a9a4",
+      "canonical_id": "arXiv:2610.00049",
+      "arxiv_id": "2610.00049",
+      "authors": [
+        "Robert Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 84,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Blackwell世代GPUでFlashAttention-4が露呈させた特殊関数ユニットのボトルネックに対し、sigmoidやtanh、SiLUを短い多項式プログラムで置換して注意やSwiGLUの消費カーネル内で高速化しGB200上の統合タスクで実測した、LLM推論カーネルへの直接の貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4406650f33cf",
+    "round": "libimp-4406650f33cfda69-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4406650f33cfda69-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4406650f33cfda69-pre01.json",
+    "receipt": "sha256:5b5778e25713c8f4046cdcec9534917ae5f1537832ad0d0ef1636c366cb773c1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4406650f33cf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

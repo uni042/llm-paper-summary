@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Scaling LLM Inference Efficiently with Optimized Sample Compute Allocation",
+      "source_url": "https://doi.org/10.18653/v1/2025.naacl-long.404",
+      "year": 2025,
+      "published": null,
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sampling is a basic operation for large language models (LLMs). In reinforcement learning rollouts and meta generation algorithms such as Best-of-N, it is essential to sample high-quality trajectories efficiently within a given compute budget. To find an optimal allocation for sample compute budgets, several choices need to be made: Which sampling configurations (model, temperature, language, etc.) to use? How many samples to generate in each configuration? We formulate these choices as a learning problem and propose O SCA , an algorithm that Optimizes Sample Compute Allocation by finding an optimal mix of different inference configurations. Our experiments show that with our learned mixed allocation, we can achieve accuracy better than the best single configuration with 128x less compute on code generation and 25x less compute on 4 reasoning tasks. O SCA is also shown to be effective in agentic workflows beyond single-turn tasks, achieving a better accuracy on SWE-Bench with 3x less compute than the default configuration. Our code and generations are released at https://github.com/LeiLiLab/OSCA .",
+      "identifiers": [
+        "SemanticScholar:7f7044690c5bd3419e32d2ea63c3b39d28e25c8c"
+      ],
+      "semantic_scholar_id": "7f7044690c5bd3419e32d2ea63c3b39d28e25c8c",
+      "doi": "10.18653/v1/2025.naacl-long.404",
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.404",
+      "authors": [
+        "Kexun Zhang",
+        "Shang Zhou",
+        "Dan-Qing Wang",
+        "W. Wang",
+        "Lei Li"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 513,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "OSCAはBest-of-NやRLロールアウトにおけるサンプル計算予算を、モデルや温度等の推論設定の混合配分として学習し最適化する。推論時計算配分というLLM推論運用への直接の貢献が確認できる",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DeepReShape: Redesigning Neural Networks for Efficient Private Inference",
+      "source_url": "https://arxiv.org/abs/2304.10593",
+      "year": 2023,
+      "published": "2023-04-20",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prior work on Private Inference (PI) -- inferences performed directly on encrypted input -- has focused on minimizing a network's ReLUs, which have been assumed to dominate PI latency rather than FLOPs. Recent work has shown that FLOPs for PI can no longer be ignored and incur high latency penalties. In this paper, we develop DeepReShape, a technique that optimizes neural network architectures under PI's constraints, optimizing for both ReLUs and FLOPs for the first time. The key insight is strategically allocating channels to position the network's ReLUs in order of their criticality to network accuracy, simultaneously optimizes ReLU and FLOPs efficiency. DeepReShape automates network development with an efficient process, and we call generated networks HybReNets. We evaluate DeepReShape using standard PI benchmarks and demonstrate a 2.1% accuracy gain with a 5.2$\\times$ runtime improvement at iso-ReLU on CIFAR-100 and an 8.7$\\times$ runtime improvement at iso-accuracy on TinyImageNet. Furthermore, we investigate the significance of network selection in prior ReLU optimizations and shed light on the key network attributes for superior PI performance.",
+      "identifiers": [
+        "SemanticScholar:ec6405ad32353640159fc7daa37128ab3ba92cd0"
+      ],
+      "semantic_scholar_id": "ec6405ad32353640159fc7daa37128ab3ba92cd0",
+      "canonical_id": "arXiv:2304.10593",
+      "arxiv_id": "2304.10593",
+      "doi": "10.48550/arXiv.2304.10593",
+      "authors": [
+        "Nandan Kumar Jha",
+        "Brandon Reagen"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1316,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DeepReShapeは暗号化入力に対するプライベート推論の制約下でReLU数とFLOPsを同時に最適化するようネットワークを再設計し、推論ランタイムを5.2倍改善する。プライベート推論への直接の貢献が確認できる",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20454976ac83",
+    "round": "libimp-20454976ac836aac-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-20454976ac836aac-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-20454976ac836aac-pre01.json",
+    "receipt": "sha256:73545a6e69379ab5e1fd4e26e5a4fe4e86794215777cb6d05b43afef70c65bfa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20454976ac83",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

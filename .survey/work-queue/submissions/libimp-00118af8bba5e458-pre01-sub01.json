@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "INAR-VL: Input-Aware Routing for Edge–Cloud Vision–Language Inference",
+      "source_url": "https://arxiv.org/abs/2605.18853",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "MobiSys Workshops",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Edge deployment of Vision-Language Models (VLMs) faces a tradeoff between latency and accuracy: cloud execution provides high-quality predictions but incurs communication delay and energy cost, while edge-only execution is faster but less accurate due to limited model capacity. This tradeoff is further complicated by heterogeneity in image quality and reasoning complexity, making static placement suboptimal. We present INAR-VL, a lightweight edge-cloud routing system for multimodal inference in a two-tier deployment. INAR-VL maintains complementary VLMs across edge and cloud and uses lightweight image and text complexity signals to guide routing and model selection, executing simple queries locally while offloading complex ones when beneficial. Evaluation on visual question answering shows that INAR-VL executes 36% of requests on the edge, reduces latency by 24%, lowers energy by 26%, and preserves 97% of cloud-level accuracy.",
+      "identifiers": [
+        "SemanticScholar:352ec5c9ad6a825b1b79eba7f7f5ec74cc54ed50"
+      ],
+      "semantic_scholar_id": "352ec5c9ad6a825b1b79eba7f7f5ec74cc54ed50",
+      "canonical_id": "arXiv:2605.18853",
+      "arxiv_id": "2605.18853",
+      "doi": "10.1145/3812836.3814782",
+      "authors": [
+        "Ahmed Šabanović",
+        "Paul Joe Maliakel",
+        "Ivona Brandić"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      },
+      "reason": "画像とテキストの複雑さ信号でエッジとクラウドの相補的VLMへ振り分ける入力適応ルーティングシステムINAR-VLを実装し、リクエストの36%をエッジで処理してレイテンシ24%・エネルギー26%削減と精度維持を実測した、分散推論への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-00118af8bba5",
+    "round": "libimp-00118af8bba5e458-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-00118af8bba5e458-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-00118af8bba5e458-pre01.json",
+    "receipt": "sha256:9a721a17af0f9b29f3fdc4ea56fb192fafe54c00c87a06742aea8299a7b7fcf5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-00118af8bba5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

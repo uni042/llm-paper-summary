@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OPTQ: A CCURATE P OST -T RAINING Q UANTIZATION FOR G ENERATIVE P RE - TRAINED T RANSFORMERS",
+      "source_url": "https://www.semanticscholar.org/paper/44041470bcc088789a6cf14d7121d34f77577e20",
+      "year": 2023,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:44041470bcc088789a6cf14d7121d34f77577e20"
+      ],
+      "semantic_scholar_id": "44041470bcc088789a6cf14d7121d34f77577e20",
+      "canonical_id": "SemanticScholar:44041470bcc088789a6cf14d7121d34f77577e20",
+      "authors": [
+        "Elias Frantar",
+        "T. Hoefler"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1244,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GPT系モデルの学習後量子化OPTQ（GPTQ）を提案し、重みを3〜4ビットへ圧縮しながら層ごとの誤差補正で精度を維持、A100で3.25倍・A6000で4.5倍の推論高速化を実測した、LLM推論のメモリと速度に直接効く量子化手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Supplementary Materials for AirCache: Activating Inter-modal Relevancy KV Cache Compression for Efficient Large Vision-Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/9e69dee950937279d6742dd2c7496e3bef4f8234",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:9e69dee950937279d6742dd2c7496e3bef4f8234"
+      ],
+      "semantic_scholar_id": "9e69dee950937279d6742dd2c7496e3bef4f8234",
+      "canonical_id": "SemanticScholar:9e69dee950937279d6742dd2c7496e3bef4f8234",
+      "authors": [
+        "Kai Huang",
+        "Hao Zou",
+        "Bo-Chen Wang",
+        "Ye Xi",
+        "Zhenlu Xie",
+        "Hao Wang",
+        "Alibaba Group"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "本編AirCacheの補足資料レコード。本編はLVLM推論のKVキャッシュ圧縮で、エリート観測ウィンドウと層別予算配分により視覚KVキャッシュを10%まで削減しデコード遅延を29〜66%短縮する、LLM推論システムへの直接の技術的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7d56cd3d8f35",
+    "round": "libimp-7d56cd3d8f350aa6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7d56cd3d8f350aa6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7d56cd3d8f350aa6-pre01.json",
+    "receipt": "sha256:e182f3cdc53a59ac9923567fd36b3469407b7bda646d722696e7aa47c9bb3653"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7d56cd3d8f35",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

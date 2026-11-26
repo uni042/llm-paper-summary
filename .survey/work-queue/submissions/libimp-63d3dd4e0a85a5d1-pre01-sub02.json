@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Factorized Context Attention: From Emulated to Native Grid Probing",
+      "source_url": "https://arxiv.org/abs/2611.32423",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Models read a book, an hour of video, or an image in one forward pass. As the context grows, this pass slows down, loses accuracy, and stops at the context window. Sparse attention is efficient, but keeps the other two limitations. Grid probing, a recent training-free method, recovers the accuracy and extends the reach by asking a frozen model the same question about short local and strided spans of the input, but every question repeats the whole computation, since each span is encoded again. Our insight is that grid probing is emulated attention, an attention pattern reproduced from outside the model through prompts, since each probe only restricts which part of the input the question can see. We introduce Factorized Context Attention (FCA), a training-free block-sparse attention that runs the same pattern natively, as the attention of the model itself. FCA encodes the input once into a KV cache, reads all spans as masked sequences in one batched forward, and uses a stair position schedule to keep every span inside the trained position range. Across long video understanding, long-context text inference and image grounding, FCA matches the accuracy and the reach of grid probing at a fraction of its cost. It gains about 10 points over the single pass on long video and 9 to 14 points on long novels, finds needles in videos of over a thousand frames and in texts four times the length of the window, and answers a later question about the same input in as little as a tenth of the time of grid probing. Native attention thus keeps what emulated attention gains without its cost, all with existing frozen language and vision-language models.",
+      "identifiers": [
+        "SemanticScholar:7ed200c105168460e30caf8d9ea086364c39fba0"
+      ],
+      "semantic_scholar_id": "7ed200c105168460e30caf8d9ea086364c39fba0",
+      "canonical_id": "arXiv:2611.32423",
+      "arxiv_id": "2611.32423",
+      "authors": [
+        "Mohamed Eltahir",
+        "Manar Eyad",
+        "Yara Alzahrani",
+        "Fatimah Albesher",
+        "Duaa M. Tahir",
+        "Tanveer Hussain",
+        "Naeemullah Khan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "プロンプト経由で再現されていたgrid probingを、入力を一度だけKVキャッシュへ符号化しマスク付きバッチforwardで実行する学習不要のブロック疎注意FCAとしてモデル内部へ実装し、長文脈推論で精度と到達範囲を保ちながらコストを大幅に下げる注意機構への直接貢献であるため対象とした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Breaking Routing And Inter-device Dependencies in Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2611.32572",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Mixture-of-Experts (MoE) models scale, Expert Parallelism (EP) becomes increasingly important for distributing experts across devices. However, the resulting token dispatch and combine operations can become a major bottleneck during inference. Overlapping these communication phases with computation is constrained by the sequential dependencies of standard MoE architectures. We introduce BRAID-MoE, an architecture that pairs laddered residual connections with early routing to relax these dependencies. Laddered residuals enable each expert combine to be deferred to the following block, while early routing computes the next routing decision from the pre-combine residual, with experts still receiving the updated post-combine hidden state. This creates an extended communication window in which the preceding combine and next dispatch can execute back-to-back on a dedicated communication stream, overlapping attention computation. On Qwen3-shaped MoEs with 0.4B-A0.1B and 2.5B-A0.5B parameters, BRAID closely matches sequential training at matched compute, with validation-loss increases of only 1% and 0.5%, respectively. We further demonstrate that existing MoE checkpoints can be adapted to BRAID with limited additional training, largely recovering their original accuracy. On a converted Qwen3-30B-A3B model, BRAID achieves speedups of up to 1.29$\\times$ in prefill and 1.37$\\times$ in decode, and at least 1.12$\\times$ across diverse workloads and EP configurations on one or two four-H100 nodes. It outperforms competing overlap strategies in all tested settings, with the strongest gains when communication is a major latency bottleneck and its duration approaches the available computation window. These results demonstrate that early routing enables more effective communication-computation overlap in MoE inference at a modest cost in model quality.",
+      "identifiers": [
+        "SemanticScholar:07030257fe8c8593ae101300fae1c7c7c39bede4"
+      ],
+      "semantic_scholar_id": "07030257fe8c8593ae101300fae1c7c7c39bede4",
+      "canonical_id": "arXiv:2611.32572",
+      "arxiv_id": "2611.32572",
+      "authors": [
+        "J. Zarka",
+        "Danyal Ahmed",
+        "Eugene Belilovsky",
+        "Edouard Oyallon"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "laddered residualとearly routingでMoEのdispatch/combineの逐次依存を緩め、通信を専用ストリームで注意計算と重ねるBRAID-MoEにより、変換したQwen3-30B-A3Bでprefill最大1.29倍・decode最大1.37倍の推論高速化を一次要旨で示す、MoE推論の通信・計算重なりへの直接貢献であるため対象とした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HiCal: Offline Calibration for Hierarchical Scale Encoding in Accurate HiF4 Quantization",
+      "source_url": "https://arxiv.org/abs/2611.32624",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block floating-point (BFP) quantization is widely adopted for efficient low-bit large language model (LLM) inference, where the choice of block scales plays a critical role in quantization accuracy. HiFloat4 (HiF4) employs a hierarchical scale encoding scheme consisting of a global E6M2 scale and two levels of binary scale extensions. However, its conventional rounding rule and fixed scale extension thresholds may not fully capture the statistical characteristics of the quantized tensors in practice, leading to suboptimal scale representations. In this work, we propose HiCal, an offline calibration approach that improves HiF4 quantization accuracy by refining the encoding decisions across all three scale levels. Specifically, we introduce a calibrated rounding bias for the Level-1 E6M2 scale and optimize the scale-extension thresholds at Levels 2 and 3 based on the empirical distributions of local group magnitudes. The resulting calibration parameters are determined offline and remain fixed during inference, while the hierarchical encoding continues to adapt to individual blocks through their local values. This design eliminates the need for per-block multi-candidate scale search while preserving the original deterministic HiF4 encoding procedure. Experiments across five synthetic and real activation distributions show that the proposed method reduces quantization MSE by 9.91%-23.50% relative to the original HiF4 scheme, including a 13.00% reduction on real Qwen3-8B activations. End-to-end evaluations across six benchmarks further show average-score improvements of 0.91 and 1.25 percentage points on Qwen3-8B and Qwen3-30B-A3B, respectively, without per-block multi-candidate search during inference.",
+      "identifiers": [
+        "SemanticScholar:79da039b2ab2192b0baa869dfd590e120f3d8a72"
+      ],
+      "semantic_scholar_id": "79da039b2ab2192b0baa869dfd590e120f3d8a72",
+      "canonical_id": "arXiv:2611.32624",
+      "arxiv_id": "2611.32624",
+      "authors": [
+        "Zhi-Yuan Zhang",
+        "Yan-Zhao Li",
+        "Hui-Lin Dong",
+        "Si-Fan Cheng",
+        "Min-Gen Zheng",
+        "Hui Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HiFloat4の階層スケール符号化について、Level-1の丸めバイアスとLevel-2/3の拡張閾値を実分布でオフライン較正するHiCalにより量子化MSEを最大23.5％削減し、推論時のブロックごと探索なしで精度を上げる、低ビットLLM推論向け量子化への直接貢献であるため対象とした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ModelLess: A Serverless System for Multi-Tier LLM Inference on Shared GPUs",
+      "source_url": "https://arxiv.org/abs/2611.32634",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference platforms sell online, asynchronous, batch and rollout products on GPUs provisioned per product, so a service's cards sit idle between bursts while other work waits. We present ModelLess, a serverless system for LLM inference. Users declare model services and the platform owns the instances. An idle service scales to zero: its instances go to sleep with their weights in host memory (release about 1 s, wake about 4 s for GLM-5.2 at TP8, against a cold start of over four minutes). Billing follows the time a service holds GPUs. The GPUs that sleeping instances free are lent to lower tiers. Cluster managers preempt low-priority tasks and treat eviction as all-or-nothing, but an LLM instance's eviction cost depends on which of its weights, execution state, KV cache and in-flight requests survive. ModelLess therefore gives each tier (online, job, flex) eviction semantics that state what it may lose when preempted, and runs a preemption protocol that closes admission before it releases memory, re-enqueues a request durably before it aborts it, and fails closed. Four components (entry, dispatcher, node agent, SGLang plugin) enforce it with sleep/wake, pause/resume of in-flight requests for flex, and a weight-copy path (follow/seal) for RL rollout. Replaying a week of traces from 1,100 H20 cards serving long-tail online models shows that about 38% of GPU-time (417 equivalent GPUs) could be lent under a coarse latency target with one fixed idle threshold. This is an idealized upper bound, and it holds only if recovery takes seconds: with a 240 s cold start under 8% remains even with per-service thresholds. On one node, a single four-hour run per policy shows that pausing yields 22% more borrower tokens per held GPU sample than abort-and-requeue, with the same median online latency. The job tier and follow/seal are not yet evaluated end to end.",
+      "identifiers": [
+        "SemanticScholar:c53c7037cc0042f8b4d087f9e83cfeba7ee93bc4"
+      ],
+      "semantic_scholar_id": "c53c7037cc0042f8b4d087f9e83cfeba7ee93bc4",
+      "canonical_id": "arXiv:2611.32634",
+      "arxiv_id": "2611.32634",
+      "authors": [
+        "Ding Shi",
+        "Wei Wu",
+        "Jia-Yuan Chen",
+        "Cheng-Hu Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "オンライン・バッチ等の階層ごとにプリエンプション時の喪失範囲を定義し、スリープ／ウェイクでアイドルGPUを下位階層へ貸し出すサーバーレスLLM推論基盤ModelLessをSGLangプラグイン等で実装し、実トレース再生で貸出可能GPU時間を示す直接のシステム貢献であるため対象とした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MXFP4 for LLM Inference: Complementary Post-Training Quantization Techniques and Their Interactions",
+      "source_url": "https://arxiv.org/abs/2611.32873",
+      "year": 2026,
+      "published": "2026-11-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in low-precision representation have introduced several microscaling numerical formats for LLM quantization. By sharing a scale factor across groups of 16 or 32 elements, these formats enable aggressive low-precision quantization with minimal accuracy degradation, particularly when combined with modern PTQ algorithms. Their accuracy depends on how the numerical format interacts with rotation, PTQ, and scale selection. We study the composability of PTQ configurations across six LLMs and three microscaling formats: MXFP6, MXFP4, and NVFP4, systematically varying Hadamard rotation granularity, PTQ algorithm, and scale-selection strategy. Our central finding is that effective quantization recipes are format dependent: both MXFP4 and NVFP4 support accurate 4-bit inference, but techniques that benefit one do not necessarily transfer to the other. MXFP4 benefits substantially from rotation and error-correcting PTQ, whereas NVFP4 gains less from rotation, consistent with its finer-grained scales capturing more within-block variation. Building on these findings, we introduce Midmax, a calibration-free scale-selection strategy that mitigates clipping error in power-of-two block scales and improves accuracy across a majority of the evaluated MXFP4 configurations. We show that pairing MXFP6 activations with MXFP4 weights recovers most of the accuracy lost at 4-bit and, on Llama-3.1-8B, matches or exceeds our in-house BF16 baseline. An additional study finds that augmenting MXFP4 with a per-tensor macroscale, a mechanism intrinsic to NVFP4, does not improve average accuracy, suggesting that global rescaling alone does not address the limitations of E8M0 block scales for MXFP4 quantization. Together, these results provide practical guidance for combining numerical formats, rotation, PTQ, and scale selection for accurate low-precision LLM inference.",
+      "identifiers": [
+        "SemanticScholar:f1de2319debe6d696f2e946a378a06f7677ce92d"
+      ],
+      "semantic_scholar_id": "f1de2319debe6d696f2e946a378a06f7677ce92d",
+      "canonical_id": "arXiv:2611.32873",
+      "arxiv_id": "2611.32873",
+      "authors": [
+        "Natalia Frumkin",
+        "Alireza Khodamoradi",
+        "K. Denolf",
+        "Eric Dellinger",
+        "S. Biles"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MXFP6・MXFP4・NVFP4のマイクロスケーリング形式とHadamard回転・PTQ手法・スケール選択の相互作用を6モデルで系統的に検証し、校正不要のスケール選択Midmaxを提案して4ビット推論の精度指針を一次要旨で具体的に示す、推論向け量子化への直接貢献であるため対象とした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-63d3dd4e0a85",
+    "round": "libimp-63d3dd4e0a85a5d1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 15,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-63d3dd4e0a85a5d1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-63d3dd4e0a85a5d1-pre01.json",
+    "receipt": "sha256:8bd0afe72070f8e00486615543f430c1c1bf4ef8e59773bc29c1f5988d20fdd0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-63d3dd4e0a85",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
