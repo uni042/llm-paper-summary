@@ -1,0 +1,45 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261127-latest-b01",
+ "reference_main_sha": "b90f0c2be37124d956aa52e20a2f91c90e8ef3e0",
+ "record_count": 2,
+ "origin": "discovery_latest_search",
+ "records": [
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2611.34402",
+   "identity_tokens": [
+    "arXiv:2611.34402"
+   ],
+   "title": "Any-Rate: Half-Bit Multi-Precision LLM Quantization with Coded Bit-Planes",
+   "reason": "単一チェックポイントから先頭ビットの読み出しだけで2〜8ビット（2〜4ビット域は0.5ビット刻み）の複数精度を供給するネスト型重み量子化Any-Rateを提案し、8重みブロックへの拡張ハミング符号語によるビットプレーン制限と精度共有LUTで、オンデバイスLLM推論のメモリ・エネルギー予算変動への対応とデコード速度維持を要旨で具体的に示しているため対象内とする。",
+   "source_url": "https://arxiv.org/abs/2611.34402",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:25:00+09:00",
+   "last_checked_at": "2026-11-27T07:25:00+09:00",
+   "linked_from": [
+    "arxiv_api_latest_search"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2611.31089",
+   "identity_tokens": [
+    "arXiv:2611.31089"
+   ],
+   "title": "Orthogonally Mixed Sign Coding with Progressive Residual Refinement for Transformer Weight Compression",
+   "reason": "ランダム直交混合で残差をガウス化し符号ベース再構成を多段に精緻化する学習不要のTransformer重み量子化・圧縮手法を提案し、Llama-3-8B等で低ビット時のperplexity劣化抑制とストレージ・実行時トレードオフを要旨で示しており、推論向け重み圧縮への直接貢献が確認できるため対象内とする。",
+   "source_url": "https://arxiv.org/abs/2611.31089",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-27T07:25:00+09:00",
+   "last_checked_at": "2026-11-27T07:25:00+09:00",
+   "linked_from": [
+    "arxiv_api_latest_search"
+   ],
+   "origin": "discovery_latest_search"
+  }
+ ]
+}
