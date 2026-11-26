@@ -1,0 +1,153 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-439f8bd206723935-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-439f8bd20672",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2608.28008"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e1a6403b1087077aea08a27132ebd66497bd72de",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T12:14:04.517036+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2608.28008",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Visual Token Coding for Video Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2608.28008",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose a new token compression paradigm for video Multimodal Large Language Models (MLLMs), termed Visual Token Coding ($VTC$). Inspired by classical video coding principles, e.g., HEVC, VTC performs structured compression by predicting the I/P frames of a video and measuring their frame-wise residuals to estimate token redundancy. Based on this base paradigm, we further extend VTC with a set of dynamic budgeting designs towards more cost-effective token coding, termed $VTC_{dy}$. To validate VTC and $VTC_{dy}$, we apply them to three MLLMs and conduct experiments on a set of video understanding benchmarks. The experimental results show that as a base paradigm, VTC can achieve an average performance retention of 98.4% on Qwen3-VL under a 50% token compression ratio, and the enhanced $VTC_{dy}$ can further improve the retention to 100.3%, outperforming a set of compared methods. Moreover, as a plug-and-play design, VTC requires no additional tuning of MLLMs for token coding. Our code is given in the supplementary materials.",
+      "identifiers": [
+        "SemanticScholar:844fc4a1ca503c229149e988b6447391c72de01f"
+      ],
+      "semantic_scholar_id": "844fc4a1ca503c229149e988b6447391c72de01f",
+      "canonical_id": "arXiv:2608.28008",
+      "arxiv_id": "2608.28008",
+      "doi": "10.48550/arXiv.2608.28008",
+      "authors": [
+        "Chenxin Fang",
+        "Tao Chen",
+        "Junshuang You",
+        "Jun Peng",
+        "Yi-Yi Zhou",
+        "Rongrong Ji"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 90,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.28008",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.28008",
+        "id:SemanticScholar:844fc4a1ca503c229149e988b6447391c72de01f",
+        "id:arXiv:2608.28008",
+        "title:visual token coding for video multimodal large language models",
+        "url:https://arxiv.org/abs/2608.28008"
+      ],
+      "record": {
+        "title": "Visual Token Coding for Video Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2608.28008",
+        "year": 2026,
+        "published": "2026-08-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we propose a new token compression paradigm for video Multimodal Large Language Models (MLLMs), termed Visual Token Coding ($VTC$). Inspired by classical video coding principles, e.g., HEVC, VTC performs structured compression by predicting the I/P frames of a video and measuring their frame-wise residuals to estimate token redundancy. Based on this base paradigm, we further extend VTC with a set of dynamic budgeting designs towards more cost-effective token coding, termed $VTC_{dy}$. To validate VTC and $VTC_{dy}$, we apply them to three MLLMs and conduct experiments on a set of video understanding benchmarks. The experimental results show that as a base paradigm, VTC can achieve an average performance retention of 98.4% on Qwen3-VL under a 50% token compression ratio, and the enhanced $VTC_{dy}$ can further improve the retention to 100.3%, outperforming a set of compared methods. Moreover, as a plug-and-play design, VTC requires no additional tuning of MLLMs for token coding. Our code is given in the supplementary materials.",
+        "identifiers": [
+          "SemanticScholar:844fc4a1ca503c229149e988b6447391c72de01f"
+        ],
+        "semantic_scholar_id": "844fc4a1ca503c229149e988b6447391c72de01f",
+        "canonical_id": "arXiv:2608.28008",
+        "arxiv_id": "2608.28008",
+        "doi": "10.48550/arXiv.2608.28008",
+        "authors": [
+          "Chenxin Fang",
+          "Tao Chen",
+          "Junshuang You",
+          "Jun Peng",
+          "Yi-Yi Zhou",
+          "Rongrong Ji"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 90,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d203bafff867420c59f9dcf6be533d754b33e5e3ff13dcf438c74d28fe4e5ddb",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

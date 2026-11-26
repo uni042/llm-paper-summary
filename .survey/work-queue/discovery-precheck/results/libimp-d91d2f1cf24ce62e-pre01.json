@@ -1,0 +1,405 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d91d2f1cf24ce62e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d91d2f1cf24c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/s13389-024-00365-1",
+    "DOI:10.1109/ikt69652.2025.11626766",
+    "SemanticScholar:1381d98cc45de9475ebab2ba83a69eb810b2cc16",
+    "SemanticScholar:90126e2e4684781200b8a0965e34fae6c9a09128",
+    "SemanticScholar:eab8a215a82ad635c5ef61daf1d87af1fe9bceaf"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e1a6403b1087077aea08a27132ebd66497bd72de",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T12:14:10.859712+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/s13389-024-00365-1",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ikt69652.2025.11626766",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:1381d98cc45de9475ebab2ba83a69eb810b2cc16",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:tcmserve modalityaware scheduling for multimodal large language model inference"
+    },
+    {
+      "requested_id": "SemanticScholar:90126e2e4684781200b8a0965e34fae6c9a09128",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Design of Low-Latency Floating-Point Units for Softmax Computation in Transformer-Based Large Language Models",
+      "source_url": "https://doi.org/10.1109/IKT69652.2025.11626766",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "Conference on Information and Knowledge Technology",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have emerged as one of the most desirable and widely used interactive digital tools in the world in the last decade. Softmax is one of the key steps in LLMs where the output is a vector of probabilities for each token in the model dictionary. The softmax computation is time-consuming due to the large vocabulary size, which can significantly increase the exponential computations and normalization, impacting the overall speed of the model. Given the importance of accuracy and speed, some of the main operations and computations of softmax are performed on the floating-point units. Speculative computations are considered when the result of the computations can be estimated from a path shorter than the critical path, with improved speedup. In this paper, speculative 32-bit floating-point computation is proposed by merging two formats, 32-bit and 16-bit, for softmax computations. Both the floating-point adder and the floating-point multiplier use this strategy. The proposed design, based on the input data of the softmax function, speculates that the 32-bit floating-point computations can be obtained by concatenating the result of 16-bit format and a part of the 32-bit format result, that gives a correct result most of the time with less delay. If speculation is unsuccessful, the critical path through the conventional 32-bit floating-point unit is activated at the cost of a slightly longer critical path. Experimental results show that speculative floating-point units lead to a reduction in delay with only marginal overhead in area and power consumption.",
+      "identifiers": [
+        "SemanticScholar:52bb36374cb97104c8c0e18788d833b57bc0ee88"
+      ],
+      "semantic_scholar_id": "52bb36374cb97104c8c0e18788d833b57bc0ee88",
+      "doi": "10.1109/IKT69652.2025.11626766",
+      "canonical_id": "DOI:10.1109/IKT69652.2025.11626766",
+      "authors": [
+        "Hoda Ghabeli",
+        "A. Molahosseini"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 360,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MLFormer: a high performance MPC linear inference framework for transformers",
+      "source_url": "https://doi.org/10.1007/s13389-024-00365-1",
+      "year": 2024,
+      "published": "2024-11-19",
+      "venue": "Journal of Cryptographic Engineering",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:cb5636f64e49438ad103c2205303cb3b5c25a6b7"
+      ],
+      "semantic_scholar_id": "cb5636f64e49438ad103c2205303cb3b5c25a6b7",
+      "doi": "10.1007/s13389-024-00365-1",
+      "canonical_id": "DOI:10.1007/s13389-024-00365-1",
+      "authors": [
+        "Siqi Liu",
+        "Zhu-Sen Liu",
+        "Dong-Long Chen",
+        "Wang-Chen Dai",
+        "Lu Zhou",
+        "Zhe Liu",
+        "Ray C. C. Cheung",
+        "Ç. Koç"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 737,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Faster Lookup Table Evaluation with Application to Secure LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/90126e2e4684781200b8a0965e34fae6c9a09128",
+      "year": 2024,
+      "published": null,
+      "venue": "IACR Cryptology ePrint Archive",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:90126e2e4684781200b8a0965e34fae6c9a09128"
+      ],
+      "semantic_scholar_id": "90126e2e4684781200b8a0965e34fae6c9a09128",
+      "canonical_id": "SemanticScholar:90126e2e4684781200b8a0965e34fae6c9a09128",
+      "authors": [
+        "Xiaoyang Hou",
+        "Jian Liu",
+        "Jing-Yu Li",
+        "Jia-Wen Zhang",
+        "Kui Ren"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 878,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VLM-PTQ: Efficient Post-Training Quantization for Large Vision-Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+      "year": 2026,
+      "published": null,
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:eab8a215a82ad635c5ef61daf1d87af1fe9bceaf"
+      ],
+      "semantic_scholar_id": "eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+      "canonical_id": "SemanticScholar:eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+      "authors": [
+        "Juncan Deng",
+        "Ke-Jie Huang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/ikt69652.2025.11626766",
+      "identity_tokens": [
+        "id:DOI:10.1109/ikt69652.2025.11626766",
+        "id:SemanticScholar:52bb36374cb97104c8c0e18788d833b57bc0ee88",
+        "title:design of lowlatency floatingpoint units for softmax computation in transformerbased large language models",
+        "url:https://doi.org/10.1109/IKT69652.2025.11626766"
+      ],
+      "record": {
+        "title": "Design of Low-Latency Floating-Point Units for Softmax Computation in Transformer-Based Large Language Models",
+        "source_url": "https://doi.org/10.1109/IKT69652.2025.11626766",
+        "year": 2025,
+        "published": "2025-12-01",
+        "venue": "Conference on Information and Knowledge Technology",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have emerged as one of the most desirable and widely used interactive digital tools in the world in the last decade. Softmax is one of the key steps in LLMs where the output is a vector of probabilities for each token in the model dictionary. The softmax computation is time-consuming due to the large vocabulary size, which can significantly increase the exponential computations and normalization, impacting the overall speed of the model. Given the importance of accuracy and speed, some of the main operations and computations of softmax are performed on the floating-point units. Speculative computations are considered when the result of the computations can be estimated from a path shorter than the critical path, with improved speedup. In this paper, speculative 32-bit floating-point computation is proposed by merging two formats, 32-bit and 16-bit, for softmax computations. Both the floating-point adder and the floating-point multiplier use this strategy. The proposed design, based on the input data of the softmax function, speculates that the 32-bit floating-point computations can be obtained by concatenating the result of 16-bit format and a part of the 32-bit format result, that gives a correct result most of the time with less delay. If speculation is unsuccessful, the critical path through the conventional 32-bit floating-point unit is activated at the cost of a slightly longer critical path. Experimental results show that speculative floating-point units lead to a reduction in delay with only marginal overhead in area and power consumption.",
+        "identifiers": [
+          "SemanticScholar:52bb36374cb97104c8c0e18788d833b57bc0ee88"
+        ],
+        "semantic_scholar_id": "52bb36374cb97104c8c0e18788d833b57bc0ee88",
+        "doi": "10.1109/IKT69652.2025.11626766",
+        "canonical_id": "DOI:10.1109/IKT69652.2025.11626766",
+        "authors": [
+          "Hoda Ghabeli",
+          "A. Molahosseini"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 360,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s13389-024-00365-1",
+      "identity_tokens": [
+        "id:DOI:10.1007/s13389-024-00365-1",
+        "id:SemanticScholar:cb5636f64e49438ad103c2205303cb3b5c25a6b7",
+        "title:mlformer a high performance mpc linear inference framework for transformers",
+        "url:https://doi.org/10.1007/s13389-024-00365-1"
+      ],
+      "record": {
+        "title": "MLFormer: a high performance MPC linear inference framework for transformers",
+        "source_url": "https://doi.org/10.1007/s13389-024-00365-1",
+        "year": 2024,
+        "published": "2024-11-19",
+        "venue": "Journal of Cryptographic Engineering",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:cb5636f64e49438ad103c2205303cb3b5c25a6b7"
+        ],
+        "semantic_scholar_id": "cb5636f64e49438ad103c2205303cb3b5c25a6b7",
+        "doi": "10.1007/s13389-024-00365-1",
+        "canonical_id": "DOI:10.1007/s13389-024-00365-1",
+        "authors": [
+          "Siqi Liu",
+          "Zhu-Sen Liu",
+          "Dong-Long Chen",
+          "Wang-Chen Dai",
+          "Lu Zhou",
+          "Zhe Liu",
+          "Ray C. C. Cheung",
+          "Ç. Koç"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 737,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:90126e2e4684781200b8a0965e34fae6c9a09128",
+      "identity_tokens": [
+        "id:SemanticScholar:90126e2e4684781200b8a0965e34fae6c9a09128",
+        "title:faster lookup table evaluation with application to secure llm inference",
+        "url:https://www.semanticscholar.org/paper/90126e2e4684781200b8a0965e34fae6c9a09128"
+      ],
+      "record": {
+        "title": "Faster Lookup Table Evaluation with Application to Secure LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/90126e2e4684781200b8a0965e34fae6c9a09128",
+        "year": 2024,
+        "published": null,
+        "venue": "IACR Cryptology ePrint Archive",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:90126e2e4684781200b8a0965e34fae6c9a09128"
+        ],
+        "semantic_scholar_id": "90126e2e4684781200b8a0965e34fae6c9a09128",
+        "canonical_id": "SemanticScholar:90126e2e4684781200b8a0965e34fae6c9a09128",
+        "authors": [
+          "Xiaoyang Hou",
+          "Jian Liu",
+          "Jing-Yu Li",
+          "Jia-Wen Zhang",
+          "Kui Ren"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 878,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+      "identity_tokens": [
+        "id:SemanticScholar:eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+        "title:vlmptq efficient posttraining quantization for large visionlanguage models",
+        "url:https://www.semanticscholar.org/paper/eab8a215a82ad635c5ef61daf1d87af1fe9bceaf"
+      ],
+      "record": {
+        "title": "VLM-PTQ: Efficient Post-Training Quantization for Large Vision-Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+        "year": 2026,
+        "published": null,
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:eab8a215a82ad635c5ef61daf1d87af1fe9bceaf"
+        ],
+        "semantic_scholar_id": "eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+        "canonical_id": "SemanticScholar:eab8a215a82ad635c5ef61daf1d87af1fe9bceaf",
+        "authors": [
+          "Juncan Deng",
+          "Ke-Jie Huang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 148,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:27f39ead68b21a5108d07a37c52714c618ce5238ebc1a6efeed41c4e19c6eba7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

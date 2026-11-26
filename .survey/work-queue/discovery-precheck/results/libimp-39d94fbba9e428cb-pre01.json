@@ -1,0 +1,245 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-39d94fbba9e428cb-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-39d94fbba9e4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.29302",
+    "arXiv:2611.20006"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e1a6403b1087077aea08a27132ebd66497bd72de",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T12:14:04.531621+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.29302",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.20006",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Compressing Onboard Language Models for Space Robots under a Behavioral-Fidelity Requirement",
+      "source_url": "https://arxiv.org/abs/2610.29302",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language models are being explored as the interface through which space robots interpret operator commands and select among verified skills. Running them onboard calls for low-bit compression, and flight use adds requirements that generic post-training quantization leaves implicit: a fixed memory budget and storage format, a static artifact under configuration control, and behavior close to the full-precision model validated on the ground. We treat compression as a ground-segment step and study QSelect, which composes one static low-bit model from compatible AWQ, GPTQ, and AutoRound checkpoints by assigning each linear module to one quantizer family and scoring every substitution at the final next-token distribution. The default fidelity mode needs no labels or tuned thresholds and accepts a substitution only when the forward KL divergence from the BF16 reference decreases; an optional target-adapted mode adds answer likelihood on a small labeled set. On DeepSeek-R1-Distill-Qwen-7B, Llama-3.1-8B, and Llama-3.2-3B at 3 and 4 bits, composed models reach lower mean held-out perplexity than every single-family model in all six settings, and the fidelity mode lowers perplexity and KL further. In a matched scaffold, final-output scoring gives lower held-out KL than representation-similarity scoring in all 12 paired runs. With labels from training or development splits of the evaluated task families, the target-adapted mode raises 3-bit pooled accuracy on the two Llama models by 4.3 and 4.5 points over the best single-family model. At 3 bits, unquantized embedding and output layers make up 43-46% of the packed artifact. All evaluations use general-domain benchmarks on a ground GPU; space-domain tasks and flight hardware are left to future work.",
+      "identifiers": [
+        "SemanticScholar:2d5e995e5f300792c6f7df0345dac24237e415ba"
+      ],
+      "semantic_scholar_id": "2d5e995e5f300792c6f7df0345dac24237e415ba",
+      "canonical_id": "arXiv:2610.29302",
+      "arxiv_id": "2610.29302",
+      "authors": [
+        "Jia-Yong Deng",
+        "Zi-Zhe Wang",
+        "Xin Lu",
+        "Yi Huang",
+        "Ze-Hao Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Glance, then Select: Evidence-Tempered Visual Token Selection for Extremely Compressed Multimodal LLMs",
+      "source_url": "https://arxiv.org/abs/2611.20006",
+      "year": 2026,
+      "published": "2026-11-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) encode a high-resolution image into thousands of visual tokens, which dominate the cost of the prefill stage. Visual token reduction removes most of these tokens, but two problems remain at extreme budgets. The vision encoder still processes every patch of the image, and the few surviving tokens often miss the small regions that hold the answer. In this paper, we propose Glance-ETD, a two-stage token reduction framework guided by a lightweight question-conditioned scorer. In the first stage, a glance encoder views the image at low resolution and re-encodes only the question-relevant regions at native resolution. In the second stage, Evidence-Tempered Diversity (ETD) selects the final tokens by combining diversity with the evidence predicted by the scorer, so that the kept tokens cover the scene and retain the answer. A single-rollout self-distillation recipe trains the MLLM with the glance encoder. With only 5% of the visual tokens, Glance-ETD retains 91.6% of the full-token performance of Qwen3.5-4B across fourteen benchmarks and outperforms the strongest prior method, LT-OPD, by 17.3 points and the same training recipe with DivPrune by 6.0. It also speeds up the time to first token on 4K images by 3.1x and generalizes to three other MLLMs and to high-resolution document benchmarks, with the largest gains on text-rich tasks.",
+      "identifiers": [
+        "SemanticScholar:b57d5dbb4e9c198e9e760cb105cff7bf8cc82297"
+      ],
+      "semantic_scholar_id": "b57d5dbb4e9c198e9e760cb105cff7bf8cc82297",
+      "canonical_id": "arXiv:2611.20006",
+      "arxiv_id": "2611.20006",
+      "authors": [
+        "Yuxuan Wang",
+        "Guang-Xiang Zhao",
+        "Yuxuan Tian",
+        "Ya-Hui Han",
+        "Xin-Yu Tan",
+        "Feiyu Wang",
+        "Zong-Wei Lv",
+        "Xiangzheng Zhang",
+        "Lin Sun",
+        "Tong Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.29302",
+      "identity_tokens": [
+        "id:SemanticScholar:2d5e995e5f300792c6f7df0345dac24237e415ba",
+        "id:arXiv:2610.29302",
+        "title:compressing onboard language models for space robots under a behavioralfidelity requirement",
+        "url:https://arxiv.org/abs/2610.29302"
+      ],
+      "record": {
+        "title": "Compressing Onboard Language Models for Space Robots under a Behavioral-Fidelity Requirement",
+        "source_url": "https://arxiv.org/abs/2610.29302",
+        "year": 2026,
+        "published": "2026-10-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Language models are being explored as the interface through which space robots interpret operator commands and select among verified skills. Running them onboard calls for low-bit compression, and flight use adds requirements that generic post-training quantization leaves implicit: a fixed memory budget and storage format, a static artifact under configuration control, and behavior close to the full-precision model validated on the ground. We treat compression as a ground-segment step and study QSelect, which composes one static low-bit model from compatible AWQ, GPTQ, and AutoRound checkpoints by assigning each linear module to one quantizer family and scoring every substitution at the final next-token distribution. The default fidelity mode needs no labels or tuned thresholds and accepts a substitution only when the forward KL divergence from the BF16 reference decreases; an optional target-adapted mode adds answer likelihood on a small labeled set. On DeepSeek-R1-Distill-Qwen-7B, Llama-3.1-8B, and Llama-3.2-3B at 3 and 4 bits, composed models reach lower mean held-out perplexity than every single-family model in all six settings, and the fidelity mode lowers perplexity and KL further. In a matched scaffold, final-output scoring gives lower held-out KL than representation-similarity scoring in all 12 paired runs. With labels from training or development splits of the evaluated task families, the target-adapted mode raises 3-bit pooled accuracy on the two Llama models by 4.3 and 4.5 points over the best single-family model. At 3 bits, unquantized embedding and output layers make up 43-46% of the packed artifact. All evaluations use general-domain benchmarks on a ground GPU; space-domain tasks and flight hardware are left to future work.",
+        "identifiers": [
+          "SemanticScholar:2d5e995e5f300792c6f7df0345dac24237e415ba"
+        ],
+        "semantic_scholar_id": "2d5e995e5f300792c6f7df0345dac24237e415ba",
+        "canonical_id": "arXiv:2610.29302",
+        "arxiv_id": "2610.29302",
+        "authors": [
+          "Jia-Yong Deng",
+          "Zi-Zhe Wang",
+          "Xin Lu",
+          "Yi Huang",
+          "Ze-Hao Jia"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.20006",
+      "identity_tokens": [
+        "id:SemanticScholar:b57d5dbb4e9c198e9e760cb105cff7bf8cc82297",
+        "id:arXiv:2611.20006",
+        "title:glance then select evidencetempered visual token selection for extremely compressed multimodal llms",
+        "url:https://arxiv.org/abs/2611.20006"
+      ],
+      "record": {
+        "title": "Glance, then Select: Evidence-Tempered Visual Token Selection for Extremely Compressed Multimodal LLMs",
+        "source_url": "https://arxiv.org/abs/2611.20006",
+        "year": 2026,
+        "published": "2026-11-15",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) encode a high-resolution image into thousands of visual tokens, which dominate the cost of the prefill stage. Visual token reduction removes most of these tokens, but two problems remain at extreme budgets. The vision encoder still processes every patch of the image, and the few surviving tokens often miss the small regions that hold the answer. In this paper, we propose Glance-ETD, a two-stage token reduction framework guided by a lightweight question-conditioned scorer. In the first stage, a glance encoder views the image at low resolution and re-encodes only the question-relevant regions at native resolution. In the second stage, Evidence-Tempered Diversity (ETD) selects the final tokens by combining diversity with the evidence predicted by the scorer, so that the kept tokens cover the scene and retain the answer. A single-rollout self-distillation recipe trains the MLLM with the glance encoder. With only 5% of the visual tokens, Glance-ETD retains 91.6% of the full-token performance of Qwen3.5-4B across fourteen benchmarks and outperforms the strongest prior method, LT-OPD, by 17.3 points and the same training recipe with DivPrune by 6.0. It also speeds up the time to first token on 4K images by 3.1x and generalizes to three other MLLMs and to high-resolution document benchmarks, with the largest gains on text-rich tasks.",
+        "identifiers": [
+          "SemanticScholar:b57d5dbb4e9c198e9e760cb105cff7bf8cc82297"
+        ],
+        "semantic_scholar_id": "b57d5dbb4e9c198e9e760cb105cff7bf8cc82297",
+        "canonical_id": "arXiv:2611.20006",
+        "arxiv_id": "2611.20006",
+        "authors": [
+          "Yuxuan Wang",
+          "Guang-Xiang Zhao",
+          "Yuxuan Tian",
+          "Ya-Hui Han",
+          "Xin-Yu Tan",
+          "Feiyu Wang",
+          "Zong-Wei Lv",
+          "Xiangzheng Zhang",
+          "Lin Sun",
+          "Tong Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 11,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0046f346e45996201aa61e8db9330abdcd35224e70794de745902ebd9d9baf75",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

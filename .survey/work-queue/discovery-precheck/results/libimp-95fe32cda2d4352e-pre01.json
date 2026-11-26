@@ -1,0 +1,247 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-95fe32cda2d4352e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-95fe32cda2d4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.13399",
+    "arXiv:2408.04413"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e1a6403b1087077aea08a27132ebd66497bd72de",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-26T12:14:18.212269+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.13399",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.04413",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Deeploy: Enabling Energy-Efficient Deployment of Small Language Models on Heterogeneous Microcontrollers",
+      "source_url": "https://arxiv.org/abs/2408.04413",
+      "year": 2024,
+      "published": "2024-08-08",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 40,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rise of embodied foundation models (EFMs), most notably small language models (SLMs), adapting Transformers for the edge applications has become a very active field of research. However, achieving the end-to-end deployment of SLMs on the microcontroller (MCU)-class chips without high-bandwidth off-chip main memory access is still an open challenge. In this article, we demonstrate high efficiency end-to-end SLM deployment on a multicore RISC-V (RV32) MCU augmented with ML instruction extensions and a hardware neural processing unit (NPU). To automate the exploration of the constrained, multidimensional memory versus computation tradeoffs involved in the aggressive SLM deployment on the heterogeneous (multicore+NPU) resources, we introduce Deeploy, a novel deep neural network (DNN) compiler, which generates highly optimized C code requiring minimal runtime support. We demonstrate that Deeploy generates the end-to-end code for executing SLMs, fully exploiting the RV32 cores’ instruction extensions and the NPU. We achieve leading-edge energy and throughput of $490 \\; \\mu $ J per token, at 340 token per second for an SLM trained on the TinyStories dataset, running for the first time on an MCU-class device without the external memory.",
+      "identifiers": [
+        "SemanticScholar:1b47527e8ab7f2de303151f9d5d62d6666913f90"
+      ],
+      "semantic_scholar_id": "1b47527e8ab7f2de303151f9d5d62d6666913f90",
+      "canonical_id": "arXiv:2408.04413",
+      "arxiv_id": "2408.04413",
+      "doi": "10.1109/TCAD.2024.3443718",
+      "authors": [
+        "Moritz Scherer",
+        "Luka Macan",
+        "V. J. Jung",
+        "Philip Wiese",
+        "Luca Bompani",
+        "A. Burrello",
+        "F. Conti",
+        "L. Benini"
+      ],
+      "priority": 40,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 40,
+        "citation_count": 40,
+        "total": 40,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 840,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VELO: A Vector Database-Assisted Cloud-Edge Collaborative LLM QoS Optimization Framework",
+      "source_url": "https://arxiv.org/abs/2406.13399",
+      "year": 2024,
+      "published": "2024-06-19",
+      "venue": "2024 IEEE International Conference on Web Services (ICWS)",
+      "citation_count": 30,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Large Language Model (LLM) has gained significant popularity and is extensively utilized across various domains. Most LLM deployments occur within cloud data centers, where they encounter substantial response delays and incur high costs, thereby impacting the Quality of Services (QoS) at the network edge. Leveraging vector database caching to store LLM request results at the edge can substantially mitigate response delays and cost associated with similar requests, which has been overlooked by previous research. Addressing these gaps, this paper introduces a novel Vector database-assisted cloud-Edge collaborative LLM QoS Optimization (VELO) framework. Firstly, we propose the VELO framework, which ingeniously employs vector database to cache the results of some LLM requests at the edge to reduce the response time of subsequent similar requests. Diverging from direct optimization of the LLM, our VELO framework does not necessitate altering the internal structure of LLM and is broadly applicable to diverse LLMs. Subsequently, building upon the VELO framework, we formulate the QoS optimization problem as a Markov Decision Process (MDP) and devise an algorithm grounded in Multi-Agent Reinforcement Learning (MARL) to decide whether to request the LLM in the cloud or directly return the results from the vector database at the edge. Moreover, to enhance request feature extraction and expedite training, we refine the policy network of MARL and integrate expert demonstrations. Finally, we implement the proposed algorithm within a real edge system. Experimental findings confirm that our VELO framework substantially enhances user satisfaction by concurrently diminishing delay and resource consumption for edge users utilizing LLMs.",
+      "identifiers": [
+        "SemanticScholar:29c67918f2a4dfd167e4d4b878defad093dd3824"
+      ],
+      "semantic_scholar_id": "29c67918f2a4dfd167e4d4b878defad093dd3824",
+      "canonical_id": "arXiv:2406.13399",
+      "arxiv_id": "2406.13399",
+      "doi": "10.1109/ICWS62655.2024.00105",
+      "authors": [
+        "Zhi Yao",
+        "Zhi-Qing Tang",
+        "Jiong Lou",
+        "Ping Shen",
+        "Wei-Jia Jia"
+      ],
+      "priority": 30,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 30,
+        "citation_count": 30,
+        "total": 30,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 890,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2408.04413",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2024.3443718",
+        "id:SemanticScholar:1b47527e8ab7f2de303151f9d5d62d6666913f90",
+        "id:arXiv:2408.04413",
+        "title:deeploy enabling energyefficient deployment of small language models on heterogeneous microcontrollers",
+        "url:https://arxiv.org/abs/2408.04413"
+      ],
+      "record": {
+        "title": "Deeploy: Enabling Energy-Efficient Deployment of Small Language Models on Heterogeneous Microcontrollers",
+        "source_url": "https://arxiv.org/abs/2408.04413",
+        "year": 2024,
+        "published": "2024-08-08",
+        "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+        "citation_count": 40,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rise of embodied foundation models (EFMs), most notably small language models (SLMs), adapting Transformers for the edge applications has become a very active field of research. However, achieving the end-to-end deployment of SLMs on the microcontroller (MCU)-class chips without high-bandwidth off-chip main memory access is still an open challenge. In this article, we demonstrate high efficiency end-to-end SLM deployment on a multicore RISC-V (RV32) MCU augmented with ML instruction extensions and a hardware neural processing unit (NPU). To automate the exploration of the constrained, multidimensional memory versus computation tradeoffs involved in the aggressive SLM deployment on the heterogeneous (multicore+NPU) resources, we introduce Deeploy, a novel deep neural network (DNN) compiler, which generates highly optimized C code requiring minimal runtime support. We demonstrate that Deeploy generates the end-to-end code for executing SLMs, fully exploiting the RV32 cores’ instruction extensions and the NPU. We achieve leading-edge energy and throughput of $490 \\; \\mu $ J per token, at 340 token per second for an SLM trained on the TinyStories dataset, running for the first time on an MCU-class device without the external memory.",
+        "identifiers": [
+          "SemanticScholar:1b47527e8ab7f2de303151f9d5d62d6666913f90"
+        ],
+        "semantic_scholar_id": "1b47527e8ab7f2de303151f9d5d62d6666913f90",
+        "canonical_id": "arXiv:2408.04413",
+        "arxiv_id": "2408.04413",
+        "doi": "10.1109/TCAD.2024.3443718",
+        "authors": [
+          "Moritz Scherer",
+          "Luka Macan",
+          "V. J. Jung",
+          "Philip Wiese",
+          "Luca Bompani",
+          "A. Burrello",
+          "F. Conti",
+          "L. Benini"
+        ],
+        "priority": 40,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 40,
+          "citation_count": 40,
+          "total": 40,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 840,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.13399",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws62655.2024.00105",
+        "id:SemanticScholar:29c67918f2a4dfd167e4d4b878defad093dd3824",
+        "id:arXiv:2406.13399",
+        "title:velo a vector databaseassisted cloudedge collaborative llm qos optimization framework",
+        "url:https://arxiv.org/abs/2406.13399"
+      ],
+      "record": {
+        "title": "VELO: A Vector Database-Assisted Cloud-Edge Collaborative LLM QoS Optimization Framework",
+        "source_url": "https://arxiv.org/abs/2406.13399",
+        "year": 2024,
+        "published": "2024-06-19",
+        "venue": "2024 IEEE International Conference on Web Services (ICWS)",
+        "citation_count": 30,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Large Language Model (LLM) has gained significant popularity and is extensively utilized across various domains. Most LLM deployments occur within cloud data centers, where they encounter substantial response delays and incur high costs, thereby impacting the Quality of Services (QoS) at the network edge. Leveraging vector database caching to store LLM request results at the edge can substantially mitigate response delays and cost associated with similar requests, which has been overlooked by previous research. Addressing these gaps, this paper introduces a novel Vector database-assisted cloud-Edge collaborative LLM QoS Optimization (VELO) framework. Firstly, we propose the VELO framework, which ingeniously employs vector database to cache the results of some LLM requests at the edge to reduce the response time of subsequent similar requests. Diverging from direct optimization of the LLM, our VELO framework does not necessitate altering the internal structure of LLM and is broadly applicable to diverse LLMs. Subsequently, building upon the VELO framework, we formulate the QoS optimization problem as a Markov Decision Process (MDP) and devise an algorithm grounded in Multi-Agent Reinforcement Learning (MARL) to decide whether to request the LLM in the cloud or directly return the results from the vector database at the edge. Moreover, to enhance request feature extraction and expedite training, we refine the policy network of MARL and integrate expert demonstrations. Finally, we implement the proposed algorithm within a real edge system. Experimental findings confirm that our VELO framework substantially enhances user satisfaction by concurrently diminishing delay and resource consumption for edge users utilizing LLMs.",
+        "identifiers": [
+          "SemanticScholar:29c67918f2a4dfd167e4d4b878defad093dd3824"
+        ],
+        "semantic_scholar_id": "29c67918f2a4dfd167e4d4b878defad093dd3824",
+        "canonical_id": "arXiv:2406.13399",
+        "arxiv_id": "2406.13399",
+        "doi": "10.1109/ICWS62655.2024.00105",
+        "authors": [
+          "Zhi Yao",
+          "Zhi-Qing Tang",
+          "Jiong Lou",
+          "Ping Shen",
+          "Wei-Jia Jia"
+        ],
+        "priority": 30,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 30,
+          "citation_count": 30,
+          "total": 30,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 890,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:abc39ed967340740d35fa721d3eadbb34e86501d26ea9362ae5d178d25bd96dd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
