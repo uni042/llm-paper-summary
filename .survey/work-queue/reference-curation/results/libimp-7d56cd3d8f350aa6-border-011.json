@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d56cd3d8f350aa6-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:f3c78accb7be462803c40f4b802dcf52ae008910",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:f3c78accb7be462803c40f4b802dcf52ae008910",
+    "identity_tokens": [
+      "SemanticScholar:f3c78accb7be462803c40f4b802dcf52ae008910"
+    ],
+    "reason": "エージェントの過去の思考過程を長期記憶として検索するThought-Retriever（TMLR 2026）は検索アルゴリズムの品質改善が主眼であり、推論サービングの効率やスループットへの技術的貢献は示されていない。",
+    "first_checked_at": "2026-11-26T11:43:08+00:00",
+    "last_checked_at": "2026-11-26T11:43:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "T HOUGHT -R ETRIEVER : D ON ’ T J UST R ETRIEVE R AW D ATA , R ETRIEVE T HOUGHTS"
+  },
+  "processed_at": "2026-11-26T11:43:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d56cd3d8f35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

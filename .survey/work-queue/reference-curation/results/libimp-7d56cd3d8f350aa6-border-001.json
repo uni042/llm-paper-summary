@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d56cd3d8f350aa6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.eswa.2026.132839",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.eswa.2026.132839",
+    "identity_tokens": [
+      "DOI:10.1016/j.eswa.2026.132839"
+    ],
+    "reason": "MLLM向けに多層特徴集約で視覚トークンを75%削減するプロジェクタSAEPを提案するが、主眼はアーキテクチャ改良とベンチマーク精度であり、推論サービングとしての遅延・スループット評価や実装機構の記述が薄い。",
+    "first_checked_at": "2026-11-26T11:43:08+00:00",
+    "last_checked_at": "2026-11-26T11:43:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Spatial -aware efficient projector for MLLMs via multi-layer feature aggregation"
+  },
+  "processed_at": "2026-11-26T11:43:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d56cd3d8f35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

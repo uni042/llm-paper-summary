@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d56cd3d8f350aa6-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:e708b51024e8d879d545dd54dbbe86a41da71b89",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:e708b51024e8d879d545dd54dbbe86a41da71b89",
+    "identity_tokens": [
+      "SemanticScholar:e708b51024e8d879d545dd54dbbe86a41da71b89"
+    ],
+    "reason": "オートマトンベースのサブワード単位制約付き生成における落とし穴と実装技法を論じるTokShop 2025の報告で、制約付きデコーディングには関係するが、主眼は正確性の問題整理であり性能システムとしての新規機構は薄い。",
+    "first_checked_at": "2026-11-26T11:43:08+00:00",
+    "last_checked_at": "2026-11-26T11:43:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Pitfalls, Subtleties, and Techniques in Automata-Based Subword-Level Constrained Generation"
+  },
+  "processed_at": "2026-11-26T11:43:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d56cd3d8f35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

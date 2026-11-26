@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d56cd3d8f350aa6-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:9cde4ca39bccd171de1bc067c3c42ac37f0f4c81",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:9cde4ca39bccd171de1bc067c3c42ac37f0f4c81",
+    "identity_tokens": [
+      "SemanticScholar:9cde4ca39bccd171de1bc067c3c42ac37f0f4c81"
+    ],
+    "reason": "gem5によるGPUシミュレーションを汎用MLワークロード向けに拡張するSRC TECHCONの報告で、シミュレーション基盤としては関連するものの、対象はLLM推論に限らず、推論実行そのものへの技術的貢献は間接的である。",
+    "first_checked_at": "2026-11-26T11:43:08+00:00",
+    "last_checked_at": "2026-11-26T11:43:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Simulating Machine Learning Models at Scale"
+  },
+  "processed_at": "2026-11-26T11:43:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d56cd3d8f35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

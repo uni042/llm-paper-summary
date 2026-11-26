@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d56cd3d8f350aa6-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s44007-025-00192-8",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s44007-025-00192-8",
+    "identity_tokens": [
+      "DOI:10.1007/s44007-025-00192-8"
+    ],
+    "reason": "Mamba等の状態空間モデルとウェーブレット理論の関係を解説するLa Matematica誌の解説的ノートであり、新しい推論機構の提案もLLM推論システムの評価も含まない理論解説である。",
+    "first_checked_at": "2026-11-26T11:43:08+00:00",
+    "last_checked_at": "2026-11-26T11:43:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Wavelets and State Space Models"
+  },
+  "processed_at": "2026-11-26T11:43:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d56cd3d8f35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

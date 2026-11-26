@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T11:38:29+00:00",
-  "record_count": 9685,
+  "updated_at": "2026-11-26T11:43:09+00:00",
+  "record_count": 9698,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -148195,6 +148195,201 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Blaze: An Efficient Bit-Sparse Attention Architecture With Workload Orchestration Optimization"
+    },
+    "DOI:10.1016/j.eswa.2026.132839": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.132839",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.132839"
+      ],
+      "reason": "MLLM向けに多層特徴集約で視覚トークンを75%削減するプロジェクタSAEPを提案するが、主眼はアーキテクチャ改良とベンチマーク精度であり、推論サービングとしての遅延・スループット評価や実装機構の記述が薄い。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Spatial -aware efficient projector for MLLMs via multi-layer feature aggregation"
+    },
+    "SemanticScholar:27f190d26baec913ea3f17cb7817909c5af7aff4": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:27f190d26baec913ea3f17cb7817909c5af7aff4",
+      "identity_tokens": [
+        "SemanticScholar:27f190d26baec913ea3f17cb7817909c5af7aff4"
+      ],
+      "reason": "エージェントRLのロールアウト向けにCoWワークスペース分岐、ツールプレフィックスキャッシュ、投機的ツール実行でピークメモリ43%・遅延23%削減を狙うが、目的は強化学習の学習スループットであり、LLM推論への適用は間接的である。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "B UNSHIN RL: S PLITTING L IVE A GENT W ORKSPACES FOR M EMORY -E FFICIENT A GENTIC RL"
+    },
+    "DOI:10.1007/s42979-025-04467-3": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s42979-025-04467-3",
+      "identity_tokens": [
+        "DOI:10.1007/s42979-025-04467-3"
+      ],
+      "reason": "マルチテナントRAGにおけるLFU・LRU・Window-LFU・クォータ等のキャッシュポリシーをシミュレーションで比較した分析であり、新しいキャッシュ機構や実システム実装の提示がなく、推論システムへの貢献は限定的である。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Caching at Scale: Efficiency and Fairness Analysis in Multi-tenant RAG Systems"
+    },
+    "SemanticScholar:9cde4ca39bccd171de1bc067c3c42ac37f0f4c81": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:9cde4ca39bccd171de1bc067c3c42ac37f0f4c81",
+      "identity_tokens": [
+        "SemanticScholar:9cde4ca39bccd171de1bc067c3c42ac37f0f4c81"
+      ],
+      "reason": "gem5によるGPUシミュレーションを汎用MLワークロード向けに拡張するSRC TECHCONの報告で、シミュレーション基盤としては関連するものの、対象はLLM推論に限らず、推論実行そのものへの技術的貢献は間接的である。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Simulating Machine Learning Models at Scale"
+    },
+    "SemanticScholar:bd800f754c13f1851c649b7df3372374990218ea": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:bd800f754c13f1851c649b7df3372374990218ea",
+      "identity_tokens": [
+        "SemanticScholar:bd800f754c13f1851c649b7df3372374990218ea"
+      ],
+      "reason": "小規模モデルから大規模モデルへ問い合わせを振り分けるAutoMixは、few-shot自己検証とPOMDP型メタ検証ルータでコスト50%削減を主張するが、APIレベルのモデル選択に留まり推論エンジン側の機構を持たない。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AutoMix: Mixing Models with Few-shot Self and Meta Verification"
+    },
+    "SemanticScholar:e708b51024e8d879d545dd54dbbe86a41da71b89": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e708b51024e8d879d545dd54dbbe86a41da71b89",
+      "identity_tokens": [
+        "SemanticScholar:e708b51024e8d879d545dd54dbbe86a41da71b89"
+      ],
+      "reason": "オートマトンベースのサブワード単位制約付き生成における落とし穴と実装技法を論じるTokShop 2025の報告で、制約付きデコーディングには関係するが、主眼は正確性の問題整理であり性能システムとしての新規機構は薄い。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pitfalls, Subtleties, and Techniques in Automata-Based Subword-Level Constrained Generation"
+    },
+    "SemanticScholar:4f969cee17649bd4fcd4b30aa25e022418797c9c": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:4f969cee17649bd4fcd4b30aa25e022418797c9c",
+      "identity_tokens": [
+        "SemanticScholar:4f969cee17649bd4fcd4b30aa25e022418797c9c"
+      ],
+      "reason": "階層的にルーティングされる低ランク専門家を持つMoEアーキテクチャStructMoEを提案するが、評価は事前学習時の検証損失のみで、推論時の遅延・メモリ・スループットの測定がなく推論システムへの貢献は未確認である。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "StructMoE : Augmenting MoEs with Hierarchically Routed Low Rank Experts"
+    },
+    "SemanticScholar:83b2db67ec3e4ccf922cc68426182053511edb31": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:83b2db67ec3e4ccf922cc68426182053511edb31",
+      "identity_tokens": [
+        "SemanticScholar:83b2db67ec3e4ccf922cc68426182053511edb31"
+      ],
+      "reason": "LLM・RAG・ツールを組み合わせた複合AIシステム向けの精度配慮型MLIRコンパイラApproxMLIR（MLSys 2026）で、カーネル近似が中心でありLLM推論そのものの最適化が主対象ではないため周辺的な関連に留まる。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A PPROX MLIR: A N A CCURACY -A WARE C OMPILER FOR C OMPOUND ML S YSTEMS"
+    },
+    "SemanticScholar:ae7ec0192d75d8618cd9a9cf92710821d5b99f7b": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:ae7ec0192d75d8618cd9a9cf92710821d5b99f7b",
+      "identity_tokens": [
+        "SemanticScholar:ae7ec0192d75d8618cd9a9cf92710821d5b99f7b"
+      ],
+      "reason": "モデルごとの性能をfastTextやDistilBERTで予測して振り分けるLLMルーティングPROCEEDはStanford CS224Nの学生プロジェクトで、RouterBench上の予備的検討に留まり、実サービングでの検証が不足している。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PROCEED: Performance Routing Optimization for Cost-Efficient and Effective Deployment"
+    },
+    "SemanticScholar:e608483c323e083a43c3f871634850450346f02f": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e608483c323e083a43c3f871634850450346f02f",
+      "identity_tokens": [
+        "SemanticScholar:e608483c323e083a43c3f871634850450346f02f"
+      ],
+      "reason": "長尺動画理解向け適応キーフレームサンプリングAKSの補足資料レコード。本編は固定トークン予算の下でキーフレームを選ぶ精度目的の前処理であり、VLM推論の効率化機構そのものではなく関連は周辺的である。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Keyfrane Sampling for Long Video Understanding -supplementary material-Xi"
+    },
+    "SemanticScholar:f3c78accb7be462803c40f4b802dcf52ae008910": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:f3c78accb7be462803c40f4b802dcf52ae008910",
+      "identity_tokens": [
+        "SemanticScholar:f3c78accb7be462803c40f4b802dcf52ae008910"
+      ],
+      "reason": "エージェントの過去の思考過程を長期記憶として検索するThought-Retriever（TMLR 2026）は検索アルゴリズムの品質改善が主眼であり、推論サービングの効率やスループットへの技術的貢献は示されていない。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "T HOUGHT -R ETRIEVER : D ON ’ T J UST R ETRIEVE R AW D ATA , R ETRIEVE T HOUGHTS"
+    },
+    "SemanticScholar:d64d9593f14f4e7f0b52d5d83f5a0877aa3cf7e8": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:d64d9593f14f4e7f0b52d5d83f5a0877aa3cf7e8",
+      "identity_tokens": [
+        "SemanticScholar:d64d9593f14f4e7f0b52d5d83f5a0877aa3cf7e8"
+      ],
+      "reason": "LLM推論の正しさをゼロ知識証明で検証するzkGPT（USENIX Security 2025）はGPT-2の証明を25秒未満で生成するが、目的は完全性・セキュリティ検証であり、証明のオーバーヘッドを伴うため推論高速化の文脈とは異なる。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "zkGPT: An Efficient Non-interactive Zero-knowledge Proof Framework for LLM Inference"
+    },
+    "DOI:10.1016/j.sysarc.2026.103687": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103687",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103687"
+      ],
+      "reason": "AIoTのクラウド意思決定向けにHEとMPCを組み合わせたプライバシー保護Transformer推論方式で、行列積を8.3〜91.6倍高速化し通信量を削減するとするが、対象は汎用Transformerの秘匿推論でありLLMサービングではない。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An efficient privacy-preserving transformer inference scheme for cloud-based intelligent decision-making in AIoT"
     }
   }
 }

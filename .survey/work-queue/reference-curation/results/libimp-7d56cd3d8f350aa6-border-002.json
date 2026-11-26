@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d56cd3d8f350aa6-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:27f190d26baec913ea3f17cb7817909c5af7aff4",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:27f190d26baec913ea3f17cb7817909c5af7aff4",
+    "identity_tokens": [
+      "SemanticScholar:27f190d26baec913ea3f17cb7817909c5af7aff4"
+    ],
+    "reason": "エージェントRLのロールアウト向けにCoWワークスペース分岐、ツールプレフィックスキャッシュ、投機的ツール実行でピークメモリ43%・遅延23%削減を狙うが、目的は強化学習の学習スループットであり、LLM推論への適用は間接的である。",
+    "first_checked_at": "2026-11-26T11:43:08+00:00",
+    "last_checked_at": "2026-11-26T11:43:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "B UNSHIN RL: S PLITTING L IVE A GENT W ORKSPACES FOR M EMORY -E FFICIENT A GENTIC RL"
+  },
+  "processed_at": "2026-11-26T11:43:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d56cd3d8f35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

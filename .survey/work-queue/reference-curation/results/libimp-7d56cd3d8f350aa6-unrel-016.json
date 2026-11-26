@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d56cd3d8f350aa6-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:baba84aad824daa488d6dd99aa4f4ded7b7cd1fe",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:baba84aad824daa488d6dd99aa4f4ded7b7cd1fe",
+    "identity_tokens": [
+      "SemanticScholar:baba84aad824daa488d6dd99aa4f4ded7b7cd1fe"
+    ],
+    "reason": "文書QA向けにマスクベースの多スパングラウンディングを行うVLMアーキテクチャM3Grounder（CVPR）であり、文書理解モデルの精度改善が目的で、LLM推論の効率化機構ではない。",
+    "first_checked_at": "2026-11-26T11:43:08+00:00",
+    "last_checked_at": "2026-11-26T11:43:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "M3Grounder: Mask-Based Multi-Span and Multi-Granular Grounding for Document QA"
+  },
+  "processed_at": "2026-11-26T11:43:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d56cd3d8f35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

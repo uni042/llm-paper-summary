@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d56cd3d8f350aa6-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:e608483c323e083a43c3f871634850450346f02f",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:e608483c323e083a43c3f871634850450346f02f",
+    "identity_tokens": [
+      "SemanticScholar:e608483c323e083a43c3f871634850450346f02f"
+    ],
+    "reason": "長尺動画理解向け適応キーフレームサンプリングAKSの補足資料レコード。本編は固定トークン予算の下でキーフレームを選ぶ精度目的の前処理であり、VLM推論の効率化機構そのものではなく関連は周辺的である。",
+    "first_checked_at": "2026-11-26T11:43:08+00:00",
+    "last_checked_at": "2026-11-26T11:43:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Keyfrane Sampling for Long Video Understanding -supplementary material-Xi"
+  },
+  "processed_at": "2026-11-26T11:43:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d56cd3d8f35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

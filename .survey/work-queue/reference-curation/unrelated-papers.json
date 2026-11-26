@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-26T11:38:29+00:00",
-  "record_count": 16727,
+  "updated_at": "2026-11-26T11:43:09+00:00",
+  "record_count": 16731,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -232133,9 +232133,9 @@
       "identity_tokens": [
         "SemanticScholar:82c09015f3a18e35d6ddfbf4ce197b0a1f568c1e"
       ],
-      "reason": "タイトル自体が科学論文に対する長文脈推論のベンチマーク評価であり、能力評価のみで推論システムへの直接の技術的貢献はない。",
+      "reason": "科学論文に対する長文脈推論能力を測るベンチマークSciTrekの提案であり、モデルの能力評価のみを扱うもので、推論システムへの技術的貢献はない。",
       "first_checked_at": "2026-11-26T00:55:55+00:00",
-      "last_checked_at": "2026-11-26T00:55:55+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -239370,6 +239370,62 @@
         "worker-worklist discovery_review"
       ],
       "title": "EventMG: Efficient Multilevel Mamba-Graph Learning for Spatiotemporal Event Representation"
+    },
+    "DOI:10.1007/s44007-025-00192-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44007-025-00192-8",
+      "identity_tokens": [
+        "DOI:10.1007/s44007-025-00192-8"
+      ],
+      "reason": "Mamba等の状態空間モデルとウェーブレット理論の関係を解説するLa Matematica誌の解説的ノートであり、新しい推論機構の提案もLLM推論システムの評価も含まない理論解説である。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Wavelets and State Space Models"
+    },
+    "SemanticScholar:e4cd85532eb3a43b08fbc9e122516881b9f11f4c": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:e4cd85532eb3a43b08fbc9e122516881b9f11f4c",
+      "identity_tokens": [
+        "SemanticScholar:e4cd85532eb3a43b08fbc9e122516881b9f11f4c"
+      ],
+      "reason": "ReLU RNNの計数挙動を形式的にも経験的にも分析する学習理論の研究（PMLR 217）であり、対象はRNNの表現能力の理論解析で、LLM推論システムとは無関係である。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Formal and Empirical Studies of Counting Behaviour in ReLU RNNs"
+    },
+    "SemanticScholar:baba84aad824daa488d6dd99aa4f4ded7b7cd1fe": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:baba84aad824daa488d6dd99aa4f4ded7b7cd1fe",
+      "identity_tokens": [
+        "SemanticScholar:baba84aad824daa488d6dd99aa4f4ded7b7cd1fe"
+      ],
+      "reason": "文書QA向けにマスクベースの多スパングラウンディングを行うVLMアーキテクチャM3Grounder（CVPR）であり、文書理解モデルの精度改善が目的で、LLM推論の効率化機構ではない。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "M3Grounder: Mask-Based Multi-Span and Multi-Granular Grounding for Document QA"
+    },
+    "SemanticScholar:8488a7d4d209f2946c3613551fc53a648f98139c": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:8488a7d4d209f2946c3613551fc53a648f98139c",
+      "identity_tokens": [
+        "SemanticScholar:8488a7d4d209f2946c3613551fc53a648f98139c"
+      ],
+      "reason": "双方向クロスアテンションで長い系列を扱うTransformerアーキテクチャBiXTは画像・点群・セグメンテーション等の視覚タスク向けモデル設計であり、LLM推論システムではない。",
+      "first_checked_at": "2026-11-26T11:43:08+00:00",
+      "last_checked_at": "2026-11-26T11:43:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "B I XT: P ERCEIVING L ONGER S EQUENCES W ITH B I -D IRECTIONAL C ROSS -A TTENTION T RANSFORMERS"
     }
   }
 }
