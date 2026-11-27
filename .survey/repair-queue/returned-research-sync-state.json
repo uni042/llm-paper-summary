@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ffbb188f9d0e19b1a6ce1a0a8a27be1a7475cecb",
+  "base_commit": "47db4a64fdba121d254d20c34c39f1ee1a6b235f",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1114,6 +1114,7 @@
     "2026-2608.23463-proxyformer-a-dual-stream-proxy-architecture-for-ultra-long-context-and-high-resolution-generation.json",
     "2026-2608.23921-hap-head-adaptive-visual-token-pruning-via-cross-modal-alignment.json",
     "2026-2608.24004-agentspec-speculative-decoding-for-batch-inference-of-llm-agents.json",
+    "2026-2608.24590-is-discrete-difficulty-sufficient-leveraging-continuous-difficulty-for-efficient-self-consistency-in-llms.json",
     "2026-2608.25068-shift-llm-distribution-shift-correction-in-depth-pruned-llms.json",
     "2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and-pressure-adaptive-budgeting.json",
     "2026-2608.25332-not-all-attention-heads-contribute-to-critical-visual-token-selection-head-aware-pruning-matters-more.json",
@@ -1149,6 +1150,7 @@
     "2026-2609.04947-mcpo-modality-contrastive-preference-optimization-for-multimodal-cot-compression.json",
     "2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.json",
     "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json",
+    "2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.json",
     "2026-2609.07008-redknot-mla-multi-head-offline-online-reuse-for-deepseek-v4-long-context-serving.json",
     "2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.json",
     "2026-2609.09721-efq-softmax-exp-free-quantization-for-softmax.json",
@@ -1269,6 +1271,7 @@
     "2026-2610.02953-slimkv-joint-token-feature-kv-cache-compression-with-reconstruction-free-beacon-attention.json",
     "2026-2610.03007-avokv-e-payload-aware-kv-cache-eviction-for-long-reasoning.json",
     "2026-2610.03027-tailoring-the-quantization-space-for-1-bit-kv-cache-compression.json",
+    "2026-2610.03039-hyperthink-text-to-parameter-hypernetworks-for-efficient-reasoning.json",
     "2026-2610.03088-coda-exploiting-admission-flexibility-for-coding-agent-serving.json",
     "2026-2610.03198-kv2-a-self-refining-kv-cache.json",
     "2026-2610.03203-afore-attention-ffn-disaggregation-with-overlapped-reconfiguration-of-experts.json",
@@ -1358,6 +1361,7 @@
     "2026-2610.13708-adaptive-dhisparse-speculative-decoding-over-a-load-adaptive-kv-hierarchy.json",
     "2026-2610.13735-orthros-phase-aware-heterogeneous-attention-for-efficient-transformers.json",
     "2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization-for-llms.json",
+    "2026-2610.13778-replayssm-cache-ssm-inputs-not-state.json",
     "2026-2610.13982-prime-frequency-aware-unified-pruning-and-merging-for-moe-compression.json",
     "2026-2610.13990-dosa-dots-sparse-attention.json",
     "2026-2610.14162-next-concept-modeling-fast-parallel-coarse-to-fine-text-generation.json",
@@ -1648,6 +1652,7 @@
     "2026-2611.00652-inference-first-training-underneath-layer-granular-lora-co-serving-with-layerloom.json",
     "2026-2611.00967-rtp-llm-building-an-evolvable-and-reliable-llm-inference-engine-at-alibaba-scale.json",
     "2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attention.json",
+    "2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.json",
     "2026-2611.01182-fast-and-exact-relative-position-attention-via-structure-aware-kernels.json",
     "2026-2611.01450-cipherflow-compiling-ai-programs-for-efficient-cryptographically-secure-inference.json",
     "2026-2611.01617-seeing-what-matters-verifying-what-pays-load-adaptive-speculative-decoding-for-vision-language-models.json",
@@ -55665,6 +55670,132 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.24590": {
+      "order": [
+        "2026-11-27T23:23:58+00:00",
+        "2026-2608.24590-is-discrete-difficulty-sufficient-leveraging-continuous-difficulty-for-efficient-self-consistency-in-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.06974": {
+      "order": [
+        "2026-11-27T23:24:01+00:00",
+        "2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "716ab71d022112d65900817b52b395d08a49b6df45de56bd18c163b1fa03a49b",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.md",
+        "canonical_id": "arXiv:2609.06974",
+        "worker_completed_at": "2026-11-28T08:10:00+09:00",
+        "worker_run_key": "muse-20261128-b2",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4441,
+          "body_paragraphs": 23,
+          "method_chars": 1840,
+          "method_paragraphs": 5,
+          "evaluation_chars": 459,
+          "limitation_chars": 288,
+          "insufficiency_flags": [
+            "評価説明量 459 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 459 < 500"
+        ],
+        "processed_at": "2026-11-27T23:24:01+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2610.03039": {
+      "order": [
+        "2026-11-27T23:25:38+00:00",
+        "2026-2610.03039-hyperthink-text-to-parameter-hypernetworks-for-efficient-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.13778": {
+      "order": [
+        "2026-11-27T23:25:41+00:00",
+        "2026-2610.13778-replayssm-cache-ssm-inputs-not-state.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "cea7129bf9cafb39c85615bbf01422df0384ba0d3f239f7f26bee4f08e4829df",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md",
+        "canonical_id": "arXiv:2610.13778",
+        "worker_completed_at": "2026-11-28T07:40:00+09:00",
+        "worker_run_key": "muse-20261128-b1",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4971,
+          "body_paragraphs": 22,
+          "method_chars": 2070,
+          "method_paragraphs": 5,
+          "evaluation_chars": 460,
+          "limitation_chars": 417,
+          "insufficiency_flags": [
+            "評価説明量 460 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 460 < 500"
+        ],
+        "processed_at": "2026-11-27T23:25:41+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2611.01089": {
+      "order": [
+        "2026-11-27T23:25:44+00:00",
+        "2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "4ecffcd99950a50f509ac9a05ea183a0511e02bbd770b3e25d79a7cb96dfeea5",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.md",
+        "canonical_id": "arXiv:2611.01089",
+        "worker_completed_at": "2026-11-28T08:40:00+09:00",
+        "worker_run_key": "muse-20261128-b3",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 5299,
+          "body_paragraphs": 23,
+          "method_chars": 2148,
+          "method_paragraphs": 5,
+          "evaluation_chars": 489,
+          "limitation_chars": 318,
+          "insufficiency_flags": [
+            "評価説明量 489 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 489 < 500"
+        ],
+        "processed_at": "2026-11-27T23:25:44+00:00"
+      },
+      "return_count": 1
     }
   },
   "imported_paper_paths": {
@@ -69349,6 +69480,12 @@
     "arxiv:2607.09889": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2607.09889-remembering-distinct-items-not-tokens-a-learnable-dirichlet-process-cach.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2607.09889-remembering-distinct-items-not-tokens-a-learnable-dirichlet-process-cach.md"
+    ],
+    "arxiv:2608.24590": [
+      "papers/inference/99-other-inference-systems/2026-2608.24590-is-discrete-difficulty-sufficient-leveraging-continuous-difficulty-for-e.md"
+    ],
+    "arxiv:2610.03039": [
+      "papers/inference/99-other-inference-systems/2026-2610.03039-hyperthink-text-to-parameter-hypernetworks-for-efficient-reasoning.md"
     ]
   }
 }

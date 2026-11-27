@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（818本）
+## 自動生成の論文一覧（820本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -590,6 +590,10 @@
   実装：[✓](https://github.com/KULeuven-MICAS/MX-Like-for-LLM-Inference) ・ リポジトリ内被引用：0  
   ブロック量子化のスケール形式と重み活性値の非対称精度からなる設計空間を、形式特化のデータパスとエヌピー統合で精度とシリコン両面から探索し、エフピー4域ではユーイー5エム3スケールが劣化を25.3パーセント減らしほぼ無償で得られること、高精度域ではスケールは無関係なことを示した研究。
 
+- **2026-10 · [HyperThink: Text-to-Parameter Hypernetworks for Efficient Reasoning](2026-2610.03039-hyperthink-text-to-parameter-hypernetworks-for-efficient-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長い思考トレースの逐次生成を、質問ごとにバイアス更新を予測するハイパーネットワークの1回の順伝播へ置き換え、ベクトル量子化で更新を離散パターンへ制約することで、非思考モードに近い遅延のまま思考モードの推論力を近似し、低遅延域の精度と遅延のトレードオフを改善した効率的推論の研究。
+
 - **2026-10 · [Hybrid Computer Use: A Unified Programmatic, Semantic, and Visual Interface for General Agents](2026-2610.41432-hybrid-computer-use-a-unified-programmatic-semantic-and-visual-interface.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   計算機を使う代理人の対話面を視覚と意味と手続きの三経路で統一し、圧縮した意味の観測と一括の動作と入力直前の照合で、OSWorld 2.0 の最高の部分点と完全達成率を出し、入力トークンを五十七パーセント減らし費用を五十五パーセント下げたと報告した。
@@ -861,6 +865,10 @@
 - **2026-08 · [Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting](2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   再順位付けと生成の間で律速が移動することを実測し、限界証拠被覆による証拠前倒しと待ち行列圧力に応じた予算削減を組み合わせ、HotpotQAでは半分の再順位付け件数で最終再現率を41.13から62.38へ上げた。
+
+- **2026-08 · [Is Discrete Difficulty Sufficient? Leveraging Continuous Difficulty for Efficient Self-Consistency in LLMs](2026-2608.24590-is-discrete-difficulty-sufficient-leveraging-continuous-difficulty-for-e.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  出力エントロピーを最終トークン埋め込みから予測する線形プローブで問題の難しさを連続信号として推定し、自己整合性のサンプリング本数を問題ごとに比例配分することで、正解率をほぼ保ったままトークン消費を最大76.7パーセント削減した効率的なテスト時計算配分の研究。
 
 - **2026-08 · [CForce: Boosting Parallel Decoding for dLLMs via Consistency Forcing](2026-2608.13925-cforce-boosting-parallel-decoding-for-dllms-via-consistency-forcing.md)**  
   実装：[✓](https://github.com/inclusionAI/dFactory) ・ リポジトリ内被引用：0  
@@ -2639,7 +2647,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：110  
+  実装：✓ ・ リポジトリ内被引用：111  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -2654,13 +2662,13 @@
   実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：55  
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
-- **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
-  実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：47  
-  RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
-
 - **2023-12 · [Zoology: Measuring and Improving Recall in Efficient Language Models](2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md)**  
   実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：48  
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
+
+- **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
+  実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：47  
+  RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
   実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts-in-LLMs) ・ リポジトリ内被引用：39  
