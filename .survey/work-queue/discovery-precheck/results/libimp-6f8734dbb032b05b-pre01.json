@@ -1,0 +1,146 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6f8734dbb032b05b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6f8734dbb032",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2611.00117"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d0c9c06b8e98b6caad6187d7684dd146ba57e8a5",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-27T02:55:14.827817+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2611.00117",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AnchorKV: Lossless Key-Value Cache Reconstruction from Layer-Sparse Residual Anchors",
+      "source_url": "https://arxiv.org/abs/2611.00117",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Residual-stream caching can reconstruct transformer key-value (KV) caches losslessly, but its memory advantage depends on architecture. We present AnchorKV, a storage-replay spectrum connecting per-layer residual caching and full recomputation through configurable residual anchors. An architecture-dependent break-even rule identifies the first storage-saving spacing, while deployment selects an operating point from the spectrum and cascade replay reduces reconstruction from O(Ls) to O(L), with L the model depth and s the anchor spacing. For interleaved sliding-window architectures, exact dynamic programming places anchors under non-uniform reconstruction demand. Across CPU, CUDA, and Ascend NPU backends, six architecture families, and fp32/bf16 arithmetic, evaluations verify bit-exact KV reconstruction and unchanged continuation logits and tokens. At 4k context, cascade reconstruction is up to 16.3 times faster than naive replay; across eight applicable global-attention checkpoints at 32k context, deepest spacing yields 5.78-54.0 times full-KV reactivatable session capacity. Compared with seven external cache methods on a common model, AnchorKV preserves full-cache retrieval and question-answering scores, whereas lossy methods change output fidelity and task scores. The break-even spacing is computable from a model's configuration file alone.",
+      "identifiers": [
+        "SemanticScholar:260ee4028dfe210e57e73703a3bcf49f4ca5e3d0"
+      ],
+      "semantic_scholar_id": "260ee4028dfe210e57e73703a3bcf49f4ca5e3d0",
+      "canonical_id": "arXiv:2611.00117",
+      "arxiv_id": "2611.00117",
+      "authors": [
+        "Hao Li",
+        "Jia-Shu Zhang",
+        "Kaleem Ullah Qasim",
+        "He-Ying Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.00117",
+      "identity_tokens": [
+        "id:SemanticScholar:260ee4028dfe210e57e73703a3bcf49f4ca5e3d0",
+        "id:arXiv:2611.00117",
+        "title:anchorkv lossless keyvalue cache reconstruction from layersparse residual anchors",
+        "url:https://arxiv.org/abs/2611.00117"
+      ],
+      "record": {
+        "title": "AnchorKV: Lossless Key-Value Cache Reconstruction from Layer-Sparse Residual Anchors",
+        "source_url": "https://arxiv.org/abs/2611.00117",
+        "year": 2026,
+        "published": "2026-10-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Residual-stream caching can reconstruct transformer key-value (KV) caches losslessly, but its memory advantage depends on architecture. We present AnchorKV, a storage-replay spectrum connecting per-layer residual caching and full recomputation through configurable residual anchors. An architecture-dependent break-even rule identifies the first storage-saving spacing, while deployment selects an operating point from the spectrum and cascade replay reduces reconstruction from O(Ls) to O(L), with L the model depth and s the anchor spacing. For interleaved sliding-window architectures, exact dynamic programming places anchors under non-uniform reconstruction demand. Across CPU, CUDA, and Ascend NPU backends, six architecture families, and fp32/bf16 arithmetic, evaluations verify bit-exact KV reconstruction and unchanged continuation logits and tokens. At 4k context, cascade reconstruction is up to 16.3 times faster than naive replay; across eight applicable global-attention checkpoints at 32k context, deepest spacing yields 5.78-54.0 times full-KV reactivatable session capacity. Compared with seven external cache methods on a common model, AnchorKV preserves full-cache retrieval and question-answering scores, whereas lossy methods change output fidelity and task scores. The break-even spacing is computable from a model's configuration file alone.",
+        "identifiers": [
+          "SemanticScholar:260ee4028dfe210e57e73703a3bcf49f4ca5e3d0"
+        ],
+        "semantic_scholar_id": "260ee4028dfe210e57e73703a3bcf49f4ca5e3d0",
+        "canonical_id": "arXiv:2611.00117",
+        "arxiv_id": "2611.00117",
+        "authors": [
+          "Hao Li",
+          "Jia-Shu Zhang",
+          "Kaleem Ullah Qasim",
+          "He-Ying Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:73d2ca4577b7d0cc76fa6a4654a5763c7835671b6010f2bf8a9233fc63c1e825",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
