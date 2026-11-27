@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-27 13:39:57 JST**
+> 自動生成: **2026-11-27 14:23:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -116,14 +116,14 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-27 12:04:11 JST（1時間35分前）** |
+| 最終maintenance完了 | **11-27 14:23:11 JST（5秒前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
 | health errors / warnings | **0 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **403** |
+| GC削除件数 | **87** |
 | queue snapshot repaired | **true** |
 | index repairs | **0** |
 | quality regressions | **0** |
@@ -136,7 +136,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **10** |
+| 直近6hのResearch完了 | **1** |
 | 直近6hのDiscovery run | **5** |
 | 直近6hのDiscovery本文確認・分類 | **61** |
 | 最終Research完了 | **11-27 08:40:00 JST** |
@@ -316,11 +316,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **309** |
+| 成功result未照合のimmutable submission | **298** |
 | └ Research | **71** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **93** |
+| └ Other/Unknown | **82** |
 
 ### 厳格検証が未成立のcompleted job
 
