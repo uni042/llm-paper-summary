@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（814本）
+## 自動生成の論文一覧（817本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1386,6 +1386,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   打ち切り標本のデコード木を復元標本せず相異なる葉として決定的に列挙し、共有プリフィックスの再利用と早期停止で、自己整合性より少ない新規トークンで高い多数決正解率とコード通過率を得るテスト時推論法。
 
+- **2026-04 · [DiffuMask: Diffusion Language Model for Token-level Prompt Pruning](2026-2604.06627-diffumask-diffusion-language-model-for-token-level-prompt-pruning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  階層的枝刈りで作った教師データを拡散言語モデルへ学習させ、トークン保持マスクを並列に予測することで、逐次枝刈りに10時間以上かかるプロンプト圧縮を約1分で終え、プロンプト長を最大80パーセント削減しながら精度を維持・改善したプロンプト圧縮の研究。
+
 - **2026-04 · [Attention Editing: A Versatile Framework for Cross-Architecture Attention Conversion](2026-2604.05688-attention-editing-a-versatile-framework-for-cross-architecture-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の長文脈推論では、過去トークンの鍵・値（Key-Value; KV）を保存するメモリと、その読出し帯域が制約となる。グループ化問い合わせ注意（Grouped Query 注意機構; GQA）はKVヘッドの共有によって容量を抑えるが、長い系列や多数の同時要求ではKVが増え続ける。
@@ -1405,6 +1409,10 @@
 - **2026-03 · [Why Smaller Is Slower? Dimensional Misalignment in Compressed LLMs](2026-2604.09595-why-smaller-is-slower-dimensional-misalignment-in-compressed-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   圧縮で生じる不規則な次元が実行基盤の整列条件を外してモデルを遅くする現象を三層で切り分け、同じ予算のまま全次元を整列した候補から動的計画法で選び直す後付けの枠組みで、前処理の遅延を最大約一・五倍の高速化まで回復したと報告した。
+
+- **2026-03 · [Weight Clustering Reveals the Importance of Relative Rank in Large Language Models](2026-2603.17917-weight-clustering-reveals-the-importance-of-relative-rank-in-large-langu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重み行列を16から64個の共有値へ置き換えるクラスタ化を分析道具にし、割当を固定して共有値だけを動かす摂動実験で、圧縮で守るべきは正確な値ではなく重みの相対順位と分散であることを4モデルで分離し、再学習なしの2から4倍の保存圧縮と併せて示した重み構造の分析研究。
 
 - **2026-03 · [The 1/W Law: An Analytical Study of Context-Length Routing Topology and GPU Generation Gains for LLM Inference Energy Efficiency](2026-2603.17280-the-1-w-law-an-analytical-study-of-context-length-routing-topology-and-g.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1589,6 +1597,10 @@
 - **2026-02 · [Decoupled Reasoning with Implicit Fact Tokens (DRIFT): A Dual-Model Framework for Efficient Long-Context Inference](2026-2602.10021-decoupled-reasoning-with-implicit-fact-tokens-drift-a-dual-model-framewo.md)**  
   実装：[✓](https://github.com/Lancelot-Xie/DRIFT) ・ リポジトリ内被引用：0  
   軽量な知識モデルが長文書のチャンクをクエリ条件付きで潜在的な事実トークンへ圧縮し、大きな推論モデルは生文ではなく圧縮表現だけを読んで答えることで、32倍圧縮でもLongBench v2の精度を20.87パーセントから29.22パーセントへ上げ、256kトークン文書で平均7倍速くした二重モデルの長文脈推論。
+
+- **2026-02 · [Confidence-Driven Multi-Scale Model Selection for Cost-Efficient Inference](2026-2602.22090-confidence-driven-multi-scale-model-selection-for-cost-efficient-inferen.md)**  
+  実装：[✓](https://github.com/NYCU-NLP-Lab/ConfDrivenInference) ・ リポジトリ内被引用：0  
+  小さいモデルの選択肢確率P(T)と隠れ状態から学習した正答可能性P(IK)で自信度を測り、不確かなクエリだけを大きいモデルへ引き上げることで、MMLUで最大モデル並みの精度を保ちながら計算量を最大で約44パーセント、GPT-4oのトークンを約60パーセント削減した多段階モデル選択の研究。
 
 - **2026-02 · [BAPS: A Fine-Grained Low-Precision Scheme for Softmax in Attention via Block-Aware Precision reScaling](2026-2602.02071-baps-a-fine-grained-low-precision-scheme-for-softmax-in-attention-via-bl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

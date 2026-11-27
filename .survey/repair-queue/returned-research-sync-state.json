@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "cba6c01e29d0fa1e68c063301dc50fdae7343875",
+  "base_commit": "fcfe3a28dac2eb9a5a2f8fac447ca24a9fd71530",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -452,6 +452,7 @@
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
     "2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-point-exponent-remapping-and-parameter-sharing.json",
     "2025-2510.19385-beyond-uniform-svd-dual-level-optimization-across-columns-and-modules-for-llm-compression.json",
+    "2025-2510.19496-cares-context-aware-resolution-selector-for-vlms.json",
     "2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network-approach-to-salient-value-mitigation.json",
     "2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.json",
     "2025-2510.22101-scaling-up-efficient-small-language-models-serving-and-deployment-for-semantic-job-search.json",
@@ -656,12 +657,14 @@
     "2026-2602.15521-expertweaver-unlocking-the-inherent-moe-in-dense-llms-with-glu-activation-patterns.json",
     "2026-2602.15563-1-bit-wonder-improving-qat-performance-in-the-low-bit-regime-through-k-means-quantization.json",
     "2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-and-inference.json",
+    "2026-2602.19762-hexagon-mlir-an-ai-compilation-stack-for-qualcomm-s-neural-processing-units-npus.json",
     "2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.json",
     "2026-2602.19938-a-replicate-and-quantize-strategy-for-plug-and-play-load-balancing-of-sparse-mixture-of-experts-llms.json",
     "2026-2602.20515-fast-prefill-fpga-accelerated-sparse-attention-for-long-context-llm-prefill.json",
     "2026-2602.20913-longvideo-r1-smart-navigation-for-low-cost-long-video-understanding.json",
     "2026-2602.21144-scaling-state-space-models-on-multiple-gpus-with-tensor-parallelism.json",
     "2026-2602.21652-sparsity-induction-for-accurate-post-training-pruning-of-large-language-models.json",
+    "2026-2602.22090-confidence-driven-multi-scale-model-selection-for-cost-efficient-inference.json",
     "2026-2602.22556-stable-adaptive-thinking-via-advantage-shaping-and-length-aware-gradient-regulation.json",
     "2026-2602.24044-data-driven-optimization-of-gpu-efficiency-for-distributed-llm-adapter-serving.json",
     "2026-2603.00126-quickgrasp-responsive-video-language-querying-service-via-accelerated-tokenization-and-edge-augmented-inference.json",
@@ -700,6 +703,7 @@
     "2026-2603.16219-specsteer-synergizing-local-context-and-global-reasoning-for-efficient-personalized-generation.json",
     "2026-2603.17280-the-1-w-law-an-analytical-study-of-context-length-routing-topology.json",
     "2026-2603.17891-ramp-reinforcement-adaptive-mixed-precision-quantization-for-efficient-on-device-llm-inference.json",
+    "2026-2603.17917-weight-clustering-reveals-the-importance-of-relative-rank-in-large-language-models.json",
     "2026-2603.17946-care-covariance-aware-and-rank-enhanced-decomposition-for-enabling-multi-head-latent-attention.json",
     "2026-2603.18037-adapting-methods-for-domain-specific-japanese-small-lms-scale-architecture-and-quantization.json",
     "2026-2603.19296-ttq-activation-aware-test-time-quantization-to-accelerate-llm-inference-on-the-fly.json",
@@ -747,6 +751,7 @@
     "2026-2604.06330-stdec-spatio-temporal-stability-guided-decoding-for-dllms.json",
     "2026-2604.06465-multi-objective-evolutionary-merging-enables-efficient-reasoning-models.json",
     "2026-2604.06613-the-detection-extraction-gap-models-know-the-answer-before-they-can-say-it.json",
+    "2026-2604.06627-diffumask-diffusion-language-model-for-token-level-prompt-pruning.json",
     "2026-2604.06787-when-is-thinking-enough-early-exit-via-sufficiency-assessment-for-efficient-reasoning.json",
     "2026-2604.06970-scheduling-the-unschedulable-taming-black-box-llm-inference-at-scale.json",
     "2026-2604.07173-infinilora-disaggregated-multi-lora-serving.json",
@@ -55538,6 +55543,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2510.19496": {
+      "order": [
+        "2026-11-27T23:01:06+00:00",
+        "2025-2510.19496-cares-context-aware-resolution-selector-for-vlms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.19762": {
+      "order": [
+        "2026-11-27T23:02:47+00:00",
+        "2026-2602.19762-hexagon-mlir-an-ai-compilation-stack-for-qualcomm-s-neural-processing-units-npus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.22090": {
+      "order": [
+        "2026-11-27T23:04:29+00:00",
+        "2026-2602.22090-confidence-driven-multi-scale-model-selection-for-cost-efficient-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.17917": {
+      "order": [
+        "2026-11-27T23:06:09+00:00",
+        "2026-2603.17917-weight-clustering-reveals-the-importance-of-relative-rank-in-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.06627": {
+      "order": [
+        "2026-11-27T23:07:50+00:00",
+        "2026-2604.06627-diffumask-diffusion-language-model-for-token-level-prompt-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69186,6 +69236,21 @@
     "arxiv:2510.18030": [
       "papers/inference/99-other-inference-systems/2025-2510.18030-from-local-to-global-revisiting-structured-pruning-paradigms-for-large-l.md",
       "papers/inference/99-other-inference-systems/2025-2510.18030-from-local-to-global-revisiting-structured-pruning-paradigms-for-large-l.md"
+    ],
+    "arxiv:2510.19496": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2510.19496-cares-context-aware-resolution-selector-for-vlms.md"
+    ],
+    "arxiv:2602.19762": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2602.19762-hexagon-mlir-an-ai-compilation-stack-for-qualcomm-s-neural-processing-un.md"
+    ],
+    "arxiv:2602.22090": [
+      "papers/inference/99-other-inference-systems/2026-2602.22090-confidence-driven-multi-scale-model-selection-for-cost-efficient-inferen.md"
+    ],
+    "arxiv:2603.17917": [
+      "papers/inference/99-other-inference-systems/2026-2603.17917-weight-clustering-reveals-the-importance-of-relative-rank-in-large-langu.md"
+    ],
+    "arxiv:2604.06627": [
+      "papers/inference/99-other-inference-systems/2026-2604.06627-diffumask-diffusion-language-model-for-token-level-prompt-pruning.md"
     ]
   }
 }

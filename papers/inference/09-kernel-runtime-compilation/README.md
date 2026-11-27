@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（367本）
+## 自動生成の論文一覧（368本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -890,6 +890,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   OptiMLは、大規模言語モデルによるCUDAカーネルの初期生成と、その後の正しさを保つ性能改善を単一の開発経路へまとめる方式である。
 
+- **2026-02 · [Hexagon-MLIR: An AI Compilation Stack For Qualcomm's Neural Processing Units (NPUs)](2026-2602.19762-hexagon-mlir-an-ai-compilation-stack-for-qualcomm-s-neural-processing-un.md)**  
+  実装：[✓](https://github.com/qualcomm/hexagon-mlir) ・ リポジトリ内被引用：0  
+  TritonカーネルとPyTorchモデルをMLIR経由でQualcomm Hexagon NPU向けに自動コンパイルし、演算子融合によるメガカーネル化とTCM活用、HVXベクトル化やダブルバッファリングで、ライブラリ方式のDRAM往復による帯域律速を避けるオープンソースコンパイル基盤。
+
 - **2026-02 · [FlashMem: Supporting Modern DNN Workloads on Mobile with GPU Memory Hierarchy Optimizations](2026-2602.15379-flashmem-supporting-modern-dnn-workloads-on-mobile-with-gpu-memory-hiera.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モバイルGPUで全重み事前読み込みをやめ、負荷容量を考慮したオフライン計画で重みの断片を計算と重ねてテクスチャメモリへ流すことで、11モデルでメモリ2.0〜8.4倍削減と初期化込み1.7〜75.0倍高速化を実現する実行枠組み。
@@ -957,7 +961,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   GPUカーネルの「何を計算するか」をタイル単位のデータ流として書き、「どのスレッドがどの配置で、どの命令を使い、転送と計算をどう重ねるか」を別のスケジュール層へ分離する。高水準な記述を保ちながら、FlashAttention-3級の複雑なパイプラインまで表現・自動推論できることを狙う。
 
 - **2025-04 · [Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler](2025-2504.19442-triton-distributed.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：21  
   OpenSHMEM通信をTritonへ統合し、計算・通信・メモリアクセスをPythonから細粒度に重ね合わせ、8〜64 GPUで分散カーネルを高速化するコンパイラ拡張。
 
 - **2025-03 · [Medusa: Accelerating Serverless LLM Inference with Materialization](2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md)**  

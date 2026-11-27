@@ -1026,6 +1026,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は、大規模言語モデルを2〜3ビット程度の重み精度に縮小するとき、少数の高感度な重みが量子化誤差を増幅する問題を扱う。
 
+- **2025-11 · [FermiGrad-SVD: An LLM Compression Pipeline with Global Rank Selection and Gauge Fixing](2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  特異値切断をフェルミゲートで連続化し全層ランクを一括最適化するFermiGradと、因子の超過を無損失に消すゲージ固定PivGaによるSVD圧縮。感度方式より良い配分を70B規模まで示す。
+
 - **2025-09 · [LUQ: Layerwise Ultra-Low Bit Quantization for Multimodal Large Language Models](2025-2509.23729-luq-layerwise-ultra-low-bit-quantization-for-multimodal-large-language-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LUQ（Layerwise Ultra-Low Bit Quantization）は、視覚言語モデル（VLM/MLLM）の各Transformer層が低ビット量子化に耐える度合いは一様でないことに着目し、層の出力活性entropyが低い順に1bit系量子化へ切り替える方式である。
@@ -1050,6 +1054,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   低ビット重み量子化では、整数、浮動小数点、非一様コードブック、ブロック単位のスケーリング、外れ値の高精度保持など、数値表現の選択肢が多数ある。
 
+- **2025-05 · [LCD: Advancing Extreme Low-Bit Clustering for Large Language Models via Knowledge Distillation](2025-2506.12038-lcd-advancing-extreme-low-bit-clustering-for-large-language-models-via-k.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LCDは密度に基づく重み代表値の初期化、ヘッセ対角近似による代表値更新、段階的・投機的な代表値数削減、層別活性平滑化を組み合わせる極低ビット量子化方式。A100上の報告速度改善はBERT-large最大6.2倍、LLaMA-2-7Bは4.7倍。
+
 - **2025-04 · [Enhancing Ultra-Low-Bit Quantization of Large Language Models Through Saliency-Aware Partial Retraining](2025-2504.13932-enhancing-ultra-low-bit-quantization-of-large-language-models-through-sa.md)**  
   実装：[✓](https://github.com/TokuyuSou/ULB-SAPR) ・ リポジトリ内被引用：1  
   CaoとArefは、事前学習済み大規模言語モデルの重みを2ビットへ圧縮するとき、既存のApiQが残す精度劣化を、小規模な部分再学習だけで軽減する手法を提案した。LLaMA-2-7Bのゼロショット常識推論5課題平均は、全精度64.85%、ApiQ 55.91%に対して、提案法の最良設定で56.88%となる。
@@ -1073,10 +1081,6 @@
 - **2025-11 · [R2Q: Towards Robust 2-Bit Large Language Models via Residual Refinement Quantization](2025-2511.21736-r2q-towards-robust-2-bit-large-language-models-via-residual-refinement-q.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   R2Q（Residual Refinement Quantization）は、2ビットの重み量子化を1回の4値への丸めではなく、元重みを二値近似した後、その残差をさらに二値近似する2段階へ分解する方式である。2ビットで品質を完全に保てる方式ではなく、比較対象の崩壊が極端な条件で改善幅が大きく見える点を区別する必要がある。
-
-- **2025-11 · [FermiGrad-SVD: An LLM Compression Pipeline with Global Rank Selection and Gauge Fixing](2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  特異値切断をフェルミゲートで連続化し全層ランクを一括最適化するFermiGradと、因子の超過を無損失に消すゲージ固定PivGaによるSVD圧縮。感度方式より良い配分を70B規模まで示す。
 
 - **2025-11 · [Beyond Dynamic Quantization: An Efficient Static Hierarchical Mix-precision Framework for Near-Lossless LLM Compression](2025-84553b047243-beyond-dynamic-quantization-an-efficient-static-hierarchical-mix-precisi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1173,10 +1177,6 @@
 - **2025-06 · [Boost Post-Training Quantization via Null Space Optimization for Large Language Models](2025-2506.11044-boost-post-training-quantization-via-null-space-optimization-for-large-l.md)**  
   実装：[✓](https://github.com/zjq0455/q2n) ・ リポジトリ内被引用：0  
   重みだけを量子化すると、浮動小数点重みWと量子化後重みWqの間に数値差が生じる。しかしLLMの実際の出力誤差は、重みの差そのものではなく、入力活性Xに作用した (W−Wq)X によって決まる。
-
-- **2025-05 · [LCD: Advancing Extreme Low-Bit Clustering for Large Language Models via Knowledge Distillation](2025-2506.12038-lcd-advancing-extreme-low-bit-clustering-for-large-language-models-via-k.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  LCDは密度に基づく重み代表値の初期化、ヘッセ対角近似による代表値更新、段階的・投機的な代表値数削減、層別活性平滑化を組み合わせる極低ビット量子化方式。A100上の報告速度改善はBERT-large最大6.2倍、LLaMA-2-7Bは4.7倍。
 
 - **2025-05 · [Grouped Sequency-arranged Rotation: Optimizing Rotation Transformation for Quantization for Free](2025-2505.03810-grouped-sequency-arranged-rotation-optimizing-rotation-transformation-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1293,7 +1293,7 @@
   OneBitは、学習済み大規模言語モデル（LLM）の重みを極端に低いビット数で保存する際に生じる精度劣化を、線形層の表現形式そのものを変更することで緩和する研究である。査読版の表3では、LLaMA-7Bの重み保存量が13.5 GBから1.3 GBへ、LLaMA-13Bでは26.0 GBから2.2 GBへ減る。
 
 - **2024-02 · [GPTVQ: The Blessing of Dimensionality for LLM Quantization](2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md)**  
-  実装：✓ ・ リポジトリ内被引用：57  
+  実装：✓ ・ リポジトリ内被引用：58  
   複数の重みを1ベクトルとして量子化し、代理ヘッセ行列（proxy Hessian）で量子化誤差を後続列へ補償する。Llama 3 8Bの約3.125 bit/value構成では、Snapdragon X Elite上で独自INT4実装よりモデル占有量を約19%減らし、23.81から26.15 トークン/sへ高速化する。
 
 - **2024-02 · [BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation](2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md)**  

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（282本）
+## 自動生成の論文一覧（283本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -955,6 +955,10 @@
 - **2025-10 · [Finish First, Perfect Later: Test-Time Token-Level Cross-Validation for Diffusion Large Language Models](2025-2510.05090-finish-first-perfect-later-test-time-token-level-cross-validation-for-di.md)**  
   実装：[✓](https://github.com/Rachum-thu/tolerator) ・ リポジトリ内被引用：0  
   拡散言語モデルの確定済みトークンを直せない問題に対し、まず全体を埋めてから部分集合を再マスクして予測し直す相互検証リファインメントを後段に置く、学習不要の2段階デコードToleratorを提案し、同一計算予算で2モデル・5ベンチマークの品質改善を示した研究。
+
+- **2025-10 · [CARES: Context-Aware Resolution Selector for VLMs](2025-2510.19496-cares-context-aware-resolution-selector-for-vlms.md)**  
+  実装：[✓](https://github.com/mkimhi/CARES) ・ リポジトリ内被引用：0  
+  小型の代理モデルで画像と質問を見て必要最小限の入力解像度を予測し、対象の視覚言語モデルを無改造のまま前段で振り分けるCARESにより、9ベンチマークで精度をほぼ保ちながらプリフィル計算を最大で平均78パーセント削減した解像度選択の研究。
 
 - **2025-09 · [PLaMo 2 Technical Report](2025-2509.04897-plamo-2-technical-report.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
