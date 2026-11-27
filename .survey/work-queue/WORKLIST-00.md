@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-27T03:15:56+00:00`
+Generated: `2026-11-27T04:44:06+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -624,7 +624,7 @@ ready総数: **582** / 未claim総数: **582** / このworker向け: **194**
 | 403 | 111 | 1 | 6 | arXiv:2601.19739 | TokenSeek: Memory Efficient Fine Tuning via Instance-Aware Token Ditching | 2026-01-27 | International Conference on Learning Representations | 1 | 7 | KV cache memory management / streaming inference / attention sinks / length extrapolation, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2601.19739) |
 | 404 | 1 | 1 | 6 | arXiv:2504.10681 | EMAFusion: A Self-Optimizing System for Seamless LLM Selection and Integration | 2025-04-14 | arXiv.org | 1 | 6 | 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2504.10681) |
 | 405 | 3 | 1 | 6 | SemanticScholar:0d48b2ceec9910e7f7e91faa4d48c31db24f41da | Rethinking Long Context Generation from the Continual Learning Perspective | 2025 | International Conference on Computational Linguistics | 3 | 6 | 99-other-inference-systems, KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems | [source](https://www.semanticscholar.org/paper/0d48b2ceec9910e7f7e91faa4d48c31db24f41da) |
-| 406 | 3 | 1 | 5 | DOI:10.1016/j.csi.2025.103996 | Accelerating Mixture-of-Experts language model inference via plug-and-play lookahead gate on a single GPU | 2025-03-01 | Comput. Stand. Interfaces | 3 | 5 | Offload / Hierarchical Memory, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://doi.org/10.1016/j.csi.2025.103996) |
+| 406 | 4 | 1 | 5 | DOI:10.1016/j.csi.2025.103996 | Accelerating Mixture-of-Experts language model inference via plug-and-play lookahead gate on a single GPU | 2025-03-01 | Comput. Stand. Interfaces | 4 | 5 | Offload / Hierarchical Memory, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://doi.org/10.1016/j.csi.2025.103996) |
 | 407 | 26 | 1 | 5 | arXiv:2408.11396 | MoE-LPR: Multilingual Extension of Large Language Models through Mixture-of-Experts with Language Priors Routing | 2024-08-21 | AAAI Conference on Artificial Intelligence | 26 | 5 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2408.11396) |
 | 408 | 9 | 1 | 5 | DOI:10.3390/electronics14112188 | A Unified and Resource-Aware Framework for Adaptive Inference Acceleration on Edge and Embedded Platforms | 2025-05-28 | Electronics | 9 | 5 | inference-systems, survey-speculative-decoding, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.3390/electronics14112188) |
 | 409 | 10 | 1 | 5 | DOI:10.1145/3767295.3769346 | TailorLLM: Collaborative End-Cloud Inference of Large and Small Language Models Based on Low-Rank Adaptation | 2026-04-26 | European Conference on Computer Systems | 0 | 5 | LLM Serving / Scheduling / Disaggregation, LLM routing、hybrid inference、quality-aware model selection, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://doi.org/10.1145/3767295.3769346) |
