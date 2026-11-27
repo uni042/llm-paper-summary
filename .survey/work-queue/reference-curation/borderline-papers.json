@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-26T22:31:47+00:00",
-  "record_count": 9996,
+  "updated_at": "2026-11-27T02:49:31+00:00",
+  "record_count": 10007,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -152870,6 +152870,171 @@
       ],
       "borderline_recheck_count": 0,
       "title": "TidalMesh: Topology-Driven AllReduce Collective Communication for Mesh Topology"
+    },
+    "arXiv:2606.05079": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.05079",
+      "identity_tokens": [
+        "arXiv:2606.05079"
+      ],
+      "reason": "LLMのin-context learningで得るfunction vectorについて、LRPによる注意ヘッド選択と分散ステアリングで効率と精度を改善する研究だが、主眼は表現の定式化と解釈可能性であり、推論サービングやデコード機構への直接貢献は薄いためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:29+00:00",
+      "last_checked_at": "2026-11-27T02:49:29+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast & Faithful Function Vectors"
+    },
+    "arXiv:2608.29958": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29958",
+      "identity_tokens": [
+        "arXiv:2608.29958"
+      ],
+      "reason": "大規模視覚言語モデルの固定された視覚トークン予算の下で、フレームとクエリの類似度曲線の微分情報を用いてエビデンスフレームを選ぶRIDGEを提案し長尺動画理解の入力削減に関わるが、主目的は動画理解の精度であり推論システム機構としての位置づけは補助的なためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RIDGE: Region-Informed Derivative-Guided Evidence Selection for Long Video Understanding"
+    },
+    "arXiv:2609.17019": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.17019",
+      "identity_tokens": [
+        "arXiv:2609.17019"
+      ],
+      "reason": "自己知識プロービングと段階的選好学習（DPO）でLLMの過剰なChain-of-Thoughtを圧縮し推論レイテンシと計算量を下げることを狙うSKIPだが、機構は学習側の選好最適化であり推論時のシステム機構ではないためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SKIP: a Self-knowledge-guided Step-wise Preference Learning Framework for Concise Reasoning"
+    },
+    "arXiv:2609.22162": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22162",
+      "identity_tokens": [
+        "arXiv:2609.22162"
+      ],
+      "reason": "医療など分散環境の連合RAGで生文書を共有せずコンパクトな潜在表現だけを交換するFedRepRAGを提案し推論時の計算オーバーヘッド削減にも触れるが、主貢献は連合検索のプロトコルとプライバシーでありLLMサービング機構への直接性は弱いためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Raw Context Transfer: Representation-based Federated Retrieval-Augmented Generation"
+    },
+    "arXiv:2609.24090": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.24090",
+      "identity_tokens": [
+        "arXiv:2609.24090"
+      ],
+      "reason": "LLMや外部APIを含む自律システムで、タスク事実契約とフィールド単位の依存マスクにより変更時の再実行範囲を最小化する増分一貫性実行を提案し冗長な再計算の削減を狙うが、対象は汎用の自律システム実行でありLLM推論基盤としての具体性は限られるためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Incremental Consistency Execution for Autonomous Intelligent Systems"
+    },
+    "arXiv:2609.33271": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33271",
+      "identity_tokens": [
+        "arXiv:2609.33271"
+      ],
+      "reason": "次の連続思考を多峰分布として拡散ヘッドで生成するAutoregressive Thought Flowにより、コンパクトな潜在トレースで潜在空間推論を行う手法だが、主貢献は推論手法の精度と表現形式であり、推論システムの実行機構への直接貢献は確認できないためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Next Thoughts Are Distributions: Generative Autoregressive Reasoning in the Latent Space"
+    },
+    "arXiv:2611.03834": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.03834",
+      "identity_tokens": [
+        "arXiv:2611.03834"
+      ],
+      "reason": "長Chain-of-Thoughtモデルと簡潔なベースモデルを低ランクHessian近似に基づく階層マージで統合し長から短への推論を効率化する学習不要な手法だが、主貢献はモデルマージの係数決定であり推論時の実行機構への直接貢献は間接的なためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Low-Rank Hierarchical Merging for Efficient Long-to-Short Reasoning"
+    },
+    "arXiv:2406.01468": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.01468",
+      "identity_tokens": [
+        "arXiv:2406.01468"
+      ],
+      "reason": "言語モデルの出力埋め込みにトークン確率が対数線形に符号化されていることを示し、出力と無関係な次元の3割超を削除しても分布がほぼ変わらないことを確認した分析だが、推論時の圧縮機構として実装・評価されたものではなく解釈可能性研究の域にあるためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Understanding Token Probability Encoding in Output Embeddings"
+    },
+    "arXiv:2609.39632": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39632",
+      "identity_tokens": [
+        "arXiv:2609.39632"
+      ],
+      "reason": "逐次テスト時スケーリングがアトラクタに捕捉され探索が止まる現象を分析し探索継続の改善を示す研究で、推論時計算の使い方には関わるが、内容は推論戦略の挙動分析が中心でありサービングやデコードのシステム機構としての貢献は薄いためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Better Exploration in Sequential Test-Time Scaling"
+    },
+    "arXiv:2610.24590": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.24590",
+      "identity_tokens": [
+        "arXiv:2610.24590"
+      ],
+      "reason": "自動運転向けVision-Language-Actionモデルのオンボード推論で、シーンと予測不確実性に応じて活性化する層を動的にルーティングし計算量と消費電力を削減するScene-Adaptive VLAだが、対象が自動運転VLAという特定応用モデルに限られ汎用LLM推論基盤への直接性は弱いためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scene-Adaptive VLA: Efficient Autonomous Driving via Dynamic Layer Routing"
+    },
+    "arXiv:2610.30215": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.30215",
+      "identity_tokens": [
+        "arXiv:2610.30215"
+      ],
+      "reason": "専門モデルとLLMの間でテキストを介さず潜在表現を直接交換するLatent Interconnect Protocolを提案し、コネクタ学習のみで複数専門家を接続するが、応用は科学エージェントの情報交換であり、推論サービング機構としての評価や直接貢献は限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AI Mindmeld: A Latent Interconnect Protocol"
     }
   }
 }

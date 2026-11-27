@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad16d48b3821ef83-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.18391",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.18391",
+    "identity_tokens": [
+      "arXiv:2610.18391"
+    ],
+    "reason": "準同型暗号化データに対するバルクビット演算を高速化するHULKの提案で、分析対象はデータベース・グラフ・ゲノム解析等の暗号化計算であり、LLM推論への適用は要旨に示されていないためunrelatedとした。",
+    "first_checked_at": "2026-11-27T02:49:30+00:00",
+    "last_checked_at": "2026-11-27T02:49:30+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "HULK: An Efficient Algorithm for Enabling Fast Bulk Bitwise Operations on Homomorphically Encrypted Data"
+  },
+  "processed_at": "2026-11-27T02:49:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad16d48b3821",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

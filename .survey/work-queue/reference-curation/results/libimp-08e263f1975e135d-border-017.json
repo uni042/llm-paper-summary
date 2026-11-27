@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-08e263f1975e135d-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.33271",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.33271",
+    "identity_tokens": [
+      "arXiv:2609.33271"
+    ],
+    "reason": "次の連続思考を多峰分布として拡散ヘッドで生成するAutoregressive Thought Flowにより、コンパクトな潜在トレースで潜在空間推論を行う手法だが、主貢献は推論手法の精度と表現形式であり、推論システムの実行機構への直接貢献は確認できないためborderlineとした。",
+    "first_checked_at": "2026-11-27T02:49:30+00:00",
+    "last_checked_at": "2026-11-27T02:49:30+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Next Thoughts Are Distributions: Generative Autoregressive Reasoning in the Latent Space"
+  },
+  "processed_at": "2026-11-27T02:49:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-08e263f1975e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

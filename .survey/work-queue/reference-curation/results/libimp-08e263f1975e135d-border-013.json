@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-08e263f1975e135d-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.22162",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.22162",
+    "identity_tokens": [
+      "arXiv:2609.22162"
+    ],
+    "reason": "医療など分散環境の連合RAGで生文書を共有せずコンパクトな潜在表現だけを交換するFedRepRAGを提案し推論時の計算オーバーヘッド削減にも触れるが、主貢献は連合検索のプロトコルとプライバシーでありLLMサービング機構への直接性は弱いためborderlineとした。",
+    "first_checked_at": "2026-11-27T02:49:30+00:00",
+    "last_checked_at": "2026-11-27T02:49:30+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Raw Context Transfer: Representation-based Federated Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-11-27T02:49:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-08e263f1975e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

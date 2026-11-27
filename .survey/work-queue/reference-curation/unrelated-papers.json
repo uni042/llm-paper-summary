@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-26T22:31:47+00:00",
-  "record_count": 18094,
+  "updated_at": "2026-11-27T02:49:31+00:00",
+  "record_count": 18140,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -258528,6 +258528,651 @@
         "worklist"
       ],
       "title": "DiffRhythm 2: Efficient and High Fidelity Song Generation via Block Flow Matching"
+    },
+    "arXiv:2605.10269": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10269",
+      "identity_tokens": [
+        "arXiv:2605.10269"
+      ],
+      "reason": "海上高解像度画像向けにVision Mambaバックボーンと特徴ピラミッドでDETR物体検出を効率化する研究で、対象は無人水上艇の障害物検出という画像応用であり、LLM推論システムへの貢献は要旨にないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Increasing the Efficiency of DETR for Maritime High-Resolution Images"
+    },
+    "arXiv:2606.09432": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09432",
+      "identity_tokens": [
+        "arXiv:2606.09432"
+      ],
+      "reason": "グラフニューラルネットと状態空間モデルを結合した潜在シミュレータGraMOで相互作用粒子系の長時間ダイナミクスをモデル化する研究であり、物理シミュレーションが対象でLLM推論とは無関係なためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Graph Mamba Operator: A Latent Simulator for Interacting Particle Systems"
+    },
+    "arXiv:2607.01960": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01960",
+      "identity_tokens": [
+        "arXiv:2607.01960"
+      ],
+      "reason": "IWSLT 2026の指示追従音声処理ショートトラックへの参加システム記述で、ASR・音声翻訳・音声QAの多段学習パイプラインと合成データが内容であり、推論システムへの技術的貢献は示されていないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "NAVER LABS Europe Submission to the Instruction-following 2026 Short Track"
+    },
+    "arXiv:2607.16692": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16692",
+      "identity_tokens": [
+        "arXiv:2607.16692"
+      ],
+      "reason": "コード実体間の依存を量子化行列と低ランク分解でモデル化し一貫性誘導リファインメントでコード生成の論理的完全性を高める枠組みであり、コード生成手法そのものが対象で推論効率化の機構はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Dependency-Guided Code Generation: Structured Matrix Decomposition and Consistency-Guided Refinement"
+    },
+    "arXiv:2608.17282": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17282",
+      "identity_tokens": [
+        "arXiv:2608.17282"
+      ],
+      "reason": "中央集権プロトコルの代わりに能力グラウンディングと思考マップ航行によるピアツーピアな分散エージェント協調でマルチモーダル推論の精度を上げる枠組みであり、エージェント協調手法が対象でLLM推論システムの効率化機構ではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "DeAR: Decentralized Agentic Reasoning via Capability Grounding and Collaborative Thought Navigation"
+    },
+    "arXiv:2608.23011": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.23011",
+      "identity_tokens": [
+        "arXiv:2608.23011"
+      ],
+      "reason": "長尺動画RAGで粗い検索インデックスと細粒度エビデンスを分離する密度適応グラフ構築を提案する研究だが、対象は動画理解のための検索インデックス設計であり、LLMの推論・サービング機構への貢献ではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Coarse Indexing, Fine Evidence: Decoupling Temporal Granularity in Long-Video RAG"
+    },
+    "arXiv:2608.26535": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26535",
+      "identity_tokens": [
+        "arXiv:2608.26535"
+      ],
+      "reason": "マルチモーダル条件付き音声・動画生成への攻撃を集めたレッドチームベンチマークMulti2AV-Safetyの構築と安全ガード評価が内容であり、能力・安全性評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Multi2AV-Safety: Benchmarking Safety in Multimodal-to-Audio-Video Generation"
+    },
+    "arXiv:2609.05596": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05596",
+      "identity_tokens": [
+        "arXiv:2609.05596"
+      ],
+      "reason": "視覚障害者の都市環境ナビゲーションを題材に、マルチモーダルLLMエージェントが応答タイミングを計画できるかを測るベンチマーク研究であり、応用タスクの評価が中心で推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Time-Aware Assistive Navigation"
+    },
+    "arXiv:2609.09903": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09903",
+      "identity_tokens": [
+        "arXiv:2609.09903"
+      ],
+      "reason": "表現力の高い音声生成のためVAE潜在空間を超球面に制約するSphereVAEで自己回帰音声表現の潜在ドリフトを抑える研究であり、音声コーデック表現の学習が対象でLLM推論とは無関係なためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "SphereVAE: Hyperspherical Latent Autoencoders for Robust Autoregressive Speech Representation Modeling"
+    },
+    "arXiv:2609.27378": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27378",
+      "identity_tokens": [
+        "arXiv:2609.27378"
+      ],
+      "reason": "全二重音声対話モデルへの心理音響マスキング閾値以下の摂動による攻撃を定式化し、潜在平滑化による防御で推論時コストなしに堅牢性を高める研究であり、音声モデルの敵対的堅牢性が対象でLLM推論システムではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models"
+    },
+    "arXiv:2609.29780": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29780",
+      "identity_tokens": [
+        "arXiv:2609.29780"
+      ],
+      "reason": "連続音声エンコーダの潜在次元とフレームレートの組合せを16構成で学習しASRや音声QAへの影響を分析した研究であり、音声表現の設計分析が対象でLLM推論への適用は示されていないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Joint Analysis of Latent Dimensionality and Frame Rate in Continuous Audio Encoders"
+    },
+    "arXiv:2609.34363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34363",
+      "identity_tokens": [
+        "arXiv:2609.34363"
+      ],
+      "reason": "オムニモーダルモデルで音声と映像の時間的対応を中間表現の対照学習で強化するSyncRAの提案であり、マルチモーダル知覚の学習手法が対象で推論効率化の機構はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "SyncRA: Learning Temporal Correspondence in Omni-Modal Models"
+    },
+    "arXiv:2609.35532": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35532",
+      "identity_tokens": [
+        "arXiv:2609.35532"
+      ],
+      "reason": "長期エージェントの能力ギャップの変化に合わせルーブリックとスキルを共進化させる強化学習枠組みARISEであり、エージェント学習の適応が対象で推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "ARISE: Adapting to Evolving Capability Gaps in Agentic Reinforcement Learning"
+    },
+    "arXiv:2610.34350": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.34350",
+      "identity_tokens": [
+        "arXiv:2610.34350"
+      ],
+      "reason": "推論の最初のトークンを変えると後続の推論長が持続的に変わる現象を、次トークン分布と注意遮断で追跡した分析研究であり、推論モデルの挙動理解が中心で効率化のシステム機構は提案されていないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Beyond the Opening: Tracing the First Token's Persistent Influence on Reasoning Length"
+    },
+    "arXiv:2610.35333": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.35333",
+      "identity_tokens": [
+        "arXiv:2610.35333"
+      ],
+      "reason": "多ラウンド対話でコードエージェントの要求焦点がずれる問題に、リポジトリ構造と要求意味から対応表を作り文脈へ注入するRepoTraceの提案であり、コードエージェントのハーネス改善が対象で推論システムではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "RepoTrace: Improving Requirement Tracing in Multi-Round Agent Interactions"
+    },
+    "arXiv:2611.04867": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.04867",
+      "identity_tokens": [
+        "arXiv:2611.04867"
+      ],
+      "reason": "実世界グループ会話の履歴を用い、複数参加者の情報を統合した支援を測るGroupAssistBenchというメモリベンチマークの構築が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "One Assistant, Many Memories: Benchmarking Real-World Group Assistance When Recall Is Not Enough"
+    },
+    "arXiv:2611.09006": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.09006",
+      "identity_tokens": [
+        "arXiv:2611.09006"
+      ],
+      "reason": "生成推薦の潜在推論で教師生成CoTの代わりにアイテム履歴から意味的ターゲットを構成するPHiTの提案であり、推薦システムという応用が主目的でLLM推論基盤への貢献は示されていないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Rethinking Latent Reasoning for Generative Recommendation: Beyond Teacher-Generated CoT and Recurrent Hidden-State Feedback"
+    },
+    "DOI:10.1109/iros58592.2024.10801981": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iros58592.2024.10801981",
+      "identity_tokens": [
+        "DOI:10.1109/iros58592.2024.10801981"
+      ],
+      "reason": "Retentive Networksを動画入力へ一般化し、人間とロボットの協調搬送タスクで力と速度を予測する研究で、推論時間の改善にも触れるが対象はロボット協調制御という応用そのものであり、LLM推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Force and Velocity Prediction in Human-Robot Collaborative Transportation Tasks through Video Retentive Networks"
+    },
+    "DOI:10.48550/arxiv.2412.06412": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2412.06412",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2412.06412",
+        "arXiv:2412.06412"
+      ],
+      "reason": "大規模望遠鏡アレイの観測計画・データ処理・追観測提案をLLMエージェントで自動化するStarWhisper Telescopeシステムの天文運用への適用報告であり、応用システムの構築が中心で推論基盤への技術的貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "StarWhisper Telescope: Agent-Based Observation Assistant System to Approach AI Astrophysicist"
+    },
+    "arXiv:2109.13209": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.13209",
+      "identity_tokens": [
+        "arXiv:2109.13209"
+      ],
+      "reason": "フランス語読解データセットFQuADに回答不能な質問を追加したFQuAD2.0の構築を報告する研究であり、データセット整備が対象で推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "FQuAD2.0: French Question Answering and knowing that you know nothing"
+    },
+    "arXiv:2505.15004": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.15004",
+      "identity_tokens": [
+        "arXiv:2505.15004"
+      ],
+      "reason": "感情を保持しながら話者を匿名化するため、話者性・言語内容・感情を因子化蒸留で分離するEASYの提案であり、音声プライバシー処理が対象でLLM推論とは無関係なためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "EASY: Emotion-aware Speaker Anonymization via Factorized Distillation"
+    },
+    "arXiv:2510.05478": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.05478",
+      "identity_tokens": [
+        "arXiv:2510.05478"
+      ],
+      "reason": "大規模音声言語モデルをラベルなしテストデータでテスト時強化学習により適応させるAQA-TTRLの提案であり、音声質問応答の精度改善が目的で推論システムの効率化機構ではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "AQA-TTRL: Self-Adaptation in Audio Question Answering with Test-Time Reinforcement Learning"
+    },
+    "arXiv:2511.22982": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.22982",
+      "identity_tokens": [
+        "arXiv:2511.22982"
+      ],
+      "reason": "テキスト描画に最適化した7Bのテキスト画像生成モデルOvis-Imageの技術報告で、限られた計算資源での運用可能性にも触れるが、主内容は拡散型画像生成モデルの学習と品質でありLLM推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Ovis-Image Technical Report"
+    },
+    "DOI:10.3724/sp.j.1089.2024-00281": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3724/sp.j.1089.2024-00281",
+      "identity_tokens": [
+        "DOI:10.3724/sp.j.1089.2024-00281"
+      ],
+      "reason": "AIGCによる画像・動画生成手法を条件別モデルや動画拡散モデルを中心に概観したレビュー論文であり、生成モデル一般の総説でLLM推論システムへの技術的貢献は扱われていないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "AIGC-Based Image and Video Generation Method: A Review"
+    },
+    "arXiv:2405.14004": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.14004",
+      "identity_tokens": [
+        "arXiv:2405.14004"
+      ],
+      "reason": "AI・機械学習のライフサイクル全体の環境影響を監視し政策へ活かすための評価フレームワークを論じる研究であり、環境影響評価が対象で推論システムの技術的貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Towards A Comprehensive Assessment of AI's Environmental Impact"
+    },
+    "arXiv:2609.36626": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36626",
+      "identity_tokens": [
+        "arXiv:2609.36626"
+      ],
+      "reason": "自然言語スキルの継続的改訂で過去タスクの手順が上書きされる問題に、勾配射影の原理を振る舞い空間へ移したSSPEで対処する研究であり、言語エージェントの継続学習が対象で推論システムではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Semantic Projection for Continual Self-Evolution of Language Agents"
+    },
+    "arXiv:2610.04882": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.04882",
+      "identity_tokens": [
+        "arXiv:2610.04882"
+      ],
+      "reason": "オンポリシー蒸留で疎な教師分布しか送れない条件の下、尾部残差化で全語彙逆KL勾配を不偏推定するResOPDであり、対象は蒸留学習の通信・メモリボトルネックであって推論高速化ではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "ResOPD: Tail Residualization for Sparse On-Policy Distillation"
+    },
+    "arXiv:2610.05070": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.05070",
+      "identity_tokens": [
+        "arXiv:2610.05070"
+      ],
+      "reason": "結果正しさの信号を取り入れたオンポリシー自己蒸留の目的関数を解析・改良する研究であり、学習時の教師監督の信頼性が対象で推論システムへの具体的適用は確認できないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Outcome-Guided On-Policy Self-Distillation"
+    },
+    "arXiv:2610.05241": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.05241",
+      "identity_tokens": [
+        "arXiv:2610.05241"
+      ],
+      "reason": "LLMエージェントが再利用する永続的な運用記録の無効化を、反実仮想リプランニングで診断し行動前に修復するStateWiseの提案であり、エージェントの状態管理が対象で推論システムの機構ではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "StateWise: Diagnosing and Repairing Persistent Operational State Before Agent Actions"
+    },
+    "arXiv:2610.06782": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.06782",
+      "identity_tokens": [
+        "arXiv:2610.06782"
+      ],
+      "reason": "困難な多段階検索向けに有界な多ラウンド検索を行うオープンなエージェント検索器T-Searchとその学習・ベンチマークの公開であり、検索精度が主眼でLLM推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "T-Search: An Open Agentic Retriever and Playground for Hard Multi-Step Search"
+    },
+    "arXiv:2610.10624": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.10624",
+      "identity_tokens": [
+        "arXiv:2610.10624"
+      ],
+      "reason": "実世界の空間音声・視覚理解を3つの能力レベルで測るSAVU-BENCHと診断セットの構築・評価が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "SAVU-BENCH: A Real-World Benchmark for Spatial Audio-Visual Understanding"
+    },
+    "arXiv:2610.16338": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.16338",
+      "identity_tokens": [
+        "arXiv:2610.16338"
+      ],
+      "reason": "音声・映像生成の同期品質について人手評価データセットとベンチマーク、同期報酬モデルを構築するSyncRewardの研究であり、生成品質の評価・報酬学習が対象で推論システムではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "SyncReward: Human-Aligned Synchronization Reward for Audio-Visual Generation"
+    },
+    "arXiv:2610.18391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.18391",
+      "identity_tokens": [
+        "arXiv:2610.18391"
+      ],
+      "reason": "準同型暗号化データに対するバルクビット演算を高速化するHULKの提案で、分析対象はデータベース・グラフ・ゲノム解析等の暗号化計算であり、LLM推論への適用は要旨に示されていないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "HULK: An Efficient Algorithm for Enabling Fast Bulk Bitwise Operations on Homomorphically Encrypted Data"
+    },
+    "arXiv:2610.19872": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.19872",
+      "identity_tokens": [
+        "arXiv:2610.19872"
+      ],
+      "reason": "推論プロンプトの移転による利得と害を生成終了記録と対応付けて診断するRCCMの実証研究であり、プロンプト戦略の評価・診断が中心で推論システムの機構的貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "RCCM: Diagnosing Gains and Harms in Reasoning-Prompt Transfer"
+    },
+    "arXiv:2610.21138": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.21138",
+      "identity_tokens": [
+        "arXiv:2610.21138"
+      ],
+      "reason": "少量のクリーンなフィードバックでサンプルごとのノイズ率を較正し報酬モデルを学習するCleanRMの提案であり、RLHFの学習手法が対象で推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "CleanRM: Reward Modeling from Noisy Feedback with a Few Clean Feedback for RLHF"
+    },
+    "arXiv:2610.22448": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.22448",
+      "identity_tokens": [
+        "arXiv:2610.22448"
+      ],
+      "reason": "Lean4形式化に基づく多レベル過程報酬でエージェント強化学習を進めるLean4AgenticRLの枠組みであり、ソフトウェア工学エージェントの学習が対象で推論高速化の機構ではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Lean4AgenticRL: Advancing Agentic RL with Verifiable Multi-level Process Rewards"
+    },
+    "arXiv:2610.24030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.24030",
+      "identity_tokens": [
+        "arXiv:2610.24030"
+      ],
+      "reason": "構造化検索でエビデンスグラフの境界カットを信号にラベルなし棄却を行う手法の提案であり、検索回答の信頼性判定が対象でLLM推論システムの実行機構への貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "When Does Evidence-Graph Structure Predict Answer Correctness? Label-Free Abstention for Structured Retrieval"
+    },
+    "arXiv:2610.25512": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.25512",
+      "identity_tokens": [
+        "arXiv:2610.25512"
+      ],
+      "reason": "視線対応アシスタントで過去の解釈を持ち越すことが後段の予測や出力へ与える影響を実験的に調べた研究であり、アシスタントの振る舞い分析が中心で推論システムへの技術的貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "When Interpretations Persist: Downstream Influence in Gaze-Aware Assistants"
+    },
+    "arXiv:2610.27256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.27256",
+      "identity_tokens": [
+        "arXiv:2610.27256"
+      ],
+      "reason": "商取引イベント系列に対する分析的推論とエビデンス grounding を測るTxnQAベンチマークの構築とモデル評価が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "TxnQA: Benchmarking Analytical Reasoning and Evidence Grounding over Transaction Event Sequences"
+    },
+    "arXiv:2610.28444": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.28444",
+      "identity_tokens": [
+        "arXiv:2610.28444"
+      ],
+      "reason": "音声・視覚エビデンスに基づく推論過程まで評価できるよう人手注釈したEvaOmniベンチマークの構築が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning"
+    },
+    "arXiv:2610.28945": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.28945",
+      "identity_tokens": [
+        "arXiv:2610.28945"
+      ],
+      "reason": "世界モデルで候補行動の結果を予測しMPPI的な重み付けで行動を選ぶ、デプロイ時に自己改善するLLMエージェントのテスト時枠組みであり、エージェントの意思決定手法が対象で推論システムの効率化機構ではないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Self-Improving Agents with World Model Predictive Paths"
+    },
+    "arXiv:2610.32268": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32268",
+      "identity_tokens": [
+        "arXiv:2610.32268"
+      ],
+      "reason": "意図の推論を要するクエリで動画区間を特定するRVG-Benchという時間的グラウンディング用ベンチマークの構築と22モデルの評価が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:30+00:00",
+      "last_checked_at": "2026-11-27T02:49:30+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "RVG-Bench: A Benchmark for Reasoning-Driven Audio-Visual Temporal Grounding"
+    },
+    "arXiv:2605.17875": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17875",
+      "identity_tokens": [
+        "arXiv:2605.17875"
+      ],
+      "reason": "タイトルが12誘導心電図の心疾患異常の多ラベル分類を明示しており、疾病判定という異分野応用が明白なため、タイトル走査でunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:31+00:00",
+      "last_checked_at": "2026-11-27T02:49:31+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "HexagonalWarriorMamba: Superior Threshold-Dependent Multi-label Classification of 12-Lead ECG Cardiac Abnormalities"
+    },
+    "arXiv:2606.01689": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01689",
+      "identity_tokens": [
+        "arXiv:2606.01689"
+      ],
+      "reason": "タイトルが赤外線小目標検出を明示しており、画像センシングによる目標検出という異分野応用が明白なため、タイトル走査でunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:31+00:00",
+      "last_checked_at": "2026-11-27T02:49:31+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "RPCASSM: Robust PCA State Space Model For Infrared Small Target Detection"
+    },
+    "arXiv:2607.07077": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07077",
+      "identity_tokens": [
+        "arXiv:2607.07077"
+      ],
+      "reason": "タイトルが脳グラフによる疾患診断を明示しており、疾病診断という異分野応用が明白なため、タイトル走査でunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:31+00:00",
+      "last_checked_at": "2026-11-27T02:49:31+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "Navigating Hierarchy: Hyperbolic Learning on Brain Graphs for Disorder Diagnosis"
+    },
+    "arXiv:2607.24093": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24093",
+      "identity_tokens": [
+        "arXiv:2607.24093"
+      ],
+      "reason": "タイトルがT細胞集団のアラインメントを明示しており、生物学データ解析という異分野応用が明白なため、タイトル走査でunrelatedとした。",
+      "first_checked_at": "2026-11-27T02:49:31+00:00",
+      "last_checked_at": "2026-11-27T02:49:31+00:00",
+      "linked_from": [
+        "worklist"
+      ],
+      "title": "TCellAlign: Cross-study T-cell Populations Alignment with Nomenclature-Guided Multi-Agent Workflow"
     }
   }
 }

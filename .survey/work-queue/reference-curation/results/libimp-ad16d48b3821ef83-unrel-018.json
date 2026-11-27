@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad16d48b3821ef83-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.28945",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.28945",
+    "identity_tokens": [
+      "arXiv:2610.28945"
+    ],
+    "reason": "世界モデルで候補行動の結果を予測しMPPI的な重み付けで行動を選ぶ、デプロイ時に自己改善するLLMエージェントのテスト時枠組みであり、エージェントの意思決定手法が対象で推論システムの効率化機構ではないためunrelatedとした。",
+    "first_checked_at": "2026-11-27T02:49:30+00:00",
+    "last_checked_at": "2026-11-27T02:49:30+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Self-Improving Agents with World Model Predictive Paths"
+  },
+  "processed_at": "2026-11-27T02:49:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad16d48b3821",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

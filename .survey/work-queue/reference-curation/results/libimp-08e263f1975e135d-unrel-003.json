@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-08e263f1975e135d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.09432",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.09432",
+    "identity_tokens": [
+      "arXiv:2606.09432"
+    ],
+    "reason": "グラフニューラルネットと状態空間モデルを結合した潜在シミュレータGraMOで相互作用粒子系の長時間ダイナミクスをモデル化する研究であり、物理シミュレーションが対象でLLM推論とは無関係なためunrelatedとした。",
+    "first_checked_at": "2026-11-27T02:49:30+00:00",
+    "last_checked_at": "2026-11-27T02:49:30+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "Graph Mamba Operator: A Latent Simulator for Interacting Particle Systems"
+  },
+  "processed_at": "2026-11-27T02:49:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-08e263f1975e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

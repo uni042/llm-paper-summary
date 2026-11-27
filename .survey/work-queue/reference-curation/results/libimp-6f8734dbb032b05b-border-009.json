@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6f8734dbb032b05b-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.01468",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.01468",
+    "identity_tokens": [
+      "arXiv:2406.01468"
+    ],
+    "reason": "言語モデルの出力埋め込みにトークン確率が対数線形に符号化されていることを示し、出力と無関係な次元の3割超を削除しても分布がほぼ変わらないことを確認した分析だが、推論時の圧縮機構として実装・評価されたものではなく解釈可能性研究の域にあるためborderlineとした。",
+    "first_checked_at": "2026-11-27T02:49:30+00:00",
+    "last_checked_at": "2026-11-27T02:49:30+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Understanding Token Probability Encoding in Output Embeddings"
+  },
+  "processed_at": "2026-11-27T02:49:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6f8734dbb032",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

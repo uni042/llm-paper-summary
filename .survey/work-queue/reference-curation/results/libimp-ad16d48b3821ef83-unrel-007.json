@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad16d48b3821ef83-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.10624",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.10624",
+    "identity_tokens": [
+      "arXiv:2610.10624"
+    ],
+    "reason": "実世界の空間音声・視覚理解を3つの能力レベルで測るSAVU-BENCHと診断セットの構築・評価が内容であり、能力評価のみで推論システムへの貢献はないためunrelatedとした。",
+    "first_checked_at": "2026-11-27T02:49:30+00:00",
+    "last_checked_at": "2026-11-27T02:49:30+00:00",
+    "linked_from": [
+      "worklist"
+    ],
+    "title": "SAVU-BENCH: A Real-World Benchmark for Spatial Audio-Visual Understanding"
+  },
+  "processed_at": "2026-11-27T02:49:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad16d48b3821",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
