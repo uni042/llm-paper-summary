@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（689本）
+## 自動生成の論文一覧（690本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2649,6 +2649,10 @@
 - **2024-07 · [Model Agnostic Hybrid Sharding For Heterogeneous Distributed Inference](2024-2407.19775-model-agnostic-hybrid-sharding-for-heterogeneous-distributed-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデルをブロック列へ分けて位相と能力を見て選んだ分散ノード列へ順に配置し、量子化で転送とメモリを減らす、モデル非依存の分散推論シャーディング方式。
+
+- **2024-06 · [VELO: A Vector Database-Assisted Cloud-Edge Collaborative LLM QoS Optimization Framework](2024-2406.13399-velo-a-vector-database-assisted-cloud-edge-collaborative-llm-qos-optimiz.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エッジにベクトルデータベースを置いて過去の質問応答を再利用し、多エージェント強化学習がリクエスト特徴と検索結果を見て即答・増強・直接依頼を使い分けることで、モデルを改変せずに報酬を最大14.59パーセント上げたクラウドとエッジの協調枠組み。
 
 - **2024-06 · [Fast Graph Vector Search via Hardware Acceleration and Delayed-Synchronization Traversal](2024-2406.12385-fast-graph-vector-search-via-hardware-acceleration-and-delayed-synchroni.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

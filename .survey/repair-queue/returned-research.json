@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-27T22:40:05+00:00",
+  "generated_at": "2026-11-27T22:50:17+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 15,
+  "count": 16,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -400,7 +400,7 @@
     },
     {
       "canonical_id": "arXiv:2512.19443",
-      "title": "D2Pruner: Debiased Importance and Structural Diversity for MLLM Token Pruning",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2512.19443",
       "returned_at": "2026-11-27T22:33:18+00:00",
       "return_count": 2,
@@ -424,6 +424,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.md",
       "import_result_path": ".survey/import-inbox/results/research/2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.json",
       "worker_run_key": "muse-20261128-b1"
+    },
+    {
+      "canonical_id": "arXiv:2409.15298",
+      "title": "Sorbet: A Neuromorphic Hardware-Compatible Transformer-Based Spiking Language Model",
+      "source_url": "https://arxiv.org/abs/2409.15298",
+      "returned_at": "2026-11-27T22:46:01+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 456 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4097,
+        "body_paragraphs": 23,
+        "method_chars": 1609,
+        "method_paragraphs": 5,
+        "evaluation_chars": 456,
+        "limitation_chars": 310,
+        "insufficiency_flags": [
+          "評価説明量 456 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.md",
+      "import_result_path": ".survey/import-inbox/results/research/2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.json",
+      "worker_run_key": "muse-20261128-b2"
     }
   ]
 }

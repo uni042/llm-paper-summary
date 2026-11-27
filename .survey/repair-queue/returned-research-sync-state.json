@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "dff3eaa21a2e4970b2aae0805589ab6ab799417c",
+  "base_commit": "d46e97b3b88dba04814a27bd7248129a73298e7a",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -119,6 +119,7 @@
     "2021-2112.08560-block-skim-efficient-question-answering-for-transformer.json",
     "2021-a15e1294d14f-tprune.json",
     "2022-04cb6c841249-pame-precision-aware-multi-exit-dnn-serving-for-reducing-latencies-of-batched-inferences.json",
+    "2022-2201.06268-continual-transformers-redundancy-free-attention-for-online-inference.json",
     "2022-2203.00748-e-lang-energy-based-joint-inferencing-of-super-and-swift-language-models.json",
     "2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.json",
     "2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.json",
@@ -187,10 +188,12 @@
     "2024-2406.00030-large-language-model-pruning.json",
     "2024-2406.02376-retaining-key-information-under-high-compression-ratios-query-guided-compressor-for-llms.json",
     "2024-2406.06571-subllm-a-novel-efficient-architecture-with-token-sequence-subsampling-for-llm.json",
+    "2024-2406.07007-crayon-customized-on-device-llm-via-instant-adapter-blending-and-edge-server-hybrid-inference.json",
     "2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-language-models.json",
     "2024-2406.11477-how-can-we-effectively-expand-the-vocabulary-of-llms-with-0-01gb-of-target-language-text.json",
     "2024-2406.12018-citrus-chunked-instruction-aware-state-eviction-for-long-sequence-modeling.json",
     "2024-2406.12385-fast-graph-vector-search-via-hardware-acceleration-and-delayed-synchronization-traversal.json",
+    "2024-2406.13399-velo-a-vector-database-assisted-cloud-edge-collaborative-llm-qos-optimization-framework.json",
     "2024-2406.15524-rethinking-pruning-large-language-models-benefits-and-pitfalls-of-reconstruction-error-minimization.json",
     "2024-2406.17415-layer-wise-quantization-a-pragmatic-and-effective-method-for-quantizing-llms-beyond-integer-bit-levels.json",
     "2024-2406.18002-decoding-with-limited-teacher-supervision-requires-understanding-when-to-trust-the-teacher.json",
@@ -211,6 +214,7 @@
     "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
     "2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.json",
     "2024-2409.15254-archon-an-architecture-search-framework-for-inference-time-techniques.json",
+    "2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.json",
     "2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.json",
     "2024-2410.02745-avg-llava-an-efficient-large-multimodal-model-with-adaptive-visual-granularity.json",
     "2024-2410.04139-from-reading-to-compressing-exploring-the-multi-document-reader-for-prompt-compression.json",
@@ -626,6 +630,7 @@
     "2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.json",
     "2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.json",
     "2026-2602.09555-adaptive-test-time-compute-allocation-for-block-diffusion-language-models-in-complex-reasoning.json",
+    "2026-2602.10021-decoupled-reasoning-with-implicit-fact-tokens-drift-a-dual-model-framework-for-efficient-long-context-inference.json",
     "2026-2602.10238-learning-to-evict-from-key-value-cache.json",
     "2026-2602.10254-area-efficient-in-memory-computing-for-mixture-of-experts-via-multiplexing-and-caching.json",
     "2026-2602.10953-search-or-accelerate-confidence-switched-position-beam-search-for-diffusion-language-models.json",
@@ -55357,6 +55362,78 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2201.06268": {
+      "order": [
+        "2026-11-27T22:42:46+00:00",
+        "2022-2201.06268-continual-transformers-redundancy-free-attention-for-online-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2406.07007": {
+      "order": [
+        "2026-11-27T22:44:22+00:00",
+        "2024-2406.07007-crayon-customized-on-device-llm-via-instant-adapter-blending-and-edge-server-hybrid-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2406.13399": {
+      "order": [
+        "2026-11-27T22:45:58+00:00",
+        "2024-2406.13399-velo-a-vector-database-assisted-cloud-edge-collaborative-llm-qos-optimization-framework.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2409.15298": {
+      "order": [
+        "2026-11-27T22:46:01+00:00",
+        "2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "aa5a77151e0809c452cf31ebe360491e7487664563d081a9bdab96c5feb3b1c2",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.md",
+        "canonical_id": "arXiv:2409.15298",
+        "worker_completed_at": "2026-11-28T08:10:00+09:00",
+        "worker_run_key": "muse-20261128-b2",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4097,
+          "body_paragraphs": 23,
+          "method_chars": 1609,
+          "method_paragraphs": 5,
+          "evaluation_chars": 456,
+          "limitation_chars": 310,
+          "insufficiency_flags": [
+            "評価説明量 456 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 456 < 500"
+        ],
+        "processed_at": "2026-11-27T22:46:01+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2602.10021": {
+      "order": [
+        "2026-11-27T22:47:38+00:00",
+        "2026-2602.10021-decoupled-reasoning-with-implicit-fact-tokens-drift-a-dual-model-framework-for-efficient-long-context-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68977,6 +69054,18 @@
     ],
     "arxiv:2602.08948": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-comput.md"
+    ],
+    "arxiv:2201.06268": [
+      "papers/inference/99-other-inference-systems/2022-2201.06268-continual-transformers-redundancy-free-attention-for-online-inference.md"
+    ],
+    "arxiv:2406.07007": [
+      "papers/inference/08-edge-on-device-llm-systems/2024-2406.07007-crayon-customized-on-device-llm-via-instant-adapter-blending-and-edge-se.md"
+    ],
+    "arxiv:2406.13399": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.13399-velo-a-vector-database-assisted-cloud-edge-collaborative-llm-qos-optimiz.md"
+    ],
+    "arxiv:2602.10021": [
+      "papers/inference/99-other-inference-systems/2026-2602.10021-decoupled-reasoning-with-implicit-fact-tokens-drift-a-dual-model-framewo.md"
     ]
   }
 }

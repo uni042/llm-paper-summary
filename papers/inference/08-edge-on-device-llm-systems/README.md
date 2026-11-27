@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（131本）
+## 自動生成の論文一覧（132本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -509,6 +509,10 @@
 - **2024-07 · [Co-Designing Binarized Transformer and Hardware Accelerator for Efficient End-to-End Edge Deployment](2024-2407.12070-co-designing-binarized-transformer-and-hardware-accelerator-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   二値化TransformerのモデルBMTと専用アクセラレータBATを設計空間探索で共同最適化し、GLUEの精度をほぼ保ったままFPGA上で先行アクセラレータ比スループット最大49.37倍とエネルギー効率最大88.53倍を実測したエッジ向け共同設計。
+
+- **2024-06 · [Crayon: Customized On-Device LLM via Instant Adapter Blending and Edge-Server Hybrid Inference](2024-2406.07007-crayon-customized-on-device-llm-via-instant-adapter-blending-and-edge-se.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  基礎LoRAのプールを共同学習しておき、利用者の少量の例との類似度で即座に合成してカスタムLoRAを作ることで端末内学習なしにカスタマイズし、2割だけサーバーへ逃がすハイブリッドと合わせてMMLU平均を31.0から47.6パーセントへ上げた研究。
 
 ### 4年前（2022-12〜2023-11）
 

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（809本）
+## 自動生成の論文一覧（811本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1586,6 +1586,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   そこで本論文は、モデルの確率分布に「適切な時点で終了する」兆候がすでに含まれているのかを調べ、その情報を取り出す生成方式と学習方式を設計する。
 
+- **2026-02 · [Decoupled Reasoning with Implicit Fact Tokens (DRIFT): A Dual-Model Framework for Efficient Long-Context Inference](2026-2602.10021-decoupled-reasoning-with-implicit-fact-tokens-drift-a-dual-model-framewo.md)**  
+  実装：[✓](https://github.com/Lancelot-Xie/DRIFT) ・ リポジトリ内被引用：0  
+  軽量な知識モデルが長文書のチャンクをクエリ条件付きで潜在的な事実トークンへ圧縮し、大きな推論モデルは生文ではなく圧縮表現だけを読んで答えることで、32倍圧縮でもLongBench v2の精度を20.87パーセントから29.22パーセントへ上げ、256kトークン文書で平均7倍速くした二重モデルの長文脈推論。
+
 - **2026-02 · [BAPS: A Fine-Grained Low-Precision Scheme for Softmax in Attention via Block-Aware Precision reScaling](2026-2602.02071-baps-a-fine-grained-low-precision-scheme-for-softmax-in-attention-via-bl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   近似した行最大値での引き算を専用コア側へ寄せて注意スコアの差を八ビットのまま転送し、外れたブロックだけ高精度でやり直すことで、長文脈の単語抽出で高精度構成の六十四・八パーセントに対し六十四・〇パーセントを保ち、単純な八ビット化の五十四・〇パーセントへの崩れを防いだ。
@@ -2639,7 +2643,7 @@
   線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
 
 - **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
-  実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：28  
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
@@ -2961,11 +2965,11 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：108  
+  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：109  
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：90  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：91  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  
@@ -3149,6 +3153,10 @@
 - **2022-01 · [Fast Monte-Carlo Approximation of the Attention Mechanism](2022-2201.12854-fast-monte-carlo-approximation-of-the-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Transformerの注意機構では、各入力位置が他の位置へどれだけ注意を向けるかを表す重みを計算し、その重みに基づいて値ベクトルを集約する。BERT、DistilBERT、Longformerに適用した実験では、GLUEの分類・類似度評価で精度をおおむね維持しつつ注意演算の計算量を大幅に減らせると報告する。
+
+- **2022-01 · [Continual Transformers: Redundancy-Free Attention for Online Inference](2022-2201.06268-continual-transformers-redundancy-free-attention-for-online-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  過去分の注意の部分結果をキャッシュして新しいトークンとの差分だけを更新する形へ注意計算を書き換え、出力と重みを完全に保ったままオンライン推論の1予測あたり演算を最大63倍削減した、無損失な継続型Transformerエンコーダ。
 
 ### 6年前（2020-12〜2021-11）
 
