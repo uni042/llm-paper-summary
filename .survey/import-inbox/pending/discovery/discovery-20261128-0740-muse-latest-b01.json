@@ -1,0 +1,385 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261128-latest-b01",
+ "reference_main_sha": "a5962e0ecff7b613a73354a063e427ebedbb0723",
+ "record_count": 22,
+ "origin": "discovery_latest_search",
+ "records": [
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2611.32545",
+   "identity_tokens": [
+    "arXiv:2611.32545"
+   ],
+   "title": "RePrism: Joint Request and Representation Scheduling for LLM Agent Serving",
+   "reason": "エージェントワークフローの依存関係が見える前提で、readyなリクエスト選択とプロンプト表現（再利用可能な表現形式）選択を共同最適化するサービングシステムRePrismを提案し、LoRAアダプタとKVキャッシュへのGPUメモリ配分まで含めてスループットとセッション完了時間の改善を要旨で具体的に示しているため、LLMサービングへの直接貢献として対象内とする。",
+   "source_url": "https://arxiv.org/abs/2611.32545",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2611.33898",
+   "identity_tokens": [
+    "arXiv:2611.33898"
+   ],
+   "title": "MoS: Mixture-of-Modality Streaming for Low-Latency Online Video LLM Analytics over Dynamic Networks",
+   "reason": "動的ネットワーク下で視覚・テキストモダリティの組合せを適応的にストリーミングしオンライン動画LLM分析の精度と応答性を両立させるシステムMoSの提案だが、主対象は動画分析向けのモダリティ配信最適化であり、LLM推論・サービング機構自体への貢献は間接的で薄いため保留とする。",
+   "source_url": "https://arxiv.org/abs/2611.33898",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2611.33005",
+   "identity_tokens": [
+    "arXiv:2611.33005"
+   ],
+   "title": "Leto: Utility-Centric Agent Memory",
+   "reason": "LLMエージェント向けメモリシステムLetoは将来の応答への有用性で記憶の保持・提供を決める枠組みだが、対象はエージェントの会話メモリ管理という応用層であり、KVキャッシュや推論実行機構への技術的貢献が要旨からは確認できないため保留とする。",
+   "source_url": "https://arxiv.org/abs/2611.33005",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2611.31806",
+   "identity_tokens": [
+    "arXiv:2611.31806"
+   ],
+   "title": "Where Did My Tokens Go? Verifiable Token Billing for LLM Services",
+   "reason": "TokenProvはLLMサービスのトークン課金を認証付き受付証跡で検証するプロトコルであり、LLMサービスの基盤要素ではあるが、推論の実行・スケジューリング・メモリ等のサービング性能機構への貢献ではなく課金検証が主目的のため保留とする。",
+   "source_url": "https://arxiv.org/abs/2611.31806",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2611.32917",
+   "identity_tokens": [
+    "arXiv:2611.32917"
+   ],
+   "title": "SOARS: System One Assisted Reranking for Agentic Search",
+   "reason": "SOARSはSystem Oneモデルで関連度推定を行い深掘り検索エージェントの検索回数・遅延・推論コストを削減する枠組みだが、主貢献は検索リランキングという応用層の効率化であり、LLM推論システム自体の機構への貢献は間接的なため保留とする。",
+   "source_url": "https://arxiv.org/abs/2611.32917",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2611.32755",
+   "identity_tokens": [
+    "arXiv:2611.32755"
+   ],
+   "title": "ReQOR: Operator-Discrepancy Subspace Repair for Quantization-Conditioned Backdoors in Large Language Models",
+   "reason": "ReQORは量子化条件付きバックドアに対し量子化で生じた演算子乖離の主方向を閉形式で修復する学習不要の防御手法で、量子化推論軌跡を扱う点は関連するが、目的はセキュリティ防御であり推論効率・サービングへの貢献ではないため保留とする。",
+   "source_url": "https://arxiv.org/abs/2611.32755",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2611.33510",
+   "identity_tokens": [
+    "arXiv:2611.33510"
+   ],
+   "title": "LogToPersona: New Benchmark and Efficient Persona Prediction through Semantic Log Filtering",
+   "reason": "LogToPersonaはオンデバイス推論を前提に活動ログを意味的にフィルタし、KVキャッシュのメモリフットプリントを最大39%削減しprefill時間を半減以下にすると要旨で述べるが、主貢献はペルソナ予測という特定応用向けの入力削減であり、汎用的な推論機構の提案ではないため保留とする。",
+   "source_url": "https://arxiv.org/abs/2611.33510",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2611.33325",
+   "identity_tokens": [
+    "arXiv:2611.33325"
+   ],
+   "title": "Sparse Adaptation for In-Context Learning on Data Streams",
+   "reason": "SAILはデータストリーム上の表形式基盤モデルの適応で適応イベント間にモデルのKVキャッシュを再利用する枠組みだが、対象はIoT表データの文脈適応という応用であり、LLM推論システムへの直接貢献としては機構の新規性・汎用性が要旨からは弱いため保留とする。",
+   "source_url": "https://arxiv.org/abs/2611.33325",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2611.32063",
+   "identity_tokens": [
+    "arXiv:2611.32063"
+   ],
+   "title": "Integral DeltaNet: Improved Linear Attention with Adaptive Memory Integration",
+   "reason": "Integral DeltaNetは線形注意でデルタ状態と積分状態の2つの再帰状態を保持しKVキャッシュ増大を避けるアーキテクチャ改良だが、要旨の主眼は長文脈モデリングの精度（記憶衝突の緩和）であり、推論システムとしての実装・効率評価への直接貢献は確認できないため保留とする。",
+   "source_url": "https://arxiv.org/abs/2611.32063",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2611.32057",
+   "identity_tokens": [
+    "arXiv:2611.32057"
+   ],
+   "title": "Generalized Tensor Parallelism: Powering Trillion-Parameter LLM Training at 10+ EFLOP/s",
+   "reason": "Generalized Tensor Parallelismはデータ・テンソル・シーケンス・文脈並列とFSDPを線形層の分割として統一する枠組みだが、要旨が示す適用先は兆パラメータ級LLMの事前学習（10+ EFLOP/s）であり、推論サービングへの直接貢献ではないため保留とする。",
+   "source_url": "https://arxiv.org/abs/2611.32057",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2611.32324",
+   "identity_tokens": [
+    "arXiv:2611.32324"
+   ],
+   "title": "When Exact Token Importance Is Not Enough: Limits of Top-K Selection in LLM Attention",
+   "reason": "注意におけるTop-Kトークン選択の限界を、個別重要度が正確でも最適な保持集合と乖離しうることを構成と実モデル監査で示す理論的分析であり、KVキャッシュ削減・トークンevictionと関連はするが、推論システムの機構提案ではなく分析に留まるため保留とする。",
+   "source_url": "https://arxiv.org/abs/2611.32324",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.34515",
+   "identity_tokens": [
+    "arXiv:2611.34515"
+   ],
+   "title": "Decoder-as-a-Probe: Verbalizing and Steering Visual Representations in LVLMs",
+   "reason": "Decoder-as-a-ProbeはLVLMの視覚表現をLLMデコーダの一次テイラー展開で読み出す解釈性手法であり、対象は表現の解釈とステアリングであって、LLM推論の効率化・サービング機構への貢献は要旨に示されていないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.34515",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.33314",
+   "identity_tokens": [
+    "arXiv:2611.33314"
+   ],
+   "title": "Building a Unified Inline Code Editing Model for GitHub Copilot",
+   "reason": "GitHub Copilot向けに補完・近傍編集・遠距離編集を単一モデルで予測する統合インラインコード編集モデルの構築報告であり、モデル呼び出し回数の削減に触れるものの主貢献は編集予測モデル自体であって推論サービングシステムではないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.33314",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.32125",
+   "identity_tokens": [
+    "arXiv:2611.32125"
+   ],
+   "title": "LARF: Learning-aligned Reasoning Framework for Search Relevance",
+   "reason": "LARFは検索関連度推定のための学習整合型推論フレームワークであり、対象は検索ランキングの判定精度と学習手法であって、LLM推論システム・サービングへの技術的貢献は要旨に示されていないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.32125",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.32064",
+   "identity_tokens": [
+    "arXiv:2611.32064"
+   ],
+   "title": "Fix How It Acts, Not How It Thinks: Surgical Fine-Tuning of Frontier LLMs",
+   "reason": "Surgical Fine-TuningはフロンティアLLMの行動上の失敗をLoRA更新で修正し、BF16やFP8/NVFP4量子化リリースへのマージで更新が消失する問題を扱うが、主対象は微調整とチェックポイント配布であり推論実行機構への貢献ではないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.32064",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.31894",
+   "identity_tokens": [
+    "arXiv:2611.31894"
+   ],
+   "title": "RESET: One Demonstration, One Verified World, Self-Improved Skills Across Embodiments",
+   "reason": "RESETは単一の実演からロボット操作スキルの自己改善を行う枠組みであり、LLMコーディングエージェントをシミュレーション内の改善に使う応用であって、LLM推論システムへの貢献は要旨に示されていないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.31894",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.31821",
+   "identity_tokens": [
+    "arXiv:2611.31821"
+   ],
+   "title": "Exploring Multi-Player Social Games as Verifiable Training Grounds for Large Language Models",
+   "reason": "マルチプレイヤー社会ゲームをLLMの社会的知能の学習基盤としてSFTとRLVRで評価する研究であり、対象はモデルの学習・評価であって推論サービングや推論効率の機構への貢献ではないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.31821",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.34132",
+   "identity_tokens": [
+    "arXiv:2611.34132"
+   ],
+   "title": "Agent-as-a-Verifier: From Scores to Evidence for General Verification",
+   "reason": "Agent-as-a-Verifierはスコア型検証器に代わりエージェントが証拠付き証明書を出す検証システムだが、対象は出力検証・報酬付けの枠組みであり、LLM推論システムの実行効率やサービング機構への貢献ではないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.34132",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.33030",
+   "identity_tokens": [
+    "arXiv:2611.33030"
+   ],
+   "title": "SALSA: Sampling Adversarial Suffixes from Learned Distributions for LLM Safety Assessment",
+   "reason": "SALSAは脱獄攻撃用の敵対的サフィックス分布を学習しサンプリングで高速に攻撃を生成する安全性評価手法であり、推論時間の短縮は攻撃生成に関するもので、LLM推論システムへの貢献ではないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.33030",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.32674",
+   "identity_tokens": [
+    "arXiv:2611.32674"
+   ],
+   "title": "Simultaneous Inference for Watermark Proportions in LLM-Generated Text",
+   "reason": "LLM生成テキストの透かし保持割合に対する同時推論（信頼下限）の統計手法であり、対象は透かし検出の統計的推測であって、LLM推論・サービングのシステム機構への貢献は要旨に示されていないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.32674",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.31848",
+   "identity_tokens": [
+    "arXiv:2611.31848"
+   ],
+   "title": "Faithful Persona Steering under Incongruity via Dual-Stream Refinement",
+   "reason": "QuirkyMindはペルソナの不整合を扱う二流路の潜在状態によるパーソナライゼーション手法であり、対象は個人化生成の表現学習であって、LLM推論システムへの技術的貢献は要旨に示されていないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.31848",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.33093",
+   "identity_tokens": [
+    "arXiv:2611.33093"
+   ],
+   "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
+   "reason": "AIChipBenchは量子化済みLLMデコーダをRTLで実装させることでLLMコーディングエージェントのハードウェア設計能力を測るベンチマークであり、対象はエージェント評価であって推論システム自体の提案ではないため対象外とする。",
+   "source_url": "https://arxiv.org/abs/2611.33093",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-28T07:40:00+09:00",
+   "last_checked_at": "2026-11-28T07:40:00+09:00",
+   "linked_from": [
+    "latest_search arxiv api"
+   ],
+   "origin": "discovery_latest_search"
+  }
+ ]
+}
