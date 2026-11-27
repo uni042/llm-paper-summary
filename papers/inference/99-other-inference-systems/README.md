@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（817本）
+## 自動生成の論文一覧（818本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1034,6 +1034,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   MorphoQuantは、画像・動画・音声を同時に扱う大規模言語モデルの活性値を4ビットに圧縮するとき、モダリティごとに異なる分布の形状が原因で精度が低下する問題を扱う。
 
+- **2026-06 · [Massive Spikes in LLMs are Bias Vectors: Mechanistic Uncovering and Spike-Free Quantization](2026-2606.02288-massive-spikes-in-llms-are-bias-vectors-mechanistic-uncovering-and-spike.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  巨大スパイクの担い手が正規化後に定数ベクトルへ収束し注意シンクを駆動するという機構解明に基づき、スパイクを抑えて事前計算テンプレートで機能を戻すことで、4ビット量子化でも先行最良方式と同等の精度を保ち、視覚モデルへも一般化した学習後量子化の研究。
+
 - **2026-06 · [LoopMoE: Unifying Iterative Computation with Mixture-of-Experts for Language Modeling](2026-2606.04438-loopmoe-unifying-iterative-computation-with-mixture-of-experts-for-langu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常のMoEは、多数の専門家パラメータを保持しながら各トークンでは少数だけを選ぶことで、総容量と一回の計算量を分離する。しかし、反復による精度向上を単純な非反復モデルと比較すると、層数、総パラメータ、演算回数、専門家活性化数などが同時に変化し、何が改善を生んだのか分からなくなる。
@@ -1833,7 +1837,7 @@
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
 - **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
-  実装：✓ ・ リポジトリ内被引用：53  
+  実装：✓ ・ リポジトリ内被引用：54  
   長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
@@ -2643,7 +2647,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：73  
+  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：74  
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
@@ -2655,7 +2659,7 @@
   RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
 
 - **2023-12 · [Zoology: Measuring and Improving Recall in Efficient Language Models](2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：48  
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  

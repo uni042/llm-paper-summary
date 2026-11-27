@@ -894,6 +894,10 @@
   実装：[✓](https://github.com/ironartisan/DLP) ・ リポジトリ内被引用：8  
   DLP（動的 Layerwise 枝刈り、動的層別刈り込み）は、重みのどれを削るかだけでなく、各層に何割の重みを残すかを決めるためのモデル圧縮方式である。ただし同じ70%の疎化率でも、重要な層を一律に70%削ると、あまり重要でない層を多く削る場合より予測品質が大きく損なわれる。
 
+- **2025-04 · [Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models](2025-2405.14428-mitigating-quantization-errors-due-to-activation-spikes-in-gated-linear-.md)**  
+  実装：[✓](https://github.com/onnoo/activation-spikes) ・ リポジトリ内被引用：7  
+  Yangらは、SwiGLUなどのゲート付き線形ユニット（GLU）を用いる大規模言語モデルで、少数のトークン位置に非常に大きい活性化値が現れ、活性化の量子化スケールを過大にする現象を調べた。著者はLLaMA-2を中心にW8A8量子化の精度低下を軽減し、代表的なzero-shot指標で量子化ベースラインより約7〜16%の改善を報告する。
+
 - **2025-01 · [BlockDialect: Block-wise Fine-grained Mixed Format Quantization for Energy-Efficient LLM Inference](2025-2501.01144-blockdialect-block-wise-fine-grained-mixed-format-quantization-for-energ.md)**  
   実装：[✓](https://code.stanford.edu/tambe-lab/blockdialect) ・ リポジトリ内被引用：7  
   著者らは、符号1ビットと値索引3ビットという4ビット格納形式を保ちつつ、16種類の表現可能値集合を用意するDialectFP4を提案する。LLaMA3-8Bで注意行列積まで含めて量子化した場合、最良のブロック混合設定では7課題平均正答率69.00%、比較対象のMXFP4-16は58.22%、全精度FP16は74.45%である（原著Table 1）。
@@ -905,10 +909,6 @@
 - **2025-09 · [PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models](2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   PTQTPは、学習済み重みを2枚の三値平面（trit-plane）と連続尺度へ分解し、約1.58ビット級の超低ビット表現を事後量子化（Post-学習 量子化; PTQ）だけで作る。二値PTQより表現力を増やしつつ、混合精度の例外経路を使わず一様な三値演算へ落とすのが狙いである。
-
-- **2025-04 · [Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models](2025-2405.14428-mitigating-quantization-errors-due-to-activation-spikes-in-gated-linear-.md)**  
-  実装：[✓](https://github.com/onnoo/activation-spikes) ・ リポジトリ内被引用：6  
-  Yangらは、SwiGLUなどのゲート付き線形ユニット（GLU）を用いる大規模言語モデルで、少数のトークン位置に非常に大きい活性化値が現れ、活性化の量子化スケールを過大にする現象を調べた。著者はLLaMA-2を中心にW8A8量子化の精度低下を軽減し、代表的なzero-shot指標で量子化ベースラインより約7〜16%の改善を報告する。
 
 - **2025-09 · [Quant-dLLM: Post-Training Extreme Low-Bit Quantization for Diffusion Large Language Models](2025-2510.03274-quant-dllm-post-training-extreme-low-bit-quantization-for-diffusion-larg.md)**  
   実装：[✓](https://github.com/ZTA2785/Quant-dLLM) ・ リポジトリ内被引用：5  

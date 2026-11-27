@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "6db9f5b641ec10bcada90eaa2446dbfef565cf14",
+  "base_commit": "224afe1b5aaea8fdca50abd08d1fe7b673d6de6c",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -835,6 +835,7 @@
     "2026-2605.07325-csr-infinite-horizon-real-time-policies-with-massive-cached-state-representations.json",
     "2026-2605.07443-rcllm-accelerating-generative-recommendation-via-beyond-prefix-kv-caching.json",
     "2026-2605.08044-fast-byte-latent-transformer.json",
+    "2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.json",
     "2026-2605.08913-non-monotonic-latency-in-apple-mps-decoding-kv-cache-interactions-and-execution-regimes.json",
     "2026-2605.08985-llava-uhd-v4-what-makes-efficient-visual-encoding-in-mllms.json",
     "2026-2605.09472-positional-lsh-binary-block-matrix-approximation-for-attention-with-linear-biases.json",
@@ -898,6 +899,7 @@
     "2026-2606.01934-hmpo-hybrid-median-length-policy-optimization-for-chain-of-thought-compression.json",
     "2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted-recovery.json",
     "2026-2606.02020-unveiling-the-entropy-dynamics-of-chain-of-thought-reasoning.json",
+    "2026-2606.02288-massive-spikes-in-llms-are-bias-vectors-mechanistic-uncovering-and-spike-free-quantization.json",
     "2026-2606.02559-from-layers-to-submodules-rethinking-granularity-in-replacement-based-llm-compression.json",
     "2026-2606.03014-mosaic-efficient-mixture-of-agent-scheduling-via-adaptive-aggregation-and-inference-concurrency.json",
     "2026-2606.03569-when-attention-collapses-stage-aware-visual-token-pruning-from-structure-to-semantics.json",
@@ -921,6 +923,7 @@
     "2026-2606.09551-fusefss-efficient-secure-llm-inference-with-function-secret-sharing.json",
     "2026-2606.09937-rksc-reasoning-aware-kv-cache-sharing-and-confident-early-exit.json",
     "2026-2606.11357-tilefuse-a-fused-mixed-precision-kernel-library-for-efficient-quantized-llm-inference.json",
+    "2026-2606.11700-comprank-efficient-llm-reranking-via-token-level-compression-and-decoding-free-scoring.json",
     "2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stream-dynamics.json",
     "2026-2606.12935-mars-margin-adversarial-risk-controlled-stopping-for-parallel-llm-test-time-scaling.json",
     "2026-2606.13233-reset-accurate-latency-critical-nvfp4-reasoning-via-step-aware-temperature-scaling.json",
@@ -955,6 +958,7 @@
     "2026-2606.24773-posterior-refinement-fast-language-generation-via-any-order-flow-maps.json",
     "2026-2606.25354-efficient-and-trainable-language-model-test-time-scaling-via-local-branch-routing.json",
     "2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-scoring.json",
+    "2026-2606.26560-erase-then-delta-attention-decoupling-erase-and-write-addresses-in-delta-rule-linear-attention.json",
     "2026-2606.26631-adaptive-visual-kv-cache-reuse-for-efficient-multi-turn-iterative-multimodal-reasoning.json",
     "2026-2606.27457-cluster-route-escalate-cascaded-framework-for-cost-aware-llm-serving.json",
     "2026-2606.27550-entmtp-accelerating-llm-inference-with-entropy-guided-multi-token-prediction.json",
@@ -988,6 +992,7 @@
     "2026-2607.08779-signed-symmetric-quantization-for-few-bit-integers.json",
     "2026-2607.09029-mosaic-adaptive-inter-layer-composition-for-efficient-heterogeneous-vision-language-models.json",
     "2026-2607.09385-steel-sparsity-aware-fused-attention-for-energy-efficient-long-sequence-inference-on-amd-s-xdna-npu.json",
+    "2026-2607.09889-remembering-distinct-items-not-tokens-a-learnable-dirichlet-process-cache-between-state-space-models-and-attention.json",
     "2026-2607.10137-rdq-residual-distribution-quantization-for-large-language-models.json",
     "2026-2607.10640-spectral-heat-flow-for-conservative-token-condensation-in-vision-language-models.json",
     "2026-2607.11089-os-pruner-pruning-chains-of-thought-of-reasoning-models-via-optimal-stopping.json",
@@ -55588,6 +55593,78 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2605.08314": {
+      "order": [
+        "2026-11-27T23:12:01+00:00",
+        "2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "8eac02ad3ac41e99023000faa1e178cf9c7bc22e018255f97820bdd0d9697fdb",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.md",
+        "canonical_id": "arXiv:2605.08314",
+        "worker_completed_at": "2026-11-28T07:40:00+09:00",
+        "worker_run_key": "muse-20261128-b1",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4595,
+          "body_paragraphs": 22,
+          "method_chars": 1914,
+          "method_paragraphs": 5,
+          "evaluation_chars": 445,
+          "limitation_chars": 340,
+          "insufficiency_flags": [
+            "評価説明量 445 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 445 < 500"
+        ],
+        "processed_at": "2026-11-27T23:12:01+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2606.02288": {
+      "order": [
+        "2026-11-27T23:13:38+00:00",
+        "2026-2606.02288-massive-spikes-in-llms-are-bias-vectors-mechanistic-uncovering-and-spike-free-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.11700": {
+      "order": [
+        "2026-11-27T23:15:15+00:00",
+        "2026-2606.11700-comprank-efficient-llm-reranking-via-token-level-compression-and-decoding-free-scoring.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.26560": {
+      "order": [
+        "2026-11-27T23:16:51+00:00",
+        "2026-2606.26560-erase-then-delta-attention-decoupling-erase-and-write-addresses-in-delta-rule-linear-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.09889": {
+      "order": [
+        "2026-11-27T23:18:28+00:00",
+        "2026-2607.09889-remembering-distinct-items-not-tokens-a-learnable-dirichlet-process-cache-between-state-space-models-and-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69256,6 +69333,18 @@
     "arxiv:2604.06627": [
       "papers/inference/99-other-inference-systems/2026-2604.06627-diffumask-diffusion-language-model-for-token-level-prompt-pruning.md",
       "papers/inference/99-other-inference-systems/2026-2604.06627-diffumask-diffusion-language-model-for-token-level-prompt-pruning.md"
+    ],
+    "arxiv:2606.02288": [
+      "papers/inference/99-other-inference-systems/2026-2606.02288-massive-spikes-in-llms-are-bias-vectors-mechanistic-uncovering-and-spike.md"
+    ],
+    "arxiv:2606.11700": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2606.11700-comprank-efficient-llm-reranking-via-token-level-compression-and-decodin.md"
+    ],
+    "arxiv:2606.26560": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2606.26560-erase-then-delta-attention-decoupling-erase-and-write-addresses-in-delta.md"
+    ],
+    "arxiv:2607.09889": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.09889-remembering-distinct-items-not-tokens-a-learnable-dirichlet-process-cach.md"
     ]
   }
 }

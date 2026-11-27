@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（283本）
+## 自動生成の論文一覧（284本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -553,6 +553,10 @@
 - **2026-06 · [MARS: Margin-Adversarial Risk-controlled Stopping for Parallel LLM Test-time Scaling](2026-2606.12935-mars-margin-adversarial-risk-controlled-stopping-for-parallel-llm-test-t.md)**  
   実装：[✓](https://github.com/Wenbo11/MARS) ・ リポジトリ内被引用：0  
   途中回答の投票の票差が、将来の変更による敵対的な損害を上回ることを証明してから並列生成を止める停止規則で、精度を保ったまま自己整合性のトークンを25から47パーセント削減する。
+
+- **2026-06 · [Erase-then-Delta Attention: Decoupling Erase and Write Addresses in Delta-Rule Linear Attention](2026-2606.26560-erase-then-delta-attention-decoupling-erase-and-write-addresses-in-delta.md)**  
+  実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：0  
+  デルタルール線形注意の能動的な修正が書き込みアドレスに固定される問題に対し、学習された別の消去アドレスで古い連想を先に消してから通常のデルタ書き込みを行う更新規則を提案し、2.5Bと25B-A2.8Bの事前学習と4k〜128kの長文脈評価で比較対象を上回る平均スコアを示した研究。
 
 - **2026-06 · [Differentiable Efficient Operator Search](2026-2606.05232-differentiable-efficient-operator-search.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

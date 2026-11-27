@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（703本）
+## 自動生成の論文一覧（705本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1643,6 +1643,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/oteomamo/SALT) ・ リポジトリ内被引用：0  
   長文脈圧縮で文のスカラー順位付けをやめ、文頻度順のキーワードトライへ予算を主題枝ごとに配分する方式を提案し、主題の潰れを防ぎながら前処理方式最良の精度と複数ターンでの費用削減を示した研究。
 
+- **2026-07 · [Remembering Distinct Items, Not Tokens: A Learnable Dirichlet-Process Cache Between State-Space Models and Attention](2026-2607.09889-remembering-distinct-items-not-tokens-a-learnable-dirichlet-process-cach.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  新規な入力にだけスロットを開くDP-means型の割当をキーとバリューのキャッシュ自体にし、キャッシュ量をトークン数ではなく相異なる項目数へ比例させることで、全注意と同じ想起を冗長度4で4分の1のスロットで達成し、固定状態モデルと全注意の中間領域を機構実験で示した研究。
+
 - **2026-07 · [ReFreeKV: Towards Threshold-Free KV Cache Compression](2026-2502.16886-refreekv-towards-threshold-free-kv-cache-compression.md)**  
   実装：[✓](https://github.com/Patrick-Ni/ReFreeKV) ・ リポジトリ内被引用：0  
   長い入力を処理したLLMは、デコード中に過去のトークンへ注意するため、各層のKeyとValueをKVキャッシュとして保持する。H2O、SnapKV、StreamingLLMなどは重要とみなした位置だけを残すが、通常は「入力の何%を保持するか」または「何トークン残すか」を先に決める。ReFreeKVは、保持率ではなく注意行列のノルム変化を停止条件にする。
@@ -1758,6 +1762,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-06 · [High-accuracy Low-Bit KV-Cache Quantization via Local Distribution Restoration](2026-2607.16248-high-accuracy-low-bit-kv-cache-quantization-via-local-distribution-restoration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   1ビットKVキャッシュを維持したまま、量子化で崩れた高確率候補の局所順位だけを検出・補正し、RULER精度を47.8%から83.2%へ回復するDGAP。
+
+- **2026-06 · [CompRank: Efficient LLM Reranking via Token-Level Compression and Decoding-Free Scoring](2026-2606.11700-comprank-efficient-llm-reranking-via-token-level-compression-and-decodin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMリランカーの文書表現を候補順序から切り離して再利用可能にし、文書トークンを区間圧縮で10.2パーセントまで減らし、識別子生成の代わりに注意質量のスコアで生成なしに順位付けることで、BEIR平均の品質をほぼ保ちながら生成型方式より最大9.5倍速く、候補500件まで安定する枠組み。
 
 - **2026-06 · [Can I Buy Your KV Cache?](2026-2606.13361-can-i-buy-your-kv-cache.md)**  
   実装：[✓](https://github.com/zly-idleness/kvstore) ・ リポジトリ内被引用：0  
@@ -2818,7 +2826,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：890  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：891  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  

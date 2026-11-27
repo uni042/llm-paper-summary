@@ -35,10 +35,15 @@
   "selection_reason": "LLMリランカーCompRankは文書側状態の再利用と区間単位トークン圧縮、デコード不要スコアリングで長い候補列のリランキング推論コストを削減する直接の効率化である",
   "semantic_scholar_id": "b80547bace2832f0ef83f1c4f8d3ce21c32ff0b4",
   "source_url": "https://arxiv.org/abs/2606.11700",
-  "status": "ready",
+  "status": "superseded",
   "title": "CompRank: Efficient LLM Reranking via Token-Level Compression and Decoding-Free Scoring",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-27T23:21:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.11700-comprank-efficient-llm-reranking-via-token-level-compression-and-decodin.md",
+  "represented_canonical_id": "arXiv:2606.11700",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
