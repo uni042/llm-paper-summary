@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（811本）
+## 自動生成の論文一覧（814本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2260,6 +2260,14 @@
   実装：✓ ・ リポジトリ内被引用：0  
   複数の状態空間専門家の混合が線形化したmulti-head 注意機構の形に展開できることを示し、従来の単一状態のSSMより表現力を高める。8x200M+モデルは2.8兆トークン学習後、top-2（活性477M）で7課題平均53.5%、Qwen2.5-0.5Bの47.7%を上回るが、学習トークン数・モデル構造が異なる。
 
+- **2025-10 · [Layer as Puzzle Pieces: Compressing Large Language Models through Layer Concatenation](2025-2510.15304-layer-as-puzzle-pieces-compressing-large-language-models-through-layer-c.md)**  
+  実装：[✓](https://github.com/MPI-Lab/CoMe) ・ リポジトリ内被引用：0  
+  隣接層の重要なチャネルをチャネル感度で選び出して連結し、1層に再構成するCoMeにより、層削除と重みの線形加算の両方の情報損失を避け、圧縮時の層対応を使った階層蒸留でLLaMA-2-7Bの30パーセント圧縮後も保持率82.98パーセントまで回復させた層圧縮の研究。
+
+- **2025-10 · [From Local to Global: Revisiting Structured Pruning Paradigms for Large Language Models](2025-2510.18030-from-local-to-global-revisiting-structured-pruning-paradigms-for-large-l.md)**  
+  実装：[✓](https://github.com/uncc-efficient-ai/GISP) ・ リポジトリ内被引用：0  
+  モデル全体の損失で測った重要度を注意ヘッドとMLPチャネルへ集約し、反復的に少しずつ削る大域的構造化枝刈りGISPにより、枝刈り率40〜50パーセントでもパープレキシティ崩壊を避け、タスク校正を下流精度へ直接結び付けられることを示した研究。
+
 - **2025-10 · [Explore Briefly, Then Decide: Mitigating LLM Overthinking via Cumulative Entropy Regulation](2025-2510.02249-explore-briefly-then-decide-mitigating-llm-overthinking-via-cumulative-e.md)**  
   実装：[✓](https://github.com/AusertDream/CumulativeEntropyRegulation) ・ リポジトリ内被引用：0  
   トークンエントロピーの累積平均TECAで推論過程の探索量を測り、正解時にTECAが低い応答へ報酬を与えるCERと分節報酬機構をGRPOへ組み込み、考えすぎによる出力トークンの浪費を難易度適応的に抑える学習手法を提案した研究。
@@ -2283,6 +2291,10 @@
 - **2025-10 · [Computationally Efficient FPGA-based Large Language Model Inference for Real-Time Decision-Making in Robotic Systems](2025-5c6550db1690-computationally-efficient-fpga-based-large-language-model-inference-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLaMA 2-7Bをロボットへ搭載するため、グループ量子化と混合精度、注意の削減を、FPGAロジックとAIエンジンとCPUへ演算を割り振るヘテロジニアス実装と組み合わせ、Jetson AGX Orin比1.95倍のスループットと18ワット動作を実機で示した研究。
+
+- **2025-10 · [BRIEF-Pro: Universal Context Compression with Short-to-Long Synthesis for Fast and Accurate Multi-Hop Reasoning](2025-2510.13799-brief-pro-universal-context-compression-with-short-to-long-synthesis-for.md)**  
+  実装：[✓](https://github.com/JasonForJoy/BRIEF) ・ リポジトリ内被引用：0  
+  短い種データから長文脈の訓練データを合成し、質問に効く証拠だけを文数指定つきで要約する3B圧縮器BRIEF-Proにより、1万語超の検索文脈を32倍に圧縮しながら70B読み手のQA性能を既存圧縮より平均4.67パーセント高く保った文脈圧縮の研究。
 
 - **2025-10 · [AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache](2025-2510.25979-attncache-accelerating-self-attention-inference-for-llm-prefill-via-atte.md)**  
   実装：[✓](https://github.com/PASAUCMerced/AttnCache) ・ リポジトリ内被引用：0  

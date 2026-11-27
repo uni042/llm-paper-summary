@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ddfaf392ac42351932c4eb5ef94b61f6b925a3eb",
+  "base_commit": "5450db046b344cfbdb13dd532fbce5c100ec016a",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -122,6 +122,7 @@
     "2022-2201.06268-continual-transformers-redundancy-free-attention-for-online-inference.json",
     "2022-2203.00748-e-lang-energy-based-joint-inferencing-of-super-and-swift-language-models.json",
     "2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.json",
+    "2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.json",
     "2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.json",
     "2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.json",
     "2022-51ecca33c669-dtqatten-leveraging-dynamic-token-based-quantization-for-efficient-attention-architecture.json",
@@ -380,6 +381,7 @@
     "2025-2507.00715-earn-efficient-inference-acceleration-for-llm-based-generative-recommendation-by-register-tokens.json",
     "2025-2507.00797-veda-efficient-llm-generation-through-voting-based-kv-cache-eviction-and-dataflow-flexible-accelerator.json",
     "2025-2507.03340-degrees-of-freedom-for-linear-attention-distilling-softmax-attention-with-optimal-feature-efficiency.json",
+    "2025-2507.03828-impact-importance-aware-activation-space-reconstruction.json",
     "2025-2507.04517-dotresize-reducing-llm-width-via-discrete-optimal-transport-based-neuron-merging.json",
     "2025-2507.04742-activation-steering-for-chain-of-thought-compression.json",
     "2025-2507.04967-the-case-for-instance-optimized-llms-in-olap-databases.json",
@@ -438,12 +440,15 @@
     "2025-2510.09932-automatically-generating-ml-compiler-backends-from-tensor-accelerator-isa-descriptions.json",
     "2025-2510.10448-recon-reasoning-with-condensation-for-efficient-retrieval-augmented-generation.json",
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
+    "2025-2510.13799-brief-pro-universal-context-compression-with-short-to-long-synthesis-for-fast-and-accurate-multi-hop-reasoning.json",
     "2025-2510.13860-shishulm-achieving-optimal-and-efficient-parameterization-with-low-attention-transformer-models.json",
     "2025-2510.14444-a-free-lunch-in-llm-compression-revisiting-retraining-after-pruning.json",
     "2025-2510.14853-rewiring-experts-on-the-fly-continuous-rerouting-for-better-online-adaptation-of-moe-models.json",
+    "2025-2510.15304-layer-as-puzzle-pieces-compressing-large-language-models-through-layer-concatenation.json",
     "2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-monolithic-forwarding.json",
     "2025-2510.15882-flexlink-boosting-your-nvlink-bandwidth-by-27-without-accuracy-concern.json",
     "2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.json",
+    "2025-2510.18030-from-local-to-global-revisiting-structured-pruning-paradigms-for-large-language-models.json",
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
     "2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-point-exponent-remapping-and-parameter-sharing.json",
     "2025-2510.19385-beyond-uniform-svd-dual-level-optimization-across-columns-and-modules-for-llm-compression.json",
@@ -55434,6 +55439,105 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2209.09130": {
+      "order": [
+        "2026-11-27T22:51:36+00:00",
+        "2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "549cd7ab660fadcc93d34d31b9e6c0fbcb1f011d5356981124f895d347338c53",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.md",
+        "canonical_id": "arXiv:2209.09130",
+        "worker_completed_at": "2026-11-28T08:10:00+09:00",
+        "worker_run_key": "muse-20261128-b2",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 3678,
+          "body_paragraphs": 21,
+          "method_chars": 1364,
+          "method_paragraphs": 4,
+          "evaluation_chars": 468,
+          "limitation_chars": 315,
+          "insufficiency_flags": [
+            "評価説明量 468 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 468 < 500"
+        ],
+        "processed_at": "2026-11-27T22:51:36+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2507.03828": {
+      "order": [
+        "2026-11-27T22:51:39+00:00",
+        "2025-2507.03828-impact-importance-aware-activation-space-reconstruction.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "1cd011beb646d4d67fe6a5846f9387161d00c9994f052572c109b5f3c9d8a98e",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2025-2507.03828-impact-importance-aware-activation-space-reconstruction.md",
+        "canonical_id": "arXiv:2507.03828",
+        "worker_completed_at": "2026-11-28T08:10:00+09:00",
+        "worker_run_key": "muse-20261128-b2",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 3556,
+          "body_paragraphs": 21,
+          "method_chars": 1267,
+          "method_paragraphs": 4,
+          "evaluation_chars": 447,
+          "limitation_chars": 276,
+          "insufficiency_flags": [
+            "評価説明量 447 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 447 < 500"
+        ],
+        "processed_at": "2026-11-27T22:51:39+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2510.13799": {
+      "order": [
+        "2026-11-27T22:53:03+00:00",
+        "2025-2510.13799-brief-pro-universal-context-compression-with-short-to-long-synthesis-for-fast-and-accurate-multi-hop-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.15304": {
+      "order": [
+        "2026-11-27T22:54:27+00:00",
+        "2025-2510.15304-layer-as-puzzle-pieces-compressing-large-language-models-through-layer-concatenation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.18030": {
+      "order": [
+        "2026-11-27T22:55:51+00:00",
+        "2025-2510.18030-from-local-to-global-revisiting-structured-pruning-paradigms-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69070,6 +69174,15 @@
     "arxiv:2602.10021": [
       "papers/inference/99-other-inference-systems/2026-2602.10021-decoupled-reasoning-with-implicit-fact-tokens-drift-a-dual-model-framewo.md",
       "papers/inference/99-other-inference-systems/2026-2602.10021-decoupled-reasoning-with-implicit-fact-tokens-drift-a-dual-model-framewo.md"
+    ],
+    "arxiv:2510.13799": [
+      "papers/inference/99-other-inference-systems/2025-2510.13799-brief-pro-universal-context-compression-with-short-to-long-synthesis-for.md"
+    ],
+    "arxiv:2510.15304": [
+      "papers/inference/99-other-inference-systems/2025-2510.15304-layer-as-puzzle-pieces-compressing-large-language-models-through-layer-c.md"
+    ],
+    "arxiv:2510.18030": [
+      "papers/inference/99-other-inference-systems/2025-2510.18030-from-local-to-global-revisiting-structured-pruning-paradigms-for-large-l.md"
     ]
   }
 }
