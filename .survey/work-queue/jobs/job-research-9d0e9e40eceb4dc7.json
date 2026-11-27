@@ -35,10 +35,15 @@
   "selection_reason": "LooMは因果エンコーダ・デコーダでデコーダ層だけをループさせ、グローバルメモリをトークンごとに一度だけ書き、KVエントリを初回訪問時にのみ公開することで、ループ回数に対してKVキャッシュが増大しない構造を実現し、配置時に深さ予算を選べるようにする手法であり、推論メモリとKVキャッシュ管理に直接貢献する。",
   "semantic_scholar_id": "50e79c5749d3a25160d979772b40bcaa20fd3cbe",
   "source_url": "https://arxiv.org/abs/2611.06835",
-  "status": "ready",
+  "status": "superseded",
   "title": "LooM: Loop-Invariant Memory for Causal Encoder-Decoder Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-27T23:40:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.06835-loom-loop-invariant-memory-for-causal-encoder-decoder-language-models.md",
+  "represented_canonical_id": "arXiv:2611.06835",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

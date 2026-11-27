@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（154本）
+## 自動生成の論文一覧（155本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -56,6 +56,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/YiwengXie/FluxMem) ・ リポジトリ内被引用：3  
   すべての視覚トークンを保持すると、時間の経過とともに事前充填（プリフィル）の費用、KVキャッシュ、GPUメモリ使用量が増加する。直近のフレームは細部を残し、少し古いフレームは隣接時刻との重複を除き、さらに古いフレームは空間的に類似する領域を一つの代表トークンへ統合する。
 
+- **2026-03 · [DyMoE: Dynamic Expert Orchestration with Mixed-Precision Quantization for Efficient MoE Inference on Edge](2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  DyMoEは、混合専門家モデル（Mixture-of-Experts、MoE）をGPUメモリが12〜24GB程度に制約された端末で動かすため、専門家ごと・層ごと・入力ごとに必要な重み精度を変える推論システムである。
+
 - **2026-01 · [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   HarvestはNVLink接続された別GPUの空きHBMを一時キャッシュに使い、MoE重みやKVをホストDRAMから再取得する遅延を減らす。正本はCPUや再計算に残し、キャッシュ喪失にも耐える。
@@ -63,6 +67,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-01 · [FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices](2026-2601.17063-flashmoe-ssd-io-cache-replacement.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   FlashMoEはMoEの専門家重みをNVMe SSDへ置き、VRAMには必要なものだけを読み込む。最近度と利用頻度から次回利用の遠さを予測してキャッシュを置換し、SSD読み出し待ちを減らす。
+
+- **2025-12 · [SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference](2025-2512.12990-slicemoe-bit-sliced-expert-caching.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  MoEエキスパートを上位・下位ビットのスライス単位でキャッシュし、重要度に応じて精度を動的再構成することで、フラッシュ転送を抑えながら高精度を保つ端末向け推論方式。
 
 - **2025-12 · [Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems](2025-2512.04476-context-aware-moe-cxl-ndp.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -124,17 +132,9 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：2  
   高・中・低頻度専門家をGPU・行列演算CPU・DIMM近傍処理へ三分し、予測付き再配置で単一GPUのMoEオフロードを高速化する。
 
-- **2026-03 · [DyMoE: Dynamic Expert Orchestration with Mixed-Precision Quantization for Efficient MoE Inference on Edge](2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  DyMoEは、混合専門家モデル（Mixture-of-Experts、MoE）をGPUメモリが12〜24GB程度に制約された端末で動かすため、専門家ごと・層ごと・入力ごとに必要な重み精度を変える推論システムである。
-
 - **2026-02 · [DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs](2026-2602.03495-dali-workload-aware-moe-offloading-local-pcs.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   DALIは入力ごとの専門家負荷を測ってCPU/GPU配置を各層で動的に変え、残差から次層を先読みし負荷履歴でGPUキャッシュを交換して、ローカルPCのPCIe待ちを減らす。
-
-- **2025-12 · [SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference](2025-2512.12990-slicemoe-bit-sliced-expert-caching.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  MoEエキスパートを上位・下位ビットのスライス単位でキャッシュし、重要度に応じて精度を動的再構成することで、フラッシュ転送を抑えながら高精度を保つ端末向け推論方式。
 
 - **2025-12 · [Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation](2025-2512.17073-bandwidth-efficient-adaptive-mixture-of-experts-via-low-rank-compensatio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -197,6 +197,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-11 · [StrataFlux: Memory-Hierarchy-Native Low-Bit LLM Inference](2026-2611.08363-strataflux-memory-hierarchy-native-low-bit-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低ビット量子化した重みとKVキャッシュをGPUに常駐させ、効くチャネルとトークンだけ追加の精度ビットをホストメモリやSSDから取り寄せ、取得と適用をずらして計算と重ねることで、2ビット重みで困惑度を9.46から8.40へ下げ、2ビット重みとKVのQwen3-8BでAIME正解率を11.0パーセントから47.1パーセントへ戻したと報告した。
+
+- **2026-11 · [PagedMoE: Cross-Precision Expert Caching for Token-Level Dynamic Precision in SSD-Resident MoE Inference](2026-2611.03173-pagedmoe-cross-precision-expert-caching-for-token-level-dynamic-precisio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  精度を別オブジェクトの版ではなく共有エキスパート状態の接頭辞の長さとして表し、不足するビットプレーンだけをSSDから読み足して接頭辞のままCPUで実行することで、動的精度のデータ削減とキャッシュ再利用を両立させ、24GiBキャッシュで一様4ビットの1.56倍のデコードスループットを実機で示したSSD常駐MoE推論系。
 
 - **2026-11 · [Accelerating Offloading-Based MoE Inference by Interleaving Concurrent Requests](2026-2611.04794-accelerating-offloading-based-moe-inference-by-interleaving-concurrent-r.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -543,7 +547,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
-  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：106  
+  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：107  
   MoE-Infinityは、混合専門家モデル（Mixture of エキスパート、MoE）の重みが単一GPUのメモリに収まらない場合に、ホスト主記憶から専門家重みを転送する時間を削減する推論システムである。
 
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
@@ -555,7 +559,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで選ばれる専門家が少ないため計算量は疎だが、モデル全体の専門家重みをGPUメモリに収めるのは難しい。Fiddlerは、この二つの実行経路の長所を入力トークン数に応じて使い分ける推論システムである。
 
 - **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](2024-2411.01433-hobbit.md)**  
-  実装：✓ ・ リポジトリ内被引用：59  
+  実装：✓ ・ リポジトリ内被引用：60  
   重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。
 
 - **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  

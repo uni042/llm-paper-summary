@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2873fa255e4cc8f6981f52b79c5124e55dff07a6",
+  "base_commit": "f701ff7982c9ae921c4745ffb5f9937bdad2fcc9",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1665,6 +1665,7 @@
     "2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.json",
     "2026-2611.02583-basiskv-value-latents-for-communication-and-key-routing.json",
     "2026-2611.02975-introducing-cluster-efficiency-to-llm-serving-pooling-economical-accelerators-over-fast-interconnects.json",
+    "2026-2611.03173-pagedmoe-cross-precision-expert-caching-for-token-level-dynamic-precision-in-ssd-resident-moe-inference.json",
     "2026-2611.03247-r2-omni-reducing-structural-and-precision-redundancy-in-omni-llms.json",
     "2026-2611.03517-ask-dont-equip-question-driven-coding-agents-for-deep-kernel-optimization.json",
     "2026-2611.03768-multi-layer-indexer-overlapping-selection-and-attention-in-deepseek-sparse-attention.json",
@@ -1675,6 +1676,7 @@
     "2026-2611.04055-hybridspec-throughput-aware-speculative-decoding-for-hybrid-gdn-moe-models.json",
     "2026-2611.04253-umload-fast-on-demand-model-loading-on-unified-memory-architecture.json",
     "2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.json",
+    "2026-2611.04327-anchor-augmented-cross-layer-recurrent-state-for-long-context-retrieval-in-test-time-training.json",
     "2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-boundaries-in-context-parallelism.json",
     "2026-2611.04671-leansparse-memory-efficient-serving-for-native-sparse-attention-llms.json",
     "2026-2611.04794-accelerating-offloading-based-moe-inference-by-interleaving-concurrent-requests.json",
@@ -1683,11 +1685,14 @@
     "2026-2611.06147-safestart-mitigating-the-overlooked-safety-cost-of-active-expert-reduction-in-moe-serving.json",
     "2026-2611.06397-where-should-a-kv-cache-repair-budget-go-distractor-structure-and-contextual-compatibility-in-non-prefix-reuse.json",
     "2026-2611.06425-d3d-decoupled-diffusion-drafting-for-asynchronous-speculative-decoding.json",
+    "2026-2611.06513-helix-heterogeneous-llm-inference-with-flexible-and-fine-grained-partitioning.json",
+    "2026-2611.06835-loom-loop-invariant-memory-for-causal-encoder-decoder-language-models.json",
     "2026-2611.06956-octopus-one-brain-many-branches-for-latent-kv-multi-agent-reinforcement-learning.json",
     "2026-2611.07025-lowram-low-rank-keys-and-amortised-values-for-composable-kv-cache-compression-at-test-time.json",
     "2026-2611.07232-recursive-sparse-attention-million-token-length-extrapolation-at-logarithmic-cost.json",
     "2026-2611.07256-triattention-unified-sparse-mixed-precision-attention-for-long-context-llm-inference.json",
     "2026-2611.07263-hyflash-a-prefix-memory-prior-for-on-device-speculative-decoding.json",
+    "2026-2611.08082-dictllm-post-training-compression-of-large-language-model-with-dictionary-kernels.json",
     "2026-2611.08362-specctmc-exact-speculative-simulation-of-diffusion-language-model-continuous-time-markov-chains.json",
     "2026-2611.08363-strataflux-memory-hierarchy-native-low-bit-llm-inference.json",
     "2026-2611.08669-chainflow-few-step-latent-flow-matching-for-speculative-decoding.json",
@@ -55796,6 +55801,51 @@
         "processed_at": "2026-11-27T23:25:44+00:00"
       },
       "return_count": 2
+    },
+    "arXiv:2611.03173": {
+      "order": [
+        "2026-11-27T23:31:16+00:00",
+        "2026-2611.03173-pagedmoe-cross-precision-expert-caching-for-token-level-dynamic-precision-in-ssd-resident-moe-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.04327": {
+      "order": [
+        "2026-11-27T23:32:53+00:00",
+        "2026-2611.04327-anchor-augmented-cross-layer-recurrent-state-for-long-context-retrieval-in-test-time-training.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.06513": {
+      "order": [
+        "2026-11-27T23:34:29+00:00",
+        "2026-2611.06513-helix-heterogeneous-llm-inference-with-flexible-and-fine-grained-partitioning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.06835": {
+      "order": [
+        "2026-11-27T23:36:06+00:00",
+        "2026-2611.06835-loom-loop-invariant-memory-for-causal-encoder-decoder-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.08082": {
+      "order": [
+        "2026-11-27T23:37:42+00:00",
+        "2026-2611.08082-dictllm-post-training-compression-of-large-language-model-with-dictionary-kernels.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69488,6 +69538,21 @@
     "arxiv:2610.03039": [
       "papers/inference/99-other-inference-systems/2026-2610.03039-hyperthink-text-to-parameter-hypernetworks-for-efficient-reasoning.md",
       "papers/inference/99-other-inference-systems/2026-2610.03039-hyperthink-text-to-parameter-hypernetworks-for-efficient-reasoning.md"
+    ],
+    "arxiv:2611.03173": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2611.03173-pagedmoe-cross-precision-expert-caching-for-token-level-dynamic-precisio.md"
+    ],
+    "arxiv:2611.04327": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.04327-anchor-augmented-cross-layer-recurrent-state-for-long-context-retrieval-.md"
+    ],
+    "arxiv:2611.06513": [
+      "papers/inference/17-pim-near-data-acceleration/2026-2611.06513-helix-heterogeneous-llm-inference-with-flexible-and-fine-grained-partiti.md"
+    ],
+    "arxiv:2611.06835": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.06835-loom-loop-invariant-memory-for-causal-encoder-decoder-language-models.md"
+    ],
+    "arxiv:2611.08082": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.08082-dictllm-post-training-compression-of-large-language-model-with-dictionar.md"
     ]
   }
 }

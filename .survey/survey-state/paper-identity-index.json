@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 5538,
+  "active_count": 5543,
   "papers": {
     "arXiv:2101.06840": {
       "path": "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
@@ -1128,6 +1128,13 @@
         "arXiv:2610.17551"
       ],
       "source_hash": "0041a174c0c344710dace5156d77766f5996141d061acfde8b5e317f9623550f"
+    },
+    "arXiv:2611.03173": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2611.03173-pagedmoe-cross-precision-expert-caching-for-token-level-dynamic-precisio.md",
+      "identifiers": [
+        "arXiv:2611.03173"
+      ],
+      "source_hash": "6de1a72c6f9686d7d2951a8c048e7d2e59a01528a0bd0bab1d291cca520a0f57"
     },
     "arXiv:2611.04794": {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2611.04794-accelerating-offloading-based-moe-inference-by-interleaving-concurrent-r.md",
@@ -12872,12 +12879,26 @@
       ],
       "source_hash": "e816cf15387055a5c2377966007c8412215ec010edc054da3ec3af6942ea00ad"
     },
+    "arXiv:2611.04327": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.04327-anchor-augmented-cross-layer-recurrent-state-for-long-context-retrieval-.md",
+      "identifiers": [
+        "arXiv:2611.04327"
+      ],
+      "source_hash": "3ced7cca934c15d3fbb298f23c402d56cc2df1bd4d9b4a11ba5157b5d4eeb954"
+    },
     "arXiv:2611.06397": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.06397-where-should-a-kv-cache-repair-budget-go-distractor-structure-and-contex.md",
       "identifiers": [
         "arXiv:2611.06397"
       ],
       "source_hash": "b22c21d69bbd27b7c039072ed942c96a034208a9c60d5082a6dc74521d518359"
+    },
+    "arXiv:2611.06835": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.06835-loom-loop-invariant-memory-for-causal-encoder-decoder-language-models.md",
+      "identifiers": [
+        "arXiv:2611.06835"
+      ],
+      "source_hash": "71a3f21da7d3c96f1ddc287f2baca7a5e586df7961871f04f8c00657c5df88cc"
     },
     "arXiv:2611.07025": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.07025-lowram-low-rank-keys-and-amortised-values-for-composable-kv-cache-compre.md",
@@ -16645,6 +16666,13 @@
         "arXiv:2611.04401"
       ],
       "source_hash": "da1880c2dc3bb9013171e009e5aa510c15984ab584da1fd7e4fd1b250e8d22a3"
+    },
+    "arXiv:2611.08082": {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2611.08082-dictllm-post-training-compression-of-large-language-model-with-dictionar.md",
+      "identifiers": [
+        "arXiv:2611.08082"
+      ],
+      "source_hash": "ab89d19b775e432b085a067682fabdaf6c931012b45edacc054177291daa39ca"
     },
     "arXiv:2611.09225": {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2611.09225-fused-softmax-for-efficient-quantized-attention.md",
@@ -30335,6 +30363,13 @@
       ],
       "source_hash": "10e4bd98dbaeb6a1f30e6641741c8707127eeecc5184c0667805c26a0c16bf43"
     },
+    "arXiv:2611.06513": {
+      "path": "papers/inference/17-pim-near-data-acceleration/2026-2611.06513-helix-heterogeneous-llm-inference-with-flexible-and-fine-grained-partiti.md",
+      "identifiers": [
+        "arXiv:2611.06513"
+      ],
+      "source_hash": "e81b054aa79dc21aab73bff53fb6a5e27a18b77a767b2f96f7a1d21fe01d0549"
+    },
     "DOI:10.1109/hpca68181.2026.11408592": {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md",
       "identifiers": [
@@ -40578,6 +40613,7 @@
     "arXiv:2610.01950": "arXiv:2610.01950",
     "arXiv:2610.02598": "arXiv:2610.02598",
     "arXiv:2610.17551": "arXiv:2610.17551",
+    "arXiv:2611.03173": "arXiv:2611.03173",
     "DOI:10.48550/arxiv.2611.04794": "arXiv:2611.04794",
     "arXiv:2611.04794": "arXiv:2611.04794",
     "arXiv:2611.08363": "arXiv:2611.08363",
@@ -42577,7 +42613,9 @@
     "DOI:10.48550/arxiv.2611.02583": "arXiv:2611.02583",
     "arXiv:2611.02583": "arXiv:2611.02583",
     "arXiv:2611.03992": "arXiv:2611.03992",
+    "arXiv:2611.04327": "arXiv:2611.04327",
     "arXiv:2611.06397": "arXiv:2611.06397",
+    "arXiv:2611.06835": "arXiv:2611.06835",
     "arXiv:2611.07025": "arXiv:2611.07025",
     "DOI:10.48550/arxiv.2611.09825": "arXiv:2611.09825",
     "arXiv:2611.09825": "arXiv:2611.09825",
@@ -43237,6 +43275,7 @@
     "arXiv:2611.03517": "arXiv:2611.03517",
     "arXiv:2611.03899": "arXiv:2611.03899",
     "arXiv:2611.04401": "arXiv:2611.04401",
+    "arXiv:2611.08082": "arXiv:2611.08082",
     "arXiv:2611.09225": "arXiv:2611.09225",
     "DOI:10.48550/arxiv.2611.23035": "arXiv:2611.23035",
     "arXiv:2611.23035": "arXiv:2611.23035",
@@ -45688,6 +45727,7 @@
     "DOI:10.48550/arxiv.2609.16161": "arXiv:2609.16161",
     "arXiv:2609.16161": "arXiv:2609.16161",
     "arXiv:2610.37033": "arXiv:2610.37033",
+    "arXiv:2611.06513": "arXiv:2611.06513",
     "DOI:10.1109/hpca68181.2026.11408592": "DOI:10.1109/hpca68181.2026.11408592",
     "arXiv:2412.20166": "DOI:10.1109/hpca68181.2026.11408592",
     "DOI:10.1145/3816440.3818602": "DOI:10.1145/3816440.3818602",

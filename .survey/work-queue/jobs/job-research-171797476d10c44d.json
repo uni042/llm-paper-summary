@@ -35,10 +35,15 @@
   "selection_reason": "PagedMoEはSSD常駐MoE推論で、精度を共有エキスパート状態の精緻化深さとして扱う接頭辞互換ツリーコードブックとビットプレーン配置により、トークン単位の動的精度でも低精度表現を高精度の接頭辞として再利用し、DRAMキャッシュからのSSD I/Oを削減するエキスパートキャッシュ機構である。",
   "semantic_scholar_id": "52dfa4753024d294c5e9d2b301085943f539021a",
   "source_url": "https://arxiv.org/abs/2611.03173",
-  "status": "ready",
+  "status": "superseded",
   "title": "PagedMoE: Cross-Precision Expert Caching for Token-Level Dynamic Precision in SSD-Resident MoE Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-27T23:40:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2611.03173-pagedmoe-cross-precision-expert-caching-for-token-level-dynamic-precisio.md",
+  "represented_canonical_id": "arXiv:2611.03173",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "Anchorはスライディングウィンドウ注意とテスト時学習を混成した線形化Transformerについて、再帰状態をアンカー層だけに配置し層間で共有することで状態を10分の1にし、softmax注意比でエンドツーエンドレイテンシを最大4.3倍削減する長文脈推論の効率化手法であり、注意機構と実行時メモリへの直接貢献が確認できる。",
   "semantic_scholar_id": "eeaa6a41a241c67fad1e44075ddb88bd60036788",
   "source_url": "https://arxiv.org/abs/2611.04327",
-  "status": "ready",
+  "status": "superseded",
   "title": "Anchor: Augmented Cross-Layer Recurrent State for Long-Context Retrieval in Test-Time Training",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-27T23:40:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.04327-anchor-augmented-cross-layer-recurrent-state-for-long-context-retrieval-.md",
+  "represented_canonical_id": "arXiv:2611.04327",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

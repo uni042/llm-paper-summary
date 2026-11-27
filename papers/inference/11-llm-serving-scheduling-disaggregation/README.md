@@ -476,6 +476,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   多頭潜在注意（Multi-Head Latent 注意機構、MLA）は、通常の注意機構のように各ヘッドの鍵と値をすべて保存せず、複数ヘッドで共有する低次元の内容潜在と、位置情報を表す回転位置埋め込み（Rotary Position Embedding、RoPE）の鍵を保持する。
 
+- **2026-09 · [OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving](2026-2609.14237-opweave-flexible-operator-disaggregation.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  固定分離境界を外し、演算子境界と異種GPU配置を共同探索して費用を同種GPUで最大1.78倍、異種GPUで最大1.89倍改善する。
+
 - **2026-09 · [Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs](2026-2609.33477-just-let-linear-states-forget-the-distant-past-prefix-caching-via-suffix.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   線形注意の状態チェックポイントを保存せず、入力隠れ状態を疎に保持したアンカーの末尾再生で任意のページ境界の状態を再構成する接頭辞キャッシュ方式で、保存量を既定方式の半分以下に抑えつつ分岐時の初回トークン時間を最大70パーセント削減した。
@@ -599,6 +603,10 @@
 - **2026-06 · [Clairvoyant: Predictive Shortest-Job-First Admission for Serial LLM Inference](2026-2606.07248-clairvoyant-predictive-shortest-job-first-admission-for-serial-llm-infer.md)**  
   実装：[✓](https://github.com/Aravind0403/clairvoyant-scheduler) ・ リポジトリ内被引用：1  
   直列推論の先頭ブロッキングを、19個の語彙特徴による0.029ミリ秒の長さ予測と最短ジョブ優先の受付で解き、短いリクエストの中央値遅延を同時バーストで70から76パーセント、実トレースで最初のトークンまで83.6パーセント減らした。
+
+- **2026-06 · [BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference](2026-2606.09514-buddy-budget-driven-dynamic-depth-routing-for-adaptive-large-language-mo.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  文脈に応じて予算どおりの層数だけを実行する動的深さ振り分けで、第1層のキャッシュを全体文脈の要約に使って生成中も経路を更新し、単一モデルで複数予算と厳密な層数制御を両立させた。
 
 - **2026-05 · [When Is the Same Model Not the Same Service? A Measurement Study of Hosted Open-Weight LLM APIs](2026-2605.02821-when-is-the-same-model-not-the-same-service-a-measurement-study-of-hoste.md)**  
   実装：[✓](https://github.com/haoruilee/llm_api_measurement_study) ・ リポジトリ内被引用：1  
@@ -994,10 +1002,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   投機的デコードのドラフト表現から残り出力長を予測し、短く終わる要求をキュー順序とワーカー割当で先に進めて、長い要求による先頭待ちとP99遅延を減らす。
 
-- **2026-09 · [OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving](2026-2609.14237-opweave-flexible-operator-disaggregation.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  固定分離境界を外し、演算子境界と異種GPU配置を共同探索して費用を同種GPUで最大1.78倍、異種GPUで最大1.89倍改善する。
-
 - **2026-09 · [MeanField Surrogate Modeling for Scalable Runtime Scheduling of Concurrent Heterogeneous AI Inference on Shared GPUs](2026-2609.02109-meanfield-surrogate-runtime-scheduling-shared-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   共有GPU上の異種LLM/視覚推論で、各モデルの局所構成＋集約GPU状態から性能を予測する平均場代理モデルにより、プロファイル数を実測で約20Nへ抑えつつ5モデル78,732構成を26msで近似探索する。
@@ -1322,10 +1326,6 @@
   実装：[✓](https://github.com/ymoslem/CRE-Router) ・ リポジトリ内被引用：0  
   質問をクラスタ化して費用対誤りで生成前に振り分け、生成後は品質推定で不合格だけを強いモデルへ格上げする二段方式で、AIME 2024では強いモデル単独に0.7ポイント差まで迫りながら出力トークン当たり時間を18パーセント下げる。
 
-- **2026-06 · [BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference](2026-2606.09514-buddy-budget-driven-dynamic-depth-routing-for-adaptive-large-language-mo.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  文脈に応じて予算どおりの層数だけを実行する動的深さ振り分けで、第1層のキャッシュを全体文脈の要約に使って生成中も経路を更新し、単一モデルで複数予算と厳密な層数制御を両立させた。
-
 - **2026-06 · [Bifrost: Hybrid TEE-FHE Inference for Privacy-Preserving Transformer and LLM Serving](2026-2606.17421-bifrost-hybrid-tee-fhe-inference-for-privacy-preserving-transformer-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   線形層だけを暗号文のままアクセラレータへ委譲し、非線形演算子とリフレッシュとプリフィルをCPUの信頼実行環境へ寄せる混在型の秘匿推論基盤。最初のトークンまでの時間を最大53.4倍短縮する。
@@ -1617,7 +1617,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-11 · [Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)**  
-  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：307  
+  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：308  
   Mooncakeは、大規模言語モデル（Large Language モデル、LLM）の推論サービスで、GPUの計算能力とメモリを同時に効率よく使うための分散サービング基盤である。中心にあるのは、KVの所在と移動費用を知る全体スケジューラ（Global Scheduler）であるConductorである。
 
 - **2025-02 · [Autellix: An Efficient Serving Engine for LLM Agents as General Programs](2025-2502.13965-autellix-agent-program-serving.md)**  
@@ -1760,6 +1760,10 @@
   実装：✓ ・ リポジトリ内被引用：16  
   混合バッチを仕事で埋める方式がいつ最大処理量を達成するかを待ち行列理論で証明し、AIエージェントの分岐処理網への拡張と、成立しない経路構造・運用制約も示す。
 
+- **2025-03 · [Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation](2025-2503.20552-adrenaline.md)**  
+  実装：[✓](https://github.com/ASISys/Adrenaline) ・ リポジトリ内被引用：16  
+  デコード注意をプリフィルGPUの余剰HBMへ動的に移し、低遅延同期・GPU資源分割・負荷連動制御で分離配信の資源偏りを解消する。
+
 - **2025-09 · [Parallax: Efficient LLM Inference Service over Decentralized Environment](2025-2509.26182-parallax-decentralized-heterogeneous-serving.md)**  
   実装：[✓](https://github.com/GradientHQ/parallax) ・ リポジトリ内被引用：15  
   地理的に離れた異種GPUでモデル層を地域・VRAM・計算性能に合わせて配置し、GPUごとの処理時間と通信遅延から要求ごとの層経路を選ぶことで、遅いGPU・低速回線によるパイプライン待ちを減らす分散LLMサービング。
@@ -1767,10 +1771,6 @@
 - **2025-08 · [LLM Serving Optimization with Variable Prefill and Decode Lengths](2025-2508.06133-llm-serving-optimization-variable-prefill-decode-lengths.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   要求ごとのプリフィル長とデコード長を考慮し、KV容量を守るバッチをF指標で選ぶスケジューラ。Vidur時間モデルでは混合2000要求の平均遅延をFCFS比4.87倍改善した。
-
-- **2025-03 · [Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation](2025-2503.20552-adrenaline.md)**  
-  実装：[✓](https://github.com/ASISys/Adrenaline) ・ リポジトリ内被引用：15  
-  デコード注意をプリフィルGPUの余剰HBMへ動的に移し、低遅延同期・GPU資源分割・負荷連動制御で分離配信の資源偏りを解消する。
 
 - **2025-02 · [ThunderServe: High-performance and Cost-efficient LLM Serving in Cloud Environments](2025-2502.09334-thunderserve-high-performance-and-cost-efficient-llm-serving-in-cloud-en.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
@@ -2431,7 +2431,7 @@
   SSJFはBERT-base代理モデルでLLMの出力長を予測して短い要求を先に処理し、FCFS比で平均完了時間を30.5〜39.6%削減する。
 
 - **2024-01 · [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md)**  
-  実装：✓ ・ リポジトリ内被引用：68  
+  実装：✓ ・ リポジトリ内被引用：69  
   注意計算とKVを系列方向に分散し、クラスタ全体のGPUメモリを共有して最大200万トークンを処理し、提供スループットを1.35〜3.4倍改善する。
 
 - **2023-12 · [Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems](2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md)**  
@@ -2685,7 +2685,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2002  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2003  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

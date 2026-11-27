@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（368本）
+## 自動生成の論文一覧（369本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -341,6 +341,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-11 · [EpiLoRA: Fusing Many LoRA Adapters into Low-Precision GEMMs for Serving and RL](2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   アダプタの下向き射影を先に走らせ低精度の行列積の本体と重ね、上向き射影を行列積の書き出し段で加える方式で、単一アダプタのトークン当たり時間を最大二十四パーセント短縮し、同じ八ビット重みでの訓練により二百七十億級が四十八ギガバイト一台で訓練可能になったと報告した。
+
+- **2026-11 · [DictLLM: Post-training Compression of Large Language Model with Dictionary Kernels](2026-2611.08082-dictllm-post-training-compression-of-large-language-model-with-dictionar.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  グループ化した層の重みを共有辞書と層固有の疎な係数へ分解し、辞書を意識したヘッセ剪定と辞書の再適合とNVFP4量子化を1つの学習後手順に組み合わせることで、LLaMA-7Bをパープレキシティ増2.9ポイントで5.1倍圧縮し、低ランク手法の圧縮率を3.6倍上回った辞書型圧縮。
 
 - **2026-11 · [CipherFlow: Compiling AI Programs for Efficient Cryptographically Secure Inference](2026-2611.01450-cipherflow-compiling-ai-programs-for-efficient-cryptographically-secure-.md)**  
   実装：[✓](https://github.com/loopleap-lab/CipherFlow) ・ リポジトリ内被引用：0  
@@ -1020,6 +1024,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：4  
   LiquidGEMM は、重みを4ビット、活性を8ビットに量子化するW4A8構成の一般行列積（General Matrix Multiplication; GEMM）を高速化するGPUカーネルである。
 
+- **2025-09 · [CoSpaDi: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning](2025-2509.22075-cospadi-compressing-llms-via-calibration-guided-sparse-dictionary-learni.md)**  
+  実装：[✓](https://github.com/mts-ai/CoSpaDi) ・ リポジトリ内被引用：4  
+  異なる出力チャネルが異なる特徴を必要とする場合、この共通部分空間の制約が圧縮品質を損なう。LLaMA-3.2-1Bの20%圧縮率では、SVD-LLMの平均ゼロショット精度37.6%に対してCoSpaDiは42.7%で、WikiText PPLは約170から64へ低下した。
+
 - **2025-05 · [FlashFormer: Whole-Model Kernels for Efficient Low-Batch Inference](2025-2505.22758-flashformer-whole-model-kernels-for-efficient-low-batch-inference.md)**  
   実装：[✓](https://github.com/cheetah-lang) ・ リポジトリ内被引用：4  
   FlashFormerは、LLMをバッチ1で1トークンずつ復号する際、層ごとのカーネル起動と重み・KVキャッシュのメモリ転送が実行時間を支配するという状況に特化したGPUカーネル設計である。
@@ -1039,10 +1047,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-09 · [Optimal Brain Restoration for Joint Quantization and Sparsification of LLMs](2025-2509.11177-optimal-brain-restoration-for-joint-quantization-and-sparsification-of-l.md)**  
   実装：[✓](https://github.com/cshguo/OBR) ・ リポジトリ内被引用：3  
   本論文は2025年9月公開のarXivプレプリントで、低ビット量子化と枝刈りを同時に適用する大規模言語モデルの圧縮を扱う。対象はLlama2、Llama3、Qwen2.5系列であり、重み4ビット・活性4ビット・KVキャッシュ4ビット（W4A4KV4）と50%の疎性を組み合わせることを主な目標とする。
-
-- **2025-09 · [CoSpaDi: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning](2025-2509.22075-cospadi-compressing-llms-via-calibration-guided-sparse-dictionary-learni.md)**  
-  実装：[✓](https://github.com/mts-ai/CoSpaDi) ・ リポジトリ内被引用：3  
-  異なる出力チャネルが異なる特徴を必要とする場合、この共通部分空間の制約が圧縮品質を損なう。LLaMA-3.2-1Bの20%圧縮率では、SVD-LLMの平均ゼロショット精度37.6%に対してCoSpaDiは42.7%で、WikiText PPLは約170から64へ低下した。
 
 - **2025-07 · [BlockBPE: Parallel BPE Tokenization](2025-2507.11941-blockbpe-parallel-bpe-tokenization.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

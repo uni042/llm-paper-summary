@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（42本）
+## 自動生成の論文一覧（43本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -54,6 +54,10 @@
   視覚入力で膨らむKVキャッシュと演算重みをDRAM・RRAMへ役割分担し、近メモリ実行と局所性を保つ演算融合で端末MLLM推論のデータ移動を抑える設計を示す。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [HELIX: HEterogeneous LLM Inference with FleXible and Fine-Grained Partitioning](2026-2611.06513-helix-heterogeneous-llm-inference-with-flexible-and-fine-grained-partiti.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  固定の注意・FFN分割をやめ、プロファイルに基づく動的計画法で演算子単位の配置をモデルと負荷とハードウェアごとに探索し、部分グラフ実行器として新興アクセラレータをvLLMへ参加させることで、多クエリデコード遅延を分離方式の標準形と比べて最大3.5倍下げた異種推論スタック。
 
 - **2026-10 · [p-DCIM: A 28nm Probabilistic SRAM DCIM based Ising Machine for Near-Memory Context Selection in LLM RAG Pipeline](2026-2610.37033-p-dcim-a-28nm-probabilistic-sram-dcim-based-ising-machine-for-near-memor.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
