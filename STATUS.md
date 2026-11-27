@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-27 11:54:53 JST**
+> 自動生成: **2026-11-27 12:04:16 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1969** |
-| 未claim Research job | **1969** |
+| 収録候補論文数 | **1973** |
+| 未claim Research job | **1973** |
 | 直近24hのResearch処理完了 | **17** |
 | 最終Research処理完了 | **11-27 08:40:00 JST** |
-| 最終Discovery探索完了 | **11-27 11:49:43 JST** |
+| 最終Discovery探索完了 | **11-27 12:00:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1969** |
+| canonical_id確認済みの一意な候補論文 | **1973** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1969** |
+| 非終端Research job合計 | **1973** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -51,11 +51,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **155097** |
-| 処理済み | **33773** |
-| 未処理Discovery候補 | **121324** |
+| 探索候補総数 | **155099** |
+| 処理済み | **33777** |
+| 未処理Discovery候補 | **121322** |
 | 収録済み | **5508** |
-| Research / Audit候補へ昇格済み | **577** |
+| Research / Audit候補へ昇格済み | **581** |
 | 無関係として除外 | **17979** |
 | 微妙として除外 | **9709** |
 
@@ -63,18 +63,18 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **121324** |
+| 未処理候補（フィルタ前） | **121322** |
 | 機械規則による暫定隔離 | **2213** |
 | 拡張機械規則による追加隔離 | **1425** |
-| 機械規則通過後 | **117686** |
+| 機械規則通過後 | **117684** |
 | 系統内前方引用スコアによる選抜保留 | **29421** |
 | 暫定隔離合計 | **33059** |
-| **読解可能候補（隔離後）** | **88265** |
-| 前方引用が同一系統で2本以上の候補 | **1548** |
+| **読解可能候補（隔離後）** | **88263** |
+| 前方引用が同一系統で2本以上の候補 | **1546** |
 | 前方引用が同一系統で3本以上の候補 | **80** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **75.0%** / 目標 **88265件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **75.0%** / 目標 **88263件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -116,14 +116,14 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-26 14:25:29 JST（21時間29分前）** |
+| 最終maintenance完了 | **11-27 12:04:11 JST（5秒前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
 | health errors / warnings | **0 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **91** |
+| GC削除件数 | **403** |
 | queue snapshot repaired | **true** |
 | index repairs | **0** |
 | quality regressions | **0** |
@@ -140,15 +140,15 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 直近6hのDiscovery run | **63** |
 | 直近6hのDiscovery本文確認・分類 | **832** |
 | 最終Research完了 | **11-27 08:40:00 JST** |
-| 最終Discovery完了 | **11-27 11:49:43 JST** |
+| 最終Discovery完了 | **11-27 12:00:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-27 08:40:00 JST** / worker — / run muse-20261127-b1 / 成果 **17件**
   - evidence: .survey/import-inbox/results/research/2026-2604.04701-muxq-mixed-to-uniform-precision-matrix-quantization-via-low-rank-outlier-decomposition.json
-- Discovery: **11-27 11:49:43 JST** / worker muse / run muse-20261127-c5d06-b01::chunk-0002-of-0003
-  - 本文確認・分類 **20件** / accept **0件** / unrelated+borderline **20件**
-  - evidence: .survey/import-inbox/results/discovery/discovery-20261127-0705-muse-c5d06-b01--chunk-0002-of-0003.json
+- Discovery: **11-27 12:00:00 JST** / worker muse / run muse-20261127-c5d06-b01::chunk-0001-of-0003
+  - 本文確認・分類 **20件** / accept **1件** / unrelated+borderline **19件**
+  - evidence: .survey/import-inbox/results/discovery/discovery-20261127-0705-muse-c5d06-b01--chunk-0001-of-0003.json
 
 ### Codex探索成果の反映状況
 
@@ -288,7 +288,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1969** |
+| ready | **1973** |
 
 ### 候補の重複・識別情報欠損
 
@@ -316,11 +316,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **361** |
+| 成功result未照合のimmutable submission | **309** |
 | └ Research | **71** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **145** |
+| └ Other/Unknown | **93** |
 
 ### 厳格検証が未成立のcompleted job
 
