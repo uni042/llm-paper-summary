@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-27T23:40:22+00:00",
+  "generated_at": "2026-11-27T23:56:55+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 22,
+  "count": 21,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -370,33 +370,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-83d3c75ebd2f--0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-83d3c75ebd2f--0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.json",
       "worker_run_key": "muse-final-20261124-b14w2"
-    },
-    {
-      "canonical_id": "arXiv:2611.24891",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.24891",
-      "returned_at": "2026-11-24T12:07:53+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 498 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3720,
-        "body_paragraphs": 16,
-        "method_chars": 1573,
-        "method_paragraphs": 4,
-        "evaluation_chars": 498,
-        "limitation_chars": 202,
-        "insufficiency_flags": [
-          "評価説明量 498 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-89f94f9b668a--2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-capacity.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-89f94f9b668a--2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-capacity.json",
-      "worker_run_key": "muse-final2-20261124-f6"
     },
     {
       "canonical_id": "arXiv:2512.19443",

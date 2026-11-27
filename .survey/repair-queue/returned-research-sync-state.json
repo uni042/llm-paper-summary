@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "4598997907a9cf38d6160bea408e93274ddc2002",
+  "base_commit": "a4b9a9dcc109dc624432069e4af4423681bdd66c",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -23696,38 +23696,11 @@
     },
     "arXiv:2611.24891": {
       "order": [
-        "2026-11-24T12:07:53+00:00",
-        "retry-research-89f94f9b668a--2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-capacity.json"
+        "2026-11-27T23:54:53+00:00",
+        "2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-capacity.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "f9006b6604b368661bffc1e6d353ffb6c24b748fbc04c5a8f55d1ad159833c16",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-89f94f9b668a--2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-capacity.md",
-        "canonical_id": "arXiv:2611.24891",
-        "worker_completed_at": "2026-11-24T19:15:00+09:00",
-        "worker_run_key": "muse-final2-20261124-f6",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 3720,
-          "body_paragraphs": 16,
-          "method_chars": 1573,
-          "method_paragraphs": 4,
-          "evaluation_chars": 498,
-          "limitation_chars": 202,
-          "insufficiency_flags": [
-            "評価説明量 498 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 498 < 500"
-        ],
-        "processed_at": "2026-11-24T12:07:53+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 2
     },
     "arXiv:2611.25091": {
@@ -69600,16 +69573,23 @@
       "papers/inference/09-kernel-runtime-compilation/2026-2611.08082-dictllm-post-training-compression-of-large-language-model-with-dictionar.md"
     ],
     "arxiv:2611.09598": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.09598-transformer-fsq-discrete-latents-for-extreme-kv-cache-compression.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2611.09598-transformer-fsq-discrete-latents-for-extreme-kv-cache-compression.md"
     ],
     "arxiv:2611.11223": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2611.11223-sga-sparse-training-native-swiglu-gates-for-activation-sparse-and-low-bi.md",
       "papers/inference/08-edge-on-device-llm-systems/2026-2611.11223-sga-sparse-training-native-swiglu-gates-for-activation-sparse-and-low-bi.md"
     ],
     "arxiv:2611.13378": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.13378-looping-deeper-without-growing-the-kv-cache-recurrent-depth-for-causal-e.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2611.13378-looping-deeper-without-growing-the-kv-cache-recurrent-depth-for-causal-e.md"
     ],
     "arxiv:2611.15069": [
+      "papers/inference/99-other-inference-systems/2026-2611.15069-difit-distribution-fidelity-guided-visual-token-pruning-for-multimodal-l.md",
       "papers/inference/99-other-inference-systems/2026-2611.15069-difit-distribution-fidelity-guided-visual-token-pruning-for-multimodal-l.md"
+    ],
+    "arxiv:2611.24891": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-.md"
     ]
   }
 }
