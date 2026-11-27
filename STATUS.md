@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-28 06:24:32 JST**
+> 自動生成: **2026-11-28 07:42:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1973** |
-| 未claim Research job | **1973** |
-| 直近24hのResearch処理完了 | **17** |
-| 最終Research処理完了 | **11-27 08:40:00 JST** |
-| 最終Discovery探索完了 | **11-27 12:00:00 JST** |
+| 収録候補論文数 | **1969** |
+| 未claim Research job | **1969** |
+| 直近24hのResearch処理完了 | **12** |
+| 最終Research処理完了 | **11-28 07:40:00 JST** |
+| 最終Discovery探索完了 | **11-28 07:31:34 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1973** |
+| canonical_id確認済みの一意な候補論文 | **1969** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1973** |
+| 非終端Research job合計 | **1969** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -51,45 +51,45 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **155099** |
-| 処理済み | **33777** |
-| 未処理Discovery候補 | **121322** |
-| 収録済み | **5508** |
-| Research / Audit候補へ昇格済み | **581** |
-| 無関係として除外 | **17979** |
-| 微妙として除外 | **9709** |
+| 探索候補総数 | **155250** |
+| 処理済み | **33803** |
+| 未処理Discovery候補 | **121447** |
+| 収録済み | **5512** |
+| Research / Audit候補へ昇格済み | **575** |
+| 無関係として除外 | **17997** |
+| 微妙として除外 | **9719** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **121322** |
-| 機械規則による暫定隔離 | **2213** |
-| 拡張機械規則による追加隔離 | **1425** |
-| 機械規則通過後 | **117684** |
-| 系統内前方引用スコアによる選抜保留 | **29421** |
-| 暫定隔離合計 | **33059** |
-| **読解可能候補（隔離後）** | **88263** |
-| 前方引用が同一系統で2本以上の候補 | **1546** |
+| 未処理候補（フィルタ前） | **121447** |
+| 機械規則による暫定隔離 | **2216** |
+| 拡張機械規則による追加隔離 | **1427** |
+| 機械規則通過後 | **117804** |
+| 系統内前方引用スコアによる選抜保留 | **29451** |
+| 暫定隔離合計 | **33094** |
+| **読解可能候補（隔離後）** | **88353** |
+| 前方引用が同一系統で2本以上の候補 | **1565** |
 | 前方引用が同一系統で3本以上の候補 | **80** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **75.0%** / 目標 **88263件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **75.0%** / 目標 **88353件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **1425件**（基本規則との重複を除去）
-- 実際の追加隔離: **1425件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 109, 'expanded_domain:content_moderation': 26, 'expanded_domain:educational_legal_applications': 26, 'expanded_domain:environmental_applications': 9, 'expanded_domain:financial_applications': 62, 'expanded_domain:geoscience_applications': 59, 'expanded_domain:materials_applications': 32, 'expanded_domain:vision_applications': 1102}**
+- 拡張規則に一致した候補: **1427件**（基本規則との重複を除去）
+- 実際の追加隔離: **1427件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 109, 'expanded_domain:content_moderation': 26, 'expanded_domain:educational_legal_applications': 26, 'expanded_domain:environmental_applications': 9, 'expanded_domain:financial_applications': 62, 'expanded_domain:geoscience_applications': 59, 'expanded_domain:materials_applications': 32, 'expanded_domain:vision_applications': 1104}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。
 
 - モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **21.8%**
-- 現在の生在庫: 後方references **63650件** / 前方引用 **60046件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **122353件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **63659件** / 前方引用 **59566件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **122472件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -97,18 +97,18 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 収録論文seed台帳 | **5499** |
-| provider巡回可能 | **5487** |
+| 収録論文seed台帳 | **5516** |
+| provider巡回可能 | **5504** |
 | provider巡回不能 | **12** |
-| 1周以上完了 | **4204** |
+| 1周以上完了 | **4234** |
 | 巡回中 | **31** |
-| 未巡回 | **1252** |
-| 今回run開始時due | **2786** |
-| 前方引用から保持中の未処理候補 | **60046** |
+| 未巡回 | **1239** |
+| 今回run開始時due | **2861** |
+| 前方引用から保持中の未処理候補 | **59566** |
 | エラー状態保持seed | **31** |
 
-- 初回カバレッジ完了率: **76.6%**
-- state最終更新: **11-27 07:12:27 JST**
+- 初回カバレッジ完了率: **76.9%**
+- state最終更新: **11-28 07:31:25 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-27 14:23:11 JST（16時間1分前）** |
+| 最終maintenance完了 | **11-27 14:23:11 JST（17時間19分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **0** |
-| 直近6hのDiscovery本文確認・分類 | **0** |
-| 最終Research完了 | **11-27 08:40:00 JST** |
-| 最終Discovery完了 | **11-27 12:00:00 JST** |
+| 直近6hのResearch完了 | **4** |
+| 直近6hのDiscovery run | **4** |
+| 直近6hのDiscovery本文確認・分類 | **9** |
+| 最終Research完了 | **11-28 07:40:00 JST** |
+| 最終Discovery完了 | **11-28 07:31:34 JST** |
 
 ### 最新Library-first run
 
-- Research: **11-27 08:40:00 JST** / worker — / run muse-20261127-b1 / 成果 **17件**
-  - evidence: .survey/import-inbox/results/research/2026-2604.04701-muxq-mixed-to-uniform-precision-matrix-quantization-via-low-rank-outlier-decomposition.json
-- Discovery: **11-27 12:00:00 JST** / worker muse / run muse-20261127-c5d06-b01::chunk-0001-of-0003
-  - 本文確認・分類 **20件** / accept **1件** / unrelated+borderline **19件**
-  - evidence: .survey/import-inbox/results/discovery/discovery-20261127-0705-muse-c5d06-b01--chunk-0001-of-0003.json
+- Research: **11-28 07:40:00 JST** / worker — / run muse-20261128-b1 / 成果 **3件**
+  - evidence: .survey/import-inbox/results/research/2024-2408.04413-deeploy-enabling-energy-efficient-deployment-of-small-language-models-on-heterogeneous-microcontrollers.json
+- Discovery: **11-28 07:31:34 JST** / worker muse / run muse-20261128-latest-b01::chunk-0002-of-0002
+  - 本文確認・分類 **2件** / accept **0件** / unrelated+borderline **2件**
+  - evidence: .survey/import-inbox/results/discovery/discovery-20261128-0740-muse-latest-b01--chunk-0002-of-0002.json
 
 ### Codex探索成果の反映状況
 
@@ -288,7 +288,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1973** |
+| ready | **1969** |
 
 ### 候補の重複・識別情報欠損
 
@@ -308,7 +308,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **5516** |
+| inference/training/survey配下の論文Markdown実体 | **5520** |
 
 ### immutable submissionの未照合
 
