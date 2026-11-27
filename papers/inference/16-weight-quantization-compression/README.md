@@ -174,6 +174,10 @@
   実装：[✓](https://github.com/RickZack/FlexRank) ・ リポジトリ内被引用：2  
   FlexRankは、一つの事前学習済みモデルから、計算・メモリ予算に応じて大きさの異なる複数の部分モデルを切り出すための低ランク分解・学習方式である。
 
+- **2025-12 · [SkipCat: Rank-Maximized Low-Rank Compression of Large Language Models via Shared Projection and Block Skipping](2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  同一入力の行列で低ランク射影を共有し、射影の先頭ブロックを再構成側へ吸収して省略することで、同じ圧縮率で保持できる有効ランクを増やし、学習なし低ランク圧縮の精度低下を既存法の半分以下に抑えた。
+
 - **2025-12 · [OptRot: Mitigating Weight Outliers via Data-Free Rotations for Post-Training Quantization](2025-2512.24124-optrot-mitigating-weight-outliers-via-data-free-rotations-for-post-train.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   GPTQによる低ビット重み量子化では、極端に大きい重みが量子化スケールを押し広げ、通常の重みの再現精度を損なう。
@@ -289,10 +293,6 @@
 - **2026-01 · [D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs](2026-2602.02546-d2quant-accurate-low-bit-post-training-weight-quantization-for-llms.md)**  
   実装：[✓](https://github.com/XIANGLONGYAN/D2Quant) ・ リポジトリ内被引用：1  
   D²Quantは、大規模言語モデルの重みのみを4ビット未満へ圧縮するときの精度劣化を対象とする、学習後量子化（post-学習 量子化; PTQ）の研究である。実験においてQwen3-8Bの2ビット重み量子化はWikiText2でパープレキシティ14.10、C4で25.96、MMLUで49.94%、7課題の平均正答率57.22%となった。
-
-- **2025-12 · [SkipCat: Rank-Maximized Low-Rank Compression of Large Language Models via Shared Projection and Block Skipping](2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  同一入力の行列で低ランク射影を共有し、射影の先頭ブロックを再構成側へ吸収して省略することで、同じ圧縮率で保持できる有効ランクを増やし、学習なし低ランク圧縮の精度低下を既存法の半分以下に抑えた。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
@@ -934,6 +934,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   主題は、大規模言語モデルの重みと活性値の両方を4ビット程度へ量子化し、再学習を行わずに推論品質を保つ事後量子化（Post-学習 量子化; PTQ）である。代表例としてLlama2-7Bの5つの言語理解課題平均では、BF16の65.65%に対し、実効4.5ビットのLO-BCQは64.68%となり、0.97ポイント低下した。
 
+- **2025-01 · [Pivoting Factorization: A Compact Meta Low-Rank Representation of Sparsity for Efficient Inference in Large Language Models](2025-2501.19090-pivoting-factorization-a-compact-meta-low-rank-representation-of-sparsit.md)**  
+  実装：[✓](https://github.com/biomedical-cybernetics/pivoting-factorization) ・ リポジトリ内被引用：5  
+  ランクが行列次元の半分の単層比較では、既存低ランク層から追加でメモリ24.2%・推論時間24.6%削減を報告。PIFAの無損失は元の低ランク近似に対する再表現の性質であり、密な原モデルを無損失圧縮するという意味ではない。
+
 - **2025-11 · [SpecQuant: Spectral Decomposition and Adaptive Truncation for Ultra-Low-Bit LLMs Quantization](2025-2511.11663-specquant-spectral-decomposition-and-adaptive-truncation-for-ultra-low-b.md)**  
   実装：[✓](https://github.com/Kishon-zzx/SpecQuant) ・ リポジトリ内被引用：4  
   本研究は、大規模言語モデル（LLM）の重みと活性を同時に4ビット程度へ圧縮するときに生じる、外れ値による量子化誤差を低減する手法を扱う。
@@ -949,10 +953,6 @@
 - **2025-04 · [Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression](2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md)**  
   実装：[✓](https://github.com/The-Inscrutable-X/TACQ) ・ リポジトリ内被引用：4  
   Task-Circuit Quantization（TACQ）は、学習済みLLMを2〜3ビットへ圧縮した際の性能崩壊を抑えるため、全ての重みを同じ精度で丸めるのではなく、タスクにとって重要で、かつ実際の量子化で大きな損失を引き起こしそうな重みだけを16ビットのまま残す学習後量子化方式である。
-
-- **2025-01 · [Pivoting Factorization: A Compact Meta Low-Rank Representation of Sparsity for Efficient Inference in Large Language Models](2025-2501.19090-pivoting-factorization-a-compact-meta-low-rank-representation-of-sparsit.md)**  
-  実装：[✓](https://github.com/biomedical-cybernetics/pivoting-factorization) ・ リポジトリ内被引用：4  
-  ランクが行列次元の半分の単層比較では、既存低ランク層から追加でメモリ24.2%・推論時間24.6%削減を報告。PIFAの無損失は元の低ランク近似に対する再表現の性質であり、密な原モデルを無損失圧縮するという意味ではない。
 
 - **2025-11 · [Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer](2025-2502.15779-rotate-clip-and-partition-towards-w2a4kv4-quantization-by-integrating-ro.md)**  
   実装：[✓](https://github.com/songsm921/RCP) ・ リポジトリ内被引用：3  
@@ -1241,7 +1241,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-03 · [QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs](2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md)**  
-  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：342  
+  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：344  
   QuaRotは、大規模言語モデル（LLM）の4ビット推論を難しくする活性値の外れ値を、高精度の例外チャネルへ逃がすのではなく、モデルの関数を変えない直交回転（orthogonal rotation）で多数の次元へ分散する量子化手法である。
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  
@@ -1265,7 +1265,7 @@
   活性値認識型特異値分解（活性値-aware Singular Value Decomposition、ASVD）は、大規模言語モデル（LLM）の線形重みを追加学習なしで低ランク行列へ置き換える圧縮方式である。LLaMA-7BとLLaMA-2-7B/13Bで重み容量を10～30%削減する実験を行い、活性値を考慮しないSVDより大幅に良い困惑度を報告する。
 
 - **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  
-  実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：95  
+  実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：96  
   巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
 
 - **2024-02 · [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md)**  
@@ -1491,7 +1491,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：409  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：410  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
@@ -1499,7 +1499,7 @@
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：371  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：372  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
@@ -1507,7 +1507,7 @@
   大規模言語モデルの重みを16ビットから4ビット、3ビット、2ビットへ縮めると、保存容量と重み転送量を大きく削減できる。一方、極低ビットでは重みや活性値の少数の外れ値が量子化範囲を広げ、重要な値の量子化刻みが粗くなって出力品質が崩れる。LLaMA-2 7B～70Bは128個の校正系列とA100 40GB 1基で1～16時間の処理が可能と報告される。
 
 - **2023-07 · [QuIP: 2-Bit Quantization of Large Language Models With Guarantees](2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md)**  
-  実装：✓ ・ リポジトリ内被引用：246  
+  実装：✓ ・ リポジトリ内被引用：247  
   重みと代理ヘッセ行列（proxy Hessian）の座標依存の偏りをランダム直交変換で崩してから、LDL分解に基づく適応丸めを行う。Llama 2 70Bでは2ビット重みでもWikiText2パープレキシティ6.326を保ち、同条件のOPTQの123.908から大幅に改善する。
 
 - **2023-06 · [SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md)**  
@@ -1601,11 +1601,11 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：843  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：844  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：744  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：746  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2022-11 · [LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md)**  

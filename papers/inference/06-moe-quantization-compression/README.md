@@ -111,7 +111,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   混合専門家モデル（Mixture of エキスパート、MoE）は、各トークンについて多数の専門家から少数を選択することで、総パラメータ数の割に活性化計算量を抑える。例えばMixtral-8×7Bは総計約470億パラメータを持つが、1トークンで活性化するのは約130億パラメータであり、元モデルの重みメモリは原著の環境で87.7GBに達する。
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
-  実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：27  
   MxMoEは、混合専門家モデル（Mixture of エキスパート; MoE）の推論において、モデルの重みを小さくするだけでなく、実際にGPU上で計算が速くなる量子化配置を選ぶ研究である。専門家演算の処理量は16ビット基準に対して、512トークン条件で1.6～2.7倍、8192トークン条件で3.0～3.4倍となった。
 
 - **2025-05 · [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)**  

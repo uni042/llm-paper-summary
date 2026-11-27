@@ -594,13 +594,13 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：[✓](https://github.com/Osilly/dynamic_llava) ・ リポジトリ内被引用：27  
   動的-LLaVAは、マルチモーダル大規模言語モデル（マルチモーダル Large Language モデル; MLLM）の高速化を、画像トークンだけの削減ではなく「画像文脈と生成済み言語文脈の両方を、推論段階に応じて動的に疎化する」問題として扱う。予測は一度だけ行い、その保持/削除決定を後続層すべてで共有する。
 
+- **2025-05 · [AdaptThink: Reasoning Models Can Learn When to Think](2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md)**  
+  実装：[✓](https://github.com/THU-KEG/AdaptThink) ・ リポジトリ内被引用：26  
+  AdaptThinkは、問題ごとに「思考あり（Thinking）」と「思考なし（NoThinking）」のどちらで回答するかをモデル自身が選択できるよう、強化学習（Reinforcement Learning; RL）で訓練する方式である。
+
 - **2025-04 · [Reasoning Models Know When They're Right: Probing Hidden States for Self-Verification](2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md)**  
   実装：✓ ・ リポジトリ内被引用：26  
   長い思考連鎖（Chain of Thought; CoT）を生成する推論モデルは、最初に正解へ到達しても別の推論経路を探索し、同じ問題を何度も検証することがある。オンラインで検証器を挿入したサービングシステムの最初のトークン遅延、処理率、VRAM消費、GPU時間を直接測定した結果ではない。
-
-- **2025-05 · [AdaptThink: Reasoning Models Can Learn When to Think](2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md)**  
-  実装：[✓](https://github.com/THU-KEG/AdaptThink) ・ リポジトリ内被引用：25  
-  AdaptThinkは、問題ごとに「思考あり（Thinking）」と「思考なし（NoThinking）」のどちらで回答するかをモデル自身が選択できるよう、強化学習（Reinforcement Learning; RL）で訓練する方式である。
 
 - **2024-12 · [D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models](2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md)**  
   実装：[✓](https://github.com/Jyk-122/D-LLM) ・ リポジトリ内被引用：15  
@@ -622,13 +622,13 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：[✓](https://github.com/SCZwangxiao/video-FlexReduc) ・ リポジトリ内被引用：7  
   動画を長くするほど事前充填で扱う系列が増え、言語モデルの鍵・値キャッシュ（KVキャッシュ）がGPUメモリを圧迫する。すべてのフレームを同じ割合で圧縮すると、静止区間へ不要な容量を割り当てる一方、質問に必要な短い場面の情報を失う。これは処理可能な動画情報量と理解精度の結果であり、トークン生成速度が同倍率で向上するという主張ではない。
 
+- **2025-01 · [Instruction-Following Pruning for Large Language Models](2025-2501.02086-instruction-following-pruning-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  指示追従枝刈り（Instruction-Following Pruning、IFPruning）は、利用者の指示文から小型の疎性予測器が必要なフィードフォワード層（FFN）の中間次元を選び、その指示に対する応答の復号中は同じ部分ネットワークを固定して実行する手法である。
+
 - **2025-07 · [DiffSkip: Differential Layer Skipping in Large Language Models](2025-diffskip-differential-layer-skipping-in-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   大規模言語モデルは、次の単語を推測するたびに、難しい計算を要する単語にも文脈からほぼ写すだけの単語にも同じ数の変換層を適用する。DiffSkipは、トークンと層の組ごとに、後続のフィードフォワードネットワーク（FFN）を実行するか、軽量な補正器で代替するかを判断する手法である。
-
-- **2025-01 · [Instruction-Following Pruning for Large Language Models](2025-2501.02086-instruction-following-pruning-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  指示追従枝刈り（Instruction-Following Pruning、IFPruning）は、利用者の指示文から小型の疎性予測器が必要なフィードフォワード層（FFN）の中間次元を選び、その指示に対する応答の復号中は同じ部分ネットワークを固定して実行する手法である。
 
 - **2025-10 · [Learning to Inference Adaptively for Multimodal Large Language Models](2025-2503.10905-learning-to-inference-adaptively-for-multimodal-large-language-models.md)**  
   実装：[✓](https://github.com/zhuoyan-xu/AdaLLaVA) ・ リポジトリ内被引用：4  
@@ -785,7 +785,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   LLaVA-PruMergeは、画像を大規模言語モデルへ渡す際の視覚トークン数を削減する方式である。LLaVA-1.5は336×336画素の画像から24×24個、すなわち576個の視覚トークンを生成する。
 
 - **2024-08 · [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)**  
-  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：174  
+  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：175  
   LayerSkipは、大規模言語モデルの全ての層を毎トークン実行する代わりに、浅い層から次トークンを予測できるよう学習し、その予測を同じモデルの残りの層で検証する方式である。下書きモデルの生成結果を大きなモデルで一括検証することで生成時間を短縮できるが、二つのモデルの重みや鍵・値キャッシュを管理する必要がある。
 
 - **2024-10 · [PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction](2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md)**  
@@ -809,7 +809,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   LongVUは、長時間動画を多模態大規模言語モデルへ入力するとき、視覚トークン数が文脈長を超える問題に対して、時間方向の冗長なフレーム削除、質問に応じた空間解像度の配分、フレーム間で重複する空間トークンの削除を段階的に組み合わせる方式である。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  
-  実装：[✓](https://aka.ms/LLMLingua-2) ・ リポジトリ内被引用：54  
+  実装：[✓](https://aka.ms/LLMLingua-2) ・ リポジトリ内被引用：55  
   本手法は圧縮を単語の保持/削除の二値分類として定式化し、双方向encoderのXLM-RoBERTa-largeやmBERTに圧縮の目的を直接学習させる。V100-32GB上のMeetingBank遅延測定では、非圧縮エンドツーエンド14.9秒に対し、5倍圧縮時5.2秒（2.9倍高速）と報告する。
 
 - **2024-06 · [D2O: Dynamic Discriminative Operations for Efficient Long-Context Inference of Large Language Models](2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md)**  
@@ -959,7 +959,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   MovieChatは、固定長の短期記憶を逐次更新し、古いフレームを類似度に応じて統合した長期記憶へ送ることで、この問題を扱う。原著図1は、224×224画素のフレームを標本抽出なしで処理する視覚側の条件で、24GB GPU上で10,000フレーム超を扱えると報告する。
 
 - **2023-05 · [Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs](2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md)**  
-  実装：[✓](https://sample-step-by-step.info) ・ リポジトリ内被引用：22  
+  実装：[✓](https://sample-step-by-step.info) ・ リポジトリ内被引用：23  
   大規模言語モデル（LLM）で多段階推論の精度を上げる自己整合性（自己整合性）は、同じ質問に対して複数の思考連鎖を標本化し、最終回答を多数決する方式である。最大7.9倍の節約は個別条件の値であり、全条件平均ではない。
 
 - **2023-03 · [CoLT5: Faster Long-Range Transformers with Conditional Computation](2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md)**  

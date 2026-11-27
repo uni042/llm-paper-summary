@@ -33,7 +33,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-04 · [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md)**  
-  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：95  
+  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：96  
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
@@ -961,7 +961,7 @@
   LM-Infiniteは、短い系列で学習した大規模言語モデルを追加学習なしで長文脈へ外挿するため、推論時の注意範囲と位置距離の扱いだけを変更する方式である。論文は元の完全注意に対してデコードを約2.7倍高速化し、GPUメモリを最大7.5倍削減したと報告する。
 
 - **2023-05 · [Landmark Attention: Random-Access Infinite Context Length for Transformers](2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md)**  
-  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：52  
   目印注意（Landmark 注意機構）は、長い文章を一定長のブロックに分け、それぞれの末尾へ特別な目印トークンを挿入し、注意機構そのものに「どの過去ブロックを読み戻すべきか」を学習させる方式である。また、LLaMA-7Bを長さ512の文脈で15,000ステップ微調整した実験では、32Kを超える入力から埋め込んだ合言葉を検索できることを示した。
 
 - **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
@@ -1021,7 +1021,7 @@
   Sangerは、Transformerの注意演算に含まれる重要度の低い接続を入力ごとに選別し、専用ハードウェア上で実際に計算を省くための協調設計である。
 
 - **2020-12 · [Fast Transformers with Clustered Attention](2020-2007.04825-fast-transformers-with-clustered-attention.md)**  
-  実装：[✓](https://github.com/idiap/fast-transformers) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/idiap/fast-transformers) ・ リポジトリ内被引用：25  
   本論文は、自己注意（self-注意機構）の各クエリがすべてのキーを参照するため、系列長Nに対して注意行列がN×Nになり、計算量と中間メモリが二乗で増える問題を扱う。NeurIPS 2020の正式版では、GTX 1080 Ti 11GB上の音声認識2データセットと、学習済みRoBERTaのGLUE・SQuADへの適用を評価した。
 
 - **2021-06 · [Memory-efficient Transformers via Top-k Attention](2021-2106.06899-top-k-attention.md)**  
@@ -1059,15 +1059,15 @@
 ### 7年前（2019-12〜2020-11）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
-  実装：✓ ・ リポジトリ内被引用：285  
+  実装：✓ ・ リポジトリ内被引用：286  
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
-  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：224  
+  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：225  
   第一の制約は、全トークン対の内積を求める標準自己注意が系列長の二乗に比例する計算を要することである。
 
 - **2020-03 · [Efficient Content-Based Sparse Attention with Routing Transformers](2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md)**  
-  実装：[✓](https://github.com/google-research/google-research/tree/master/routing_transformer) ・ リポジトリ内被引用：100  
+  実装：[✓](https://github.com/google-research/google-research/tree/master/routing_transformer) ・ リポジトリ内被引用：101  
   固定した近傍窓ではなく「内容が近いトークン」をクラスタリングして注意先を決める。局所注意だけでは拾いにくい遠距離依存を残しつつ、各トークンが全系列を見る密な自己注意の二乗コストを削る、初期の内容依存疎注意方式。
 
 ### 8年前（2018-12〜2019-11）

@@ -376,6 +376,10 @@
   実装：[✓](https://github.com/JasonNing96/DSSD-Efficient-Edge-Computing) ・ リポジトリ内被引用：7  
   端末で大規模言語モデルを動かすにはメモリ、演算能力、電力が不足しやすい。基地局やエッジサーバに大型モデルを置けば演算資源は確保できるが、ネットワーク往復時間と帯域が生成遅延へ加わる。ただしモデル対やドラフト長によっては通常の大型モデル推論より遅い条件があり、通信を減らせば無条件に高速化するわけではない。
 
+- **2025-04 · [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  D²MoEは、端末上でMoEを動かすときの専門家の重みをどの精度で読み込むかと、SSDなどからの重み読込とGPU計算をどう重ねるかを同時に設計する。二重ルーティングは専門家IDとビット幅の二つの選択を意味し、トークンを二回生成する方式ではない。
+
 - **2025-10 · [Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding](2025-2510.11331-heterogeneous-edge-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   小基地局に下書きモデル、大基地局に対象モデルを置き、要求の下書き・検証を二段パイプライン化し、無線帯域・バッチ境界・投機長を調整して往復遅延を減らす方式。
@@ -383,10 +387,6 @@
 - **2025-04 · [Scaling Up On-Device LLMs via Active-Weight Swapping Between DRAM and Flash](2025-2504.08378-scaling-up-on-device-llms-via-active-weight-swapping-between-dram-and-fl.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   スマートフォン上で大規模言語モデルを動かす際、モデルの全重みをDRAMに置けないことが最大の制約になる。さらに現在の層の活性化ベクトルから数層先の活性重みを予測して先読みし、複数層の重みをフラッシュ上で近接配置する。
-
-- **2025-04 · [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  D²MoEは、端末上でMoEを動かすときの専門家の重みをどの精度で読み込むかと、SSDなどからの重み読込とGPU計算をどう重ねるかを同時に設計する。二重ルーティングは専門家IDとビット幅の二つの選択を意味し、トークンを二回生成する方式ではない。
 
 - **2025-06 · [CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge](2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

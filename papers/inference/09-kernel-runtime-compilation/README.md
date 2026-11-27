@@ -957,7 +957,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
-  実装：[✓](https://github.com/kvcache-ai/ktransformers) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/kvcache-ai/ktransformers) ・ リポジトリ内被引用：30  
   大規模な混合専門家モデルの多数の専門家重みをCPUメモリに常駐させ、注意機構などをGPUで処理する異種混成推論基盤。CPUの行列演算命令を算術強度に応じて使い分け、非同期の実行制御と専門家計算の遅延反映によってCPU・GPUの相互待ちを減らす。低同時実行の巨大モデルを主対象とし、評価した環境は二基の高性能XeonとA100またはRTX 4080である。
 
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
@@ -1282,16 +1282,16 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：57  
   しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
+- **2024-06 · [T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge](2024-2407.00088-t-mac-cpu-renaissance-via-table-lookup-for-low-bit-llm-deployment-on-edg.md)**  
+  実装：[✓](https://github.com/microsoft/T-MAC) ・ リポジトリ内被引用：36  
+  重みのみを低ビット量子化した大規模言語モデルでは、重みは1〜4ビットでも活性値は8〜16ビット以上の精度を保つことが多い。論文はカーネルの最大6.6倍、平均3.6倍の改善、モデル全体で条件により2〜4倍の生成速度改善を報告する。
+
 - **2024-10 · [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md)**  
   実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：35  
   一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
 
-- **2024-06 · [T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge](2024-2407.00088-t-mac-cpu-renaissance-via-table-lookup-for-low-bit-llm-deployment-on-edg.md)**  
-  実装：[✓](https://github.com/microsoft/T-MAC) ・ リポジトリ内被引用：35  
-  重みのみを低ビット量子化した大規模言語モデルでは、重みは1〜4ビットでも活性値は8〜16ビット以上の精度を保つことが多い。論文はカーネルの最大6.6倍、平均3.6倍の改善、モデル全体で条件により2〜4倍の生成速度改善を報告する。
-
 - **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
-  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：34  
   Any-Precision LLMは、同じ大規模言語モデルを複数の量子化精度で運用する場合のメモリと作成費用を削減する研究である。Llama-2-7Bの3～8ビット6種類を個別配置する場合29.9GBに対し、共通配置では8.4GBとなり、3.56倍の容量節約を報告する。
 
 - **2024-06 · [FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion](2024-2406.06858-flux-fast-software-based-communication-overlap-on-gpus-through-kernel-fu.md)**  
@@ -1475,7 +1475,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
-  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：85  
+  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：86  
   重みを3～4ビットへ圧縮すればGPUメモリへの転送量を減らせるが、既存の重みのみ量子化の多くは、積和を行う直前に重みを半精度へ展開する逆量子化処理を必要とする。
 
 - **2022-11 · [Who Says Elephants Can't Run: Bringing Large Scale MoE Models into Cloud Scale Production](2022-2211.10017-who-says-elephants-can-t-run-bringing-large-scale-moe-models-into-cloud-.md)**  

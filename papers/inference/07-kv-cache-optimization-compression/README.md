@@ -2540,7 +2540,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [SnapKV: LLM Knows What You are Looking for Before Generation](2024-2404.14469-snapkv.md)**  
-  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：607  
+  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：608  
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
@@ -2580,7 +2580,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   MiniCacheは層内のトークン選別や低ビット化だけでなく、隣り合う層のあいだにも冗長性があると観察し、中層以降で同じ位置のKV状態を共有表現へ統合する。
 
 - **2024-03 · [Jamba: A Hybrid Transformer-Mamba Language Model](2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md)**  
-  実装：✓ ・ リポジトリ内被引用：103  
+  実装：✓ ・ リポジトリ内被引用：104  
   系列が長くなると鍵値キャッシュ（KVキャッシュ）の容量と読出し量が増え、GPUのメモリ容量・帯域を圧迫する。さらに混合専門家モデル（Mixture-of-Experts、MoE）を一部の前向き全結合層へ導入し、総パラメータ容量とトークン当たりの有効計算量を分離する。
 
 - **2024-10 · [MagicPIG: LSH Sampling for Efficient LLM Generation](2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md)**  
@@ -2588,11 +2588,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   LSHの衝突確率を注意分布の提案分布として使い、CPUへ置いたKVから少数だけをサンプリングして疎注意を計算する方式。全注意の2〜5%程度の計算で精度を保ち、最大5倍のデコードスループットを示す。
 
 - **2024-05 · [You Only Cache Once: Decoder-Decoder Architectures for Language Models](2024-2405.05254-yoco.md)**  
-  実装：[✓](https://aka.ms/YOCO) ・ リポジトリ内被引用：82  
+  実装：[✓](https://aka.ms/YOCO) ・ リポジトリ内被引用：83  
   自己デコーダが一度だけ生成した大域鍵値を後半の交差デコーダ全層で共有し、長文脈の鍵値メモリと事前充填時間を桁違いに削減する。
 
 - **2024-05 · [Reducing Transformer Key-Value Cache Size with Cross-Layer Attention](2024-2405.12981-cross-layer-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：80  
+  実装：✓ ・ リポジトリ内被引用：81  
   MQA/GQAのKV共有を層方向へ拡張し、隣接層でKV活性を再利用してKVキャッシュを追加で約2倍削減する注意アーキテクチャ。
 
 - **2024-05 · [ZipCache: Accurate and Efficient KV Cache Quantization with Salient Token Identification](2024-2405.14256-zipcache.md)**  
@@ -2660,7 +2660,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   本論文は、大規模言語モデルの生成時に生じる逐次計算の待ち時間を、投機的復号（投機的復号）の二つの構成要素から短縮する研究である。投機的復号では軽量な下書きモデルが数トークンを先に提案し、大型の対象モデルが一度の前向き計算で提案を検証する。
 
 - **2024-02 · [Get More with LESS: Synthesizing Recurrence with KV Cache Compression for Efficient LLM Inference](2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md)**  
-  実装：[✓](https://github.com/hdong920/LESS) ・ リポジトリ内被引用：52  
+  実装：[✓](https://github.com/hdong920/LESS) ・ リポジトリ内被引用：53  
   LESSは、キー・値キャッシュ（Key-Value Cache; KVキャッシュ）の追い出しを「残すか捨てるか」の二択にしない。重要なトークンは従来どおり疎KVキャッシュへ明示的に残し、追い出すトークンは固定サイズの低ランク状態へ順次圧縮する。次の注意計算では両方を合成するため、疎キャッシュから消えたトークンにも低解像度ながら参照経路が残る。
 
 - **2024-07 · [Model Tells You Where to Merge: Adaptive KV Cache Merging for LLMs on Long-Context Tasks](2024-2407.08454-model-tells-you-where-to-merge-adaptive-kv-cache-merging-for-llms-on-lon.md)**  
@@ -2696,7 +2696,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   自己回帰型の大規模言語モデル（LLM）は、過去トークンの鍵（K）と値（V）をKVキャッシュへ保存することで、次のトークン生成時に過去の注意計算をやり直さない。原著のメモリ表では、バッチ64、文脈長2048でLLaMA-2 13BのKVキャッシュが50GBから27.5GB、LLaMA-3 8Bが8GBから4.8GB、70Bが20GBから11GBになる。
 
 - **2024-06 · [Attention Score is not All You Need for Token Importance Indicator in KV Cache Reduction: Value Also Matters](2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md)**  
-  実装：✓ ・ リポジトリ内被引用：38  
+  実装：✓ ・ リポジトリ内被引用：39  
   注意スコアに値ベクトルのL1ノルムを組み込み、実際の注意出力寄与に近い重要度でKVトークンを削減する後付け型キャッシュ枝刈り。
 
 - **2024-08 · [NACL: A General and Effective KV Cache Eviction Framework for LLM at Inference Time](2024-2408.03675-nacl-a-general-and-effective-kv-cache-eviction-framework-for-llms.md)**  
@@ -2834,11 +2834,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：891  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：892  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：821  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：822  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -2846,7 +2846,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2023-10 · [Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs](2023-2310.01801-fastgen.md)**  
-  実装：[✓](https://github.com/machilusZ/FastGen) ・ リポジトリ内被引用：292  
+  実装：[✓](https://github.com/machilusZ/FastGen) ・ リポジトリ内被引用：293  
   FastGenは注意ヘッドごとの構造を一度だけ診断してKVキャッシュ保持方針を変え、追加学習なしでメモリ削減と長系列生成の高速化を両立する。
 
 - **2023-05 · [Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time](2023-2305.17118-scissorhands.md)**  

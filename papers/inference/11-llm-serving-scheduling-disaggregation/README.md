@@ -1633,7 +1633,7 @@
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
-  実装：✓ ・ リポジトリ内被引用：59  
+  実装：✓ ・ リポジトリ内被引用：60  
   注意機構とMoE専門家FFNを別GPU群へ分離し、複数注意レプリカから専門家要求を集約して大きな専門家バッチを作り、専用多対多RDMA通信とピンポン型パイプラインで通信を隠す大規模MoEサービング方式。
 
 - **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
@@ -1668,13 +1668,13 @@
   実装：✓ ・ リポジトリ内被引用：28  
   プリフィル重視/デコード重視インスタンスを混在させ、要求ごとのTTFT・TPOT余裕を別要求へ移すことで集約型と分離型を統一するLLM配信基盤。既存集約型比9〜47%、分離型比29〜77%グッドプットを改善する。
 
+- **2025-02 · [HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment](2025-2502.07903-hexgen-2.md)**  
+  実装：✓ ・ リポジトリ内被引用：28  
+  異種GPU上の事前充填・復号分離を、グラフ分割と最大流で段階別並列化・資源配置・KV転送まで共同最適化するLLMサービング方式。
+
 - **2025-04 · [JITServe: SLO-aware LLM Serving with Imprecise Request Information](2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md)**  
   実装：✓ ・ リポジトリ内被引用：27  
   不確かな出力長と依存関係を逐次更新し、期限達成に必要な最小帯域で要求を選ぶことで、サービス有効処理量を1.4〜6.3倍へ改善する。
-
-- **2025-02 · [HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment](2025-2502.07903-hexgen-2.md)**  
-  実装：✓ ・ リポジトリ内被引用：27  
-  異種GPU上の事前充填・復号分離を、グラフ分割と最大流で段階別並列化・資源配置・KV転送まで共同最適化するLLMサービング方式。
 
 - **2025-04 · [semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage](2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md)**  
   実装：✓ ・ リポジトリ内被引用：26  
@@ -2347,11 +2347,11 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：884  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：885  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：743  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：744  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
@@ -2689,7 +2689,7 @@
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
-  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：617  
+  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：618  
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  

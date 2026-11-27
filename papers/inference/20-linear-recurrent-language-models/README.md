@@ -142,7 +142,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2024-12 · [Gated Delta Networks: Improving Mamba2 with Delta Rule](2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md)**  
-  実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：185  
+  実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：186  
   本論文は、長文脈を固定容量の状態へ圧縮する線形再帰言語モデルが、記憶の保持と更新を両立しにくい問題を扱う。
 
 - **2025-02 · [PICASO: Permutation-Invariant Context Composition with State Space Models](2025-2502.17605-picaso-permutation-invariant-context-composition-with-state-space-models.md)**  
@@ -180,11 +180,11 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2023-2312.00752-mamba-selective-state-space-linear-time-inference.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：354  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：356  
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：141  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：142  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2023-12 · [Gated Linear Attention Transformers with Hardware-Efficient Training](2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md)**  
@@ -220,7 +220,7 @@
   一覧用要約：Lightning 注意機構-2は因果線形注意を現在のタイル内と過去タイルからの寄与に分解し、タイル内を因果マスク付き通常行列積、タイル間を固定サイズの累積KV状態による右積で計算する。前向き・逆向きの両方をTritonで入出力認識型に実装し、長系列でも学習速度と作業メモリを安定させる。
 
 - **2024-10 · [LoLCATs: On Low-Rank Linearizing of Large Language Models](2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/lolcats) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/HazyResearch/lolcats) ・ リポジトリ内被引用：17  
   線形注意を元の注意出力に合わせる注意転移と低ランク適応だけの調整で線形化し、学習量を桁違いに減らしながらラマ3・8ビーのゼロショット差をほぼ閉じ、初めて4050億パラメータまで線形化した。
 
 - **2024-11 · [MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map](2024-2411.10741-metala-unified-optimal-linear-approximation-to-softmax-attention-map.md)**  

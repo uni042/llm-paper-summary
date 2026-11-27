@@ -1845,7 +1845,7 @@
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
 - **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
-  実装：✓ ・ リポジトリ内被引用：54  
+  実装：✓ ・ リポジトリ内被引用：55  
   長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
@@ -1853,7 +1853,7 @@
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
-  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：50  
+  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：51  
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
@@ -1885,7 +1885,7 @@
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
 - **2025-04 · [Reasoning Models Can Be Effective Without Thinking](2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md)**  
-  実装：✓ ・ リポジトリ内被引用：28  
+  実装：✓ ・ リポジトリ内被引用：29  
   大規模推論モデルは、最終回答の前に長い思考列（chain of thought、CoT）を生成することで数学、プログラミング、定理証明の精度を高めている。形式定理証明では長い思考より3.3～3.7倍少ないトークンで同程度のpass@kを得る。
 
 - **2024-12 · [Compressed Chain of Thought: Efficient Reasoning Through Dense Representations](2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md)**  
@@ -2659,11 +2659,11 @@
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
-  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：55  
+  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：56  
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2023-12 · [Zoology: Measuring and Improving Recall in Efficient Language Models](2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：48  
+  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：49  
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
 
 - **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
@@ -2993,7 +2993,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：146  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：147  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
@@ -3021,7 +3021,7 @@
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
-  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：41  
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 - **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
@@ -3277,7 +3277,7 @@
   翻訳文の長さを最初に予測し、最初の反復では全位置を同時に予測する。2019年の機械翻訳実験では、WMT14英語→ドイツ語において基礎CMLMの10反復が27.03 BLEU、同等規模の自己回帰Transformerが27.74 BLEUとなった。
 
 - **2019-07 · [Large Memory Layers with Product Keys](2019-1907.05242-large-memory-layers-with-product-keys.md)**  
-  実装：[✓](https://github.com/facebookresearch/XLM) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/facebookresearch/XLM) ・ リポジトリ内被引用：15  
   本論文の積キー記憶層（Product Key メモリ; PKM）は、二つの部分キー集合の直積で巨大なキー集合を暗黙的に作り、各部分集合の上位候補だけを調べて全積キー集合に対する正確な上位選択を行う。検索結果に対応する少数の値ベクトルだけを読み出して加重和を計算するため、総パラメータ容量と活性計算量を分離できる。
 
 - **2019-11 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
