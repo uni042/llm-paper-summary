@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e92bab029469a201-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.32755",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.32755",
+    "identity_tokens": [
+      "arXiv:2611.32755"
+    ],
+    "reason": "ReQORは量子化条件付きバックドアに対し量子化で生じた演算子乖離の主方向を閉形式で修復する学習不要の防御手法で、量子化推論軌跡を扱う点は関連するが、目的はセキュリティ防御であり推論効率・サービングへの貢献ではないため保留とする。",
+    "first_checked_at": "2026-11-27T22:31:29+00:00",
+    "last_checked_at": "2026-11-27T22:31:29+00:00",
+    "linked_from": [
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ReQOR: Operator-Discrepancy Subspace Repair for Quantization-Conditioned Backdoors in Large Language Models"
+  },
+  "processed_at": "2026-11-27T22:31:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e92bab029469",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

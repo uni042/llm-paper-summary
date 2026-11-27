@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e92bab029469a201-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.33325",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.33325",
+    "identity_tokens": [
+      "arXiv:2611.33325"
+    ],
+    "reason": "SAILはデータストリーム上の表形式基盤モデルの適応で適応イベント間にモデルのKVキャッシュを再利用する枠組みだが、対象はIoT表データの文脈適応という応用であり、LLM推論システムへの直接貢献としては機構の新規性・汎用性が要旨からは弱いため保留とする。",
+    "first_checked_at": "2026-11-27T22:31:29+00:00",
+    "last_checked_at": "2026-11-27T22:31:29+00:00",
+    "linked_from": [
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Sparse Adaptation for In-Context Learning on Data Streams"
+  },
+  "processed_at": "2026-11-27T22:31:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e92bab029469",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

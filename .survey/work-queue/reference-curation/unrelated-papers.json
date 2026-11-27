@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-27T02:49:31+00:00",
-  "record_count": 18140,
+  "updated_at": "2026-11-27T22:31:29+00:00",
+  "record_count": 18158,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -259173,6 +259173,260 @@
         "worklist"
       ],
       "title": "TCellAlign: Cross-study T-cell Populations Alignment with Nomenclature-Guided Multi-Agent Workflow"
+    },
+    "arXiv:2601.20352": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.20352",
+      "identity_tokens": [
+        "AMA",
+        "Adaptive Memory via Multi-Agent Collaboration",
+        "arXiv:2601.20352"
+      ],
+      "reason": "全文通読の結果、本論文はLLMエージェントの長期対話記憶を複数エージェントで構築・検索・検証・更新するアプリケーションレベルの記憶管理フレームワークであり、モデルの推論実行そのもの（サービング、KVキャッシュ、量子化、カーネル、並列化等）を対象としていない。入力トークン削減は記憶検索の結果として副次的に生じるもので、推論システムの機構ではないため、Research対象外と判定した。",
+      "first_checked_at": "2026-11-27T22:31:28+00:00",
+      "last_checked_at": "2026-11-27T22:31:28+00:00",
+      "linked_from": [
+        "worker-worklist-00.json:job-research-1b0ea44555dcec64"
+      ],
+      "title": "AMA: Adaptive Memory via Multi-Agent Collaboration"
+    },
+    "arXiv:2611.31848": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.31848",
+      "identity_tokens": [
+        "arXiv:2611.31848"
+      ],
+      "reason": "QuirkyMindはペルソナの不整合を扱う二流路の潜在状態によるパーソナライゼーション手法であり、対象は個人化生成の表現学習であって、LLM推論システムへの技術的貢献は要旨に示されていないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:28+00:00",
+      "last_checked_at": "2026-11-27T22:31:28+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "Faithful Persona Steering under Incongruity via Dual-Stream Refinement"
+    },
+    "arXiv:2611.33093": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33093",
+      "identity_tokens": [
+        "arXiv:2611.33093"
+      ],
+      "reason": "AIChipBenchは量子化済みLLMデコーダをRTLで実装させることでLLMコーディングエージェントのハードウェア設計能力を測るベンチマークであり、対象はエージェント評価であって推論システム自体の提案ではないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:28+00:00",
+      "last_checked_at": "2026-11-27T22:31:28+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design"
+    },
+    "arXiv:2006.16378": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.16378",
+      "identity_tokens": [
+        "arXiv:2006.16378"
+      ],
+      "reason": "読解の結果、主題は機械翻訳における非自己回帰系列生成の学習法であり、自己回帰モデルと非自己回帰モデルをEM枠組みで共同最適化し、出力の多峰性を除くことで翻訳精度と推論遅延の両立を狙う学習アルゴリズムの論文である。評価も機械翻訳ベンチマークでの翻訳品質と遅延が中心で、LLM推論システムのサービング、メモリ管理、スケジューリング等の機構への貢献ではないため、対象範囲外と判定した。",
+      "first_checked_at": "2026-11-27T22:31:28+00:00",
+      "last_checked_at": "2026-11-27T22:31:28+00:00",
+      "linked_from": [
+        "worker-worklist research_audit slice-b1-w4"
+      ],
+      "title": "An EM Approach to Non-autoregressive Conditional Sequence Generation"
+    },
+    "arXiv:2611.34823": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.34823",
+      "identity_tokens": [
+        "arXiv:2611.34823"
+      ],
+      "reason": "タイトル自体が初等教育のリテラシー基盤に関する言語モデルの知識を測るベンチマークであることを明示しており、対象は教育・言語知識評価であってLLM推論・サービングではないことがタイトルから明白なため、タイトルscreenでunrelatedとした。",
+      "first_checked_at": "2026-11-27T22:31:28+00:00",
+      "last_checked_at": "2026-11-27T22:31:28+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "The Linguistic Knowledge Benchmark: Do Language Models Know the Foundations of Early-Grade Literacy?"
+    },
+    "arXiv:2611.33871": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33871",
+      "identity_tokens": [
+        "arXiv:2611.33871"
+      ],
+      "reason": "タイトル自体が子どもの物語処理とリテラシーを文脈的言語表現で結ぶ神経科学的研究であることを明示しており、対象はfMRI等の認知神経科学であってLLM推論・サービングではないことがタイトルから明白なため、タイトルscreenでunrelatedとした。",
+      "first_checked_at": "2026-11-27T22:31:28+00:00",
+      "last_checked_at": "2026-11-27T22:31:28+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "Contextual language representations link narrative processing to language and literacy in children"
+    },
+    "arXiv:2611.31851": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.31851",
+      "identity_tokens": [
+        "arXiv:2611.31851"
+      ],
+      "reason": "タイトル自体が合成社会シミュレーションにおけるLLMエージェントの感情表出応答のモデリングであることを明示しており、対象は社会シミュレーション応用であってLLM推論・サービングではないことがタイトルから明白なため、タイトルscreenでunrelatedとした。",
+      "first_checked_at": "2026-11-27T22:31:28+00:00",
+      "last_checked_at": "2026-11-27T22:31:28+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "Modeling Event-Conditioned Emotional Expression Response with LLM Agents in a Synthetic Social Simulation"
+    },
+    "arXiv:2611.34750": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.34750",
+      "identity_tokens": [
+        "arXiv:2611.34750"
+      ],
+      "reason": "タイトル自体がLLMエージェントによるロボットマニピュレータ制御のためのキーポーズ生成であることを明示しており、対象はロボット操作の応用であってLLM推論・サービングではないことがタイトルから明白なため、タイトルscreenでunrelatedとした。",
+      "first_checked_at": "2026-11-27T22:31:28+00:00",
+      "last_checked_at": "2026-11-27T22:31:28+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "SOLVE: Sparse, Ordered Keyposes Make LLM Agents Versatile and Efficient Robot Manipulator"
+    },
+    "arXiv:2611.31762": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.31762",
+      "identity_tokens": [
+        "arXiv:2611.31762"
+      ],
+      "reason": "タイトル自体がLean 4の証明のリファクタリングをCodexとQwenで行う研究であることを明示しており、対象は定理証明の応用であってLLM推論・サービングではないことがタイトルから明白なため、タイトルscreenでunrelatedとした。",
+      "first_checked_at": "2026-11-27T22:31:28+00:00",
+      "last_checked_at": "2026-11-27T22:31:28+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "Verified Proof Refactoring with Codex and Qwen"
+    },
+    "arXiv:2611.34515": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.34515",
+      "identity_tokens": [
+        "arXiv:2611.34515"
+      ],
+      "reason": "Decoder-as-a-ProbeはLVLMの視覚表現をLLMデコーダの一次テイラー展開で読み出す解釈性手法であり、対象は表現の解釈とステアリングであって、LLM推論の効率化・サービング機構への貢献は要旨に示されていないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:29+00:00",
+      "last_checked_at": "2026-11-27T22:31:29+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "Decoder-as-a-Probe: Verbalizing and Steering Visual Representations in LVLMs"
+    },
+    "arXiv:2611.33314": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33314",
+      "identity_tokens": [
+        "arXiv:2611.33314"
+      ],
+      "reason": "GitHub Copilot向けに補完・近傍編集・遠距離編集を単一モデルで予測する統合インラインコード編集モデルの構築報告であり、モデル呼び出し回数の削減に触れるものの主貢献は編集予測モデル自体であって推論サービングシステムではないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:29+00:00",
+      "last_checked_at": "2026-11-27T22:31:29+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "Building a Unified Inline Code Editing Model for GitHub Copilot"
+    },
+    "arXiv:2611.32125": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32125",
+      "identity_tokens": [
+        "arXiv:2611.32125"
+      ],
+      "reason": "LARFは検索関連度推定のための学習整合型推論フレームワークであり、対象は検索ランキングの判定精度と学習手法であって、LLM推論システム・サービングへの技術的貢献は要旨に示されていないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:29+00:00",
+      "last_checked_at": "2026-11-27T22:31:29+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "LARF: Learning-aligned Reasoning Framework for Search Relevance"
+    },
+    "arXiv:2611.32064": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32064",
+      "identity_tokens": [
+        "arXiv:2611.32064"
+      ],
+      "reason": "Surgical Fine-TuningはフロンティアLLMの行動上の失敗をLoRA更新で修正し、BF16やFP8/NVFP4量子化リリースへのマージで更新が消失する問題を扱うが、主対象は微調整とチェックポイント配布であり推論実行機構への貢献ではないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:29+00:00",
+      "last_checked_at": "2026-11-27T22:31:29+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "Fix How It Acts, Not How It Thinks: Surgical Fine-Tuning of Frontier LLMs"
+    },
+    "arXiv:2611.31894": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.31894",
+      "identity_tokens": [
+        "arXiv:2611.31894"
+      ],
+      "reason": "RESETは単一の実演からロボット操作スキルの自己改善を行う枠組みであり、LLMコーディングエージェントをシミュレーション内の改善に使う応用であって、LLM推論システムへの貢献は要旨に示されていないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:29+00:00",
+      "last_checked_at": "2026-11-27T22:31:29+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "RESET: One Demonstration, One Verified World, Self-Improved Skills Across Embodiments"
+    },
+    "arXiv:2611.31821": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.31821",
+      "identity_tokens": [
+        "arXiv:2611.31821"
+      ],
+      "reason": "マルチプレイヤー社会ゲームをLLMの社会的知能の学習基盤としてSFTとRLVRで評価する研究であり、対象はモデルの学習・評価であって推論サービングや推論効率の機構への貢献ではないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:29+00:00",
+      "last_checked_at": "2026-11-27T22:31:29+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "Exploring Multi-Player Social Games as Verifiable Training Grounds for Large Language Models"
+    },
+    "arXiv:2611.34132": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.34132",
+      "identity_tokens": [
+        "arXiv:2611.34132"
+      ],
+      "reason": "Agent-as-a-Verifierはスコア型検証器に代わりエージェントが証拠付き証明書を出す検証システムだが、対象は出力検証・報酬付けの枠組みであり、LLM推論システムの実行効率やサービング機構への貢献ではないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:29+00:00",
+      "last_checked_at": "2026-11-27T22:31:29+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "Agent-as-a-Verifier: From Scores to Evidence for General Verification"
+    },
+    "arXiv:2611.33030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.33030",
+      "identity_tokens": [
+        "arXiv:2611.33030"
+      ],
+      "reason": "SALSAは脱獄攻撃用の敵対的サフィックス分布を学習しサンプリングで高速に攻撃を生成する安全性評価手法であり、推論時間の短縮は攻撃生成に関するもので、LLM推論システムへの貢献ではないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:29+00:00",
+      "last_checked_at": "2026-11-27T22:31:29+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "SALSA: Sampling Adversarial Suffixes from Learned Distributions for LLM Safety Assessment"
+    },
+    "arXiv:2611.32674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.32674",
+      "identity_tokens": [
+        "arXiv:2611.32674"
+      ],
+      "reason": "LLM生成テキストの透かし保持割合に対する同時推論（信頼下限）の統計手法であり、対象は透かし検出の統計的推測であって、LLM推論・サービングのシステム機構への貢献は要旨に示されていないため対象外とする。",
+      "first_checked_at": "2026-11-27T22:31:29+00:00",
+      "last_checked_at": "2026-11-27T22:31:29+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "title": "Simultaneous Inference for Watermark Proportions in LLM-Generated Text"
     }
   }
 }

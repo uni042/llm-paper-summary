@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e92bab029469a201-unrel-019",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.32674",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.32674",
+    "identity_tokens": [
+      "arXiv:2611.32674"
+    ],
+    "reason": "LLM生成テキストの透かし保持割合に対する同時推論（信頼下限）の統計手法であり、対象は透かし検出の統計的推測であって、LLM推論・サービングのシステム機構への貢献は要旨に示されていないため対象外とする。",
+    "first_checked_at": "2026-11-27T22:31:29+00:00",
+    "last_checked_at": "2026-11-27T22:31:29+00:00",
+    "linked_from": [
+      "latest_search arxiv api"
+    ],
+    "title": "Simultaneous Inference for Watermark Proportions in LLM-Generated Text"
+  },
+  "processed_at": "2026-11-27T22:31:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e92bab029469",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

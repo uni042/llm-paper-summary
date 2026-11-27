@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e92bab029469a201-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.32324",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.32324",
+    "identity_tokens": [
+      "arXiv:2611.32324"
+    ],
+    "reason": "注意におけるTop-Kトークン選択の限界を、個別重要度が正確でも最適な保持集合と乖離しうることを構成と実モデル監査で示す理論的分析であり、KVキャッシュ削減・トークンevictionと関連はするが、推論システムの機構提案ではなく分析に留まるため保留とする。",
+    "first_checked_at": "2026-11-27T22:31:29+00:00",
+    "last_checked_at": "2026-11-27T22:31:29+00:00",
+    "linked_from": [
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "When Exact Token Importance Is Not Enough: Limits of Top-K Selection in LLM Attention"
+  },
+  "processed_at": "2026-11-27T22:31:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e92bab029469",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
