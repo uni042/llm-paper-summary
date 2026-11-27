@@ -25,6 +25,15 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 2026-06-03〜2026-09-03
 
+### 2026-11-26 — Ollama v0.40.19（正式版）
+
+2026-11-26 17:52 UTC公開。前日に公開候補版（v0.40.19-rc0）として出ていたものの正式版。
+
+- **Inkling 2**: short historyの高速化、draft proposal（投機的デコードの候補生成）とconversation snapshotの改善（PR #19881）。対象はInkling 2系の経路で、速度倍率は一次資料にないため記録しない。
+- **mlxrunner**: Engramモデルのhistory bufferをcompact化し、Apple系MLX経路のmemory使用量を削減（PR #19913）。
+- 内蔵llama-serverを更新（PR #19917。取り込み先のbuild番号はrelease本文に明記されていないため記録しない）。
+- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.19)
+
 ### 2026-11-24 — Ollama v0.40.18（正式版）
 
 - **MLX経路**: Inkling系のresidual mixingをMetalでfusionし、mlxrunnerのtensor helperとmodel setupをarchitecture間で共有化（いずれもApple系MLX経路の変更）。

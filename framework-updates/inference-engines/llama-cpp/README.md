@@ -100,6 +100,18 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-11-27 — llama.cpp b12792〜b12818（開発ビルド）
+
+b12791の続き。開発ビルドは b12818（2026-11-27 20:43 UTC）まで進んだ。いずれもpre-releaseの開発ビルドであり正式版ではない。番号の範囲であって全番号にreleaseがある意味ではない。重要変更だけを拾う（b12791→b12818の差分は27 commit）。
+
+- **b12818: ggmlがFP8 / NVFP4向け量子化scaleに対応**（PR #28898）。tensor scale（per-tensor / per-channel / per-expert / per-expert-per-channel）とactivation scaleを `mul_mat` / `mul_mat_id` へ通し、scale付き型ではscale side-carを必須化。低bit量子化の精度基盤に関わる変更で、速度倍率は公表されていない。
+- **CUDA / HIP: indexed bias付きFlash Attentionを追加**（PR #33063）。**moe-cache: 別backendで選択されたexpertに対応**（PR #33133）。**graph: recurrent stateをcopyせずin-placeで読む**よう変更し、recurrent / hybridモデルのstate転送量を削減（PR #28841 / #30139）。
+- **Inkling 2向けCUDA fusion**: short conv、depth mix、loop controller、L2 clip、situ chainを融合（PR #33060）。**BailingMoE3: ssm_conv + siluを融合**し冗長なcopyを削除（PR #33081）。いずれも特定architecture向けで、一般モデルの速度向上を示さない。
+- **OpenCL: Adreno A850向けMoE int8 bin kernel**（PR #33069）と**投機的検証向けmulti-token f32 GEMV**（PR #33098）を追加。**Vulkan: Inkling 2 Mini向けFA compact bias対応**（PR #32898）。**SYCL: BMG D=256の単一query decodeをFA vector kernelへ振り分け**（PR #30606）。backend別の変更であり、速度倍率は公表されていない。
+- 変換ではBertForSequenceClassificationのpoolerを保持（PR #33122）。x86_64-darwinのnix supportは削除された（PR #33114、利用者影響は限定的）。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b12818 ; https://github.com/ggml-org/llama.cpp/compare/b12791...b12818
+
 ## 2026-11-26 — llama.cpp v1.1.0（正式版）＋ b12704〜b12791（開発ビルド）
 
 b12703の続き。正式版 v1.1.0 が 2026-11-26 09:16 UTC に公開された（version bump は b12752）。あわせて開発ビルドは b12791（2026-11-26 22:10 UTC）まで進んだ。番号の範囲であって全番号にreleaseがある意味ではない。重要変更だけを拾う。

@@ -2,7 +2,7 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-11-27**
+- フレームワーク差分の最終確認: **2026-11-28**
 - 用語・可読性の最終監査: **2026-09-07**
 
 この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。
@@ -68,6 +68,13 @@
 ---
 
 ## 最新更新
+
+### 2026-11-28 — Ollama v0.40.19（正式版）／ llama.cpp開発ビルド b12818まで
+
+- **Ollama v0.40.19（2026-11-26 UTC、正式版）**: Inkling 2のshort history高速化とdraft proposal改善、mlxrunnerのEngram history buffer compact化（Apple系MLX経路のmemory削減）、内蔵llama-server更新。速度倍率は未公表。[Ollama](inference-engines/ollama/)
+- **llama.cpp開発ビルド b12792〜b12818**: ggmlのFP8 / NVFP4量子化scale対応、CUDA / HIPのindexed bias付きFlash Attention、moe-cacheの別backend expert対応、recurrent stateのin-place読み取り等。正式版はv1.1.0のまま。[llama.cpp](inference-engines/llama-cpp/)
+- **モデル新規公開は0件**。vLLM v0.34.0 / SGLang v0.5.23 / TensorRT-LLM v1.3.0 / LMDeploy v0.18.0 / vLLM-Omni v0.34.0 / MLX v0.32.5 が引き続き最新正式版。
+
 
 ### 2026-11-27 — llama.cpp v1.1.0（正式版）
 
