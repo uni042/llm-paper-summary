@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Orthogonally Mixed Sign Coding with Progressive Residual Refinement for Transformer Weight Compression",
+      "source_url": "https://arxiv.org/abs/2611.31089",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM quantization reduces storage but often degrades predictive fidelity at low bit rates. We propose a training-free, CDF-free, Gaussian-CLT-motivated progressive residual-sign quantization framework that uses randomized orthogonal mixing to promote Gaussian-like residual distributions and improve sign based reconstruction of Transformer weights. Each stage independently normalizes residuals and analytically calibrates reconstruction, progressively recovering quantization errors. The framework enables flexible storage-fidelity trade-offs without learned codebooks, empirical CDFs, or trellis optimization. We evaluate GPT-2 Large and Llama-3-8B across attention and MLP projections. At five residual stages, joint quantization preserves near-baseline predictive fidelity, achieving perplexities of 32.16 and 12.73, compared with full-precision values of 29.89 and 11.07, respectively. Ablations further demonstrate that orthogonal mixing substantially improves reconstruction over identity-based sign coding, while activation-aware scaling improves output fidelity and reduced-precision statistics lower storage overhead with negligible perplexity degradation. Comparisons with conventional quantizers establish the method's progressive fidelity recovery and characterize its storage-quality and runtime trade-offs. These results demonstrate the effectiveness of orthogonally mixed residual-sign coding for flexible, training-free Transformer weight compression.",
+      "identifiers": [
+        "SemanticScholar:2faca06f43e92dd7c8dfed22d4ae525d06d962ad"
+      ],
+      "semantic_scholar_id": "2faca06f43e92dd7c8dfed22d4ae525d06d962ad",
+      "canonical_id": "arXiv:2611.31089",
+      "arxiv_id": "2611.31089",
+      "authors": [
+        "Anindya Roy Chowdhury",
+        "Atanu Barai",
+        "Nandakishore Santhi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ランダム直交混合で残差をガウス化し符号ベース再構成を多段に精緻化する学習不要のTransformer重み量子化・圧縮手法を提案し、Llama-3-8B等で低ビット時のperplexity劣化抑制とストレージ・実行時トレードオフを要旨で示しており、推論向け重み圧縮への直接貢献が確認できるため対象内とする。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_latest_search"
+    },
+    {
+      "title": "Any-Rate: Half-Bit Multi-Precision LLM Quantization with Coded Bit-Planes",
+      "source_url": "https://arxiv.org/abs/2611.34402",
+      "year": 2026,
+      "published": "2026-11-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Nested multi-precision quantization derives multiple precisions from a single checkpoint by reading only the leading bits of each weight, which makes it attractive for on-device deployment under varying memory and energy budgets. However, existing methods offer only integer bits, leaving large accuracy gaps between adjacent precisions and severe degradation at 2 bits. To address this, we propose Any-Rate, which serves 2-8 bits from one checkpoint, in half-bit steps over 2-4 bits. Any-Rate restricts some bit-planes to extended Hamming codewords in 8-weight blocks (0.5 bits per weight), shares one LUT per row across precisions, and encodes all precisions jointly with a separate target for each, reducing the loss from sharing bit-planes. Across four LLMs, Any-Rate achieves state-of-the-art accuracy among multi-precision methods at 2 and 3 bits, keeping 69% of FP16 accuracy at 2 bits, and is within one point of the best at 4 bits. It decodes about as fast as existing kernels, and an LPDDR energy model estimates up to 27% less energy at equal accuracy. Code is available at https://github.com/hoonki2002/Any-Rate.",
+      "identifiers": [
+        "SemanticScholar:da31d75085a3967451d7970f86439a1d7adb3117"
+      ],
+      "semantic_scholar_id": "da31d75085a3967451d7970f86439a1d7adb3117",
+      "canonical_id": "arXiv:2611.34402",
+      "arxiv_id": "2611.34402",
+      "authors": [
+        "Hoonki Lee",
+        "Haechan Shin",
+        "Hyuntaek Jung",
+        "Yeonu Choi",
+        "Sangyeob Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "単一チェックポイントから先頭ビットの読み出しだけで2〜8ビット（2〜4ビット域は0.5ビット刻み）の複数精度を供給するネスト型重み量子化Any-Rateを提案し、8重みブロックへの拡張ハミング符号語によるビットプレーン制限と精度共有LUTで、オンデバイスLLM推論のメモリ・エネルギー予算変動への対応とデコード速度維持を要旨で具体的に示しているため対象内とする。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_latest_search"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-44d5e1370393",
+    "round": "libimp-44d5e13703931d2d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-44d5e13703931d2d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-44d5e13703931d2d-pre01.json",
+    "receipt": "sha256:00ce089b567642b0219cc84c4253aea422e0eb878685ad723c386adde8bc7c82"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-44d5e1370393",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

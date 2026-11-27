@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Biophysically-Inspired Feedback Controller for Multi-Class Cache Fairness",
+      "source_url": "https://arxiv.org/abs/2608.14561",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cache replacement under multi-tenant LLM-serving conditions is a multi-class problem: short, high-reuse system prompts; long, moderate-reuse user documents; medium-length code context; and bursty conversation history share a single eviction pool. Under skewed multi-class arrivals, conventional flat-LRU policies expose the worst-served-class miss ratio ($m_{\\max}$) only as a fixed point. We introduce a class of cache-replacement policies parameterised by a per-class flux formula, where three structural commitments -- a single global token-mass imbalance signal, $K$ parallel rectified per-class promotion accumulators, and an age-ordered eviction backstop -- produce emergent multi-class fairness. We instantiate this class with a linear V-coupled rectified flux and a Goldman-Hodgkin-Katz extension whose $V \\to 0$ limit is exactly the linear form. Across four skew levels on synthetic multi-class workloads, the policy class closes 27--72\\,\\% of the LRU$\\to$Belady gap on $m_{\\max}$, with linear and GHK interchangeable on the headline objective within search variance. The fairness/throughput tradeoff is exposed as a tunable knob on a single hyperparameter axis. We position this against the LeCaR feedback-controller lineage and the formal-control-theory cache-decay lineage as a novel combination of known ingredients. Code and reproduction scripts: https://github.com/flatmax/membrane.cache",
+      "identifiers": [
+        "SemanticScholar:ce202bfa01782ab07b0b5605bf50fa526c017e2b"
+      ],
+      "semantic_scholar_id": "ce202bfa01782ab07b0b5605bf50fa526c017e2b",
+      "canonical_id": "arXiv:2608.14561",
+      "arxiv_id": "2608.14561",
+      "doi": "10.48550/arXiv.2608.14561",
+      "authors": [
+        "Matt R. Flax"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 185,
+        "matched_prestigious_venue": null
+      },
+      "reason": "マルチテナントLLMサービングでシステムプロンプト・文書・コード文脈・会話履歴が単一のエビクションプールを共有する条件を対象に、クラス別フラックス式でパラメータ化したキャッシュ置換ポリシーを提案し、最悪クラスのミス率の公平性を改善する。要旨で対象・機構・評価条件が具体的に確認できるサービング向けキャッシュ管理の直接貢献でありacceptとした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-08e263f1975e",
+    "round": "libimp-08e263f1975e135d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-08e263f1975e135d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-08e263f1975e135d-pre01.json",
+    "receipt": "sha256:35e6cd2c7c11a462b9eab71f30bf9b4c79a3915b252e028736598c9e63eb3d38"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-08e263f1975e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
