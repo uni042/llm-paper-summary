@@ -35,10 +35,15 @@
   "selection_reason": "512サンプルの並列デコードに頼るテスト時スケーリングに対し、凍結したLLM上の軽量Conv1Dコントローラが信頼度軌跡を見て停止・再検討・方針転換を判断する信頼度誘導型の自己洗練機構であり、約190分の1のトークン量で同等の精度を狙う適応的テスト時計算の制御手法である。",
   "semantic_scholar_id": "d9683b161e04de850508ea8ae99f5d9f1d2b0c90",
   "source_url": "https://arxiv.org/abs/2602.08948",
-  "status": "ready",
+  "status": "superseded",
   "title": "CoRefine: Confidence-Guided Self-Refinement for Adaptive Test-Time Compute",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-27T22:38:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-comput.md",
+  "represented_canonical_id": "arXiv:2602.08948",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

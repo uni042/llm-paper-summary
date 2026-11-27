@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（366本）
+## 自動生成の論文一覧（367本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -1389,6 +1389,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-04 · [The Feasibility of Implementing Large-Scale Transformers on Multi-FPGA Platforms](2024-2404.16158-the-feasibility-of-implementing-large-scale-transformers-on-multi-fpga-p.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   複数FPGAへ大規模モデルを展開する基盤と自動ツールを整え、I-BERTの符号器を6台のFPGAで実働させ、最新FPGAでの推定では高性能GPUに近い遅延へ届くことを示した、大規模トランスフォーマーのFPGA実装の実現可能性の検証。
+
+- **2024-08 · [Deeploy: Enabling Energy-Efficient Deployment of Small Language Models on Heterogeneous Microcontrollers](2024-2408.04413-deeploy-enabling-energy-efficient-deployment-of-small-language-models-on.md)**  
+  実装：[✓](https://github.com/pulp-platform/deeploy) ・ リポジトリ内被引用：0  
+  タイリングと静的メモリ割当てを解き、線形層を点単位畳み込みへ変換してNPUへ載せるボトムアップ型コンパイラDeeployで、小型言語モデルを外部メモリなしのマイコン級SoCへ配備し、毎秒340トークン・1トークンあたり490マイクロジュールを実機で達成した。
 
 - **2024-07 · [FlashNorm: Fast Normalization for Transformers](2024-2407.09577-flashnorm-fast-normalization-for-transformers.md)**  
   実装：[✓](https://github.com/OpenMachine-ai/transformer-tricks) ・ リポジトリ内被引用：0  

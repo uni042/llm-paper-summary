@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "bd035a32b8fc8ca1959dfea36a2daba095ee108c",
+  "base_commit": "f958a26641ed0f965fc734741d9d0197afad0575",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -202,6 +202,7 @@
     "2024-2407.19775-model-agnostic-hybrid-sharding-for-heterogeneous-distributed-inference.json",
     "2024-2407.20228-flexattention-for-efficient-high-resolution-vision-language-models.json",
     "2024-2408.00008-scalellm-a-resource-frugal-llm-serving-framework-by-optimizing-end-to-end-efficiency.json",
+    "2024-2408.04413-deeploy-enabling-energy-efficient-deployment-of-small-language-models-on-heterogeneous-microcontrollers.json",
     "2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-inference.json",
     "2024-2408.10631-llm-barber-block-aware-rebuilder-for-sparsity-mask-in-one-shot-for-large-language-models.json",
     "2024-2408.11799-practical-token-pruning-for-foundation-models-in-few-shot-conversational-virtual-assistant-systems.json",
@@ -209,6 +210,7 @@
     "2024-2409.02026-foundations-of-large-language-model-compression-part-1-weight-quantization.json",
     "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
     "2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.json",
+    "2024-2409.15254-archon-an-architecture-search-framework-for-inference-time-techniques.json",
     "2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.json",
     "2024-2410.02745-avg-llava-an-efficient-large-multimodal-model-with-adaptive-visual-granularity.json",
     "2024-2410.04139-from-reading-to-compressing-exploring-the-multi-document-reader-for-prompt-compression.json",
@@ -494,6 +496,7 @@
     "2025-2512.15973-dynamic-rank-reinforcement-learning-for-adaptive-low-rank-multi-head-self-attention.json",
     "2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large-language-models.json",
     "2025-2512.17108-atom-efficient-on-device-video-language-pipelines-through-modular-reuse.json",
+    "2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.json",
     "2025-2512.20184-reaching-agreement-among-reasoning-llm-agents.json",
     "2025-2512.20198-designing-spatial-architectures-for-sparse-attention-star-accelerator-via-cross-stage-tiling.json",
     "2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on-edge.json",
@@ -501,6 +504,7 @@
     "2025-2512.20839-input-adaptive-visual-preprocessing-for-efficient-fast-vision-language-model-inference.json",
     "2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-resource-constrained-gpus.json",
     "2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.json",
+    "2025-2512.22402-efficient-multi-model-orchestration-for-self-hosted-large-language-models.json",
     "2025-2512.22925-argus-token-aware-distributed-llm-inference-optimization.json",
     "2025-2512.23029-viability-and-performance-of-a-private-llm-server-for-smbs-a-benchmark-analysis-of-qwen3-30b-on-consumer-grade-hardware.json",
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
@@ -55317,6 +55321,69 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2408.04413": {
+      "order": [
+        "2026-11-27T22:31:55+00:00",
+        "2024-2408.04413-deeploy-enabling-energy-efficient-deployment-of-small-language-models-on-heterogeneous-microcontrollers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2409.15254": {
+      "order": [
+        "2026-11-27T22:33:16+00:00",
+        "2024-2409.15254-archon-an-architecture-search-framework-for-inference-time-techniques.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.19443": {
+      "order": [
+        "2026-11-27T22:33:18+00:00",
+        "2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "61cd3e248ac9e5caee08db3dfa21455726814f6e0b38280214fa347ae436ee51",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.md",
+        "canonical_id": "arXiv:2512.19443",
+        "worker_completed_at": "2026-11-28T07:40:00+09:00",
+        "worker_run_key": "muse-20261128-b1",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4034,
+          "body_paragraphs": 21,
+          "method_chars": 1514,
+          "method_paragraphs": 4,
+          "evaluation_chars": 431,
+          "limitation_chars": 293,
+          "insufficiency_flags": [
+            "評価説明量 431 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 431 < 500"
+        ],
+        "processed_at": "2026-11-27T22:33:18+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2512.22402": {
+      "order": [
+        "2026-11-27T22:34:38+00:00",
+        "2025-2512.22402-efficient-multi-model-orchestration-for-self-hosted-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68922,6 +68989,15 @@
     "arxiv:2610.15709": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.15709-preserving-updates-in-low-bit-recurrent-state-quantization.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.15709-preserving-updates-in-low-bit-recurrent-state-quantization.md"
+    ],
+    "arxiv:2408.04413": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2408.04413-deeploy-enabling-energy-efficient-deployment-of-small-language-models-on.md"
+    ],
+    "arxiv:2409.15254": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2409.15254-archon-an-architecture-search-framework-for-inference-time-techniques.md"
+    ],
+    "arxiv:2512.22402": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.22402-efficient-multi-model-orchestration-for-self-hosted-large-language-model.md"
     ]
   }
 }

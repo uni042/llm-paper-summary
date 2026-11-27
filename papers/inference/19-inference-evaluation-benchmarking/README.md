@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（280本）
+## 自動生成の論文一覧（282本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -726,6 +726,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデルの各位置で上位2確率の比を確信度として測り、確定済み近傍に近い位置ほど閾値を下げる空間変調付きの学習不要なトークン単位早期終了で、生成ステップを大幅に減らす方式。
 
+- **2026-02 · [CoRefine: Confidence-Guided Self-Refinement for Adaptive Test-Time Compute](2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-comput.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論トレース全体の信頼度の動態を小さなConv1Dコントローラで読み、停止・再検討・別方針を選ぶ適応型の自己洗練により、512サンプルの多数決と同等以上の精度を約190分の1のトークンで達成した研究。
+
 - **2026-02 · [Architecture-Aware LLM Inference Optimization on AMD Instinct GPUs: A Comprehensive Benchmark and Deployment Study](2026-2603.10031-architecture-aware-llm-inference-optimization-on-amd-instinct-gpus-a-com.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MI325X 8台で2350億から1兆パラメータの4モデルを実測し、注意機構ごとにブロック大きさ・カーネル・KV方針・並列度を変える必要があること、テキストでは密モデル毎秒15,944トークンと活性37億の専門家混合モデル毎秒15,343トークンがほぼ並ぶこと、全モデルが同時約500件で帯域律速に飽和することを示した。
@@ -1047,7 +1051,7 @@
   本論文は、新しい量子化器を提案するものではなく、既存の量子化方式をモデル能力、指示追従・整合性、推論効率という異なる観点で測り直す比較実験である。論文のSpQR実装は低ビットの値域を模擬しながら高精度形式で重みを保持しており、品質の比較には使えても実メモリ削減を実証しない。
 
 - **2024-01 · [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md)**  
-  実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：23  
   多段階推論では、単一の思考連鎖（Chain-of-Thought、CoT）だけで回答すると、途中の偶然の誤りがそのまま最終回答に伝わる。自己整合性（自己整合性、SC）は同一問題から複数の思考連鎖を独立に標本化し、最終回答を多数決してこの変動を抑える。しかしSCは難しい問題にも簡単な問題にも、事前に決めた最大標本数を一律に使う。
 
 - **2024-11 · [Lynx: Enabling Efficient MoE Inference through Dynamic Batch-Aware Expert Selection](2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md)**  
@@ -1097,6 +1101,10 @@
 - **2024-09 · [EchoAtt: Attend, Copy, then Adjust for More Efficient Large Language Models](2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   内側の層同士で注意行列が似るという観測に基づき、似た層の注意計算を共有する生徒モデルを知識蒸留と継続学習で作り、パラメータ削減と推論・学習の高速化を品質維持と両立させた研究。
+
+- **2024-09 · [Archon: An Architecture Search Framework for Inference-Time Techniques](2024-2409.15254-archon-an-architecture-search-framework-for-inference-time-techniques.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  生成・融合・順位付け・批判・検証などの推論時技法の部品とモデルの組み合わせをベイズ最適化で自動探索し、課題と計算予算に合わせた推論アーキテクチャを組むことで、フロンティアモデルを平均15.1パーセント上回りながら推論呼び出しを20パーセント減らした構成探索フレームワーク。
 
 - **2024-04 · [Softmax Attention with Constant Cost per Token](2024-2404.05843-softmax-attention-with-constant-cost-per-token.md)**  
   実装：[✓](https://github.com/glassroom/heinsen_attention) ・ リポジトリ内被引用：0  
