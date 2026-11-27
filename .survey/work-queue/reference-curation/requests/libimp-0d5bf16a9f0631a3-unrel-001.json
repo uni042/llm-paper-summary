@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0d5bf16a9f0631a3-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2601.20352",
+  "reason": "全文通読の結果、本論文はLLMエージェントの長期対話記憶を複数エージェントで構築・検索・検証・更新するアプリケーションレベルの記憶管理フレームワークであり、モデルの推論実行そのもの（サービング、KVキャッシュ、量子化、カーネル、並列化等）を対象としていない。入力トークン削減は記憶検索の結果として副次的に生じるもので、推論システムの機構ではないため、Research対象外と判定した。",
+  "title": "AMA: Adaptive Memory via Multi-Agent Collaboration",
+  "identity_tokens": [
+    "arXiv:2601.20352",
+    "AMA",
+    "Adaptive Memory via Multi-Agent Collaboration"
+  ],
+  "linked_from": [
+    "worker-worklist-00.json:job-research-1b0ea44555dcec64"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0d5bf16a9f06",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
