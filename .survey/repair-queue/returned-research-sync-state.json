@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "f958a26641ed0f965fc734741d9d0197afad0575",
+  "base_commit": "dff3eaa21a2e4970b2aae0805589ab6ab799417c",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -55153,38 +55153,11 @@
     },
     "arXiv:2602.08948": {
       "order": [
-        "2026-11-26T23:08:08+00:00",
-        "retry-research-e438396e97e9--2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.json"
+        "2026-11-27T22:35:58+00:00",
+        "2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "89a04819c3b194e627e9874c10db173a53de40699748aa68f8953c1d811a29f9",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e438396e97e9--2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-compute.md",
-        "canonical_id": "arXiv:2602.08948",
-        "worker_completed_at": "2026-11-27T07:26:45+09:00",
-        "worker_run_key": "muse-20261127-b1",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 5093,
-          "body_paragraphs": 20,
-          "method_chars": 2105,
-          "method_paragraphs": 4,
-          "evaluation_chars": 482,
-          "limitation_chars": 370,
-          "insufficiency_flags": [
-            "評価説明量 482 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 482 < 500"
-        ],
-        "processed_at": "2026-11-26T23:08:08+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2603.23516": {
@@ -55374,7 +55347,7 @@
         ],
         "processed_at": "2026-11-27T22:33:18+00:00"
       },
-      "return_count": 1
+      "return_count": 2
     },
     "arXiv:2512.22402": {
       "order": [
@@ -68991,13 +68964,19 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.15709-preserving-updates-in-low-bit-recurrent-state-quantization.md"
     ],
     "arxiv:2408.04413": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2408.04413-deeploy-enabling-energy-efficient-deployment-of-small-language-models-on.md",
       "papers/inference/09-kernel-runtime-compilation/2024-2408.04413-deeploy-enabling-energy-efficient-deployment-of-small-language-models-on.md"
     ],
     "arxiv:2409.15254": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2409.15254-archon-an-architecture-search-framework-for-inference-time-techniques.md",
       "papers/inference/19-inference-evaluation-benchmarking/2024-2409.15254-archon-an-architecture-search-framework-for-inference-time-techniques.md"
     ],
     "arxiv:2512.22402": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.22402-efficient-multi-model-orchestration-for-self-hosted-large-language-model.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.22402-efficient-multi-model-orchestration-for-self-hosted-large-language-model.md"
+    ],
+    "arxiv:2602.08948": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2602.08948-corefine-confidence-guided-self-refinement-for-adaptive-test-time-comput.md"
     ]
   }
 }
