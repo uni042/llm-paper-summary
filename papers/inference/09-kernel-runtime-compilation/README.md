@@ -280,6 +280,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   Bit-by-Bitは、事前学習済みLLMを重み2ビット、活性化2ビットまで量子化したときの精度低下と学習不安定性を抑える量子化対応学習（QAT）の方式である。RTX 4090の行列ベクトル積単体では形状によって11倍を超える高速化がある一方、小さい形状ではBF16より遅い。
 
+- **2026-03 · [Sparser, Faster, Lighter Transformer Language Models](2026-2603.23198-sparser-faster-lighter-transformer-language-models.md)**  
+  実装：[✓](https://github.com/SakanaAI/sparser-faster-llms) ・ リポジトリ内被引用：1  
+  フィードフォワード層の活性スパース性を、タイル単位の疎形式と融合カーネルで実際の速度・省メモリ・省エネルギーへ変える研究。正則化だけで99パーセント超のスパース性をほぼ無劣化で得られることも示す。
+
 - **2026-03 · [Mixture-of-Depths Attention](2026-2603.15619-mixture-of-depths-attention.md)**  
   実装：[✓](https://github.com/hustvl/MoDA) ・ リポジトリ内被引用：1  
   Mixture-of-Depths 注意機構（MoDA）は、深い大規模言語モデル（Large Language モデル; LLM）で浅い層に形成された情報が、繰り返す残差更新により後段で薄まる問題を対象とする。
@@ -849,10 +853,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Active Imitation Learning for Thermal- and Kernel-Aware LFM Inference on 3D S-NUCA Many-Cores](2026-2604.11948-active-imitation-learning-for-thermal-and-kernel-aware-lfm-inference-on-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案方式AILFM（Active Imitation Learning for LFMs）は、コアごとの命令実行率、最終段キャッシュのミス率、平均キャッシュ距離、電力予算、温度を観測し、どのカーネルをどのコアに割り当てると温度上限を守りながら実行時間を短縮できるかを判断する。
-
-- **2026-03 · [Sparser, Faster, Lighter Transformer Language Models](2026-2603.23198-sparser-faster-lighter-transformer-language-models.md)**  
-  実装：[✓](https://github.com/SakanaAI/sparser-faster-llms) ・ リポジトリ内被引用：0  
-  フィードフォワード層の活性スパース性を、タイル単位の疎形式と融合カーネルで実際の速度・省メモリ・省エネルギーへ変える研究。正則化だけで99パーセント超のスパース性をほぼ無劣化で得られることも示す。
 
 - **2026-03 · [RSR-core: A High-Performance Engine for Low-Bit Matrix-Vector Multiplication](2026-2603.27462-rsr-core-a-high-performance-engine-for-low-bit-matrix-vector-multiplicat.md)**  
   実装：[✓](https://github.com/UIC-InDeXLab/RSR-core) ・ リポジトリ内被引用：0  

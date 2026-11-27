@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "f9006b6604b368661bffc1e6d353ffb6c24b748fbc04c5a8f55d1ad159833c16",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-capacity.md",
+  "status": "imported",
+  "source_sha256": "8965bda6b398295999fcff38e0564524b632dd66b4590012d1c779a55243b1a0",
   "canonical_id": "arXiv:2611.24891",
-  "worker_completed_at": "2026-11-24T19:15:00+09:00",
-  "worker_run_key": "muse-final2-20261124-f6",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-.md",
+  "lineage": "11-llm-serving-scheduling-disaggregation",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-28T08:40:00+09:00",
+  "worker_run_key": "muse-20261128-b3",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 3720,
-    "body_paragraphs": 16,
-    "method_chars": 1573,
-    "method_paragraphs": 4,
-    "evaluation_chars": 498,
-    "limitation_chars": 202,
-    "insufficiency_flags": [
-      "評価説明量 498 < 500"
-    ]
+    "body_chars": 8711,
+    "body_paragraphs": 29,
+    "method_chars": 2434,
+    "method_paragraphs": 5,
+    "evaluation_chars": 3490,
+    "limitation_chars": 448,
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 498 < 500"
-  ],
-  "processed_at": "2026-11-24T10:55:52+00:00"
+  "processed_at": "2026-11-27T23:54:53+00:00"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "Designs a looped causal encoder-decoder whose encoder recurrence shares the last round KV cache losslessly, achieving zero round-wise KV growth and 1/6 of a looped transformer global KV, validated by looping the 552B DeepSeek-V4.1-Flash for serving.",
   "semantic_scholar_id": "5682dded219c92aded066f4f3ea5d072f0aa4c26",
   "source_url": "https://arxiv.org/abs/2611.13378",
-  "status": "ready",
+  "status": "superseded",
   "title": "Looping Deeper Without Growing the KV Cache: Recurrent Depth for Causal Encoder-Decoders",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-27T23:56:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.13378-looping-deeper-without-growing-the-kv-cache-recurrent-depth-for-causal-e.md",
+  "represented_canonical_id": "arXiv:2611.13378",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

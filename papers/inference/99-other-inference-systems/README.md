@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（820本）
+## 自動生成の論文一覧（821本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -509,6 +509,10 @@
 - **2026-11 · [Efficient and Robust Drafting with Multi-Token Prediction](2026-2611.25813-efficient-and-robust-drafting-with-multi-token-prediction.md)**  
   実装：[✓](https://github.com/google-research/gemma4-mtp-drafter-domain-adaptation) ・ リポジトリ内被引用：0  
   対象モデルの活性値とKVキャッシュを共有する単一の4層ドラフトヘッドで複数トークンを自己回帰的に予測し、プリフィルと全語彙射影の費用を削ることで、Gemma 4の31BでH100上3.14倍、スマートフォンのGPU上でE4Bが2.18倍の追加学習なし高速化を実測した複数トークン予測法。
+
+- **2026-11 · [DiFiT: Distribution-Fidelity-guided Visual Token Pruning for Multimodal Large Language Models](2026-2611.15069-difit-distribution-fidelity-guided-visual-token-pruning-for-multimodal-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  枝刈りで答えが変わらなくても応答確率がずれる予測ドリフトを定量化し、全トークン版の応答分布に合わせる蒸留と複数予算のマスク学習で選択器だけを学習することで、視覚トークン10パーセント保持でも平均性能89.36パーセント保持とサンプリング反転の30.3パーセント削減を示した視覚トークン枝刈り。
 
 - **2026-11 · [Cruella: A Unified Microscaling and Floating-Point Dot-Product Unit for LLM Inference on FPGAs](2026-2611.27323-cruella-a-unified-microscaling-and-floating-point-dot-product-unit-for-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

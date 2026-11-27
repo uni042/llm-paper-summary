@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "264cd2acc70ae854a468978d8a32707d97aea34c",
+  "base_commit": "4598997907a9cf38d6160bea408e93274ddc2002",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1697,21 +1697,25 @@
     "2026-2611.08363-strataflux-memory-hierarchy-native-low-bit-llm-inference.json",
     "2026-2611.08669-chainflow-few-step-latent-flow-matching-for-speculative-decoding.json",
     "2026-2611.09225-fused-softmax-for-efficient-quantized-attention.json",
+    "2026-2611.09598-transformer-fsq-discrete-latents-for-extreme-kv-cache-compression.json",
     "2026-2611.09825-bitdecoding-fp4-native-fp4-kv-cache-decoding-via-algorithm-system-co-design.json",
     "2026-2611.10096-coordinated-mixed-precision-kv-cache-quantization-for-efficient-llm-based-multi-agent-systems.json",
     "2026-2611.10165-autoematic-runtime-adaptive-mixed-precision-llm-inference-via-automatic-exponent-mantissa-refinement.json",
     "2026-2611.10432-d-real-acceptance-length-optimization-with-unbiased-gradients-for-speculative-decoding.json",
     "2026-2611.10511-calfa-kv-joint-calibration-and-fisher-guided-anchors-for-1-bit-kv-cache-compression.json",
     "2026-2611.10848-multiturnroute-a-platform-for-building-and-evaluating-multi-turn-llm-routers.json",
+    "2026-2611.11223-sga-sparse-training-native-swiglu-gates-for-activation-sparse-and-low-bit-llms.json",
     "2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-experts-and-recurrent-models.json",
     "2026-2611.12356-dforktree-accelerating-speculative-decoding-with-fork-aware-block-diffusion-draft-trees.json",
     "2026-2611.13017-multi-future-drafting-mixture-block-drafters-for-tree-verified-speculative-decoding.json",
     "2026-2611.13176-shadowprefill-keeping-your-next-model-warm-for-per-step-model-routing-in-agentic-llm-serving.json",
+    "2026-2611.13378-looping-deeper-without-growing-the-kv-cache-recurrent-depth-for-causal-encoder-decoders.json",
     "2026-2611.13412-bursts-that-outlast-themselves-persistent-degradation-in-prefix-cached-agent-serving.json",
     "2026-2611.13442-forespark-joint-draft-and-verification-budget-scheduling-for-parallel-speculative-decoding.json",
     "2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transformer-inference.json",
     "2026-2611.14051-can-kv-cache-be-reused-across-model-updates-a-deepseek-v4-flash-case-study.json",
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
+    "2026-2611.15069-difit-distribution-fidelity-guided-visual-token-pruning-for-multimodal-large-language-models.json",
     "2026-2611.22019-computed-permutation-trellis-coding-near-optimal-quantization-from-two-multiplications-and-a-64-byte-table.json",
     "2026-2611.22086-hycoinfer-cloud-edge-collaborative-inference-for-large-language-models-on-heterogeneous-gpu-fpga-architectures.json",
     "2026-2611.22191-risa-recoverable-sparse-attention-for-block-diffusion-language-models.json",
@@ -55846,6 +55850,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.09598": {
+      "order": [
+        "2026-11-27T23:50:24+00:00",
+        "2026-2611.09598-transformer-fsq-discrete-latents-for-extreme-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.11223": {
+      "order": [
+        "2026-11-27T23:51:32+00:00",
+        "2026-2611.11223-sga-sparse-training-native-swiglu-gates-for-activation-sparse-and-low-bit-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.13378": {
+      "order": [
+        "2026-11-27T23:52:38+00:00",
+        "2026-2611.13378-looping-deeper-without-growing-the-kv-cache-recurrent-depth-for-causal-encoder-decoders.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.15069": {
+      "order": [
+        "2026-11-27T23:53:46+00:00",
+        "2026-2611.15069-difit-distribution-fidelity-guided-visual-token-pruning-for-multimodal-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69558,6 +69598,18 @@
     "arxiv:2611.08082": [
       "papers/inference/09-kernel-runtime-compilation/2026-2611.08082-dictllm-post-training-compression-of-large-language-model-with-dictionar.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2611.08082-dictllm-post-training-compression-of-large-language-model-with-dictionar.md"
+    ],
+    "arxiv:2611.09598": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.09598-transformer-fsq-discrete-latents-for-extreme-kv-cache-compression.md"
+    ],
+    "arxiv:2611.11223": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2611.11223-sga-sparse-training-native-swiglu-gates-for-activation-sparse-and-low-bi.md"
+    ],
+    "arxiv:2611.13378": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.13378-looping-deeper-without-growing-the-kv-cache-recurrent-depth-for-causal-e.md"
+    ],
+    "arxiv:2611.15069": [
+      "papers/inference/99-other-inference-systems/2026-2611.15069-difit-distribution-fidelity-guided-visual-token-pruning-for-multimodal-l.md"
     ]
   }
 }

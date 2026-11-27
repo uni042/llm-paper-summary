@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（132本）
+## 自動生成の論文一覧（133本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -93,6 +93,10 @@
   連続制御の現在フレームのプリフィルと過去フレームのデコードを1バッチへ詰めるリクエスト間パイプライン化で、再学習なしにエッジ上の視覚言語行動モデルを2.55倍高速化する推論基盤。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [SGA-Sparse: Training Native SwiGLU Gates for Activation-Sparse and Low-Bit LLMs](2026-2611.11223-sga-sparse-training-native-swiglu-gates-for-activation-sparse-and-low-bi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SwiGLUの元のゲートを固定予算ルータとして全パラメータ学習し、学習なしでは劣るゲート信号が学習後に最良のルーティング信号へ逆転することを示して、補助ルータなしでFFNの75から85パーセントのスパース化と低ビット量子化の併用を等価ビット幅のパレート前線で示した活性値スパース学習。
 
 - **2026-11 · [MixFold: Sub-4-Bit Mixed-Precision LLM Inference via Output-Channel Grouping on Mobile NPUs](2026-2611.26976-mixfold-sub-4-bit-mixed-precision-llm-inference-via-output-channel-group.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
