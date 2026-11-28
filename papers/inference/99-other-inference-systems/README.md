@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（827本）
+## 自動生成の論文一覧（832本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1849,7 +1849,7 @@
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
-  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：63  
+  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：64  
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
@@ -2144,6 +2144,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   誤り注入の実験で終盤の段の誤りほど最終答えを壊すことを示し、意味の薄いトークンの間引きと、位置で重み付けした危険度が高い段だけの二経路修正を組み合わせ、八十億規模モデルで生成トークンを約二割減らしつつ正解率の低下を一・一ポイントに抑えたと報告した。
 
+- **2025-08 · [GM-Skip: Metric-Guided Transformer Block Skipping for Efficient Vision-Language Models](2025-2508.18227-gm-skip-metric-guided-transformer-block-skipping-for-efficient-vision-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  視覚言語モデルのTransformerブロックを、タスク指標を実測しながら落としても痛くないものから貪欲にスキップし、逆順削除で初期層を守ることで、分類精度を保ちながら推論遅延を下げるフレームワーク。
+
 - **2025-08 · [DTRNet: Dynamic Token Routing Network to Reduce Quadratic Costs in Transformers](2025-2509.00925-dtrnet-dynamic-token-routing-network-to-reduce-quadratic-costs-in-transf.md)**  
   実装：[✓](https://github.com/Aman26Sharma/DTRNet) ・ リポジトリ内被引用：1  
   各層で学習済みルーティングがトークンごとにfull 注意機構経路と軽量な自己投影経路を選ぶ。FineWeb-Eduで事前学習した360Mモデルでは、DTRNet-BiLayerがdense SmolLM比FLOPs 0.84倍で平均ゼロショット精度44.36%、denseの44.23%とほぼ同等だった。
@@ -2416,6 +2420,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   著者はTransformerの演算を、極端な量子化で行列乗算を置換できる射影部分と、置換しにくい注意ヘッド内部に分ける。さらにAmdahl則で「改善できる部分が元の実行時間の何割か」を明示し、13種類のGPT・OPT・LLaMA構成を、クラウド向け256×256およびエッジ向け32×32のシストリック配列でサイクル精度解析した。
 
+- **2025-09 · [Adaptive Overclocking: Dynamic Control of Thinking Path Length via Real-Time Reasoning Signals](2025-2509.17000-adaptive-overclocking-dynamic-control-of-thinking-path-length-via-real-t.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論進捗ベクトルへの介入強度を、問題の難しさによる初期化とトークンごとの予測エントロピーによる調整で動的に制御し、トークン上限1024のMath500でQwen-32Bの正解数を75件から102件へ増やした、推論時の考えすぎを抑える適応制御。
+
 - **2025-08 · [Hardwired-Neurons Language Processing Units as General-Purpose Cognitive Substrates](2025-2508.16151-hardwired-neurons-language-processing-units-as-general-purpose-cognitive.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの重みを金属配線の形状として回路へ埋め込み、メモリアクセスを消すことで桁違いのスループットとエネルギー効率を狙う言語処理ユニットと、その製造を成立させる配線埋め込み方法の提案。
@@ -2479,6 +2487,10 @@
 - **2025-06 · [Routing Mamba: Scaling State Space Models with Mixture-of-Experts Projection](2025-2506.18145-routing-mamba-scaling-state-space-models-with-mixture-of-experts-project.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは115Mから10B総パラメータまでの構成、Mamba、Mamba2、Gated DeltaNet、注意機構とのハイブリッドであるSambaを評価する。
+
+- **2025-06 · [ReTern: Exploiting Natural Redundancy and Sign Transformations for Enhanced Fault Tolerance in Compute-in-Memory-Based Ternary LLMs](2025-2506.01140-retern-exploiting-natural-redundancy-and-sign-transformations-for-enhanc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  三値LLMをコンピュート・イン・メモリへ載せる際のスタックアット故障に対し、ゼロ重みの冗長表現と列単位の符号反転を組み合わせ、再学習なしで故障による精度低下を大幅に抑える重みマッピング手法。
 
 - **2025-06 · [MoTE: Mixture of Ternary Experts for Memory-efficient Large Multimodal Models](2025-2506.14435-mote-mixture-of-ternary-experts-for-memory-efficient-large-multimodal-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2596,6 +2608,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文を一つの埋め込みへ圧縮し、完了した文の埋め込みをキャッシュして生成する階層型モデルで、小規模領域で計算量最大約10倍と速度最大3倍の効率を得る一方、品質の代償も測る研究。
 
+- **2025-03 · [IteRABRe: Iterative Recovery-Aided Block Reduction](2025-2503.06291-iterabre-iterative-recovery-aided-block-reduction.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMのブロックを類似度で1層ずつ落とし、そのたびに知識蒸留とLoRAで回復する反復を繰り返すことで、わずか250万トークンの回復データで約25%の層削減と性能保持を両立する圧縮手法。
+
 - **2025-03 · [Efficient self-attention with smart pruning for sustainable large language models](2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-langua.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   埋め込みと全結合層の重みを凍結とゼロ化で削り、自己注意のクエリとキーを行の同一化で、バリューを対角化で圧縮する枝刈り手法。GPT-2で全体約70%圧縮しながら分類精度の低下を約2.5ポイントに抑え、推論を2.5倍に高速化したと報告する。
@@ -2619,6 +2635,10 @@
 - **2025-02 · [HAAN: A Holistic Approach for Accelerating Normalization Operations in Large Language Models](2025-2502.11832-haan-a-holistic-approach-for-accelerating-normalization-operations-in-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   深い層で標準偏差の逆数が対数領域で直線的に減る性質を使い、正規化統計の計算を飛ばして予測し、残りもサブサンプリングと量子化で軽くするアルゴリズムとFPGAアクセラレータの協調設計で、正規化の遅延と電力を大きく下げる。
+
+- **2025-02 · [Cicada: A Pipeline-Efficient Approach to Serverless Inference with Decoupled Management](2025-2502.20959-cicada-a-pipeline-efficient-approach-to-serverless-inference-with-decoup.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  サーバーレス推論のモデル読み込みパイプラインについて、層構築の無駄な初期化を1ビット化して省くMiniLoaderと、重み取得を層構築から切り離して順不同適用を可能にするWeightDecouplerで停止時間を潰し、PISeL比で遅延を平均61.59%削減し利用率をほぼ100%まで引き上げた方式。
 
 - **2025-01 · [Softplus Attention with Re-weighting Boosts Length Extrapolation in Large Language Models](2025-2501.13428-softplus-attention-with-re-weighting-boosts-length-extrapolation-in-larg.md)**  
   実装：[✓](https://github.com/iminfine/freeattn) ・ リポジトリ内被引用：0  

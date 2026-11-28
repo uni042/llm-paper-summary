@@ -35,10 +35,15 @@
   "selection_reason": "ブロックプルーニングを反復し、各回に少量（2.5Mトークン）の回復学習を挟むIteRABReによりLlama3.1-8BとQwen2.5-7Bを圧縮し、言語能力を保ちながら既存手法を上回る圧縮結果を示しており、推論向けモデル圧縮への直接の技術的貢献が一次要旨で具体的に確認できる。",
   "semantic_scholar_id": "58c6a1ff08cf860530222301f70ab9c72201155b",
   "source_url": "https://arxiv.org/abs/2503.06291",
-  "status": "ready",
+  "status": "superseded",
   "title": "IteRABRe: Iterative Recovery-Aided Block Reduction",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-28T03:37:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2503.06291-iterabre-iterative-recovery-aided-block-reduction.md",
+  "represented_canonical_id": "arXiv:2503.06291",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

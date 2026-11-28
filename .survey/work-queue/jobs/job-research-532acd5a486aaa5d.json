@@ -35,10 +35,15 @@
   "selection_reason": "三値LLMをternary compute-in-memory（TCiM）アクセラレータへ載せる際のメモリ stuck-at fault による精度劣化に対し、重みの自然な冗長性と符号変換を利用して耐障害性を高めるReTernを提案する。三値量子化LLMの推論ハードウェア実行に直接関わる貢献である。",
   "semantic_scholar_id": "0ae62f335c05ab3b4eb3f1b0aef7187db54b7cf7",
   "source_url": "https://arxiv.org/abs/2506.01140",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReTern: Exploiting Natural Redundancy and Sign Transformations for Enhanced Fault Tolerance in Compute-in-Memory-Based Ternary LLMs",
   "type": "research",
   "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-28T03:37:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2506.01140-retern-exploiting-natural-redundancy-and-sign-transformations-for-enhanc.md",
+  "represented_canonical_id": "arXiv:2506.01140",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
