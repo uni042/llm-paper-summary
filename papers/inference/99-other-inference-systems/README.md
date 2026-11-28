@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（832本）
+## 自動生成の論文一覧（835本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2636,6 +2636,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   深い層で標準偏差の逆数が対数領域で直線的に減る性質を使い、正規化統計の計算を飛ばして予測し、残りもサブサンプリングと量子化で軽くするアルゴリズムとFPGAアクセラレータの協調設計で、正規化の遅延と電力を大きく下げる。
 
+- **2025-02 · [Exploring Model Invariance with Discrete Search for Ultra-Low-Bit Quantization](2025-2502.06844-exploring-model-invariance-with-discrete-search-for-ultra-low-bit-quanti.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  順列・スケーリング・回転の不変変換を活性値ガイドの離散探索で同時に探す量子化前処理InvarExploreで、OPT-13Bの2ビット量子化においてAWQのパープレキシティを35.89から26.26へ、推論精度を51.85から55.13へ改善した。
+
 - **2025-02 · [Cicada: A Pipeline-Efficient Approach to Serverless Inference with Decoupled Management](2025-2502.20959-cicada-a-pipeline-efficient-approach-to-serverless-inference-with-decoup.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   サーバーレス推論のモデル読み込みパイプラインについて、層構築の無駄な初期化を1ビット化して省くMiniLoaderと、重み取得を層構築から切り離して順不同適用を可能にするWeightDecouplerで停止時間を潰し、PISeL比で遅延を平均61.59%削減し利用率をほぼ100%まで引き上げた方式。
@@ -3160,9 +3164,17 @@
   実装：[✓](https://github.com/twwwwx/Infor-Coef) ・ リポジトリ内被引用：0  
   Infor-Coefが扱うのは、BERTのモデル重みを固定比率で減らすだけでは、簡単な入力と難しい入力に同じ計算を割り当てるという問題である。BERT-base比で16.2倍という原著の代表値は、バッチ内最大長へpaddingしたときの推定FLOPs比である。
 
+- **2023-05 · [Flover: A Temporal Fusion Framework for Efficient Autoregressive Model Parallel Inference](2023-2305.13484-flover-a-temporal-fusion-framework-for-efficient-autoregressive-model-pa.md)**  
+  実装：[✓](https://github.com/YJHMITWEB/Flover) ・ リポジトリ内被引用：0  
+  到着したリクエストを単一推論ストリームのイテレーション境界で融合し、終了分の孤立メモリを移動量最小のシャッフルで詰めることで、ポアソン到着でFasterTransformer比最大11.2倍、出力長ばらつき条件で6.8倍を達成した自己回帰モデル向け推論枠組み。
+
 - **2023-05 · [Finding the Pillars of Strength for Multi-Head Attention](2023-2305.14380-finding-the-pillars-of-strength-for-multi-head-attention.md)**  
   実装：[✓](https://github.com/SenticNet/GHA) ・ リポジトリ内被引用：0  
   多頭注意のヘッドをグループ内同質化とグループ間多様化の自己教師あり制約で分け、各グループの代表ヘッドだけを投票で残すことで、パラメータを32.1パーセント削りながら翻訳と要約で通常のTransformerを上回る注意機構の冗長性削減。
+
+- **2023-05 · [Diffusion Language Models Generation Can Be Halted Early](2023-2305.10818-diffusion-language-models-generation-can-be-halted-early.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散言語モデルの生成途中で予測分布が収束する現象を観測し、エントロピー・KL・トークン切替の基準で適応的に生成を止めることで、DDLMで約40%、SSDで10〜15%の生成時間削減を品質低下なしに得た早期停止の研究。
 
 - **2023-05 · [Cheaply Evaluating Inference Efficiency Metrics for Autoregressive Transformer APIs](2023-2305.02440-cheaply-evaluating-inference-efficiency-metrics-for-autoregressive-trans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3187,7 +3199,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：210  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：211  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
@@ -3317,7 +3329,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：394  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：395  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  

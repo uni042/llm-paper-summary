@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "3734f862e844136c19275400f51230f064e9cfba",
+  "base_commit": "04b8a0facc194ba74582ab81525c189069b16145",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -133,6 +133,8 @@
     "2023-2304.02721-to-asymmetry-and-beyond-structured-pruning-of-sequence-to-sequence-models-for-improved-inference-efficiency.json",
     "2023-2304.11520-processing-natural-language-on-embedded-devices-how-well-do-transformer-models-perform.json",
     "2023-2305.02440-cheaply-evaluating-inference-efficiency-metrics-for-autoregressive-transformer-apis.json",
+    "2023-2305.10818-diffusion-language-models-generation-can-be-halted-early.json",
+    "2023-2305.13484-flover-a-temporal-fusion-framework-for-efficient-autoregressive-model-parallel-inference.json",
     "2023-2305.14380-finding-the-pillars-of-strength-for-multi-head-attention.json",
     "2023-2305.14405-neuralmatrix-compute-the-entire-neural-networks-with-linear-matrix-operations-for-efficient-inference.json",
     "2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-photonic-transformer-accelerator.json",
@@ -162,6 +164,7 @@
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
     "2024-2401.09964-when-neural-code-completion-models-size-up-the-situation-attaining-cheaper-and-faster-completion-through-dynamic-model-i.json",
     "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
+    "2024-2401.12961-eloquent-a-more-robust-transmission-scheme-for-llm-token-streaming.json",
     "2024-2402.00913-institutional-platform-for-secure-self-service-large-language-model-exploration.json",
     "2024-2402.03480-trillion-parameter-ai-serving-infrastructure-for-scientific-discovery-a-survey-and-vision.json",
     "2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformers.json",
@@ -182,6 +185,7 @@
     "2024-2405.00888-dynamo-accelerating-language-model-inference-with-dynamic-multi-token-sampling.json",
     "2024-2405.05525-ditto-quantization-aware-secure-inference-of-transformers-upon-mpc.json",
     "2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-method-for-llms.json",
+    "2024-2405.15208-decoding-at-the-speed-of-thought-harnessing-parallel-decoding-of-lexical-units-for-llms.json",
     "2024-2405.15346-bisup-bidirectional-quantization-error-suppression-for-large-language-models.json",
     "2024-2405.15877-basis-selection-low-rank-decomposition-of-pretrained-large-language-models-for-target-applications.json",
     "2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.json",
@@ -291,6 +295,7 @@
     "2025-2502.04348-prompt-based-depth-pruning-of-large-language-models.json",
     "2025-2502.04563-waferllm-large-language-model-inference-at-wafer-scale.json",
     "2025-2502.05947-acceleration-multiple-heads-decoding-for-llm-via-dynamic-tree-attention.json",
+    "2025-2502.06844-exploring-model-invariance-with-discrete-search-for-ultra-low-bit-quantization.json",
     "2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.json",
     "2025-2502.11832-haan-a-holistic-approach-for-accelerating-normalization-operations-in-large-language-models.json",
     "2025-2502.12455-dsmoe-matrix-partitioned-experts-with-dynamic-routing-for-computation-efficient-dense-llms.json",
@@ -56302,6 +56307,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2305.10818": {
+      "order": [
+        "2026-11-28T03:39:32+00:00",
+        "2023-2305.10818-diffusion-language-models-generation-can-be-halted-early.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2305.13484": {
+      "order": [
+        "2026-11-28T03:40:40+00:00",
+        "2023-2305.13484-flover-a-temporal-fusion-framework-for-efficient-autoregressive-model-parallel-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2401.12961": {
+      "order": [
+        "2026-11-28T03:41:47+00:00",
+        "2024-2401.12961-eloquent-a-more-robust-transmission-scheme-for-llm-token-streaming.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2405.15208": {
+      "order": [
+        "2026-11-28T03:42:55+00:00",
+        "2024-2405.15208-decoding-at-the-speed-of-thought-harnessing-parallel-decoding-of-lexical-units-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2502.06844": {
+      "order": [
+        "2026-11-28T03:44:03+00:00",
+        "2025-2502.06844-exploring-model-invariance-with-discrete-search-for-ultra-low-bit-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70124,6 +70174,21 @@
     "arxiv:2509.17000": [
       "papers/inference/99-other-inference-systems/2025-2509.17000-adaptive-overclocking-dynamic-control-of-thinking-path-length-via-real-t.md",
       "papers/inference/99-other-inference-systems/2025-2509.17000-adaptive-overclocking-dynamic-control-of-thinking-path-length-via-real-t.md"
+    ],
+    "arxiv:2305.10818": [
+      "papers/inference/99-other-inference-systems/2023-2305.10818-diffusion-language-models-generation-can-be-halted-early.md"
+    ],
+    "arxiv:2305.13484": [
+      "papers/inference/99-other-inference-systems/2023-2305.13484-flover-a-temporal-fusion-framework-for-efficient-autoregressive-model-pa.md"
+    ],
+    "arxiv:2401.12961": [
+      "papers/inference/15-inference-simulation-emulation/2024-2401.12961-eloquent-a-more-robust-transmission-scheme-for-llm-token-streaming.md"
+    ],
+    "arxiv:2405.15208": [
+      "papers/inference/05-speculative-decoding-moe/2024-2405.15208-decoding-at-the-speed-of-thought-harnessing-parallel-decoding-of-lexical.md"
+    ],
+    "arxiv:2502.06844": [
+      "papers/inference/99-other-inference-systems/2025-2502.06844-exploring-model-invariance-with-discrete-search-for-ultra-low-bit-quanti.md"
     ]
   }
 }

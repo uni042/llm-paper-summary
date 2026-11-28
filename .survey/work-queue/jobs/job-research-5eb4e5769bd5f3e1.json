@@ -35,10 +35,15 @@
   "selection_reason": "不安定ネットワーク下のLLMトークンストリーミングを対象に、生成トークンと未確認トークンを次のパケットへ同梱して各パケットを独立に描画可能にする伝送方式Eloquentを提案し、パケットロスによる描画停滞の比率を削減する実測・シミュレーションを示しており、LLMサービングの配信機構に直接貢献する。",
   "semantic_scholar_id": "66fda72056a56470705b0cb524438341f1547310",
   "source_url": "https://arxiv.org/abs/2401.12961",
-  "status": "ready",
+  "status": "superseded",
   "title": "Eloquent: A More Robust Transmission Scheme for LLM Token Streaming",
   "type": "research",
   "venue": "NAIC",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-28T03:45:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2024-2401.12961-eloquent-a-more-robust-transmission-scheme-for-llm-token-streaming.md",
+  "represented_canonical_id": "arXiv:2401.12961",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

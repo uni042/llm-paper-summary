@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（490本）
+## 自動生成の論文一覧（491本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1923,6 +1923,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-05 · [How Speculative Can Speculative Decoding Be?](2024-468b43887ef3-how-speculative-can-speculative-decoding-be.md)**  
   実装：[✓](https://github.com/ZhuoruiLiu12/SpecGame) ・ リポジトリ内被引用：0  
   投機的デコードでドラフトモデルをどこまで小さくでき、候補トークンを何個まで出せるかを理論と5モデル族の実測で調べ、最適な候補数は3から5個、ドラフトは対象の10から20倍小さくても有効で極端な例では60倍小さくても1.5倍級の高速化が残ることを示した分析。
+
+- **2024-05 · [Decoding at the Speed of Thought: Harnessing Parallel Decoding of Lexical Units for LLMs](2024-2405.15208-decoding-at-the-speed-of-thought-harnessing-parallel-decoding-of-lexical.md)**  
+  実装：[✓](https://github.com/tjunlp-lab/Lexical-Unit-Decoding-LUD-) ・ リポジトリ内被引用：0  
+  モデルが高確信で予測する連続トークン列（語彙単位）を自己生成データで学習させ、1回の順伝播で複数トークンを受理する並列デコードLUDで、LLaMA-13Bのテキスト生成を品質指標を保ったまま約33パーセント高速化した。
 
 - **2024-03 · [SDSAT: Accelerating LLM Inference through Speculative Decoding with Semantic Adaptive Tokens](2024-2403.18647-sdsat-accelerating-llm-inference-through-speculative-decoding-with-seman.md)**  
   実装：[✓](https://github.com/ainergy-ml/SDSAT) ・ リポジトリ内被引用：0  

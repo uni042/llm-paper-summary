@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（133本）
+## 自動生成の論文一覧（134本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -549,6 +549,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-04 · [Implementing and Optimizing the Scaled Dot-Product Attention on Streaming Dataflow](2024-2404.16629-implementing-and-optimizing-the-scaled-dot-product-attention-on-streamin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ストリーミングデータフロー実行モデルへSDPAを行単位に載せ替え、割り算の順序替えとオンラインソフトマックスで深いFIFOを消し、中間メモリをO(N)からO(1)へ落とせることをサイクル精度シミュレーションで示した実装研究。
+
+- **2024-01 · [Eloquent: A More Robust Transmission Scheme for LLM Token Streaming](2024-2401.12961-eloquent-a-more-robust-transmission-scheme-for-llm-token-streaming.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  新規トークンのパケットへ未確認トークンを同梱して各パケットを単独で描画可能にし、不安定回線での再送待ちによる描画停止を、既定シミュレーション条件で再送方式比71.0パーセント、パケット複製方式比31.6パーセント減らしたLLMトークンストリーミング向け転送方式。
 
 ### 4年前（2022-12〜2023-11）
 
