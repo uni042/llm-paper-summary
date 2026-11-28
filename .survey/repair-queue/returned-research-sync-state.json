@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c79ba7dca8326353417a7cebc995779d2eb63006",
+  "base_commit": "964d09a692d6ff2d805f0b413241ff7071b02bcb",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -248,6 +248,7 @@
     "2024-2411.01438-skyserve-serving-ai-models-across-regions-and-clouds-with-spot-instances.json",
     "2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.json",
     "2024-2411.07066-zeroth-order-adaptive-neuron-alignment-based-pruning-without-re-training.json",
+    "2024-2411.09289-streamadapter-efficient-test-time-adaptation-from-contextual-streams.json",
     "2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and-instant-deployment.json",
     "2024-2411.12758-an-exploration-of-the-effect-of-quantisation-on-energy-consumption-and-inference-time-of-starcoder2.json",
     "2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connected-layers.json",
@@ -260,6 +261,7 @@
     "2024-2412.01042-truncformer-private-llm-inference-using-only-truncations.json",
     "2024-2412.03214-continual-low-rank-scaled-dot-product-attention.json",
     "2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-for-large-language-models.json",
+    "2024-2412.04372-distributed-inference-with-minimal-off-chip-traffic-for-transformers-on-low-power-mcus.json",
     "2024-2412.05225-beexformer-a-fast-inferencing-binarized-transformer-with-early-exits.json",
     "2024-2412.06106-efficient-context-propagating-perceiver-architectures-for-auto-regressive-language-modeling.json",
     "2024-2412.06458-pruning-all-rounder-rethinking-and-improving-inference-efficiency-for-large-vision-language-models.json",
@@ -299,6 +301,7 @@
     "2025-2502.02818-transql-serving-large-language-models-with-sql-on-low-resource-hardware.json",
     "2025-2502.04348-prompt-based-depth-pruning-of-large-language-models.json",
     "2025-2502.04563-waferllm-large-language-model-inference-at-wafer-scale.json",
+    "2025-2502.05798-streamdcim-a-tile-based-streaming-digital-cim-accelerator-with-mixed-stationary-cross-forwarding-dataflow-for-multimodal.json",
     "2025-2502.05947-acceleration-multiple-heads-decoding-for-llm-via-dynamic-tree-attention.json",
     "2025-2502.06844-exploring-model-invariance-with-discrete-search-for-ultra-low-bit-quantization.json",
     "2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.json",
@@ -369,6 +372,7 @@
     "2025-2505.16743-trim-achieving-extreme-sparsity-with-targeted-row-wise-iterative-metric-driven-pruning.json",
     "2025-2505.17701-countdown-contextually-sparse-activation-filtering-out-unnecessary-weights-in-down-projection.json",
     "2025-2505.18092-qwenlong-cprs-towards-llms-with-dynamic-context-optimization.json",
+    "2025-2505.18149-first-finish-search-efficient-test-time-scaling-in-large-language-models.json",
     "2025-2505.18232-two-stage-regularization-based-structured-pruning-for-llms.json",
     "2025-2505.18824-flatattention-dataflow-and-fabric-collectives-co-optimization-for-efficient-attention.json",
     "2025-2505.19342-astra-communication-efficient-acceleration-for-multi-device-transformer-inference.json",
@@ -376,6 +380,7 @@
     "2025-2505.19812-efficient-multi-modal-long-context-learning-for-training-free-adaptation.json",
     "2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.json",
     "2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference-acceleration.json",
+    "2025-2505.20932-qwt-v2-practical-effective-and-efficient-post-training-quantization.json",
     "2025-2505.21919-towards-efficient-key-value-cache-management-for-prefix-prefilling-in-llm-inference.json",
     "2025-2505.22425-scaling-reasoning-without-attention.json",
     "2025-2505.23061-dingo-constrained-inference-for-diffusion-llms.json",
@@ -56452,6 +56457,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2411.09289": {
+      "order": [
+        "2026-11-28T04:18:04+00:00",
+        "2024-2411.09289-streamadapter-efficient-test-time-adaptation-from-contextual-streams.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.04372": {
+      "order": [
+        "2026-11-28T04:19:43+00:00",
+        "2024-2412.04372-distributed-inference-with-minimal-off-chip-traffic-for-transformers-on-low-power-mcus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2502.05798": {
+      "order": [
+        "2026-11-28T04:21:22+00:00",
+        "2025-2502.05798-streamdcim-a-tile-based-streaming-digital-cim-accelerator-with-mixed-stationary-cross-forwarding-dataflow-for-multimodal.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.18149": {
+      "order": [
+        "2026-11-28T04:23:01+00:00",
+        "2025-2505.18149-first-finish-search-efficient-test-time-scaling-in-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.20932": {
+      "order": [
+        "2026-11-28T04:24:39+00:00",
+        "2025-2505.20932-qwt-v2-practical-effective-and-efficient-post-training-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70334,6 +70384,21 @@
     "arxiv:2409.15395": [
       "papers/inference/99-other-inference-systems/2024-2409.15395-parse-trees-guided-llm-prompt-compression.md",
       "papers/inference/99-other-inference-systems/2024-2409.15395-parse-trees-guided-llm-prompt-compression.md"
+    ],
+    "arxiv:2411.09289": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2411.09289-streamadapter-efficient-test-time-adaptation-from-contextual-streams.md"
+    ],
+    "arxiv:2412.04372": [
+      "papers/inference/15-inference-simulation-emulation/2024-2412.04372-distributed-inference-with-minimal-off-chip-traffic-for-transformers-on-.md"
+    ],
+    "arxiv:2502.05798": [
+      "papers/inference/99-other-inference-systems/2025-2502.05798-streamdcim-a-tile-based-streaming-digital-cim-accelerator-with-mixed-sta.md"
+    ],
+    "arxiv:2505.18149": [
+      "papers/inference/99-other-inference-systems/2025-2505.18149-first-finish-search-efficient-test-time-scaling-in-large-language-models.md"
+    ],
+    "arxiv:2505.20932": [
+      "papers/inference/16-weight-quantization-compression/2025-2505.20932-qwt-v2-practical-effective-and-efficient-post-training-quantization.md"
     ]
   }
 }

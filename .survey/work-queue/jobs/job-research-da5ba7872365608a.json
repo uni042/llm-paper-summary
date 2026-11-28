@@ -35,10 +35,15 @@
   "selection_reason": "低消費電力MCU複数台へTransformer推論を分割配置し重みをオンチップに静止させることでオフチップトラフィックを最小化し、TinyLlama-42Mを8台の超低消費MCUで実行して単一チップ比26.1倍の高速化とエネルギー遅延積27.2倍改善を示した研究で、オンデバイス分散推論に直接貢献する。",
   "semantic_scholar_id": "488449d678a6c24b40d32845c1249f1601e6b83a",
   "source_url": "https://arxiv.org/abs/2412.04372",
-  "status": "ready",
+  "status": "superseded",
   "title": "Distributed Inference with Minimal Off-Chip Traffic for Transformers on Low-Power MCUs",
   "type": "research",
   "venue": "Design, Automation and Test in Europe",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-28T04:27:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2024-2412.04372-distributed-inference-with-minimal-off-chip-traffic-for-transformers-on-.md",
+  "represented_canonical_id": "arXiv:2412.04372",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

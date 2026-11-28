@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（134本）
+## 自動生成の論文一覧（135本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -487,6 +487,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-12 · [TruncFormer: Private LLM Inference Using Only Truncations](2024-2412.01042-truncformer-private-llm-inference-using-only-truncations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   非線形演算を加算・乗算・切り捨ての列へ展開し、切り捨てを溢れが起きる場所だけへ静的に置くことで、任意の言語モデルへ使えるプライベート推論の変換枠組み。
+
+- **2024-12 · [Distributed Inference with Minimal Off-Chip Traffic for Transformers on Low-Power MCUs](2024-2412.04372-distributed-inference-with-minimal-off-chip-traffic-for-transformers-on-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みを複製しないテンソル並列型分割で小型Transformerを複数MCUへ分散し、オンチップだけで推論してオフチップアクセスを消す方式。シミュレーションでTinyLlama自己回帰が8チップ26.1倍、MobileBERTが4チップ4.7倍の高速化を示した。
 
 ### 3年前（2023-12〜2024-11）
 

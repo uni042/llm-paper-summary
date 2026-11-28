@@ -1398,6 +1398,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   SharmaとGeipingのBinary Block Masking（BinBlkMsk）は、FlashAttentionのブロック分割を活用し、マスクに許可要素が一つもないブロックを実行せず、許可要素を含むブロックだけを処理する方式である。
 
+- **2024-08 · [Deeploy: Enabling Energy-Efficient Deployment of Small Language Models on Heterogeneous Microcontrollers](2024-2408.04413-deeploy-enabling-energy-efficient-deployment-of-small-language-models-on.md)**  
+  実装：[✓](https://github.com/pulp-platform/deeploy) ・ リポジトリ内被引用：1  
+  タイリングと静的メモリ割当てを解き、線形層を点単位畳み込みへ変換してNPUへ載せるボトムアップ型コンパイラDeeployで、小型言語モデルを外部メモリなしのマイコン級SoCへ配備し、毎秒340トークン・1トークンあたり490マイクロジュールを実機で達成した。
+
 - **2024-05 · [Integer Scale: A Free Lunch for Faster Fine-grained Quantization of LLMs](2024-2405.14597-integer-scale-a-free-lunch-for-faster-fine-grained-quantization-of-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLMの重みを小さなグループに分けて量子化すると、グループごとに異なる量子化スケールを選べるため、粗い量子化より精度を維持しやすい。原著は最大1.85倍のFP16比エンドツーエンド速度改善、浮動小数点スケールの同等カーネル比最大1.83倍などを報告する。
@@ -1405,10 +1409,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-04 · [The Feasibility of Implementing Large-Scale Transformers on Multi-FPGA Platforms](2024-2404.16158-the-feasibility-of-implementing-large-scale-transformers-on-multi-fpga-p.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   複数FPGAへ大規模モデルを展開する基盤と自動ツールを整え、I-BERTの符号器を6台のFPGAで実働させ、最新FPGAでの推定では高性能GPUに近い遅延へ届くことを示した、大規模トランスフォーマーのFPGA実装の実現可能性の検証。
-
-- **2024-08 · [Deeploy: Enabling Energy-Efficient Deployment of Small Language Models on Heterogeneous Microcontrollers](2024-2408.04413-deeploy-enabling-energy-efficient-deployment-of-small-language-models-on.md)**  
-  実装：[✓](https://github.com/pulp-platform/deeploy) ・ リポジトリ内被引用：0  
-  タイリングと静的メモリ割当てを解き、線形層を点単位畳み込みへ変換してNPUへ載せるボトムアップ型コンパイラDeeployで、小型言語モデルを外部メモリなしのマイコン級SoCへ配備し、毎秒340トークン・1トークンあたり490マイクロジュールを実機で達成した。
 
 - **2024-07 · [FlashNorm: Fast Normalization for Transformers](2024-2407.09577-flashnorm-fast-normalization-for-transformers.md)**  
   実装：[✓](https://github.com/OpenMachine-ai/transformer-tricks) ・ リポジトリ内被引用：0  

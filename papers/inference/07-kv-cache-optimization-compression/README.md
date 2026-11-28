@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（716本）
+## 自動生成の論文一覧（717本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -2830,6 +2830,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-05 · [BiSup: Bidirectional Quantization Error Suppression for Large Language Models](2024-2405.15346-bisup-bidirectional-quantization-error-suppression-for-large-language-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   量子化誤差の縦の蓄積と横の拡散を分けて抑える誤差抑制手法。学習可能な量子化パラメータの層別微調整と、システムプロンプトの高精度キャッシュ保持で、3ビット量子化のパープレキシティを大きく改善する。
+
+- **2024-11 · [StreamAdapter: Efficient Test Time Adaptation from Contextual Streams](2024-2411.09289-streamadapter-efficient-test-time-adaptation-from-contextual-streams.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  デモンストレーションのKVキャッシュを一定サイズの文脈状態へ圧縮し、低ランク更新として重みへ吸収させるテスト時適応StreamAdapter。文脈を残さないため生成遅延が文脈長に依存せず、LLaMA-3-8Bの学習済みタスク平均92.75で10ショットICLの86.11を上回った。
 
 - **2024-11 · [SCA: Selective Compression Attention for Efficiently Extending the Context Window of Large Language Models](2024-b9a679571edc-sca-selective-compression-attention-for-efficiently-extending-the-contex.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

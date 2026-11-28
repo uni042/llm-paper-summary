@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（404本）
+## 自動生成の論文一覧（405本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -1177,6 +1177,10 @@
 - **2025-06 · [Boost Post-Training Quantization via Null Space Optimization for Large Language Models](2025-2506.11044-boost-post-training-quantization-via-null-space-optimization-for-large-l.md)**  
   実装：[✓](https://github.com/zjq0455/q2n) ・ リポジトリ内被引用：0  
   重みだけを量子化すると、浮動小数点重みWと量子化後重みWqの間に数値差が生じる。しかしLLMの実際の出力誤差は、重みの差そのものではなく、入力活性Xに作用した (W−Wq)X によって決まる。
+
+- **2025-05 · [QwT-v2: Practical, Effective and Efficient Post-Training Quantization](2025-2505.20932-qwt-v2-practical-effective-and-efficient-post-training-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  PTQの誤差補償をブロック出力への後補償に変え、対角だけのチャネル単位アフィン補償を閉形式で求め、量子化パラメータへ吸収して推論時コストをゼロにするQwT-v2。LLaMA3-8BのINT4でサイズ増わずか0.01GBでQwTと同等の精度回復を示した。
 
 - **2025-05 · [Grouped Sequency-arranged Rotation: Optimizing Rotation Transformation for Quantization for Free](2025-2505.03810-grouped-sequency-arranged-rotation-optimizing-rotation-transformation-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

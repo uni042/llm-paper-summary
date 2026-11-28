@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（839本）
+## 自動生成の論文一覧（841本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1849,7 +1849,7 @@
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
-  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：64  
+  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：65  
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
@@ -2564,6 +2564,10 @@
   実装：[✓](https://github.com/ignorejjj/LongRefiner) ・ リポジトリ内被引用：0  
   検索文書を階層木へ起こし直し、問いの情報範囲に応じた局所得点と全域得点で節点を選ぶ精錬器で、全文投入より約十分の一のトークンで七課題すべて最高精度を達成した。
 
+- **2025-05 · [First Finish Search: Efficient Test-Time Scaling in Large Language Models](2025-2505.18149-first-finish-search-efficient-test-time-scaling-in-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  並列生成した推論トレースのうち最初に完了した最も短いものを即座に返すFirst Finish Searchを提案し、DeepSeek-R1のAIME平均で正解率82.23%を、多数決より少ない総トークン31.1Kで達成した。
+
 - **2025-05 · [Exploring Federated Pruning for Large Language Models](2025-2505.13547-exploring-federated-pruning-for-large-language-models.md)**  
   実装：[✓](https://github.com/Pengxin-Guo/FedPrLLM) ・ リポジトリ内被引用：0  
   LLMの重みを削ってメモリ使用量を減らす剪定（枝刈り）は、モデルの入力活性化を校正データで観測して「消しても影響の小さい重み」を選ぶことが多い。LLaMA 7Bの50%疎化では、WikiText2の困惑度（PPL）が密モデル5.67、全データを集める集中剪定7.25、FedPrLLM層one-shot 7.32、クライアント単独7.44となる。
@@ -2623,6 +2627,10 @@
 - **2025-02 · [Streaming Looking Ahead with Token-level Self-reward](2025-2503.00029-streaming-looking-ahead-with-token-level-self-reward.md)**  
   実装：[✓](https://github.com/CognitiveKernel/SLA) ・ リポジトリ内被引用：0  
   方策モデル自身にトークン単位の自己報酬を持たせるReward Transformerと、先読みトークンを再利用するバランス木探索SLAで、外部報酬モデルなしの先読みデコードをストリーミング可能にし、凍結したLlama-3-8Bで貪欲デコードに対する勝率79.7パーセントを得た。
+
+- **2025-02 · [StreamDCIM: A Tile-based Streaming Digital CIM Accelerator with Mixed-stationary Cross-forwarding Dataflow for Multimodal Transformer](2025-2502.05798-streamdcim-a-tile-based-streaming-digital-cim-accelerator-with-mixed-sta.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  マルチモーダルTransformer向けに、再構成可能なタイル単位デジタルCIMマクロ、混合定常クロスフォワーディング・データフロー、書き換えを計算と重ねる細粒度パイプラインを組み合わせ、ViLBERTで非ストリーミング比2.63倍・層単位ストリーミング比1.28倍の高速化を合成評価で示したCIMアクセラレータ。
 
 - **2025-02 · [SHAFT: Secure, Handy, Accurate and Fast Transformer Inference](2025-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.md)**  
   実装：[✓](https://github.com/andeskyl/SHAFT) ・ リポジトリ内被引用：0  
@@ -2695,7 +2703,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：111  
+  実装：✓ ・ リポジトリ内被引用：112  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -2707,7 +2715,7 @@
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
-  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：56  
+  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：57  
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2023-12 · [Zoology: Measuring and Improving Recall in Efficient Language Models](2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md)**  
