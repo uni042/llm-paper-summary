@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f94820dacd1347ae-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2611.32989",
+  "reason": "全文通読の結果、本論文は注意計算の線形コスト化という機構自体はLLM推論の注意にも関係しうるが、実証は視覚Transformer（ADE20K、ImageNet-1k、Diving-48）へのドロップイン置換と微調整に限られ、LLM推論ワークロードでの評価や因果マスク版の実装は一次資料に確認できない（著者ら自身がデコーダ設定を今後の課題としている）。よってLLM推論システムへの直接の技術的貢献の根拠が現時点では弱く、即Researchではなくborderlineと判定した。",
+  "title": "AVQ-Attention-2: Adaptive Vector-Quantized Attention with Exact Local Blocks and Linear-Cost Training",
+  "identity_tokens": [
+    "arXiv:2611.32989",
+    "AVQ-Attention-2",
+    "adaptive vector-quantized attention"
+  ],
+  "linked_from": [
+    "worker-worklist-30.json:job-research-cd7cc2913adfbe15"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f94820dacd13",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
