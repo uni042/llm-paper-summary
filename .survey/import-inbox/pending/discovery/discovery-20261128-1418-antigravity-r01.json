@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "antigravity-local",
+  "run_key": "antigravity-20261128-1418-r01",
+  "reference_main_sha": "f277c073ff02ccb7c169ffdf51e889ee29ba62e4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.34912",
+      "identity_tokens": [
+        "id:arXiv:2611.34912",
+        "url:https://arxiv.org/abs/2611.34912"
+      ],
+      "title": "LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE",
+      "reason": "動画拡散モデル向けVideo VAEのストリーミング符号化・復号（causal window attentionによる時間方向KVキャッシュ有界化）が主題であり、LLM推論・学習システムの対象外。",
+      "source_url": "https://arxiv.org/abs/2611.34912",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-28T05:18:00Z",
+      "last_checked_at": "2026-11-28T05:18:00Z",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.34821",
+      "identity_tokens": [
+        "id:arXiv:2611.34821",
+        "url:https://arxiv.org/abs/2611.34821"
+      ],
+      "title": "LoopTitan: What Does Parameter Revisit Buy a Mixture-of-Experts?",
+      "reason": "Looped MoEのパラメータ反復利用を同一パラメータ・FLOPs・KVキャッシュ予算で検証する分析研究だが、推論システム実装やオフロード最適化ではなくアーキテクチャ・最適化器（AdamW/Muon）挙動の比較が中心のため保留。",
+      "source_url": "https://arxiv.org/abs/2611.34821",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-28T05:18:00Z",
+      "last_checked_at": "2026-11-28T05:18:00Z",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.34776",
+      "identity_tokens": [
+        "id:arXiv:2611.34776",
+        "url:https://arxiv.org/abs/2611.34776"
+      ],
+      "title": "DFly2: Turbocharging Long-Context Speculative Decoding by Sharing the Target's Sparsity",
+      "reason": "長文脈のネイティブ疎注意LLM（DeepSeek-V4系）向け投機的デコーディングにおいて、ターゲットモデルのKVキャッシュと疎注意位置選択をドラフトモデルへ共有し、プリフィル時間・プリフィックスキャッシュヒット・デコード並列度を改善するブロック並列ドラフタであり重点領域に合致。",
+      "source_url": "https://arxiv.org/abs/2611.34776",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-28T05:18:00Z",
+      "last_checked_at": "2026-11-28T05:18:00Z",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.34584",
+      "identity_tokens": [
+        "id:arXiv:2611.34584",
+        "url:https://arxiv.org/abs/2611.34584"
+      ],
+      "title": "Routing and Cache Retention for Multi-Turn LLM Inference: Theory and Implementation",
+      "reason": "マルチターンAIエージェント推論（197B MoEモデルの実GPUクラスタ評価）でルーティングとKVキャッシュ保持・エビクションをオンライン影価格更新と1ターン先読み移行で共同最適化するPARKコントローラを提案しており、エージェントサービングおよびKVキャッシュ管理の重点領域に合致。",
+      "source_url": "https://arxiv.org/abs/2611.34584",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-28T05:18:00Z",
+      "last_checked_at": "2026-11-28T05:18:00Z",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.34278",
+      "identity_tokens": [
+        "id:arXiv:2611.34278",
+        "url:https://arxiv.org/abs/2611.34278"
+      ],
+      "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems",
+      "reason": "マルチエージェント間のクロスモデルKVキャッシュ転送に伴う安全性アライメント低下とプロンプトインジェクション攻撃（Chasm）を分析するセキュリティ研究であり、推論システム効率化の対象外。",
+      "source_url": "https://arxiv.org/abs/2611.34278",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-28T05:18:00Z",
+      "last_checked_at": "2026-11-28T05:18:00Z",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    }
+  ]
+}
