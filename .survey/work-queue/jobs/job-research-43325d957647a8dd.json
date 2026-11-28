@@ -35,10 +35,15 @@
   "selection_reason": "プロンプト経由で再現されていたgrid probingを、入力を一度だけKVキャッシュへ符号化しマスク付きバッチforwardで実行する学習不要のブロック疎注意FCAとしてモデル内部へ実装し、長文脈推論で精度と到達範囲を保ちながらコストを大幅に下げる注意機構への直接貢献であるため対象とした。",
   "semantic_scholar_id": "7ed200c105168460e30caf8d9ea086364c39fba0",
   "source_url": "https://arxiv.org/abs/2611.32423",
-  "status": "ready",
+  "status": "superseded",
   "title": "Factorized Context Attention: From Emulated to Native Grid Probing",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T08:39:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2611.32423-factorized-context-attention-from-emulated-to-native-grid-probing.md",
+  "represented_canonical_id": "arXiv:2611.32423",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

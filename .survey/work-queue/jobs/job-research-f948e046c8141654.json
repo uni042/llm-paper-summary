@@ -35,10 +35,15 @@
   "selection_reason": "Hopper GPU向け4ビットKVキャッシュデコードカーネルについて、vLLMのNVFP4経路がメモリ帯域の10〜20％しか出ない原因を命令発行予算と直列化にあると特定し、TMAプロデューサワープと計算ワーグループの重ね合わせ等で帯域67〜75％を達成するカーネルを提示しており、KVキャッシュ量子化のデコード高速化に直接貢献する。",
   "semantic_scholar_id": "de9d0b6afa4766429b61045938a64ce11782fde9",
   "source_url": "https://arxiv.org/abs/2611.30027",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fast 4-bit KV-Cache Decoding on Hopper GPUs: Why Existing Kernels Are Slow and How to Fix Them",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T08:39:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.30027-fast-4-bit-kv-cache-decoding-on-hopper-gpus-why-existing-kernels-are-slo.md",
+  "represented_canonical_id": "arXiv:2611.30027",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

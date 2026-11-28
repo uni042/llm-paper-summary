@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（261本）
+## 自動生成の論文一覧（262本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -345,6 +345,10 @@
 - **2026-11 · [L2C2: Enhancing Large-scale Chiplets for Agent Long-Context LLM Inference with Sparse and Distributed Attention](2026-2611.33691-l2c2-enhancing-large-scale-chiplets-for-agent-long-context-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   チップレット上の分散スパース注意を、部分プリフィルのSplit-Comm注意と長さ適応の双モード、デコードのトークン交互割当てと動的キャッシュ分散で最適化するL2C2を提案し、シミュレーションで部分プリフィル1.45倍、デコード1.53倍の高速化を示した。
+
+- **2026-11 · [Factorized Context Attention: From Emulated to Native Grid Probing](2026-2611.32423-factorized-context-attention-from-emulated-to-native-grid-probing.md)**  
+  実装：[✓](https://github.com/mohammad2012191/FCA) ・ リポジトリ内被引用：0  
+  グリッドプロービングのアテンションパターンを、入力の一度だけの符号化と階段型位置割り当てでモデル内部のブロック疎アテンションとして実行し、長文テキストで単一パス比9〜14ポイントの精度とウィンドウの4倍までの到達範囲を、再符号化なしに得た学習なしの長文脈の読み方。
 
 - **2026-11 · [DTS: Delta-Based Tile Scoring for Efficient Long-Context Sparse Attention](2026-2611.25938-dts-delta-based-tile-scoring-for-efficient-long-context-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1081,7 +1085,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：308  
+  実装：✓ ・ リポジトリ内被引用：309  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-11 · [Blockwise Self-Attention for Long Document Understanding](2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "PackLoopはループ型言語モデルの自己投機的デコードについて、同時実行時に推測位置の配置（行パッキング）がKVキャッシュ読み出し回数を決めることを示し、読み出し済みの行内でのみ投機する方式で並行デコードでも投機の利得を維持する、投機的デコードのサービング機構への直接の貢献である。",
   "semantic_scholar_id": "163bfe1e0f5ae436c5cbf89fdc462a6b33abb2ca",
   "source_url": "https://arxiv.org/abs/2611.30205",
-  "status": "ready",
+  "status": "superseded",
   "title": "PackLoop: Row-Packed Self-Speculative Decoding for Looped Language Models under Concurrency",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T08:39:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.30205-packloop-row-packed-self-speculative-decoding-for-looped-language-models.md",
+  "represented_canonical_id": "arXiv:2611.30205",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

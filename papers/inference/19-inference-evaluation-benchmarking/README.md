@@ -60,6 +60,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   携帯端末でニューラル処理装置が常に速いわけではないことを段階別に実測し、入力処理では中央処理装置が最大1.6倍速く、逐次生成の実効加速も1.05から1.20倍にとどまり、全面任せでは電力が最大51パーセント増えることを示した。
 
+- **2026-04 · [Reasoning Language Model Inference Serving Unveiled: An Empirical Study](2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md)**  
+  実装：[✓](https://github.com/lqinfdim/RLMServing) ・ リポジトリ内被引用：2  
+  推論大規模言語モデルは通常の言語モデルと異なり、キャッシュ使用量が大きく変動し、少数の遅い要求が処理全体を引き延ばす。著者らは評価枠組みASUとベンチマークASU-Perfを導入し、複数のサービング最適化がモデル規模や負荷によって効いたり逆効果になったりすることを、実機評価と到着負荷の再現で示す。
+
 - **2026-04 · [Early Stopping for Large Reasoning Models via Confidence Dynamics](2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.md)**  
   実装：[✓](https://github.com/sudoparsa/CoDE-Stop) ・ リポジトリ内被引用：2  
   中間回答の確信度の時系列から、届いた推論は閾値で、不発な推論は不安定さの蓄積で止める学習不要の早期終了で、トークン量を25から50パーセント削りながら釣り合いを最も良くした。
@@ -147,10 +151,6 @@
 - **2026-04 · [The Detection-Extraction Gap: Models Know the Answer Before They Can Say It](2026-2604.06613-the-detection-extraction-gap-models-know-the-answer-before-they-can-say-.md)**  
   実装：[✓](https://github.com/EdWangLoDaSc/know2say) ・ リポジトリ内被引用：1  
   答えが回収可能になる時点と強制抽出できる時点のずれを分布のずれとして定式化し、自由継続だけで検出と抽出を行う早期終了BAEEで直列生成を約7割減らしながら正解率も上げる、推論時計算の分析と手法。
-
-- **2026-04 · [Reasoning Language Model Inference Serving Unveiled: An Empirical Study](2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md)**  
-  実装：[✓](https://github.com/lqinfdim/RLMServing) ・ リポジトリ内被引用：1  
-  推論大規模言語モデルは通常の言語モデルと異なり、キャッシュ使用量が大きく変動し、少数の遅い要求が処理全体を引き延ばす。著者らは評価枠組みASUとベンチマークASU-Perfを導入し、複数のサービング最適化がモデル規模や負荷によって効いたり逆効果になったりすることを、実機評価と到着負荷の再現で示す。
 
 - **2026-04 · [NeuReasoner: Towards Explainable, Controllable, and Unified Reasoning via Mixture-of-Neurons](2026-2604.02972-neureasoner-towards-explainable-controllable-and-unified-reasoning-via-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -817,7 +817,7 @@
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-02 · [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md)**  
-  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：46  
+  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：47  
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
