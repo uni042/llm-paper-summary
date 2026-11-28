@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（730本）
+## 自動生成の論文一覧（733本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -345,6 +345,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/SAI-Lab-NYU/WSVD) ・ リポジトリ内被引用：3  
   SVDを注意ヘッドごとに適用し再構成をフラッシュデコードへ融合することで、視覚言語モデルのデコードを1.8倍超高速化し、量子化込みでも精度低下を約1ポイントに抑えた。
 
+- **2026-04 · [The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference](2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  数学的には、毎回すべての接頭辞を再計算する経路と同じ注意計算を実行するはずである。新しい高速化カーネルやKV圧縮方式を提案する研究ではない。さらに32ビット浮動小数点（FP32）へ切り替えると、著者らの別の対照実験ではトークン反転が0%となり、出力分布差が大幅に減った。
+
 - **2026-04 · [Stochastic KV Routing: Enabling Adaptive Depth-Wise Cache Sharing](2026-2604.22782-stochastic-kv-routing-enabling-adaptive-depth-wise-cache-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   既存の削減手法の多くは「どの時刻のトークンを捨てるか」に着目するが、本研究は「どの層が独自のKVを持つ必要があるか」を問い直す。
@@ -492,10 +496,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-04 · [Universal YOCO for Efficient Depth Scaling](2026-2604.01220-universal-yoco-for-efficient-depth-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   YOCOの自己デコーダだけをパラメータ共有で再帰化し、全体KVキャッシュを一定に保ちながら深さ方向の計算スケーリングを実現したアーキテクチャ研究。
-
-- **2026-04 · [The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference](2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  数学的には、毎回すべての接頭辞を再計算する経路と同じ注意計算を実行するはずである。新しい高速化カーネルやKV圧縮方式を提案する研究ではない。さらに32ビット浮動小数点（FP32）へ切り替えると、著者らの別の対照実験ではトークン反転が0%となり、出力分布差が大幅に減った。
 
 - **2026-04 · [Sub-Token Routing for KV Cache Compression](2026-2604.21335-sub-token-routing-for-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1003,6 +1003,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   推論モデルの冗長な推論トレースでKV予算が奪われる問題に対し、モデルの不確実性で枝刈り強度を変え、直近内容と似たトークンを割り引くRoCoKVを提案し、制約付き予算で既存圧縮法より高い精度と、vLLM実測でFull-KV比最大1.43倍の高速化を示した圧縮法。
 
+- **2026-11 · [RES: Accelerating Diffusion Language Models with Rolling Entropy Sampling](2026-2611.29066-res-accelerating-diffusion-language-models-with-rolling-entropy-sampling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散言語モデルで受理とKVキャッシュへの確定を分離し、受理済み連続プレフィックスが最小長に達した時点でだけ確定するローリング型サンプラーRESを提案し、DiffusionGemmaの7ベンチマークでパスあたりトークン数を19.3から25.5へ増やした（マクロ精度は80.7%から78.8%）。
+
 - **2026-11 · [ReKV: Overlapping Quantized KV Transfer and Suffix Recomputation](2026-2611.08770-rekv-overlapping-quantized-kv-transfer-and-suffix-recomputation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィル・デコード分離のKV受け渡しで、層境界より前を量子化転送し、境界状態から後ろをデコード側で再計算して転送と重ねることで、8K受け渡し遅延をBF16全転送の最大3.65倍まで短縮した、品質ゲート付きの結合方針。
@@ -1014,6 +1018,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-11 · [OPSERVE: Opportunistic LLM Inference over Fragmented GPU Capacity in HPC Systems](2026-de7f1d0908f4-opserve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-.md)**  
   実装：[✓](https://github.com/sc26-submission/aionhpc-26-adsubmission) ・ リポジトリ内被引用：0  
   HPCで一時的に遊ぶGPU断片の上に過渡ワーカーを起動し、プリフィルとデコードの遅延比率に応じてワーカーの役割を動的に配り直し、完了済みプリフィルのKV状態を共有層で回収後も生かすことで、固定配分比で95パーセンタイル遅延を最大15.4倍短くした機会的推論基盤。
+
+- **2026-11 · [One Million Tokens in 20GB: Calibration-Free 2-Bit SRFT KV-Cache Compression for Looped MoE Inference on Apple Silicon](2026-2611.29092-one-million-tokens-in-20gb-calibration-free-2-bit-srft-kv-cache-compress.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  NoPE型モデルの値の単位RMS正規化を使い、SRFT回転後のKVキャッシュを較正なしで実効2.06ビットへ圧縮し、32GB Apple M6上でInkling-2-Miniの100万トークン推論を19.49GiB・9.52トークン毎秒で動かしたKV圧縮とMetalカーネル。
 
 - **2026-11 · [Norn: Context-Length-Aware Optimization of Weight and KV Cache Placement for Offloaded LLM Inference](2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1058,6 +1066,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-11 · [Fairway: Load-Aware KV Cache Reuse for LLM Prefill Scheduling](2026-2611.02082-fairway-load-aware-kv-cache-reuse-for-llm-prefill-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   再利用率と自分の処理時間で割った相対待ちで並べる速い車線と、作業量の課金で最も古い要求の前の作業を抑える公平な車線を組み合わせ、調整なしで尾の初回トークン時間を先行方式より最大八・六倍下げ、過負荷でも中央値を犠牲にせず飢餓を起こさなかったと報告した。
+
+- **2026-11 · [Exact on Paper: Which LLM Serving Shortcuts Flip Graded Answers, Measured Against the Noise of Reordering the Same Requests](2026-2611.29663-exact-on-paper-which-llm-serving-shortcuts-flip-graded-answers-measured-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  正確とされるサービング機能がどのリクエストの正誤を入れ替えるかを、再起動と到着順変更の2つのノイズ床とバッチ不変カーネルの対照で測り、精度確認だけではFP8 KVキャッシュ級の反転を見逃すことを示した検証研究。
 
 - **2026-11 · [Coordinated Mixed-Precision KV Cache Quantization for Efficient LLM-based Multi-agent Systems](2026-2611.10096-coordinated-mixed-precision-kv-cache-quantization-for-efficient-llm-base.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

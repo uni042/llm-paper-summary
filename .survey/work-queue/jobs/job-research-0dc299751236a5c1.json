@@ -35,10 +35,15 @@
   "selection_reason": "TurboFHEは完全準同型暗号によるLLM推論向けに、CKKS推論プログラムを暗号文・多項式レベルで分割して複数GPUへ自動コンパイルし、実測ベース性能モデルで配置と転送スケジュールを最適化するフレームワークで、プライバシー保護LLM推論の実行基盤へ直接貢献する。",
   "semantic_scholar_id": "c392889f8440e700af9d035c9fc349432191f758",
   "source_url": "https://arxiv.org/abs/2611.29244",
-  "status": "ready",
+  "status": "superseded",
   "title": "TurboFHE: An Efficient and Scalable Multi-GPU Framework for Homomorphic LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:19:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2611.29244-turbofhe-an-efficient-and-scalable-multi-gpu-framework-for-homomorphic-l.md",
+  "represented_canonical_id": "arXiv:2611.29244",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

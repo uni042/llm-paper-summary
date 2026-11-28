@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c0297e6c2e113a0cc4e5f53382f2474554af5fd9",
+  "base_commit": "9c4d41b29707436df9debafd5c54697e24f5efbd",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1835,7 +1835,12 @@
     "2026-2611.28702-hiperfcc-kvcache-accelerating-confidential-llm-serving-with-hierarchical-kv-caching.json",
     "2026-2611.28760-analytical-modeling-and-optimal-gpu-provisioning-for-disaggregated-llm-inference.json",
     "2026-2611.29006-nohaircache-calibrate-once-kv-cache-eviction-with-one-power-law-exponent.json",
+    "2026-2611.29066-res-accelerating-diffusion-language-models-with-rolling-entropy-sampling.json",
+    "2026-2611.29092-one-million-tokens-in-20gb-calibration-free-2-bit-srft-kv-cache-compression-for-looped-moe-inference-on-apple-silicon.json",
+    "2026-2611.29104-when-does-decomposition-help-empirical-study-on-workload-architecture-affinity-in-llm-inference-serving.json",
+    "2026-2611.29244-turbofhe-an-efficient-and-scalable-multi-gpu-framework-for-homomorphic-llm-inference.json",
     "2026-2611.29497-gossamer-a-utility-driven-architecture-for-constant-budget-kv-cache-compression-in-reasoning-llms.json",
+    "2026-2611.29663-exact-on-paper-which-llm-serving-shortcuts-flip-graded-answers-measured-against-the-noise-of-reordering-the-same-requests.json",
     "2026-2611.30027-fast-4-bit-kv-cache-decoding-on-hopper-gpus-why-existing-kernels-are-slow-and-how-to-fix-them.json",
     "2026-2611.30205-packloop-row-packed-self-speculative-decoding-for-looped-language-models-under-concurrency.json",
     "2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.json",
@@ -56761,6 +56766,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.29066": {
+      "order": [
+        "2026-11-28T10:12:03+00:00",
+        "2026-2611.29066-res-accelerating-diffusion-language-models-with-rolling-entropy-sampling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.29092": {
+      "order": [
+        "2026-11-28T10:13:20+00:00",
+        "2026-2611.29092-one-million-tokens-in-20gb-calibration-free-2-bit-srft-kv-cache-compression-for-looped-moe-inference-on-apple-silicon.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.29104": {
+      "order": [
+        "2026-11-28T10:14:37+00:00",
+        "2026-2611.29104-when-does-decomposition-help-empirical-study-on-workload-architecture-affinity-in-llm-inference-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.29244": {
+      "order": [
+        "2026-11-28T10:15:54+00:00",
+        "2026-2611.29244-turbofhe-an-efficient-and-scalable-multi-gpu-framework-for-homomorphic-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.29663": {
+      "order": [
+        "2026-11-28T10:17:11+00:00",
+        "2026-2611.29663-exact-on-paper-which-llm-serving-shortcuts-flip-graded-answers-measured-against-the-noise-of-reordering-the-same-requests.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70946,6 +70996,21 @@
     "arxiv:2611.28760": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.28760-analytical-modeling-and-optimal-gpu-provisioning-for-disaggregated-llm-i.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.28760-analytical-modeling-and-optimal-gpu-provisioning-for-disaggregated-llm-i.md"
+    ],
+    "arxiv:2611.29066": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.29066-res-accelerating-diffusion-language-models-with-rolling-entropy-sampling.md"
+    ],
+    "arxiv:2611.29092": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.29092-one-million-tokens-in-20gb-calibration-free-2-bit-srft-kv-cache-compress.md"
+    ],
+    "arxiv:2611.29104": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.29104-when-does-decomposition-help-empirical-study-on-workload-architecture-af.md"
+    ],
+    "arxiv:2611.29244": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.29244-turbofhe-an-efficient-and-scalable-multi-gpu-framework-for-homomorphic-l.md"
+    ],
+    "arxiv:2611.29663": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.29663-exact-on-paper-which-llm-serving-shortcuts-flip-graded-answers-measured-.md"
     ]
   }
 }

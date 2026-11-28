@@ -220,6 +220,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   キー側はオジャ則、値側はデルタ則で、共有スロットを持つ2段階メモリの両側を誤差修正し、線形注意の想起性能を高めた回帰型アーキテクチャ。
 
+- **2026-10 · [Clock Diffusion: Efficient Semi-Autoregressive Continuous Diffusion Language Models](2026-2610.00894-clock-diffusion-efficient-semi-autoregressive-continuous-diffusion-langu.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  位置依存のノイズスケジュールでトークンごとに拡散の時計をずらし、可変長生成とKVキャッシュを連続拡散言語モデルへ持ち込んだ半自己回帰型の枠組みで、拡散モデル最良のパープレキシティ19.5を達成する。
+
 - **2026-09 · [Tensor Decomposition of Transformer Key-Value Caches: Spectral Structure and Format Comparison](2026-2609.28029-tensor-decomposition-of-transformer-key-value-caches-spectral-structure-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   この研究は、自己回帰Transformerの鍵・値キャッシュ（key-value キャッシュ; KVキャッシュ）を、注意ヘッド・トークン・特徴・隣接層の四つの軸を持つテンソルとして扱い、どの軸が実際に低ランク圧縮できるのかを調べる。RoPE後の鍵を圧縮すると、RoPE前に圧縮する場合に比べて同じ保存量での再構成誤差が相対41〜64%増す。
@@ -677,10 +681,6 @@
 - **2026-10 · [Continue or Restart? The Limits of Early Failure Prediction in Coding Agents](2026-2610.35971-continue-or-restart-the-limits-of-early-failure-prediction-in-coding-age.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   147,002件の軌跡で、早期接頭辞は同一課題の試行を偶然並みにしか分けられないこと、学習型再起動の利得は試行選択ではなく課題間配分から来ること、予算内では継続が再起動を支配することを示した。
-
-- **2026-10 · [Clock Diffusion: Efficient Semi-Autoregressive Continuous Diffusion Language Models](2026-2610.00894-clock-diffusion-efficient-semi-autoregressive-continuous-diffusion-langu.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  位置依存のノイズスケジュールでトークンごとに拡散の時計をずらし、可変長生成とKVキャッシュを連続拡散言語モデルへ持ち込んだ半自己回帰型の枠組みで、拡散モデル最良のパープレキシティ19.5を達成する。
 
 - **2026-10 · [CacheLink: Functional KV Transport for Zero-Prefill Cross-Model Context Handoff](2026-2610.15509-cachelink-functional-kv-transport-for-zero-prefill-cross-model-context-h.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1865,11 +1865,11 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：160  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：161  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
-  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：130  
+  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：131  
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
@@ -3393,7 +3393,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：398  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：399  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  

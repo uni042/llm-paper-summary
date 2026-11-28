@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（374本）
+## 自動生成の論文一覧（375本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -337,6 +337,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   厳密流線形注意（Exact Flow Linear 注意機構、EFLA）は、デルタ則更新が、入力を一つのトークン区間で固定した連続時間の微分方程式を前進オイラー法（explicit Euler）で一歩近似したものと解釈できることを示す。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [TurboFHE: An Efficient and Scalable Multi-GPU Framework for Homomorphic LLM Inference](2026-2611.29244-turbofhe-an-efficient-and-scalable-multi-gpu-framework-for-homomorphic-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CKKS推論の計算グラフを2つの粒度で分割し、実測性能モデルで分割・配置・常駐・転送を共同最適化して複数GPU計画を自動生成するFHE推論基盤で、BERTで24.5倍、専門家の手作業計画に対して最大1.24倍の改善を示した。
 
 - **2026-11 · [Systolic Linear Attention: Co-Designing Tile-Grouped Gated Delta Attention for TPUs](2026-2611.06828-systolic-linear-attention-co-designing-tile-grouped-gated-delta-attentio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -961,7 +965,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：242  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：243  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  

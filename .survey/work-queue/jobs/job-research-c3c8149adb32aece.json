@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論サービングの構成（単独レプリカ、テンソル／パイプライン並列、プリフィル・デコード分離）を同一ハードウェア・同一モデル・同一到着スケジュールでSGLang上に揃えて150条件を実測し、ワークロード形状と構成の親和性を切り分けた研究で、分散・分離サービングの設計判断に直接貢献する。",
   "semantic_scholar_id": "cc006a787e313750952ad786e86b1291b4d7caf8",
   "source_url": "https://arxiv.org/abs/2611.29104",
-  "status": "ready",
+  "status": "superseded",
   "title": "When Does Decomposition Help? Empirical Study on Workload-Architecture Affinity in LLM Inference Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:19:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.29104-when-does-decomposition-help-empirical-study-on-workload-architecture-af.md",
+  "represented_canonical_id": "arXiv:2611.29104",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

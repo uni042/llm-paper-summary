@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（698本）
+## 自動生成の論文一覧（699本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -64,6 +64,10 @@
   実装：[✓](https://github.com/vllm-project/vllm-omni) ・ リポジトリ内被引用：10  
   複数LLM・拡散モデル・音声/画像生成器を段階グラフへ分解し、各段階を独立バッチ・独立GPU配置・共通コネクタで実行することで、any-to-any型マルチモーダル推論を単一モデル用サービング基盤から拡張する方式。
 
+- **2026-02 · [Efficient Multi-round LLM Inference over Disaggregated Serving](2026-2602.14516-ampd-multi-round-disaggregated-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  多ラウンド推論の追加プリフィルを、実行時負荷に応じてデコード側の局所実行かプリフィル側の遠隔実行へ振り分け、待ち行列の並べ替えとGPU配備計画を組み合わせてSLO達成率を高める分離サービング方式。
+
 - **2026-07 · [SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling](2026-2607.08565-smetric-session-centric-agent-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   セッションの初回だけ負荷分散し、後続要求はKV局所性を優先しつつ過負荷・キャッシュ消失時だけ再配置することで、エージェント配信のクラスタTPSを10〜16%改善する。
@@ -75,10 +79,6 @@
 - **2026-04 · [Introspective Diffusion Language Models](2026-2604.11035-introspective-diffusion-language-models.md)**  
   実装：[✓](https://github.com/Introspective-Diffusion/I-DLM) ・ リポジトリ内被引用：9  
   本論文は、拡散言語モデル（diffusion language モデル; DLM）が複数トークンを同時に提案できるにもかかわらず、同規模の自己回帰言語モデル（autoregressive language モデル; ARモデル）より推論品質が低く、複数要求を処理する実運用で期待ほど高速化しない原因を、生成アルゴリズムと推論エンジンの双方から調べる。
-
-- **2026-02 · [Efficient Multi-round LLM Inference over Disaggregated Serving](2026-2602.14516-ampd-multi-round-disaggregated-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  多ラウンド推論の追加プリフィルを、実行時負荷に応じてデコード側の局所実行かプリフィル側の遠隔実行へ振り分け、待ち行列の並べ替えとGPU配備計画を組み合わせてSLO達成率を高める分離サービング方式。
 
 - **2026-05 · [SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters](2026-2605.00528-saga.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -228,6 +228,10 @@
   実装：[✓](https://github.com/yangdsh/LPC) ・ リポジトリ内被引用：4  
   特に複数ターンの会話では、それまでの会話履歴が次の質問にも含まれるため、同じ履歴を再計算しない価値が大きい。一方、GPUメモリは有限で、実行中の要求がKV領域を増やすと保存済みの接頭辞を退避しなければならない。原著のH100・Qwen3-32B-FP8評価では、LRUと同等のヒット率に必要なキャッシュ容量を18〜47%削減した。
 
+- **2026-09 · [Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving](2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  接頭辞キャッシュは要求外のサーバ状態を出力へ持ち込み、エージェント軌跡差を16ビット36.2%から4ビット75.0%へ増幅することを制御実験で確認。
+
 - **2026-09 · [Astrolabe: Balancing Load in LLM Serving with Randomized Prediction-Guided Scheduling](2025-2508.03611-block-predictive-load-balancing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   出力長予測とインスタンス局所シミュレーションを2択無作為配送へ統合し、KV移送なしでLLMクラスタの負荷分散を改善する。
@@ -327,10 +331,6 @@
 - **2026-09 · [Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving](2026-2609.18112-fairinference-token-latency-fairness-multitenant.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   分離実行比δ以内のトークン遅延を保証するdeadline スケジューラとKV予約を統合し、高需要テナント下のp99 遅延 isolationを実現する。
-
-- **2026-09 · [Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving](2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  接頭辞キャッシュは要求外のサーバ状態を出力へ持ち込み、エージェント軌跡差を16ビット36.2%から4ビット75.0%へ増幅することを制御実験で確認。
 
 - **2026-09 · [Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows](2026-2609.10964-decoupling-readiness-from-release-tail-aware-agentic-llm-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -801,6 +801,10 @@
   そのため最終段だけ負荷が重くなり、前段のGPUが待つ「パイプラインの空隙（パイプライン bubble）」が生じる。予測器、空隙認識スケジューラ、移行調整器の三要素で構成される。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [When Does Decomposition Help? Empirical Study on Workload-Architecture Affinity in LLM Inference Serving](2026-2611.29104-when-does-decomposition-help-empirical-study-on-workload-architecture-af.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ハードウェアとモデルと到着条件を固定して5つのサービング構成だけを変える150条件の統制実験で、レプリカはデコード寄り、パイプラインはプリフィル寄りの負荷に相性が良いことと、静的な相分離は崩壊し得ることを示した実証研究。
 
 - **2026-11 · [UMLoad: Fast On-Demand Model Loading on Unified Memory Architecture](2026-2611.04253-umload-fast-on-demand-model-loading-on-unified-memory-architecture.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1808,6 +1812,10 @@
   実装：✓ ・ リポジトリ内被引用：15  
   要求ごとのプリフィル長とデコード長を考慮し、KV容量を守るバッチをF指標で選ぶスケジューラ。Vidur時間モデルでは混合2000要求の平均遅延をFCFS比4.87倍改善した。
 
+- **2025-06 · [Beyond the Buzz: A Pragmatic Take on Inference Disaggregation](2025-2506.05508-beyond-the-buzz-a-pragmatic-take-on-inference-disaggregation.md)**  
+  実装：✓ ・ リポジトリ内被引用：15  
+  二つの段階を同じGPU群で混在させる同居方式は、片方を最適化するともう片方が悪化しやすい。
+
 - **2025-10 · [Accelerating Diffusion LLM Inference via Local Determinism Propagation](2025-2510.07081-accelerating-diffusion-llm-inference-via-local-determinism-propagation.md)**  
   実装：[✓](https://github.com/friedrichor/LocalLeap) ・ リポジトリ内被引用：14  
   マスクを順に外す標準的な復号では、各反復で最も確信度の高い一位置だけを確定する保守的方式が品質維持のために用いられる。LLaDA-8B-InstructのGSM8K・生成長512では、逐次確定の7.76トークン/秒を53.82トークン/秒へ、反復512回を73回へ削減し、正答率は78.24%から78.54%であった。
@@ -1815,10 +1823,6 @@
 - **2025-07 · [PolyServe: Efficient Multi-SLO Serving at Scale](2025-2507.17769-polyserve-efficient-multi-slo-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
   PolyServeは、LLM配信サービスに複数の遅延保証階層がある場合に、要求をどのサーバへ送るか、各階層へ何台のサーバを割り当てるかを共同で制御する方式である。SLO達成率90%の点で、既存方式に対する有効処理量（有効スループット）はプリフィル・デコード分離構成で平均1.23倍、同居構成で平均1.18倍である。
-
-- **2025-06 · [Beyond the Buzz: A Pragmatic Take on Inference Disaggregation](2025-2506.05508-beyond-the-buzz-a-pragmatic-take-on-inference-disaggregation.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  二つの段階を同じGPU群で混在させる同居方式は、片方を最適化するともう片方が悪化しやすい。
 
 - **2025-03 · [throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving](2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md)**  
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：14  
@@ -2411,7 +2415,7 @@
   複数の言語モデル呼出しから成るアプリケーションの入力・出力の関係を、意味変数という抽象化で推論提供側へ公開する。これにより要求間の依存関係、同一接頭部の再利用、アプリケーション全体の完了時間を考慮した要求配置を可能にする。単一要求の速度ではなく、複数要求を組み合わせた作業の完了時間を最適化する研究である。
 
 - **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：115  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：116  
   長いプリフィルを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
 
 - **2024-08 · [NanoFlow: Towards Optimal Large Language Model Serving Throughput](2024-2408.12757-nanoflow.md)**  
@@ -2455,7 +2459,7 @@
   外部ツールや人間応答を待つ間に生成が中断される拡張LLMで、KVキャッシュをGPUに保持する、CPUへ退避する、破棄して再計算するという三つの選択肢を、GPUメモリの時間積で表した浪費量を基準に要求ごとに切り替える推論基盤。
 
 - **2024-01 · [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md)**  
-  実装：✓ ・ リポジトリ内被引用：72  
+  実装：✓ ・ リポジトリ内被引用：73  
   注意計算とKVを系列方向に分散し、クラスタ全体のGPUメモリを共有して最大200万トークンを処理し、提供スループットを1.35〜3.4倍改善する。
 
 - **2024-04 · [Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction](2024-2404.08509-ssjf.md)**  
@@ -2713,7 +2717,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2042  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2043  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

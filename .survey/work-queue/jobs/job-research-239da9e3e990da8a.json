@@ -35,10 +35,15 @@
   "selection_reason": "拡散言語モデル（DiffusionGemma）のサンプラについて、トークンをKVキャッシュへ確定するタイミングが速度と精度を左右することを示し、確定した連続接頭辞を段階的にコミットするRolling Entropy Samplerでデノイジングを高速化する手法で、拡散LLMのデコード機構へ直接貢献する。",
   "semantic_scholar_id": "a31f930774b00ac272ece785641490606c5dd265",
   "source_url": "https://arxiv.org/abs/2611.29066",
-  "status": "ready",
+  "status": "superseded",
   "title": "RES: Accelerating Diffusion Language Models with Rolling Entropy Sampling",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:19:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.29066-res-accelerating-diffusion-language-models-with-rolling-entropy-sampling.md",
+  "represented_canonical_id": "arXiv:2611.29066",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

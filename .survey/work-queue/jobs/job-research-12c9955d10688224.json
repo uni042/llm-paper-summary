@@ -35,10 +35,15 @@
   "selection_reason": "Apple Silicon上のループ型MoE推論について、スライディングウィンドウや値正規化等の構造的性質とSRFTを組み合わせた較正不要の2ビットKVキャッシュ圧縮で、32GBメモリ上で100万トークン文脈を扱えることを示しており、エッジデバイスでの長文脈MoE推論のメモリ削減に直接貢献する。",
   "semantic_scholar_id": "d035346d3ce3c791e44cb7d026bab75bca3f7e45",
   "source_url": "https://arxiv.org/abs/2611.29092",
-  "status": "ready",
+  "status": "superseded",
   "title": "One Million Tokens in 20GB: Calibration-Free 2-Bit SRFT KV-Cache Compression for Looped MoE Inference on Apple Silicon",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:19:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.29092-one-million-tokens-in-20gb-calibration-free-2-bit-srft-kv-cache-compress.md",
+  "represented_canonical_id": "arXiv:2611.29092",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

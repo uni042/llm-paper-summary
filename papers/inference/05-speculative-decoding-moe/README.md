@@ -1303,7 +1303,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test](2025-2503.01840-eagle-3.md)**  
-  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：292  
+  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：293  
   特徴回帰制約を外して直接トークン予測し、訓練時に自己生成入力を再投入することでドラフト学習のデータ規模拡大を有効化したEAGLE系投機的復号。
 
 - **2025-09 · [DiffuSpec: Unlocking Diffusion Language Models for Speculative Decoding](2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md)**  
@@ -1402,6 +1402,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：11  
   Cloud 対象の早期出口から暫定トークンを返し、エッジ ドラフトを最終検証と並行して先行生成することで待ち時間を隠し、Jetson Nano＋A100でpre-drafting単体最大11%級の追加改善を示す。
 
+- **2025-09 · [Set Block Decoding is a Language Model Inference Accelerator](2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  次トークン予測とマスク位置予測を同一Transformerへ統合し、未来ブロックの非連続位置をEB-Samplerで並列確定するSBD。8Bモデルで品質を概ね維持しながら前向き計算回数を約3〜5倍削減し、H100屋根線モデルで実時間化の可能性を分析する。
+
 - **2025-06 · [Scaling Speculative Decoding with Lookahead Reasoning](2025-2506.19830-scaling-speculative-decoding-with-lookahead-reasoning.md)**  
   実装：[✓](https://github.com/hao-ai-lab/LookaheadReasoning) ・ リポジトリ内被引用：10  
   従来の投機的復号（投機的復号）は小型モデルが未来のトークンを先行提案し、大型目標モデルが複数位置をまとめて検証する。しかし草稿長を増やすほど全トークンが連続して受理される確率が下がり、目標モデルの検証計算も増えるため、速度向上が頭打ちになる。
@@ -1409,10 +1413,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-11 · [SPECVLM: Enhancing Speculative Decoding of Video LLMs via Verifier-Guided Token Pruning](2025-6ac6253cc798-specvlm-enhancing-speculative-decoding-of-video-llms-via-verifier-guided.md)**  
   実装：[✓](https://github.com/zju-jiyicheng/SpecVLM) ・ リポジトリ内被引用：9  
   削るべきトークンをターゲットのlanguage-to-video 注意機構から決め、まず重要度の高いトークンを累積注意量に基づいて残し、残りを空間的に均一に間引く。
-
-- **2025-09 · [Set Block Decoding is a Language Model Inference Accelerator](2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  次トークン予測とマスク位置予測を同一Transformerへ統合し、未来ブロックの非連続位置をEB-Samplerで並列確定するSBD。8Bモデルで品質を概ね維持しながら前向き計算回数を約3〜5倍削減し、H100屋根線モデルで実時間化の可能性を分析する。
 
 - **2025-06 · [SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding](2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -1430,6 +1430,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/liuxukun2000/Adaptix) ・ リポジトリ内被引用：9  
   単一トークンずつの逐次処理は、モデル重みの読み込みやメモリ帯域の費用が大きい。投機的復号（投機的復号）は軽量な提案器で複数の候補トークンを先に作り、対象モデルの一括検証で正しい接頭辞を確定することで、この逐次実行回数を減らす。論文図3は自己回帰比で約1.8〜2.5倍の処理量向上を示す。
 
+- **2025-10 · [Correctness Forensics for Batch Speculative Decoding: Diagnosing the Ragged Tensor Problem](2025-2510.22876-correctness-forensics-for-batch-speculative-decoding-diagnosing-the-ragg.md)**  
+  実装：[✓](https://github.com/eBay/spec_dec) ・ リポジトリ内被引用：8  
+  著者らは、既存のBSPとDSDに重大な同期不良があることを具体的な出力で示し、正当性の検査指標を設計する。論文のA100実験ではEXSpecはバッチサイズ8で最大約3倍の処理量を示す。
+
 - **2025-09 · [Bridging Draft Policy Misalignment: Group Tree Optimization for Speculative Decoding](2025-2509.22134-bridging-draft-policy-misalignment-group-tree-optimization-for-speculati.md)**  
   実装：[✓](https://github.com/hsj576/GTO) ・ リポジトリ内被引用：8  
   投機的復号では小型草稿モデルが複数の次トークン候補を先に予測し、大型の対象モデルがまとめて検証する。LLaMA-3.1-8B、Vicuna-13B、DeepSeek-R1-Distill-LLaMA-8B、LLaMA-3.3-70Bなどの対話・コード・数学評価で、EAGLE-3比の平均追加高速化は温度0で7.7%、温度1で5.6%と報告される。
@@ -1441,10 +1445,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-11 · [DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving](2025-2511.21669-dsd-distributed-edge-cloud-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   端末側下書きモデルとクラウド側目標モデルによる分散投機的復号をDSD-Simでモデル化し、学習型の適応窓制御で投機窓幅を調整して処理量を最大9.7%向上する。
-
-- **2025-10 · [Correctness Forensics for Batch Speculative Decoding: Diagnosing the Ragged Tensor Problem](2025-2510.22876-correctness-forensics-for-batch-speculative-decoding-diagnosing-the-ragg.md)**  
-  実装：[✓](https://github.com/eBay/spec_dec) ・ リポジトリ内被引用：7  
-  著者らは、既存のBSPとDSDに重大な同期不良があることを具体的な出力で示し、正当性の検査指標を設計する。論文のA100実験ではEXSpecはバッチサイズ8で最大約3倍の処理量を示す。
 
 - **2025-04 · [Dynamic-Width Speculative Beam Decoding for LLM Inference](2025-2409.16560-dynamic-width-speculative-beam-decoding-for-llm-inference.md)**  
   実装：[✓](https://github.com/ZongyueQin/DSBD) ・ リポジトリ内被引用：7  
@@ -1749,7 +1749,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   EAGLE-2は、既存のEAGLEで用いる小型の下書きモデルをそのまま使いながら、投機的復号（投機的復号）で検証する候補木の形を入力文脈に応じて変える手法である。代表的な温度0のVicuna 7B・MT-benchでは通常生成比3.62倍、既存EAGLEは2.90倍であり、平均受理長はそれぞれ4.98と3.94トークンである。
 
 - **2024-02 · [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](2024-2402.02057-lookahead-decoding.md)**  
-  実装：[✓](https://github.com/hao-ai-lab/LookaheadDecoding) ・ リポジトリ内被引用：210  
+  実装：[✓](https://github.com/hao-ai-lab/LookaheadDecoding) ・ リポジトリ内被引用：211  
   先読みデコードは、対象LLMを未来位置へ並列反復して途中の正しい短いトークン列を蓄積し、現在接頭辞に合う候補を一括検証して、追加モデルなしに逐次ステップとメモリ帯域待ちを減らす。
 
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
@@ -2029,7 +2029,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：840  
+  実装：✓ ・ リポジトリ内被引用：841  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  
