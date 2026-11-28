@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-28T05:39:44+00:00",
+  "generated_at": "2026-11-28T05:52:01+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 17,
+  "count": 15,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -423,60 +423,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-912c7e317669--2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-912c7e317669--2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
-      "canonical_id": "arXiv:2611.33896",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.33896",
-      "returned_at": "2026-11-28T00:22:15+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 469 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3879,
-        "body_paragraphs": 21,
-        "method_chars": 1492,
-        "method_paragraphs": 4,
-        "evaluation_chars": 469,
-        "limitation_chars": 286,
-        "insufficiency_flags": [
-          "評価説明量 469 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-93189d97a0af--2026-2611.33896-looped-models-are-fast-multi-token-predictors.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-93189d97a0af--2026-2611.33896-looped-models-are-fast-multi-token-predictors.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
-      "canonical_id": "arXiv:2611.34092",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.34092",
-      "returned_at": "2026-11-28T00:23:23+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 498 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4153,
-        "body_paragraphs": 21,
-        "method_chars": 1537,
-        "method_paragraphs": 4,
-        "evaluation_chars": 498,
-        "limitation_chars": 365,
-        "insufficiency_flags": [
-          "評価説明量 498 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ac68650789d5--2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ac68650789d5--2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.json",
       "worker_run_key": "muse-20261128-b2"
     }
   ]
