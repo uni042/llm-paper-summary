@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（715本）
+## 自動生成の論文一覧（716本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -2846,6 +2846,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-10 · [ALISE: Accelerating Large Language Model Serving with Speculative Scheduling](2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-schedul.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   出力長を検索型予測器で推定し、残り時間の短いジョブを優先するプリエンプティブなスケジューリングと、待ち時間に応じたKVキャッシュのスワップで、ヘッドオブライン・ブロッキングを解くサービング方式。vLLM比で最大2.1倍のスループット。
+
+- **2024-07 · [Token-Picker: Accelerating Attention in Text Generation with Minimized Memory Transfer via Probability Estimation](2024-2407.15131-token-picker-accelerating-attention-in-text-generation-with-minimized-me.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キーの部分ビットから注意確率の上限を保守的に見積もり、確率が無視できるトークンの転送を省くToken-Pickerと専用ハードウェアToPickを提案し、メモリアクセス2.57倍削減、生成で2.28倍の高速化と2.41倍のエネルギー効率を達成した。
 
 - **2024-07 · [QET: Enhancing Quantized LLM Parameters and KV Cache Compression through Element Substitution and Residual Clustering](2024-2407.03637-qet-enhancing-quantized-llm-parameters-and-kv-cache-compression-through-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "Token-Pickerはテキスト生成の注意がメモリ律速である点に対し、ソフトマックス前の確率推定で不要トークンを除きオフチップ転送を最小化する手法であり、デコード注意の高速化への直接貢献が具体的である。",
   "semantic_scholar_id": "3b130ed85558a083c083a35cedf2c44cbf2e0a65",
   "source_url": "https://arxiv.org/abs/2407.15131",
-  "status": "ready",
+  "status": "superseded",
   "title": "Token-Picker: Accelerating Attention in Text Generation with Minimized Memory Transfer via Probability Estimation",
   "type": "research",
   "venue": "Design Automation Conference",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-28T04:15:10+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.15131-token-picker-accelerating-attention-in-text-generation-with-minimized-me.md",
+  "represented_canonical_id": "arXiv:2407.15131",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

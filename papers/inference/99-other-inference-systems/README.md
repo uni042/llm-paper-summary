@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（836本）
+## 自動生成の論文一覧（839本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2950,13 +2950,25 @@
   実装：[✓](https://github.com/Kaiwen-Tang/Sorbet) ・ リポジトリ内被引用：0  
   ソフトマックスと層正規化をビットシフト演算へ置き換え、重みを1ビット化することで、ニューロモルフィックハードウェアへ載せられる初のTransformer型スパイキング言語モデルを実現し、エネルギー試算でBERT比27.16倍の削減を示した研究。
 
+- **2024-09 · [Parse Trees Guided LLM Prompt Compression](2024-2409.15395-parse-trees-guided-llm-prompt-compression.md)**  
+  実装：[✓](https://github.com/LengendaryHippopotamus/PartPrompt) ・ リポジトリ内被引用：0  
+  プロンプト圧縮を構文木と文書階層の大域木の枝刈りへ変換し、局所エントロピーと節点値調整で選ぶPartPromptを提案し、残存率20%のBBCnewsでBLEU 13.69と、生成型を含む比較対象の9.22から11.31を上回った。
+
 - **2024-09 · [Internalizing ASR with Implicit Chain of Thought for Efficient Speech-to-Speech Conversational LLM](2024-2409.17353-internalizing-asr-with-implicit-chain-of-thought-for-efficient-speech-to.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   音声入力から音声出力を生成する大規模言語モデルでは、音声を文字へ転写し、文字で回答を考え、再び音声へ変換する方式が使われる。RTX 3090を使った測定では、初回出力音声トークンの遅延が1.09秒から0.87秒へ低下した。
 
+- **2024-09 · [Deploying Open-Source Large Language Models: A performance Analysis](2024-2409.14887-deploying-open-source-large-language-models-a-performance-analysis.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  vLLMでMistral系とLLaMA-3 70BをV100とA100の複数構成で実測し、同時リクエスト数とプロンプト長に対する100トークン生成時間を7構成分表にまとめ、Mixtral 8x7BではA100 2枚で総計最大約700トークン毎秒、A100 2枚で70B級が実用になるという配備目安を示した計測研究。
+
 - **2024-08 · [Writing in the Margins: Better Inference Pattern for Long Context Retrieval](2024-2408.14906-writing-in-the-margins-better-inference-pattern-for-long-context-retriev.md)**  
   実装：[✓](https://github.com/writer/writing-in-the-margins) ・ リポジトリ内被引用：0  
   チャンク化プリフィルの各区間で質問関連部分を欄外メモとして抽出・分類し、残したメモだけを文脈末尾へ集約して再提示することで、中盤忘却を抑えて長文脈の多段推論と集約を改善するKVキャッシュ対応の推論パターン。
+
+- **2024-08 · [QUITO: Accelerating Long-Context Reasoning through Query-Guided Context Compression](2024-2408.00274-quito-accelerating-long-context-reasoning-through-query-guided-context-c.md)**  
+  実装：[✓](https://github.com/Wenshansilvia/attention_compressor) ・ リポジトリ内被引用：0  
+  質問への応答開始を示すトリガートークンの注意分布で文脈中の語の重要度を測り予算内で残す文脈圧縮QUITOを提案し、2倍圧縮のNaturalQuestionsで正解率58.9%と、パープレキシティ基準の比較対象38.7から53.2%を上回った。
 
 - **2024-08 · [Practical Token Pruning for Foundation Models in Few-shot Conversational Virtual Assistant Systems](2024-2408.11799-practical-token-pruning-for-foundation-models-in-few-shot-conversational.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3085,7 +3097,7 @@
   著者らは、質問の対象実体のウィキペディア閲覧数を人気度の代理指標として、質問の関係種別ごとに閾値を学習し、閾値未満の質問だけ外部文書を検索する適応的検索（適応的 Retrieval）を提案した。PopQAで最良の組合せは正答率46.5%となり、どの常時検索・検索なしの構成よりも5.3ポイント高いと報告する。
 
 - **2023-10 · [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md)**  
-  実装：[✓](https://github.com/carriex/recomp) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/carriex/recomp) ・ リポジトリ内被引用：21  
   Xu、Shi、ChoiによるRECOMPは、検索拡張言語モデル（Retrieval-Augmented Language モデル、RALM）の推論時に、検索した文書をそのままモデルの文脈へ連結する方式を改める。原著は文脈トークン数を主要な効率指標とするため、文書量が5%になったという数値をGPU実行時間が20倍速くなったと読み替えてはならない。
 
 - **2023-10 · [MatFormer: Nested Transformer for Elastic Inference](2023-2310.07707-matformer-nested-transformer-for-elastic-inference.md)**  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "e05625f8031377319dca0484f3dcf856ffbf771a",
+  "base_commit": "19c558f7e41001c469f05193a1c02caba992f86c",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -173,6 +173,7 @@
     "2024-2402.17652-compass-a-decentralized-scheduler-for-latency-sensitive-ml-workflows.json",
     "2024-2403.02920-taylorshift-shifting-the-complexity-of-self-attention-from-squared-to-linear-and-back.json",
     "2024-2403.07339-im-unpack-training-and-inference-with-arbitrarily-low-precision-integers.json",
+    "2024-2403.07921-merino-entropy-driven-design-for-generative-language-models-on-iot-devices.json",
     "2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grained-weight-importance-assessment.json",
     "2024-2403.12688-seven-pruning-transformer-model-by-reserving-sentinels.json",
     "2024-2404.05843-softmax-attention-with-constant-cost-per-token.json",
@@ -209,9 +210,11 @@
     "2024-2407.04147-an-adaptive-language-agnostic-pruning-method-for-greener-language-models-for-code.json",
     "2024-2407.11717-turbo-informativity-driven-acceleration-plug-in-for-vision-language-large-models.json",
     "2024-2407.12070-co-designing-binarized-transformer-and-hardware-accelerator-for-efficient-end-to-end-edge-deployment.json",
+    "2024-2407.15131-token-picker-accelerating-attention-in-text-generation-with-minimized-memory-transfer-via-probability-estimation.json",
     "2024-2407.19775-model-agnostic-hybrid-sharding-for-heterogeneous-distributed-inference.json",
     "2024-2407.20228-flexattention-for-efficient-high-resolution-vision-language-models.json",
     "2024-2408.00008-scalellm-a-resource-frugal-llm-serving-framework-by-optimizing-end-to-end-efficiency.json",
+    "2024-2408.00274-quito-accelerating-long-context-reasoning-through-query-guided-context-compression.json",
     "2024-2408.04413-deeploy-enabling-energy-efficient-deployment-of-small-language-models-on-heterogeneous-microcontrollers.json",
     "2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-inference.json",
     "2024-2408.10631-llm-barber-block-aware-rebuilder-for-sparsity-mask-in-one-shot-for-large-language-models.json",
@@ -220,8 +223,10 @@
     "2024-2409.02026-foundations-of-large-language-model-compression-part-1-weight-quantization.json",
     "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
     "2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.json",
+    "2024-2409.14887-deploying-open-source-large-language-models-a-performance-analysis.json",
     "2024-2409.15254-archon-an-architecture-search-framework-for-inference-time-techniques.json",
     "2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.json",
+    "2024-2409.15395-parse-trees-guided-llm-prompt-compression.json",
     "2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.json",
     "2024-2410.02745-avg-llava-an-efficient-large-multimodal-model-with-adaptive-visual-granularity.json",
     "2024-2410.04139-from-reading-to-compressing-exploring-the-multi-document-reader-for-prompt-compression.json",
@@ -56402,6 +56407,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2403.07921": {
+      "order": [
+        "2026-11-28T04:07:51+00:00",
+        "2024-2403.07921-merino-entropy-driven-design-for-generative-language-models-on-iot-devices.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2407.15131": {
+      "order": [
+        "2026-11-28T04:09:10+00:00",
+        "2024-2407.15131-token-picker-accelerating-attention-in-text-generation-with-minimized-memory-transfer-via-probability-estimation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2408.00274": {
+      "order": [
+        "2026-11-28T04:10:27+00:00",
+        "2024-2408.00274-quito-accelerating-long-context-reasoning-through-query-guided-context-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2409.14887": {
+      "order": [
+        "2026-11-28T04:11:45+00:00",
+        "2024-2409.14887-deploying-open-source-large-language-models-a-performance-analysis.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2409.15395": {
+      "order": [
+        "2026-11-28T04:13:03+00:00",
+        "2024-2409.15395-parse-trees-guided-llm-prompt-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70264,6 +70314,21 @@
     "arxiv:2506.13514": [
       "papers/inference/08-edge-on-device-llm-systems/2025-2506.13514-tensorslm-energy-efficient-embedding-compression-of-sub-billion-paramete.md",
       "papers/inference/08-edge-on-device-llm-systems/2025-2506.13514-tensorslm-energy-efficient-embedding-compression-of-sub-billion-paramete.md"
+    ],
+    "arxiv:2403.07921": [
+      "papers/inference/08-edge-on-device-llm-systems/2024-2403.07921-merino-entropy-driven-design-for-generative-language-models-on-iot-devic.md"
+    ],
+    "arxiv:2407.15131": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2407.15131-token-picker-accelerating-attention-in-text-generation-with-minimized-me.md"
+    ],
+    "arxiv:2408.00274": [
+      "papers/inference/99-other-inference-systems/2024-2408.00274-quito-accelerating-long-context-reasoning-through-query-guided-context-c.md"
+    ],
+    "arxiv:2409.14887": [
+      "papers/inference/99-other-inference-systems/2024-2409.14887-deploying-open-source-large-language-models-a-performance-analysis.md"
+    ],
+    "arxiv:2409.15395": [
+      "papers/inference/99-other-inference-systems/2024-2409.15395-parse-trees-guided-llm-prompt-compression.md"
     ]
   }
 }

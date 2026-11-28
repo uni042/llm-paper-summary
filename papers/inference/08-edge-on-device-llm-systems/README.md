@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（134本）
+## 自動生成の論文一覧（135本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -521,6 +521,10 @@
 - **2024-06 · [Crayon: Customized On-Device LLM via Instant Adapter Blending and Edge-Server Hybrid Inference](2024-2406.07007-crayon-customized-on-device-llm-via-instant-adapter-blending-and-edge-se.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   基礎LoRAのプールを共同学習しておき、利用者の少量の例との類似度で即座に合成してカスタムLoRAを作ることで端末内学習なしにカスタマイズし、2割だけサーバーへ逃がすハイブリッドと合わせてMMLU平均を31.0から47.6パーセントへ上げた研究。
+
+- **2024-02 · [Merino: Entropy-driven Design for Generative Language Models on IoT Devices](2024-2403.07921-merino-entropy-driven-design-for-generative-language-models-on-iot-devic.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重み行列の特異値エントロピーを有効性制約付きで最大化する数理計画により、学習なしでモバイル向け生成言語モデルの建築を決め、OPT-350Mと同等以上の精度をパラメータ82%削減で達成しJetson Nanoで4.9倍高速なモデル群MeRinoを設計した研究。
 
 ### 4年前（2022-12〜2023-11）
 
