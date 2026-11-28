@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-28T03:49:02+00:00",
-  "record_count": 18159,
+  "updated_at": "2026-11-28T05:18:52+00:00",
+  "record_count": 18161,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -259443,6 +259443,34 @@
         "worker-worklist-30.json:job-research-c8aef859405979d4"
       ],
       "title": "Tiny Models are the Computational Saver for Large Models"
+    },
+    "arXiv:2611.34912": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.34912",
+      "identity_tokens": [
+        "arXiv:2611.34912",
+        "id:arXiv:2611.34912",
+        "url:https://arxiv.org/abs/2611.34912"
+      ],
+      "reason": "動画拡散モデル向けVideo VAEのストリーミング符号化・復号（causal window attentionによる時間方向KVキャッシュ有界化）が主題であり、LLM推論・学習システムの対象外。",
+      "first_checked_at": "2026-11-28T05:18:52+00:00",
+      "last_checked_at": "2026-11-28T05:18:52+00:00",
+      "linked_from": [],
+      "title": "LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE"
+    },
+    "arXiv:2611.34278": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.34278",
+      "identity_tokens": [
+        "arXiv:2611.34278",
+        "id:arXiv:2611.34278",
+        "url:https://arxiv.org/abs/2611.34278"
+      ],
+      "reason": "マルチエージェント間のクロスモデルKVキャッシュ転送に伴う安全性アライメント低下とプロンプトインジェクション攻撃（Chasm）を分析するセキュリティ研究であり、推論システム効率化の対象外。",
+      "first_checked_at": "2026-11-28T05:18:52+00:00",
+      "last_checked_at": "2026-11-28T05:18:52+00:00",
+      "linked_from": [],
+      "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems"
     }
   }
 }

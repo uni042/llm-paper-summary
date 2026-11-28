@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-28T03:49:02+00:00",
-  "record_count": 10026,
+  "updated_at": "2026-11-28T05:18:52+00:00",
+  "record_count": 10024,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -150482,50 +150482,22 @@
       "borderline_recheck_count": 0,
       "title": "TigerTTS: Draft-Guided Multi-Frame Parallel Speech-Token Language Model for Fast and Robust Text-to-Speech"
     },
-    "arXiv:2611.34278": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2611.34278",
-      "identity_tokens": [
-        "arXiv:2611.34278"
-      ],
-      "reason": "モデル間KVキャッシュ転送という推論機構を対象に、潜在ハンドオフが安全性アライメントを損なう攻撃面とキャッシュガード防御を分析する内容で、KVキャッシュ機構には直接関係するが主目的はセキュリティ評価であるため保留とする。",
-      "first_checked_at": "2026-11-26T19:40:22+00:00",
-      "last_checked_at": "2026-11-26T19:40:22+00:00",
-      "linked_from": [
-        "arxiv_api_latest_search"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems"
-    },
     "arXiv:2611.34821": {
       "classification": "borderline",
       "canonical_id": "arXiv:2611.34821",
       "identity_tokens": [
-        "arXiv:2611.34821"
+        "arXiv:2611.34821",
+        "id:arXiv:2611.34821",
+        "url:https://arxiv.org/abs/2611.34821"
       ],
-      "reason": "ループ型MoEアーキテクチャのゲイン要因を分解した分析論文で、KVキャッシュを含む一致予算での比較は推論にも関係するが、主たる貢献はモデルアーキテクチャと学習レシピの理解であり、推論システム機構の提案ではないため保留とする。",
+      "reason": "Looped MoEのパラメータ反復利用を同一パラメータ・FLOPs・KVキャッシュ予算で検証する分析研究だが、推論システム実装やオフロード最適化ではなくアーキテクチャ・最適化器（AdamW/Muon）挙動の比較が中心のため保留。",
       "first_checked_at": "2026-11-26T19:40:22+00:00",
-      "last_checked_at": "2026-11-26T19:40:22+00:00",
+      "last_checked_at": "2026-11-28T05:18:52+00:00",
       "linked_from": [
         "arxiv_api_latest_search"
       ],
       "borderline_recheck_count": 0,
       "title": "LoopTitan: What Does Parameter Revisit Buy a Mixture-of-Experts?"
-    },
-    "arXiv:2611.34912": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2611.34912",
-      "identity_tokens": [
-        "arXiv:2611.34912"
-      ],
-      "reason": "ストリーミング動画VAEの符号化と復号を因果ウィンドウ注意で高速化しKVキャッシュを有界に保つ内容で、推論高速化の技術要素はあるものの対象は動画生成モデルのVAEであり、LLM推論システムへの直接貢献は薄いため保留とする。",
-      "first_checked_at": "2026-11-26T19:40:22+00:00",
-      "last_checked_at": "2026-11-26T19:40:22+00:00",
-      "linked_from": [
-        "arxiv_api_latest_search"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE"
     },
     "arXiv:2611.30825": {
       "classification": "borderline",

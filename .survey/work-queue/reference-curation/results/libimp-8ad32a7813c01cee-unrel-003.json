@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ad32a7813c01cee-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.34278",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.34278",
+    "identity_tokens": [
+      "arXiv:2611.34278",
+      "id:arXiv:2611.34278",
+      "url:https://arxiv.org/abs/2611.34278"
+    ],
+    "reason": "マルチエージェント間のクロスモデルKVキャッシュ転送に伴う安全性アライメント低下とプロンプトインジェクション攻撃（Chasm）を分析するセキュリティ研究であり、推論システム効率化の対象外。",
+    "first_checked_at": "2026-11-28T05:18:52+00:00",
+    "last_checked_at": "2026-11-28T05:18:52+00:00",
+    "linked_from": [],
+    "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems"
+  },
+  "processed_at": "2026-11-28T05:18:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ad32a7813c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
