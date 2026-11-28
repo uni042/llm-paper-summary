@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（288本）
+## 自動生成の論文一覧（289本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -919,6 +919,10 @@
 - **2025-02 · [Binary Neural Networks for Large Language Model: A Survey](2025-2502.19008-binary-neural-networks-for-large-language-model-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   中心となるのは、BitNet、BitNet b1.58、BitNet a4.8、FBI-LLM、Bi-Mambaなど、重みの二値化・三値化を学習時から組み込む方式である。
+
+- **2025-11 · [Object-Centric Vision Token Pruning for Vision Language Models](2025-2511.20439-object-centric-vision-token-pruning-for-vision-language-models.md)**  
+  実装：[✓](https://github.com/GarryLarry010131/OC-VTP) ・ リポジトリ内被引用：0  
+  視覚トークンを物体単位のスロットへ集約し各スロットの代表トークンだけを残す保証付き枝刈りで、LLaVA-1.5の視覚トークンを11.1パーセントまで削っても精度の95.5パーセントを保ち、プリフィルFLOPsを約6.5分の1にした視覚言語モデル向け推論高速化。
 
 - **2025-11 · [Iris: First-Class Multi-GPU Programming Experience in Triton](2025-2511.12500-iris-first-class-multi-gpu-programming-experience-in-triton.md)**  
   実装：[✓](https://github.com/ROCm/iris) ・ リポジトリ内被引用：0  

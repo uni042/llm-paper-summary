@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（138本）
+## 自動生成の論文一覧（139本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -439,6 +439,10 @@
 - **2025-11 · [Why Should the Server Do It All?: A Scalable, Versatile, and Model-Agnostic Framework for Server-Light DNN Inference over Massively Distributed Clients via Training-Free Intermediate Feature Compression](2025-2511.11608-why-should-the-server-do-it-all-a-scalable-versatile-and-model-agnostic-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分割推論の中間特徴を非対称トップK、大きさ分割、適応ビット量子化の3段で正確な比率に圧縮し、計算をエッジへ寄せることで、上り通信を最大10分の1、サーバGPU時間を最大4.4分の1にし、精度低下を概ね3ポイント以内に収めた学習不要の分散推論基盤。
+
+- **2025-11 · [Joint Partitioning and Placement of Foundation Models for Real-Time Edge AI](2025-2512.01039-joint-partitioning-and-placement-of-foundation-models-for-real-time-edge.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  基盤モデルの層分割とエッジノードへの配置を実行時に決め直す適応型分割推論の枠組みを定式化し、想定シナリオの期待値として帯域20Mb/sで遅延を500ミリ秒から200ミリ秒へ下げる見積もりを示したオーケストレーション研究。
 
 - **2025-11 · [Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks](2025-2511.02647-federated-attention-a-distributed-paradigm-for-collaborative-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

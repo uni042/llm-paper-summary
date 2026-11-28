@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（371本）
+## 自動生成の論文一覧（372本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -930,6 +930,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/Qcompiler/llm_bench) ・ リポジトリ内被引用：0  
   LLM量子化を事前学習・微調整・推論の三段階と対象部位で体系化し、数学的基礎、外れ値対策、KVキャッシュ量子化、カーネル生成までを整理したサーベイで、混合精度が低ビットでも精度を保つ鍵だと示す。
 
+- **2025-12 · [Network and Compiler Optimizations for Efficient Linear Algebra Kernels in Private Transformer Inference](2025-2512.11135-network-and-compiler-optimizations-for-efficient-linear-algebra-kernels-.md)**  
+  実装：[✓](https://github.com/baahl-nyu/orion) ・ リポジトリ内被引用：0  
+  FHEによる暗号化Transformer推論のカーネルをOrion上で実装・計測し、BSGSが行方式の最大13.7倍、活性化枝刈りと線形統合でFFN遅延が11.46分の1になること、そして基本演算が演算強度約0.1でメモリ律速であることを示したプライベート推論の特性研究。
+
 - **2025-12 · [Memory-Efficient Acceleration of Block Low-Rank Foundation Models on Resource Constrained GPUs](2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-res.md)**  
   実装：[✓](https://github.com/pabillam/mem-efficient-blr) ・ リポジトリ内被引用：0  
   ブロック低ランク圧縮は多トークン推論では中間テンソルの往復でメモリ律速になることをルーフライン分析で示し、部分融合とメモリ配置の最適化を行ったTritonカーネルで中間の書き戻しを消すことで、圧縮の理論上の節約を実測の高速化へ戻す研究。
@@ -1479,7 +1483,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：952  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：953  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  

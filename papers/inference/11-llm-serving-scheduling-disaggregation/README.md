@@ -2407,7 +2407,7 @@
   異種GPU資源を使う演算をナノバッチ化して同一装置内で重畳し、自動探索で高スループットな推論パイプラインを構成する。
 
 - **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：101  
+  実装：✓ ・ リポジトリ内被引用：102  
   根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
 - **2023-12 · [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md)**  
@@ -2499,7 +2499,7 @@
   常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
 
 - **2024-07 · [LLM Inference Serving: Survey of Recent Advances and Opportunities](2024-2407.12391-llm-inference-serving-survey-of-recent-advances-and-opportunities.md)**  
-  実装：✓ ・ リポジトリ内被引用：28  
+  実装：✓ ・ リポジトリ内被引用：29  
   本論文は、大規模言語モデル（Large Language モデル、LLM）の推論サービスを効率化するシステム研究を整理した総説である。
 
 - **2024-09 · [No Request Left Behind: Tackling Heterogeneity in Long-Context LLM Inference with Medha](2024-2409.17264-no-request-left-behind-tackling-heterogeneity-in-long-context-llm-infere.md)**  

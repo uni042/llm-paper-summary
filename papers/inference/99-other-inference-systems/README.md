@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（844本）
+## 自動生成の論文一覧（846本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1702,6 +1702,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   異種LLMの編成を合意状態が回帰する意味的回帰ネットワークとして実行する審議プロトコルNSEDを提案し、ブローカーによる制約付きチーム編成、自己投票を禁じる二次投票、疲労モデルによる最適停止を備え、小型モデルの編成でAIME 2025の84.0パーセントを示す。
 
+- **2026-01 · [LAMP: Look-Ahead Mixed-Precision Inference of Large Language Models](2026-2601.21623-lamp-look-ahead-mixed-precision-inference-of-large-language-models.md)**  
+  実装：[✓](https://github.com/sbudzinskiy/LAMP-LLM) ・ リポジトリ内被引用：0  
+  行列積の直後に続く非線形演算が丸め誤差を増幅する度合いを先読みし、注意機構のキー・クエリ内積などのうち数値的に敏感なごく一部だけを高精度で再累算することで、GPT-2 XLの低精度推論誤差を最大2桁超削減する混合精度累算フレームワーク。
+
 - **2026-01 · [FourierSampler: Unlocking Non-Autoregressive Potential in Diffusion Language Models via Frequency-Guided Generation](2026-2601.23182-fouriersampler-unlocking-non-autoregressive-potential-in-diffusion-langu.md)**  
   実装：[✓](https://github.com/ShirleYoung/FourierSampler) ・ リポジトリ内被引用：0  
   拡散言語モデルの隠れ状態で低周波が構造、高周波が詳細を担うという発見に基づき、周波数窓を滑らせて構造から詳細へ復号順序を誘導し、LLaDAとSDARで数学とコードの精度を一貫して上げる学習不要のサンプラー。
@@ -2291,6 +2295,10 @@
 - **2025-11 · [BudgetMem: Training-Free Selective Memory for Cost-Efficient Long-Context Processing in Language Models](2025-2511.04919-budgetmem-training-free-selective-memory-for-cost-efficient-long-context.md)**  
   実装：[✓](https://github.com/Chandra-Alla/BudgetMem-paper) ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の長文脈処理では、全入力をモデルへ投入すると注意計算・メモリ・料金が増える。トークン単位の圧縮器では、語句が断片的に残ることで検索に必要な語順や句のまとまりが失われる場合がある。既定の保持比率は30%であり、残した断片をBM25検索索引に格納する。
+
+- **2025-11 · [Behavior-Equivalent Token: Single-Token Replacement for Long Prompts in LLMs](2025-2511.23271-behavior-equivalent-token-single-token-replacement-for-long-prompts-in-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長いシステムプロンプトの内容を再構成学習で埋め込み、フルプロンプト付きモデルの出力分布を知識蒸留して振る舞いまで写した特殊トークン1個でプロンプトを置き換えることで、性能のおおむね98%を保ったままプリフィルをほぼ消し、TTFTを最大59%短縮するプロンプト圧縮。
 
 - **2025-11 · [Automatic Pruning Discovery for Large Language Models](2025-2511.15390-automatic-pruning-discovery-for-large-language-models.md)**  
   実装：[✓](https://anonymous.4open.science/r/AutoPrune) ・ リポジトリ内被引用：0  
@@ -2890,6 +2898,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   SAMT（Spatial 構成 Mapping for Transformers）は、Transformer推論の行列演算をTPU型・NVDLA型などの空間アクセラレータへ割り当てる際に、演算子融合の選択とPE（processing element）上のデータフローを同時に最適化する探索フローである。
 
+- **2024-10 · [AERO: Entropy-Guided Framework for Private LLM Inference](2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  注意エントロピーで非線形演算の役割を診断し、静的正規化とヘッド別エントロピー正則化で非線形を削っても学習が崩れないようにする、プライベート推論向けの設計枠組み。通信を3.4倍削減する。
+
 - **2024-10 · [Addition is All You Need for Energy-efficient Language Models](2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   浮動小数点乗算の仮数部の積を落として定数で補い、乗算を1回の整数加算で近似する L-Mul を提案し、fp8 乗算より少ないゲート数で同等以上の精度を示すとともに、注意機構への学習なし置換で bf16 との平均差0.07パーセントに収まることを言語モデルで確認した研究。
@@ -2965,10 +2977,6 @@
 - **2024-10 · [Approximately Aligned Decoding](2024-2410.01103-approximately-aligned-decoding.md)**  
   実装：[✓](https://github.com/amazon-science/Approximately-Aligned-Decoding) ・ リポジトリ内被引用：0  
   Approximately Aligned Decoding（AprAD）は、大規模言語モデルの生成途中で禁止文字、構文違反、存在しないAPIの呼び出しなどを検出したとき、生成済み接頭辞をどこまで残して再開するかを投機的サンプリング（投機的 sampling）の受理・棄却計算で決める方式である。
-
-- **2024-10 · [AERO: Entropy-Guided Framework for Private LLM Inference](2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  注意エントロピーで非線形演算の役割を診断し、静的正規化とヘッド別エントロピー正則化で非線形を削っても学習が崩れないようにする、プライベート推論向けの設計枠組み。通信を3.4倍削減する。
 
 - **2024-09 · [Sorbet: A Neuromorphic Hardware-Compatible Transformer-Based Spiking Language Model](2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-lang.md)**  
   実装：[✓](https://github.com/Kaiwen-Tang/Sorbet) ・ リポジトリ内被引用：0  

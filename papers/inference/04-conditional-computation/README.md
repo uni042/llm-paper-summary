@@ -666,6 +666,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：[✓](https://github.com/intcomp/attention-bias) ・ リポジトリ内被引用：2  
   多くの視覚トークンが冗長なので、言語モデルの初期層で重要度の低いトークンを捨てれば、以後の注意機構やKV保持の負荷を下げられる。
 
+- **2025-04 · [Saliency-driven Dynamic Token Pruning for Large Language Models](2025-2504.04514-saliency-driven-dynamic-token-pruning-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  KVキャッシュを削減する方式は、生成段階のメモリと注意計算を減らす一方、既に全入力を処理した後でKVを捨てるだけではプリフィル計算を取り戻せない。
+
 - **2025-03 · [PromptDistill: Query-based Selective Token Retention in Intermediate Layers for Efficient Large Language Model Inference](2025-2503.23274-promptdistill-query-based-selective-token-retention-in-intermediate-laye.md)**  
   実装：[✓](https://github.com/declare-lab/PromptDistill) ・ リポジトリ内被引用：2  
   長文の入力を持つ大規模言語モデルでは、プロンプトの全位置を全Transformer層で処理すると、入力長に伴って注意計算と中間状態の保存量が増える。PromptDistillは、最初の数層だけ全位置を処理した後、入力の最後の位置のqueryと各位置のkeyから選んだ重要位置に計算を集中する。< の本文§2–3とTable 1–5を照合した。
@@ -717,10 +721,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2025-05 · [Beyond Hard and Soft: Hybrid Context Compression for Balancing Local and Global Information Retention](2025-2505.15774-beyond-hard-and-soft-hybrid-context-compression-for-balancing-local-and-.md)**  
   実装：[✓](https://github.com/Xnhyacinth/HyCo2) ・ リポジトリ内被引用：1  
   HyCo2（Hybrid Context Compression）は、長文脈の検索拡張生成（Retrieval-Augmented Generation; RAG）で、必要な情報を保持しながら入力トークン数を減らす圧縮方式である。デフォルトでは16個の潜在クエリと、原文トークンの上位10%を保持する設定である。
-
-- **2025-04 · [Saliency-driven Dynamic Token Pruning for Large Language Models](2025-2504.04514-saliency-driven-dynamic-token-pruning-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  KVキャッシュを削減する方式は、生成段階のメモリと注意計算を減らす一方、既に全入力を処理した後でKVを捨てるだけではプリフィル計算を取り戻せない。
 
 - **2025-03 · [Local Information Matters: Inference Acceleration For Grounded Conversation Generation Models Through Adaptive Local-Aware Token Pruning](2025-2503.23959-local-information-matters-inference-acceleration-for-grounded-conversati.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -821,7 +821,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   隠れ状態の小振幅成分を層別にゼロ化し、対応重みチャネルを読まない専用カーネルで、追加学習なしに40〜50%のモデル全体活性疎性と最大1.8倍のデコード高速化を実現する。
 
 - **2024-07 · [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：41  
+  実装：✓ ・ リポジトリ内被引用：42  
   LazyLLMは、長い入力文のすべてのトークンを全変換層で計算する慣行を改め、現在予測しようとしている次のトークンに重要な入力部分だけを深い層へ進める推論時の計算削減法である。
 
 - **2024-06 · [Turbo Sparse: Achieving LLM SOTA Performance with Minimal Activated Parameters](2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md)**  

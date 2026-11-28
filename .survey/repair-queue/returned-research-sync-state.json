@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d338b5116f1e9f7c54dc00b62b529c4001189a85",
+  "base_commit": "764bd8abcb3a8dcb5d94c1ec7a7e168b5631041a",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -518,10 +518,13 @@
     "2025-2511.19438-opt4gptq-co-optimizing-memory-and-computation-for-4-bit-gptq-quantized-llm-inference-on-heterogeneous-platforms.json",
     "2025-2511.19518-towards-efficient-vlms-information-theoretic-driven-compression-via-adaptive-structural-pruning.json",
     "2025-2511.19822-mosaic-pruning-a-hierarchical-framework-for-generalizable-pruning-of-mixture-of-experts-models.json",
+    "2025-2511.20439-object-centric-vision-token-pruning-for-vision-language-models.json",
     "2025-2511.21910-platinum-path-adaptable-lut-based-accelerator-tailored-for-low-bit-weight-matrix-multiplication.json",
     "2025-2511.22176-focused-chain-of-thought-efficient-llm-reasoning-via-structured-input-information.json",
     "2025-2511.22599-discedge-distributed-context-management-for-large-language-models-at-the-edge.json",
+    "2025-2511.23271-learning-a-single-token-to-replace-long-system-prompts-in-llms.json",
     "2025-2512.00335-efficient-kernel-mapping-and-comprehensive-system-evaluation-of-llm-acceleration-on-a-cgla.json",
+    "2025-2512.01039-joint-partitioning-and-placement-of-foundation-models-for-real-time-edge-ai.json",
     "2025-2512.02351-understanding-and-harnessing-sparsity-in-unified-multimodal-models.json",
     "2025-2512.02924-autoneural-co-designing-vision-language-models-for-npu-inference.json",
     "2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and-gauge-fixing.json",
@@ -536,6 +539,7 @@
     "2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.json",
     "2025-2512.09927-token-expand-merge-training-free-token-compression-for-vision-language-action-models.json",
     "2025-2512.10922-sparseswaps-tractable-llm-pruning-mask-refinement-at-scale.json",
+    "2025-2512.11135-network-and-compiler-optimizations-for-efficient-linear-algebra-kernels-in-private-transformer-inference.json",
     "2025-2512.11221-adaptive-soft-rolling-kv-freeze-with-entropy-guided-recovery-sublinear-memory-growth-for-efficient-llm-inference.json",
     "2025-2512.11411-sliced-relu-attention-quasi-linear-contextual-expressivity-via-sorting.json",
     "2025-2512.11534-hfs-holistic-query-aware-frame-selection-for-efficient-video-understanding.json",
@@ -636,6 +640,7 @@
     "2026-2601.20655-onepiece-a-large-scale-distributed-inference-system-with-rdma-for-complex-ai-generated-content-aigc-workflows.json",
     "2026-2601.20706-npu-design-for-diffusion-language-model-inference.json",
     "2026-2601.20755-profinfer-an-ebpf-based-fine-grained-llm-inference-profiler.json",
+    "2026-2601.21623-lamp-look-ahead-mixed-precision-inference-of-large-language-models.json",
     "2026-2601.21684-do-not-waste-your-rollouts-recycling-search-experience-for-efficient-test-time-scaling.json",
     "2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.json",
     "2026-2601.22563-eugens-efficient-unified-and-general-dense-layers.json",
@@ -56602,6 +56607,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2511.20439": {
+      "order": [
+        "2026-11-28T05:09:01+00:00",
+        "2025-2511.20439-object-centric-vision-token-pruning-for-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2511.23271": {
+      "order": [
+        "2026-11-28T05:10:09+00:00",
+        "2025-2511.23271-learning-a-single-token-to-replace-long-system-prompts-in-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.01039": {
+      "order": [
+        "2026-11-28T05:11:18+00:00",
+        "2025-2512.01039-joint-partitioning-and-placement-of-foundation-models-for-real-time-edge-ai.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.11135": {
+      "order": [
+        "2026-11-28T05:12:27+00:00",
+        "2025-2512.11135-network-and-compiler-optimizations-for-efficient-linear-algebra-kernels-in-private-transformer-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.21623": {
+      "order": [
+        "2026-11-28T05:13:37+00:00",
+        "2026-2601.21623-lamp-look-ahead-mixed-precision-inference-of-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70544,6 +70594,21 @@
     "arxiv:2511.18832": [
       "papers/inference/99-other-inference-systems/2025-2511.18832-concept-than-document-context-compression-via-amr-based-conceptual-entro.md",
       "papers/inference/99-other-inference-systems/2025-2511.18832-concept-than-document-context-compression-via-amr-based-conceptual-entro.md"
+    ],
+    "arxiv:2511.20439": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20439-object-centric-vision-token-pruning-for-vision-language-models.md"
+    ],
+    "arxiv:2511.23271": [
+      "papers/inference/99-other-inference-systems/2025-2511.23271-behavior-equivalent-token-single-token-replacement-for-long-prompts-in-l.md"
+    ],
+    "arxiv:2512.01039": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2512.01039-joint-partitioning-and-placement-of-foundation-models-for-real-time-edge.md"
+    ],
+    "arxiv:2512.11135": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2512.11135-network-and-compiler-optimizations-for-efficient-linear-algebra-kernels-.md"
+    ],
+    "arxiv:2601.21623": [
+      "papers/inference/99-other-inference-systems/2026-2601.21623-lamp-look-ahead-mixed-precision-inference-of-large-language-models.md"
     ]
   }
 }
