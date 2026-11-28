@@ -35,10 +35,15 @@
   "selection_reason": "並列ブロックドラフタのlm_head読み出しを低ランク基底へ置換し補正ヘッドを強化してJacobi反復で並列精緻化するWavefrontをvLLM上のCUDAグラフとして実装し、Qwen3系で既存投機的デコード比最大23.6％のスループット改善を示す直接貢献であるため対象とした。",
   "semantic_scholar_id": "ca0fd68aa33b1ec576195f4021f1164ce7035fcd",
   "source_url": "https://arxiv.org/abs/2611.31638",
-  "status": "ready",
+  "status": "superseded",
   "title": "Wavefront: Low-Rank Drafting with Parallel Causal Refinement for Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T05:39:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2611.31638-wavefront-low-rank-drafting-with-parallel-causal-refinement-for-speculat.md",
+  "represented_canonical_id": "arXiv:2611.31638",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

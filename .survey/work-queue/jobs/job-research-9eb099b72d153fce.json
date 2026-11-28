@@ -35,10 +35,15 @@
   "selection_reason": "文脈長に応じて重みとKVキャッシュの配置と計算割当をサブレイヤ単位で切り替える実行計画を事前計算し、単一GPUのオフロード推論でPipelined Sharding比最大16.8倍のレイテンシ改善を一次要旨で示す、階層メモリ配置最適化への直接貢献であるため対象とした。",
   "semantic_scholar_id": "94c25b4b7e94be6c608e9f1654ca1d2930f2431d",
   "source_url": "https://arxiv.org/abs/2611.32295",
-  "status": "ready",
+  "status": "superseded",
   "title": "Norn: Context-Length-Aware Optimization of Weight and KV Cache Placement for Offloaded LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T05:39:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-.md",
+  "represented_canonical_id": "arXiv:2611.32295",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

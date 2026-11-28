@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（83本）
+## 自動生成の論文一覧（84本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -118,6 +118,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-11 · [RankCast: Phase-Aware Rank Balancing in MoE Serving](2026-2611.33542-rankcast-phase-aware-rank-balancing-in-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィルではランク価格でトークン割り当てを寄せ、デコードでは忙しいランクのエキスパートを閉じることで、フェーズごとに違うMoEのランク負荷ピークを上位エキスパート保護の統一制約で下げ、プリフィル最大19パーセント高速化とデコード最大10パーセント短縮を品質低下1ポイント未満で実機示したMoEサービング方式。
+
+- **2026-11 · [Inference-Aware Congestion Control for Distributed MoE Inference](2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  集合通信の依存関係とGPU側消費者の準備状態をACK/INTの輻輳制御へ取り込み、計算を実際に止めている転送へ帯域を寄せることで、リンク利用率だけを見るHPCCより平均TTFTを最大19.41パーセント、GPU待ちを54.86パーセント下げた分散MoE推論向け輻輳制御。
 
 - **2026-11 · [Communicate the Change: Efficient Expert Parallelism via Activation Compression](2026-2611.22215-communicate-the-change-efficient-expert-parallelism-via-activation-compr.md)**  
   実装：[✓](https://github.com/McGill-NLP/EchoMoE) ・ リポジトリ内被引用：0  

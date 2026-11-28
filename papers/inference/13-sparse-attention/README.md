@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（260本）
+## 自動生成の論文一覧（261本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -337,6 +337,10 @@
 - **2026-11 · [Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention](2026-2610.42147-latent-sparse-attention-towards-subquadratic-ultra-long-context-attentio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   キーを学習した潜在空間で意味的に集めてクエリが代表だけを採点する疎な注意で、千万トークンで一層の入力処理を元の疎な注意より二十二・七倍・全注意より七十二・四倍速くし精度を数点以内に保ち、原生型でも全注意と同等の精度と一・六倍の学習高速化を示した。
+
+- **2026-11 · [L2C2: Enhancing Large-scale Chiplets for Agent Long-Context LLM Inference with Sparse and Distributed Attention](2026-2611.33691-l2c2-enhancing-large-scale-chiplets-for-agent-long-context-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  チップレット上の分散スパース注意を、部分プリフィルのSplit-Comm注意と長さ適応の双モード、デコードのトークン交互割当てと動的キャッシュ分散で最適化するL2C2を提案し、シミュレーションで部分プリフィル1.45倍、デコード1.53倍の高速化を示した。
 
 - **2026-11 · [DTS: Delta-Based Tile Scoring for Efficient Long-Context Sparse Attention](2026-2611.25938-dts-delta-based-tile-scoring-for-efficient-long-context-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -883,7 +887,7 @@
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：242  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：243  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  

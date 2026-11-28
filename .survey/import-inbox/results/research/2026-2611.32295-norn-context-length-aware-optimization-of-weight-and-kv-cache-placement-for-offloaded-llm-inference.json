@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "b8358c4c6ac3dd24cba58978787d9bc3682ceba7e877ed63989e44ef156b74f5",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.md",
+  "status": "imported",
+  "source_sha256": "0ddb1398f3a4926fdd0c85be338bf7daabcd31b5d8391187c0466f192393a7aa",
   "canonical_id": "arXiv:2611.32295",
-  "worker_completed_at": "2026-11-28T08:10:00+09:00",
-  "worker_run_key": "muse-20261128-b2",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-.md",
+  "lineage": "07-kv-cache-optimization-compression",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-28T12:05:36+09:00",
+  "worker_run_key": "muse-20261128-cont-repair",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 5119,
-    "body_paragraphs": 21,
+    "body_chars": 6632,
+    "body_paragraphs": 24,
     "method_chars": 2087,
     "method_paragraphs": 4,
-    "evaluation_chars": 489,
+    "evaluation_chars": 2002,
     "limitation_chars": 392,
-    "insufficiency_flags": [
-      "評価説明量 489 < 500"
-    ]
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 489 < 500"
-  ],
-  "processed_at": "2026-11-28T00:05:53+00:00"
+  "processed_at": "2026-11-28T05:33:34+00:00"
 }
