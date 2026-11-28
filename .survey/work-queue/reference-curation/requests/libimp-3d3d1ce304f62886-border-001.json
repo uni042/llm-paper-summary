@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3d3d1ce304f62886-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2510.02838",
+  "reason": "全文通読の結果、本論文はテキストから画像・動画を生成する拡散パイプライン（エンコード、拡散、デコードの3段階）を対象に、段階単位の配置計画とリクエスト振り分けを動的に決めるサービングシステムであり、評価モデルはStableDiffusion3-Medium、Flux.1、CogVideoX1.5-5B、HunyuanVideoの生成ビジョンパイプラインのみで、LLMのテキスト生成推論、KVキャッシュ、トークン単位デコード等の評価は一次資料に含まれない。段階分離やSLO配慮の配置という考え方はLLMサービングと隣接するものの、本サーベイの対象であるLLM推論システムへの直接の技術的貢献は確認できないためborderlineと判定した。",
+  "title": "TridentServe: A Stage-level Serving System for Diffusion Pipelines",
+  "identity_tokens": [
+    "arXiv:2510.02838",
+    "TridentServe",
+    "diffusion pipeline serving"
+  ],
+  "linked_from": [
+    "worker-worklist-30.json:job-research-1951d1ff84f29a9c"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d3d1ce304f6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
