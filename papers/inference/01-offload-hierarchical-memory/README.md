@@ -586,13 +586,13 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：22  
   注意演算とその他をH20/H100へ分離し、CPU非介在通信と自動分割・パイプラインで層間通信を隠して、同費用vLLM比16.1〜90.1%高いデコードスループットを得る。
 
+- **2024-09 · [TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference](2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  TwinPilotsは、モデルの重みと鍵・値キャッシュ（KVキャッシュ）が画像処理装置（GPU）の高帯域幅メモリに収まらない状況で、中央処理装置（CPU）を単なる重みの保管先ではなく、GPUと並行する計算装置として扱う推論方式である。
+
 - **2024-09 · [Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM](2024-2409.15654-cambricon-llm-chiplet-flash-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。
-
-- **2024-09 · [TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference](2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
-  TwinPilotsは、モデルの重みと鍵・値キャッシュ（KVキャッシュ）が画像処理装置（GPU）の高帯域幅メモリに収まらない状況で、中央処理装置（CPU）を単なる重みの保管先ではなく、GPUと並行する計算装置として扱う推論方式である。
 
 - **2024-03 · [OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization](2024-2403.12983-osscar-one-shot-structured-pruning-in-vision-and-language-models-with-co.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -621,7 +621,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-12〜2023-11）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：555  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：556  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-12〜2022-11）
