@@ -36,6 +36,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：5  
   FluxMoEは層の実行直前だけ必要な専門家重みをGPUへ実体化し、直後に解放するPagedTensorと帯域比例のストリーミングで、KVキャッシュを圧迫する常駐重みを減らす。
 
+- **2026-03 · [DyMoE: Dynamic Expert Orchestration with Mixed-Precision Quantization for Efficient MoE Inference on Edge](2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  DyMoEは、混合専門家モデル（Mixture-of-Experts、MoE）をGPUメモリが12〜24GB程度に制約された端末で動かすため、専門家ごと・層ごと・入力ごとに必要な重み精度を変える推論システムである。
+
 - **2026-08 · [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   DASHは将来型High-Bandwidth FlashをGPU/HBM近傍へ接続し、専門家重みをGPUへ直送する経路とHBM経由経路を並行利用して、大容量MoEのフラッシュ転送待ちを減らす。
@@ -59,10 +63,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-03 · [FluxMem: Adaptive Hierarchical Memory for Streaming Video Understanding](2026-2603.02096-fluxmem-adaptive-hierarchical-memory-for-streaming-video-understanding.md)**  
   実装：[✓](https://github.com/YiwengXie/FluxMem) ・ リポジトリ内被引用：3  
   すべての視覚トークンを保持すると、時間の経過とともに事前充填（プリフィル）の費用、KVキャッシュ、GPUメモリ使用量が増加する。直近のフレームは細部を残し、少し古いフレームは隣接時刻との重複を除き、さらに古いフレームは空間的に類似する領域を一つの代表トークンへ統合する。
-
-- **2026-03 · [DyMoE: Dynamic Expert Orchestration with Mixed-Precision Quantization for Efficient MoE Inference on Edge](2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  DyMoEは、混合専門家モデル（Mixture-of-Experts、MoE）をGPUメモリが12〜24GB程度に制約された端末で動かすため、専門家ごと・層ごと・入力ごとに必要な重み精度を変える推論システムである。
 
 - **2026-01 · [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -559,7 +559,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   Mixtralの専門家重みをCPUに置き、LRUキャッシュと投機的先読みで必要な専門家だけGPUへ移して、12〜16GB級VRAMでの転送待ちを減らす。
 
 - **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](2024-2411.01433-hobbit.md)**  
-  実装：✓ ・ リポジトリ内被引用：61  
+  実装：✓ ・ リポジトリ内被引用：62  
   重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。
 
 - **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  

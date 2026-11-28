@@ -240,6 +240,10 @@
   実装：[✓](https://github.com/SHA-4096/EntropyInfer) ・ リポジトリ内被引用：1  
   長い入力を処理するLLMでは、入力文脈全体の注意機構計算がプリフィル 遅延を押し上げ、生成中は過去トークンのキー/値 (KV) が蓄積してGPU メモリを圧迫する。
 
+- **2026-05 · [VisionPulse: Dynamic Visual Sparsity for Efficient Multimodal Reasoning](2026-2605.31457-visionpulse-dynamic-visual-sparsity-for-efficient-multimodal-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  視覚言語モデル（Vision-Language モデル）は画像を多数の視覚トークンへ変換し、テキストとともに自己注意（self-注意機構）へ入力する。
+
 - **2026-05 · [Stochastic Sparse Attention for Memory-Bound Inference](2026-2605.01910-stochastic-sparse-attention-for-memory-bound-inference.md)**  
   実装：[✓](https://github.com/OPUSLab/SANTA) ・ リポジトリ内被引用：1  
   SANTA（Stochastic Additive No-mulT 注意機構）は、注意確率を使って少数の値ベクトルだけを抽出し、その平均で密な注意出力を近似する。RTX 6000 Ada上の32K文脈では、精度が密注意と統計的に同等な設定で注意カーネルが約1.5倍高速化した。
@@ -574,10 +578,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   橋渡しトークンを拾うウォーク型スコアと重み付き貯水池サンプリングでKVキャッシュを追い出す学習不要の方式で、8割追い出しでも全注意に約1ポイント差まで迫った。
 
-- **2026-05 · [VisionPulse: Dynamic Visual Sparsity for Efficient Multimodal Reasoning](2026-2605.31457-visionpulse-dynamic-visual-sparsity-for-efficient-multimodal-reasoning.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  視覚言語モデル（Vision-Language モデル）は画像を多数の視覚トークンへ変換し、テキストとともに自己注意（self-注意機構）へ入力する。
-
 - **2026-05 · [PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models](2026-2605.20813-pulsecol-periodically-refreshed-column-sparse-attention-for-accelerating.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PulseColは、拡散言語モデル（diffusion language モデル、dLLM）の生成で同じ系列に対する双方向の自己注意を何度も計算する費用を減らす方式である。
@@ -697,7 +697,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：200  
+  実装：✓ ・ リポジトリ内被引用：201  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  

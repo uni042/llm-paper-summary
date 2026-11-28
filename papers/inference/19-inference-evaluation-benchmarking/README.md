@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（289本）
+## 自動生成の論文一覧（291本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -190,6 +190,10 @@
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-11 · [VAPOR: Improving Multimodal Reasoning with Sparse Visual Updates](2026-2611.33751-vapor-improving-multimodal-reasoning-with-sparse-visual-updates.md)**  
+  実装：[✓](https://github.com/Su-my/VAPOR) ・ リポジトリ内被引用：0  
+  生成のたびに視覚注意を計算し直す無駄を、ヘッドごとに視覚注意出力をキャッシュして再利用し、視覚キーの低ランク近似で見積もった視覚マスが閾値を超えたときだけ正確に再計算することで削る学習不要の方式で、全視覚トークンを保持したまま正解率とデコード速度を同時に改善した。
+
 - **2026-11 · [Understanding the Energy Cost of Quantized Agents on Shared GPUs](2026-2610.41672-understanding-the-energy-cost-of-quantized-agents-on-shared-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   失敗分も含めた検証済み完了当たりのエネルギーで量子化を測り直し、固定した呼び出しでは10〜25%安い4ビット形式が実実行では余分な作業と未完了で49%高くなる一方、キャッシュ競合のある40GB配置では空きメモリの効果で安くなり、最安の精度は同時実行数と配置で変わることを実機で示した。
@@ -209,6 +213,10 @@
 - **2026-11 · [MultiTurnRoute: A Platform for Building and Evaluating Multi-Turn LLM Routers](2026-2611.10848-multiturnroute-a-platform-for-building-and-evaluating-multi-turn-llm-rou.md)**  
   実装：[✓](https://github.com/loopleap-lab/MultiTurnRoute) ・ リポジトリ内被引用：0  
   複数ターン会話向けに、対話状態と各モデルのキャッシュ済みプレフィックスをルーターへ渡す基盤と評価Arenaを構築し、ゲート付き対話状態とキャッシュ割引で品質と費用を別々に見積もるルーターが最強モデルの品質に届く費用を最大20.3パーセント削減する。
+
+- **2026-11 · [MixMoMo: Accelerating Extra-Large MoE Inference with Mixed-Precision GPU-NPU Execution on Mobile Devices](2026-2611.33981-mixmomo-accelerating-extra-large-moe-inference-with-mixed-precision-gpu-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エキスパートの量子化感度を活性値の重要次元から実行時に見積もり、品質予算内でビット幅を動的に割り当て、同精度グループ単位でGPUとNPUへ実行時間ベースに振り分け、NPUではタイルをまたいで逆量子化をバッチ化することで、モバイルSoC上の超大規模MoE推論を高速化する。
 
 - **2026-11 · [Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads](2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b2.md)**  
   実装：[✓](https://github.com/MohsenZand/GPUBenchmarking) ・ リポジトリ内被引用：0  
@@ -809,7 +817,7 @@
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-02 · [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md)**  
-  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：44  
+  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：45  
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  

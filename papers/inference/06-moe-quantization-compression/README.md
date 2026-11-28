@@ -134,13 +134,13 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   実装：[✓](https://github.com/darren-fzq/EAQuant) ・ リポジトリ内被引用：8  
   密モデル向けの事後学習量子化（Post-学習 量子化; PTQ）をMoEへそのまま持ち込むと、専門家ごとに異なる活性外れ値、量子化後のルータTop-kの入れ替わり、ほとんど選ばれない専門家の校正データ不足が重なる。EAQuantはこれを一つの量子化誤差として扱わず、専門家認識平滑化、ルーティング整合、専門家単位の校正データ均衡の三機構に分解して補正する。
 
+- **2025-11 · [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference](2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md)**  
+  実装：[✓](https://github.com/kexinchu/DynaQuant) ・ リポジトリ内被引用：5  
+  DynaExqは、専門家混合モデル（Mixture of エキスパート; MoE）を単一GPUの限られた高帯域メモリへ載せるため、専門家ごとの量子化精度を推論中に変更するシステムである。論文はQwen3-30B-A3B、Qwen3-80B-A3B、Phi-3.5-MoEをRTX A6000 48GBの単一GPUで測定した。
+
 - **2025-03 · [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation](2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   DynaMoは、混合専門家モデル（Mixture-of-Experts; MoE）の量子化を、固定された1種類の較正データに最適化するのではなく、複数のデータ集合にわたる専門家の重要度変動と、入力分布の変化に応じて調整する手法である。
-
-- **2025-11 · [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference](2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md)**  
-  実装：[✓](https://github.com/kexinchu/DynaQuant) ・ リポジトリ内被引用：4  
-  DynaExqは、専門家混合モデル（Mixture of エキスパート; MoE）を単一GPUの限られた高帯域メモリへ載せるため、専門家ごとの量子化精度を推論中に変更するシステムである。論文はQwen3-30B-A3B、Qwen3-80B-A3B、Phi-3.5-MoEをRTX A6000 48GBの単一GPUで測定した。
 
 - **2025-09 · [MoPEQ: Mixture of Mixed Precision Quantized Experts](2025-2509.02512-mopeq-mixture-of-mixed-precision-quantized-experts.md)**  
   実装：[✓](https://github.com/krishnateja95/MoE-Mixed-Prec) ・ リポジトリ内被引用：4  
