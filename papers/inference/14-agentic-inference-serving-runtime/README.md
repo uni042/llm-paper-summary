@@ -197,6 +197,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   カーネルを意味を保つテンプレートへ書き換えてから資源制約下でパラメータ探索を行う二段階方式で、SGLangの実カーネルを最大3.55倍まで高速化した。
 
+- **2025-12 · [Transcending Cost-Quality Tradeoff in Agent Serving via Session-Awareness](2025-d84a0fae3606-transcending-cost-quality-tradeoff-in-agent-serving-via-session-awarenes.md)**  
+  実装：[✓](https://github.com/robinren03/agserve) ・ リポジトリ内被引用：1  
+  従来の単純な接頭辞一致キャッシュや最近使用順の退避では、この特徴を活かしにくい。NeurIPS 2025の実機評価では、AWエージェントでGPT-4oと近い品質を16.5%の費用で達成し、同一費用の費用・品質曲線に対して1.8倍の品質を報告する。
+
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-11 · [Towards Fair Resource Sharing in Agentic LLM Serving](2026-2611.23558-towards-fair-resource-sharing-in-agentic-llm-serving.md)**  
@@ -398,10 +402,6 @@
 - **2026-02 · [AgenticOCR: Parsing Only What You Need for Efficient Retrieval-Augmented Generation](2026-2602.24134-agenticocr-parsing-only-what-you-need-for-efficient-retrieval-augmented-.md)**  
   実装：[✓](https://github.com/OpenDataLab/AgenticOCR) ・ リポジトリ内被引用：0  
   AgenticOCRは、画像を含む長いPDF文書から回答を生成する検索拡張生成（Retrieval-Augmented Generation、RAG）において、検索されたページを丸ごと大規模な生成モデルへ渡す代わりに、質問に必要な領域を選んで拡大・回転・文字認識する方式である。
-
-- **2025-12 · [Transcending Cost-Quality Tradeoff in Agent Serving via Session-Awareness](2025-d84a0fae3606-transcending-cost-quality-tradeoff-in-agent-serving-via-session-awarenes.md)**  
-  実装：[✓](https://github.com/robinren03/agserve) ・ リポジトリ内被引用：0  
-  従来の単純な接頭辞一致キャッシュや最近使用順の退避では、この特徴を活かしにくい。NeurIPS 2025の実機評価では、AWエージェントでGPT-4oと近い品質を16.5%の費用で達成し、同一費用の費用・品質曲線に対して1.8倍の品質を報告する。
 
 - **2025-12 · [Reaching Agreement Among Reasoning LLM Agents](2025-2512.20184-reaching-agreement-among-reasoning-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
