@@ -26,7 +26,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-07 · [Gemma 4 Technical Report](2026-2607.02770-gemma-4-technical-report.md)**  
-  実装：✓ ・ リポジトリ内被引用：51  
+  実装：✓ ・ リポジトリ内被引用：52  
   密モデルと混合専門家モデルを含むGemma 4の技術報告。局所・大域注意の配置、キー・値キャッシュ共有、キーの値への再利用、部分回転位置符号化、量子化対応学習、複数トークン予測ドラフタ、12Bの符号化器不要構成を組み合わせ、推論時の重み容量・KV容量・復号費用をそれぞれ減らす。数値はモデル系列・量子化形式・文脈長ごとに区別して読む必要がある。
 
 - **2026-03 · [Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction](2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md)**  
@@ -876,6 +876,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-02 · [Stopping Computation for Converged Tokens in Masked Diffusion-LM Decoding](2026-2602.06412-stopping-computation-for-converged-tokens-in-masked-diffusion-lm-decodin.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   マスク拡散デコードで事後分布が安定した位置をロックして以降の計算を止め、キーとバリューはキャッシュから読ませることで理論計算量を30から50パーセント減らした研究。
+
+- **2026-02 · [Q Cache: Visual Attention is Valuable in Less than Half of Decode Layers for Multimodal Large Language Model](2026-2602.01901-q-cache-visual-attention-is-valuable-in-less-than-half-of-decode-layers-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MLLMで隣接デコード層のアテンションが半数以上の層で類似する観測に基づき、層をまたいでクエリとキーを共有するレイジーアテンションとQキャッシュでKVキャッシュを35パーセント以上削減しスループットを1.5倍にした研究。
 
 - **2026-02 · [Dynamic Mixed-Precision Routing for Efficient Multi-step LLM Interaction](2026-2602.02711-dynamic-mixed-precision-routing-for-efficient-multi-step-llm-interaction.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -2003,10 +2007,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   MixedDimKVは、長文推論の鍵・値キャッシュ（key-value キャッシュ、KVキャッシュ）を「トークンを残すか破棄するか」だけで制御する従来の方式を拡張し、各トークンに異なる保持次元数を割り当てる圧縮方式である。
 
-- **2026-02 · [Q Cache: Visual Attention is Valuable in Less than Half of Decode Layers for Multimodal Large Language Model](2026-2602.01901-q-cache-visual-attention-is-valuable-in-less-than-half-of-decode-layers-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  MLLMで隣接デコード層のアテンションが半数以上の層で類似する観測に基づき、層をまたいでクエリとキーを共有するレイジーアテンションとQキャッシュでKVキャッシュを35パーセント以上削減しスループットを1.5倍にした研究。
-
 - **2026-02 · [More Than a Quick Glance: Overcoming the Greedy Bias in KV-Cache Compression](2026-2602.02199-more-than-a-quick-glance-overcoming-the-greedy-bias-in-kv-cache-compress.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意スコア単独の貪欲なKV圧縮に対し、蓄積型予算と保護除数とハッシュ想起を組み合わせ、128k文脈でも崩壊しないKVキャッシュ圧縮を示す。
@@ -2596,7 +2596,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   注意の層間集約パターンに合わせてKV予算を下層から上層へ逓減させ、同じ総メモリで固定予算型より長文脈性能を保つKVキャッシュ圧縮法。
 
 - **2024-06 · [InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management](2024-2406.19707-infinigen-dynamic-kv-cache-management.md)**  
-  実装：[✓](https://github.com/snu-comparch/InfiniGen) ・ リポジトリ内被引用：198  
+  実装：[✓](https://github.com/snu-comparch/InfiniGen) ・ リポジトリ内被引用：199  
   CPU側の全KVキャッシュから次レイヤーで重要なトークンだけを予測してGPUへ先読みし、長文オフロード推論のPCIe転送を削減して最大3.00倍高速化する。
 
 - **2024-07 · [Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference](2024-2407.11550-ada-kv.md)**  

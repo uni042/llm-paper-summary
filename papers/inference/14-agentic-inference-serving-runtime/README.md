@@ -169,6 +169,10 @@
   実装：[✓](https://github.com/dorcha-inc/orla) ・ リポジトリ内被引用：1  
   分類段階をQwen3-4B、重い段階をQwen3-8Bへ割り当てた異種構成は、単一Qwen3-8Bの比較対象に対し壁時計時間38%、平均完了時間60%、推定推論費用35%を削減した。
 
+- **2026-03 · [HeRo: Adaptive Orchestration of Agentic RAG on Heterogeneous Mobile SoC](2026-2603.01661-hero-adaptive-orchestration-of-agentic-rag-on-heterogeneous-mobile-soc.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  携帯SoC上のエージェント型検索拡張生成を、段階ごとの処理装置適性と共有帯域の混雑をモデル化して動的に割り振るHeRoで、市販端末のエンドツーエンド遅延を最大10.94倍削減するシステム。
+
 - **2026-03 · [CUCo: An Agentic Framework for Compute and Communication Co-design](2026-2603.02376-cuco-an-agentic-framework-for-compute-and-communication-co-design.md)**  
   実装：[✓](https://anonymous.4open.science/r/CUCo-06EC/) ・ リポジトリ内被引用：1  
   既存の分散処理では、行列積や注意計算を高速化する担当と、NCCL通信を高速化する担当が分離されやすい。続いて性能探索の低速経路（slow-path）で、コンパイル・数値照合・実機ベンチマークを通した候補だけを残し、進化的な探索で転送と計算の重なり方を改善する。
@@ -374,10 +378,6 @@
 - **2026-04 · [CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades](2026-2604.12262-cascadedebate-multi-agent-deliberation-for-cost-aware-llm-cascades.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、問い合わせを小型LLMから大型LLMへ段階的に委譲するカスケード（cascade）に、必要なときだけ複数エージェントの討論（multi-agent deliberation）を挿入するCascadeDebateを提案する。Llama-3.2のMedQAでは標準カスケード68.20%に対し提案法86.44%を報告する。
-
-- **2026-03 · [HeRo: Adaptive Orchestration of Agentic RAG on Heterogeneous Mobile SoC](2026-2603.01661-hero-adaptive-orchestration-of-agentic-rag-on-heterogeneous-mobile-soc.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  携帯SoC上のエージェント型検索拡張生成を、段階ごとの処理装置適性と共有帯域の混雑をモデル化して動的に割り振るHeRoで、市販端末のエンドツーエンド遅延を最大10.94倍削減するシステム。
 
 - **2026-02 · [Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization](2026-2602.22675-search-more-think-less-rethinking-long-horizon-agentic-search-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
