@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-28T03:19:24+00:00",
+  "generated_at": "2026-11-28T05:27:41+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 26,
+  "count": 21,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -372,33 +372,6 @@
       "worker_run_key": "muse-final-20261124-b14w2"
     },
     {
-      "canonical_id": "arXiv:2611.01089",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.01089",
-      "returned_at": "2026-11-28T00:19:43+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 489 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5299,
-        "body_paragraphs": 23,
-        "method_chars": 2148,
-        "method_paragraphs": 5,
-        "evaluation_chars": 489,
-        "limitation_chars": 318,
-        "insufficiency_flags": [
-          "評価説明量 489 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-080c5a2d8569--2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-080c5a2d8569--2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.json",
-      "worker_run_key": "muse-20261128-b3"
-    },
-    {
       "canonical_id": "arXiv:2611.32083",
       "title": null,
       "source_url": "https://arxiv.org/abs/2611.32083",
@@ -477,33 +450,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7cc767e27ee8--2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-7cc767e27ee8--2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
-      "canonical_id": "arXiv:2609.06974",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2609.06974",
-      "returned_at": "2026-11-28T00:22:11+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 459 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4441,
-        "body_paragraphs": 23,
-        "method_chars": 1840,
-        "method_paragraphs": 5,
-        "evaluation_chars": 459,
-        "limitation_chars": 288,
-        "insufficiency_flags": [
-          "評価説明量 459 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8a2229c2ee48--2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8a2229c2ee48--2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.json",
       "worker_run_key": "muse-20261128-b2"
     },
     {
@@ -615,33 +561,6 @@
       "worker_run_key": "muse-20261128-b2"
     },
     {
-      "canonical_id": "arXiv:2611.30417",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.30417",
-      "returned_at": "2026-11-28T00:23:25+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 493 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5694,
-        "body_paragraphs": 22,
-        "method_chars": 2372,
-        "method_paragraphs": 5,
-        "evaluation_chars": 493,
-        "limitation_chars": 340,
-        "insufficiency_flags": [
-          "評価説明量 493 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ae5925946970--2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ae5925946970--2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.json",
-      "worker_run_key": "muse-20261128-b3"
-    },
-    {
       "canonical_id": "arXiv:2611.33004",
       "title": null,
       "source_url": "https://arxiv.org/abs/2611.33004",
@@ -666,60 +585,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ce4b59bbc9f2--2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ce4b59bbc9f2--2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.json",
-      "worker_run_key": "muse-20261128-b3"
-    },
-    {
-      "canonical_id": "arXiv:2610.13778",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2610.13778",
-      "returned_at": "2026-11-28T00:23:28+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 460 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4971,
-        "body_paragraphs": 22,
-        "method_chars": 2070,
-        "method_paragraphs": 5,
-        "evaluation_chars": 460,
-        "limitation_chars": 417,
-        "insufficiency_flags": [
-          "評価説明量 460 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cface9a454f3--2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-cface9a454f3--2026-2610.13778-replayssm-cache-ssm-inputs-not-state.json",
-      "worker_run_key": "muse-20261128-b1"
-    },
-    {
-      "canonical_id": "arXiv:2611.31089",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.31089",
-      "returned_at": "2026-11-28T00:24:38+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 461 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4729,
-        "body_paragraphs": 21,
-        "method_chars": 1889,
-        "method_paragraphs": 4,
-        "evaluation_chars": 461,
-        "limitation_chars": 316,
-        "insufficiency_flags": [
-          "評価説明量 461 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-db3237fa9374--2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-db3237fa9374--2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.json",
       "worker_run_key": "muse-20261128-b3"
     }
   ]

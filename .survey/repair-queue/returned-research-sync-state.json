@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "f277c073ff02ccb7c169ffdf51e889ee29ba62e4",
+  "base_commit": "60c405a907a7604ec152a429118b04ebb2d756e9",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -55611,38 +55611,11 @@
     },
     "arXiv:2609.06974": {
       "order": [
-        "2026-11-28T00:22:11+00:00",
-        "retry-research-8a2229c2ee48--2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.json"
+        "2026-11-28T05:18:13+00:00",
+        "2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "716ab71d022112d65900817b52b395d08a49b6df45de56bd18c163b1fa03a49b",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8a2229c2ee48--2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.md",
-        "canonical_id": "arXiv:2609.06974",
-        "worker_completed_at": "2026-11-28T08:10:00+09:00",
-        "worker_run_key": "muse-20261128-b2",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 4441,
-          "body_paragraphs": 23,
-          "method_chars": 1840,
-          "method_paragraphs": 5,
-          "evaluation_chars": 459,
-          "limitation_chars": 288,
-          "insufficiency_flags": [
-            "評価説明量 459 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 459 < 500"
-        ],
-        "processed_at": "2026-11-28T00:22:11+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2610.03039": {
@@ -55656,74 +55629,20 @@
     },
     "arXiv:2610.13778": {
       "order": [
-        "2026-11-28T00:23:28+00:00",
-        "retry-research-cface9a454f3--2026-2610.13778-replayssm-cache-ssm-inputs-not-state.json"
+        "2026-11-28T05:19:51+00:00",
+        "2026-2610.13778-replayssm-cache-ssm-inputs-not-state.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "cea7129bf9cafb39c85615bbf01422df0384ba0d3f239f7f26bee4f08e4829df",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cface9a454f3--2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md",
-        "canonical_id": "arXiv:2610.13778",
-        "worker_completed_at": "2026-11-28T07:40:00+09:00",
-        "worker_run_key": "muse-20261128-b1",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 4971,
-          "body_paragraphs": 22,
-          "method_chars": 2070,
-          "method_paragraphs": 5,
-          "evaluation_chars": 460,
-          "limitation_chars": 417,
-          "insufficiency_flags": [
-            "評価説明量 460 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 460 < 500"
-        ],
-        "processed_at": "2026-11-28T00:23:28+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2611.01089": {
       "order": [
-        "2026-11-28T00:19:43+00:00",
-        "retry-research-080c5a2d8569--2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.json"
+        "2026-11-28T05:21:29+00:00",
+        "2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "4ecffcd99950a50f509ac9a05ea183a0511e02bbd770b3e25d79a7cb96dfeea5",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-080c5a2d8569--2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.md",
-        "canonical_id": "arXiv:2611.01089",
-        "worker_completed_at": "2026-11-28T08:40:00+09:00",
-        "worker_run_key": "muse-20261128-b3",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 5299,
-          "body_paragraphs": 23,
-          "method_chars": 2148,
-          "method_paragraphs": 5,
-          "evaluation_chars": 489,
-          "limitation_chars": 318,
-          "insufficiency_flags": [
-            "評価説明量 489 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 489 < 500"
-        ],
-        "processed_at": "2026-11-28T00:19:43+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2611.03173": {
@@ -55845,74 +55764,20 @@
     },
     "arXiv:2611.30417": {
       "order": [
-        "2026-11-28T00:23:25+00:00",
-        "retry-research-ae5925946970--2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.json"
+        "2026-11-28T05:23:07+00:00",
+        "2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "5f342f90de3be5829f8066bc991fee646ccd94a046e31cf3584b6a91f8b8e73b",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ae5925946970--2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.md",
-        "canonical_id": "arXiv:2611.30417",
-        "worker_completed_at": "2026-11-28T08:40:00+09:00",
-        "worker_run_key": "muse-20261128-b3",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 5694,
-          "body_paragraphs": 22,
-          "method_chars": 2372,
-          "method_paragraphs": 5,
-          "evaluation_chars": 493,
-          "limitation_chars": 340,
-          "insufficiency_flags": [
-            "評価説明量 493 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 493 < 500"
-        ],
-        "processed_at": "2026-11-28T00:23:25+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2611.31089": {
       "order": [
-        "2026-11-28T00:24:38+00:00",
-        "retry-research-db3237fa9374--2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.json"
+        "2026-11-28T05:24:46+00:00",
+        "2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "4447fc74a7ffac1dec285ffcb35b4c72356e603a7a2f61bf306cb5bc5f829934",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-db3237fa9374--2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.md",
-        "canonical_id": "arXiv:2611.31089",
-        "worker_completed_at": "2026-11-28T08:40:00+09:00",
-        "worker_run_key": "muse-20261128-b3",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 4729,
-          "body_paragraphs": 21,
-          "method_chars": 1889,
-          "method_paragraphs": 4,
-          "evaluation_chars": 461,
-          "limitation_chars": 316,
-          "insufficiency_flags": [
-            "評価説明量 461 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 461 < 500"
-        ],
-        "processed_at": "2026-11-28T00:24:38+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2611.31638": {
@@ -70614,6 +70479,21 @@
     "arxiv:2601.21623": [
       "papers/inference/99-other-inference-systems/2026-2601.21623-lamp-look-ahead-mixed-precision-inference-of-large-language-models.md",
       "papers/inference/99-other-inference-systems/2026-2601.21623-lamp-look-ahead-mixed-precision-inference-of-large-language-models.md"
+    ],
+    "arxiv:2609.06974": [
+      "papers/inference/99-other-inference-systems/2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structur.md"
+    ],
+    "arxiv:2610.13778": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md"
+    ],
+    "arxiv:2611.01089": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.md"
+    ],
+    "arxiv:2611.30417": [
+      "papers/inference/13-sparse-attention/2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.md"
+    ],
+    "arxiv:2611.31089": [
+      "papers/inference/16-weight-quantization-compression/2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-.md"
     ]
   }
 }
