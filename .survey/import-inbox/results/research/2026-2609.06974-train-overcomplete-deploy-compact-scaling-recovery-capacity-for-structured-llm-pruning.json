@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "716ab71d022112d65900817b52b395d08a49b6df45de56bd18c163b1fa03a49b",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.md",
+  "status": "imported",
+  "source_sha256": "ba5117596534d1adbdacce7ece53604308184a2941aeb1b4ffc97b87dda5000b",
   "canonical_id": "arXiv:2609.06974",
-  "worker_completed_at": "2026-11-28T08:10:00+09:00",
-  "worker_run_key": "muse-20261128-b2",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structur.md",
+  "lineage": "99-other-inference-systems",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-28T12:05:00+09:00",
+  "worker_run_key": "muse-20261128-cont-repair",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 4441,
-    "body_paragraphs": 23,
+    "body_chars": 5947,
+    "body_paragraphs": 27,
     "method_chars": 1840,
     "method_paragraphs": 5,
-    "evaluation_chars": 459,
+    "evaluation_chars": 1965,
     "limitation_chars": 288,
-    "insufficiency_flags": [
-      "評価説明量 459 < 500"
-    ]
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 459 < 500"
-  ],
-  "processed_at": "2026-11-27T23:24:01+00:00"
+  "processed_at": "2026-11-28T05:18:13+00:00"
 }

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（695本）
+## 自動生成の論文一覧（696本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-07 · [Kimi K3: Open Frontier Intelligence](2026-2607.24653-kimi-k3-open-frontier-intelligence.md)**  
-  実装：✓ ・ リポジトリ内被引用：52  
+  実装：✓ ・ リポジトリ内被引用：53  
   KDA状態とMLAのKVを統合する接頭辞キャッシュ、512トークン境界の再利用、クラスタ親和ルーティングを記述するKimi K3技術報告。配信機構は具体的だが、節内に比較測定はない。
 
 - **2026-04 · [SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference](2026-2505.24095-skywalker-cross-region-load-balancer.md)**  
@@ -829,6 +829,10 @@
 - **2026-10 · [Stable Token-level Scheduling for Serverless LLM Inference](2026-2610.17689-stable-token-level-scheduling-for-serverless-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   トークン間遅延の実測値を混雑信号として毎デコードステップでフィードバックし、残り出力トークン総量の上限であるトークンウィンドウを開閉して新規リクエストの受け入れをトークン単位で制御する、サーバーレス推論向けスケジューラ。
+
+- **2026-10 · [Scute: Exact Batched Serving for PEFT Adapters Beyond LoRA](2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.md)**  
+  実装：[✓](https://github.com/ThomasWalker1/Scute-deploy) ・ リポジトリ内被引用：0  
+  LoRA、DoRA、(IA)3、SSF、VeRA、OFTを6スロットの正規形で統一し、畳み込めるスロットは読み込み時に消し、残るスロットはバイトモデルで費用を見積もる3経路で処理することで、変換の精度損とメモリ損なしに5手法のアダプタをvLLMの1バッチで厳密に提供できるようにしたサービング系。
 
 - **2026-10 · [SAKURA: Serving Attention Key-Value State Under Rate Adaptation for Private Image Editing on Phones](2026-2610.29733-sakura-serving-attention-key-value-state-under-rate-adaptation-for-priva.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1968,6 +1972,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   次のリクエストの到来を予告する助言リクエストを使い、KVキャッシュを背景で先読みして配置を先に決めることで、無状態サービングの負荷分散と有状態サービングのキャッシュ再利用を両立させる。
 
+- **2025-11 · [Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems](2025-2511.22880-loraserve-heterogeneous-adapter-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  LoRAのランクと需要を同時に見て動的配置・確率ルーティングし、不在アダプタはGPUDirect RDMAで遠隔取得して分散アダプタプールを構成する。
+
 - **2025-11 · [DOPD: A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving](2025-2511.20982-dopd-dynamic-pd-disaggregation.md)**  
   実装：[✓](https://github.com/liao4s/DOPD) ・ リポジトリ内被引用：5  
   負荷予測と解析的な最適P/D比でプリフィル/デコード instanceを動的再構成し、8x H100実機で有効スループット最大1.5倍・SLO達成99.4%を報告。
@@ -2015,10 +2023,6 @@
 - **2024-12 · [Multi-Bin Batching for Increasing LLM Inference Throughput](2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   しかし固定バッチ方式では、バッチに含まれる要求のうち最も長い生成が終わるまで、そのバッチ全体が実行資源を占有する。2026年改訂版の実測では、単一A100 80GB上のllama.cppでDollyワークロードを処理し、推定長8ビンが固定バッチの273.53生成トークン/秒から684.02生成トークン/秒へ改善する。
-
-- **2025-11 · [Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems](2025-2511.22880-loraserve-heterogeneous-adapter-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  LoRAのランクと需要を同時に見て動的配置・確率ルーティングし、不在アダプタはGPUDirect RDMAで遠隔取得して分散アダプタプールを構成する。
 
 - **2025-11 · [Pre-Attention Expert Prediction and Prefetching for Mixture-of-Experts Large Language Models](2025-2511.10676-pre-attention-expert-prediction-and-prefetching-for-mixture-of-experts-l.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -2531,7 +2535,7 @@
   本研究は、巨大な言語モデルの推論において、長い入力を処理する最初の一回の待ち時間を短縮する文脈並列（context parallelism）の実装を扱う。提案の中心は、リング状の通信で鍵・値を巡回させるpass-KVと、逆に問い合わせを巡回させるpass-Qを、推論段階と既存キャッシュの割合に応じて切り替えることである。
 
 - **2024-01 · [CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference](2024-2401.11240-caraserve-cpu-assisted-lora-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：17  
   LoRA読込中にCPUでプリフィル計算を先行し、ランク依存のバッチ遅延を予測してSLO違反が少ないサーバへ配分することで、多数アダプタ提供のコールドスタートを隠す。
 
 - **2024-03 · [LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization](2024-2403.01136-llm-pq-serving-llm-on-heterogeneous-clusters-with-phase-aware-partition-.md)**  

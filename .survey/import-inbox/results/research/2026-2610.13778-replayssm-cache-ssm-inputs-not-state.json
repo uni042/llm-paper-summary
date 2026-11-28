@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "cea7129bf9cafb39c85615bbf01422df0384ba0d3f239f7f26bee4f08e4829df",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md",
+  "status": "imported",
+  "source_sha256": "3b421ffc7bf4090f7b085cd6b6cf197f88d2ce3b59d62ec44705731734c270d1",
   "canonical_id": "arXiv:2610.13778",
-  "worker_completed_at": "2026-11-28T07:40:00+09:00",
-  "worker_run_key": "muse-20261128-b1",
+  "paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md",
+  "lineage": "05-speculative-decoding-moe",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-28T12:05:00+09:00",
+  "worker_run_key": "muse-20261128-cont-repair",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 4971,
-    "body_paragraphs": 22,
+    "body_chars": 6658,
+    "body_paragraphs": 26,
     "method_chars": 2070,
     "method_paragraphs": 5,
-    "evaluation_chars": 460,
+    "evaluation_chars": 2147,
     "limitation_chars": 417,
-    "insufficiency_flags": [
-      "評価説明量 460 < 500"
-    ]
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 460 < 500"
-  ],
-  "processed_at": "2026-11-27T23:25:41+00:00"
+  "processed_at": "2026-11-28T05:19:51+00:00"
 }

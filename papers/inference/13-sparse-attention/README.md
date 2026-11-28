@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（259本）
+## 自動生成の論文一覧（260本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -345,6 +345,10 @@
 - **2026-11 · [AttentionIndex: Accelerating Learned Sparse Attention with a Causal Inverted-File Index](2026-2611.02508-attentionindex-accelerating-learned-sparse-attention-with-a-causal-inver.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   学習型疎注意の索引器の全数走査を、類似でキーをまとめた転置ファイル型の索引による経路付けへ替え、因果性を保ちながら索引を育てることで、百万トークンで全数選択の最大一点八倍の入力処理量と、連続ブロック方式より最大十八・四ポイント高い精度を報告した。
+
+- **2026-11 · [ANOR: Scaling Sparse Attention with a GPU-PNM Computing Hierarchy](2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  疎注意の選択局所性を使い、注意の大半をGPU側キャッシュのヒットで、ミスだけをCXL-PNMで計算し、更新量の制限と読み取り再利用と負荷適応のキャッシュ配分で、デコードスループットを退避方式の2.3倍へ上げたGPUとPNMの階層型疎注意システム。
 
 - **2026-10 · [UlaCache: Unified Logical Addressing for Sparse LLM Serving](2026-2610.29820-ulacache-unified-logical-addressing-for-sparse-llm-serving.md)**  
   実装：[✓](https://github.com/scitix/UlaCache) ・ リポジトリ内被引用：0  

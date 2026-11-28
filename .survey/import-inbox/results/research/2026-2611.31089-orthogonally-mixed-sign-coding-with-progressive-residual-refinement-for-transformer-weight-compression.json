@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "4447fc74a7ffac1dec285ffcb35b4c72356e603a7a2f61bf306cb5bc5f829934",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.md",
+  "status": "imported",
+  "source_sha256": "52f2207f73f7d47dadc651baea89d004ca16c56dc96a7fd11ab0a3319cea7795",
   "canonical_id": "arXiv:2611.31089",
-  "worker_completed_at": "2026-11-28T08:40:00+09:00",
-  "worker_run_key": "muse-20261128-b3",
+  "paper_path": "papers/inference/16-weight-quantization-compression/2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-.md",
+  "lineage": "16-weight-quantization-compression",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-28T12:05:20+09:00",
+  "worker_run_key": "muse-20261128-cont-repair",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 4729,
-    "body_paragraphs": 21,
+    "body_chars": 9751,
+    "body_paragraphs": 28,
     "method_chars": 1889,
     "method_paragraphs": 4,
-    "evaluation_chars": 461,
+    "evaluation_chars": 5483,
     "limitation_chars": 316,
-    "insufficiency_flags": [
-      "評価説明量 461 < 500"
-    ]
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 461 < 500"
-  ],
-  "processed_at": "2026-11-28T00:04:38+00:00"
+  "processed_at": "2026-11-28T05:24:46+00:00"
 }

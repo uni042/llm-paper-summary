@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（491本）
+## 自動生成の論文一覧（492本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -313,6 +313,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds](2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expect.md)**  
   実装：[✓](https://github.com/y-x-zhao/AngelSpec-EDR) ・ リポジトリ内被引用：2  
   投機的復号をマルコフ報酬過程で表し、期待復号ラウンド数に正確に等しい目的関数EDRで並列ドラフト器を学習する理論と手法で、2種の最新ドラフト器の平均受理長を9課題すべてで改善した。
+
+- **2026-10 · [ReplaySSM: Cache SSM Inputs, Not State](2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md)**  
+  実装：[✓](https://github.com/Johnny-Liou/ReplaySSM) ・ リポジトリ内被引用：2  
+  SSMの状態を毎ステップ書く代わりに、チェックポイントと直近入力のバッファから状態を再構成する形へ変え、状態書き込みを窓ごと1回へ減らすことで、標準デコードを最大1.47倍、投機的デコードを約1.8倍高速化し、低精度状態の誤差蓄積も断ち切ったvLLM向けのサービング方式。
 
 - **2026-10 · [LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models](2026-2610.21594-loopahead-speculating-ahead-for-faster-decoding-in-looped-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（405本）
+## 自動生成の論文一覧（406本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -295,6 +295,10 @@
   D²Quantは、大規模言語モデルの重みのみを4ビット未満へ圧縮するときの精度劣化を対象とする、学習後量子化（post-学習 量子化; PTQ）の研究である。実験においてQwen3-8Bの2ビット重み量子化はWikiText2でパープレキシティ14.10、C4で25.96、MMLUで49.94%、7課題の平均正答率57.22%となった。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [Orthogonally Mixed Sign Coding with Progressive Residual Refinement for Transformer Weight Compression](2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みを直交混合して符号だけで表し、残差を多段に重ねることで、コードブックもCDFも学習もなしに保存量と忠実度を段階的に選べるようにしたTransformer重みの学習不要な圧縮方式で、5段でパープレキシティが全精度の近くまで回復することを2モデルで示した。
 
 - **2026-11 · [Computed Permutation Trellis Coding: Near-Optimal Quantization from Two Multiplications and a 64-Byte Table](2026-2611.22019-computed-permutation-trellis-coding-near-optimal-quantization-from-two-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1265,7 +1269,7 @@
   加算量子化による言語モデル圧縮（AQLM）は、重みの極低ビット量子化における「小さいモデルを高精度で保持した方が、巨大モデルを2ビットにするより良い」という従来の精度対容量の関係を改善する研究である。Llama 2 7B・13B・70B、Mixtral 8×7B、Mistral 7Bを評価する。
 
 - **2023-12 · [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md)**  
-  実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：106  
+  実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：107  
   活性値認識型特異値分解（活性値-aware Singular Value Decomposition、ASVD）は、大規模言語モデル（LLM）の線形重みを追加学習なしで低ランク行列へ置き換える圧縮方式である。LLaMA-7BとLLaMA-2-7B/13Bで重み容量を10～30%削減する実験を行い、活性値を考慮しないSVDより大幅に良い困惑度を報告する。
 
 - **2024-02 · [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md)**  

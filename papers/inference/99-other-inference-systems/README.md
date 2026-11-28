@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（846本）
+## 自動生成の論文一覧（847本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -697,6 +697,10 @@
 - **2026-09 · [When to Retrieve, When to Stay: Uncertainty-Aware Temporal Evidence Allocation for Streaming Video-LLMs](2026-2609.37345-when-to-retrieve-when-to-stay-uncertainty-aware-temporal-evidence-alloca.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   軽量エンコーダの類似度分布のエントロピーで意味検索と新しさの配分を適応させ、対象Video-LLMの視覚符号化を選ばれた観測だけに限定することで、ストリーミング動画理解の視覚処理費用を半分以下にする学習不要の証拠配分。
+
+- **2026-09 · [Train Overcomplete, Deploy Compact: Scaling Recovery Capacity for Structured LLM Pruning](2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structur.md)**  
+  実装：[✓](https://github.com/mmai-laboratory/OverRep) ・ リポジトリ内被引用：0  
+  枝刈りの回復段階だけを一時的に過完備化して大きな容量で学習し、配備時には代数的に畳み込んで小型構造へ戻すことで、推論時の追加費用なしに保持性能を最大8.4ポイント上げた構造化枝刈りの回復手法。
 
 - **2026-09 · [Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane](2026-2609.05565-toward-sustainable-distributed-llm-inference-a-systems-synthesis-and-res.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

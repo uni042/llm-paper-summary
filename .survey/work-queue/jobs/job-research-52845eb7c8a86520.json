@@ -35,10 +35,15 @@
   "selection_reason": "ReplaySSMはSSMの再帰をチェックポイントと直近入力バッファへ展開し、状態書き込みの回避・投機的デコードのバッファポインタによるロールバック・出力用と更新用で精度を分けたチェックポイントにより状態メモリトラフィックを半減させ、vLLM実装でMamba-2等のデコードを1.20〜1.47倍高速化しており、SSM推論のメモリI/O最適化に直接貢献する。",
   "semantic_scholar_id": "debb43c16e4ea7dcb09cd5e8006dc49657f220d0",
   "source_url": "https://arxiv.org/abs/2610.13778",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReplaySSM: Cache SSM Inputs, Not State",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T05:27:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md",
+  "represented_canonical_id": "arXiv:2610.13778",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
