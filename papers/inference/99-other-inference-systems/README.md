@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（841本）
+## 自動生成の論文一覧（844本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2184,6 +2184,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   推論特化言語モデルが長い思考過程を生成する際、誤りを見つけて解き直す有用な反省と、既に正しい途中計算を繰り返し肯定するだけの冗長な反省が混在する。本研究は後者を自己確認型反省と呼び、反省文を開始する語の生成確率に偏りがあることを利用して、必要な推論をなるべく残しながら冗長な出力を減らす。ただし平均正解率は64.9%から64.2%へ0.7ポイント下がった。
 
+- **2025-05 · [Hierarchical Document Refinement for Long-context Retrieval-augmented Generation](2025-2505.10413-hierarchical-document-refinement-for-long-context-retrieval-augmented-ge.md)**  
+  実装：[✓](https://github.com/ignorejjj/LongRefiner) ・ リポジトリ内被引用：1  
+  検索文書を階層木へ起こし直し、問いの情報範囲に応じた局所得点と全域得点で節点を選ぶ精錬器で、全文投入より約十分の一のトークンで七課題すべて最高精度を達成した。
+
 - **2025-05 · [DINGO: Constrained Inference for Diffusion LLMs](2025-2505.23061-dingo-constrained-inference-for-diffusion-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   正規表現のオートマトン上で動的計画法を回し、ブロック並列予測でも分布を歪めずに確率最大の制約適合出力を厳密に求める、拡散言語モデル向けの制約付きデコード。
@@ -2280,9 +2284,17 @@
   実装：✓ ・ リポジトリ内被引用：0  
   早期終了の浅い層で衝突する基礎特徴と識別特徴を、バイパスモジュールと高次統計の予測器、二相の損失重みで分離し、約30パーセントの計算量で70パーセントを使う先行方式に並ぶ精度を出す微調整法。
 
+- **2025-11 · [Concept than Document: Context Compression via AMR-based Conceptual Entropy](2025-2511.18832-concept-than-document-context-compression-via-amr-based-conceptual-entro.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  検索文書をAMRグラフ化し、概念エントロピーとt検定で重要な概念だけを残して文脈を約50%に圧縮することで、PopQAで全バックボーンのAUCをバニラより改善した、意味構造を使うRAG文脈圧縮の研究。
+
 - **2025-11 · [BudgetMem: Training-Free Selective Memory for Cost-Efficient Long-Context Processing in Language Models](2025-2511.04919-budgetmem-training-free-selective-memory-for-cost-efficient-long-context.md)**  
   実装：[✓](https://github.com/Chandra-Alla/BudgetMem-paper) ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の長文脈処理では、全入力をモデルへ投入すると注意計算・メモリ・料金が増える。トークン単位の圧縮器では、語句が断片的に残ることで検索に必要な語順や句のまとまりが失われる場合がある。既定の保持比率は30%であり、残した断片をBM25検索索引に格納する。
+
+- **2025-11 · [Automatic Pruning Discovery for Large Language Models](2025-2511.15390-automatic-pruning-discovery-for-large-language-models.md)**  
+  実装：[✓](https://anonymous.4open.science/r/AutoPrune) ・ リポジトリ内被引用：0  
+  LLM自身にグラフ駆動の思考連鎖で枝刈り式を発見させ、重み分布の歪度で層ごとの削り方を変える配分と組み合わせることで、60パーセント枝刈りでもLLaMA-1 13BのパープレキシティをWandaの8.56から7.63へ改善した自動枝刈り設計。
 
 - **2025-10 · [Value-State Gated Attention for Mitigating Extreme-Token Phenomena in Transformers](2025-2510.09017-value-state-gated-attention-for-mitigating-extreme-token-phenomena-in-tr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2335,6 +2347,10 @@
 - **2025-10 · [Computationally Efficient FPGA-based Large Language Model Inference for Real-Time Decision-Making in Robotic Systems](2025-5c6550db1690-computationally-efficient-fpga-based-large-language-model-inference-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLaMA 2-7Bをロボットへ搭載するため、グループ量子化と混合精度、注意の削減を、FPGAロジックとAIエンジンとCPUへ演算を割り振るヘテロジニアス実装と組み合わせ、Jetson AGX Orin比1.95倍のスループットと18ワット動作を実機で示した研究。
+
+- **2025-10 · [Chopping Trees: Semantic Similarity Based Dynamic Pruning for Tree-of-Thought Reasoning](2025-2511.08595-chopping-trees-semantic-similarity-based-dynamic-pruning-for-tree-of-tho.md)**  
+  実装：[✓](https://github.com/kimjoonghokim/SSDP) ・ リポジトリ内被引用：0  
+  展開直後の子ノードを文埋め込みの類似度でまとめ、報酬最大の代表だけを残すオンライン意味的剪定で、木探索の探索ノードを85〜90パーセント減らし、DPTS比最大2.3倍の高速化と精度の概ね維持を両立した推論時探索の効率化。
 
 - **2025-10 · [BRIEF-Pro: Universal Context Compression with Short-to-Long Synthesis for Fast and Accurate Multi-Hop Reasoning](2025-2510.13799-brief-pro-universal-context-compression-with-short-to-long-synthesis-for.md)**  
   実装：[✓](https://github.com/JasonForJoy/BRIEF) ・ リポジトリ内被引用：0  
@@ -2559,10 +2575,6 @@
 - **2025-05 · [LLM-MS: A Multi-Model LLM Search Engine](2025-fa0fa1f7bd52-llm-ms-a-multi-model-llm-search-engine.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数のオープンLLMへトークン予算を動的に配分する検索エンジンで、埋め込み類似度の採点で有望モデルへ生成を寄せて打ち切りを行うOUAと、UCB1バンディットで配分するMABにより、単体モデルより高い応答品質を少ないトークンで得る。
-
-- **2025-05 · [Hierarchical Document Refinement for Long-context Retrieval-augmented Generation](2025-2505.10413-hierarchical-document-refinement-for-long-context-retrieval-augmented-ge.md)**  
-  実装：[✓](https://github.com/ignorejjj/LongRefiner) ・ リポジトリ内被引用：0  
-  検索文書を階層木へ起こし直し、問いの情報範囲に応じた局所得点と全域得点で節点を選ぶ精錬器で、全文投入より約十分の一のトークンで七課題すべて最高精度を達成した。
 
 - **2025-05 · [First Finish Search: Efficient Test-Time Scaling in Large Language Models](2025-2505.18149-first-finish-search-efficient-test-time-scaling-in-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2882,6 +2894,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   浮動小数点乗算の仮数部の積を落として定数で補い、乗算を1回の整数加算で近似する L-Mul を提案し、fp8 乗算より少ないゲート数で同等以上の精度を示すとともに、注意機構への学習なし置換で bf16 との平均差0.07パーセントに収まることを言語モデルで確認した研究。
 
+- **2024-09 · [Parse Trees Guided LLM Prompt Compression](2024-2409.15395-parse-trees-guided-llm-prompt-compression.md)**  
+  実装：[✓](https://github.com/LengendaryHippopotamus/PartPrompt) ・ リポジトリ内被引用：1  
+  プロンプト圧縮を構文木と文書階層の大域木の枝刈りへ変換し、局所エントロピーと節点値調整で選ぶPartPromptを提案し、残存率20%のBBCnewsでBLEU 13.69と、生成型を含む比較対象の9.22から11.31を上回った。
+
 - **2024-08 · [Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference](2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-infer.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   層を分割する代わりに小さい副層を並列度ぶん並べて集約を層一回に減らし、その結果を次層の全結合部まで遅らせることで通信を注意計算に重ね、実機で最初のトークンまでの時間を標準構造より幾何平均三十五・六パーセント短縮したと報告した。
@@ -2957,10 +2973,6 @@
 - **2024-09 · [Sorbet: A Neuromorphic Hardware-Compatible Transformer-Based Spiking Language Model](2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-lang.md)**  
   実装：[✓](https://github.com/Kaiwen-Tang/Sorbet) ・ リポジトリ内被引用：0  
   ソフトマックスと層正規化をビットシフト演算へ置き換え、重みを1ビット化することで、ニューロモルフィックハードウェアへ載せられる初のTransformer型スパイキング言語モデルを実現し、エネルギー試算でBERT比27.16倍の削減を示した研究。
-
-- **2024-09 · [Parse Trees Guided LLM Prompt Compression](2024-2409.15395-parse-trees-guided-llm-prompt-compression.md)**  
-  実装：[✓](https://github.com/LengendaryHippopotamus/PartPrompt) ・ リポジトリ内被引用：0  
-  プロンプト圧縮を構文木と文書階層の大域木の枝刈りへ変換し、局所エントロピーと節点値調整で選ぶPartPromptを提案し、残存率20%のBBCnewsでBLEU 13.69と、生成型を含む比較対象の9.22から11.31を上回った。
 
 - **2024-09 · [Internalizing ASR with Implicit Chain of Thought for Efficient Speech-to-Speech Conversational LLM](2024-2409.17353-internalizing-asr-with-implicit-chain-of-thought-for-efficient-speech-to.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

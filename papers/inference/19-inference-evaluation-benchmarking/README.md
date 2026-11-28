@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（287本）
+## 自動生成の論文一覧（288本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -927,6 +927,10 @@
 - **2025-11 · [Firewall Routing: Blocking Leads to Better Hybrid Inference for LLMs](2025-73146b754a26-firewall-routing-blocking-leads-to-better-hybrid-inference-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   両モデルを複数回サンプリングして勝率をソフトなラベル化し、強いモデルでも解けないロングテールクエリを弱いモデル側へ遮断するルーター学習。APGRで最大5.29ポイント改善。
+
+- **2025-11 · [DocSLM: A Small Vision-Language Model for Long Multimodal Document Understanding](2025-2511.11313-docslm-a-small-vision-language-model-for-long-multimodal-document-unders.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ページあたり固定576トークンへの階層圧縮と、区間ごとに活性値を解放するストリーミング棄却で、視覚トークン82パーセント減・遅延71パーセント減と定常メモリを両立し、大型モデルと同等以上の文書理解精度を示した小型視覚言語モデル。
 
 - **2025-11 · [CoEdge-RAG: Optimizing Hierarchical Scheduling for Retrieval-Augmented LLMs in Collaborative Edge Computing](2025-2511.05915-coedge-rag-optimizing-hierarchical-scheduling-for-retrieval-augmented-ll.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

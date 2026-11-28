@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（137本）
+## 自動生成の論文一覧（138本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -431,6 +431,10 @@
 - **2025-04 · [Mosaic: Composite Projection Pruning for Resource-efficient LLMs](2025-2504.06323-mosaic-composite-projection-pruning-for-resource-efficient-llms.md)**  
   実装：[✓](https://github.com/blessonvar/Mosaic) ・ リポジトリ内被引用：1  
   Mosaicは、事前学習済み大規模言語モデルを限られたメモリの装置へ配置するため、Transformerの各線形射影に異なる削減率を割り当てる方式である。通常の非構造化枝刈りは重みを零化するため品質を比較的保てるが、重み行列の寸法を縮めない限り汎用の密行列演算ではメモリや時間の削減に結びつきにくい。
+
+- **2025-11 · [Why Should the Server Do It All?: A Scalable, Versatile, and Model-Agnostic Framework for Server-Light DNN Inference over Massively Distributed Clients via Training-Free Intermediate Feature Compression](2025-2511.11608-why-should-the-server-do-it-all-a-scalable-versatile-and-model-agnostic-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分割推論の中間特徴を非対称トップK、大きさ分割、適応ビット量子化の3段で正確な比率に圧縮し、計算をエッジへ寄せることで、上り通信を最大10分の1、サーバGPU時間を最大4.4分の1にし、精度低下を概ね3ポイント以内に収めた学習不要の分散推論基盤。
 
 - **2025-11 · [Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks](2025-2511.02647-federated-attention-a-distributed-paradigm-for-collaborative-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
