@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3c0d2a8c1e69a3b8-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2412.12951",
+  "reason": "全文通読の結果、本論文の主貢献は確率的ゲートによるパラメータ効率のよいファインチューニングであり、基底モデルの20〜40%削減と推論高速化は副次的な効果として述べられるものの、評価はRoBERTa系エンコーダのGLUE分類に限られ、LLMの生成推論システムへの適用・評価が一次資料に確認できない。行列積マイクロベンチマークと単一データセットの推論時間測定だけではLLM推論システムへの直接貢献の根拠が弱く、学習単独の効率化に近いためborderlineと判定した。",
+  "title": "FineGates: LLMs Finetuning with Compression using Stochastic Gates",
+  "identity_tokens": [
+    "arXiv:2412.12951",
+    "FineGates",
+    "stochastic gates"
+  ],
+  "linked_from": [
+    "worker-worklist-00.json:job-research-630051ce7d6a29f4"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3c0d2a8c1e69",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
