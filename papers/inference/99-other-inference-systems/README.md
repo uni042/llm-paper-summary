@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（850本）
+## 自動生成の論文一覧（851本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -525,6 +525,10 @@
 - **2026-11 · [FrontierReplay: Split-Free Exact Prefix Caching for Hybrid Language Models](2026-2611.26020-frontierreplay-split-free-exact-prefix-caching-for-hybrid-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ハイブリッドモデルでプリフィックス再利用が終わる位置はターンの境界など予測可能だと実測し、プリフィルを切断せず回帰層の入力ログから状態だけを再計算して正確なチェックポイントを作ることで、有効スループットを最大4.26倍にし初回トークン時間を最大89パーセント減らしたキャッシュ方式。
+
+- **2026-11 · [flash-comm: Self-Synchronizing Collective Communication for LLM Decoding](2026-2611.06634-flash-comm-self-synchronizing-collective-communication-for-llm-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  データブロック自体に準備完了の証拠を持たせてGPU間バリアを定常状態から外す自己同期型の集合通信で、8台のB300でオールリデュース遅延の中央値を28.8パーセント減らし、デコードのTPOTを最大6.8パーセント下げた。
 
 - **2026-11 · [Efficient and Robust Drafting with Multi-Token Prediction](2026-2611.25813-efficient-and-robust-drafting-with-multi-token-prediction.md)**  
   実装：[✓](https://github.com/google-research/gemma4-mtp-drafter-domain-adaptation) ・ リポジトリ内被引用：0  

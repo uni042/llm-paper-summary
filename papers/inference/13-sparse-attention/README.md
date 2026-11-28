@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（262本）
+## 自動生成の論文一覧（263本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -48,13 +48,13 @@
   実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：20  
   Qwen3.8-Flash-Nextは履歴を再帰状態へ要約し、圧縮した疎注意機構で長文脈を検索する。論文は1M文脈で注意機構の計算時間を短縮し、検索品質も比較する。
 
+- **2026-06 · [MiniMax Sparse Attention](2026-2606.13392-minimax-sparse-attention.md)**  
+  実装：[✓](https://github.com/MiniMax-AI/MSA) ・ リポジトリ内被引用：16  
+  対象：100万トークン級の長文脈推論・学習における、GQA対応の学習可能なブロック疎注意。一次論文は2026年6月12日改訂の第2版。速度の値は「モデル全体の推論速度」ではなく、論文の注意演算実装をH800で測った値として読む。
+
 - **2026-03 · [HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention](2026-2603.28458-hisa-efficient-hierarchical-indexing-for-fine-grained-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   HISA（階層型索引付き疎注意、Hierarchical Indexed Sparse 注意機構）は、長文脈大規模言語モデルの疎注意（sparse 注意機構）において、注意本体を計算する前に「どの過去トークンを参照するか」を探す索引器が律速になるという問題を扱う。
-
-- **2026-06 · [MiniMax Sparse Attention](2026-2606.13392-minimax-sparse-attention.md)**  
-  実装：[✓](https://github.com/MiniMax-AI/MSA) ・ リポジトリ内被引用：15  
-  対象：100万トークン級の長文脈推論・学習における、GQA対応の学習可能なブロック疎注意。一次論文は2026年6月12日改訂の第2版。速度の値は「モデル全体の推論速度」ではなく、論文の注意演算実装をH800で測った値として読む。
 
 - **2026-07 · [Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling](2026-2607.0298-hierarchical-sparse-attention-done-right-toward-infinite-context-modelin.md)**  
   実装：[✓](https://github.com/Tencent-Hunyuan/HiLS-Attention) ・ リポジトリ内被引用：11  
@@ -365,6 +365,10 @@
 - **2026-11 · [Coarse Semantic Blocks for Efficient Training-Free Sparse Attention](2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.md)**  
   実装：[✓](https://github.com/pfnet-research/semantic-block-sparse-attention/) ・ リポジトリ内被引用：0  
   入力文ごとにキーを二千四十八トークン級の意味の塊へ分け、重心得点で問い合わせごとに塊を選ぶ学習なしの疎な注意で、索引構築込みの模型全体で五百二十四千の入力処理を二・三から二・四倍、復号を一・七から二・〇倍速くし、大きな模型では密な注意に近い精度を保ったと報告した。
+
+- **2026-11 · [CISA: Retrofitting Dense Attention Models with Chunk-Indexed Sparse Attention](2026-2611.03200-cisa-retrofitting-dense-attention-models-with-chunk-indexed-sparse-atten.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存の密な注意モデルへ勾配更新なしで、キー平均による16トークンチャンクの索引選択とプリフィルでの選択共有を後付けし、100万トークン・32同時要求のサービングで密な注意の2.29倍のスループットと、RULERでのスコア差2.05ポイント以内を両立した疎な注意の実装方式。
 
 - **2026-11 · [AttentionIndex: Accelerating Learned Sparse Attention with a Causal Inverted-File Index](2026-2611.02508-attentionindex-accelerating-learned-sparse-attention-with-a-causal-inver.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -887,7 +891,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：370  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：371  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  

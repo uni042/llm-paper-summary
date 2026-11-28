@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（292本）
+## 自動生成の論文一覧（293本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -209,6 +209,10 @@
 - **2026-11 · [SafeStart: Mitigating the Overlooked Safety Cost of Active Expert Reduction in MoE LLM Serving](2026-2611.06147-safestart-mitigating-the-overlooked-safety-cost-of-active-expert-reducti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エキスパート削減によるMoE高速化が精度をほぼ保ったまま拒否だけを弱めることを実測で示し、原因が応答の冒頭にあることを特定して、冒頭だけ全エキスパートで計算するSafeStartで高速化の大半と拒否の両方を保つ対策を与えた研究。
+
+- **2026-11 · [RI-Prune: Relation and Information Aware Visual Token Pruning for Multi-Image Vision-Language Models](2026-2611.06047-ri-prune-relation-and-information-aware-visual-token-pruning-for-multi-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意を使わず、クエリ関連度・画像間対応・画像内代表性の3信号でプロジェクタ出力の視覚トークンを画像別に選ぶ学習不要の枝刈りで、残存23.5パーセントで計算量を5.6倍減らしながらQwen2.5-VLの精度の96.2パーセントを維持した。
 
 - **2026-11 · [R^2-Omni: Reducing Structural and Precision Redundancy in Omni-LLMs for Long-Form Generation](2026-2611.03247-r-2-omni-reducing-structural-and-precision-redundancy-in-omni-llms-for-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

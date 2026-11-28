@@ -230,6 +230,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（LLM）の推論では、各層の線形射影が多数の乗算と重み読出を必要とする。WiSparseは、活性と重みの両方からチャネル重要度を推定し、モデル全体の疎性率をブロック・層の二段階で割り当てる学習不要の活性疎化（学習不要 活性値 sparsity）方式である。
 
+- **2026-02 · [SwiftVLM: Efficient Vision-Language Model Inference via Cross-Layer Token Bypass](2026-2602.03134-swiftvlm-efficient-vision-language-model-inference-via-cross-layer-token.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  落選した視覚トークンを捨てずに迂回させ、次の枝刈り層で表現を補正して再評価する学習不要の枝刈りで、トークンを3分の1に減らしても位置特定の精度を無枝刈りの約87パーセントに保った。
+
 - **2026-02 · [POP: Prefill-Only Pruning for Efficient Large Model Inference](2026-2602.03295-pop-prefill-only-pruning-for-efficient-large-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィルでのみ深い層を飛ばしデコードでは全層を使う段階別枝刈りで、生成精度をほぼ保ったままプリフィルを最大1.37倍高速化した。
@@ -523,10 +527,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2026-03 · [Balancing Saliency and Coverage: Semantic Prominence-Aware Budgeting for Visual Token Compression in VLMs](2026-2603.14892-balancing-saliency-and-coverage-semantic-prominence-aware-budgeting-for-.md)**  
   実装：[✓](https://github.com/jayaylee/PromPrune) ・ リポジトリ内被引用：0  
   特異値のスペクトルエントロピーで画像ごとの意味の広がりを測り、固定予算を顕著さと被覆へ振り分けて二段で選ぶことで、エルラバネクスト七ビーで計算量八十八パーセント削減と入力処理二十二パーセント高速化をしながら元の精度の九十七点五パーセントを保った。
-
-- **2026-02 · [SwiftVLM: Efficient Vision-Language Model Inference via Cross-Layer Token Bypass](2026-2602.03134-swiftvlm-efficient-vision-language-model-inference-via-cross-layer-token.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  落選した視覚トークンを捨てずに迂回させ、次の枝刈り層で表現を補正して再評価する学習不要の枝刈りで、トークンを3分の1に減らしても位置特定の精度を無枝刈りの約87パーセントに保った。
 
 - **2026-02 · [QTALE: Quantization-Robust Token-Adaptive Layer Execution for LLMs](2026-2602.10431-qtale-quantization-robust-token-adaptive-layer-execution-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

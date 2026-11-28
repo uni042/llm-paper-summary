@@ -108,6 +108,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/leapquant/LeapQuant) ・ リポジトリ内被引用：2  
   線形注意の再帰状態を窓ごとに1回だけ量子化し、外れ値を高精度の補償トークンへ逃がす学習不要の方式で、8ビットでも精度をほぼ保ちながら状態転送を3.4倍減らしデコードを高速化した。
 
+- **2026-07 · [Every Microsecond Matters: Achieving Near Speed-of-Light Latency in GPU Collectives](2026-2607.16100-every-microsecond-matters-achieving-near-speed-of-light-latency-in-gpu-c.md)**  
+  実装：[✓](https://github.com/ss16118/low-latency-nccl) ・ リポジトリ内被引用：2  
+  本研究は、GPU間の集合通信（collective 通信）を大きなメッセージの帯域幅ではなく、短いメッセージの待ち時間を中心に最適化する。そこで、データ転送と到着通知を一体化するLL方式、受信領域の特殊値で到着を判定するsentinel方式、双方向通信と二重バッファによる暗黙の順序制御、NVLinkの原子的加算を使うLL128方式を設計した。
+
 - **2026-06 · [Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models](2026-2606.10537-prefilling-dllm-predictive-prefilling-for-long-context-inference-in-diff.md)**  
   実装：[✓](https://github.com/menik1126/Prefilling-dLLM) ・ リポジトリ内被引用：2  
   Prefilling-dLLMは、この入力接頭辞を長さ一定の小区間へ分け、各区間の鍵・値（Key–Value、KV）表現を事前に一度だけ計算し、問い合わせに関係する区間だけを残して反復的な雑音除去（denoising）に再利用する方式である。
@@ -204,13 +208,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/SJTU-ReArch-Group/GTSim/) ・ リポジトリ内被引用：1  
   FIBERはGPUの実行単位から私有レジスタ所有を切り離し、SM内共有レジスタ、動的な並列度変更、レジスタ単位の依存追跡を組み合わせる。LLMのGEMMと非GEMMが交互に現れる処理を対象に、シミュレータ上でAmpere 2.25倍、Hopper 1.8倍、Blackwell 2.09倍のエンドツーエンド高速化を報告する。
 
+- **2026-07 · [X-Stage: Modeling Post-Issue Backpressure in GPU Communication–Computation Fusion](2026-2607.23264-x-stage-modeling-post-issue-backpressure-in-gpu-communication-computatio.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  遠隔書き込みの発行後区間を排出率と有限容量でモデル化し、バースト間隔から背圧の蓄積と回復を予測してスケジュールを直すことで、専門並列で最大1.62倍、テンソル並列で最大1.75倍、系列並列で最大1.43倍の高速化を実測した。
+
 - **2026-07 · [Harness Engineering for LLM-Driven GPU Kernel Generation](2026-2607.17979-harness-engineering-llm-gpu-kernels.md)**  
   実装：[✓](https://github.com/syhya/mlsys26-flashinfer-contest) ・ リポジトリ内被引用：1  
   LLM生成GPUカーネルを、公式準拠のコンパイル・正当性・計時・全形状評価とプロファイル駆動の保守的昇格ループで管理し、B200上の5演算子でFlashInfer比1.12〜29.68倍を得たハーネス設計。
-
-- **2026-07 · [Every Microsecond Matters: Achieving Near Speed-of-Light Latency in GPU Collectives](2026-2607.16100-every-microsecond-matters-achieving-near-speed-of-light-latency-in-gpu-c.md)**  
-  実装：[✓](https://github.com/ss16118/low-latency-nccl) ・ リポジトリ内被引用：1  
-  本研究は、GPU間の集合通信（collective 通信）を大きなメッセージの帯域幅ではなく、短いメッセージの待ち時間を中心に最適化する。そこで、データ転送と到着通知を一体化するLL方式、受信領域の特殊値で到着を判定するsentinel方式、双方向通信と二重バッファによる暗黙の順序制御、NVLinkの原子的加算を使うLL128方式を設計した。
 
 - **2026-06 · [When Good Enough Is Optimal: Multiplication-Only Matrix Inversion Approximation for Quantized Gated DeltaNet](2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approxi.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -622,10 +626,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/RuokaiYin/Celty) ・ リポジトリ内被引用：0  
   重み疎性と実行時活性疎性の交差を疎行列×疎ベクトルとして扱い、走長圧縮形式、ワープ割当、レジスタ部分和、専用復号器を共同設計して低バッチLLMデコードを高速化する。
 
-- **2026-07 · [X-Stage: Modeling Post-Issue Backpressure in GPU Communication–Computation Fusion](2026-2607.23264-x-stage-modeling-post-issue-backpressure-in-gpu-communication-computatio.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  遠隔書き込みの発行後区間を排出率と有限容量でモデル化し、バースト間隔から背圧の蓄積と回復を予測してスケジュールを直すことで、専門並列で最大1.62倍、テンソル並列で最大1.75倍、系列並列で最大1.43倍の高速化を実測した。
-
 - **2026-07 · [WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning](2026-2607.28418-wide-boosting-adaptive-llm-inference-via-token-level-dynamic-width-pruni.md)**  
   実装：[✓](https://github.com/EIT-NLP/LLM-Pruning/tree/main/WIDE) ・ リポジトリ内被引用：0  
   トークンごとに注意ヘッド群とFFNチャネル群の実行可否をルータが決め、マスク並べ替えで不規則な選択をタイル単位の規則性へ変換してブロックごと飛ばす動的幅枝刈りで、削減率50パーセントでも品質を保ちながらプリフィル1.68倍の高速化を得た。
@@ -992,13 +992,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/osayamenja/FlashMoE) ・ リポジトリ内被引用：17  
   分散MoE全体を単一の常駐GPUカーネルへ融合し、装置起点通信とタイル単位スケジューリングでCPU起動・同期待ちを除き、8基H100で最大6.4倍の遅延改善と5.7倍のスループットを示す。
 
+- **2025-05 · [TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference](2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md)**  
+  実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：14  
+  GPU実行波を考慮した2分割とAllReduce–RMSNorm融合により、小さなテンソル並列バッチでも通信と計算を重ね、遅延とスループットを改善する。
+
 - **2025-09 · [Towards Robust Agentic CUDA Kernel Benchmarking, Verification, and Optimization](2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md)**  
   実装：[✓](https://github.com/SakanaAI/robust-kbench) ・ リポジトリ内被引用：13  
   固定入力などを悪用した「高速だが一般化しないCUDA」を弾くrobust-kbenchと、翻訳・LLM検証・進化的最適化を統合したエージェントを提案し、KernelBenchの見かけの平均3.13倍高速化が堅牢化後1.49倍へ下がることを示す。
-
-- **2025-05 · [TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference](2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：13  
-  GPU実行波を考慮した2分割とAllReduce–RMSNorm融合により、小さなテンソル並列バッチでも通信と計算を重ね、遅延とスループットを改善する。
 
 - **2025-04 · [70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float (DFloat11)](2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md)**  
   実装：[✓](https://github.com/LeanModels/DFloat11) ・ リポジトリ内被引用：12  
@@ -1487,7 +1487,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：957  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：958  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  

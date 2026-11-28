@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c343648eaa92612cd15dfe3b23c126cad608a32e",
+  "base_commit": "f594ac7631e350f41a964ea191b95f0bf1221028",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1716,6 +1716,7 @@
     "2026-2611.02966-shq-learnable-grids-for-llm-weight-quantization.json",
     "2026-2611.02975-introducing-cluster-efficiency-to-llm-serving-pooling-economical-accelerators-over-fast-interconnects.json",
     "2026-2611.03173-pagedmoe-cross-precision-expert-caching-for-token-level-dynamic-precision-in-ssd-resident-moe-inference.json",
+    "2026-2611.03200-cisa-retrofitting-dense-attention-models-with-chunk-indexed-sparse-attention.json",
     "2026-2611.03247-r2-omni-reducing-structural-and-precision-redundancy-in-omni-llms.json",
     "2026-2611.03517-ask-dont-equip-question-driven-coding-agents-for-deep-kernel-optimization.json",
     "2026-2611.03768-multi-layer-indexer-overlapping-selection-and-attention-in-deepseek-sparse-attention.json",
@@ -1731,11 +1732,15 @@
     "2026-2611.04671-leansparse-memory-efficient-serving-for-native-sparse-attention-llms.json",
     "2026-2611.04794-accelerating-offloading-based-moe-inference-by-interleaving-concurrent-requests.json",
     "2026-2611.05611-hybrid-spark-adaptive-speculative-decoding-that-lets-the-content-choose-the-drafter.json",
+    "2026-2611.05724-give-the-drafter-a-second-chance-to-guess-parallel-reconsideration-for-speculative-decoding.json",
+    "2026-2611.05804-matching-the-training-time-weight-rule-in-inference-time-expert-deactivation.json",
+    "2026-2611.06047-ri-prune-relation-and-information-aware-visual-token-pruning-for-multi-image-vision-language-models.json",
     "2026-2611.06084-shallow-encoding-emits-deep-memories.json",
     "2026-2611.06147-safestart-mitigating-the-overlooked-safety-cost-of-active-expert-reduction-in-moe-serving.json",
     "2026-2611.06397-where-should-a-kv-cache-repair-budget-go-distractor-structure-and-contextual-compatibility-in-non-prefix-reuse.json",
     "2026-2611.06425-d3d-decoupled-diffusion-drafting-for-asynchronous-speculative-decoding.json",
     "2026-2611.06513-helix-heterogeneous-llm-inference-with-flexible-and-fine-grained-partitioning.json",
+    "2026-2611.06634-flash-comm-self-synchronizing-collective-communication-for-llm-decoding.json",
     "2026-2611.06835-loom-loop-invariant-memory-for-causal-encoder-decoder-language-models.json",
     "2026-2611.06956-octopus-one-brain-many-branches-for-latent-kv-multi-agent-reinforcement-learning.json",
     "2026-2611.07025-lowram-low-rank-keys-and-amortised-values-for-composable-kv-cache-compression-at-test-time.json",
@@ -56561,6 +56566,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.03200": {
+      "order": [
+        "2026-11-28T09:17:16+00:00",
+        "2026-2611.03200-cisa-retrofitting-dense-attention-models-with-chunk-indexed-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.05724": {
+      "order": [
+        "2026-11-28T09:18:25+00:00",
+        "2026-2611.05724-give-the-drafter-a-second-chance-to-guess-parallel-reconsideration-for-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.05804": {
+      "order": [
+        "2026-11-28T09:19:33+00:00",
+        "2026-2611.05804-matching-the-training-time-weight-rule-in-inference-time-expert-deactivation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.06047": {
+      "order": [
+        "2026-11-28T09:20:42+00:00",
+        "2026-2611.06047-ri-prune-relation-and-information-aware-visual-token-pruning-for-multi-image-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.06634": {
+      "order": [
+        "2026-11-28T09:21:51+00:00",
+        "2026-2611.06634-flash-comm-self-synchronizing-collective-communication-for-llm-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70666,6 +70716,21 @@
     "arxiv:2611.02966": [
       "papers/inference/16-weight-quantization-compression/2026-2611.02966-shq-learnable-grids-for-llm-weight-quantization.md",
       "papers/inference/16-weight-quantization-compression/2026-2611.02966-shq-learnable-grids-for-llm-weight-quantization.md"
+    ],
+    "arxiv:2611.03200": [
+      "papers/inference/13-sparse-attention/2026-2611.03200-cisa-retrofitting-dense-attention-models-with-chunk-indexed-sparse-atten.md"
+    ],
+    "arxiv:2611.05724": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.05724-give-the-drafter-a-second-chance-to-guess-parallel-reconsideration-for-s.md"
+    ],
+    "arxiv:2611.05804": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2611.05804-matching-the-training-time-weight-rule-in-inference-time-expert-deactiva.md"
+    ],
+    "arxiv:2611.06047": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2611.06047-ri-prune-relation-and-information-aware-visual-token-pruning-for-multi-i.md"
+    ],
+    "arxiv:2611.06634": [
+      "papers/inference/99-other-inference-systems/2026-2611.06634-flash-comm-self-synchronizing-collective-communication-for-llm-decoding.md"
     ]
   }
 }

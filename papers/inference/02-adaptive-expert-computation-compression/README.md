@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（137本）
+## 自動生成の論文一覧（138本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -54,6 +54,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：5  
   MoEの重みから入力統計に基づく共有成分を抜いて全精度で残し、固有成分だけをベクトル量子化して出力の偏りを補正することで、3ビットでも全精度並みの正解率を保った量子化方式。
 
+- **2026-09 · [Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models](2026-2609.04575-training-free-halving-activated-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  本研究は実行する専門家数k1とルータ正規化集合k2を分離し、k2を保ったままk1だけ半減して、細粒度MoEの計算削減とルータ利得を両立する学習不要手法。
+
 - **2026-06 · [DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training](2025-2512.13996-dtop-p-dynamic-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   比例積分制御でTop-p閾値を動かして平均専門家数を予算へ追従させ、層別正規化でトークン・深さごとに計算を再配分する事前学習MoE。
@@ -70,9 +74,9 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：4  
   並列dLLMのトークン群で専門家コア集合を共有し、MoEのユニーク重み転送を約55%削減しつつ相対精度99.5%を維持、MoE層遅延を最大38%短縮する。
 
-- **2026-09 · [Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models](2026-2609.04575-training-free-halving-activated-experts.md)**  
+- **2026-09 · [You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs](2026-2609.25809-you-only-need-2-3-of-the-chosen-experts-an-empirical-study-of-dynamic-ex.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  本研究は実行する専門家数k1とルータ正規化集合k2を分離し、k2を保ったままk1だけ半減して、細粒度MoEの計算削減とルータ利得を両立する学習不要手法。
+  専門家をさらに間引けば推論時の行列積と重み転送を減らせるが、選択数を全トークンで同じように減らすだけで十分なのか、それともトークンや層ごとに専門家数を変える複雑な方式が必要なのか、共通条件での比較が不足していた。9モデルと3課題群を平均すると、元の選択数$K$の約3分の2を残すだけで元性能の98.8%を維持した。
 
 - **2026-08 · [Shape Mutating Expert Compression: LorExperts and BTExperts](2026-2608.07814-lorexperts-btexperts-shape-mutating-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -98,13 +102,13 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：3  
   層間で異なる専門家冗長性を全体最適化し、エントロピー制約付き貪欲統合で枝刈り予算を非一様配分して同一圧縮率の精度保持を改善する。
 
-- **2026-09 · [You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs](2026-2609.25809-you-only-need-2-3-of-the-chosen-experts-an-empirical-study-of-dynamic-ex.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  専門家をさらに間引けば推論時の行列積と重み転送を減らせるが、選択数を全トークンで同じように減らすだけで十分なのか、それともトークンや層ごとに専門家数を変える複雑な方式が必要なのか、共通条件での比較が不足していた。9モデルと3課題群を平均すると、元の選択数$K$の約3分の2を残すだけで元性能の98.8%を維持した。
-
 - **2026-09 · [PRIME: Frequency-Aware Unified Pruning and Merging for MoE Compression](2026-2610.13982-prime-frequency-aware-unified-pruning-and-merging-for-moe-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   エキスパートの枝刈りと統合を別々に決める従来法をやめ、使用頻度で重み付けした目的関数の整数線形計画で割当てを一括決定し、頻度重み付き集約とルーターの線形再構成で仕上げる、再学習なしのMoE圧縮枠組み。
+
+- **2026-09 · [Higher-order pruning of experts in mixture-of-experts language models](2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.md)**  
+  実装：[✓](https://github.com/awslabs/HOPE) ・ リポジトリ内被引用：2  
+  エキスパート対の協調を相互作用行列で記録し、削除誤差の上限を2次計画で最小化して消すエキスパートを決める枝刈り方式で、50パーセント削除時に既存手法中最高の平均順位1.58を得た。
 
 - **2026-09 · [ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs](2026-2609.05228-ace.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -166,10 +170,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：1  
   MoEは各トークンに少数の専門家だけを起動するため演算量を抑えられる一方、全専門家の重みを保持する必要があり、GPUメモリ容量とロード・配置が問題になる。単純に利用頻度が低い専門家を削除すると、他専門家が代替できるか、あるいは特定専門家の組合せで初めて再構成できるかという相互依存を見落とす。組合せを総当たりすると専門家数に対して探索空間が指数的に増える。
 
-- **2026-09 · [Higher-order pruning of experts in mixture-of-experts language models](2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/awslabs/HOPE) ・ リポジトリ内被引用：1  
-  エキスパート対の協調を相互作用行列で記録し、削除誤差の上限を2次計画で最小化して消すエキスパートを決める枝刈り方式で、50パーセント削除時に既存手法中最高の平均順位1.58を得た。
-
 - **2026-09 · [Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts](2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   動的MoE推論で専門家数を減らすと出力分散と尺度が増える問題を特定し、層・次元ごとの平均と分散を学習時分布へ戻す軽量補正で、同じ専門家予算の精度を大幅に回復する。
@@ -223,6 +223,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   意味類似トークンを概念へ適応圧縮し、同一パラメータ・同一平均演算量下で節約計算を専門家混合モデルへ再配分して性能と長文脈推論効率を同時改善する。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [Matching the Training-Time Weight Rule in Inference-Time Expert Deactivation](2026-2611.05804-matching-the-training-time-weight-rule-in-inference-time-expert-deactiva.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  同一の無効化集合でMoEの4つの無効化実装を比べ、最も有害な実装が学習時の重み規則で決まることを重み和モデルと5チェックポイントの実験で示し、規則を外すとパープレキシティが最大28,740倍まで悪化することを確認した分析。
 
 - **2026-10 · [SPARE: Sparsity Allocation via Routing Entropy for Efficient MoEs](2026-2610.29662-spare-sparsity-allocation-via-routing-entropy-for-efficient-moes.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -311,7 +315,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [REAP the Experts: Why Pruning Prevails for One-Shot MoE compression](2025-2510.13999-reap-one-shot-moe-compression.md)**  
-  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：48  
   ルーターゲート値と活性ノルムを組み合わせ、生成性能への寄与が小さい専門家をone-shotで削除し、最大1T級MoEでも50%圧縮を高品質に実現する。
 
 - **2025-09 · [LongCat-Flash Technical Report](2025-2509.01322-longcat-flash-zero-computation-experts.md)**  
@@ -331,7 +335,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   層ごとに異なるエキスパート冗長性を微分可能な探索で学習し、重要度に応じた非一様プルーニングでMoEの推論コストを削減する。
 
 - **2025-04 · [Domain-Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations](2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md)**  
-  実装：[✓](https://github.com/RUCAIBox/EASYEP) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/RUCAIBox/EASYEP) ・ リポジトリ内被引用：21  
   少数のドメイン内例だけで、その領域で繰り返し使われる専門家集合を同定し、ゲート値だけでなく専門家出力の大きさとトークン表現の変化量まで使って枝刈りするEASY-EP。DeepSeek-R1で256専門家のうち128個だけを残し、平均性能67.20→66.55を保ちながら、同一メモリ予算で2.99倍のスループットを報告する。
 
 - **2025-09 · [Dropping Experts, Recombining Neurons: Retraining-Free Pruning for Sparse Mixture-of-Experts LLMs](2025-2509.10377-dern-dropping-experts-recombining-neurons.md)**  
@@ -370,13 +374,13 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：7  
   しかしルータが選び得る専門家の重みをすべてGPUに保持できなければ、選択された専門家をCPUメモリからPCIe経由で転送しなければならない。先読み（プリフェッチ）が当たれば転送を隠せるが、外れたときの同期読み込みは生成を止める。
 
+- **2025-09 · [Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts](2025-2509.21892-elastic-moe-inference-time-scalability.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  学習時と異なる活性エキスパート数でも性能が崩れないよう、多様な共活性組合せと階層的ルーター順位を学習し、単一MoEを2〜3倍の推論予算範囲へ弾性化する。
+
 - **2025-09 · [HEAPr: Hessian-based Efficient Atomic Expert Pruning in Output Space](2025-2509.22299-heapr-atomic-expert-pruning.md)**  
   実装：[✓](https://github.com/LLIKKE/HEAPr) ・ リポジトリ内被引用：5  
   MoE エキスパートをatomic エキスパートへ分解し、出力空間の二次情報で全層を大域順位付けして剪定することで、20〜25%程度の圧縮を多くのモデルでほぼ無損失に実現する。
-
-- **2025-09 · [Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts](2025-2509.21892-elastic-moe-inference-time-scalability.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  学習時と異なる活性エキスパート数でも性能が崩れないよう、多様な共活性組合せと階層的ルーター順位を学習し、単一MoEを2〜3倍の推論予算範囲へ弾性化する。
 
 - **2025-04 · [Cluster-Driven Expert Pruning for Mixture-of-Experts Large Language Models](2025-2504.07807-cluster-driven-expert-pruning.md)**  
   実装：[✓](https://github.com/Fighoture/MoE_unsupervised_pruning) ・ リポジトリ内被引用：5  

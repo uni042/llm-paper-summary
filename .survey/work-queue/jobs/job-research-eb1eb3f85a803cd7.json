@@ -35,10 +35,15 @@
   "selection_reason": "CISAはchunk単位のsparse attentionでKV履歴の読み出しを8-16倍削減し、100万token promptのサービングでdense attention比2.29倍のend-to-end throughputを示す長文脈LLM推論の直接的な高速化手法である。",
   "semantic_scholar_id": "467ad7def240b7aaf1dd83d5514f31c4ff998ba0",
   "source_url": "https://arxiv.org/abs/2611.03200",
-  "status": "ready",
+  "status": "superseded",
   "title": "CISA: Retrofitting Dense Attention Models with Chunk-Indexed Sparse Attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T09:23:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2611.03200-cisa-retrofitting-dense-attention-models-with-chunk-indexed-sparse-atten.md",
+  "represented_canonical_id": "arXiv:2611.03200",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
