@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（497本）
+## 自動生成の論文一覧（498本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -86,6 +86,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：9  
   動的剪定は投機木を速くするが、剪定した枝の中に本来受理できる候補があれば平均受理長が落ちる。Graftは剪定で空いた候補枠を捨てず、対象モデルの過去検証から得た安価な検索候補で「接ぎ木」する。対象モデルが一度に検証するノード総数は増やさず、ドラフト計算だけを安い検索へ置換する。
 
+- **2026-09 · [LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers](2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md)**  
+  実装：[✓](https://github.com/kaist-flexml-lab/loopspec) ・ リポジトリ内被引用：8  
+  ループ型Transformerの中間再帰状態を投機提案に使い、未来ドラフトと現在検証をパイプライン化して最大6.83倍高速化する。
+
 - **2026-07 · [DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting](2026-2607.07409-dels-spec-decoupled-long-short-contexts-for-parallel-speculative-draftin.md)**  
   実装：[✓](https://github.com/dt-3t/DeLS-Spec) ・ リポジトリ内被引用：8  
   投機的復号（投機的復号）は、軽量なドラフトモデルで複数の候補トークンを先に生成し、目標モデルの一度の前向き計算で並列検証することで自己回帰生成の逐次呼出しを減らす。Qwen3-4Bの温度0、8ベンチマーク平均では、DFlashの自己回帰比復号高速化4.63倍・平均受理長6.04から、DeLS-Specは4.82倍・6.35へ改善した。
@@ -97,10 +101,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-02 · [MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios](2026-2603.09983-moe-spac-efficient-moe-inference-based-on-speculative-activation-utility-in-hete.md)**  
   実装：[✓](https://github.com/lshAlgorithm/MoE-SpAc) ・ リポジトリ内被引用：8  
   MoE-SpAcは、投機的復号で先に見える専門家需要を集計し、VRAMに残す専門家・先読みする重み・CPUで計算する専門家を制約付きで同時に配置して、端末の転送待ちを減らす。
-
-- **2026-09 · [LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers](2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md)**  
-  実装：[✓](https://github.com/kaist-flexml-lab/loopspec) ・ リポジトリ内被引用：7  
-  ループ型Transformerの中間再帰状態を投機提案に使い、未来ドラフトと現在検証をパイプライン化して最大6.83倍高速化する。
 
 - **2026-08 · [Verification-Aware Training for Speculative Decoding](2026-2608.30135-verification-aware-training-for-speculative-decoding.md)**  
   実装：[✓](https://github.com/naver-ai/VAT) ・ リポジトリ内被引用：7  
@@ -117,6 +117,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-12 · [DEER: Draft with Diffusion, Verify with Autoregressive Models](2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   DEERは、投機的復号の候補生成器を、左から右へ逐次生成する小型自己回帰モデルから、複数位置をまとめて予測できる離散拡散言語モデル（discrete diffusion language モデル）へ置き換える方式である。
+
+- **2026-09 · [WaveFront Decoding: Parallelized Self-Speculative Decoding for Looped Language Models](2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-lan.md)**  
+  実装：[✓](https://github.com/summerbro-hhj/wavefront-decoding) ・ リポジトリ内被引用：6  
+  ループ型モデルで、位置ごとに深さの違う状態を1回の重み共有ブロック呼び出しに束ねて草案と検証を同時並行化する学習不要の復号で、自己回帰生成の最大4.81倍の高速化を示した。
 
 - **2026-09 · [DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding](2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -145,10 +149,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-02 · [Vegas: Self-Speculative Decoding with Verification-Guided Sparse Attention](2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md)**  
   実装：[✓](https://github.com/platformxlab/vegas) ・ リポジトリ内被引用：6  
   検証で得た注意ロジットを次の疎な候補生成へ再利用し、鍵値選択の追加走査を抑えながら損失なし自己投機復号を高速化する。
-
-- **2026-09 · [WaveFront Decoding: Parallelized Self-Speculative Decoding for Looped Language Models](2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-lan.md)**  
-  実装：[✓](https://github.com/summerbro-hhj/wavefront-decoding) ・ リポジトリ内被引用：5  
-  ループ型モデルで、位置ごとに深さの違う状態を1回の重み共有ブロック呼び出しに束ねて草案と検証を同時並行化する学習不要の復号で、自己回帰生成の最大4.81倍の高速化を示した。
 
 - **2026-08 · [S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices](2026-2608.15018-s2-moe-self-speculative-decoding-edge.md)**  
   実装：[✓](https://github.com/angerybob/S2-MoE) ・ リポジトリ内被引用：5  
@@ -409,6 +409,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-01 · [TABED: Test-Time Adaptive Ensemble Drafting for Robust Speculative Decoding in LVLMs](2026-2601.20357-tabed-test-time-adaptive-ensemble-drafting-for-robust-speculative-decodi.md)**  
   実装：[✓](https://github.com/furiosa-ai/TABED) ・ リポジトリ内被引用：2  
   TABED（Test-Time 適応的 Ensemble Drafting）は、画像と文章を処理する大規模視覚言語モデル（LVLM）の出力生成を速くするための、実行時適応型の投機的復号方式である。
+
+- **2026-11 · [LoopCache: Accelerating Long-Context Self-Speculative Decoding for Looped Transformers](2026-2611.24301-loopcache-accelerating-long-context-self-speculative-decoding-for-looped.md)**  
+  実装：[✓](https://github.com/zZzZ9zZ9/LoopCache) ・ リポジトリ内被引用：1  
+  ループ型トランスフォーマーの自己投機的デコードで、中間ループの予測を信頼度で選んで下書きを更新し、KVキャッシュ読みを周期的に1ループ分へ抑えて厳密検証を無損失に保つことで、波形方式に対して平均10倍を超える高速化を得た長文脈向けデコード方式。
 
 - **2026-11 · [Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter](2026-2611.05611-hybrid-spark-adaptive-speculative-decoding-that-lets-the-content-choose-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -716,10 +720,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/MisakiTaro0414/floodgates) ・ リポジトリ内被引用：0  
   ループ型モデルの浅いループに、検証で作られる深いプリフィックスキャッシュとマスクトークンを使って複数トークンを並列に下書きさせ、下書き専用の低ランク適応で学習することで、無損失のまま最大7.5倍まで速くする自己投機的デコード。
 
-- **2026-11 · [LoopCache: Accelerating Long-Context Self-Speculative Decoding for Looped Transformers](2026-2611.24301-loopcache-accelerating-long-context-self-speculative-decoding-for-looped.md)**  
-  実装：[✓](https://github.com/zZzZ9zZ9/LoopCache) ・ リポジトリ内被引用：0  
-  ループ型トランスフォーマーの自己投機的デコードで、中間ループの予測を信頼度で選んで下書きを更新し、KVキャッシュ読みを周期的に1ループ分へ抑えて厳密検証を無損失に保つことで、波形方式に対して平均10倍を超える高速化を得た長文脈向けデコード方式。
-
 - **2026-11 · [LEGOSpec: A Composable and Efficient Framework for Speculative Draft Design and Training](2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-desi.md)**  
   実装：[✓](https://github.com/SJTU-DAI-Sys/LEGOSpec) ・ リポジトリ内被引用：0  
   ドラフトを4部品へ分解して学習条件を揃えた対照実験で部品効果を分離し、長文脈向けバックボーンと並列補正と階層型教師を組み合わせたDFluxで受理長を最大34.7パーセント伸ばし、ドラフト学習そのものも最大1.79倍速くした投機的復号の設計・学習フレームワーク。
@@ -743,6 +743,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-11 · [ForeSpark: Joint Draft and Verification Budget Scheduling for Parallel Speculative Decoding](2026-2611.13442-forespark-joint-draft-and-verification-budget-scheduling-for-parallel-sp.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   下書き前に文脈特徴から長さごとの受理を推し、下書き長と検証予算を凹包絡と全体ソートで共同配分することで、処理能力を最も強い従来方式の最大一・七七倍、自己回帰復号の最大二・四九倍にし、品質目標を満たせる負荷も一・五一倍にしたと報告した。
+
+- **2026-11 · [FlyingStart: Learned Cross-Token Warm Starts for Fixed-Point Decoding in Recurrent-Depth Language Models](2026-2611.34492-flyingstart-learned-cross-token-warm-starts-for-fixed-point-decoding-in-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  再帰深度モデルは各トークンの反復をランダムノイズから始めて収束コストを全額払うが、本論文は前のトークンの終了状態と現在の入力から線形写像で開始点を予測し、反復も終了規則も変えないまま同精度でループを1〜2本削る。
 
 - **2026-11 · [DForkTree: Accelerating Speculative Decoding with Fork-Aware Block Diffusion Draft Trees](2026-2611.12356-dforktree-accelerating-speculative-decoding-with-fork-aware-block-diffus.md)**  
   実装：[✓](https://github.com/Perseus037/DForkTree) ・ リポジトリ内被引用：0  

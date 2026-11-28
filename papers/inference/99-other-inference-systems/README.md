@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（847本）
+## 自動生成の論文一覧（848本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -207,6 +207,10 @@
 - **2026-10 · [Multi-Token Prediction Done Right](2026-2610.38331-multi-token-prediction-done-right.md)**  
   実装：[✓](https://github.com/JaydenTeoh/Soft-MTP) ・ リポジトリ内被引用：1  
   複数トークン予測の交差エントロピー勾配を自己蒸留成分と低品質な残差へ厳密に分解し、勾配回収の工夫で残差だけを消す一行変更のSoft-MTPにより、全規模でパープレキシティ、投機的デコーディング、ゼロショット精度を無料で改善する学習法。
+
+- **2026-10 · [How to Loop Your Transformer: Loop Scaling, Specialization, and Parallel Inference](2026-2610.40325-how-to-loop-your-transformer-loop-scaling-specialization-and-parallel-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ループする範囲、ループごとの低ランク特化、トークン間へ接続をずらす並列化を統一条件で比較し、制約ごとに最適なループ設計が異なることと、並列ループの品質を正規化で回復できることを示した研究。
 
 - **2026-10 · [Gated Slot Attention-2: Two-Sided Associative Memory Correction in Linear Attention](2026-2610.02816-gated-slot-attention-2-two-sided-associative-memory-correction-in-linear.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -482,6 +486,10 @@
   実装：[✓](https://github.com/camail-official/LoReS) ・ リポジトリ内被引用：0  
   リカレント言語モデルの量子化を状態外と状態内へ分け、減衰型リカレンスは外れ値が弱く量子化しやすいことと、バリュー軸グルーピング・減衰ベース混合精度・確率的丸めからなるLoReSで状態を8ビット化しても大規模ハイブリッドの精度がほぼ保たれることを示す研究。
 
+- **2026-11 · [PURA: Video Token Pruning via Unified Spatiotemporal Redundancy Assessment](2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessmen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  各視覚トークンの空間参照と時間参照を表現誤差と重要度からなる1つの除去コストで競わせ、動画ごとに空間と時間の枝刈り配分を自動で決める学習不要の圧縮で、圧縮自体の時間を111.7倍短縮し保持率5パーセントでも比較対象の10パーセント時を上回る精度を保った動画トークン枝刈り。
+
 - **2026-11 · [Perceive Once, Escalate on Demand: Handing Off Visual KV Memory from Small to Large VLMs](2026-2611.26902-perceive-once-escalate-on-demand-handing-off-visual-kv-memory-from-small.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   小さい視覚言語モデルのKVキャッシュを大きいモデルへ渡すとき、相手のキャッシュへの忠実な回帰ではなく相手自身の回答から写像を蒸留することで、履歴の再エンコードなしに大きいモデルの判断を引き出せることを示した、カスケードの受け渡し経路の研究。
@@ -609,10 +617,6 @@
 - **2026-10 · [Hybrid Computer Use: A Unified Programmatic, Semantic, and Visual Interface for General Agents](2026-2610.41432-hybrid-computer-use-a-unified-programmatic-semantic-and-visual-interface.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   計算機を使う代理人の対話面を視覚と意味と手続きの三経路で統一し、圧縮した意味の観測と一括の動作と入力直前の照合で、OSWorld 2.0 の最高の部分点と完全達成率を出し、入力トークンを五十七パーセント減らし費用を五十五パーセント下げたと報告した。
-
-- **2026-10 · [How to Loop Your Transformer: Loop Scaling, Specialization, and Parallel Inference](2026-2610.40325-how-to-loop-your-transformer-loop-scaling-specialization-and-parallel-in.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ループする範囲、ループごとの低ランク特化、トークン間へ接続をずらす並列化を統一条件で比較し、制約ごとに最適なループ設計が異なることと、並列ループの品質を正規化で回復できることを示した研究。
 
 - **2026-10 · [FuseRAG: Fusing Structure and Evidence into Inference for Cost-Efficient Graph-based RAG](2026-2610.22818-fuserag-fusing-structure-and-evidence-into-inference-for-cost-efficient-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

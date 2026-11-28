@@ -35,10 +35,15 @@
   "selection_reason": "単一チェックポイントから先頭ビットの読み出しだけで2〜8ビット（2〜4ビット域は0.5ビット刻み）の複数精度を供給するネスト型重み量子化Any-Rateを提案し、8重みブロックへの拡張ハミング符号語によるビットプレーン制限と精度共有LUTで、オンデバイスLLM推論のメモリ・エネルギー予算変動への対応とデコード速度維持を要旨で具体的に示しているため対象内とする。",
   "semantic_scholar_id": "da31d75085a3967451d7970f86439a1d7adb3117",
   "source_url": "https://arxiv.org/abs/2611.34402",
-  "status": "ready",
+  "status": "superseded",
   "title": "Any-Rate: Half-Bit Multi-Precision LLM Quantization with Coded Bit-Planes",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T05:59:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2611.34402-any-rate-half-bit-multi-precision-llm-quantization-with-coded-bit-planes.md",
+  "represented_canonical_id": "arXiv:2611.34402",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

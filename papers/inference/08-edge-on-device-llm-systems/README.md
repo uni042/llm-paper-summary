@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（139本）
+## 自動生成の論文一覧（140本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -117,6 +117,10 @@
 - **2026-11 · [HyCoInfer: Cloud-Edge Collaborative Inference for Large Language Models on Heterogeneous GPU-FPGA Architectures](2026-2611.22086-hycoinfer-cloud-edge-collaborative-inference-for-large-language-models-o.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィルをクラウドGPU、デコードをGPUとエッジFPGAへ分ける分離型サービングで、FPGA容量を織り込んだ役割分担と帯域適応型のKV圧縮と層単位転送により、500Mbps回線の長文質問応答でクラウドのみ比グッドプット4.11倍と遅延56.2パーセント減を出す協調推論システム。
+
+- **2026-11 · [Any-Rate: Half-Bit Multi-Precision LLM Quantization with Coded Bit-Planes](2026-2611.34402-any-rate-half-bit-multi-precision-llm-quantization-with-coded-bit-planes.md)**  
+  実装：[✓](https://github.com/hoonki2002/Any-Rate) ・ リポジトリ内被引用：0  
+  8重みのブロックでビットプレーンをハミング符号語へ制限して0.5ビット刻みの精度を作り、モード別の誤差フィードバック目標で全モードを共同符号化することで、1つのチェックポイントから2から8ビットを読み分け、2ビットでもFP16精度の69パーセントを保つ入れ子型多精度量子化。
 
 - **2026-10 · [TileWeave: Heterogeneous Tiling for Sparse Prefill on Mobile SoCs](2026-2611.00408-tileweave-heterogeneous-tiling-for-sparse-prefill-on-mobile-socs.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

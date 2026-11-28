@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "2dbc0d10b8a2f97ffb116e41d7a1e8760fb16d06964de107dfaf89cec25ab3c8",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.md",
+  "status": "imported",
+  "source_sha256": "6e92b303bf4d9d4d9f28f6d1dd6b3e76262f2b33cbb1ff08f82e2595a2ce5f9d",
   "canonical_id": "arXiv:2611.34630",
-  "worker_completed_at": "2026-11-28T08:10:00+09:00",
-  "worker_run_key": "muse-20261128-b2",
+  "paper_path": "papers/inference/15-inference-simulation-emulation/2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-sl.md",
+  "lineage": "15-inference-simulation-emulation",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-28T12:05:36+09:00",
+  "worker_run_key": "muse-20261128-cont-repair",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 5329,
-    "body_paragraphs": 22,
+    "body_chars": 7029,
+    "body_paragraphs": 25,
     "method_chars": 2415,
     "method_paragraphs": 5,
-    "evaluation_chars": 492,
+    "evaluation_chars": 2192,
     "limitation_chars": 411,
-    "insufficiency_flags": [
-      "評価説明量 492 < 500"
-    ]
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 492 < 500"
-  ],
-  "processed_at": "2026-11-28T00:19:42+00:00"
+  "processed_at": "2026-11-28T05:57:30+00:00"
 }

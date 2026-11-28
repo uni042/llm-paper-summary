@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "475b62cadb8b0980f58d4364fe9ad4e35b95c874e48b8ef61d3cd1a5f72c8431",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.md",
+  "status": "imported",
+  "source_sha256": "23733a9accfbc33b6b14ca64f91e2e8e89d8f7a4290e7cf71df05d60ad780939",
   "canonical_id": "arXiv:2611.34521",
-  "worker_completed_at": "2026-11-28T08:10:00+09:00",
-  "worker_run_key": "muse-20261128-b2",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessmen.md",
+  "lineage": "99-other-inference-systems",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-28T12:05:36+09:00",
+  "worker_run_key": "muse-20261128-cont-repair",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 4625,
-    "body_paragraphs": 21,
+    "body_chars": 6304,
+    "body_paragraphs": 24,
     "method_chars": 1880,
     "method_paragraphs": 4,
-    "evaluation_chars": 494,
+    "evaluation_chars": 2173,
     "limitation_chars": 351,
-    "insufficiency_flags": [
-      "評価説明量 494 < 500"
-    ]
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 494 < 500"
-  ],
-  "processed_at": "2026-11-28T00:19:40+00:00"
+  "processed_at": "2026-11-28T05:56:21+00:00"
 }

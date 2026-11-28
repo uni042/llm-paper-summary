@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0879d1dd593cb25e6c9525bd3bc605f09c28a2ad",
+  "base_commit": "b337209c84887e08489988e2de9135fcc9cc52bb",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1823,6 +1823,8 @@
     "2026-2611.33981-mixmomo-accelerating-extra-large-moe-inference-with-mixed-precision-gpu-npu-execution.json",
     "2026-2611.34010-asymmetric-speculative-decoding-unlocking-in-context-learning-in-draft-models.json",
     "2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.json",
+    "2026-2611.34402-any-rate-half-bit-multi-precision-llm-quantization-with-coded-bit-planes.json",
+    "2026-2611.34492-flyingstart-learned-cross-token-warm-starts-for-fixed-point-decoding-in-recurrent-depth.json",
     "2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.json",
     "2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
@@ -56395,6 +56397,24 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.34402": {
+      "order": [
+        "2026-11-28T05:54:04+00:00",
+        "2026-2611.34402-any-rate-half-bit-multi-precision-llm-quantization-with-coded-bit-planes.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.34492": {
+      "order": [
+        "2026-11-28T05:55:12+00:00",
+        "2026-2611.34492-flyingstart-learned-cross-token-warm-starts-for-fixed-point-decoding-in-recurrent-depth.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70406,6 +70426,12 @@
     ],
     "arxiv:2611.34092": [
       "papers/inference/05-speculative-decoding-moe/2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-a.md"
+    ],
+    "arxiv:2611.34402": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2611.34402-any-rate-half-bit-multi-precision-llm-quantization-with-coded-bit-planes.md"
+    ],
+    "arxiv:2611.34492": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.34492-flyingstart-learned-cross-token-warm-starts-for-fixed-point-decoding-in-.md"
     ]
   }
 }

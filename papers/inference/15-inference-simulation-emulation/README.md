@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（135本）
+## 自動生成の論文一覧（136本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -149,6 +149,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-11 · [LaFlash: Capacity-Driven Acceleration for Coding Agent Workflows via QLC-HBF](2026-2611.22746-laflash-capacity-driven-acceleration-for-coding-agent-workflows-via-qlc-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   コーディングエージェントの休止状態を追い出さず保持する方が再計算より速いことに着目し、大容量のQLC高帯域フラッシュへ状態を置くLaFlashで、SLC方式とバッチ拡大の組み合わせに対し平均7.04倍のスループットと10.96倍のエネルギー効率を得る容量駆動の加速アーキテクチャ。
+
+- **2026-11 · [A Differential Computing Accelerator for LLM Inference Leveraging Bit-Slice Transition Sparsity](2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-sl.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ビットスライスベクトルを少数のSteiner点からの最大2回のビット反転で表し、部分和を加減算だけで無損失に再構成することで、疎性の乏しい低次スライスの密な行列積計算を再利用へ置き換え、既存アクセラレータ比1.27〜3.09倍の高速化をシミュレーションで示したアルゴリズムとハードウェアの共同設計。
 
 - **2026-10 · [The Real Cost of Context: Predicting Compute Time and Energy Consumption in LLM Prefill and Decode Phases](2026-2610.39621-the-real-cost-of-context-predicting-compute-time-and-energy-consumption-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
