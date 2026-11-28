@@ -248,6 +248,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   RAG各段階を資源・通信付き演算子へ変換し、ゼロコピー通信とCPU/GPU重畳で復号外のオーケストレーション律速を削減する。
 
+- **2026-08 · [Multi-Image Visual Token Pruning in Large Visual Language Models](2026-2608.26806-multi-image-visual-token-pruning-in-large-visual-language-models.md)**  
+  実装：[✓](https://github.com/zry13/AVTP) ・ リポジトリ内被引用：1  
+  隠れ状態の変化で重要度を測り、モデルに合う層と画像ごとの保持率を適応させる学習不要の視覚トークン枝刈りで、多画像推論を精度を保ちながら2倍速くする。
+
 - **2026-08 · [Learning What to Remember: Test-Time Training via Context Distillation](2026-2608.01672-learning-what-to-remember-test-time-training-via-context-distillation.md)**  
   実装：[✓](https://github.com/dangxingyu/ttcd) ・ リポジトリ内被引用：1  
   通常の全注意（full 注意機構）は長い履歴の情報を参照できる一方、長さに応じて注意計算と鍵・値（KV）キャッシュの費用が増える。760Mパラメータをゼロから学習したモデルのRULER針検索（6課題平均）では、32KトークンでIP-TTTの9.29%に対しIP-TTCDは21.96%。
@@ -885,10 +889,6 @@
 - **2026-08 · [Not All Attention Heads Contribute to Critical Visual Token Selection: Head-Aware Pruning Matters More](2026-2608.25332-not-all-attention-heads-contribute-to-critical-visual-token-selection-he.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークンの重要度判定が少数の視覚ヘッドへ集中することを示し、骨格へ入る前の類似度削減と、浅い層は視覚ヘッドのみ・中間層は全ヘッドという段階的枝刈りを組み合わせ、88.9パーセント削減でも性能の95.9パーセント保持と1.62倍高速化を実現する。
-
-- **2026-08 · [Multi-Image Visual Token Pruning in Large Visual Language Models](2026-2608.26806-multi-image-visual-token-pruning-in-large-visual-language-models.md)**  
-  実装：[✓](https://github.com/zry13/AVTP) ・ リポジトリ内被引用：0  
-  隠れ状態の変化で重要度を測り、モデルに合う層と画像ごとの保持率を適応させる学習不要の視覚トークン枝刈りで、多画像推論を精度を保ちながら2倍速くする。
 
 - **2026-08 · [Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration](2026-2608.24664-maia-200-a-software-defined-dataflow-system-for-large-scale-ai-accelerat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2798,6 +2798,10 @@
   実装：[✓](https://github.com/cornell-zhang/allo/tree/main/examples) ・ リポジトリ内被引用：14  
   大規模言語モデルの推論を再構成可能な論理回路（FPGA）へ載せる従来方式の多くは、同じ演算器を複数の演算子・層へ順番に割り当てる時間多重型である。AMD Alveo U280上のGPT-2では、同じFPGAのDFXに対してプリフィル2.16倍、復号1.10倍の高速化を報告する。
 
+- **2024-11 · [XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models](2024-2411.15100-xgrammar-flexible-and-efficient-structured-generation-engine-for-large-l.md)**  
+  実装：[✓](https://github.com/mlc-ai/xgrammar) ・ リポジトリ内被引用：13  
+  構造化生成の文法チェックを高速化するため、語彙を事前検査できるトークンと実行時検査が必要なトークンに分け、前者はマスクをキャッシュし、後者は永続スタックで処理し、文法計算をGPU推論と重ねるエンジン。既存ライブラリより最大で100倍以上速く、サービング全体ではほぼゼロの追加コストになった。
+
 - **2024-09 · [LLaMA-Omni: Seamless Speech Interaction with Large Language Models](2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md)**  
   実装：[✓](https://github.com/ictnlp/LLaMA-Omni) ・ リポジトリ内被引用：13  
   従来のカスケード方式では、音声認識が入力を文字起こしし、その文字列を大規模言語モデルへ渡し、生成されたテキストを音声合成器へ送る。
@@ -2805,10 +2809,6 @@
 - **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
   実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：13  
   二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
-
-- **2024-11 · [XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models](2024-2411.15100-xgrammar-flexible-and-efficient-structured-generation-engine-for-large-l.md)**  
-  実装：[✓](https://github.com/mlc-ai/xgrammar) ・ リポジトリ内被引用：12  
-  構造化生成の文法チェックを高速化するため、語彙を事前検査できるトークンと実行時検査が必要なトークンに分け、前者はマスクをキャッシュし、後者は永続スタックで処理し、文法計算をGPU推論と重ねるエンジン。既存ライブラリより最大で100倍以上速く、サービング全体ではほぼゼロの追加コストになった。
 
 - **2024-10 · [Fast Best-of-N Decoding via Speculative Rejection](2024-2410.20290-fast-best-of-n-decoding-via-speculative-rejection.md)**  
   実装：[✓](https://github.com/Zanette-Labs/SpeculativeRejection) ・ リポジトリ内被引用：11  
@@ -2850,6 +2850,10 @@
   実装：[✓](https://github.com/decoding-comp-trust/comp-trust) ・ リポジトリ内被引用：6  
   LLM圧縮の評価は、通常の質問応答や知識課題の性能を維持できるかに偏りがちである。評価の中心的な結果は、同程度に圧縮する場合は量子化が枝刈りより元モデルの信頼性を再現しやすいこと、4-bit量子化では一部軸が改善し得ること、3-bitでは通常性能に現れにくい深刻な回帰が生じることである。
 
+- **2024-02 · [Generative Representational Instruction Tuning](2024-2402.09906-generative-representational-instruction-tuning.md)**  
+  実装：[✓](https://github.com/ContextualAI/gritlm) ・ リポジトリ内被引用：6  
+  GRIT（Generative Representational Instruction Tuning）は、文章生成と文章埋込みを一つの大規模言語モデルで処理するための指示調整方式である。7BモデルのGritLM-7Bは、56データ集合からなるMTEBの平均66.8を示し、同じ基盤モデルから表現専用で訓練した比較版の66.8と同等だった。
+
 - **2024-05 · [A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models](2024-2405.13019-a-comprehensive-survey-of-accelerated-generation-techniques-in-large-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   第一は小型モデルなどで先のトークンを予測し、大型の対象モデルが並列に検証する投機的復号（投機的復号）、第二は簡単なトークンで深いTransformer層の計算を省略する早期終了（early exiting）、第三は複数位置のトークンを同時に生成・更新する非自己回帰生成（non-autoregressive generation）である。
@@ -2857,10 +2861,6 @@
 - **2024-02 · [Small Models, Big Insights: Leveraging Slim Proxy Models To Decide When and What to Retrieve for LLMs](2024-2402.12052-small-models-big-insights-leveraging-slim-proxy-models-to-decide-when-an.md)**  
   実装：[✓](https://github.com/plageon/SlimPlm) ・ リポジトリ内被引用：5  
   従来の自己評価型方式は大型言語モデル自身に暫定回答や判断を作らせるため、検索要否を知る段階で高価な大型モデル推論が増える。
-
-- **2024-02 · [Generative Representational Instruction Tuning](2024-2402.09906-generative-representational-instruction-tuning.md)**  
-  実装：[✓](https://github.com/ContextualAI/gritlm) ・ リポジトリ内被引用：5  
-  GRIT（Generative Representational Instruction Tuning）は、文章生成と文章埋込みを一つの大規模言語モデルで処理するための指示調整方式である。7BモデルのGritLM-7Bは、56データ集合からなるMTEBの平均66.8を示し、同じ基盤モデルから表現専用で訓練した比較版の66.8と同等だった。
 
 - **2024-11 · [kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers](2024-2411.04013-knn-attention-demystified-a-theoretical-exploration-for-scalable-transfo.md)**  
   実装：[✓](https://github.com/sansui-123/knn_attention) ・ リポジトリ内被引用：4  
@@ -3113,11 +3113,11 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：112  
+  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：113  
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：93  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：94  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  
