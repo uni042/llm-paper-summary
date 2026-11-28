@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0dc53cd3bd876221-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2611.00444",
+  "reason": "全文通読の結果、本論文はTPU上の動画拡散トランスフォーマーの注意カーネルを、オンラインソフトマックスの最大値減算と再スケーリングを数値証明（certificate）で省略することで高速化する研究であり、実証はWan 2.2とLTX-2の動画生成（注意カーネル遅延最大24.0%削減、DiTステップ遅延最大19.6%削減）が中心である。注意機構の安定化という機構自体はLLMの注意にも関係し、第5.5節に因果LLM学習での予備的な高速化も示されるが、主評価は動画拡散であり、LLM推論システムへの直接の技術的貢献やLLM推論ワークロードでの評価が一次資料に確認できないため、即Researchの根拠が弱くborderlineと判定した。",
+  "title": "CLiS: Plug-and-Play Attention Acceleration for Video Diffusion on TPUs via Certified Stabilization",
+  "identity_tokens": [
+    "arXiv:2611.00444",
+    "CLiS",
+    "Certified Loop-Invariant Stabilization"
+  ],
+  "linked_from": [
+    "worker-worklist-30.json:job-research-7a9e1009937b25de"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dc53cd3bd87",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

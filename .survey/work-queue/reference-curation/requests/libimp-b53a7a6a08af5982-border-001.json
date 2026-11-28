@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b53a7a6a08af5982-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2611.07477",
+  "reason": "全文通読の結果、本論文はLLMの学習における通信・計算オーバーラップを対象に、ワーキンググループがデータ準備状況に応じて通信役と計算役を切り替える永続カーネルを提案し、学習スループットで1.10〜1.83倍の高速化を示したものである。通信と計算の重ね合わせという機構自体は推論時のテンソル並列や専門家並列にも関係しうるが、一次資料の設計・統合・評価はすべて学習（Megatron-LM、順伝播と逆伝播、MXFP8学習）向けであり、LLM推論システムへの直接の技術的貢献や推論ワークロードでの評価が確認できないため、即Researchの根拠が弱くborderlineと判定した。",
+  "title": "KOSMOS: Self-scheduling Persistent Kernels for Communication-Compute Overlap",
+  "identity_tokens": [
+    "arXiv:2611.07477",
+    "KOSMOS",
+    "self-scheduling persistent kernels"
+  ],
+  "linked_from": [
+    "worker-worklist-00.json:job-research-08641e05cec44dd7"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b53a7a6a08af",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
