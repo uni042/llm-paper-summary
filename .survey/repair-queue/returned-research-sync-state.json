@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a233e7902878c3c3300182913afd94151b05ecc1",
+  "base_commit": "401ae5244844d00b143e61e91cdf7ffbb2d13ed4",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -306,6 +306,7 @@
     "2025-2502.17728-llm-inference-acceleration-via-efficient-operation-fusion.json",
     "2025-2502.18627-pacq-a-simt-microarchitecture-for-efficient-dataflow-in-hyper-asymmetric-gemms.json",
     "2025-2502.20959-cicada-a-pipeline-efficient-approach-to-serverless-inference-with-decoupled-management.json",
+    "2025-2503.00029-streaming-looking-ahead-with-token-level-self-reward.json",
     "2025-2503.00245-cosmoes-compact-sparse-mixture-of-experts.json",
     "2025-2503.01253-nm-spmm-accelerating-matrix-multiplication-using-n-m-sparsity-with-gpgpu.json",
     "2025-2503.01873-online-pseudo-average-shifting-attention-pasa-for-robust-low-precision-llm-inference-algorithms-and-numerical-analysis.json",
@@ -335,6 +336,7 @@
     "2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-pruning-for-efficient-long-context-llm-inference.json",
     "2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.json",
     "2025-2504.10854-lvlm-csp-accelerating-large-vision-language-models-via-clustering-scattering-and-pruning-for-reasoning-segmentation.json",
+    "2025-2504.11729-edgeprompt-a-distributed-key-value-inference-framework-for-llms-in-6g-networks.json",
     "2025-2504.12984-tilus-a-tile-level-gpgpu-programming-language-for-low-precision-computation.json",
     "2025-2504.14941-windve-collaborative-cpu-npu-vector-embedding.json",
     "2025-2504.15475-speculative-sampling-via-exponential-races.json",
@@ -349,12 +351,14 @@
     "2025-2505.04081-qstore-quantization-aware-compressed-model-storage.json",
     "2025-2505.07531-quantx-a-framework-for-hardware-aware-quantization-of-generative-ai-workloads.json",
     "2025-2505.07861-scalable-llm-reasoning-acceleration-with-low-rank-distillation.json",
+    "2025-2505.09319-statistical-modeling-and-uncertainty-estimation-of-llm-inference-systems.json",
     "2025-2505.09663-analog-foundation-models.json",
     "2025-2505.10118-why-1-1-1-in-visual-token-pruning-beyond-naive-integration-via-multi-objective-balanced-covering.json",
     "2025-2505.10413-hierarchical-document-refinement-for-long-context-retrieval-augmented-generation.json",
     "2025-2505.10951-subgcache-accelerating-graph-based-rag-with-subgraph-level-kv-cache.json",
     "2025-2505.11040-efficient-attention-via-pre-scoring-prioritizing-informative-keys-in-transformers.json",
     "2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.json",
+    "2025-2505.14620-enhancing-learned-knowledge-in-lora-adapters-through-efficient-contrastive-decoding-on-ascend-npus.json",
     "2025-2505.15154-prolonged-reasoning-is-not-all-you-need-certainty-based-adaptive-routing-for-efficient-llm-mllm-reasoning.json",
     "2025-2505.16221-lightrouter-towards-efficient-llm-collaboration-with-minimal-overhead.json",
     "2025-2505.16743-trim-achieving-extreme-sparsity-with-targeted-row-wise-iterative-metric-driven-pruning.json",
@@ -383,6 +387,7 @@
     "2025-2506.10446-fast-on-the-easy-deep-on-the-hard-efficient-reasoning-via-powered-length-penalty.json",
     "2025-2506.10822-recut-balancing-reasoning-length-and-accuracy-in-llms-via-stepwise-trails-and-preference-optimization.json",
     "2025-2506.11120-sdmprune-self-distillation-mlp-pruning-for-efficient-large-language-models.json",
+    "2025-2506.13514-tensorslm-energy-efficient-embedding-compression-of-sub-billion-parameter-language-models-on-low-end-devices.json",
     "2025-2506.17254-near-optimal-online-deployment-and-routing-for-streaming-llms.json",
     "2025-2506.17255-ultrasketchllm-sub-1-bit-llm-compression-via-sketch-and-hardware-friendly-operators.json",
     "2025-2506.18582-parallel-continuous-chain-of-thought-with-jacobi-iteration.json",
@@ -56352,6 +56357,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2503.00029": {
+      "order": [
+        "2026-11-28T03:48:40+00:00",
+        "2025-2503.00029-streaming-looking-ahead-with-token-level-self-reward.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2504.11729": {
+      "order": [
+        "2026-11-28T03:50:04+00:00",
+        "2025-2504.11729-edgeprompt-a-distributed-key-value-inference-framework-for-llms-in-6g-networks.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.09319": {
+      "order": [
+        "2026-11-28T03:51:28+00:00",
+        "2025-2505.09319-statistical-modeling-and-uncertainty-estimation-of-llm-inference-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.14620": {
+      "order": [
+        "2026-11-28T03:52:52+00:00",
+        "2025-2505.14620-enhancing-learned-knowledge-in-lora-adapters-through-efficient-contrastive-decoding-on-ascend-npus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2506.13514": {
+      "order": [
+        "2026-11-28T03:54:16+00:00",
+        "2025-2506.13514-tensorslm-energy-efficient-embedding-compression-of-sub-billion-parameter-language-models-on-low-end-devices.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70194,6 +70244,21 @@
     "arxiv:2502.06844": [
       "papers/inference/99-other-inference-systems/2025-2502.06844-exploring-model-invariance-with-discrete-search-for-ultra-low-bit-quanti.md",
       "papers/inference/99-other-inference-systems/2025-2502.06844-exploring-model-invariance-with-discrete-search-for-ultra-low-bit-quanti.md"
+    ],
+    "arxiv:2503.00029": [
+      "papers/inference/99-other-inference-systems/2025-2503.00029-streaming-looking-ahead-with-token-level-self-reward.md"
+    ],
+    "arxiv:2504.11729": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2504.11729-edgeprompt-a-distributed-key-value-inference-framework-for-llms-in-6g-ne.md"
+    ],
+    "arxiv:2505.09319": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2505.09319-statistical-modeling-and-uncertainty-estimation-of-llm-inference-systems.md"
+    ],
+    "arxiv:2505.14620": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2505.14620-enhancing-learned-knowledge-in-lora-adapters-through-efficient-contrasti.md"
+    ],
+    "arxiv:2506.13514": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2506.13514-tensorslm-energy-efficient-embedding-compression-of-sub-billion-paramete.md"
     ]
   }
 }

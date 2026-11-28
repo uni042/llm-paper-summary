@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（835本）
+## 自動生成の論文一覧（836本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2620,6 +2620,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、Transformerの注意行列を推論時に疎化する際の品質劣化を、学習時に注意確率を少数の要素へ集中させておくことで抑える手法を提案する。理想マスクでの精度維持と、低コストのマスク予測器が同じ結果を達成できるかは別問題であり、Hyper-注意機構では正則化モデルの方が悪い条件も存在する。
 
+- **2025-02 · [Streaming Looking Ahead with Token-level Self-reward](2025-2503.00029-streaming-looking-ahead-with-token-level-self-reward.md)**  
+  実装：[✓](https://github.com/CognitiveKernel/SLA) ・ リポジトリ内被引用：0  
+  方策モデル自身にトークン単位の自己報酬を持たせるReward Transformerと、先読みトークンを再利用するバランス木探索SLAで、外部報酬モデルなしの先読みデコードをストリーミング可能にし、凍結したLlama-3-8Bで貪欲デコードに対する勝率79.7パーセントを得た。
+
 - **2025-02 · [SHAFT: Secure, Handy, Accurate and Fast Transformer Inference](2025-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.md)**  
   実装：[✓](https://github.com/andeskyl/SHAFT) ・ リポジトリ内被引用：0  
   入力クリッピング付き常微分方程式による定数ラウンドのソフトマックスと、フーリエ級数近似のGELUで、秘密分散型のTransformer秘密推論を速く正確にし、Hugging Faceからそのまま持ち込めるようにした枠組みSHAFT。
@@ -2822,6 +2826,10 @@
   実装：[✓](https://github.com/wuyushuwys/ToR_SSM) ・ リポジトリ内被引用：3  
   Mamba向けに、隠れ状態由来の重要度でトークンを分類し枝刈りとマージを使い分ける学習後トークン削減を作り、演算2割減でも既存削減法より平均正解率を約9ポイント高く保つ。
 
+- **2024-08 · [Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations](2024-2408.03130-inference-optimizations-for-large-language-models-effects-challenges-and.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  Donisch、Schacht、Lanquillonの論文は、LLMの推論資源を削減する研究を、量子化、剪定、知識蒸留、アーキテクチャ最適化という四群に分けた文献レビューである。§III-Dで紹介する投機的復号の2〜3倍の遅延改善は参照論文に帰属する値であり、このレビューの独立した再現結果ではない。
+
 - **2024-02 · [Plato: Plan to Efficiently Decode for Large Language Model Inference](2024-2402.12280-plato-plan-to-efficiently-decode-for-large-language-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   Platoは、長い回答を1トークンずつ逐次生成する代わりに、質問を意味的な小課題（node）へ分割し、その間の依存関係を有向非巡回グラフ（DAG）として表現することで、依存しない部分を並列生成するLLM推論システムである。
@@ -2837,10 +2845,6 @@
 - **2024-10 · [LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions](2024-2410.05462-levattention-time-space-and-streaming-efficient-algorithm-for-heavy-atte.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   実験は画像分類用の視覚Transformer（ViT）であり、LLMのKVキャッシュ圧縮やGPU推論時間の改善を直接実証したものではない。
-
-- **2024-08 · [Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations](2024-2408.03130-inference-optimizations-for-large-language-models-effects-challenges-and.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  Donisch、Schacht、Lanquillonの論文は、LLMの推論資源を削減する研究を、量子化、剪定、知識蒸留、アーキテクチャ最適化という四群に分けた文献レビューである。§III-Dで紹介する投機的復号の2〜3倍の遅延改善は参照論文に帰属する値であり、このレビューの独立した再現結果ではない。
 
 - **2024-06 · [Recurrent Context Compression: Efficiently Expanding the Context Window of LLM](2024-2406.06110-recurrent-context-compression-efficiently-expanding-the-context-window-o.md)**  
   実装：[✓](https://github.com/WUHU-G/RCC_Transformer) ・ リポジトリ内被引用：2  
@@ -2861,6 +2865,10 @@
 - **2024-10 · [Optimized Spatial Architecture Mapping Flow for Transformer Accelerators](2024-2410.07407-optimized-spatial-architecture-mapping-flow-for-transformer-accelerators.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   SAMT（Spatial 構成 Mapping for Transformers）は、Transformer推論の行列演算をTPU型・NVDLA型などの空間アクセラレータへ割り当てる際に、演算子融合の選択とPE（processing element）上のデータフローを同時に最適化する探索フローである。
+
+- **2024-10 · [Addition is All You Need for Energy-efficient Language Models](2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  浮動小数点乗算の仮数部の積を落として定数で補い、乗算を1回の整数加算で近似する L-Mul を提案し、fp8 乗算より少ないゲート数で同等以上の精度を示すとともに、注意機構への学習なし置換で bf16 との平均差0.07パーセントに収まることを言語モデルで確認した研究。
 
 - **2024-08 · [Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference](2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-infer.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -2937,10 +2945,6 @@
 - **2024-10 · [AERO: Entropy-Guided Framework for Private LLM Inference](2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意エントロピーで非線形演算の役割を診断し、静的正規化とヘッド別エントロピー正則化で非線形を削っても学習が崩れないようにする、プライベート推論向けの設計枠組み。通信を3.4倍削減する。
-
-- **2024-10 · [Addition is All You Need for Energy-efficient Language Models](2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  浮動小数点乗算の仮数部の積を落として定数で補い、乗算を1回の整数加算で近似する L-Mul を提案し、fp8 乗算より少ないゲート数で同等以上の精度を示すとともに、注意機構への学習なし置換で bf16 との平均差0.07パーセントに収まることを言語モデルで確認した研究。
 
 - **2024-09 · [Sorbet: A Neuromorphic Hardware-Compatible Transformer-Based Spiking Language Model](2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-lang.md)**  
   実装：[✓](https://github.com/Kaiwen-Tang/Sorbet) ・ リポジトリ内被引用：0  

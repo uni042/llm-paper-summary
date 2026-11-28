@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（285本）
+## 自動生成の論文一覧（286本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -1007,6 +1007,10 @@
 - **2025-05 · [Towards Efficient Key-Value Cache Management for Prefix Prefilling in LLM Inference](2025-2505.21919-towards-efficient-key-value-cache-management-for-prefix-prefilling-in-ll.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実運用トレースでKVキャッシュの再利用率と逐次・ランダムの混合アクセスを実証し、RedisとRDMA系キーバリューストアのメタデータ性能を実トレースで測って、接頭辞プリフィル専用のメタデータ管理が要ることを示した分析研究。
+
+- **2025-05 · [Statistical Modeling and Uncertainty Estimation of LLM Inference Systems](2025-2505.09319-statistical-modeling-and-uncertainty-estimation-of-llm-inference-systems.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  スループットの飽和を表す指数関数のパラメータを機械学習で未観測設定へ外挿し、焼きなましで作った誤差記録から誤差予測器と類似度ベースの信頼度まで出す、LLM推論性能の統計的予測枠組みALA。最良の学習設定では予測誤差の中央値が4パーセントだった。
 
 - **2025-05 · [Resource-Efficient Language Models: Quantization for Fast and Accessible Inference](2025-2505.08620-resource-efficient-language-models-quantization-for-fast-and-accessible-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

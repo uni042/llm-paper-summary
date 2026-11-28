@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（133本）
+## 自動生成の論文一覧（134本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -456,6 +456,10 @@
   実装：[✓](https://github.com/caidongqi/Mobile-Search-Engine/tree/pc) ・ リポジトリ内被引用：0  
   端末上のマルチモーダル埋め込みを早期終了の粗い埋め込みで肩代わりし、検索時に残りの層で仕上げるReminisceは、終了予測・共有LoRAによる癒合・投機的な細粒度検索の3設計で、精度低下を抑えながら平均12.4倍のスループットと大幅な省電力を達成する。
 
+- **2025-06 · [TensorSLM: Energy-efficient Embedding Compression of Sub-billion Parameter Language Models on Low-end Devices](2025-2506.13514-tensorslm-energy-efficient-embedding-compression-of-sub-billion-paramete.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  トークン埋め込みを1本ずつテンソルトレイン分解して行列積状態で保存する学習不要の圧縮で、埋め込み層を約2倍圧縮しても性能を概ね保ち、Raspberry Pi 5級デバイスでの推論エネルギーを推定で約半分にした。
+
 - **2025-06 · [HAPE: Hardware-Aware LLM Pruning For Efficient On-Device Inference Optimization](2025-3b8e234e37c9-hape-hardware-aware-llm-pruning-for-efficient-on-device-inference-optimi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   疎率ではなく実機の遅延感度で重要度を決め、ブロック内の動的疎率と枝刈り中の疎コンパイルを組み合わせ、学習なしで端末向けにLLMを枝刈りするハードウェア考慮型の枠組み。
@@ -495,7 +499,7 @@
   本論文は、LLM向けの移動体エッジ知能をMEI4LLMと呼び、その設計空間を通信・計算・記憶の三資源で整理する。
 
 - **2024-03 · [MELTing point: Mobile Evaluation of Language Transformers](2024-2403.12844-melting-point-mobile-evaluation-of-language-transformers.md)**  
-  実装：[✓](https://github.com/brave-experiments/MELT-public) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/brave-experiments/MELT-public) ・ リポジトリ内被引用：16  
   モデル読込み中の操作不能、端末の発熱、連続実行での動作周波数低下、バッテリー消費、量子化による回答品質の劣化も重要である。原著の評価条件では4ビットモデルの生成スループットが3ビットモデルより平均24.77%高かった。
 
 - **2024-01 · [BlockFFN: Towards End-Side Acceleration-Friendly Mixture-of-Experts with Chunk-Level Activation Sparsity](2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts.md)**  
