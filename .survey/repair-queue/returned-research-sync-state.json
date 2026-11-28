@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a4b9a9dcc109dc624432069e4af4423681bdd66c",
+  "base_commit": "5dbf61632472a134052c1395cc285b5a98399307",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1757,6 +1757,11 @@
     "2026-2611.27701-forest-coordinating-tree-based-hbf-rram-and-hbm-for-efficient-speculative-llm-inference.json",
     "2026-2611.27891-speculative-decoding-is-less-speculative-than-you-think.json",
     "2026-2611.27973-memonce-a-scalable-memory-architecture-for-large-language-models.json",
+    "2026-2611.28550-ccamoe-cache-conditioned-adaptive-inference-for-offloaded-moe.json",
+    "2026-2611.28702-hiperfcc-kvcache-accelerating-confidential-llm-serving-with-hierarchical-kv-caching.json",
+    "2026-2611.29006-nohaircache-calibrate-once-kv-cache-eviction-with-one-power-law-exponent.json",
+    "2026-2611.29497-gossamer-a-utility-driven-architecture-for-constant-budget-kv-cache-compression-in-reasoning-llms.json",
+    "2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -55859,6 +55864,78 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.28550": {
+      "order": [
+        "2026-11-27T23:58:59+00:00",
+        "2026-2611.28550-ccamoe-cache-conditioned-adaptive-inference-for-offloaded-moe.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.28702": {
+      "order": [
+        "2026-11-27T23:59:56+00:00",
+        "2026-2611.28702-hiperfcc-kvcache-accelerating-confidential-llm-serving-with-hierarchical-kv-caching.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.29006": {
+      "order": [
+        "2026-11-28T00:00:53+00:00",
+        "2026-2611.29006-nohaircache-calibrate-once-kv-cache-eviction-with-one-power-law-exponent.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.29497": {
+      "order": [
+        "2026-11-28T00:01:49+00:00",
+        "2026-2611.29497-gossamer-a-utility-driven-architecture-for-constant-budget-kv-cache-compression-in-reasoning-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.30417": {
+      "order": [
+        "2026-11-28T00:01:51+00:00",
+        "2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "5f342f90de3be5829f8066bc991fee646ccd94a046e31cf3584b6a91f8b8e73b",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.md",
+        "canonical_id": "arXiv:2611.30417",
+        "worker_completed_at": "2026-11-28T08:40:00+09:00",
+        "worker_run_key": "muse-20261128-b3",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 5694,
+          "body_paragraphs": 22,
+          "method_chars": 2372,
+          "method_paragraphs": 5,
+          "evaluation_chars": 493,
+          "limitation_chars": 340,
+          "insufficiency_flags": [
+            "評価説明量 493 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 493 < 500"
+        ],
+        "processed_at": "2026-11-28T00:01:51+00:00"
+      },
+      "return_count": 1
     }
   },
   "imported_paper_paths": {
@@ -69590,6 +69667,18 @@
     ],
     "arxiv:2611.24891": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-.md"
+    ],
+    "arxiv:2611.28550": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.28550-ccamoe-cache-conditioned-adaptive-inference-for-offloaded-moe.md"
+    ],
+    "arxiv:2611.28702": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.28702-hiperfcc-kvcache-accelerating-confidential-llm-serving-with-hierarchical.md"
+    ],
+    "arxiv:2611.29006": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.29006-nohaircache-calibrate-once-kv-cache-eviction-with-one-power-law-exponent.md"
+    ],
+    "arxiv:2611.29497": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.29497-gossamer-a-utility-driven-architecture-for-constant-budget-kv-cache-comp.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "NoHairCacheは注意蓄積型（H2O）と近接性型（StreamingLLM）のKVキャッシュエビクションを単一のべき乗則族の両端として統一し、減衰指数を1コーパスで一度較正するだけでドメイン横断に転用できるエビクション手法で、KVキャッシュ削減へ直接貢献する。",
   "semantic_scholar_id": "a70f50ab3f463a3258fb5af022bd2ce55eeb26cc",
   "source_url": "https://arxiv.org/abs/2611.29006",
-  "status": "ready",
+  "status": "superseded",
   "title": "NoHairCache: Calibrate-Once KV Cache Eviction with One Power-Law Exponent",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T00:03:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.29006-nohaircache-calibrate-once-kv-cache-eviction-with-one-power-law-exponent.md",
+  "represented_canonical_id": "arXiv:2611.29006",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "HiPerfCC-KVCacheはGPU機密コンピューティング下で階層KVキャッシングの保護転送がドライバロックによりサービングを停滞させる問題を特性評価し、資源寿命管理とKV復元の並列化をSGLangに実装したシステムで、機密LLMサービングのKVキャッシュ高速化に直接貢献する。",
   "semantic_scholar_id": "1fd079668613cd2f49b2809e6b40d1203f1145a5",
   "source_url": "https://arxiv.org/abs/2611.28702",
-  "status": "ready",
+  "status": "superseded",
   "title": "HiPerfCC-KVCache: Accelerating Confidential LLM Serving with Hierarchical KV Caching",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T00:03:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.28702-hiperfcc-kvcache-accelerating-confidential-llm-serving-with-hierarchical.md",
+  "represented_canonical_id": "arXiv:2611.28702",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
