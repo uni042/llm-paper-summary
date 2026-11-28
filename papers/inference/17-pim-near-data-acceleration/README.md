@@ -200,7 +200,7 @@
   グループ化クエリ注意（Grouped-Query 注意機構; GQA）はKVキャッシュを減らすが、各要求の注意計算は依然として独立したKVにアクセスするため、メモリ帯域が性能を制限する。著者はMICRO 2024の論文で、GPU基準に対し最大2.67倍の推論処理量、最大2.57倍の端から端までの遅延改善、最大42.03%のエネルギー削減を報告する。
 
 - **2024-10 · [A Survey: Collaborative Hardware and Software Design in the Era of Large Language Models](2024-2410.07265-a-survey-collaborative-hardware-and-software-design-in-the-era-of-large-.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   LLM学習・推論を対象に、演算融合、KVメモリ管理、連続バッチ、事前入力と復号の分離、MoE、注意近似、投機的復号、量子化・疎性、PIM/CIMなどをアルゴリズムとハードウェアの協調設計という軸で整理する2024年のレビュー。
 
 ### 4年前（2022-12〜2023-11）

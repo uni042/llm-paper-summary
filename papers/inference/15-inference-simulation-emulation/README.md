@@ -412,6 +412,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈エージェント向けに、エッジへのモデルキャッシュとエッジ／クラウド間の推論オフロードをテスト時にも学習する強化学習T2DRLで一体に決め、二重オランダ式オークションで資源配分を補うことで、比較対象よりシステム費用を少なくとも30パーセント下げる枠組み。
 
+- **2025-11 · [Platinum: Path-Adaptable LUT-Based Accelerator Tailored for Low-Bit Weight Matrix Multiplication](2025-2511.21910-platinum-path-adaptable-lut-based-accelerator-tailored-for-low-bit-weigh.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ルックアップテーブルの構築経路を最小全域木でオフライン生成して動的探索回路を消し、三値重みの対称性と三進パック圧縮を組み合わせた低ビット重み行列積ASICで、BitNet b1.58-3Bのプリフィルで先行ASIC比最大73.6倍の高速化を0.96平方ミリメートルで示した研究。
+
 - **2025-10 · [Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling](2025-1fee57bdbc55-keeping-up-with-large-language-models-a-holistic-methodology-of-compute-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   分散LLMの解析的性能モデルへFlashAttention・MoE・トポロジ別通信を組み込んで並列化空間を5次元化し、チップレットの製造コストモデルまで統合することで、実機を作らずに性能とコストの交換関係を設計初期に探索できるようにしたモデル化方法論。
@@ -431,10 +435,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-04 · [MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference](2025-2504.09775-mist-a-co-design-framework-for-heterogeneous-multi-stage-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLMサービングの性能は、モデルのプリフィルとデコードだけでなく、RAGの検索、KVキャッシュの再利用、ネットワーク転送、スケジューリング、異なるモデルを使う複数クライアントなどの組合せで決まる。しかし異なるベンダーを跨いだプリフィル/デコード（PD）分離を、実際の統一サービングスタックで検証できないことが多い。
-
-- **2025-11 · [Platinum: Path-Adaptable LUT-Based Accelerator Tailored for Low-Bit Weight Matrix Multiplication](2025-2511.21910-platinum-path-adaptable-lut-based-accelerator-tailored-for-low-bit-weigh.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ルックアップテーブルの構築経路を最小全域木でオフライン生成して動的探索回路を消し、三値重みの対称性と三進パック圧縮を組み合わせた低ビット重み行列積ASICで、BitNet b1.58-3Bのプリフィルで先行ASIC比最大73.6倍の高速化を0.96平方ミリメートルで示した研究。
 
 - **2025-11 · [Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism](2025-832f2fc32711-multiplexed-heterogeneous-llm-serving-via-stage-aligned-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
