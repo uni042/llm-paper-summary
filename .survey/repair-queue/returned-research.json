@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-28T00:21:04+00:00",
+  "generated_at": "2026-11-28T00:22:16+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -372,33 +372,6 @@
       "worker_run_key": "muse-final-20261124-b14w2"
     },
     {
-      "canonical_id": "arXiv:2409.15298",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2409.15298",
-      "returned_at": "2026-11-27T22:46:01+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 456 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4097,
-        "body_paragraphs": 23,
-        "method_chars": 1609,
-        "method_paragraphs": 5,
-        "evaluation_chars": 456,
-        "limitation_chars": 310,
-        "insufficiency_flags": [
-          "評価説明量 456 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.md",
-      "import_result_path": ".survey/import-inbox/results/research/2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
       "canonical_id": "arXiv:2209.09130",
       "title": null,
       "source_url": "https://arxiv.org/abs/2209.09130",
@@ -423,33 +396,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.md",
       "import_result_path": ".survey/import-inbox/results/research/2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
-      "canonical_id": "arXiv:2609.06974",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2609.06974",
-      "returned_at": "2026-11-27T23:24:01+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 459 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4441,
-        "body_paragraphs": 23,
-        "method_chars": 1840,
-        "method_paragraphs": 5,
-        "evaluation_chars": 459,
-        "limitation_chars": 288,
-        "insufficiency_flags": [
-          "評価説明量 459 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.json",
       "worker_run_key": "muse-20261128-b2"
     },
     {
@@ -561,33 +507,6 @@
       "worker_run_key": "muse-20261128-b3"
     },
     {
-      "canonical_id": "arXiv:2611.32295",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.32295",
-      "returned_at": "2026-11-28T00:05:53+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 489 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5119,
-        "body_paragraphs": 21,
-        "method_chars": 2087,
-        "method_paragraphs": 4,
-        "evaluation_chars": 489,
-        "limitation_chars": 392,
-        "insufficiency_flags": [
-          "評価説明量 489 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
       "canonical_id": "arXiv:2611.33004",
       "title": null,
       "source_url": "https://arxiv.org/abs/2611.33004",
@@ -615,33 +534,6 @@
       "worker_run_key": "muse-20261128-b3"
     },
     {
-      "canonical_id": "arXiv:2611.33896",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.33896",
-      "returned_at": "2026-11-28T00:19:37+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 469 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3879,
-        "body_paragraphs": 21,
-        "method_chars": 1492,
-        "method_paragraphs": 4,
-        "evaluation_chars": 469,
-        "limitation_chars": 286,
-        "insufficiency_flags": [
-          "評価説明量 469 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.33896-looped-models-are-fast-multi-token-predictors.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2611.33896-looped-models-are-fast-multi-token-predictors.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
       "canonical_id": "arXiv:2611.34092",
       "title": null,
       "source_url": "https://arxiv.org/abs/2611.34092",
@@ -666,33 +558,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.md",
       "import_result_path": ".survey/import-inbox/results/research/2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
-      "canonical_id": "arXiv:2611.34630",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.34630",
-      "returned_at": "2026-11-28T00:19:42+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 492 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5329,
-        "body_paragraphs": 22,
-        "method_chars": 2415,
-        "method_paragraphs": 5,
-        "evaluation_chars": 492,
-        "limitation_chars": 411,
-        "insufficiency_flags": [
-          "評価説明量 492 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.json",
       "worker_run_key": "muse-20261128-b2"
     },
     {
@@ -724,7 +589,7 @@
     },
     {
       "canonical_id": "arXiv:2605.08314",
-      "title": "FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2605.08314",
       "returned_at": "2026-11-28T00:20:51+00:00",
       "return_count": 4,
@@ -751,7 +616,7 @@
     },
     {
       "canonical_id": "arXiv:2512.19443",
-      "title": "D2Pruner: Debiased Importance and Structural Diversity for MLLM Token Pruning",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2512.19443",
       "returned_at": "2026-11-28T00:20:53+00:00",
       "return_count": 4,
@@ -778,7 +643,7 @@
     },
     {
       "canonical_id": "arXiv:2611.32083",
-      "title": "Inference-Aware Congestion Control for Distributed MoE Inference",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.32083",
       "returned_at": "2026-11-28T00:20:54+00:00",
       "return_count": 4,
@@ -805,7 +670,7 @@
     },
     {
       "canonical_id": "arXiv:2507.03828",
-      "title": "IMPACT: Importance-Aware Activation Space Reconstruction",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2507.03828",
       "returned_at": "2026-11-28T00:20:56+00:00",
       "return_count": 4,
@@ -832,7 +697,7 @@
     },
     {
       "canonical_id": "arXiv:2611.34521",
-      "title": "PURA: Video Token Pruning via Unified Spatiotemporal Redundancy Assessment",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.34521",
       "returned_at": "2026-11-28T00:20:58+00:00",
       "return_count": 4,
@@ -855,6 +720,141 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-538e5ab63afc--2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-538e5ab63afc--2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.json",
+      "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2611.32295",
+      "title": "Norn: Context-Length-Aware Optimization of Weight and KV Cache Placement for Offloaded LLM Inference",
+      "source_url": "https://arxiv.org/abs/2611.32295",
+      "returned_at": "2026-11-28T00:22:08+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 489 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5119,
+        "body_paragraphs": 21,
+        "method_chars": 2087,
+        "method_paragraphs": 4,
+        "evaluation_chars": 489,
+        "limitation_chars": 392,
+        "insufficiency_flags": [
+          "評価説明量 489 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7cc767e27ee8--2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-7cc767e27ee8--2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.json",
+      "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2409.15298",
+      "title": "Sorbet: A Neuromorphic Hardware-Compatible Transformer-Based Spiking Language Model",
+      "source_url": "https://arxiv.org/abs/2409.15298",
+      "returned_at": "2026-11-28T00:22:10+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 456 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4097,
+        "body_paragraphs": 23,
+        "method_chars": 1609,
+        "method_paragraphs": 5,
+        "evaluation_chars": 456,
+        "limitation_chars": 310,
+        "insufficiency_flags": [
+          "評価説明量 456 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8066331aba82--2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8066331aba82--2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.json",
+      "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2609.06974",
+      "title": "Train Overcomplete, Deploy Compact: Scaling Recovery Capacity for Structured LLM Pruning",
+      "source_url": "https://arxiv.org/abs/2609.06974",
+      "returned_at": "2026-11-28T00:22:11+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 459 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4441,
+        "body_paragraphs": 23,
+        "method_chars": 1840,
+        "method_paragraphs": 5,
+        "evaluation_chars": 459,
+        "limitation_chars": 288,
+        "insufficiency_flags": [
+          "評価説明量 459 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8a2229c2ee48--2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8a2229c2ee48--2026-2609.06974-train-overcomplete-deploy-compact-scaling-recovery-capacity-for-structured-llm-pruning.json",
+      "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2611.34630",
+      "title": "A Differential Computing Accelerator for LLM Inference Leveraging Bit-Slice Transition Sparsity",
+      "source_url": "https://arxiv.org/abs/2611.34630",
+      "returned_at": "2026-11-28T00:22:13+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 492 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5329,
+        "body_paragraphs": 22,
+        "method_chars": 2415,
+        "method_paragraphs": 5,
+        "evaluation_chars": 492,
+        "limitation_chars": 411,
+        "insufficiency_flags": [
+          "評価説明量 492 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-912c7e317669--2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-912c7e317669--2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.json",
+      "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2611.33896",
+      "title": "Looped Models are Fast Multi-Token Predictors",
+      "source_url": "https://arxiv.org/abs/2611.33896",
+      "returned_at": "2026-11-28T00:22:15+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 469 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3879,
+        "body_paragraphs": 21,
+        "method_chars": 1492,
+        "method_paragraphs": 4,
+        "evaluation_chars": 469,
+        "limitation_chars": 286,
+        "insufficiency_flags": [
+          "評価説明量 469 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-93189d97a0af--2026-2611.33896-looped-models-are-fast-multi-token-predictors.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-93189d97a0af--2026-2611.33896-looped-models-are-fast-multi-token-predictors.json",
       "worker_run_key": "muse-20261128-b2"
     }
   ]
