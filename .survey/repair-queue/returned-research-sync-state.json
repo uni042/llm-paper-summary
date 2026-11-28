@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "b337209c84887e08489988e2de9135fcc9cc52bb",
+  "base_commit": "eb0e8a44ccb5ad197767b663d5bf26b8b21c75bb",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -55887,74 +55887,20 @@
     },
     "arXiv:2611.34521": {
       "order": [
-        "2026-11-28T00:20:58+00:00",
-        "retry-research-538e5ab63afc--2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.json"
+        "2026-11-28T05:56:21+00:00",
+        "2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "475b62cadb8b0980f58d4364fe9ad4e35b95c874e48b8ef61d3cd1a5f72c8431",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-538e5ab63afc--2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.md",
-        "canonical_id": "arXiv:2611.34521",
-        "worker_completed_at": "2026-11-28T08:10:00+09:00",
-        "worker_run_key": "muse-20261128-b2",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 4625,
-          "body_paragraphs": 21,
-          "method_chars": 1880,
-          "method_paragraphs": 4,
-          "evaluation_chars": 494,
-          "limitation_chars": 351,
-          "insufficiency_flags": [
-            "評価説明量 494 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 494 < 500"
-        ],
-        "processed_at": "2026-11-28T00:20:58+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2611.34630": {
       "order": [
-        "2026-11-28T00:22:13+00:00",
-        "retry-research-912c7e317669--2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.json"
+        "2026-11-28T05:57:30+00:00",
+        "2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "2dbc0d10b8a2f97ffb116e41d7a1e8760fb16d06964de107dfaf89cec25ab3c8",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-912c7e317669--2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.md",
-        "canonical_id": "arXiv:2611.34630",
-        "worker_completed_at": "2026-11-28T08:10:00+09:00",
-        "worker_run_key": "muse-20261128-b2",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 5329,
-          "body_paragraphs": 22,
-          "method_chars": 2415,
-          "method_paragraphs": 5,
-          "evaluation_chars": 492,
-          "limitation_chars": 411,
-          "insufficiency_flags": [
-            "評価説明量 492 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 492 < 500"
-        ],
-        "processed_at": "2026-11-28T00:22:13+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2306.13835": {
@@ -70428,10 +70374,18 @@
       "papers/inference/05-speculative-decoding-moe/2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-a.md"
     ],
     "arxiv:2611.34402": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2611.34402-any-rate-half-bit-multi-precision-llm-quantization-with-coded-bit-planes.md",
       "papers/inference/08-edge-on-device-llm-systems/2026-2611.34402-any-rate-half-bit-multi-precision-llm-quantization-with-coded-bit-planes.md"
     ],
     "arxiv:2611.34492": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.34492-flyingstart-learned-cross-token-warm-starts-for-fixed-point-decoding-in-.md",
       "papers/inference/05-speculative-decoding-moe/2026-2611.34492-flyingstart-learned-cross-token-warm-starts-for-fixed-point-decoding-in-.md"
+    ],
+    "arxiv:2611.34521": [
+      "papers/inference/99-other-inference-systems/2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessmen.md"
+    ],
+    "arxiv:2611.34630": [
+      "papers/inference/15-inference-simulation-emulation/2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-sl.md"
     ]
   }
 }
