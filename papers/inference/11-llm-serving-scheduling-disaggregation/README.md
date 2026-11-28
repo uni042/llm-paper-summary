@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（694本）
+## 自動生成の論文一覧（695本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1633,7 +1633,7 @@
   Mooncakeは、大規模言語モデル（Large Language モデル、LLM）の推論サービスで、GPUの計算能力とメモリを同時に効率よく使うための分散サービング基盤である。中心にあるのは、KVの所在と移動費用を知る全体スケジューラ（Global Scheduler）であるConductorである。
 
 - **2025-02 · [Autellix: An Efficient Serving Engine for LLM Agents as General Programs](2025-2502.13965-autellix-agent-program-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：69  
+  実装：✓ ・ リポジトリ内被引用：70  
   エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。
 
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
@@ -2288,6 +2288,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、推論時に複数のChain-of-Thought（CoT）枝を生成して多数決を取る自己整合性（SC）のトークン費用とリクエスト完了遅延を同時に削減するDUCHESSを提案する。
 
+- **2025-08 · [Pruning Large Language Models by Identifying and Preserving Functional Networks](2025-2508.05239-pruning-large-language-models-by-identifying-and-preserving-functional-n.md)**  
+  実装：[✓](https://github.com/WhatAboutMyStar/LLM_ACTIVATION) ・ リポジトリ内被引用：0  
+  MLPニューロンの信号に層ごとCanICAをかけて同時に活動するニューロン群（機能ネットワーク）を抽出し、そのマスクに属するニューロンを残す構造化枝刈り。Vicuna-7Bの20パーセント枝刈りでWikiText-2パープレキシティ15.85と、SliceGPTの60.88などを大きく上回った。
+
 - **2025-07 · [Resource Multiplexing in Tuning and Serving Large Language Models](2025-350ca60c84cd-resource-multiplexing-in-tuning-and-serving-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論とファインチューニングを同じGPUへ相乗りさせるため、推論の遅延制約の中で調整作業をイテレーション単位で差し込み、調整を中断可能な形に変換し、両者のリクエストをまとめて処理する多重化システム。推論のSLOを守りながら調整のスループットが最大で約15倍になった。
@@ -2697,7 +2701,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2015  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2016  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

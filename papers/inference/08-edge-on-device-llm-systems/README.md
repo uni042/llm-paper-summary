@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（135本）
+## 自動生成の論文一覧（137本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -440,6 +440,10 @@
   実装：[✓](https://github.com/ChaosRez/llm-context-management) ・ リポジトリ内被引用：0  
   会話文脈をトークン列としてエッジノード間に複製し、ターンカウンタで版を照合して整合性を保つ分散文脈管理 DisCEdge を実装し、生テキスト方式より応答の中央値を最大14.46パーセント短縮し、クライアント保持方式より要求サイズの中央値を90パーセント減らした実機研究。
 
+- **2025-10 · [TeLLMe v2: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs](2025-2510.15926-tellme-v2-an-efficient-end-to-end-ternary-llm-prefill-and-decode-acceler.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  三値LLMの行列積を、活性値グループから作る参照表の引き換えで実行し、URAMに合わせた重み配置と逆順プリフィル注意でプリフィルまで含めて加速するエッジFPGAアクセラレータで、KV260上で4.8Wのままデコード25トークン毎秒とTTFT 0.45〜0.96秒を実機で示した。
+
 - **2025-10 · [ShishuLM: Achieving Optimal and Efficient Parameterization with Low Attention Transformer Models](2025-2510.13860-shishulm-achieving-optimal-and-efficient-parameterization-with-low-atten.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   後半層の注意の冗長性に基づき、上位層を全結合だけのブロックへ置き換えて事前学習する効率的な言語モデル。注意を約3分の2残す構成で土台と同等の品質と生成効率の改善を示し、重み共有でさらに容量を削る。
@@ -451,6 +455,10 @@
 - **2025-08 · [Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative](2025-2508.07329-efficient-edge-llms-deployment-via-hessianaware-quantization-and-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、GPUメモリが限られた端末でMixture-of-Experts（MoE）モデルを実行する際の二つの問題を同時に扱う。第一に、重みだけでなく活性値も整数8ビットへ量子化すると、少数の極端な活性値が量子化範囲を支配し、精度が悪化し得る。
+
+- **2025-07 · [Prism: Communication-efficient Distributed Inference for Foundation Models at Edge](2025-2507.12145-prism-communication-efficient-distributed-inference-for-foundation-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  位置方向に分割した分散Transformer推論で、デバイス間へ送る中間特徴を区間平均へ圧縮し、重複を数えるスケーリング付きソフトマックスでキー・バリュー計算の重複まで消すことで、BERTでは通信を最大99.2パーセント減らしながらGLUE精度をほぼ保ったエッジ分散推論方式。
 
 - **2025-06 · [Ubiquitous memory augmentation via mobile multimodal embedding system](2025-5504da64243a-ubiquitous-memory-augmentation-via-mobile-multimodal-embedding-system.md)**  
   実装：[✓](https://github.com/caidongqi/Mobile-Search-Engine/tree/pc) ・ リポジトリ内被引用：0  
@@ -487,11 +495,11 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)**  
-  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：82  
+  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：83  
   PowerInfer-2は、利用頻度を測った重みだけをスマホの高速メモリへ置き、残りをUFSから読みつつCPU・NPU計算と重ねて、容量不足と読出し待ちを減らす方式。
 
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  
-  実装：✓ ・ リポジトリ内被引用：38  
+  実装：✓ ・ リポジトリ内被引用：39  
   SwapMoEは、全専門家をメモリに置けない問題に対し、層ごとの仮想枠へ入力で選ばれた専門家重みを入れ替え、メモリ容量と重み転送を抑える方式。
 
 - **2024-07 · [Mobile Edge Intelligence for Large Language Models: A Contemporary Survey](2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md)**  

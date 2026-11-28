@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（286本）
+## 自動生成の論文一覧（287本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -999,6 +999,10 @@
 - **2025-08 · [DRQA: Dynamic Reasoning Quota Allocation for Controlling Overthinking in Reasoning Large Language Models](2025-2508.17803-drqa-dynamic-reasoning-quota-allocation-for-controlling-overthinking-in-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   バッチ推論で生じる資源競合による推論圧縮を、A/B/C判定の選好データとGRPOで単一質問推論へ移植し、正解率を上げながらトークンを約31%削減した過剰思考の制御手法。
+
+- **2025-07 · [Efficient Deployment of Vision-Language Models on Mobile Devices: A Case Study on OnePlus 13R](2025-2507.08505-efficient-deployment-of-vision-language-models-on-mobile-devices-a-case-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  OnePlus 13R実機で視覚言語モデル3種とモバイル推論フレームワーク3種を横断測定し、同じモデルでも実行系で遅延が約2倍違い、トークン生成のCPU偏重とNPU未使用が熱と電力の支配要因であることを示した実測研究。
 
 - **2025-07 · [Characterizing State Space Model and Hybrid Language Model Performance with Long Context](2025-2507.12442-characterizing-state-space-model-and-hybrid-language-model-performance-w.md)**  
   実装：[✓](https://github.com/sapmitra/ssm-scope) ・ リポジトリ内被引用：0  

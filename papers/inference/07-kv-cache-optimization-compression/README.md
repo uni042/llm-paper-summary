@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（717本）
+## 自動生成の論文一覧（718本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -2508,6 +2508,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-10 · [Position-Adaptive Temporal Sparsity for KV Caches in Long-Context LLMs](2025-65a0133f5916-position-adaptive-temporal-sparsity-for-kv-caches-in-long-context-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KVキャッシュの各エントリの仮数下位ビットをトークン位置に応じて切り捨て、全トークンを残したままキャッシュを最大42パーセント削減し、最適スケジュールではパープレキシティ増加0.9パーセントで35.9パーセント削減を達成する位置適応型の圧縮。
+
+- **2025-10 · [Cortex: Workflow-Aware Resource Pooling and Scheduling for Agentic Serving](2025-2510.14126-cortex-workflow-aware-resource-pooling-and-scheduling-for-agentic-servin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェントワークフローの段階ごとに専用エンジンプールを割り当てる段階分離で、段階間の干渉とKVキャッシュの重複保持を断ち、段階単位の増強と優先度付けを可能にするワークフロー認識型サービング基盤のプロトタイプ（定量評価は未報告）。
 
 - **2025-09 · [ChunkLLM: A Lightweight Pluggable Framework for Accelerating LLMs Inference](2025-2510.02361-chunkllm-a-lightweight-pluggable-framework-for-accelerating-llms-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

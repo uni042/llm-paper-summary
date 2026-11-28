@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "f6479b79b1a3f18fc508cd2c1daefc3667779bbb",
+  "base_commit": "69ef60ff3857d8b087fbbb31964e158db21b02bb",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -413,16 +413,19 @@
     "2025-2507.04517-dotresize-reducing-llm-width-via-discrete-optimal-transport-based-neuron-merging.json",
     "2025-2507.04742-activation-steering-for-chain-of-thought-compression.json",
     "2025-2507.04967-the-case-for-instance-optimized-llms-in-olap-databases.json",
+    "2025-2507.08505-efficient-deployment-of-vision-language-models-on-mobile-devices-a-case-study-on-oneplus-13r.json",
     "2025-2507.08523-inferlog-accelerating-llm-inference-for-online-log-parsing-via-icl-oriented-prefix-caching.json",
     "2025-2507.09010-hybrid-systolic-array-accelerator-with-optimized-dataflow-for-edge-large-language-model-inference.json",
     "2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.json",
     "2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.json",
+    "2025-2507.12145-prism-communication-efficient-distributed-inference-for-foundation-models-at-edge.json",
     "2025-2507.14715-exploring-the-dynamic-scheduling-space-of-real-time-generative-ai-applications-on-emerging-heterogeneous-systems.json",
     "2025-2507.17245-distrattention-an-efficient-and-flexible-self-attention-mechanism-on-modern-gpus.json",
     "2025-2507.17618-simlens-for-early-exit-in-large-language-models.json",
     "2025-2508.01540-magicvl-2b-empowering-vision-language-models-on-mobile-devices-with-lightweight-visual-encoders-via-curriculum-learning.json",
     "2025-2508.03726-hierarchical-verification-of-speculative-beams-for-accelerating-llm-inference.json",
     "2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-communication.json",
+    "2025-2508.05239-pruning-large-language-models-by-identifying-and-preserving-functional-networks.json",
     "2025-2508.05282-not-all-errors-are-created-equal-ascot-addresses-late-stage-fragility-in-efficient-llm-reasoning.json",
     "2025-2508.08289-attention-as-conditioning-what-classical-learning-theory-predicts-about-linear-transformers.json",
     "2025-2508.09173-camel-energy-aware-llm-inference-on-resource-constrained-devices.json",
@@ -472,11 +475,13 @@
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
     "2025-2510.13799-brief-pro-universal-context-compression-with-short-to-long-synthesis-for-fast-and-accurate-multi-hop-reasoning.json",
     "2025-2510.13860-shishulm-achieving-optimal-and-efficient-parameterization-with-low-attention-transformer-models.json",
+    "2025-2510.14126-cortex-workflow-aware-resource-pooling-and-scheduling-for-agentic-serving.json",
     "2025-2510.14444-a-free-lunch-in-llm-compression-revisiting-retraining-after-pruning.json",
     "2025-2510.14853-rewiring-experts-on-the-fly-continuous-rerouting-for-better-online-adaptation-of-moe-models.json",
     "2025-2510.15304-layer-as-puzzle-pieces-compressing-large-language-models-through-layer-concatenation.json",
     "2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-monolithic-forwarding.json",
     "2025-2510.15882-flexlink-boosting-your-nvlink-bandwidth-by-27-without-accuracy-concern.json",
+    "2025-2510.15926-tellme-v2-an-efficient-end-to-end-ternary-llm-prefill-and-decode-accelerator-with-table-lookup-matmul-on-edge-fpgas.json",
     "2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.json",
     "2025-2510.18030-from-local-to-global-revisiting-structured-pruning-paradigms-for-large-language-models.json",
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
@@ -56502,6 +56507,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2507.08505": {
+      "order": [
+        "2026-11-28T04:41:42+00:00",
+        "2025-2507.08505-efficient-deployment-of-vision-language-models-on-mobile-devices-a-case-study-on-oneplus-13r.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2507.12145": {
+      "order": [
+        "2026-11-28T04:43:24+00:00",
+        "2025-2507.12145-prism-communication-efficient-distributed-inference-for-foundation-models-at-edge.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2508.05239": {
+      "order": [
+        "2026-11-28T04:45:06+00:00",
+        "2025-2508.05239-pruning-large-language-models-by-identifying-and-preserving-functional-networks.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.14126": {
+      "order": [
+        "2026-11-28T04:46:48+00:00",
+        "2025-2510.14126-cortex-workflow-aware-resource-pooling-and-scheduling-for-agentic-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.15926": {
+      "order": [
+        "2026-11-28T04:48:30+00:00",
+        "2025-2510.15926-tellme-v2-an-efficient-end-to-end-ternary-llm-prefill-and-decode-accelerator-with-table-lookup-matmul-on-edge-fpgas.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70404,6 +70454,21 @@
     "arxiv:2505.20932": [
       "papers/inference/16-weight-quantization-compression/2025-2505.20932-qwt-v2-practical-effective-and-efficient-post-training-quantization.md",
       "papers/inference/16-weight-quantization-compression/2025-2505.20932-qwt-v2-practical-effective-and-efficient-post-training-quantization.md"
+    ],
+    "arxiv:2507.08505": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2507.08505-efficient-deployment-of-vision-language-models-on-mobile-devices-a-case-.md"
+    ],
+    "arxiv:2507.12145": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2507.12145-prism-communication-efficient-distributed-inference-for-foundation-model.md"
+    ],
+    "arxiv:2508.05239": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.05239-pruning-large-language-models-by-identifying-and-preserving-functional-n.md"
+    ],
+    "arxiv:2510.14126": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.14126-cortex-workflow-aware-resource-pooling-and-scheduling-for-agentic-servin.md"
+    ],
+    "arxiv:2510.15926": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2510.15926-tellme-v2-an-efficient-end-to-end-ternary-llm-prefill-and-decode-acceler.md"
     ]
   }
 }
