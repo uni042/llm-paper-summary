@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "4e03d58de4b0b40daffdc38c34ee333ddd8c1627",
+  "base_commit": "5ef1dc767321c8b029116c131ee3526c0e664048",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1772,6 +1772,10 @@
     "2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.json",
     "2026-2611.33542-rankcast-phase-aware-rank-balancing-in-moe-serving.json",
     "2026-2611.33625-state-space-attention-learning-context-dependent-memory-retention.json",
+    "2026-2611.33896-looped-models-are-fast-multi-token-predictors.json",
+    "2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.json",
+    "2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.json",
+    "2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -6834,6 +6838,7 @@
     "retry-research-07edeb08cee0--libfile_cdb35e0415a48191ab10091bc79e3311--2026-2605.29843-harp-adaptive-rotation-quantization-research-20261014-1330-scheduled-chat.json",
     "retry-research-07ffa214ad2e--libfile_c51867e3c6808191a4a25222e98646a5--2024-2403.11805-llms-mobile-system-service-research-20261016-0030-scheduled-chat-30-r01.json",
     "retry-research-080701f32c21--libfile_806d7ae5cde88191939842c8a2320b36--2026-2601.14888-reasoning-qat-low-bit-reasoning-llm-research-20261014-1230-scheduled-chat.json",
+    "retry-research-080c5a2d8569--2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.json",
     "retry-research-08730e3224ed--libfile_85dc15be1c54819184e670fe888eb9b1--2202.08791-cosformer.json",
     "retry-research-087e1abb78b3--libfile_546c44579bc08191851804fcd92ceb7d--2025-2503.23274-promptdistill-intermediate-layer-token-retention-research-20261027-2245-s.json",
     "retry-research-087e4e2026f7--libfile_a139b3d1fa9c819195e060c610960802--2026-2604.13519-toolspec-research-20261012-0058-scheduled-chat-00-r01.json",
@@ -55760,8 +55765,8 @@
     },
     "arXiv:2611.01089": {
       "order": [
-        "2026-11-27T23:25:44+00:00",
-        "2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.json"
+        "2026-11-28T00:19:43+00:00",
+        "retry-research-080c5a2d8569--2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.json"
       ],
       "status": "blocked_quality",
       "result": {
@@ -55771,7 +55776,7 @@
         "source_sha256": "4ecffcd99950a50f509ac9a05ea183a0511e02bbd770b3e25d79a7cb96dfeea5",
         "normalized_source_sha256": null,
         "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.md",
+        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-080c5a2d8569--2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.md",
         "canonical_id": "arXiv:2611.01089",
         "worker_completed_at": "2026-11-28T08:40:00+09:00",
         "worker_run_key": "muse-20261128-b3",
@@ -55790,9 +55795,9 @@
         "failures": [
           "説明不足トリガー: 評価説明量 489 < 500"
         ],
-        "processed_at": "2026-11-27T23:25:44+00:00"
+        "processed_at": "2026-11-28T00:19:43+00:00"
       },
-      "return_count": 2
+      "return_count": 3
     },
     "arXiv:2611.03173": {
       "order": [
@@ -56171,6 +56176,150 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.33896": {
+      "order": [
+        "2026-11-28T00:19:37+00:00",
+        "2026-2611.33896-looped-models-are-fast-multi-token-predictors.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "45a7c95f5b4c7e3cbaaadfe2e2d0d0c653a4620e538a43d2ec0263920e0ef93b",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.33896-looped-models-are-fast-multi-token-predictors.md",
+        "canonical_id": "arXiv:2611.33896",
+        "worker_completed_at": "2026-11-28T08:10:00+09:00",
+        "worker_run_key": "muse-20261128-b2",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 3879,
+          "body_paragraphs": 21,
+          "method_chars": 1492,
+          "method_paragraphs": 4,
+          "evaluation_chars": 469,
+          "limitation_chars": 286,
+          "insufficiency_flags": [
+            "評価説明量 469 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 469 < 500"
+        ],
+        "processed_at": "2026-11-28T00:19:37+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2611.34092": {
+      "order": [
+        "2026-11-28T00:19:38+00:00",
+        "2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "91bdbb0b1808eb6b89c0101edc74894dd29f331835d76fd4c4b52737b17a0146",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.md",
+        "canonical_id": "arXiv:2611.34092",
+        "worker_completed_at": "2026-11-28T08:10:00+09:00",
+        "worker_run_key": "muse-20261128-b2",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4153,
+          "body_paragraphs": 21,
+          "method_chars": 1537,
+          "method_paragraphs": 4,
+          "evaluation_chars": 498,
+          "limitation_chars": 365,
+          "insufficiency_flags": [
+            "評価説明量 498 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 498 < 500"
+        ],
+        "processed_at": "2026-11-28T00:19:38+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2611.34521": {
+      "order": [
+        "2026-11-28T00:19:40+00:00",
+        "2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "475b62cadb8b0980f58d4364fe9ad4e35b95c874e48b8ef61d3cd1a5f72c8431",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.md",
+        "canonical_id": "arXiv:2611.34521",
+        "worker_completed_at": "2026-11-28T08:10:00+09:00",
+        "worker_run_key": "muse-20261128-b2",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4625,
+          "body_paragraphs": 21,
+          "method_chars": 1880,
+          "method_paragraphs": 4,
+          "evaluation_chars": 494,
+          "limitation_chars": 351,
+          "insufficiency_flags": [
+            "評価説明量 494 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 494 < 500"
+        ],
+        "processed_at": "2026-11-28T00:19:40+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2611.34630": {
+      "order": [
+        "2026-11-28T00:19:42+00:00",
+        "2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "2dbc0d10b8a2f97ffb116e41d7a1e8760fb16d06964de107dfaf89cec25ab3c8",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.md",
+        "canonical_id": "arXiv:2611.34630",
+        "worker_completed_at": "2026-11-28T08:10:00+09:00",
+        "worker_run_key": "muse-20261128-b2",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 5329,
+          "body_paragraphs": 22,
+          "method_chars": 2415,
+          "method_paragraphs": 5,
+          "evaluation_chars": 492,
+          "limitation_chars": 411,
+          "insufficiency_flags": [
+            "評価説明量 492 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 492 < 500"
+        ],
+        "processed_at": "2026-11-28T00:19:42+00:00"
+      },
+      "return_count": 1
     }
   },
   "imported_paper_paths": {
