@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-28 17:40:47 JST**
+> 自動生成: **2026-11-28 17:48:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **1853** |
 | 直近24hのResearch処理完了 | **120** |
 | 最終Research処理完了 | **11-28 17:20:00 JST** |
-| 最終Discovery探索完了 | **11-28 17:26:51 JST** |
+| 最終Discovery探索完了 | **11-28 17:46:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -51,30 +51,30 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **155479** |
+| 探索候補総数 | **155478** |
 | 処理済み | **33803** |
-| 未処理Discovery候補 | **121676** |
+| 未処理Discovery候補 | **121675** |
 | 収録済み | **5628** |
-| Research / Audit候補へ昇格済み | **448** |
+| Research / Audit候補へ昇格済み | **447** |
 | 無関係として除外 | **18000** |
-| 微妙として除外 | **9727** |
+| 微妙として除外 | **9728** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **121676** |
+| 未処理候補（フィルタ前） | **121675** |
 | 機械規則による暫定隔離 | **2216** |
 | 拡張機械規則による追加隔離 | **1427** |
-| 機械規則通過後 | **118033** |
+| 機械規則通過後 | **118032** |
 | 系統内前方引用スコアによる選抜保留 | **29508** |
 | 暫定隔離合計 | **33151** |
-| **読解可能候補（隔離後）** | **88525** |
+| **読解可能候補（隔離後）** | **88524** |
 | 前方引用が同一系統で2本以上の候補 | **1565** |
 | 前方引用が同一系統で3本以上の候補 | **80** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **75.0%** / 目標 **88525件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **75.0%** / 目標 **88524件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **21.7%**
-- 現在の生在庫: 後方references **63938件** / 前方引用 **59566件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **122615件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **63936件** / 前方引用 **59566件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **122614件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-28 17:34:57 JST（5分前）** |
+| 最終maintenance完了 | **11-28 17:34:57 JST（13分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **79** |
-| 直近6hのDiscovery run | **9** |
-| 直近6hのDiscovery本文確認・分類 | **13** |
+| 直近6hのDiscovery run | **10** |
+| 直近6hのDiscovery本文確認・分類 | **14** |
 | 最終Research完了 | **11-28 17:20:00 JST** |
-| 最終Discovery完了 | **11-28 17:26:51 JST** |
+| 最終Discovery完了 | **11-28 17:46:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-28 17:20:00 JST** / worker — / run muse-20261128-d1 / 成果 **10件**
   - evidence: .survey/import-inbox/results/research/2026-2611.32264-mayfly-lifecycle-aware-high-bandwidth-flash-for-recursive-self-improvement.json
-- Discovery: **11-28 17:26:51 JST** / worker muse / run muse-20261128-d1-w3-postread
+- Discovery: **11-28 17:46:00 JST** / worker muse / run muse-20261128-d2-w2-postread
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/results/discovery/discovery-20261128-d1-w3-postread-2611.32989.json
+  - evidence: .survey/import-inbox/results/discovery/discovery-20261128-d2-w2-postread-2611.29004.json
 
 ### Codex探索成果の反映状況
 
