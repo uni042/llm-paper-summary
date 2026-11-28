@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（267本）
+## 自動生成の論文一覧（268本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -33,15 +33,15 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-04 · [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md)**  
-  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：100  
+  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：101  
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
-  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：80  
+  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：81  
   前世代GLM-4.5の3550億/320億活性と比較すると、総容量を増やしながら毎トークンの計算増加を限定する設計である。論文は長系列の注意計算で約1.5〜2倍の削減効果を述べるが、これは全システムの要求処理率が一律2倍になるという意味ではない。
 
 - **2026-03 · [IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse](2026-2603.12201-indexcache-cross-layer-index-reuse.md)**  
-  実装：✓ ・ リポジトリ内被引用：34  
+  実装：✓ ・ リポジトリ内被引用：35  
   各層で繰り返す疎注意のトークン選択を一部の層だけで計算し、後続層に再利用する。30B DSAモデルの200K文脈でインデクサ計算を75%削減し、プリフィルを1.82倍、デコードを1.48倍高速化した。
 
 - **2026-08 · [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md)**  
@@ -195,6 +195,10 @@
 - **2026-02 · [RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference](2026-2602.05853-rrattention-dynamic-block-sparse-attention-via-per-head-round-robin-shif.md)**  
   実装：[✓](https://github.com/PaddlePaddle/PaddleFleet) ・ リポジトリ内被引用：2  
   提案法は各 S トークン区間からヘッドごとに異なる問い合わせを一つ選び、鍵を区間単位で集約して重要度を計算する。Llama-3.1-8BとQwen2.5-7BのHELMETでは、注意ブロックの約半分を省略しながら全注意の平均性能の99%以上を再現した。
+
+- **2026-10 · [Spin: Shadow Predictive Indexer for Sparse Attention](2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  過去のインデクサスコアの指数移動平均で重要ブロックを予測し、探索と層別予算で鮮度と配分を保ちながら、スパース注意のインデクサ入力自体を疎にする学習不要の方式。
 
 - **2026-10 · [Jet-QSparse: Accelerating Agentic LLM Inference with 4-Bit Sparse Attention](2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attenti.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -390,6 +394,10 @@
   実装：[✓](https://github.com/nnurlan008/DisSparse) ・ リポジトリ内被引用：0  
   top-p スパース注意を INT4複製へのスコア計算、ヒストグラム型単一パス選択、前層隠れ状態で次層選択を先行させるパイプライン、割当ての分割で vLLM へ組み込み、選択を1.17〜1.80倍高速化し最大バッチを密な vLLM 比で最大8倍まで広げた長文脈サービング方式。
 
+- **2026-11 · [DFly2: Turbocharging Long-Context Speculative Decoding by Sharing the Target's Sparsity](2026-2611.34776-dfly2-turbocharging-long-context-speculative-decoding-by-sharing-the-tar.md)**  
+  実装：[✓](https://github.com/Tencent/AngelSpec) ・ リポジトリ内被引用：0  
+  ネイティブスパースなターゲットのKVキャッシュと位置選択をブロック並列ドラフタが共有し、独自キャッシュと選択計算をなくすことで、長文脈とエージェント系で受理長の優位が10.0〜31.5%へ広がり、高同時実行でも62〜81%多いスループットを出した。
+
 - **2026-11 · [Coarse Semantic Blocks for Efficient Training-Free Sparse Attention](2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.md)**  
   実装：[✓](https://github.com/pfnet-research/semantic-block-sparse-attention/) ・ リポジトリ内被引用：0  
   入力文ごとにキーを二千四十八トークン級の意味の塊へ分け、重心得点で問い合わせごとに塊を選ぶ学習なしの疎な注意で、索引構築込みの模型全体で五百二十四千の入力処理を二・三から二・四倍、復号を一・七から二・〇倍速くし、大きな模型では密な注意に近い精度を保ったと報告した。
@@ -413,10 +421,6 @@
 - **2026-10 · [Stratified Sparse Attention: Reducing the Sparse-to-Dense Gap at Extreme Sparsity](2026-2610.28441-stratified-sparse-attention-reducing-the-sparse-to-dense-gap-at-extreme-.md)**  
   実装：[✓](https://github.com/skylight-org/SSA-Paper-Code) ・ リポジトリ内被引用：0  
   上位トークンの決定的保持と残差のスコア誘導サンプリングを包含確率補正でつなぐ疎注意で、50倍疎性でも密注意との精度差を大きく縮め、文脈1Mで最大2.96倍のデコード高速化を得た。
-
-- **2026-10 · [Spin: Shadow Predictive Indexer for Sparse Attention](2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  過去のインデクサスコアの指数移動平均で重要ブロックを予測し、探索と層別予算で鮮度と配分を保ちながら、スパース注意のインデクサ入力自体を疎にする学習不要の方式。
 
 - **2026-10 · [SPARTA: A Sparse Ternary LLM Accelerator with Adaptive Attention and Unified Datapath for Long-Context Edge Inference](2026-2610.34824-sparta-a-sparse-ternary-llm-accelerator-with-adaptive-attention-and-unif.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -721,7 +725,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：204  
+  実装：✓ ・ リポジトリ内被引用：205  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  

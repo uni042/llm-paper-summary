@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0f995a154fa601faa83aefc59b39200b7bb4fae3",
+  "base_commit": "c96fb5299fa3c503ec2c40f4c090e8c10623a3ed",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1882,6 +1882,7 @@
     "2026-2611.34584-routing-and-cache-retention-for-multi-turn-llm-inference-theory-and-implementation.json",
     "2026-2611.34615-pipeaxes-decoupling-compute-and-communication-granularities-for-pipeline-parallel-llm-serving.json",
     "2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-slice-transition-sparsity.json",
+    "2026-2611.34776-dfly2-turbocharging-long-context-speculative-decoding-by-sharing-the-target-s-sparsity.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -56911,6 +56912,15 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.34776": {
+      "order": [
+        "2026-11-28T10:40:57+00:00",
+        "2026-2611.34776-dfly2-turbocharging-long-context-speculative-decoding-by-sharing-the-target-s-sparsity.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -71156,6 +71166,9 @@
     "arxiv:2611.34615": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.34615-pipeaxes-decoupling-compute-and-communication-granularities-for-pipeline.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.34615-pipeaxes-decoupling-compute-and-communication-granularities-for-pipeline.md"
+    ],
+    "arxiv:2611.34776": [
+      "papers/inference/13-sparse-attention/2026-2611.34776-dfly2-turbocharging-long-context-speculative-decoding-by-sharing-the-tar.md"
     ]
   }
 }
