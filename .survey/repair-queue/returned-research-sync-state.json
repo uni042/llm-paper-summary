@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "47ed9568c36eb5096333c124065fc0136eac41a2",
+  "base_commit": "a9c5ab81bee4ea02b1aefa1ad7fccf538b0c0228",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1741,13 +1741,18 @@
     "2026-2611.06425-d3d-decoupled-diffusion-drafting-for-asynchronous-speculative-decoding.json",
     "2026-2611.06513-helix-heterogeneous-llm-inference-with-flexible-and-fine-grained-partitioning.json",
     "2026-2611.06634-flash-comm-self-synchronizing-collective-communication-for-llm-decoding.json",
+    "2026-2611.06828-systolic-linear-attention-co-designing-tile-grouped-gated-delta-attention-for-tpus.json",
     "2026-2611.06835-loom-loop-invariant-memory-for-causal-encoder-decoder-language-models.json",
     "2026-2611.06956-octopus-one-brain-many-branches-for-latent-kv-multi-agent-reinforcement-learning.json",
     "2026-2611.07025-lowram-low-rank-keys-and-amortised-values-for-composable-kv-cache-compression-at-test-time.json",
+    "2026-2611.07149-fastafd-when-does-attention-ffn-disaggregation-pay-on-rack-scale-nvlink.json",
+    "2026-2611.07211-not-all-loops-cost-the-same-phase-dependent-depth-for-serving-looped-transformers.json",
     "2026-2611.07232-recursive-sparse-attention-million-token-length-extrapolation-at-logarithmic-cost.json",
     "2026-2611.07256-triattention-unified-sparse-mixed-precision-attention-for-long-context-llm-inference.json",
     "2026-2611.07263-hyflash-a-prefix-memory-prior-for-on-device-speculative-decoding.json",
+    "2026-2611.07542-flashoffloading-low-latency-kv-cache-offloading-for-long-context-llm-serving.json",
     "2026-2611.08082-dictllm-post-training-compression-of-large-language-model-with-dictionary-kernels.json",
+    "2026-2611.08307-measured-coupling-for-parallel-decoding-in-diffusion-language-models.json",
     "2026-2611.08362-specctmc-exact-speculative-simulation-of-diffusion-language-model-continuous-time-markov-chains.json",
     "2026-2611.08363-strataflux-memory-hierarchy-native-low-bit-llm-inference.json",
     "2026-2611.08669-chainflow-few-step-latent-flow-matching-for-speculative-decoding.json",
@@ -56611,6 +56616,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.06828": {
+      "order": [
+        "2026-11-28T09:37:50+00:00",
+        "2026-2611.06828-systolic-linear-attention-co-designing-tile-grouped-gated-delta-attention-for-tpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.07149": {
+      "order": [
+        "2026-11-28T09:39:31+00:00",
+        "2026-2611.07149-fastafd-when-does-attention-ffn-disaggregation-pay-on-rack-scale-nvlink.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.07211": {
+      "order": [
+        "2026-11-28T09:41:11+00:00",
+        "2026-2611.07211-not-all-loops-cost-the-same-phase-dependent-depth-for-serving-looped-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.07542": {
+      "order": [
+        "2026-11-28T09:42:51+00:00",
+        "2026-2611.07542-flashoffloading-low-latency-kv-cache-offloading-for-long-context-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.08307": {
+      "order": [
+        "2026-11-28T09:44:31+00:00",
+        "2026-2611.08307-measured-coupling-for-parallel-decoding-in-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70736,6 +70786,21 @@
     "arxiv:2611.06634": [
       "papers/inference/99-other-inference-systems/2026-2611.06634-flash-comm-self-synchronizing-collective-communication-for-llm-decoding.md",
       "papers/inference/99-other-inference-systems/2026-2611.06634-flash-comm-self-synchronizing-collective-communication-for-llm-decoding.md"
+    ],
+    "arxiv:2611.06828": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.06828-systolic-linear-attention-co-designing-tile-grouped-gated-delta-attentio.md"
+    ],
+    "arxiv:2611.07149": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.07149-fastafd-when-does-attention-ffn-disaggregation-pay-on-rack-scale-nvlink.md"
+    ],
+    "arxiv:2611.07211": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.07211-not-all-loops-cost-the-same-phase-dependent-depth-for-serving-looped-tra.md"
+    ],
+    "arxiv:2611.07542": [
+      "papers/inference/13-sparse-attention/2026-2611.07542-flashoffloading-low-latency-kv-cache-offloading-for-long-context-llm-ser.md"
+    ],
+    "arxiv:2611.08307": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2611.08307-measured-coupling-for-parallel-decoding-in-diffusion-language-models.md"
     ]
   }
 }

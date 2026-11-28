@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（263本）
+## 自動生成の論文一覧（264本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -37,7 +37,7 @@
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
-  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：78  
+  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：79  
   前世代GLM-4.5の3550億/320億活性と比較すると、総容量を増やしながら毎トークンの計算増加を限定する設計である。論文は長系列の注意計算で約1.5〜2倍の削減効果を述べるが、これは全システムの要求処理率が一律2倍になるという意味ではない。
 
 - **2026-03 · [IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse](2026-2603.12201-indexcache-cross-layer-index-reuse.md)**  
@@ -216,6 +216,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   平均補償後に残る注意誤差を注意質量とブロック内得点分散の積で推定し、厳密に読む鍵・値ブロックを選ぶことで、長文脈の疎な注意計算の精度と中央処理装置退避効率を改善する。
 
+- **2026-09 · [AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving](2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload.md)**  
+  実装：[✓](https://gitcode.com/cann/cann-recipes-infer) ・ リポジトリ内被引用：1  
+  疎注意で選ばれたKV項目を、ベクトル化ハッシュ照合で装置側バッファと突き合わせ、不在分だけを全コアへ均等に転送する退避高速化演算子で、的中率94.83パーセントと出力遅延39パーセント削減を実要求で示した。
+
 - **2026-09 · [Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models](2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md)**  
   実装：[✓](https://github.com/tbn5pj/WISE_code) ・ リポジトリ内被引用：1  
   再帰型言語モデルは、同じネットワークブロックを何度も通して潜在表現を更新することで、固定パラメータ数のまま推論時計算量を増やせる。4K文脈では、後半20段の注意をネイティブFlashAttention比で1.758倍、探索段を含む32段の注意軌跡全体でも1.355倍高速化した。
@@ -353,6 +357,10 @@
 - **2026-11 · [L2C2: Enhancing Large-scale Chiplets for Agent Long-Context LLM Inference with Sparse and Distributed Attention](2026-2611.33691-l2c2-enhancing-large-scale-chiplets-for-agent-long-context-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   チップレット上の分散スパース注意を、部分プリフィルのSplit-Comm注意と長さ適応の双モード、デコードのトークン交互割当てと動的キャッシュ分散で最適化するL2C2を提案し、シミュレーションで部分プリフィル1.45倍、デコード1.53倍の高速化を示した。
+
+- **2026-11 · [FlashOffloading: Low-Latency KV Cache Offloading for Long-Context LLM Serving](2026-2611.07542-flashoffloading-low-latency-kv-cache-offloading-for-long-context-llm-ser.md)**  
+  実装：[✓](https://github.com/vllm-project/vllm-ascend/tree/releases/v0.30.0) ・ リポジトリ内被引用：0  
+  KVの正本をホストDRAMに置き、プリフィルは層単位の回転バッファ、デコードは逆引き疎索引と融合カーネルでオフロード遅延を削ることで、TPOT 30ミリ秒制約の下でプリフィル最大1.38倍・デコード最大1.91倍のスループットと512K〜1Mトークン系列の処理可能性を実現した、長文脈向けKV全面オフロード基盤。
 
 - **2026-11 · [Factorized Context Attention: From Emulated to Native Grid Probing](2026-2611.32423-factorized-context-attention-from-emulated-to-native-grid-probing.md)**  
   実装：[✓](https://github.com/mohammad2012191/FCA) ・ リポジトリ内被引用：0  
@@ -513,10 +521,6 @@
 - **2026-09 · [Block-Sparse Attention with Semantic-Geometric Decoupled Routing](2026-2609.22884-block-sparse-attention-with-semantic-geometric-decoupled-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の自己注意は、入力系列の全トークン対を比較する密注意の計算量とメモリアクセスが大きい。そこで、問い合わせと鍵をブロック単位に平均して近似スコアを出す方式が用いられる。単一NVIDIA H100 80GBでの128Kトークン注意処理では、FlashAttentionの451.03 msに対してSGDRは89.59 ms（5.03倍）であった。
-
-- **2026-09 · [AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving](2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload.md)**  
-  実装：[✓](https://gitcode.com/cann/cann-recipes-infer) ・ リポジトリ内被引用：0  
-  疎注意で選ばれたKV項目を、ベクトル化ハッシュ照合で装置側バッファと突き合わせ、不在分だけを全コアへ均等に転送する退避高速化演算子で、的中率94.83パーセントと出力遅延39パーセント削減を実要求で示した。
 
 - **2026-08 · [Training-Free Hashing-Based Attention via Binary Principal Components](2026-2608.04405-training-free-hashing-based-attention-via-binary-principal-components.md)**  
   実装：[✓](https://github.com/yudaohai666/BPC) ・ リポジトリ内被引用：0  

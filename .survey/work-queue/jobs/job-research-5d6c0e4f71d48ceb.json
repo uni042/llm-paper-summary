@@ -35,10 +35,15 @@
   "selection_reason": "FastAFD builds an attention-FFN disaggregated MoE serving engine for GB200 NVL72 that overlaps MoE and attention microbatches and beats tuned vLLM wide expert parallelism on decode throughput; direct serving-system contribution.",
   "semantic_scholar_id": "bbc3b519195d80916ee7c10451eedd17a620a9fb",
   "source_url": "https://arxiv.org/abs/2611.07149",
-  "status": "ready",
+  "status": "superseded",
   "title": "FastAFD: When Does Attention-FFN Disaggregation Pay on Rack-Scale NVLink?",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T09:47:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2611.07149-fastafd-when-does-attention-ffn-disaggregation-pay-on-rack-scale-nvlink.md",
+  "represented_canonical_id": "arXiv:2611.07149",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

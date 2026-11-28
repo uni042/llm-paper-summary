@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（293本）
+## 自動生成の論文一覧（294本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -225,6 +225,10 @@
 - **2026-11 · [MixMoMo: Accelerating Extra-Large MoE Inference with Mixed-Precision GPU-NPU Execution on Mobile Devices](2026-2611.33981-mixmomo-accelerating-extra-large-moe-inference-with-mixed-precision-gpu-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エキスパートの量子化感度を活性値の重要次元から実行時に見積もり、品質予算内でビット幅を動的に割り当て、同精度グループ単位でGPUとNPUへ実行時間ベースに振り分け、NPUではタイルをまたいで逆量子化をバッチ化することで、モバイルSoC上の超大規模MoE推論を高速化する。
+
+- **2026-11 · [Measured Coupling for Parallel Decoding in Diffusion Language Models](2026-2611.08307-measured-coupling-for-parallel-decoding-in-diffusion-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散言語モデルの並列デコードで、位置間の相互作用を類似度という代理指標ではなく、確定が他位置の確信度へ与える変化として主パス内のプローブで実測し、平均場デコード比でステップ数を3分の1以上削減しつつ正解率差を平均約1.1ポイントに抑えた、学習不要の確定判定手法。
 
 - **2026-11 · [Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads](2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b2.md)**  
   実装：[✓](https://github.com/MohsenZand/GPUBenchmarking) ・ リポジトリ内被引用：0  
@@ -1095,7 +1099,7 @@
   本論文は、新しい量子化器を提案するものではなく、既存の量子化方式をモデル能力、指示追従・整合性、推論効率という異なる観点で測り直す比較実験である。論文のSpQR実装は低ビットの値域を模擬しながら高精度形式で重みを保持しており、品質の比較には使えても実メモリ削減を実証しない。
 
 - **2024-11 · [Lynx: Enabling Efficient MoE Inference through Dynamic Batch-Aware Expert Selection](2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md)**  
-  実装：✓ ・ リポジトリ内被引用：19  
+  実装：✓ ・ リポジトリ内被引用：20  
   演算の疎性が、専門家重みを高帯域メモリから読み出す量の削減につながらなくなる。Lynxはこの矛盾を、モデルの重みを恒久的に枝刈りするのでなく、現在のバッチのルーター出力を再配置することで緩和する。通常の同居配置で出力トークン間隔の中央値を1.09～1.30倍短縮し、精度変化を概ね1ポイント以内に抑える。
 
 - **2024-02 · [Benchmarking and Dissecting the Nvidia Hopper GPU Architecture](2024-2402.13499-benchmarking-and-dissecting-the-nvidia-hopper-gpu-architecture.md)**  
@@ -1179,7 +1183,7 @@
   著者らは推論段階を対象に、重み共有、低ランク分解、枝刈り、量子化、知識蒸留、早期終了、トークン省略の七系統を比較する。
 
 - **2022-08 · [Momentum Transformer: Closing the Performance Gap Between Self-attention and Its Linearization](2022-2208.00579-momentum-transformer-closing-the-performance-gap-between-self-attention-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：1  
   モーメンタム Transformerは、通常のソフトマックス注意を線形化した際に失われる表現力を、最適化アルゴリズムのモーメンタムに着想を得た状態更新で補おうとする研究である。だが、LRAの平均正答率は標準ソフトマックスの58.70%を下回る56.04%であり、翻訳の生成速度も標準ソフトマックスの方が大きい。
 
 ### 6年前（2020-12〜2021-11）
