@@ -137,6 +137,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   ドラフトモデルが隔離環境でツール操作列を先行実行し、権威モデルが先頭操作を確認したマクロだけ後続操作と観測をまとめて確定して、大型モデル呼出しとツール待ちを減らす。
 
+- **2026-09 · [SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services](2026-2609.26763-sara.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  大規模言語モデルの分離型推論では、入力をまとめて処理する事前充填（プリフィル）、生成された鍵・値キャッシュ（KV キャッシュ）の転送、出力を逐次生成する復号（デコード）を別々の装置群へ配置する。原著の要旨は段階別SLO予測の平均誤差5%未満、同じ配備費用で既存比較方式より平均26.6%高い有効処理率を報告する。
+
 - **2026-09 · [Attuner: Recomputation-Free Agentic Context KV Reuse](2026-2609.36722-attuner-recomputation-free-agentic-context-kv-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   エージェントがスキルの説明、検索した文書、過去の記憶をリクエストごとに組み立てると、同じ資料を何度もプリフィルすることになる。再計算を減らす代わりに、複数資料から正しい証拠を選ぶ能力が落ちる問題がある。学習済みQuery更新を投影重みに統合するため、推論時にFull teacherや保存済み資料KVの再計算は不要である。
@@ -238,10 +242,6 @@
 - **2026-09 · [When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression](2026-2609.29875-when-can-agents-forget-their-reasoning-iclr-for-long-horizon-agent-conte.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実行済み推論を代理エントロピーで選んでオンラインに削除する学習不要の圧縮で、260課題の報酬を上げながら入力トークンを25.5パーセント削り、推論が忘れられるのは由来状態が外部化された後だと示した。
-
-- **2026-09 · [SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services](2026-2609.26763-sara.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  大規模言語モデルの分離型推論では、入力をまとめて処理する事前充填（プリフィル）、生成された鍵・値キャッシュ（KV キャッシュ）の転送、出力を逐次生成する復号（デコード）を別々の装置群へ配置する。原著の要旨は段階別SLO予測の平均誤差5%未満、同じ配備費用で既存比較方式より平均26.6%高い有効処理率を報告する。
 
 - **2026-09 · [Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations](2026-2609.14773-pull-lazy-working-memory-materialization.md)**  
   実装：[✓](https://github.com/wulun811/kongmen-pull) ・ リポジトリ内被引用：0  

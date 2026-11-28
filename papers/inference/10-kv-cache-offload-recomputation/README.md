@@ -94,6 +94,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/shutianluo/DirectKV) ・ リポジトリ内被引用：6  
   注意機構の計算を毎回最初からやり直さずに済む反面、数万トークンの文脈と複数の同時要求を抱えるとGPUの高帯域メモリ（HBM）を圧迫する。既存のオフロード方式と比べ、CPU–GPU間の転送量を最大50%減らし、GPUメモリ使用量を43%削減し、端点の性能を最大1.2倍改善した。
 
+- **2026-06 · [SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL](2026-2606.19746-sac-sparse-attention-cxl-disaggregated-kv.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  疎注意で実際に使うtop-k KVだけをCXL共有メモリから層ごとに直接読み込み、RDMAの接頭辞全量転送とローカルKV常駐をなくして長文高並行デコードを高速化する。
+
 - **2026-05 · [SplitZip: Ultra Fast Lossless KV Compression for Disaggregated LLM Serving](2026-2605.01708-splitzip-lossless-kv-compression.md)**  
   実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：6  
   BF16の指数が少数値へ集中する性質を使い、頻出指数を4ビット化し例外だけ位置付きで別保存することで、KVキャッシュを無損失かつGPU上で高速圧縮し、分離LLM配信の転送待ちを削減する方式。
@@ -113,10 +117,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-12 · [CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving](2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   CXL-SpecKVは低温KVをCXLメモリへ置き、FPGAで圧縮・展開とDMAを処理し、将来トークンを予測し、予測トークンに対応すると論文が説明する将来位置のKVを先読みすることで容量と転送待ちを減らす方式。論文は投機先読みを報告するが、公開実装ではLSTM重み読込・実DMA・予測トークン別address生成を確認できず性能寄与未検証。
-
-- **2026-06 · [SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL](2026-2606.19746-sac-sparse-attention-cxl-disaggregated-kv.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  疎注意で実際に使うtop-k KVだけをCXL共有メモリから層ごとに直接読み込み、RDMAの接頭辞全量転送とローカルKV常駐をなくして長文高並行デコードを高速化する。
 
 - **2026-05 · [VeriCache: Turning Lossy KV Cache into Lossless LLM Inference](2026-2605.17613-vericache-lossless-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -153,6 +153,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-12 · [MatKV: Trading Compute for Flash Storage in LLM Inference](2025-2512.22195-matkv-trading-compute-for-flash-storage-in-llm-inference.md)**  
   実装：[✓](https://github.com/kunwooshin/MatKV) ・ リポジトリ内被引用：4  
   MatKVは、検索拡張生成（Retrieval-Augmented Generation、RAG）の質問ごとに同じ文書を何度もGPUで事前処理する無駄を、文書単位の鍵・値（KV）キャッシュをストレージへ永続化することで減らす方式である。
+
+- **2026-08 · [Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention](2026-2608.03555-karat-pnm-retrieval-sparse-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  KARATはKVと索引をLPDDR搭載の汎用処理近傍メモリへ移し、GPUを重み計算へ専念させ、検索型疎注意をマイクロバッチ化して大容量KVの転送とGPU容量制約を減らす方式。
 
 - **2026-07 · [LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs](2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -205,10 +209,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-08 · [Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches](2026-2608.01657-prefixshield-admission-responsibility.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   共有KVキャッシュで新規ブロックを作った利用者に持続的な回収責任を持たせ、負債中の再利用昇格を抑えつつ、その利用者の低価値ブロックから追い出すことで、固定分割なしに他利用者の接頭辞再利用を守る方式。
-
-- **2026-08 · [Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention](2026-2608.03555-karat-pnm-retrieval-sparse-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  KARATはKVと索引をLPDDR搭載の汎用処理近傍メモリへ移し、GPUを重み計算へ専念させ、検索型疎注意をマイクロバッチ化して大容量KVの転送とGPU容量制約を減らす方式。
 
 - **2026-05 · [ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse](2026-2605.22850-objectcache-layerwise-object-storage-retrieval.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -383,7 +383,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：185  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：186  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
@@ -415,7 +415,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   多輪会話の履歴KV再計算と長プロンプトによるFCFS ヘッド-of-line blockingを、GPU/DRAM/SSDの多段KV保持と飢餓なし要求reorderingで同時に解くFlashGen。2×A100のShareGPT評価でOPT-30B 1.63倍、Llama-2 70B 2.85倍のスループットを報告する。
 
 - **2025-03 · [SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs](2025-2503.16163-specache-speculative-kv-caching.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：17  
   SpeCacheは16-bit KV正本をCPUに残し、GPUには重要位置の低ビット索引と少数の正確KVだけを置く。次トークンの参照先を予測して一段先読みし、容量と転送待ちを減らす方式。
 
 - **2025-02 · [HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading](2025-2502.12574-headinfer-head-wise-kv-offloading.md)**  
@@ -529,7 +529,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：128  
+  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：129  
   ShadowKVはキーを低ランク要約と代表値としてGPUに残し、値だけCPUへ置いて重要チャンクの値を選択転送し、長文KVの容量とPCIe転送量を減らす方式。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  

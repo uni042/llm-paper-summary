@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（697本）
+## 自動生成の論文一覧（698本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-07 · [Kimi K3: Open Frontier Intelligence](2026-2607.24653-kimi-k3-open-frontier-intelligence.md)**  
-  実装：✓ ・ リポジトリ内被引用：54  
+  実装：✓ ・ リポジトリ内被引用：55  
   KDA状態とMLAのKVを統合する接頭辞キャッシュ、512トークン境界の再利用、クラスタ親和ルーティングを記述するKimi K3技術報告。配信機構は具体的だが、節内に比較測定はない。
 
 - **2026-04 · [SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference](2026-2505.24095-skywalker-cross-region-load-balancer.md)**  
@@ -28,6 +28,10 @@
   実装：✓ ・ リポジトリ内被引用：17  
   非同期エージェントのKV接頭辞がLRU追い出しと再計算を繰り返す中盤スラッシングを、KV使用率・ヒット率を混雑信号にしたエージェント単位の加算増加・乗算減少型受入れ制御で未然に抑える方式。
 
+- **2025-12 · [TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale](2025-2512.18194-tract-rack-scale-cxl-shared-kv.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  CXL Type-3共有メモリをプリフィル・デコード間KV転送路とラック共有接頭辞キャッシュに兼用し、GPU–CXL直接DMAでRDMAのNICホップを除去するサービング方式。
+
 - **2025-12 · [TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity](2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   プリフィル・通信・デコードを共通の「トークン速度」で観測し、突発負荷では既存デコードGPUを一時的なプリフィル処理へ転用して、新規GPU起動の遅れを埋める自動スケーリング方式。
@@ -35,10 +39,6 @@
 - **2026-09 · [GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving](2025-2508.16449-greenllm-slo-aware-dvfs-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   GreenLLMは、プリフィルとデコードの負荷を入力長・出力TPS・P95トークン間時間から観測し、各段階のSLO内でGPU周波数を別々に選ぶ二重帰還制御により、過剰な高周波数動作とエネルギーを減らす。
-
-- **2025-12 · [TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale](2025-2512.18194-tract-rack-scale-cxl-shared-kv.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
-  CXL Type-3共有メモリをプリフィル・デコード間KV転送路とラック共有接頭辞キャッシュに兼用し、GPU–CXL直接DMAでRDMAのNICホップを除去するサービング方式。
 
 - **2026-03 · [Parallelizing Tool Execution and LLM Generation for Low-Latency Agent Serving](2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
@@ -48,6 +48,10 @@
   実装：[✓](https://github.com/ASISys/DualMap) ・ リポジトリ内被引用：12  
   DualMapは、分散LLM推論でプロンプト接頭辞のKVキャッシュを再利用したいという要求と、各推論インスタンスへ負荷を均等に分けたいという要求の衝突を解く配車方式である。ICLR 2026の論文は、vLLMを用いた分散推論クラスタで実際の会話・ツール利用負荷を評価し、同じTTFT目標を満たす有効要求容量を既存方式比で最大2.25倍に改善したと報告する。
 
+- **2026-08 · [From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems](2026-2608.15127-agentsysbench.md)**  
+  実装：✓ ・ リポジトリ内被引用：11  
+  エージェントのLLM呼出しだけでなくツール・検索・サンドボックス・状態・通信を含む実行を測定し、トークン速度だけでは捉えられない待ち時間と資源競合がどこで生じるかを明らかにしたベンチマーク。
+
 - **2026-02 · [Predicting LLM Output Length via Entropy-Guided Representations](2026-2602.11812-predicting-llm-output-length-via-entropy-guided-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   生成長を事前に予測して近い長さの要求をまとめればこの無駄を減らせるが、既存法はDistilBERTのような補助モデルを別途動かすため、追加遅延とGPUメモリを消費する。
@@ -55,10 +59,6 @@
 - **2026-01 · [LLM-42: Enabling Determinism in LLM Inference with Verified Speculation](2026-2601.17768-llm42-verified-speculation-deterministic-inference.md)**  
   実装：[✓](https://github.com/microsoft/llm-42) ・ リポジトリ内被引用：11  
   動的バッチの高速カーネルで先に生成し、固定形状の再実行でトークンとKVを検証・巻き戻すことで、要求単位の決定性をカーネル全面書換えなしに保証する。
-
-- **2026-08 · [From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems](2026-2608.15127-agentsysbench.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
-  エージェントのLLM呼出しだけでなくツール・検索・サンドボックス・状態・通信を含む実行を測定し、トークン速度だけでは捉えられない待ち時間と資源競合がどこで生じるかを明らかにしたベンチマーク。
 
 - **2026-02 · [vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models](2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md)**  
   実装：[✓](https://github.com/vllm-project/vllm-omni) ・ リポジトリ内被引用：10  
@@ -536,6 +536,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   入力長・予測出力長・KV圧力・SLOから配置後の追加完了時間を見積もり、実機校正したコストでプリフィル／デコード先を選ぶルータをA40分離サービング上で評価し、利得と失敗領域を定量化した。
 
+- **2026-09 · [Analytical Power-Aware Provisioning for Prefill-Decode Disaggregated AI Inference](2026-2609.24639-analytical-power-aware-provisioning-for-prefill-decode-disaggregated-ai-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本研究は、入力処理（プリフィル）と復号（デコード）を別々のGPU群に割り当てる分離型サービング（プリフィル–デコード Disaggregation、PD分離）で、何台の入力処理インスタンスと復号インスタンスを稼働させれば、要求処理容量を満たしながらGPU電力を最小化できるかを扱う。
+
 - **2026-09 · [Adaptive Context Parallelism for Production LLM Serving](2026-2609.04774-vertumnus-adaptive-context-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   接頭辞キャッシュ後の残計算量とワーカー混雑を測り、要求ごとの文脈並列度とクラスタのCP分割・統合を数秒単位で変えて、短文の通信費と長文の計算待ちを減らす。
@@ -543,6 +547,10 @@
 - **2026-08 · [When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference](2026-2608.03741-heteropanacea.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル/デコードと注意/FFNを最大4段へ分離するシミュレータで、計算性能・メモリ帯域・通信費の異なる装置配置を比較し、分離が有利な資源条件を測定する研究。
+
+- **2026-08 · [SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL](2026-92b65c48d388-splitscaling-adaptive-scaling-for-disaggregated-llm-serving-against-traffic-bursts-via-drl.md)**  
+  実装：[✓](https://github.com/Onlytonight/SplitScaling) ・ リポジトリ内被引用：1  
+  プリフィル／デコード各プールを深層強化学習で独立伸縮し、新規ノードへ待機要求を即時再割当して、バースト負荷下でSLOを守りながら静的構成比25.2%の計算コストを削減する。
 
 - **2026-08 · [LLMVisor: A Real-Time Latency Attribution Model for Multi-Tenant LLM Serving](2026-2608.08382-llmvisor-realtime-latency-attribution.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -830,6 +838,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   分担を事前に決めず、両端キューからCPUとGPUが完了順にエキスパートを取り合う自己適応スケジューリングで、共有PCのCPU競合に分担自体を追随させるMoEハイブリッド推論方式。
 
+- **2026-11 · [Analytical Modeling and Optimal GPU Provisioning for Disaggregated LLM Inference](2026-2611.28760-analytical-modeling-and-optimal-gpu-provisioning-for-disaggregated-llm-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分離推論のプリフィル・デコード間GPU配分を、タイル単位の解析的容量モデルと釣り合いの閉形式、整数探索でプロファイルなしに求め、H100で容量誤差3.5%・ステップ時間誤差約9%を達成し全配分の実測6条件全てで最適配分を選んだプロビジョニング手法。
+
 - **2026-10 · [Zepp: Accelerating Distributed MoE Serving under Relaxed Balance Constraints](2026-2610.11158-zepp-accelerating-distributed-moe-serving-under-relaxed-balance-constrai.md)**  
   実装：[✓](https://github.com/andronius-yang/zepp) ・ リポジトリ内被引用：0  
   負荷均衡を目的から制約へ格下げし、複製配置・通信の分割とマージ・3ストリームの重ね合わせでノード間通信そのものを最小化する分散MoEサービング基盤。
@@ -1110,10 +1122,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   入力長とMoE専門家へのトークン偏りから通信タイルへ予約するGPU資源を解析的に選び、計算と通信の重なりを調整して固定配分よりプリフィル待ちを減らす。
 
-- **2026-09 · [Analytical Power-Aware Provisioning for Prefill-Decode Disaggregated AI Inference](2026-2609.24639-analytical-power-aware-provisioning-for-prefill-decode-disaggregated-ai-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本研究は、入力処理（プリフィル）と復号（デコード）を別々のGPU群に割り当てる分離型サービング（プリフィル–デコード Disaggregation、PD分離）で、何台の入力処理インスタンスと復号インスタンスを稼働させれば、要求処理容量を満たしながらGPU電力を最小化できるかを扱う。
-
 - **2026-09 · [An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference](2026-2609.12378-an-open-source-end-to-end-fhe-implementation-for-privacy-preserving-llam.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   問題は単一演算を高速化するだけではなく、各演算の入出力の暗号文配置を接続できるようにすることにある。arXiv:2609.12378の2026年10月14日改訂v3本文は、提案方式をThemisと呼ぶ。
@@ -1145,10 +1153,6 @@
 - **2026-08 · [Squeezing the Cache, Preserving the Truth: Monotonic Equipotential Allocation with Geodesia-KV](2026-2608.23599-squeezing-the-cache-preserving-the-truth-monotonic-equipotential-allocat.md)**  
   実装：[✓](https://github.com/geodesia-ai/geodesia-kv) ・ リポジトリ内被引用：0  
   Geodesia-KVは、長文脈LLM推論のKVキャッシュを単に一律4ビット化するのでなく、64トークン単位のブロックごとに異なる精度を割り当て、不要になった高精度表現を保持せず低精度側へ単調に移す方式である。しかしこの差は0.39%程度で、別コーパスPG-19の11冊では同一の優位は統計的に確立されない。
-
-- **2026-08 · [SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL](2026-92b65c48d388-splitscaling-adaptive-scaling-for-disaggregated-llm-serving-against-traffic-bursts-via-drl.md)**  
-  実装：[✓](https://github.com/Onlytonight/SplitScaling) ・ リポジトリ内被引用：0  
-  プリフィル／デコード各プールを深層強化学習で独立伸縮し、新規ノードへ待機要求を即時再割当して、バースト負荷下でSLOを守りながら静的構成比25.2%の計算コストを削減する。
 
 - **2026-08 · [SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries](2026-2608.05604-skillzip-contract-preserving-graph-compression-for-scalable-agent-skill-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1732,13 +1736,13 @@
   実装：✓ ・ リポジトリ内被引用：22  
   要求・ジョブ・タスク抽象、NPU中心FlowServe、KV局所性とPD構成を統合した分散スケジューラ、NPU-fork等の高速スケールを組み合わせたHuawei Cloud本番サーバーレスLLM基盤。
 
+- **2025-07 · [Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving](2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md)**  
+  実装：✓ ・ リポジトリ内被引用：21  
+  同一GPU内でプリフィル/デコードをproactiveにSM分割し、計算飽和とメモリ帯域競合をモデル化してvLLM比最大2.2倍スループット・20倍TTFT改善を達成する。
+
 - **2025-02 · [Demystifying Cost-Efficiency in LLM Serving over Heterogeneous GPUs](2025-2502.00722-demystifying-cost-efficiency-in-llm-serving-over-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：21  
   次に、どのGPUを何台借りるか、各GPU群にモデルを何個複製しどの並列方式で載せるか、要求種別をどの複製へ何割ずつ振り分けるかを、価格上限と実際のGPU在庫を制約にした混合整数線形計画（Mixed-Integer Linear Programming; MILP）として表す。
-
-- **2025-07 · [Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving](2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
-  同一GPU内でプリフィル/デコードをproactiveにSM分割し、計算飽和とメモリ帯域競合をモデル化してvLLM比最大2.2倍スループット・20倍TTFT改善を達成する。
 
 - **2025-02 · [HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds](2025-2502.15524-hydraserve-serverless-cold-start.md)**  
   実装：[✓](https://github.com/LLMServe/hydraserve) ・ リポジトリ内被引用：19  
@@ -1952,6 +1956,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   検索数を増やすと根拠が集まりやすい反面、入力長が増え、最初のトークン生成までの処理やGPUメモリ占有が大きくなる。METISは、質問ごとに必要な検索件数、文章片の統合方法、中間要約長を変えることと、同時にGPUで処理する要求を選ぶことを、一つの制御器で行う。
 
+- **2025-11 · [DOPD: A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving](2025-2511.20982-dopd-dynamic-pd-disaggregation.md)**  
+  実装：[✓](https://github.com/liao4s/DOPD) ・ リポジトリ内被引用：6  
+  負荷予測と解析的な最適P/D比でプリフィル/デコード instanceを動的再構成し、8x H100実機で有効スループット最大1.5倍・SLO達成99.4%を報告。
+
 - **2025-10 · [xLLM Technical Report](2025-2510.14686-xllm-technical-report.md)**  
   実装：[✓](https://github.com/jd-opensource/xllm) ・ リポジトリ内被引用：6  
   原著のDeepSeek-R1、プリフィル/デコード分離、入力2048／出力2048トークン、TPOT上限100msの表3では、MindIEが8476.44 トークン/s、xLLMが11351.58 トークン/sとなり、同じ制約下で約33.9%の改善を示した。
@@ -1983,10 +1991,6 @@
 - **2025-11 · [Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems](2025-2511.22880-loraserve-heterogeneous-adapter-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   LoRAのランクと需要を同時に見て動的配置・確率ルーティングし、不在アダプタはGPUDirect RDMAで遠隔取得して分散アダプタプールを構成する。
-
-- **2025-11 · [DOPD: A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving](2025-2511.20982-dopd-dynamic-pd-disaggregation.md)**  
-  実装：[✓](https://github.com/liao4s/DOPD) ・ リポジトリ内被引用：5  
-  負荷予測と解析的な最適P/D比でプリフィル/デコード instanceを動的再構成し、8x H100実機で有効スループット最大1.5倍・SLO達成99.4%を報告。
 
 - **2025-10 · [BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure](2025-2510.13223-banaserve-dynamic-module-migration.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -2399,7 +2403,7 @@
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-01 · [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](2024-2401.11181-tetriinfer.md)**  
-  実装：✓ ・ リポジトリ内被引用：130  
+  実装：✓ ・ リポジトリ内被引用：131  
   事前充填を固定長チャンク化して復号インスタンスから分離し、生成長予測付き二段階配置で混合LLM要求の干渉を抑える配信システム。
 
 - **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  

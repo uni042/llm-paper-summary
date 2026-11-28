@@ -35,10 +35,15 @@
   "selection_reason": "DisSparseは長文脈LLMサービング向けに、固定予算top-kではなく注意質量に応じて予算が変わるtop-p動的スパース注意をパイプライン化して実装し、vLLM型の静的メモリ割当てと両立させる手法で、スパース注意によるサービング高速化へ直接貢献する。",
   "semantic_scholar_id": "893716737951343e8e50eb2bb0ff894e979876e6",
   "source_url": "https://arxiv.org/abs/2611.28522",
-  "status": "ready",
+  "status": "superseded",
   "title": "DisSparse: Pipelined Top-$p$ Sparse Attention for Long-Context LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:00:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2611.28522-dissparse-pipelined-top-p-sparse-attention-for-long-context-llm-serving.md",
+  "represented_canonical_id": "arXiv:2611.28522",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

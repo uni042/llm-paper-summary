@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（137本）
+## 自動生成の論文一覧（138本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -37,7 +37,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   異種GPU/TPU/PIMと分離サービング・多階層鍵値メモリ・MoE・電力を要求駆動ループで統合模擬するLLMサービングシミュレータ。
 
 - **2026-01 · [AIConfigurator: Lightning-Fast Configuration Optimization for Multi-Framework LLM Serving](2026-2601.06288-aiconfigurator-multi-framework-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：17  
   実GPUで測った演算・通信性能から複数のLLMサービング構成をCPU上で予測し、並列化やバッチ、プリフィル・デコード分離を探索して遅延目標を満たす候補を選ぶ。
 
 - **2026-06 · [Frontier: Towards Comprehensive and Accurate LLM Inference Simulation](2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md)**  
@@ -84,6 +84,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：2  
   通常の評価では、タスクの成否と終了後の消費トークン数を記録するが、実行途中のエージェント自身が残りの必要予算を理解していたかは別問題である。BAGEN（Budget-Aware Agent）は、残予算の自己推定を独立した能力として定義し、途中状態ごとに「完了に必要な資源の下限・上限」または「完了不可能」を回答させる評価枠組みを提案する。
 
+- **2026-02 · [TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence](2026-2602.20662-tom-a-ternary-read-only-memory-accelerator-for-llm-powered-edge-intellig.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  TOMは、三値重み（ternary 重み）を持つ大規模言語モデル（LLM）をエッジ端末で低遅延・低消費電力に動かすための、読出し専用メモリ（ROM）と静的ランダムアクセスメモリ（SRAM）の混合専用回路である。重みを毎トークン外部メモリから転送する方式と異なり、固定ベースモデルの重みをROMとしてオンチップへ焼き込み、各演算器の近くに分散配置する。
+
 - **2026-02 · [Asynchronous Verified Semantic Caching for Tiered LLM Architectures](2026-2602.13165-asynchronous-verified-semantic-caching-for-tiered-llm-architectures.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   著者は、事前に人手や大規模モデルで検証した回答を持つ静的キャッシュと、通常の要求を処理しながら生成回答を保存する動的キャッシュを分離する構成を前提とする。原著のトレース駆動シミュレーションでは、会話要求における静的由来回答の割合が8.2%から19.4%、検索要求では2.2%から8.6%へ増えた。
@@ -120,10 +124,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：1  
   FleetOptは、長文脈LLM推論のGPUをすべて最大入力長に合わせて確保すると、多くの短い要求に対してKVキャッシュ枠が過大になる問題を扱う。境界をわずかに超えた要求は、推論エンジンへ入れる前にゲートウェイで文章を抽出圧縮し、短文脈プールへ移せるようにする。
 
-- **2026-02 · [TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence](2026-2602.20662-tom-a-ternary-read-only-memory-accelerator-for-llm-powered-edge-intellig.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  TOMは、三値重み（ternary 重み）を持つ大規模言語モデル（LLM）をエッジ端末で低遅延・低消費電力に動かすための、読出し専用メモリ（ROM）と静的ランダムアクセスメモリ（SRAM）の混合専用回路である。重みを毎トークン外部メモリから転送する方式と異なり、固定ベースモデルの重みをROMとしてオンチップへ焼き込み、各演算器の近くに分散配置する。
-
 - **2026-01 · [SynPerf: A Hybrid Analytical-ML Framework for GPU Performance Prediction](2026-2601.14910-synperf-a-hybrid-analytical-ml-framework-for-gpu-performance-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   カーネルをタスクへ分解し命令パイプラインごとの需要を解析してから学習モデルで実行時間を予測するGPU性能モデルで、11種のGPUでカーネル誤差6.1パーセントまで下げ、性能上限の診断で融合MoEを最大1.7倍速くした。
@@ -145,6 +145,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-11 · [SpecCTMC: Exact Speculative Simulation of Diffusion Language Model Continuous-Time Markov Chains](2026-2611.08362-specctmc-exact-speculative-simulation-of-diffusion-language-model-contin.md)**  
   実装：[✓](https://github.com/kasakh/specctmc) ・ リポジトリ内被引用：0  
   拡散言語モデルの厳密な連続時間サンプリングを、過去の予測で下書きし並列評価と残差補正で検証する投機実行に変え、出力分布を一切変えずに逐次モデル評価を最大4.38倍減らす学習不要のサンプラー。
+
+- **2026-11 · [Selective ROM Weight Storage for Responsive LLM Control on Edge Robots](2026-2611.28563-selective-rom-weight-storage-for-responsive-llm-control-on-edge-robots.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MLPの下射影など選択した固定重みだけをバンク型ROMへ置き専用路で供給し、出力スライスでのプリエンプションと単一パス意思決定を組み合わせ、シミュレーションでQwen3-8Bの計画遅延を1.52倍高速化しタスク応答P99を約227倍下げた、エッジロボット向けLLM推論のメモリとスケジューリングの協調設計。
 
 - **2026-11 · [ROCm InferaSim: Cut LLM Serving Trial Costs and Deploy the Best Configuration](2026-2611.04032-rocm-inferasim-cut-llm-serving-trial-costs-and-deploy-the-best-configura.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

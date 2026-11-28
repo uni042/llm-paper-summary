@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "fd08eafbbf9ac0f35e52f3710cb36cc52fd59209",
+  "base_commit": "1772121880477120a983b9ffd7c1c49d701d3594",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1786,6 +1786,7 @@
     "2026-2611.16384-beyond-compressing-everything-contrastive-memory-learning-for-selective-context-compression.json",
     "2026-2611.18482-mmflash-faster-speculative-decoding-for-vision-language-models.json",
     "2026-2611.20006-glance-then-select-evidence-tempered-visual-token-selection-for-extremely-compressed-multimodal-llms.json",
+    "2026-2611.21917-lost-in-a-few-heads-diagnosing-and-repairing-block-selection-in-sparse-attention.json",
     "2026-2611.22019-computed-permutation-trellis-coding-near-optimal-quantization-from-two-multiplications-and-a-64-byte-table.json",
     "2026-2611.22086-hycoinfer-cloud-edge-collaborative-inference-for-large-language-models-on-heterogeneous-gpu-fpga-architectures.json",
     "2026-2611.22191-risa-recoverable-sparse-attention-for-block-diffusion-language-models.json",
@@ -1827,8 +1828,12 @@
     "2026-2611.27701-forest-coordinating-tree-based-hbf-rram-and-hbm-for-efficient-speculative-llm-inference.json",
     "2026-2611.27891-speculative-decoding-is-less-speculative-than-you-think.json",
     "2026-2611.27973-memonce-a-scalable-memory-architecture-for-large-language-models.json",
+    "2026-2611.28522-dissparse-pipelined-top-p-sparse-attention-for-long-context-llm-serving.json",
     "2026-2611.28550-ccamoe-cache-conditioned-adaptive-inference-for-offloaded-moe.json",
+    "2026-2611.28563-selective-rom-weight-storage-for-responsive-llm-control-on-edge-robots.json",
+    "2026-2611.28625-indexerstage-staging-indexer-k-across-memory-tiers-for-sparse-attention-llm-serving.json",
     "2026-2611.28702-hiperfcc-kvcache-accelerating-confidential-llm-serving-with-hierarchical-kv-caching.json",
+    "2026-2611.28760-analytical-modeling-and-optimal-gpu-provisioning-for-disaggregated-llm-inference.json",
     "2026-2611.29006-nohaircache-calibrate-once-kv-cache-eviction-with-one-power-law-exponent.json",
     "2026-2611.29497-gossamer-a-utility-driven-architecture-for-constant-budget-kv-cache-compression-in-reasoning-llms.json",
     "2026-2611.30027-fast-4-bit-kv-cache-decoding-on-hopper-gpus-why-existing-kernels-are-slow-and-how-to-fix-them.json",
@@ -56711,6 +56716,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.21917": {
+      "order": [
+        "2026-11-28T09:55:51+00:00",
+        "2026-2611.21917-lost-in-a-few-heads-diagnosing-and-repairing-block-selection-in-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.28522": {
+      "order": [
+        "2026-11-28T09:56:45+00:00",
+        "2026-2611.28522-dissparse-pipelined-top-p-sparse-attention-for-long-context-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.28563": {
+      "order": [
+        "2026-11-28T09:57:37+00:00",
+        "2026-2611.28563-selective-rom-weight-storage-for-responsive-llm-control-on-edge-robots.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.28625": {
+      "order": [
+        "2026-11-28T09:58:31+00:00",
+        "2026-2611.28625-indexerstage-staging-indexer-k-across-memory-tiers-for-sparse-attention-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.28760": {
+      "order": [
+        "2026-11-28T09:59:24+00:00",
+        "2026-2611.28760-analytical-modeling-and-optimal-gpu-provisioning-for-disaggregated-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70876,6 +70926,21 @@
     "arxiv:2611.20006": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2611.20006-glance-then-select-evidence-tempered-visual-token-selection-for-extremel.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2611.20006-glance-then-select-evidence-tempered-visual-token-selection-for-extremel.md"
+    ],
+    "arxiv:2611.21917": [
+      "papers/inference/13-sparse-attention/2026-2611.21917-lost-in-a-few-heads-diagnosing-and-repairing-block-selection-in-sparse-a.md"
+    ],
+    "arxiv:2611.28522": [
+      "papers/inference/13-sparse-attention/2026-2611.28522-dissparse-pipelined-top-p-sparse-attention-for-long-context-llm-serving.md"
+    ],
+    "arxiv:2611.28563": [
+      "papers/inference/15-inference-simulation-emulation/2026-2611.28563-selective-rom-weight-storage-for-responsive-llm-control-on-edge-robots.md"
+    ],
+    "arxiv:2611.28625": [
+      "papers/inference/13-sparse-attention/2026-2611.28625-indexerstage-staging-indexer-k-across-memory-tiers-for-sparse-attention-.md"
+    ],
+    "arxiv:2611.28760": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.28760-analytical-modeling-and-optimal-gpu-provisioning-for-disaggregated-llm-i.md"
     ]
   }
 }

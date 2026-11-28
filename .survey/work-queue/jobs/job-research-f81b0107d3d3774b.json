@@ -35,10 +35,15 @@
   "selection_reason": "OSplitは分離型LLM推論向けに、モデルと負荷条件とvLLMの容量モデルからプリフィル／デコードワーカーへのGPU分割と集団生成方針を解析的に最適化し、H100とGB300で理論値と実測の近さを示した研究で、分離サービングの資源プロビジョニングへ直接貢献する。",
   "semantic_scholar_id": "fac3174f5d29d9952519d67011d41ed59c7f9c31",
   "source_url": "https://arxiv.org/abs/2611.28760",
-  "status": "ready",
+  "status": "superseded",
   "title": "Analytical Modeling and Optimal GPU Provisioning for Disaggregated LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:00:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.28760-analytical-modeling-and-optimal-gpu-provisioning-for-disaggregated-llm-i.md",
+  "represented_canonical_id": "arXiv:2611.28760",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

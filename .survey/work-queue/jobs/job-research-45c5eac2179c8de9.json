@@ -35,10 +35,15 @@
   "selection_reason": "IndexerStageはDeepSeek Sparse AttentionのIndexer-K状態をメモリ階層へ外部化し、完了ページを共有実行バッファ経由でステージングしながらGPUネイティブのスコア・top-k・注意カーネルを維持するSGLang実装のサービングランタイムで、スパース注意サービングのGPUメモリ削減へ直接貢献する。",
   "semantic_scholar_id": "18fede023f0ac2161c34db63ee150d23480bfcb2",
   "source_url": "https://arxiv.org/abs/2611.28625",
-  "status": "ready",
+  "status": "superseded",
   "title": "IndexerStage: Staging Indexer-K across Memory Tiers for Sparse-Attention LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:00:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2611.28625-indexerstage-staging-indexer-k-across-memory-tiers-for-sparse-attention-.md",
+  "represented_canonical_id": "arXiv:2611.28625",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
