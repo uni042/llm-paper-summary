@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-28T00:22:21+00:00",
+  "generated_at": "2026-11-28T00:23:29+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -399,60 +399,6 @@
       "worker_run_key": "muse-20261128-b2"
     },
     {
-      "canonical_id": "arXiv:2610.13778",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2610.13778",
-      "returned_at": "2026-11-27T23:25:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 460 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4971,
-        "body_paragraphs": 22,
-        "method_chars": 2070,
-        "method_paragraphs": 5,
-        "evaluation_chars": 460,
-        "limitation_chars": 417,
-        "insufficiency_flags": [
-          "評価説明量 460 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2610.13778-replayssm-cache-ssm-inputs-not-state.json",
-      "worker_run_key": "muse-20261128-b1"
-    },
-    {
-      "canonical_id": "arXiv:2611.30417",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.30417",
-      "returned_at": "2026-11-28T00:01:51+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 493 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5694,
-        "body_paragraphs": 22,
-        "method_chars": 2372,
-        "method_paragraphs": 5,
-        "evaluation_chars": 493,
-        "limitation_chars": 340,
-        "insufficiency_flags": [
-          "評価説明量 493 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.json",
-      "worker_run_key": "muse-20261128-b3"
-    },
-    {
       "canonical_id": "arXiv:2611.31089",
       "title": null,
       "source_url": "https://arxiv.org/abs/2611.31089",
@@ -478,87 +424,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.md",
       "import_result_path": ".survey/import-inbox/results/research/2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.json",
       "worker_run_key": "muse-20261128-b3"
-    },
-    {
-      "canonical_id": "arXiv:2611.31638",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.31638",
-      "returned_at": "2026-11-28T00:04:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 496 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5338,
-        "body_paragraphs": 21,
-        "method_chars": 2109,
-        "method_paragraphs": 4,
-        "evaluation_chars": 496,
-        "limitation_chars": 320,
-        "insufficiency_flags": [
-          "評価説明量 496 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.31638-wavefront-low-rank-drafting-with-parallel-causal-refinement-for-speculative-decoding.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2611.31638-wavefront-low-rank-drafting-with-parallel-causal-refinement-for-speculative-decoding.json",
-      "worker_run_key": "muse-20261128-b3"
-    },
-    {
-      "canonical_id": "arXiv:2611.33004",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.33004",
-      "returned_at": "2026-11-28T00:12:24+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 487 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5719,
-        "body_paragraphs": 22,
-        "method_chars": 2769,
-        "method_paragraphs": 5,
-        "evaluation_chars": 487,
-        "limitation_chars": 341,
-        "insufficiency_flags": [
-          "評価説明量 487 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.json",
-      "worker_run_key": "muse-20261128-b3"
-    },
-    {
-      "canonical_id": "arXiv:2611.34092",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.34092",
-      "returned_at": "2026-11-28T00:19:38+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 498 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4153,
-        "body_paragraphs": 21,
-        "method_chars": 1537,
-        "method_paragraphs": 4,
-        "evaluation_chars": 498,
-        "limitation_chars": 365,
-        "insufficiency_flags": [
-          "評価説明量 498 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.json",
-      "worker_run_key": "muse-20261128-b2"
     },
     {
       "canonical_id": "arXiv:2611.01089",
@@ -724,7 +589,7 @@
     },
     {
       "canonical_id": "arXiv:2611.32295",
-      "title": "Norn: Context-Length-Aware Optimization of Weight and KV Cache Placement for Offloaded LLM Inference",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.32295",
       "returned_at": "2026-11-28T00:22:08+00:00",
       "return_count": 4,
@@ -751,7 +616,7 @@
     },
     {
       "canonical_id": "arXiv:2409.15298",
-      "title": "Sorbet: A Neuromorphic Hardware-Compatible Transformer-Based Spiking Language Model",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2409.15298",
       "returned_at": "2026-11-28T00:22:10+00:00",
       "return_count": 4,
@@ -778,7 +643,7 @@
     },
     {
       "canonical_id": "arXiv:2609.06974",
-      "title": "Train Overcomplete, Deploy Compact: Scaling Recovery Capacity for Structured LLM Pruning",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2609.06974",
       "returned_at": "2026-11-28T00:22:11+00:00",
       "return_count": 4,
@@ -805,7 +670,7 @@
     },
     {
       "canonical_id": "arXiv:2611.34630",
-      "title": "A Differential Computing Accelerator for LLM Inference Leveraging Bit-Slice Transition Sparsity",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.34630",
       "returned_at": "2026-11-28T00:22:13+00:00",
       "return_count": 4,
@@ -832,7 +697,7 @@
     },
     {
       "canonical_id": "arXiv:2611.33896",
-      "title": "Looped Models are Fast Multi-Token Predictors",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.33896",
       "returned_at": "2026-11-28T00:22:15+00:00",
       "return_count": 4,
@@ -856,6 +721,141 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-93189d97a0af--2026-2611.33896-looped-models-are-fast-multi-token-predictors.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-93189d97a0af--2026-2611.33896-looped-models-are-fast-multi-token-predictors.json",
       "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2611.31638",
+      "title": "Wavefront: Low-Rank Drafting with Parallel Causal Refinement for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.31638",
+      "returned_at": "2026-11-28T00:23:22+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 496 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5338,
+        "body_paragraphs": 21,
+        "method_chars": 2109,
+        "method_paragraphs": 4,
+        "evaluation_chars": 496,
+        "limitation_chars": 320,
+        "insufficiency_flags": [
+          "評価説明量 496 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9d14b00aec8f--2026-2611.31638-wavefront-low-rank-drafting-with-parallel-causal-refinement-for-speculative-decoding.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9d14b00aec8f--2026-2611.31638-wavefront-low-rank-drafting-with-parallel-causal-refinement-for-speculative-decoding.json",
+      "worker_run_key": "muse-20261128-b3"
+    },
+    {
+      "canonical_id": "arXiv:2611.34092",
+      "title": "Improving Tail-Augmented Speculative Drafting with Hidden State Mixing and Gradient Detach",
+      "source_url": "https://arxiv.org/abs/2611.34092",
+      "returned_at": "2026-11-28T00:23:23+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 498 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4153,
+        "body_paragraphs": 21,
+        "method_chars": 1537,
+        "method_paragraphs": 4,
+        "evaluation_chars": 498,
+        "limitation_chars": 365,
+        "insufficiency_flags": [
+          "評価説明量 498 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ac68650789d5--2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ac68650789d5--2026-2611.34092-improving-tail-augmented-speculative-drafting-with-hidden-state-mixing-and-gradient-detach.json",
+      "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2611.30417",
+      "title": "ANOR: Scaling Sparse Attention with a GPU-PNM Computing Hierarchy",
+      "source_url": "https://arxiv.org/abs/2611.30417",
+      "returned_at": "2026-11-28T00:23:25+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 493 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5694,
+        "body_paragraphs": 22,
+        "method_chars": 2372,
+        "method_paragraphs": 5,
+        "evaluation_chars": 493,
+        "limitation_chars": 340,
+        "insufficiency_flags": [
+          "評価説明量 493 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ae5925946970--2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ae5925946970--2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.json",
+      "worker_run_key": "muse-20261128-b3"
+    },
+    {
+      "canonical_id": "arXiv:2611.33004",
+      "title": "LEGOSpec: A Composable and Efficient Framework for Speculative Draft Design and Training",
+      "source_url": "https://arxiv.org/abs/2611.33004",
+      "returned_at": "2026-11-28T00:23:26+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 487 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5719,
+        "body_paragraphs": 22,
+        "method_chars": 2769,
+        "method_paragraphs": 5,
+        "evaluation_chars": 487,
+        "limitation_chars": 341,
+        "insufficiency_flags": [
+          "評価説明量 487 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ce4b59bbc9f2--2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ce4b59bbc9f2--2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.json",
+      "worker_run_key": "muse-20261128-b3"
+    },
+    {
+      "canonical_id": "arXiv:2610.13778",
+      "title": "ReplaySSM: Cache SSM Inputs, Not State",
+      "source_url": "https://arxiv.org/abs/2610.13778",
+      "returned_at": "2026-11-28T00:23:28+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 460 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4971,
+        "body_paragraphs": 22,
+        "method_chars": 2070,
+        "method_paragraphs": 5,
+        "evaluation_chars": 460,
+        "limitation_chars": 417,
+        "insufficiency_flags": [
+          "評価説明量 460 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cface9a454f3--2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-cface9a454f3--2026-2610.13778-replayssm-cache-ssm-inputs-not-state.json",
+      "worker_run_key": "muse-20261128-b1"
     }
   ]
 }
