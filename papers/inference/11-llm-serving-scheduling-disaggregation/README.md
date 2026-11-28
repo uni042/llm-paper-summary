@@ -324,6 +324,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   分離実行比δ以内のトークン遅延を保証するdeadline スケジューラとKV予約を統合し、高需要テナント下のp99 遅延 isolationを実現する。
 
+- **2026-09 · [Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving](2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  接頭辞キャッシュは要求外のサーバ状態を出力へ持ち込み、エージェント軌跡差を16ビット36.2%から4ビット75.0%へ増幅することを制御実験で確認。
+
 - **2026-09 · [Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving](2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   デコード要求の次トークン期限から残り時間を求め、期限内に入る最大プリフィル塊を反復ごとに二分探索して、固定分割の起動費と一括処理のデコード停止を減らす。
@@ -463,10 +467,6 @@
 - **2026-09 · [Unlocking Software-defined GPU Fabric Scheduling in the LLM Era](2026-a43ed4b300bf-unlocking-software-defined-gpu-fabric-scheduling-in-the-llm-era.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   GPUファブリック競合を監視・通信注入制御し、vLLM+MooncakeでPD KV転送を19.4–34.4%短縮する。
-
-- **2026-09 · [Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving](2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  接頭辞キャッシュは要求外のサーバ状態を出力へ持ち込み、エージェント軌跡差を16ビット36.2%から4ビット75.0%へ増幅することを制御実験で確認。
 
 - **2026-09 · [ROSETTA: Efficient and Accurate Privacy-Preserving LLM Decoding via Hybrid CKKS/TFHE Evaluation](2026-2609.16915-rosetta-efficient-and-accurate-privacy-preserving-llm-decoding-via-hybri.md)**  
   実装：[✓](https://anonymous.4open.science/r/ROSETTA_artifact-B77F/) ・ リポジトリ内被引用：1  
@@ -1776,6 +1776,10 @@
   実装：✓ ・ リポジトリ内被引用：16  
   DistServeやSplitwiseのように別GPUへ二段階を分離すれば互いの干渉を抑えられるが、プリフィル GPUが混雑しデコード GPUが遊休になる場合、あるいは逆にデコード GPUがKVキャッシュで満杯なのにプリフィル GPUが空く場合、固定役割は資源を無駄にする。
 
+- **2025-06 · [SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving](2025-2506.09397-sled-a-speculative-llm-decoding-framework-for-efficient-edge-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  通常の投機的復号（投機的復号）は、小型モデルが複数候補を提案し、大型モデルが一回の前向き計算で受理・棄却を判定する。
+
 - **2025-04 · [LLM推論とAIエージェント向けスループット最適スケジューリング](2025-2504.07347-throughput-optimal-scheduling-llm-inference-ai-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   混合バッチを仕事で埋める方式がいつ最大処理量を達成するかを待ち行列理論で証明し、AIエージェントの分岐処理網への拡張と、成立しない経路構造・運用制約も示す。
@@ -1795,10 +1799,6 @@
 - **2025-08 · [LLM Serving Optimization with Variable Prefill and Decode Lengths](2025-2508.06133-llm-serving-optimization-variable-prefill-decode-lengths.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   要求ごとのプリフィル長とデコード長を考慮し、KV容量を守るバッチをF指標で選ぶスケジューラ。Vidur時間モデルでは混合2000要求の平均遅延をFCFS比4.87倍改善した。
-
-- **2025-06 · [SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving](2025-2506.09397-sled-a-speculative-llm-decoding-framework-for-efficient-edge-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
-  通常の投機的復号（投機的復号）は、小型モデルが複数候補を提案し、大型モデルが一回の前向き計算で受理・棄却を判定する。
 
 - **2025-10 · [Accelerating Diffusion LLM Inference via Local Determinism Propagation](2025-2510.07081-accelerating-diffusion-llm-inference-via-local-determinism-propagation.md)**  
   実装：[✓](https://github.com/friedrichor/LocalLeap) ・ リポジトリ内被引用：14  
@@ -1840,6 +1840,10 @@
   実装：✓ ・ リポジトリ内被引用：12  
   二つの段階を同じGPU群で混在させる同居方式は、片方を最適化するともう片方が悪化しやすい。
 
+- **2025-05 · [SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs](2025-2505.17052-specedge-edge-assisted-speculative-serving.md)**  
+  実装：[✓](https://github.com/kaist-ina/specedge) ・ リポジトリ内被引用：12  
+  消費者GPUをエッジ側ドラフト生成へ使い、先行ドラフトと複数要求の検証パイプラインでWAN遅延を隠しつつ、A100サーバの処理量を平均2.22倍へ高めるエッジ支援投機的配信。
+
 - **2025-05 · [HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving](2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   画像符号化・入力処理・デコードを異種段階として扱い、負荷とSLOに応じてE+P+D、EP+D、ED+Pを選ぶ混成分離と段階別バッチ・二重ストリームを組み合わせ、マルチモーダル配信のグッドプットを高める。
@@ -1859,10 +1863,6 @@
 - **2025-10 · [MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving](2025-2510.14557-mx-pushing-the-limits-of-microscaling-formats-for-efficient-large-langua.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   しかし4ビットの浮動小数点形式では、活性の一部に現れる極端に大きな値が量子化尺度を押し上げ、他の値がゼロへ丸められることがある。
-
-- **2025-05 · [SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs](2025-2505.17052-specedge-edge-assisted-speculative-serving.md)**  
-  実装：[✓](https://github.com/kaist-ina/specedge) ・ リポジトリ内被引用：11  
-  消費者GPUをエッジ側ドラフト生成へ使い、先行ドラフトと複数要求の検証パイプラインでWAN遅延を隠しつつ、A100サーバの処理量を平均2.22倍へ高めるエッジ支援投機的配信。
 
 - **2025-04 · [SLO-Aware Scheduling for Large Language Model Inferences](2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
@@ -2367,7 +2367,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：894  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：895  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -2705,7 +2705,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2026  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2028  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

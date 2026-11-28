@@ -88,13 +88,13 @@
   実装：✓ ・ リポジトリ内被引用：7  
   検索拡張生成（Retrieval-Augmented Generation; RAG）では、質問に関連する文書片を多数連結して言語モデルへ渡す。通常の全文注意では文書片を一度に事前入力処理するため、互いの文脈を利用できる反面、検索片が増えると初回トークン待ち時間（Time to First Token; TTFT）が長くなる。
 
+- **2026-09 · [FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates](2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.md)**  
+  実装：[✓](https://github.com/Superone77/FlashLoop) ・ リポジトリ内被引用：6  
+  ループ型Transformerで、変化の大きいトークンと注意列だけを再計算し、ループ間のKV残差を量子化する学習不要の推論基盤で、精度をほぼ保ち高速化1.64倍とメモリ6分の1を達成した。
+
 - **2026-04 · [Guess-Verify-Refine: Data-Aware Top-K for Sparse-Attention Decoding on Blackwell via Temporal Correlation](2026-2604.22312-guess-verify-refine-data-aware-top-k-for-sparse-attention-decoding-on-bl.md)**  
   実装：[✓](https://github.com/longcheng-nv/GVR_TopK_supplementaty_materials) ・ リポジトリ内被引用：6  
   Guess-Verify-Refine（GVR）は、長文脈の疎注意を使う言語モデルが次のトークンを生成するとき、過去の全トークンから重要度上位の位置を選ぶ処理を高速化するGPUアルゴリズムである。
-
-- **2026-09 · [FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates](2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.md)**  
-  実装：[✓](https://github.com/Superone77/FlashLoop) ・ リポジトリ内被引用：5  
-  ループ型Transformerで、変化の大きいトークンと注意列だけを再計算し、ループ間のKV残差を量子化する学習不要の推論基盤で、精度をほぼ保ち高速化1.64倍とメモリ6分の1を達成した。
 
 - **2026-08 · [LongCat Sparse Attention: Taming the Lightning via Streaming-aware Hierarchical Cross-Layer Indexing](2026-2608.01662-longcat-sparse-attention-taming-the-lightning-via-streaming-aware-hierar.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -187,6 +187,10 @@
 - **2026-02 · [RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference](2026-2602.05853-rrattention-dynamic-block-sparse-attention-via-per-head-round-robin-shif.md)**  
   実装：[✓](https://github.com/PaddlePaddle/PaddleFleet) ・ リポジトリ内被引用：2  
   提案法は各 S トークン区間からヘッドごとに異なる問い合わせを一つ選び、鍵を区間単位で集約して重要度を計算する。Llama-3.1-8BとQwen2.5-7BのHELMETでは、注意ブロックの約半分を省略しながら全注意の平均性能の99%以上を再現した。
+
+- **2026-10 · [Jet-QSparse: Accelerating Agentic LLM Inference with 4-Bit Sparse Attention](2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attenti.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  全履歴を四ビットで保持し毎ステップ全キーを四ビット演算で走査して重い塊だけを高精度で集約する学習なしの注意で、六十四ブロック時に文脈十二万八千・同時要求十六で生成一・九四倍高速化と収容量二・五八倍以上を、百二十八ブロック時には四モデル五課題で検出可能な精度低下なしを報告した。
 
 - **2026-10 · [Accelerating Cross-Model LLM Inference via Attention Map Reuse](2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.md)**  
   実装：[✓](https://github.com/PKU-DAIR/MapFlow) ・ リポジトリ内被引用：1  
@@ -287,6 +291,10 @@
 - **2026-03 · [CSAttention: Centroid-Scoring Attention for Accelerating LLM Inference](2026-2604.08584-csattention-centroid-scoring-attention-for-accelerating-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   長文脈の自己注意では、現在の問い合わせベクトルと過去の鍵ベクトルとの内積を計算し、対応する値を重み付き集約する。多くの鍵の寄与が小さいため、一部の鍵だけを使う疎注意で演算量と転送量を削減できる。しかし95%もの鍵を捨てる場合、実際に重要な鍵を取りこぼすと正答率が急落する。鍵の全件走査をオンラインで繰り返さない設計である。
+
+- **2026-02 · [Token Sparse Attention: Efficient Long-Context Inference with Interleaved Token Selection](2026-2602.03216-token-sparse-attention-efficient-long-context-inference-with-interleaved.md)**  
+  実装：[✓](https://github.com/dongwonjo/Token-Sparse-Attention) ・ リポジトリ内被引用：1  
+  トークン Sparse 注意機構は、長文脈のプリフィルで注意計算の対象トークンを減らすが、元の系列からトークンを永久に捨てない方式である。LLaMA-3.1-8B-InstructのRULERでは、FlashAttentionの128K注意処理を基準とする速度が1.00倍から1.36倍となり、平均正答率は87.01%から87.02%とほぼ不変だった。
 
 - **2026-02 · [HyLRA: Hybrid Layer Reuse Attention for Efficient Long-Context Inference](2026-2602.00777-hylra-hybrid-layer-reuse-attention-for-efficient-long-context-inference.md)**  
   実装：[✓](https://anonymous.4open.science/r/unified-cache-management-CF80/) ・ リポジトリ内被引用：1  
@@ -425,10 +433,6 @@
 - **2026-10 · [Joint Subspace Sparse Attention for Efficient Long-Context Decoding](2026-2610.19026-joint-subspace-sparse-attention-for-efficient-long-context-decoding.md)**  
   実装：[✓](https://github.com/jiwonsong-dev/JSSA) ・ リポジトリ内被引用：0  
   トークンスコア保存誤差を最小化する共有低次元部分空間でのトークン選択と、KVヘッドごとに異なる選択を元のキャッシュから直接読むギャザーなしカーネルを組み合わせた、学習不要のトークン単位疎な注意。
-
-- **2026-10 · [Jet-QSparse: Accelerating Agentic LLM Inference with 4-Bit Sparse Attention](2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attenti.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  全履歴を四ビットで保持し毎ステップ全キーを四ビット演算で走査して重い塊だけを高精度で集約する学習なしの注意で、六十四ブロック時に文脈十二万八千・同時要求十六で生成一・九四倍高速化と収容量二・五八倍以上を、百二十八ブロック時には四モデル五課題で検出可能な精度低下なしを報告した。
 
 - **2026-10 · [INTRA: Interleaved Non-contiguous Token spaRse Attention](2026-2610.34056-intra-interleaved-non-contiguous-token-sparse-attention.md)**  
   実装：[✓](https://github.com/NovTi/INTRA) ・ リポジトリ内被引用：0  
@@ -646,10 +650,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文書単位の疎注意と圧縮KVキャッシュ、文書別位置符号化、GPUとCPUメモリへの階層配置を組み合わせ、学習も推論もメモリ量に対して線形の費用で1億トークン規模の長期メモリを扱い、規模を4桁広げても精度低下を9パーセント未満に抑えた端から端まで学習可能なメモリモデル。
 
-- **2026-02 · [Token Sparse Attention: Efficient Long-Context Inference with Interleaved Token Selection](2026-2602.03216-token-sparse-attention-efficient-long-context-inference-with-interleaved.md)**  
-  実装：[✓](https://github.com/dongwonjo/Token-Sparse-Attention) ・ リポジトリ内被引用：0  
-  トークン Sparse 注意機構は、長文脈のプリフィルで注意計算の対象トークンを減らすが、元の系列からトークンを永久に捨てない方式である。LLaMA-3.1-8B-InstructのRULERでは、FlashAttentionの128K注意処理を基準とする速度が1.00倍から1.36倍となり、平均正答率は87.01%から87.02%とほぼ不変だった。
-
 - **2026-02 · [S2O: Early Stopping for Sparse Attention via Online Permutation](2026-2602.22575-s2o-early-stopping-for-sparse-attention-via-online-permutation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   これは単にTop-Kブロックを固定数選ぶ方式ではなく、実行中の寄与を見て処理を止める方式である。Llama-3.1-8Bの128K入力では、著者は注意演算約7.5倍、事前充填のエンドツーエンド3.81倍の高速化を報告する。
@@ -701,11 +701,11 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：201  
+  実装：✓ ・ リポジトリ内被引用：202  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：131  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：132  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
@@ -713,7 +713,7 @@
   要点: FlexPrefillは、長文プリフィルの注意計算を一律の疎パターンへ置き換えるのではなく、入力と注意ヘッドごとに「クエリごとに見る場所が違う多様型」か「多くのクエリが似た場所を見る構造型」かを判定し、その型に合う索引だけを累積注意量の閾値まで選ぶ。これにより、必要なヘッドには多く、簡単なヘッドには少ない計算予算を割り当てる。
 
 - **2025-03 · [XAttention: Block Sparse Attention with Antidiagonal Scoring](2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md)**  
-  実装：[✓](https://github.com/mit-han-lab/x-attention) ・ リポジトリ内被引用：64  
+  実装：[✓](https://github.com/mit-han-lab/x-attention) ・ リポジトリ内被引用：65  
   すべての過去トークンが同じように重要とは限らないため、注意行列の重要な領域だけを計算するブロック疎注意（block-sparse 注意機構）が提案されてきた。RULERやLongBenchでは全注意に近い精度を保ち、注意演算部分では最大13.5倍の高速化を報告する。
 
 - **2025-02 · [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md)**  
@@ -721,7 +721,7 @@
   自己類似度を使って重要ブロックを予測し、残ったブロックにもGPUワープ単位のsoftmax判定を適用する学習不要の疎注意演算子。近似誤差の許容範囲を層ごとに調整し、言語・画像・動画で実測性能と品質を比較する。
 
 - **2024-12 · [SCBench: A KV Cache-Centric Analysis of Long-Context Methods](2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md)**  
-  実装：✓ ・ リポジトリ内被引用：44  
+  実装：✓ ・ リポジトリ内被引用：46  
   共有長文脈を複数ターンで再利用する12タスクを用い、KV生成・圧縮・検索・読み込みの各方式が初回だけでなく後続要求でどう崩れるかを比較する。
 
 - **2025-02 · [Twilight: Adaptive Attention Sparsity with Hierarchical Top-p Pruning](2025-2502.02770-twilight-adaptive-attention-sparsity-with-hierarchical-top-p-pruning.md)**  
@@ -887,11 +887,11 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：369  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：370  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：243  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：244  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
@@ -915,7 +915,7 @@
   長文脈の自己回帰生成では、各新規トークンの問い合わせに対して過去の鍵・値キャッシュ（KVキャッシュ）を読み出すため、注意計算がGPUのメモリ帯域に律速されやすい。注意スコアへ大きく寄与する特徴チャネルを学習後の少量データで層別に校正し、そのチャネルだけを連続配置した小さなラベルキャッシュを作る。
 
 - **2024-09 · [Block-Attention for Efficient Prefilling](2024-2409.15355-block-attention-for-efficient-prefilling.md)**  
-  実装：[✓](https://github.com/TemporaryLoRA/Block-Attention) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/TemporaryLoRA/Block-Attention) ・ リポジトリ内被引用：29  
   検索拡張生成（Retrieval-Augmented Generation; RAG）で取得した各文書を互いに独立した注意ブロックとして事前計算し、同じ文書が別質問で再利用されたらKVキャッシュを再計算しない。
 
 - **2024-06 · [SampleAttention: Near-Lossless Acceleration of Long Context LLM Inference with Adaptive Structured Sparse Attention](2024-2406.15486-sampleattention-near-lossless-acceleration-of-long-context-llm-inference.md)**  
@@ -1071,7 +1071,7 @@
 ### 7年前（2019-12〜2020-11）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
-  実装：✓ ・ リポジトリ内被引用：287  
+  実装：✓ ・ リポジトリ内被引用：288  
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
