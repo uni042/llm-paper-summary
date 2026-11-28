@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-28T00:19:49+00:00",
+  "generated_at": "2026-11-28T00:20:59+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -372,33 +372,6 @@
       "worker_run_key": "muse-final-20261124-b14w2"
     },
     {
-      "canonical_id": "arXiv:2512.19443",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2512.19443",
-      "returned_at": "2026-11-27T22:33:18+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 431 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4034,
-        "body_paragraphs": 21,
-        "method_chars": 1514,
-        "method_paragraphs": 4,
-        "evaluation_chars": 431,
-        "limitation_chars": 293,
-        "insufficiency_flags": [
-          "評価説明量 431 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.md",
-      "import_result_path": ".survey/import-inbox/results/research/2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.json",
-      "worker_run_key": "muse-20261128-b1"
-    },
-    {
       "canonical_id": "arXiv:2409.15298",
       "title": null,
       "source_url": "https://arxiv.org/abs/2409.15298",
@@ -451,60 +424,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.md",
       "import_result_path": ".survey/import-inbox/results/research/2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.json",
       "worker_run_key": "muse-20261128-b2"
-    },
-    {
-      "canonical_id": "arXiv:2507.03828",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2507.03828",
-      "returned_at": "2026-11-27T22:51:39+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 447 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3556,
-        "body_paragraphs": 21,
-        "method_chars": 1267,
-        "method_paragraphs": 4,
-        "evaluation_chars": 447,
-        "limitation_chars": 276,
-        "insufficiency_flags": [
-          "評価説明量 447 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2025-2507.03828-impact-importance-aware-activation-space-reconstruction.md",
-      "import_result_path": ".survey/import-inbox/results/research/2025-2507.03828-impact-importance-aware-activation-space-reconstruction.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
-      "canonical_id": "arXiv:2605.08314",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2605.08314",
-      "returned_at": "2026-11-27T23:12:01+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 445 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4595,
-        "body_paragraphs": 22,
-        "method_chars": 1914,
-        "method_paragraphs": 5,
-        "evaluation_chars": 445,
-        "limitation_chars": 340,
-        "insufficiency_flags": [
-          "評価説明量 445 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.json",
-      "worker_run_key": "muse-20261128-b1"
     },
     {
       "canonical_id": "arXiv:2609.06974",
@@ -642,33 +561,6 @@
       "worker_run_key": "muse-20261128-b3"
     },
     {
-      "canonical_id": "arXiv:2611.32083",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.32083",
-      "returned_at": "2026-11-28T00:05:50+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 493 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4487,
-        "body_paragraphs": 21,
-        "method_chars": 1580,
-        "method_paragraphs": 4,
-        "evaluation_chars": 493,
-        "limitation_chars": 398,
-        "insufficiency_flags": [
-          "評価説明量 493 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
       "canonical_id": "arXiv:2611.32295",
       "title": null,
       "source_url": "https://arxiv.org/abs/2611.32295",
@@ -724,7 +616,7 @@
     },
     {
       "canonical_id": "arXiv:2611.33896",
-      "title": "Looped Models are Fast Multi-Token Predictors",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.33896",
       "returned_at": "2026-11-28T00:19:37+00:00",
       "return_count": 2,
@@ -751,7 +643,7 @@
     },
     {
       "canonical_id": "arXiv:2611.34092",
-      "title": "Improving Tail-Augmented Speculative Drafting with Hidden State Mixing and Gradient Detach",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.34092",
       "returned_at": "2026-11-28T00:19:38+00:00",
       "return_count": 2,
@@ -777,35 +669,8 @@
       "worker_run_key": "muse-20261128-b2"
     },
     {
-      "canonical_id": "arXiv:2611.34521",
-      "title": "PURA: Video Token Pruning via Unified Spatiotemporal Redundancy Assessment",
-      "source_url": "https://arxiv.org/abs/2611.34521",
-      "returned_at": "2026-11-28T00:19:40+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 494 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4625,
-        "body_paragraphs": 21,
-        "method_chars": 1880,
-        "method_paragraphs": 4,
-        "evaluation_chars": 494,
-        "limitation_chars": 351,
-        "insufficiency_flags": [
-          "評価説明量 494 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
       "canonical_id": "arXiv:2611.34630",
-      "title": "A Differential Computing Accelerator for LLM Inference Leveraging Bit-Slice Transition Sparsity",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.34630",
       "returned_at": "2026-11-28T00:19:42+00:00",
       "return_count": 2,
@@ -832,7 +697,7 @@
     },
     {
       "canonical_id": "arXiv:2611.01089",
-      "title": "Scute: Exact Batched Serving for PEFT Adapters Beyond LoRA",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.01089",
       "returned_at": "2026-11-28T00:19:43+00:00",
       "return_count": 4,
@@ -856,6 +721,141 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-080c5a2d8569--2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-080c5a2d8569--2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.json",
       "worker_run_key": "muse-20261128-b3"
+    },
+    {
+      "canonical_id": "arXiv:2605.08314",
+      "title": "FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast",
+      "source_url": "https://arxiv.org/abs/2605.08314",
+      "returned_at": "2026-11-28T00:20:51+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 445 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4595,
+        "body_paragraphs": 22,
+        "method_chars": 1914,
+        "method_paragraphs": 5,
+        "evaluation_chars": 445,
+        "limitation_chars": 340,
+        "insufficiency_flags": [
+          "評価説明量 445 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2bf8d383c4c8--2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2bf8d383c4c8--2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.json",
+      "worker_run_key": "muse-20261128-b1"
+    },
+    {
+      "canonical_id": "arXiv:2512.19443",
+      "title": "D2Pruner: Debiased Importance and Structural Diversity for MLLM Token Pruning",
+      "source_url": "https://arxiv.org/abs/2512.19443",
+      "returned_at": "2026-11-28T00:20:53+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 431 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4034,
+        "body_paragraphs": 21,
+        "method_chars": 1514,
+        "method_paragraphs": 4,
+        "evaluation_chars": 431,
+        "limitation_chars": 293,
+        "insufficiency_flags": [
+          "評価説明量 431 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2e59ac92536c--2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2e59ac92536c--2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.json",
+      "worker_run_key": "muse-20261128-b1"
+    },
+    {
+      "canonical_id": "arXiv:2611.32083",
+      "title": "Inference-Aware Congestion Control for Distributed MoE Inference",
+      "source_url": "https://arxiv.org/abs/2611.32083",
+      "returned_at": "2026-11-28T00:20:54+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 493 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4487,
+        "body_paragraphs": 21,
+        "method_chars": 1580,
+        "method_paragraphs": 4,
+        "evaluation_chars": 493,
+        "limitation_chars": 398,
+        "insufficiency_flags": [
+          "評価説明量 493 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3465d7084005--2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3465d7084005--2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.json",
+      "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2507.03828",
+      "title": "IMPACT: Importance-Aware Activation Space Reconstruction",
+      "source_url": "https://arxiv.org/abs/2507.03828",
+      "returned_at": "2026-11-28T00:20:56+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 447 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3556,
+        "body_paragraphs": 21,
+        "method_chars": 1267,
+        "method_paragraphs": 4,
+        "evaluation_chars": 447,
+        "limitation_chars": 276,
+        "insufficiency_flags": [
+          "評価説明量 447 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-462c1fa0ac69--2025-2507.03828-impact-importance-aware-activation-space-reconstruction.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-462c1fa0ac69--2025-2507.03828-impact-importance-aware-activation-space-reconstruction.json",
+      "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2611.34521",
+      "title": "PURA: Video Token Pruning via Unified Spatiotemporal Redundancy Assessment",
+      "source_url": "https://arxiv.org/abs/2611.34521",
+      "returned_at": "2026-11-28T00:20:58+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 494 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4625,
+        "body_paragraphs": 21,
+        "method_chars": 1880,
+        "method_paragraphs": 4,
+        "evaluation_chars": 494,
+        "limitation_chars": 351,
+        "insufficiency_flags": [
+          "評価説明量 494 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-538e5ab63afc--2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-538e5ab63afc--2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessment.json",
+      "worker_run_key": "muse-20261128-b2"
     }
   ]
 }
