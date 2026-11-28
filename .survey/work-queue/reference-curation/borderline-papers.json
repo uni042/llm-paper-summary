@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-28T08:26:48+00:00",
-  "record_count": 10025,
+  "updated_at": "2026-11-28T08:45:50+00:00",
+  "record_count": 10026,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -153321,6 +153321,23 @@
       ],
       "borderline_recheck_count": 0,
       "title": "AVQ-Attention-2: Adaptive Vector-Quantized Attention with Exact Local Blocks and Linear-Cost Training"
+    },
+    "arXiv:2611.29004": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.29004",
+      "identity_tokens": [
+        "Consumer-Time Validity",
+        "arXiv:2611.29004",
+        "consumer-bound recovery contract"
+      ],
+      "reason": "全文通読の結果、本論文の主たる貢献は、状態を持つAIランタイムについて、回復した状態や遅延した権限が消費時点で有効かを定める消費者拘束型の回復契約と、許容可能な証拠に基づくオフライン検証方法論、およびセキュリティ特性の解明であり、対象はvLLM、SGLang、Google ADK、ChatGLM2など複数システムへまたがる。vLLM向けの境界修復は実装されているものの、推論のスループットや遅延、メモリ効率といったLLM推論システムとしての性能機構の提案や評価は一次資料に含まれず、検証とセキュリティの研究として位置づけられるため、即Researchではなくborderlineと判定した。",
+      "first_checked_at": "2026-11-28T08:45:47+00:00",
+      "last_checked_at": "2026-11-28T08:45:47+00:00",
+      "linked_from": [
+        "worker-worklist-30.json:job-research-7c258409fff85756"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Consumer-Time Validity in Stateful AI Runtimes: Verifying Recovered State and Deferred Authority"
     }
   }
 }

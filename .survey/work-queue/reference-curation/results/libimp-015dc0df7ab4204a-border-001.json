@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-015dc0df7ab4204a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.29004",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.29004",
+    "identity_tokens": [
+      "Consumer-Time Validity",
+      "arXiv:2611.29004",
+      "consumer-bound recovery contract"
+    ],
+    "reason": "全文通読の結果、本論文の主たる貢献は、状態を持つAIランタイムについて、回復した状態や遅延した権限が消費時点で有効かを定める消費者拘束型の回復契約と、許容可能な証拠に基づくオフライン検証方法論、およびセキュリティ特性の解明であり、対象はvLLM、SGLang、Google ADK、ChatGLM2など複数システムへまたがる。vLLM向けの境界修復は実装されているものの、推論のスループットや遅延、メモリ効率といったLLM推論システムとしての性能機構の提案や評価は一次資料に含まれず、検証とセキュリティの研究として位置づけられるため、即Researchではなくborderlineと判定した。",
+    "first_checked_at": "2026-11-28T08:45:47+00:00",
+    "last_checked_at": "2026-11-28T08:45:47+00:00",
+    "linked_from": [
+      "worker-worklist-30.json:job-research-7c258409fff85756"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Consumer-Time Validity in Stateful AI Runtimes: Verifying Recovered State and Deferred Authority"
+  },
+  "processed_at": "2026-11-28T08:45:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-015dc0df7ab4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
