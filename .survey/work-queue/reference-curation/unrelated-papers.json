@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-27T22:31:29+00:00",
-  "record_count": 18158,
+  "updated_at": "2026-11-28T03:49:02+00:00",
+  "record_count": 18159,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -259427,6 +259427,22 @@
         "latest_search arxiv api"
       ],
       "title": "Simultaneous Inference for Watermark Proportions in LLM-Generated Text"
+    },
+    "arXiv:2403.17726": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.17726",
+      "identity_tokens": [
+        "Tiny Models are the Computational Saver for Large Models",
+        "TinySaver",
+        "arXiv:2403.17726"
+      ],
+      "reason": "全文通読の結果、本論文は視覚モデルの早期終了型動的推論の研究であり、主目的も全ての実験も画像分類・物体検出等の視覚タスクに限られる。早期終了という考え方自体は推論効率化と関連するものの、LLM推論システムへの直接の技術的貢献、適用、評価は一次資料に確認できず、対象範囲（LLM推論システム）外であるためunrelatedと判定した。",
+      "first_checked_at": "2026-11-28T03:49:02+00:00",
+      "last_checked_at": "2026-11-28T03:49:02+00:00",
+      "linked_from": [
+        "worker-worklist-30.json:job-research-c8aef859405979d4"
+      ],
+      "title": "Tiny Models are the Computational Saver for Large Models"
     }
   }
 }

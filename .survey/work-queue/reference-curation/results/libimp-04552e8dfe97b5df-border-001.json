@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-04552e8dfe97b5df-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.02120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.02120",
+    "identity_tokens": [
+      "Diver",
+      "arXiv:2406.02120",
+      "span-level mutual information verification"
+    ],
+    "reason": "全文通読の結果、本論文は入力への忠実さを上げるため、発散点で候補スパンごとに点別相互情報量（PMI）を計算して再順位付けするデコード品質手法であり、目的は出力の faithfulness とタスク性能の改善である。第5.3節で著者自身がデコード速度を本手法の限界と明記し、検証計算の追加により通常の貪欲デコードや核サンプリングより遅く、高速化は小さい検証モデルを使う変種での緩和にとどまる。推論スループット、遅延、メモリ、サービング等の推論システム効率への技術的貢献は一次資料に確認できないため、デコード関連ではあるがLLM推論システムへの直接貢献が弱くborderlineと判定した。",
+    "first_checked_at": "2026-11-28T03:49:01+00:00",
+    "last_checked_at": "2026-11-28T03:49:01+00:00",
+    "linked_from": [
+      "worker-worklist-45.json:job-research-5da1b9289a5cce71"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Diver: Large Language Model Decoding with Span-Level Mutual Information Verification"
+  },
+  "processed_at": "2026-11-28T03:49:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-04552e8dfe97",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
