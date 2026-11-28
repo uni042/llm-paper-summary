@@ -48,6 +48,10 @@
   実装：[✓](https://github.com/Hsu1023/PILL) ・ リポジトリ内被引用：2  
   PILLは、拡散言語モデル（diffusion language モデル）が文章やプログラムの既知の前半と後半の間を補完する課題（infilling）において、欠落部分の長さをあらかじめ固定しなければならない制約を扱う。既存の可変長方式は長さを反復探索したり生成途中に伸縮操作を挿入したりするため、推論回数が増える。
 
+- **2026-07 · [HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference](2026-2607.04302-hifa4-training-free-4-bit-flashattention-on-ascend-hif4-npus-for-llm-inf.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  注意の行列積を4ビット化する際に、較正固定の等価な拡大・縮小でキーの外れ値をクエリ側へ移し、正規化子を実際に使う量子化済み重みから求めることで、判断のずれを大幅に減らした学習不要の方式である。
+
 - **2026-06 · [Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems](2026-2606.05711-beyond-tokens-a-unified-framework-for-latent-communication-in-llm-based-.md)**  
   実装：[✓](https://github.com/enochliu98/Awesome-Latent-Communication) ・ リポジトリ内被引用：2  
   2026年7月15日を調査打切りとして、2024～2026年の代表的な18研究を選び、送る情報の種類（WHAT）、送受信間の表現・層の整合（WHICH）、受信モデルへの統合方法（HOW）という3軸で比較する。
@@ -103,10 +107,6 @@
 - **2026-08 · [Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference](2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-langua.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   復号済みトークンを候補と確定へ分け、候補を信頼度の高い文脈だけで検証して検証文脈の汚染を断つ取消可能復号で、Saber比2.71倍の高速化と品質改善を両立した。
-
-- **2026-07 · [HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference](2026-2607.04302-hifa4-training-free-4-bit-flashattention-on-ascend-hif4-npus-for-llm-inf.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  注意の行列積を4ビット化する際に、較正固定の等価な拡大・縮小でキーの外れ値をクエリ側へ移し、正規化子を実際に使う量子化済み重みから求めることで、判断のずれを大幅に減らした学習不要の方式である。
 
 - **2026-06 · [Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models](2026-2606.24165-spectral-evolution-guided-token-pruning-in-multimodal-large-language-mod.md)**  
   実装：[✓](https://github.com/zjubinchen/CLSE) ・ リポジトリ内被引用：1  
@@ -1063,7 +1063,7 @@
   多段階推論では、単一の思考連鎖（Chain-of-Thought、CoT）だけで回答すると、途中の偶然の誤りがそのまま最終回答に伝わる。自己整合性（自己整合性、SC）は同一問題から複数の思考連鎖を独立に標本化し、最終回答を多数決してこの変動を抑える。しかしSCは難しい問題にも簡単な問題にも、事前に決めた最大標本数を一律に使う。
 
 - **2024-11 · [Lynx: Enabling Efficient MoE Inference through Dynamic Batch-Aware Expert Selection](2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   演算の疎性が、専門家重みを高帯域メモリから読み出す量の削減につながらなくなる。Lynxはこの矛盾を、モデルの重みを恒久的に枝刈りするのでなく、現在のバッチのルーター出力を再配置することで緩和する。通常の同居配置で出力トークン間隔の中央値を1.09～1.30倍短縮し、精度変化を概ね1ポイント以内に抑える。
 
 - **2024-02 · [Benchmarking and Dissecting the Nvidia Hopper GPU Architecture](2024-2402.13499-benchmarking-and-dissecting-the-nvidia-hopper-gpu-architecture.md)**  

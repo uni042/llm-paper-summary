@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2143fe6e644e788cc548a033ef0a9cc90bec05a6",
+  "base_commit": "9f3b5b681de370cff4a8301a4b052bb027a773ab",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1767,6 +1767,11 @@
     "2026-2611.31869-rankserve-rank-aware-cpu-gpu-scheduling-for-memory-constrained-moe-serving.json",
     "2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.json",
     "2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.json",
+    "2026-2611.32624-hical-offline-calibration-for-hierarchical-scale-encoding-in-accurate-hif4-quantization.json",
+    "2026-2611.32881-scalable-placement-for-disaggregated-llm-serving-on-heterogeneous-edge-fleets.json",
+    "2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.json",
+    "2026-2611.33542-rankcast-phase-aware-rank-balancing-in-moe-serving.json",
+    "2026-2611.33625-state-space-attention-learning-context-dependent-memory-retention.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -56094,6 +56099,78 @@
         "processed_at": "2026-11-28T00:05:53+00:00"
       },
       "return_count": 2
+    },
+    "arXiv:2611.32624": {
+      "order": [
+        "2026-11-28T00:10:43+00:00",
+        "2026-2611.32624-hical-offline-calibration-for-hierarchical-scale-encoding-in-accurate-hif4-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.32881": {
+      "order": [
+        "2026-11-28T00:12:21+00:00",
+        "2026-2611.32881-scalable-placement-for-disaggregated-llm-serving-on-heterogeneous-edge-fleets.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.33004": {
+      "order": [
+        "2026-11-28T00:12:24+00:00",
+        "2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "6bdd723a0e510c5ef33d5a4961c02f8fd2c533b0fc455ba52c4de85af58fbbaa",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.md",
+        "canonical_id": "arXiv:2611.33004",
+        "worker_completed_at": "2026-11-28T08:40:00+09:00",
+        "worker_run_key": "muse-20261128-b3",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 5719,
+          "body_paragraphs": 22,
+          "method_chars": 2769,
+          "method_paragraphs": 5,
+          "evaluation_chars": 487,
+          "limitation_chars": 341,
+          "insufficiency_flags": [
+            "評価説明量 487 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 487 < 500"
+        ],
+        "processed_at": "2026-11-28T00:12:24+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2611.33542": {
+      "order": [
+        "2026-11-28T00:14:03+00:00",
+        "2026-2611.33542-rankcast-phase-aware-rank-balancing-in-moe-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.33625": {
+      "order": [
+        "2026-11-28T00:15:42+00:00",
+        "2026-2611.33625-state-space-attention-learning-context-dependent-memory-retention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69845,6 +69922,18 @@
     "arxiv:2611.31869": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.31869-rankserve-rank-aware-cpu-gpu-scheduling-for-memory-constrained-moe-servi.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.31869-rankserve-rank-aware-cpu-gpu-scheduling-for-memory-constrained-moe-servi.md"
+    ],
+    "arxiv:2611.32624": [
+      "papers/inference/99-other-inference-systems/2026-2611.32624-hical-offline-calibration-for-hierarchical-scale-encoding-in-accurate-hi.md"
+    ],
+    "arxiv:2611.32881": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.32881-scalable-placement-for-disaggregated-llm-serving-on-heterogeneous-edge-f.md"
+    ],
+    "arxiv:2611.33542": [
+      "papers/inference/12-moe-parallelism-communication/2026-2611.33542-rankcast-phase-aware-rank-balancing-in-moe-serving.md"
+    ],
+    "arxiv:2611.33625": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.33625-state-space-attention-learning-context-dependent-memory-retention.md"
     ]
   }
 }

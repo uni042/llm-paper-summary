@@ -64,6 +64,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   近年の端末向けシステムオンチップ（SoC）には、CPU、内蔵画像処理装置（integrated GPU、iGPU）、神経処理装置（NPU）が同居し、同じ主記憶を共有するものがある。原著はAMD Ryzen AIの3機種を用いて、事前充填（プリフィル）で内蔵GPU単独比の平均速度向上率をそれぞれ約2.30倍、1.50倍、1.17倍と報告する。
 
+- **2026-06 · [E2LLM: Towards Efficient LLM Serving in Heterogeneous Edge/Fog Environments](2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  E2LLMは異種端末を入力処理用・生成用の複製群に分け、各群の連続層を端末へ再配置し、層・帯域・負荷の最遅段を抑える分散サービング方式。
+
 - **2026-05 · [Quant.npu: Enabling Efficient Mobile NPU Inference for on-device LLMs via Fully Static Quantization](2026-2605.20295-quant-npu-enabling-efficient-mobile-npu-inference-for-on-device-llms-via.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   QualcommのHexagon系NPUは、整数行列積の高速化と規則的な量子化に適した専用回路を持つ。SM8650実機ではW4A8構成がExecuTorchのW4A16構成より最大15.1%低遅延となり、Llama-3.2-3B-InstructのW4A8では従来の回転方式より精度が大きく改善した。
@@ -87,6 +91,10 @@
 - **2026-04 · [EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices](2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   モバイルLLMのコールドスタートで浪費されるフラッシュ帯域を、重要度別の可変精度量子化・SIMD向け重み格納・CPU/NPU協調実行で削減し、同等精度条件の初回応答を最大4.07倍高速化する。
+
+- **2025-12 · [LOIP: Collaborative LLM Inference with Offloading-based Pipeline Parallelism on Edge Devices](2025-2512.21835-loip-collaborative-llm-inference-with-offloading-based-pipeline-parallel.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LOIPは、端末ごとのメモリ容量・演算性能が異なる複数のNVIDIA Jetsonを連携させ、モデルのパラメータを量子化・枝刈りせずに推論するための実行基盤である。
 
 - **2025-12 · [ActionFlow: A Pipelined Action Acceleration for Vision Language Models on Edge](2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -250,10 +258,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   スマートフォンNPU向けに多ブロック投機復号、CPU側の疎な改訂、NPU可視メモリの交換最適化を統合し、LLaDA-8Bを接頭辞KV再利用付きCPU基準比17～42倍高速化する。
 
-- **2026-06 · [E2LLM: Towards Efficient LLM Serving in Heterogeneous Edge/Fog Environments](2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  E2LLMは異種端末を入力処理用・生成用の複製群に分け、各群の連続層を端末へ再配置し、層・帯域・負荷の最遅段を抑える分散サービング方式。
-
 - **2026-05 · [Keyword Matters: Unveiling the Energy Sensitivity of On-Device LLM Prompting](2026-2607.22568-keyword-matters-unveiling-the-energy-sensitivity-of-on-device-llm-prompt.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来の推論効率化は量子化、剪定、推論カーネル、KVキャッシュ管理などモデル・実装側の変更が中心だった。論文で強調される18.5%、62.6%等は後者の相対値であり、別モデルや別端末の絶対エネルギーをそのまま比較した値ではない。
@@ -329,10 +333,6 @@
 - **2025-12 · [PerCache: Predictive Hierarchical Cache for RAG Applications on Mobile Devices](2025-2601.11553-percache-predictive-hierarchical-cache-for-rag-applications-on-mobile-de.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   質問と回答の組と知識断片の中間テンソルを2層に貯め、空き時間に将来の質問を予測して先回りで満たす携帯向け階層キャッシュで、PerLTQAの平均遅延を最も強い比較対象の64.94秒から23.73秒へ63.5%削減した。
-
-- **2025-12 · [LOIP: Collaborative LLM Inference with Offloading-based Pipeline Parallelism on Edge Devices](2025-2512.21835-loip-collaborative-llm-inference-with-offloading-based-pipeline-parallel.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  LOIPは、端末ごとのメモリ容量・演算性能が異なる複数のNVIDIA Jetsonを連携させ、モデルのパラメータを量子化・枝刈りせずに推論するための実行基盤である。
 
 - **2025-12 · [Input-Adaptive Visual Preprocessing for Efficient Fast Vision-Language Model Inference](2025-2512.20839-input-adaptive-visual-preprocessing-for-efficient-fast-vision-language-m.md)**  
   実装：[✓](https://github.com/kmdavidds/mlfastlm) ・ リポジトリ内被引用：0  

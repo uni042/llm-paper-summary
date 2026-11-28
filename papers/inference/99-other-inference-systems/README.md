@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（821本）
+## 自動生成の論文一覧（822本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -501,6 +501,10 @@
 - **2026-11 · [HiSA: Sparsifying the Hidden Dimension of RoPE Attention in LLMs](2026-2611.26363-hisa-sparsifying-the-hidden-dimension-of-rope-attention-in-llms.md)**  
   実装：[✓](https://github.com/ambroise-b/hisa) ・ リポジトリ内被引用：0  
   回転位置埋め込みの速い周波数ペアは遠距離で不要だという仮説から、角度予算を超えたペアのスコア部分だけを位置だけで静的に落とす隠れ次元疎化を提案し、内積の約3割の計算で検証損失を密な注意より下げ、KVキャッシュ削減とデコード高速化まで示した研究。
+
+- **2026-11 · [HiCal: Offline Calibration for Hierarchical Scale Encoding in Accurate HiF4 Quantization](2026-2611.32624-hical-offline-calibration-for-hierarchical-scale-encoding-in-accurate-hi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HiF4の3階層スケール符号化の丸めバイアスと2つの拡張しきい値だけをオフライン校正で実分布に合わせ、ブロックごとの候補探索なしに量子化誤差を9.91〜23.50パーセント減らし、下流精度の平均も改善した軽量な量子化校正。
 
 - **2026-11 · [FrontierReplay: Split-Free Exact Prefix Caching for Hybrid Language Models](2026-2611.26020-frontierreplay-split-free-exact-prefix-caching-for-hybrid-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2667,7 +2671,7 @@
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2023-12 · [Zoology: Measuring and Improving Recall in Efficient Language Models](2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：49  
+  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：50  
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
 
 - **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  

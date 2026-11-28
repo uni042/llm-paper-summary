@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-28T00:07:58+00:00",
+  "generated_at": "2026-11-28T00:18:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 26,
+  "count": 27,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -616,7 +616,7 @@
     },
     {
       "canonical_id": "arXiv:2611.31089",
-      "title": "Orthogonally Mixed Sign Coding with Progressive Residual Refinement for Transformer Weight Compression",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.31089",
       "returned_at": "2026-11-28T00:04:38+00:00",
       "return_count": 2,
@@ -643,7 +643,7 @@
     },
     {
       "canonical_id": "arXiv:2611.31638",
-      "title": "Wavefront: Low-Rank Drafting with Parallel Causal Refinement for Speculative Decoding",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.31638",
       "returned_at": "2026-11-28T00:04:41+00:00",
       "return_count": 2,
@@ -670,7 +670,7 @@
     },
     {
       "canonical_id": "arXiv:2611.32083",
-      "title": "Inference-Aware Congestion Control for Distributed MoE Inference",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.32083",
       "returned_at": "2026-11-28T00:05:50+00:00",
       "return_count": 2,
@@ -697,7 +697,7 @@
     },
     {
       "canonical_id": "arXiv:2611.32295",
-      "title": "Norn: Context-Length-Aware Optimization of Weight and KV Cache Placement for Offloaded LLM Inference",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.32295",
       "returned_at": "2026-11-28T00:05:53+00:00",
       "return_count": 2,
@@ -721,6 +721,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.md",
       "import_result_path": ".survey/import-inbox/results/research/2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.json",
       "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2611.33004",
+      "title": "LEGOSpec: A Composable and Efficient Framework for Speculative Draft Design and Training",
+      "source_url": "https://arxiv.org/abs/2611.33004",
+      "returned_at": "2026-11-28T00:12:24+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 487 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5719,
+        "body_paragraphs": 22,
+        "method_chars": 2769,
+        "method_paragraphs": 5,
+        "evaluation_chars": 487,
+        "limitation_chars": 341,
+        "insufficiency_flags": [
+          "評価説明量 487 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.md",
+      "import_result_path": ".survey/import-inbox/results/research/2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.json",
+      "worker_run_key": "muse-20261128-b3"
     }
   ]
 }
