@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-85516fe3b0bf7fa1-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2405.17506",
+  "reason": "読解の結果、主題は学習済み深層ネットワークの構造化ノード枝刈りであり、ユニット活性を下三角変換（Gram-Schmidt直交化）で直交化して枝刈りしたユニットの寄与を残存ユニットから再構成し、ImageNet上のVGGとResNetでパラメータ数・FLOPs・実行時間・エネルギーに対する精度保持を評価した汎用DNN圧縮の論文である。枝刈り自体は推論効率化の一般技術だが、LLMやTransformerでの評価はなく著者自身がTransformerへの影響は未検証と述べており、LLM推論システムへの直接の技術的貢献は確認できないため境界と判定した。",
+  "title": "Subspace Node Pruning",
+  "identity_tokens": [
+    "arXiv:2405.17506",
+    "https://arxiv.org/abs/2405.17506"
+  ],
+  "linked_from": [
+    "worker-worklist research_audit slice-c1-w4"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-85516fe3b0bf",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-43c916f4d849e774-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2508.21493",
+  "reason": "読解の結果、主題は量子化ニューラルネットワーク向けFPGAデータフローアクセラレータのコンパイラ最適化であり、区間演算でテンソルの範囲・スケール・バイアスを静的に求め、アキュムレータ幅の最小化と非行列演算（レイヤーテール）の閾値化等でLUT平均17%・DSP66%削減を画像分類QNNワークロードで示した論文である。量子化推論のハードウェア最適化として関連はあるが、LLMやTransformerの評価はなく対象は小規模な画像分類QNNと埋め込みFPGAであり、LLM推論システムへの直接の技術的貢献は確認できないため境界と判定した。",
+  "title": "SIRA: Scaled-Integer Range Analysis for Optimizing FPGA Dataflow Neural Network Accelerators",
+  "identity_tokens": [
+    "arXiv:2508.21493",
+    "https://arxiv.org/abs/2508.21493"
+  ],
+  "linked_from": [
+    "worker-worklist research_audit slice-c1-w4"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43c916f4d849",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
