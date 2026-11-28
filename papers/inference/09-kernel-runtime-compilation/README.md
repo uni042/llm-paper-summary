@@ -45,7 +45,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   Mamba-3は、状態空間モデル（State Space モデル、SSM）を使う系列モデルを学習時の並列性だけでなく推論時の実行効率から設計し直す研究である。
 
 - **2025-12 · [SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations](2025-2512.14080-sonicmoe-accelerating-moe-with-io-and-tile-aware-optimizations.md)**  
-  実装：[✓](https://github.com/Dao-AILab/sonic-moe) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/Dao-AILab/sonic-moe) ・ リポジトリ内被引用：13  
   SonicMoEは混合専門家モデル（Mixture-of-Experts、MoE）の学習を対象に、専門家の細粒度化と高疎性化によって生じる三種類の非効率を同時に減らす。ICLR 2026正式版では、7B級の細粒度MoEでScatterMoEに対する活性値メモリ削減45%、Hopper世代GPUでの計算処理量1.86倍を報告する。
 
 - **2026-04 · [Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel](2026-2604.13327-event-tensor-dynamic-megakernel-generation.md)**  
@@ -1495,7 +1495,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：961  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：962  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  

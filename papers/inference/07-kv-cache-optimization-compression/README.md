@@ -65,13 +65,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/PriyanshBhatnagar/STAR-KV) ・ リポジトリ内被引用：14  
   特異値の学習可能なしきい値で層・ヘッドごとのKV低ランク次元を自動配分し、鍵/値で異なる分解と低ランク対応混合精度量子化を組み合わせ、強い圧縮を実GPU高速化へつなげる。
 
+- **2026-05 · [OSCAR: Offline Spectral Covariance-Aware Rotation for 2-bit KV Cache Quantization](2026-2605.17757-oscar-offline-spectral-covariance-aware-rotation-for-2-bit-kv-cache-quan.md)**  
+  実装：[✓](https://github.com/FutureMLS-Lab/OSCAR) ・ リポジトリ内被引用：14  
+  しかし2ビットには4段階の値しかなく、KV活性値の少数の大きな外れ値が量子化範囲を支配すると、通常値の区別が失われ、注意分布が崩れる。システム評価はNVIDIA H100上の著者実装であり、12GB級の民生GPUや標準配布版llama.cppで同じ結果が出ると示したものではない。
+
 - **2026-07 · [LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning](2026-lazyeviction.md)**  
   実装：[✓](https://github.com/Halo-949/LazyEviction) ・ リポジトリ内被引用：13  
   一時的に注意が下がって後で再重要化するトークンを最大再帰間隔で予測し、観測窓ごとの遅延削除で長い推論のKVキャッシュを圧縮する方式。
-
-- **2026-05 · [OSCAR: Offline Spectral Covariance-Aware Rotation for 2-bit KV Cache Quantization](2026-2605.17757-oscar-offline-spectral-covariance-aware-rotation-for-2-bit-kv-cache-quan.md)**  
-  実装：[✓](https://github.com/FutureMLS-Lab/OSCAR) ・ リポジトリ内被引用：13  
-  しかし2ビットには4段階の値しかなく、KV活性値の少数の大きな外れ値が量子化範囲を支配すると、通常値の区別が失われ、注意分布が崩れる。システム評価はNVIDIA H100上の著者実装であり、12GB級の民生GPUや標準配布版llama.cppで同じ結果が出ると示したものではない。
 
 - **2026-05 · [Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management](2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
@@ -828,6 +828,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-06 · [Last But Not Least: Boundary Attention CalibratiON for Multimodal KV Cache Compression](2026-2606.14782-last-but-not-least-boundary-attention-calibration-for-multimodal-kv-cach.md)**  
   実装：[✓](https://github.com/ryu1ion/official_BACON) ・ リポジトリ内被引用：1  
   最終クエリの注意が観測窓を上回る差分を境界証拠として抽出し、層内の広がりと層間の持続で雑音を除いてから観測窓の点数へ較正して加える方式で、強い圧縮ほどキャッシュ圧縮の精度を大きく改善した。
+
+- **2026-05 · [When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon](2026-2605.05699-when-quantization-is-free-an-int4-kv-cache-that-outruns-fp16-on-apple-si.md)**  
+  実装：[✓](https://github.com/aminems/AppleSiliconFFT) ・ リポジトリ内被引用：1  
+  統一メモリでは鍵値の転送が生成を支配するため、回転と尺度と四ビット詰め込みを一回の融合カーネルにまとめれば、量子化の追加費用より転送の節約が大きくなり、十六ビットより速く約三倍の圧縮が同時に得られることを実機で示した。
 
 - **2026-05 · [WaveFilter: Enhancing the Long-Context Capability of Diffusion LLMs via Wavelet-Guided KV Cache Filtering](2026-2606.00724-wavefilter-enhancing-the-long-context-capability-of-diffusion-llms-via-w.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1891,10 +1895,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   既存の量子化方式では全トークンを同じ低ビットへ変換すると品質が落ちやすく、重要度によってトークンごとにビット幅を変えると探索や計算の費用が大きくなる。
 
-- **2026-05 · [When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon](2026-2605.05699-when-quantization-is-free-an-int4-kv-cache-that-outruns-fp16-on-apple-si.md)**  
-  実装：[✓](https://github.com/aminems/AppleSiliconFFT) ・ リポジトリ内被引用：0  
-  統一メモリでは鍵値の転送が生成を支配するため、回転と尺度と四ビット詰め込みを一回の融合カーネルにまとめれば、量子化の追加費用より転送の節約が大きくなり、十六ビットより速く約三倍の圧縮が同時に得られることを実機で示した。
-
 - **2026-05 · [When KV Meets Embeddings: Dynamic GPU Memory Allocation for Accelerating Generative Recommender Serving](2026-2605.04450-when-kv-meets-embeddings-dynamic-gpu-memory-allocation-for-accelerating-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   生成レコメンダのGPU HBMを埋め込みキャッシュとKVキャッシュへ実行時に再配分する問題を定式化し、3層PPO制御器による配分決定、在駐状態を動かさない配分適用、両キャッシュの局所性を併せ見たルーティングを備えるRACERで、静的配分比の限界を実測とともに示した研究。
@@ -2114,7 +2114,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   KVキャッシュの仮想アドレスを連続に保ったままCUDA仮想メモリで物理ページだけを需要時割当し、PagedAttention固有のブロック表と専用注意カーネルを不要にする方式。長文脈サービングで最大1.23倍のスループット改善を報告する。
 
 - **2025-04 · [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md)**  
-  実装：✓ ・ リポジトリ内被引用：89  
+  実装：✓ ・ リポジトリ内被引用：90  
   TurboQuantは、高次元ベクトルを入力データセットに合わせて学習し直さずに低ビット化する、オンライン量子化方式である。理論面では、復元二乗誤差と内積誤差の両方について、ビット幅bに対して概ね4のマイナスb乗で減る上界を示し、情報理論的な下限との差が最大約2.7倍の定数内であると証明する。
 
 - **2025-05 · [KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction](2025-2505.23416-kvzip.md)**  
@@ -2640,11 +2640,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
-  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：478  
+  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：479  
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-01 · [KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization](2024-2401.18079-kvquant.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/KVQuant) ・ リポジトリ内被引用：449  
+  実装：[✓](https://github.com/SqueezeAILab/KVQuant) ・ リポジトリ内被引用：450  
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  

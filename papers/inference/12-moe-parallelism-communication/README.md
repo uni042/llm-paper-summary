@@ -250,7 +250,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)**  
-  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：41  
   Cometは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を複数GPUへ分散配置したときに生じる通信待ちを、専門家の行列計算と重ねて隠すための実行系である。著者らは8基のH800および8基のL20からなるGPU環境で、Mixtral-8×7B、Qwen2-MoE、Phi-3.5-MoEなどを評価した。
 
 - **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
@@ -313,13 +313,13 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：2  
   集合通信のデータを任意ビット幅で量子化して送る通信方式。ビット分割で不規則なビット幅を扱い、スパイク保存で外れ値を残して2ビット化の崩壊を防ぐ。PCIeノードでは階層通信のパイプライン化も併用する。
 
+- **2025-11 · [FarSkip-Collective: Unhobbling Blocking Communication in Mixture of Experts Models](2025-2511.11505-farskip-collective-unhobbling-blocking-communication-in-mixture-of-exper.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  残差の結線を変えて集合通信の結果を次の層へ後付けにし、古い・部分的な活性値で計算を先行させることで通信と計算を重ねる専門家混合の変換法で、109Bまでの全層変換と自己蒸留による精度回復、推論と学習の両方での重なりを実証する。
+
 - **2024-12 · [IFMoE: An Inference Framework Design for Fine-grained MoE](2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   共有部分をテンソル並列化して細粒度MoEの重複メモリを減らし、少数専門家で草稿生成した後に完全専門家設定でKVキャッシュを修整して復号を高速化する。
-
-- **2025-11 · [FarSkip-Collective: Unhobbling Blocking Communication in Mixture of Experts Models](2025-2511.11505-farskip-collective-unhobbling-blocking-communication-in-mixture-of-exper.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  残差の結線を変えて集合通信の結果を次の層へ後付けにし、古い・部分的な活性値で計算を先行させることで通信と計算を重ねる専門家混合の変換法で、109Bまでの全層変換と自己蒸留による精度回復、推論と学習の両方での重なりを実証する。
 
 - **2025-11 · [DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication](2025-2511.06605-dma-latte-expanding-the-reach-of-dma-offloads-to-latency-bound-ml-commun.md)**  
   実装：[✓](https://github.com/AMDResearch/AMD-DMA-Latte) ・ リポジトリ内被引用：0  
@@ -344,7 +344,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   LongVILAは、長時間動画を理解する視覚言語モデル（Vision-Language モデル、VLM）の学習手順と分散実行基盤を同時に設計した研究である。256基のGPUを使うと勾配チェックポイントを使わず約200万トークンの学習文脈を扱え、従来のリング型系列並列に対して2.1〜5.7倍の訓練処理量を得る。
 
 - **2024-04 · [Shortcut-connected Expert Parallelism for Accelerating Mixture of Experts](2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで実行する専門家並列では、各トークンを選択された専門家のGPUへ送る全対全通信（全対全）が不可欠となる。従来のtop-2 MoEでは、ルーティング、入力整列、全対全送信、専門家計算、全対全返送、出力整列が依存鎖上で続く。
 
 - **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
@@ -372,16 +372,16 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-06 · [Tutel: Adaptive Mixture-of-Experts at Scale](2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md)**  
-  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：65  
+  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：66  
   Tutelは、混合専門家モデル（Mixture-of-Experts; MoE）で反復ごとに変わる専門家負荷へ実行系を追従させる分散実行基盤である。固定の並列化方式や固定の通信・計算パイプラインは、この変動に対して一つの実行形態しか使えず、通信時間または専門家計算時間のどちらかを無駄にしやすい。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
-  実装：✓ ・ リポジトリ内被引用：50  
+  実装：✓ ・ リポジトリ内被引用：51  
   Linaは、分散した混合専門家モデル（Mixture of エキスパート、MoE）の通信を、学習と推論で異なる原因に分解して高速化するシステムである。論文の事前計測では、全対全通信が処理段階時間の平均34.1%、ある層の順伝播時間の74.9%を占め、通信中のGPU演算器利用率は平均3.7%にとどまった。
 
 ### 6年前（2020-12〜2021-11）
 
 - **2021-01 · [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md)**  
-  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：377  
+  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：378  
   論文は、専門家容量、容量超過トークンの扱い、負荷分散補助損失、ルータだけを高精度で計算する選択的精度、初期値スケールの縮小、専門家専用ドロップアウト、データ・モデル・専門家並列の組合せまで含め、巨大な疎モデルを実際に安定学習するための設計をまとめている。
 <!-- survey:auto:end -->

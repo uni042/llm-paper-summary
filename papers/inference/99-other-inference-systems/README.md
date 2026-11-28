@@ -28,13 +28,13 @@
   実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：10  
   コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
 
+- **2026-02 · [ICaRus: Identical Cache Reuse for Efficient Multi Model Inference](2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  複数の専門言語モデルを順番に呼び出すエージェント型推論では、同じシステム指示、会話履歴、検索資料を何度も入力する。LLaMA-3.1-8Bを使うReAct型の8エージェント構成では、通常のモデル別KV方式に対して95パーセンタイル遅延（P95、遅い側5%に入る境界）を最大11.1倍短縮し、最大スループットを3.8倍に高めた。
+
 - **2026-07 · [Read As Human: Compressing Context via Parallelizable Close Reading and Skimming](2026-2602.01840-read-as-human-compressing-context-via-parallelizable-close-reading-and-s.md)**  
   実装：[✓](https://github.com/Twilightaaa/RAM) ・ リポジトリ内被引用：8  
   入力文脈圧縮には、不要な語を削る方式と、文章を連続ベクトルへ変換する方式がある。Qwen3-4Bでの4倍圧縮時、NaturalQAの完全一致率は66.59、2WikiMQAは50.39であり、8倍圧縮時にはそれぞれ61.09、40.24となる。
-
-- **2026-02 · [ICaRus: Identical Cache Reuse for Efficient Multi Model Inference](2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  複数の専門言語モデルを順番に呼び出すエージェント型推論では、同じシステム指示、会話履歴、検索資料を何度も入力する。LLaMA-3.1-8Bを使うReAct型の8エージェント構成では、通常のモデル別KV方式に対して95パーセンタイル遅延（P95、遅い側5%に入る境界）を最大11.1倍短縮し、最大スループットを3.8倍に高めた。
 
 - **2026-04 · [MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction](2026-2604.27393-minicpm-o-4-5-towards-real-time-full-duplex-omni-modal-interaction.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -1885,7 +1885,7 @@
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM/tree/main/v2) ・ リポジトリ内被引用：58  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM/tree/main/v2) ・ リポジトリ内被引用：59  
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
 - **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
@@ -1972,6 +1972,10 @@
   実装：[✓](https://github.com/ZJU-REAL/Self-Braking-Tuning) ・ リポジトリ内被引用：9  
   従来の出力トークン予算や推論時の外部停止判定では、問題の難しさと必要な推論深度を一律に扱ったり、追加の判定機構が必要になったりする。
 
+- **2025-04 · [Activated LoRA: Fine-tuned LLMs for Intrinsics](2025-2504.12397-activated-lora-fine-tuned-llms-for-intrinsics.md)**  
+  実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：7  
+  しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
+
 - **2025-01 · [Rope to Nope and Back Again: A New Hybrid Attention Strategy](2025-2501.18795-rope-to-nope-and-back-again-a-new-hybrid-attention-strategy.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   大規模言語モデル（large language モデル; LLM）で長い入力を処理すると、全トークン同士の注意（注意機構）計算は入力長Lの二乗に近い費用を要する。長文脈評価では256Kトークンでの検索・質問応答が改善し、局所層を増やすことで長文推論時のキー・値キャッシュ（key-value キャッシュ; KVキャッシュ）も減らせる。
@@ -1987,10 +1991,6 @@
 - **2025-05 · [GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment](2025-2505.12215-gmsa-enhancing-context-compression-via-group-merging-and-layer-semantic-.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   GMSAは、原文を文字列として間引くのではなく、少数の連続表現トークン（soft トークン）へ変換する文脈圧縮方式である。NaturalQuestionsの4倍圧縮では完全一致（Exact Match、EM）が58.12%で、元文脈をそのまま与える条件の15.07%を上回った。
-
-- **2025-04 · [Activated LoRA: Fine-tuned LLMs for Intrinsics](2025-2504.12397-activated-lora-fine-tuned-llms-for-intrinsics.md)**  
-  実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：6  
-  しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
 
 - **2025-02 · [CipherPrune: Efficient and Scalable Private Transformer Inference](2025-2502.16782-cipherprune-efficient-and-scalable-private-transformer-inference.md)**  
   実装：[✓](https://github.com/UCF-Lou-Lab-PET/cipher-prune-inference) ・ リポジトリ内被引用：6  
@@ -2755,7 +2755,7 @@
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：110  
+  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：111  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
@@ -3329,7 +3329,7 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：111  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：112  
   本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-10 · [8-bit Optimizers via Block-wise Quantization](2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md)**  
@@ -3423,7 +3423,7 @@
 ### 9年前（2017-12〜2018-11）
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
-  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：120  
+  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：121  
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
@@ -3441,6 +3441,6 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：398  
+  実装：✓ ・ リポジトリ内被引用：399  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 <!-- survey:auto:end -->
