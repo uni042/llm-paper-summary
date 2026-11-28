@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（734本）
+## 自動生成の論文一覧（736本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -393,6 +393,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：2  
   文脈区間の寿命を書込み前に判定し、短命な区間を高速メモリ、長命な区間をフラッシュへ配置することで、フラッシュの書換え寿命を最大3.13倍に延ばした配置層の提案。
 
+- **2026-10 · [KV4-RL: Unlocking Faster Asynchronous Rollouts for RLVR with INT4 KV Cache Quantization](2026-2610.14448-kv4-rl-unlocking-faster-asynchronous-rollouts-for-rlvr-with-int4-kv-cach.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  非同期ロールアウトで集中するKV処理をINT4量子化し、シンクと直近文脈だけをINT8で守ることで、RLVRのロールアウトを累積1.80倍速くしながら最終精度の差を0.5ポイント以内に抑える方式。
+
 - **2026-10 · [HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs](2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.md)**  
   実装：[✓](https://github.com/FlashLabAE/HBFSim) ・ リポジトリ内被引用：2  
   実機のない高帯域フラッシュを含むメモリ階層を、較正済みの提供スケジューラとフラッシュ内部モデルを閉ループでつないで模擬する器を作り、配置はKV優先、変換は並列性を保つ範囲マッピング、寿命はKV書き込み量で決まるという設計指針を引き出した。
@@ -400,6 +404,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Behavior-Preserving KV Cache Compression](2026-2610.06479-behavior-preserving-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   キャッシュ削除の採点を注意量などの代理信号から、全キャッシュモデルの次トークン分布とのずれへ置き換え、圧縮前の統計だけでそのずれを推定することで、除去率90パーセントの長文脈検索でも注意型の41点台に対し61から68点を保った。
+
+- **2026-09 · [Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions](2026-2609.16215-where-should-the-kv-cache-live-placement-policies-across-gpu-cpu-and-ssd-for-long-lived-sessions.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  GPU・CPU・SSD間のKV配置政策を比較し、SSDの容量利得とワークロード別の最適配置・遅延境界を定量化する。
 
 - **2026-09 · [The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems](2026-2609.27746-kv-cache-working-set-online-capacity-planning.md)**  
   実装：[✓](https://github.com/llc-kc/kv_cache_capacity_estimator) ・ リポジトリ内被引用：2  
@@ -545,6 +553,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/KunmingSHAO/FlagRot_releaser) ・ リポジトリ内被引用：1  
   回転が平らな部分をかえって悪化させる観測から、部分ごとに回すか否かを注意誤差で選んで旗を符号の符号ビットへ隠す方式で、二・五ビットでの発散度を一八・七から一二・四へ下げ、長文脈課題を二・九ポイント回復したと報告した。
 
+- **2026-10 · [ZipFusion: Fusing Lossless KV Decompression with Attention for Efficient LLM Decoding](2026-2610.33719-zipfusion-fusing-lossless-kv-decompression-with-attention-for-efficient-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  無損失圧縮したKVキャッシュを注意カーネルが直接読み、レジスタ内の簡単なビット演算で値を再構成することで、復元の受け渡しを消してデコードの帯域を下げ、空いたメモリを同時実行数の増加へ回す仕組み。
+
 - **2026-10 · [Vesta: Queueing-Aware LLM Scheduling for Real-World Workloads](2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   セッションのKVキャッシュ所有先を固定し、実行先だけを待ち行列理論に基づく混雑価格付き目的関数でリクエストごとに選ぶことで、キャッシュ再利用と負荷分散を両立させる分散スケジューラ。
@@ -581,10 +593,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/chenzhwsysu57/kvreuse) ・ リポジトリ内被引用：1  
   競合課題間の非接頭辞KV再利用で崩れる解釈を、接頭辞から作る16個の潜在トークンを再利用ブロックの後ろへ置いて立て直し、再計算なしに正解率を大きく回復させた。
 
-- **2026-10 · [KV4-RL: Unlocking Faster Asynchronous Rollouts for RLVR with INT4 KV Cache Quantization](2026-2610.14448-kv4-rl-unlocking-faster-asynchronous-rollouts-for-rlvr-with-int4-kv-cach.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  非同期ロールアウトで集中するKV処理をINT4量子化し、シンクと直近文脈だけをINT8で守ることで、RLVRのロールアウトを累積1.80倍速くしながら最終精度の差を0.5ポイント以内に抑える方式。
-
 - **2026-10 · [KV2: A Self-Refining KV Cache](2026-2610.03198-kv2-a-self-refining-kv-cache.md)**  
   実装：[✓](https://anonymous.4open.science/r/KVsquared-0B97/) ・ リポジトリ内被引用：1  
   再利用型KV圧縮で、軽量な代理スコアが選んだ少数の文脈トークンだけを再構成クエリに使い、最終エビクションスコアを決める2段方式。予算2パーセントの極端な圧縮で比較対象との差が最大になる。
@@ -596,6 +604,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [iS-KV: Online Low-Rank KV Cache Compression via Block-Incremental SVD](2026-2610.02815-is-kv-online-low-rank-kv-cache-compression-via-block-incremental-svd.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   直近を正確に残し古い履歴を低ランク化するオンライン圧縮で、基底更新時に過去の係数も同期させることでドリフトを防ぎ、MATH-500で4.06倍圧縮しながら元モデルの83.6パーセントに対し82.6パーセントを保つ。
+
+- **2026-10 · [GAAC: Lossless KV Compression for Bandwidth-Efficient LLM Inference on Personal Devices](2026-2610.38210-gaac-lossless-kv-compression-for-bandwidth-efficient-llm-inference-on-pe.md)**  
+  実装：[✓](https://github.com/Intelligent-Microsystems-Lab/GAAC) ・ リポジトリ内被引用：1  
+  BF16の指数部が短い連続区間へ集中する性質を使い、KVをビット単位で無損失に約1.41倍圧縮し、復元を注意カーネルへ融合して読み出し帯域を減らすことで、個人向けデバイスの長文脈デコード注意とサービングを速める方式。
 
 - **2026-10 · [FuTransformer: FP8 Prefill and INT4 Decode for Llama-Style Inference on Hopper](2026-2610.23796-futransformer-fp8-prefill-and-int4-decode-for-llama-style-inference-on-h.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -636,10 +648,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [WUSH-KV: KV Cache Quantization with Data-Adaptive Transforms](2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   キーと値の二階統計と、クエリ側・出力射影側の感度の両方から閉形式で作るデータ適応変換を量子化前に挟むKVキャッシュ量子化で、2ビットでも再構成誤差とパープレキシティを既存変換より小さく保った。
-
-- **2026-09 · [Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions](2026-2609.16215-where-should-the-kv-cache-live-placement-policies-across-gpu-cpu-and-ssd-for-long-lived-sessions.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  GPU・CPU・SSD間のKV配置政策を比較し、SSDの容量利得とワークロード別の最適配置・遅延境界を定量化する。
 
 - **2026-09 · [UniCache: Task- and Type-Aware KV Cache Compression for Unified Multimodal Models](2026-2609.32831-unicache-task-and-type-aware-kv-cache-compression-for-unified-multimodal.md)**  
   実装：[✓](https://github.com/Superone77/UniCache) ・ リポジトリ内被引用：1  
@@ -1003,6 +1011,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/Ege-Cakar/State-Space-Attention) ・ リポジトリ内被引用：0  
   学習済みスコアラがチャンク単位で保持する過去表現を選び直し、捨てた情報が必要だった学習誤りをスコアラへ返す回復で学習することで、読み取り予算576トークンでも8K文脈の検索課題で全注意に数ポイント差まで迫る、推論メモリ一定の注意機構。
 
+- **2026-11 · [Routing and Cache Retention for Multi-Turn LLM Inference: Theory and Implementation](2026-2611.34584-routing-and-cache-retention-for-multi-turn-llm-inference-theory-and-impl.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  マルチターン推論のルーティングとKVキャッシュ保持を流体近似で一体に定式化し、シャドウプライスによる受付・配置と再利用価値による保持インデックスを持つPARKで、16台のH200の実エージェント負荷で最強の比較対象比24.2〜40.0%高い出力スループットを出した。
+
 - **2026-11 · [RoCoKV: Accelerating LLM Inference Serving through Uncertainty and Redundancy Aware KV Cache Compression](2026-2611.25433-rocokv-accelerating-llm-inference-serving-through-uncertainty-and-redund.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論モデルの冗長な推論トレースでKV予算が奪われる問題に対し、モデルの不確実性で枝刈り強度を変え、直近内容と似たトークンを割り引くRoCoKVを提案し、制約付き予算で既存圧縮法より高い精度と、vLLM実測でFull-KV比最大1.43倍の高速化を示した圧縮法。
@@ -1050,6 +1062,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-11 · [Looping Deeper Without Growing the KV Cache: Recurrent Depth for Causal Encoder-Decoders](2026-2611.13378-looping-deeper-without-growing-the-kv-cache-recurrent-depth-for-causal-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ループを因果エンコーダ側に置いて大域KV源を反復精緻化し、確率的深さ学習による固定点で最終ラウンドだけのKV共有を無損失化することで、ループなしと同量の常駐KVのまま再帰深度の利得の86から93パーセントを得て、552BサービングでKV 36.8分の1とスループット3.6倍を示したループ型アーキテクチャ。
+
+- **2026-11 · [LoomKV: Lossless KV Cache Compression from GPU Memory to SSD for LLM Serving](2026-2611.32954-loomkv-lossless-kv-cache-compression-from-gpu-memory-to-ssd-for-llm-serv.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  BF16上位バイトの偏りを使う無損失符号でKVを約0.71倍に圧縮し、外部階層とGPUプールの両方へ適用することで、AgentXのLRUの崖で有効スループット2.7〜3.6倍、プールでは収容トークン1.31〜1.34倍を、出力を変えずに得たKVキャッシュ圧縮。
 
 - **2026-11 · [LooM: Loop-Invariant Memory for Causal Encoder-Decoder Language Models](2026-2611.06835-loom-loop-invariant-memory-for-causal-encoder-decoder-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1106,10 +1122,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-11 · [Aggron: Aggressive Compression of Agentic KV Caches during Head-of-Line Stalls in the Request Queue](2026-2611.26435-aggron-aggressive-compression-of-agentic-kv-caches-during-head-of-line-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェントのKVキャッシュ圧縮を、文脈が大きくなってから一括で行うのではなく、リクエストが待ち行列でヘッド・オブ・ライン停滞に止まる時間へ埋め込むサービング方式。要約できる散文だけを別キューで小さく何度も圧縮し、高負荷でP99遅延を27〜31パーセント削減、スループットを1.34〜1.40倍にしながら精度を無圧縮と同等に保つ。
-
-- **2026-10 · [ZipFusion: Fusing Lossless KV Decompression with Attention for Efficient LLM Decoding](2026-2610.33719-zipfusion-fusing-lossless-kv-decompression-with-attention-for-efficient-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  無損失圧縮したKVキャッシュを注意カーネルが直接読み、レジスタ内の簡単なビット演算で値を再構成することで、復元の受け渡しを消してデコードの帯域を下げ、空いたメモリを同時実行数の増加へ回す仕組み。
 
 - **2026-10 · [WIRE: Weight Space Implicit Representation Encoding of Frozen Video LLMs](2026-2610.17355-wire-weight-space-implicit-representation-encoding-of-frozen-video-llms.md)**  
   実装：[✓](https://github.com/AmeenAli/WIRE) ・ リポジトリ内被引用：0  
@@ -1342,10 +1354,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [HaloBlock: Faster and Better Decoding for Diffusion Large Language Models](2026-2610.17948-haloblock-faster-and-better-decoding-for-diffusion-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデルのブロック右側の難しさと境界の文脈不連続を、双方向累積エントロピーで測ってブロック両側へハローを適応的に足すことで緩和し、学習なしで正解率とスループットの両方を改善した研究。
-
-- **2026-10 · [GAAC: Lossless KV Compression for Bandwidth-Efficient LLM Inference on Personal Devices](2026-2610.38210-gaac-lossless-kv-compression-for-bandwidth-efficient-llm-inference-on-pe.md)**  
-  実装：[✓](https://github.com/Intelligent-Microsystems-Lab/GAAC) ・ リポジトリ内被引用：0  
-  BF16の指数部が短い連続区間へ集中する性質を使い、KVをビット単位で無損失に約1.41倍圧縮し、復元を注意カーネルへ融合して読み出し帯域を減らすことで、個人向けデバイスの長文脈デコード注意とサービングを速める方式。
 
 - **2026-10 · [FORGE: Procedural Weight Generation for Sparse MoE Inference](2026-2610.16890-forge-procedural-weight-generation-for-sparse-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2233,13 +2241,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/pzs19/TokenSelect) ・ リポジトリ内被引用：21  
   各問い合わせで重要な鍵値をトークン単位に選び、ヘッド軟投票・選択キャッシュ・ページ化内積カーネルで長文脈注意を高精度かつ高速化する。
 
+- **2025-02 · [Online Scheduling for LLM Inference with KV Cache Constraints](2025-2502.07115-online-scheduling-for-llm-inference-with-kv-cache-constraints.md)**  
+  実装：✓ ・ リポジトリ内被引用：21  
+  本研究は、大規模言語モデル（LLM）の複数要求を一つの推論ワーカーで処理する際に、生成が進むほど増える鍵・値キャッシュ（KVキャッシュ）を将来時点まで予測し、どの要求をいつ開始するかを決めるオンラインスケジューリング（online スケジューラ）を扱う。
+
 - **2025-06 · [InfiniPot-V: Memory-Constrained KV Cache Compression for Streaming Video Understanding](2025-2506.15745-infinipot-v-memory-constrained-kv-cache-compression-for-streaming-video-.md)**  
   実装：[✓](https://github.com/aiha-lab/InfiniPot-V) ・ リポジトリ内被引用：20  
   InfiniPot-Vは、動画を順次処理する映像言語モデルの鍵・値キャッシュ（KVキャッシュ）が、視聴時間とともに増加する問題を扱う。全映像のKVキャッシュをいったん構築してから圧縮する方式は、圧縮前の瞬間最大メモリが装置容量を超える。主要評価では、Qwen-2-VL-7Bの50Kトークン相当の動画文脈を6Kへ縮小しても、MLVU平均65.8を維持した。
-
-- **2025-02 · [Online Scheduling for LLM Inference with KV Cache Constraints](2025-2502.07115-online-scheduling-for-llm-inference-with-kv-cache-constraints.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
-  本研究は、大規模言語モデル（LLM）の複数要求を一つの推論ワーカーで処理する際に、生成が進むほど増える鍵・値キャッシュ（KVキャッシュ）を将来時点まで予測し、どの要求をいつ開始するかを決めるオンラインスケジューリング（online スケジューラ）を扱う。
 
 - **2025-11 · [KV Cache Transform Coding for Compact Storage in LLM Inference](2025-2511.01815-kv-cache-transform-coding-for-compact-storage-in-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：18  

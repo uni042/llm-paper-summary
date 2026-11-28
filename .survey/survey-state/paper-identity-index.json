@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 5676,
+  "active_count": 5681,
   "papers": {
     "arXiv:2101.06840": {
       "path": "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
@@ -7716,6 +7716,13 @@
       ],
       "source_hash": "bd3af8ae3c93ac2150c0f7919230dee64b62a28684db0747e405ef992ae6d5da"
     },
+    "arXiv:2611.33111": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2611.33111-draft-calibration-for-speculative-decoding-accelerating-llm-serving-by-m.md",
+      "identifiers": [
+        "arXiv:2611.33111"
+      ],
+      "source_hash": "e2af48fdf4f6bbe9ce30911e74c0af383235f90b650bf5eb4ab968c8377ea536"
+    },
     "arXiv:2611.33896": {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2611.33896-looped-models-are-fast-multi-token-predictors.md",
       "identifiers": [
@@ -13278,12 +13285,26 @@
       ],
       "source_hash": "050f8699007ce0acefc13e74a61acf3e1a43209a733d66238f3061ec3689f7b0"
     },
+    "arXiv:2611.32954": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.32954-loomkv-lossless-kv-cache-compression-from-gpu-memory-to-ssd-for-llm-serv.md",
+      "identifiers": [
+        "arXiv:2611.32954"
+      ],
+      "source_hash": "f427f248cdd360b501018b9369eb6e83128aef005e859a77f96aa30121ac976b"
+    },
     "arXiv:2611.33625": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.33625-state-space-attention-learning-context-dependent-memory-retention.md",
       "identifiers": [
         "arXiv:2611.33625"
       ],
       "source_hash": "fca448399b5bbc30100c4bbcb5be9c572c0096a7662010078e8ed9944f1bb16e"
+    },
+    "arXiv:2611.34584": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.34584-routing-and-cache-retention-for-multi-turn-llm-inference-theory-and-impl.md",
+      "identifiers": [
+        "arXiv:2611.34584"
+      ],
+      "source_hash": "5c0cd1efbae766032f5c6a2ed55c9ea467e5bf37a705786785b0934ab996abd4"
     },
     "DOI:10.18653/v1/2026.acl-long.1631": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-28d0e3a1162b-octopus-gated-selective-attention-for-memory-bounded-long-context-infere.md",
@@ -23218,6 +23239,13 @@
         "arXiv:2611.32881"
       ],
       "source_hash": "636bb6e9c9b1743cd837c8dcf34353fd3334d7fa2e067fd1aefe5011fde2e12d"
+    },
+    "arXiv:2611.34615": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.34615-pipeaxes-decoupling-compute-and-communication-granularities-for-pipeline.md",
+      "identifiers": [
+        "arXiv:2611.34615"
+      ],
+      "source_hash": "b07baf01cc1919ab55f26dd311f91c321fe99dba9ea8b0a68cdaa6a6b8536e5c"
     },
     "DOI:10.1109/tdsc.2026.3718538": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-priv.md",
@@ -40872,6 +40900,13 @@
       ],
       "source_hash": "69be4f9ecfcc30e81a0c7be5a7e31a113a3d9951afc461359f6890f0aa00dfad"
     },
+    "arXiv:2611.33080": {
+      "path": "papers/inference/99-other-inference-systems/2026-2611.33080-shifter-quantization-compact-representations-for-native-integer-computat.md",
+      "identifiers": [
+        "arXiv:2611.33080"
+      ],
+      "source_hash": "9a2151a3dfeb4f71fbe753636a0549f506cb8d4dbccdb863a7f07e5b7973455f"
+    },
     "arXiv:2611.34521": {
       "path": "papers/inference/99-other-inference-systems/2026-2611.34521-pura-video-token-pruning-via-unified-spatiotemporal-redundancy-assessmen.md",
       "identifiers": [
@@ -42679,6 +42714,7 @@
     "arXiv:2611.31638": "arXiv:2611.31638",
     "arXiv:2611.32269": "arXiv:2611.32269",
     "arXiv:2611.33004": "arXiv:2611.33004",
+    "arXiv:2611.33111": "arXiv:2611.33111",
     "arXiv:2611.33896": "arXiv:2611.33896",
     "arXiv:2611.34010": "arXiv:2611.34010",
     "arXiv:2611.34092": "arXiv:2611.34092",
@@ -43609,7 +43645,9 @@
     "arXiv:2611.31937": "arXiv:2611.31937",
     "arXiv:2611.32264": "arXiv:2611.32264",
     "arXiv:2611.32295": "arXiv:2611.32295",
+    "arXiv:2611.32954": "arXiv:2611.32954",
     "arXiv:2611.33625": "arXiv:2611.33625",
+    "arXiv:2611.34584": "arXiv:2611.34584",
     "DOI:10.18653/v1/2026.acl-long.1631": "DOI:10.18653/v1/2026.acl-long.1631",
     "DOI:10.18653/v1/2026.acl-long.859": "DOI:10.18653/v1/2026.acl-long.859",
     "DOI:10.18653/v1/2026.acl-long.1123": "DOI:10.18653/v1/2026.acl-long.1123",
@@ -45438,6 +45476,7 @@
     "arXiv:2611.29104": "arXiv:2611.29104",
     "arXiv:2611.31869": "arXiv:2611.31869",
     "arXiv:2611.32881": "arXiv:2611.32881",
+    "arXiv:2611.34615": "arXiv:2611.34615",
     "DOI:10.1109/tdsc.2026.3718538": "DOI:10.1109/tdsc.2026.3718538",
     "DOI:10.3390/s26041101": "DOI:10.3390/s26041101",
     "DOI:10.14722/ndss.2026.230035": "DOI:10.14722/ndss.2026.230035",
@@ -48487,6 +48526,7 @@
     "arXiv:2611.32624": "arXiv:2611.32624",
     "arXiv:2611.32634": "arXiv:2611.32634",
     "arXiv:2611.32873": "arXiv:2611.32873",
+    "arXiv:2611.33080": "arXiv:2611.33080",
     "arXiv:2611.34521": "arXiv:2611.34521",
     "DOI:10.1007/s44443-026-00724-4": "DOI:10.1007/s44443-026-00724-4",
     "DOI:10.1145/3789240.3829130": "DOI:10.1145/3789240.3829130",

@@ -35,10 +35,15 @@
   "selection_reason": "パイプライン並列LLMサービングでプリフィルを層単位スライスに分けてデコードと交互実行し、INT4活性化転送と遅延スラックに基づくスケジューラで対話リクエストのTTFTを大幅に下げるPipeAxesを一次要旨で具体的に示しており直接貢献である。",
   "semantic_scholar_id": "4350c0b233ebe8017466171173ef7f3097044211",
   "source_url": "https://arxiv.org/abs/2611.34615",
-  "status": "ready",
+  "status": "superseded",
   "title": "PipeAxes: Decoupling Compute and Communication Granularities for Pipeline-Parallel LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:38:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.34615-pipeaxes-decoupling-compute-and-communication-granularities-for-pipeline.md",
+  "represented_canonical_id": "arXiv:2611.34615",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

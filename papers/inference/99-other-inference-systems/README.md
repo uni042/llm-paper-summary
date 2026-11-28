@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（853本）
+## 自動生成の論文一覧（854本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -493,6 +493,10 @@
 - **2026-11 · [Specification-Guided Generation for Large Language Models](2026-2610.41511-specification-guided-generation-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   文法では表せない変数同士の論理の制約を、各割当ての前に可能な領域を計算して文法へ変換することで生成の構成により保証し、模型の呼び出しを却下標本化より大幅に減らし、後戻りで促しに合わない割当てを九十八件中九十二件から十三件へ減らしたと報告した。
+
+- **2026-11 · [Shifter Quantization: Compact Representations for Native Integer Computation](2026-2611.33080-shifter-quantization-compact-representations-for-native-integer-computat.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  グループ共有ビットの追加とシフトで低ビット重みをネイティブ整数へ再構成し、MMAが縮約次元全体を跨げるようにした量子化で、2ビットでQ2K比プリフィル2.71〜3.77倍かつKL減、4ビットでNInfer比1.43〜2.47倍をRTX 5090で示した。
 
 - **2026-11 · [Shallow Encoding Emits Deep Memories](2026-2611.06084-shallow-encoding-emits-deep-memories.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3401,7 +3405,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：399  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：400  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
@@ -3427,7 +3431,7 @@
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
-  実装：✓ ・ リポジトリ内被引用：97  
+  実装：✓ ・ リポジトリ内被引用：98  
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Horovod: fast and easy distributed deep learning in TensorFlow](2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md)**  

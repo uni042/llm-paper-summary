@@ -35,10 +35,15 @@
   "selection_reason": "BF16の上位バイトに対する較正済み3ビット符号でKVキャッシュを無損失に0.71倍へ圧縮し、LMCacheとvLLM上で外部階層モードとGPUプールモードの両方でgoodputを最大3.6倍化するなど、LLMサービングのKV階層メモリへの直接貢献であるため対象とした。",
   "semantic_scholar_id": "d64d58e0f7c7eeb621646f6c7c4a4b7d5930696b",
   "source_url": "https://arxiv.org/abs/2611.32954",
-  "status": "ready",
+  "status": "superseded",
   "title": "LoomKV: Lossless KV Cache Compression from GPU Memory to SSD for LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:38:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.32954-loomkv-lossless-kv-cache-compression-from-gpu-memory-to-ssd-for-llm-serv.md",
+  "represented_canonical_id": "arXiv:2611.32954",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
