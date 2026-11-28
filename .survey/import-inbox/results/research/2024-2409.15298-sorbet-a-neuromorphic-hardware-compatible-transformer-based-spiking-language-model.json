@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "aa5a77151e0809c452cf31ebe360491e7487664563d081a9bdab96c5feb3b1c2",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.md",
+  "status": "imported",
+  "source_sha256": "0b641a05ea48f9020187a526394e91919602fde02438f522bc0ce161a6f214d3",
   "canonical_id": "arXiv:2409.15298",
-  "worker_completed_at": "2026-11-28T08:10:00+09:00",
-  "worker_run_key": "muse-20261128-b2",
+  "paper_path": "papers/inference/99-other-inference-systems/2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-lang.md",
+  "lineage": "99-other-inference-systems",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-28T12:05:00+09:00",
+  "worker_run_key": "muse-20261128-cont-repair",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 4097,
-    "body_paragraphs": 23,
+    "body_chars": 5536,
+    "body_paragraphs": 27,
     "method_chars": 1609,
     "method_paragraphs": 5,
-    "evaluation_chars": 456,
+    "evaluation_chars": 1895,
     "limitation_chars": 310,
-    "insufficiency_flags": [
-      "評価説明量 456 < 500"
-    ]
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 456 < 500"
-  ],
-  "processed_at": "2026-11-27T22:46:01+00:00"
+  "processed_at": "2026-11-28T03:11:30+00:00"
 }

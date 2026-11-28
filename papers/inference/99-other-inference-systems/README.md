@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（822本）
+## 自動生成の論文一覧（826本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1822,6 +1822,10 @@
   実装：[✓](https://github.com/I-Halder/Demystifying-LLM-as-a-Judge-Analytically-Tractable-Model-for-Inference-Time-Scaling) ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の推論時に複数の回答を生成し、別の評価モデル（LLM-as-a-Judge）が良い回答を選ぶ方式は、学習済みのモデル重みを変更せずに品質を改善する手段である。
 
+- **2025-12 · [D2Pruner: Debiased Importance and Structural Diversity for MLLM Token Pruning](2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pru.md)**  
+  実装：[✓](https://github.com/EvelynZhang-epiclab/D2Pruner) ・ リポジトリ内被引用：0  
+  注意の位置バイアスを差し引いて重要度を直し、空間と意味のハイブリッドグラフ上で最大独立集合を選ぶことで、視覚トークンを90パーセント削っても局所化性能の85.7パーセントを保ち、プリフィルを最大5.09倍速くした学習不要のマルチモーダルモデル向けトークン枝刈り。
+
 - **2025-12 · [Compass: Co-Exploration of Mapping and Hardware for Heterogeneous Multi-Chiplet Accelerators Targeting LLM Inference Service Workloads](2025-2512.06093-compass-co-exploration-of-mapping-and-hardware-for-heterogeneous-multi-c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混在するリクエスト種類と可変系列長の提供ワークロードを、マイクロバッチと層の二次元グラフ符号化で表し、系列長分布に合わせて遺伝的探索でチップレット配置を最適化することで、エネルギー遅延積を先行探索手法から平均約63パーセント削減するマッピング探索フレームワーク。
@@ -2151,6 +2155,10 @@
 - **2025-07 · [Investigating Structural Pruning and Recovery Techniques for Compressing Multimodal Large Language Models: An Empirical Study](2025-2507.20749-investigating-structural-pruning-and-recovery-techniques-for-compressing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   言語バックボーンの重みと演算が大きな割合を占めるため、モデルの一部を実際に削除できれば、量子化とは別の経路でメモリ・計算負担を下げられる。15%削減・回復なしのLLaVAでは幅方向の平均指標57.79、層方向46.09であり、元モデル62.28からの低下は幅方向の方が小さい。
+
+- **2025-07 · [IMPACT: Importance-Aware Activation Space Reconstruction](2025-2507.03828-impact-importance-aware-activation-space-reconstruction.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  活性値の次元ごとの重要度を勾配で測り、重要度で重み付けした活性値共分散行列の固有ベクトルを再構成基底とする低ランク圧縮で、従来法より最大48.6パーセント大きなサイズ削減を同精度で達成し、同精度ではスループット最大35パーセント増とメモリ最大41パーセント減を示した研究。
 
 - **2025-06 · [SparseSSM: Efficient Selective Structured State Space Models Can Be Pruned in One-Shot](2025-2506.09613-sparsessm-efficient-selective-structured-state-space-models-can-be-prune.md)**  
   実装：[✓](https://github.com/CFinTech/SparseSSM) ・ リポジトリ内被引用：1  
@@ -2906,6 +2914,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   浮動小数点乗算の仮数部の積を落として定数で補い、乗算を1回の整数加算で近似する L-Mul を提案し、fp8 乗算より少ないゲート数で同等以上の精度を示すとともに、注意機構への学習なし置換で bf16 との平均差0.07パーセントに収まることを言語モデルで確認した研究。
 
+- **2024-09 · [Sorbet: A Neuromorphic Hardware-Compatible Transformer-Based Spiking Language Model](2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-lang.md)**  
+  実装：[✓](https://github.com/Kaiwen-Tang/Sorbet) ・ リポジトリ内被引用：0  
+  ソフトマックスと層正規化をビットシフト演算へ置き換え、重みを1ビット化することで、ニューロモルフィックハードウェアへ載せられる初のTransformer型スパイキング言語モデルを実現し、エネルギー試算でBERT比27.16倍の削減を示した研究。
+
 - **2024-09 · [Internalizing ASR with Implicit Chain of Thought for Efficient Speech-to-Speech Conversational LLM](2024-2409.17353-internalizing-asr-with-implicit-chain-of-thought-for-efficient-speech-to.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   音声入力から音声出力を生成する大規模言語モデルでは、音声を文字へ転写し、文字で回答を考え、再び音声へ変換する方式が使われる。RTX 3090を使った測定では、初回出力音声トークンの遅延が1.09秒から0.87秒へ低下した。
@@ -3189,6 +3201,10 @@
 - **2022-10 · [QuaLA-MiniLM: a Quantized Length Adaptive MiniLM](2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.md)**  
   実装：[✓](https://github.com/intel/intel-extension-for-transformers/tree/main/examples/huggingface/pytorch/question-answering/dynamic) ・ リポジトリ内被引用：0  
   MiniLMv2の自己注意関係蒸留、層別トークン削減と復元、INT8事後量子化を統合し、SQuAD1.1の質問応答でBERT-base比8.8倍のCPU推論高速化をF1低下約0.90ポイントで達成した研究。
+
+- **2022-09 · [SAMP: A Model Inference Toolkit of Post-Training Quantization for Text Processing via Self-Adaptive Mixed-Precision](2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-pr.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意を浮動小数点に残し全結合だけを量子化するモードを含む混合精度の組み合わせを、精度劣化を考慮する配分アルゴリズムで自動推奨し、カーネル融合と合わせてBERT系テキスト処理の推論をFasterTransformer比最大1.15倍まで速くする学習後量子化のツールキット。
 
 - **2022-03 · [DTQAtten: Leveraging Dynamic Token-based Quantization for Efficient Attention Architecture](2022-51ecca33c669-dtqatten-leveraging-dynamic-token-based-quantization-for-efficient-atten.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

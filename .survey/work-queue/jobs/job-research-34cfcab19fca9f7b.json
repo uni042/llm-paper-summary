@@ -35,10 +35,15 @@
   "selection_reason": "D2Pruner prunes visual tokens in MLLMs by combining a debiased attention-based importance score with maximal-independent-set selection over a spatial-semantic hybrid graph, reducing LLaVA-1.5-7B FLOPs by 74.2% while retaining 99.2% performance and sustaining 85.7% at 90% token reduction on InternVL localization; a direct inference-acceleration technique for multimodal LLMs.",
   "semantic_scholar_id": "c0cbf1e33a7366eeca082379637bb8ad7c74cd12",
   "source_url": "https://arxiv.org/abs/2512.19443",
-  "status": "ready",
+  "status": "superseded",
   "title": "D2Pruner: Debiased Importance and Structural Diversity for MLLM Token Pruning",
   "type": "research",
   "venue": "AAAI Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-28T03:19:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pru.md",
+  "represented_canonical_id": "arXiv:2512.19443",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

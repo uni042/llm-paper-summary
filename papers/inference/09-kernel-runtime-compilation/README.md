@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（369本）
+## 自動生成の論文一覧（370本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -761,6 +761,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization](2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md)**  
   実装：[✓](https://github.com/codezakh/gpu-forecasters) ・ リポジトリ内被引用：0  
   実GPU計測をLLMの相対速度予測で選択的に代替し、同じGPU計測予算で候補数を4倍へ広げて6課題中4課題で基準と同等以上の高速カーネルを発見する。
+
+- **2026-05 · [FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast](2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.md)**  
+  実装：[✓](https://github.com/Zishan-Shao/FlashSVD) ・ リポジトリ内被引用：0  
+  SVD圧縮したチェックポイントが速くならない原因を実行経路の細切れ化と診断し、共通因子表現・稠密KVデコード・MLPのパック実行・層単位グラフ再生で経路を細く組み直すことで、固定チェックポイントのままデコードを最大2.55倍速くした低ランク専用の推論ランタイム。
 
 - **2026-05 · [Exact Linear Attention](2026-2605.18848-exact-linear-attention.md)**  
   実装：[✓](https://github.com/yauntyour/Exact-Linear-Attention) ・ リポジトリ内被引用：0  

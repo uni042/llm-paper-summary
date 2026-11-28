@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "1cd011beb646d4d67fe6a5846f9387161d00c9994f052572c109b5f3c9d8a98e",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2025-2507.03828-impact-importance-aware-activation-space-reconstruction.md",
+  "status": "imported",
+  "source_sha256": "7732834d7e6e29ec824a65e3629c26811d12321e2ecd00fd0c20506a1213ace5",
   "canonical_id": "arXiv:2507.03828",
-  "worker_completed_at": "2026-11-28T08:10:00+09:00",
-  "worker_run_key": "muse-20261128-b2",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2507.03828-impact-importance-aware-activation-space-reconstruction.md",
+  "lineage": "99-other-inference-systems",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-28T12:06:16+09:00",
+  "worker_run_key": "muse-20261128-cont-repair",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 3556,
-    "body_paragraphs": 21,
+    "body_chars": 5039,
+    "body_paragraphs": 25,
     "method_chars": 1267,
     "method_paragraphs": 4,
-    "evaluation_chars": 447,
+    "evaluation_chars": 1930,
     "limitation_chars": 276,
-    "insufficiency_flags": [
-      "評価説明量 447 < 500"
-    ]
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 447 < 500"
-  ],
-  "processed_at": "2026-11-27T22:51:39+00:00"
+  "processed_at": "2026-11-28T03:13:09+00:00"
 }

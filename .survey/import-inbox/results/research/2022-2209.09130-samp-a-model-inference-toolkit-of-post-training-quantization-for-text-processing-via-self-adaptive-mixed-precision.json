@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "549cd7ab660fadcc93d34d31b9e6c0fbcb1f011d5356981124f895d347338c53",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.md",
+  "status": "imported",
+  "source_sha256": "c652a1253dd9712f2897bd5b2c4ee167430e9b4a8ef24e4ba6ac4e51126eecc0",
   "canonical_id": "arXiv:2209.09130",
-  "worker_completed_at": "2026-11-28T08:10:00+09:00",
-  "worker_run_key": "muse-20261128-b2",
+  "paper_path": "papers/inference/99-other-inference-systems/2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-pr.md",
+  "lineage": "99-other-inference-systems",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-28T12:06:16+09:00",
+  "worker_run_key": "muse-20261128-cont-repair",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 3678,
-    "body_paragraphs": 21,
+    "body_chars": 5268,
+    "body_paragraphs": 25,
     "method_chars": 1364,
     "method_paragraphs": 4,
-    "evaluation_chars": 468,
+    "evaluation_chars": 2058,
     "limitation_chars": 315,
-    "insufficiency_flags": [
-      "評価説明量 468 < 500"
-    ]
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 468 < 500"
-  ],
-  "processed_at": "2026-11-27T22:51:36+00:00"
+  "processed_at": "2026-11-28T03:09:51+00:00"
 }
