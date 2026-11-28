@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "18dc2de8ea3fec96131655dee82c7372b7ebfa24",
+  "base_commit": "ec5d7498d001e101e886f638b19ade74e9930548",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -137,6 +137,7 @@
     "2023-2305.14405-neuralmatrix-compute-the-entire-neural-networks-with-linear-matrix-operations-for-efficient-inference.json",
     "2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-photonic-transformer-accelerator.json",
     "2023-2306.01841-binary-and-ternary-natural-language-generation.json",
+    "2023-2306.13835-computron-serving-distributed-deep-learning-models-with-model-parallel-swapping.json",
     "2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based-language-models-on-cpus.json",
     "2023-2307.03712-int-fp-qsim-mixed-precision-and-formats-for-large-language-models-and-vision-transformers.json",
     "2023-2308.07470-symphony-optimized-dnn-model-serving-using-deferred-batch-scheduling.json",
@@ -173,6 +174,7 @@
     "2024-2403.12688-seven-pruning-transformer-model-by-reserving-sentinels.json",
     "2024-2404.05843-softmax-attention-with-constant-cost-per-token.json",
     "2024-2404.06709-cqil-inference-latency-optimization-with-concurrent-computation-of-quasi-independent-layers.json",
+    "2024-2404.10896-from-a-lossless-1-5-1-compression-algorithm-for-llama2-7b-weights-to-variable-precision-variable-range-compressed-numeri.json",
     "2024-2404.15420-xc-cache-cross-attending-to-cached-context-for-efficient-llm-inference.json",
     "2024-2404.16158-the-feasibility-of-implementing-large-scale-transformers-on-multi-fpga-platforms.json",
     "2024-2404.16629-implementing-and-optimizing-the-scaled-dot-product-attention-on-streaming-dataflow.json",
@@ -226,6 +228,7 @@
     "2024-2410.11857-llmbridge-reducing-costs-to-access-llms-in-a-prompt-centric-internet.json",
     "2024-2410.12982-flash-inference-near-linear-time-inference-for-long-convolution-sequence-models.json",
     "2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.json",
+    "2024-2410.13299-llm-rank-a-graph-theoretical-approach-to-pruning-large-language-models.json",
     "2024-2410.14725-rethinking-token-reduction-for-state-space-models.json",
     "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic-re-batching.json",
     "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic.json",
@@ -241,6 +244,7 @@
     "2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connected-layers.json",
     "2024-2411.14345-layer-pruning-with-consensus-a-triple-win-solution.json",
     "2024-2411.15100-xgrammar-flexible-and-efficient-structured-generation-engine-for-large.json",
+    "2024-2411.15785-a-method-for-building-large-language-models-with-predefined-kv-cache-capacity.json",
     "2024-2411.17773-efficient-multi-modal-large-language-models-via-visual-token-grouping.json",
     "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json",
     "2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.json",
@@ -274,6 +278,7 @@
     "2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.json",
     "2025-1efbe4ec3d0b-empiric-exploring-missing-pieces-in-kv-cache-compression-for-reducing-computation-storage-and-latency-in-long-context-ll.json",
     "2025-2501.01672-practical-secure-inference-algorithm-for-a-fine-tuned-large-language-model-based-on-fully-homomorphic-encryption.json",
+    "2025-2501.05248-deriving-coding-specific-sub-models-from-llms-using-resource-efficient-pruning.json",
     "2025-2501.07139-flexquant-elastic-quantization-framework-for-locally-hosted-llm-on-edge-devices.json",
     "2025-2501.08631-swsc-shared-weight-for-similar-channel-in-llm.json",
     "2025-2501.14205-serving-long-context-llms-at-the-mobile-edge-test-time-reinforcement-learning-based-model-caching-and-inference-offloadi.json",
@@ -56202,6 +56207,51 @@
         "processed_at": "2026-11-28T00:22:13+00:00"
       },
       "return_count": 4
+    },
+    "arXiv:2306.13835": {
+      "order": [
+        "2026-11-28T03:21:23+00:00",
+        "2023-2306.13835-computron-serving-distributed-deep-learning-models-with-model-parallel-swapping.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2404.10896": {
+      "order": [
+        "2026-11-28T03:22:30+00:00",
+        "2024-2404.10896-from-a-lossless-1-5-1-compression-algorithm-for-llama2-7b-weights-to-variable-precision-variable-range-compressed-numeri.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2410.13299": {
+      "order": [
+        "2026-11-28T03:23:38+00:00",
+        "2024-2410.13299-llm-rank-a-graph-theoretical-approach-to-pruning-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2411.15785": {
+      "order": [
+        "2026-11-28T03:24:45+00:00",
+        "2024-2411.15785-a-method-for-building-large-language-models-with-predefined-kv-cache-capacity.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2501.05248": {
+      "order": [
+        "2026-11-28T03:25:53+00:00",
+        "2025-2501.05248-deriving-coding-specific-sub-models-from-llms-using-resource-efficient-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69984,6 +70034,21 @@
     ],
     "arxiv:2605.08314": [
       "papers/inference/09-kernel-runtime-compilation/2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.md"
+    ],
+    "arxiv:2306.13835": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2306.13835-computron-serving-distributed-deep-learning-models-with-model-parallel-s.md"
+    ],
+    "arxiv:2404.10896": [
+      "papers/inference/16-weight-quantization-compression/2024-2404.10896-from-a-lossless-1-5-1-compression-algorithm-for-llama2-7b-weights-to-var.md"
+    ],
+    "arxiv:2410.13299": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2410.13299-llm-rank-a-graph-theoretical-approach-to-pruning-large-language-models.md"
+    ],
+    "arxiv:2411.15785": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2411.15785-a-method-for-building-large-language-models-with-predefined-kv-cache-cap.md"
+    ],
+    "arxiv:2501.05248": [
+      "papers/inference/99-other-inference-systems/2025-2501.05248-deriving-coding-specific-sub-models-from-llms-using-resource-efficient-p.md"
     ]
   }
 }

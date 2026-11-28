@@ -35,10 +35,15 @@
   "selection_reason": "LLM-Rank（MLPRank）はMLPを重み付き有向非循環グラフとして表し修正PageRank中心性でノード重要度を測る構造化剪定で、計算要求とメモリフットプリントを同時に削減し精度保持で既存剪定を上回るため、推論最適化のためのモデル圧縮に直接貢献する。",
   "semantic_scholar_id": "1f8d22855c22d4a9954cc3b48764cbc969466ddb",
   "source_url": "https://arxiv.org/abs/2410.13299",
-  "status": "ready",
+  "status": "superseded",
   "title": "LLM-Rank: A Graph Theoretical Approach to Pruning Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-28T03:27:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2024-2410.13299-llm-rank-a-graph-theoretical-approach-to-pruning-large-language-models.md",
+  "represented_canonical_id": "arXiv:2410.13299",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

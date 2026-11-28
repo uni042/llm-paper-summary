@@ -35,10 +35,15 @@
   "selection_reason": "Bounded-Cache TransformerはKVキャッシュ容量を事前に定めた上限へ動的に収め、メモリ使用量を抑えつつ推論品質とスループットを維持する。KVキャッシュ管理というLLM推論の中核への直接の貢献が確認できる",
   "semantic_scholar_id": "f7f3973c342a726caf586017ac3709e1347acf2a",
   "source_url": "https://arxiv.org/abs/2411.15785",
-  "status": "ready",
+  "status": "superseded",
   "title": "A Method for Building Large Language Models with Predefined KV Cache Capacity",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-28T03:27:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2411.15785-a-method-for-building-large-language-models-with-predefined-kv-cache-cap.md",
+  "represented_canonical_id": "arXiv:2411.15785",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

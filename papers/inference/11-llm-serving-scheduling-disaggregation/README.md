@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（693本）
+## 自動生成の論文一覧（694本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2743,6 +2743,10 @@
 - **2023-08 · [Symphony: Optimized DNN Model Serving using Deferred Batch Scheduling](2023-2308.07470-symphony-optimized-dnn-model-serving-using-deferred-batch-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   集中型スケジューラが期限内で発送を遅らせてバッチを太らせる非仕事保存型の調度と、エポック単位のモデル配置最適化で、混合モデル負荷の有効スループットを最大4.7倍にする推論サービング基盤。
+
+- **2023-06 · [Computron: Serving Distributed Deep Learning Models with Model Parallel Swapping](2023-2306.13835-computron-serving-distributed-deep-learning-models-with-model-parallel-s.md)**  
+  実装：[✓](https://github.com/dlzou/computron) ・ リポジトリ内被引用：0  
+  モデル並列で分散した複数大規模モデルのパラメータシャードを、クラスタ全体のCPU-GPUリンク帯域を使ってCPUメモリとGPUメモリの間で並列スワップすることで、GPUメモリ容量を超えるモデル集合を共有クラスタでサービングし、入れ替え時間を並列度に応じて短縮するシステム。
 
 - **2023-05 · [PruMUX: Augmenting Data Multiplexing with Model Compression](2023-2305.14706-prumux-augmenting-data-multiplexing-with-model-compression.md)**  
   実装：[✓](https://github.com/yushansu/PruMUX) ・ リポジトリ内被引用：0  

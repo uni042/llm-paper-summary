@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（284本）
+## 自動生成の論文一覧（285本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -1105,6 +1105,10 @@
 - **2024-10 · [LLMProxy: Reducing Cost to Access Large Language Models](2024-2410.11857-llmproxy-reducing-cost-to-access-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデル選択・文脈管理・意味キャッシュの3つのLLMコスト最適化を、双方向APIを持つプロキシLLMProxyへ集約する設計を提案し、WhatsApp実サービス運用と評価で文脈コスト30〜50%減などを示した研究。
+
+- **2024-10 · [LLM-Rank: A Graph Theoretical Approach to Pruning Large Language Models](2024-2410.13299-llm-rank-a-graph-theoretical-approach-to-pruning-large-language-models.md)**  
+  実装：[✓](https://github.com/davidbhoffmann/mlp-rank-pruning) ・ リポジトリ内被引用：0  
+  モデルを重み付き有向グラフへ写し、重み付きPageRankの中心性でニューロンの重要度を決めて構造化枝刈りを行う方式。LLM版はFFNを連結して扱い、OpenLLaMA-3B-v2で低スパース率においてSliceGPTとL1ノルム枝刈りを上回る精度保持を示した。
 
 - **2024-09 · [EchoAtt: Attend, Copy, then Adjust for More Efficient Large Language Models](2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

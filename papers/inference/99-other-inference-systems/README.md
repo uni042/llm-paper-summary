@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（826本）
+## 自動生成の論文一覧（827本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2628,6 +2628,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   基盤モデルはクライアント、LoRA行列だけはサーバーで暗号文計算する分割と、モデル抽出攻撃へ耐えるPrivate Linear 層により、ChatGLM2-6Bで1トークン1.61秒の秘匿推論を実現する方式。
 
+- **2025-01 · [Deriving Coding-Specific Sub-Models from LLMs using Resource-Efficient Pruning](2025-2501.05248-deriving-coding-specific-sub-models-from-llms-using-resource-efficient-p.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Wandaの校正データを対象領域のものへ替えるだけで、再学習なしに領域・言語特化のサブモデルを切り出せることを示した研究。50%の非構造化枝刈りで、最良サブモデルは全領域で領域別校正から得られ、言語別サブモデルは自言語のHumanEvalで最も高い精度を保った。
+
 - **2024-12 · [Sparse Checkpointing for Fast and Reliable MoE Training](2024-2412.15411-sparse-checkpointing-for-fast-and-reliable-moe-training.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   これらの最大値は比較方式・モデル・障害条件が異なるため、同一条件で「4×31×8倍」を掛け合わせられるわけではない。
@@ -3073,7 +3077,7 @@
   保存頻度を増やせば故障前に失う学習進捗は減るが、遠隔ストレージの集約帯域が不足すると保存そのものが長くなり、学習を妨げる。提案は単なる「メモリへ保存する」という発想ではない。
 
 - **2023-07 · [A Survey of Techniques for Optimizing Transformer Inference](2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   本論文は、Transformer推論を軽量化・高速化する手法を、モデルを作り直す方法から演算器の設計まで横断的に整理した43ページの文献調査である。例えばCoFiは引用元研究で約95%の疎性と約10倍の高速化を報告し、HMC-TranはV100のテンソルコアを利用するBERT-baseの92%疎性で3.68倍を報告する。
 
 - **2023-01 · [Alternating Updates for Efficient Transformers](2023-2301.13310-alternating-updates-for-efficient-transformers.md)**  

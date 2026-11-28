@@ -35,10 +35,15 @@
   "selection_reason": "一次要旨でLlama2 7B重みの可逆圧縮から発展した可変精度・可変範囲の圧縮数値型とFPGA実装が確認でき、LLM推論システムの計算量・メモリ・遅延の削減へ直接つながる具体的な機構を持つためacceptとした。",
   "semantic_scholar_id": "719fc92104adff461bcf04fdbef12bbbb59f2a1a",
   "source_url": "https://arxiv.org/abs/2404.10896",
-  "status": "ready",
+  "status": "superseded",
   "title": "From a Lossless (~1.5: 1) Compression Algorithm for Llama2 7B Weights to Variable Precision, Variable Range, Compressed Numeric Data Types for CNNs and LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-28T03:27:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2024-2404.10896-from-a-lossless-1-5-1-compression-algorithm-for-llama2-7b-weights-to-var.md",
+  "represented_canonical_id": "arXiv:2404.10896",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
