@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-28T00:23:33+00:00",
+  "generated_at": "2026-11-28T00:24:42+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -372,60 +372,6 @@
       "worker_run_key": "muse-final-20261124-b14w2"
     },
     {
-      "canonical_id": "arXiv:2209.09130",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2209.09130",
-      "returned_at": "2026-11-27T22:51:36+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 468 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3678,
-        "body_paragraphs": 21,
-        "method_chars": 1364,
-        "method_paragraphs": 4,
-        "evaluation_chars": 468,
-        "limitation_chars": 315,
-        "insufficiency_flags": [
-          "評価説明量 468 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.md",
-      "import_result_path": ".survey/import-inbox/results/research/2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
-      "canonical_id": "arXiv:2611.31089",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2611.31089",
-      "returned_at": "2026-11-28T00:04:38+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 461 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4729,
-        "body_paragraphs": 21,
-        "method_chars": 1889,
-        "method_paragraphs": 4,
-        "evaluation_chars": 461,
-        "limitation_chars": 316,
-        "insufficiency_flags": [
-          "評価説明量 461 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.json",
-      "worker_run_key": "muse-20261128-b3"
-    },
-    {
       "canonical_id": "arXiv:2611.01089",
       "title": null,
       "source_url": "https://arxiv.org/abs/2611.01089",
@@ -724,7 +670,7 @@
     },
     {
       "canonical_id": "arXiv:2611.31638",
-      "title": "Wavefront: Low-Rank Drafting with Parallel Causal Refinement for Speculative Decoding",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.31638",
       "returned_at": "2026-11-28T00:23:22+00:00",
       "return_count": 4,
@@ -751,7 +697,7 @@
     },
     {
       "canonical_id": "arXiv:2611.34092",
-      "title": "Improving Tail-Augmented Speculative Drafting with Hidden State Mixing and Gradient Detach",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.34092",
       "returned_at": "2026-11-28T00:23:23+00:00",
       "return_count": 4,
@@ -778,7 +724,7 @@
     },
     {
       "canonical_id": "arXiv:2611.30417",
-      "title": "ANOR: Scaling Sparse Attention with a GPU-PNM Computing Hierarchy",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.30417",
       "returned_at": "2026-11-28T00:23:25+00:00",
       "return_count": 4,
@@ -805,7 +751,7 @@
     },
     {
       "canonical_id": "arXiv:2611.33004",
-      "title": "LEGOSpec: A Composable and Efficient Framework for Speculative Draft Design and Training",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.33004",
       "returned_at": "2026-11-28T00:23:26+00:00",
       "return_count": 4,
@@ -832,7 +778,7 @@
     },
     {
       "canonical_id": "arXiv:2610.13778",
-      "title": "ReplaySSM: Cache SSM Inputs, Not State",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2610.13778",
       "returned_at": "2026-11-28T00:23:28+00:00",
       "return_count": 4,
@@ -856,6 +802,60 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cface9a454f3--2026-2610.13778-replayssm-cache-ssm-inputs-not-state.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-cface9a454f3--2026-2610.13778-replayssm-cache-ssm-inputs-not-state.json",
       "worker_run_key": "muse-20261128-b1"
+    },
+    {
+      "canonical_id": "arXiv:2611.31089",
+      "title": "Orthogonally Mixed Sign Coding with Progressive Residual Refinement for Transformer Weight Compression",
+      "source_url": "https://arxiv.org/abs/2611.31089",
+      "returned_at": "2026-11-28T00:24:38+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 461 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4729,
+        "body_paragraphs": 21,
+        "method_chars": 1889,
+        "method_paragraphs": 4,
+        "evaluation_chars": 461,
+        "limitation_chars": 316,
+        "insufficiency_flags": [
+          "評価説明量 461 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-db3237fa9374--2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-db3237fa9374--2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.json",
+      "worker_run_key": "muse-20261128-b3"
+    },
+    {
+      "canonical_id": "arXiv:2209.09130",
+      "title": "SAMP: A Model Inference Toolkit of Post-Training Quantization for Text Processing via Self-Adaptive Mixed-Precision",
+      "source_url": "https://arxiv.org/abs/2209.09130",
+      "returned_at": "2026-11-28T00:24:41+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 468 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3678,
+        "body_paragraphs": 21,
+        "method_chars": 1364,
+        "method_paragraphs": 4,
+        "evaluation_chars": 468,
+        "limitation_chars": 315,
+        "insufficiency_flags": [
+          "評価説明量 468 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed53ee4a9b4b--2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ed53ee4a9b4b--2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.json",
+      "worker_run_key": "muse-20261128-b2"
     }
   ]
 }
