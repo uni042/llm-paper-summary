@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-28T00:03:33+00:00",
+  "generated_at": "2026-11-28T00:07:45+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 22,
+  "count": 26,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -589,7 +589,7 @@
     },
     {
       "canonical_id": "arXiv:2611.30417",
-      "title": "ANOR: Scaling Sparse Attention with a GPU-PNM Computing Hierarchy",
+      "title": null,
       "source_url": "https://arxiv.org/abs/2611.30417",
       "returned_at": "2026-11-28T00:01:51+00:00",
       "return_count": 2,
@@ -613,6 +613,114 @@
       "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.md",
       "import_result_path": ".survey/import-inbox/results/research/2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.json",
       "worker_run_key": "muse-20261128-b3"
+    },
+    {
+      "canonical_id": "arXiv:2611.31089",
+      "title": "Orthogonally Mixed Sign Coding with Progressive Residual Refinement for Transformer Weight Compression",
+      "source_url": "https://arxiv.org/abs/2611.31089",
+      "returned_at": "2026-11-28T00:04:38+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 461 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4729,
+        "body_paragraphs": 21,
+        "method_chars": 1889,
+        "method_paragraphs": 4,
+        "evaluation_chars": 461,
+        "limitation_chars": 316,
+        "insufficiency_flags": [
+          "評価説明量 461 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.md",
+      "import_result_path": ".survey/import-inbox/results/research/2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.json",
+      "worker_run_key": "muse-20261128-b3"
+    },
+    {
+      "canonical_id": "arXiv:2611.31638",
+      "title": "Wavefront: Low-Rank Drafting with Parallel Causal Refinement for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.31638",
+      "returned_at": "2026-11-28T00:04:41+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 496 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5338,
+        "body_paragraphs": 21,
+        "method_chars": 2109,
+        "method_paragraphs": 4,
+        "evaluation_chars": 496,
+        "limitation_chars": 320,
+        "insufficiency_flags": [
+          "評価説明量 496 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.31638-wavefront-low-rank-drafting-with-parallel-causal-refinement-for-speculative-decoding.md",
+      "import_result_path": ".survey/import-inbox/results/research/2026-2611.31638-wavefront-low-rank-drafting-with-parallel-causal-refinement-for-speculative-decoding.json",
+      "worker_run_key": "muse-20261128-b3"
+    },
+    {
+      "canonical_id": "arXiv:2611.32083",
+      "title": "Inference-Aware Congestion Control for Distributed MoE Inference",
+      "source_url": "https://arxiv.org/abs/2611.32083",
+      "returned_at": "2026-11-28T00:05:50+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 493 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4487,
+        "body_paragraphs": 21,
+        "method_chars": 1580,
+        "method_paragraphs": 4,
+        "evaluation_chars": 493,
+        "limitation_chars": 398,
+        "insufficiency_flags": [
+          "評価説明量 493 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.md",
+      "import_result_path": ".survey/import-inbox/results/research/2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.json",
+      "worker_run_key": "muse-20261128-b2"
+    },
+    {
+      "canonical_id": "arXiv:2611.32295",
+      "title": "Norn: Context-Length-Aware Optimization of Weight and KV Cache Placement for Offloaded LLM Inference",
+      "source_url": "https://arxiv.org/abs/2611.32295",
+      "returned_at": "2026-11-28T00:05:53+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 489 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5119,
+        "body_paragraphs": 21,
+        "method_chars": 2087,
+        "method_paragraphs": 4,
+        "evaluation_chars": 489,
+        "limitation_chars": 392,
+        "insufficiency_flags": [
+          "評価説明量 489 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.md",
+      "import_result_path": ".survey/import-inbox/results/research/2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.json",
+      "worker_run_key": "muse-20261128-b2"
     }
   ]
 }

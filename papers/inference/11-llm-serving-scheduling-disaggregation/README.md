@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（691本）
+## 自動生成の論文一覧（692本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -785,6 +785,10 @@
 - **2026-11 · [TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming](2026-2611.26619-tidecache-efficient-hybrid-llm-serving-with-transparent-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ハイブリッドモデルのキャッシュ配分を仮想アドレス固定のまま物理ページ移動で動的に変え、有界状態層の計算中に全体注意層のKVを層単位で先読みすることで、TideCacheはHiCache付きSGLang比でエージェントのターン完了数を最大2.04倍にし、P50トークン当たり遅延を20から59パーセント減らした。
+
+- **2026-11 · [RankServe: Rank-Aware CPU-GPU Scheduling for Memory-Constrained MoE Serving](2026-2611.31869-rankserve-rank-aware-cpu-gpu-scheduling-for-memory-constrained-moe-servi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ランク圧縮でランクがばらついたMoEエキスパートのGPU常駐価値を、CPU実行か転送後GPU実行の安い方と比べた遅延節約量をバイト数で割って決め、ミス経路の選択と可変ランクのグループ実行を組み合わせることで、実機でTTFT 1.69〜2.29倍・TPOT 1.71〜2.48倍の高速化を示したCPU-GPU協調サービング。
 
 - **2026-11 · [LEAF: A Low-Latency Evaluation Architecture for Feedforward Block in Privacy-Preserving Transformer Inference](2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-priv.md)**  
   実装：[✓](https://github.com/zhanglr3/LEAF-HE) ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "低ランク圧縮したMoEチェックポイントのメモリ制約下サービングで、専門家のランクとトークン負荷からGPU常駐価値を評価して配置を決めるRankServeをvLLM上に実装し、TTFTとTPOTで最速ベースライン比1.7〜2.5倍の高速化を示している。",
   "semantic_scholar_id": "63ed3fc584bf107fe039d3c0e537030a0477b305",
   "source_url": "https://arxiv.org/abs/2611.31869",
-  "status": "ready",
+  "status": "superseded",
   "title": "RankServe: Rank-Aware CPU-GPU Scheduling for Memory-Constrained MoE Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T00:07:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.31869-rankserve-rank-aware-cpu-gpu-scheduling-for-memory-constrained-moe-servi.md",
+  "represented_canonical_id": "arXiv:2611.31869",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

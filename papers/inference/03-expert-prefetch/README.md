@@ -34,6 +34,10 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   実装：✓ ・ リポジトリ内被引用：2  
   OD-MoEは、GPUメモリが小さい複数のエッジ装置を協調させて混合専門家モデル（Mixture-of-Experts; MoE）を実行するための分散推論方式である。著者らの10ノード実験では、Mixtral-8x7Bの復号速度が平均3.6925トークン/秒となり、全専門家をGPUへ保持する比較方式の4.8900トークン/秒の75.51%に相当する。
 
+- **2026-08 · [SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration](2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md)**  
+  実装：[✓](https://anonymous.4open.science/r/SPICE) ・ リポジトリ内被引用：1  
+  一文解説： GPUに全専門家の重みが載らない混合専門家モデルで、SPICEは将来必要になる専門家を予測して早めに転送し、予測を外した場合も「近似して即時に進む」「CPUで正確に計算する」「GPUへ重みを移して正確に計算する」の三経路を選び、転送待ちを減らす。
+
 - **2026-06 · [SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models](2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md)**  
   実装：[✓](https://github.com/wei390/SpecPrefetch) ・ リポジトリ内被引用：1  
   SpecPrefetchは、混合専門家モデル（Mixture of エキスパート、MoE）の重みをGPUにすべて置けない環境で、必要な専門家をストレージから読み込む待ち時間を短縮する研究である。提案方式は、一つ前の層の状態から次層で使いそうな専門家を軽量な予測器で推定し、現在層の計算と専門家の非同期転送を重ねる。
@@ -55,10 +59,6 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 - **2026-10 · [DeepInfer-Mac: Running a 750B-Class MoE on a 24 GB Laptop](2026-2610.36564-deepinfer-mac-running-a-750b-class-moe-on-a-24-gb-laptop.md)**  
   実装：[✓](https://github.com/haoruilee/DeepInfer-Mac) ・ リポジトリ内被引用：0  
   750B級MoEの作業集合だけを24GBメモリに置き、専門家をSSDからGPUバッファへ直接読む実行系で、毎秒0.21から0.72トークンの生成と先行読みによる21.0パーセントの改善を実測した事例研究。
-
-- **2026-08 · [SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration](2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md)**  
-  実装：[✓](https://anonymous.4open.science/r/SPICE) ・ リポジトリ内被引用：0  
-  一文解説： GPUに全専門家の重みが載らない混合専門家モデルで、SPICEは将来必要になる専門家を予測して早めに転送し、予測を外した場合も「近似して即時に進む」「CPUで正確に計算する」「GPUへ重みを移して正確に計算する」の三経路を選び、転送待ちを減らす。
 
 - **2026-05 · [Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching](2020-2026.00101-efficient-moe-inference-on-single-consumer-grade-gpu-with-dynamic-expert-caching.md)**  
   実装：[✓](https://github.com/rzhang772/SMOE) ・ リポジトリ内被引用：0  
@@ -93,7 +93,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-10 · [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)**  
-  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：49  
+  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：50  
   ProMoEは数層先のルーティングから必要な専門家を予測し、CPUからGPUへ分割転送する。誤予測を止め、到着済みから実行して、重み転送待ちを計算の裏に隠す。
 
 ### 4年前（2022-12〜2023-11）
