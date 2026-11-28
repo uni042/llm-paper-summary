@@ -35,10 +35,15 @@
   "selection_reason": "ReKVはプリフィル／デコード分離におけるKV受け渡しについて、量子化したプリフィックスKV転送と境界状態の送信、デコード側でのサフィックス再計算を重ね合わせ、層ごとの転送精度と再計算の選択を最適化して8Kハンドオフレイテンシを最大3.65倍削減しており、分離サービングのKV転送に直接貢献する。",
   "semantic_scholar_id": "7231a862d791bd73dee3aac18fdccd4d368f537d",
   "source_url": "https://arxiv.org/abs/2611.08770",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReKV: Overlapping Quantized KV Transfer and Suffix Recomputation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T09:53:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.08770-rekv-overlapping-quantized-kv-transfer-and-suffix-recomputation.md",
+  "represented_canonical_id": "arXiv:2611.08770",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

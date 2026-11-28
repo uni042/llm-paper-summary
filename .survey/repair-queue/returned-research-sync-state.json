@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2c07e782530f795b37e8bf0d897b0f3317751350",
+  "base_commit": "a97ade3127fb4b28ee7b803641a4ae57068e7bd8",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1756,12 +1756,15 @@
     "2026-2611.08362-specctmc-exact-speculative-simulation-of-diffusion-language-model-continuous-time-markov-chains.json",
     "2026-2611.08363-strataflux-memory-hierarchy-native-low-bit-llm-inference.json",
     "2026-2611.08669-chainflow-few-step-latent-flow-matching-for-speculative-decoding.json",
+    "2026-2611.08770-rekv-overlapping-quantized-kv-transfer-and-suffix-recomputation.json",
     "2026-2611.09028-scout-before-you-route-predicting-task-success-and-token-count-from-a-small-llm-prefill.json",
     "2026-2611.09225-fused-softmax-for-efficient-quantized-attention.json",
+    "2026-2611.09474-nebula-distributed-position-independent-caching-for-llm-serving.json",
     "2026-2611.09598-transformer-fsq-discrete-latents-for-extreme-kv-cache-compression.json",
     "2026-2611.09825-bitdecoding-fp4-native-fp4-kv-cache-decoding-via-algorithm-system-co-design.json",
     "2026-2611.10096-coordinated-mixed-precision-kv-cache-quantization-for-efficient-llm-based-multi-agent-systems.json",
     "2026-2611.10165-autoematic-runtime-adaptive-mixed-precision-llm-inference-via-automatic-exponent-mantissa-refinement.json",
+    "2026-2611.10178-the-storage-view-of-kv-cache-characterizing-cache-behavior-across-llm-workloads.json",
     "2026-2611.10432-d-real-acceptance-length-optimization-with-unbiased-gradients-for-speculative-decoding.json",
     "2026-2611.10511-calfa-kv-joint-calibration-and-fisher-guided-anchors-for-1-bit-kv-cache-compression.json",
     "2026-2611.10848-multiturnroute-a-platform-for-building-and-evaluating-multi-turn-llm-routers.json",
@@ -1781,6 +1784,8 @@
     "2026-2611.15069-difit-distribution-fidelity-guided-visual-token-pruning-for-multimodal-large-language-models.json",
     "2026-2611.15569-tracekv-policy-preserving-low-rank-kv-cache-compression-for-reasoning-vision-language-models.json",
     "2026-2611.16384-beyond-compressing-everything-contrastive-memory-learning-for-selective-context-compression.json",
+    "2026-2611.18482-mmflash-faster-speculative-decoding-for-vision-language-models.json",
+    "2026-2611.20006-glance-then-select-evidence-tempered-visual-token-selection-for-extremely-compressed-multimodal-llms.json",
     "2026-2611.22019-computed-permutation-trellis-coding-near-optimal-quantization-from-two-multiplications-and-a-64-byte-table.json",
     "2026-2611.22086-hycoinfer-cloud-edge-collaborative-inference-for-large-language-models-on-heterogeneous-gpu-fpga-architectures.json",
     "2026-2611.22191-risa-recoverable-sparse-attention-for-block-diffusion-language-models.json",
@@ -56661,6 +56666,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.08770": {
+      "order": [
+        "2026-11-28T09:49:14+00:00",
+        "2026-2611.08770-rekv-overlapping-quantized-kv-transfer-and-suffix-recomputation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.09474": {
+      "order": [
+        "2026-11-28T09:50:02+00:00",
+        "2026-2611.09474-nebula-distributed-position-independent-caching-for-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.10178": {
+      "order": [
+        "2026-11-28T09:50:49+00:00",
+        "2026-2611.10178-the-storage-view-of-kv-cache-characterizing-cache-behavior-across-llm-workloads.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.18482": {
+      "order": [
+        "2026-11-28T09:51:37+00:00",
+        "2026-2611.18482-mmflash-faster-speculative-decoding-for-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.20006": {
+      "order": [
+        "2026-11-28T09:52:24+00:00",
+        "2026-2611.20006-glance-then-select-evidence-tempered-visual-token-selection-for-extremely-compressed-multimodal-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70806,6 +70856,21 @@
     "arxiv:2611.08307": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2611.08307-measured-coupling-for-parallel-decoding-in-diffusion-language-models.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2611.08307-measured-coupling-for-parallel-decoding-in-diffusion-language-models.md"
+    ],
+    "arxiv:2611.08770": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.08770-rekv-overlapping-quantized-kv-transfer-and-suffix-recomputation.md"
+    ],
+    "arxiv:2611.09474": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.09474-nebula-distributed-position-independent-caching-for-llm-serving.md"
+    ],
+    "arxiv:2611.10178": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.10178-the-storage-view-of-kv-cache-characterizing-cache-behavior-across-llm-wo.md"
+    ],
+    "arxiv:2611.18482": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.18482-mmflash-faster-speculative-decoding-for-vision-language-models.md"
+    ],
+    "arxiv:2611.20006": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2611.20006-glance-then-select-evidence-tempered-visual-token-selection-for-extremel.md"
     ]
   }
 }

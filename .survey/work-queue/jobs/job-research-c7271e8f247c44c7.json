@@ -35,10 +35,15 @@
   "selection_reason": "本番・公開の11種のトレースを用い、KVキャッシュの再利用元・再帰タイミング・有効寿命・フットプリントをブロック粒度で特性評価し、GPUメモリを超えてDRAM・SSD・遠隔ストレージへ広がる階層的KVキャッシュの保持・回収・配置方針に必要な実行時文脈を明らかにした計測研究であり、推論基盤の計測への直接貢献が一次要旨で具体的に確認できる。",
   "semantic_scholar_id": "a5926c8242d4186b238eefb3d9c2c348933b07a0",
   "source_url": "https://arxiv.org/abs/2611.10178",
-  "status": "ready",
+  "status": "superseded",
   "title": "The Storage View Of KV Cache: Characterizing Cache Behavior Across LLM Workloads",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T09:53:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.10178-the-storage-view-of-kv-cache-characterizing-cache-behavior-across-llm-wo.md",
+  "represented_canonical_id": "arXiv:2611.10178",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

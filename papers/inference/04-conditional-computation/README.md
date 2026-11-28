@@ -182,6 +182,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：[✓](https://github.com/tianyi-lab/PoLar) ・ リポジトリ内被引用：1  
   本論文は、学習済みの各層を関数とみなし、その呼出し順と回数を入力に応じて変える「層プログラム（Program-of-Layers; PoLar）」を提案する。Qwen1.5-MoE-A2.7B-Chatの24層を対象にした実測では、予測器・埋め込み器・候補探索を含む追加費用は合計3.05ミリ秒、通常の全層実行の0.8%だった。
 
+- **2026-06 · [Moving Beyond Diversity: Visual Token Pruning as Subspace Reconstruction for Efficient VLMs](2026-2606.18681-moving-beyond-diversity-visual-token-pruning-as-subspace-reconstruction-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  視覚トークンの枝刈りを、大きさの情報を含めて元の特徴空間を近似する列部分集合選択として解き直し、関連度の低いトークンを優遇する反関連度と組み合わせることで、94パーセント削減でも基準性能の約95パーセントを保つ方式である。
+
 - **2026-05 · [Gated Subspace Inference for Transformer Acceleration](2026-2605.03109-gated-subspace-inference-for-transformer-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（LLM）のバッチサイズ1の逐次復号では、GPUの計算能力よりも重み行列を高帯域メモリ（HBM）から読む費用が律速になりやすい。Gated Subspace Inference（GSI）は、各層の活性化を低次元基底への射影と残差に分解し、残差が十分小さいトークンだけ、事前計算した低次元の重み像を使う方式である。
@@ -423,10 +427,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2026-06 · [One Layer's Trash is Another Layer's Treasure: Adaptive Layer-wise Visual Token Selection in LVLMs](2026-2606.14277-one-layer-s-trash-is-another-layer-s-treasure-adaptive-layer-wise-visual.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークンを捨てず層ごとに飛ばす適応型の選択方式で、各層が低ランク近似の注意で必要な領域だけを処理し、89パーセント圧縮でも元の精度の96.7パーセントを保った。
-
-- **2026-06 · [Moving Beyond Diversity: Visual Token Pruning as Subspace Reconstruction for Efficient VLMs](2026-2606.18681-moving-beyond-diversity-visual-token-pruning-as-subspace-reconstruction-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  視覚トークンの枝刈りを、大きさの情報を含めて元の特徴空間を近似する列部分集合選択として解き直し、関連度の低いトークンを優遇する反関連度と組み合わせることで、94パーセント削減でも基準性能の約95パーセントを保つ方式である。
 
 - **2026-06 · [Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs](2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-.md)**  
   実装：[✓](https://github.com/Junzhou-Chen/ST_Merge) ・ リポジトリ内被引用：0  
