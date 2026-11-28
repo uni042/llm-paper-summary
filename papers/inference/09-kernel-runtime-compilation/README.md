@@ -1302,13 +1302,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/microsoft/T-MAC) ・ リポジトリ内被引用：37  
   重みのみを低ビット量子化した大規模言語モデルでは、重みは1〜4ビットでも活性値は8〜16ビット以上の精度を保つことが多い。論文はカーネルの最大6.6倍、平均3.6倍の改善、モデル全体で条件により2〜4倍の生成速度改善を報告する。
 
+- **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
+  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：36  
+  Any-Precision LLMは、同じ大規模言語モデルを複数の量子化精度で運用する場合のメモリと作成費用を削減する研究である。Llama-2-7Bの3～8ビット6種類を個別配置する場合29.9GBに対し、共通配置では8.4GBとなり、3.56倍の容量節約を報告する。
+
 - **2024-10 · [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md)**  
   実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：36  
   一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
-
-- **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
-  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：35  
-  Any-Precision LLMは、同じ大規模言語モデルを複数の量子化精度で運用する場合のメモリと作成費用を削減する研究である。Llama-2-7Bの3～8ビット6種類を個別配置する場合29.9GBに対し、共通配置では8.4GBとなり、3.56倍の容量節約を報告する。
 
 - **2024-05 · [Large Language Model Pruning](2024-2406.00030-large-language-model-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：34  
@@ -1487,7 +1487,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：955  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：956  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  

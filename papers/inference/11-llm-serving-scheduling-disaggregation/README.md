@@ -32,13 +32,13 @@
   実装：✓ ・ リポジトリ内被引用：16  
   プリフィル・通信・デコードを共通の「トークン速度」で観測し、突発負荷では既存デコードGPUを一時的なプリフィル処理へ転用して、新規GPU起動の遅れを埋める自動スケーリング方式。
 
+- **2026-09 · [GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving](2025-2508.16449-greenllm-slo-aware-dvfs-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：15  
+  GreenLLMは、プリフィルとデコードの負荷を入力長・出力TPS・P95トークン間時間から観測し、各段階のSLO内でGPU周波数を別々に選ぶ二重帰還制御により、過剰な高周波数動作とエネルギーを減らす。
+
 - **2025-12 · [TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale](2025-2512.18194-tract-rack-scale-cxl-shared-kv.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   CXL Type-3共有メモリをプリフィル・デコード間KV転送路とラック共有接頭辞キャッシュに兼用し、GPU–CXL直接DMAでRDMAのNICホップを除去するサービング方式。
-
-- **2026-09 · [GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving](2025-2508.16449-greenllm-slo-aware-dvfs-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  GreenLLMは、プリフィルとデコードの負荷を入力長・出力TPS・P95トークン間時間から観測し、各段階のSLO内でGPU周波数を別々に選ぶ二重帰還制御により、過剰な高周波数動作とエネルギーを減らす。
 
 - **2026-03 · [Parallelizing Tool Execution and LLM Generation for Low-Latency Agent Serving](2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
@@ -1808,6 +1808,10 @@
   実装：✓ ・ リポジトリ内被引用：14  
   PolyServeは、LLM配信サービスに複数の遅延保証階層がある場合に、要求をどのサーバへ送るか、各階層へ何台のサーバを割り当てるかを共同で制御する方式である。SLO達成率90%の点で、既存方式に対する有効処理量（有効スループット）はプリフィル・デコード分離構成で平均1.23倍、同居構成で平均1.18倍である。
 
+- **2025-03 · [throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving](2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md)**  
+  実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：14  
+  固定した最大周波数でGPUを動かすと低負荷時に余分な電力を使うが、単純に周波数を下げると同時要求数やKVキャッシュ量が増えたとき遅延が悪化する。著者らは、要求の生成長を予測し、将来の各復号反復におけるバッチサイズとKVキャッシュ使用量を推定する。
+
 - **2025-04 · [FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling](2025-2504.03775-flowkv-low-latency-transfer-load-aware.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   KVキャッシュを連続セグメントへ寄せてNCCL転送をまとめ、全体負荷に応じてプリフィル／デコード役割も切り替える分離推論基盤。転送遅延を最大96.8%削減し、LongBenchで15.2〜48.9%短縮。
@@ -1815,10 +1819,6 @@
 - **2025-04 · [Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving](2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md)**  
   実装：[✓](https://github.com/eddiegaoo/Apt-Serve) ・ リポジトリ内被引用：13  
   KVキャッシュと半分の容量で済む隠れ状態キャッシュを反復ごとに切り替え、待機時間・メモリ量に基づく近似比2の適応バッチ編成でTTFTのSLO崩壊を抑え、有効スループットをvLLM比最大8.8倍へ高める。
-
-- **2025-03 · [throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving](2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md)**  
-  実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：13  
-  固定した最大周波数でGPUを動かすと低負荷時に余分な電力を使うが、単純に周波数を下げると同時要求数やKVキャッシュ量が増えたとき遅延が悪化する。著者らは、要求の生成長を予測し、将来の各復号反復におけるバッチサイズとKVキャッシュ使用量を推定する。
 
 - **2025-03 · [Teola: Towards End-to-End Optimization of LLM-based Applications](2024-2407.00326-teola.md)**  
   実装：[✓](https://github.com/NetX-lab/Ayo) ・ リポジトリ内被引用：13  
@@ -2128,6 +2128,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   LeMixは継続学習と推論を同一GPU群へ共置し、事前予測した空き時間・応答遅延・メモリ量でタスク配置と実行順を調整する。固定分離比でスループット最大3.53倍、SLO達成率最大2.12倍を報告。
 
+- **2025-07 · [A Thermal-aware Workload Scheduler for High-performance LLM Inference in Cooling-regulated Datacenters](2025-a06f210bac8b-a-thermal-aware-workload-scheduler-for-high-performance-llm-inference-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  本研究は、データセンターの冷却設定温度を高めることで冷却電力を節約しようとすると、GPUの熱保護動作（thermal throttling）が逆に推論処理量を低下させる、という運用上の競合を扱う。従来の推論スケジューラはGPU利用率とトークン処理量を最適化しても、この熱的な履歴状態を明示的には考慮しない。
+
 - **2025-06 · [Near-Optimal Online Deployment and Routing for Streaming LLMs](2025-2506.17254-near-optimal-online-deployment-and-routing-for-streaming-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   流入するモデル群から同時稼働数の上限内で段階ごとに配備集合を楽観的に選び、段階内では予算と処理上限を満たす線形計画で問合せを振り分ける二層の方式で、後悔が問合せ数の三分の二乗の水準という理論の下限と一致する近最適性を示した。
@@ -2207,10 +2211,6 @@
 - **2025-07 · [Toppings: CPU-Assisted, Rank-Aware Adapter Serving for LLM Inference](2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   アダプタ読み込みの裏でCPUに適応計算を先行させて読み込み待ちを隠し、ランクからデコード遅延を予測する性能モデルで要求の配置先を選ぶことで、多人数向けアダプタ提供の平均遅延を最大1.7倍改善し、目標達成率99パーセントを達成した提供基盤。
-
-- **2025-07 · [A Thermal-aware Workload Scheduler for High-performance LLM Inference in Cooling-regulated Datacenters](2025-a06f210bac8b-a-thermal-aware-workload-scheduler-for-high-performance-llm-inference-in.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  本研究は、データセンターの冷却設定温度を高めることで冷却電力を節約しようとすると、GPUの熱保護動作（thermal throttling）が逆に推論処理量を低下させる、という運用上の競合を扱う。従来の推論スケジューラはGPU利用率とトークン処理量を最適化しても、この熱的な履歴状態を明示的には考慮しない。
 
 - **2025-06 · [On-the-Fly Adaptive Distillation of Transformer to Dual-State Linear Attention for Long-Context LLM Serving](2025-2506.09316-on-the-fly-adaptive-distillation-of-transformer-to-dual-state-linear-att.md)**  
   実装：[✓](https://github.com/utnslab/DSLA-Serve) ・ リポジトリ内被引用：1  
@@ -2383,7 +2383,7 @@
   Llumnixは、複数のGPU実行単位で大規模言語モデルを提供するとき、要求を最初に振り分けて終わりにせず、生成途中でも別の実行単位へ移動するスケジューラである。
 
 - **2024-03 · [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：218  
+  実装：✓ ・ リポジトリ内被引用：219  
   本研究は、対話型の大規模言語モデル（LLM）において、利用者が同じ会話を再開するたびに過去の文章を読み直して注意機構の鍵・値（KV）を作り直す無駄を、会話状態の耐久保存で削減する。原著が調べたShareGPT会話では73%が複数ターンで、長く続いた会話の新規ターンでは過去の内容に由来する再計算が事前計算時間の最大99%に達する。
 
 - **2024-01 · [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)**  
@@ -2391,7 +2391,7 @@
   要求到着時にモデルをGPUへ読み込むサーバーレス環境で、チェックポイントをGPU近くのSSD / DRAMへキャッシュし、高速読み込み器とモデル所在地を考慮した要求配置、生成途中要求の移動を組み合わせてモデル起動待ちを短縮するシステム。
 
 - **2024-08 · [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](2024-2408.00741-dynamollm.md)**  
-  実装：✓ ・ リポジトリ内被引用：131  
+  実装：✓ ・ リポジトリ内被引用：132  
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-01 · [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](2024-2401.11181-tetriinfer.md)**  
@@ -2443,7 +2443,7 @@
   Pensieveは、会話型の大規模言語モデルを複数往復にわたって提供するとき、前回までの履歴を毎回最初から入力処理する重複計算を減らす状態保持型の推論提供システムである。
 
 - **2024-02 · [INFERCEPT: Efficient Intercept Support for Augmented Large Language Model Inference](2024-2402.01869-infercept-intercept-aware-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：72  
+  実装：✓ ・ リポジトリ内被引用：73  
   外部ツールや人間応答を待つ間に生成が中断される拡張LLMで、KVキャッシュをGPUに保持する、CPUへ退避する、破棄して再計算するという三つの選択肢を、GPUメモリの時間積で表した浪費量を基準に要求ごとに切り替える推論基盤。
 
 - **2024-01 · [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md)**  
@@ -2554,6 +2554,10 @@
   実装：✓ ・ リポジトリ内被引用：12  
   要点: この研究は、vLLMのような各GPU内スケジューラを改良するのではなく、その一段手前の「どのLLMインスタンスへ要求を送るか」を最適化する。
 
+- **2024-07 · [SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving](2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：12  
+  RPSとGPU周波数からp95/p99遅延を予測し、25生成反復ごとにSLOを満たす最低周波数へDVFSする方式。GPT-J-6B＋A100/A30の実機配信で、最大周波数運用比22.8〜45.5%のエネルギー削減を示す。
+
 - **2024-03 · [Optimizing LLM Queries in Relational Data Analytics Workloads](2024-2403.05821-optimizing-llm-queries-in-relational-data-analytics-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   理論上の最適解を探す最適接頭辞ヒット再帰（Optimal Prefix Hit Recursion、OPHR）は組合せ爆発を起こすため、実用方式として貪欲群再帰（Greedy Group Recursion、GGR）を設計する。
@@ -2561,10 +2565,6 @@
 - **2024-10 · [Fast Inference for Augmented Large Language Models](2024-2410.18248-lamps.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   API待機時のKV処理方式を予測してメモリ時間積で要求を順位付けし、拡張LLM推論の遅延をINFERCEPT比27〜85%削減する。
-
-- **2024-07 · [SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving](2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
-  RPSとGPU周波数からp95/p99遅延を予測し、25生成反復ごとにSLOを満たす最低周波数へDVFSする方式。GPT-J-6B＋A100/A30の実機配信で、最大周波数運用比22.8〜45.5%のエネルギー削減を示す。
 
 - **2024-06 · [Slice-Level Scheduling for High-Throughput and Load-Balanced LLM Serving](2024-2406.13511-slice-level-scheduling-for-high-throughput-and-load-balanced-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：11  

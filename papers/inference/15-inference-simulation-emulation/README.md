@@ -412,6 +412,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  
   本研究が対象とするのは、あらかじめ処理する要求集合が分かっているオフライン推論であり、複数の大規模言語モデル（LLM）を一つのアプリケーション内で使う状況である。単一モデルの要求順序を最適化するだけでは、モデル間のGPU分配を決められない。SamuLLMはこれらを一つの計画問題として扱う。
 
+- **2025-05 · [DECA: A Near-Core LLM Decompression Accelerator Grounded on a 3D Roofline Model](2025-2505.19349-deca-a-near-core-llm-decompression-accelerator-grounded-on-a-3d-roofline.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  圧縮重みの解凍をコア近傍アクセラレータへ逃がし、アウトオブオーダ起動で遅延を隠すDECAと、三資源で性能を説明する三次元ルーフサーフェスモデルにより、圧縮行列演算を最大4倍、70B級モデルの次トークン生成を1.6倍から2.6倍高速化する。
+
 - **2025-01 · [Serving Long-Context LLMs at the Mobile Edge: Test-Time Reinforcement Learning-based Model Caching and Inference Offloading](2025-2501.14205-serving-long-context-llms-at-the-mobile-edge-test-time-reinforcement-lea.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈エージェント向けに、エッジへのモデルキャッシュとエッジ／クラウド間の推論オフロードをテスト時にも学習する強化学習T2DRLで一体に決め、二重オランダ式オークションで資源配分を補うことで、比較対象よりシステム費用を少なくとも30パーセント下げる枠組み。
@@ -431,10 +435,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-06 · [Semantic Scheduling for LLM Inference](2025-2506.12204-semantic-scheduling-for-llm-inference.md)**  
   実装：[✓](https://github.com/Wenyueh/latency_optimization_with_priority_constraints) ・ リポジトリ内被引用：1  
   本論文は、LLMのオンライン推論に到着する要求を単なる先着順や予測実行時間順ではなく、要求文面から推定される緊急度を第一の優先基準として実行するスケジューラを提案する。実データ条件で最も緊急な要求の正規化待ち時間がFCFS比最大167.3倍短縮した条件がある。
-
-- **2025-05 · [DECA: A Near-Core LLM Decompression Accelerator Grounded on a 3D Roofline Model](2025-2505.19349-deca-a-near-core-llm-decompression-accelerator-grounded-on-a-3d-roofline.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  圧縮重みの解凍をコア近傍アクセラレータへ逃がし、アウトオブオーダ起動で遅延を隠すDECAと、三資源で性能を説明する三次元ルーフサーフェスモデルにより、圧縮行列演算を最大4倍、70B級モデルの次トークン生成を1.6倍から2.6倍高速化する。
 
 - **2025-04 · [MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference](2025-2504.09775-mist-a-co-design-framework-for-heterogeneous-multi-stage-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -499,11 +499,11 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Vidur: A Large-Scale Simulation Framework For LLM Inference](2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：83  
+  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：84  
   Vidurは、大規模言語モデル（LLM）をどのGPUに何台配置し、どの並列化方式・バッチ化方式で処理するかを、候補ごとに実機で運転せず比較するためのシミュレータである。LLaMA2-7B/70B、InternLM-20B、Qwen-72Bを使った実機比較では、オンライン負荷での正規化要求遅延の誤差は最大でも9%未満と報告される。
 
 - **2023-12 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
-  実装：[✓](https://github.com/PrincetonUniversity/LLMCompass) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/PrincetonUniversity/LLMCompass) ・ リポジトリ内被引用：34  
   入力はモデルの計算グラフと装置構成であり、出力は演算子別・推論段階別の遅延、チップ面積、製造費用の推定値である。性能推定と面積・費用推定を同一の設計空間で組み合わせるため、最速のチップだけでなく、価格に見合った推論性能を評価できる。
 
 - **2024-08 · [LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale](2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md)**  

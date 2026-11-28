@@ -16,13 +16,13 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：12  
   HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。
 
+- **2026-03 · [A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs](2025-2502.09921-hilos-near-storage-processing.md)**  
+  実装：[✓](https://github.com/hongsunjang/HILOS/tree/asplos26) ・ リポジトリ内被引用：7  
+  市販SmartSSD上で自己注意をKVの近くへ移し、X-キャッシュと遅延KV書戻しを組み合わせることで、長文脈オフライン推論を通常SSD型オフロード比で最大7.86倍高速化する。
+
 - **2026-08 · [HBF Sucks? A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving](2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md)**  
   実装：[✓](https://github.com/pku-lemonade/TokenSim) ・ リポジトリ内被引用：6  
   SSD型KV退避の保存先だけをHBFへ置換すると、近接メモリ減少・書込主体化・熱／耐久制約が利点を上回り、遅延が2〜5.5倍悪化することを本番トレースで示す。
-
-- **2026-03 · [A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs](2025-2502.09921-hilos-near-storage-processing.md)**  
-  実装：[✓](https://github.com/hongsunjang/HILOS/tree/asplos26) ・ リポジトリ内被引用：6  
-  市販SmartSSD上で自己注意をKVの近くへ移し、X-キャッシュと遅延KV書戻しを組み合わせることで、長文脈オフライン推論を通常SSD型オフロード比で最大7.86倍高速化する。
 
 - **2026-05 · [CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving](2026-2603.28768-craft-cost-aware-expert-replication.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

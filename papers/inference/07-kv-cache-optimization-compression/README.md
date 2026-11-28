@@ -2847,6 +2847,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈LLMのKVキャッシュは系列長に比例して大きくなるため、重み量子化とは別にKVの保存精度を下げる必要がある。
 
+- **2024-10 · [ALISE: Accelerating Large Language Model Serving with Speculative Scheduling](2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-schedul.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  出力長を検索型予測器で推定し、残り時間の短いジョブを優先するプリエンプティブなスケジューリングと、待ち時間に応じたKVキャッシュのスワップで、ヘッドオブライン・ブロッキングを解くサービング方式。vLLM比で最大2.1倍のスループット。
+
 - **2024-07 · [Let the Code LLM Edit Itself When You Edit the Code](2024-2407.03157-let-the-code-llm-edit-itself-when-you-edit-the-code.md)**  
   実装：[✓](https://github.com/zhenyuhe00/PIE) ・ リポジトリ内被引用：1  
   本研究は、開発者が既存コードの途中に行を挿入・削除した直後に、コード補完用の大規模言語モデル（LLM）が次の行を予測し直す場面を対象とする。
@@ -2874,10 +2878,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-10 · [BATON: Enhancing Batch-wise Inference Efficiency for Large Language Models via Dynamic Re-Batching](2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   完了したクエリの枠へ新規クエリを差し込む動的リバッチを、ベクトル整形とプリフィル済みKVの埋め込みで実現し、追加パラメータなしにアイドル計算をほぼゼロにした研究。
-
-- **2024-10 · [ALISE: Accelerating Large Language Model Serving with Speculative Scheduling](2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-schedul.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  出力長を検索型予測器で推定し、残り時間の短いジョブを優先するプリエンプティブなスケジューリングと、待ち時間に応じたKVキャッシュのスワップで、ヘッドオブライン・ブロッキングを解くサービング方式。vLLM比で最大2.1倍のスループット。
 
 - **2024-07 · [Token-Picker: Accelerating Attention in Text Generation with Minimized Memory Transfer via Probability Estimation](2024-2407.15131-token-picker-accelerating-attention-in-text-generation-with-minimized-me.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

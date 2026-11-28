@@ -115,7 +115,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   MxMoEは、混合専門家モデル（Mixture of エキスパート; MoE）の推論において、モデルの重みを小さくするだけでなく、実際にGPU上で計算が速くなる量子化配置を選ぶ研究である。専門家演算の処理量は16ビット基準に対して、512トークン条件で1.6～2.7倍、8192トークン条件で3.0～3.4倍となった。
 
 - **2025-05 · [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)**  
-  実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：24  
   MoEQuantは、混合専門家モデル（Mixture of エキスパート、MoE）を低ビットの重みで動かすときに生じる、専門家間の較正例不足と専門家内の入力重要度の違いを同時に扱う学習後量子化（Post-学習 量子化、PTQ）の枠組みである。
 
 - **2025-07 · [EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models](2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md)**  
@@ -177,7 +177,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-10 · [Mixture Compressor for Mixture-of-Experts LLMs Gains More](2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md)**  
-  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：58  
+  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：59  
   第一に、専門家ごとに必要な重み精度が異なるため、全専門家を同じビット幅へ量子化する必要はない。原著表4のMixtral 8×7Bでは、平均2.54ビットのPMQだけで平均ゼロショット正解率67.50%、保存重み16.24GB、活性化パラメータ4.53GB、基準比1.63倍の速度となる。
 
 - **2024-04 · [SEER-MoE: Sparse Expert Efficiency through Regularization for Mixture-of-Experts](2024-2404.05089-seer-moe-sparse-expert-efficiency-through-regularization-for-mixture-of-.md)**  

@@ -2739,7 +2739,7 @@
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：108  
+  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：109  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
@@ -2759,7 +2759,7 @@
   RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
-  実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts-in-LLMs) ・ リポジトリ内被引用：39  
+  実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts-in-LLMs) ・ リポジトリ内被引用：40  
   全パラメータ数を大きくしても活性化する部分を限定できるが、実機では選択された専門家へのトークン転送、専門家ごとの負荷の偏り、GPU間の全対全通信、巨大な専門家重みの配置・退避が新たな律速になる。
 
 - **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
