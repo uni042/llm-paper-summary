@@ -254,20 +254,20 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   MoEの専門家を状態のない独立GPUサービスへ分離し、CPU不要のIBGDA一対一通信、動的バッチ、専門家複製で、GPU単位の伸縮・負荷分散・障害迂回を可能にする大規模MoEサービング方式。
 
 - **2025-03 · [Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling](2025-2503.04398-semantic-parallelism.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：14  
   トークンと専門家の活性化親和性を事前学習し、専門家配置と要求・トークン配置を協調させてMoEの全対全通信を削減する推論方式。
 
 - **2025-09 · [GRACE-MoE: Grouping and Replication with Locality-Aware Routing for Efficient Distributed MoE Inference](2025-2509.25041-grace-moe-grouping-and-replication-with-locality-aware-routing-for-efficient-distributed-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   共活性に基づく階層専門家配置、動的複製、局所性・負荷認識ルーティング、階層疎通信を組み合わせ、分散MoE推論を最大4.66倍高速化するGRACE-MoE。
 
+- **2025-03 · [Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts](2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md)**  
+  実装：[✓](https://github.com/CASE-Lab-UMD/Capacity-Aware-MoE) ・ リポジトリ内被引用：11  
+  専門家並列（専門家 Parallelism; EP）では、平均トークン数が同じでも一部専門家に負荷が集中すると、その専門家を担当するGPUが同期点を支配する。Capacity-Aware Inferenceは各専門家へ容量上限を設け、低ゲートスコアの超過トークンを落とすか、同一GPU上の追加候補専門家へ逃がすことでこのストラグラー効果を抑える。
+
 - **2025-11 · [GPU-Initiated Networking for NCCL](2025-2511.15076-gpu-initiated-networking-for-nccl.md)**  
   実装：[✓](https://github.com/NVIDIA/nccl) ・ リポジトリ内被引用：10  
   NCCL 2.28へGPUカーネルからRDMAを直接起動できるGINを追加し、直接GPU→NICとCPU代理を同一APIで切替。DeepEPのMoE通信をNVSHMEM相当の性能でNCCLへ統合する。
-
-- **2025-03 · [Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts](2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md)**  
-  実装：[✓](https://github.com/CASE-Lab-UMD/Capacity-Aware-MoE) ・ リポジトリ内被引用：10  
-  専門家並列（専門家 Parallelism; EP）では、平均トークン数が同じでも一部専門家に負荷が集中すると、その専門家を担当するGPUが同期点を支配する。Capacity-Aware Inferenceは各専門家へ容量上限を設け、低ゲートスコアの超過トークンを落とすか、同一GPU上の追加候補専門家へ逃がすことでこのストラグラー効果を抑える。
 
 - **2025-10 · [Collective Communication for 100k+ GPUs](2025-2510.20171-collective-communication-for-100k-gpus.md)**  
   実装：[✓](https://github.com/meta-pytorch/torchcomms/tree/main/comms/ncclx) ・ リポジトリ内被引用：6  
@@ -368,12 +368,12 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   Tutelは、混合専門家モデル（Mixture-of-Experts; MoE）で反復ごとに変わる専門家負荷へ実行系を追従させる分散実行基盤である。固定の並列化方式や固定の通信・計算パイプラインは、この変動に対して一つの実行形態しか使えず、通信時間または専門家計算時間のどちらかを無駄にしやすい。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
-  実装：✓ ・ リポジトリ内被引用：48  
+  実装：✓ ・ リポジトリ内被引用：49  
   Linaは、分散した混合専門家モデル（Mixture of エキスパート、MoE）の通信を、学習と推論で異なる原因に分解して高速化するシステムである。論文の事前計測では、全対全通信が処理段階時間の平均34.1%、ある層の順伝播時間の74.9%を占め、通信中のGPU演算器利用率は平均3.7%にとどまった。
 
 ### 6年前（2020-12〜2021-11）
 
 - **2021-01 · [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md)**  
-  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：368  
+  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：370  
   論文は、専門家容量、容量超過トークンの扱い、負荷分散補助損失、ルータだけを高精度で計算する選択的精度、初期値スケールの縮小、専門家専用ドロップアウト、データ・モデル・専門家並列の組合せまで含め、巨大な疎モデルを実際に安定学習するための設計をまとめている。
 <!-- survey:auto:end -->

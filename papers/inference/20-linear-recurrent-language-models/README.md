@@ -41,6 +41,10 @@
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
+- **2026-07 · [A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets](2026-2607.02303-a-hippocampus-for-linear-attention-an-exact-memory-for-what-the-recurren.md)**  
+  実装：[✓](https://github.com/scale-lab-ai/HOLA) ・ リポジトリ内被引用：2  
+  線形注意（Linear 注意機構）や状態空間モデル（State Space モデル; SSM）は、入力履歴を固定長の再帰状態へ要約するため、過去の全トークンに対応する鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）を保存する全注意と比べて、長文脈の記憶容量を一定に保ちやすい。
+
 - **2026-04 · [FG^2-GDN: Enhancing Long-Context Gated Delta Networks with Doubly Fine-Grained Control](2026-2604.19021-fg-2-gdn-enhancing-long-context-gated-delta-networks-with-doubly-fine-gr.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長い文脈の自己回帰推論では、通常のソフトマックス注意（softmax 注意機構）が鍵・値キャッシュ（Key-Value Cache、KV Cache）を系列長に応じて保持し、入力一括処理の計算も系列長の二乗で増える。
@@ -56,10 +60,6 @@
 - **2026-07 · [The Key to Going Linear: Analysis-Driven Transformer Linearization](2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   基盤を凍結して状態更新だけを比べ、ソフトマックスの一次近似が示すキー依存のランク1射影を備えるデルタ型が最も注意を近似できること、窓とシンクと短い畳み込みの処方で先行線形化のMMLUを上回ることを示した。
-
-- **2026-07 · [A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets](2026-2607.02303-a-hippocampus-for-linear-attention-an-exact-memory-for-what-the-recurren.md)**  
-  実装：[✓](https://github.com/scale-lab-ai/HOLA) ・ リポジトリ内被引用：1  
-  線形注意（Linear 注意機構）や状態空間モデル（State Space モデル; SSM）は、入力履歴を固定長の再帰状態へ要約するため、過去の全トークンに対応する鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）を保存する全注意と比べて、長文脈の記憶容量を一定に保ちやすい。
 
 - **2026-02 · [Online Vector Quantized Attention](2026-2602.03922-online-vector-quantized-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

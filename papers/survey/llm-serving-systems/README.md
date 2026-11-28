@@ -9,7 +9,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-04 · [Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities](2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   エッジLLM推論を4つの協調構成で整理し、圧縮・デコード高速化・分割配置・KV管理・オフロード・無線通信を通信/計算/メモリの共同最適化として体系化するサーベイ。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
