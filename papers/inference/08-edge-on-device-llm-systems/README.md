@@ -424,6 +424,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   エッジ推論のGPU周波数とバッチサイズの組み合わせを多腕バンディットとして探索し、事後分布の更新で最適構成を素早く見つけることで、Jetson AGX Orin上でエネルギー遅延積を既定構成比12.4から29.9パーセント下げるエネルギー管理の枠組み。
 
+- **2025-05 · [Scaling On-Device GPU Inference for Large Generative Models](2025-2505.00232-scaling-on-device-gpu-inference-for-large-generative-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  テンソル仮想化で論理配置と物理GPUオブジェクトを分離し、デバイス特化や段階配慮型最適化を組み合わせるML Driftにより、従来より10倍から100倍大きな生成モデルを端末GPUで動かし、既存エンジン比で桁違いの性能を示す。
+
 - **2025-05 · [RAP: Runtime Adaptive Pruning for LLM Inference](2025-2505.17138-rap-runtime-adaptive-pruning-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   固定の剪定率でモデル重みだけを削る方式は、短い入力では過剰に品質を落とし、長い入力ではKVキャッシュの増加を補えないことがある。
@@ -475,10 +479,6 @@
 - **2025-06 · [HAPE: Hardware-Aware LLM Pruning For Efficient On-Device Inference Optimization](2025-3b8e234e37c9-hape-hardware-aware-llm-pruning-for-efficient-on-device-inference-optimi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   疎率ではなく実機の遅延感度で重要度を決め、ブロック内の動的疎率と枝刈り中の疎コンパイルを組み合わせ、学習なしで端末向けにLLMを枝刈りするハードウェア考慮型の枠組み。
-
-- **2025-05 · [Scaling On-Device GPU Inference for Large Generative Models](2025-2505.00232-scaling-on-device-gpu-inference-for-large-generative-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  テンソル仮想化で論理配置と物理GPUオブジェクトを分離し、デバイス特化や段階配慮型最適化を組み合わせるML Driftにより、従来より10倍から100倍大きな生成モデルを端末GPUで動かし、既存エンジン比で桁違いの性能を示す。
 
 - **2025-05 · [ASTRA: Communication-Efficient Acceleration for Multi-Device Transformer Inference](2025-2505.19342-astra-communication-efficient-acceleration-for-multi-device-transformer-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
