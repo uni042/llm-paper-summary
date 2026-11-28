@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-28T03:19:10+00:00",
+  "generated_at": "2026-11-28T03:19:24+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 31,
+  "count": 26,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -399,60 +399,6 @@
       "worker_run_key": "muse-20261128-b3"
     },
     {
-      "canonical_id": "arXiv:2605.08314",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2605.08314",
-      "returned_at": "2026-11-28T00:20:51+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 445 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4595,
-        "body_paragraphs": 22,
-        "method_chars": 1914,
-        "method_paragraphs": 5,
-        "evaluation_chars": 445,
-        "limitation_chars": 340,
-        "insufficiency_flags": [
-          "評価説明量 445 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2bf8d383c4c8--2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2bf8d383c4c8--2026-2605.08314-flashsvd-v1-5-making-low-rank-transformers-inference-actually-fast.json",
-      "worker_run_key": "muse-20261128-b1"
-    },
-    {
-      "canonical_id": "arXiv:2512.19443",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2512.19443",
-      "returned_at": "2026-11-28T00:20:53+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 431 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4034,
-        "body_paragraphs": 21,
-        "method_chars": 1514,
-        "method_paragraphs": 4,
-        "evaluation_chars": 431,
-        "limitation_chars": 293,
-        "insufficiency_flags": [
-          "評価説明量 431 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2e59ac92536c--2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2e59ac92536c--2025-2512.19443-d2pruner-debiased-importance-and-structural-diversity-for-mllm-token-pruning.json",
-      "worker_run_key": "muse-20261128-b1"
-    },
-    {
       "canonical_id": "arXiv:2611.32083",
       "title": null,
       "source_url": "https://arxiv.org/abs/2611.32083",
@@ -477,33 +423,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3465d7084005--2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-3465d7084005--2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
-      "canonical_id": "arXiv:2507.03828",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2507.03828",
-      "returned_at": "2026-11-28T00:20:56+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 447 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3556,
-        "body_paragraphs": 21,
-        "method_chars": 1267,
-        "method_paragraphs": 4,
-        "evaluation_chars": 447,
-        "limitation_chars": 276,
-        "insufficiency_flags": [
-          "評価説明量 447 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-462c1fa0ac69--2025-2507.03828-impact-importance-aware-activation-space-reconstruction.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-462c1fa0ac69--2025-2507.03828-impact-importance-aware-activation-space-reconstruction.json",
       "worker_run_key": "muse-20261128-b2"
     },
     {
@@ -558,33 +477,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7cc767e27ee8--2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-7cc767e27ee8--2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.json",
-      "worker_run_key": "muse-20261128-b2"
-    },
-    {
-      "canonical_id": "arXiv:2409.15298",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2409.15298",
-      "returned_at": "2026-11-28T00:22:10+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 456 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4097,
-        "body_paragraphs": 23,
-        "method_chars": 1609,
-        "method_paragraphs": 5,
-        "evaluation_chars": 456,
-        "limitation_chars": 310,
-        "insufficiency_flags": [
-          "評価説明量 456 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8066331aba82--2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8066331aba82--2024-2409.15298-sorbet-a-neuromorphic-hardware-compatible-transformer-based-spiking-language-model.json",
       "worker_run_key": "muse-20261128-b2"
     },
     {
@@ -829,33 +721,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-db3237fa9374--2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-db3237fa9374--2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.json",
       "worker_run_key": "muse-20261128-b3"
-    },
-    {
-      "canonical_id": "arXiv:2209.09130",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2209.09130",
-      "returned_at": "2026-11-28T00:24:41+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 468 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3678,
-        "body_paragraphs": 21,
-        "method_chars": 1364,
-        "method_paragraphs": 4,
-        "evaluation_chars": 468,
-        "limitation_chars": 315,
-        "insufficiency_flags": [
-          "評価説明量 468 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed53ee4a9b4b--2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ed53ee4a9b4b--2022-2209.09130-samp-a-model-inference-toolkit-of-post-training-quantization-for-text-processing-via-self-adaptive-mixed-precision.json",
-      "worker_run_key": "muse-20261128-b2"
     }
   ]
 }
