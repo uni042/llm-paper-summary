@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d3e7425e228b19de-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2311.07102",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2311.07102",
+    "identity_tokens": [
+      "Fovea Attention",
+      "Fovea Transformer",
+      "arXiv:2311.07102"
+    ],
+    "reason": "全文通読の結果、本論文は注意の疎化による長文脈モデリングのモデルアーキテクチャ研究であり、注意機構という点では推論効率と関連するものの、主目的と評価は長文脈要約タスクの品質（ROUGE）向上にあり、計算量O(N log N)の主張と学習時メモリ・学習速度の分析にとどまって、LLM推論・サービング・デコードでの効率評価が一次資料に確認できない。推論システムへの直接貢献の根拠が弱いためborderlineと判定した。",
+    "first_checked_at": "2026-11-28T03:34:41+00:00",
+    "last_checked_at": "2026-11-28T03:34:41+00:00",
+    "linked_from": [
+      "worker-worklist-00.json:job-research-8db9bc4d82bc05b1"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fovea Transformer: Efficient Long-Context Modeling with Structured Fine-To-Coarse Attention"
+  },
+  "processed_at": "2026-11-28T03:34:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d3e7425e228b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
