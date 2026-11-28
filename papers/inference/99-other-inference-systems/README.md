@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（851本）
+## 自動生成の論文一覧（853本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -513,6 +513,14 @@
 - **2026-11 · [One Schedule Does Not Fit All: Adaptive Inference Schedules for Diffusion Language Models](2026-2611.25895-one-schedule-does-not-fit-all-adaptive-inference-schedules-for-diffusion.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   固定のノイズ除去スケジュールが最適でないことを示し、ペア校正と同時ブートストラップ限界で効用と退化ガードレールを一緒に認証して最安の候補だけを配備し、駄目なら完全スケジュールへ戻る配備ルールで、デノイザ評価回数をタスクにより1.33倍から8.0倍まで減らすことを認証した研究。
+
+- **2026-11 · [MXFP4 for LLM Inference: Complementary Post-Training Quantization Techniques and Their Interactions](2026-2611.32873-mxfp4-for-llm-inference-complementary-post-training-quantization-techniq.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  6モデルと3つのマイクロスケーリング形式で回転、PTQ、スケール選択の組合せを系統的に振り、効くレシピが形式依存であること（MXFP4は回転とGPTQで約3ポイント回復、NVFP4は回転で悪化しがち）を示し、較正不要のスケール選択Midmaxを提案した量子化レシピの研究。
+
+- **2026-11 · [ModelLess: A Serverless System for Multi-Tier LLM Inference on Shared GPUs](2026-2611.32634-modelless-a-serverless-system-for-multi-tier-llm-inference-on-shared-gpu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  製品別に占有されたGPUの遊休を、重みをホストメモリに残す秒単位のスリープと階層別の退避セマンティクスで他階層へ貸すサーバーレス推論基盤で、1,100枚のトレース再演でGPU時間の約38%が貸出可能、一時停止方式が再キューより借り手トークンを保持サンプルあたり22%増やした。
 
 - **2026-11 · [Keep the Reasoning, Read the Image: On-Demand Visual KV for Multi-Turn Reasoning VLMs](2026-2611.23769-keep-the-reasoning-read-the-image-on-demand-visual-kv-for-multi-turn-rea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

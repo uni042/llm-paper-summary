@@ -128,6 +128,10 @@
   実装：[✓](https://github.com/Analytics-Everywhere-Lab/edge-moe) ・ リポジトリ内被引用：1  
   専門家モデルの疎な活性化が辺縁実機で効くかを同一条件で実測し、Jetsonでは同じ有効規模の密モデルより約31パーセント遅く電力2.1倍・メモリ天井到達となり、費用は有効ではなく総パラメータに追随すること、経路選択は計算の9パーセント未満で主因でないことを示した。
 
+- **2026-06 · [Breaking the Ice: Analyzing Cold Start Latency in vLLM](2026-2606.07362-breaking-the-ice-analyzing-cold-start-latency-in-vllm.md)**  
+  実装：[✓](https://github.com/upb-cn/vllm-startup-profiler) ・ リポジトリ内被引用：1  
+  vLLMの起動を6段階へ分解して初めて体系的に量り、全体が主にCPU律速で各段階が特定の量へほぼ線形に従うことを示し、段階別回帰の予測器で平均二乗誤差2.42秒の予測を達成した。
+
 - **2026-06 · [Benchmarking LLM Serving Systems for Agentic AI Workloads with XPerf](2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   エージェント実行を呼出し依存グラフとして記録・再生し、8種類の実アプリでサービング負荷とハードウェア指標を再現可能に測る評価基盤を提示する。
@@ -598,10 +602,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   6種類のGPU LLMサービング構成を計216時間連続運転し、全構成でホスト側のメモリ経年劣化を検出。リーク率はvLLM V1単体+1.8KB/時からTriton+V0の+157KB/時まで大差があり、配置・ランタイム選択が長期信頼性を左右することを示す。
 
-- **2026-06 · [Breaking the Ice: Analyzing Cold Start Latency in vLLM](2026-2606.07362-breaking-the-ice-analyzing-cold-start-latency-in-vllm.md)**  
-  実装：[✓](https://github.com/upb-cn/vllm-startup-profiler) ・ リポジトリ内被引用：0  
-  vLLMの起動を6段階へ分解して初めて体系的に量り、全体が主にCPU律速で各段階が特定の量へほぼ線形に従うことを示し、段階別回帰の予測器で平均二乗誤差2.42秒の予測を達成した。
-
 - **2026-06 · [Beyond Per-Token Pricing: A Concurrency-Aware Methodology for LLM Infrastructure Cost Estimation](2026-2606.11690-beyond-per-token-pricing-a-concurrency-aware-methodology-for-llm-infrast.md)**  
   実装：[✓](https://github.com/pChitral/vllm-cost-meter) ・ リポジトリ内被引用：0  
   本研究はこの差を、要求到着率を明示した費用測定問題として定式化する。ハードウェア、モデル構造、量子化精度、要求到着率、遅延目標を分け、同じGPUでも負荷によって費用がどの程度変わるかを実機で測る。H100 NVLの主実験では、3種類のモデルと2種類の精度の計6構成を7段階の要求率で測定し、同じ構成内で17.5～36.3倍の出力トークン単価差を観測した。
@@ -837,7 +837,7 @@
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
-  実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：38  
+  実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：39  
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  

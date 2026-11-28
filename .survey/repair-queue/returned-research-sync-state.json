@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "615cd556b6355eaa593f3fa6415f65fafcb20734",
+  "base_commit": "fdb8dc154ff5b062bf3f318211b6c8194b126a30",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1847,6 +1847,8 @@
     "2026-2611.30455-cgspec-consistency-guided-speculative-decoding-with-overlap-aware-verification-scheduling-for-edge-cloud-inference.json",
     "2026-2611.30720-testing-quantized-kv-cache-maintenance-encoding-layout-and-historical-restoration.json",
     "2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.json",
+    "2026-2611.31105-livelora-exact-kv-cache-migration-across-lora-updates-for-llm-agents.json",
+    "2026-2611.31112-look-back-draft-ahead-corrective-prefix-attention-for-parallel-speculative-decoding.json",
     "2026-2611.31638-wavefront-low-rank-drafting-with-parallel-causal-refinement-for-speculative-decoding.json",
     "2026-2611.31737-greendynamix-thermal-aware-dynamic-mixed-precision-moe-llm-inference-systems.json",
     "2026-2611.31869-rankserve-rank-aware-cpu-gpu-scheduling-for-memory-constrained-moe-serving.json",
@@ -1857,7 +1859,10 @@
     "2026-2611.32269-pando-noise-coupled-parallel-draft-trees-for-efficient-edge-speculative-decoding.json",
     "2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.json",
     "2026-2611.32423-factorized-context-attention-from-emulated-to-native-grid-probing.json",
+    "2026-2611.32572-breaking-routing-and-inter-device-dependencies-in-mixture-of-experts.json",
     "2026-2611.32624-hical-offline-calibration-for-hierarchical-scale-encoding-in-accurate-hif4-quantization.json",
+    "2026-2611.32634-modelless-a-serverless-system-for-multi-tier-llm-inference-on-shared-gpus.json",
+    "2026-2611.32873-mxfp4-for-llm-inference-complementary-post-training-quantization-techniques-and-their-interactions.json",
     "2026-2611.32881-scalable-placement-for-disaggregated-llm-serving-on-heterogeneous-edge-fleets.json",
     "2026-2611.33004-legospec-a-composable-and-efficient-framework-for-speculative-draft-design-and-training.json",
     "2026-2611.33542-rankcast-phase-aware-rank-balancing-in-moe-serving.json",
@@ -56811,6 +56816,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.31105": {
+      "order": [
+        "2026-11-28T10:21:25+00:00",
+        "2026-2611.31105-livelora-exact-kv-cache-migration-across-lora-updates-for-llm-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.31112": {
+      "order": [
+        "2026-11-28T10:22:16+00:00",
+        "2026-2611.31112-look-back-draft-ahead-corrective-prefix-attention-for-parallel-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.32572": {
+      "order": [
+        "2026-11-28T10:23:08+00:00",
+        "2026-2611.32572-breaking-routing-and-inter-device-dependencies-in-mixture-of-experts.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.32634": {
+      "order": [
+        "2026-11-28T10:24:00+00:00",
+        "2026-2611.32634-modelless-a-serverless-system-for-multi-tier-llm-inference-on-shared-gpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.32873": {
+      "order": [
+        "2026-11-28T10:24:52+00:00",
+        "2026-2611.32873-mxfp4-for-llm-inference-complementary-post-training-quantization-techniques-and-their-interactions.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -71016,6 +71066,21 @@
     "arxiv:2611.29663": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2611.29663-exact-on-paper-which-llm-serving-shortcuts-flip-graded-answers-measured-.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2611.29663-exact-on-paper-which-llm-serving-shortcuts-flip-graded-answers-measured-.md"
+    ],
+    "arxiv:2611.31105": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.31105-livelora-exact-kv-cache-migration-across-lora-updates-for-llm-agents.md"
+    ],
+    "arxiv:2611.31112": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.31112-look-back-draft-ahead-corrective-prefix-attention-for-parallel-speculati.md"
+    ],
+    "arxiv:2611.32572": [
+      "papers/inference/12-moe-parallelism-communication/2026-2611.32572-breaking-routing-and-inter-device-dependencies-in-mixture-of-experts.md"
+    ],
+    "arxiv:2611.32634": [
+      "papers/inference/99-other-inference-systems/2026-2611.32634-modelless-a-serverless-system-for-multi-tier-llm-inference-on-shared-gpu.md"
+    ],
+    "arxiv:2611.32873": [
+      "papers/inference/99-other-inference-systems/2026-2611.32873-mxfp4-for-llm-inference-complementary-post-training-quantization-techniq.md"
     ]
   }
 }

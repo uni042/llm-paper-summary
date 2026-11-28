@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（84本）
+## 自動生成の論文一覧（85本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -126,6 +126,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-11 · [Communicate the Change: Efficient Expert Parallelism via Activation Compression](2026-2611.22215-communicate-the-change-efficient-expert-parallelism-via-activation-compr.md)**  
   実装：[✓](https://github.com/McGill-NLP/EchoMoE) ・ リポジトリ内被引用：0  
   エキスパート並列の通信が隠れ状態の全次元を毎層送る冗長さに着目し、数層ごとに配る全幅の参照状態との差分だけを圧縮して送るEchoMoEで、ノード間通信を58パーセント減らしスループットを22.6パーセント上げながら平均性能の低下を3.8ポイントに抑える後付け改修法。
+
+- **2026-11 · [Breaking Routing And Inter-device Dependencies in Mixture-of-Experts](2026-2611.32572-breaking-routing-and-inter-device-dependencies-in-mixture-of-experts.md)**  
+  実装：[✓](https://github.com/j-zarka/braid-moe/) ・ リポジトリ内被引用：0  
+  MoEのはしご型残差接続と早期ルーティングで通信と計算の依存を緩め、結合と送信を連続させてアテンションと重ねることで、Qwen3-30B-A3Bの推論をプリフィル最大1.29倍、デコード最大1.37倍に高速化し、検証損失の増加を約1%以内に抑えたアーキテクチャ変更。
 
 - **2026-10 · [INC-MoE: Overlapping In-Network Collectives and Expert Computation for Expert-Parallel Mixture-of-Experts Inference](2026-2610.36339-inc-moe-overlapping-in-network-collectives-and-expert-computation-for-ex.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

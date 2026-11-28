@@ -35,7 +35,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   プリフィル側だけに集中していたKVキャッシュのストレージ読出しをデコード側NICにも分散し、RDMA転送と負荷認識スケジューリングでエージェント型LLM推論のストレージ帯域ボトルネックを緩和する。
 
 - **2026-08 · [Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse](2026-2608.03893-cross-model-kv-cache-transfer.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   大小モデル間でKVを内容空間のヘッド単位線形写像へ変換し、受信モデルの長文再プリフィルを省く方式。対応層を選びRoPEを付け直して形状差による誤差を抑える。
 
 - **2026-05 · [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md)**  
@@ -134,6 +134,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：4  
   全HBF構成でKV配置・書戻し・寿命認識GCを共同最適化し、FlashAccel比最大1.58倍、H3比最大3.30倍の平均スループット向上。
 
+- **2026-04 · [ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache](2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  LoRA由来KVを共有基底キャッシュと低ランク残差キャッシュへ分け、コピーオンライト型DualRadixTreeとSRAM内ResidualAttentionで共有文脈のKV重複を減らすマルチエージェント配信方式。
+
 - **2026-04 · [CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration](2026-2604.25080-cacheflow.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   CacheFlowは退避接頭辞KVをトークン・層・GPU方向に分割し、一部を再計算し残りをI/O復元して同時進行させ、復元待ちを減らす3次元スケジューラ。
@@ -185,10 +189,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-05 · [Adaptive KV Cache Reuse for Fast Long-Context LLM Serving](2026-2605.24022-cachetune-adaptive-kv-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   CacheTuneは文書断片KVを周波数成分で選別し、重要部分だけ全体文脈で再計算、残りをストレージから再利用して、品質と再計算・転送時間を両立する方式。
-
-- **2026-04 · [ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache](2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  LoRA由来KVを共有基底キャッシュと低ランク残差キャッシュへ分け、コピーオンライト型DualRadixTreeとSRAM内ResidualAttentionで共有文脈のKV重複を減らすマルチエージェント配信方式。
 
 - **2026-03 · [PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving](2026-2603.23049-pcr-prefetch-cache-reuse-rag-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -549,7 +549,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   FastDecodeは、言語モデルの逐次生成で巨大化する鍵・値キャッシュ（KVキャッシュ）をGPU外へ置くだけでなく、キャッシュを読む注意計算そのものを複数のCPUノードへ移す推論配信システムである。
 
 - **2024-10 · [Fast State Restoration in LLM Serving with HCache](2024-2410.05004-hcache-fast-state-restoration-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：35  
+  実装：✓ ・ リポジトリ内被引用：36  
   GPUから追い出した会話状態を、巨大なKVキャッシュそのものでも元トークン列でもなく中間活性として保存し、I/Oと再計算を重ねて高速にKVへ復元する状態再利用方式。
 
 - **2024-09 · [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)**  

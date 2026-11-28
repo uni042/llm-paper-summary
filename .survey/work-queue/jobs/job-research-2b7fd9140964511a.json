@@ -35,10 +35,15 @@
   "selection_reason": "LiveLoRAはLoRAアダプタ更新時に最終ブロックだけを再評価してKVキャッシュを正確に移行するモデル・ランタイム協調設計で、フル履歴リプリフィル比で中央値約69倍の移行高速化を示しており、LLMエージェントのサービングにおけるKVキャッシュ管理へ直接貢献する。",
   "semantic_scholar_id": "7a975652956b7a07f9b76a0e080bcff93c71ecdc",
   "source_url": "https://arxiv.org/abs/2611.31105",
-  "status": "ready",
+  "status": "superseded",
   "title": "LiveLoRA: Exact KV Cache Migration Across LoRA Updates for LLM Agents",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:26:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.31105-livelora-exact-kv-cache-migration-across-lora-updates-for-llm-agents.md",
+  "represented_canonical_id": "arXiv:2611.31105",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "laddered residualとearly routingでMoEのdispatch/combineの逐次依存を緩め、通信を専用ストリームで注意計算と重ねるBRAID-MoEにより、変換したQwen3-30B-A3Bでprefill最大1.29倍・decode最大1.37倍の推論高速化を一次要旨で示す、MoE推論の通信・計算重なりへの直接貢献であるため対象とした。",
   "semantic_scholar_id": "07030257fe8c8593ae101300fae1c7c7c39bede4",
   "source_url": "https://arxiv.org/abs/2611.32572",
-  "status": "ready",
+  "status": "superseded",
   "title": "Breaking Routing And Inter-device Dependencies in Mixture-of-Experts",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T10:26:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/12-moe-parallelism-communication/2026-2611.32572-breaking-routing-and-inter-device-dependencies-in-mixture-of-experts.md",
+  "represented_canonical_id": "arXiv:2611.32572",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
