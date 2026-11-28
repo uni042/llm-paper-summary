@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（114本）
+## 自動生成の論文一覧（115本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -218,6 +218,10 @@
 - **2026-10 · [Taking Tokenization off the Host for Agentic LLM Serving](2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.md)**  
   実装：[✓](https://github.com/Msiavashi/GraphTok) ・ リポジトリ内被引用：0  
   符号化の全工程を1つのCUDAグラフとしてGPUで実行するトークン化器で、参照と同一のトークン番号を保ったまま、接頭辞活用時の応答開始を2倍以上速くし、前面の供給能力を大きく広げた。
+
+- **2026-10 · [LADS: Lease-Aware Delivery Scheduling of Tool Results for Language Model Agents](2026-2611.00881-lads-lease-aware-delivery-scheduling-of-tool-results-for-language-model-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Webエージェントのツール結果の配送順序を、プリフィックスキャッシュのリース所有状態と再開遅延の推定で制御し、再開が保護枠を解放する回転効果を使って、FIFO配送に対して平均完了ワークフロー遅延をバースト条件で44.6%、実ワークフロー再生で50.6%削減した配送スケジューラ。
 
 - **2026-10 · [In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents](2026-2610.41291-in-model-context-compression-with-agentic-soft-tokens-for-long-horizon-l.md)**  
   実装：[✓](https://github.com/RISE-X-Lab/Agentic-Soft-Token) ・ リポジトリ内被引用：0  

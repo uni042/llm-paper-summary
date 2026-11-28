@@ -35,10 +35,15 @@
   "selection_reason": "残差ストリームの疎なアンカーからTransformerのKVキャッシュをビット単位で無損失に再構成するAnchorKVを提案し、アーキテクチャ依存の損益分岐規則、カスケード再生による再構成の高速化、スライディングウィンドウ向けの厳密な動的計画法によるアンカー配置までを複数バックエンドで検証している。KVキャッシュのメモリ削減と再構成という推論システムへの直接貢献が要旨で具体的に確認できるためacceptとした。",
   "semantic_scholar_id": "260ee4028dfe210e57e73703a3bcf49f4ca5e3d0",
   "source_url": "https://arxiv.org/abs/2611.00117",
-  "status": "ready",
+  "status": "superseded",
   "title": "AnchorKV: Lossless Key-Value Cache Reconstruction from Layer-Sparse Residual Anchors",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T09:14:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.00117-anchorkv-lossless-key-value-cache-reconstruction-from-layer-sparse-resid.md",
+  "represented_canonical_id": "arXiv:2611.00117",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

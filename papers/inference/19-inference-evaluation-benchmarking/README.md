@@ -84,6 +84,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。
 
+- **2026-09 · [Constraints Are Graphs, Not Chains: Exact Decoding for Diffusion Language Models](2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  拡散言語モデルの制約付きデコードで、制約を逐次状態ではなく因子グラフとして保持し変数消去で厳密に解く方式を提案し、全制約充足を小さな追加遅延で達成した研究。
+
 - **2026-09 · [AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines](2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md)**  
   実装：[✓](https://github.com/li-ch/autotunebench) ・ リポジトリ内被引用：1  
   自動チューニングの測定規約を凍結コード・DB投入検証・不正隔離・事前登録比較・外部アンカーで強制し、エージェントが評価欠陥を最適化するのを防ぐ。
@@ -421,10 +425,6 @@
 - **2026-09 · [Efficient FlashAttention on Blackwell via Fixed-Shift Softmax and Persistent Scheduling](2026-2610.02229-efficient-flashattention-on-blackwell-via-fixed-shift-softmax-and-persis.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   行最大値の逐次補正を固定シフトで消し、逆方向の正規化を逆数分母の保存で前処理へ移し、持続型スケジューリングと重ねることで、新世代GPU向け注意カーネルのスループットを24条件の幾何平均で7.3パーセント高めた実装研究。
-
-- **2026-09 · [Constraints Are Graphs, Not Chains: Exact Decoding for Diffusion Language Models](2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  拡散言語モデルの制約付きデコードで、制約を逐次状態ではなく因子グラフとして保持し変数消去で厳密に解く方式を提案し、全制約充足を小さな追加遅延で達成した研究。
 
 - **2026-09 · [Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs](2026-2609.07664-accuracy-is-not-enough-a-divergence-based-approach-to-evaluate-fidelity-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

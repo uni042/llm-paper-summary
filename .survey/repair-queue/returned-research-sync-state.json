@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "f992c4bfe80384800600c59e9f617f2a38073d30",
+  "base_commit": "f4b72577273c888f84b4f70d3846173c56cdab7d",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1688,6 +1688,8 @@
     "2026-2610.42148-flide-accelerating-decision-inference-with-exact-state-forking.json",
     "2026-2611.00051-tenonagent-virtualizing-execution-residency-for-memory-oversubscribed-llm-agents.json",
     "2026-2611.00058-causalprune-counterfactual-causal-token-pruning-for-efficient-large-vision-language-models.json",
+    "2026-2611.00117-anchorkv-lossless-key-value-cache-reconstruction-from-layer-sparse-residual-anchors.json",
+    "2026-2611.00351-sieve-preserving-cross-image-evidence-via-depth-aware-token-compression.json",
     "2026-2611.00391-rethinking-kv-cache-eviction-for-agentic-llm-serving.json",
     "2026-2611.00408-tileweave-heterogeneous-tiling-for-sparse-prefill-on-mobile-socs.json",
     "2026-2611.00486-integer-exact-microscaling-running-mxfp4-language-models-on-int8-matrix-units.json",
@@ -1695,6 +1697,7 @@
     "2026-2611.00506-weights-that-stay-on-chip-megakernels-for-serial-heads-in-speculative-decoding.json",
     "2026-2611.00646-when-shards-fly-cross-tensor-in-flight-conversion-for-low-latency-low-memory-weight-updates-in-disaggregated-rl.json",
     "2026-2611.00652-inference-first-training-underneath-layer-granular-lora-co-serving-with-layerloom.json",
+    "2026-2611.00881-lads-lease-aware-delivery-scheduling-of-tool-results-for-language-model-agents.json",
     "2026-2611.00967-rtp-llm-building-an-evolvable-and-reliable-llm-inference-engine-at-alibaba-scale.json",
     "2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attention.json",
     "2026-2611.01089-scute-exact-batched-serving-for-peft-adapters-beyond-lora.json",
@@ -1706,9 +1709,11 @@
     "2026-2611.01864-quantizing-recurrent-language-models-is-easier-than-you-think.json",
     "2026-2611.02082-fairway-load-aware-kv-cache-reuse-for-llm-prefill-scheduling.json",
     "2026-2611.02278-concise-9b-removing-the-slack-from-a-reasoning-model-s-thinking.json",
+    "2026-2611.02297-factorspec-serving-exact-relational-constraints-as-speculative-drafts.json",
     "2026-2611.02508-attentionindex-accelerating-learned-sparse-attention-with-a-causal-inverted-file-index.json",
     "2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.json",
     "2026-2611.02583-basiskv-value-latents-for-communication-and-key-routing.json",
+    "2026-2611.02966-shq-learnable-grids-for-llm-weight-quantization.json",
     "2026-2611.02975-introducing-cluster-efficiency-to-llm-serving-pooling-economical-accelerators-over-fast-interconnects.json",
     "2026-2611.03173-pagedmoe-cross-precision-expert-caching-for-token-level-dynamic-precision-in-ssd-resident-moe-inference.json",
     "2026-2611.03247-r2-omni-reducing-structural-and-precision-redundancy-in-omni-llms.json",
@@ -56511,6 +56516,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.00117": {
+      "order": [
+        "2026-11-28T09:05:31+00:00",
+        "2026-2611.00117-anchorkv-lossless-key-value-cache-reconstruction-from-layer-sparse-residual-anchors.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.00351": {
+      "order": [
+        "2026-11-28T09:07:09+00:00",
+        "2026-2611.00351-sieve-preserving-cross-image-evidence-via-depth-aware-token-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.00881": {
+      "order": [
+        "2026-11-28T09:08:48+00:00",
+        "2026-2611.00881-lads-lease-aware-delivery-scheduling-of-tool-results-for-language-model-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.02297": {
+      "order": [
+        "2026-11-28T09:10:27+00:00",
+        "2026-2611.02297-factorspec-serving-exact-relational-constraints-as-speculative-drafts.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.02966": {
+      "order": [
+        "2026-11-28T09:12:07+00:00",
+        "2026-2611.02966-shq-learnable-grids-for-llm-weight-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70596,6 +70646,21 @@
     "arxiv:2611.16384": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2611.16384-beyond-compressing-everything-contrastive-memory-learning-for-selective-.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2611.16384-beyond-compressing-everything-contrastive-memory-learning-for-selective-.md"
+    ],
+    "arxiv:2611.00117": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.00117-anchorkv-lossless-key-value-cache-reconstruction-from-layer-sparse-resid.md"
+    ],
+    "arxiv:2611.00351": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.00351-sieve-preserving-cross-image-evidence-via-depth-aware-token-compression.md"
+    ],
+    "arxiv:2611.00881": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2611.00881-lads-lease-aware-delivery-scheduling-of-tool-results-for-language-model-.md"
+    ],
+    "arxiv:2611.02297": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.02297-factorspec-serving-exact-relational-constraints-as-speculative-drafts.md"
+    ],
+    "arxiv:2611.02966": [
+      "papers/inference/16-weight-quantization-compression/2026-2611.02966-shq-learnable-grids-for-llm-weight-quantization.md"
     ]
   }
 }

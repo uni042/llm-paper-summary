@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（725本）
+## 自動生成の論文一覧（727本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -141,6 +141,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/SayedPedramHaeri/Dont-Waste-Bits) ・ リポジトリ内被引用：6  
   本研究は、端末上で動かす小型言語モデルのキー・値キャッシュ（KVキャッシュ）を、トークンごとの重要度に応じて異なるビット幅で保存する適応量子化方式を提案する。SmolLM-360MとHellaSwagの実機評価では、固定4ビットの正答率33.6%、遅延2.93に対して、提案方式は41.2%、2.41だった。
 
+- **2026-03 · [The Residual Stream Is All You Need: On the Redundancy of the KV Cache in Transformer Inference](2026-2603.19664-the-residual-stream-is-all-you-need-on-the-redundancy-of-the-kv-cache-in.md)**  
+  実装：[✓](https://github.com/Kaleemullahqasim/KV-Direct) ・ リポジトリ内被引用：6  
+  著者らはこの事実を残差の十分性として整理し、古いKVを破棄して残差ベクトルのチェックポイントを保持するKV-Directを提案した。原著の全系列を毎回再計算する比較では、30トークン生成が標準キャッシュ方式より1.7～3.8倍遅かった。
+
 - **2026-02 · [You Need an Encoder for Native Position-Independent Caching](2026-2602.01519-you-need-an-encoder-for-native-position-independent-caching.md)**  
   実装：[✓](https://github.com/shijuzhao/Comb) ・ リポジトリ内被引用：6  
   凍結したデコーダ専用LLMへPIC専用エンコーダを追加し、任意順序の文書KV再利用を高精度化しつつTTFTを51〜94%削減、KV容量も約75%以上削減するCOMBを提案。
@@ -176,10 +180,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-04 · [When Hidden States Drift: Can KV Caches Rescue Long-Range Speculative Decoding?](2026-2604.26412-when-hidden-states-drift-can-kv-caches-rescue-long-range-speculative-dec.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   投機的復号（投機的復号）は、小さなドラフトモデルが先の複数トークンを提案し、大きな対象モデルが一括で検証することで逐次生成の遅延を減らす。Qwen3-8Bでの実験では、KV再利用は後方の投機ステップの受理率を改善し、混成方式は小規模な逐次受理評価で平均受理トークン数を2.37から2.54へ増やした。
-
-- **2026-03 · [The Residual Stream Is All You Need: On the Redundancy of the KV Cache in Transformer Inference](2026-2603.19664-the-residual-stream-is-all-you-need-on-the-redundancy-of-the-kv-cache-in.md)**  
-  実装：[✓](https://github.com/Kaleemullahqasim/KV-Direct) ・ リポジトリ内被引用：5  
-  著者らはこの事実を残差の十分性として整理し、古いKVを破棄して残差ベクトルのチェックポイントを保持するKV-Directを提案した。原著の全系列を毎回再計算する比較では、30トークン生成が標準キャッシュ方式より1.7～3.8倍遅かった。
 
 - **2026-03 · [LookaheadKV: Fast and Accurate KV Cache Eviction by Glimpsing into the Future without Generation](2026-2603.10899-lookaheadkv-fast-and-accurate-kv-cache-eviction-by-glimpsing-into-the-fu.md)**  
   実装：[✓](https://github.com/SamsungLabs/LookaheadKV) ・ リポジトリ内被引用：5  
@@ -1167,6 +1167,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   ビーコンの鍵と値を低ランク潜在として学習し層適応に配分するトークンと特徴の同時圧縮に、ビーコン鍵だけ位置埋め込みを外して再構成なしの潜在注意を組み合わせ、32倍圧縮でも長文性能で首位を保ち、文脈128Kで復号を最大3.38倍速くした。
 
+- **2026-10 · [SIEVE: Preserving Cross-Image Evidence via Depth-Aware Token Compression](2026-2611.00351-sieve-preserving-cross-image-evidence-via-depth-aware-token-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数画像の視覚トークンを、画像ごとの等量クォータとデコーダ深さ方向の漸進的選択・同一画像内集約で圧縮し、保持率12.5%でプリフィル計算量を6.6倍削減し遅延を1.9倍高速化しながら未圧縮の平均精度を上回った、学習不要のVLM推論圧縮方式。
+
 - **2026-10 · [Serving a Revisable World: Versioned Execution for Interruptible Agents](2026-2610.01160-serving-a-revisable-world-versioned-execution-for-interruptible-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェントの計画差し替えを版付き実行で扱い、旧版の権限取消し・残り実行の有界化・有効プリフィックスの認証継承を1つの遷移に統一して、陳腐化出力の漏れと再計算の無駄を同時に消す制御面の再設計。
@@ -1402,6 +1406,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Approximation Algorithms for Dual-Memory Request Scheduling in Disaggregated LLM Inference](2026-2610.15579-approximation-algorithms-for-dual-memory-request-scheduling-in-disaggreg.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分離型推論のプリフィル側とデコード側の2つのメモリ容量を同時に扱う受付スケジューリング問題を定式化し、近似保証つきアルゴリズムを2つ与えた理論研究。
+
+- **2026-10 · [AnchorKV: Lossless Key-Value Cache Reconstruction from Layer-Sparse Residual Anchors](2026-2611.00117-anchorkv-lossless-key-value-cache-reconstruction-from-layer-sparse-resid.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層方向に疎な残差アンカーだけを保存し、カスケード再生でKVキャッシュをビット単位で無損失に再構成することで、4k文脈の再構成を最大16.3倍高速化し、32k文脈で再活性化可能なセッション容量を全KVの5.78〜54.0倍にした、保存量と再生費用のスペクトラムを設計する方式。
 
 - **2026-10 · [An Optical KV Cache Network for Disaggregated LLM Serving](2026-2610.18444-an-optical-kv-cache-network-for-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2074,7 +2082,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  
-  実装：[✓](https://github.com/microsoft/vattention) ・ リポジトリ内被引用：95  
+  実装：[✓](https://github.com/microsoft/vattention) ・ リポジトリ内被引用：96  
   KVキャッシュの仮想アドレスを連続に保ったままCUDA仮想メモリで物理ページだけを需要時割当し、PagedAttention固有のブロック表と専用注意カーネルを不要にする方式。長文脈サービングで最大1.23倍のスループット改善を報告する。
 
 - **2025-04 · [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md)**  
@@ -2417,6 +2425,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：3  
   AhaKVは、LLM推論でKVキャッシュを固定予算へ圧縮するとき、過去トークンの重要度を累積注意スコアだけで決めることの偏りを修正する方式である。
 
+- **2025-03 · [Slim attention: cut your context memory in half without loss – K-cache is all you need for MHA](2025-2503.05840-slim-attention-cut-your-context-memory-in-half-without-loss-k-cache-is-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  値射影をキー射影の逆行列で変換し、値をキーキャッシュから等価に復元して文脈メモリを半分にする無損失狙いの注意機構。長文脈の生成を最大2倍速くする。
+
 - **2025-02 · [Compression Barriers in Autoregressive Transformers](2025-2502.15955-compression-barriers-in-autoregressive-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   近年のKV圧縮は重要トークンの選択、疎性、低次元表現、クラスタリング等で保存量を削減しているが、これらの成功が任意の入力でも保証できるかは別問題である。
@@ -2460,10 +2472,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-05 · [Addressing Activation Outliers in LLMs: A Systematic Review of Post-Training Quantization Techniques](2025-26c8fc4003ac-addressing-activation-outliers-in-llms-a-systematic-review-of-post-train.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   活性値の外れ値に絞った学習後量子化の系統的レビュー。PRISMAで選んだ52件を等価変換・混合精度・細粒度化・非線形データ型の4群へ分類し、どのビット幅でどの対策が要るかを困惑度の横断比較で示した。
-
-- **2025-03 · [Slim attention: cut your context memory in half without loss – K-cache is all you need for MHA](2025-2503.05840-slim-attention-cut-your-context-memory-in-half-without-loss-k-cache-is-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  値射影をキー射影の逆行列で変換し、値をキーキャッシュから等価に復元して文脈メモリを半分にする無損失狙いの注意機構。長文脈の生成を最大2倍速くする。
 
 - **2025-02 · [CalibQuant: 1-Bit KV Cache Quantization for Multimodal LLMs](2025-2502.14882-calibquant-1-bit-kv-cache-quantization-for-multimodal-llms.md)**  
   実装：[✓](https://github.com/insuhan/calibquant) ・ リポジトリ内被引用：2  
@@ -2612,7 +2620,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：428  
+  実装：✓ ・ リポジトリ内被引用：429  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
@@ -2683,6 +2691,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：69  
   RazorAttentionは、長い入力を処理する大規模言語モデルの鍵・値キャッシュ（KV キャッシュ）を、注意頭ごとの機能差に基づいて圧縮する手法である。原著の既定設定では、非検索頭に残す近傍長を max(4000,N/5)、系列先頭の保持数を4とし、誘導頭の上位14%と反復頭の上位1%を検索頭として保護する。
 
+- **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
+  実装：✓ ・ リポジトリ内被引用：62  
+  本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
+
 - **2024-10 · [Not All Heads Matter: A Head-Level KV Cache Compression Method with Integrated Retrieval and Reasoning](2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md)**  
   実装：[✓](https://github.com/FYYFU/HeadKV) ・ リポジトリ内被引用：61  
   従来の圧縮方式は、最近の注意得点を利用して残すトークンを選んだり、層ごとに予算を変えたりする。論文は文脈QAの代表条件で元キャッシュの約1.5%を保持しながら完全キャッシュ性能の97%を得たと報告するが、これは全タスク・全モデルで97%という保証ではない。
@@ -2690,10 +2702,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-07 · [Keep the Cost Down: A Review on Methods to Optimize LLM's KV Cache Consumption](2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md)**  
   実装：✓ ・ リポジトリ内被引用：61  
   本稿は、Luohe Shi、Hongyi Zhang、Yao Yao、Zuchao Li、Hai Zhaoによる鍵・値キャッシュ（Key-Value Cache、以下KVキャッシュ）の最適化手法に関する総説を、2024年11月20日の第4版を一次資料として再監査した解説である。
-
-- **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
-  実装：✓ ・ リポジトリ内被引用：61  
-  本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
 
 - **2024-02 · [Hydragen: High-Throughput LLM Inference with Shared Prefixes](2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md)**  
   実装：[✓](https://github.com/jordan-benjamin/hydragen) ・ リポジトリ内被引用：60  
@@ -2932,6 +2940,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 8年前（2018-12〜2019-11）
 
 - **2019-11 · [Fast Transformer Decoding: One Write-Head is All You Need](2019-1911.02150-multi-query-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：317  
+  実装：✓ ・ リポジトリ内被引用：318  
   複数問い合わせ注意（Multi-Query 注意機構; MQA）は、問い合わせ側の8ヘッドを維持したまま、鍵と値だけを全ヘッドで1組へ共有する。長い履歴を毎生成ステップで読む増分復号のメモリ転送を減らし、TPUv2でのWMT英独翻訳のデコーダ測定を46から3.8マイクロ秒／出力トークンへ短縮した。
 <!-- survey:auto:end -->

@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（406本）
+## 自動生成の論文一覧（407本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -42,6 +42,10 @@
   実装：[✓](https://github.com/IntelChina-AI/BitTern) ・ リポジトリ内被引用：7  
   CAT-Qは、高精度で事前学習された大規模言語モデル（LLM）を、重みが負一・零・正一の三値しか取らない形式へ変換する学習後量子化（Post-学習 量子化; PTQ）方式である。235Bモデルの三値化にはA100 80GBを8枚使って最大60時間を要する。
 
+- **2026-04 · [GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling](2026-2604.18556-gsq-highly-accurate-low-precision-scalar-quantization-for-llms-via-gumbe.md)**  
+  実装：[✓](https://github.com/IST-DASLab/GSQ) ・ リポジトリ内被引用：7  
+  大規模言語モデルを2～3ビット程度に圧縮すると、重みの転送量と常駐メモリを大幅に減らせる。Llama-3.1-8B/70Bの2ビット評価で従来スカラー量子化より高い精度を示し、Qwen3-8Bの既存GGUF K-Quantチェックポイントを同じ保存形式のまま改善する点が実用上重要である。
+
 - **2026-02 · [HiFloat4 Format for Language Model Inference](2026-2602.11287-hifloat4-format-for-language-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   4ビット浮動小数点を使うとモデル容量とメモリ転送を削減できるが、4ビットの中で符号・指数・仮数をすべて表すと、精度と数値範囲の両立が難しい。そこで複数要素で尺度を共有するブロック浮動小数点（Block Floating-Point; BFP）を利用する。尺度が階層化されるため、外れ値が一部の要素だけにある場合も群全体の量子化刻みを粗くしすぎずに済む。
@@ -57,10 +61,6 @@
 - **2026-05 · [LoopQ: Quantization for Looped Language Models](2026-2605.16343-loopq-quantization-for-looped-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   従来の事後量子化（PTQ）は同一重みに同じ変換行列と尺度を適用し続けるため、周回ごとに活性化の大きさ・方向が変わると丸め誤差やクリッピングが生じる。W4A4条件で4バックボーンの5課題平均正答率は静的PTQ最良比較方式に対して相対平均67.8%改善し、8つのバックボーン×データセット条件のPPL相対減少は下限代入による保守的平均75.2%と報告した。
-
-- **2026-04 · [GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling](2026-2604.18556-gsq-highly-accurate-low-precision-scalar-quantization-for-llms-via-gumbe.md)**  
-  実装：[✓](https://github.com/IST-DASLab/GSQ) ・ リポジトリ内被引用：6  
-  大規模言語モデルを2～3ビット程度に圧縮すると、重みの転送量と常駐メモリを大幅に減らせる。Llama-3.1-8B/70Bの2ビット評価で従来スカラー量子化より高い精度を示し、Qwen3-8Bの既存GGUF K-Quantチェックポイントを同じ保存形式のまま改善する点が実用上重要である。
 
 - **2026-03 · [ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression](2026-2603.17435-zipserv-fast-memory-efficient-llm-inference-hardware-aware-lossless-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -106,6 +106,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   ScaleSearchは、ブロック浮動小数点（Block Floating Point、BFP）形式で低ビット量子化するとき、各ブロックに共通する尺度（Scale）を最適化する方法である。これらは異なる評価対象の数値であり、尺度探索だけで全ての改善が生じたと見なしてはならない。
 
+- **2026-05 · [ScaleSweep: Accurate NVFP4 Post-Training Quantization of LLMs via Block Scale Initialization](2026-2606.07618-scalesweep-accurate-nvfp4-post-training-quantization-of-llms-via-block-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  ScaleSweepは、NVIDIA Blackwell世代でハードウェア対応するNVFP4の重み・活性値・KVキャッシュ・query状態の量子化について、16要素ブロックのFP8スケールの選び方を改善する後学習量子化（PTQ）手法である。これはBF16比約93.9%の平均性能回復である。
+
 - **2026-05 · [HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization](2026-2605.29843-harp-hadamard-preconditioned-adaptive-rotation-processor-for-extreme-llm.md)**  
   実装：[✓](https://github.com/brain-lab-research/HARP) ・ リポジトリ内被引用：3  
   重みを2～4ビットへ圧縮する事後量子化（Post-学習 量子化; PTQ）では、少数の大きな外れ値や入力方向ごとに異なる誤差感度のため、単純な丸めが深刻な品質劣化を招く。
@@ -141,10 +145,6 @@
 - **2026-06 · [LiftQuant: Continuous Bit-Width LLM via Dimensional Lifting and Projection](2026-2606.04050-liftquant-continuous-bit-width-llm-via-dimensional-lifting-and-projectio.md)**  
   実装：[✓](https://github.com/Heliulu/LiftQuant) ・ リポジトリ内被引用：2  
   LLMの重み量子化はGPUメモリ消費を減らす有力な方法だが、多くの方式は2ビット、3ビット、4ビットといった整数の量子化幅を単位にする。たとえば70Bモデルの3ビット版が24GBのGPUへ収まらず、2ビット版なら大きな余裕が残る場合、空いた容量を精度向上へ使いにくい。
-
-- **2026-05 · [ScaleSweep: Accurate NVFP4 Post-Training Quantization of LLMs via Block Scale Initialization](2026-2606.07618-scalesweep-accurate-nvfp4-post-training-quantization-of-llms-via-block-s.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  ScaleSweepは、NVIDIA Blackwell世代でハードウェア対応するNVFP4の重み・活性値・KVキャッシュ・query状態の量子化について、16要素ブロックのFP8スケールの選び方を改善する後学習量子化（PTQ）手法である。これはBF16比約93.9%の平均性能回復である。
 
 - **2026-05 · [OSAQ: Outlier Self-Absorption for Accurate Low-bit LLM Quantization](2026-2605.04738-osaq-outlier-self-absorption-for-accurate-low-bit-llm-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -210,6 +210,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   圧縮済み層を通した活性値で後段を較正し直し、圧縮後に測り直した層重要度で保持率を反復的に直す二つの補正により、学習なし低ランク圧縮のゼロショット正解率を最大で約1から2.5ポイント改善した分析と手法の論文である。
 
+- **2026-08 · [CubicQuant: Parametric Non-Uniform Codebooks for High-Throughput LLM Inference with 1-8-Bit Weights](2026-2608.06763-cubicquant-parametric-non-uniform-codebooks-for-high-throughput-llm-infe.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本研究が扱うのは、大規模言語モデル（LLM）の重みをGPUメモリに置き、自己回帰復号の各段階で行列演算に供給する際の表現形式である。提案形式は、1〜8ビットの重み符号を連続したビット列へ保存し、重み群ごとに尺度 s と二つの形状係数 a,b を付加する。
+
 - **2026-08 · [ARCHead: Activation-Metric Residual Correction for Large Language Model Output Heads](2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md)**  
   実装：[✓](https://github.com/suayptalha/archead) ・ リポジトリ内被引用：1  
   ARCHeadは、大規模言語モデル（LLM）の最終出力射影（language-modeling head; LM-head）に特化した学習後圧縮方式である。語彙数が大きいモデルでは、この例外だけで数百MBから1GB以上の重みを保持する。
@@ -221,6 +225,10 @@
 - **2026-06 · [STaR-Quant: State-Time Consistent Post-Training Quantization for Diffusion Large Language Models](2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusio.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   拡散型言語モデルの量子化で、マスク状態ごとに活性変換を分け、注意出力へブロック単位の補償を入れて誤差の蓄積を抑える学習後量子化。4ビット条件で比較対象を上回り、最大1.69倍の高速化と3.14倍のメモリ削減を示した。
+
+- **2026-06 · [Signed Symmetric Quantization for Few-Bit Integers](2026-2607.08779-signed-symmetric-quantization-for-few-bit-integers.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  対称量子化のスケールの符号をグループごとに選び、余分な整数水準を支配的な外れ値側へ回すことで、ゼロ点なしのまま切り捨て誤差を減らし、2ビットでパープレキシティを103.1から17.8へ改善する。
 
 - **2026-06 · [PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics](2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stre.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -237,6 +245,10 @@
 - **2026-06 · [GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation](2026-2606.23419-grinqh-graded-input-based-quantization-hierarchy-for-efficient-llm-gener.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   後者、とりわけバッチ1では、大きな線形層の重みを毎トークン読み出すため帯域律速になりやすい。重みを一律に3ビットや4ビットへ量子化すると帯域は減るが、重要なチャネルの精度も同時に失われる。Qwen3-8BのRTX 4090上では、4ビットMARLINの最適化カーネルより約25%高速な、GSM8K品質とのパレート前線上の動作点を示す。
+
+- **2026-05 · [Scaled Outer Product: A Hardware-Aware, Per-Layer Methodology for Post-Training Quantization of Large Language Models](2026-2605.14929-scaled-outer-product-a-hardware-aware-per-layer-methodology-for-post-tra.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ブロックごとの拡大率、層ごとの符号帳の組の探索、活性で重み付けた類似度による昇格配分を組み合わせた学習後量子化の方法論で、推奨動作点では六・五ビットで八・〇ビットの八ビット基準より重み再構成誤差が低く、一・五ビット節約できた。完全な評価は別論文に委ねられる。
 
 - **2026-05 · [MGVQ: Synergizing Multi-dimensional Sensitivity-Aware and Gradient-Hessian Fusion for Vector Quantization](2026-2605.24019-mgvq-synergizing-multi-dimensional-sensitivity-aware-and-gradient-hessia.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -303,6 +315,10 @@
   D²Quantは、大規模言語モデルの重みのみを4ビット未満へ圧縮するときの精度劣化を対象とする、学習後量子化（post-学習 量子化; PTQ）の研究である。実験においてQwen3-8Bの2ビット重み量子化はWikiText2でパープレキシティ14.10、C4で25.96、MMLUで49.94%、7課題の平均正答率57.22%となった。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [SHq: Learnable Grids for LLM Weight Quantization](2026-2611.02966-shq-learnable-grids-for-llm-weight-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化グリッドを圧縮強さとオフセットの2パラメータで表し、モデルの出力KLで選ぶSHqを提案し、5モデル・2〜6ビットの45/50設定で保持KL最良、3〜4ビットでは固定グリッド最良より4.0〜34.4%低いことを示した、ルックアップテーブルの中身だけを変える重み量子化の研究。
 
 - **2026-11 · [Orthogonally Mixed Sign Coding with Progressive Residual Refinement for Transformer Weight Compression](2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -556,10 +572,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   実量子化ノイズでFisher情報の層別感度を測り、PPOで全体ビット予算を層へ配分して、3〜4bit域の品質劣化を一様量子化より抑える。
 
-- **2026-08 · [CubicQuant: Parametric Non-Uniform Codebooks for High-Throughput LLM Inference with 1-8-Bit Weights](2026-2608.06763-cubicquant-parametric-non-uniform-codebooks-for-high-throughput-llm-infe.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本研究が扱うのは、大規模言語モデル（LLM）の重みをGPUメモリに置き、自己回帰復号の各段階で行列演算に供給する際の表現形式である。提案形式は、1〜8ビットの重み符号を連続したビット列へ保存し、重み群ごとに尺度 s と二つの形状係数 a,b を付加する。
-
 - **2026-08 · [Budget-Aware LLM Quantization and Low-Rank Correction via Information-Guided Subspace Matrices](2026-b373673622df-budget-aware-llm-quantization-and-low-rank-correction-via-information-gu.md)**  
   実装：[✓](https://github.com/sinuofan/IJCAI2026-BALANCER) ・ リポジトリ内被引用：0  
   BALANCERは、限られた記憶容量で大規模言語モデル（LLM）を実行するため、各重み行列の量子化精度と低ランク補正の階数を全モデル共通のビット予算で割り当てる学習不要の圧縮方式である。
@@ -632,10 +644,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   トークン適応型量子化誤差補償とカーネル・通信・SLOスケジューリングを共同設計し、W4–FP16のperplexity差を56–75%回復。
 
-- **2026-06 · [Signed Symmetric Quantization for Few-Bit Integers](2026-2607.08779-signed-symmetric-quantization-for-few-bit-integers.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  対称量子化のスケールの符号をグループごとに選び、余分な整数水準を支配的な外れ値側へ回すことで、ゼロ点なしのまま切り捨て誤差を減らし、2ビットでパープレキシティを103.1から17.8へ改善する。
-
 - **2026-06 · [Recover-LoRA for Aggressive Quantization: Reclaiming Accuracy in 2-Bit Language Models via Low-Rank Adaptation with Knowledge Distillation on Synthetic Data](2026-2606.04238-recover-lora-for-aggressive-quantization-reclaiming-accuracy-in-2-bit-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの重みを4ビットから2ビットへ圧縮すると、デコード時に重みをGPUメモリから読み出す帯域費用を減らせる。12ベンチマーク中9件で、量子化による教師との差の80〜95%を回復した。
@@ -671,10 +679,6 @@
 - **2026-05 · [SPARQLe: Sub-Precision Activation Representation for Quantized LLM Inference](2026-2606.00365-sparqle-sub-precision-activation-representation-for-quantized-llm-infere.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   8ビット活性の上位4ビットが多くゼロになる冗長性を利用し、密な下位ビットと疎な上位ビットへ分解して専用加速器で直接計算する協調設計。量子化方式は変えずに遅延を最大で約24パーセント短縮した。
-
-- **2026-05 · [Scaled Outer Product: A Hardware-Aware, Per-Layer Methodology for Post-Training Quantization of Large Language Models](2026-2605.14929-scaled-outer-product-a-hardware-aware-per-layer-methodology-for-post-tra.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ブロックごとの拡大率、層ごとの符号帳の組の探索、活性で重み付けた類似度による昇格配分を組み合わせた学習後量子化の方法論で、推奨動作点では六・五ビットで八・〇ビットの八ビット基準より重み再構成誤差が低く、一・五ビット節約できた。完全な評価は別論文に委ねられる。
 
 - **2026-05 · [QAM-W: Joint 2D Codebook Quantization for LLM Weights via Hadamard Rotation and Activation-Aware Scaling](2026-2605.26339-qam-w-joint-2d-codebook-quantization-for-llm-weights-via-hadamard-rotati.md)**  
   実装：[✓](https://github.com/white07S/qam-w) ・ リポジトリ内被引用：0  
@@ -914,6 +918,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   PTQTPは、学習済み重みを2枚の三値平面（trit-plane）と連続尺度へ分解し、約1.58ビット級の超低ビット表現を事後量子化（Post-学習 量子化; PTQ）だけで作る。二値PTQより表現力を増やしつつ、混合精度の例外経路を使わず一様な三値演算へ落とすのが狙いである。
 
+- **2025-02 · [LO-BCQ: Locally Optimal Block Clustered Quantization for 4-bit (W4A4) LLM Inference](2025-2502.05376-lo-bcq-locally-optimal-block-clustered-quantization-for-4-bit-w4a4-llm-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  主題は、大規模言語モデルの重みと活性値の両方を4ビット程度へ量子化し、再学習を行わずに推論品質を保つ事後量子化（Post-学習 量子化; PTQ）である。代表例としてLlama2-7Bの5つの言語理解課題平均では、BF16の65.65%に対し、実効4.5ビットのLO-BCQは64.68%となり、0.97ポイント低下した。
+
 - **2025-09 · [Quant-dLLM: Post-Training Extreme Low-Bit Quantization for Diffusion Large Language Models](2025-2510.03274-quant-dllm-post-training-extreme-low-bit-quantization-for-diffusion-larg.md)**  
   実装：[✓](https://github.com/ZTA2785/Quant-dLLM) ・ リポジトリ内被引用：5  
   本研究は、拡散型大規模言語モデル（diffusion large language モデル、以下dLLM）の重みを、追加の勾配学習なしに平均2ビットへ圧縮しながら、生成・推論課題の正答率を維持する手法を提案する。
@@ -937,10 +945,6 @@
 - **2025-04 · [OAC: Output-adaptive Calibration for Accurate Post-training Quantization](2025-2405.15025-oac-output-adaptive-calibration-for-accurate-post-training-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   重みを2ビットあるいは1ビットに圧縮すると、元の浮動小数点重みを丸める際の誤差が大きくなり、通常の層単位の校正だけではモデルの最終予測が著しく悪化する。
-
-- **2025-02 · [LO-BCQ: Locally Optimal Block Clustered Quantization for 4-bit (W4A4) LLM Inference](2025-2502.05376-lo-bcq-locally-optimal-block-clustered-quantization-for-4-bit-w4a4-llm-i.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  主題は、大規模言語モデルの重みと活性値の両方を4ビット程度へ量子化し、再学習を行わずに推論品質を保つ事後量子化（Post-学習 量子化; PTQ）である。代表例としてLlama2-7Bの5つの言語理解課題平均では、BF16の65.65%に対し、実効4.5ビットのLO-BCQは64.68%となり、0.97ポイント低下した。
 
 - **2025-01 · [Pivoting Factorization: A Compact Meta Low-Rank Representation of Sparsity for Efficient Inference in Large Language Models](2025-2501.19090-pivoting-factorization-a-compact-meta-low-rank-representation-of-sparsit.md)**  
   実装：[✓](https://github.com/biomedical-cybernetics/pivoting-factorization) ・ リポジトリ内被引用：5  
