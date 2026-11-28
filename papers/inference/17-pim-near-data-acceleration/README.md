@@ -34,7 +34,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System](2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   長文脈のLLMがトークンを一つずつ生成するとき、注意機構はこれまでの各トークンに対応する鍵・値キャッシュ（KV キャッシュ）を読み返す。動的PIMアクセス（動的 PIM Access; DPA）は生成中のトークン数に応じたループとアドレス変換を使い、KVキャッシュを実行時に1MB単位で追加する。
 
 - **2026-03 · [Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator](2026-2603.04797-hardware-software-co-design-for-3d-dram-based-llm-serving-accelerator.md)**  
@@ -145,13 +145,13 @@
   実装：✓ ・ リポジトリ内被引用：9  
   LLM重みの行列ベクトル積をNAND内部へ移し、電荷再利用読み出しとLSB優先符号化でSSD内部帯域を引き出して端末推論を高速化する。
 
+- **2025-04 · [CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM](2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  KV容量と注意帯域を同時拡張できるDIMM-PIMへデコード注意を分離し、GPU全結合層と重畳してHBM-PIM比最大5.15倍のスループットを得る。
+
 - **2025-09 · [Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference](2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   長文脈エージェント推論の帯域・容量の二重メモリ壁に対し、平坦化シストリック配列、非対称4ビット量子化、FlashAttention専用支援を共同設計し、シミュレーションでA100比最大2.23倍、TPU v6e比最大4.70倍のスループットを示す。
-
-- **2025-04 · [CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM](2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  KV容量と注意帯域を同時拡張できるDIMM-PIMへデコード注意を分離し、GPU全結合層と重畳してHBM-PIM比最大5.15倍のスループットを得る。
 
 - **2025-03 · [Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design](2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -184,11 +184,11 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-04 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
-  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：42  
+  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：43  
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
-  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：42  
+  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：43  
   一方、各要求が別々の過去トークン列を持つ多頭注意では、問い合わせベクトルと鍵キャッシュ、注意重みと値キャッシュの積が、メモリ帯域に制約されやすい行列とベクトルの積（GEMV）になる。NeuPIMsは、この非対称性をNPUとPIMの役割分担で解決するだけでなく、従来のNPU+PIM結合方式では双方を同時に動かせないという問題まで対象にする。
 
 - **2024-04 · [IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System](2024-2410.15008-ianus-integrated-accelerator-based-on-npu-pim-unified-memory-system.md)**  

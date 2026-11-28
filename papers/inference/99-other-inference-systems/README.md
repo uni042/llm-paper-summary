@@ -2120,6 +2120,10 @@
   実装：[✓](https://github.com/ModalityDance/IVT-LR) ・ リポジトリ内被引用：1  
   視覚言語モデル（vision-language モデル; VLM）が図表や画像に基づいて多段階の推論をするとき、従来の思考の連鎖（chain of thought; CoT）方式は中間推論を自然言語トークンとして逐次生成する。
 
+- **2025-10 · [Layer as Puzzle Pieces: Compressing Large Language Models through Layer Concatenation](2025-2510.15304-layer-as-puzzle-pieces-compressing-large-language-models-through-layer-c.md)**  
+  実装：[✓](https://github.com/MPI-Lab/CoMe) ・ リポジトリ内被引用：1  
+  隣接層の重要なチャネルをチャネル感度で選び出して連結し、1層に再構成するCoMeにより、層削除と重みの線形加算の両方の情報損失を避け、圧縮時の層対応を使った階層蒸留でLLaMA-2-7Bの30パーセント圧縮後も保持率82.98パーセントまで回復させた層圧縮の研究。
+
 - **2025-10 · [Key and Value Weights Are Probably All You Need: On the Necessity of the Query, Key, Value weight Triplet in Self-Attention Transformers](2025-2510.23912-key-and-value-weights-are-probably-all-you-need-on-the-necessity-of-the-.md)**  
   実装：[✓](https://github.com/MarkoKarbevski/Wqkv_necessity) ・ リポジトリ内被引用：1  
   各射影が表現力に独立して必要なのかは、モデルのパラメータ数・学習時の最適化・推論時のメモリ使用量を考えるうえで重要である。理論の出発点は、注意機構が元の入力Xを直接見るのではなく、XWQ、XWK、XWVという射影後の値に依存する点である。これは非埋込パラメータ約8.3%削減であり、総モデルパラメータが25%減るわけではない。
@@ -2327,10 +2331,6 @@
 - **2025-10 · [MossNet: Mixture of State-Space Experts is a Multi-Head Attention](2025-2510.26182-mossnet-mixture-of-state-space-experts-is-a-multi-head-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数の状態空間専門家の混合が線形化したmulti-head 注意機構の形に展開できることを示し、従来の単一状態のSSMより表現力を高める。8x200M+モデルは2.8兆トークン学習後、top-2（活性477M）で7課題平均53.5%、Qwen2.5-0.5Bの47.7%を上回るが、学習トークン数・モデル構造が異なる。
-
-- **2025-10 · [Layer as Puzzle Pieces: Compressing Large Language Models through Layer Concatenation](2025-2510.15304-layer-as-puzzle-pieces-compressing-large-language-models-through-layer-c.md)**  
-  実装：[✓](https://github.com/MPI-Lab/CoMe) ・ リポジトリ内被引用：0  
-  隣接層の重要なチャネルをチャネル感度で選び出して連結し、1層に再構成するCoMeにより、層削除と重みの線形加算の両方の情報損失を避け、圧縮時の層対応を使った階層蒸留でLLaMA-2-7Bの30パーセント圧縮後も保持率82.98パーセントまで回復させた層圧縮の研究。
 
 - **2025-10 · [From Local to Global: Revisiting Structured Pruning Paradigms for Large Language Models](2025-2510.18030-from-local-to-global-revisiting-structured-pruning-paradigms-for-large-l.md)**  
   実装：[✓](https://github.com/uncc-efficient-ai/GISP) ・ リポジトリ内被引用：0  
@@ -3097,11 +3097,11 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：111  
+  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：112  
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：92  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：93  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  

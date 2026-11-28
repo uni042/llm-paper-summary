@@ -168,6 +168,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   GPUメモリに収まらない環境では、使わない専門家をホストメモリに置き、必要なものを転送する。専門家が実際に選ばれてから読み込むと、GPUが転送待ちで止まるため、将来選ばれる専門家を予測して先読み（プリフェッチ）する。
 
+- **2026-07 · [NELSSA: A GPU–PNM Heterogeneous System for Mixed-Length LLM Serving via Length–based Request Placement](2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  要求長に応じて短い注意機構をGPU、長い疎注意を実機PNMへ配置し、文脈成長時はキー・バリュー状態を背景移送して一方向に実行先を切り替え、混在長負荷のGPUメモリ圧迫と先頭待ちを抑える異種実行基盤。
+
 - **2026-07 · [Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch](2026-2607.23099-distribution-aware-moe-kernel-dispatch.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   MoEのルーティング偏りを実効エキスパート数でモデル化し、GPU上の実ヒストグラムから条件付きCUDAグラフで適切な融合MoEカーネルを選び、B200上のMoE遅延を短縮する。
@@ -293,10 +297,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-07 · [TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models](2026-2607.07388-tf-engram-ssd-backed-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   フレーズ専用意味記憶を訓練なしで構築し、GPU・DRAM・NVMe SSDへ階層配置、中間層の早期予測でSSD読出しを先読みする外部記憶。100Mエントリで平均精度59.4、GPU使用3.06GBを報告。
-
-- **2026-07 · [NELSSA: A GPU–PNM Heterogeneous System for Mixed-Length LLM Serving via Length–based Request Placement](2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  要求長に応じて短い注意機構をGPU、長い疎注意を実機PNMへ配置し、文脈成長時はキー・バリュー状態を背景移送して一方向に実行先を切り替え、混在長負荷のGPUメモリ圧迫と先頭待ちを抑える異種実行基盤。
 
 - **2026-07 · [Kairox: Adaptive GPU-CPU Hybrid LLM Inference via Online Neuron Balancing](2026-58b45f0ef5d5-kairox-adaptive-gpu-cpu-hybrid-llm-inference-via-online-neuron-balancing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -621,7 +621,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-12〜2023-11）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：556  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：557  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-12〜2022-11）
