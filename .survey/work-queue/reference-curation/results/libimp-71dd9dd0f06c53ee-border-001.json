@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-71dd9dd0f06c53ee-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.08668",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.08668",
+    "identity_tokens": [
+      "SSVQ",
+      "Sign-Splitting Vector Quantization",
+      "arXiv:2503.08668"
+    ],
+    "reason": "全文通読の結果、本論文はベクトル量子化による重み圧縮の学習手法であり、推論向け圧縮という点では関連するものの、評価は視覚モデルと画像生成モデルに限られ、LLMの圧縮・推論への適用や評価が一次資料に確認できない。ハードウェア加速の検証も視覚モデル向けシミュレータでの3倍高速化にとどまるため、LLM推論システムへの直接貢献の根拠が弱くborderlineと判定した。",
+    "first_checked_at": "2026-11-28T03:19:02+00:00",
+    "last_checked_at": "2026-11-28T03:19:02+00:00",
+    "linked_from": [
+      "worker-worklist-30.json:job-research-c0944be6bbebbf88"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SSVQ: Unleashing the Potential of Vector Quantization with Sign-Splitting"
+  },
+  "processed_at": "2026-11-28T03:19:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-71dd9dd0f06c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-27T22:31:29+00:00",
-  "record_count": 10017,
+  "updated_at": "2026-11-28T03:19:03+00:00",
+  "record_count": 10022,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -153185,6 +153185,85 @@
       ],
       "borderline_recheck_count": 0,
       "title": "When Exact Token Importance Is Not Enough: Limits of Top-K Selection in LLM Attention"
+    },
+    "arXiv:2508.21493": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.21493",
+      "identity_tokens": [
+        "arXiv:2508.21493"
+      ],
+      "reason": "読解の結果、主題は量子化ニューラルネットワーク向けFPGAデータフローアクセラレータのコンパイラ最適化であり、区間演算でテンソルの範囲・スケール・バイアスを静的に求め、アキュムレータ幅の最小化と非行列演算（レイヤーテール）の閾値化等でLUT平均17%・DSP66%削減を画像分類QNNワークロードで示した論文である。量子化推論のハードウェア最適化として関連はあるが、LLMやTransformerの評価はなく対象は小規模な画像分類QNNと埋め込みFPGAであり、LLM推論システムへの直接の技術的貢献は確認できないため境界と判定した。",
+      "first_checked_at": "2026-11-28T03:19:01+00:00",
+      "last_checked_at": "2026-11-28T03:19:01+00:00",
+      "linked_from": [
+        "worker-worklist research_audit slice-c1-w4"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SIRA: Scaled-Integer Range Analysis for Optimizing FPGA Dataflow Neural Network Accelerators"
+    },
+    "arXiv:2508.07071": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.07071",
+      "identity_tokens": [
+        "FKL",
+        "Fused Kernel Library",
+        "arXiv:2508.07071"
+      ],
+      "reason": "全文通読の結果、本論文は汎用GPUライブラリ一般を対象に、垂直融合と水平融合を自動化するC++ APIの手法論であり、実証は画像処理ライブラリ（OpenCV-CUDA、NPP）の模倣ラッパーと合成ベンチマークに限られる。カーネル融合という機構自体はLLM推論カーネルにも関係しうるが、LLM推論システムへの直接の技術的貢献やLLMワークロードでの評価が一次資料に確認できないため、即Researchの根拠が弱くborderlineと判定した。",
+      "first_checked_at": "2026-11-28T03:19:02+00:00",
+      "last_checked_at": "2026-11-28T03:19:02+00:00",
+      "linked_from": [
+        "worker-worklist-45.json:job-research-bc84f350c4a02463"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Fused Kernel Library: A C++ API to Develop Highly-Efficient GPU Libraries"
+    },
+    "arXiv:2503.08668": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.08668",
+      "identity_tokens": [
+        "SSVQ",
+        "Sign-Splitting Vector Quantization",
+        "arXiv:2503.08668"
+      ],
+      "reason": "全文通読の結果、本論文はベクトル量子化による重み圧縮の学習手法であり、推論向け圧縮という点では関連するものの、評価は視覚モデルと画像生成モデルに限られ、LLMの圧縮・推論への適用や評価が一次資料に確認できない。ハードウェア加速の検証も視覚モデル向けシミュレータでの3倍高速化にとどまるため、LLM推論システムへの直接貢献の根拠が弱くborderlineと判定した。",
+      "first_checked_at": "2026-11-28T03:19:02+00:00",
+      "last_checked_at": "2026-11-28T03:19:02+00:00",
+      "linked_from": [
+        "worker-worklist-30.json:job-research-c0944be6bbebbf88"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SSVQ: Unleashing the Potential of Vector Quantization with Sign-Splitting"
+    },
+    "arXiv:2405.17506": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.17506",
+      "identity_tokens": [
+        "arXiv:2405.17506"
+      ],
+      "reason": "読解の結果、主題は学習済み深層ネットワークの構造化ノード枝刈りであり、ユニット活性を下三角変換（Gram-Schmidt直交化）で直交化して枝刈りしたユニットの寄与を残存ユニットから再構成し、ImageNet上のVGGとResNetでパラメータ数・FLOPs・実行時間・エネルギーに対する精度保持を評価した汎用DNN圧縮の論文である。枝刈り自体は推論効率化の一般技術だが、LLMやTransformerでの評価はなく著者自身がTransformerへの影響は未検証と述べており、LLM推論システムへの直接の技術的貢献は確認できないため境界と判定した。",
+      "first_checked_at": "2026-11-28T03:19:02+00:00",
+      "last_checked_at": "2026-11-28T03:19:02+00:00",
+      "linked_from": [
+        "worker-worklist research_audit slice-c1-w4"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Subspace Node Pruning"
+    },
+    "arXiv:2406.14404": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.14404",
+      "identity_tokens": [
+        "arXiv:2406.14404"
+      ],
+      "reason": "全文読解の結果、提案法QuEEは量子化と早期終了をサンプルごとに組み合わせる推論コスト削減の枠組みであり、機構自体は推論効率化と関連する。しかし評価はImageNet・CIFAR-10/100・SVHNの画像分類とT2T-ViTおよびDINOv2事前学習ViTのみで、LLMや言語タスクでの検証はなく、コスト指標も理論量のBitOPSで実測の遅延・メモリは未検証と論文自身が認めている。LLM推論システムへの直接の技術的貢献が一次資料で確認できないため、対象範囲の境界としてborderlineと判定し、Researchは作成しない。",
+      "first_checked_at": "2026-11-28T03:19:02+00:00",
+      "last_checked_at": "2026-11-28T03:19:02+00:00",
+      "linked_from": [
+        "worker-worklist-00.json research_audit rank 166"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Predicting Probabilities of Error to Combine Quantization and Early Exiting: QuEE"
     }
   }
 }

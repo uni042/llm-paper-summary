@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4e1cdca5dfbdc388-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.07071",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.07071",
+    "identity_tokens": [
+      "FKL",
+      "Fused Kernel Library",
+      "arXiv:2508.07071"
+    ],
+    "reason": "全文通読の結果、本論文は汎用GPUライブラリ一般を対象に、垂直融合と水平融合を自動化するC++ APIの手法論であり、実証は画像処理ライブラリ（OpenCV-CUDA、NPP）の模倣ラッパーと合成ベンチマークに限られる。カーネル融合という機構自体はLLM推論カーネルにも関係しうるが、LLM推論システムへの直接の技術的貢献やLLMワークロードでの評価が一次資料に確認できないため、即Researchの根拠が弱くborderlineと判定した。",
+    "first_checked_at": "2026-11-28T03:19:02+00:00",
+    "last_checked_at": "2026-11-28T03:19:02+00:00",
+    "linked_from": [
+      "worker-worklist-45.json:job-research-bc84f350c4a02463"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Fused Kernel Library: A C++ API to Develop Highly-Efficient GPU Libraries"
+  },
+  "processed_at": "2026-11-28T03:19:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4e1cdca5dfbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

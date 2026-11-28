@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa31a0ba6f3fbf02-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.14404",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.14404",
+    "identity_tokens": [
+      "arXiv:2406.14404"
+    ],
+    "reason": "全文読解の結果、提案法QuEEは量子化と早期終了をサンプルごとに組み合わせる推論コスト削減の枠組みであり、機構自体は推論効率化と関連する。しかし評価はImageNet・CIFAR-10/100・SVHNの画像分類とT2T-ViTおよびDINOv2事前学習ViTのみで、LLMや言語タスクでの検証はなく、コスト指標も理論量のBitOPSで実測の遅延・メモリは未検証と論文自身が認めている。LLM推論システムへの直接の技術的貢献が一次資料で確認できないため、対象範囲の境界としてborderlineと判定し、Researchは作成しない。",
+    "first_checked_at": "2026-11-28T03:19:02+00:00",
+    "last_checked_at": "2026-11-28T03:19:02+00:00",
+    "linked_from": [
+      "worker-worklist-00.json research_audit rank 166"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Predicting Probabilities of Error to Combine Quantization and Early Exiting: QuEE"
+  },
+  "processed_at": "2026-11-28T03:19:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa31a0ba6f3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
