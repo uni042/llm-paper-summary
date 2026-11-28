@@ -25,7 +25,7 @@
   Agent-Xは、端末内で実行する大規模言語モデル（LLM）エージェントの遅延を、入力事前充填（プリフィル）と逐次生成（デコード）の両段階から削減する方式である。原著はTinyAgent-7BとMac mini M4 Proの実機を用い、エージェント全体で平均1.61倍の高速化を示す。
 
 - **2026-04 · [MemExplorer: Navigating the Heterogeneous Memory Design Space for Agentic Inference NPUs](2026-2604.16007-memexplorer-navigating-the-heterogeneous-memory-design-space-for-agentic-inference-npus.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   SRAM/HBM/LPDDR/GDDR/HBFを統一モデル化し、プリフィル/デコードNPUとメモリ階層を共同探索して、基準NPU比でプリフィル最大2.3倍・デコード最大1.93倍の電力効率を得る。
 
 - **2026-03 · [FastTTS: Accelerating Test-Time Scaling for Edge LLM Reasoning](2026-2509.00195-fasttts-accelerating-test-time-scaling-for-edge-llm-reasoning.md)**  
@@ -52,9 +52,17 @@
   実装：✓ ・ リポジトリ内被引用：2  
   スマートフォンで大規模言語モデル（LLM）を端末内実行すると、モデル重みだけでなく、会話履歴を再計算せずに利用する鍵・値キャッシュ（KVキャッシュ）が長時間RAMを占有する。mzCacheはこの問題を、端末での退避後の復帰時間を最小化するメモリ管理として扱う。
 
+- **2026-05 · [Lever：スマートフォン向けフラッシュ常駐LLMの投機的推論](2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  OnePlus 12上の測定では、フラッシュ常駐標的モデルの検証時間のうち約78〜93%を入出力が占める条件があり、演算高速化だけではこの待ち時間を解消できない。Leverは投機的復号（投機的復号）を「サーバGPUで標的モデルの計算回数を減らす方式」ではなく、「フラッシュ常駐モデルの呼出し回数を複数トークンへ償却する方式」として再設計する。
+
 - **2026-10 · [Stepped MoE: Segment-Level Routing with Configurable Inference Complexity](2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   区間ごとに全層の専門家を一括選択して固定し、入れ替えの入出力を消しながら、1つのモデルから活性1Bから4Bまでを選べるようにした、端末向けの専門家混合構造。
+
+- **2026-09 · [PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling](2026-2609.09662-pelm-speculative-decoding-dvfs.md)**  
+  実装：[✓](https://github.com/imec-nu/PELM) ・ リポジトリ内被引用：1  
+  DVFS・自己投機的デコード・可変検証深度を深層強化学習で共同制御し、端末LLMで最大23.1%高速化・52.4%エネルギー削減を達成する。
 
 - **2026-09 · [MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson](2026-fd0d3fa4e564-mcsched-memory-controller-aware-scheduling-for-embodied-llm-workloads-on-nvidia-jetson.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -63,6 +71,10 @@
 - **2026-09 · [BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices](2609.14643.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   投機的復号の複数トークン窓でエキスパート再利用・フラッシュ連続読出し・NPU計算との移動重畳を行い、30B級MoEのスマホ推論を平均4.83倍高速化する。
+
+- **2026-08 · [EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding](2026-2608.05303-edgexpert-moe-speculative-decoding.md)**  
+  実装：[✓](https://doi.org/10.5281/zenodo.21481269) ・ リポジトリ内被引用：1  
+  MoEと投機的復号の併用で増える専門家外部メモリアクセスを、プリフィルの共有専門家再利用とデコードの深さ認識チャネル統合で直接削減するエッジ向け協調設計。
 
 - **2026-07 · [HeteroMosaic: Exposing and Exploiting Heterogeneous Execution Opportunities for Energy-Efficient Edge LLM Inference](2026-2607.12839-heteromosaic-exposing-and-exploiting-heterogeneous-execution-opportuniti.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -75,10 +87,6 @@
 - **2026-05 · [Quant.npu: Enabling Efficient Mobile NPU Inference for on-device LLMs via Fully Static Quantization](2026-2605.20295-quant-npu-enabling-efficient-mobile-npu-inference-for-on-device-llms-via.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   QualcommのHexagon系NPUは、整数行列積の高速化と規則的な量子化に適した専用回路を持つ。SM8650実機ではW4A8構成がExecuTorchのW4A16構成より最大15.1%低遅延となり、Llama-3.2-3B-InstructのW4A8では従来の回転方式より精度が大きく改善した。
-
-- **2026-05 · [Lever：スマートフォン向けフラッシュ常駐LLMの投機的推論](2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  OnePlus 12上の測定では、フラッシュ常駐標的モデルの検証時間のうち約78〜93%を入出力が占める条件があり、演算高速化だけではこの待ち時間を解消できない。Leverは投機的復号（投機的復号）を「サーバGPUで標的モデルの計算回数を減らす方式」ではなく、「フラッシュ常駐モデルの呼出し回数を複数トークンへ償却する方式」として再設計する。
 
 - **2026-04 · [Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM](2026-2604.18655-ondevice-multilora-runtime.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -146,10 +154,6 @@
   実装：[✓](https://anonymous.4open.science/r/ThermE-codebase-D37B/) ・ リポジトリ内被引用：0  
   候補操作の発熱を事前に見積もり、熱余裕を予測して周波数設定とトークン上限を不確実さ込みで選ぶことで、共有冷却のエッジSoC上でvLLM比で最初のトークンまでの時間を40.55パーセント減らし、品質目標違反率を5.70パーセントまで下げた実行系の研究。
 
-- **2026-09 · [PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling](2026-2609.09662-pelm-speculative-decoding-dvfs.md)**  
-  実装：[✓](https://github.com/imec-nu/PELM) ・ リポジトリ内被引用：0  
-  DVFS・自己投機的デコード・可変検証深度を深層強化学習で共同制御し、端末LLMで最大23.1%高速化・52.4%エネルギー削減を達成する。
-
 - **2026-09 · [Partition-Aware Scheduling for Mobile Heterogeneous Inference Co-Execution](2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   演算子のCPU-GPU分割とDAG上の実行順を共同最適化し、段階化・臨界度標本化・遅延予測による配備時反復探索でオフライン最適化に近いモバイル推論遅延を得る。
@@ -205,10 +209,6 @@
 - **2026-08 · [Event-Driven Language Models with Sparse Neural Activity for Neuromorphic Hardware](2026-2608.30439-event-driven-language-models-with-sparse-neural-activity-for-neuromorphi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   量子化された線形注意モデルの全射影に、射影ごとに学習する閾値で小さい活性値をゼロ化する仕組みと疎さの損失を入れ、有効演算を最大約4倍減らし、イベント駆動の多チップ基盤では密モデル比5.4倍のスループットが投影されることを示した研究。
-
-- **2026-08 · [EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding](2026-2608.05303-edgexpert-moe-speculative-decoding.md)**  
-  実装：[✓](https://doi.org/10.5281/zenodo.21481269) ・ リポジトリ内被引用：0  
-  MoEと投機的復号の併用で増える専門家外部メモリアクセスを、プリフィルの共有専門家再利用とデコードの深さ認識チャネル統合で直接削減するエッジ向け協調設計。
 
 - **2026-08 · [Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference](2026-2608.02341-broadcast-rate-limits-in-wi-fi-a-forgotten-bottleneck-for-collaborative-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

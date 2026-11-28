@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（848本）
+## 自動生成の論文一覧（849本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -195,6 +195,10 @@
 - **2026-11 · [The Sparsity Whisperer](2026-2608.06630-the-sparsity-whisperer.md)**  
   実装：[✓](https://github.com/Shavit-Lab/Whisper) ・ リポジトリ内被引用：1  
   枝刈りで守るべきものを活性値の大きさから入力対の出力差へ広げ、層単位・ニューロン単位・二階再構成の三方式で、高いスパース率ほどスパースジーピーティーやワンダに対する改善が広がることを示す。
+
+- **2026-11 · [Perceive Once, Escalate on Demand: Handing Off Visual KV Memory from Small to Large VLMs](2026-2611.26902-perceive-once-escalate-on-demand-handing-off-visual-kv-memory-from-small.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  小さい視覚言語モデルのKVキャッシュを大きいモデルへ渡すとき、相手のキャッシュへの忠実な回帰ではなく相手自身の回答から写像を蒸留することで、履歴の再エンコードなしに大きいモデルの判断を引き出せることを示した、カスケードの受け渡し経路の研究。
 
 - **2026-11 · [MOAI: Module-Optimizing Architecture for non-interactive secure transformer Inference](2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transform.md)**  
   実装：[✓](https://github.com/dtc2025ag/MOAI) ・ リポジトリ内被引用：1  
@@ -490,10 +494,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   各視覚トークンの空間参照と時間参照を表現誤差と重要度からなる1つの除去コストで競わせ、動画ごとに空間と時間の枝刈り配分を自動で決める学習不要の圧縮で、圧縮自体の時間を111.7倍短縮し保持率5パーセントでも比較対象の10パーセント時を上回る精度を保った動画トークン枝刈り。
 
-- **2026-11 · [Perceive Once, Escalate on Demand: Handing Off Visual KV Memory from Small to Large VLMs](2026-2611.26902-perceive-once-escalate-on-demand-handing-off-visual-kv-memory-from-small.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  小さい視覚言語モデルのKVキャッシュを大きいモデルへ渡すとき、相手のキャッシュへの忠実な回帰ではなく相手自身の回答から写像を蒸留することで、履歴の再エンコードなしに大きいモデルの判断を引き出せることを示した、カスケードの受け渡し経路の研究。
-
 - **2026-11 · [One Schedule Does Not Fit All: Adaptive Inference Schedules for Diffusion Language Models](2026-2611.25895-one-schedule-does-not-fit-all-adaptive-inference-schedules-for-diffusion.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   固定のノイズ除去スケジュールが最適でないことを示し、ペア校正と同時ブートストラップ限界で効用と退化ガードレールを一緒に認証して最安の候補だけを配備し、駄目なら完全スケジュールへ戻る配備ルールで、デノイザ評価回数をタスクにより1.33倍から8.0倍まで減らすことを認証した研究。
@@ -513,6 +513,10 @@
 - **2026-11 · [HiCal: Offline Calibration for Hierarchical Scale Encoding in Accurate HiF4 Quantization](2026-2611.32624-hical-offline-calibration-for-hierarchical-scale-encoding-in-accurate-hi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HiF4の3階層スケール符号化の丸めバイアスと2つの拡張しきい値だけをオフライン校正で実分布に合わせ、ブロックごとの候補探索なしに量子化誤差を9.91〜23.50パーセント減らし、下流精度の平均も改善した軽量な量子化校正。
+
+- **2026-11 · [GreenDynaMix: Thermal-Aware Dynamic Mixed-Precision MoE LLM Inference Systems](2026-2611.31737-greendynamix-thermal-aware-dynamic-mixed-precision-moe-llm-inference-sys.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  DVFSのPID制御でGPU温度と老化を抑え、失うスループットをMoEエキスパートの動的混合精度で補い、高精度配分をルータ重みで決めることで、3種のプラットフォームで老化率を25〜33%下げつつスループット維持とPPL悪化0.9〜1.6%を両立した。
 
 - **2026-11 · [FrontierReplay: Split-Free Exact Prefix Caching for Hybrid Language Models](2026-2611.26020-frontierreplay-split-free-exact-prefix-caching-for-hybrid-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

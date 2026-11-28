@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（372本）
+## 自動生成の論文一覧（373本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -345,6 +345,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-11 · [Fused-Softmax for efficient quantized attention](2026-2611.09225-fused-softmax-for-efficient-quantized-attention.md)**  
   実装：[✓](https://github.com/ROCm/aiter) ・ リポジトリ内被引用：0  
   行最大値の凍結と巻き戻し、指数のアフィン近似の行列積への畳み込み、確率の2段階変換と行和の行列積化で、ソフトマックスのベクトル仕事をほぼ消した量子化注意カーネルを MI355X で実装し、BF16比で最大3.2倍のカーネル高速化と動画生成で最大2.05倍の高速化を示した研究。
+
+- **2026-11 · [FlashQLA: Efficient Context Parallelism for Gated DeltaNet](2026-2611.32039-flashqla-efficient-context-parallelism-for-gated-deltanet.md)**  
+  実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：0  
+  Gated DeltaNetの文脈並列で、減衰窓に基づく境界状態準備の削減、カード内外の二重並列での要約共有、遅延モデルによる分割選択を組み合わせ、単一GPUで順伝播1.7〜3.1倍、8GPU・100万トークンで順伝播最大4.8倍を達成した実行フレームワーク。
 
 - **2026-11 · [EpiLoRA: Fusing Many LoRA Adapters into Low-Precision GEMMs for Serving and RL](2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

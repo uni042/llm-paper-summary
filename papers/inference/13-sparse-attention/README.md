@@ -160,6 +160,10 @@
   実装：[✓](https://github.com/llm-sys/flash-indexer) ・ リポジトリ内被引用：2  
   上位K選択の棄却に必要な上限と下限だけを安く計算する証明書で、疎な注意の索引付けを無損失に条件付き計算化し、索引付け器を最大2.74倍、初回トークンまでの時間を最大1.94倍に高速化した。
 
+- **2026-05 · [Position: LLM Inference Should Be Evaluated as Energy-to-Token Production](2026-2605.11733-position-llm-inference-should-be-evaluated-as-energy-to-token-production.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  通常の推論評価では精度、応答遅延、トークン毎秒、GPU利用率、モデル浮動小数点演算利用率（モデル FLOPs Utilization、MFU）を測る。KVキャッシュ圧縮、量子化、疎注意、ルーティング、バッチ化、スケジューリングなどは、トークン当たりの計算量と消費エネルギーを減らすことで、この上限を引き上げる介入として位置づけられる。
+
 - **2026-05 · [Full Attention Strikes Back: Transferring Full Attention into Sparse within Hundred Training Steps](2026-2605.16928-full-attention-strikes-back-transferring-full-attention-into-sparse-with.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈の大規模言語モデル（Large Language モデル; LLM）は、すべてのトークンへ注意を計算する全注意（Full 注意機構）を使うと、系列長の増加に伴って注意計算とキー・値（Key-Value; KV）キャッシュの負荷が増える。著者は100万トークン文脈のプリフィルで最大9.36倍、復号で約2.01倍の速度向上を報告する。
@@ -251,10 +255,6 @@
 - **2026-05 · [Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache](2026-2605.06763-sparse-attention-as-a-range-searching-problem-towards-an-inference-effic.md)**  
   実装：[✓](https://github.com/UIC-InDeXLab/Louver) ・ リポジトリ内被引用：1  
   著者らは、必要な鍵の数が質問と時刻によって変わることを実験で示し、固定個数の検索ではなく、問い合わせとの内積が指定閾値以上の鍵を全て返す問題へ置き換える。提案方式Louverは、KVキャッシュの鍵を幾何学的な点集合と見なし、問い合わせベクトルと閾値から定まる半空間に含まれる点を検索する。
-
-- **2026-05 · [Position: LLM Inference Should Be Evaluated as Energy-to-Token Production](2026-2605.11733-position-llm-inference-should-be-evaluated-as-energy-to-token-production.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  通常の推論評価では精度、応答遅延、トークン毎秒、GPU利用率、モデル浮動小数点演算利用率（モデル FLOPs Utilization、MFU）を測る。KVキャッシュ圧縮、量子化、疎注意、ルーティング、バッチ化、スケジューリングなどは、トークン当たりの計算量と消費エネルギーを減らすことで、この上限を引き上げる介入として位置づけられる。
 
 - **2026-05 · [Cascade Token Selection for Transformer Attention Acceleration](2026-2605.03110-cascade-token-selection-for-transformer-attention-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

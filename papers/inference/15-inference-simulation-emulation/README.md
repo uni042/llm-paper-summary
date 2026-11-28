@@ -60,6 +60,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://anonymous.4open.science/r/DyQ-VLA-7F51/) ・ リポジトリ内被引用：4  
   DyQ-VLAの2026年10月4日公開の第3版は、量子化によって変わる実行時の行動と誤差の相関を明示的に測り、並進と回転で異なる制御を行う。LIBEROおよびRoboTwin 2.0の評価では、BF16に対する推論単位の速度改善が1.74〜1.81倍、成功した実行全体にわたるモデル推論時間の改善が1.88〜1.93倍となった。
 
+- **2026-09 · [Characterizing High Bandwidth Flash for LLM Serving](2026-2609.39131-characterizing-high-bandwidth-flash-for-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  著者らはHBM、HBF、ホストDRAM、SSDの四階層にまたがる配置方針と、キャッシュ再利用を優先しながら新規要求の受入れを制限するスケジューラを設計する。B200相当の計算モデルとHBFの仮定仕様を用いた結果、評価した負荷条件で処理完了時間を36.1〜87.7%短縮する構成があり、モデル化したエネルギー削減率は最大59.1%に達する。
+
 - **2026-06 · [KernelSight-LM: A Kernel-Level LLM Inference Simulator](2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   GPUカーネル予測と実運用サービングの離散事象モデルを統合し、未計測GPUでもカーネル誤差12.1%、対象計測ありで3.8%を達成。
@@ -71,10 +75,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-02 · [Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference](2026-2602.04595-harmonia-algorithm-hardware-co-design-for-memory-and-compute-efficient-b.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   LLMの推論ではモデル重みだけでなく、各層で生じる活性化と、長い入力履歴を保持する鍵・値キャッシュ（KVキャッシュ）がメモリ容量・帯域・演算器の面積を消費する。重みだけを4ビット整数へ量子化しても、活性化がFP16のままでは浮動小数点と整数の混合積和演算を処理する回路が必要になる。
-
-- **2026-09 · [Characterizing High Bandwidth Flash for LLM Serving](2026-2609.39131-characterizing-high-bandwidth-flash-for-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  著者らはHBM、HBF、ホストDRAM、SSDの四階層にまたがる配置方針と、キャッシュ再利用を優先しながら新規要求の受入れを制限するスケジューラを設計する。B200相当の計算モデルとHBFの仮定仕様を用いた結果、評価した負荷条件で処理完了時間を36.1〜87.7%短縮する構成があり、モデル化したエネルギー削減率は最大59.1%に達する。
 
 - **2026-05 · [EVA: Accelerating LLM Decoding via an Efficient Vector Quantization Architecture](2026-2605.24144-eva-accelerating-llm-decoding-via-an-efficient-vector-quantization-archi.md)**  
   実装：[✓](https://github.com/dbw6/Eva) ・ リポジトリ内被引用：2  
@@ -91,6 +91,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-10 · [ePACT: Energy-Performance-Aware Commitment Tracking for LLM Serving](2026-2610.01784-epact-energy-performance-aware-commitment-tracking-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLMサービングの電力を単純に減らすのではなく、事前に契約した時間単位の電力量へ実消費を近づける。要求ごとのサービス期限を予測し、レプリカ数とGPUクロックをオンラインで調整する。
+
+- **2026-09 · [Hot–Cold Tiering of HBM and High Bandwidth Flash for Agentic LLM Serving](2026-2609.25782-hot-cold-tiering-of-hbm-and-high-bandwidth-flash-for-agentic-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  全セッションのKVを高帯域メモリ（High Bandwidth メモリ; HBM）に残せば容量が不足し、CPUメモリなどへ退避すると復帰時の転送待ちが増える。Qwen3-Coder-30B-A3Bを用いたエージェント作業のトレースで、HBM単独の165セッションに対してHBF追加構成は3900セッションを保持する（約23.6倍）。
 
 - **2026-05 · [MoE-Hub: Taming Software Complexity for Seamless MoE Overlap with Hardware-Accelerated Communication on Multi-GPU Systems](2026-2605.05888-moe-hub-taming-software-complexity-for-seamless-moe-overlap-with-hardwar.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -193,10 +197,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-09 · [RoofLang: Enabling AI-Driven Architecting of LLM Inference Systems](2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md)**  
   実装：[✓](https://github.com/yzygitzh/rooflang) ・ リポジトリ内被引用：0  
   RoofLangはLLM推論を計算・ハードウェアグラフと意味保存変換で表し、実装非依存のシミュレーションを評価器としてAIに配置・並列化・通信構成を探索させる設計基盤である。
-
-- **2026-09 · [Hot–Cold Tiering of HBM and High Bandwidth Flash for Agentic LLM Serving](2026-2609.25782-hot-cold-tiering-of-hbm-and-high-bandwidth-flash-for-agentic-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  全セッションのKVを高帯域メモリ（High Bandwidth メモリ; HBM）に残せば容量が不足し、CPUメモリなどへ退避すると復帰時の転送待ちが増える。Qwen3-Coder-30B-A3Bを用いたエージェント作業のトレースで、HBM単独の165セッションに対してHBF追加構成は3900セッションを保持する（約23.6倍）。
 
 - **2026-09 · [HeteroReason: Heterogeneous FPGA-GPU Acceleration for Disaggregated Speculative Reasoning](2026-2609.28717-heteroreason-heterogeneous-fpga-gpu-acceleration-for-disaggregated-specu.md)**  
   実装：[✓](https://github.com/zehuanzhang/HeteroReason) ・ リポジトリ内被引用：0  

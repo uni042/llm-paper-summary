@@ -35,10 +35,15 @@
   "selection_reason": "Gated DeltaNetの逐次依存で文脈並列が制限される問題に対し、境界状態の事前処理を減衰考慮で削減し二重文脈並列とカーネル協調設計を行うFlashQLAで、長文脈ワークロードのフォワードを最大4.8倍高速化すると一次要旨で示している。",
   "semantic_scholar_id": "888a667230da9268b265fe105e4ce100bb464484",
   "source_url": "https://arxiv.org/abs/2611.32039",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlashQLA: Efficient Context Parallelism for Gated DeltaNet",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T08:30:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2611.32039-flashqla-efficient-context-parallelism-for-gated-deltanet.md",
+  "represented_canonical_id": "arXiv:2611.32039",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

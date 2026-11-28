@@ -39,7 +39,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   大小モデル間でKVを内容空間のヘッド単位線形写像へ変換し、受信モデルの長文再プリフィルを省く方式。対応層を選びRoPEを付け直して形状差による誤差を抑える。
 
 - **2026-05 · [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   長い入力文脈や過去の会話を再利用する大規模言語モデル（LLM）の配信では、過去の入力を処理した際の鍵・値キャッシュ（KVキャッシュ）を保存しておけば、同じ接頭辞を再計算せずに済む。提案するのは、KVブロックに対応するGPU向けオブジェクト、GPUから非同期で要求を発行・完了確認する待ち行列、推論カーネルの実行余裕に応じて読み書きを配置する制御の三つである。
 
 - **2025-12 · [EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving](2025-2512.14946-evicpress-joint-compression-eviction.md)**  
@@ -126,6 +126,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：5  
   ForesightKVは将来の注意履歴から数百〜数千トークン後に参照されるKVを教師化し、軽量評価器で長期寄与を予測して追い出し、早すぎる削除を減らす方式。
 
+- **2026-09 · [HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution](2026-2609.18675-hbflex.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  全HBF構成でKV配置・書戻し・寿命認識GCを共同最適化し、FlashAccel比最大1.58倍、H3比最大3.30倍の平均スループット向上。
+
 - **2026-06 · [SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL](2026-2606.19746-sac-sparse-attention-cxl-disaggregated-kv.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   疎注意で実際に使うtop-k KVだけをCXL共有メモリから層ごとに直接読み込み、RDMAの接頭辞全量転送とローカルKV常駐をなくして長文高並行デコードを高速化する。
@@ -145,10 +149,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-12 · [MatKV: Trading Compute for Flash Storage in LLM Inference](2025-2512.22195-matkv-trading-compute-for-flash-storage-in-llm-inference.md)**  
   実装：[✓](https://github.com/kunwooshin/MatKV) ・ リポジトリ内被引用：4  
   MatKVは、検索拡張生成（Retrieval-Augmented Generation、RAG）の質問ごとに同じ文書を何度もGPUで事前処理する無駄を、文書単位の鍵・値（KV）キャッシュをストレージへ永続化することで減らす方式である。
-
-- **2026-09 · [HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution](2026-2609.18675-hbflex.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  全HBF構成でKV配置・書戻し・寿命認識GCを共同最適化し、FlashAccel比最大1.58倍、H3比最大3.30倍の平均スループット向上。
 
 - **2026-07 · [LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs](2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -186,6 +186,14 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：3  
   RAGの共有接頭辞KVをDRAM・SSDへ階層保存し、待機列を使う先読みLRU、層単位の転送・計算重畳、SSD→DRAMプリフェッチで再利用待ちを隠し、平均TTFTを最大2.47倍高速化する。
 
+- **2026-09 · [SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference](2026-2609.23816-splash-high-bandwidth-flash-long-context.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  長文脈LLMでは、復号のたびに過去のキー・値（KV）キャッシュを読み直すため、文脈長と同時要求数の増加に伴って容量と帯域の双方が問題になる。CPU DRAM、CXL、SSDへ退避すれば容量は増えるが、HBMとの大きな帯域差が復号を律速する。
+
+- **2026-09 · [Enabling High-Bandwidth Flash for Generative Recommendation Serving with Write-Aware KV Cache Policy](2026-2609.07175-high-bandwidth-flash-write-aware-kv-cache.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  生成推薦の利用者KVキャッシュをHBFへ置く際、LRU-Kで低再利用利用者のキャッシュ書込みを抑え、HBMのみより3.8〜4.7倍のスループットを得つつフラッシュ寿命を約1年から6年以上へ延ばす方式を分析した。
+
 - **2026-09 · [EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?](2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md)**  
   実装：[✓](https://github.com/KunmingSHAO/efficientagent_release) ・ リポジトリ内被引用：2  
   個々の鍵・値を主記憶から再読込する費用が再計算より安くても、再利用時までキャッシュに残っていなければ高速化は実現しない。一方、高い演算能力を持つH800では退避・再読込が一貫して不利であり、容量を増やせば必ず得になるわけではない。主張する93%の削減は再計算された入力トークン数についてであり、すべての計算費用やサービス料金が93%減ることを意味しない。
@@ -214,9 +222,9 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/CGCL-codes/SimLLM) ・ リポジトリ内被引用：2  
   キー・値キャッシュ（KV キャッシュ）は、一つの生成要求の過去トークンを再計算しないための標準的な手段だが、通常は要求をまたいでキャッシュを共有しない。従来のH2OやStreamingLLMは同一要求内の重要トークンを選び、ZipCacheは保存数値を圧縮するが、異なる要求の意味的な重複を直接利用しない。
 
-- **2026-09 · [SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference](2026-2609.23816-splash-high-bandwidth-flash-long-context.md)**  
+- **2026-10 · [Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving](2026-2610.30791-gandalf-flash-shall-not-die-increasing-flash-storage-lifetime-for-kv-cac.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  長文脈LLMでは、復号のたびに過去のキー・値（KV）キャッシュを読み直すため、文脈長と同時要求数の増加に伴って容量と帯域の双方が問題になる。CPU DRAM、CXL、SSDへ退避すれば容量は増えるが、HBMとの大きな帯域差が復号を律速する。
+  KVキャッシュのSSDオフロードで、注意の種類を将来再利用の代理指標として線形注意状態をDRAMへ、全注意KVをSSDへ振り分け、再計算利益と書き込み・追い出し費用を比べる容量対応ゲートで書き込みを絞り、ヒット率を保ったままSSD寿命を平均7.3倍へ延ばす手法。
 
 - **2026-09 · [PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding](2026-2609.34555-pulseinfer-i-o-centric-sparse-kv-cache-offloading-for-efficient-long-con.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -225,10 +233,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding](2026-2609.05764-interface-aware-kv-quantization-nvm.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は固定Hadamard回転・正規化・4ビット符号帳でKVをオンチップNVM向けに量子化し、補助情報と読み出し再構成を減らして長文脈KVの面積・エネルギーを抑える。
-
-- **2026-09 · [Enabling High-Bandwidth Flash for Generative Recommendation Serving with Write-Aware KV Cache Policy](2026-2609.07175-high-bandwidth-flash-write-aware-kv-cache.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  生成推薦の利用者KVキャッシュをHBFへ置く際、LRU-Kで低再利用利用者のキャッシュ書込みを抑え、HBMのみより3.8〜4.7倍のスループットを得つつフラッシュ寿命を約1年から6年以上へ延ばす方式を分析した。
 
 - **2026-08 · [SPECTRA: Pushing the KV Cache Beyond the 2-Bit Cliff via Spectral Transform Coding](2026-2608.07915-spectra-pushing-the-kv-cache-beyond-the-2-bit-cliff-via-spectral-transfo.md)**  
   実装：[✓](https://github.com/nokia-applied-research/SPECTRA) ・ リポジトリ内被引用：1  
@@ -312,10 +316,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：0  
   消費者向けGPUのオフロード推論で、クエリとの関連で履歴ブロックを選び、コピーと再計算の費用で保持量と回復方式を実行時に決めることで、KVキャッシュ回復の遅延を大きく下げる実行時機構。
 
-- **2026-10 · [Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving](2026-2610.30791-gandalf-flash-shall-not-die-increasing-flash-storage-lifetime-for-kv-cac.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  KVキャッシュのSSDオフロードで、注意の種類を将来再利用の代理指標として線形注意状態をDRAMへ、全注意KVをSSDへ振り分け、再計算利益と書き込み・追い出し費用を比べる容量対応ゲートで書き込みを絞り、ヒット率を保ったままSSD寿命を平均7.3倍へ延ばす手法。
-
 - **2026-10 · [DualPace: Decoupled Scheduling and Cooperative GPU--CPU Decoding for LLM Serving](2026-2610.33501-dualpace-decoupled-scheduling-and-cooperative-gpu-cpu-decoding-for-llm-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   スケジューリング権限をGPUエンジンとCPUエンジンに分離し、ホストメモリとAMX対応CPUを独立したデコード段として回すことで、CPUオフロードの断続的な進捗と尾の遅延を解消するサービング実行系。
@@ -383,7 +383,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：181  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：182  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
@@ -553,7 +553,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   GPUから追い出した会話状態を、巨大なKVキャッシュそのものでも元トークン列でもなく中間活性として保存し、I/Oと再計算を重ねて高速にKVへ復元する状態再利用方式。
 
 - **2024-09 · [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)**  
-  実装：✓ ・ リポジトリ内被引用：32  
+  実装：✓ ・ リポジトリ内被引用：33  
   InstAttention（プレプリント名InstInfer）は、長文脈・大バッチの大規模言語モデル推論で、鍵・値キャッシュをSSDへ退避するとGPUへの読戻し転送が律速になる問題を扱う。OPT-13BをNVIDIA A6000と組み合わせた評価では、従来のSSD退避システムFlexGenと比べて最大11.1倍の処理量を報告する。
 
 - **2024-10 · [Compute Or Load KV Cache? Why Not Both?](2024-2410.03065-cake-compute-or-load-kv-cache.md)**  

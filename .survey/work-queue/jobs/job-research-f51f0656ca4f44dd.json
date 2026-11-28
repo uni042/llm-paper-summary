@@ -35,10 +35,15 @@
   "selection_reason": "RISC-Vベクトルプロセッサ上でブロック量子化行列積をネイティブ実行するQBSと、K/Vを局所保持してデコード注意を高速化するAKVを定義し、RTL評価で投影計算最大51.34倍・注意1.45倍の高速化を示す、LLM推論向けハードウェア実行方式への直接貢献であるため対象とした。",
   "semantic_scholar_id": "132463aac3a09c4f9c5544c778b4c2c4a3a45143",
   "source_url": "https://arxiv.org/abs/2611.31937",
-  "status": "ready",
+  "status": "superseded",
   "title": "Native Block-Quantized Matrix Multiplication and Explicit K/V Residency with Dual-View Access for LLM Inference on RISC-V Vector Processors",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T08:30:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.31937-native-block-quantized-matrix-multiplication-and-explicit-k-v-residency-.md",
+  "represented_canonical_id": "arXiv:2611.31937",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

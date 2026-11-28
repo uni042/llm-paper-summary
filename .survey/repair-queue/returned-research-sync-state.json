@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "eb0e8a44ccb5ad197767b663d5bf26b8b21c75bb",
+  "base_commit": "b2c32123e8718a9f18c9bf5e8d4ba5884cc9c28f",
   "last_full_scan_at": "2026-11-26T19:36:02+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1809,8 +1809,13 @@
     "2026-2611.30417-anor-scaling-sparse-attention-with-a-gpu-pnm-computing-hierarchy.json",
     "2026-2611.31089-orthogonally-mixed-sign-coding-with-progressive-residual-refinement-for-transformer-weight-compression.json",
     "2026-2611.31638-wavefront-low-rank-drafting-with-parallel-causal-refinement-for-speculative-decoding.json",
+    "2026-2611.31737-greendynamix-thermal-aware-dynamic-mixed-precision-moe-llm-inference-systems.json",
     "2026-2611.31869-rankserve-rank-aware-cpu-gpu-scheduling-for-memory-constrained-moe-serving.json",
+    "2026-2611.31937-native-block-quantized-matrix-multiplication-and-explicit-k-v-residency-with-dual-view-access-for-llm-inference-on-risc-v.json",
+    "2026-2611.32039-flashqla-efficient-context-parallelism-for-gated-deltanet.json",
     "2026-2611.32083-inference-aware-congestion-control-for-distributed-moe-inference.json",
+    "2026-2611.32264-mayfly-lifecycle-aware-high-bandwidth-flash-for-recursive-self-improvement.json",
+    "2026-2611.32269-pando-noise-coupled-parallel-draft-trees-for-efficient-edge-speculative-decoding.json",
     "2026-2611.32295-norn-context-length-aware-optimization-of-weight-and-kv-cache-placement-for-offloaded-llm-inference.json",
     "2026-2611.32624-hical-offline-calibration-for-hierarchical-scale-encoding-in-accurate-hif4-quantization.json",
     "2026-2611.32881-scalable-placement-for-disaggregated-llm-serving-on-heterogeneous-edge-fleets.json",
@@ -56361,6 +56366,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.31737": {
+      "order": [
+        "2026-11-28T08:25:52+00:00",
+        "2026-2611.31737-greendynamix-thermal-aware-dynamic-mixed-precision-moe-llm-inference-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.31937": {
+      "order": [
+        "2026-11-28T08:26:41+00:00",
+        "2026-2611.31937-native-block-quantized-matrix-multiplication-and-explicit-k-v-residency-with-dual-view-access-for-llm-inference-on-risc-v.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.32039": {
+      "order": [
+        "2026-11-28T08:27:30+00:00",
+        "2026-2611.32039-flashqla-efficient-context-parallelism-for-gated-deltanet.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.32264": {
+      "order": [
+        "2026-11-28T08:28:20+00:00",
+        "2026-2611.32264-mayfly-lifecycle-aware-high-bandwidth-flash-for-recursive-self-improvement.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.32269": {
+      "order": [
+        "2026-11-28T08:29:09+00:00",
+        "2026-2611.32269-pando-noise-coupled-parallel-draft-trees-for-efficient-edge-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -70386,6 +70436,21 @@
     ],
     "arxiv:2611.34630": [
       "papers/inference/15-inference-simulation-emulation/2026-2611.34630-a-differential-computing-accelerator-for-llm-inference-leveraging-bit-sl.md"
+    ],
+    "arxiv:2611.31737": [
+      "papers/inference/99-other-inference-systems/2026-2611.31737-greendynamix-thermal-aware-dynamic-mixed-precision-moe-llm-inference-sys.md"
+    ],
+    "arxiv:2611.31937": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.31937-native-block-quantized-matrix-multiplication-and-explicit-k-v-residency-.md"
+    ],
+    "arxiv:2611.32039": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.32039-flashqla-efficient-context-parallelism-for-gated-deltanet.md"
+    ],
+    "arxiv:2611.32264": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.32264-mayfly-lifecycle-aware-high-bandwidth-flash-for-recursive-self-improveme.md"
+    ],
+    "arxiv:2611.32269": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.32269-pando-noise-coupled-parallel-draft-trees-for-efficient-edge-speculative-.md"
     ]
   }
 }

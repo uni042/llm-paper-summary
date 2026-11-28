@@ -35,10 +35,15 @@
   "selection_reason": "再帰的自己改善のセッション群で生じるKVキャッシュのバーストと減衰に合わせ、High-Bandwidth Flash上のKVをその場読みとHBM復帰の間でライフサイクル管理するMayflyにより完了時間を最大34％短縮する、LLM推論のKV階層メモリ管理への直接貢献であるため対象とした。",
   "semantic_scholar_id": "b8a978c66f4294cfea36d2f960180797d5dd2f56",
   "source_url": "https://arxiv.org/abs/2611.32264",
-  "status": "ready",
+  "status": "superseded",
   "title": "Mayfly: Lifecycle-Aware High-Bandwidth Flash for Recursive Self-Improvement",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T08:30:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.32264-mayfly-lifecycle-aware-high-bandwidth-flash-for-recursive-self-improveme.md",
+  "represented_canonical_id": "arXiv:2611.32264",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

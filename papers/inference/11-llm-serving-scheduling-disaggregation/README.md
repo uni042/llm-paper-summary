@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-07 · [Kimi K3: Open Frontier Intelligence](2026-2607.24653-kimi-k3-open-frontier-intelligence.md)**  
-  実装：✓ ・ リポジトリ内被引用：53  
+  実装：✓ ・ リポジトリ内被引用：54  
   KDA状態とMLAのKVを統合する接頭辞キャッシュ、512トークン境界の再利用、クラスタ親和ルーティングを記述するKimi K3技術報告。配信機構は具体的だが、節内に比較測定はない。
 
 - **2026-04 · [SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference](2026-2505.24095-skywalker-cross-region-load-balancer.md)**  
@@ -1645,7 +1645,7 @@
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
-  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：63  
+  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：64  
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
@@ -1796,6 +1796,10 @@
   実装：✓ ・ リポジトリ内被引用：15  
   要求ごとのプリフィル長とデコード長を考慮し、KV容量を守るバッチをF指標で選ぶスケジューラ。Vidur時間モデルでは混合2000要求の平均遅延をFCFS比4.87倍改善した。
 
+- **2025-06 · [SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving](2025-2506.09397-sled-a-speculative-llm-decoding-framework-for-efficient-edge-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：15  
+  通常の投機的復号（投機的復号）は、小型モデルが複数候補を提案し、大型モデルが一回の前向き計算で受理・棄却を判定する。
+
 - **2025-10 · [Accelerating Diffusion LLM Inference via Local Determinism Propagation](2025-2510.07081-accelerating-diffusion-llm-inference-via-local-determinism-propagation.md)**  
   実装：[✓](https://github.com/friedrichor/LocalLeap) ・ リポジトリ内被引用：14  
   マスクを順に外す標準的な復号では、各反復で最も確信度の高い一位置だけを確定する保守的方式が品質維持のために用いられる。LLaDA-8B-InstructのGSM8K・生成長512では、逐次確定の7.76トークン/秒を53.82トークン/秒へ、反復512回を73回へ削減し、正答率は78.24%から78.54%であった。
@@ -1803,10 +1807,6 @@
 - **2025-07 · [PolyServe: Efficient Multi-SLO Serving at Scale](2025-2507.17769-polyserve-efficient-multi-slo-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
   PolyServeは、LLM配信サービスに複数の遅延保証階層がある場合に、要求をどのサーバへ送るか、各階層へ何台のサーバを割り当てるかを共同で制御する方式である。SLO達成率90%の点で、既存方式に対する有効処理量（有効スループット）はプリフィル・デコード分離構成で平均1.23倍、同居構成で平均1.18倍である。
-
-- **2025-06 · [SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving](2025-2506.09397-sled-a-speculative-llm-decoding-framework-for-efficient-edge-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  通常の投機的復号（投機的復号）は、小型モデルが複数候補を提案し、大型モデルが一回の前向き計算で受理・棄却を判定する。
 
 - **2025-04 · [FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling](2025-2504.03775-flowkv-low-latency-transfer-load-aware.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
@@ -2705,7 +2705,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2024  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：2025  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
