@@ -38,7 +38,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   長文脈への対応では、512トークンの滑動窓注意（Sliding Window 注意機構、SWA）を3層、全注意を1層とする交互配置を使う。
 
 - **2025-12 · [Efficient MoE Serving in the Memory-Bound Regime: Balance Activated Experts, Not Tokens](2025-2512.09277-efficient-moe-serving-in-the-memory-bound-regime-balance-activated-exper.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   混合専門家モデル（Mixture-of-Experts; MoE）を複数GPUへ載せる専門家並列（専門家 Parallelism; EP）では、人気専門家の複製を作り、各GPUへ配置し、同じ専門家を選んだトークンを複製間へ振り分ける。
 
 - **2026-03 · [NCCL EP: Towards a Unified Expert Parallel Communication API for NCCL](2026-2603.13606-nccl-ep-towards-a-unified-expert-parallel-communication-api-for-nccl.md)**  

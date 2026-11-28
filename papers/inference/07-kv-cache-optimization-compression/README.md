@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（724本）
+## 自動生成の論文一覧（725本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -337,6 +337,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：3  
   KARAは、新しく増えたKV区間だけを一度ずつ圧縮し、重要トークンを可変長チャンクへ広げ、周期発動で再圧縮費を抑えて長い推論の同時実行数を保つ。
 
+- **2026-04 · [WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models](2026-2604.02570-wsvd-weighted-low-rank-approximation-for-fast-and-efficient-execution-of.md)**  
+  実装：[✓](https://github.com/SAI-Lab-NYU/WSVD) ・ リポジトリ内被引用：3  
+  SVDを注意ヘッドごとに適用し再構成をフラッシュデコードへ融合することで、視覚言語モデルのデコードを1.8倍超高速化し、量子化込みでも精度低下を約1ポイントに抑えた。
+
 - **2026-04 · [Stochastic KV Routing: Enabling Adaptive Depth-Wise Cache Sharing](2026-2604.22782-stochastic-kv-routing-enabling-adaptive-depth-wise-cache-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   既存の削減手法の多くは「どの時刻のトークンを捨てるか」に着目するが、本研究は「どの層が独自のKVを持つ必要があるか」を問い直す。
@@ -380,6 +384,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Hybrid Latent Attention for Looped Language Models](2026-2610.07940-hybrid-latent-attention-for-looped-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   古いトークンを全ループ共有の潜在として保存し再構成せず直接読み、直近分だけ正確なKVを残す注意機構で、キャッシュを10.7倍圧縮し16K文脈の復号を最大7.4倍高速化した。
+
+- **2026-10 · [HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs](2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.md)**  
+  実装：[✓](https://github.com/FlashLabAE/HBFSim) ・ リポジトリ内被引用：2  
+  実機のない高帯域フラッシュを含むメモリ階層を、較正済みの提供スケジューラとフラッシュ内部モデルを閉ループでつないで模擬する器を作り、配置はKV優先、変換は並列性を保つ範囲マッピング、寿命はKV書き込み量で決まるという設計指針を引き出した。
 
 - **2026-10 · [Behavior-Preserving KV Cache Compression](2026-2610.06479-behavior-preserving-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -429,6 +437,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/famous-blue-raincoat/Safe_KV_Compress) ・ リポジトリ内被引用：2  
   保持トークンを選別して捨てる方式はメモリを節約できるが、一般的な評価は最終回答の正答率を重視する。非圧縮の正答率67.4%、正答中の不完全推論率4.3%に対し、SnapKVは正答率50.0%を維持しても不完全推論率が65.5%に増えた。
 
+- **2026-08 · [Benchmarking Composable Compression Techniques in Mixture-of-Experts LLMs](2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  専門家枝刈り、量子化、KV圧縮を重ねる配備を10モデルと7ワークロードで一貫評価するベンチマークを構築し、圧縮率では品質も速度も予測できず専門家軸が劣化を支配すること、KV圧縮が長文脈の復号を遅くし得ることを示した。
+
 - **2026-08 · [Archer: Adaptive Reuse of Cached Hidden States for Efficient Rollback in Diffusion Language Models](2026-2608.08086-archer-adaptive-reuse-of-cached-hidden-states-for-efficient-rollback-in-.md)**  
   実装：[✓](https://github.com/Hxnng/Archer) ・ リポジトリ内被引用：2  
   本研究は、拡散言語モデル（Diffusion Language モデル; DLM）が一度生成したトークンを後から置換・再マスクできる「巻き戻し（rollback）」を保持しながら、繰り返しの全系列再計算を減らす推論時のキャッシュ制御を扱う。ただし応答を再計算することと、元の全再計算方式と同じ出力分布・復号経路を保証することは異なる。
@@ -464,10 +476,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [OmniRefine: Alignment-Aware Cooperative Compression for Efficient Omnimodal Large Language Models](2026-2605.12056-omnirefine-alignment-aware-cooperative-compression-for-efficient-omnimod.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   固定した時間区切りをフレームと音声の対応に合わせて作り替えてから、映像と音声をそれぞれの冗長構造に合う方式で協調圧縮し、保持率44パーセントで全トークン並みの正解率を保った学習不要の圧縮方式。
-
-- **2026-04 · [WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models](2026-2604.02570-wsvd-weighted-low-rank-approximation-for-fast-and-efficient-execution-of.md)**  
-  実装：[✓](https://github.com/SAI-Lab-NYU/WSVD) ・ リポジトリ内被引用：2  
-  SVDを注意ヘッドごとに適用し再構成をフラッシュデコードへ融合することで、視覚言語モデルのデコードを1.8倍超高速化し、量子化込みでも精度低下を約1ポイントに抑えた。
 
 - **2026-04 · [When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration](2026-2604.13349-when-less-latent-leads-to-better-relay-information-preserving-compressio.md)**  
   実装：[✓](https://github.com/markli404/When-Less-Latent-Leads-to-Better-Relay) ・ リポジトリ内被引用：2  
@@ -581,9 +589,9 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/taiga333/eval-kv-repurpose) ・ リポジトリ内被引用：1  
   接頭辞一致に縛られない区間単位のKV再利用をvLLM上で測るテストベッドを構築し、単純な位置補正だけの再利用が単一文書課題では品質を保ち、偏った負荷では同じ容量でヒット率63.9パーセント対3.3パーセントと大きく効く一方、複数文書推論では劣化することを示した。
 
-- **2026-10 · [HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs](2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.md)**  
-  実装：[✓](https://github.com/FlashLabAE/HBFSim) ・ リポジトリ内被引用：1  
-  実機のない高帯域フラッシュを含むメモリ階層を、較正済みの提供スケジューラとフラッシュ内部モデルを閉ループでつないで模擬する器を作り、配置はKV優先、変換は並列性を保つ範囲マッピング、寿命はKV書き込み量で決まるという設計指針を引き出した。
+- **2026-10 · [iS-KV: Online Low-Rank KV Cache Compression via Block-Incremental SVD](2026-2610.02815-is-kv-online-low-rank-kv-cache-compression-via-block-incremental-svd.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  直近を正確に残し古い履歴を低ランク化するオンライン圧縮で、基底更新時に過去の係数も同期させることでドリフトを防ぎ、MATH-500で4.06倍圧縮しながら元モデルの83.6パーセントに対し82.6パーセントを保つ。
 
 - **2026-10 · [FuTransformer: FP8 Prefill and INT4 Decode for Llama-Style Inference on Hopper](2026-2610.23796-futransformer-fp8-prefill-and-int4-decode-for-llama-style-inference-on-h.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -608,6 +616,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Coda: Exploiting Admission Flexibility for Coding-Agent Serving](2026-2610.03088-coda-exploiting-admission-flexibility-for-coding-agent-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   コーディングエージェント向けサービングで、KV状態の準備費用と待ち時間による受付順の並べ替え、文脈長の近い集団への注意分割、多ワーカーでの文脈適合ルーティングを組み合わせ、進行を保ちながらスループットを上げる方式。
+
+- **2026-10 · [BELT: BEhavior-Aligned Low-Rank KV Cache Compression with Learned Top-k Rank Allocation](2026-2610.17966-belt-behavior-aligned-low-rank-kv-cache-compression-with-learned-top-k-r.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  注意分布と注意出力に目的関数を合わせた低ランクKV圧縮と、全ヘッド横断の学習型ランク配分により、70パーセント圧縮でも長文脈品質を保ち、量子化併用で最大17.8倍の削減と最大3.3倍のデコード高速化を得た。
 
 - **2026-10 · [AlignPred: Error-Controlled KV Cache Compression via Alignment and Predictive Coding](2026-2610.17970-alignpred-error-controlled-kv-cache-compression-via-alignment-and-predic.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -732,10 +744,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [Beyond Sparse Weights: When Is Attention Compressible?](2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   疎な注意マップだけではKV圧縮を正当化できないことを理論化し、値分散配分と末尾要約を厳密な物理予算で実装するCertKVを提案。
-
-- **2026-08 · [Benchmarking Composable Compression Techniques in Mixture-of-Experts LLMs](2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llm.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  専門家枝刈り、量子化、KV圧縮を重ねる配備を10モデルと7ワークロードで一貫評価するベンチマークを構築し、圧縮率では品質も速度も予測できず専門家軸が劣化を支配すること、KV圧縮が長文脈の復号を遅くし得ることを示した。
 
 - **2026-07 · [SelKV: Selective KV Cache Merging with Per-Token Merge-or-Drop and Attention Compensation](2026-2607.16213-selkv-selective-kv-cache-merging-with-per-token-merge-or-drop-and-attent.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -966,6 +974,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-11 · [Transformer-FSQ: Discrete Latents for Extreme KV-Cache Compression](2026-2611.09598-transformer-fsq-discrete-latents-for-extreme-kv-cache-compression.md)**  
   実装：[✓](https://github.com/ASzecsenyi/transformer-fsq) ・ リポジトリ内被引用：0  
   残差状態を有限スカラー量子化の広い低ビット格子へ写して整数コードだけをメタデータなしで保持することで、圧縮率12倍から97.5倍の極端なKVキャッシュ圧縮でも長文脈検索の精度を比較手法中最高に保ち、デコード速度も非圧縮並み以上を実測したKVキャッシュ圧縮。
+
+- **2026-11 · [TraceKV: Policy-Preserving Low-Rank KV Cache Compression for Reasoning Vision-Language Models](2026-2611.15569-tracekv-policy-preserving-low-rank-kv-cache-compression-for-reasoning-vi.md)**  
+  実装：[✓](https://github.com/AK-DREAM/TraceKV) ・ リポジトリ内被引用：0  
+  自己生成した推論トレースでの較正、フィッシャー感度で重み付けした特異値分解、全層でのランク配分により、方策のKL乖離を抑える無訓練の低ランクKV圧縮TraceKVを提案し、量子化併用で5.64倍圧縮しながら正解率を密モデルの73.58%に対し73.41%に保った。
 
 - **2026-11 · [Testing Quantized KV-Cache Maintenance: Encoding Layout and Historical Restoration](2026-2611.30720-testing-quantized-kv-cache-maintenance-encoding-layout-and-historical-re.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1275,10 +1287,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   重みの断片とKVブロックを1つのメモリ予算で競わせ、呼び出し意図の先読みと層単位の流し込みで複数モデルエージェントをメモリ制約GPUに載せるサービング基盤。
 
-- **2026-10 · [iS-KV: Online Low-Rank KV Cache Compression via Block-Incremental SVD](2026-2610.02815-is-kv-online-low-rank-kv-cache-compression-via-block-incremental-svd.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  直近を正確に残し古い履歴を低ランク化するオンライン圧縮で、基底更新時に過去の係数も同期させることでドリフトを防ぎ、MATH-500で4.06倍圧縮しながら元モデルの83.6パーセントに対し82.6パーセントを保つ。
-
 - **2026-10 · [InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations](2026-2610.04473-inferopt-constrained-multi-objective-search-for-llm-inference-configurat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   層ごとのKV保持率と専門家数を同じ探索の枠組みで扱い、固定した代理評価、予算超過の事前棄却、予算の段階的な引き締めで、品質と資源のパレートな設定群を効率よく探す手法。
@@ -1378,10 +1386,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Beyond Hotness: High-Resolution Memory Characterization of Cloud and LLM Workloads for Tiered Memory with ARM SPE](2026-2610.32711-beyond-hotness-high-resolution-memory-characterization-of-cloud-and-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プロセッサのサンプリング拡張でLLM推論を含む8ワークロードのメモリ挙動を細かく測り、遅延の集中とアイドル期間で階層メモリへの適性を判定した計測研究。
-
-- **2026-10 · [BELT: BEhavior-Aligned Low-Rank KV Cache Compression with Learned Top-k Rank Allocation](2026-2610.17966-belt-behavior-aligned-low-rank-kv-cache-compression-with-learned-top-k-r.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  注意分布と注意出力に目的関数を合わせた低ランクKV圧縮と、全ヘッド横断の学習型ランク配分により、70パーセント圧縮でも長文脈品質を保ち、量子化併用で最大17.8倍の削減と最大3.3倍のデコード高速化を得た。
 
 - **2026-10 · [BellowsKV: One Latent for Many Layers, Expanded on Demand](2026-2610.35023-bellowskv-one-latent-for-many-layers-expanded-on-demand.md)**  
   実装：[✓](https://github.com/MorrisZJ/BellowsKV) ・ リポジトリ内被引用：0  
@@ -2608,7 +2612,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：427  
+  実装：✓ ・ リポジトリ内被引用：428  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  

@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（46本）
+## 自動生成の論文一覧（47本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/)
 
@@ -75,6 +75,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   TileQは、混合専門家モデル（Mixture-of-Experts; MoE）の推論用重みを低ビット量子化する際、量子化誤差を修復する低ランク行列そのものが大量の専門家ごとに増殖する問題を扱う。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [Prune, Don't Merge: Expert Compression of Mixture-of-Experts LLMs on Multilingual Production Tasks](2026-2611.12240-prune-don-t-merge-expert-compression-of-mixture-of-experts-llms-on-multi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MoEのエキスパート削除と統合を5つの多言語本番タスクで同一条件で比較し、20比較中16で削除が有意に勝ち、圧縮の損失の大部分が内容ではなくJSONやレイアウトなどの出力契約の破れであることを示した。
 
 - **2026-10 · [Shared Low-rank Basis Factorization for Data-free Mixture-of-Experts Compression](2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-com.md)**  
   実装：[✓](https://github.com/ctxGou/MoE-Compression) ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（849本）
+## 自動生成の論文一覧（850本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -28,13 +28,13 @@
   実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：10  
   コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
 
+- **2026-07 · [Read As Human: Compressing Context via Parallelizable Close Reading and Skimming](2026-2602.01840-read-as-human-compressing-context-via-parallelizable-close-reading-and-s.md)**  
+  実装：[✓](https://github.com/Twilightaaa/RAM) ・ リポジトリ内被引用：8  
+  入力文脈圧縮には、不要な語を削る方式と、文章を連続ベクトルへ変換する方式がある。Qwen3-4Bでの4倍圧縮時、NaturalQAの完全一致率は66.59、2WikiMQAは50.39であり、8倍圧縮時にはそれぞれ61.09、40.24となる。
+
 - **2026-02 · [ICaRus: Identical Cache Reuse for Efficient Multi Model Inference](2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   複数の専門言語モデルを順番に呼び出すエージェント型推論では、同じシステム指示、会話履歴、検索資料を何度も入力する。LLaMA-3.1-8Bを使うReAct型の8エージェント構成では、通常のモデル別KV方式に対して95パーセンタイル遅延（P95、遅い側5%に入る境界）を最大11.1倍短縮し、最大スループットを3.8倍に高めた。
-
-- **2026-07 · [Read As Human: Compressing Context via Parallelizable Close Reading and Skimming](2026-2602.01840-read-as-human-compressing-context-via-parallelizable-close-reading-and-s.md)**  
-  実装：[✓](https://github.com/Twilightaaa/RAM) ・ リポジトリ内被引用：7  
-  入力文脈圧縮には、不要な語を削る方式と、文章を連続ベクトルへ変換する方式がある。Qwen3-4Bでの4倍圧縮時、NaturalQAの完全一致率は66.59、2WikiMQAは50.39であり、8倍圧縮時にはそれぞれ61.09、40.24となる。
 
 - **2026-04 · [MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction](2026-2604.27393-minicpm-o-4-5-towards-real-time-full-duplex-omni-modal-interaction.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -45,7 +45,7 @@
   視覚・言語・行動モデル（vision-language-action モデル; VLA）は、画像と自然言語の指示を統合し、ロボットの連続した操作を生成する。
 
 - **2026-02 · [Is Retraining-Free Enough? The Necessity of Router Calibration for Efficient MoE Compression](2026-2603.02217-is-retraining-free-enough-the-necessity-of-router-calibration-for-effici.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   しかし推論時に呼ばれない専門家も含めて大量の重みを保持する必要があり、GPUメモリの制約が厳しい。専門家を削除、低ランク編集、統合する方式はこの常駐重みを減らせるが、圧縮後の性能が元モデルより大きく落ちることがある。
 
 - **2026-05 · [Language Modeling with Hyperspherical Flows](2026-2605.11125-language-modeling-with-hyperspherical-flows.md)**  
@@ -485,6 +485,10 @@
 - **2026-11 · [Shallow Encoding Emits Deep Memories](2026-2611.06084-shallow-encoding-emits-deep-memories.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ハイブリッドモデルの「深い記憶の書き込みは浅い層から出せる」「再帰状態はシンク＋低ランク」という二性質を使い、プリフィルの層数を最大63%まで削り再帰状態を2.0〜3.9倍小さくして、公式試験ほぼ無損失のままスループットを1.2〜1.4倍にするサービング手法SEED。
+
+- **2026-11 · [Scout Before You Route: Predicting Task Success and Token Count from a Small LLM Prefill](2026-2611.09028-scout-before-you-route-predicting-task-success-and-token-count-from-a-sm.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  凍結した小さいモデルのプリフィル活性値から候補ごとの成功確率と出力長を線形プローブで予測するルータを提案し、中央値価格付けに対して精度をそろえた支出を9データセット中8つで9.4%から33.0%削減した。
 
 - **2026-11 · [Quantizing Recurrent Language Models Is Easier Than You Think](2026-2611.01864-quantizing-recurrent-language-models-is-easier-than-you-think.md)**  
   実装：[✓](https://github.com/camail-official/LoReS) ・ リポジトリ内被引用：0  
@@ -2008,6 +2012,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   一般的なクラスタスケジューラが空きGPUを近い位置に詰めても、実際に頻繁に通信するDP/PPグループが別のスイッチ配下に分散すれば帯域競合と通信待ちが発生する。トレース駆動シミュレーションでは比較方式に対し通信グループの重み付き最大広がりを最大1.67倍改善し、実クラスタでは208 GPUで学習処理量5.7%、9600超GPUで10.6%改善した。
 
+- **2025-11 · [CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning](2025-2511.18659-clara-bridging-retrieval-and-generation-with-continuous-latent-reasoning.md)**  
+  実装：[✓](https://github.com/apple/ml-clara) ・ リポジトリ内被引用：3  
+  CLaRa（Continuous Latent Reasoning）は、文書を少数の連続値メモリトークンへ圧縮し、その表現を文書検索と生成の双方に用いる。Mistral-7Bで16倍圧縮したSCPは、4質問応答課題の通常検索条件において平均CEM 38.96%を記録し、PISCOの37.83%を上回る。
+
 - **2025-07 · [Activation Steering for Chain-of-Thought Compression](2025-2507.04742-activation-steering-for-chain-of-thought-compression.md)**  
   実装：[✓](https://github.com/ArminAzizi98/ASC) ・ リポジトリ内被引用：3  
   冗長な推論と簡潔な推論の活性の平均差を操舵ベクトルとして中間層へ注入し、分布のずれを距離予算で抑えながら思考連鎖を最大六七・四三パーセント短縮し、正解率を保って二・七三倍速くした。
@@ -2035,10 +2043,6 @@
 - **2025-11 · [Thinking with Drafts: Speculative Temporal Reasoning for Efficient Long Video Understanding](2025-2512.00805-thinking-with-drafts-speculative-temporal-reasoning-for-efficient-long-v.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長い動画の質問応答では、最初に少数のフレームを見て全体を把握し、必要な時間区間を細かく調べる「フレームを見ながら考える」方式が使われる。原著の観測では、動画トークンに対する注意スコアの90%以上が 10^-3 未満で、密に読み込んだフレームには冗長な情報が多い。
-
-- **2025-11 · [CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning](2025-2511.18659-clara-bridging-retrieval-and-generation-with-continuous-latent-reasoning.md)**  
-  実装：[✓](https://github.com/apple/ml-clara) ・ リポジトリ内被引用：2  
-  CLaRa（Continuous Latent Reasoning）は、文書を少数の連続値メモリトークンへ圧縮し、その表現を文書検索と生成の双方に用いる。Mistral-7Bで16倍圧縮したSCPは、4質問応答課題の通常検索条件において平均CEM 38.96%を記録し、PISCOの37.83%を上回る。
 
 - **2025-11 · [Beyond Fixed-Length Calibration for Post-Training Compression of LLMs](2025-572d81dfcf74-beyond-fixed-length-calibration-for-post-training-compression-of-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -2799,7 +2803,7 @@
   二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
 
 - **2024-11 · [XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models](2024-2411.15100-xgrammar-flexible-and-efficient-structured-generation-engine-for-large-l.md)**  
-  実装：[✓](https://github.com/mlc-ai/xgrammar) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/mlc-ai/xgrammar) ・ リポジトリ内被引用：12  
   構造化生成の文法チェックを高速化するため、語彙を事前検査できるトークンと実行時検査が必要なトークンに分け、前者はマスクをキャッシュし、後者は永続スタックで処理し、文法計算をGPU推論と重ねるエンジン。既存ライブラリより最大で100倍以上速く、サービング全体ではほぼゼロの追加コストになった。
 
 - **2024-10 · [Fast Best-of-N Decoding via Speculative Rejection](2024-2410.20290-fast-best-of-n-decoding-via-speculative-rejection.md)**  
@@ -3275,7 +3279,7 @@
   標準的な変換器（Transformer）の自己注意（self-注意機構）は、入力系列内のトークン間の重みを入力内容に応じて計算する。特にこの論文の「学習80%高速化」は約1.8倍の処理速度を意味し、処理時間が80%減ったという意味ではない。
 
 - **2022-02 · [Competition-Level Code Generation with AlphaCode](2022-2203.07814-competition-level-code-generation-with-alphacode.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：24  
   AlphaCodeは、自然言語で与えられた競技プログラミング問題から、正しい実行プログラムを見つけるための生成・探索・選別システムである。評価では2021年12月のCodeforcesの10大会を後から模擬し、各問題最大10提出という条件で、参加者中の順位が平均して上位54.3%に相当した。
 
 - **2022-04 · [Step-unrolled Denoising Autoencoders for Text Generation](2022-2112.06749-step-unrolled-denoising-autoencoders-for-text-generation.md)**  

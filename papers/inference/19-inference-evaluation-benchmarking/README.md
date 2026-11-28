@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（291本）
+## 自動生成の論文一覧（292本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -229,6 +229,10 @@
 - **2026-11 · [CoPyro: Feeding Copy Proposals to Parallel Drafters](2026-2611.27217-copyro-feeding-copy-proposals-to-parallel-drafters.md)**  
   実装：[✓](https://github.com/dt-3t/CoPyro) ・ リポジトリ内被引用：0  
   文脈中の過去の出現からコピーした続きをマスクの代わりに並列ドラフターへ入力し、信頼性特徴とともに残す部分と直す部分を学ばせることで、受理長を最大5.08パーセント伸ばす投機的デコードの改良。
+
+- **2026-11 · [Beyond Compressing Everything: Contrastive Memory Learning for Selective Context Compression](2026-2611.16384-beyond-compressing-everything-contrastive-memory-learning-for-selective-.md)**  
+  実装：[✓](https://github.com/scar-on/CoMem) ・ リポジトリ内被引用：0  
+  同一文書への異なるクエリ同士をハードネガティブとする対照学習とメモリスロット間の双方向注意で、クエリごとに違う証拠を選んで残すソフト文脈圧縮CoMemを提案し、Mistral-7Bの32倍圧縮でも先行圧縮法を全QAベンチマークで上回った。
 
 - **2026-11 · [AutoEMatic: Runtime-Adaptive Mixed-Precision LLM Inference via Automatic Exponent-Mantissa Refinement](2026-2611.10165-autoematic-runtime-adaptive-mixed-precision-llm-inference-via-automatic-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

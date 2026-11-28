@@ -35,10 +35,15 @@
   "selection_reason": "実運用の多言語タスクでMoE LLMのエキスパート剪定（REAP）と統合（REAM）を同一キャリブレーション条件で比較し、25%削減時に剪定が生成品質の93.6%を保持する等、サービング時のGPUメモリ削減に直結するエキスパート圧縮の実証知見を示しており、MoE推論圧縮へ直接貢献する。",
   "semantic_scholar_id": "112d83cf9e1c98121feca2d5ec35d8f63b78592f",
   "source_url": "https://arxiv.org/abs/2611.12240",
-  "status": "ready",
+  "status": "superseded",
   "title": "Prune, Don't Merge: Expert Compression of Mixture-of-Experts LLMs on Multilingual Production Tasks",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-28T09:02:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/06-moe-quantization-compression/2026-2611.12240-prune-don-t-merge-expert-compression-of-mixture-of-experts-llms-on-multi.md",
+  "represented_canonical_id": "arXiv:2611.12240",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

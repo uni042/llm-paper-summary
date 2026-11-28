@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（136本）
+## 自動生成の論文一覧（137本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -33,7 +33,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure](2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md)**  
-  実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：19  
   異種GPU/TPU/PIMと分離サービング・多階層鍵値メモリ・MoE・電力を要求駆動ループで統合模擬するLLMサービングシミュレータ。
 
 - **2026-01 · [AIConfigurator: Lightning-Fast Configuration Optimization for Multi-Framework LLM Serving](2026-2601.06288-aiconfigurator-multi-framework-llm-serving.md)**  
@@ -41,7 +41,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実GPUで測った演算・通信性能から複数のLLMサービング構成をCPU上で予測し、並列化やバッチ、プリフィル・デコード分離を探索して遅延目標を満たす候補を選ぶ。
 
 - **2026-06 · [Frontier: Towards Comprehensive and Accurate LLM Inference Simulation](2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md)**  
-  実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：11  
   分離プリフィル/デコードや注意-FFN分離を役割別イベントグラフとして再現し、演算・通信・KVメモリを実測校正して、現代LLMサービング構成の性能を高精度に予測する。
 
 - **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
@@ -137,6 +137,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-11 · [XM-Sparse: High-Throughput Sparse-Attention LLM Serving over Scale-up Memory Pools](2026-2611.22280-xm-sparse-high-throughput-sparse-attention-llm-serving-over-scale-up-mem.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   スパース注意のKVと索引キーの両キャッシュをスケールアップメモリプールへ追い出し、アクセス様式ごとに取得機構を使い分けるXM-Sparseで、PCIeオフロード方式と比べて最大約5倍、同じ基盤への素朴な統合と比べても最大1.34倍のデコードスループットを得る提供システム。
+
+- **2026-11 · [When Is High-Bandwidth Flash Cost-Effective for LLM Inference?](2026-2611.11036-when-is-high-bandwidth-flash-cost-effective-for-llm-inference.md)**  
+  実装：[✓](https://github.com/ryeii/When-Is-High-Bandwidth-Flash-Cost-Effective-for-LLM-Inference) ・ リポジトリ内被引用：0  
+  高帯域フラッシュで重み容量を肩代わりする配置を9モデル・5ワークロードでシミュレーションし、固定需要の468比較中98で必要GPU台数が減り、休止セッションと短い対話に利得が集中する一方、ツール利用では利得が皆無であることを示した。
 
 - **2026-11 · [SpecCTMC: Exact Speculative Simulation of Diffusion Language Model Continuous-Time Markov Chains](2026-2611.08362-specctmc-exact-speculative-simulation-of-diffusion-language-model-contin.md)**  
   実装：[✓](https://github.com/kasakh/specctmc) ・ リポジトリ内被引用：0  
