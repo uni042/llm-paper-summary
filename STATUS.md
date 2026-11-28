@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-28 12:48:50 JST**
+> 自動生成: **2026-11-28 12:55:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文数 | **1912** |
 | 未claim Research job | **1912** |
-| 直近24hのResearch処理完了 | **60** |
-| 最終Research処理完了 | **11-28 12:45:00 JST** |
-| 最終Discovery探索完了 | **11-28 12:34:58 JST** |
+| 直近24hのResearch処理完了 | **61** |
+| 最終Research処理完了 | **11-28 12:52:00 JST** |
+| 最終Discovery探索完了 | **11-28 12:49:37 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -55,9 +55,9 @@
 | 処理済み | **33803** |
 | 未処理Discovery候補 | **121558** |
 | 収録済み | **5569** |
-| Research / Audit候補へ昇格済み | **511** |
-| 無関係として除外 | **17997** |
-| 微妙として除外 | **9726** |
+| Research / Audit候補へ昇格済み | **508** |
+| 無関係として除外 | **17998** |
+| 微妙として除外 | **9728** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -89,7 +89,7 @@
 
 - 消化率: **21.8%**
 - 現在の生在庫: 後方references **63795件** / 前方引用 **59566件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **122531件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **122528件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-27 14:23:11 JST（22時間25分前）** |
+| 最終maintenance完了 | **11-27 14:23:11 JST（22時間32分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **60** |
-| 直近6hのDiscovery run | **10** |
-| 直近6hのDiscovery本文確認・分類 | **15** |
-| 最終Research完了 | **11-28 12:45:00 JST** |
-| 最終Discovery完了 | **11-28 12:34:58 JST** |
+| 直近6hのResearch完了 | **61** |
+| 直近6hのDiscovery run | **11** |
+| 直近6hのDiscovery本文確認・分類 | **16** |
+| 最終Research完了 | **11-28 12:52:00 JST** |
+| 最終Discovery完了 | **11-28 12:49:37 JST** |
 
 ### 最新Library-first run
 
-- Research: **11-28 12:45:00 JST** / worker — / run muse-20261128-c2 / 成果 **4件**
-  - evidence: .survey/import-inbox/results/research/2025-2502.06844-exploring-model-invariance-with-discrete-search-for-ultra-low-bit-quantization.json
-- Discovery: **11-28 12:34:58 JST** / worker muse / run muse-20261128-c2-w3-postread
+- Research: **11-28 12:52:00 JST** / worker — / run muse-20261128-c2 / 成果 **5件**
+  - evidence: .survey/import-inbox/results/research/2024-2405.15208-decoding-at-the-speed-of-thought-harnessing-parallel-decoding-of-lexical-units-for-llms.json
+- Discovery: **11-28 12:49:37 JST** / worker muse / run muse-20261128-c3-w1-postread
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/results/discovery/discovery-postread-2311.07102.json
+  - evidence: .survey/import-inbox/results/discovery/discovery-postread-2403.17726.json
 
 ### Codex探索成果の反映状況
 
